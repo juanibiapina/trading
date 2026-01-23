@@ -59,3 +59,38 @@
 ![RVYL](RVYL-1630.png)
 
 ![REVB](REVB-1630.png)
+
+## After-Hours Analysis (~4:50 PM ET)
+
+**Source:** TradingView After-Hours Gainers
+
+| Ticker | Close | AH Price | AH Change | AH Volume | Interest |
+|--------|-------|----------|-----------|-----------|----------|
+| **BATL** | $1.28 | $1.93 | **+51%** | Active | **HIGH** |
+| **AGMH** | $2.14 | $2.28-2.84 | +10-30% | Heavy | **HIGH** |
+| SLGB | $1.22 | $1.41 | +16% | Moderate | Medium |
+| SLE | $5.90 | $6.40 | +8% | Sparse | Low |
+| SQFT | $3.27 | $3.52-3.67 | +10% | Very Low | Low |
+| SMXT | $0.73 | $0.79 | +8% | Low | Low |
+
+### Top Candidates for Tomorrow
+
+**1. BATL (Battalion Oil)** - Best candidate
+- Massive AH spike: $1.28 → $1.93 (+51%)
+- Active post-market volume with consistent buying
+- Regular session quiet (106K vol), AH exploding
+- Fits micro-cap, <$10 criteria
+
+**2. AGMH (AGM Group Holdings)** - Strong volume
+- AH range: $2.20 - $2.84 (spiked +33%)
+- Heavy volume burst (678K+ in single AH minute)
+- Has "unusual volume + price increase" pattern
+
+**3. SLGB (Smart Logistics)** - Moderate
+- AH: $1.22 → $1.41 (+16%)
+- Decent volume, lower price point
+
+### Notes
+- Used TradingView After-Hours Gainers screener: https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/
+- Finviz screener only shows regular session data, not AH
+- Yahoo Finance API confirmed to provide real-time AH data (no 15-min delay)
