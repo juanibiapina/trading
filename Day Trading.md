@@ -164,6 +164,7 @@ This could indicate news is coming. Monitor closely.
 ## Resources
 
 - [My Screener](https://elite.finviz.com/screener.ashx?v=150&f=cap_microunder,sh_float_u100,sh_price_u10,sh_relvol_o10,ta_change_u20&ft=4&o=-change) - Micro cap, float <100M, price <$10, rel vol >10, change >20%, sorted by change
+- [After-Hours Gainers (TradingView)](https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/) - Shows stocks gaining in after-hours trading
 - https://finviz.com
 - https://www.financialdatasets.ai/ (account available but no credits yet. for now yahoo works)
 
