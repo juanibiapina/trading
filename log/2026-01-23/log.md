@@ -80,15 +80,18 @@
 - Active post-market volume with consistent buying
 - Regular session quiet (106K vol), AH exploding
 - Fits micro-cap, <$10 criteria
+- [TradingView Chart](https://www.tradingview.com/chart/?symbol=BATL)
 
 **2. AGMH (AGM Group Holdings)** - Strong volume
 - AH range: $2.20 - $2.84 (spiked +33%)
 - Heavy volume burst (678K+ in single AH minute)
 - Has "unusual volume + price increase" pattern
+- [TradingView Chart](https://www.tradingview.com/chart/?symbol=AGMH)
 
 **3. SLGB (Smart Logistics)** - Moderate
 - AH: $1.22 → $1.41 (+16%)
 - Decent volume, lower price point
+- [TradingView Chart](https://www.tradingview.com/chart/?symbol=SLGB)
 
 ### Notes
 - Used TradingView After-Hours Gainers screener: https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/
