@@ -1,0 +1,13 @@
+new_window "editor"
+run_cmd "nvim-server -c ':e Day Trading.md'"
+
+new_window "git"
+run_cmd "lazygit"
+
+new_window "agent"
+run_cmd "opencode"
+
+new_window "autocommit"
+run_cmd "gitwatch -r origin ."
+
+select_window 3
