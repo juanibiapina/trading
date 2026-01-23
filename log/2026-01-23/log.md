@@ -127,6 +127,8 @@
 
 **Setup:** After-hours momentum - heavy volume burst (678K+), price spiked to $2.84 (+33%).
 
+**Catalyst (4:15 PM):** AGM Group Holdings entered US$25M equity line of credit facility with institutional investor, issued 5-year warrant for 608,777 shares at $2.4639. Financing deal - provides cash runway but dilution risk.
+
 ---
 
 ### Notes
