@@ -112,6 +112,8 @@
 
 **Setup:** After-hours momentum - massive AH spike from $1.28 to $1.93 (+51%), active volume.
 
+**Catalyst (4:35 PM):** Battalion Oil terminated gas treating agreement for WAT AGI Facility, shifted Monument Draw gas volumes to new large-cap midstream processor, driving ~1,200 bbl/d month-to-date increase in January oil production vs December. Operational improvement.
+
 ---
 
 ## Trade | AGMH | Long (After-Hours)
