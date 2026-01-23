@@ -93,6 +93,40 @@
 - Decent volume, lower price point
 - [TradingView Chart](https://www.tradingview.com/chart/?symbol=SLGB)
 
+### Charts
+
+![BATL After-Hours](BATL-AH.png)
+
+![AGMH After-Hours](AGMH-AH.png)
+
+---
+
+## Trade | BATL | Long (After-Hours)
+
+| Field | Value |
+|-------|-------|
+| Entry | $1.86 |
+| Stop Loss | $1.51 (-18.8%) |
+| Shares | 100 |
+| Status | Open |
+
+**Setup:** After-hours momentum - massive AH spike from $1.28 to $1.93 (+51%), active volume.
+
+---
+
+## Trade | AGMH | Long (After-Hours)
+
+| Field | Value |
+|-------|-------|
+| Entry | $2.29 |
+| Stop Loss | $2.17 (-5.2%) |
+| Shares | 200 |
+| Status | Open |
+
+**Setup:** After-hours momentum - heavy volume burst (678K+), price spiked to $2.84 (+33%).
+
+---
+
 ### Notes
 - Used TradingView After-Hours Gainers screener: https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/
 - Finviz screener only shows regular session data, not AH
