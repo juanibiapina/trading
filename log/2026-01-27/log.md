@@ -119,11 +119,17 @@ Reviewed after-hours gainers from TradingView screener.
 
 ## Summary
 
-| Stock | Change | Float | Catalyst | AH Action | Grade |
-|-------|--------|-------|----------|-----------|-------|
-| ZNB | +62% | 146M | None | Selling | C |
-| MRNO | +56% | **1.35M** | BTC treasury | Running | B |
-| ABOS | +31% | 46M | Analyst PT | Strong | B |
-| NINE | +20% | 38M | None | Flat | C |
+| Stock | Change | Float | Catalyst | AH Action | Volume | Grade |
+|-------|--------|-------|----------|-----------|--------|-------|
+| MRNO | +56% | **1.35M** | BTC treasury | Running | **Unusual** | B |
+| ZNB | +62% | 146M | None | Selling | Somewhat | C |
+| ABOS | +31% | 46M | Analyst PT | Strong | Normal | C |
+| NINE | +20% | 38M | None | Flat | Normal | C |
 
-**Best Setup:** MRNO has the ideal low float, but already extended. No trades taken today.
+**Chart Review Notes:**
+- MRNO: Clear unusual volume spike on chart
+- ZNB: Some unusual volume visible
+- ABOS: Volume looks normal despite the move
+- NINE: Volume looks normal
+
+**Best Setup:** MRNO is the only one with low float + unusual volume, but already extended. Watch for premarket continuation tomorrow.
