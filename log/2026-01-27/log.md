@@ -21,9 +21,19 @@
 
 ---
 
+## Screener Notes
+
+**Finviz:** Didn't find anything good today. The unusual volume screener considers too many days - misses stocks that just started moving.
+
+**TradingView After-Hours Gainers:** Found MRNO here. Better for catching fresh moves.
+
+**Lesson:** TradingView AH screener is better for finding stocks that just started their move today.
+
+---
+
 ## After-Hours Screener Review
 
-Reviewed after-hours gainers from TradingView screener.
+Reviewed after-hours gainers from TradingView screener (found MRNO here).
 
 ---
 
