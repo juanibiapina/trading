@@ -86,9 +86,9 @@ Reviewed after-hours gainers from TradingView screener.
 - Steady climb throughout day
 - Post-market: $2.96-3.32 (+9-22% more)
 
-**Grade:** B
-**Decision:** Watch
-**Reason:** Real catalyst (analyst upgrade), legitimate biotech. Float too high for quick scalp but has legs.
+**Grade:** C
+**Decision:** Skip
+**Reason:** Real catalyst but volume looks normal on chart. Float too high. Not the explosive setup we want.
 
 ---
 
