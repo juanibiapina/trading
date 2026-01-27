@@ -131,11 +131,19 @@
 | Entry | $2.29 |
 | Stop Loss | $2.17 (-5.2%) |
 | Shares | 200 |
-| Status | Open |
+| Status | **Closed - Stop Hit** |
+| Exit | $2.17 |
+| P&L | **-$24 (-5.2%)** |
 
 **Setup:** After-hours momentum - heavy volume burst (678K+), price spiked to $2.84 (+33%).
 
 **Catalyst (4:15 PM):** AGM Group Holdings entered US$25M equity line of credit facility with institutional investor, issued 5-year warrant for 608,777 shares at $2.4639. Financing deal - provides cash runway but dilution risk.
+
+**Post-Trade Analysis:**
+- Volume didn't sustain, stock faded
+- Hit stop loss at $2.17
+- Now trading at $1.80 - stop saved further losses
+- **Lesson:** Financing/dilution catalysts are weaker than operational news. BATL had real operational improvement, AGMH had dilution risk.
 
 ---
 
