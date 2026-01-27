@@ -33,7 +33,7 @@ Reviewed after-hours gainers from TradingView screener.
 
 **Grade:** C
 **Decision:** Skip
-**Reason:** High float (146M), no catalyst, already had big move, post-market selling
+**Reason:** High float (146M), no catalyst, already had big move, post-market selling. Some unusual volume but float kills it.
 
 ---
 
