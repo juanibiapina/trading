@@ -60,7 +60,7 @@ Reviewed after-hours gainers from TradingView screener.
 
 **Grade:** B
 **Decision:** Watch
-**Reason:** Excellent low float, but already ran hard. Entry risky at these levels. Watch for pullback.
+**Reason:** Excellent low float + clear unusual volume on chart. Best setup of the four. Already ran hard though - entry risky. Watch for premarket continuation.
 
 ---
 
