@@ -1,5 +1,24 @@
 # Trading Log - 2026-01-27
 
+## Trade Executed
+
+**MRNO - Murano Global Investments** (Paper Trade)
+
+| Field | Value |
+|-------|-------|
+| Entry | $2.48 |
+| Shares | 100 |
+| Position Size | $248 |
+| Stop Loss | $1.88 (-24%) |
+| Take Profit | $4.49 (+81%) |
+| Risk | $60 |
+| Reward | $201 |
+| R:R | 1:3.35 |
+
+**Rationale:** Low float (1.35M), unusual volume, BTC treasury catalyst, strong AH momentum.
+
+---
+
 ## After-Hours Screener Review
 
 Reviewed after-hours gainers from TradingView screener.
