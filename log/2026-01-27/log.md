@@ -113,7 +113,7 @@ Reviewed after-hours gainers from TradingView screener.
 
 **Grade:** C
 **Decision:** Skip
-**Reason:** No catalyst, high float, delisting risk, weak post-market action
+**Reason:** No catalyst, high float, delisting risk, weak post-market action, normal volume on chart
 
 ---
 
