@@ -31,7 +31,8 @@
 | Take Profit | $6.00 (+43.2%) |
 | Shares | 100 |
 | R:R | 3.3:1 |
-| Status | Open |
+| Status | **Closed - Loss** |
+| Notes | First trade, sold at a loss. TP of $6.00 was hit in premarket but didn't execute. |
 
 **Setup:** Short squeeze - low float (1.27M), elevated short interest, explosive premarket volume.
 
