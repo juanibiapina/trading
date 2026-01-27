@@ -130,12 +130,12 @@ Look for:
 | Volume pattern | Increasing into open | Fading |
 | Price vs news time | Moving before/after news | No reaction to news |
 
-**D. Capture chart (using surf):**
+**D. Capture chart (using browse):**
 ```bash
-surf tab.new "https://www.tradingview.com/chart/?symbol=TICKER"
-surf wait 3
-surf screenshot
-cp /tmp/surf-snap-*.png log/YYYY-MM-DD/TICKER-HHMM.png
+browse tab.new "https://www.tradingview.com/chart/?symbol=TICKER"
+browse wait 3
+browse screenshot
+cp /tmp/browse-snap-*.png log/YYYY-MM-DD/TICKER-HHMM.png
 ```
 
 Link in daily log with `![TICKER](TICKER-HHMM.png)`.
