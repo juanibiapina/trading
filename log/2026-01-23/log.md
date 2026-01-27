@@ -108,11 +108,19 @@
 | Entry | $1.86 |
 | Stop Loss | $1.51 (-18.8%) |
 | Shares | 100 |
-| Status | Open |
+| Status | **Closed** |
+| Exit | ~$2.40 |
+| P&L | ~+$54 (+29%) |
 
 **Setup:** After-hours momentum - massive AH spike from $1.28 to $1.93 (+51%), active volume.
 
 **Catalyst (4:35 PM):** Battalion Oil terminated gas treating agreement for WAT AGI Facility, shifted Monument Draw gas volumes to new large-cap midstream processor, driving ~1,200 bbl/d month-to-date increase in January oil production vs December. Operational improvement.
+
+**Post-Trade Analysis:**
+- Sold around $2.40 for a win
+- Stock continued to **$7.00 in premarket on Jan 26** (+276% from entry)
+- Then dumped to $2.55 after open
+- **Lesson:** The biggest move happened in premarket. Consider holding AH positions through to premarket exit.
 
 ---
 
