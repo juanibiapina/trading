@@ -57,11 +57,14 @@ These questions are useful to ask when defining or updating the Trading Plan.
 | After open dump | $2.55 | -64% from peak |
 
 **Strategy:**
-1. **4:00-8:00 PM ET:** Screen [TradingView AH Gainers](https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/)
-2. **Identify catalyst:** Real news > no news. Check PR, SEC filings.
-3. **Buy in after-hours:** Enter position before market closes (8 PM ET)
+1. **4:00-8:00 PM ET (After close):** Screen for AH volume spikes
+   - [TradingView AH Gainers](https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/)
+   - [Finviz Screener](https://finviz.com/screener.ashx) - filter by after-hours change
+   - Look for unusual volume increases after market close
+2. **Identify catalyst:** Real news > no news. Check PR, SEC filings. Operational news > financing/dilution.
+3. **Buy in after-hours:** Enter position after spotting the move (4:00-8:00 PM ET)
 4. **Hold overnight**
-5. **Sell in premarket (4:00-9:30 AM):** Watch for momentum peak, exit before open
+5. **Sell in premarket (4:00-9:30 AM):** Watch for momentum peak, exit before regular open
 
 **Risks:**
 - Extended hours have wider spreads and lower liquidity
