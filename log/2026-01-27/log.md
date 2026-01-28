@@ -2,11 +2,12 @@
 
 ## Trade Executed
 
-**MRNO - Murano Global Investments** (Paper Trade)
+**MRNO - Murano Global Investments** (Paper Trade) - CLOSED
 
 | Field | Value |
 |-------|-------|
 | Entry | $2.48 |
+| Exit | $3.80 |
 | Shares | 100 |
 | Position Size | $248 |
 | Stop Loss | $1.88 (-24%) |
@@ -14,8 +15,15 @@
 | Risk | $60 |
 | Reward | $201 |
 | R:R | 1:3.35 |
+| **Result** | **+$132 (+53.2%)** |
 
 **Rationale:** Low float (1.35M), unusual volume, BTC treasury catalyst, strong AH momentum.
+
+**Exit Notes (Jan 28 premarket):**
+- Sold at $3.80 during premarket consolidation near $4.00 resistance
+- No new catalyst - running on momentum/squeeze only
+- Decided to lock in profits rather than risk rejection at resistance
+- Short interest had increased to 17.38% (was 0.96% at entry)
 
 ![MRNO Entry](MRNO-2232.png)
 
