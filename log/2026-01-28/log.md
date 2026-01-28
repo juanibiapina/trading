@@ -112,6 +112,8 @@
 
 ## Trade Execution
 
+### Trade 1: SER
+
 **Entry:**
 - Ticker: SER
 - Time: ~22:21 Berlin (16:21 ET) - After Hours
@@ -129,9 +131,28 @@
 
 ---
 
+### Trade 2: XPON
+
+**Entry:**
+- Ticker: XPON
+- Time: ~22:29 Berlin (16:29 ET) - After Hours
+- Price: $1.35
+- Size: ~100 EUR
+- Reason: Preliminary financials catalyst, +109% Y/Y revenue growth, energy storage sector momentum
+
+![XPON Entry Chart](XPON-2229.png)
+
+**Exit:**
+- Time: 
+- Price: 
+- P/L: 
+- Reason: 
+
+---
+
 ## Notes
 
-- SER is top candidate: biotech + FDA IND clearance + low float
-- Entry at $4.63 (+69% from prev close $2.74)
-- AH High so far: $5.02
-- Watch premarket tomorrow for continuation or exit
+- SER: Entry at $4.63 (+69% from prev close $2.74), AH High $5.02
+- XPON: Entry at $1.35 (+58% from prev close $0.856), AH High $1.37
+- Both positions are AH entries - higher risk, watch premarket
+- Note: Trading plan says 1 trade/day - broke rule with 2 trades today
