@@ -113,11 +113,13 @@
 ## Trade Execution
 
 **Entry:**
-- Ticker: 
-- Time: 
-- Price: 
-- Size: 
-- Reason: 
+- Ticker: SER
+- Time: ~22:21 Berlin (16:21 ET) - After Hours
+- Price: $4.63
+- Size: ~100 EUR
+- Reason: FDA IND clearance catalyst, biotech sector, low float
+
+![SER Entry Chart](SER-2221.png)
 
 **Exit:**
 - Time: 
@@ -130,5 +132,6 @@
 ## Notes
 
 - SER is top candidate: biotech + FDA IND clearance + low float
-- Consider premarket entry if momentum continues
-- Watch for news updates overnight
+- Entry at $4.63 (+69% from prev close $2.74)
+- AH High so far: $5.02
+- Watch premarket tomorrow for continuation or exit
