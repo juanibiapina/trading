@@ -27,6 +27,18 @@
 
 ![MRNO Entry](MRNO-2232.png)
 
+**Post-Trade Review (Jan 28 after open):**
+
+![MRNO at Open](MRNO-open.png)
+
+What happened at market open:
+- Premarket: Price consolidated around $2.80-$3.50
+- At open: Brief spike to **$4.10** (would have been +65% from entry)
+- Post-open: Sharp rejection, crashed to **$2.40** within 2-3 hours (-40% from peak)
+- End of day: Trading at $2.31
+
+**Key Takeaway:** Exit at $3.80 premarket was correct decision. Holding through open hoping for $4.49 target would have resulted in a loss. This validates the trading plan insight: "Momentum stocks often peak in premarket, then dump at open."
+
 ---
 
 ## Screener Notes
