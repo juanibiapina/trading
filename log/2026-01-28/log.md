@@ -143,10 +143,10 @@
 ![XPON Entry Chart](XPON-2229.png)
 
 **Exit:**
-- Time: 
-- Price: 
-- P/L: 
-- Reason: 
+- Time: ~10:15 Berlin (04:15 ET) - Pre-market
+- Price: $1.21
+- P/L: -10.4% (-$0.14/share)
+- Reason: Low PM volume, weak follow-through, cut weaker position to focus on SER
 
 ---
 
