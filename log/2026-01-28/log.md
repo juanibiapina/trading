@@ -148,6 +148,8 @@
 - P/L: -10.4% (-$0.14/share)
 - Reason: Low PM volume, weak follow-through, cut weaker position to focus on SER
 
+![XPON Exit Chart](XPON-1015.png)
+
 ---
 
 ## Notes
