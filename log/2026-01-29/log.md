@@ -145,6 +145,17 @@ VIVS is the only candidate that fits the trading plan criteria (biotech, low flo
 
 ![PZG Entry](PZG-entry.png)
 
+| Field | Value |
+|-------|-------|
+| Shares | 150 |
+| Entry | $3.40 |
+| Stop Loss | $2.49 (-26.8%) |
+| Take Profit | $5.66 (+66.5%) |
+| Position Size | $510 |
+| Risk | $136.50 |
+| Reward | $339 |
+| R:R | 2.5:1 |
+
 - Bought on federal approval catalyst
 - Entry after significant AH run-up from $1.73 close
 
