@@ -124,10 +124,10 @@
 ![SER Entry Chart](SER-2221.png)
 
 **Exit:**
-- Time: 
-- Price: 
-- P/L: 
-- Reason: 
+- Time: ~15:45 Berlin (09:45 ET) - Market Hours
+- Price: $3.79
+- P/L: -18.1% (-$0.84/share)
+- Reason: Stock faded from AH highs, unable to reclaim entry level 
 
 ---
 
