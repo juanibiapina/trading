@@ -160,3 +160,4 @@
 - XPON: Entry at $1.35 (+58% from prev close $0.856), AH High $1.37
 - Both positions are AH entries - higher risk, watch premarket
 - Note: Trading plan says 1 trade/day - broke rule with 2 trades today
+- **TODO:** Review SER in a few days - volume remains extremely high (47M+ vs 161K avg) despite price fade
