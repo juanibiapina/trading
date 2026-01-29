@@ -139,10 +139,14 @@ VIVS is the only candidate that fits the trading plan criteria (biotech, low flo
 
 ## Trade Execution
 
-(To be filled during trading session)
-
 ### Entry
 
+**PZG** @ $3.40 (after-hours)
+
+![PZG Entry](PZG-entry.png)
+
+- Bought on federal approval catalyst
+- Entry after significant AH run-up from $1.73 close
 
 ### Exit
 
