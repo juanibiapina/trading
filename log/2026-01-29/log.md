@@ -158,6 +158,7 @@ VIVS is the only candidate that fits the trading plan criteria (biotech, low flo
 
 - Bought on federal approval catalyst
 - Entry after significant AH run-up from $1.73 close
+- **Note:** Bought too fast - felt anxious/FOMO as price was rising quickly
 
 ---
 
