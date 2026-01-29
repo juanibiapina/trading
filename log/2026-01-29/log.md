@@ -159,6 +159,27 @@ VIVS is the only candidate that fits the trading plan criteria (biotech, low flo
 - Bought on federal approval catalyst
 - Entry after significant AH run-up from $1.73 close
 
+---
+
+**VIVS** @ $2.70 (after-hours)
+
+![VIVS Entry](VIVS-entry.png)
+
+| Field | Value |
+|-------|-------|
+| Shares | 150 |
+| Entry | $2.70 |
+| Stop Loss | $2.23 (-17.4%) |
+| Take Profit | $4.41 (+63.3%) |
+| Position Size | $405 |
+| Risk | $70.50 |
+| Reward | $256.50 |
+| R:R | 3.6:1 |
+
+- Bought on Asia-Pacific distributor deal catalyst
+- Low float biotech - fits trading plan
+- Spiked to ~$3.33, consolidated to entry zone
+
 ### Exit
 
 
