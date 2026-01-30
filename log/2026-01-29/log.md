@@ -165,7 +165,7 @@ VIVS is the only candidate that fits the trading plan criteria (biotech, low flo
 ![PZG Jan 30 morning](PZG-0730.png)
 ![PZG Jan 30 update](PZG-0731.png)
 
-**Status (Jan 30):** Still holding - unrealized loss -$255 (-50%)
+**Status (Jan 30):** CLOSED @ $1.70 - loss realized -$255 (-50%)
 
 ---
 
