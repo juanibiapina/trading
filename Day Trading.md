@@ -16,6 +16,7 @@ tags:
 - Only one position at a time.
 - I'll trade in the PC.
 - I'll keep the amount around 100 euros per trade since this is a learning time.
+- **Sector discipline:** Biotech/pharma only. Non-biotech trades (DRCT advertising, XPON industrials, PZG gold) all lost in W05.
 
 ## Trading Plan Requirements
 
