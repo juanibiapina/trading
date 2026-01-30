@@ -68,7 +68,16 @@ These questions are useful to ask when defining or updating the Trading Plan.
    - [TradingView AH Gainers](https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/)
    - [Finviz Screener](https://finviz.com/screener.ashx) - filter by after-hours change
    - Look for unusual volume increases after market close
-2. **Identify catalyst:** Real news > no news. Check PR, SEC filings. Operational news > financing/dilution.
+2. **Identify catalyst:** Real news > no news. Check PR, SEC filings.
+   
+   **Catalyst Ranking (best to worst):**
+   | Tier | Catalyst Type | Example | Result |
+   |------|---------------|---------|--------|
+   | A | Operational improvement | BATL gas agreement | +29% |
+   | A | Partnership/distribution | VIVS Asia deal | +65% |
+   | B | FDA milestone | SER IND clearance | -18% (faded) |
+   | C | Analyst price target | ABOS $7 target | Skipped |
+   | D | Financing/dilution | AGMH equity line | -5% (avoid) |
 3. **Buy in after-hours:** Enter position after spotting the move
 4. **Hold overnight**
 5. **10:00-15:30 Berlin / 4:00-9:30 AM ET:** Watch for momentum peak, exit before regular open
