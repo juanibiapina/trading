@@ -206,7 +206,15 @@ VIVS is the only candidate that fits the trading plan criteria (biotech, low flo
 | Trade | Entry | Exit | P&L |
 |-------|-------|------|-----|
 | VIVS | $2.70 | $4.48 | **+$267** |
-| PZG | $3.40 | (open) | - |
+| PZG | $3.40 | (open @ $1.70) | **-$255** (unrealized) |
+
+**Realized:** +$267
+**Unrealized:** -$255
+**Net (if closed now):** +$12
 
 ### Lessons
+
+- **Stop losses don't work in pre/post market** - critical risk when trading extended hours
+- **FOMO kills** - bought PZG too fast at the top, chasing the spike
+- **Bought at the literal top** - anxiety led to worst possible entry
 
