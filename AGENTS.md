@@ -2,6 +2,13 @@
 
 Agent instructions for this trading repo.
 
+## Getting Started
+
+Always read `Day Trading.md` at the beginning of each conversation. It contains:
+- Current trading plan and rules
+- Entry/exit strategies
+- Lessons learned from past trades
+
 ## Structure
 
 - `Day Trading.md` - Main trading plan, workflows, and resources
