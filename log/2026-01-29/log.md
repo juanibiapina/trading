@@ -183,9 +183,23 @@ VIVS is the only candidate that fits the trading plan criteria (biotech, low flo
 
 ### Exit
 
+**VIVS** @ $4.48 (Jan 30)
+
+![VIVS Exit](VIVS-exit.png)
+
+| Field | Value |
+|-------|-------|
+| Exit | $4.48 |
+| Profit | +$267 |
+| Return | +65.9% |
+| Result | **WIN** - beat TP ($4.41) |
 
 ### P&L
 
+| Trade | Entry | Exit | P&L |
+|-------|-------|------|-----|
+| VIVS | $2.70 | $4.48 | **+$267** |
+| PZG | $3.40 | (open) | - |
 
 ### Lessons
 
