@@ -162,7 +162,10 @@ VIVS is the only candidate that fits the trading plan criteria (biotech, low flo
 - **Note:** Bought at the literal top (~$3.40), stock collapsed back to pre-news levels
 - **Note:** Stop loss at $2.49 did NOT trigger - no stop losses in pre/post market!
 
-![PZG Jan 30](PZG-0731.png)
+![PZG Jan 30 morning](PZG-0730.png)
+![PZG Jan 30 update](PZG-0731.png)
+
+**Status (Jan 30):** Still holding - unrealized loss -$255 (-50%)
 
 ---
 
