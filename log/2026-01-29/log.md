@@ -201,6 +201,17 @@ VIVS is the only candidate that fits the trading plan criteria (biotech, low flo
 | Return | +65.9% |
 | Result | **WIN** - beat TP ($4.41) |
 
+---
+
+**PZG** @ $1.70 (Jan 30)
+
+| Field | Value |
+|-------|-------|
+| Exit | $1.70 |
+| Loss | -$255 |
+| Return | -50% |
+| Result | **LOSS** - SL failed (extended hours) |
+
 ### P&L
 
 | Trade | Entry | Exit | P&L |
