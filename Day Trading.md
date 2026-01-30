@@ -104,7 +104,15 @@ These questions are useful to ask when defining or updating the Trading Plan.
 
 Run this workflow at the end of each trading week to assess performance and refine the strategy.
 
-Document the review in `log/weekly/YYYY-WNN/review.md` (ISO week format).
+### Steps
+
+1. **Create review** - Document in `log/weekly/YYYY-WNN/review.md`
+2. **Analyze trades** - Fill out the template below
+3. **Update trading plan** - Extract learnings and update this document:
+   - Add new examples to existing patterns
+   - Add new rules based on repeated mistakes
+   - Update catalyst rankings with real results
+   - Document what worked/didn't work with specific trades
 
 ### Review Template
 
