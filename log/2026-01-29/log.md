@@ -217,11 +217,9 @@ VIVS is the only candidate that fits the trading plan criteria (biotech, low flo
 | Trade | Entry | Exit | P&L |
 |-------|-------|------|-----|
 | VIVS | $2.70 | $4.48 | **+$267** |
-| PZG | $3.40 | (open @ $1.70) | **-$255** (unrealized) |
+| PZG | $3.40 | $1.70 | **-$255** |
 
-**Realized:** +$267
-**Unrealized:** -$255
-**Net (if closed now):** +$12
+**Total P&L: +$12**
 
 ### Lessons
 
