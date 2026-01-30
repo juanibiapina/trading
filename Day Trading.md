@@ -155,6 +155,10 @@ Run this workflow at the end of each trading week to assess performance and refi
 ## Recommendations
 
 1. [Action items for next week]
+
+## Trading Plan Updates
+
+[List changes made to Day Trading.md based on this week's learnings]
 ```
 
 ### Key Metrics to Track
