@@ -83,6 +83,64 @@ These questions are useful to ask when defining or updating the Trading Plan.
 
 ---
 
+## Weekly Review Workflow
+
+Run this workflow at the end of each trading week to assess performance and refine the strategy.
+
+Document the review in `log/weekly/YYYY-WNN/review.md` (ISO week format).
+
+### Review Template
+
+```markdown
+# Weekly Review: [Date Range]
+
+## Summary
+
+| Metric | Value |
+|--------|-------|
+| Trading Days | X |
+| Total Trades | X |
+| Wins | X (X%) |
+| Losses | X (X%) |
+| Net P&L | $X |
+
+## Trade Breakdown
+
+| Date | Ticker | Entry | Exit | P&L | Notes |
+|------|--------|-------|------|-----|-------|
+
+## Rule Violations
+
+1. [List any trading plan violations]
+
+## Key Lessons
+
+1. [What patterns emerged?]
+
+## What Worked
+
+| Pattern | Example | Result |
+|---------|---------|--------|
+
+## What Didn't Work
+
+| Pattern | Example | Result |
+|---------|---------|--------|
+
+## Recommendations
+
+1. [Action items for next week]
+```
+
+### Key Metrics to Track
+
+- Win rate (target: >50%)
+- Average win vs average loss (target: wins > losses)
+- Rule compliance (target: 100%)
+- Sector discipline (target: biotech only)
+
+---
+
 ## Morning Analysis Workflow
 
 Run this workflow between 7:00-9:30 AM ET to find premarket gappers before market open.
