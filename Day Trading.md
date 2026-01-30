@@ -75,9 +75,14 @@ These questions are useful to ask when defining or updating the Trading Plan.
 
 **Risks:**
 - Extended hours have wider spreads and lower liquidity
-- Stop losses may not execute properly
+- **CRITICAL: Stop losses DO NOT execute in extended hours** - PZG (Jan 29) had SL at $2.49, stock crashed to $1.70, SL never triggered. Accept full loss potential or size smaller.
 - Can gap against you overnight
 - Need broker that supports extended hours trading
+
+**Entry Rules (learned Jan 2026):**
+- **Never chase >50% above previous close** - PZG entered at +97%, SER at +69%, both lost
+- **Wait for consolidation** - VIVS entered after spike consolidated, won +65%
+- **FOMO = worst entries** - Anxiety/rushing led to buying at literal tops
 
 **TODO:** Track win rate of this strategy vs regular session trading.
 
