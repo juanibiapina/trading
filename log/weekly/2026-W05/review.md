@@ -88,3 +88,15 @@
 4. **Stick to biotech** - All 3 wins were biotech-adjacent. Non-biotech trades lost.
 
 5. **Exit in premarket, not at open** - Best exits (MRNO, VIVS) were before/at open. Open dumps are real.
+
+---
+
+## Trading Plan Updates
+
+Changes made to `Day Trading.md` based on this week:
+
+1. Added sector discipline rule (biotech only)
+2. Made stop loss warning explicit with PZG example
+3. Added entry rules section (no chasing >50%, wait for consolidation, avoid FOMO)
+4. Added catalyst ranking table (operational > partnerships > FDA > financing)
+5. Added MRNO and VIVS to premarket exit examples (3/3 pattern confirmed)
