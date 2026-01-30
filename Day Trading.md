@@ -49,13 +49,15 @@ These questions are useful to ask when defining or updating the Trading Plan.
 3. FOMO peaks in premarket → price explodes
 4. Regular market opens → dump as early buyers take profits
 
-**Example - BATL (Jan 23-26, 2026):**
-| Phase | Price | Notes |
-|-------|-------|-------|
-| AH Entry (Jan 23) | $1.86 | Catalyst: operational news |
-| Next day close | ~$4.00 | Steady climb |
-| Premarket peak (Jan 26) | **$7.00** | +276% from entry |
-| After open dump | $2.55 | -64% from peak |
+**Examples (Jan 2026):**
+
+| Stock | Entry | PM Peak | After Open | Lesson |
+|-------|-------|---------|------------|--------|
+| BATL | $1.86 | $7.00 (+276%) | $2.55 (-64%) | Sold at $2.40, missed PM peak |
+| MRNO | $2.48 | ~$4.10 | $2.31 (-44%) | Sold at $3.80 PM - perfect exit |
+| VIVS | $2.70 | $4.48 | - | Sold at $4.48 PM - perfect exit |
+
+**Pattern confirmed 3/3 times in W05:** Exit in premarket, NOT at open.
 
 **Trading Hours:**
 | Session | US Eastern (ET) | Berlin (CET) |
