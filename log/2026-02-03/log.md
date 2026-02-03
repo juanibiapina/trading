@@ -34,6 +34,11 @@
 
 ## Notes
 
+### TIRX
+![TIRX](TIRX-1540.png)
+
+This could have worked, but could only have detected it in early premarket. Volume is still there, maybe still interesting.
+
 ### FATN
 ![FATN](FATN-1540.png)
 
