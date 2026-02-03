@@ -33,4 +33,4 @@ Interesting, not sure what to make of it. Gapped up at open, spiked to $0.95, no
 
 ## Summary
 
-**No trades today.** All screener candidates are non-biotech — sector discipline says skip. No biotech names showing unusual premarket activity today.
+**No trades today.** Reviewed screener results after market open (missed premarket). All candidates are non-biotech — sector discipline says skip. No biotech names on the board today.
