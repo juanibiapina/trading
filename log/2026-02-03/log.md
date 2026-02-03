@@ -48,6 +48,32 @@
 - **Decision:** Skip
 - **Reason:** Zero AH volume, no unusual activity.
 
+## Volume Spike Screener
+
+Built and ran a custom script (`scripts/ah-screener.py`) that checks 10-day volume history via Yahoo Finance for all 99 TradingView AH gainers to find **first-day unusual volume spikes**.
+
+5 first-day spikes found — all non-biotech:
+
+| Ticker | AH % | Vol Ratio | Sector | Verdict |
+|--------|-------|-----------|--------|---------|
+| INHD | +15.5% | 15.4x | Steel/Holdings | Skip — not biotech, no catalyst, meme history |
+| DOX | +6.7% | 3.4x | IT Services ($8B) | Skip — too big, not biotech |
+| UFI | +5.6% | 4.8x | Textiles | Skip — not biotech, thin volume |
+| MAMO | +5.5% | 961x | Powersports | Skip — crashed -60%, not biotech |
+| MVIS | +4.2% | 4.0x | LiDAR/tech | Skip — not biotech |
+
+## Screener Assessment
+
+The current approach has a gap: TradingView shows AH price gainers, but many have no real volume behind them. The custom script helps filter for first-day spikes, but we're still starting from a price-gainer list rather than a **volume-first** list.
+
+Explored financialdatasets.ai but their screener is fundamentals-only (P/E, revenue, debt) — no real-time volume or AH data. Not useful for this workflow.
+
+**Need:** A data source for real-time AH volume screening (not just price % gainers).
+
 ## Summary
 
-No actionable candidates tonight. The only stock with real AH activity (LIMN) was disqualified by the >50% rule and prior-day volume rule. All other biotech/pharma names had zero or negligible AH volume.
+No actionable candidates tonight. No trades.
+
+- **LIMN** was the biggest biotech AH mover but failed on multiple rules (>50% above prev close, day 2 of volume, weak catalyst). Chart note: if caught on Feb 2 (day 1 at $0.85), that was the right entry.
+- All other biotech names (FEMY, FEED, ONCY, DRMA) had zero or negligible AH volume.
+- The 5 first-day volume spikes were all non-biotech.
