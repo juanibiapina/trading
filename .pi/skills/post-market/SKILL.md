@@ -19,6 +19,7 @@ Screen for after-hours momentum stocks and identify overnight hold candidates.
 - Browse in new tab: https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/
 - Take a screenshot and extract tickers and available information
 - Filter for tickers that have gains
+- Open each ticker in trading view using browse in a new tab so the user can review them while you do the next steps
 
 ## Step 2: Analyze Each Candidate
 
