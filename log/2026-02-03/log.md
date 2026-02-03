@@ -9,30 +9,6 @@
 | INLF | INLIF LIMITED | +45.66% | Industrials |
 | SOAR | Volato Group | +31.66% | Aviation |
 
-## Catalyst Check
-
-### FATN - FatPipe, Inc. (+71.74%)
-- **Sector:** Tech/Networking — ❌ NOT biotech
-- **Catalyst:** Q3 FY26 results — revenue up 30%, MRR up 48%. Investor webinar Feb 2.
-- **Decision:** SKIP — sector discipline
-
-### TIRX - TIAN RUIXIANG Holdings (+64.15%)
-- **Sector:** Financial Services — ❌ NOT biotech
-- **Catalyst:** Announced $1.5B plan to acquire 15,000 BTC from strategic investor. Also facing Nasdaq delisting hearing Feb 17.
-- **Decision:** SKIP — sector discipline, delisting risk
-
-### INLF - INLIF LIMITED (+45.66%)
-- **Sector:** Industrials — ❌ NOT biotech
-- **Catalyst:** Dead cat bounce — dropped 70% on Monday, now bouncing. No real catalyst.
-- **Decision:** SKIP — sector discipline, dead cat bounce
-
-### SOAR
-![SOAR](SOAR-1542.png)
-
-Interesting, not sure what to make of it. Gapped up at open, spiked to $0.95, now choppy around $0.73.
-
-
-
 ## Notes
 
 ### TIRX
