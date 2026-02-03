@@ -26,8 +26,11 @@ Already had a spike yesterday and didn't hold. Dead cat bounce.
 
 There's no way we could have caught that one — instantly went up in premarket and then no more changes till now.
 
+### SOAR
+![SOAR](SOAR-1542.png)
+
+Interesting, not sure what to make of it. Gapped up at open, spiked to $0.95, now choppy around $0.73.
+
 ## Summary
 
-**No trades today.** All 6 screener candidates are non-biotech. Trading plan rule: "Biotech/pharma only."
-
-No biotech names showing unusual premarket activity today.
+**No trades today.** All screener candidates are non-biotech — sector discipline says skip. No biotech names showing unusual premarket activity today.
