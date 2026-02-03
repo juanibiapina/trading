@@ -39,6 +39,11 @@
 
 This could have worked, but could only have detected it in early premarket. Volume is still there, maybe still interesting.
 
+### INLF
+![INLF](INLF-1541.png)
+
+Already had a spike yesterday and didn't hold. Dead cat bounce.
+
 ### FATN
 ![FATN](FATN-1540.png)
 
