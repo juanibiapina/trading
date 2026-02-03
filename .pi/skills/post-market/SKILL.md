@@ -1,85 +1,80 @@
 ---
 name: post-market
-description: [TODO: Complete and informative explanation of what the skill does and when to use it. Include WHEN to use this skill - specific scenarios, file types, or tasks that trigger it.]
+description: Post-market screening and trade execution workflow for after-hours trading (4:00-8:00 PM ET / 22:00-02:00 CET). Use when the user says "post-market", "after hours", "AH screening", or asks to find stocks moving after market close. Triggers on evening screening sessions, after-hours gainer analysis, and overnight hold candidates.
 ---
 
-# Post Market
+# Post-Market Workflow
 
-## Overview
+Screen for after-hours momentum stocks and identify overnight hold candidates.
 
-[TODO: 1-2 sentences explaining what this skill enables]
+**Session:** 4:00-8:00 PM ET (22:00-02:00 Berlin)
 
-## Structuring This Skill
+## Step 1: Screen for AH Gainers
 
-[TODO: Choose the structure that best fits this skill's purpose. Common patterns:
+Check [TradingView AH Gainers](https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/) for stocks with unusual after-hours volume.
 
-**1. Workflow-Based** (best for sequential processes)
-- Works well when there are clear step-by-step procedures
-- Example: DOCX skill with "Workflow Decision Tree" → "Reading" → "Creating" → "Editing"
-- Structure: ## Overview → ## Workflow Decision Tree → ## Step 1 → ## Step 2...
+Filter for:
+- Sector: Biotech/Pharma only
+- Market Cap: < $100M
+- Float: < 10M preferred
+- AH gain: > 10%
 
-**2. Task-Based** (best for tool collections)
-- Works well when the skill offers different operations/capabilities
-- Example: PDF skill with "Quick Start" → "Merge PDFs" → "Split PDFs" → "Extract Text"
-- Structure: ## Overview → ## Quick Start → ## Task Category 1 → ## Task Category 2...
+## Step 2: Analyze Each Candidate
 
-**3. Reference/Guidelines** (best for standards or specifications)
-- Works well for brand guidelines, coding standards, or requirements
-- Example: Brand styling with "Brand Guidelines" → "Colors" → "Typography" → "Features"
-- Structure: ## Overview → ## Guidelines → ## Specifications → ## Usage...
+For each candidate:
 
-**4. Capabilities-Based** (best for integrated systems)
-- Works well when the skill provides multiple interrelated features
-- Example: Product Management with "Core Capabilities" → numbered capability list
-- Structure: ## Overview → ## Core Capabilities → ### 1. Feature → ### 2. Feature...
+1. **Check catalyst** — Look for news on Finviz (`https://finviz.com/quote.ashx?t=TICKER`). Rank by catalyst tier:
+   - **Tier A:** Operational improvement, partnership/distribution deal
+   - **Tier B:** FDA milestone
+   - **Tier C:** Analyst price target (skip)
+   - **Tier D:** Financing/dilution (avoid)
 
-Patterns can be mixed and matched as needed. Most skills combine patterns (e.g., start with task-based, add workflow for complex operations).
+2. **Check fundamentals** via Yahoo Finance API:
+   ```
+   https://query1.finance.yahoo.com/v8/finance/chart/TICKER?interval=1m&range=1d&includePrePost=true
+   ```
+   - Float, market cap, volume vs average
+   - Current AH price vs close (reject if >50% above close)
 
-Delete this entire "Structuring This Skill" section when done - it's just guidance.]
+3. **Assess price action** — Look for consolidation after initial spike (not chasing vertical moves).
 
-## [TODO: Replace with the first main section based on chosen structure]
+## Step 3: Log Candidates
 
-[TODO: Add content here. See examples in existing skills:
-- Code samples for technical skills
-- Decision trees for complex workflows
-- Concrete examples with realistic user requests
-- References to scripts/templates/references as needed]
+Document in `log/YYYY-MM-DD/log.md`:
 
-## Resources
+```markdown
+# Post-Market Screening - YYYY-MM-DD
 
-This skill includes example resource directories that demonstrate how to organize different types of bundled resources:
+## Candidates
 
-### scripts/
-Executable code (Python/Bash/etc.) that can be run directly to perform specific operations.
+### TICKER
+- **AH Price:** $X (+X%)
+- **Previous Close:** $X
+- **Float:** X
+- **Market Cap:** $X
+- **Catalyst:** [description + tier]
+- **Volume:** X (Xx average)
+- **Decision:** Buy / Watch / Skip
+- **Reason:** [why]
+```
 
-**Examples from other skills:**
-- PDF skill: `fill_fillable_fields.py`, `extract_form_field_info.py` - utilities for PDF manipulation
-- DOCX skill: `document.py`, `utilities.py` - Python modules for document processing
+## Step 4: Entry Decision
 
-**Appropriate for:** Python scripts, shell scripts, or any executable code that performs automation, data processing, or specific operations.
+**Buy criteria (all must be true):**
+- Biotech/pharma sector
+- Tier A or B catalyst
+- Price < 50% above previous close
+- Float < 10M
+- Volume confirming (increasing, not fading)
 
-**Note:** Scripts may be executed without loading into context, but can still be read by Claude for patching or environment adjustments.
+**Entry rules:**
+- ~€100 position size (learning phase)
+- Accept full loss potential — stop losses do NOT execute in extended hours
+- Plan to exit in premarket (before 9:30 AM ET / 15:30 CET)
 
-### references/
-Documentation and reference material intended to be loaded into context to inform Claude's process and thinking.
+## Risks
 
-**Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
-
-**Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Claude should reference while working.
-
-### assets/
-Files not intended to be loaded into context, but rather used within the output Claude produces.
-
-**Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
-
-**Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
-
----
-
-**Any unneeded directories can be deleted.** Not every skill requires all three types of resources.
+- Wider spreads and lower liquidity in extended hours
+- Stop losses do not trigger — size accordingly
+- Overnight gaps possible
+- Need broker supporting extended hours
