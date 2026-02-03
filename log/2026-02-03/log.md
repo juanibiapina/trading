@@ -7,7 +7,6 @@
 | FATN | FatPipe, Inc. | +71.74% | Tech/Networking |
 | TIRX | TIAN RUIXIANG Holdings | +64.15% | Financial Services |
 | INLF | INLIF LIMITED | +45.66% | Industrials |
-| NPT | Texxon Holding Limited | +41.57% | Energy/Oil |
 | SOAR | Volato Group | +31.66% | Aviation |
 | HCAI | Huachen AI Parking Mgmt | +29.78% | Tech/AI |
 
