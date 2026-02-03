@@ -32,6 +32,13 @@
 - All non-biotech sectors
 - **Decision:** SKIP — sector discipline
 
+## Notes
+
+### FATN
+![FATN](FATN-1540.png)
+
+There's no way we could have caught that one — instantly went up in premarket and then no more changes till now.
+
 ## Summary
 
 **No trades today.** All 6 screener candidates are non-biotech. Trading plan rule: "Biotech/pharma only."
