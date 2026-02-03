@@ -31,9 +31,7 @@
 
 Interesting, not sure what to make of it. Gapped up at open, spiked to $0.95, now choppy around $0.73.
 
-### HCAI
-- Non-biotech sector
-- **Decision:** SKIP — sector discipline
+
 
 ## Notes
 
