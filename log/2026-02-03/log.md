@@ -27,7 +27,7 @@
 - **Catalyst:** Dead cat bounce — dropped 70% on Monday, now bouncing. No real catalyst.
 - **Decision:** SKIP — sector discipline, dead cat bounce
 
-### NPT, SOAR, HCAI
+### SOAR, HCAI
 - All non-biotech sectors
 - **Decision:** SKIP — sector discipline
 
