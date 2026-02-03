@@ -11,13 +11,9 @@ Screen for after-hours momentum stocks and identify overnight hold candidates.
 
 ## Step 1: Screen for AH Gainers
 
-Check [TradingView AH Gainers](https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/) for stocks with unusual after-hours volume.
-
-Filter for:
-- Sector: Biotech/Pharma only
-- Market Cap: < $100M
-- Float: < 10M preferred
-- AH gain: > 10%
+- browse in new tab: https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/
+- Take a screenshot and extract tickers and available information
+- Filter for tickers that have gains
 
 ## Step 2: Analyze Each Candidate
 
