@@ -55,21 +55,16 @@ For each candidate:
 
 ## Step 4: Entry Decision
 
-**Buy criteria (all must be true):**
+**Buy criteria (all or most must be true):**
 - Biotech/pharma sector
-- Tier A or B catalyst
+- Good catalist
 - Price < 50% above previous close
 - Float < 10M
-- Volume confirming (increasing, not fading)
+- Volume confirming:
+  - volume not fading
+  - today is the first day of unexpected volume (reject tickers that had unexpected volume in the previous days)
 
 **Entry rules:**
 - ~€100 position size (learning phase)
 - Accept full loss potential — stop losses do NOT execute in extended hours
 - Plan to exit in premarket (before 9:30 AM ET / 15:30 CET)
-
-## Risks
-
-- Wider spreads and lower liquidity in extended hours
-- Stop losses do not trigger — size accordingly
-- Overnight gaps possible
-- Need broker supporting extended hours
