@@ -12,6 +12,9 @@
 - **Volume:** 81.8M regular, 26K AH (fading)
 - **Decision:** Skip
 - **Reason:** Already +87% in regular session, +149% above previous close — violates >50% rule. Also NOT first day of unusual volume (Feb 2 had 4.9M vs ~100K normal). AH volume fading (26K vs 81M regular).
+- **Chart note:** AH price action is actually building, not fading. Stock consolidated $0.90-$1.07 during regular hours, then broke out in AH to $1.55. If we had caught this on Feb 2 when it first spiked to $0.85 (day 1 of volume), that would have been the right entry at ~50% above prev close.
+
+![LIMN](LIMN-2300.png)
 
 ### FEMY - Femasys Inc
 - **AH Price:** $0.58 (+14.64%)
