@@ -9,9 +9,14 @@ Screen for after-hours momentum stocks and identify overnight hold candidates.
 
 **Session:** 4:00-8:00 PM ET (22:00-02:00 Berlin)
 
+## Step 0: Create today's log directory and file
+
+- Run `date`
+- Create directory and file: `log/YYYY-MM-DD/log.md`:
+
 ## Step 1: Screen for AH Gainers
 
-- browse in new tab: https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/
+- Browse in new tab: https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/
 - Take a screenshot and extract tickers and available information
 - Filter for tickers that have gains
 
@@ -19,24 +24,18 @@ Screen for after-hours momentum stocks and identify overnight hold candidates.
 
 For each candidate:
 
-1. **Check catalyst** — Look for news on Finviz (`https://finviz.com/quote.ashx?t=TICKER`). Rank by catalyst tier:
-   - **Tier A:** Operational improvement, partnership/distribution deal
-   - **Tier B:** FDA milestone
-   - **Tier C:** Analyst price target (skip)
-   - **Tier D:** Financing/dilution (avoid)
+1. **Check catalyst** — Look for news on Finviz (`https://finviz.com/quote.ashx?t=TICKER`)
 
 2. **Check fundamentals** via Yahoo Finance API:
    ```
    https://query1.finance.yahoo.com/v8/finance/chart/TICKER?interval=1m&range=1d&includePrePost=true
    ```
    - Float, market cap, volume vs average
-   - Current AH price vs close (reject if >50% above close)
+   - Current AH price vs close
 
-3. **Assess price action** — Look for consolidation after initial spike (not chasing vertical moves).
+3. **Assess price action**
 
 ## Step 3: Log Candidates
-
-Document in `log/YYYY-MM-DD/log.md`:
 
 ```markdown
 # Post-Market Screening - YYYY-MM-DD
