@@ -27,8 +27,13 @@
 - **Catalyst:** Dead cat bounce — dropped 70% on Monday, now bouncing. No real catalyst.
 - **Decision:** SKIP — sector discipline, dead cat bounce
 
-### SOAR, HCAI
-- All non-biotech sectors
+### SOAR
+![SOAR](SOAR-1542.png)
+
+Interesting, not sure what to make of it. Gapped up at open, spiked to $0.95, now choppy around $0.73.
+
+### HCAI
+- Non-biotech sector
 - **Decision:** SKIP — sector discipline
 
 ## Notes
