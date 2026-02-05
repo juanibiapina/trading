@@ -47,20 +47,23 @@ COLUMNS = [
     "market_cap_basic",
 ]
 
-FILTERS = [
-    {"left": "relative_volume_intraday|5", "operation": "greater", "right": MIN_INTRADAY_RVOL},
-    {"left": "market_cap_basic", "operation": "in_range", "right": [0, MAX_MARKET_CAP]},
-    {"left": "close", "operation": "in_range", "right": [MIN_PRICE, MAX_PRICE]},
-    {"left": "sector", "operation": "equal", "right": SECTOR},
-    {"left": "volume|5", "operation": "greater", "right": MIN_5M_VOLUME},
-]
+def build_filters(biotech_only=True):
+    filters = [
+        {"left": "relative_volume_intraday|5", "operation": "greater", "right": MIN_INTRADAY_RVOL},
+        {"left": "market_cap_basic", "operation": "in_range", "right": [0, MAX_MARKET_CAP]},
+        {"left": "close", "operation": "in_range", "right": [MIN_PRICE, MAX_PRICE]},
+        {"left": "volume|5", "operation": "greater", "right": MIN_5M_VOLUME},
+    ]
+    if biotech_only:
+        filters.append({"left": "sector", "operation": "equal", "right": SECTOR})
+    return filters
 
 
-def scan():
+def scan(biotech_only=True):
     """Run a single scan and return results."""
     payload = {
         "columns": COLUMNS,
-        "filter": FILTERS,
+        "filter": build_filters(biotech_only),
         "sort": {"sortBy": "relative_volume_intraday|5", "sortOrder": "desc"},
         "markets": ["america"],
         "symbols": {"query": {"types": ["stock"]}},
