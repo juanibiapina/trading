@@ -167,14 +167,15 @@ def notify(ticker, price, intraday_rvol, change_pct):
         pass
 
 
-def watch(interval):
+def watch(interval, biotech_only=True):
     """Poll continuously."""
     previous_tickers = set()
-    print(f"Watching every {interval}s... (Ctrl+C to stop)")
+    mode = "biotech" if biotech_only else "all sectors"
+    print(f"Watching every {interval}s ({mode})... (Ctrl+C to stop)")
 
     while True:
         try:
-            results = scan()
+            results = scan(biotech_only)
             current_tickers = {r["ticker"] for r in results}
             print_results(results, previous_tickers)
 
