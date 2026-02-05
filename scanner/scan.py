@@ -199,12 +199,16 @@ def main():
     parser = argparse.ArgumentParser(description="Biotech volume spike scanner")
     parser.add_argument("--watch", nargs="?", const=60, type=int, metavar="SECS",
                         help="Poll continuously (default: every 60s)")
+    parser.add_argument("--all", action="store_true",
+                        help="Search all sectors (default: Health Technology only)")
     args = parser.parse_args()
 
+    biotech_only = not args.all
+
     if args.watch:
-        watch(args.watch)
+        watch(args.watch, biotech_only)
     else:
-        results = scan()
+        results = scan(biotech_only)
         print_results(results)
 
 
