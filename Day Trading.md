@@ -17,6 +17,24 @@ tags:
 - I'll trade in the PC.
 - I'll keep the amount around 100 euros per trade since this is a learning time.
 - **Sector discipline:** Biotech/pharma only. Non-biotech trades (DRCT advertising, XPON industrials, PZG gold) all lost in W05.
+- **Scanner:** Use custom TradingView screener script (`scanner/scan.py`) to detect volume spikes. Run with `--all` to scan all sectors, then verify catalyst manually. See [TradingView Screener API](#tradingview-screener-api-free) in Resources.
+
+## Scanner Learnings (Feb 5, 2026)
+
+**Key insight: `relative_volume_intraday` beats `relative_volume_10d_calc`.**
+- `relative_volume_10d_calc|5` compares current 5m bar to the overall 10-day average 5m bar — useless because open/close bars skew the average, making normal mid-day bars look like spikes.
+- `relative_volume_intraday|5` compares to what's typical *for this specific time of day* — much more accurate for detecting real unusual activity.
+
+**Catalyst verification is critical.**
+- Scanner finds volume spikes, but not all spikes are tradeable.
+- No-news pumps (GDTC — Discord pump by "Grandmaster-Obi") spike and fade fast.
+- Real catalysts (AIM — Phase 2 clinical data, CISS — ownership filing + fleet expansion, TRUG — product launch partnership) have more follow-through.
+- Always check news before entering.
+
+**Consider expanding beyond biotech.**
+- CISS (shipping, 194K float) and TRUG (software/gaming) both had real catalysts and big moves.
+- Ultra-low float (<500K) produces the most violent moves regardless of sector.
+- Run scanner with `--all` flag, then filter by catalyst quality manually.
 
 ## Trading Plan Requirements
 
