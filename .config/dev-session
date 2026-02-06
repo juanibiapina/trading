@@ -7,7 +7,4 @@ run_cmd "lazygit"
 new_window "agent"
 run_cmd "pi"
 
-new_window "autocommit"
-run_cmd "gitwatch -r origin ."
-
 select_window 3
