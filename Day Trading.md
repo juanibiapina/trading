@@ -17,7 +17,7 @@ tags:
 - I'll trade in the PC.
 - I'll keep the amount around 100 euros per trade since this is a learning time.
 - **Sector discipline:** Biotech/pharma only. Non-biotech trades (DRCT advertising, XPON industrials, PZG gold) all lost in W05.
-- **Scanner:** Use custom TradingView screener script (`scanner/scan.py`) to detect volume spikes. Run with `--all` to scan all sectors, then verify catalyst manually. See [TradingView Screener API](#tradingview-screener-api-free) in Resources.
+- **Scanner:** Use custom TradingView screener script (`scripts/scan.py`) to detect volume spikes. Run with `--all` to scan all sectors, then verify catalyst manually. See [TradingView Screener API](#tradingview-screener-api-free) in Resources.
 
 ## Scanner Learnings (Feb 5, 2026)
 
