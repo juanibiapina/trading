@@ -88,6 +88,7 @@ These questions are useful to ask when defining or updating the Trading Plan.
 1. **22:00-02:00 Berlin / 4:00-8:00 PM ET:** Screen for AH volume spikes
    - [TradingView AH Gainers](https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/)
    - [Finviz Screener](https://finviz.com/screener.ashx) - filter by after-hours change
+   - **Custom scanner:** `python3 scripts/scan.py --all` (auto-detects AH session)
    - Look for unusual volume increases after market close
 2. **Identify catalyst:** Real news > no news. Check PR, SEC filings.
    
