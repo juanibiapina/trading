@@ -133,3 +133,37 @@ Ran custom scanner with 5-min intervals:
 
 ### Plan
 - Exit both positions in premarket before 9:30 AM ET (15:30 CET)
+
+---
+
+## Exits - 2026-02-10
+
+### ABP - Sold at 10:35 CET (4:35 AM ET)
+- **Exit:** $3.06 (limit sell), 100 shares
+- **Entry:** $2.52
+- **P&L:** +$54.00 (+21.4%)
+- **Catalyst for continuation:** Goldman Sachs 6.8% passive stake disclosure triggered premarket surge
+- **Current price at exit:** ~$3.21 (bid/ask 3.21/3.22)
+- **Notes:** ABP ran from $1.52 close → $3.22 premarket (+112%). Strong catalyst stack (FDA IND + GS stake). Exited below TP ($3.60) but solid gain. Chart showed consolidation around $3.00-3.30 in premarket.
+
+![ABP sell order](ABP-sell-order.png)
+![ABP chart at exit](ABP-1035.png)
+
+### IFBD - Sold at 10:41 CET (4:41 AM ET)
+- **Exit:** $0.94 (limit sell at $0.90, filled at $0.94), 200 shares
+- **Entry:** $0.9785
+- **P&L:** -$7.70 (-3.9%)
+- **Notes:** No catalyst, no follow-through. Volume died overnight (752 shares at time of exit). 8.2M float too large for sustained move without a catalyst. Limit at $0.90 filled at $0.94 — got lucky with the spread.
+
+![IFBD sell order](IFBD-sell-order.png)
+![IFBD chart at exit](IFBD-1041.png)
+
+### Session Summary
+
+| Ticker | Entry | Exit | Shares | P&L | % |
+|--------|-------|------|--------|-----|---|
+| ABP | $2.52 | $3.06 | 100 | +$54.00 | +21.4% |
+| IFBD | $0.9785 | $0.94 | 200 | -$7.70 | -3.9% |
+| **Total** | | | | **+$46.30** | |
+
+**Net result: +$46.30** on $447.70 capital deployed (+10.3%)
