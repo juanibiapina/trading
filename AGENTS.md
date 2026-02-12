@@ -12,6 +12,8 @@ Always read `Day Trading.md` at the beginning of each conversation. It contains:
 ## Structure
 
 - `Day Trading.md` - Main trading plan, workflows, and resources
+- `knowledge/` - Reference documents
+  - `Trading Plan Requirements.md` - Use when defining or updating the trading plan
 - `log/YYYY-MM-DD/` - Daily trade log and morning analysis
 - `log/weekly/YYYY-WNN/` - Weekly reviews (ISO week format)
 
