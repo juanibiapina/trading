@@ -1,7 +1,7 @@
-# Post-Market Screening - 2026-02-12
+# Post-Market Screening - 2026-02-11
 
 ## Session
-- **Time:** 00:21 CET (18:21 ET)
+- **Time:** 00:21 CET (18:21 ET) — logged after midnight but this is the Feb 11 AH session
 - **Result:** No trades
 
 ## Scanner Results
