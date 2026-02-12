@@ -14,12 +14,9 @@ Screen for after-hours momentum stocks and identify overnight hold candidates.
 - Run `date`
 - Create directory and file: `log/YYYY-MM-DD/log.md`:
 
-## Step 1: Screen for AH Gainers
+## Step 1: Get Candidates
 
-- Browse in new tab: https://www.tradingview.com/markets/stocks-usa/market-movers-after-hours-gainers/
-- Take a screenshot and extract tickers and available information
-- Filter for tickers that have gains
-- Open each ticker in trading view using browse in a new tab so the user can review them while you do the next steps
+Ask the user for tickers to analyze. They will provide candidates from their own screening.
 
 ## Step 2: Analyze Each Candidate
 
