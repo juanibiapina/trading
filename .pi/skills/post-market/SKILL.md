@@ -12,26 +12,49 @@ Screen for after-hours momentum stocks and identify overnight hold candidates.
 ## Step 0: Create today's log directory and file
 
 - Run `date`
-- Create directory and file: `log/YYYY-MM-DD/log.md`:
+- Create directory and file: `log/YYYY-MM-DD/log.md`
 
-## Step 1: Get Candidates
+## Step 1: Run Scanner
 
-Ask the user for tickers to analyze. They will provide candidates from their own screening.
+Run the scanner script to get candidates:
+
+```bash
+python3 scripts/scan.py --all
+```
+
+The scanner auto-detects the after-hours session and returns stocks with:
+- All sectors (biotech preferred but scan everything)
+- Market cap < $100M
+- Price $0.50-$10
+- AH volume > 50K
+- AH change > 5%
+
+Present the results to the user in a table with clickable TradingView links:
+
+```
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | Float | Industry |
+|--------|-------|-------|--------|----------|--------|-------|----------|
+| TICKER | [TV](https://www.tradingview.com/chart/?symbol=TICKER) | $X | +X% | $X | XK | XM | Industry |
+```
+
+Ask which tickers to analyze further.
 
 ## Step 2: Analyze Each Candidate
 
-For each candidate:
+For each selected candidate:
 
-1. **Check catalyst** — Look for news on Finviz (`https://finviz.com/quote.ashx?t=TICKER`)
-
-2. **Check fundamentals** via Yahoo Finance API:
+1. **Check catalyst** — Search for recent news using brave-search:
+   ```bash
+   ~/.agents/skills/brave-search/search.js "TICKER COMPANY_NAME stock news" --freshness pd -n 5
    ```
-   https://query1.finance.yahoo.com/v8/finance/chart/TICKER?interval=1m&range=1d&includePrePost=true
-   ```
-   - Float, market cap, volume vs average
-   - Current AH price vs close
+   Look for: partnerships, FDA news, earnings, offerings (dilution = bad)
 
-3. **Assess price action**
+2. **Open chart in TradingView** for visual analysis:
+   ```bash
+   browse tab.new "https://www.tradingview.com/chart/?symbol=TICKER"
+   ```
+
+3. **Assess setup** — Based on scanner data + news, determine catalyst tier and decision
 
 ## Step 3: Log Candidates
 
@@ -55,7 +78,7 @@ For each candidate:
 
 **Buy criteria (all or most must be true):**
 - Biotech/pharma sector
-- Good catalist
+- Good catalyst
 - Price < 50% above previous close
 - Float < 10M
 - Volume confirming:
