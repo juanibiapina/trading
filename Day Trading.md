@@ -40,12 +40,13 @@ Catch momentum spikes in biotech stocks by entering in after-hours and exiting i
 - Trade on PC
 
 **Sector Discipline:**
-- **Biotech/pharma only** - Non-biotech trades (DRCT advertising, XPON industrials, PZG gold) all lost in W05
+- **Biotech/pharma only** - Non-biotech trades have 0% win rate: DRCT (W05), XPON (W05), PZG (W05), IFBD (W07) all lost. Biotech trades (VIVS, ABP) won.
 
-**Entry Rules (learned Jan 2026):**
-- **Never chase >50% above previous close** - PZG entered at +97%, SER at +69%, both lost
+**Entry Rules (learned Jan-Feb 2026):**
+- **Never chase >50% above previous close** - PZG entered at +97%, SER at +69%, both lost. Exception: ABP at +68% won with tier-A catalyst stack (FDA + GS stake)
 - **Wait for consolidation** - VIVS entered after spike consolidated, won +65%
 - **FOMO = worst entries** - Anxiety/rushing led to buying at literal tops
+- **No catalyst = no follow-through** - IFBD had 77x volume but no news → faded to 752 shares by premarket. AH spikes without catalyst die overnight.
 
 ### Catalyst Ranking
 
