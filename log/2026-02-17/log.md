@@ -23,6 +23,9 @@
 - **Entry:** 100 shares @ $1.27 (filled ~22:49 CET)
 - **Position size:** $127
 - **Entry vs close:** +44.3% above previous close
+- **Exit:** Stop hit @ $1.06 (forgot to sell in premarket)
+- **P&L:** -$21 (-16.5%)
+- **Lesson:** No catalyst = no follow-through (same as IFBD). Volume alone isn't enough.
 
 ![MNDR](MNDR-2249.png)
 
