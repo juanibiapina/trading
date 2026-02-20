@@ -37,16 +37,17 @@ Catch momentum spikes in biotech stocks by entering in after-hours and exiting i
 - One trade per day, one position at a time
 - Stop after winning or losing
 - ~100 euros per trade (learning phase)
+- Set premarket exit alarm + order right after entry (MNDR W08 miss: forgot to sell premarket, loss expanded)
 - Trade on PC
 
 **Sector Discipline:**
-- **Biotech/pharma only** - Non-biotech trades have 0% win rate: DRCT (W05), XPON (W05), PZG (W05), IFBD (W07) all lost. Biotech trades (VIVS, ABP) won.
+- **Biotech/pharma only** - Non-biotech trades have 0% win rate (0/6): DRCT (W05), XPON (W05), PZG (W05), IFBD (W07), MNDR (W08), TMDE (W08) all lost. Biotech trades (VIVS, ABP) won.
 
 **Entry Rules (learned Jan-Feb 2026):**
 - **Never chase >50% above previous close** - PZG entered at +97%, SER at +69%, both lost. Exception: ABP at +68% won with tier-A catalyst stack (FDA + GS stake)
 - **Wait for consolidation** - VIVS entered after spike consolidated, won +65%
 - **FOMO = worst entries** - Anxiety/rushing led to buying at literal tops
-- **No catalyst = no follow-through** - IFBD had 77x volume but no news → faded to 752 shares by premarket. AH spikes without catalyst die overnight.
+- **No catalyst = no follow-through** - IFBD had 77x volume but no news → faded to 752 shares by premarket. MNDR had 6.8x AH volume with no news and still lost -16.5%. AH spikes without catalyst die overnight.
 
 ### Catalyst Ranking
 
