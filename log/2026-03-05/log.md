@@ -88,6 +88,38 @@
 - **INUV**: Flat at $2.90 (+5.5%). Dead volume.
 - **BNRG, UPXI, PRSO**: Dropped off scan.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+### All Sectors
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| GBR | [TV](https://www.tradingview.com/chart/?symbol=GBR) | $1.09 | +36.7% | $1.49 | 18.3M | 2.7M | 6.8x | 4.7M | Real Estate Development |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $0.87 | +9.9% | $0.95 | 10.3M | 219.7M | 0.0x | 86.2M | Semiconductors |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $3.04 | +18.1% | $3.59 | 3.3M | 23.6M | 0.1x | — | Wholesale Distributors |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $1.00 | +8.0% | $1.08 | 2.3M | 26.2M | 0.1x | — | Oilfield Services/Equipment |
+| DLXY | [TV](https://www.tradingview.com/chart/?symbol=DLXY) | $1.17 | +10.3% | $1.29 | 2.3M | 8.6M | 0.3x | 4.7M | Wholesale Distributors |
+| AIFF | [TV](https://www.tradingview.com/chart/?symbol=AIFF) | $1.42 | +7.7% | $1.53 | 977K | 33.2M | 0.0x | 11.5M | Medical Specialties |
+| INUV | [TV](https://www.tradingview.com/chart/?symbol=INUV) | $2.75 | +6.5% | $2.93 | 189K | 589K | 0.3x | 11.8M | Packaged Software |
+
+### Biotech-Only Scan
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| AIFF | [TV](https://www.tradingview.com/chart/?symbol=AIFF) | $1.42 | +7.7% | $1.53 | 977K | 33.2M | 0.0x | 11.5M | Medical Specialties |
+
+### Returning Candidates (all from prior scans)
+
+- **GBR**: Bounced — was fading $1.58 → $1.30 → $1.25, now back to $1.49 (+36.7%). Volume up to 18.3M (6.8x). Volatile whipsaw pattern without catalyst — confirms no conviction behind the move. Still non-biotech, skip.
+- **MOBX**: Fading again — $0.95 (+9.9%), down from $1.00. Volume 10.3M but float 86.2M still disqualifying.
+- **TMDE**: Slight pullback — $3.59 (+18.1%), was $3.67. Volume up 2.2M → 3.3M. Day 3 of multi-day run, non-biotech. Avoid.
+- **STAK**: Fading hard — $1.08 (+8.0%), was $1.15 (+15.0%). Volume doubled but price dropping. Non-biotech.
+- **DLXY**: Steady — $1.29 (+10.3%), slight uptick from $1.26. Volume up 1.4M → 2.3M. Still non-biotech, low VRatio.
+- **AIFF**: Unchanged at $1.53 (+7.7%). Volume 977K (up slightly from 818K). Already +106% from previous close ($0.69) — far beyond 50% entry threshold. AH VRatio 0.0x. Late entry, skip.
+- **INUV**: Flat at $2.93 (+6.5%). Dead volume (189K vs 589K avg). No catalyst. Skip.
+
+No new candidates found. No actionable biotech setups.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
