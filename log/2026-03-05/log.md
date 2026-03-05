@@ -54,6 +54,40 @@
 - **PRSO**: Unchanged at $0.86 (+5.9%). Still negligible volume.
 - **SKYQ, DLXY**: Dropped off scan entirely.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+### All Sectors
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| GBR | [TV](https://www.tradingview.com/chart/?symbol=GBR) | $1.09 | +14.7% | $1.25 | 16.5M | 2.5M | 6.6x | 4.7M | Real Estate Development |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $0.87 | +15.5% | $1.00 | 8.1M | 219.4M | 0.0x | 86.2M | Semiconductors |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $3.04 | +20.7% | $3.67 | 2.2M | 23.5M | 0.1x | — | Wholesale Distributors |
+| DLXY | [TV](https://www.tradingview.com/chart/?symbol=DLXY) | $1.17 | +7.7% | $1.26 | 1.4M | 8.5M | 0.2x | 4.7M | Wholesale Distributors |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $1.00 | +15.0% | $1.15 | 1.1M | 26.1M | 0.0x | — | Oilfield Services/Equipment |
+| AIFF | [TV](https://www.tradingview.com/chart/?symbol=AIFF) | $1.42 | +7.7% | $1.53 | 818K | 33.2M | 0.0x | 11.5M | Medical Specialties |
+| INUV | [TV](https://www.tradingview.com/chart/?symbol=INUV) | $2.75 | +5.5% | $2.90 | 182K | 588K | 0.3x | 11.8M | Packaged Software |
+
+### Biotech-Only Scan
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| AIFF | [TV](https://www.tradingview.com/chart/?symbol=AIFF) | $1.42 | +7.7% | $1.53 | 819K | 33.2M | 0.0x | 11.5M | Medical Specialties |
+
+### New Candidates
+
+- **STAK**: Skip — Oilfield Services (non-biotech, 0% win rate). VRatio 0.0x. Likely oil sector sympathy from Iran war headlines. No specific company catalyst found.
+
+### Returning Candidates
+
+- **GBR**: Continuing fade — $1.58 → $1.30 → $1.25 (+14.7%). Selling pressure steady. Volume up to 16.5M but price keeps dropping. No catalyst, confirms fade.
+- **MOBX**: Bounced — was $0.92 (+6.1%), now $1.00 (+15.5%). Volume doubled 4.2M → 8.1M. Defense contract hype still alive but float 86.2M is disqualifying.
+- **TMDE**: Gaining momentum — was $3.29 (+8.2%), now $3.67 (+20.7%). Volume tripled 674K → 2.2M. Had +230% surge on March 2 on market rumors. Non-biotech, multi-day runner (day 3). Avoid — chasing extended moves.
+- **DLXY**: Volume surged — was 51K at 22:30, now 1.4M. Price steady $1.24 → $1.26. Still non-biotech, VRatio 0.2x.
+- **AIFF**: Slight uptick — $1.50 → $1.53 (+7.7%). Volume increased 252K → 818K. Real catalyst (20x commercial footprint, 33x EEG scans, NVIDIA partnership) but stock already +106% from previous close ($0.69). Way above 50% entry threshold. AH VRatio 0.0x.
+- **INUV**: Flat at $2.90 (+5.5%). Dead volume.
+- **BNRG, UPXI, PRSO**: Dropped off scan.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
