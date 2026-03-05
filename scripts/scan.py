@@ -373,14 +373,19 @@ def main():
                         help="Poll continuously (default: every 60s)")
     parser.add_argument("--all", action="store_true",
                         help="Search all sectors (default: Health Technology only)")
+    parser.add_argument("--session", choices=["premarket", "regular", "afterhours"],
+                        help="Force a specific session (default: auto-detect)")
     args = parser.parse_args()
 
     biotech_only = not args.all
 
-    session = get_session()
-    if session == "closed":
-        print("Market is closed (outside 4:00 AM - 8:00 PM ET).")
-        sys.exit(0)
+    if args.session:
+        session = args.session
+    else:
+        session = get_session()
+        if session == "closed":
+            print("Market is closed (outside 4:00 AM - 8:00 PM ET).")
+            sys.exit(0)
 
     print(f"Session: {session.upper()}")
 

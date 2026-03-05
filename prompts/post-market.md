@@ -1,4 +1,0 @@
-- make sure repository is clean (stash if not and notify the user)
-- pull latest changes
-- start post market skill
-- commit and push changes

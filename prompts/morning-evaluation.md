@@ -1,0 +1,92 @@
+Run a morning evaluation of last night's post-market scanning session.
+
+The goal is to assess scanner effectiveness: did we catch the right stocks? What did we miss?
+
+## Steps
+
+### 1. Setup
+
+- Run `date` to get the current time
+- Determine yesterday's US trading date (the AH session we're evaluating)
+- Set `LOG_FILE=log/YYYY-MM-DD/log.md` using that date
+- Pull latest changes
+- Read the existing log to understand what was found and any paper trades
+
+### 2. Retrospective Scan
+
+Run the scanner in forced after-hours mode to see what TradingView still shows from yesterday's AH session:
+
+```bash
+python3 scripts/scan.py --all --session afterhours
+```
+
+This may show stocks that moved in yesterday's AH. Note: data may be stale or partially updated.
+
+### 3. Check Paper Trade P&L
+
+If there are paper trades in the log, check their current prices:
+
+```bash
+python3 scripts/check-prices.py TICKER1 TICKER2 ...
+```
+
+For each paper trade:
+- Get current premarket price (or latest available price)
+- Calculate unrealized P&L: `(current_price - entry_price) * shares`
+- Calculate P&L percentage: `((current_price - entry_price) / entry_price) * 100`
+
+### 4. Find Missed Opportunities
+
+Compare the retrospective scan results with what our evening scans caught:
+
+- **Caught**: stocks that appeared in both evening scans and retrospective scan
+- **Missed**: stocks in the retrospective scan that our evening scans never found
+- For each missed stock, analyze WHY it was missed:
+  - Appeared too late (after our last scan)?
+  - Below our volume/change thresholds at scan time?
+  - Different sector filtered out?
+
+Also check if any missed stocks would have been profitable (i.e., they're still up in premarket).
+
+### 5. Update Log
+
+Append a `## Morning Evaluation` section to the log:
+
+```markdown
+## Morning Evaluation — HH:MM CET
+
+### Retrospective Scan
+[results from forced AH scan, if any]
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| XXXX   | $2.50 | 23:00 CET  | $3.10   | +€24.00 | +24.0% | ✅ Win |
+
+**Total Paper P&L: +€XX.XX**
+
+### Scanner Effectiveness
+
+- Evening scans ran: X times (HH:MM - HH:MM CET)
+- Candidates found: X unique tickers
+- Retrospective matches: X/Y
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+
+[or "No significant missed opportunities."]
+
+### Notes
+[any observations about scanner performance, threshold adjustments needed, etc.]
+```
+
+### 6. Commit
+
+```bash
+git add log/
+git commit -m "morning evaluation YYYY-MM-DD"
+git push
+```
