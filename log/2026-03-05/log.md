@@ -120,6 +120,36 @@
 
 No new candidates found. No actionable biotech setups.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+### All Sectors
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| TPET | [TV](https://www.tradingview.com/chart/?symbol=TPET) | $1.59 | +6.3% | $1.69 | 26.2M | 127.1M | 0.2x | 9.6M | Integrated Oil |
+| GBR | [TV](https://www.tradingview.com/chart/?symbol=GBR) | $1.09 | +22.9% | $1.34 | 20.7M | 3.0M | 7.0x | 4.7M | Real Estate Development |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $0.87 | +12.0% | $0.97 | 11.8M | 219.8M | 0.1x | 86.2M | Semiconductors |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $3.04 | +15.5% | $3.51 | 3.6M | 23.6M | 0.2x | — | Wholesale Distributors |
+| DLXY | [TV](https://www.tradingview.com/chart/?symbol=DLXY) | $1.17 | +6.0% | $1.24 | 2.3M | 8.7M | 0.3x | 4.7M | Wholesale Distributors |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $1.46 | +50.0% | $2.19 | 1.9M | 517K | 3.7x | 3.3M | Information Technology Services |
+| AIFF | [TV](https://www.tradingview.com/chart/?symbol=AIFF) | $1.42 | +8.5% | $1.54 | 1.1M | 33.2M | 0.0x | 11.5M | Medical Specialties |
+| INUV | [TV](https://www.tradingview.com/chart/?symbol=INUV) | $2.75 | +5.5% | $2.90 | 200K | 590K | 0.3x | 11.8M | Packaged Software |
+
+### New Candidates
+
+- **ANY**: Skip — Information Technology Services (non-biotech, 0% win rate). Float 3.3M and VRatio 3.7x look attractive, but: (1) non-biotech sector, (2) +50% is right at the "never chase >50%" threshold, (3) no catalyst found — regained Nasdaq compliance last week and short interest dropped 47% in Feb, but no fresh news for today's spike. No-catalyst AH spikes die overnight (IFBD, MNDR pattern).
+- **TPET**: Skip — Integrated Oil (non-biotech). Multi-day runner driven by Iran war oil spike (+42% during regular session today, +169% on Monday). Already had its move. VRatio 0.2x in AH means momentum fading. ATM offering filed recently — dilution risk (Tier D catalyst).
+
+### Returning Candidates
+
+- **GBR**: Still fading — $1.49 → $1.34 (+22.9%). Volume up to 20.7M (7.0x) but price keeps declining from $1.58 peak. No catalyst, volatile whipsaw confirms no conviction.
+- **MOBX**: Stable at $0.97 (+12.0%). Volume 11.8M but float 86.2M still disqualifying.
+- **TMDE**: Fading — $3.59 → $3.51 (+15.5%). Day 3 of multi-day run. Non-biotech. Avoid.
+- **DLXY**: Pulled back — $1.29 → $1.24 (+6.0%). Losing momentum. Non-biotech.
+- **AIFF**: Steady at $1.54 (+8.5%). Tiny uptick from $1.53. AH VRatio still 0.0x. Already +106% from previous close — far above 50% entry threshold.
+- **INUV**: Flat at $2.90 (+5.5%). Dead volume. No catalyst. Skip.
+- **STAK**: Dropped off scan entirely — confirmed fade.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
