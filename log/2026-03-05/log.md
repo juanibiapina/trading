@@ -192,6 +192,49 @@ No new candidates found. No actionable biotech setups.
 - **INUV**: Dropped off scan entirely — confirmed dead.
 - **STAK**: Still absent — confirmed fade from 23:30 scan.
 
+## Scan 01:30 CET (7:30 PM ET)
+
+### All Sectors
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| GBR | [TV](https://www.tradingview.com/chart/?symbol=GBR) | $1.09 | +27.5% | $1.39 | 21.9M | 3.1M | 7.1x | 4.7M | Real Estate Development |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $0.87 | +12.0% | $0.97 | 14.0M | 220.1M | 0.1x | 86.2M | Semiconductors |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $1.46 | +40.4% | $2.05 | 4.7M | 853K | 5.6x | 3.3M | Information Technology Services |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $3.04 | +11.8% | $3.40 | 3.8M | 23.7M | 0.2x | — | Wholesale Distributors |
+| DLXY | [TV](https://www.tradingview.com/chart/?symbol=DLXY) | $1.17 | +5.1% | $1.23 | 2.4M | 8.7M | 0.3x | 4.7M | Wholesale Distributors |
+| AIFF | [TV](https://www.tradingview.com/chart/?symbol=AIFF) | $1.42 | +9.2% | $1.55 | 1.2M | 33.2M | 0.0x | 11.5M | Medical Specialties |
+| OLOX | [TV](https://www.tradingview.com/chart/?symbol=OLOX) | $1.15 | +8.7% | $1.25 | 1.2M | 2.0M | 0.6x | 7.4M | Metal Fabrication |
+| INUV | [TV](https://www.tradingview.com/chart/?symbol=INUV) | $2.75 | +5.8% | $2.91 | 205K | 591K | 0.3x | 11.8M | Packaged Software |
+| AGIG | [TV](https://www.tradingview.com/chart/?symbol=AGIG) | $2.16 | +6.9% | $2.31 | 64K | 2.7M | 0.0x | 4.0M | Oil & Gas Production |
+| TMCI | [TV](https://www.tradingview.com/chart/?symbol=TMCI) | $1.39 | +5.8% | $1.47 | 54K | 1.1M | 0.1x | 44.8M | Medical Specialties |
+
+### Biotech-Only Scan
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| AIFF | [TV](https://www.tradingview.com/chart/?symbol=AIFF) | $1.42 | +9.2% | $1.55 | 1.2M | 33.2M | 0.0x | 11.5M | Medical Specialties |
+| TMCI | [TV](https://www.tradingview.com/chart/?symbol=TMCI) | $1.39 | +5.8% | $1.47 | 54K | 1.1M | 0.1x | 44.8M | Medical Specialties |
+
+### New Candidates
+
+- **AGIG**: Skip — Oil & Gas Production (non-biotech, 0% win rate). Abundia Global, low-carbon energy company. Only catalyst: fireside chat on March 4 (stale) and $20M registered direct offering on Feb 19 (dilution = Tier D catalyst). VRatio 0.0x (64K vs 2.7M avg — dead volume). +6.9% move is trivial.
+
+### Returning Candidates
+
+- **GBR**: Bounced again — $1.34 → $1.39 (+27.5%). Wild whipsaw all session: $1.58 → $1.30 → $1.25 → $1.49 → $1.34 → $1.39. Volume 21.9M (7.1x) but no catalyst — pure volatility, no conviction.
+- **ANY**: Continuing fade — $2.14 → $2.05 (+40.4%). Down from $2.19 peak at 00:30. Volume 4.7M (5.6x) but price declining steadily. No-catalyst spike dying as expected (IFBD/MNDR pattern).
+- **MOBX**: Fading — $0.99 → $0.97 (+12.0%). Volume 14.0M but float 86.2M still disqualifying.
+- **TMDE**: Continuing fade — $3.44 → $3.40 (+11.8%). Day 3 of multi-day run. Non-biotech.
+- **DLXY**: Fading — $1.26 → $1.23 (+5.1%). Losing steam. Non-biotech.
+- **AIFF**: Steady at $1.55 (+9.2%), tiny uptick from $1.54. AH VRatio 0.0x. Already +106% from previous close ($0.69) — far above 50% entry threshold.
+- **OLOX**: Uptick — $1.22 → $1.25 (+8.7%). Volume unchanged at 1.2M. Non-biotech (Metal Fabrication), no catalyst.
+- **INUV**: Back on scan at $2.91 (+5.8%). Flat, dead volume (205K vs 591K avg). No catalyst.
+- **TMCI**: Unchanged at $1.47 (+5.8%). Float 44.8M (too high), volume 54K (dead). No catalyst.
+- **TPET, STAK**: Both dropped off scan — confirmed fades.
+
+No new actionable setups. AH session winding down (30 min to close). All candidates either non-biotech or fail entry criteria.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
