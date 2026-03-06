@@ -150,9 +150,51 @@ No new candidates found. No actionable biotech setups.
 - **INUV**: Flat at $2.90 (+5.5%). Dead volume. No catalyst. Skip.
 - **STAK**: Dropped off scan entirely — confirmed fade.
 
+## Scan 01:00 CET (7:00 PM ET)
+
+### All Sectors
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| TPET | [TV](https://www.tradingview.com/chart/?symbol=TPET) | $1.59 | +9.7% | $1.75 | 31.4M | 127.6M | 0.2x | 9.6M | Integrated Oil |
+| GBR | [TV](https://www.tradingview.com/chart/?symbol=GBR) | $1.09 | +22.9% | $1.34 | 21.3M | 3.0M | 7.1x | 4.7M | Real Estate Development |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $0.87 | +13.8% | $0.99 | 13.1M | 220.0M | 0.1x | 86.2M | Semiconductors |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $1.46 | +46.6% | $2.14 | 4.1M | 785K | 5.3x | 3.3M | Information Technology Services |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $3.04 | +13.2% | $3.44 | 3.7M | 23.6M | 0.2x | — | Wholesale Distributors |
+| DLXY | [TV](https://www.tradingview.com/chart/?symbol=DLXY) | $1.17 | +7.7% | $1.26 | 2.4M | 8.7M | 0.3x | 4.7M | Wholesale Distributors |
+| AIFF | [TV](https://www.tradingview.com/chart/?symbol=AIFF) | $1.42 | +8.5% | $1.54 | 1.2M | 33.2M | 0.0x | 11.5M | Medical Specialties |
+| OLOX | [TV](https://www.tradingview.com/chart/?symbol=OLOX) | $1.15 | +6.1% | $1.22 | 1.1M | 2.0M | 0.6x | 7.4M | Metal Fabrication |
+| INDO | [TV](https://www.tradingview.com/chart/?symbol=INDO) | $5.05 | +5.9% | $5.35 | 359K | 6.7M | 0.1x | 9.5M | Integrated Oil |
+| TMCI | [TV](https://www.tradingview.com/chart/?symbol=TMCI) | $1.39 | +5.8% | $1.47 | 54K | 1.1M | 0.1x | 44.8M | Medical Specialties |
+
+### Biotech-Only Scan
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| AIFF | [TV](https://www.tradingview.com/chart/?symbol=AIFF) | $1.42 | +8.5% | $1.54 | 1.2M | 33.2M | 0.0x | 11.5M | Medical Specialties |
+| TMCI | [TV](https://www.tradingview.com/chart/?symbol=TMCI) | $1.39 | +5.8% | $1.47 | 54K | 1.1M | 0.1x | 44.8M | Medical Specialties |
+
+### New Candidates
+
+- **OLOX**: Skip — Metal Fabrication / energy company (non-biotech, 0% win rate). Has drilling program news (10-well 2026 program) but sector discipline says no. VRatio 0.6x, small +6.1% move.
+- **INDO**: Skip — Integrated Oil (non-biotech). VRatio 0.1x (negligible). Oil sector sympathy from Iran war headlines, same as TPET.
+- **TMCI** (biotech scan): Skip — Medical Specialties (Treace Medical, orthopedic surgery). Float 44.8M (want <10M, way too high). Volume only 54K (0.1x VRatio — dead). No fresh catalyst: downgraded to "Sell" by Wall Street Zen, Lake Street price target $7.00, institutional accumulation from Q3 — all stale news. Fails on float, volume, and catalyst.
+
+### Returning Candidates
+
+- **GBR**: Stable at $1.34 (+22.9%) — unchanged from 00:30 scan. Volume 21.3M (7.1x) but price settled well below $1.58 peak. No catalyst, fading confirmed.
+- **TPET**: Slight bounce — $1.69 → $1.75 (+9.7%). Volume up 26.2M → 31.4M. Still oil sector multi-day runner from Iran war headlines. ATM offering = dilution risk.
+- **ANY**: Fading — $2.19 (+50%) → $2.14 (+46.6%). Volume doubled 1.9M → 4.1M but price declining. No-catalyst spike dying overnight (IFBD/MNDR pattern).
+- **MOBX**: Flat at $0.99 (+13.8%). Volume 13.1M but float 86.2M still disqualifying.
+- **TMDE**: Continuing fade — $3.51 → $3.44 (+13.2%). Day 3 of multi-day run. Non-biotech. Avoid.
+- **DLXY**: Flat at $1.26 (+7.7%). Non-biotech, low VRatio.
+- **AIFF**: Unchanged at $1.54 (+8.5%). AH VRatio still 0.0x. Already +106% from previous close ($0.69) — far above 50% entry threshold.
+- **INUV**: Dropped off scan entirely — confirmed dead.
+- **STAK**: Still absent — confirmed fade from 23:30 scan.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 
-No trades today. Two pharma/medical candidates (UPXI, AIFF) appeared in biotech scan but both failed entry criteria — UPXI has massive float (56.2M) and negligible AH volume; AIFF already had its +64% move during regular hours with dead AH volume. Discipline: biotech only, catalyst required, don't chase.
+No trades today. Six scans (22:30–01:00 CET) produced no actionable biotech setups. Two medical specialties candidates appeared (UPXI, AIFF, TMCI) but all failed entry criteria — UPXI massive float (56.2M), AIFF already had its +64% move with dead AH volume, TMCI float 44.8M with only 54K shares traded. Non-biotech candidates showed the typical no-catalyst AH fade pattern (GBR, ANY). Discipline: biotech only, catalyst required, don't chase.
