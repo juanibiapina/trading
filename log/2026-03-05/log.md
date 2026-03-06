@@ -240,4 +240,55 @@ No new actionable setups. AH session winding down (30 min to close). All candida
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 
-No trades today. Six scans (22:30–01:00 CET) produced no actionable biotech setups. Two medical specialties candidates appeared (UPXI, AIFF, TMCI) but all failed entry criteria — UPXI massive float (56.2M), AIFF already had its +64% move with dead AH volume, TMCI float 44.8M with only 54K shares traded. Non-biotech candidates showed the typical no-catalyst AH fade pattern (GBR, ANY). Discipline: biotech only, catalyst required, don't chase.
+No trades today. Six scans (22:30–01:30 CET) produced no actionable biotech setups. Two medical specialties candidates appeared (UPXI, AIFF, TMCI) but all failed entry criteria — UPXI massive float (56.2M), AIFF already had its +64% move with dead AH volume, TMCI float 44.8M with only 54K shares traded. Non-biotech candidates showed the typical no-catalyst AH fade pattern (GBR, ANY). Discipline: biotech only, catalyst required, don't chase.
+
+## Morning Evaluation — 08:00 CET
+
+### Retrospective Scan
+
+Forced AH scan at 08:00 CET (02:00 ET) shows final AH state:
+
+**All Sectors (9 hits):**
+
+| Ticker | Close | AH Chg | AH Price | AH Vol | VRatio | Float | Industry |
+|--------|-------|--------|----------|--------|--------|-------|----------|
+| GBR | $1.09 | +26.6% | $1.38 | 22.6M | 7.2x | 4.7M | Real Estate Development |
+| MOBX | $0.87 | +9.1% | $0.94 | 14.9M | 0.1x | 86.2M | Semiconductors |
+| ANY | $1.46 | +45.9% | $2.13 | 5.5M | 5.9x | 3.3M | Information Technology Services |
+| TMDE | $3.04 | +11.8% | $3.40 | 3.9M | 0.2x | — | Wholesale Distributors |
+| DLXY | $1.17 | +6.0% | $1.24 | 2.5M | 0.3x | 4.7M | Wholesale Distributors |
+| OLOX | $1.15 | +7.0% | $1.23 | 1.3M | 0.6x | 7.4M | Metal Fabrication |
+| INUV | $2.75 | +5.5% | $2.90 | 211K | 0.4x | 11.8M | Packaged Software |
+| EDSA | $3.61 | +5.3% | $3.80 | 81K | 0.0x | 7.3M | Pharmaceuticals: Major |
+| TMCI | $1.39 | +5.8% | $1.47 | 54K | 0.1x | 44.8M | Medical Specialties |
+
+**Biotech-Only (2 hits):** EDSA (+5.3%, VRatio 0.0x), TMCI (+5.8%, VRatio 0.1x)
+
+### Paper Trade P&L
+
+No paper trades taken — no P&L to report.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **6 times** (22:30 – 01:30 CET)
+- Unique tickers found: **17** (GBR, SKYQ, INUV, PRSO, DLXY, MOBX, BNRG, UPXI, TMDE, AIFF, STAK, TPET, ANY, OLOX, INDO, TMCI, AGIG)
+- Retrospective scan tickers: **9**
+- Caught: **8/9** (89%) — GBR, MOBX, ANY, TMDE, DLXY, OLOX, INUV, TMCI
+- Missed: **1** (EDSA)
+- Evening-only (faded by AH close): 8 tickers (SKYQ, PRSO, BNRG, UPXI, AIFF, STAK, TPET, INDO, AGIG)
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| EDSA | +5.3% | VRatio 0.0x (81K vs 20.1M avg) — below scanner sensitivity at scan times. Likely had even less volume during 22:30–01:30 window. | No — trivial move, dead volume, no catalyst found. Non-actionable even if detected. |
+
+No significant missed opportunities. EDSA was the only ticker in the retrospective scan not caught during the evening session. It's in our target sector (Pharmaceuticals: Major) with acceptable float (7.3M), but the move (+5.3%) and volume (VRatio 0.0x) were far too weak to be actionable. Correctly would have been skipped.
+
+### Notes
+
+- **Scanner coverage is excellent** — 89% catch rate (8/9). The one miss was non-actionable.
+- **No biotech action in AH** — The night was dominated by non-biotech momentum: GBR (real estate, no catalyst whipsaw), ANY (IT services, no-catalyst spike fading as predicted), MOBX (semiconductors, defense contract already priced in), TMDE (wholesale, multi-day runner day 3).
+- **Correct to stay flat** — Zero biotech candidates met entry criteria. AIFF was the most tempting (real catalyst, medical sector) but already +106% from previous close, dead AH VRatio — textbook "late to the party" skip.
+- **Premarket prices unavailable** — Evaluation run at 08:00 CET (02:00 ET), before US premarket opens at 10:00 CET (04:00 ET). Cannot assess overnight continuation for any tickers.
+- **Pattern confirmation**: GBR no-catalyst whipsaw ($1.58 → $1.25 → $1.49 → $1.34 → $1.39 → final $1.38) and ANY no-catalyst fade ($2.19 → $2.13) reinforce the "no catalyst = no follow-through" rule.
