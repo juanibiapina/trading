@@ -14,13 +14,14 @@ The goal is to assess scanner effectiveness: did we catch the right stocks? What
 
 ### 2. Retrospective Scan
 
-Run the scanner in forced after-hours mode to see what TradingView still shows from yesterday's AH session:
+Run both a forced after-hours scan and a live premarket scan to get the fullest picture of what moved overnight. Use `--all` to scan ALL sectors — don't limit to biotech. We want to catch anything that would have been worth buying.
 
 ```bash
 python3 scripts/scan.py --all --session afterhours
+python3 scripts/scan.py --all --session premarket
 ```
 
-This may show stocks that moved in yesterday's AH. Note: data may be stale or partially updated.
+The AH scan may still show yesterday's post-market movers. The premarket scan shows what's moving right now — stocks up in premarket often continued from an AH spike, so this catches movers our evening scans may have missed.
 
 ### 3. Check Paper Trade P&L
 
