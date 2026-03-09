@@ -97,6 +97,37 @@ Dropped from scan: CYPH, POLA, IMTE, NXXT (volume/change fell below thresholds).
 
 **No new paper trades.** ACXP remains the only actionable position; monitoring the retrace.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $0.80 | +14.1% | $0.91 | 15.3M | 79.7M | 0.2x | 39.8M | Integrated Oil |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $1.54 | +46.8% | $2.26 | 6.5M | 811K | 8.0x | 825K | Personnel Services |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $0.81 | +9.8% | $0.89 | 4.8M | 256.8M | 0.0x | 86.2M | Semiconductors |
+| TPET | [TV](https://www.tradingview.com/chart/?symbol=TPET) | $1.70 | +7.1% | $1.82 | 4.5M | 165.9M | 0.0x | 9.6M | Integrated Oil |
+| ACXP | [TV](https://www.tradingview.com/chart/?symbol=ACXP) | $1.96 | +32.0% | $2.58 | 4.1M | 760K | 5.3x | 2.3M | Pharmaceuticals: Major |
+| MTEN | [TV](https://www.tradingview.com/chart/?symbol=MTEN) | $1.66 | +24.1% | $2.06 | 3.2M | 409K | 7.7x | 1.2M | Industrial Machinery |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.50 | +51.7% | $2.27 | 1.3M | 198K | 6.6x | 246K | Household/Personal Care |
+| VSME | [TV](https://www.tradingview.com/chart/?symbol=VSME) | $1.12 | +8.0% | $1.21 | 396K | 2.1M | 0.2x | 2.7M | Advertising/Marketing |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $2.15 | +6.5% | $2.29 | 330K | 24.6M | 0.0x | 0 | Wholesale Distributors |
+| IBG | [TV](https://www.tradingview.com/chart/?symbol=IBG) | $3.31 | +6.0% | $3.51 | 88K | 1.8M | 0.0x | 560K | Beverages: Alcoholic |
+| ARTW | [TV](https://www.tradingview.com/chart/?symbol=ARTW) | $2.43 | +7.0% | $2.60 | 83K | 40K | 2.1x | 2.1M | Trucks/Farm Machinery |
+
+**New candidate:**
+
+- **MOBX** — Skip: not biotech (Semiconductors), float 86.2M (way too high), VRatio 0.0x (no unusual volume).
+
+**Previously seen — notable changes:**
+
+- **ACXP** — ⚠️ Continued fade: $2.67 → $2.58 (+36.6% → +32.0%). Volume still growing (3.7M → 4.1M, VRatio 5.2x → 5.3x) but price giving back further. Paper trade entry at $2.88 is now -$0.30/share (-10.4%). Price action suggests AH spike may be fading — volume rising but price falling is bearish divergence.
+- **BYAH** — Continued surge: $2.13 → $2.27 (+42.0% → +51.7%), volume tripled (467K → 1.3M), VRatio 4.8x → 6.6x. Now above 50% threshold. Still skip: not biotech.
+- **MTEN** — Bounced: $1.96 → $2.06 (+18.1% → +24.1%). Still skip: not biotech.
+- **BIYA** — Slight pullback: $2.34 → $2.26 (+51.9% → +46.8%). Back under 50% threshold. Still skip: not biotech.
+- **EONR** — Fading: $0.96 → $0.91 (+19.5% → +14.1%). Still skip: not biotech, float 39.8M.
+- **Others** — TPET, VSME, TMDE, IBG, ARTW: no significant changes.
+
+**No new paper trades.** ACXP paper position showing bearish volume/price divergence — will evaluate premarket.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
