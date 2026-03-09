@@ -67,6 +67,36 @@
 
 **Risk:** +47.3% is near the 50% ceiling. Tier B catalysts (FDA-related) have mixed results (SER IND clearance lost -18%). However, dual catalyst + volume confirmation + very low float (2.3M) tips the balance. **Paper trade entered.**
 
+## Scan 23:33 CET (5:33 PM ET)
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $0.80 | +19.5% | $0.96 | 14.0M | 79.5M | 0.2x | 39.8M | Integrated Oil |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $1.54 | +51.9% | $2.34 | 6.4M | 800K | 8.0x | 825K | Personnel Services |
+| TPET | [TV](https://www.tradingview.com/chart/?symbol=TPET) | $1.70 | +5.2% | $1.79 | 3.8M | 165.8M | 0.0x | 9.6M | Integrated Oil |
+| ACXP | [TV](https://www.tradingview.com/chart/?symbol=ACXP) | $1.96 | +36.6% | $2.67 | 3.7M | 718K | 5.2x | 2.3M | Pharmaceuticals: Major |
+| MTEN | [TV](https://www.tradingview.com/chart/?symbol=MTEN) | $1.66 | +18.1% | $1.96 | 3.1M | 402K | 7.7x | 1.2M | Industrial Machinery |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.50 | +42.0% | $2.13 | 467K | 97K | 4.8x | 246K | Household/Personal Care |
+| VSME | [TV](https://www.tradingview.com/chart/?symbol=VSME) | $1.12 | +6.8% | $1.20 | 390K | 2.1M | 0.2x | 2.7M | Advertising/Marketing |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $2.15 | +7.0% | $2.30 | 305K | 24.6M | 0.0x | 0 | Wholesale Distributors |
+| IBG | [TV](https://www.tradingview.com/chart/?symbol=IBG) | $3.31 | +6.0% | $3.51 | 86K | 1.8M | 0.0x | 560K | Beverages: Alcoholic |
+| ARTW | [TV](https://www.tradingview.com/chart/?symbol=ARTW) | $2.43 | +7.0% | $2.60 | 77K | 39K | 2.0x | 2.1M | Trucks/Farm Machinery |
+
+**All tickers seen in prior scans. No new candidates.**
+
+Dropped from scan: CYPH, POLA, IMTE, NXXT (volume/change fell below thresholds).
+
+**Previously seen — notable changes:**
+
+- **ACXP** — ⚠️ Price retracing: $2.88 → $2.67 (+47.3% → +36.6%). Volume still growing (2.9M → 3.7M, VRatio 4.7x → 5.2x) but price giving back. Paper trade entry at $2.88 is currently -$0.21/share (-7.3%). Watching for stabilization vs continued fade.
+- **BYAH** — ⚠️ Major spike: $1.60 → $2.13 (+6.7% → +42.0%), VRatio 3.3x → 4.8x. Still skip: not biotech (Household/Personal Care). Previously had dilution (offering) = Tier D catalyst.
+- **BIYA** — Now above 50% threshold ($2.29 → $2.34, +48.7% → +51.9%). Still skip: not biotech.
+- **EONR** — Doubled its gain ($0.89 → $0.96, +10.7% → +19.5%). Still skip: not biotech, float 39.8M.
+- **MTEN** — Stable ($1.97 → $1.96). Still skip: not biotech.
+- **Others** — TPET, VSME, TMDE, IBG, ARTW: no significant changes.
+
+**No new paper trades.** ACXP remains the only actionable position; monitoring the retrace.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
