@@ -88,3 +88,24 @@ git add -A
 git commit -m "scanner improvement YYYY-MM-DD: [brief description]"
 git push
 ```
+
+### 7. Send Daily Summary Email
+
+Send an email summarizing the full overnight cycle to `juanibiapina@gmail.com`.
+
+```bash
+gmcli juanibiapina@gmail.com send \
+  --to juanibiapina@gmail.com \
+  --subject "Trading Scanner Report — YYYY-MM-DD" \
+  --body "..."
+```
+
+The email body should be a concise, readable summary covering:
+
+1. **Post-Market Scans** — How many scans ran, how many unique tickers found, any notable movers
+2. **Paper Trades** — Any positions entered, entry price and reasoning
+3. **Morning Evaluation** — Paper P&L (€ and %), scanner catch rate, missed opportunities
+4. **Improvements Made Today** — What was changed, the hypothesis, and what we're evaluating
+5. **Key Takeaway** — One sentence: the single most important thing from this cycle
+
+Keep it short — aim for something scannable on a phone in under 30 seconds.
