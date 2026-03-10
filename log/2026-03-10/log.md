@@ -83,6 +83,34 @@ No new biotech/pharma candidates. No new paper trades.
 
 No new paper trades. ACXP remains the only biotech/pharma candidate today.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| ACXP | [TV](https://www.tradingview.com/chart/?symbol=ACXP) | $2.90 | +13.8% | $3.30 | 2.3M | 4.2M | 0.5x | 2.3M | Pharmaceuticals: Major |
+| RBNE | [TV](https://www.tradingview.com/chart/?symbol=RBNE) | $1.98 | +14.1% | $2.26 | 1.8M | 4.7M | 0.4x | 2.7M | Marine Shipping |
+| CVGI | [TV](https://www.tradingview.com/chart/?symbol=CVGI) | $1.62 | +37.0% | $2.22 | 1.6M | 317K | 5.0x | 28.1M | Trucks/Construction/Farm Machinery |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $3.78 | +10.3% | $4.17 | 996K | 6.2M | 0.2x | 95K | Pharmaceuticals: Other |
+| MSGM | [TV](https://www.tradingview.com/chart/?symbol=MSGM) | $4.35 | +10.6% | $4.81 | 594K | 235K | 2.5x | 2.2M | Packaged Software |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $2.01 | +8.5% | $2.18 | 87K | 24.9M | 0.0x | — | Wholesale Distributors |
+| MIND | [TV](https://www.tradingview.com/chart/?symbol=MIND) | $8.68 | +5.8% | $9.18 | 56K | 142K | 0.4x | 8.9M | Oilfield Services/Equipment |
+| POLA | [TV](https://www.tradingview.com/chart/?symbol=POLA) | $1.53 | +7.2% | $1.64 | 53K | 283K | 0.2x | 1.8M | Electronic Equipment/Instruments |
+
+**New candidates:**
+- ATPC: Skip — pharma label but catalyst is oil/gas trading (per 21:30 scan). Already +87% in regular session, way over 50% rule. AH volume fading (0.2x).
+- MIND: Skip — not biotech (Oilfield Services/Equipment).
+- POLA: Skip — not biotech (Electronic Equipment/Instruments). Tiny AH volume (0.2x).
+
+**Previously seen (updates):**
+- ACXP ➡️: $3.30 (+13.8%), essentially flat from $3.32 at 23:00. Paper trade entry at $2.90 still up ~14%. Volume 2.3M (up from 1.9M) but VRatio only 0.5x — holding gains but not accelerating. Stable consolidation.
+- RBNE: $2.26 (+14.1%), barely changed from $2.25 at 23:00. Volume 1.8M (up from 1.5M). Still not biotech.
+- CVGI: $2.22 (+37.0%), same range. Still not biotech, float 28.1M.
+- MSGM: $4.81 (+10.6%), down from +12.4% at 23:00. Cooling off. Still not biotech.
+- TMDE: $2.18 (+8.5%), flat. Still skipped.
+- AIDX: Dropped off scanner (was +5.4% at 23:00). Volume faded as expected.
+
+No new biotech/pharma candidates. No new paper trades. ACXP remains the sole position — consolidating around $3.30.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
