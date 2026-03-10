@@ -243,44 +243,46 @@ Dropped from scan: MOBX, TPET (volume/change fell below thresholds).
 |--------|-------------|------------|-----------------|--------|
 | ACXP | $2.88 | 23:00 CET | 34 | Pharma ✓, dual catalyst (CDI trial + patent), float 2.3M, volume surging 0.6x→4.7x |
 
-## Morning Evaluation — 10:05 CET
+## Morning Evaluation — 10:20 CET
 
 ### Retrospective Scan
 
 **AH scan (forced):** 0 hits — AH session ended, data no longer available from TradingView.
 
-**Premarket scan (10:05 CET / 4:05 AM ET):**
+**Premarket scan (10:21 CET / 4:21 AM ET):**
 
 | Ticker | Close | PM Chg | PM Price | PM Vol | VRatio | Float | Industry | In AH Scans? |
 |--------|-------|--------|----------|--------|--------|-------|----------|-------------|
-| MDCX | $0.52 | +14.6% | $0.60 | 3.7M | 0.2x | 8.4M | Biotechnology | ✅ Yes |
-| COOT | $0.58 | +44.4% | $0.83 | 788K | 0.9x | 8.6M | Financial Conglomerates | ✅ Yes |
-| EONR | $0.80 | +8.8% | $0.87 | 566K | 0.0x | 39.8M | Integrated Oil | ✅ Yes |
-| SGN | $0.54 | +11.6% | $0.60 | 312K | 0.0x | 24.0M | Packaged Software | ❌ No |
-| MTEN | $1.66 | +20.5% | $2.00 | 308K | 0.7x | 1.2M | Industrial Machinery | ✅ Yes |
-| BIYA | $1.54 | +33.4% | $2.06 | 198K | 0.2x | 825K | Personnel Services | ✅ Yes |
-
-**ACXP** not in premarket scan — no PM trading activity yet (PM just opened 5 min ago).
+| MDCX | $0.52 | +11.8% | $0.58 | 4.2M | 0.2x | 8.4M | Biotechnology | ✅ Yes |
+| COOT | $0.58 | +42.6% | $0.82 | 849K | 0.9x | 8.6M | Financial Conglomerates | ✅ Yes |
+| EONR | $0.80 | +8.3% | $0.87 | 687K | 0.0x | 39.8M | Integrated Oil | ✅ Yes |
+| MTEN | $1.66 | +14.5% | $1.90 | 382K | 0.9x | 1.2M | Industrial Machinery | ✅ Yes |
+| SGN | $0.54 | +8.9% | $0.59 | 374K | 0.0x | 24.0M | Packaged Software | ❌ No |
+| BIYA | $1.54 | +39.0% | $2.14 | 223K | 0.3x | 825K | Personnel Services | ✅ Yes |
+| SEED | $1.14 | +17.5% | $1.34 | 52K | 0.3x | 6.6M | Agricultural Commodities | ✅ Yes |
 
 ### Paper Trade P&L
 
+ACXP premarket price action (from Yahoo 5-min data):
+- 10:00 CET (PM open): $2.00 → $1.93 (gapped down -17.4% from AH close $2.42)
+- 10:10 CET: $1.86 (PM low)
+- 10:20 CET: $1.85 (new PM low)
+- 10:25 CET: $2.01 (bounce)
+- 10:40 CET: $2.05 (PM high)
+- 10:55 CET: $2.03 (current)
+
 | Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
 |--------|-------|------------|---------|-----|-------|--------|
-| ACXP | $2.88 | 23:00 CET | $2.42 (AH close) | -$15.64 | -16.0% | ❌ Loss (pending PM) |
+| ACXP | $2.88 | 23:00 CET | $2.03 (PM) | -$28.90 | -29.5% | ❌ Loss |
 
-**Total Paper P&L: -$15.64** (~-€14.50)
+**Total Paper P&L: -$28.90** (~-€26.50)
 
-> No PM trades yet for ACXP (PM opened 10:00 CET). Last known price is AH close at $2.42.
-
-ACXP AH price action (from Yahoo 5-min data):
-- 22:00 CET: $1.97 (regular close)
-- 22:10 CET: $2.77 (initial spike on catalyst)
-- 22:40 CET: $2.87 (AH peak)
-- 23:00 CET: $2.73 (paper entry was at scanner price $2.88)
-- 00:00 CET: $2.51
-- 01:00 CET: $2.42 (AH close)
-
-Entry was at the literal top. Steady fade throughout AH with no bounce.
+ACXP full trajectory from paper entry:
+- 23:00 CET (entry): $2.88 (AH peak — literally the top)
+- 01:00 CET (AH close): $2.42 (-16.0%)
+- 10:00 CET (PM open): $1.93 (-33.0%) — gapped down hard
+- 10:20 CET (PM low): $1.85 (-35.8%)
+- 10:55 CET (current): $2.03 (-29.5%) — bouncing but still deep red
 
 **Hidden factor:** ACXP already surged +45% during regular hours ($1.35 Fri close → $1.96 Mon close). Our scanner measured AH change from $1.96 (+47%), but the **total move from Friday** was $1.35 → $2.88 = **+113%**. We were chasing an already-extended stock well past the 50% rule when measured correctly.
 
@@ -288,7 +290,7 @@ Entry was at the literal top. Steady fade throughout AH with no bounce.
 
 - Evening scans ran: **6 times** (22:30, 23:00, 23:33, 00:00, 00:30, 01:00 CET)
 - Unique tickers found: **19** across all scans
-- PM movers caught: **5/6** (83%) — only SGN missed
+- PM movers caught: **6/7** (86%) — only SGN missed
 
 The scanner caught nearly everything. Comprehensive coverage across the AH session.
 
@@ -296,7 +298,7 @@ The scanner caught nearly everything. Comprehensive coverage across the AH sessi
 
 | Ticker | PM Change | Why Missed | Would Be Profitable? |
 |--------|-----------|------------|---------------------|
-| SGN | +11.6% | Not in any AH scan — likely moved only in PM, or below AH thresholds | ❌ No — Packaged Software (not biotech), float 24M (too high), VRatio 0.0x |
+| SGN | +8.9% | Not in any AH scan — likely moved only in PM, or below AH thresholds | ❌ No — Packaged Software (not biotech), float 24M (too high), VRatio 0.0x |
 
 No biotech/pharma opportunities were missed. SGN would have been skipped per sector discipline and float rules regardless.
 
@@ -304,21 +306,22 @@ No biotech/pharma opportunities were missed. SGN would have been skipped per sec
 
 | Ticker | AH End | PM Price | Overnight Change | Notes |
 |--------|--------|----------|-----------------|-------|
-| BIYA | $2.43 (+57.8%) | $2.06 (+33.4%) | 📉 -$0.37 (-15.2%) | Big overnight fade |
-| COOT | $0.87 (+51.3%) | $0.83 (+44.4%) | 📉 -$0.04 (-4.6%) | Holding well |
-| MTEN | $1.97 (+18.7%) | $2.00 (+20.5%) | 📈 +$0.03 (+1.5%) | Gained overnight |
-| MDCX | $0.60 (+16.0%) | $0.60 (+14.6%) | ➡️ Flat | Holding |
+| BIYA | $2.43 (+57.8%) | $2.14 (+39.0%) | 📉 -$0.29 (-11.9%) | Fading but still strong |
+| COOT | $0.87 (+51.3%) | $0.82 (+42.6%) | 📉 -$0.05 (-5.7%) | Holding well |
+| MTEN | $1.97 (+18.7%) | $1.90 (+14.5%) | 📉 -$0.07 (-3.6%) | Slight fade |
+| SEED | $1.42 (+24.6%) | $1.34 (+17.5%) | 📉 -$0.08 (-5.6%) | Fading |
+| MDCX | $0.60 (+16.0%) | $0.58 (+11.8%) | 📉 -$0.02 (-3.3%) | Slight fade |
 | BYAH | $1.76 (+17.3%) | — | 📉 Not in PM scan | Faded completely |
-| SEED | $1.42 (+24.6%) | — | 📉 Not in PM scan | Faded completely |
-| ACXP | $2.41 (+23.3%) | — | ❓ No PM trades yet | Absent from scan |
+| ACXP | $2.42 (+23.3%) | $2.03 (+3.6%) | 📉 -$0.39 (-16.1%) | Gapped down, worst fade |
 
-Key observation: **AH spike → overnight fade is the norm.** BIYA lost -15% overnight. BYAH and SEED disappeared from PM entirely. MTEN is the only one that gained. This supports the thesis that premarket exits need to be timed carefully — not all AH movers follow through.
+Key observation: **Every single AH mover faded overnight.** Not one held or gained. ACXP was the worst (-16.1%), BYAH vanished entirely. Even the "strong" ones (BIYA, COOT) lost ground. This challenges the core thesis that AH entries carry into PM — at least for this session, overnight holds would have lost money across the board.
 
 ### Notes
 
-1. **Scanner coverage: excellent.** 5/6 PM movers caught (83%). The one miss (SGN) wouldn't have been actionable (not biotech, high float).
+1. **Scanner coverage: excellent.** 6/7 PM movers caught (86%). The one miss (SGN) wouldn't have been actionable (not biotech, high float).
 2. **ACXP entry was the worst possible timing.** Entered at the AH peak ($2.88) right when the scanner showed a volume surge. But volume surge was distribution, not accumulation. The stock had already run +113% from Friday's close — way past the 50% rule.
-3. **New rule consideration: check multi-day move.** The scanner only shows change from that day's close. ACXP looked like +47% from close, but was actually +113% from prior day. Need to factor in regular-session moves before entering AH.
+3. **New rule: check multi-day move.** The scanner only shows change from that day's close. ACXP looked like +47% from close, but was actually +113% from prior day. Need to factor in regular-session moves before entering AH. Consider adding previous close delta to scanner output.
 4. **Bearish divergence = exit signal.** By 23:33 CET (30 min after entry), volume was rising while price was falling. This pattern persisted the entire AH session. Should be treated as a hard exit signal.
 5. **Tier B catalysts (FDA-adjacent) continue to underperform.** ACXP (CDI trial + patent) joins SER (IND clearance, -18%) as another Tier B loss. Record is now 0/2 for Tier B.
-6. **Non-biotech movers performed better** — BIYA, COOT, MTEN all would have been profitable entries in AH. But sector discipline (0/6 non-biotech win rate) says don't touch them. The overnight fade of BIYA (-15%) and complete disappearance of BYAH/SEED from PM partially validates this caution.
+6. **Universal overnight fade tonight.** All 7 AH movers faded into PM. Even non-biotech movers (BIYA, COOT, MTEN) that looked strong in AH lost value. This was a bad night for overnight holds across the board — possibly a broader market sentiment issue (check if indices were down).
+7. **Paper trade lesson: -29.5% loss.** This would have been a real ~€27 loss on a €100 position. The AH fade was visible within 30 min of entry — earlier exit at $2.67 (23:33 scan) would have limited loss to -7.3%.
