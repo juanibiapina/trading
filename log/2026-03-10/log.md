@@ -111,6 +111,33 @@ No new paper trades. ACXP remains the only biotech/pharma candidate today.
 
 No new biotech/pharma candidates. No new paper trades. ACXP remains the sole position — consolidating around $3.30.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| ACXP | [TV](https://www.tradingview.com/chart/?symbol=ACXP) | $2.90 | +10.3% | $3.20 | 2.5M | 4.2M | 0.6x | 2.3M | Pharmaceuticals: Major |
+| RBNE | [TV](https://www.tradingview.com/chart/?symbol=RBNE) | $1.98 | +8.6% | $2.15 | 2.0M | 4.7M | 0.4x | 2.7M | Marine Shipping |
+| CVGI | [TV](https://www.tradingview.com/chart/?symbol=CVGI) | $1.62 | +37.7% | $2.23 | 1.6M | 324K | 5.1x | 28.1M | Trucks/Construction/Farm Machinery |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $3.78 | +16.7% | $4.41 | 1.4M | 6.2M | 0.2x | 95K | Pharmaceuticals: Other |
+| MSGM | [TV](https://www.tradingview.com/chart/?symbol=MSGM) | $4.35 | +10.6% | $4.81 | 602K | 236K | 2.6x | 2.2M | Packaged Software |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $2.01 | +8.5% | $2.18 | 98K | 24.9M | 0.0x | — | Wholesale Distributors |
+| MIND | [TV](https://www.tradingview.com/chart/?symbol=MIND) | $8.68 | +5.8% | $9.18 | 57K | 142K | 0.4x | 8.9M | Oilfield Services/Equipment |
+| POLA | [TV](https://www.tradingview.com/chart/?symbol=POLA) | $1.53 | +7.8% | $1.65 | 55K | 283K | 0.2x | 1.8M | Electronic Equipment/Instruments |
+| IPST | [TV](https://www.tradingview.com/chart/?symbol=IPST) | $0.56 | +16.7% | $0.65 | 51K | 102K | 0.5x | 8.8M | Beverages: Alcoholic |
+
+**New candidate:**
+- IPST: Skip — not biotech (Beverages: Alcoholic). Float 8.8M, volume below average (0.5x).
+
+**Previously seen (updates):**
+- ACXP ⬇️: $3.20 (+10.3%), down from $3.30 at 23:30. Slight pullback but still holding above close. Volume 2.5M (up from 2.3M), VRatio 0.6x. Paper trade entry at $2.90 still up ~10.3%. Pulling back from the $3.32 peak — normal consolidation. Will check premarket for exit decision.
+- ATPC: $4.41 (+16.7%), up from $4.17 (+10.3%) at 23:30. Continuing higher but still >50% above previous close from regular session. Skipped per rules.
+- RBNE: $2.15 (+8.6%), down from $2.26 (+14.1%) at 23:30. Fading. Still not biotech.
+- CVGI: $2.23 (+37.7%), same range as 23:30. Still not biotech, float 28.1M.
+- MSGM: $4.81 (+10.6%), flat from 23:30. Still not biotech.
+- TMDE/MIND/POLA: Essentially unchanged. All still skipped.
+
+No new biotech/pharma candidates. No new paper trades. ACXP remains the sole position — minor pullback from earlier highs but holding gains.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
