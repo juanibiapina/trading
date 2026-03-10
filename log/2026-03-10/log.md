@@ -40,6 +40,26 @@ No new biotech/pharma candidates in AH.
 
 **ACXP update (existing paper trade):** Closed at $2.90, last regular session prints around $3.05–$3.15. AH just opened — monitoring for continuation. Entry at $2.90 still looks intact.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| ACXP | [TV](https://www.tradingview.com/chart/?symbol=ACXP) | $2.90 | +5.5% | $3.06 | 1.4M | 4.1M | 0.3x | 2.3M | Pharmaceuticals: Major |
+| CVGI | [TV](https://www.tradingview.com/chart/?symbol=CVGI) | $1.62 | +34.0% | $2.17 | 1.2M | 270K | 4.3x | 28.1M | Trucks/Construction/Farm Machinery |
+| MSGM | [TV](https://www.tradingview.com/chart/?symbol=MSGM) | $4.35 | +9.7% | $4.77 | 535K | 228K | 2.4x | 2.2M | Packaged Software |
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $0.58 | +7.6% | $0.62 | 439K | 55.3M | 0.0x | 32.4M | Specialty Stores |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $2.01 | +7.0% | $2.15 | 75K | 24.9M | 0.0x | — | Wholesale Distributors |
+
+**Verdicts:**
+- CVGI: Skip — not biotech (Trucks/Farm Machinery). Q4 earnings beat driving the move. Float 28.1M too high.
+- MSGM: Skip — not biotech (Packaged Software). Already skipped in 22:00 scan, still moving up slightly (+9.7% vs +22.8% earlier — cooling off).
+- AZI: Skip — not biotech (Specialty Stores), float 32.4M, negligible volume ratio.
+- TMDE: Skip — not biotech (Wholesale Distributors), historical loser per trading plan.
+
+**ACXP update:** AH price $3.06 (+5.5% from $2.90 close). Paper trade entry at $2.90 is up ~5.5%. However, AH volume 1.4M vs 4.1M avg (0.3x VRatio) — volume is below average, not building. Worth monitoring but not adding.
+
+No new biotech/pharma candidates. No new paper trades.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
