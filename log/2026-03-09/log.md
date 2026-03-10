@@ -242,3 +242,76 @@ Dropped from scan: MOBX, TPET (volume/change fell below thresholds).
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | ACXP | $2.88 | 23:00 CET | 34 | Pharma ✓, dual catalyst (CDI trial + patent), float 2.3M, volume surging 0.6x→4.7x |
+
+## Morning Evaluation — 08:00 CET
+
+> **Note:** Premarket hasn't opened yet (opens 10:00 CET / 4:00 AM ET). ACXP P&L below is based on end-of-AH last trade. Re-check in premarket.
+
+### Retrospective AH Scan (forced at 08:00 CET)
+
+| Ticker | Close | AH Chg | AH Price | AH Vol | VRatio | Float | Industry |
+|--------|-------|--------|----------|--------|--------|-------|----------|
+| EONR | $0.80 | +11.2% | $0.89 | 17.6M | 0.2x | 39.8M | Integrated Oil |
+| BIYA | $1.54 | +57.8% | $2.43 | 6.7M | 8.0x | 825K | Personnel Services |
+| ACXP | $1.96 | +23.3% | $2.41 | 4.5M | 5.6x | 2.3M | Pharmaceuticals: Major |
+| MTEN | $1.66 | +18.7% | $1.97 | 3.4M | 7.8x | 1.2M | Industrial Machinery |
+| MDCX | $0.52 | +16.0% | $0.60 | 2.6M | 0.1x | 8.4M | Biotechnology |
+| BYAH | $1.50 | +17.3% | $1.76 | 1.8M | 7.1x | 246K | Household/Personal Care |
+| COOT | $0.58 | +51.3% | $0.87 | 1.0M | 1.1x | 8.6M | Financial Conglomerates |
+| SEED | $1.14 | +24.6% | $1.42 | 945K | 5.5x | 6.6M | Agricultural Commodities |
+| TMDE | $2.15 | +9.8% | $2.36 | 360K | 0.0x | — | Wholesale Distributors |
+| CYPH | $0.54 | +6.3% | $0.58 | 188K | 0.1x | 40.9M | Biotechnology |
+| ARTW | $2.43 | +9.5% | $2.66 | 137K | 3.0x | 2.1M | Trucks/Farm Machinery |
+
+### Premarket Scan (08:00 CET / 02:00 ET)
+
+Notable pharma/biotech in premarket:
+- **ATRA** ($6.68 close) — Pharma, but moved in regular session (+29% from prev close $5.17), only +1.6% AH. Not an AH opportunity.
+- **LSTA** ($5.04 close) — Pharma, regular session mover (+21% from prev close $4.18), flat AH. Not an AH opportunity.
+- **CYPH** ($0.54) — Biotech, +5.1% PM, tiny move. Already in AH scans.
+
+No new pharma/biotech AH movers surfaced in premarket.
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| ACXP | $2.88 | 23:00 CET | $2.42 (AH close) | -$15.64 | -16.0% | ❌ Loss (pending PM) |
+
+**Total Paper P&L: -$15.64** (~-€14.50)
+
+ACXP peaked at $2.88 at entry time (23:00), then faded steadily through AH: $2.67 → $2.58 → $2.52 → $2.42 → $2.41. Classic bearish divergence — volume kept rising (160K → 4.5M) while price fell from peak. Entry was essentially at the top.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **6 times** (22:30, 23:00, 23:33, 00:00, 00:30, 01:00 CET)
+- Unique tickers found: **19** across all scans
+- Retrospective AH matches: **11/11** (100% — every end-of-AH mover was caught by evening scans)
+
+The scanner didn't miss any AH movers. Coverage was comprehensive.
+
+### Missed Opportunities
+
+No significant missed opportunities. All 11 end-of-AH movers were found during evening scans.
+
+Premarket pharma movers (ATRA, LSTA) moved during regular session — not catchable by AH scanner.
+
+### Non-Biotech Movers (skipped per sector discipline)
+
+| Ticker | AH Peak | End-AH Price | Would Have Profited? | Notes |
+|--------|---------|-------------|---------------------|-------|
+| BIYA | +57.8% | $2.43 | ✅ Yes (from $2.29 at first scan) | Personnel Services, reverse split + Web3 acquisition |
+| COOT | +51.3% | $0.87 | ✅ Yes (from $0.82 at first appearance) | Financial, no catalyst — rule says these fade |
+| BYAH | +51.7% peak | $1.76 | ⚠️ Depends on exit — peaked at $2.27, ended at $1.76 | Personal Care, dilution offering = Tier D |
+| MTEN | +24.1% peak | $1.97 | ✅ Yes (from $2.05 → faded → recovered) | Industrial Machinery |
+| SEED | +24.6% | $1.42 | ⚠️ Marginal — appeared late at $1.40 | Agricultural |
+
+These were correctly skipped per sector discipline (non-biotech 0% win rate: 0/6). AH prices don't tell the full story — need to see if they hold through premarket (where our strategy exits).
+
+### Notes
+
+1. **Scanner coverage: excellent.** 100% catch rate on AH movers. Six scans over 3 hours provided thorough coverage.
+2. **ACXP entry timing was poor.** Entered at $2.88 (+47.3%) right at the peak. The 22:30 scan showed ACXP at +44.2% with only 0.6x VRatio — correctly skipped. By 23:00, volume surged to 4.7x, triggering entry, but price was already at the top. Lesson: volume surge ≠ price will go higher. The volume surge may have been distribution (selling into the spike).
+3. **Bearish divergence signal was clear by 23:33** (30 min after entry) — volume rising, price falling. Should have paper-exited or at least flagged as warning.
+4. **Entry near 50% rule ceiling** — +47.3% is dangerously close to the "never chase >50%" rule. Combined with Tier B catalyst (FDA-adjacent), this matches the SER pattern (IND clearance, lost -18%).
+5. **Pre-market evaluation incomplete** — PM hasn't started (08:00 CET, opens 10:00). ACXP could still recover per the AH→PM momentum thesis. Will re-check at 10:00+ CET.
