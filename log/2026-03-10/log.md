@@ -60,6 +60,29 @@ No new biotech/pharma candidates in AH.
 
 No new biotech/pharma candidates. No new paper trades.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| ACXP | [TV](https://www.tradingview.com/chart/?symbol=ACXP) | $2.90 | +14.5% | $3.32 | 1.9M | 4.1M | 0.5x | 2.3M | Pharmaceuticals: Major |
+| CVGI | [TV](https://www.tradingview.com/chart/?symbol=CVGI) | $1.62 | +34.6% | $2.18 | 1.3M | 287K | 4.6x | 28.1M | Trucks/Construction/Farm Machinery |
+| MSGM | [TV](https://www.tradingview.com/chart/?symbol=MSGM) | $4.35 | +12.4% | $4.89 | 576K | 233K | 2.5x | 2.2M | Packaged Software |
+| RBNE | [TV](https://www.tradingview.com/chart/?symbol=RBNE) | $1.98 | +13.6% | $2.25 | 1.5M | 4.7M | 0.3x | 2.7M | Marine Shipping |
+| AIDX | [TV](https://www.tradingview.com/chart/?symbol=AIDX) | $2.80 | +5.4% | $2.95 | 287K | 480K | 0.6x | 1.8M | Medical/Nursing Services |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $2.01 | +8.0% | $2.17 | 81K | 24.9M | 0.0x | — | Wholesale Distributors |
+
+**New candidates:**
+- RBNE: Skip — not biotech (Marine Shipping). News: commercial update on vessel employment from March 4. Sector rule violation.
+- AIDX: Skip — not biotech/pharma (Medical/Nursing Services). 20/20 Biolabs. Volume below average (0.6x). No fresh catalyst.
+
+**Previously seen (updates):**
+- ACXP ⬆️: AH price $3.32 (+14.5% from close), up from $3.06 at 22:30. Paper trade entry at $2.90 now up ~14.5%. Volume 1.9M (up from 1.4M) but still below 4.1M avg (0.5x). Price building nicely — continuation into overnight looks plausible.
+- CVGI: $2.18 (+34.6%), roughly same as 22:30 (+34.0%). Still not biotech, still skipped.
+- MSGM: $4.89 (+12.4%), up slightly from +9.7% at 22:30. Still not biotech.
+- TMDE: $2.17 (+8.0%), minimal change from +7.0% at 22:30. Still skipped.
+
+No new paper trades. ACXP remains the only biotech/pharma candidate today.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
