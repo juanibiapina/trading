@@ -23,6 +23,23 @@ Note: Regular session scan (market closes 4:00 PM ET). Candidates to watch into 
 
 **Non-biotech (skipped per sector rule):** MI, MRNO, CELU, NXGL, TOPS, SOS, KITT, EUDA, FNDM, CCTC, CAPS, BYAH, BIYA, COOT, GOCO, MTEN, SEED, TAIT, PAPL, FEBO, UCAR
 
+## Scan 22:00 CET (4:00 PM ET)
+
+After-hours scan — AH just opened.
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| MSGM | [TV](https://www.tradingview.com/chart/?symbol=MSGM) | $4.35 | +22.8% | $5.34 | 380K | 207K | 1.8x | 2.2M | Packaged Software |
+| SLMT | [TV](https://www.tradingview.com/chart/?symbol=SLMT) | $1.10 | +5.5% | $1.16 | 56K | 879K | 0.1x | 46.2M | Movies/Entertainment |
+
+**Verdicts:**
+- MSGM: Skip — not biotech/pharma (Packaged Software). 0% win rate on non-biotech.
+- SLMT: Skip — not biotech/pharma (Movies/Entertainment), float 46.2M way too high, volume below average (0.1x).
+
+No new biotech/pharma candidates in AH.
+
+**ACXP update (existing paper trade):** Closed at $2.90, last regular session prints around $3.05–$3.15. AH just opened — monitoring for continuation. Entry at $2.90 still looks intact.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
