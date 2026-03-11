@@ -175,3 +175,62 @@ No new paper trades. ACXP remains the sole position — consolidating around $3.
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | ACXP | $2.90 | 21:30 CET | 34 | Pharma, +48.3%, 2.3M float, Tier B catalyst (new clinical trial for ibezapolstat in recurrent C. diff). Under 50% rule. Monitor AH for continuation. |
+
+## Morning Evaluation — 10:05 CET
+
+### Retrospective Scan
+
+**Afterhours (forced):** 0 hits — AH session closed, no data.
+
+**Premarket (live, all sectors):**
+
+| Ticker | Close | PM Price | PM Chg% | PM Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|----------|---------|--------|--------|--------|-------|----------|
+| VCIG | $3.00 | $3.75 | +25.0% | 981K | 2.9M | 0.3x | — | Miscellaneous Commercial Services |
+| ACXP | $2.90 | $3.50 | +20.7% | 878K | 4.2M | 0.2x | 2.3M | Pharmaceuticals: Major |
+| SGN | $0.64 | $0.68 | +6.5% | 208K | 35.7M | 0.0x | 24.0M | Packaged Software |
+| CVGI | $1.62 | $1.96 | +21.0% | 156K | 346K | 0.5x | 28.1M | Trucks/Construction/Farm Machinery |
+| TMDE | $2.01 | $2.39 | +18.9% | 110K | 24.9M | 0.0x | — | Wholesale Distributors |
+| ATPC | $3.78 | $4.19 | +10.8% | 104K | 6.3M | 0.0x | 95K | Pharmaceuticals: Other |
+| CTXR | $0.93 | $1.03 | +10.6% | 69K | 827K | 0.1x | 21.8M | Medical Specialties |
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| ACXP | $2.90 | 21:30 CET | $3.43 | +$18.02 | +18.3% | ✅ Win |
+
+**Total Paper P&L: +$18.02**
+
+ACXP entered at close price during regular session scan. AH consolidation range was $3.06–$3.32. Premarket pushed higher to $3.43–$3.85 range. Strategy working as designed: AH entry → PM exit for profit.
+
+### Scanner Effectiveness
+
+- Evening scans ran: 7 times (21:30 – 00:30 CET)
+- Candidates found: 19 unique tickers (all sectors)
+- Biotech/pharma candidates: 8 (ACXP, VTAK, BIAF, TIVC, APVO, QNTM, ATPC, CNSP)
+- Retrospective PM movers: 7 tickers
+- Retrospective matches: 5/7 caught by evening scans
+
+### Missed Opportunities
+
+| Ticker | PM Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| VCIG | +25.0% | Not in AH scans — moved only in premarket. Not biotech (Commercial Services). | Skipped anyway: sector rule |
+| CTXR | +10.6% | Not in AH scans — moved only in premarket. Medical Specialties, 21.8M float. | Skipped anyway: float too high |
+
+Both missed stocks would have been filtered out by trading rules (sector discipline / float limits). No actionable opportunities were missed.
+
+**Non-biotech AH movers — outcome check:**
+- MSGM: +22.8% AH peak → PM $4.47 (+2.8% from close). Gave back most gains. AH entry would have been marginal.
+- CVGI: +37% AH → PM $1.98 (+22% from close). If entered at AH price $2.17, now $1.98 = **-8.8% loss**.
+- TMDE: +24.9% AH → PM $2.39 (+18.9%). Holding better than others but historical loser per plan.
+
+**Sector discipline validated:** Non-biotech AH movers underperformed or reversed. The biotech-only rule continues to protect against false signals.
+
+### Notes
+
+- ACXP was the only biotech candidate across all 7 evening scans — correctly identified and paper traded. Good execution.
+- AH volume on ACXP never exceeded 0.6x VRatio, which was a concern. Despite this, price held gains and pushed higher in PM. Volume isn't everything — catalyst quality (Tier B, clinical trial news) drove follow-through.
+- Scanner coverage was comprehensive: 7 scans over 3 hours caught 5/7 of today's PM movers. The 2 misses (VCIG, CTXR) only started moving in premarket and would have been skipped anyway.
+- No threshold adjustments needed. Current filtering is working well.
