@@ -41,6 +41,33 @@
 
 No entries today. SXTP is the only interesting candidate (strong catalyst + ultra-low float) but violates the 50% rule at +71.3%. Monitor in after-hours for a pullback toward +40-50% range where entry could be justified.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $1.63 | +60.2% | $2.61 | 4.4M | 541K | 8.0x | 22.4M | Apparel/Footwear Retail |
+| BANL | [TV](https://www.tradingview.com/chart/?symbol=BANL) | $0.55 | +7.6% | $0.59 | 340K | 4.9M | 0.1x | 5.1M | Air Freight/Couriers |
+| JBDI | [TV](https://www.tradingview.com/chart/?symbol=JBDI) | $0.70 | +17.6% | $0.82 | 183K | 54K | 3.4x | — | Wholesale Distributors |
+| RDGT | [TV](https://www.tradingview.com/chart/?symbol=RDGT) | $2.02 | +9.4% | $2.21 | 70K | 17K | 4.2x | 16.0M | Medical Distributors |
+
+### Evaluation
+
+**TLYS** — Tilly's Inc. **Catalyst:** Q4 2026 earnings released after close today (expected EPS -$0.15, revenue $148.7M). Skip: not biotech/pharma (sector discipline: 0% win rate on non-biotech). Also float 22.4M is too high.
+
+**BANL** — CBL International. No fresh catalyst found, just short interest update. Skip: not biotech/pharma, tiny AH change (+7.6%), volume ratio 0.1x (below average).
+
+**JBDI** — JBDI Holdings. No clear catalyst found. Skip: not biotech/pharma, no catalyst = no follow-through.
+
+**RDGT** — Ridgetech. Pharmaceutical wholesale distributor in China. Growth strategy announced ~1 week ago (stale). Skip: not biotech/pharma (distributor), float 16M too high, weak move (+9.4%).
+
+### SXTP Update (from earlier scan)
+
+SXTP trading at $3.08 in AH (down from $3.22 close). Still +64.7% above previous close ($1.87) — remains above the 50% entry rule. Volume appears thin in AH. No entry.
+
+### Summary
+
+No new entries. All 4 AH candidates are non-biotech (sector discipline). SXTP from earlier scan pulled back slightly but still violates the 50% rule. No paper trades today.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
