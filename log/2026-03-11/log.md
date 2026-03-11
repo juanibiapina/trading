@@ -97,6 +97,34 @@ SXTP trading at ~$2.90 in AH, down from $3.22 close and $3.08 at last check. Sti
 
 No new entries. IPW is the only new ticker but fails sector discipline (internet retail). SXTP continues to fade in AH ($3.22 → $3.08 → $2.90), now borderline on the 50% rule but showing weakness rather than consolidation. No paper trades.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $1.63 | +74.8% | $2.85 | 9.8M | 1.2M | 8.4x | 22.4M | Apparel/Footwear Retail |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $2.20 | +10.0% | $2.42 | 1.1M | 212K | 5.0x | 367K | Internet Retail |
+| BANL | [TV](https://www.tradingview.com/chart/?symbol=BANL) | $0.55 | +6.5% | $0.59 | 434K | 4.9M | 0.1x | 5.1M | Air Freight/Couriers |
+| JBDI | [TV](https://www.tradingview.com/chart/?symbol=JBDI) | $0.70 | +13.9% | $0.79 | 347K | 72K | 4.8x | — | Wholesale Distributors |
+| IBG | [TV](https://www.tradingview.com/chart/?symbol=IBG) | $2.26 | +5.3% | $2.38 | 102K | 2.0M | 0.1x | 560K | Beverages: Alcoholic |
+| RDGT | [TV](https://www.tradingview.com/chart/?symbol=RDGT) | $2.02 | +8.9% | $2.20 | 72K | 17K | 4.3x | 16.0M | Medical Distributors |
+
+### Evaluation
+
+**IBG** (new) — Innovation Beverage Group. Crashed -36.2% during regular session, small AH bounce +5.3%. Catalyst: proposed merger with BlockFuel Energy (announced Oct 2025, stale). Skip: not biotech/pharma (sector discipline), no fresh catalyst, below-average volume (0.1x), dead-cat bounce after major selloff.
+
+**Previously seen tickers:**
+- **TLYS** — Slight fade from $2.92 (+79.1%) → $2.85 (+74.8%). AH volume still building (9.8M vs 8.5M at last scan). Still not biotech — skip.
+- **IPW** — Fading from $2.49 (+13.2%) → $2.42 (+10.0%). Still not biotech — skip.
+- **BANL** — Back on scan at $0.59 (+6.5%), flat. Still not biotech — skip.
+- **JBDI** — Holding at $0.79 (+13.9%), stable. Still not biotech — skip.
+- **RDGT** — Flat at $2.20 (+8.9%). Still not biotech — skip.
+
+**SXTP Update** — Recovered from $2.90 at last scan to ~$3.14 in AH. Still +68% above previous close ($1.87) — well above 50% entry rule. AH volume fading. No entry.
+
+### Summary
+
+No new entries. IBG is the only new ticker but fails sector discipline (beverages) and has no fresh catalyst. All returning tickers continue to fail sector discipline. SXTP recovered but still violates the 50% rule at +68%. No paper trades today.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
