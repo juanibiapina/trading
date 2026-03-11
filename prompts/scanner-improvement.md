@@ -93,19 +93,32 @@ git push
 
 Send an email summarizing the full overnight cycle to `juanibiapina@gmail.com`.
 
+**Formatting rules (important — email is plain text only):**
+- Subject: use only ASCII characters. Use `-` not `—` (em dashes break as `Ã¢Â€Â"`)
+- Body: plain text. No markdown (`**`, `##`, `*`). Use ALL-CAPS for section headers.
+- Use `EUR` not `€`, `$` is fine
+- Keep it short — scannable on a phone in under 30 seconds
+
 ```bash
 gmcli juanibiapina@gmail.com send \
   --to juanibiapina@gmail.com \
-  --subject "Trading Scanner Report — YYYY-MM-DD" \
-  --body "..."
+  --subject "Trading Scanner Report - YYYY-MM-DD" \
+  --body "OVERNIGHT CYCLE: [date range]
+
+POST-MARKET SCANS
+[How many scans ran, unique tickers, notable movers]
+
+PAPER TRADES
+[Positions entered, entry price, reasoning. Or 'None']
+
+MORNING EVALUATION
+[Paper P&L ($ and EUR), scanner catch rate, missed opportunities]
+
+Cumulative Paper P&L: [running total across all days]
+
+IMPROVEMENTS MADE TODAY
+[What changed, brief hypothesis]
+
+KEY TAKEAWAY
+[One sentence: the single most important thing from this cycle]"
 ```
-
-The email body should be a concise, readable summary covering:
-
-1. **Post-Market Scans** — How many scans ran, how many unique tickers found, any notable movers
-2. **Paper Trades** — Any positions entered, entry price and reasoning
-3. **Morning Evaluation** — Paper P&L (€ and %), scanner catch rate, missed opportunities
-4. **Improvements Made Today** — What was changed, the hypothesis, and what we're evaluating
-5. **Key Takeaway** — One sentence: the single most important thing from this cycle
-
-Keep it short — aim for something scannable on a phone in under 30 seconds.
