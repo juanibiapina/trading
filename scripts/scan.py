@@ -101,6 +101,7 @@ COLUMNS_AFTERHOURS = [
     "postmarket_volume",
     "postmarket_close",
     "average_volume_10d_calc",
+    "change",                      # regular session change % (from prev close)
     "sector",
     "industry",
     "float_shares_outstanding",
@@ -227,10 +228,11 @@ def scan(session, biotech_only=True):
                 "ext_close": d[4] or 0,
                 "avg_vol_daily": avg_vol,
                 "vol_ratio": round(ah_vol / avg_vol, 1) if avg_vol else 0,
-                "sector": d[6],
-                "industry": d[7],
-                "float": int(d[8]) if d[8] else 0,
-                "market_cap": int(d[9]) if d[9] else 0,
+                "day_change_pct": d[6] or 0,
+                "sector": d[7],
+                "industry": d[8],
+                "float": int(d[9]) if d[9] else 0,
+                "market_cap": int(d[10]) if d[10] else 0,
             })
 
     return results
@@ -290,17 +292,26 @@ def print_results(results, session, previous_tickers=None):
     else:
         # Premarket or after-hours
         ext_label = "PM" if session == "premarket" else "AH"
-        print(f"  {'Ticker':<8} {'Close':>6} {ext_label + ' Chg%':>8} {ext_label + ' Price':>8} {ext_label + ' Vol':>8} {'AvgVol':>8} {'VRatio':>7} {'Float':>8} {'MCap':>8} {'Industry':<25} {'New'}")
-        print(f"  {'-' * 113}")
+        show_day_chg = session == "afterhours"
+
+        if show_day_chg:
+            print(f"  {'Ticker':<8} {'Close':>6} {'Day%':>7} {ext_label + ' Chg%':>8} {ext_label + ' Price':>8} {ext_label + ' Vol':>8} {'AvgVol':>8} {'VRatio':>7} {'Float':>8} {'MCap':>8} {'Industry':<25} {'New'}")
+            print(f"  {'-' * 120}")
+        else:
+            print(f"  {'Ticker':<8} {'Close':>6} {ext_label + ' Chg%':>8} {ext_label + ' Price':>8} {ext_label + ' Vol':>8} {'AvgVol':>8} {'VRatio':>7} {'Float':>8} {'MCap':>8} {'Industry':<25} {'New'}")
+            print(f"  {'-' * 113}")
 
         for r in results:
             is_new = ""
             if previous_tickers is not None and r["ticker"] not in previous_tickers:
                 is_new = " ⚡ NEW"
 
+            day_chg = f"{r.get('day_change_pct', 0):>+7.1f} " if show_day_chg else ""
+
             print(
                 f"  {r['ticker']:<8} "
                 f"{r['price']:>6.2f} "
+                f"{day_chg}"
                 f"{r['change_pct']:>+8.1f} "
                 f"{r['ext_close']:>8.2f} "
                 f"{fmt_number(r['ext_volume']):>8} "
