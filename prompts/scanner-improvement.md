@@ -91,34 +91,39 @@ git push
 
 ### 7. Send Daily Summary Email
 
-Send an email summarizing the full overnight cycle to `juanibiapina@gmail.com`.
+Send an HTML email summarizing the full overnight cycle to `juanibiapina@gmail.com`.
 
-**Formatting rules (important — email is plain text only):**
-- Subject: use only ASCII characters. Use `-` not `—` (em dashes break as `Ã¢Â€Â"`)
-- Body: plain text. No markdown (`**`, `##`, `*`). Use ALL-CAPS for section headers.
-- Use `EUR` not `€`, `$` is fine
-- Keep it short — scannable on a phone in under 30 seconds
+Use the HTML email script (not gmcli — it doesn't support HTML):
 
 ```bash
-gmcli juanibiapina@gmail.com send \
+node scripts/send-email.js \
   --to juanibiapina@gmail.com \
   --subject "Trading Scanner Report - YYYY-MM-DD" \
-  --body "OVERNIGHT CYCLE: [date range]
+  --body '<div style="font-family: -apple-system, Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+<h2 style="color: #1a1a1a; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">Overnight Cycle: [date range]</h2>
 
-POST-MARKET SCANS
-[How many scans ran, unique tickers, notable movers]
+<h3 style="color: #555; margin-top: 20px;">Post-Market Scans</h3>
+<p>[How many scans ran, unique tickers, notable movers]</p>
 
-PAPER TRADES
-[Positions entered, entry price, reasoning. Or 'None']
+<h3 style="color: #555;">Paper Trades</h3>
+<p>[Positions entered, entry price, reasoning. Or "None"]</p>
 
-MORNING EVALUATION
-[Paper P&L ($ and EUR), scanner catch rate, missed opportunities]
+<h3 style="color: #555;">Morning Evaluation</h3>
+<p style="font-size: 18px;">Paper P&amp;L: <span style="color: #2e7d32; font-weight: bold;">+$X (+X%)</span> or <span style="color: #c62828; font-weight: bold;">-$X (-X%)</span></p>
+<p>[Scanner catch rate, missed opportunities]</p>
+<p style="background: #f5f5f5; padding: 10px; border-radius: 4px;">Cumulative Paper P&amp;L: [running total]</p>
 
-Cumulative Paper P&L: [running total across all days]
+<h3 style="color: #555;">Improvement Made Today</h3>
+<p>[What changed, brief hypothesis]</p>
 
-IMPROVEMENTS MADE TODAY
-[What changed, brief hypothesis]
-
-KEY TAKEAWAY
-[One sentence: the single most important thing from this cycle]"
+<h3 style="color: #555;">Key Takeaway</h3>
+<p style="background: #e3f2fd; padding: 10px; border-radius: 4px; border-left: 4px solid #1976d2;">[One sentence: the single most important thing from this cycle]</p>
+</div>'
 ```
+
+**Formatting rules:**
+- Subject: use ASCII only — use `-` not `—` (em dashes break encoding)
+- Body: HTML with inline styles (email clients strip `<style>` tags)
+- Use `&amp;` for `&`, `&mdash;` for em dashes, `&euro;` for €
+- Color wins green (`#2e7d32`), losses red (`#c62828`)
+- Keep it short — scannable on a phone in under 30 seconds
