@@ -68,6 +68,35 @@ SXTP trading at $3.08 in AH (down from $3.22 close). Still +64.7% above previous
 
 No new entries. All 4 AH candidates are non-biotech (sector discipline). SXTP from earlier scan pulled back slightly but still violates the 50% rule. No paper trades today.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $1.63 | +79.1% | $2.92 | 8.5M | 1.0M | 8.4x | 22.4M | Apparel/Footwear Retail |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $2.20 | +13.2% | $2.49 | 832K | 183K | 4.6x | 367K | Internet Retail |
+| JBDI | [TV](https://www.tradingview.com/chart/?symbol=JBDI) | $0.70 | +12.6% | $0.79 | 320K | 70K | 4.6x | — | Wholesale Distributors |
+| RDGT | [TV](https://www.tradingview.com/chart/?symbol=RDGT) | $2.02 | +8.4% | $2.19 | 72K | 17K | 4.3x | 16.0M | Medical Distributors |
+
+### Evaluation
+
+**IPW** (new) — iPower Inc, e-commerce for garden/hydroponic products. No fresh catalyst found; recent proxy filing for share issuance authority, stock down 80.5% over 3 months. Skip: not biotech/pharma (sector discipline).
+
+**TLYS** (prior scan) — Up from $2.61 (+60.2%) → $2.92 (+79.1%). AH volume surging (8.5M vs 4.4M at last scan). Earnings-driven move continues to build. Still not biotech/pharma — skip.
+
+**JBDI** (prior scan) — Slight pullback from $0.82 → $0.79. Volume steady. Still no catalyst, not biotech — skip.
+
+**RDGT** (prior scan) — Flat, $2.21 → $2.19. No change — skip.
+
+**BANL** — Dropped off scan (volume faded).
+
+### SXTP Update
+
+SXTP trading at ~$2.90 in AH, down from $3.22 close and $3.08 at last check. Still +55% above previous close ($1.87) — remains above 50% entry rule. AH volume appears thin. Trend is fading, not consolidating. No entry.
+
+### Summary
+
+No new entries. IPW is the only new ticker but fails sector discipline (internet retail). SXTP continues to fade in AH ($3.22 → $3.08 → $2.90), now borderline on the 50% rule but showing weakness rather than consolidation. No paper trades.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
