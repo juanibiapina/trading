@@ -125,6 +125,36 @@ No new entries. IPW is the only new ticker but fails sector discipline (internet
 
 No new entries. IBG is the only new ticker but fails sector discipline (beverages) and has no fresh catalyst. All returning tickers continue to fail sector discipline. SXTP recovered but still violates the 50% rule at +68%. No paper trades today.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $1.63 | +81.6% | $2.96 | 10.9M | 1.3M | 8.4x | 22.4M | Apparel/Footwear Retail |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $2.20 | +9.1% | $2.40 | 1.1M | 218K | 5.1x | 367K | Internet Retail |
+| JBDI | [TV](https://www.tradingview.com/chart/?symbol=JBDI) | $0.70 | +9.6% | $0.76 | 350K | 73K | 4.8x | — | Wholesale Distributors |
+| HCTI | [TV](https://www.tradingview.com/chart/?symbol=HCTI) | $3.06 | +6.9% | $3.27 | 251K | 1.8M | 0.1x | 1.2M | Information Technology Services |
+| IBG | [TV](https://www.tradingview.com/chart/?symbol=IBG) | $2.26 | +7.1% | $2.42 | 108K | 2.0M | 0.1x | 560K | Beverages: Alcoholic |
+| RDGT | [TV](https://www.tradingview.com/chart/?symbol=RDGT) | $2.02 | +13.9% | $2.30 | 74K | 17K | 4.3x | 16.0M | Medical Distributors |
+
+### Evaluation
+
+**HCTI** (new) — Healthcare Triangle Inc, IT services company. Skip: not biotech/pharma (sector discipline: 0% win rate on non-biotech). Also volume ratio 0.1x (below average), small AH move (+6.9%).
+
+**Previously seen tickers:**
+- **TLYS** — Continues climbing: $2.85 (+74.8%) → $2.96 (+81.6%). AH volume now 10.9M, still building. Impressive earnings-driven move, but not biotech — skip.
+- **IPW** — Fading further: $2.42 (+10.0%) → $2.40 (+9.1%). Not biotech — skip.
+- **JBDI** — Pulled back: $0.79 (+13.9%) → $0.76 (+9.6%). Not biotech — skip.
+- **IBG** — Slight bounce: $2.38 (+5.3%) → $2.42 (+7.1%). Still a dead-cat bounce, not biotech — skip.
+- **RDGT** — Improved: $2.20 (+8.9%) → $2.30 (+13.9%). Still not biotech, float 16M too high — skip.
+
+**SXTP Update** — Dropped off scanner entirely. Likely fading further from $3.14 at last check. The AH trend has been consistently down ($3.22 → $3.08 → $2.90 → $3.14 → off scan). Catalyst was strong but move is exhausting without fresh buying interest. No entry.
+
+**BANL** — Also dropped off scanner (faded).
+
+### Summary
+
+No new entries. HCTI is the only new ticker but fails sector discipline (IT services) and has below-average volume. SXTP has now dropped off the scanner entirely — the babesiosis catalyst move is fading. All remaining tickers are non-biotech. No paper trades today.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
