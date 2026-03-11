@@ -155,6 +155,49 @@ No new entries. IBG is the only new ticker but fails sector discipline (beverage
 
 No new entries. HCTI is the only new ticker but fails sector discipline (IT services) and has below-average volume. SXTP has now dropped off the scanner entirely — the babesiosis catalyst move is fading. All remaining tickers are non-biotech. No paper trades today.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $1.63 | +75.5% | $2.86 | 11.4M | 1.3M | 8.4x | 22.4M | Apparel/Footwear Retail |
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $0.89 | +6.3% | $0.95 | 3.8M | 90.7M | 0.0x | 39.8M | Integrated Oil |
+| TPET | [TV](https://www.tradingview.com/chart/?symbol=TPET) | $1.48 | +10.5% | $1.64 | 2.7M | 174.6M | 0.0x | 9.6M | Integrated Oil |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $0.67 | +8.1% | $0.73 | 1.3M | 267.3M | 0.0x | 86.2M | Semiconductors |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $2.20 | +5.5% | $2.32 | 1.1M | 222K | 5.1x | 367K | Internet Retail |
+| BANL | [TV](https://www.tradingview.com/chart/?symbol=BANL) | $0.55 | +6.5% | $0.59 | 457K | 4.9M | 0.1x | 5.1M | Air Freight/Couriers |
+| JBDI | [TV](https://www.tradingview.com/chart/?symbol=JBDI) | $0.70 | +6.4% | $0.74 | 353K | 73K | 4.8x | — | Wholesale Distributors |
+| HCTI | [TV](https://www.tradingview.com/chart/?symbol=HCTI) | $3.06 | +6.7% | $3.27 | 255K | 1.8M | 0.1x | 1.2M | Information Technology Services |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $2.29 | +10.9% | $2.54 | 242K | 25.6M | 0.0x | — | Wholesale Distributors |
+| INDO | [TV](https://www.tradingview.com/chart/?symbol=INDO) | $4.77 | +5.0% | $5.01 | 153K | 9.6M | 0.0x | 9.5M | Integrated Oil |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $0.77 | +7.2% | $0.83 | 142K | 27.6M | 0.0x | — | Oilfield Services/Equipment |
+| RDGT | [TV](https://www.tradingview.com/chart/?symbol=RDGT) | $2.02 | +5.4% | $2.13 | 77K | 18K | 4.4x | 16.0M | Medical Distributors |
+| AGH | [TV](https://www.tradingview.com/chart/?symbol=AGH) | $4.63 | +5.6% | $4.89 | 53K | 3.3M | 0.0x | 7.5M | Movies/Entertainment |
+
+### Evaluation
+
+**New tickers — all fail sector discipline (not biotech/pharma):**
+- **EONR** — Integrated Oil. Skip: not biotech/pharma, below-average AH volume (0.0x VRatio), float 39.8M too high.
+- **TPET** — Integrated Oil. Skip: not biotech/pharma, below-average AH volume, small move (+10.5%).
+- **MOBX** — Semiconductors. Skip: not biotech/pharma, below-average AH volume, float 86.2M way too high.
+- **TMDE** — Wholesale Distributors. Skip: not biotech/pharma. Also previously traded and lost (W08 — known loser from trading plan).
+- **INDO** — Integrated Oil. Skip: not biotech/pharma, below-average AH volume, small move (+5.0%).
+- **STAK** — Oilfield Services/Equipment. Skip: not biotech/pharma, below-average AH volume.
+- **AGH** — Movies/Entertainment. Skip: not biotech/pharma, below-average AH volume, tiny AH volume (53K).
+
+**Previously seen tickers:**
+- **TLYS** — Pulled back from $2.96 (+81.6%) → $2.86 (+75.5%). AH volume 11.4M, still building. Impressive earnings move but not biotech — skip.
+- **IPW** — Fading: $2.40 (+9.1%) → $2.32 (+5.5%). Losing momentum — skip.
+- **BANL** — Flat at $0.59 (+6.5%). No change — skip.
+- **JBDI** — Fading: $0.76 (+9.6%) → $0.74 (+6.4%). Losing momentum — skip.
+- **HCTI** — Flat at $3.27 (+6.7%). No change — skip.
+- **RDGT** — Pulled back: $2.30 (+13.9%) → $2.13 (+5.4%). Fading — skip.
+
+**SXTP Update** — No longer on scanner. Previously faded from $3.22 close through $3.08 → $2.90 → $3.14 → off scan. The babesiosis catalyst move has exhausted. No entry.
+
+### Summary
+
+No new entries. 7 new tickers appeared but all fail sector discipline (oil, semiconductors, IT, entertainment, wholesale). No biotech/pharma stocks showing AH momentum today. SXTP remains off scanner. No paper trades.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
