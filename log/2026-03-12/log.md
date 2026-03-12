@@ -50,6 +50,23 @@ NXGL (+12.0% AH, Chemicals), DTCK (+12.8% AH, Food Distributors), BANL (+5.1% AH
 
 **AEMD** ($1.73 entry) — Not in AH scan. Monitor for AH activity.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+After-hours scan. 2 hits, both biotech/pharma — same tickers as 22:00 scan.
+
+### Biotech/Pharma Candidates
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| LGVN | [TV](https://www.tradingview.com/chart/?symbol=LGVN) | $0.81 | -0.4% | +5.1% | $0.85 | 72K | 26.7M | 0.0x | 17.6M | Biotechnology |
+| GRCE | [TV](https://www.tradingview.com/chart/?symbol=GRCE) | $4.06 | +2.8% | +5.7% | $4.29 | 64K | 460K | 0.1x | 11.3M | Pharmaceuticals: Major |
+
+**LGVN** — Already seen at 22:00. AH price $0.85 (was $0.86), volume 72K (was 62K). Still skip: float too high (17.6M), negligible volume ratio.
+
+**GRCE** — Already seen at 22:00. No change in price or volume. Still skip: float too high (11.3M), fading volume.
+
+No new candidates this scan.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
