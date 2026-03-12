@@ -123,6 +123,43 @@ After-hours scan. 7 hits — 2 biotech/pharma (both previously seen), 5 non-biot
 
 No new paper trades. Quiet AH session for biotech — both LGVN and GRCE have been fading across all scans tonight.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+After-hours scan. 7 hits — 1 new biotech candidate (CODX), 1 returning biotech (LGVN), 5 non-biotech (all previously seen).
+
+### Biotech/Pharma Candidates
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| CODX | [TV](https://www.tradingview.com/chart/?symbol=CODX) | $2.63 | -18.8% | +44.1% | $3.79 | 71K | 340K | 0.2x | 1.9M | Biotechnology |
+| LGVN | [TV](https://www.tradingview.com/chart/?symbol=LGVN) | $0.81 | -0.4% | +5.1% | $0.85 | 124K | 26.7M | 0.0x | 17.6M | Biotechnology |
+
+**CODX** — New. Japanese patent granted for Co-Dx PCR platform (announced ~2 PM ET today). Low float (1.9M), biotech ✓, total move from prev close only ~+17% ✓. However: **Skip** — this is day 2+ of unusual activity (stock soared 100%+ on March 11 Nasdaq relisting, pulled back -18.8% today). AH volume ratio only 0.2x (71K shares). Today's drop shows profit-taking from yesterday's spike; AH move looks like a recovery bounce on new catalyst rather than fresh momentum.
+
+**LGVN** — Already seen at 22:00/22:30/23:00/23:30. AH price $0.85 (unchanged from 23:30), volume 124K (was 119K). Flat. Still skip: float too high (17.6M), negligible volume ratio.
+
+### Non-Biotech (all skipped per sector discipline)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $1.35 | +51.7% | +12.6% | $1.52 | 12.1M | 110.2M | 0.1x | 39.8M | Integrated Oil |
+| DTCK | [TV](https://www.tradingview.com/chart/?symbol=DTCK) | $1.95 | +12.1% | +9.7% | $2.14 | 1.3M | 4.1M | 0.3x | 177K | Food Distributors |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $2.43 | +6.1% | +6.2% | $2.58 | 395K | 26.3M | 0.0x | 0 | Wholesale Distributors |
+| FBGL | [TV](https://www.tradingview.com/chart/?symbol=FBGL) | $0.61 | +9.1% | +7.2% | $0.66 | 212K | 2.1M | 0.1x | 0 | Engineering & Construction |
+| IPM | [TV](https://www.tradingview.com/chart/?symbol=IPM) | $1.91 | +8.2% | +8.9% | $2.08 | 104K | 54K | 1.9x | 5.7M | Packaged Software |
+
+**EONR** — Previously seen at 23:30. AH price up to $1.52 (was $1.44), volume doubled to 12.1M (was 6.2M). Still skip: non-biotech, float too high (39.8M), day already >50% above prev close.
+
+**DTCK** — Previously seen at 22:00/23:00/23:30. AH price $2.14 (was $2.19 at 23:30 — fading). Still skip: non-biotech.
+
+**TMDE** — Previously seen at 23:30. Volume up to 395K (was 298K), price unchanged. Still skip: non-biotech, previously lost on this ticker in W08.
+
+**FBGL** — Previously seen at 23:30. Essentially unchanged. Still skip: non-biotech.
+
+**IPM** — Previously seen at 23:30. AH price $2.08 (was $2.10), VRatio up to 1.9x (was 1.3x). Still skip: non-biotech.
+
+**Note:** GRCE dropped off the scan entirely (was in all previous AH scans). No new paper trades — quiet night for biotech.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
