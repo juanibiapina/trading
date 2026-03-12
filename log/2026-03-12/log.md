@@ -25,6 +25,31 @@ Regular session scan (30 min before close). 19 hits total.
 
 TLYS (+47.2%, Apparel), AGRZ (+153.6%, Engineering), LCUT (+15.2%, Home Furnishings), OCG (+27.4%, Specialty Stores), POLA (+20.6%, Electronics), VRA (+35.7%, Apparel), BNRG (+18.7%, Engineering), CNEY (+15.6%, Electrical), FNDM (+20.0%, Financial), BIOX (+16.7%, Agricultural), GMEX (-19.9%, Stores), PEBC (-12.6%, Banks), SAGT (+6.4%, Software), SDOT (+13.2%, Restaurants), HYFM (+24.0%, Machinery).
 
+## Scan 22:00 CET (4:00 PM ET)
+
+After-hours scan (just after AH open). 6 hits, 2 biotech/pharma.
+
+### Biotech/Pharma Candidates
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| GRCE | [TV](https://www.tradingview.com/chart/?symbol=GRCE) | $4.06 | +2.8% | +5.7% | $4.29 | 64K | 460K | 0.1x | 11.3M | Pharmaceuticals: Major |
+| LGVN | [TV](https://www.tradingview.com/chart/?symbol=LGVN) | $0.81 | -0.4% | +6.6% | $0.86 | 62K | 26.7M | 0.0x | 17.6M | Biotechnology |
+
+**GRCE** — Skip: float too high (11.3M), AH volume ratio 0.1 (fading), small total move (+8.5% from prev close).
+
+**LGVN** — Skip: float way too high (17.6M), AH volume ratio 0.0 (no real volume), tiny move.
+
+### Non-Biotech (all skipped per sector discipline)
+
+NXGL (+12.0% AH, Chemicals), DTCK (+12.8% AH, Food Distributors), BANL (+5.1% AH, Air Freight), PEW (+5.9% AH, Specialty Stores).
+
+### Paper Trade Updates
+
+**SPRC** ($4.73 entry) — Not in AH scan. Ultra-low float may have limited AH liquidity.
+
+**AEMD** ($1.73 entry) — Not in AH scan. Monitor for AH activity.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
