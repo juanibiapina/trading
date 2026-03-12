@@ -160,6 +160,42 @@ After-hours scan. 7 hits — 1 new biotech candidate (CODX), 1 returning biotech
 
 **Note:** GRCE dropped off the scan entirely (was in all previous AH scans). No new paper trades — quiet night for biotech.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+After-hours scan. 6 hits — 2 biotech (both previously seen), 4 non-biotech (1 new).
+
+### Biotech/Pharma Candidates
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| CODX | [TV](https://www.tradingview.com/chart/?symbol=CODX) | $2.63 | -18.8% | +41.4% | $3.72 | 314K | 374K | 0.8x | 1.9M | Biotechnology |
+| LGVN | [TV](https://www.tradingview.com/chart/?symbol=LGVN) | $0.81 | -0.4% | +5.4% | $0.85 | 135K | 26.7M | 0.0x | 17.6M | Biotechnology |
+
+**CODX** — Previously seen at 00:00. AH price $3.72 (was $3.79 — slight fade), but **volume jumped 4.4x** from 71K to 314K. VRatio improved from 0.2x to 0.8x. Patent catalyst is drawing interest. Still skip: day 2+ of unusual activity (100%+ rally on March 11 Nasdaq relisting, then -18.8% today). AH move is a recovery bounce, not fresh momentum.
+
+**LGVN** — Already seen at 22:00/22:30/23:00/23:30/00:00. AH price $0.85 (unchanged), volume 135K (was 124K). Still skip: float too high (17.6M), negligible volume ratio.
+
+### Non-Biotech (all skipped per sector discipline)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $1.35 | +51.7% | +10.4% | $1.49 | 14.8M | 110.5M | 0.1x | 39.8M | Integrated Oil |
+| DTCK | [TV](https://www.tradingview.com/chart/?symbol=DTCK) | $1.95 | +12.1% | +9.2% | $2.13 | 1.3M | 4.1M | 0.3x | 177K | Food Distributors |
+| IPM | [TV](https://www.tradingview.com/chart/?symbol=IPM) | $1.91 | +8.2% | +8.4% | $2.07 | 158K | 59K | 2.7x | 5.7M | Packaged Software |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $1.97 | -16.0% | +6.9% | $2.10 | 73K | 3.4M | 0.0x | 0 | Misc. Commercial Services |
+
+**EONR** — Previously seen. AH price $1.49 (was $1.52 at 00:00 — fading). Still skip: non-biotech, float too high (39.8M).
+
+**DTCK** — Previously seen. AH price $2.13 (was $2.14 at 00:00 — flat). Still skip: non-biotech.
+
+**IPM** — Previously seen. AH price $2.07 (was $2.08 at 00:00), VRatio up to 2.7x (was 1.9x). Still skip: non-biotech.
+
+**VCIG** — New. Skip: non-biotech (Misc. Commercial Services), negligible volume ratio (0.0x), stock down -16% on the day.
+
+**GRCE** dropped off the scan (was in 22:00–23:30 scans). **TMDE** and **FBGL** also dropped off (were in 23:30–00:00 scans).
+
+No new paper trades. Both biotech candidates fail entry criteria — CODX is day 2+ activity and LGVN has too-high float. Quiet night continues.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
