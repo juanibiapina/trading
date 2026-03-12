@@ -37,9 +37,9 @@ python3 scripts/scan.py --all
 
 - If there ARE results, format them as:
   ```markdown
-  | Ticker | Chart | Close | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
-  |--------|-------|-------|--------|----------|--------|--------|--------|-------|----------|
-  | TICK   | [TV](https://www.tradingview.com/chart/?symbol=TICK) | $X | +X% | $X | XK | XK | Xx | XM | Industry |
+  | Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+  |--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+  | TICK   | [TV](https://www.tradingview.com/chart/?symbol=TICK) | $X | +X% | +X% | $X | XK | XK | Xx | XM | Industry |
   ```
 
 ### 4. Paper Trade Decisions
@@ -48,7 +48,7 @@ Read the existing log to see which tickers were already found in previous scans 
 
 For each **new** candidate (not in prior scans), evaluate against the entry criteria from the trading plan:
 - Biotech/pharma preferred (non-biotech has 0% win rate historically)
-- Price < 50% above previous close
+- Price < 50% above previous close (for AH scans, check Day% + AH Chg% = total move from previous close)
 - Float < 10M ideal
 - Has a clear catalyst (search for news if needed)
 - Volume not fading, first day of unusual activity
