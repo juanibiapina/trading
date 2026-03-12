@@ -247,3 +247,73 @@ No new entries. 3 new tickers (OLOX, KWM, BRN) all fail sector discipline. No bi
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+
+None — no biotech/pharma candidates met entry criteria.
+
+## Morning Evaluation — 10:08 CET
+
+### Retrospective Scan
+
+**After-hours scan (forced):** 0 hits — AH session closed, data no longer available.
+
+**Premarket scan (all sectors):**
+
+| Ticker | Close | PM Price | PM Chg | PM Vol | Industry |
+|--------|-------|----------|--------|--------|----------|
+| BNRG | $0.83 | $1.00 | +20.8% | 4.3M | Engineering & Construction |
+| TLYS | $1.63 | $2.48 | +52.1% | 1.7M | Apparel/Footwear Retail |
+| TPET | $1.48 | $1.60 | +8.4% | 661K | Integrated Oil |
+| EONR | $0.89 | $0.95 | +7.0% | 496K | Integrated Oil |
+| TMDE | $2.29 | $2.79 | +21.8% | 436K | Wholesale Distributors |
+| INDO | $4.77 | $5.25 | +10.0% | 62K | Integrated Oil |
+| DLXY | $0.84 | $0.90 | +7.0% | 59K | Wholesale Distributors |
+
+No biotech/pharma stocks in premarket movers.
+
+### Key Stock Updates (via Yahoo Finance, ~4:08 AM ET)
+
+| Ticker | Prev Close | Yest Close | Current PM | vs Prev Close | vs Yest Close |
+|--------|-----------|------------|------------|---------------|---------------|
+| SXTP | $1.88 | $3.22 | $2.99 | +59.0% | -7.1% |
+| ACXP | $2.90 | $6.03 | $5.26 | +81.4% | -12.8% |
+| TLYS | $1.58 | $1.63 | $2.49 | +57.6% | +52.8% |
+| TMDE | $2.01 | $2.29 | $2.75 | +36.8% | +20.1% |
+| BNRG | $0.83 | $0.83 | $1.00 | +20.5% | +20.8% |
+
+### Paper Trade P&L
+
+No paper trades were placed — nothing to evaluate.
+
+### Scanner Effectiveness
+
+- **Evening scans ran:** 8 times (21:30 – 00:30 CET)
+- **Unique tickers found:** 31 across all scans
+- **Biotech/pharma candidates:** 2 (SXTP, ACXP)
+- **Retrospective matches:** 5 of 7 premarket movers were seen in evening scans
+
+**Would skipped entries have been profitable?**
+
+| Ticker | Skip Reason | AH Entry Would Be | Outcome |
+|--------|-------------|-------------------|---------|
+| SXTP | 50% rule (+71.3%) | ~$3.08-$3.22 | ❌ Loss — PM at $2.99 (-7.1%) |
+| ACXP | 50% rule (+107.9%), day 2 | ~$6.03 | ❌ Loss — PM at $5.26 (-12.8%) |
+| TLYS | Sector discipline | ~$2.61-$2.96 AH | ❌ Loss — PM at $2.49 (below AH) |
+
+**All three skip decisions were correct.** The 50% rule and sector discipline both prevented losses.
+
+### Missed Opportunities
+
+| Ticker | PM Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| BNRG | +20.8% | Not in AH scan (appeared in premarket only) | Possibly — up +20.5% from prev close, but not biotech |
+| DLXY | +7.0% | Not in AH scan (appeared in premarket only) | No — tiny move, not actionable |
+
+No significant missed opportunities. Both premarket-only stocks are non-biotech and would have been correctly filtered by sector discipline.
+
+### Notes
+
+- **50% rule vindicated:** Both SXTP (-7.1%) and ACXP (-12.8%) faded from their close prices into premarket. High-entry extended-hours moves continue to fade overnight.
+- **Sector discipline vindicated:** TLYS was the biggest mover (earnings-driven, +52.1% in PM) but all AH entry points ($2.61-$2.96) are above the current PM price ($2.49). Non-biotech momentum didn't carry through.
+- **Dead night for biotech:** No new biotech catalysts emerged overnight. The two biotech candidates (SXTP, ACXP) were carryovers from the regular session with entries already too extended.
+- **Scanner coverage good:** 5/7 premarket movers were already caught in evening scans. The 2 missed (BNRG, DLXY) only appeared in premarket and are non-biotech.
+- **No changes needed:** Scanner thresholds and sector filter working as intended.
