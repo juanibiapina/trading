@@ -86,6 +86,43 @@ After-hours scan. 3 hits — all previously seen, no new candidates.
 
 DTCK (+9.2% AH, Food Distributors) — previously seen at 22:00. AH price $2.13, volume 1.3M. Low float (177K) but non-biotech.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+After-hours scan. 7 hits — 2 biotech/pharma (both previously seen), 5 non-biotech (4 new).
+
+### Biotech/Pharma Candidates
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| LGVN | [TV](https://www.tradingview.com/chart/?symbol=LGVN) | $0.81 | -0.4% | +5.1% | $0.85 | 119K | 26.7M | 0.0x | 17.6M | Biotechnology |
+| GRCE | [TV](https://www.tradingview.com/chart/?symbol=GRCE) | $4.06 | +2.8% | +5.7% | $4.29 | 64K | 460K | 0.1x | 11.3M | Pharmaceuticals: Major |
+
+**LGVN** — Already seen at 22:00/22:30/23:00. AH price $0.85 (was $0.86 at 23:00), volume 119K (was 117K). Fading. Still skip: float too high (17.6M), negligible volume ratio.
+
+**GRCE** — Already seen at 22:00/22:30/23:00. No change in price ($4.29) or volume (64K). Dead. Still skip: float too high (11.3M), no volume.
+
+### Non-Biotech (all skipped per sector discipline)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $1.35 | +51.7% | +6.3% | $1.44 | 6.2M | 109.6M | 0.1x | 39.8M | Integrated Oil |
+| DTCK | [TV](https://www.tradingview.com/chart/?symbol=DTCK) | $1.95 | +12.1% | +12.3% | $2.19 | 1.3M | 4.1M | 0.3x | 177K | Food Distributors |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $2.43 | +6.1% | +6.2% | $2.58 | 298K | 26.3M | 0.0x | 0 | Wholesale Distributors |
+| FBGL | [TV](https://www.tradingview.com/chart/?symbol=FBGL) | $0.61 | +9.1% | +7.2% | $0.66 | 208K | 2.1M | 0.1x | 0 | Engineering & Construction |
+| IPM | [TV](https://www.tradingview.com/chart/?symbol=IPM) | $1.91 | +8.2% | +9.9% | $2.10 | 67K | 50K | 1.3x | 5.7M | Packaged Software |
+
+**EONR** — New. Skip: non-biotech (Integrated Oil), float too high (39.8M), +51.7% day already >50% above prev close.
+
+**DTCK** — Previously seen at 22:00/23:00. AH price up to $2.19 (was $2.13 at 23:00), volume still 1.3M. Interesting low float (177K) but non-biotech.
+
+**TMDE** — New. Skip: non-biotech (Wholesale Distributors), previously lost on this ticker in W08.
+
+**FBGL** — New. Skip: non-biotech (Engineering & Construction), low volume ratio (0.1x).
+
+**IPM** — New. Skip: non-biotech (Packaged Software), low AH volume (67K).
+
+No new paper trades. Quiet AH session for biotech — both LGVN and GRCE have been fading across all scans tonight.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
