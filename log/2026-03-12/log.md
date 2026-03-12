@@ -67,6 +67,25 @@ After-hours scan. 2 hits, both biotech/pharma — same tickers as 22:00 scan.
 
 No new candidates this scan.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+After-hours scan. 3 hits — all previously seen, no new candidates.
+
+### Biotech/Pharma Candidates
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| LGVN | [TV](https://www.tradingview.com/chart/?symbol=LGVN) | $0.81 | -0.4% | +6.9% | $0.86 | 117K | 26.7M | 0.0x | 17.6M | Biotechnology |
+| GRCE | [TV](https://www.tradingview.com/chart/?symbol=GRCE) | $4.06 | +2.8% | +5.7% | $4.29 | 64K | 460K | 0.1x | 11.3M | Pharmaceuticals: Major |
+
+**LGVN** — Already seen at 22:00/22:30. AH price $0.86 (back to 22:00 level), volume up to 117K (was 72K at 22:30). Still skip: float too high (17.6M), negligible volume ratio.
+
+**GRCE** — Already seen at 22:00/22:30. No change in price ($4.29) or volume (64K). Still skip: float too high (11.3M), fading volume.
+
+### Non-Biotech (skipped per sector discipline)
+
+DTCK (+9.2% AH, Food Distributors) — previously seen at 22:00. AH price $2.13, volume 1.3M. Low float (177K) but non-biotech.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
