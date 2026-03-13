@@ -30,6 +30,7 @@ MIN_5M_VOLUME = 5,000
 - 2 morning evaluations (10:05, 10:20 CET)
 - Paper trades with ~€100 positions
 - Biotech/pharma preferred (non-biotech historically 0% win rate)
+- Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: <50% above close, float <10M, catalyst required, first day of unusual volume
 
 ## Modifiable Files
@@ -42,6 +43,21 @@ MIN_5M_VOLUME = 5,000
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-03-13 — Regular Session Entry Guard in Post-Market Prompt
+
+**Context:** March 12 paper trades (SPRC -18.6%, AEMD -4.6%) were both entered during the 21:30 CET scan — regular session, 30 min before market close. Neither stock appeared in any subsequent AH scan. The trading plan says "enter in AH" but the prompt treated regular-session candidates identically to AH candidates, allowing immediate paper trade entries. This is the third consecutive daily loss from questionable entries (March 9: ACXP -29.5% at AH peak, March 12: two regular-session entries that faded). Paper trade record: 1W/3L.
+
+**Evaluation of previous changes:**
+- Day% prompt integration (2026-03-12): **Working as intended.** March 12 AH tables include Day% column. CODX was correctly evaluated using Day% (-18.8%) + AH% (+44.1%) to calculate total move from prev close (~+17%). No stock triggered the 50% rule through Day%+AH% combo that night, so the filter hasn't been stress-tested yet. Insufficient data for full evaluation.
+- Day% scanner column (2026-03-11): **Complete.** Column appears in terminal output and prompt-generated tables. No issues.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added "Regular session caution" block to Step 4 (Paper Trade Decisions). When the scan runs before AH opens (21:30 CET / before 4:00 PM ET), candidates are flagged as "Watch — pending AH confirmation" instead of entering paper trades. Trades are only entered from AH scans (22:00+ CET).
+   - Why: 2/2 regular-session paper trades on March 12 lost money. Both stocks had intraday spikes that didn't carry into AH. The trading plan requires AH entries, but the prompt allowed immediate entry from regular-session scans.
+   - Hypothesis: Regular-session candidates that don't reappear in AH scans will be correctly skipped, preventing premature entries. Measurable: next 21:30 CET scan should show "Watch" flags instead of paper trade entries. If a candidate from a regular scan doesn't appear in AH, no paper trade should be placed.
+
+**Updated process:** Regular session scans now produce "Watch" candidates, not paper trade entries.
 
 ### 2026-03-12 — Complete Day% Integration in Post-Market Prompt
 

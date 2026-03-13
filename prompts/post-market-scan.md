@@ -53,7 +53,9 @@ For each **new** candidate (not in prior scans), evaluate against the entry crit
 - Has a clear catalyst (search for news if needed)
 - Volume not fading, first day of unusual activity
 
-If a candidate passes, add a paper trade entry to the `## Paper Trades` table:
+**Regular session caution (21:30 CET / before 4:00 PM ET):** If this scan is running before AH opens, do NOT enter paper trades yet. Flag candidates as "Watch — pending AH confirmation" in the evaluation notes. Only enter a paper trade if the stock reappears in a subsequent AH scan (22:00+ CET) with sustained momentum. Stocks that spike intraday but don't carry into AH tend to fade (e.g., SPRC -18.6%, AEMD -4.6% on March 12).
+
+If a candidate passes (and it's an AH scan), add a paper trade entry to the `## Paper Trades` table:
 - Entry Price = current AH price
 - Shares = ~€100 / entry price (round down)
 - Reason = brief justification
