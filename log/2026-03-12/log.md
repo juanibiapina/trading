@@ -202,3 +202,55 @@ No new paper trades. Both biotech candidates fail entry criteria — CODX is day
 |--------|-------------|------------|-----------------|--------|
 | SPRC | $4.73 | 3:30 PM ET | 21 | Patent publication catalyst (weight loss/fatty liver therapy), ultra-low 339K float |
 | AEMD | $1.73 | 3:30 PM ET | 57 | Strategic review (Maxim Group engagement) + Life Sciences Forum presentation, 1.2M float, 42.7x rel volume |
+
+## Morning Evaluation — 10:20 CET
+
+### Retrospective Scan
+
+**After-hours scan (forced):** 0 hits — AH session ended, no data available.
+
+**Premarket scan (all sectors):**
+
+| Ticker | Close | PM Chg | PM Price | PM Vol | VRatio | Float | Industry |
+|--------|-------|--------|----------|--------|--------|-------|----------|
+| EONR | $1.35 | +28.1% | $1.73 | 10.1M | 0.1x | 39.8M | Integrated Oil |
+| EDHL | $3.46 | +37.9% | $4.77 | 1.0M | 5.4x | — | Advertising/Marketing |
+| ELPW | $3.59 | +31.2% | $4.71 | 376K | 0.2x | 31K | Electrical Products |
+| CODX | $2.63 | +8.7% | $2.86 | 211K | 0.5x | 1.9M | Biotechnology |
+| TMDE | $2.43 | +5.3% | $2.56 | 105K | 0.0x | — | Wholesale Distributors |
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| SPRC | $4.73 | 21:30 CET | $3.85 (close) | -$18.48 | -18.6% | ❌ Loss |
+| AEMD | $1.73 | 21:30 CET | $1.65 (close) | -$4.56 | -4.6% | ❌ Loss |
+
+**Total Paper P&L: -$23.04**
+
+Neither stock has premarket activity this morning. SPRC dropped from $4.73 to $3.85 close (crashed in last 30 min of regular session), bounced to $4.21–$4.44 in AH, but still below entry. AEMD barely moved in AH ($1.65–$1.69). No overnight follow-through for either.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 times** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET)
+- Biotech candidates found: **7 unique** (QNTM, EVGN, SPRC, AEMD, GRCE, LGVN, CODX)
+- Non-biotech candidates tracked: **24 unique** (skipped per sector discipline)
+- Premarket movers caught: **3/5** (EONR, CODX, TMDE)
+- Biotech premarket movers caught: **1/1** (CODX) — 100% biotech coverage
+
+### Missed Opportunities
+
+| Ticker | PM Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| EDHL | +37.9% | Never appeared in AH scans — movement started in premarket only | Yes, but non-biotech (Advertising) |
+| ELPW | +31.2% | Never appeared in AH scans — ultra-low 31K float, no AH volume | Yes, but non-biotech (Electrical) |
+
+Both missed stocks are non-biotech, so they wouldn't have been traded under sector discipline. The scanner had **100% coverage for biotech movers**.
+
+### Notes
+
+- **Paper trades both lost.** Entering during the regular session (3:30 PM ET, 30 min before close) is risky — SPRC's -18.6% loss came from the stock crashing into the close. The trading plan says to enter in AH, not during regular hours.
+- **Quiet AH night for biotech.** Only CODX showed meaningful AH activity (correctly identified and skipped as day-2 bounce). GRCE and LGVN faded across all scans.
+- **CODX decision validated.** Skipped as day-2 recovery bounce — stock only managed +8.7% in premarket, confirming the "no fresh momentum" read.
+- **Non-biotech EDHL (+37.9%) and ELPW (+31.2%) were the real movers.** Both started moving in premarket, not AH, so no AH scan could have caught them. This is a known gap: premarket-only movers are invisible to evening scans.
+- **Sector discipline cost opportunity tonight.** The biggest winners were non-biotech. However, the trading plan's 0/6 non-biotech win rate justifies the filter — one night's sample doesn't change that.
