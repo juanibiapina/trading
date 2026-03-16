@@ -41,6 +41,29 @@
 
 **Non-biotech (WNW, ULY, TAOP, CIGL, etc.)** — Skip: sector discipline. Non-biotech has 0% win rate (0/6).
 
+## Scan 22:00 CET (4:00 PM ET) — After-Hours
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| UPXI | [TV](https://www.tradingview.com/chart/?symbol=UPXI) | $1.08 | -2.7% | +5.6% | $1.14 | 4.3M | 10.8M | 0.4x | 56.2M | Pharmaceuticals |
+| DCGO | [TV](https://www.tradingview.com/chart/?symbol=DCGO) | $0.65 | -1.5% | +10.9% | $0.72 | 1.2M | 906K | 1.3x | 85.4M | Medical/Nursing |
+| LIDR | [TV](https://www.tradingview.com/chart/?symbol=LIDR) | $1.55 | -2.5% | +42.6% | $2.21 | 751K | 531K | 1.4x | 42.9M | Packaged Software |
+| JVA | [TV](https://www.tradingview.com/chart/?symbol=JVA) | $3.17 | +1.3% | +12.0% | $3.55 | 158K | 43K | 3.7x | 5.0M | Food |
+
+### Evaluation
+
+**Prior watch update:** HCWB and NBY (watched from 21:30 scan) did not appear in AH scan — no unusual after-hours volume. Dropping from watch list.
+
+**LIDR** (+42.6% AH, Packaged Software, 42.9M float) — Skip: non-biotech (0% win rate), float too high (42.9M). Catalyst is Q4 earnings (revenue +94%) + NVIDIA Halos partnership — real catalysts but wrong sector.
+
+**JVA** (+12.0% AH, Food, 5.0M float) — Skip: non-biotech (0% win rate). No news catalyst found. Decent float but wrong sector.
+
+**UPXI** (+5.6% AH, Pharmaceuticals, 56.2M float) — Skip: float too high (56.2M, ideal <10M), VRatio 0.4x (below average volume), tiny AH move (+2.9% from prev close).
+
+**DCGO** (+10.9% AH, Medical/Nursing, 85.4M float) — Skip: not biotech/pharma, float too high (85.4M).
+
+**No paper trades.** No candidates pass entry criteria — all either non-biotech or have excessive float. Weak AH session.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
