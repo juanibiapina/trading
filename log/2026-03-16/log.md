@@ -135,6 +135,33 @@
 
 **No paper trades.** Fifth scan today — zero biotech/pharma candidates have appeared in any after-hours scan. Completely dead day for the strategy. All AH movers are non-biotech.
 
+## Scan 00:00 CET (6:00 PM ET) — After-Hours
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| LIDR | [TV](https://www.tradingview.com/chart/?symbol=LIDR) | $1.55 | -2.5% | +41.3% | $2.19 | 13.8M | 2.0M | 7.0x | 42.9M | Packaged Software |
+| UPXI | [TV](https://www.tradingview.com/chart/?symbol=UPXI) | $1.08 | -2.7% | +10.2% | $1.19 | 4.8M | 10.9M | 0.4x | 56.2M | Pharmaceuticals |
+| ONFO | [TV](https://www.tradingview.com/chart/?symbol=ONFO) | $0.62 | +14.1% | +26.6% | $0.78 | 1.9M | 272K | 7.1x | 4.1M | Packaged Software |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $0.51 | +12.8% | +7.9% | $0.55 | 1.6M | 404K | 3.9x | 7.0M | Misc. Commercial |
+| DCGO | [TV](https://www.tradingview.com/chart/?symbol=DCGO) | $0.65 | -1.5% | +8.1% | $0.70 | 1.4M | 931K | 1.5x | 85.4M | Medical/Nursing |
+| JVA | [TV](https://www.tradingview.com/chart/?symbol=JVA) | $3.17 | +1.3% | +20.5% | $3.82 | 359K | 68K | 5.3x | 5.0M | Food |
+| CYCU | [TV](https://www.tradingview.com/chart/?symbol=CYCU) | $1.03 | -37.6% | +6.8% | $1.10 | 202K | 1.5M | 0.1x | 3.7M | IT Services |
+
+### Evaluation
+
+**No new tickers.** All 7 candidates appeared in prior scans.
+
+**Prior scan updates:**
+- **LIDR** (seen since 22:00, peaked at +59.4%): Now +41.3% AH ($2.19), continuing steady fade from $2.47 peak. Volume at 13.8M but price down ~11% from high. Still non-biotech, float 42.9M — skipped.
+- **ONFO** (seen 23:00 at +9.7%, 23:30 at +24.1%): Now +26.6% ($0.78), still building. Volume surged to 1.9M (7.1x avg). Interesting momentum but non-biotech (Packaged Software) — skipped per sector discipline.
+- **JVA** (seen since 22:00, was +12-15%): Now +20.5% ($3.82), strongest move yet. Volume 359K (5.3x avg). Grinding higher all session but non-biotech (Food) — skipped.
+- **UPXI** (seen 22:00 at +5.6%, 23:30 at +6.5%): Now +10.2% ($1.19), uptick. Pharma sector but float 56.2M (ideal <10M), VRatio 0.4x (below average) — skipped.
+- **NCPL** (seen 22:30 at +13.8%, 23:30 at +10.6%): Now +7.9% ($0.55), fading. Non-biotech — skipped.
+- **DCGO** (seen since 22:00): +8.1% ($0.70), choppy around same levels all session. Non-biotech, float 85.4M — skipped.
+- **CYCU** (seen since 21:30): +6.8% ($1.10), stable. VRatio 0.1x — dead volume. Non-biotech — skipped.
+
+**No paper trades.** Sixth scan today with zero biotech/pharma candidates meeting entry criteria. Dead day for the strategy — no healthcare movers in after-hours at all.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
