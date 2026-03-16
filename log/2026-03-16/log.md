@@ -162,6 +162,34 @@
 
 **No paper trades.** Sixth scan today with zero biotech/pharma candidates meeting entry criteria. Dead day for the strategy — no healthcare movers in after-hours at all.
 
+## Scan 00:30 CET (6:30 PM ET) — After-Hours
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| LIDR | [TV](https://www.tradingview.com/chart/?symbol=LIDR) | $1.55 | -2.5% | +43.2% | $2.22 | 14.3M | 2.0M | 7.0x | 42.9M | Packaged Software |
+| UPXI | [TV](https://www.tradingview.com/chart/?symbol=UPXI) | $1.08 | -2.7% | +7.4% | $1.16 | 4.8M | 10.9M | 0.4x | 56.2M | Pharmaceuticals |
+| ONFO | [TV](https://www.tradingview.com/chart/?symbol=ONFO) | $0.62 | +14.1% | +31.4% | $0.81 | 2.3M | 316K | 7.4x | 4.1M | Packaged Software |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $0.51 | +12.8% | +8.3% | $0.55 | 1.6M | 405K | 3.9x | 7.0M | Misc. Commercial |
+| DCGO | [TV](https://www.tradingview.com/chart/?symbol=DCGO) | $0.65 | -1.5% | +9.7% | $0.71 | 1.4M | 932K | 1.5x | 85.4M | Medical/Nursing |
+| LGVN | [TV](https://www.tradingview.com/chart/?symbol=LGVN) | $0.89 | -8.8% | +8.1% | $0.96 | 493K | 30.5M | 0.0x | 17.6M | Biotechnology |
+| JVA | [TV](https://www.tradingview.com/chart/?symbol=JVA) | $3.17 | +1.3% | +18.0% | $3.74 | 375K | 70K | 5.4x | 5.0M | Food |
+| CYCU | [TV](https://www.tradingview.com/chart/?symbol=CYCU) | $1.03 | -37.6% | +8.7% | $1.12 | 211K | 1.5M | 0.1x | 3.7M | IT Services |
+
+### Evaluation
+
+**Prior scan updates:**
+- **LIDR** (seen since 22:00, peaked at +59.4%): Now +43.2% AH ($2.22), slight bounce from 00:00 low of $2.19 but still well off peak. Volume at 14.3M. Still non-biotech (Packaged Software), float 42.9M — skipped.
+- **ONFO** (seen since 23:00, was +26.6% at 00:00): Now +31.4% ($0.81), continuing to build. Volume 2.3M (7.4x avg). Strongest sustained mover this session but non-biotech (Packaged Software) — skipped per sector discipline.
+- **JVA** (seen since 22:00, peaked at +20.5%): Now +18.0% ($3.74), slight fade from 00:00 peak of $3.82. Non-biotech (Food) — skipped.
+- **UPXI** (seen since 22:00): +7.4% ($1.16), fading from +10.2% at 00:00. Pharma but float 56.2M, VRatio 0.4x — skipped.
+- **NCPL** (seen since 22:30): +8.3% ($0.55), stable. Non-biotech — skipped.
+- **DCGO** (seen since 22:00): +9.7% ($0.71), slight uptick from 00:00. Non-biotech, float 85.4M — skipped.
+- **CYCU** (seen since 21:30): +8.7% ($1.12), steady drift. VRatio 0.1x — dead volume. Non-biotech — skipped.
+
+**New: LGVN** (+8.1% AH, Biotechnology, 17.6M float) — Skip: D-tier catalyst ($30M private placement announced March 10 — financing/dilution, which the plan says to avoid). VRatio 0.0x (493K vs 30.5M avg — essentially zero unusual AH activity). Float 17.6M (above ideal 10M). Stock was -8.8% during regular session, AH bounce just recovers part of the loss — still below previous close. Earnings March 17 but not a catalyst yet.
+
+**No paper trades.** Seventh scan today — LGVN is the first biotech to appear in AH but fails on every metric (D-tier catalyst, no unusual volume, high float, stock below previous close). Completely dead day for the strategy.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
