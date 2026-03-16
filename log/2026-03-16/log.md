@@ -64,6 +64,26 @@
 
 **No paper trades.** No candidates pass entry criteria — all either non-biotech or have excessive float. Weak AH session.
 
+## Scan 22:30 CET (4:30 PM ET) — After-Hours
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| LIDR | [TV](https://www.tradingview.com/chart/?symbol=LIDR) | $1.55 | -2.5% | +59.4% | $2.47 | 6.9M | 1.2M | 5.6x | 42.9M | Packaged Software |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $0.51 | +12.8% | +13.8% | $0.58 | 1.5M | 396K | 3.8x | 7.0M | Miscellaneous Commercial Services |
+| DCGO | [TV](https://www.tradingview.com/chart/?symbol=DCGO) | $0.65 | -1.5% | +13.5% | $0.73 | 1.2M | 913K | 1.4x | 85.4M | Medical/Nursing Services |
+| JVA | [TV](https://www.tradingview.com/chart/?symbol=JVA) | $3.17 | +1.3% | +13.9% | $3.61 | 288K | 60K | 4.8x | 5.0M | Food |
+
+### Evaluation
+
+**Prior scan updates:**
+- **LIDR** (seen 22:00 at +42.6%): Now +59.4% AH ($2.47), volume surged from 751K to 6.9M. Strong momentum but still non-biotech (Packaged Software), float 42.9M — skipped for same reasons.
+- **DCGO** (seen 22:00 at +10.9%): Now +13.5% AH ($0.73), steady. Still non-biotech, float 85.4M — skipped.
+- **JVA** (seen 22:00 at +12.0%): Now +13.9% AH ($3.61), slight uptick. Still non-biotech (Food) — skipped.
+
+**New: NCPL** (+13.8% AH, Misc. Commercial Services, 7.0M float) — Skip: non-biotech (0% win rate). Catalyst is Q3 2026 earnings release today. Decent float (7.0M) and volume ratio (3.8x) but wrong sector.
+
+**No paper trades.** Third scan today with zero biotech/pharma candidates meeting entry criteria. Quiet day for the strategy.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
