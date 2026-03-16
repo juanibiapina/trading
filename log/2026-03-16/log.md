@@ -84,6 +84,29 @@
 
 **No paper trades.** Third scan today with zero biotech/pharma candidates meeting entry criteria. Quiet day for the strategy.
 
+## Scan 23:00 CET (5:00 PM ET) — After-Hours
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| LIDR | [TV](https://www.tradingview.com/chart/?symbol=LIDR) | $1.55 | -2.5% | +51.6% | $2.35 | 11.0M | 1.7M | 6.6x | 42.9M | Packaged Software |
+| DCGO | [TV](https://www.tradingview.com/chart/?symbol=DCGO) | $0.65 | -1.5% | +5.0% | $0.68 | 1.4M | 926K | 1.5x | 85.4M | Medical/Nursing Services |
+| JVA | [TV](https://www.tradingview.com/chart/?symbol=JVA) | $3.17 | +1.3% | +15.1% | $3.65 | 322K | 64K | 5.1x | 5.0M | Food |
+| CYCU | [TV](https://www.tradingview.com/chart/?symbol=CYCU) | $1.03 | -37.6% | +5.8% | $1.09 | 158K | 1.5M | 0.1x | 3.7M | IT Services |
+| ONFO | [TV](https://www.tradingview.com/chart/?symbol=ONFO) | $0.62 | +14.1% | +9.7% | $0.68 | 57K | 72K | 0.8x | 4.1M | Packaged Software |
+
+### Evaluation
+
+**Prior scan updates:**
+- **LIDR** (seen 22:00 at +42.6%, 22:30 at +59.4%): Now +51.6% AH ($2.35), fading from peak of $2.47. Volume still building at 11.0M but price giving back gains. Still non-biotech (Packaged Software), float 42.9M — skipped.
+- **DCGO** (seen 22:00 at +10.9%, 22:30 at +13.5%): Now +5.0% AH ($0.68), fading significantly. Losing momentum. Still non-biotech, float 85.4M — skipped.
+- **JVA** (seen 22:00 at +12.0%, 22:30 at +13.9%): Now +15.1% AH ($3.65), slight grind higher. Still non-biotech (Food) — skipped.
+
+**CYCU** (seen in 21:30 regular session at -37.6%) — Skip: non-biotech (IT Services). Small AH bounce (+5.8%) after massive regular session loss. VRatio 0.1x — no real AH volume.
+
+**New: ONFO** (+9.7% AH, Packaged Software, 4.1M float) — Skip: non-biotech (0% win rate). Only catalyst is a routine preferred stock dividend declaration from March 11 (D-tier). VRatio 0.8x — below average volume.
+
+**No paper trades.** Fourth scan today with zero biotech/pharma candidates meeting entry criteria. Completely dead day for the strategy — no healthcare movers in after-hours.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
