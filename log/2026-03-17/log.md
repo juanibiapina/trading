@@ -98,7 +98,38 @@ No paper trades tonight. The AH scan produced no candidates that meet entry crit
 - HIT has no identifiable catalyst despite interesting AH spike
 - UCAR and JVA from the earlier watchlist both failed to carry momentum into AH, confirming the regular-session caution was correct
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Session: AFTERHOURS**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| HIT | [TV](https://www.tradingview.com/chart/?symbol=HIT) | $1.70 | -0.6% | +21.2% | $2.06 | 3.5M | 616K | 5.8x | 7.6M | Information Technology Services |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $1.31 | -28.4% | +5.3% | $1.38 | 110K | 6.6M | 0.0x | 0 | Wholesale Distributors |
+
+### Updates from Prior Scans
+
+- **BIAF**: No longer appearing in scan. Faded out of AH activity.
+- **JAGU**: No longer appearing in scan. Dropped off.
+- **HIT**: AH price holding steady ($2.06 vs $2.07 at 22:30). Volume grew from 3.2M to 3.5M. **Catalyst found** (see below).
+- **TMDE**: Fading. AH gain dropped from +8.4% to +5.3%. Still a skip.
+
+### Candidate Evaluation
+
+**HIT** (Health In Tech) — **PAPER TRADE**
+- Float 7.6M (under 10M ✓), MCap $96.7M, IT Services / InsurTech
+- **Catalyst found:** PR released at 4:01 PM ET (22:01 CET) — Strategic collaboration with Ciklum (AWS Advanced Tier Service Partner) to accelerate AI-driven InsurTech platform. Ciklum will optimize AWS architecture, data engineering, and AI-enabled quoting/analytics. Platform serves 800+ brokers, TPAs, MGUs and carriers across 40 states.
+- Catalyst tier: A (Partnership/collaboration with AWS ecosystem partner)
+- AH action: +21.2% on 3.5M shares (5.8x avg volume), holding steady for 1 hour
+- First day of unusual activity: Yes (regular session was flat at -0.6%)
+- Volume NOT fading: grew from 3.2M (22:30) to 3.5M (23:00) while price held
+- Previous scan at 22:30 skipped HIT for "no catalyst" — the PR had just dropped and the search missed it
+- Additional context: Q4 2025 earnings coming March 25 (potential second catalyst), CTO appointment in Feb (momentum in hiring)
+
+**TMDE** — Skip: fading AH bounce (+5.3% down from +8.4%), down -28.4% on the day, past loser from our trades.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| HIT | $2.06 | 23:00 CET | 52 | AWS/Ciklum partnership catalyst (Tier A). Float 7.6M, first-day AH spike +21%, volume 5.8x and growing. |
