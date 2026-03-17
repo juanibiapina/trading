@@ -169,6 +169,39 @@ No new candidates. No changes to paper trades.
 
 No new paper trades. HIT position continues to build.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**Session: AFTERHOURS**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| HIT | [TV](https://www.tradingview.com/chart/?symbol=HIT) | $1.70 | -0.6% | +31.2% | $2.23 | 4.1M | 677K | 6.0x | 7.6M | Information Technology Services |
+| HCWB | [TV](https://www.tradingview.com/chart/?symbol=HCWB) | $0.88 | -6.3% | +6.7% | $0.94 | 810K | 48.0M | 0.0x | 4.7M | Biotechnology |
+| EDSA | [TV](https://www.tradingview.com/chart/?symbol=EDSA) | $7.00 | +36.7% | +7.4% | $7.52 | 160K | 6.0M | 0.0x | 7.3M | Pharmaceuticals: Major |
+| FMFC | [TV](https://www.tradingview.com/chart/?symbol=FMFC) | $0.51 | +3.7% | +8.8% | $0.55 | 55K | 1.9M | 0.0x | 0 | Consumer Sundries |
+
+### Updates from Prior Scans
+
+- **HIT**: Steady climb continues. Price $2.23 (up from $2.17 at 00:00), AH gain now +31.2% (was +27.6%). Volume 4.1M (up from 3.9M). 2.5+ hours of sustained building with no pullback. Paper trade at $2.06 is up +8.3%.
+- **EDSA**: Continuing to fade. AH +7.4% at $7.52 (down from +12.3% at $7.86 at 00:00). Confirmed fade, still a skip.
+
+### Candidate Evaluation
+
+**HCWB** (HCW Biologics) — Skip: low AH volume, stock was down on the day
+- Float 4.7M (good), MCap $5.0M (micro), Biotechnology
+- Catalyst: Closed exclusive worldwide license for HCW11-006 with $7M upfront payment (announced March 17). Also published preclinical CAR-T research in Science Advances.
+- $7M deal for a $5M company is material, but AH reaction is muted: +6.7% on only 810K shares vs 48M avg (0.02x). Stock was DOWN -6.3% on the regular session despite the news.
+- The market is not excited. Low AH volume + weak price action = no momentum for overnight carry.
+
+**FMFC** (Kandal M Venture) — Skip: no catalyst, tiny AH volume
+- MCap $9.3M, Consumer Sundries (leather goods). Float unknown.
+- No fresh news found. AH volume 55K vs 1.9M avg = negligible.
+- Small AH move (+8.8%) on no catalyst with no volume. Not actionable.
+
+### Summary
+
+HIT continues to be the only story tonight. Now +31.2% in AH with 4.1M shares traded over 2.5 hours, and still climbing. No other candidates meet entry criteria. Paper trade at $2.06 is performing well (+8.3%).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
