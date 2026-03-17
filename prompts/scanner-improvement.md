@@ -89,4 +89,4 @@ git commit -m "scanner improvement YYYY-MM-DD: [brief description]"
 git push
 ```
 
-*Note: the daily summary email is sent by the process-review task (the last task in the daily cycle).*
+*Note: the daily summary email is sent by a separate task (daily-email.md).*
