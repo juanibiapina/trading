@@ -144,6 +144,31 @@ No paper trades tonight. The AH scan produced no candidates that meet entry crit
 
 No new candidates. No changes to paper trades.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**Session: AFTERHOURS**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| HIT | [TV](https://www.tradingview.com/chart/?symbol=HIT) | $1.70 | -0.6% | +27.6% | $2.17 | 3.9M | 655K | 5.9x | 7.6M | Information Technology Services |
+| EDSA | [TV](https://www.tradingview.com/chart/?symbol=EDSA) | $7.00 | +36.7% | +12.3% | $7.86 | 124K | 6.0M | 0.0x | 7.3M | Pharmaceuticals: Major |
+
+### Updates from Prior Scans
+
+- **HIT**: Steady climb continues. Price $2.17 (up from $2.11 at 23:30), AH gain now +27.6% (was +24.1%). Volume 3.9M (up from 3.7M). Building for 2+ hours with no signs of fading. Paper trade at $2.06 is up +5.3%.
+- **TMDE**: Dropped off scan entirely. Confirmed fade.
+
+### Candidate Evaluation
+
+**EDSA** (Edesa Biotech) — Skip: fading from intraday peak, no fresh catalyst, tiny AH volume
+- Float 7.3M (under 10M), MCap $58.4M, Pharmaceuticals
+- No fresh catalyst found for today. Most recent news: Phase 3 positive results (Feb 24) and Q1 earnings (Feb 13). Today's +36.7% move has no identifiable trigger.
+- AH volume 124K vs 6.0M avg = 0.02x. Extremely low AH participation.
+- Regular session peaked at $7.96 (10:40 AM ET). AH spiked briefly to $7.90 then pulled back to $7.38-$7.43 by 6:00 PM ET. Price is fading from intraday peak.
+- Pattern warning: "No catalyst = no follow-through" + "Chasing extended stocks is risky" (already +36.7% on the day).
+
+No new paper trades. HIT position continues to build.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
