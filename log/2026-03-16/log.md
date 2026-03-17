@@ -194,3 +194,71 @@
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+
+*(No paper trades — zero biotech/pharma candidates met entry criteria)*
+
+## Morning Evaluation — 10:21 CET
+
+### Retrospective Scan
+
+**After-hours scan (forced, 04:21 ET):** 0 hits — AH session closed hours ago, no data.
+
+**Premarket scan (04:21 ET):**
+
+| Ticker | Close | PM Chg | PM Price | PM Vol | VRatio | Float | Industry |
+|--------|-------|--------|----------|--------|--------|-------|----------|
+| WNW | $2.15 | +15.3% | $2.48 | 5.9M | 0.3x | 14.1M | Internet Retail |
+| LIDR | $1.55 | +35.2% | $2.10 | 3.0M | 1.4x | 42.9M | Packaged Software |
+| OCG | $0.79 | +19.3% | $0.94 | 2.4M | 1.3x | 1.7M | Specialty Stores |
+| ONFO | $0.62 | +9.3% | $0.67 | 168K | 0.5x | 4.1M | Packaged Software |
+| STIM | $1.36 | +15.4% | $1.57 | 51K | 0.1x | 35.5M | Medical Specialties |
+
+### Paper Trade P&L
+
+No paper trades taken — nothing to evaluate.
+
+### Scanner Effectiveness
+
+- **Evening scans ran:** 7 times (21:30 – 00:30 CET)
+- **Candidates found:** 23 unique tickers across all scans
+- **Retrospective matches:** 3/5 premarket movers were caught by evening scans
+
+| Premarket Mover | Caught? | Where |
+|-----------------|---------|-------|
+| WNW (+15.3%) | ✅ Yes | Regular session scan 21:30 |
+| LIDR (+35.2%) | ✅ Yes | All AH scans (22:00–00:30) |
+| ONFO (+9.3%) | ✅ Yes | AH scans from 23:00 onward |
+| OCG (+19.3%) | ❌ No | Premarket-only mover |
+| STIM (+15.4%) | ❌ No | Premarket-only mover |
+
+### Missed Opportunities
+
+| Ticker | PM Change | Industry | Float | Why Missed | Would Be Profitable? |
+|--------|-----------|----------|-------|------------|---------------------|
+| OCG | +19.3% | Specialty Stores | 1.7M | No AH activity — premarket-only mover | Skipped anyway: non-biotech |
+| STIM | +15.4% | Medical Specialties | 35.5M | No AH activity — premarket-only mover | Skipped anyway: float 35.5M (ideal <10M) |
+
+Neither missed stock would have been traded — both fail entry criteria (wrong sector or excessive float).
+
+### AH Mover Follow-Through
+
+How did last night's AH movers perform into premarket?
+
+| Ticker | AH Peak | AH Peak Time | Current PM | From Peak | From Prev Close | Verdict |
+|--------|---------|-------------|------------|-----------|-----------------|---------|
+| LIDR | $2.47 (+59.4%) | 22:30 | $2.15 | -13.0% | +35.2% | Faded from peak, still up |
+| ONFO | $0.81 (+31.4%) | 00:30 | $0.69 | -14.8% | +27.8% | Faded from peak, still up |
+| JVA | $3.82 (+20.5%) | 00:00 | $3.66 | -4.2% | +16.9% | Slight fade, holding |
+| HCWB | $0.94 (+81.2%) | Close | $0.80 | -14.9% | +55.8% | Faded hard — 50% rule saved us |
+| WNW | $2.15 (+19.4%) | Close | $2.58 | +20.0% | +41.8% | Continued higher in PM |
+| DCGO | $0.73 (+13.5%) | 22:30 | $0.69 | -5.5% | +5.2% | Faded, flat |
+| NCPL | $0.58 (+13.8%) | 22:30 | $0.52 | -10.3% | +15.1% | Faded from AH peak |
+| LGVN | $0.96 (+8.1%) | 00:30 | $0.92 | -4.2% | -5.5% | Still below prev close |
+
+### Notes
+
+1. **Correct no-trade decision.** Zero biotech/pharma candidates appeared with viable setups. All AH movers were non-biotech. Sector discipline held.
+2. **50% rule validated again.** HCWB (+81.2%) faded from $0.94 to $0.80 overnight — entering would have lost -14.9%. The "never chase >50%" rule continues to protect against these.
+3. **AH peak → PM fade pattern.** Most AH movers (LIDR, ONFO, HCWB, DCGO, NCPL) faded from their AH peaks into premarket. Exception: WNW continued higher (+41.8% from prev close in PM vs +19.4% at close).
+4. **Scanner coverage is good.** Caught 3/5 premarket movers; the 2 missed (OCG, STIM) only emerged in premarket and would have been skipped anyway (wrong sector, excessive float).
+5. **No scanner adjustments needed.** The scanner did its job — it found the movers. The issue isn't detection, it's that biotech had no catalysts yesterday. Some days are just dead for the strategy.
