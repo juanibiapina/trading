@@ -80,6 +80,15 @@ Append a `## Morning Evaluation` section to the log:
 
 [or "No significant missed opportunities."]
 
+### AH Mover Follow-Through
+
+How did last night's top AH movers perform into premarket? Include every stock that appeared in 2+ evening scans with AH change >10%.
+
+| Ticker | AH Peak | AH Peak Time | Current PM | From Peak | From Prev Close | Verdict |
+|--------|---------|-------------|------------|-----------|-----------------|---------|
+
+This tracks whether AH momentum carries into premarket (the core trading hypothesis).
+
 ### Notes
 [any observations about scanner performance, threshold adjustments needed, etc.]
 ```
