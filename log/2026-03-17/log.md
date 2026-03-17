@@ -56,6 +56,48 @@
 | UCAR | A | Low float, strong catalyst (Thailand EV truck production), massive volume. Watch for AH continuation. |
 | JVA | B | Low float, earnings beat catalyst. Watch for AH follow-through. |
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Session: AFTERHOURS**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $2.74 | +43.5% | +8.4% | $2.97 | 3.6M | 39.3M | 0.1x | 4.3M | Medical Specialties |
+| HIT | [TV](https://www.tradingview.com/chart/?symbol=HIT) | $1.70 | -0.6% | +21.8% | $2.07 | 3.2M | 570K | 5.5x | 7.6M | Information Technology Services |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $1.31 | -28.4% | +8.4% | $1.42 | 100K | 6.6M | 0.0x | 0 | Wholesale Distributors |
+| JAGU | [TV](https://www.tradingview.com/chart/?symbol=JAGU) | $1.61 | -2.4% | +6.2% | $1.71 | 87K | 415K | 0.2x | 11.5M | Other Metals/Minerals |
+
+### Watchlist Update (from 21:30 scan)
+
+- **UCAR**: AH price dropped to ~$0.69 (from $0.72 close). Lost momentum, no AH follow-through. **Confirmed: regular session spike did not carry into AH.**
+- **JVA**: AH flat at ~$4.07. No follow-through despite earnings beat. **Confirmed: no AH momentum.**
+
+### Candidate Evaluation
+
+**BIAF** (bioAffinity Technologies) - Skip: multi-day runner, not first day
+- Float 4.3M (ideal), MCap $12.3M, Medical Specialties
+- Catalyst: CyPath Lung sales growth, FY2025 results (released March 13). Stock spiked +120% on March 13.
+- Today is day 4 of the run. AH hovering $2.89-3.05, not building.
+- Our pattern targets first-day AH spikes. Multi-day runners have already had their biggest move.
+
+**HIT** (Health In Tech) - Skip: no clear catalyst
+- Float 7.6M (acceptable), MCap $96.7M, IT Services
+- AH spike +26.5% to ~$2.15, holding steady. First day of unusual AH activity.
+- Short interest up 25% in Feb (possible squeeze angle), but no fresh news or PR found.
+- Pattern warning: "No catalyst = no follow-through" (IFBD 77x vol faded, MNDR 6.8x AH vol lost -16.5%).
+- Worth monitoring if a catalyst surfaces, but entering without one is against the playbook.
+
+**TMDE** - Skip: down -28.4% on day, dead cat bounce in AH. Float unknown. Past loser from our trades.
+
+**JAGU** - Skip: small AH move (+6.2%), float 11.5M (above ideal), low AH volume (87K).
+
+### Summary
+
+No paper trades tonight. The AH scan produced no candidates that meet entry criteria:
+- BIAF is a multi-day runner (day 4), not first-day unusual activity
+- HIT has no identifiable catalyst despite interesting AH spike
+- UCAR and JVA from the earlier watchlist both failed to carry momentum into AH, confirming the regular-session caution was correct
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
