@@ -128,6 +128,22 @@ No paper trades tonight. The AH scan produced no candidates that meet entry crit
 
 **TMDE** — Skip: fading AH bounce (+5.3% down from +8.4%), down -28.4% on the day, past loser from our trades.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**Session: AFTERHOURS**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| HIT | [TV](https://www.tradingview.com/chart/?symbol=HIT) | $1.70 | -0.6% | +24.1% | $2.11 | 3.7M | 629K | 5.8x | 7.6M | Information Technology Services |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $1.31 | -28.4% | +5.3% | $1.38 | 136K | 6.6M | 0.0x | 0 | Wholesale Distributors |
+
+### Updates from Prior Scans
+
+- **HIT**: Continuing to build. Price $2.11 (up from $2.06 at 23:00), AH gain now +24.1% (was +21.2%). Volume 3.7M (up from 3.5M). Steady climb over 90 minutes confirms sustained momentum. Paper trade entry at $2.06 is already up +2.4%.
+- **TMDE**: Flat. AH price still $1.38 (+5.3%), volume crept from 110K to 136K. Still a skip.
+
+No new candidates. No changes to paper trades.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
