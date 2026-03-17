@@ -7,10 +7,10 @@ Auto-detects the current trading session (premarket, regular, after-hours)
 and uses the appropriate fields for each.
 
 Usage:
-    python scripts/scan.py              # Single scan (auto-detect session)
+    python scripts/scan.py              # Single scan, all sectors (auto-detect session)
     python scripts/scan.py --watch      # Poll every 60s
     python scripts/scan.py --watch 30   # Poll every 30s
-    python scripts/scan.py --all        # All sectors (default: biotech only)
+    python scripts/scan.py --biotech    # Biotech only (default: all sectors)
 """
 
 import argparse
@@ -109,7 +109,7 @@ COLUMNS_AFTERHOURS = [
 ]
 
 
-def build_filters(session, biotech_only=True):
+def build_filters(session, biotech_only=False):
     """Build filter list appropriate for the current session."""
     filters = [
         {"left": "market_cap_basic", "operation": "in_range", "right": [0, MAX_MARKET_CAP]},
@@ -158,7 +158,7 @@ def get_columns(session):
     return COLUMNS_REGULAR
 
 
-def scan(session, biotech_only=True):
+def scan(session, biotech_only=False):
     """Run a single scan and return results."""
     columns = get_columns(session)
     payload = {
@@ -338,7 +338,7 @@ def notify(ticker, price, change_pct):
         pass
 
 
-def watch(interval, session, biotech_only=True):
+def watch(interval, session, biotech_only=False):
     """Poll continuously."""
     previous_tickers = set()
     mode = "biotech" if biotech_only else "all sectors"
@@ -383,12 +383,14 @@ def main():
     parser.add_argument("--watch", nargs="?", const=60, type=int, metavar="SECS",
                         help="Poll continuously (default: every 60s)")
     parser.add_argument("--all", action="store_true",
-                        help="Search all sectors (default: Health Technology only)")
+                        help="Search all sectors (default, kept for backward compatibility)")
+    parser.add_argument("--biotech", action="store_true",
+                        help="Restrict to Health Technology sector only")
     parser.add_argument("--session", choices=["premarket", "regular", "afterhours"],
                         help="Force a specific session (default: auto-detect)")
     args = parser.parse_args()
 
-    biotech_only = not args.all
+    biotech_only = args.biotech
 
     if args.session:
         session = args.session

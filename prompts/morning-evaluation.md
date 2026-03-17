@@ -1,6 +1,8 @@
 Run a morning evaluation of last night's post-market scanning session.
 
-The goal is to assess scanner effectiveness: did we catch the right stocks? What did we miss?
+**Primary goal: find today's winner and diagnose the scanner.**
+
+The most important question is: what stock IS exploding in premarket right now? There is almost always one. Find it first — independently, without looking at last night's watchlist — then check if our evening scanner would have caught it. This is the baseline test: if the scanner can't even detect the winners, no entry rules will make the strategy work. See "Learning Phase" in Day Trading.md for the full reasoning.
 
 ## Steps
 
@@ -12,16 +14,25 @@ The goal is to assess scanner effectiveness: did we catch the right stocks? What
 - Pull latest changes
 - Read the existing log to understand what was found and any paper trades
 
-### 2. Retrospective Scan
+### 2. Find Today's Winner
 
-Run both a forced after-hours scan and a live premarket scan to get the fullest picture of what moved overnight. Use `--all` to scan ALL sectors — don't limit to biotech. We want to catch anything that would have been worth buying.
+**Do this BEFORE looking at last night's log.** Search fresh for what is exploding in premarket right now.
+
+Run both a forced after-hours scan and a live premarket scan:
 
 ```bash
 python3 scripts/scan.py --all --session afterhours
 python3 scripts/scan.py --all --session premarket
 ```
 
-The AH scan may still show yesterday's post-market movers. The premarket scan shows what's moving right now — stocks up in premarket often continued from an AH spike, so this catches movers our evening scans may have missed.
+From the results, identify the **best AH→premarket trade** — the stock that:
+- Spiked in after-hours yesterday
+- Is still running or peaking in premarket now
+- Would have given the best return if bought in AH and sold now
+
+This is "today's winner." Document it with: sector, catalyst, float, AH entry price, current PM price, hypothetical P&L.
+
+**Then** go back and read last night's log. Was this stock on our radar? This is the scanner diagnostic.
 
 ### 3. Check Paper Trade P&L
 
@@ -36,18 +47,21 @@ For each paper trade:
 - Calculate unrealized P&L: `(current_price - entry_price) * shares`
 - Calculate P&L percentage: `((current_price - entry_price) / entry_price) * 100`
 
-### 4. Find Missed Opportunities
+### 4. Scanner Diagnostic
 
-Compare the retrospective scan results with what our evening scans caught:
+**For today's winner (from Step 2), answer:**
+- Was it detectable at evening screening time (~22:15 CET)? YES / NO
+- If YES: what did it look like then? (price, volume, % gain) — why didn't we act on it?
+- If NO: why not? (news came later, AH move started after midnight, no volume yet, etc.)
+- What scanner change would have caught it?
 
-- **Caught**: stocks that appeared in both evening scans and retrospective scan
-- **Missed**: stocks in the retrospective scan that our evening scans never found
-- For each missed stock, analyze WHY it was missed:
+**Then compare all retrospective results with evening scans:**
+- **Caught**: stocks in both evening scans and retrospective
+- **Missed**: stocks in retrospective that evening scans never found
+- For each missed stock, analyze WHY:
   - Appeared too late (after our last scan)?
   - Below our volume/change thresholds at scan time?
-  - Different sector filtered out?
-
-Also check if any missed stocks would have been profitable (i.e., they're still up in premarket).
+  - Sector filtered out?
 
 ### 5. Update Log
 
@@ -56,8 +70,33 @@ Append a `## Morning Evaluation` section to the log:
 ```markdown
 ## Morning Evaluation — HH:MM CET
 
-### Retrospective Scan
-[results from forced AH scan, if any]
+### Today's Winner
+
+**[TICKER]** — [sector]
+- Catalyst: [what drove it]
+- Previous Close: $X
+- AH last night: $X (+X%) at HH:MM CET
+- Premarket now: $X (+X%)
+- Hypothetical P&L (AH entry → PM peak): +X%
+- Float: X | Market Cap: $X
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES / NO**
+- [If YES: what it looked like at ~22:15 CET, why we did/didn't act]
+- [If NO: why — news timing, volume below threshold, etc.]
+- Scanner gap: [what would need to change to catch this]
+
+[If no clear winner today: "No stock showed the AH→PM pattern today. Reason: [market conditions, etc.]"]
+
+### Baseline Tracking
+
+- Days tracked: X
+- Winners detected by scanner: X/Y (**X%**)
+- Target: >80%
+- Status: **BASELINE MET / NOT MET**
+
+### Retrospective Scan Results
+[results from forced AH + PM scans]
 
 ### Paper Trade P&L
 

@@ -7,7 +7,7 @@ This runs daily after the morning evaluation. The goal is continuous, data-drive
 - **One or two small changes per day.** Never rewrite a whole file. Surgical edits only.
 - **Every change must have a hypothesis.** "I expect this will..." with measurable criteria.
 - **Evaluate previous changes first.** Check if yesterday's changes helped before making new ones.
-- **Don't change strategy.** Entry rules, sector discipline, position sizing — those are the user's domain. You improve the *scanner and process* that feeds into those decisions.
+- **Don't change strategy.** Position sizing, learning phase goals — those are the user's domain. You improve the *scanner and process* that feeds into those decisions.
 - **Be conservative.** A missed improvement is fine. A broken scanner is not.
 
 ## What You Can Change
@@ -25,7 +25,7 @@ This runs daily after the morning evaluation. The goal is continuous, data-drive
 - `AGENTS.md` (agent instructions)
 - `scheduler.json` (schedule — managed separately)
 - This file (`prompts/scanner-improvement.md`)
-- Core trading rules (sector discipline, position sizing, entry/exit rules)
+- Core trading rules (position sizing, learning phase parameters)
 
 ## Steps
 
@@ -105,12 +105,17 @@ node scripts/send-email.js \
 <h3 style="color: #555; margin-top: 20px;">Post-Market Scans</h3>
 <p>[How many scans ran, unique tickers, notable movers]</p>
 
-<h3 style="color: #555;">Paper Trades</h3>
-<p>[Positions entered, entry price, reasoning. Or "None"]</p>
+<h3 style="color: #555;">Today&rsquo;s Winner</h3>
+<p><strong>[TICKER]</strong> ([sector]) &mdash; [catalyst]<br/>
+AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;">+X%</span> hypothetical)</p>
+<p>Scanner caught it? <strong style="color: #2e7d32;">YES</strong> or <strong style="color: #c62828;">NO</strong> &mdash; [brief reason if missed]</p>
 
-<h3 style="color: #555;">Morning Evaluation</h3>
+<h3 style="color: #555;">Baseline Status</h3>
+<p style="font-size: 18px; background: #f5f5f5; padding: 10px; border-radius: 4px;">Detection rate: <strong>X/Y (X%)</strong> &mdash; Target: &gt;80%<br/>
+<span style="color: #1976d2;">[BASELINE MET / NOT MET]</span></p>
+
+<h3 style="color: #555;">Paper Trades</h3>
 <p style="font-size: 18px;">Paper P&amp;L: <span style="color: #2e7d32; font-weight: bold;">+$X (+X%)</span> or <span style="color: #c62828; font-weight: bold;">-$X (-X%)</span></p>
-<p>[Scanner catch rate, missed opportunities]</p>
 <p style="background: #f5f5f5; padding: 10px; border-radius: 4px;">Cumulative Paper P&amp;L: [running total]</p>
 
 <h3 style="color: #555;">Improvement Made Today</h3>

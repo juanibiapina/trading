@@ -23,7 +23,7 @@ python3 scripts/scan.py --all
 ```
 
 The scanner auto-detects the after-hours session and returns stocks with:
-- All sectors (biotech preferred but scan everything)
+- All sectors — no sector filter (learning phase, see Day Trading.md)
 - Market cap < $100M
 - Price $0.50-$10
 - AH volume > 50K
@@ -76,14 +76,14 @@ For each selected candidate:
 
 ## Step 4: Entry Decision
 
-**Buy criteria (all or most must be true):**
-- Biotech/pharma sector
-- Good catalyst
-- Price < 50% above previous close
+**Buy criteria (learning phase — paper trade only):**
+- Any sector (no sector restriction — learning phase)
+- Good catalyst (news, partnership, FDA, earnings — not just volume)
 - Float < 10M
 - Volume confirming:
   - volume not fading
   - today is the first day of unexpected volume (reject tickers that had unexpected volume in the previous days)
+- Note: previous hard rules (biotech only, never >50% above close) are now observations under review — see Day Trading.md Learning Phase
 
 **Entry rules:**
 - ~€100 position size (learning phase)

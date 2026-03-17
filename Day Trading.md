@@ -9,7 +9,7 @@ tags:
 
 ### Goal
 
-Catch momentum spikes in biotech stocks by entering in after-hours and exiting in premarket before the regular market dump.
+Catch momentum spikes by entering in after-hours and exiting in premarket before the regular market dump. Any sector — the strategy learns what works through retrospective analysis.
 
 **Key Insight (from BATL trade Jan 2026):** Momentum stocks often peak in premarket, then dump at open. The biggest gains happen *before* regular trading begins.
 
@@ -40,14 +40,30 @@ Catch momentum spikes in biotech stocks by entering in after-hours and exiting i
 - Set premarket exit alarm + order right after entry (MNDR W08 miss: forgot to sell premarket, loss expanded)
 - Trade on PC
 
-**Sector Discipline:**
-- **Biotech/pharma only** - Non-biotech trades have 0% win rate (0/6): DRCT (W05), XPON (W05), PZG (W05), IFBD (W07), MNDR (W08), TMDE (W08) all lost. Biotech trades (VIVS, ABP) won.
+**Learning Phase (started W11 2026):**
 
-**Entry Rules (learned Jan-Feb 2026):**
-- **Never chase >50% above previous close** - PZG entered at +97%, SER at +69%, both lost. Exception: ABP at +68% won with tier-A catalyst stack (FDA + GS stake)
-- **Wait for consolidation** - VIVS entered after spike consolidated, won +65%
-- **FOMO = worst entries** - Anxiety/rushing led to buying at literal tops
-- **No catalyst = no follow-through** - IFBD had 77x volume but no news → faded to 752 shares by premarket. MNDR had 6.8x AH volume with no news and still lost -16.5%. AH spikes without catalyst die overnight.
+The strategy is in a learning phase because we don't yet know what makes a winning trade. Earlier we restricted to biotech-only after going 0/6 on non-biotech trades, but that logic is flawed — restricting to *any* single sector would cut out losses. It doesn't prove biotech is special. The real problem may be that the overall strategy can't yet distinguish good trades from bad ones, and sector filtering just masks that.
+
+**The baseline requirement:** before we can fine-tune any entry rules (sector, price, catalyst type), we need to prove the scanner can even *detect* the winners. Every trading day produces at least one stock that fits the AH→premarket pattern. If our evening scanner consistently misses those stocks, no amount of filtering will make the strategy work. So the first goal is:
+
+1. **Detect** — Can we find yesterday's winner in retrospect? (morning retrospective, Step 0)
+2. **Diagnose** — Would our evening scanner have caught it? If not, why?
+3. **Fix** — Improve the scanner until it reliably catches winners (target: >80% detection rate)
+4. **Refine** — Only then do entry rules (sector, catalyst, price) matter — because now we're choosing among detected winners
+
+Until the baseline is met, we paper trade and focus entirely on scanner accuracy:
+- No hard sector or entry-price restrictions — let the data reveal what works
+- Every morning, run the retrospective (Step 0) — this is the most important part of the workflow
+- Track detection rate weekly: what % of morning winners were detectable the previous evening?
+
+**Observations (from Jan-Feb 2026):**
+These are patterns noticed so far, NOT hard rules. They may evolve as more data comes in:
+- *Biotech catalysts worked well:* VIVS (+65%), ABP (win) — binary catalysts (FDA, partnerships) drive strong overnight momentum
+- *No catalyst = no follow-through:* IFBD had 77x volume but no news → faded. MNDR had 6.8x AH volume, no news, lost -16.5%
+- *Chasing extended stocks is risky:* PZG entered at +97%, SER at +69%, both lost. But ABP at +68% won with strong catalyst stack
+- *Consolidation entries worked:* VIVS entered after spike consolidated, won +65%
+- *FOMO = worst entries:* Anxiety/rushing led to buying at literal tops
+- *Non-biotech 0/6:* DRCT, XPON, PZG, IFBD, MNDR, TMDE all lost — but unclear if sector was the cause or other factors (no catalyst, chasing, FOMO)
 
 ### Catalyst Ranking
 
@@ -74,7 +90,25 @@ Catch momentum spikes in biotech stocks by entering in after-hours and exiting i
 - Can gap against you overnight
 - Need broker that supports extended hours trading
 
-**TODO:** Track win rate of this strategy vs regular session trading.
+### Baseline Status
+
+**Detection rate:** not yet measured (start tracking W11 2026)
+**Target:** >80% of morning winners should have been detectable at evening screening time
+**Status:** Learning — collecting data through daily retrospectives
+
+Once the baseline is met (scanner reliably detects winners), the strategy graduates from learning phase to live trading with data-driven entry rules.
+
+### Emerging Patterns (from retrospectives)
+
+_This section gets updated as retrospective analyses reveal what ideal trades have in common. After 2 weeks of daily retrospectives (target: W13 2026), review all findings and promote consistent patterns to strategy rules._
+
+**Patterns confirmed so far:**
+- (none yet — start collecting from W11 retrospectives)
+
+**Patterns under investigation:**
+- Strong catalyst presence (seen in BATL, VIVS, ABP wins)
+- AH consolidation before PM continuation
+- Volume sustainability through overnight
 
 ---
 
@@ -141,28 +175,77 @@ Run this workflow at the end of each trading week to assess performance and refi
 
 ### Key Metrics to Track
 
-- Win rate (target: >50%)
+- **Scanner detection rate (THE baseline):** what % of morning winners were detectable at evening screening time? (target: >80%)
+- Win rate (target: >50%) — only meaningful after baseline is met
 - Average win vs average loss (target: wins > losses)
-- Rule compliance (target: 100%)
-- Sector discipline (target: biotech only)
+- Pattern consistency: are the same characteristics appearing in ideal trades?
 
 ---
 
 ## Morning Analysis Workflow
 
-Run this workflow between 7:00-9:30 AM ET to find premarket gappers before market open.
+Run this workflow between 7:00-9:30 AM ET. Document in `log/YYYY-MM-DD/log.md`.
 
-Document the analysis in `log/YYYY-MM-DD/log.md`.
+### Step 0: Retrospective — Find Today's Winners (7:00-7:30 AM)
+
+**This is the most important step.** Before looking at today's candidates, independently find what IS exploding in premarket RIGHT NOW. Don't look at last night's watchlist — search fresh. There is almost always a stock that spiked in AH and is peaking in premarket this morning.
+
+**Why this matters:**
+The retrospective is a diagnostic tool for the evening scanner. If a stock is a clear winner this morning but wasn't on our radar last night, our scanner is broken. The strategy can only work if the scanner reliably catches winners. The baseline requirement is: **every morning winner should have been detectable the previous evening.**
+
+**How to find it:**
+1. Search broadly for stocks exploding in premarket RIGHT NOW (any sector):
+   - Premarket gainers lists, volume leaders, unusual activity
+   - Use Yahoo Finance API with `includePrePost=true` to check AH + PM action
+   - Look for the pattern: spiked in AH yesterday → still running or peaking in PM now
+2. Identify the best one — the stock with the clearest AH entry → premarket peak pattern
+3. Then go back and check: **was this stock visible in after-hours last night?** What did it look like at screening time (~22:15 CET)?
+
+**Document it:**
+```
+## Retrospective: [Date]
+
+**Today's Winner:** [TICKER]
+- Sector: [sector]
+- Previous Close: $X
+- AH action last night: $X at [time] (+X% from close), volume Xm
+- Premarket now: $X (+X% from close)
+- Hypothetical P&L (AH entry → PM peak): +X%
+
+**Catalyst:**
+- [What news/event drove it, and when did it drop]
+
+**Scanner Diagnostic:**
+- Was this detectable at screening time (~22:15 CET)? YES / NO
+- If YES: what did it look like? (price, volume, % gain at that time)
+- If NO: why not? (news came later, AH move started after midnight, no volume yet, etc.)
+- **Scanner gap:** [what would need to change to catch this]
+
+**Stock characteristics:**
+- Float: X
+- Market Cap: $X
+- AH volume vs normal: Xx
+- Price action pattern: [consolidation? steady climb? spike and hold?]
+```
+
+**This builds two things:**
+1. A library of "what winning trades actually look like" → evolves the strategy
+2. A diagnostic log for the scanner → if it keeps missing winners, we know exactly what to fix
+
+**After 2 weeks of daily retrospectives (target: W13 2026),** review all findings:
+- What patterns do winners share?
+- How often did the scanner catch them? What's the detection rate?
+- What scanner changes would improve detection?
 
 ### Step 1: Screen for Candidates (7:00-8:00 AM)
 
 Use Finviz screener with these filters:
-- Sector: Healthcare (Biotechnology focus)
 - Market Cap: < $100M (micro-cap)
 - Float: < 10M (low float = bigger moves)
 - Relative Volume: > 2 (unusual activity)
 - Gap: Up > 5%
 - Price: $0.50 - $10
+- **No sector filter** — let retrospective analysis guide what sectors work
 
 This should return 5-20 candidates on an active day.
 
@@ -175,7 +258,7 @@ For each stock that passes the screener:
 |--------|-------|-----|
 | Float | < 5M | Easier to move |
 | Market Cap | < $50M | More volatile |
-| Sector | Biotech/Pharma | News-driven |
+| Sector | Any (note it for pattern tracking) | Learning phase |
 | Short Float | > 10% | Squeeze potential |
 
 **B. Check for news:**

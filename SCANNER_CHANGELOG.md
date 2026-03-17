@@ -29,9 +29,9 @@ MIN_5M_VOLUME = 5,000
 - 7 evening scans every 30 min (21:30–01:30 CET)
 - 2 morning evaluations (10:05, 10:20 CET)
 - Paper trades with ~€100 positions
-- Biotech/pharma preferred (non-biotech historically 0% win rate)
+- All sectors — no sector restriction (learning phase, see Day Trading.md)
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
-- Entry rules: <50% above close, float <10M, catalyst required, first day of unusual volume
+- Entry rules: float <10M, catalyst required, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 
 ## Modifiable Files
 

@@ -47,11 +47,11 @@ python3 scripts/scan.py --all
 Read the existing log to see which tickers were already found in previous scans today.
 
 For each **new** candidate (not in prior scans), evaluate against the entry criteria from the trading plan:
-- Biotech/pharma preferred (non-biotech has 0% win rate historically)
-- Price < 50% above previous close (for AH scans, check Day% + AH Chg% = total move from previous close)
+- Any sector — no sector restriction (learning phase, see Day Trading.md)
 - Float < 10M ideal
 - Has a clear catalyst (search for news if needed)
 - Volume not fading, first day of unusual activity
+- Note sector and characteristics for pattern tracking (see Observations in Day Trading.md)
 
 **Regular session caution (21:30 CET / before 4:00 PM ET):** If this scan is running before AH opens, do NOT enter paper trades yet. Flag candidates as "Watch — pending AH confirmation" in the evaluation notes. Only enter a paper trade if the stock reappears in a subsequent AH scan (22:00+ CET) with sustained momentum. Stocks that spike intraday but don't carry into AH tend to fade (e.g., SPRC -18.6%, AEMD -4.6% on March 12).
 
