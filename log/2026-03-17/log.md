@@ -207,3 +207,113 @@ HIT continues to be the only story tonight. Now +31.2% in AH with 4.1M shares tr
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | HIT | $2.06 | 23:00 CET | 52 | AWS/Ciklum partnership catalyst (Tier A). Float 7.6M, first-day AH spike +21%, volume 5.8x and growing. |
+
+## Morning Evaluation — 10:24 CET
+
+### Today's Winner
+
+**HIT** (Health In Tech) — Information Technology Services / InsurTech
+
+- Catalyst: Strategic collaboration with Ciklum (AWS Advanced Tier Partner) to accelerate AI-driven InsurTech platform. PR released 22:01 CET.
+- Previous Close: $1.70
+- AH last night: peaked $2.23 (+31.2%) at 00:30 CET, steady climb over 2.5 hours
+- At screening time (~22:15 CET): ~$2.14 (+25.9%)
+- Premarket now: $2.01 (+18.2%), fading from PM open high of $2.27
+- PM peak: $2.27 high at 09:00 CET (4:00 AM ET, first minute of premarket)
+- Hypothetical P&L (AH entry $2.06 → PM peak $2.27): **+10.2%**
+- Float: 7.6M | Market Cap: $96.7M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- Scanner caught HIT at 22:30 CET with +21.8% AH change, 3.2M volume, 5.5x VRatio
+- Initially skipped at 22:30 for "no catalyst" (the PR dropped at 22:01, web search missed it)
+- Catalyst found by 23:00 scan. Paper trade entered at $2.06 at 23:00 CET.
+- Scanner gap: **None for detection.** The 30-minute delay between catalyst drop (22:01) and discovery (23:00) could be shortened with automated news monitoring, but the scanner itself caught HIT immediately.
+
+**Stock characteristics:**
+- Float: 7.6M (under 10M, good)
+- Market Cap: $96.7M (under $100M)
+- AH volume: 4.1M vs 677K avg = 6.0x
+- Price action: steady climb for 2.5+ hours with no pullback, then PM peaked at open and slowly faded
+- Pattern: classic AH spike → PM peak → fade. Confirms the "exit in premarket" rule.
+
+### Baseline Tracking
+
+- Days tracked: 1 (first day with explicit "Today's Winner" tracking; 7th morning evaluation overall)
+- Winners detected by scanner: 1/1 (**100%**)
+- Target: >80%
+- Status: **TOO EARLY** (need 10+ days for meaningful baseline)
+
+### Retrospective Scan Results
+
+**After-hours scan (forced, 04:20 ET):** 0 hits — AH session closed, no data available.
+
+**Premarket scan (04:20 ET):**
+
+| Ticker | Close | PM Chg | PM Price | PM Vol | AvgVol | VRatio | Float | MCap | Industry |
+|--------|-------|--------|----------|--------|--------|--------|-------|------|----------|
+| HIT | $1.70 | +21.2% | $2.06 | 507K | 711K | 0.7x | 7.6M | $96.7M | Information Technology Services |
+| AIB | $2.90 | +11.0% | $3.22 | 125K | 0 | 0.0x | 24.0M | $84.8M | Data Processing Services |
+
+**Broader TradingView scan (all caps, >10% PM change):**
+
+| Ticker | Close | PM Chg | PM Vol | Float | MCap | Industry |
+|--------|-------|--------|--------|-------|------|----------|
+| DVLT | $0.78 | +22.4% | 2.0M | 323M | $451M | Electronic Production Equipment |
+| ZENA | $2.28 | +20.6% | 1.6M | 4.1M | $109M | Information Technology Services |
+| HIT | $1.70 | +20.0% | 510K | 7.6M | $97M | Information Technology Services |
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | PM Peak | Current | Peak P&L | Current P&L | Status |
+|--------|-------|------------|---------|---------|----------|-------------|--------|
+| HIT | $2.06 | 23:00 CET | $2.27 (09:00) | $2.01 | +$10.92 (+10.2%) | -$2.60 (-2.4%) | ⚠️ Fading |
+
+- PM peak was at 09:00 CET (4:00 AM ET) = first minute of premarket
+- If premarket exit alarm was set per plan rules: exit at ~$2.15-2.27 = **+4.4% to +10.2% win**
+- If still holding at 10:24 CET: -2.4% (price fading since PM open)
+- **Lesson:** The plan says "set premarket exit alarm + order right after entry." HIT peaked at PM open and faded steadily for 80+ minutes. This reinforces the rule: exit early in premarket.
+
+**Total Paper P&L (at PM peak exit): +$10.92 (~€10.10)**
+**Total Paper P&L (if still holding): -$2.60 (~-€2.40)**
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 times (21:30, 22:30, 23:00, 23:30, 00:00, 00:30 CET)
+- Candidates found: 9 unique tickers (UCAR, LNAI, JVA, LIDR, BIAF, HIT, TMDE, JAGU, EDSA, HCWB, FMFC)
+- PM movers from retrospective: HIT, AIB, ZENA (within our criteria)
+- Scanner caught: **1/3** — HIT was caught; AIB and ZENA were not
+
+### Missed Opportunities
+
+| Ticker | PM Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| AIB | +32.1% to $3.83 peak | New listing (first day as AIB, SPAC merger). AH was DOWN from close ($2.85 vs $2.90). Only spiked in PM on $400M AI infrastructure LOI. | Yes if PM entry — but not the AH→PM pattern |
+| ZENA | +30.7% to $2.98 peak | AH was flat (+0.9% at 22:15 CET). News (drone interceptor) was from regular session. AH change below 5% threshold. | Yes if PM entry — but scanner couldn't detect at screening time |
+| DVLT | +24.8% to $0.99 | MCap $451M and float 323M — outside scanner criteria entirely | N/A — not in our universe |
+
+**Analysis:** Both missed PM movers (AIB, ZENA) were **not detectable in AH** at screening time. AIB was a special situation (new listing + AH decline). ZENA had regular-session news but no AH follow-through. These are PM-only movers that the AH screening approach cannot catch by design. The scanner correctly identified HIT as the only AH→PM setup.
+
+### AH Mover Follow-Through
+
+How did last night's top AH movers perform into premarket?
+
+| Ticker | AH Peak | AH Peak Time | Current PM | From Peak | From Prev Close | Verdict |
+|--------|---------|-------------|------------|-----------|-----------------|---------|
+| HIT | $2.23 (+31.2%) | 00:30 | $2.01 | -9.9% | +18.2% | ✅ Won — peaked at PM open ($2.27), now fading. Optimal exit: first 5 min of PM. |
+| EDSA | $7.86 (+12.3%) | 00:00 | $7.11 | -9.5% | +38.9% | Faded from AH peak, holding above prev close. Skip was correct (no fresh catalyst). |
+| FMFC | $0.55 (+8.8%) | 00:30 | $0.54 | -1.8% | +9.7% | Flat — tiny AH move, no follow-through. |
+| BIAF | $2.97 (+8.4%) | 22:30 | $2.45 | -17.5% | +28.3% | Faded hard — multi-day runner dumping. Skip was correct. |
+| TMDE | $1.42 (+8.4%) | 22:30 | $1.24 | -12.7% | -32.2% | ❌ Continued dropping — dead cat bounce confirmed. Skip was correct. |
+| HCWB | $0.94 (+6.7%) | 00:30 | $0.90 | -4.3% | -3.8% | Flat/down — muted reaction despite catalyst. Skip was correct. |
+| JAGU | $1.71 (+6.2%) | 22:30 | $1.64 | -4.1% | -0.6% | Flat — small AH move faded. Skip was correct. |
+
+**Key finding:** HIT was the only stock with strong AH momentum (+31.2%) AND a clear catalyst. It was also the only one that remained significantly above previous close in PM. Every other AH mover either faded or was correctly skipped. The paper trade decision was correct.
+
+### Notes
+
+1. **Scanner worked for detection.** HIT was caught at 22:30 CET, 29 minutes into AH. The only gap was a 30-minute delay finding the catalyst (PR at 22:01, found at ~23:00). Automated news monitoring would close this gap.
+2. **PM-only movers are invisible to AH screening.** Both ZENA and AIB moved entirely in premarket with no AH signal. This is a structural limitation of the strategy (screen in AH, enter in AH). A complementary early-premarket scan (10:00 CET / 4:00 AM ET) could catch these, but would require a different entry approach.
+3. **PM peak at PM open pattern.** HIT peaked in the first minute of premarket ($2.27 high at 09:00 CET). This matches the BATL/MRNO/VIVS pattern: momentum peaks early, then fades. Aggressive limit sells at PM open are the right approach.
+4. **Correct skip decisions.** All skipped candidates (BIAF, TMDE, EDSA, HCWB, FMFC, JAGU) either faded or went negative. The entry criteria (fresh catalyst, first-day spike, sustained volume) successfully filtered out losers.
+5. **No scanner adjustments needed.** The scanner detected today's winner. The misses (AIB, ZENA) are PM-only movers that no AH scanner could catch. Consider adding a 10:00 CET quick premarket scan as a supplementary check.
