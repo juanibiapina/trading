@@ -128,6 +128,41 @@ Two candidates worth tracking into AH: **AIM** (patent approval, strong) and **A
 
 MDAI remains the only actionable candidate. Paper trade holding well at $1.63 (+2.5% from entry at $1.59). No new candidates qualify. Most prior tickers fading, confirming 22:00 evaluations.
 
+## Scan 23:00 CET (5:00 PM ET) — After-Hours
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| MDAI | [TV](https://www.tradingview.com/chart/?symbol=MDAI) | $1.20 | -6.3% | +35.0% | $1.62 | 5.7M | 906K | 6.3x | 21.9M | Medical Specialties |
+| SER | [TV](https://www.tradingview.com/chart/?symbol=SER) | $1.28 | -4.5% | +51.6% | $1.94 | 5.6M | 675K | 8.3x | 5.5M | Miscellaneous Commercial Services |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $1.44 | +6.7% | +11.1% | $1.60 | 1.9M | 355K | 5.2x | 3.4M | Engineering & Construction |
+| LOBO | [TV](https://www.tradingview.com/chart/?symbol=LOBO) | $0.58 | -1.6% | +8.5% | $0.63 | 179K | 65K | 2.8x | 6.9M | Motor Vehicles |
+| CISS | [TV](https://www.tradingview.com/chart/?symbol=CISS) | $0.80 | +6.7% | +10.0% | $0.88 | 160K | 776K | 0.2x | 194K | Marine Shipping |
+| BANL | [TV](https://www.tradingview.com/chart/?symbol=BANL) | $0.65 | +5.5% | +9.2% | $0.71 | 128K | 1.4M | 0.1x | 5.1M | Air Freight/Couriers |
+| PSQH | [TV](https://www.tradingview.com/chart/?symbol=PSQH) | $0.67 | -12.9% | +8.5% | $0.73 | 97K | 2.6M | 0.0x | 35.8M | Department Stores |
+| MRNO | [TV](https://www.tradingview.com/chart/?symbol=MRNO) | $0.62 | -1.6% | +7.9% | $0.67 | 57K | 9.0M | 0.0x | 1.4M | Hotels/Resorts/Cruise lines |
+| SBDS | [TV](https://www.tradingview.com/chart/?symbol=SBDS) | $7.60 | +6.6% | +14.1% | $8.67 | 50K | 36K | 1.4x | 313K | Wholesale Distributors |
+
+### Candidate Evaluation
+
+**Prior candidates update:**
+- **MDAI** (paper trade at $1.59): now $1.62 (+35.0% from close, was +35.8% at 22:30). Essentially flat over the last 30 min. Volume 5.7M vs 5.4M, still building slowly. Paper trade +1.9% from entry. Holding steady.
+- **SER**: now +51.6% (was +46.1% at 22:30). Bouncing back after earlier fade, but still a dilution catalyst. Skip confirmed.
+- **SUNE**: now +11.1% (was +18.1% at 22:30). Fading significantly, no catalyst. Skip confirmed.
+- **CISS**: still +10.0% (unchanged). Skip confirmed.
+- **PSQH**: now +8.5% (was +10.0% at 22:30). Fading. Skip confirmed.
+- **MRNO**: now +7.9% (was +8.6% at 22:30). Fading. Skip confirmed.
+- **BANL**: now +9.2% (was +5.5% at 22:00, dropped from 22:30 scan, back now). Still negligible VRatio (0.1x). Skip.
+
+**New tickers:**
+- **LOBO** (+8.5% AH) — Skip: no catalyst. No fresh news; most recent headlines are about PGA show and Nasdaq delisting notification (old). Float 6.9M is decent but move is modest and unexplained.
+- **SBDS** (+14.1% AH) — Skip: no catalyst, tiny volume. Upcoming Q4 earnings and Roth Conference (Mar 23-24) may be driving anticipation, but volume only 50K with VRatio 1.4x. Float 313K is extremely low but that makes it easy to move on minimal volume.
+
+**Dropped from prior scan:** EONR and TPET — momentum faded completely.
+
+### Summary
+
+No new actionable candidates. MDAI paper trade holding steady at $1.62 (+1.9% from $1.59 entry). The AH session is showing typical post-first-hour consolidation. SER is the only other stock with real volume/momentum but remains a skip due to dilution catalyst. Quiet evening overall.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
