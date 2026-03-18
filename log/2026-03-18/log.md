@@ -196,6 +196,35 @@ No new actionable candidates. MDAI paper trade holding steady at $1.62 (+1.9% fr
 
 MDAI paper trade continues to strengthen at $1.65 (+3.8% from $1.59 entry). Momentum building after 30 min of consolidation. No new actionable candidates. SBDS is interesting (pre-earnings + tiny float) but doesn't fit the catalyst-driven AH strategy. Quiet evening; MDAI remains the only play.
 
+## Scan 00:00 CET (6:00 PM ET) — After-Hours
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| MDAI | [TV](https://www.tradingview.com/chart/?symbol=MDAI) | $1.20 | -6.3% | +32.9% | $1.59 | 6.1M | 949K | 6.4x | 21.9M | Medical Specialties |
+| SER | [TV](https://www.tradingview.com/chart/?symbol=SER) | $1.28 | -4.5% | +42.2% | $1.82 | 6.0M | 726K | 8.3x | 5.5M | Miscellaneous Commercial Services |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $1.44 | +6.7% | +13.9% | $1.64 | 2.0M | 370K | 5.4x | 3.4M | Engineering & Construction |
+| CISS | [TV](https://www.tradingview.com/chart/?symbol=CISS) | $0.80 | +6.7% | +8.7% | $0.87 | 432K | 806K | 0.5x | 194K | Marine Shipping |
+| SBDS | [TV](https://www.tradingview.com/chart/?symbol=SBDS) | $7.60 | +6.6% | +13.3% | $8.61 | 124K | 47K | 2.6x | 313K | Wholesale Distributors |
+| EXFY | [TV](https://www.tradingview.com/chart/?symbol=EXFY) | $0.77 | +2.6% | +5.6% | $0.81 | 97K | 1.1M | 0.1x | 61.0M | Packaged Software |
+
+### Candidate Evaluation
+
+**Prior candidates update:**
+- **MDAI** (paper trade at $1.59): now $1.59 (+32.9% from close, was +37.5% at 23:30). Pulled back from $1.65 peak to exactly our entry price. Volume 6.1M (up from 5.9M), still accumulating. Paper trade at breakeven. Consolidation after the initial AH spike; not alarming given the strong catalyst.
+- **SER**: +42.2% (was +45.7% at 23:30). Continuing slow fade from the +54.7% peak at 22:00. Skip confirmed (dilution catalyst).
+- **SUNE**: +13.9% (was +10.4% at 23:30). Slight bounce but still below 22:00 peak of +20.8%. No catalyst. Skip confirmed.
+- **CISS**: +8.7% (was +17.8% at 23:30). Significant fade. Skip confirmed.
+- **SBDS**: +13.3% (was +18.8% at 23:30). Fading from peak. Skip confirmed.
+
+**New tickers:**
+- **EXFY** (+5.6% AH) — Skip: float 61M (way too high), VRatio 0.1x (negligible volume), tiny move. No catalyst found.
+
+**Dropped from prior scan:** BANL, PSQH — momentum faded.
+
+### Summary
+
+Quiet late-AH session. No new actionable candidates. MDAI paper trade pulled back to entry at $1.59 (breakeven) after earlier high of $1.65. The BARDA catalyst is strong so overnight continuation is still plausible, but the pullback bears watching. Most other tickers continue fading. Two hours of AH remain.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
