@@ -43,9 +43,9 @@ Ask which tickers to analyze further.
 
 For each selected candidate:
 
-1. **Check catalyst** — Search for recent news using brave-search:
+1. **Check catalyst** — Search for recent news:
    ```bash
-   ~/.agents/skills/brave-search/search.js "TICKER COMPANY_NAME stock news" --freshness pd -n 5
+   websearch search "TICKER COMPANY_NAME stock news" --freshness day -n 5
    ```
    Look for: partnerships, FDA news, earnings, offerings (dilution = bad)
 
