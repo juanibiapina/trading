@@ -97,6 +97,37 @@ Two candidates worth tracking into AH: **AIM** (patent approval, strong) and **A
 
 **BANL** (+5.5% AH) — Skip: tiny move, negligible VRatio (0.1x).
 
+## Scan 22:30 CET (4:30 PM ET) — After-Hours
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| MDAI | [TV](https://www.tradingview.com/chart/?symbol=MDAI) | $1.20 | -6.3% | +35.8% | $1.63 | 5.4M | 873K | 6.1x | 21.9M | Medical Specialties |
+| SER | [TV](https://www.tradingview.com/chart/?symbol=SER) | $1.28 | -4.5% | +46.1% | $1.87 | 5.1M | 623K | 8.2x | 5.5M | Miscellaneous Commercial Services |
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $1.04 | +1.0% | +6.7% | $1.11 | 2.3M | 109.6M | 0.0x | 39.8M | Integrated Oil |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $1.44 | +6.7% | +18.1% | $1.70 | 1.6M | 324K | 4.9x | 3.4M | Engineering & Construction |
+| CISS | [TV](https://www.tradingview.com/chart/?symbol=CISS) | $0.80 | +6.7% | +10.0% | $0.88 | 140K | 774K | 0.2x | 194K | Marine Shipping |
+| PSQH | [TV](https://www.tradingview.com/chart/?symbol=PSQH) | $0.67 | -12.9% | +10.0% | $0.74 | 95K | 2.6M | 0.0x | 35.8M | Department Stores |
+| MRNO | [TV](https://www.tradingview.com/chart/?symbol=MRNO) | $0.62 | -1.6% | +8.6% | $0.67 | 55K | 9.0M | 0.0x | 1.4M | Hotels/Resorts/Cruise lines |
+
+### Candidate Evaluation
+
+**Prior candidates update:**
+- **MDAI** (paper trade at $1.59): now $1.63 (+35.8% from close, was +32.5%). Holding and slightly up. Volume 5.4M vs 4.9M earlier, still building. Paper trade looks good.
+- **SER**: now +46.1% (was +54.7%). Fading as expected from dilution catalyst. Skip confirmed.
+- **SUNE**: now +18.1% (was +20.8%). Slowly fading, still no catalyst. Skip confirmed.
+- **EONR**: now +6.7% (was +9.6%). Fading. Skip confirmed.
+- **PSQH**: now +10.0% (was +5.2%). Improved, but still: float 35.8M too high, -12.9% day.
+
+**New tickers:**
+- **CISS** (+10.0% AH) — Skip: no catalyst, negligible VRatio (0.2x). Float 194K is extremely low but MCap $177K makes this essentially untradeable. No news found.
+- **MRNO** (+8.6% AH) — Skip: no current catalyst. Known stock from Jan 2026 (perfect exit at $3.80 PM). Now at $0.67, far below Jan levels. Volume negligible (55K, VRatio 0.0x).
+
+**Dropped from prior scan:** TPET, TMDE, VHUB, BANL — momentum faded.
+
+### Summary
+
+MDAI remains the only actionable candidate. Paper trade holding well at $1.63 (+2.5% from entry at $1.59). No new candidates qualify. Most prior tickers fading, confirming 22:00 evaluations.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
