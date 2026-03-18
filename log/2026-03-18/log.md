@@ -52,7 +52,53 @@
 
 Two candidates worth tracking into AH: **AIM** (patent approval, strong) and **ARTL** (glaucoma study, strong). Both have fresh catalysts and massive intraday volume. Re-scan after 22:00 CET to check AH continuation.
 
+## Scan 22:00 CET (4:00 PM ET) — After-Hours
+
+**Previous candidates from 21:30 scan:** AIM and ARTL did NOT appear in the AH scan. Neither carried momentum into after-hours, confirming the regular session caution pattern (see SPRC, AEMD examples from March 12).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| SER | [TV](https://www.tradingview.com/chart/?symbol=SER) | $1.28 | -4.5% | +54.7% | $1.98 | 4.1M | 516K | 8.0x | 5.5M | Miscellaneous Commercial Services |
+| MDAI | [TV](https://www.tradingview.com/chart/?symbol=MDAI) | $1.20 | -6.3% | +32.5% | $1.59 | 4.9M | 822K | 6.0x | 21.9M | Medical Specialties |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $1.44 | +6.7% | +20.8% | $1.74 | 633K | 209K | 3.0x | 3.4M | Engineering & Construction |
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $1.04 | +1.0% | +9.6% | $1.14 | 1.7M | 109.5M | 0.0x | 39.8M | Integrated Oil |
+| TPET | [TV](https://www.tradingview.com/chart/?symbol=TPET) | $1.11 | +5.7% | +7.2% | $1.19 | 1.0M | 104.5M | 0.0x | 9.6M | Integrated Oil |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $1.54 | +17.6% | +7.8% | $1.66 | 121K | 6.4M | 0.0x | — | Wholesale Distributors |
+| VHUB | [TV](https://www.tradingview.com/chart/?symbol=VHUB) | $0.72 | -41.9% | +5.7% | $0.76 | 110K | 465K | 0.2x | — | Food Retail |
+| PSQH | [TV](https://www.tradingview.com/chart/?symbol=PSQH) | $0.67 | -12.9% | +5.2% | $0.71 | 89K | 2.6M | 0.0x | 35.8M | Department Stores |
+| BANL | [TV](https://www.tradingview.com/chart/?symbol=BANL) | $0.65 | +5.5% | +5.5% | $0.69 | 85K | 1.4M | 0.1x | 5.1M | Air Freight/Couriers |
+
+### Candidate Evaluation
+
+**MDAI** (+32.5% AH) — ✅ Paper trade entry
+- Catalyst: **$31.7M BARDA funding** to accelerate DeepView AI diagnostic system (announced today). Tier A catalyst (government contract, non-dilutive).
+- Float: 21.9M (above 10M ideal, but not a hard filter in learning phase). MCap: $36.8M.
+- AH Volume: 4.9M vs avg 822K (6.0x). Strong AH activity.
+- Assessment: Best candidate. Major non-dilutive funding is a strong catalyst. Volume is real and sustained. Float is higher than ideal but the catalyst strength compensates.
+
+**SER** (+54.7% AH) — Skip: dilution + previous loser
+- Catalyst: **$30M private placement** (common stock + pre-funded warrants, $15M initial gross proceeds). Tier D catalyst (financing/dilution — avoid per trading plan).
+- Previous trade lost (entered at +69%, per Day Trading.md notes).
+- Despite the big AH move, dilution catalysts tend to fade. The +54.7% is likely short covering / initial reaction that will reverse.
+
+**SUNE** (+20.8% AH) — Skip: no catalyst
+- Float 3.4M is ideal, but no news found to explain the move.
+- Per observations: "no catalyst = no follow-through" (IFBD pattern).
+
+**EONR** (+9.6% AH) — Skip: modest move, negligible VRatio (0.0x), float 39.8M too high.
+
+**TPET** (+7.2% AH) — Skip: modest move, negligible VRatio (0.0x).
+
+**TMDE** (+7.8% AH) — Skip: known loser from prior trades, modest AH move, negligible VRatio.
+
+**VHUB** (+5.7% AH) — Skip: dead cat bounce after -41.9% day. Low volume.
+
+**PSQH** (+5.2% AH) — Skip: weak recovery after -12.9% day. Float 35.8M too high.
+
+**BANL** (+5.5% AH) — Skip: tiny move, negligible VRatio (0.1x).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| MDAI | $1.59 | 22:00 CET | 62 | $31.7M BARDA funding (Tier A), 6x AH volume, AI medical diagnostics |
