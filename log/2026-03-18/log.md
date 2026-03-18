@@ -225,6 +225,39 @@ MDAI paper trade continues to strengthen at $1.65 (+3.8% from $1.59 entry). Mome
 
 Quiet late-AH session. No new actionable candidates. MDAI paper trade pulled back to entry at $1.59 (breakeven) after earlier high of $1.65. The BARDA catalyst is strong so overnight continuation is still plausible, but the pullback bears watching. Most other tickers continue fading. Two hours of AH remain.
 
+## Scan 00:30 CET (6:30 PM ET) — After-Hours
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| MDAI | [TV](https://www.tradingview.com/chart/?symbol=MDAI) | $1.20 | -6.3% | +35.0% | $1.62 | 6.2M | 966K | 6.4x | 21.9M | Medical Specialties |
+| SER | [TV](https://www.tradingview.com/chart/?symbol=SER) | $1.28 | -4.5% | +44.5% | $1.85 | 6.2M | 739K | 8.3x | 5.5M | Miscellaneous Commercial Services |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $1.44 | +6.7% | +18.8% | $1.71 | 2.1M | 378K | 5.5x | 3.4M | Engineering & Construction |
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $1.04 | +1.0% | +7.6% | $1.12 | 3.5M | 109.7M | 0.0x | 39.8M | Integrated Oil |
+| CISS | [TV](https://www.tradingview.com/chart/?symbol=CISS) | $0.80 | +6.7% | +8.1% | $0.86 | 469K | 810K | 0.6x | 194K | Marine Shipping |
+| VHUB | [TV](https://www.tradingview.com/chart/?symbol=VHUB) | $0.72 | -41.9% | +5.4% | $0.76 | 227K | 478K | 0.5x | — | Food Retail |
+| LOBO | [TV](https://www.tradingview.com/chart/?symbol=LOBO) | $0.58 | -1.6% | +8.4% | $0.63 | 181K | 65K | 2.8x | 6.9M | Motor Vehicles |
+| SBDS | [TV](https://www.tradingview.com/chart/?symbol=SBDS) | $7.60 | +6.6% | +13.8% | $8.65 | 139K | 49K | 2.8x | 313K | Wholesale Distributors |
+| BANL | [TV](https://www.tradingview.com/chart/?symbol=BANL) | $0.65 | +5.5% | +6.0% | $0.69 | 132K | 1.4M | 0.1x | 5.1M | Air Freight/Couriers |
+
+### Candidate Evaluation
+
+**Prior candidates update:**
+- **MDAI** (paper trade at $1.59): now $1.62 (+35.0% from close). Recovered from the $1.59 dip at 00:00 back to $1.62. Volume 6.2M (up from 6.1M), still accumulating. Paper trade +1.9% from entry. Stabilizing after the pullback.
+- **SER**: +44.5% (was +42.2% at 00:00). Slight bounce but still well below the +54.7% peak at 22:00. Skip confirmed (dilution catalyst).
+- **SUNE**: +18.8% (was +13.9% at 00:00). Bounced back to 22:00 levels. Still no catalyst found. Skip confirmed.
+- **EONR**: returned to scan at +7.6%. Float 39.8M too high, VRatio 0.0x. Skip.
+- **CISS**: +8.1% (was +8.7% at 00:00). Slowly fading. Skip confirmed.
+- **SBDS**: +13.8% (was +13.3% at 00:00). Holding steady ahead of tomorrow's Q4 earnings. Skip (earnings gamble, tiny volume).
+- **LOBO**: returned at +8.4%. Still no catalyst, modest move. Skip.
+- **VHUB**: +5.4%. Dead cat bounce after -41.9% day. Skip.
+- **BANL**: +6.0%. Negligible VRatio. Skip.
+
+No new tickers in this scan.
+
+### Summary
+
+All tickers previously evaluated. No new actionable candidates. MDAI paper trade recovered from the 00:00 dip back to $1.62 (+1.9% from entry). Volume continues building (6.2M). AH closes in 1.5 hours. The BARDA catalyst remains strong for overnight continuation.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
