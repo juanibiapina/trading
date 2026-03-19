@@ -140,6 +140,30 @@ All three candidates are repeats. Changes since last scan (30 min):
 
 - **IDN**: AH price $5.68 → $5.67 (-0.2%), basically flat. Vol 386K → 408K. Still skipped (float 19M too high).
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**Session: AFTERHOURS**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.21 | +1.7% | +18.2% | $1.43 | 1.6M | 302K | 5.3x | 1.7M | Pharmaceuticals: Major |
+| IDN | [TV](https://www.tradingview.com/chart/?symbol=IDN) | $4.80 | -1.8% | +20.2% | $5.77 | 428K | 167K | 2.6x | 19.0M | Packaged Software |
+| NIXX | [TV](https://www.tradingview.com/chart/?symbol=NIXX) | $0.79 | +18.5% | +5.0% | $0.83 | 243K | 938K | 0.3x | 22.4M | Personnel Services |
+
+### Update from 23:00 Scan
+
+- **BIAF**: Dropped off scanner entirely. Fade confirmed.
+
+- **DRMA**: AH price $1.45 → $1.43 (-1.4%), AH change 19.8% → 18.2%. Vol 1.4M → 1.6M. Slight price pullback but volume still building. Paper trade active at $1.45 entry. Holding.
+
+- **IDN**: AH price $5.67 → $5.77 (+1.8%), AH change 18.1% → 20.2%. Vol 408K → 428K. Small uptick. Still skipped (float 19M too high).
+
+- **NIXX** (NEW) - Nixxy Inc (AI infrastructure/telecom)
+  - Catalyst: Signed 12-month infrastructure services agreement with Telforge (FingerMotion subsidiary) to manage up to $60M in telecom traffic for 2026. Telforge acquisition signed March 18. Significant revenue contract relative to $19.7M MCap.
+  - Skip: float 22.4M (too high, ideal <10M), VRatio 0.3x (below average volume, not unusual activity), AH change only +5.0% (insufficient momentum). Despite the real catalyst, the profile doesn't fit the low-float momentum setup.
+
+**No new paper trades.** DRMA paper trade from 23:00 scan remains active.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
