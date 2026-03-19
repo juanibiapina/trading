@@ -164,6 +164,34 @@ All three candidates are repeats. Changes since last scan (30 min):
 
 **No new paper trades.** DRMA paper trade from 23:00 scan remains active.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**Session: AFTERHOURS**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.21 | +1.7% | +19.0% | $1.44 | 1.7M | 310K | 5.4x | 1.7M | Pharmaceuticals: Major |
+| IDN | [TV](https://www.tradingview.com/chart/?symbol=IDN) | $4.80 | -1.8% | +17.7% | $5.65 | 444K | 168K | 2.6x | 19.0M | Packaged Software |
+| NIXX | [TV](https://www.tradingview.com/chart/?symbol=NIXX) | $0.79 | +18.5% | +8.0% | $0.86 | 283K | 942K | 0.3x | 22.4M | Personnel Services |
+| VHUB | [TV](https://www.tradingview.com/chart/?symbol=VHUB) | $0.78 | +8.4% | +7.6% | $0.84 | 55K | 796K | 0.1x | — | Food Retail |
+| VEEA | [TV](https://www.tradingview.com/chart/?symbol=VEEA) | $0.63 | -9.0% | +7.8% | $0.68 | 51K | 308K | 0.2x | 15.4M | Packaged Software |
+
+### Update from 23:30 Scan
+
+- **DRMA**: AH price $1.43 → $1.44 (+0.7%), AH change 18.2% → 19.0%. Vol 1.6M → 1.7M, VRatio 5.3x → 5.4x. Holding steady near highs. Paper trade active at $1.45 entry, currently at $1.44 (-0.7%). Volume continuing to build.
+
+- **IDN**: AH price $5.77 → $5.65 (-2.1%), AH change 20.2% → 17.7%. Vol 428K → 444K. Slight fade from peak. Still skipped (float 19M too high).
+
+- **NIXX**: AH price $0.83 → $0.86 (+3.6%), AH change 5.0% → 8.0%. Some momentum building but still skipped (float 22.4M, VRatio 0.3x well below average).
+
+### New Candidate Evaluation
+
+- **VHUB** (+8.4% day, +7.6% AH) — VHub Global (Food Retail). Skip: float unknown (data missing), VRatio 0.1x (far below average volume, extremely thin AH activity with only 55K shares), AH change only +7.6%.
+
+- **VEEA** (-9.0% day, +7.8% AH) — Veea Inc (Packaged Software). Skip: float 15.4M (too high), VRatio 0.2x (very low), finished regular session red (-9.0%). The AH bounce looks like a dead-cat bounce rather than momentum.
+
+**No new paper trades.** DRMA paper trade from 23:00 scan remains active and holding near entry.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
