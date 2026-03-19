@@ -62,6 +62,38 @@ Excluded from evaluation: RVPH (-55.4%), DXLG (-4.9%), SBDS (-43.9%) negative, M
 3. **CHNR** - Ultra-low float, acquisition catalyst. Day 2 risk. Watch if it holds $4.00+.
 4. **WETO** - Robotics rebrand play. Watch but PIPE dilution is a red flag.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Session: AFTERHOURS**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $2.97 | +22.2% | +6.8% | $3.17 | 1.8M | 40.7M | 0.0x | 4.3M | Medical Specialties |
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.21 | +1.7% | +15.7% | $1.40 | 1.1M | 247K | 4.5x | 1.7M | Pharmaceuticals: Major |
+| IDN | [TV](https://www.tradingview.com/chart/?symbol=IDN) | $4.80 | -1.8% | +19.4% | $5.73 | 334K | 155K | 2.2x | 19.0M | Packaged Software |
+
+### Candidate Evaluation
+
+**BIAF** (+22.2% day, +6.8% AH) - bioAffinity Technologies (Medical Specialties)
+- Float 4.3M, MCap $13.4M - good profile.
+- Catalyst search: Stock soared 120% on March 13 on CyPath Lung sales growth (Q4 2025 earnings). March 17 saw a case study PR and board departure announcement. No today-specific catalyst.
+- Skip: multi-day continuation (Day 4+ from March 13 earnings run), not first day of unusual activity. VRatio 0.0 in AH suggests very low interest.
+
+**DRMA** (+1.7% day, +15.7% AH) - Dermata Therapeutics (Pharmaceuticals)
+- Float 1.7M (excellent), MCap $3.4M (ultra micro).
+- Catalyst search: Earnings not released (expected March 25). No 8-K filed today. Most recent news: VP Marketing appointment (March 10), Tome skincare brand launch (March 5). No press releases or SEC filings found for today.
+- Skip: no catalyst found. The +15.7% AH move on no news could be thin-volume noise given the very low float and micro cap.
+
+**IDN** (-1.8% day, +19.4% AH) - Intellicheck (Software)
+- Catalyst: First annual profit, record Q4 earnings. EPS $0.08 beat $0.02 estimate (+300%). Revenue $6.635M beat $6.192M. Cash rose to $9.65M. Conference call at 4:30 PM ET today.
+- Skip: float 19M too high (ideal <10M), MCap $97M too high for micro-cap setup. Strong catalyst but doesn't fit the low-float momentum profile.
+
+### Earlier Watchlist Update
+
+None of the regular session candidates (SER, SUNE, CHNR, WETO) appeared in the AH scan. Their AH activity did not meet scanner thresholds. No AH confirmation for any of them.
+
+**No paper trades entered this scan.** All three AH candidates failed entry criteria (no catalyst, multi-day continuation, or float/MCap too high).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
