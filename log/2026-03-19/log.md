@@ -192,6 +192,40 @@ All three candidates are repeats. Changes since last scan (30 min):
 
 **No new paper trades.** DRMA paper trade from 23:00 scan remains active and holding near entry.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**Session: AFTERHOURS**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $2.97 | +22.2% | +5.4% | $3.13 | 2.2M | 40.8M | 0.1x | 4.3M | Medical Specialties |
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.21 | +1.7% | +28.1% | $1.55 | 1.9M | 335K | 5.7x | 1.7M | Pharmaceuticals: Major |
+| IDN | [TV](https://www.tradingview.com/chart/?symbol=IDN) | $4.80 | -1.8% | +18.8% | $5.70 | 460K | 170K | 2.7x | 19.0M | Packaged Software |
+| NIXX | [TV](https://www.tradingview.com/chart/?symbol=NIXX) | $0.79 | +18.5% | +5.8% | $0.84 | 306K | 945K | 0.3x | 22.4M | Personnel Services |
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $1.98 | -4.3% | +21.7% | $2.41 | 128K | 251K | 0.5x | — | Information Technology Services |
+| VEEA | [TV](https://www.tradingview.com/chart/?symbol=VEEA) | $0.63 | -9.0% | +13.9% | $0.72 | 75K | 311K | 0.2x | 15.4M | Packaged Software |
+| VHUB | [TV](https://www.tradingview.com/chart/?symbol=VHUB) | $0.78 | +8.4% | +7.7% | $0.84 | 61K | 797K | 0.1x | — | Food Retail |
+
+### Update from 00:00 Scan
+
+- **DRMA**: AH price $1.44 → $1.55 (+7.6%), AH change 19.0% → **+28.1%**. **Strong acceleration.** Vol 1.7M → 1.9M, VRatio 5.4x → 5.7x. Patent catalyst driving sustained buying. Paper trade entry at $1.45, now at $1.55 (+6.9%). Holding.
+
+- **BIAF**: AH price $3.13, unchanged from 23:00 scan. Vol 2.1M → 2.2M. Dead flat in AH. Still skipped (multi-day continuation, no today-specific catalyst).
+
+- **IDN**: AH price $5.65 → $5.70 (+0.9%), AH change 17.7% → 18.8%. Slight uptick. Vol 444K → 460K. Still skipped (float 19M too high).
+
+- **NIXX**: AH price $0.86 → $0.84 (-2.3%), AH change 8.0% → 5.8%. Fading. Still skipped (float 22.4M, VRatio 0.3x).
+
+- **VEEA**: AH price $0.68 → $0.72 (+5.9%), AH change 7.8% → 13.9%. Some momentum building but still skipped (float 15.4M, VRatio 0.2x, closed regular session red).
+
+- **VHUB**: AH price $0.84, flat. Vol 55K → 61K. Still skipped (unknown float, VRatio 0.1x).
+
+### New Candidate Evaluation
+
+- **MASK** (-4.3% day, +21.7% AH) — 3 E Network Technology Group (Chinese IT, Hong Kong). MCap $2.2M (ultra micro), float unknown. Catalyst search: no earnings today, no 8-K filings, no press releases found. Recent news is negative (Nasdaq bid price deficiency notice, convertible notes dilution). Skip: no catalyst found. The +21.7% AH move on no news with below-average volume (VRatio 0.5x) is likely thin-volume noise in an ultra-micro stock.
+
+**No new paper trades.** DRMA paper trade from 23:00 scan remains active and showing strong gains (+6.9% from $1.45 entry). The acceleration to +28.1% AH with continued volume building is encouraging.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
