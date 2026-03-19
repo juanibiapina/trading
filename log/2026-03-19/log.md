@@ -116,7 +116,32 @@ All three candidates are repeats. Changes since last scan (30 min):
 
 **No paper trades entered this scan.** All candidates either lack catalysts, are multi-day continuations, or don't fit the low-float profile. The fading AH prices on DRMA and IDN further confirm the skip decisions.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Session: AFTERHOURS**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $2.97 | +22.2% | +5.4% | $3.13 | 2.1M | 40.7M | 0.1x | 4.3M | Medical Specialties |
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.21 | +1.7% | +19.8% | $1.45 | 1.4M | 280K | 5.1x | 1.7M | Pharmaceuticals: Major |
+| IDN | [TV](https://www.tradingview.com/chart/?symbol=IDN) | $4.80 | -1.8% | +18.1% | $5.67 | 408K | 164K | 2.5x | 19.0M | Packaged Software |
+
+### Update from 22:30 Scan
+
+All three candidates are repeats. Changes since last scan (30 min):
+
+- **BIAF**: AH price $3.18 → $3.13 (-1.6%), AH change dropped from +7.1% → +5.4%. Continuing to fade. Vol 2.0M → 2.1M. Still skipped (multi-day continuation from March 13 earnings, no today-specific catalyst).
+
+- **DRMA**: AH price $1.37 → $1.45 (+5.8%), AH change jumped from +13.2% → +19.8%. **Significant reversal** from the fading pattern seen at 22:30. Volume 1.2M → 1.4M, VRatio 5.1x.
+  - **Catalyst found (missed in earlier scans):** Benzinga reported at 4:27 PM ET (right at AH open) that Dermata received a U.S. Notice of Allowance for a patent titled "Compositions..." (likely related to Spongilla acne treatment technology). Additionally, the Australian Patent Office granted a patent for their next-generation acne treatment. Both announced today.
+  - This explains the AH move and the reversal from fading to climbing. The catalyst is real.
+  - Float 1.7M (excellent), MCap $3.4M (ultra micro), volume building steadily across AH.
+  - **Paper trade entered** (see below). Patent notice + ultra-low float + accelerating price action.
+
+- **IDN**: AH price $5.68 → $5.67 (-0.2%), basically flat. Vol 386K → 408K. Still skipped (float 19M too high).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| DRMA | $1.45 | 23:00 CET | 62 | U.S. patent notice of allowance + Australian patent grant. Float 1.7M, VRatio 5.1x, price accelerating in AH after earlier fade reversed. |
