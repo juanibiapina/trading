@@ -263,3 +263,99 @@ All tickers previously evaluated. No new actionable candidates. MDAI paper trade
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | MDAI | $1.59 | 22:00 CET | 62 | $31.7M BARDA funding (Tier A), 6x AH volume, AI medical diagnostics |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**SUNE** (SUNation Energy) — Engineering & Construction (Solar Energy)
+
+- Catalyst: Q4/FY2025 earnings beat annual guidance + positive 2026 outlook. Released on GlobeNewswire after close March 18.
+- Previous Close (Mar 17): $1.35
+- March 18 Regular Close: $1.44 (+6.7%)
+- AH last night at 22:00 CET: $1.74 (+20.8% from close)
+- AH low at 23:30 CET: $1.59 (+10.4%)
+- AH end at 00:30 CET: $1.71 (+18.8%)
+- Premarket now (04:21 ET): $1.76 (+22.2% from close)
+- Hypothetical P&L (AH entry $1.74 → PM $1.76): +1.1%
+- Hypothetical P&L (AH dip entry $1.59 → PM $1.76): +10.7%
+- Float: 3.4M | Market Cap: $4.9M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — appeared in all 6 AH scans (22:00 - 00:30 CET)
+- At 22:00 CET: $1.74, +20.8% AH change, 633K vol, 3.0x VRatio, float 3.4M
+- **Why we didn't act:** Evaluated as "Skip: no catalyst found" at every scan
+- **The catalyst was publicly available.** SUNation's Q4/FY2025 earnings release was posted on GlobeNewswire after close March 18. The pre-announcement was published March 16 saying results would come "after the close" on March 18. This was findable.
+- **Scanner gap:** Catalyst research workflow failed, not the scanner itself. SUNE was the 3rd-ranked AH mover at 22:00, behind SER (dilution, correctly skipped) and MDAI (selected as paper trade). The evaluation searched for news but missed the earnings release. Possible fix: for every AH mover with >10% change, explicitly check GlobeNewswire/PRNewswire for same-day releases and check whether earnings were scheduled for that day.
+
+**Key Insight:** SUNE had the best AH characteristics for this strategy: modest initial spike (+20.8%, not overextended), legitimate catalyst (earnings beat), low float (3.4M), and the AH→PM pattern held perfectly. Compare with MDAI (+32.5% entry, faded) and SER (+54.7%, dilution, faded hard). The less extended entry with a strong catalyst won.
+
+### Baseline Tracking
+
+- Days tracked: 2
+- Winners detected by scanner: 2/2 (**100%**) — HIT (Mar 17), SUNE (Mar 18)
+- Target: >80%
+- Status: **TOO EARLY** (need 10+ days for meaningful baseline)
+
+Note: Both days the scanner detected the winner but the evaluation process dismissed it or chose a different stock. The scanner works; the evaluation/catalyst research is the weak link.
+
+### Retrospective Scan Results
+
+**After-hours scan (forced, 04:20 ET):** 0 hits — AH session closed, no data available.
+
+**Premarket scan (04:21 ET):** 5 hits
+
+| Ticker | Close | PM Chg% | PM Price | PM Vol | AvgVol | VRatio | Float | MCap | Industry |
+|--------|-------|---------|----------|--------|--------|--------|-------|------|----------|
+| SUNE | $1.44 | +22.2% | $1.76 | 1.5M | 419K | 3.7x | 3.4M | $4.9M | Engineering & Construction |
+| SER | $1.28 | +21.1% | $1.55 | 675K | 756K | 0.9x | 5.5M | $13.8M | Misc Commercial Services |
+| MDAI | $1.20 | +20.8% | $1.45 | 325K | 987K | 0.3x | 21.9M | $36.8M | Medical Specialties |
+| TPET | $1.11 | +8.1% | $1.20 | 316K | 104.6M | 0.0x | 9.6M | $35.4M | Integrated Oil |
+| TMDE | $1.54 | +12.3% | $1.73 | 108K | 6.4M | 0.0x | — | $36.3M | Wholesale Distributors |
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| MDAI | $1.59 | 22:00 CET | $1.45 | -$8.68 | -8.8% | ❌ Loss (unrealized) |
+
+**Total Paper P&L: -$8.68** (-8.8%)
+
+Note: PM at 04:21 ET is very early. MDAI could still move. The BARDA catalyst is strong but the stock was already +32.5% at entry, leaving little room for further upside in PM. If SUNE had been chosen instead (entry ~$1.74), the paper trade would be +$1.24 (+1.1%), or +$10.54 (+10.7%) if entered at the 23:30 dip.
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 AH scans (22:00 - 00:30 CET) + 1 regular session scan (21:30)
+- AH candidates found: 15 unique tickers
+- PM movers this morning: 5 tickers
+- Retrospective matches: **5/5 (100%)** — every PM mover appeared in evening AH scans
+
+### Missed Opportunities
+
+No PM movers were missed by the evening scanner. All 5 stocks in today's PM scan appeared in at least one evening AH scan.
+
+The opportunity missed was SUNE: correctly detected by scanner but dismissed because catalyst research didn't find the earnings beat.
+
+### AH Mover Follow-Through
+
+How did last night's top AH movers perform into premarket? Every stock that appeared in 2+ evening scans with AH change >10%.
+
+| Ticker | AH Peak | AH Peak Time | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-------------|------------|-----------|------------|---------|
+| SER | $1.98 (+54.7%) | 22:00 | $1.55 (+21.1%) | -21.7% | +21.1% | ❌ Faded hard (dilution catalyst) |
+| MDAI | $1.65 (+37.5%) | 22:30 | $1.45 (+20.8%) | -12.1% | +20.8% | ❌ Faded from peak |
+| SUNE | $1.74 (+20.8%) | 22:00 | $1.76 (+22.2%) | +1.1% | +22.2% | ✅ Held and slightly exceeded |
+| SBDS | $9.03 (+18.8%) | 23:30 | — | faded off scan | — | ❌ Faded out |
+| CISS | $0.94 (+17.8%) | 23:30 | — | faded off scan | — | ❌ Faded out |
+
+**Key finding:** Only SUNE held its AH gains into PM. It was also: (1) the least extended at first scan (+20.8% vs +37-55% for SER/MDAI), (2) had a legitimate catalyst (earnings beat), and (3) had the lowest float (3.4M). The two biggest AH movers (SER, MDAI) both faded significantly by PM, despite MDAI having a strong catalyst. Overextension at entry may matter more than catalyst strength.
+
+### Notes
+
+1. **Scanner is working.** 100% detection rate across 2 days. The scanner finds the movers. The bottleneck is evaluation quality, specifically catalyst research.
+
+2. **Catalyst research gap.** SUNE's earnings were publicly announced March 16 (scheduled for after close March 18) and released on GlobeNewswire at close. The evaluation checked for news but missed it. Need to: (a) check GlobeNewswire/PRNewswire directly for any stock with >10% AH move, (b) check earnings calendars since scheduled earnings after close are the most predictable AH catalysts.
+
+3. **Entry extension matters.** Emerging pattern (tentative, 2 days): stocks less extended at first AH scan may have better PM follow-through. SUNE (+20.8%) held; MDAI (+32.5%) and SER (+54.7%) faded. This aligns with the Day Trading.md observation: "Chasing extended stocks is risky."
+
+4. **Paper trade timing.** MDAI was entered at the first AH scan price ($1.59 = +32.5% from close). If we'd waited for SUNE analysis and entered at the 23:30 dip ($1.59 for SUNE), the return would have been +10.7% instead of -8.8%. The wrong stock was chosen because the correct one was dismissed without catalyst research.
