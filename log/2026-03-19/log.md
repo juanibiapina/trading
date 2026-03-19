@@ -94,6 +94,28 @@ None of the regular session candidates (SER, SUNE, CHNR, WETO) appeared in the A
 
 **No paper trades entered this scan.** All three AH candidates failed entry criteria (no catalyst, multi-day continuation, or float/MCap too high).
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Session: AFTERHOURS**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $2.97 | +22.2% | +7.1% | $3.18 | 2.0M | 40.7M | 0.0x | 4.3M | Medical Specialties |
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.21 | +1.7% | +13.2% | $1.37 | 1.2M | 260K | 4.7x | 1.7M | Pharmaceuticals: Major |
+| IDN | [TV](https://www.tradingview.com/chart/?symbol=IDN) | $4.80 | -1.8% | +18.3% | $5.68 | 386K | 161K | 2.4x | 19.0M | Packaged Software |
+
+### Update from 22:00 Scan
+
+All three candidates are repeats. Changes since last scan (30 min):
+
+- **BIAF**: AH price $3.17 → $3.18 (+0.3%), vol 1.8M → 2.0M. Flat, no momentum building. Still skipped (multi-day continuation, no today-specific catalyst).
+- **DRMA**: AH price $1.40 → $1.37 (-2.1%), AH change dropped from +15.7% → +13.2%. Fading. Still skipped (no catalyst found).
+- **IDN**: AH price $5.73 → $5.68 (-0.9%), vol 334K → 386K. Slight fade. Still skipped (float 19M too high).
+
+**No new candidates appeared.** None of the regular session watchlist stocks (SER, SUNE, CHNR, WETO) showed up in AH scanners.
+
+**No paper trades entered this scan.** All candidates either lack catalysts, are multi-day continuations, or don't fit the low-float profile. The fading AH prices on DRMA and IDN further confirm the skip decisions.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
