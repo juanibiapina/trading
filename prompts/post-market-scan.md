@@ -66,7 +66,7 @@ If a candidate passes (and it's an AH scan), add a paper trade entry to the `## 
 
 If a candidate fails, note briefly why in the scan section (e.g., "Skip: no catalyst", "Skip: float too high").
 
-For candidates already seen in prior scans, note any significant changes (price movement, volume increase/decrease).
+For candidates already seen in prior scans, note any significant changes (price movement, volume increase/decrease). **If a prior candidate was skipped for "no catalyst" and still shows >10% AH change, re-run the structured catalyst search** — don't just repeat the prior skip. Press releases and news articles frequently appear 15-30 minutes after AH opens (4:00 PM ET), so catalysts often become findable at the 22:30 or 23:00 scans that weren't available at 22:00.
 
 ### 5. Commit
 

@@ -92,7 +92,8 @@ Append a `## Morning Evaluation` section to the log:
 
 - Days tracked: X
 - Winners detected by scanner: X/Y (**X%**)
-- Target: >80%
+- Winner selected for paper trade: X/Y (**X%**) — did we trade the right stock?
+- Target: >80% detection
 - Status: **BASELINE MET / NOT MET**
 
 ### Retrospective Scan Results
