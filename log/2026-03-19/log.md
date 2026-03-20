@@ -231,3 +231,86 @@ All three candidates are repeats. Changes since last scan (30 min):
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | DRMA | $1.45 | 23:00 CET | 62 | U.S. patent notice of allowance + Australian patent grant. Float 1.7M, VRatio 5.1x, price accelerating in AH after earlier fade reversed. |
+
+## Morning Evaluation — 10:23 CET
+
+### Today's Winner
+
+**DRMA** — Pharmaceuticals (Dermata Therapeutics)
+- Catalyst: U.S. patent Notice of Allowance + Australian patent grant for next-gen acne treatment (Benzinga, 4:27 PM ET)
+- Previous Close: $1.21
+- AH last night: $1.40 (+15.7%) at 22:00 CET (first detection), peaked $1.56 (+28.9%) at 01:15 CET
+- Premarket now: $1.55 (+28.1%), PM high $1.59 (+31.4%) at 10:01 CET
+- Hypothetical P&L (AH entry at first detection $1.40 → PM peak $1.59): **+13.6%**
+- Float: 1.7M | Market Cap: $3.4M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- DRMA appeared at 22:00 CET (first AH scan) at +15.7%, $1.40. It was in every subsequent scan (6/6 AH scans).
+- Initially skipped at 22:00 for "no catalyst." Catalyst was found at 23:00 scan (Benzinga report of patent notice). Paper trade entered at $1.45.
+- Scanner gap: None. The scanner caught this perfectly. The delay was in catalyst research, not detection. The 22:00→23:00 gap cost $0.05/share (+3.6%), but the catalyst confirmation was the right call.
+
+### Baseline Tracking
+
+- Days tracked: 3
+- Winners detected by scanner: 3/3 (**100%**) — HIT (Mar 17), SUNE (Mar 18), DRMA (Mar 19)
+- Target: >80%
+- Status: **TOO EARLY** (need 10+ days for meaningful baseline, but 3/3 is encouraging)
+
+### Retrospective Scan Results
+
+**Forced AH scan (10:20 CET):** 0 hits (AH session ended 8+ hours ago, expected)
+
+**Live PM scan (10:20 CET):** 3 hits
+
+| Ticker | Close | PM Chg% | PM Price | PM Vol | VRatio | Float | Industry |
+|--------|-------|---------|----------|--------|--------|-------|----------|
+| DRMA | $1.21 | +26.4% | $1.53 | 1.0M | 2.7x | 1.7M | Pharmaceuticals |
+| INMB | $1.22 | +13.9% | $1.39 | 249K | 0.5x | 22.1M | Biotechnology |
+| RPGL | $0.53 | +35.8% | $0.72 | 73K | 0.2x | 0 | IT Services |
+
+DRMA was the only stock showing the AH→PM continuation pattern. INMB and RPGL were PM-only gaps (no meaningful AH movement).
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| DRMA | $1.45 | 23:00 CET | $1.55 | +$6.20 (+€5.74) | +6.9% | ✅ Win (open) |
+
+**Total Paper P&L: +$6.20 (+€5.74)**
+
+PM peak was $1.59 at 10:01 CET. If exited at peak: +$8.68 (+€8.04), +9.7%. Position still open, price holding near highs.
+
+### Scanner Effectiveness
+
+- Evening scans ran: 7 times (21:30 - 00:30 CET), 6 were AH scans
+- Candidates found: 15 unique tickers across all scans
+- AH candidates with >10% change: DRMA, IDN, MASK (MASK only 1 scan)
+- Retrospective PM matches: 1/3 (DRMA caught; INMB and RPGL were PM-only moves, not AH→PM)
+
+### Missed Opportunities
+
+| Ticker | PM Peak | Why Missed | Would Be Profitable? |
+|--------|---------|------------|---------------------|
+| INMB | +20.2% | PM-only gap; AH was flat at $1.25 (+2.4%). Catalyst: AD/PD 2026 plenary + Lucid Capital upgrade. News likely dropped pre-market. | N/A (no AH entry possible) |
+| RPGL | +58.5% | PM-only spike; AH flat at $0.55. Reverse split + Nasdaq deficiency. Spiked to $0.95 then crashed to $0.70 in 15 min. | No (untradeable spike/crash) |
+
+Neither missed stock fits the AH→PM pattern. Both were PM-only moves with no AH entry opportunity. The scanner is not expected to catch these since our strategy requires AH entry.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | AH Peak Time | Current PM | From Peak | From Prev Close | Verdict |
+|--------|---------|-------------|------------|-----------|-----------------|---------|
+| DRMA | $1.55 (28.1%) | 00:30 CET | $1.55 | 0.0% | +28.1% | ✅ Held gains into PM, continued to $1.59 |
+| IDN | $5.77 (20.2%) | 23:30 CET | $5.46 | -5.4% | +11.7% | ⚠️ Partial fade, still up from close |
+
+DRMA: AH momentum carried into PM and made new highs. The pattern worked perfectly.
+IDN: AH gains partially held but faded. Skipped due to high float (19M), which was the right call.
+
+### Notes
+
+- **Scanner performance: excellent.** DRMA was detected at the first possible AH scan and appeared in all 6 AH scans. The paper trade is profitable.
+- **Catalyst discovery lag:** DRMA was initially flagged "no catalyst" at 22:00. The Benzinga report was found at 23:00. Consider checking Benzinga/GlobeNewsWire earlier in AH scans, or adding a catalyst search step immediately after detection.
+- **The AH→PM pattern confirmed again:** DRMA gained +28% in AH and continued to +31% in PM. IDN gained +20% in AH but faded, supporting the observation that low-float stocks (DRMA: 1.7M) follow through better than high-float ones (IDN: 19M).
+- **PM-only movers (INMB, RPGL) are not tradeable in our strategy.** They gap in PM without AH buildup, so there is no entry window. This is expected and not a scanner failure.
+- **3/3 on baseline tracking.** Small sample but the scanner is consistently finding the AH→PM winners. Continue daily tracking toward the 10-day target.
