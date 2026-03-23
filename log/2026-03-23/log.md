@@ -49,6 +49,29 @@ Session: REGULAR (before AH opens)
 
 > **Note:** This is a regular session scan (3:30 PM ET). No paper trades entered. Candidates flagged as "Watch - pending AH confirmation" per trading plan rules. Re-scan after 22:00 CET when AH is open.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+Session: AFTERHOURS
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| UGRO | [TV](https://www.tradingview.com/chart/?symbol=UGRO) | $6.15 | +182.1% | +20.0% | $7.38 | 4.0M | 14.9M | 0.3x | 672K | Wholesale Distributors |
+| HAIN | [TV](https://www.tradingview.com/chart/?symbol=HAIN) | $0.62 | +6.1% | +5.3% | $0.65 | 150K | 1.4M | 0.1x | 88.4M | Food: Major Diversified |
+
+### Candidate Evaluation
+
+**UGRO** (prior watch list, AH continuation +20%): Fresh catalyst confirmed - IPG completed all-stock merger with Flash Sports & Media today (GlobeNewswire PR 7:05 AM ET), bringing T20 cricket league broadcasting rights to UGRO ticker. This is a legitimate same-day catalyst, not just the 2-week-old Nasdaq compliance. Ultra-low float 672K. However: VRatio 0.3 = volume clearly fading in AH. Stock now +218% total from previous close - far more extended than any prior case (PZG lost at +97%, SER lost at +69%). Merger conversion set at $3.23/share vs current $7.38 creates selling pressure. **Skip: volume fading (VRatio 0.3) + extremely extended (+218%).**
+
+**HAIN** (+5.3% AH, float 88.4M): **Skip: float way too high (88.4M).**
+
+### Watch List Updates
+
+**BNGO** (from 21:30 watch): Reported Q4/FY2025 earnings today (GlobeNewswire PR at close). Did NOT appear in AH scan - no significant AH movement from earnings. Drop from watch.
+
+**GMEX** (from 21:30 watch): Did NOT appear in AH scan despite strong catalyst (AU$4.2M commercial order). No AH continuation. Drop from watch.
+
+> **Summary:** No paper trades. Only AH mover is UGRO which is too extended with fading volume. Thin AH session overall.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
