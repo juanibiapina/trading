@@ -109,6 +109,29 @@ Session: AFTERHOURS
 
 > **Summary:** No paper trades. UGRO continues building but too extended for entry. EDBL is new but has no catalyst. Thin AH session continues.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Session: AFTERHOURS
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| UGRO | [TV](https://www.tradingview.com/chart/?symbol=UGRO) | $6.15 | +182.1% | +31.9% | $8.11 | 13.6M | 16.2M | 0.8x | 672K | Wholesale Distributors |
+| EDBL | [TV](https://www.tradingview.com/chart/?symbol=EDBL) | $1.82 | +0.3% | +17.0% | $2.13 | 361K | 195K | 1.9x | 544K | Agricultural Commodities/Milling |
+| HAIN | [TV](https://www.tradingview.com/chart/?symbol=HAIN) | $0.62 | +6.1% | +5.3% | $0.65 | 150K | 1.4M | 0.1x | 88.4M | Food: Major Diversified |
+| PSQH | [TV](https://www.tradingview.com/chart/?symbol=PSQH) | $0.64 | -3.2% | +7.8% | $0.69 | 51K | 2.7M | 0.0x | 35.8M | Department Stores |
+
+### Candidate Evaluation
+
+**UGRO** (prior scans, AH fading): Price pulled back from $8.36 (23:30) to $8.11. AH change dropped from +35.9% to +31.9%. Volume 13.6M vs 12.5M at 23:30, modest increase but price declining. Momentum now fading after 2 hours of steady climb. Still +272% from prior close ($2.18). **Skip: extremely extended, momentum now fading.**
+
+**EDBL** (prior scan, re-checked catalyst): Price fading from $2.26 (23:30) to $2.13. AH change dropped from +24.2% to +17.0%. Volume increased from 206K to 361K (1.9x VRatio). Re-ran structured catalyst search per rules: (1) Earnings: not today, expected March 30-31. (2) Press releases: no same-day PR on GlobeNewswire/BusinessWire/PRNewswire. (3) SEC filings: most recent 8-K was March 18 (share exchange agreement for Series B preferred stock, not a positive catalyst). Still no catalyst found. Price fading despite volume increase suggests selling into the move. **Skip: no catalyst found, price fading.**
+
+**HAIN** (unchanged from prior scans): Same AH price ($0.65) and volume (150K). **Skip: float way too high (88.4M).**
+
+**PSQH** (new, +7.8% AH): Float 35.8M. Earnings were March 17 (a week ago, +109% Q4 revenue growth). Lock-up expiration was March 20. AH volume 51K is negligible (0.0x VRatio). **Skip: float too high (35.8M), negligible AH volume, modest change (+7.8%).**
+
+> **Summary:** No paper trades. UGRO and EDBL both fading from prior scan levels. No new actionable candidates. Fifth consecutive scan with no entries today, a very thin AH session. UGRO was the only stock with real momentum but was too extended from +182% regular session close for safe entry.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
