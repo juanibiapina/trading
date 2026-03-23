@@ -132,6 +132,29 @@ Session: AFTERHOURS
 
 > **Summary:** No paper trades. UGRO and EDBL both fading from prior scan levels. No new actionable candidates. Fifth consecutive scan with no entries today, a very thin AH session. UGRO was the only stock with real momentum but was too extended from +182% regular session close for safe entry.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+Session: AFTERHOURS
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| UGRO | [TV](https://www.tradingview.com/chart/?symbol=UGRO) | $6.15 | +182.1% | +33.0% | $8.18 | 14.1M | 16.3M | 0.9x | 672K | Wholesale Distributors |
+| EDBL | [TV](https://www.tradingview.com/chart/?symbol=EDBL) | $1.82 | +0.3% | +18.1% | $2.15 | 443K | 205K | 2.2x | 544K | Agricultural Commodities/Milling |
+| HAIN | [TV](https://www.tradingview.com/chart/?symbol=HAIN) | $0.62 | +6.1% | +5.3% | $0.65 | 150K | 1.4M | 0.1x | 88.4M | Food: Major Diversified |
+| PSQH | [TV](https://www.tradingview.com/chart/?symbol=PSQH) | $0.64 | -3.2% | +7.8% | $0.69 | 51K | 2.7M | 0.0x | 35.8M | Department Stores |
+
+### Candidate Evaluation
+
+**UGRO** (prior scans, stabilizing): Price recovered slightly from $8.11 (00:00) to $8.18. AH change +33.0% vs +31.9% last scan. Volume 14.1M (+500K in 30 min), VRatio 0.8 → 0.9. After the pullback from the $8.36 high (23:30), price is stabilizing in the $8.10-$8.20 range. Still +275% from prior close ($2.18). **Skip: extremely extended, same reasoning as prior scans.**
+
+**EDBL** (prior scans, also stabilizing): Price $2.15 vs $2.13 at 00:00. AH change +18.1% vs +17.0%. Volume grew from 361K to 443K, VRatio improved from 1.9x to 2.2x. Volume continuing to build but price bouncing in narrow range ($2.13-$2.26). No catalyst found across three consecutive searches (23:30, 00:00, 00:30). **Skip: no catalyst found despite sustained AH volume. Pattern matches IFBD/MNDR (high volume, no news, faded).**
+
+**HAIN** (unchanged): Same $0.65, 150K volume. **Skip: float too high (88.4M).**
+
+**PSQH** (unchanged from 00:00): Same $0.69, 51K volume. **Skip: float too high (35.8M), negligible volume.**
+
+> **Summary:** No paper trades. No new candidates. UGRO stabilizing but still far too extended. EDBL building volume without a catalyst. Sixth consecutive scan with no entries. This was a very thin AH session with only one real mover (UGRO) that was already too extended from the regular session.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
