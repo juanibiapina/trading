@@ -72,6 +72,23 @@ Session: AFTERHOURS
 
 > **Summary:** No paper trades. Only AH mover is UGRO which is too extended with fading volume. Thin AH session overall.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+Session: AFTERHOURS
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| UGRO | [TV](https://www.tradingview.com/chart/?symbol=UGRO) | $6.15 | +182.1% | +29.8% | $7.98 | 8.2M | 15.5M | 0.5x | 672K | Wholesale Distributors |
+| HAIN | [TV](https://www.tradingview.com/chart/?symbol=HAIN) | $0.62 | +6.1% | +5.3% | $0.65 | 150K | 1.4M | 0.1x | 88.4M | Food: Major Diversified |
+
+### Candidate Evaluation
+
+**UGRO** (prior scan, continued AH movement): Price climbed from $7.38 → $7.98 (+29.8% AH vs +20% at 22:00). Volume doubled: 4.0M → 8.2M in 30 min (12x float already traded). VRatio improved from 0.3x → 0.5x. Momentum building, not fading. However, now +266% from prior close ($2.18), far more extended than any case in the log. Prior losses at +97% (PZG) and +69% (SER). Even ABP's win was at +68%. At nearly 4x the extension of any prior entry, the risk/reward is poor despite the real catalyst and ultra-low float. **Skip: extremely extended (+266% from prior close). Volume improving but entry too late.**
+
+**HAIN** (unchanged from 22:00): No change in AH price or volume. **Skip: float too high (88.4M).**
+
+> **Summary:** No new candidates. UGRO showing continued strength but too extended for entry. Very thin AH session overall - no actionable setups.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
