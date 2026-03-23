@@ -89,6 +89,26 @@ Session: AFTERHOURS
 
 > **Summary:** No new candidates. UGRO showing continued strength but too extended for entry. Very thin AH session overall - no actionable setups.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Session: AFTERHOURS
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| UGRO | [TV](https://www.tradingview.com/chart/?symbol=UGRO) | $6.15 | +182.1% | +35.9% | $8.36 | 12.5M | 16.1M | 0.8x | 672K | Wholesale Distributors |
+| EDBL | [TV](https://www.tradingview.com/chart/?symbol=EDBL) | $1.82 | +0.3% | +24.2% | $2.26 | 206K | 176K | 1.2x | 544K | Agricultural Commodities/Milling |
+| HAIN | [TV](https://www.tradingview.com/chart/?symbol=HAIN) | $0.62 | +6.1% | +5.3% | $0.65 | 150K | 1.4M | 0.1x | 88.4M | Food: Major Diversified |
+
+### Candidate Evaluation
+
+**UGRO** (prior scans, continued AH momentum): Price climbed from $7.98 → $8.36 (+35.9% AH, ~+283% from prior close $2.18). Volume building steadily: 4.0M (22:00) → 8.2M (22:30) → 12.5M now. VRatio improved from 0.3x → 0.5x → 0.8x, approaching average. Momentum clearly sustained with real catalyst (IPG/Flash Sports merger). However, +283% from prior close is far beyond any prior entry. Worst losses came from chasing extended stocks (PZG at +97%, SER at +69%). Even ABP's winning entry was at +68%. **Skip: extremely extended (+283% from prior close). Strong momentum but entry too late at nearly 4x any prior case.**
+
+**EDBL** (new, +24.2% AH): Ultra-low float 544K. Close was flat (+0.3%) so this is purely AH activity. Structured catalyst search: (1) Earnings: next expected 3/30/2026, not today. (2) Press releases: most recent GlobeNewswire PR was March 10 (Fresh Market distribution). No same-day PR found. (3) SEC filings: no 8-K found for today. **Skip: no catalyst found.** AH Vol 206K (1.2x VRatio) is above average but modest in absolute terms. Worth re-checking next scan if it persists, but no catalyst makes follow-through unlikely (see IFBD, MNDR pattern).
+
+**HAIN** (unchanged from prior scans): No change in AH price ($0.65) or volume (150K). **Skip: float way too high (88.4M).**
+
+> **Summary:** No paper trades. UGRO continues building but too extended for entry. EDBL is new but has no catalyst. Thin AH session continues.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
