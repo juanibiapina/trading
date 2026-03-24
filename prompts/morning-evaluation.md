@@ -34,6 +34,16 @@ This is "today's winner." Document it with: sector, catalyst, float, AH entry pr
 
 **Then** go back and read last night's log. Was this stock on our radar? This is the scanner diagnostic.
 
+### Yahoo Finance Data
+
+For detailed price action data (5-min bars, AH/PM history), use the Yahoo Finance fetch script:
+
+```bash
+python3 scripts/yahoo-fetch.py TICKER --interval 5m --range 2d --prepost
+```
+
+This handles the required User-Agent header. Pipe output to `python3 -c "..."` for custom processing. Do NOT use raw `curl` to Yahoo Finance (it will fail without the User-Agent header).
+
 ### 3. Check Paper Trade P&L
 
 If there are paper trades in the log, check their current prices:
