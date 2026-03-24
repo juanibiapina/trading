@@ -45,6 +45,31 @@
 **FCHL (+19.0%)** — Skip
 - 15-for-1 reverse split effective March 23. Price move is artificial from share consolidation, not real momentum.
 
+## Scan 22:00 CET (4:00 PM ET) — After-Hours
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| MDAI | [TV](https://www.tradingview.com/chart/?symbol=MDAI) | $1.65 | -4.1% | +11.5% | $1.84 | 769K | 2.2M | 0.3x | 21.9M | Medical Specialties |
+| NXTT | [TV](https://www.tradingview.com/chart/?symbol=NXTT) | $1.00 | -33.3% | +6.0% | $1.06 | 257K | 238K | 1.1x | 4.9M | Packaged Software |
+
+**Prior candidates (21:30 scan) AH update:** RBNE, FEED, MKDW, CVV not appearing in AH scanner. No post-market trades recorded yet. Confirms pre-AH caution was warranted.
+
+### Candidate Evaluation
+
+**MDAI (+11.5% AH)** — Skip: float too high, volume low
+- Catalyst: YES. Q4 2025 earnings reported today (Mar 24). Conference call at 5:00 PM ET (underway now). Also received $31.7M non-dilutive BARDA funding on Mar 18 for DeepView AI burn wound system.
+- Float: 21.9M (too high, ideal <10M). MCap: $50.6M.
+- VRatio 0.3x means AH volume is *below* average. Not unusual activity.
+- Earnings is a Tier B catalyst, but the float is too large and volume too weak to generate the AH-to-premarket squeeze pattern.
+
+**NXTT (+6.0% AH)** — Skip: dead cat bounce, no catalyst
+- Catalyst: No catalyst found. No press releases, no earnings, no SEC filings today. Had 200-for-1 reverse split Sept 2025. Multiple volatility trading halts during regular session today.
+- Float: 4.9M (decent). MCap: $4.9M.
+- Down -33.3% during regular hours. The +6% AH is a weak bounce, not momentum. Classic dead cat bounce pattern.
+- Company is a Bitcoin-holding/SaaS shell with near-total value destruction (-100% over 3 years).
+
+**Summary:** First AH scan. No candidates meet criteria. Neither has float <10M with sustained >10% AH momentum and strong volume. Will re-check at 22:30-23:00 CET.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
