@@ -166,6 +166,35 @@
 
 **Summary:** Fourth AH scan. No new candidates meeting criteria. NXTT paper trade is essentially flat at $1.14 vs $1.15 entry. The dead cat bounce is holding but not building momentum. No volume acceleration. Will monitor in premarket tomorrow for exit.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| NXTT | [TV](https://www.tradingview.com/chart/?symbol=NXTT) | $1.00 | -33.3% | +20.0% | $1.20 | 322K | 245K | 1.3x | 4.9M | Packaged Software |
+| CIGL | [TV](https://www.tradingview.com/chart/?symbol=CIGL) | $2.00 | +0.0% | +5.0% | $2.10 | 361K | 182K | 2.0x | 5.9M | Misc. Commercial Services |
+| PSQH | [TV](https://www.tradingview.com/chart/?symbol=PSQH) | $0.60 | -6.4% | +8.2% | $0.65 | 52K | 2.7M | 0.0x | 35.8M | Department Stores |
+| CDLX | [TV](https://www.tradingview.com/chart/?symbol=CDLX) | $0.94 | +3.0% | +6.4% | $1.00 | 66K | 1.3M | 0.0x | 52.0M | Internet Software/Services |
+
+### Candidate Evaluation
+
+**NXTT (+20.0% AH)** — Active paper trade. Fifth AH scan.
+- AH change trajectory: +6.0% → +13.0% → +15.0% → +14.0% → **+20.0%**. Significant acceleration from last scan.
+- Volume 322K (VRatio 1.3x). Steady but not explosive. No volume surge accompanying the price jump.
+- Paper trade entry at $1.15, current $1.20 (**+4.3%**). Now in profit.
+- Still no catalyst after 3 structured searches. The dead cat bounce is strengthening rather than fading, which is unexpected for a no-catalyst move. Net still -20% on the day vs prior close.
+- Worth watching closely in premarket. If this continues building, the no-catalyst dead cat bounce pattern may have more follow-through than expected.
+
+**CIGL (+5.0% AH)** — Prior candidate, fading further
+- Was +5.5% at 23:30, now +5.0%. Slow fade. Below 10% threshold. Negative catalyst only (fraud lawsuits). Skip unchanged.
+
+**PSQH (+8.2% AH)** — Prior candidate, fading
+- Was +9.3% at 23:30, now +8.2%. Float 35.8M, VRatio 0.0x. Skip unchanged.
+
+**CDLX (+6.4% AH)** — Prior candidate, unchanged
+- Same +6.4% as all prior scans. Float 52M. Negligible volume. Skip unchanged.
+
+**Summary:** Fifth AH scan. No new candidates. NXTT paper trade accelerating to +20% AH (+4.3% from entry). All other candidates below 10% threshold or have disqualifying float. Monitoring NXTT in premarket tomorrow.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
