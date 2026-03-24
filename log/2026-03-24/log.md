@@ -138,6 +138,34 @@
 
 **Summary:** Third AH scan. NXTT is the only candidate with float <10M and >10% AH sustained across 2+ scans. Entering paper trade per learning phase protocol despite dead cat bounce pattern and no catalyst. This generates data on whether no-catalyst bounces after crashes follow through in premarket.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| NXTT | [TV](https://www.tradingview.com/chart/?symbol=NXTT) | $1.00 | -33.3% | +14.0% | $1.14 | 306K | 244K | 1.3x | 4.9M | Packaged Software |
+| CIGL | [TV](https://www.tradingview.com/chart/?symbol=CIGL) | $2.00 | +0.0% | +5.5% | $2.11 | 360K | 181K | 2.0x | 5.9M | Misc. Commercial Services |
+| PSQH | [TV](https://www.tradingview.com/chart/?symbol=PSQH) | $0.60 | -6.4% | +9.3% | $0.66 | 52K | 2.7M | 0.0x | 35.8M | Department Stores |
+| CDLX | [TV](https://www.tradingview.com/chart/?symbol=CDLX) | $0.94 | +3.0% | +6.4% | $1.00 | 60K | 1.3M | 0.0x | 52.0M | Internet Software/Services |
+
+### Candidate Evaluation
+
+**NXTT (+14.0% AH)** — Active paper trade. Fourth AH scan.
+- AH change: +6.0% → +13.0% → +15.0% → +14.0%. Slight fade from peak but holding above +13%.
+- Volume steady at 306K (VRatio 1.3x). No acceleration, no collapse.
+- Paper trade entry at $1.15, current $1.14 (-0.9%). Essentially flat.
+- Pattern: slow grind, not the sharp spike-and-hold seen in winners (BATL, VIVS). Consistent with low-conviction dead cat bounce.
+
+**CIGL (+5.5% AH)** — Prior candidate, stable
+- Was +5.0% at 23:00, now +5.5%. Flat. Volume 360K (VRatio 2.0x). Still below 10% threshold. Only catalyst remains negative (fraud lawsuits). Skip unchanged.
+
+**PSQH (+9.3% AH)** — NEW. Skip: float too high (35.8M), below 10% threshold
+- Float 35.8M, MCap 31.1M, VRatio 0.0x (negligible volume). Does not meet any criteria.
+
+**CDLX (+6.4% AH)** — Prior candidate, unchanged
+- Same +6.4% as 23:00. Negligible volume. Float 52M. Skip unchanged.
+
+**Summary:** Fourth AH scan. No new candidates meeting criteria. NXTT paper trade is essentially flat at $1.14 vs $1.15 entry. The dead cat bounce is holding but not building momentum. No volume acceleration. Will monitor in premarket tomorrow for exit.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
