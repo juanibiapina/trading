@@ -105,7 +105,41 @@
 
 **Summary:** Second AH scan. No candidates meet entry criteria. NXTT has float <10M and >10% AH sustained across 2 scans, but this is a dead cat bounce with no catalyst, not a genuine AH spike. Will re-check at 23:00 CET per learning phase protocol.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| NXTT | [TV](https://www.tradingview.com/chart/?symbol=NXTT) | $1.00 | -33.3% | +15.0% | $1.15 | 294K | 242K | 1.2x | 4.9M | Packaged Software |
+| CDLX | [TV](https://www.tradingview.com/chart/?symbol=CDLX) | $0.94 | +3.0% | +6.4% | $1.00 | 55K | 1.3M | 0.0x | 52.0M | Internet Software/Services |
+| CIGL | [TV](https://www.tradingview.com/chart/?symbol=CIGL) | $2.00 | +0.0% | +5.0% | $2.10 | 351K | 180K | 1.9x | 5.9M | Misc. Commercial Services |
+| ORIS | [TV](https://www.tradingview.com/chart/?symbol=ORIS) | $0.76 | +18.9% | +5.1% | $0.80 | 83K | 3.1M | 0.0x | 1.1M | Food: Major Diversified |
+
+### Candidate Evaluation
+
+**NXTT (+15.0% AH)** — Prior candidate, third AH scan. Re-ran structured catalyst search (#3):
+- Earnings: No. Press releases: None found. SEC filings: None today.
+- **Still no catalyst after 3 searches across 3 scans.**
+- AH change strengthening: +6.0% → +13.0% → +15.0%. Volume steady at ~294K (VRatio 1.2x).
+- Remains a dead cat bounce after -33.3% regular session crash (net -18.3% on day).
+- Float 4.9M, sustained >10% AH across 2 scans (22:30 and 23:00). Meets learning phase criteria.
+- **Paper trade entered per learning phase protocol** — see concerns below in Paper Trades.
+
+**CDLX (+6.4% AH)** — NEW. Skip: float too high (52M)
+- Catalyst: YES. Completed sale of Bridg assets to PAR Technology (PR at 4:05 PM ET today).
+- Float 52.0M (far above 10M threshold). Only +6.4% AH with negligible volume (0.0x VRatio). Not a momentum candidate.
+
+**CIGL (+5.0% AH)** — Prior candidate, fading
+- Was +6.5% at 22:30, now +5.0%. Fading AH momentum. Only catalyst is negative (securities fraud lawsuits). Skip unchanged.
+
+**ORIS (+5.1% AH)** — NEW. Skip: negligible volume, below threshold
+- AH volume 83K with VRatio 0.0x (well below average). Only +5.1% AH. No significant activity.
+
+**Prior 21:30 candidates:** RBNE, FEED, MKDW, CVV absent from AH scanner for third consecutive scan. Intraday moves fully failed to carry into after-hours.
+
+**Summary:** Third AH scan. NXTT is the only candidate with float <10M and >10% AH sustained across 2+ scans. Entering paper trade per learning phase protocol despite dead cat bounce pattern and no catalyst. This generates data on whether no-catalyst bounces after crashes follow through in premarket.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| NXTT | $1.15 | 23:00 CET | 86 | Learning phase data. Dead cat bounce after -33% crash, NO catalyst (3 searches). Float 4.9M, sustained +13-15% AH across 2 scans. Major concerns: no catalyst, bounce not spike, net -18% on day. Entering to collect data on this pattern. |
