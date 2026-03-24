@@ -195,6 +195,43 @@
 
 **Summary:** Fifth AH scan. No new candidates. NXTT paper trade accelerating to +20% AH (+4.3% from entry). All other candidates below 10% threshold or have disqualifying float. Monitoring NXTT in premarket tomorrow.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| NXTT | [TV](https://www.tradingview.com/chart/?symbol=NXTT) | $1.00 | -33.3% | +23.0% | $1.23 | 339K | 247K | 1.4x | 4.9M | Packaged Software |
+| TJGC | [TV](https://www.tradingview.com/chart/?symbol=TJGC) | $0.59 | +18.2% | +17.6% | $0.69 | 100K | 417K | 0.2x | 4.1M | Electronic Equipment/Instruments |
+| CIGL | [TV](https://www.tradingview.com/chart/?symbol=CIGL) | $2.00 | +0.0% | +5.0% | $2.10 | 361K | 182K | 2.0x | 5.9M | Misc. Commercial Services |
+| ABVE | [TV](https://www.tradingview.com/chart/?symbol=ABVE) | $0.83 | -5.4% | +5.3% | $0.88 | 86K | 3.1M | 0.0x | 42.8M | Food: Major Diversified |
+| CDLX | [TV](https://www.tradingview.com/chart/?symbol=CDLX) | $0.94 | +3.0% | +6.4% | $1.00 | 66K | 1.3M | 0.0x | 52.0M | Internet Software/Services |
+| PSQH | [TV](https://www.tradingview.com/chart/?symbol=PSQH) | $0.60 | -6.4% | +8.2% | $0.65 | 52K | 2.7M | 0.0x | 35.8M | Department Stores |
+
+### Candidate Evaluation
+
+**NXTT (+23.0% AH)** — Active paper trade. Sixth AH scan.
+- AH change trajectory: +6.0% → +13.0% → +15.0% → +14.0% → +20.0% → +23.0%. Continued acceleration.
+- Volume 339K (VRatio 1.4x). Slight uptick from 322K at 00:00. Steady but not explosive.
+- Paper trade entry at $1.15, current $1.23 (**+7.0%**). Strengthening.
+- Still no catalyst. Dead cat bounce that keeps building without volume surge. Interesting data point for pattern library.
+
+**TJGC (+17.6% AH)** — NEW. Skip: no catalyst, volume below average.
+- Structured catalyst search:
+  1. Earnings: None found today.
+  2. Press releases: No GlobeNewswire/PRNewswire/BusinessWire releases found.
+  3. SEC filings: No 8-K or material filings today.
+  4. General news search: Nothing TJGC-specific.
+- Float 4.1M (low, ideal). MCap $9.0M.
+- BUT VRatio is only 0.2x (volume *below* average). AH Vol 100K vs AvgVol 417K. This is not unusual activity - it's below-normal volume at higher prices.
+- Was in 21:30 "remaining hits" at +18.2% day gain. Combined move is significant (+38% from prior close) but on thin volume with no catalyst.
+- Prior daily volumes: Mar 18: 69K, Mar 19: 19K, Mar 20: 13K, Mar 23: 50K. Very thinly traded stock.
+- **Skip: no catalyst + below-average volume. Not the AH spike pattern.**
+
+**ABVE (+5.3% AH)** — NEW. Skip: float too high (42.8M), below 10% threshold, VRatio 0.0x.
+
+**CIGL, CDLX, PSQH** — Prior candidates, no significant changes. Skip unchanged.
+
+**Summary:** Sixth AH scan. NXTT paper trade accelerating to +23% AH (+7.0% from entry). TJGC is new with low float but has no catalyst and below-average volume. No other candidates meet criteria.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
