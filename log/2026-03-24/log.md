@@ -70,6 +70,41 @@
 
 **Summary:** First AH scan. No candidates meet criteria. Neither has float <10M with sustained >10% AH momentum and strong volume. Will re-check at 22:30-23:00 CET.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| MDAI | [TV](https://www.tradingview.com/chart/?symbol=MDAI) | $1.65 | -4.1% | +10.9% | $1.83 | 1.2M | 2.3M | 0.5x | 21.9M | Medical Specialties |
+| CIGL | [TV](https://www.tradingview.com/chart/?symbol=CIGL) | $2.00 | +0.0% | +6.5% | $2.13 | 329K | 178K | 1.8x | 5.9M | Misc. Commercial Services |
+| NXTT | [TV](https://www.tradingview.com/chart/?symbol=NXTT) | $1.00 | -33.3% | +13.0% | $1.13 | 283K | 241K | 1.2x | 4.9M | Packaged Software |
+
+### Candidate Evaluation
+
+**MDAI (+10.9% AH)** — Prior candidate, no change in assessment
+- AH change slightly down from +11.5% to +10.9%. Volume up (769K to 1.2M) but VRatio still only 0.5x (below average).
+- Float 21.9M remains too high. Skip unchanged.
+
+**CIGL (+6.5% AH)** — NEW. Skip: no positive catalyst, weak AH move
+- Structured catalyst search:
+  1. Earnings: No earnings today.
+  2. Press releases: Only news is securities fraud class action lawsuits (Schall Law Firm, Rosen Law Firm) alleging fraudulent stock promotion scheme. This is *negative* news.
+  3. SEC filings: No positive 8-K found.
+- Float 5.9M is decent, but +6.5% is below the 10% threshold and the only news is litigation. Not a momentum candidate.
+
+**NXTT (+13.0% AH)** — Prior candidate, re-evaluated (now >10% AH)
+- Re-ran structured catalyst search per instructions (was skipped at 22:00 for "no catalyst," now >10%):
+  1. Earnings: None today. Next estimated Mar 26, 2026.
+  2. Press releases: None found for today.
+  3. SEC filings: Most recent 8-K was annual meeting/board elections (Mar 9). No new filing today.
+  4. **Still no catalyst found.**
+- The +13% AH is a dead cat bounce after a -33.3% regular session crash (net -24.7% on the day). Multiple volatility halts during regular hours. This is NOT the AH spike pattern we trade. The pattern requires a *new* catalyst-driven spike from a stable base, not a bounce off a crash.
+- Company (Next Technology Holding) is a Chinese Bitcoin/AI shell that lost 96% of value over the past year (52w high: $960 post-split adjusted, now $1.13). Extremely high risk.
+- **Skip: no catalyst, dead cat bounce, not the AH spike pattern.**
+
+**Prior 21:30 candidates AH update:** RBNE, FEED, MKDW, CVV still not appearing in AH scanner (second consecutive AH scan absent). Intraday moves did not carry into AH.
+
+**Summary:** Second AH scan. No candidates meet entry criteria. NXTT has float <10M and >10% AH sustained across 2 scans, but this is a dead cat bounce with no catalyst, not a genuine AH spike. Will re-check at 23:00 CET per learning phase protocol.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
