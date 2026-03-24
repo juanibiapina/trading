@@ -159,3 +159,86 @@ Session: AFTERHOURS
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+
+## Morning Evaluation — 10:28 CET
+
+### Today's Winner
+
+**UGRO** — Wholesale Distributors (pivoted to Sports Media / T20 Cricket)
+- Catalyst: IPG completed all-stock merger with Flash Sports & Media, bringing T20 cricket league broadcasting rights (Lanka Premier League, Malaysia & Zimbabwe leagues) under NASDAQ-listed entity. GlobeNewswire PR released 7:05 AM ET March 23.
+- Previous Close (March 20): $2.18
+- Regular Session March 23: Open $3.58, High $7.23, Close $6.15 (+182%)
+- AH last night: $7.38 (+20% from close) at 22:00 CET, peaked $8.36 (+36%) at 23:30 CET
+- Premarket now: $8.29 (+35% from close), peaked $8.76 at 09:40 ET (15:40 CET)
+- Hypothetical P&L (AH entry at scanner detection → PM peak): $7.38 → $8.76 = **+18.7%**
+- Float: 672K | Market Cap: ~$4.6M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — #1 hit on every AH scan (22:00, 22:30, 23:30, 00:00, 00:30 CET)
+- Why we didn't trade: Skipped as "extremely extended" — stock was already +182% in regular session, +218% from previous close at first detection. Every prior extended entry lost money (PZG at +97%, SER at +69%).
+- This was a defensible decision given historical losses on extended stocks, but the +18.7% PM continuation shows ultra-low float (672K) + strong catalyst can sustain momentum even at extreme extension.
+- Scanner gap: None for detection. The gap is in entry criteria: we have no framework for distinguishing "extended and done" from "extended but still running." The ultra-low float and legitimate same-day M&A catalyst differentiated this from past failed extension entries (PZG/SER had weaker catalysts).
+
+**Data discrepancy noted:** Yahoo Finance 5m chart shows UGRO AH start at ~$3.15 while the scanner (TradingView) reported $7.38 at the same timestamp. The daily bar shows Close: $6.15 but continuous trading ended around $3.60 by 15:30 ET. The official close appears to be from a closing auction/cross that diverged significantly from continuous trading. If the real AH entry was $3.15 (chart data), the PM peak return would be +178%, not +18.7%. This pricing gap between official close and tradeable AH prices on ultra-low float stocks needs investigation.
+
+### Baseline Tracking
+
+- Days tracked: 4
+- Winners detected by scanner: 4/4 (**100%**) — HIT (Mar 17), SUNE (Mar 18), DRMA (Mar 19), UGRO (Mar 24)
+- Winner selected for paper trade: 0/4 (**0%**) — we have not paper traded any winner yet
+- Target: >80% detection
+- Status: **DETECTION BASELINE MET** (4/4), but selection/execution at 0% — scanner finds winners but entry rules reject them all
+
+### Retrospective Scan Results
+
+**Forced AH scan (10:20 CET):** 0 hits (AH session ended 8+ hours ago, expected)
+
+**Forced PM scan (10:20 CET):** 3 hits
+
+| Ticker | Close | PM Chg | PM Price | PM Vol | VRatio | Float | Industry |
+|--------|-------|--------|----------|--------|--------|-------|----------|
+| EDBL | $1.82 | +34.1% | $2.44 | 1.6M | 7.7x | 544K | Agricultural Commodities/Milling |
+| UGRO | $6.15 | +29.1% | $7.94 | 756K | 0.0x | 672K | Wholesale Distributors |
+| VHUB | $0.83 | +10.4% | $0.92 | 222K | 0.2x | 0 | Food Retail |
+
+### Paper Trade P&L
+
+No paper trades were entered on March 23.
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 times (21:30 - 00:30 CET)
+- Candidates found: 7 unique tickers (UGRO, PTLE, GMEX, ZYBT, LICN, BNGO, EDBL, HAIN, PSQH — 9 total, but UGRO and EDBL were the only AH movers with sustained action)
+- AH movers with real continuation: 2 (UGRO, EDBL)
+- Both were detected by the scanner
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| UGRO | +36% AH | Detected but skipped: too extended (+218% from prev close) | Yes: +18.7% (scanner price) to +178% (chart price) |
+| EDBL | +24% AH | Detected but skipped: no catalyst found | Yes: +12.8% from detection to PM peak |
+
+Both missed opportunities were detected by the scanner but rejected by entry criteria.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | AH Peak Time | Current PM | From Peak | From Prev Close | Verdict |
+|--------|---------|-------------|------------|-----------|-----------------|---------|
+| UGRO | $8.36 (+36%) | 23:30 CET | $8.29 | -0.8% | +280% | Held gains, slight PM continuation to $8.76 peak then pulled back. Strong follow-through. |
+| EDBL | $2.26 (+24%) | 23:30 CET | $2.23 | -1.3% | +23% | Continued in PM to $2.55 peak (+40% from close). AH momentum carried into PM. |
+| VHUB | $0.86 (+8%) | Late AH | $0.90 | +4.7% | +14% | Modest AH move, modest PM continuation. Not a strong pattern. |
+
+Core hypothesis (AH momentum carries into PM) confirmed for both UGRO and EDBL today.
+
+### Notes
+
+1. **Scanner detection is working (4/4 = 100%).** The problem has shifted from "can we find the winners?" to "can we pick the right one to trade?" Entry rules are too conservative: every detected winner was rejected.
+
+2. **Extension filter is the main blocker.** UGRO was rejected solely because it was too extended. But with ultra-low float (672K) and a legitimate M&A catalyst, it had more fuel than PZG or SER. A possible refinement: consider catalyst quality when evaluating extension. Strong M&A/partnership catalysts may justify entries on extended stocks; weaker catalysts (analyst targets, no news) do not.
+
+3. **"No catalyst" rule needs nuance.** EDBL had no identifiable catalyst but delivered +34% PM from close. The prior observation ("no catalyst = no follow-through") held for IFBD and MNDR but not EDBL. Ultra-low float (544K) may be a mitigating factor: stocks with very low float can move on smaller buying pressure even without news.
+
+4. **UGRO price data discrepancy is important.** The scanner showed AH start at $7.38 (from official close $6.15) but the chart shows ~$3.15. On ultra-low float stocks, the official closing price can diverge dramatically from the actual tradeable AH price. This means: (a) our extension calculations may be wrong, (b) the real opportunity may be larger or smaller than what the scanner shows. Need to cross-check scanner prices against actual order book data.
+
+5. **Paper trade urgency.** 4/4 winners detected, 0/4 traded. The learning phase requires paper trading to test entry rules, not just detection. Next session: consider paper trading the top candidate even if extension or catalyst concerns exist, to collect data on whether those concerns actually predict losses.
