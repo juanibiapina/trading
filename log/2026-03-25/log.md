@@ -211,6 +211,54 @@ RMSG, the top candidate from the pre-AH scan, is already fading in AH (-9.4%). C
 - Volume: 2.3M and growing (5.5x avg). Catalyst (Agentic AI PR) still in play.
 - Outlook: consolidation after initial spike, now building second leg. Positive for overnight hold.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**Session: AFTERHOURS** — Fifth scan. HCTI paper trade active from 22:30.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.71 | -41.8% | +139.8% | $4.10 | 14.6M | 1.9M | 7.5x | - | Misc. Commercial Services |
+| SLND | [TV](https://www.tradingview.com/chart/?symbol=SLND) | $1.32 | +1.5% | +71.2% | $2.26 | 1.2M | 503K | 2.3x | 12.6M | Engineering & Construction |
+| HCTI | [TV](https://www.tradingview.com/chart/?symbol=HCTI) | $2.92 | +11.5% | +37.7% | $4.02 | 2.6M | 456K | 5.7x | 1.2M | IT Services |
+| TPST | [TV](https://www.tradingview.com/chart/?symbol=TPST) | $1.74 | -0.6% | +19.0% | $2.07 | 260K | 159K | 1.6x | 8.3M | Pharmaceuticals: Major |
+| BBGI | [TV](https://www.tradingview.com/chart/?symbol=BBGI) | $3.70 | +6.9% | +13.8% | $4.21 | 62K | 25K | 2.4x | 637K | Broadcasting |
+| ADVB | [TV](https://www.tradingview.com/chart/?symbol=ADVB) | $4.28 | +5.9% | +13.1% | $4.84 | 1.0M | 168K | 6.3x | 370K | Biotechnology |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $1.60 | -4.2% | +11.2% | $1.78 | 611K | 535K | 1.1x | - | Misc. Commercial Services |
+
+*Excluded: BLNK (float 134.5M), CDLX (float 52M), ICU (+5.7% AH, below threshold), LRHC (+5.6% AH).*
+
+### Prior Candidates Update
+
+| Ticker | 23:00 AH Chg | 23:30 AH Chg | AH Vol Change | Trend |
+|--------|-------------|-------------|---------------|-------|
+| HCTI | +35.5% ($3.96) | +37.7% ($4.02) | 2.3M → 2.6M (+13%) | **Stabilizing, slight bounce from 17:00 dip. AH history: dipped to $3.72 at 17:30, now $4.02.** |
+| ADVB | +21.5% ($5.20) | +13.1% ($4.84) | 1.0M → 1.0M (flat) | **Fading further. Down from +38% peak to +13%.** |
+| FCHL | +190.6% ($4.97) | +139.8% ($4.10) | 12.9M → 14.6M | Fading hard. Still skipped (post-split bounce). |
+| TPST | +13.8% ($1.98) | +19.0% ($2.07) | - | Building slightly, but low volume (1.6x avg). |
+
+### New Candidate Evaluations
+
+**SLND** (+71.2% AH, float 12.6M, mcap $71.4M) — **Skip: no catalyst found, high float/mcap**
+- Structured catalyst search:
+  1. Earnings: No earnings reported today.
+  2. Press releases: No same-day PR found. Last major news: March 17 8-K for $110M term loan restructuring with sureties waiving payments/defaults.
+  3. SEC filings: March 23 8-K (material definitive agreement from March 17). No today filing.
+- AH price action: flat at $1.31-$1.36 until 17:00 ET, then sudden spike to $2.26 by 17:10 (+73.8%). Looks like a single large buyer or block trade.
+- Float 12.6M (above ideal <10M), mcap $71.4M (above <$100M but high for this strategy). Combined with no catalyst, this is a skip.
+
+**BBGI** (+13.8% AH, float 637K, mcap $6.7M) — **Skip: no fresh catalyst, very low AH volume**
+- Ultra-low float (637K), but AH volume only 62K (2.4x avg). Very thin.
+- Only recent news: March 20 debt restructuring announcement (not today-specific). Noteholders could receive up to 95% equity, which is dilutive to existing shareholders.
+- AH price action: jumped from $3.88 to $4.21 in one candle at 17:09. Likely one buyer given thin volume.
+- Not a genuine AH momentum play.
+
+### HCTI Paper Trade Status
+- Entry: $4.01 at 22:30 CET
+- AH history: peaked $4.43 at 16:05, consolidated $3.95-$4.13, dipped to $3.72 at 17:30, now recovering to $4.02
+- Current P&L: ~breakeven ($4.02 vs $4.01 entry)
+- Volume: 2.6M and still growing (5.7x avg). Catalyst (Agentic AI PR) still in play.
+- Outlook: recovered from $3.72 dip. Consolidation range is $3.72-$4.43. Need to hold above $3.95 support for overnight thesis. Will evaluate PM action tomorrow.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
