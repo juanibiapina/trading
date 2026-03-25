@@ -134,10 +134,16 @@ Append a `## Morning Evaluation` section to the log:
 
 How did last night's top AH movers perform into premarket? Include every stock that appeared in 2+ evening scans with AH change >10%.
 
-| Ticker | AH Peak | AH Peak Time | Current PM | From Peak | From Prev Close | Verdict |
-|--------|---------|-------------|------------|-----------|-----------------|---------|
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
 
-This tracks whether AH momentum carries into premarket (the core trading hypothesis).
+**AH Trajectory** — classify the AH price action from evening scan data:
+- **Build**: AH% increased across scans (e.g., +6% → +13% → +20%)
+- **Spike→fade**: peaked early in AH, declined in later scans
+- **Spike→hold**: spiked then held steady across scans
+- **Late surge**: flat in early AH, jumped in later scans (23:30+ CET)
+
+This tracks whether AH momentum carries into premarket and which AH patterns predict follow-through.
 
 ### Notes
 [any observations about scanner performance, threshold adjustments needed, etc.]
