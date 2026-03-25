@@ -117,7 +117,50 @@ RMSG, the top candidate from the pre-AH scan, is already fading in AH (-9.4%). C
 2. **ADVB** — Ultra-low float biotech. Check if AH move sustains and re-search for catalyst.
 3. **FCHL** — Monitor only. Post-split bounce, not entering.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Session: AFTERHOURS** — Third scan. Learning phase: paper trade the best candidate with float <10M and >10% AH sustained across 2+ scans.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.71 | -41.8% | +188.3% | $4.93 | 10.6M | 1.4M | 7.5x | - | Misc. Commercial Services |
+| HCTI | [TV](https://www.tradingview.com/chart/?symbol=HCTI) | $2.92 | +11.5% | +37.3% | $4.01 | 2.0M | 383K | 5.3x | 1.2M | IT Services |
+| ADVB | [TV](https://www.tradingview.com/chart/?symbol=ADVB) | $4.28 | +5.9% | +21.5% | $5.20 | 949K | 153K | 6.2x | 370K | Biotechnology |
+| BTBD | [TV](https://www.tradingview.com/chart/?symbol=BTBD) | $1.86 | +31.0% | +8.1% | $2.01 | 206K | 233K | 0.9x | 3.2M | Restaurants |
+| ICU | [TV](https://www.tradingview.com/chart/?symbol=ICU) | $2.28 | +1.8% | +8.4% | $2.47 | 70K | 90K | 0.8x | 3.7M | Medical Specialties |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $1.60 | -4.2% | +8.1% | $1.73 | 483K | 520K | 0.9x | - | Misc. Commercial Services |
+
+*Excluded: LRHC (+5.6% AH, modest), TOP (+5.3% AH, modest), CDLX (float 52M, +6.6% AH).*
+
+### Prior Candidates Update
+
+| Ticker | 22:00 AH Chg | 22:30 AH Chg | AH Vol Change | Trend |
+|--------|-------------|-------------|---------------|-------|
+| HCTI | +43.8% | +37.3% | 801K → 2.0M (+150%) | **Slight price fade, volume surging** |
+| ADVB | +42.1% | +21.5% | 949K (was 788K) | **Fading significantly** |
+| FCHL | +292.4% | +188.3% | 6.6M → 10.6M | Fading (still skipped: post-split bounce) |
+
+### Candidate Evaluations
+
+**HCTI** (+37.3% AH, float 1.2M, mcap $3.4M) — **PAPER TRADE**
+- **Catalyst found (re-search):** "Healthcare Triangle Launches Agentic AI Agent for Healthcare Services" — CNW/PRNewswire, March 25, 2026 at 4:10 PM ET. Deployment of Agentic AI to Teyame AI's customer engagement platform. Company cites $200B projected Agentic AI market by 2034.
+- At 22:00 scan, no catalyst was findable. By 22:30, the PR appeared on Benzinga and Yahoo Finance. Confirms the "PRs appear 15-30 min after AH" pattern.
+- Float 1.2M (ultra-low), AH volume 2.0M vs 383K avg (5.3x), volume INCREASING.
+- Sustained >10% AH across 2 scans (22:00: +43.8%, 22:30: +37.3%).
+- AH price action: peaked at $4.43 (+69.1% from prev close) at 16:05, consolidated $3.95-$4.13 range. Currently $4.01.
+- Concern: price down from peak, but consolidation after spike can be bullish (VIVS pattern). Volume still building.
+
+**ADVB** (+21.5% AH, float 370K, mcap $5.8M) — **Skip: fading, no catalyst**
+- Re-searched: still no today-specific catalyst. Last news was Feb 18 (1-for-20 reverse split).
+- Fading sharply: +42.1% → +21.5% in 30 minutes. AH price peaked at $5.58, now $5.20.
+- Ultra-low float (370K) but without catalyst, matches "no catalyst = no follow-through" pattern.
+
+**FCHL** — **Skip (unchanged): post-reverse-split bounce.** Still fading from +292% to +188%.
+
+**New candidates (BTBD, ICU, VCIG):** All below 10% AH threshold. No evaluation needed.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| HCTI | $4.01 | 22:30 CET | 26 | Agentic AI launch catalyst (4:10 PM ET PR), float 1.2M, AH vol 5.3x and surging, sustained +37% AH across 2 scans, consolidating after spike |
