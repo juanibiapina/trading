@@ -310,6 +310,48 @@ Re-searched: confirmed no today-specific catalyst. Bitget article from today exp
 - Concern: lost $3.95 support level. Consolidating $3.55-$3.83 range. Classic "spike, consolidate, fade lower" pattern rather than "spike, consolidate, second leg" (VIVS). The catalyst (Agentic AI PR) may not have enough substance for overnight momentum.
 - Outlook: need to hold $3.55 support for any overnight thesis. Will evaluate PM action tomorrow. PM exit target: above $4.00 if any bounce, or cut at open if no PM movement.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**Session: AFTERHOURS** — Seventh scan. HCTI paper trade active from 22:30.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.71 | -41.8% | +115.2% | $3.68 | 15.4M | 2.0M | 7.5x | - | Misc. Commercial Services |
+| SLND | [TV](https://www.tradingview.com/chart/?symbol=SLND) | $1.32 | +1.5% | +57.6% | $2.08 | 3.3M | 747K | 4.5x | 12.6M | Engineering & Construction |
+| HCTI | [TV](https://www.tradingview.com/chart/?symbol=HCTI) | $2.92 | +11.5% | +29.8% | $3.79 | 2.8M | 485K | 5.9x | 1.2M | IT Services |
+| ADVB | [TV](https://www.tradingview.com/chart/?symbol=ADVB) | $4.28 | +5.9% | +18.7% | $5.08 | 1.1M | 169K | 6.3x | 370K | Biotechnology |
+| TPST | [TV](https://www.tradingview.com/chart/?symbol=TPST) | $1.74 | -0.6% | +16.7% | $2.03 | 333K | 167K | 2.0x | 8.3M | Pharmaceuticals: Major |
+| BBGI | [TV](https://www.tradingview.com/chart/?symbol=BBGI) | $3.70 | +6.9% | +12.4% | $4.16 | 62K | 25K | 2.4x | 637K | Broadcasting |
+
+### Prior Candidates Update
+
+| Ticker | 00:00 AH Chg | 00:30 AH Chg | AH Vol Change | Trend |
+|--------|-------------|-------------|---------------|-------|
+| HCTI | +25.3% ($3.66) | +29.8% ($3.79) | 2.8M → 2.8M (flat) | **Recovering. AH history: $3.65 at 18:25, $3.74 at 18:30. Stabilizing in $3.65-$3.83 range after $3.55 low.** |
+| ADVB | +15.7% ($4.95) | +18.7% ($5.08) | 1.1M → 1.1M (flat) | **Bouncing. AH history: $5.25 at 18:30 (+30% from prev close). Recovered from +13% fade.** |
+| SLND | +59.8% ($2.11) | +57.6% ($2.08) | 2.8M → 3.3M (+18%) | Slight fade, volume still surging. AH history: $2.05 at 18:30. Still skipped (high float/mcap). |
+| FCHL | +140.4% ($4.11) | +115.2% ($3.68) | 15.1M → 15.4M | Fading further. Still skipped (post-split bounce). |
+| TPST | +19.5% ($2.08) | +16.7% ($2.03) | 313K → 333K | Stable/slight fade. AH settled into $2.03-$2.05 range. Still skipped (dilutive placement). |
+| BBGI | +13.8% ($4.21) | +12.4% ($4.16) | 62K → 62K (flat) | Only 2 real AH trades. Not a genuine momentum play. |
+
+### No New Candidates
+
+No new tickers above 10% AH threshold. Same roster as prior scans.
+
+### ADVB Re-check (bouncing, sustained >10% AH across all 7 scans, no catalyst)
+
+ADVB is the only prior candidate that has INCREASED from its fade. AH history shows $5.25 at 18:30 (+30% from prev close), bouncing from the $4.75 low at 17:20. Ultra-low float (370K) driving extreme volatility. Still no catalyst after 7 searches. Consistent with "no catalyst = no follow-through" skip, but the persistent bounce is notable. Not entering.
+
+### HCTI Paper Trade Status
+- Entry: $4.01 at 22:30 CET
+- Current: $3.79 (scanner) / $3.74 at 18:30 (AH history)
+- AH range since entry: $3.55 low (17:30) to $4.43 high (16:05)
+- Current P&L: ~-$5.72 (-5.5%), 26 shares * ($3.79 - $4.01)
+- AH price action: After $3.55 dip, stabilized in $3.65-$3.83 range for last hour. Not recovering to earlier $3.95-$4.13 range.
+- Volume: 2.8M (5.9x avg), plateauing.
+- Assessment: classic spike-and-settle pattern rather than consolidation-for-second-leg. The $3.55-$3.83 range is the new equilibrium. Catalyst (Agentic AI) generated initial excitement but fading. PM action tomorrow will determine outcome. Will evaluate at morning scan.
+- PM exit plan: if PM opens above $4.00, sell into strength. If flat/below $3.80, cut at or before open.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
