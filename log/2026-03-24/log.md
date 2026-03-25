@@ -237,3 +237,97 @@
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | NXTT | $1.15 | 23:00 CET | 86 | Learning phase data. Dead cat bounce after -33% crash, NO catalyst (3 searches). Float 4.9M, sustained +13-15% AH across 2 scans. Major concerns: no catalyst, bounce not spike, net -18% on day. Entering to collect data on this pattern. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**NXTT** — Packaged Software (Chinese Bitcoin/AI shell company)
+- Catalyst: None found. Dead cat bounce after -33.3% regular session crash. No earnings, no press releases, no SEC filings. Multiple volatility halts during regular session.
+- Previous Close (Mar 23): $1.50
+- Regular Close (Mar 24): $1.00 (-33.3%)
+- AH last night: Peaked at $1.40 (+40%) at 01:45 CET. Steady climb from $1.06 at 22:00 CET through $1.23 at 00:30 CET to $1.40 at 01:45 CET.
+- Premarket now: $1.37 (+37% from close) at 11:22 CET. PM peak $1.40 (+40%) at 11:20 CET, retesting AH high.
+- Hypothetical P&L (AH entry at first detection $1.06 at 22:00 CET → PM peak $1.40): **+32.1%**
+- Float: 4.9M | Market Cap: $4.9M
+
+**Note:** NXTT is still -8.7% from its previous close ($1.50). This is a crash recovery, not a new-high breakout. The AH→PM pattern worked, but the setup is fundamentally different from catalyst-driven winners like BATL/VIVS. Worth tracking whether "dead cat bounces" are a reliable sub-pattern.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- First detection: 22:00 CET at $1.06 (+6.0% AH), VRatio 1.1x
+- By 22:30 CET: $1.13 (+13.0%), sustained above 10% threshold
+- Paper trade entered at 23:00 CET at $1.15 (+15.0%)
+- Scanner gap: **None for detection.** The scanner caught NXTT from the first AH scan and tracked it through all 6 scans. The learning phase protocol correctly triggered a paper trade despite concerns about the dead cat bounce pattern.
+
+### Baseline Tracking
+
+- Days tracked: 5
+- Winners detected by scanner: 5/5 (**100%**) — HIT (Mar 17), SUNE (Mar 18), DRMA (Mar 19), UGRO (Mar 23), NXTT (Mar 24)
+- Winner selected for paper trade: 1/5 (**20%**) — NXTT is the first paper trade of a winner
+- Target: >80% detection
+- Status: **DETECTION BASELINE MET** (100%). Selection rate still low (20%), but improving: the learning phase protocol forced this trade, generating the first winner P&L data.
+
+### Retrospective Scan Results
+
+**Forced AH scan (10:20 CET):** 0 hits (expected: AH session closed at 02:00 CET, no live AH data)
+
+**Forced PM scan (10:20 CET):** 2 hits
+
+| Ticker | Close | PM Chg% | PM Price | PM Vol | AvgVol | VRatio | Float | MCap | Industry |
+|--------|-------|---------|----------|--------|--------|--------|-------|------|----------|
+| TOP | $0.62 | +22.2% | $0.76 | 1.0M | 82K | 12.4x | 5.2M | $23.0M | Investment Banks/Brokers |
+| NXTT | $1.00 | +17.0% | $1.17 | 179K | 257K | 0.7x | 4.9M | $4.9M | Packaged Software |
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| NXTT | $1.15 | 23:00 CET | $1.37 | +$18.92 | +19.1% | ✅ Win |
+
+86 shares * ($1.37 - $1.15) = +$18.92. PM peak at $1.40 would yield +$21.50 (+21.7%).
+
+**Total Paper P&L: +$18.92**
+
+### Scanner Effectiveness
+
+- Evening scans ran: 7 times (21:30 - 00:30 CET) — 1 pre-AH + 6 AH
+- Candidates found: 8 unique AH tickers (MDAI, NXTT, CIGL, CDLX, ORIS, PSQH, TJGC, ABVE)
+- Retrospective PM matches: 1/2 (NXTT caught, TOP missed)
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| TOP | ~+2% AH at scan times, +22% PM | Negligible AH volume. The move happened in premarket (PM Vol 1.0M at 12.4x VRatio) not in after-hours. Evening scanner can't catch PM-only moves by design. | Marginal. AH entry at $0.63 → PM peak $0.85 = +34.9%, but AH had near-zero volume. Untradeable in AH. |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | AH Peak Time | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-------------|------------|-----------|------------|---------|
+| NXTT | $1.40 | 01:45 CET | $1.37 | -2.1% | +37.0% | ✅ Strong PM follow-through, retested AH high at $1.40 in PM |
+| MDAI | $2.01 | 22:30 CET | $1.62 | -19.4% | -1.8% | ❌ Gave back all AH gains. Faded from $2.01 peak to $1.65 by 23:00, continued to $1.62 in PM |
+
+**Intraday movers (pre-AH candidates) — did regular session gains hold?**
+
+| Ticker | Day Close | Day % | AH Range | PM Price | Held? |
+|--------|-----------|-------|----------|----------|-------|
+| RBNE | $2.11 | +91.8% | $1.96-$2.19 | $2.05 | Mostly held, slow fade. No PM continuation. |
+| FEED | $2.26 | +58.0% | $2.12-$2.30 | $2.18 | Held, flat. No PM continuation. |
+| MKDW | $3.07 | +37.7% | $2.99-$3.25 | $3.33 | Held + small PM continuation (+8.5% from close). |
+| CVV | $5.13 | +37.5% | $5.07-$5.38 | $5.09 | Held, then faded in PM (-0.8% from close). |
+| TJGC | $0.59 | +18.2% | $0.51-$0.70 | No PM data | Dropped in early AH, spiked late AH (+17.6%), no PM data. |
+
+**Key observation:** None of the big intraday movers produced AH→PM continuation trades. They held their gains but didn't generate new momentum. NXTT (the crash recovery bounce) was the only AH→PM trade. The evening scanner correctly ignored all pre-AH candidates that failed to show AH momentum.
+
+### Notes
+
+1. **First winning paper trade.** NXTT is the first time the scanner's selection was paper traded AND resulted in a win. Previous winners (HIT, SUNE, DRMA, UGRO) were all detected but not traded due to entry rule rejections. The learning phase protocol of "trade everything meeting criteria" generated this data point.
+
+2. **Dead cat bounce pattern: inconclusive.** NXTT had no catalyst and was recovering from a -33% crash. This is different from the catalyst-driven winners (BATL, VIVS, DRMA). One successful instance doesn't validate the pattern. Continue collecting data on no-catalyst bounces.
+
+3. **PM-only movers can't be caught.** TOP's move happened entirely in premarket (PM Vol 12.4x average vs near-zero AH volume). The evening scanner catches AH movers by design. A separate premarket scanner would be needed to catch PM-only plays, but that conflicts with the strategy's AH entry timing.
+
+4. **NXTT PM spike timing.** NXTT faded from its AH peak ($1.40 at 01:45 CET) to $1.15-$1.20 through early premarket (10:00-11:00 CET), then spiked back to $1.40 at 11:20 CET. The PM spike coincided with European pre-open activity. Selling at the initial PM fade ($1.17-$1.20) would have locked in only +1.7-4.3% instead of the eventual +19.1%. Pattern to watch: AH peaks may retest in PM after a dip.
+
+5. **MDAI was a false positive.** Peaked at $2.01 in early AH (22:30 CET) then faded all the way back to close price. The scanner correctly filtered it out (float 21.9M, VRatio 0.3-0.5x), but it did clear the 10% AH threshold. The large float and below-average VRatio were the right rejection signals.
