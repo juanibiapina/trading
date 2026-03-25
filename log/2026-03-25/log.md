@@ -259,6 +259,57 @@ RMSG, the top candidate from the pre-AH scan, is already fading in AH (-9.4%). C
 - Volume: 2.6M and still growing (5.7x avg). Catalyst (Agentic AI PR) still in play.
 - Outlook: recovered from $3.72 dip. Consolidation range is $3.72-$4.43. Need to hold above $3.95 support for overnight thesis. Will evaluate PM action tomorrow.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**Session: AFTERHOURS** — Sixth scan. HCTI paper trade active from 22:30.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.71 | -41.8% | +140.4% | $4.11 | 15.1M | 2.0M | 7.5x | - | Misc. Commercial Services |
+| SLND | [TV](https://www.tradingview.com/chart/?symbol=SLND) | $1.32 | +1.5% | +59.8% | $2.11 | 2.8M | 682K | 4.0x | 12.6M | Engineering & Construction |
+| HCTI | [TV](https://www.tradingview.com/chart/?symbol=HCTI) | $2.92 | +11.5% | +25.3% | $3.66 | 2.8M | 475K | 5.8x | 1.2M | IT Services |
+| TPST | [TV](https://www.tradingview.com/chart/?symbol=TPST) | $1.74 | -0.6% | +19.5% | $2.08 | 313K | 165K | 1.9x | 8.3M | Pharmaceuticals: Major |
+| ADVB | [TV](https://www.tradingview.com/chart/?symbol=ADVB) | $4.28 | +5.9% | +15.7% | $4.95 | 1.1M | 169K | 6.3x | 370K | Biotechnology |
+| BBGI | [TV](https://www.tradingview.com/chart/?symbol=BBGI) | $3.70 | +6.9% | +13.8% | $4.21 | 62K | 25K | 2.4x | 637K | Broadcasting |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $1.60 | -4.2% | +11.9% | $1.79 | 619K | 535K | 1.2x | - | Misc. Commercial Services |
+
+*Excluded: BTBD (+7.0%), ICU (+5.7%), CDLX (float 52M), BOXL (+7.8%).*
+
+### Prior Candidates Update
+
+| Ticker | 23:30 AH Chg | 00:00 AH Chg | AH Vol Change | Trend |
+|--------|-------------|-------------|---------------|-------|
+| HCTI | +37.7% ($4.02) | +25.3% ($3.66) | 2.6M → 2.8M (+8%) | **Fading. Dipped to $3.55 at 17:30, recovered to $3.83, now $3.75 (check-prices) / $3.66 (scanner). Lost $3.95 support.** |
+| SLND | +71.2% ($2.26) | +59.8% ($2.11) | 1.2M → 2.8M (+133%) | **Fading from peak but volume surging. Catalyst found (see below).** |
+| ADVB | +13.1% ($4.84) | +15.7% ($4.95) | 1.0M → 1.1M (flat) | Slight bounce. Still no catalyst. Bitget reports AH high of $7.88, extreme volatility on 370K float. |
+| FCHL | +139.8% ($4.10) | +140.4% ($4.11) | 14.6M → 15.1M | Stable after earlier fade. Still skipped (post-split bounce). |
+| TPST | +19.0% ($2.07) | +19.5% ($2.08) | 260K → 313K | Stable. Still skipped (dilutive placement, low volume). |
+
+### SLND Catalyst Re-search (sustained >10% AH, previously skipped for "no catalyst")
+
+Benzinga headline today (March 25): **"Southland Holdings Receives Notice To Proceed On Three Projects Totaling $118M Through A Subsidiary"** including a data center project. This is a genuine operational catalyst (Tier A). The PR likely hit the wire around 17:00 ET, which matches the sudden AH spike from $1.33 to $2.26 in 10 minutes.
+
+However, SLND profile doesn't fit the strategy well:
+- Float 12.6M (above ideal <10M)
+- MCap $71.4M (high for this strategy)
+- Now fading from $2.26 peak to $2.02-$2.11, 2 hours after catalyst
+- **Skip: real catalyst but wrong profile (high float/mcap) and already fading from peak.**
+
+Pattern note: SLND demonstrates that catalysts CAN appear at 17:00 ET (1 hour after AH open). The 23:30 scan caught the move but couldn't find the catalyst; by 00:00 the Benzinga article was findable.
+
+### ADVB Re-check (sustained >10% AH across all 5 scans, no catalyst)
+
+Re-searched: confirmed no today-specific catalyst. Bitget article from today explicitly states "the breakout is real, but the catalyst remains a mystery." Ultra-low float (370K) driving extreme volatility (AH range $4.75-$7.88 per Robinhood/Bitget data). Not entering without catalyst.
+
+### HCTI Paper Trade Status
+- Entry: $4.01 at 22:30 CET
+- Current: $3.66 (scanner) / $3.75 (check-prices at 18:00 ET)
+- AH history: peaked $4.43 at 16:05, consolidated $3.95-$4.13, second leg to $4.27, then faded to $3.55 low at 17:30, recovered to $3.75-$3.83 range
+- Current P&L: ~-$9.10 (-8.7%), 26 shares * ($3.66 - $4.01)
+- Volume: 2.8M (5.8x avg), still building but price not following
+- Concern: lost $3.95 support level. Consolidating $3.55-$3.83 range. Classic "spike, consolidate, fade lower" pattern rather than "spike, consolidate, second leg" (VIVS). The catalyst (Agentic AI PR) may not have enough substance for overnight momentum.
+- Outlook: need to hold $3.55 support for any overnight thesis. Will evaluate PM action tomorrow. PM exit target: above $4.00 if any bounce, or cut at open if no PM movement.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
