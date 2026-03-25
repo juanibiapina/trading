@@ -49,12 +49,22 @@ For each selected candidate:
    ```
    Look for: partnerships, FDA news, earnings, offerings (dilution = bad)
 
-2. **Open chart in TradingView** for visual analysis:
+2. **Check price history** — Verify this is the first day of unusual activity:
+   ```bash
+   python3 scripts/check-prices.py --ah-history TICKER
+   ```
+   For detailed 5-min bar data:
+   ```bash
+   python3 scripts/yahoo-fetch.py TICKER --interval 5m --range 2d --prepost
+   ```
+   Do NOT use raw `curl` to Yahoo Finance (it fails without the User-Agent header that these scripts handle).
+
+3. **Open chart in TradingView** for visual analysis:
    ```bash
    browse tab.new "https://www.tradingview.com/chart/?symbol=TICKER"
    ```
 
-3. **Assess setup** — Based on scanner data + news, determine catalyst tier and decision
+4. **Assess setup** — Based on scanner data + news, determine catalyst tier and decision
 
 ## Step 3: Log Candidates
 

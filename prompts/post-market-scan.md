@@ -42,6 +42,17 @@ python3 scripts/scan.py --all
   | TICK   | [TV](https://www.tradingview.com/chart/?symbol=TICK) | $X | +X% | +X% | $X | XK | XK | Xx | XM | Industry |
   ```
 
+### Yahoo Finance Data
+
+For price history and AH price action data, use the helper scripts:
+
+```bash
+python3 scripts/check-prices.py --ah-history TICKER1 TICKER2 ...
+python3 scripts/yahoo-fetch.py TICKER --interval 5m --range 2d --prepost
+```
+
+Do NOT use raw `curl` to Yahoo Finance (it fails without the User-Agent header that these scripts handle).
+
 ### 4. Paper Trade Decisions
 
 Read the existing log to see which tickers were already found in previous scans today.
