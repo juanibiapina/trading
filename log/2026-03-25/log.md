@@ -159,6 +159,58 @@ RMSG, the top candidate from the pre-AH scan, is already fading in AH (-9.4%). C
 
 **New candidates (BTBD, ICU, VCIG):** All below 10% AH threshold. No evaluation needed.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Session: AFTERHOURS** — Fourth scan. HCTI paper trade active from 22:30.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.71 | -41.8% | +190.6% | $4.97 | 12.9M | 1.7M | 7.5x | - | Misc. Commercial Services |
+| HCTI | [TV](https://www.tradingview.com/chart/?symbol=HCTI) | $2.92 | +11.5% | +35.5% | $3.96 | 2.3M | 421K | 5.5x | 1.2M | IT Services |
+| ADVB | [TV](https://www.tradingview.com/chart/?symbol=ADVB) | $4.28 | +5.9% | +21.5% | $5.20 | 1.0M | 163K | 6.2x | 370K | Biotechnology |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $1.60 | -4.2% | +15.0% | $1.84 | 577K | 531K | 1.1x | - | Misc. Commercial Services |
+| TPST | [TV](https://www.tradingview.com/chart/?symbol=TPST) | $1.74 | -0.6% | +13.8% | $1.98 | 66K | 134K | 0.5x | 8.3M | Pharmaceuticals: Major |
+| FGL | [TV](https://www.tradingview.com/chart/?symbol=FGL) | $3.63 | -18.1% | +13.2% | $4.11 | 162K | 106K | 1.5x | 5.6M | Engineering & Construction |
+| BTBD | [TV](https://www.tradingview.com/chart/?symbol=BTBD) | $1.86 | +31.0% | +6.8% | $1.99 | 316K | 245K | 1.3x | 3.2M | Restaurants |
+| ICU | [TV](https://www.tradingview.com/chart/?symbol=ICU) | $2.28 | +1.8% | +5.3% | $2.40 | 73K | 90K | 0.8x | 3.7M | Medical Specialties |
+| LRHC | [TV](https://www.tradingview.com/chart/?symbol=LRHC) | $0.67 | +11.2% | +5.6% | $0.71 | 551K | 349K | 1.6x | 2.8M | Real Estate Development |
+
+### Prior Candidates Update
+
+| Ticker | 22:30 AH Chg | 23:00 AH Chg | AH Vol Change | Trend |
+|--------|-------------|-------------|---------------|-------|
+| HCTI | +37.3% ($4.01) | +35.5% ($3.96) | 2.0M → 2.3M (+15%) | **Consolidating $3.95-$4.31 range, volume growing. AH history shows recovery to $4.31 at 17:00 ET.** |
+| ADVB | +21.5% ($5.20) | +21.5% ($5.20) | 949K → 1.0M | Stabilized after earlier fade. Still no catalyst. |
+| FCHL | +188.3% ($4.93) | +190.6% ($4.97) | 10.6M → 12.9M | Stable. Still skipped (post-split bounce). |
+
+### New Candidate Evaluations
+
+**VCIG** (+15.0% AH from close, float unknown) - **Skip: fading, no catalyst**
+- AH history: peaked at +20% ($2.00) right at AH open, faded to $1.77 (+6.0% from prev close) by 17:00 ET.
+- No news found for today. The +15% from close is misleading; from prev close it's only +6%.
+
+**TPST** (+13.8% AH from close, float 8.3M, mcap $23.5M) - **Skip: dilutive placement, low volume**
+- Building in AH (from flat at AH open to +24% from prev close by 17:00 ET).
+- But: $6M private placement announced March 23 (Catalyst Tier D - dilutive). No new catalyst today.
+- Very low AH volume (66K, 0.5x avg). Float 8.3M (not low).
+
+**FGL** (+13.2% AH from close, float 5.6M, mcap $1.3M) - **Skip: day recovery, not AH momentum**
+- Has real catalyst: $8.6M solar contract under Malaysia's LSS5 programme (GlobeNewswire, March 25).
+- But stock was -18.1% during regular session. AH "bounce" only brings it to -7.7% from prev close ($4.43 → $4.09 at 17:00 ET).
+- Dead-cat bounce, not genuine AH momentum.
+
+### ADVB Re-check (sustained >10% AH across 3 scans)
+- Re-searched for catalyst: still nothing. No press releases, no earnings, no SEC filings found.
+- Pattern: ultra-low float (370K) sustaining +21.5% AH without catalyst for 1 hour. Peaked at +38% then faded and stabilized.
+- Matches "no catalyst = no follow-through" pattern (IFBD, MNDR). Not entering.
+
+### HCTI Paper Trade Status
+- Entry: $4.01 at 22:30 CET
+- Current: $3.96 (scanner) / $4.31 (AH history at 17:00 ET) - recovering from consolidation
+- AH price action: peaked $4.43 at 16:05, consolidated $3.95-$4.13, now climbing again to $4.31
+- Volume: 2.3M and growing (5.5x avg). Catalyst (Agentic AI PR) still in play.
+- Outlook: consolidation after initial spike, now building second leg. Positive for overnight hold.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
