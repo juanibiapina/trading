@@ -35,6 +35,9 @@ SECTOR = "Health Technology"
 MIN_INTRADAY_RVOL = 10       # 10x the typical volume for this time of day
 MIN_5M_VOLUME = 5000         # Absolute minimum volume per 5m bar
 
+# Regular session supplementary filter (catch day movers winding down at end of day)
+MIN_DAY_CHANGE_REGULAR = 15  # Minimum day% change for supplementary scan
+
 # Premarket filters
 MIN_PM_VOLUME = 50_000       # Minimum premarket volume
 MIN_PM_CHANGE = 5            # Minimum premarket change %
@@ -109,7 +112,7 @@ COLUMNS_AFTERHOURS = [
 ]
 
 
-def build_filters(session, biotech_only=False):
+def build_filters(session, biotech_only=False, day_movers=False):
     """Build filter list appropriate for the current session."""
     filters = [
         {"left": "market_cap_basic", "operation": "in_range", "right": [0, MAX_MARKET_CAP]},
@@ -117,10 +120,13 @@ def build_filters(session, biotech_only=False):
     ]
 
     if session == "regular":
-        filters.extend([
-            {"left": "relative_volume_intraday|5", "operation": "greater", "right": MIN_INTRADAY_RVOL},
-            {"left": "volume|5", "operation": "greater", "right": MIN_5M_VOLUME},
-        ])
+        if day_movers:
+            filters.append({"left": "change", "operation": "greater", "right": MIN_DAY_CHANGE_REGULAR})
+        else:
+            filters.extend([
+                {"left": "relative_volume_intraday|5", "operation": "greater", "right": MIN_INTRADAY_RVOL},
+                {"left": "volume|5", "operation": "greater", "right": MIN_5M_VOLUME},
+            ])
     elif session == "premarket":
         filters.extend([
             {"left": "premarket_volume", "operation": "greater", "right": MIN_PM_VOLUME},
@@ -158,12 +164,12 @@ def get_columns(session):
     return COLUMNS_REGULAR
 
 
-def scan(session, biotech_only=False):
+def scan(session, biotech_only=False, day_movers=False):
     """Run a single scan and return results."""
     columns = get_columns(session)
     payload = {
         "columns": columns,
-        "filter": build_filters(session, biotech_only),
+        "filter": build_filters(session, biotech_only, day_movers),
         "sort": {"sortBy": get_sort_field(session), "sortOrder": "desc"},
         "markets": ["america"],
         "symbols": {"query": {"types": ["stock"]}},
@@ -359,6 +365,12 @@ def watch(interval, session, biotech_only=False):
                 previous_tickers = set()
 
             results = scan(session, biotech_only)
+            if session == "regular":
+                day_mover_results = scan(session, biotech_only, day_movers=True)
+                seen = {r["ticker"] for r in results}
+                for r in day_mover_results:
+                    if r["ticker"] not in seen:
+                        results.append(r)
             current_tickers = {r["ticker"] for r in results}
             print_results(results, session, previous_tickers)
 
@@ -406,6 +418,12 @@ def main():
         watch(args.watch, session, biotech_only)
     else:
         results = scan(session, biotech_only)
+        if session == "regular":
+            day_mover_results = scan(session, biotech_only, day_movers=True)
+            seen = {r["ticker"] for r in results}
+            for r in day_mover_results:
+                if r["ticker"] not in seen:
+                    results.append(r)
         print_results(results, session)
 
 
