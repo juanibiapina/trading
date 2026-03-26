@@ -174,6 +174,47 @@ Pattern: Holding above $1.32 floor. Four distinct waves with higher support leve
 
 **Assessment:** GVH remains the sole live paper trade. No new candidates warrant entry. GVH showing healthy consolidation after four AH waves — staircase pattern intact with higher support each pullback. Will monitor in premarket tomorrow.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Scanner: 5 AH hits. GVH sustained from all prior scans. HWH accelerated significantly.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| GVH | [TV](https://www.tradingview.com/chart/?symbol=GVH) | $1.03 | +4.7% | +37.4% | $1.42 | 4.9M | 599K | 8.2x | 0 | Air Freight/Couriers |
+| GMEX | [TV](https://www.tradingview.com/chart/?symbol=GMEX) | $0.90 | -4.2% | +25.5% | $1.13 | 682K | 5.0M | 0.1x | 0 | Specialty Stores |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.76 | +34.3% | +20.5% | $2.12 | 540K | 133K | 4.1x | 472K | Financial Conglom |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $0.86 | -4.0% | +12.7% | $0.97 | 1.4M | 218K | 6.5x | 4.9M | Pharmaceuticals: Major |
+| HCTI | [TV](https://www.tradingview.com/chart/?symbol=HCTI) | $2.78 | -4.8% | +5.0% | $2.92 | 74K | 970K | 0.1x | 1.2M | IT Services |
+
+**GVH paper trade update (5-min bars through 7:02 PM ET):**
+- 6:05 PM: Fourth wave — $1.43, high $1.45
+- 6:10-6:15 PM: Consolidating $1.38-$1.45
+- 6:20-6:25 PM: $1.40-$1.40 range
+- 6:30 PM: Fifth wave — NEW AH HIGH $1.53 (+49%)
+- 6:35-6:45 PM: Pullback to $1.42-$1.48
+- 6:50-6:55 PM: Fading to $1.33-$1.39
+- 7:00 PM: $1.36
+
+Pattern: Five distinct waves with higher highs ($1.20 → $1.46 → $1.55 → $1.53). Latest pullback deeper ($1.33) but volume still building (4.9M, 8.2x avg). Paper trade entry at $1.35 is roughly breakeven (+$0.01/share, +0.7%).
+
+**HWH re-evaluation (now +20.5%, was +11.4% at 23:30):**
+Significant acceleration from marginal to clear candidate. 472K ultra-low float.
+
+Catalyst search (4 searches): 10-K annual report filed March 26 with "Nasdaq Compliance Update" and "Growth Strategy." Posted near market close (~3:49 PM ET). Weak-to-medium catalyst (compliance filings don't usually drive sustained moves).
+
+AH price action: Steady grind higher, not spike-and-fade. $1.84 at 4:00 PM → peaked $2.34 (+33%) at 6:30 PM → currently $2.08 (+18%). Higher lows throughout: $1.77 → $1.80 → $1.86 → $1.94 → $2.05. Volume 540K (4.1x avg).
+
+Would be a valid paper trade candidate (ultra-low float, catalyst found, sustained climb), but **already holding GVH** per one-position-at-a-time rule. Noted for pattern tracking.
+
+**Other candidates:**
+- **GMEX**: +25.5%, but VRatio 0.1x (682K vs 5.0M avg). Stale catalyst (3-day-old kitchen robot deal). Skip: no volume, stale catalyst.
+- **SHPH**: +12.7%, VRatio 6.5x, 4.9M float. Was spike-and-fade at earlier scans. Skip maintained: erratic pattern, no catalyst.
+- **HCTI**: +5.0%. Below 10% threshold. Skip.
+- **DXST**: Dropped off scanner entirely. Day 2 fade complete.
+- **MKDW**: Dropped off scanner. Day 3 runner fading.
+
+**Assessment:** GVH still the primary position. Made new AH high $1.53 then pulled back to $1.36 (roughly at entry). HWH was the interesting development this scan but already committed to GVH. AH closes at 8:00 PM ET (02:00 CET) — final price will be the overnight hold level. Monitor in premarket tomorrow starting 10:00 CET.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
