@@ -215,6 +215,53 @@ Would be a valid paper trade candidate (ultra-low float, catalyst found, sustain
 
 **Assessment:** GVH still the primary position. Made new AH high $1.53 then pulled back to $1.36 (roughly at entry). HWH was the interesting development this scan but already committed to GVH. AH closes at 8:00 PM ET (02:00 CET) — final price will be the overnight hold level. Monitor in premarket tomorrow starting 10:00 CET.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+Scanner: 8 AH hits. GVH sustained from all prior scans.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| GVH | [TV](https://www.tradingview.com/chart/?symbol=GVH) | $1.03 | +4.7% | +31.1% | $1.35 | 5.3M | 646K | 8.3x | 0 | Air Freight/Couriers |
+| GMEX | [TV](https://www.tradingview.com/chart/?symbol=GMEX) | $0.90 | -4.2% | +22.2% | $1.10 | 751K | 5.0M | 0.1x | 0 | Specialty Stores |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.76 | +34.3% | +16.5% | $2.05 | 620K | 142K | 4.3x | 472K | Financial Conglom |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $0.86 | -4.0% | +11.6% | $0.96 | 1.5M | 221K | 6.6x | 4.9M | Pharmaceuticals: Major |
+| YAAS | [TV](https://www.tradingview.com/chart/?symbol=YAAS) | $0.98 | +3.3% | +10.2% | $1.08 | 286K | 97K | 3.0x | 2.0M | Packaged Software |
+| ARTL | [TV](https://www.tradingview.com/chart/?symbol=ARTL) | $3.19 | -34.2% | +9.1% | $3.48 | 58K | 7.9M | 0.0x | 0 | Pharmaceuticals: Major |
+| BARK | [TV](https://www.tradingview.com/chart/?symbol=BARK) | $0.55 | -4.9% | +8.7% | $0.60 | 108K | 1.6M | 0.1x | 95.0M | Agricultural Commodities |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $3.70 | -4.9% | +5.4% | $3.90 | 2.3M | 700K | 3.3x | 0 | Environmental Services |
+
+**GVH paper trade update (5-min bars through 7:33 PM ET):**
+- 6:30 PM: NEW AH HIGH $1.53 (+49%), another wave
+- 6:35-6:50 PM: Pullback — $1.48, $1.42, $1.43, $1.39
+- 6:55 PM: Deeper pullback to $1.33
+- 7:00-7:10 PM: Recovery $1.35-$1.39, consolidating
+- 7:15 PM: Holding $1.37
+- 7:20 PM: Ticking up $1.39, high $1.43
+- 7:25 PM: Sixth wave — $1.48, high $1.50
+- 7:30 PM: $1.46, high $1.50
+- 7:33 PM: $1.45
+
+Pattern: Six distinct waves. Latest high $1.53 (+49% from close). Pullbacks now finding support at $1.33-$1.35 (entry level). Volume 5.3M (8.3x avg). The staircase pattern continues with consistent higher lows ($1.11 → $1.19 → $1.32 → $1.33 → $1.37). Paper trade entry at $1.35 currently at +$0.10/share (+7.4%).
+
+**HWH update (5-min bars through 7:33 PM ET):**
+- Peaked $2.34 at 6:30 PM (+33%), then faded
+- 6:35-6:50 PM: Sold off $2.20 → $2.13 → $2.06 → $2.05
+- 6:55-7:05 PM: Bounced $2.07-$2.11, then dropped to $1.94 low at 7:05 PM
+- 7:10-7:20 PM: Choppy $2.05, $1.96, $2.03
+- 7:25-7:33 PM: $1.97, $1.97, $2.01
+
+HWH is fading. Peak at $2.34 (+33%) was at 6:30 PM, now at $2.01 (+14%), losing momentum. Already committed to GVH. HWH would have been a worse entry anyway (peak-and-fade pattern vs GVH's staircase).
+
+**Other candidates:**
+- **GMEX**: +22.2% per scanner, VRatio 0.1x. Stale 3-day-old catalyst. Skip maintained.
+- **SHPH**: +11.6% per scanner but 5-min bars show erratic spike-and-fade all session. Skip maintained.
+- **YAAS**: Scanner shows +10.2% ($1.08) but 5-min bars reveal spike-and-fade: spiked to $1.30 at 4:10 PM, faded to $0.96 by 5:00 PM, briefly bounced to $1.10 at 6:35 PM, back to $0.96. Skip: not sustained.
+- **ARTL**: +9.1%, below threshold, VRatio 0.0x (58K vs 7.9M avg). Skip.
+- **BARK**: +8.7%, 95M float (way above 10M ideal). Skip: float too high.
+- **DXST**: Faded further to +5.4%. Day 2 confirmed. Skip.
+
+**Assessment:** GVH remains the sole live position. Holding above entry at $1.35 with a staircase pattern of higher lows. AH closes at 8:00 PM ET (02:00 CET). No new paper trade candidates. Will monitor GVH in premarket tomorrow (10:00 CET).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
