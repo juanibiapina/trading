@@ -35,6 +35,33 @@
 **Skip notes:**
 - FCHL: Day 2, fading from yesterday's +216% AH peak. Not first day of activity.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+Scanner: 4 AH hits. None of the pre-AH candidates (EEIQ, NDLS, MKDW, AIFF) carried into AH.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $3.70 | -4.9% | +35.9% | $5.03 | 1.9M | 648K | 3.0x | 0 | Environmental Services |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $0.86 | -4.0% | +20.9% | $1.04 | 946K | 164K | 5.8x | 4.9M | Pharmaceuticals: Major |
+| GVH | [TV](https://www.tradingview.com/chart/?symbol=GVH) | $1.03 | +4.7% | +12.6% | $1.16 | 107K | 45K | 2.4x | 0 | Air Freight/Couriers |
+| YAAS | [TV](https://www.tradingview.com/chart/?symbol=YAAS) | $0.98 | +3.3% | +6.1% | $1.04 | 252K | 93K | 2.7x | 2.0M | Packaged Software |
+
+**5-min bar update (current AH prices):**
+- **DXST**: Peaked at $6.39 (+73%), now ~$4.55 (+23%) and fading steadily
+- **GVH**: Climbing steadily to $1.42 (+38%) — strongest AH momentum
+- **SHPH**: Spiked to $1.15 (+33%) on a single volume burst, faded to $0.91 (+5%)
+- **YAAS**: +6.1%, minimal move
+
+**Evaluations:**
+- **DXST**: Skip — DAY 2. Yesterday AH spiked to $6.45 at 7:50 PM ET, dumped in PM/regular today to $3.70, spiking again now. Repeated spike-and-dump pattern. No catalyst found (4 searches).
+- **GVH**: Watch — climbing in AH (+38%), but no catalyst found (4 searches), no float data, very low volume (107K). $2.2M MCap. Needs to sustain for next scan.
+- **SHPH**: Skip — AH spike faded to +5%, not sustained. Single burst of 162K volume then nothing.
+- **YAAS**: Skip — AH change only +6.1%, below threshold.
+
+**Pre-AH candidates status:**
+- EEIQ (+209% intraday) — no AH continuation. Confirms intraday spikes without AH follow-through tend to fade.
+- NDLS, MKDW, AIFF — same, no AH presence.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
