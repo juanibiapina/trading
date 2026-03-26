@@ -357,3 +357,112 @@ ADVB is the only prior candidate that has INCREASED from its fade. AH history sh
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | HCTI | $4.01 | 22:30 CET | 26 | Agentic AI launch catalyst (4:10 PM ET PR), float 1.2M, AH vol 5.3x and surging, sustained +37% AH across 2 scans, consolidating after spike |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**EEIQ** — Miscellaneous Commercial Services (Education)
+- Company: EpicQuest Education Group International Limited
+- Catalyst: Unknown — no PR identified. Stock already moved +22.4% in regular session (from $2.23 to $2.73). PM explosion may be continuation/momentum.
+- Previous Close: $2.23
+- Regular Close: $2.73 (+22.4% during regular session)
+- AH last night: $2.77 (+1.5%) at 22:15 CET — essentially flat
+- AH late peak: $3.29 (+20.5%) at 00:30 CET — spiked then dumped to $2.43
+- PM peak: $8.81 (+222.7% from close) at 10:05 CET
+- PM current: $5.71 (+109.2%) at 11:24 CET
+- Float: 860K | Market Cap: $4.0M
+- Hypothetical P&L (AH entry $2.77 → PM peak $8.81): +218%
+
+**Important caveat:** There was NO AH entry signal. The AH movement was negligible at screening time (+1.5%). This was a PM-only move, not an AH→PM trade.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **NO**
+- At 22:15 CET: EEIQ was +1.5% from close ($2.77 vs $2.73). Well below any AH threshold.
+- The regular session already showed a +22.4% move with 860K float and 3x volume, but EEIQ was NOT in the 21:30 pre-AH scan results. This is a scanner gap.
+- Late AH (00:30 CET): spiked to $3.29 (+20.5%) but immediately dumped to $2.43 — "spike→dump" pattern that would not be traded.
+- PM opened at $3.39 and hit $8.81 within 10 minutes. The entire move was premarket-only.
+- **Scanner gap:** Regular session scanner at 21:30 should have flagged EEIQ (+22.4%, float 860K, $4M mcap, 3x volume) as a watch candidate. Even without AH momentum, being on the watchlist would have prompted PM monitoring.
+
+### Baseline Tracking
+
+- Days tracked: 6
+- Winners detected by scanner: 5/6 (**83.3%**) — HIT (Mar 17), SUNE (Mar 18), DRMA (Mar 19), UGRO (Mar 23), NXTT (Mar 24). EEIQ (Mar 25) NOT detected.
+- Winner selected for paper trade: 1/6 (**16.7%**) — NXTT was the only paper trade of a winner
+- Target: >80% detection
+- Status: **BASELINE MET** (83.3% ≥ 80%) — but first miss. EEIQ was a PM-only play with no meaningful AH signal. All AH movers faded in PM today.
+
+**Pattern note:** Today is the first day where the AH→PM pattern did not produce a winner. Every AH mover peaked in AH and faded into PM. The biggest PM winner (EEIQ) had no AH signal. This challenges the assumption that AH momentum reliably predicts PM peaks.
+
+### Retrospective Scan Results
+
+**Forced AH scan (10:20 CET):** 0 hits — AH session ended, no data.
+
+**Live PM scan (10:20 CET):** 6 hits
+
+| Ticker | Close | PM Chg% | PM Price | PM Vol | AvgVol | VRatio | Float | MCap | Industry |
+|--------|-------|---------|----------|--------|--------|--------|-------|------|----------|
+| EEIQ | $2.73 | +119.8% | $6.00 | 2.7M | 63K | 42.2x | 860K | $4.0M | Misc. Commercial Services |
+| FCHL | $1.71 | +95.3% | $3.34 | 1.1M | 2.1M | 0.5x | - | $1.9M | Misc. Commercial Services |
+| SLND | $1.32 | +31.1% | $1.73 | 458K | 786K | 0.6x | 12.6M | $71.4M | Engineering & Construction |
+| HCTI | $2.92 | +22.6% | $3.58 | 440K | 500K | 0.9x | 1.2M | $3.4M | IT Services |
+| TPST | $1.74 | +15.5% | $2.01 | 103K | 172K | 0.6x | 8.3M | $23.5M | Pharmaceuticals: Major |
+| BATL | $5.23 | +7.5% | $5.62 | 213K | 10.3M | 0.0x | 15.6M | $95.5M | Oil & Gas Production |
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| HCTI | $4.01 | 22:30 CET | $3.32 | -$17.94 | -17.2% | ❌ Loss |
+
+**Total Paper P&L: -$17.94**
+
+HCTI paper trade analysis:
+- Entered on Agentic AI launch catalyst (4:10 PM ET PR), float 1.2M, AH vol 5.3x
+- AH peaked at $5.06 (+73.3%) at 22:35 CET, then faded throughout AH
+- PM opened down further: $3.70, briefly bounced to $4.13 at 10:25 CET, then continued fading
+- Current: $3.32 (+13.7% from close but -17.2% from entry)
+- Lesson: entered during the spike phase, not after consolidation. Classic "spike and settle" rather than "spike, consolidate, second leg" (which VIVS showed). The catalyst (Agentic AI) was low-substance hype.
+
+### Scanner Effectiveness
+
+- Evening scans ran: 7 times (21:30 - 00:30 CET)
+- Candidates found: ~18 unique tickers across all scans
+- Retrospective PM matches: 5/6 PM scan tickers were in evening scans (EEIQ was not)
+- Key AH movers correctly identified: FCHL, HCTI, ADVB, SLND, TPST, BBGI
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| EEIQ | +1.5% at 22:15 CET | Below AH threshold. Also not in 21:30 regular scan despite +22.4% day change, 860K float, 3x volume. PM-only move. | Hypothetically yes (+218% AH→PM) but no realistic AH entry — signal was invisible |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| FCHL | $7.50 | 22:45 CET | Spike→fade | $3.15 | -58.0% | +84.2% | ❌ No follow-through |
+| HCTI | $5.06 | 22:35 CET | Spike→fade | $3.32 | -34.4% | +13.7% | ❌ No follow-through |
+| ADVB | $6.76 | 22:25 CET | Spike→fade | $4.42 | -34.6% | +3.3% | ❌ No follow-through |
+| SLND | $2.26 | 23:30 CET | Late surge→fade | $1.73 | -23.5% | +31.1% | ❌ No follow-through |
+| TPST | $2.08 | 00:00 CET | Build→hold | $1.99 | -4.3% | +14.4% | ⚠️ Held best, minimal fade |
+| BBGI | $4.21 | 23:30 CET | Spike→hold | $3.88 | -7.8% | +4.9% | ⚠️ Thin volume, flat |
+
+**Key finding: 0/6 AH movers followed through to PM today.** All peaked in AH and faded into premarket. This is the first day in the tracking period where no AH mover carried momentum into PM.
+
+AH trajectory patterns:
+- **Spike→fade (FCHL, HCTI, ADVB):** peaked in first 30 min of AH, faded rest of night and into PM. Most common pattern tonight.
+- **Late surge→fade (SLND):** moved late in AH on catalyst, still faded into PM.
+- **Build→hold (TPST):** gradual AH build, held steady into PM. Best preservation of gains (-4.3% from peak). Notable: this was the one with a dilutive placement catalyst (Tier D) that was skipped.
+
+### Notes
+
+1. **First "no AH→PM pattern" day.** All 6 AH movers faded in PM. The biggest PM winner (EEIQ) was a PM-only play. This suggests AH momentum doesn't always predict PM continuation — some days the pattern simply doesn't work.
+
+2. **EEIQ regular session gap.** EEIQ had a +22.4% regular session move with a 860K float and was NOT caught by the 21:30 pre-AH scan. This is worth investigating — the regular session scanner may have thresholds that exclude it, or it may not be scanning all stocks. Adding regular-session movers as AH watch candidates could improve detection.
+
+3. **HCTI paper trade lesson.** Entry at $4.01 was during the initial spike (+37.3%). AH price action showed "spike→settle" pattern (peaked $5.06 at 22:35, then lower highs all night). The catalyst (Agentic AI launch) was a buzzword PR without substance. Compare to VIVS (+65% win), which had a concrete partnership deal. Catalyst quality matters more than catalyst presence.
+
+4. **FCHL skip was correct.** Post-reverse-split bounce peaked at $7.50 in AH, now at $3.15 in PM (-58% from peak). The skip saved a significant loss.
+
+5. **Emerging observation: "spike→fade" is the default AH pattern.** Of 6 AH movers tracked tonight, ALL faded from their AH peaks. The question for the strategy is: which ones will buck this trend? Previous winners (VIVS, BATL) had strong catalysts AND consolidation periods before PM continuation. Tonight's movers all peaked too early and faded steadily.
