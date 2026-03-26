@@ -138,6 +138,42 @@ GVH is the only candidate with >10% AH sustained across 3 scans (22:00, 22:30, 2
 - Entry at $1.35 (current AH price after pullback from $1.55 peak)
 - €100 ≈ $116 (EUR/USD 1.158) → $116 / $1.35 = 85 shares
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Scanner: 6 AH hits. GVH sustained from prior 3 scans. No new candidates above threshold.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| GVH | [TV](https://www.tradingview.com/chart/?symbol=GVH) | $1.03 | +4.7% | +34.0% | $1.38 | 4.0M | 499K | 8.1x | 0 | Air Freight/Couriers |
+| GMEX | [TV](https://www.tradingview.com/chart/?symbol=GMEX) | $0.90 | -4.2% | +21.1% | $1.09 | 497K | 5.0M | 0.1x | 0 | Specialty Stores |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $0.86 | -4.0% | +12.7% | $0.97 | 1.4M | 216K | 6.5x | 4.9M | Pharmaceuticals: Major |
+| MKDW | [TV](https://www.tradingview.com/chart/?symbol=MKDW) | $7.80 | +49.1% | +12.2% | $8.75 | 87K | 775K | 0.1x | 1.2M | Auto Parts: OEM |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.76 | +34.3% | +11.4% | $1.96 | 277K | 97K | 2.9x | 472K | Financial Conglom |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $3.70 | -4.9% | +5.7% | $3.91 | 2.3M | 697K | 3.3x | 0 | Environmental Services |
+
+**GVH paper trade update (5-min bars through 6:32 PM ET):**
+- 5:30-5:40 PM: Third wave to $1.40-$1.49, new AH high at $1.55 (+50%)
+- 5:45 PM: Pullback to $1.35 (-13% from peak)
+- 5:50-5:55 PM: Held $1.34-$1.36, higher support than prior pullbacks
+- 6:00 PM: Dipped to $1.32, then bounced
+- 6:05 PM: Fourth wave — spiked to $1.45 high, closed $1.43
+- 6:10-6:15 PM: Churning $1.38-$1.45
+- 6:20-6:25 PM: Consolidating $1.40-$1.43
+- 6:30 PM: Up to $1.47 high, $1.46 close
+- 6:32 PM: Last bar $1.45
+
+Pattern: Holding above $1.32 floor. Four distinct waves with higher support levels ($1.11 → $1.19 → $1.32 → $1.38). Volume climbed to 4.0M (8.1x avg). Currently +41% from close. Paper trade entry at $1.35 is +$0.10/share (+7.4%).
+
+**Prior candidates update:**
+
+- **SHPH** (reappeared, was skipped at 22:00): Scanner shows +12.7% ($0.97), but 5-min bars tell a different story — extremely choppy. Spiked to $1.16 (+35%) at 4:05 PM, dumped to $0.86, rebounded to $1.16 at 4:35, dumped again. Currently $0.95 (+10.5%) after settling. Not sustained momentum — erratic spike-and-fade pattern. Skip maintained.
+- **GMEX**: Stable at +21.1% but VRatio 0.1x, stale catalyst (3 days old). Skip maintained.
+- **MKDW**: Fading from +15.6% → +12.2%. Day 3, no catalyst, VRatio 0.1x. Skip maintained.
+- **HWH**: +11.4%, up from +10.8%. VRatio 2.9x. Marginal but improving. No catalyst. Skip.
+- **DXST**: Faded to +5.7%. Day 2 spike-and-dump confirmed. Skip.
+
+**Assessment:** GVH remains the sole live paper trade. No new candidates warrant entry. GVH showing healthy consolidation after four AH waves — staircase pattern intact with higher support each pullback. Will monitor in premarket tomorrow.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
