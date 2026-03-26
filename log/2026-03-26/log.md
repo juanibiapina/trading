@@ -62,6 +62,38 @@ Scanner: 4 AH hits. None of the pre-AH candidates (EEIQ, NDLS, MKDW, AIFF) carri
 - EEIQ (+209% intraday) — no AH continuation. Confirms intraday spikes without AH follow-through tend to fade.
 - NDLS, MKDW, AIFF — same, no AH presence.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+Scanner: 4 AH hits. GVH sustaining from 22:00 scan.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| GVH | [TV](https://www.tradingview.com/chart/?symbol=GVH) | $1.03 | +4.7% | +19.4% | $1.23 | 1.5M | 218K | 7.0x | 0 | Air Freight/Couriers |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $3.70 | -4.9% | +8.1% | $4.00 | 2.2M | 685K | 3.2x | 0 | Environmental Services |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.76 | +34.3% | +9.8% | $1.93 | 57K | 71K | 0.8x | 472K | Financial Conglom |
+| GSUN | [TV](https://www.tradingview.com/chart/?symbol=GSUN) | $0.52 | +18.2% | +5.5% | $0.55 | 259K | 828K | 0.3x | 8.2M | Misc Commercial Svc |
+
+**GVH AH price action (5-min bars):**
+- 4:00-4:30 PM ET: flat around $1.01-$1.03
+- 4:35 PM: jumped to $1.15 (+12%), held $1.13-$1.16 through 4:55 PM
+- 5:10 PM: second wave - spiked to $1.46 high, closed $1.29
+- 5:15 PM: peaked at $1.49 high (+45%), closed $1.42
+- 5:20-5:30 PM: fading back - $1.34, $1.23, $1.19
+- 5:31 PM: bounced to $1.27 (+23%)
+
+**Re-evaluation of prior candidates:**
+
+- **GVH** (from 22:00 scan): Sustained >10% AH across 2 scans. Re-ran structured catalyst search (4 more searches): no earnings, no press releases, no SEC filings, no news found. Benzinga confirms +38.8% AH move but cites no catalyst. $2.2M MCap, no float data, e-commerce logistics (Hong Kong). 52-week range $0.87-$364 suggests extreme volatility on thin liquidity. Peaked at +45% then fading. **Watch for 23:00 scan** - need to see if it holds >10% or continues fading.
+
+- **DXST** (from 22:00 scan): Faded further from +35.9% to +8.1%. Day 2 pattern confirmed - spike and dump repeating. Skip.
+
+**New candidates:**
+
+- **HWH**: Was on pre-AH list (+34.3% intraday). AH +9.8%, below 10% threshold. Volume only 0.8x average - no AH momentum. Skip.
+- **GSUN**: AH +5.5%, below 10% threshold. Volume 0.3x average - actually below normal. Skip.
+
+**Assessment:** GVH is the only candidate >10% AH sustained across 2 scans. No catalyst found despite 8 total searches. This is the second AH scan (22:30) - per learning phase rules, paper trade decision deferred to third scan (23:00+). If GVH sustains >10% at 23:00, paper trade it per learning phase default (data collection > skipping).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
