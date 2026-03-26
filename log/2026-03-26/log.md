@@ -94,7 +94,52 @@ Scanner: 4 AH hits. GVH sustaining from 22:00 scan.
 
 **Assessment:** GVH is the only candidate >10% AH sustained across 2 scans. No catalyst found despite 8 total searches. This is the second AH scan (22:30) - per learning phase rules, paper trade decision deferred to third scan (23:00+). If GVH sustains >10% at 23:00, paper trade it per learning phase default (data collection > skipping).
 
+## Scan 23:00 CET (5:00 PM ET)
+
+Scanner: 5 AH hits. GVH sustained from 22:00 and 22:30 scans.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| GVH | [TV](https://www.tradingview.com/chart/?symbol=GVH) | $1.03 | +4.7% | +44.7% | $1.49 | 3.2M | 406K | 7.9x | 0 | Air Freight/Couriers |
+| GMEX | [TV](https://www.tradingview.com/chart/?symbol=GMEX) | $0.90 | -4.2% | +20.0% | $1.08 | 103K | 4.9M | 0.0x | 0 | Specialty Stores |
+| MKDW | [TV](https://www.tradingview.com/chart/?symbol=MKDW) | $7.80 | +49.1% | +15.6% | $9.01 | 73K | 773K | 0.1x | 1.2M | Auto Parts: OEM |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $3.70 | -4.9% | +10.3% | $4.08 | 2.3M | 694K | 3.3x | 0 | Environmental Services |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.76 | +34.3% | +10.8% | $1.95 | 123K | 79K | 1.6x | 472K | Financial Conglom |
+
+**GVH AH price action (5-min bars, 4:00-6:00 PM ET):**
+- 4:00-4:15: Flat ~$1.03
+- 4:20: Jumped to $1.15 (+12%), held $1.13-$1.16 through 4:40
+- 4:55: Second wave to $1.29 (+25%)
+- 5:00: Spiked to $1.42 (+38%), high $1.46
+- 5:05: Peaked at $1.49 high (+45%), closed $1.34
+- 5:10-5:15: Pulled back to $1.19-$1.23
+- 5:20-5:25: Recovered to $1.27-$1.29
+- 5:30-5:40: Third wave to $1.40-$1.49, new high $1.55 (+50%)
+- 5:45-6:00: Fading back to $1.33-$1.35 range
+
+Pattern: Multiple waves with higher highs ($1.20 → $1.46 → $1.55). Pullbacks find higher support each time ($1.11 → $1.19 → $1.33). Volume 7.9x average. Active buying.
+
+**Prior candidates update:**
+
+- **GVH** (3rd scan, sustained): +44.7% AH, sustained >10% across all 3 AH scans. Peaked $1.55 (+50%), currently ~$1.35 (+31%). Volume climbed from 107K (22:00) → 1.5M (22:30) → 3.2M (23:00). Re-searched for catalyst (4 searches at 22:00, 4 at 22:30) - no earnings, no press releases, no SEC filings, no news. Benzinga confirmed the move but cited no catalyst. No float data, $2.2M MCap, e-commerce logistics (Hong Kong). 52-week range $0.87-$364.
+- **DXST** (3rd scan, fading): Faded from +35.9% (22:00) → +8.1% (22:30) → +10.3% (23:00). Day 2 spike-and-dump confirmed. Skip.
+
+**New candidates:**
+
+- **GMEX**: AH +20%, but catalyst is stale (AU$4.2M kitchen robot deal announced March 23, 3 days ago). VRatio 0.0x (103K vs 4.9M avg) - essentially no volume. Skip: stale catalyst, illiquid.
+- **MKDW**: AH +15.6% on top of +49.1% intraday. Multiple sources confirm "surges without catalyst." Day 3 multi-day runner ($2.24 Mar 24 → $3.58 Mar 25 → $7.80 today). VRatio 0.1x in AH. Skip: no catalyst, day 3, not first day of unusual activity.
+- **HWH**: AH +10.8%, 472K float. Was on pre-AH watchlist (+34.3% intraday). VRatio only 1.6x. Skip: barely above threshold, weak AH volume.
+
+**Paper trade decision:**
+
+GVH is the only candidate with >10% AH sustained across 3 scans (22:00, 22:30, 23:00). Per learning phase rules, this is the third AH scan (23:00+) and GVH meets the criteria for a paper trade entry:
+- Concerns: no catalyst found (12 total searches), no float data, extreme 52-week range ($0.87-$364), fading from peak
+- Entering anyway per learning phase default: "A paper trade with noted concerns generates data; a skip generates nothing"
+- Entry at $1.35 (current AH price after pullback from $1.55 peak)
+- €100 ≈ $116 (EUR/USD 1.158) → $116 / $1.35 = 85 shares
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| GVH | $1.35 | 5:00 PM ET | 85 | Sustained >10% AH across 3 scans, 7.9x volume, staircase pattern with higher highs/lows. No catalyst (concern noted). Learning phase entry for data collection. |
