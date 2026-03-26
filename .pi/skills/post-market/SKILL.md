@@ -43,11 +43,12 @@ Ask which tickers to analyze further.
 
 For each selected candidate:
 
-1. **Check catalyst** — Search for recent news:
+1. **Check catalyst** — Search for recent news (max 4 websearch calls per ticker):
    ```bash
    websearch search "TICKER COMPANY_NAME stock news" --freshness day -n 5
    ```
    Look for: partnerships, FDA news, earnings, offerings (dilution = bad)
+   Do NOT use `websearch extract` on financial sites (Finviz, Benzinga, MarketBeat) — they return JS errors. If 4 searches don't find a catalyst, stop and note "no catalyst found."
 
 2. **Check price history** — Verify this is the first day of unusual activity:
    ```bash

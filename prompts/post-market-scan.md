@@ -61,10 +61,11 @@ For each **new** candidate (not in prior scans), evaluate against the entry crit
 - Any sector — do NOT skip stocks for being outside biotech/pharma. The "non-biotech 0/6" observation in Day Trading.md is a hypothesis under investigation, not a filter. Note the sector for pattern tracking.
 - Float < 10M ideal
 - Has a clear catalyst — for every stock with AH change >10%, do a structured catalyst search:
-  1. **Earnings**: check if the company reported earnings today (Yahoo Finance, Finviz news tab, or search "[TICKER] earnings"). Earnings released after close are the most common AH catalyst and the most commonly missed.
+  1. **Earnings**: check if the company reported earnings today (Yahoo Finance or search "[TICKER] earnings"). Earnings released after close are the most common AH catalyst and the most commonly missed.
   2. **Press releases**: search GlobeNewswire, PRNewswire, or BusinessWire for same-day releases (search "[TICKER] press release" or "[company name] announcement"). PRs often drop at exactly 4:00-4:05 PM ET and may not appear in general news searches immediately.
   3. **SEC filings**: check for 8-K filings (material events) on the same day.
   4. If none of the above finds a catalyst, THEN note "no catalyst found" as a skip reason.
+  **Search budget:** Steps 1-3 should take at most 4 websearch calls per ticker. If no catalyst is found after 4 searches, stop and record "no catalyst found." Do not try additional search providers, alternative query phrasings, or `websearch extract` on financial sites (Finviz, Benzinga, MarketBeat return JS errors). More searches rarely uncover what 4 targeted searches missed.
 - Volume not fading, first day of unusual activity
 - Note sector and characteristics for pattern tracking (observations in Day Trading.md are NOT skip criteria)
 
