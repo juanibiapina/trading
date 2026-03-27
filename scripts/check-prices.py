@@ -15,6 +15,7 @@ import argparse
 import json
 import sys
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, timedelta
 
 ET = timezone(timedelta(hours=-5))
@@ -131,8 +132,19 @@ def main():
     args = parser.parse_args()
 
     if args.ah_history:
+        # Fetch all tickers in parallel to avoid sequential timeout accumulation
+        results = {}
+        with ThreadPoolExecutor(max_workers=len(args.tickers)) as pool:
+            futures = {pool.submit(get_ah_history, t): t for t in args.tickers}
+            for future in as_completed(futures):
+                ticker = futures[future]
+                try:
+                    results[ticker] = future.result()
+                except Exception:
+                    results[ticker] = None
+
         for ticker in args.tickers:
-            info = get_ah_history(ticker)
+            info = results[ticker]
             if not info:
                 print(f"\n{ticker}: No AH data available")
                 continue
@@ -151,10 +163,21 @@ def main():
                 chg = ((bar["price"] - prev) / prev * 100) if prev > 0 else 0
                 print(f"  {bar['time']:<8} ${bar['price']:>7.2f} {fmt_number(bar['volume']):>8} {chg:>+7.1f}%")
     else:
+        # Fetch all tickers in parallel
+        results = {}
+        with ThreadPoolExecutor(max_workers=len(args.tickers)) as pool:
+            futures = {pool.submit(get_current_price, t): t for t in args.tickers}
+            for future in as_completed(futures):
+                ticker = futures[future]
+                try:
+                    results[ticker] = future.result()
+                except Exception:
+                    results[ticker] = None
+
         print(f"\n{'Ticker':<8} {'Close':>8} {'PM Price':>9} {'PM Chg%':>8} {'AH Price':>9} {'AH Chg%':>8}")
         print(f"{'-' * 55}")
         for ticker in args.tickers:
-            info = get_current_price(ticker)
+            info = results[ticker]
             if not info:
                 print(f"{ticker:<8} {'N/A':>8}")
                 continue
