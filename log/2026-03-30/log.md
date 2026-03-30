@@ -83,7 +83,42 @@ Top 3 to monitor:
 2. **JCSE** — Float 1.5M, massive volume, late-day strength. If AH holds $1.70+, interesting.
 3. **BFRG** — Float 9.1M, 405M volume (insane), but heavy fade from highs is concerning.
 
+## Scan 22:30 CET (4:30 PM ET) — First AH Scan
+
+Scanner still reports REGULAR session (56 hits). AH prices checked via Yahoo Finance for all prior candidates.
+
+**AH Activity (30 min into AH):**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Float | Industry |
+|--------|-------|-------|------|--------|----------|-------|----------|
+| ASTC | [TV](https://www.tradingview.com/chart/?symbol=ASTC) | $4.65 | +105% | **+20.0%** | $5.58 | 1.4M | Aerospace & Defense |
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $1.05 | +107% | +9.6% | $1.15 | 9.1M | Packaged Software |
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $3.56 | +113% | -1.7% | $3.50 | — | Biotechnology |
+| JCSE | [TV](https://www.tradingview.com/chart/?symbol=JCSE) | $1.72 | +72% | -9.9% | $1.55 | 1.5M | Industrial Machinery |
+| JFBR | [TV](https://www.tradingview.com/chart/?symbol=JFBR) | $3.08 | +40% | -4.2% | $2.95 | 444K | Recreational Products |
+| ICU | [TV](https://www.tradingview.com/chart/?symbol=ICU) | $3.62 | +32% | -1.3% | $3.57 | 3.9M | Medical Specialties |
+| MKDW | [TV](https://www.tradingview.com/chart/?symbol=MKDW) | $6.35 | +32% | -0.5% | $6.32 | 1.2M | Auto Parts: OEM |
+| KZR | [TV](https://www.tradingview.com/chart/?symbol=KZR) | $7.45 | +21% | 0.0% | $7.45 | 6.4M | Biotechnology |
+| SXTC | [TV](https://www.tradingview.com/chart/?symbol=SXTC) | $1.65 | +27% | -4.8% | $1.57 | 620K | Pharma |
+
+**ASTC AH Price Action (trending up):**
+- 16:00 $4.77 → 16:05 $5.04 → 16:10 $4.95 → 16:15 $4.90 → 16:20 $5.23 → 16:25 $5.57 → 16:32 $5.58
+- Strong uptrend, dipped to $4.90 then recovered to $5.58. Still climbing.
+
+**BFRG AH Price Action:**
+- 16:00 $1.09 → 16:15 $1.21 (peak +15%) → 16:32 $1.15 (+10%)
+- Some momentum but fading from peak.
+
+**Candidate Evaluation:**
+
+1. **ASTC** — ⭐ **Paper trade.** Day 2 runner (had +28% AH on Friday). Float 1.4M (excellent). AH +20% and climbing. 107M shares today = 76x float turnover. On radar since 21:30 scan, sustained through 3 scans. Concern: very extended (+145% from prev close). Catalyst not confirmed (no websearch available), but multi-day momentum + massive volume strongly suggest a material catalyst from Friday.
+
+2. **BFRG** — Watch. AH +10% (borderline), float 9.1M (OK). 407M volume today is extraordinary. If it re-appears at 23:00+ scan with >10% AH, consider.
+
+3. **ELAB, JCSE, JFBR, ICU, MKDW, KZR, SXTC** — Skip: all fading or flat in AH. The massive intraday moves did not carry over.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| ASTC | $5.58 | 22:30 CET (4:30 PM ET) | 17 | Day 2 runner, float 1.4M, AH +20% climbing, 76x float turnover. Extended (+145% from prev) but learning phase default: enter with noted concerns. |
