@@ -184,6 +184,43 @@ Scanner: AFTERHOURS session, 2 hits. 1.5 hours into AH.
 - BFRG was the more stable AH mover but couldn't be traded (position full).
 - Key takeaway: AH spike magnitude alone is not a good entry signal. AH price stability over 30-60 min may matter more.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Scanner: AFTERHOURS session, 4 hits. 2 hours into AH.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $1.05 | +106.6% | +8.1% | $1.14 | 9.3M | 41.6M | 0.2x | 9.1M | Packaged Software |
+| HSDT | [TV](https://www.tradingview.com/chart/?symbol=HSDT) | $1.86 | -3.1% | +36.6% | $2.54 | 926K | 348K | 2.7x | 22.7M | Medical Specialties |
+| POLA | [TV](https://www.tradingview.com/chart/?symbol=POLA) | $1.95 | +25.8% | +6.7% | $2.08 | 113K | 189K | 0.6x | 1.8M | Electronic Equipment/Instruments |
+| AUUD | [TV](https://www.tradingview.com/chart/?symbol=AUUD) | $0.66 | -13.4% | +14.8% | $0.76 | 92K | 139K | 0.7x | 3.9M | Packaged Software |
+
+**Changes from 23:30 scan:**
+
+- ⬇ **BFRG: fading below 10%.** AH +8.1% (was +10.5% at 23:30). Ranging $1.13-$1.20, drifting lower. AH vol up to 9.3M but price weakening. Was the most stable AH candidate all session but losing steam.
+- **ASTC dropped off scanner** at 23:30 and still absent. AH fully reversed to $4.41 at 17:00 ET (-5.2% from close). Paper trade deep underwater.
+- NEW: **HSDT** ($2.54, +36.6% AH). Sudden spike at 16:25 ET from ~$1.90 to $2.60. Peaked $2.66 at 16:30 ET, holding $2.46-$2.55 range since. Float 22.7M (too high). MCap $76.8M (relatively large). The abrupt 16:25 spike suggests news dropped at that exact time.
+- NEW: **POLA** ($2.08, +6.7% AH). Float 1.8M (excellent). Day was +25.8%, AH continuing up with steady climb $1.94→$2.10. From prev close ($1.55) total move is +34%. But AH change <10% from close. Thin AH volume.
+- NEW: **AUUD** ($0.76, +14.8% AH per scanner). But check-prices shows very choppy: bounced $0.66-$0.79, latest $0.72 (+9.1% from close). Was DOWN -13.4% on the day. Dead cat bounce.
+
+**Candidate evaluations:**
+
+- **HSDT:** Skip — float 22.7M (well above 10M ideal), MCap $76.8M. The AH move is impressive (+37%) but this doesn't fit the low-float momentum pattern. No catalyst search possible (no websearch available). Note for pattern tracking: large AH spike on a DOWN day with high float — worth checking in retrospective whether this carried into premarket.
+- **POLA:** Watch — excellent float (1.8M), tiny MCap ($5.2M), but AH change only +6.7% from close. Not enough AH-specific momentum yet. If it appears in a later scan with >10% AH change, revisit.
+- **AUUD:** Skip — dead cat bounce on a -13% day. Choppy AH action, not sustained momentum.
+- **BFRG:** Fading below 10% AH threshold. Can't trade anyway (position full with ASTC). Was the most stable AH candidate this session — held $1.14-$1.22 for 2+ hours vs ASTC's spike-and-crash. In hindsight, AH stability > AH spike magnitude. No catalyst search possible.
+
+**ASTC paper trade update:**
+- Entry: $5.58 at 22:30 CET. Current: $4.41 at 17:00 ET. **Paper P&L: -21.0% (-$19.89 on 17 shares).**
+- Full AH timeline: $4.77 → $5.57 → $5.66 (peak 16:30) → $4.79 (17:00 23:00 scan) → $4.51 (17:30) → $4.41 (17:00 latest 5m candle close). Slow grind lower after the spike-and-fade.
+- The AH "momentum" was a 30-minute blow-off top. Will track into premarket but this looks like a confirmed loss. Reinforces: entering day 2 runners at extreme extension (+145% from prev close) is high risk, even with ultra-low float.
+
+**Session summary (6 scans, 21:30-00:00 CET):**
+- 54 stocks moved during regular session. Only BFRG and ASTC carried meaningful AH momentum. Both fading by 00:00.
+- HSDT appeared with a strong AH spike (+37%) but high float (22.7M) disqualifies it from the low-float strategy.
+- Paper trade ASTC: -21.0% and likely to worsen. Entry was at the blow-off top of a day 2 runner.
+- Key lesson developing: AH price stability over 30-60 min (BFRG pattern) may be a better entry signal than a sharp AH spike (ASTC pattern). The spike attracted FOMO; the range suggested accumulation.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
