@@ -117,6 +117,36 @@ Scanner still reports REGULAR session (56 hits). AH prices checked via Yahoo Fin
 
 3. **ELAB, JCSE, JFBR, ICU, MKDW, KZR, SXTC** — Skip: all fading or flat in AH. The massive intraday moves did not carry over.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+Scanner: AFTERHOURS session, 4 hits. 1 hour into AH.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $1.05 | +106.6% | +11.4% | $1.17 | 5.4M | 41.2M | 0.1x | 9.1M | Packaged Software |
+| ASTC | [TV](https://www.tradingview.com/chart/?symbol=ASTC) | $4.65 | +96.2% | +13.3% | $5.27 | 4.3M | 11.1M | 0.4x | 1.4M | Aerospace & Defense |
+| FBIO | [TV](https://www.tradingview.com/chart/?symbol=FBIO) | $2.70 | -2.2% | +5.2% | $2.84 | 218K | 465K | 0.5x | 24.7M | Pharmaceuticals: Major |
+| IZM | [TV](https://www.tradingview.com/chart/?symbol=IZM) | $0.73 | -17.0% | +5.9% | $0.77 | 51K | 10.5M | 0.0x | 7.8M | Internet Retail |
+
+**Changes from 22:30 scan:**
+
+- ⬇ **ASTC: AH fading hard.** Peaked $5.66 at 16:30 ET, now $4.79 at 17:02 ET. AH gain collapsed from +20% to +3.1%. Sharp selloff from 16:30 onward.
+- ⬆ **BFRG: AH strengthening.** Holding $1.17-1.27 range. At 17:02 ET: $1.20 (+14.3% from close). More stable than ASTC.
+- ELAB, JCSE, JFBR, ICU, MKDW, KZR, SXTC — all dropped off scanner (no significant AH activity)
+- NEW: **FBIO** ($2.84, +5.2% AH) — pharma, float 24.7M. Skip: AH move too small, float too high.
+- NEW: **IZM** ($0.77, +5.9% AH) — internet retail, -17% day. Skip: dead cat bounce, not momentum.
+
+**ASTC paper trade update:**
+- Entered at $5.58 (22:30 CET). Now $4.79 at 17:02 ET = **-14.2% paper loss**.
+- AH price action: $4.77 → $5.04 → $5.57 → $5.66 (peak) → $5.27 → $4.79 (now). Classic spike-and-fade.
+- Concern: AH momentum fully reversed. Was a day 2 runner but the AH extension to +145% from prev close was too far. Will track into premarket — if momentum doesn't recover overnight, this confirms "chasing extended stocks is risky" pattern from Day Trading.md.
+
+**BFRG evaluation:**
+- Sustained >10% AH across 2 scans (22:30: +10%, 23:00: +14.3%). Float 9.1M (under 10M). 407M daily volume.
+- Would qualify for paper trade under learning phase default, but **position full** (already in ASTC per one-trade-per-day rule).
+- Catalyst unknown (no websearch available). 407M volume on $6.4M mcap stock strongly implies a material catalyst.
+- Note for pattern tracking: BFRG showing more AH stability than ASTC despite both being big day movers.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
