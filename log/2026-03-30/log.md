@@ -221,6 +221,43 @@ Scanner: AFTERHOURS session, 4 hits. 2 hours into AH.
 - Paper trade ASTC: -21.0% and likely to worsen. Entry was at the blow-off top of a day 2 runner.
 - Key lesson developing: AH price stability over 30-60 min (BFRG pattern) may be a better entry signal than a sharp AH spike (ASTC pattern). The spike attracted FOMO; the range suggested accumulation.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+Scanner: AFTERHOURS session, 4 hits. 2.5 hours into AH.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $1.05 | +106.6% | +10.5% | $1.16 | 9.9M | 41.7M | 0.2x | 9.1M | Packaged Software |
+| HSDT | [TV](https://www.tradingview.com/chart/?symbol=HSDT) | $1.86 | -3.1% | +34.1% | $2.50 | 1.5M | 415K | 3.6x | 22.7M | Medical Specialties |
+| POLA | [TV](https://www.tradingview.com/chart/?symbol=POLA) | $1.95 | +25.8% | +6.2% | $2.07 | 164K | 195K | 0.8x | 1.8M | Electronic Equip/Instruments |
+| IZM | [TV](https://www.tradingview.com/chart/?symbol=IZM) | $0.73 | -17.0% | +5.9% | $0.77 | 81K | 10.5M | 0.0x | 7.8M | Internet Retail |
+
+**Changes from 00:00 scan:**
+
+- ⬆ **BFRG: back above 10%.** AH +10.5% (was +8.1%). Range $1.13-$1.20, extremely stable for 2.5+ hours. AH vol up to 9.9M. Most consistent AH candidate this entire session.
+- ⬇ **HSDT: fading.** AH +34.1% (was +36.6%). Dropped from $2.54 to $2.43 in last 30 min. Float 22.7M still disqualifies.
+- ⬆ **POLA: CLIMBING.** AH price history shows steady uptrend: $1.94 → $2.02 → $2.10 → $2.15 at 17:30 ET (+10.3% from close, +38.7% from prev close). Float 1.8M (excellent). Thin AH volume but persistent upward pressure.
+- ↔ **IZM: irrelevant.** Dead cat bounce, skip.
+- **ASTC** (paper trade): continued fade. $4.23 at 17:30 ET.
+- **AUUD, FBIO**: dropped off scanner.
+
+**ASTC paper trade update:**
+- Entry: $5.58 at 22:30 CET. Current: $4.23 at 17:30 ET. **Paper P&L: -24.2% (-$22.95 on 17 shares).**
+- AH timeline continued: $4.41 (17:00) → $4.47 (17:10) → $4.37 (17:20) → $4.21 (17:25) → $4.23 (17:30). Slow grind lower, no recovery. Below today's close of $4.65.
+- This paper trade is a confirmed loss. Will track into premarket for final P&L, but the entry was textbook "chasing the blow-off top" on an extended day 2 runner.
+
+**POLA evaluation:**
+- Strongest new development this scan. Float 1.8M (ideal). MCap $5.2M (micro). Steady AH climb, no spike-and-fade like ASTC or HSDT.
+- AH change ~10% from close (borderline), but total move +38.7% from prev close.
+- Catalyst unknown (no websearch available). +25.8% day + continued AH strength strongly suggests a material catalyst.
+- **Can't paper trade** — position full (one-trade-per-day, ASTC open). Note for pattern tracking: POLA's AH pattern (steady climb, no spike) resembles BFRG's stability pattern rather than ASTC's spike-and-fade.
+
+**BFRG evaluation:**
+- Sustained >10% AH across 5 scans (22:30-00:30). Most stable AH candidate this entire session.
+- Float 9.1M (OK). 407M daily volume on $6.4M mcap. Catalyst unknown (no websearch available).
+- **Can't paper trade** — position full (ASTC open).
+- Note: BFRG held $1.13-$1.20 for 2.5 hours while ASTC crashed from $5.66 to $4.23 and HSDT faded from $2.66 to $2.43. Stable-range AH pattern consistently outperformed spike-and-fade this session.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
