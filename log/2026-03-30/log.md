@@ -147,6 +147,43 @@ Scanner: AFTERHOURS session, 4 hits. 1 hour into AH.
 - Catalyst unknown (no websearch available). 407M volume on $6.4M mcap stock strongly implies a material catalyst.
 - Note for pattern tracking: BFRG showing more AH stability than ASTC despite both being big day movers.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Scanner: AFTERHOURS session, 2 hits. 1.5 hours into AH.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $1.05 | +106.6% | +10.5% | $1.16 | 8.4M | 41.5M | 0.2x | 9.1M | Packaged Software |
+| IZM | [TV](https://www.tradingview.com/chart/?symbol=IZM) | $0.73 | -17.0% | +5.5% | $0.77 | 65K | 10.5M | 0.0x | 7.8M | Internet Retail |
+
+**ASTC dropped off scanner.** No longer showing significant AH activity.
+
+**Changes from 23:00 scan:**
+
+- ⬇ **ASTC: AH fully reversed.** Peaked $5.66 (+21.7%) at 16:30 ET, now $4.51 (-3.0% from close) at 17:30 ET. Dropped off scanner entirely. Full AH timeline:
+  - 16:00 $4.77 → 16:25 $5.57 → 16:30 $5.66 (peak) → 16:50 $4.72 → 17:20 $4.53 → 17:30 $4.51
+  - Classic spike-and-fade: the entire +20% AH gain evaporated in 60 minutes.
+- ↔ **BFRG: holding steady.** Ranging $1.14-1.22 in AH, now $1.16 (+10.5%). More stable than ASTC. AH vol 8.4M (up from 5.4M at 23:00).
+- ↔ **IZM: still irrelevant.** +5.5% AH on a -17% day stock with near-zero AH volume. Skip.
+- No new candidates.
+
+**ASTC paper trade update:**
+- Entry: $5.58 at 22:30 CET. Current: $4.51 at 17:30 ET. **Paper P&L: -19.2% (-$18.19 on 17 shares).**
+- This is a textbook "chasing extended stocks" loss. ASTC was already +145% from prev close when we entered. The AH spike to $5.66 (+21.7% from close) was the blow-off top, and it reversed hard within 30 minutes.
+- **Lesson:** Day 2 runners with extreme extension (+145% from prev close) are dangerous even with ultra-low float. The AH "momentum" was actually the last gasp before profit-taking.
+
+**BFRG status:**
+- Sustained >10% AH across 3 scans now (22:30: +10%, 23:00: +14%, 23:30: +10.5%). Float 9.1M. 407M daily volume.
+- Would qualify for paper trade under learning phase, but position full (one-trade-per-day rule, already in ASTC).
+- In hindsight, BFRG showed more AH stability than ASTC — ranged $1.14-1.22 vs ASTC's spike from $4.77 to $5.66 and crash back to $4.51. A more stable AH range may be a better signal than a sharp AH spike.
+- Catalyst still unknown (no websearch available).
+
+**Session summary (4 scans, 21:30-23:30 CET):**
+- 54 stocks moved significantly during regular session, but only 2 carried meaningful AH momentum.
+- ASTC was the strongest candidate on paper (float 1.4M, day 2 runner, +20% AH) but fully reversed. Paper trade: **-19.2%**.
+- BFRG was the more stable AH mover but couldn't be traded (position full).
+- Key takeaway: AH spike magnitude alone is not a good entry signal. AH price stability over 30-60 min may matter more.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
