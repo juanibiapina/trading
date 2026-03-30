@@ -47,6 +47,42 @@
 
 **Key observation:** Most big movers show volume already fading to near-zero by 3:30 PM. The exceptions with active volume: JFBR (22.6x), ICU (14.4x), SXTC (58.5x). These are the ones most likely to carry into AH.
 
+## Scan 22:01 CEST (4:01 PM ET) — Market Close / AH Opening
+
+Scanner reported REGULAR session (54 hits). AH just opened, no AH price data yet. Yahoo Finance close prices used where available.
+
+**Top movers (low float + significant move):**
+
+| Ticker | Chart | Close | Day% | DayVol | Float | MCap | Industry |
+|--------|-------|-------|------|--------|-------|------|----------|
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $3.56 | +113% | — | — | $904K | Biotechnology |
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $1.05 | +107% | 405M | 9.1M | $6.4M | Packaged Software |
+| ASTC | [TV](https://www.tradingview.com/chart/?symbol=ASTC) | $4.65 | +105% | 106M | 1.4M | $7.8M | Aerospace & Defense |
+| JCSE | [TV](https://www.tradingview.com/chart/?symbol=JCSE) | $1.72 | +72% | 35.6M | 1.5M | $5.0M | Industrial Machinery |
+| JFBR | [TV](https://www.tradingview.com/chart/?symbol=JFBR) | $2.96 | +35% | — | 444K | $1.9M | Recreational Products |
+| ICU | [TV](https://www.tradingview.com/chart/?symbol=ICU) | $3.68 | +34% | — | 3.9M | $14.7M | Medical Specialties |
+| MKDW | [TV](https://www.tradingview.com/chart/?symbol=MKDW) | $6.37 | +32% | — | 1.2M | $30.5M | Auto Parts: OEM |
+| KZR | [TV](https://www.tradingview.com/chart/?symbol=KZR) | $7.39 | +19% | — | 6.4M | $54.1M | Biotechnology |
+| SXTC | [TV](https://www.tradingview.com/chart/?symbol=SXTC) | $1.52 | +17% | — | 620K | $1.5M | Pharma |
+
+**Changes from 21:30 scan:**
+- ⬆ JCSE: +60% → +72% (close) — strongest late-day momentum, 23.7x float turnover
+- ⬆ ICU: +26% → +34% — building
+- ⬆ MKDW: +27% → +32% — building
+- ⬇ ASTC: peaked $6.48 (+186%) intraday, faded to $4.65 close (+105%)
+- ⬇ BFRG: peaked $1.55 (+205%) intraday, heavy fade to $1.05 close (+107%)
+- ⬇ SXTC: +24% → +17% — fading
+- NEW: KZR (+19%, biotech, $54M mcap)
+- ZEOX flagged by scanner (+10%, surging volume), but OTC (no AH trading), only 9.7K daily volume — skip
+
+**Watch — pending AH confirmation:**
+All candidates need AH data. Re-scan at 22:30+ CEST.
+
+Top 3 to monitor:
+1. **ASTC** — Float 1.4M, day 2 runner (had +28% AH on Friday). If it stabilizes in AH above $4.50, strong candidate.
+2. **JCSE** — Float 1.5M, massive volume, late-day strength. If AH holds $1.70+, interesting.
+3. **BFRG** — Float 9.1M, 405M volume (insane), but heavy fade from highs is concerning.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
