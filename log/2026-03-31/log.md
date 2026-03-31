@@ -182,6 +182,45 @@ Scanner: 7 AH hits. ELAB remains dominant. No new candidates above 10% AH thresh
 - HPAI: Holding +10.7% but day was -25% (bounce, not momentum). AH vol only 52K.
 - ASTC, QVCGP, LTRN: All sub-7% AH, not actionable.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+Scanner: 9 AH hits. ELAB surging to new AH highs. BCG is a major new candidate at +39.3% AH. Already holding ELAB paper trade (one trade per day).
+
+**Updated candidates (from prior scans):**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|-------|----------|
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $5.99 | +68% | **+44.7%** | **$8.66** | 8.8M | N/A | Biotechnology |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.05 | +6% | **+22.9%** | **$1.29** | 262K | 1.0M | Household/Personal Care |
+| ZJYL | [TV](https://www.tradingview.com/chart/?symbol=ZJYL) | $2.02 | +10% | +8.4% | $2.19 | 122K | N/A | Medical Specialties |
+| HPAI | [TV](https://www.tradingview.com/chart/?symbol=HPAI) | $1.50 | -25% | +10.7% | $1.66 | 52K | 7.9M | Packaged Software |
+| ASTC | [TV](https://www.tradingview.com/chart/?symbol=ASTC) | $5.23 | +13% | +6.3% | $5.56 | 332K | 1.4M | Aerospace & Defense |
+
+**New candidates:**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|-------|----------|
+| BCG | [TV](https://www.tradingview.com/chart/?symbol=BCG) | $2.01 | -2% | **+39.3%** | **$2.80** | 528K | 3.2M | Investment Managers |
+| SLND | [TV](https://www.tradingview.com/chart/?symbol=SLND) | $1.30 | -28% | +5.4% | $1.37 | 82K | 12.6M | Engineering & Construction |
+
+**ELAB paper trade update:**
+- Entry: $7.40 at 23:10 CET. Current: $8.66 at 17:30 ET (**+$1.26, +17.0%**)
+- New AH high: **$8.68** at 17:25 ET (surpassed prior $8.57 high from 16:35 ET)
+- AH pattern: After fading from $8.57 to $7.49 (16:35-17:05 ET), ELAB launched a second wave. Building $7.82 → $8.19 → $8.68 over the last 30 minutes. This is a build pattern, not spike-and-fade. Very bullish for overnight hold.
+
+**BCG catalyst search (2/4 searches used):**
+1. **Earnings (March 30-31):** Reported Q4/FY2025 results. Revenue +11% YoY to $187.1M, AuM +11% to $29.9B, Q4 revenue +13.2% to $50.5M, swung to quarterly profit. Filed 10-K annual report.
+2. **Catalyst verdict: CLEAR** - Earnings beat with revenue growth and profit swing. Classic post-earnings AH move.
+
+**BCG AH pattern:** Started moving at 16:50 ET (late AH start). Peaked at $3.03 at 17:00 ET, fading to $2.78 by 17:30. Spike-and-fade so far, but only 40 minutes of data. Float 3.2M (good), MCap $33.4M.
+- Cannot enter: already holding ELAB (one trade per day rule).
+
+**Prior candidate updates:**
+- BYAH: Sustained >10% AH across **4 consecutive scans**. Float 1.0M (ideal). Building pattern: $1.10 → $1.16 → $1.25 → $1.35 (peak at 17:25 ET), currently $1.29. AH vol 262K. Strong candidate but cannot enter (one trade per day).
+- ZJYL: Recovering slightly (+8.4% vs +5.9% at 00:00), but erratic. Not actionable.
+- HPAI: Unchanged at +10.7%. Day was -25%, bounce character. Not actionable.
+- SLND: New but day was -27.8%, AH only +5.4%, float 12.6M. Dead bounce. Skip.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
