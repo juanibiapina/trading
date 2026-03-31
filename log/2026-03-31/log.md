@@ -157,6 +157,31 @@ Scanner: 6 AH hits. ELAB still leading but AH gain moderating (+28.5% vs +37.6% 
 - BYAH: Sustained >10% AH across 2 scans. Float 1.0M ideal. But AH volume very low (207K). Holding ~$1.13 (+14% from prev close). Would warrant catalyst search if no position held.
 - HPAI: Sustained +10.7% across 2 scans but day was -25%. Bounce character, not momentum. Low conviction.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Scanner: 7 AH hits. ELAB remains dominant. No new candidates above 10% AH threshold. Already holding ELAB paper trade (one trade per day).
+
+**Updated candidates (from prior scans):**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|-------|----------|
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $5.99 | +68% | **+28.0%** | **$7.67** | 8.0M | N/A | Biotechnology |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.05 | +6% | +10.5% | $1.16 | 247K | 1.0M | Household/Personal Care |
+| HPAI | [TV](https://www.tradingview.com/chart/?symbol=HPAI) | $1.50 | -25% | +10.7% | $1.66 | 52K | 7.9M | Packaged Software |
+| ZJYL | [TV](https://www.tradingview.com/chart/?symbol=ZJYL) | $2.02 | +10% | +5.9% | $2.14 | 121K | N/A | Medical Specialties |
+| ASTC | [TV](https://www.tradingview.com/chart/?symbol=ASTC) | $5.23 | +13% | +6.3% | $5.56 | 284K | 1.4M | Aerospace & Defense |
+
+**ELAB paper trade update:**
+- Entry: $7.40 at 23:10 CET. Current: $7.85 at 18:01 ET (+$0.45, +6.1%)
+- AH pattern since last scan: stabilized after peak fade. Consolidating $7.50-7.93 for the last hour. Bounced from $7.49 low (17:05 ET) to $7.92 (17:35), then $7.93 (17:50). No longer fading — forming a range.
+- AH high remains $8.57 (16:35 ET). Current price ~$7.85 is -8.4% from peak but +31% from close.
+
+**Prior candidate updates:**
+- BYAH: Sustained >10% AH across 3 consecutive scans. Float 1.0M (ideal). AH vol 247K, still low. Would warrant catalyst search if no position held — but one trade per day, already in ELAB.
+- ZJYL: Fading as expected. +12.4% at 23:30 → +5.9% now. Classic spike-and-fade confirmed.
+- HPAI: Holding +10.7% but day was -25% (bounce, not momentum). AH vol only 52K.
+- ASTC, QVCGP, LTRN: All sub-7% AH, not actionable.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
