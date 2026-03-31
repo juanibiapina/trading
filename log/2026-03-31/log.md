@@ -126,6 +126,37 @@ Concerns documented:
 
 Entering anyway: catalyst is strong (multi-layered), and a paper trade with noted concerns generates data.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Scanner: 6 AH hits. ELAB still leading but AH gain moderating (+28.5% vs +37.6% at 23:00). One new candidate: ZJYL. Already holding ELAB paper trade (one trade per day).
+
+**Updated candidates (from prior scans):**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|-------|----------|
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $5.99 | +68% | **+27.0%** | **$7.61** | 7.1M | N/A | Biotechnology |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.05 | +6% | +10.5% | $1.16 | 207K | 1.0M | Household/Personal Care |
+| HPAI | [TV](https://www.tradingview.com/chart/?symbol=HPAI) | $1.50 | -25% | +10.7% | $1.66 | 52K | 7.9M | Packaged Software |
+
+**New candidates:**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|-------|----------|
+| ZJYL | [TV](https://www.tradingview.com/chart/?symbol=ZJYL) | $2.02 | +10% | +12.4% | $2.27 | 111K | N/A | Medical Specialties |
+| SNBR | [TV](https://www.tradingview.com/chart/?symbol=SNBR) | $1.79 | -10% | +8.6% | $1.95 | 76K | 16.5M | Home Furnishings |
+
+**ELAB paper trade update:**
+- Entry: $7.40 at 23:10 CET. Current: ~$7.61 at 17:30 ET (+$0.21, +2.8%)
+- AH price action since entry: faded from $8.57 peak to $7.49 (17:05), bounced to $7.69 (17:10), now consolidating $7.51-7.63. Fade appears to have stabilized above $7.50.
+
+**New candidate notes:**
+- ZJYL: First appearance. Peaked early at +23.4% (16:05 ET), fading to +15.2% by 16:30. Classic spike-and-fade. MCap $15.8M. No catalyst search needed since we already hold a position (one trade per day).
+- SNBR: Float 16.5M (too high), AH +8.6% (below 10% threshold). Skip.
+
+**Prior candidate updates:**
+- BYAH: Sustained >10% AH across 2 scans. Float 1.0M ideal. But AH volume very low (207K). Holding ~$1.13 (+14% from prev close). Would warrant catalyst search if no position held.
+- HPAI: Sustained +10.7% across 2 scans but day was -25%. Bounce character, not momentum. Low conviction.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
