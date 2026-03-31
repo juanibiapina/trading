@@ -263,3 +263,123 @@ Scanner: AFTERHOURS session, 4 hits. 2.5 hours into AH.
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | ASTC | $5.58 | 22:30 CET (4:30 PM ET) | 17 | Day 2 runner, float 1.4M, AH +20% climbing, 76x float turnover. Extended (+145% from prev) but learning phase default: enter with noted concerns. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**POLA** — Electronic Equipment/Instruments (Polar Power, Inc.)
+- Catalyst: Unknown (no websearch available). +26% regular session day + steady AH build strongly suggests a material catalyst. 701K regular volume vs 189K avg = 3.7x volume.
+- Previous Close: $1.55
+- Regular Close (Mar 30): $1.95 (+25.8%)
+- AH last night: steady build $1.95 → $2.49 peak at 01:30 CET (19:30 ET)
+- Premarket now: $2.22 (+14% from close, +43% from prev close)
+- Hypothetical P&L (close entry $1.95 → AH peak $2.49): **+27.7%**
+- Hypothetical P&L (close entry $1.95 → PM now $2.22): **+13.8%**
+- Float: 1.8M | Market Cap: $5.2M
+
+**AH price action timeline (5-min bars):**
+- 22:00 CET: $1.95 (flat at close)
+- 22:15 CET: $1.96 (+0.5%)
+- 22:45 CET: $1.91 (dip, -2%)
+- 23:05 CET: $2.00 (broke $2!)
+- 23:30 CET: $2.08 (+6.7%)
+- 00:00 CET: $2.07 (+6.2%)
+- 00:30 CET: $2.19 (+12.3%)
+- 00:45 CET: $2.28 (+16.9%)
+- 01:25 CET: $2.44 (+25.1%)
+- 01:30 CET: $2.42 (peak $2.49 = +27.7%)
+- 01:55 CET: $2.43 (held into close of AH)
+- PM 10:00 CET: $2.31 (gapped down from AH close)
+- PM 10:20 CET: $2.22 (+13.8%)
+
+**Scanner Diagnostic:**
+- Detectable at screening time (~22:15 CET)? **NO** — only +0.5% from close at that time
+- Detected by later scans? **YES** — appeared in 00:00 CET scan (+6.7%, $2.08) and 00:30 CET scan (+6.2%, $2.07)
+- Evaluation at the time: correctly noted as "Watch — excellent float (1.8M), steady AH climb" but dismissed because AH change <10% from close and position was full (ASTC)
+- Why not traded: (1) AH change borderline at 6-7%, (2) position locked in ASTC, (3) thin AH volume
+- **Scanner gap:** POLA's main build happened 00:30-01:30 CET, AFTER our last scan. At our last scan it was +6-7%; it then doubled its AH gain in the next hour to +28%. A later scan (01:00+ CET) would have shown POLA at +12-15% AH and flagged it more clearly. Also: the one-trade-per-day rule prevented acting even though the log noted POLA was a better pattern than ASTC.
+
+**Key insight:** The 00:30 CET scan notes explicitly said POLA's "steady climb, no spike" pattern resembled BFRG's stability (which was preferred over ASTC's spike-and-fade). The right stock was identified, the right pattern was recognized, but selection rules (position full, AH% threshold) prevented action.
+
+### Baseline Tracking
+
+- Days tracked: 7
+- Winners detected by scanner: 6/7 (**85.7%**) — HIT (Mar 17), SUNE (Mar 18), DRMA (Mar 19), UGRO (Mar 23), NXTT (Mar 24), POLA (Mar 30). EEIQ (Mar 25) NOT detected.
+- Winner selected for paper trade: 1/7 (**14.3%**) — only NXTT (Mar 24) was paper traded as winner
+- Target: >80% detection
+- Status: **BASELINE MET** (85.7% detection) — scanner reliability is proven. The bottleneck is now selection quality: we trade the wrong stock or can't trade the right one.
+
+### Retrospective Scan Results
+
+**After-hours forced scan (10:20 CET):** 0 hits (AH session is closed)
+
+**Premarket scan (10:20 CET):** 3 hits
+
+| Ticker | Close | PM Chg% | PM Price | PM Vol | AvgVol | VRatio | Float | MCap | Industry |
+|--------|-------|---------|----------|--------|--------|--------|-------|------|----------|
+| OXBR | $0.87 | +38.3% | $1.20 | 579K | 154K | 3.7x | 6.5M | $6.7M | Specialty Insurance |
+| BFRG | $1.05 | +19.0% | $1.25 | 454K | 41.9M | 0.0x | 9.1M | $6.4M | Packaged Software |
+| POLA | $1.95 | +19.0% | $2.32 | 98K | 325K | 0.3x | 1.8M | $5.2M | Electronic Equip/Instruments |
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| ASTC | $5.58 | 22:30 CET | $4.05 | -$26.01 | -27.4% | ❌ Loss |
+
+- 17 shares × ($4.05 - $5.58) = -$26.01
+- ASTC: peaked $5.80 AH (+24.7%) at 22:30 CET, then crashed — classic spike-and-fade on an extended day 2 runner. Continued fading in PM to $4.05. Below regular close ($4.65).
+
+**Total Paper P&L: -$26.01**
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 times (21:30 - 00:30 CET)
+- Candidates found: 13 unique tickers (BFRG, ELAB, ASTC, JCSE, JFBR, ICU, MKDW, KZR, SXTC, VINO, NGMC, HSDT, POLA, AUUD, IZM — counting all that appeared in any scan)
+- Stocks with >10% AH change in any scan: 4 (ASTC, BFRG, HSDT, AUUD)
+- Today's winner (POLA) detected: **YES** (at 00:00 and 00:30 CET, but below 10% AH threshold)
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| POLA | +28% (peak) | Detected at +6-7% AH but below 10% threshold; position full (ASTC) | ✅ Yes, +28% AH peak, +14% at PM |
+| OXBR | +49% (peak) | Not in any evening scan — flat during regular hours (-2%), AH spike at 00:25 CET was too late and too sudden | ✅ Yes, +49% AH peak, but faded to +36% PM, now +35% |
+
+**OXBR analysis:** OXBR was completely invisible in evening scans. It closed flat ($0.867 on $0.889 prev close = -2.5%). The AH spike happened at 00:25-00:30 CET — a sudden jump from $0.93 to $1.29 in 5 minutes. There was no gradual build to detect. This is a "news-at-midnight" pattern where a catalyst drops after our scanning window. To catch this we'd need automated AH monitoring with alerts on sudden volume/price spikes.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| ASTC | $5.80 (+24.7%) | 22:30 CET | **Spike→fade** | $4.05 | -30.2% | -12.9% | ❌ Destroyed — faded below close |
+| BFRG | $1.24 (+18.1%) | 22:15 CET | **Spike→hold** | $1.22 | -1.6% | +16.2% | ✅ Held gains into PM |
+| HSDT | $2.79 (+50.0%) | 23:30 CET | **Spike→fade** | $1.86 | -33.3% | 0.0% | ❌ Full reversal — back to close |
+| POLA | $2.49 (+27.7%) | 01:30 CET | **Build** | $2.22 | -10.8% | +13.8% | ✅ Best AH→PM follow-through |
+
+**Pattern analysis:**
+- **Build** (POLA): Best follow-through. Steady climb throughout AH, held well into PM despite gap down from AH close. Only -11% from peak. This is the pattern to look for.
+- **Spike→hold** (BFRG): Good follow-through. Early spike then ranged for hours, still holding in PM. Only -2% from peak. Stable but didn't extend.
+- **Spike→fade** (ASTC, HSDT): Both gave back ALL gains and more. ASTC peaked 30 min into AH, crashed all session. HSDT peaked at 23:30, faded to exactly close by PM. Both were the biggest AH spikes by % — but the spike itself was the top.
+
+**Emerging rule:** AH trajectory matters more than AH spike magnitude. Build > Spike→hold >> Spike→fade.
+
+### Notes
+
+1. **Scanner detection continues strong (85.7%).** The scanner reliably finds the movers. Detection rate has been >80% for 5 of 7 tracked days.
+
+2. **Selection is the bottleneck.** We traded ASTC (spike→fade, -27%) while POLA (build, +28%) sat on the watchlist as "borderline." The one-trade-per-day rule locked us into a bad trade before the good one became visible.
+
+3. **AH trajectory classification should drive selection.** This session provided a clean comparison:
+   - ASTC: spike→fade → ❌ -27%
+   - BFRG: spike→hold → ✅ +16%
+   - POLA: build → ✅ +28%
+   - HSDT: spike→fade → ❌ 0%
+   The pattern is consistent: build/hold outperform spike-and-fade. A stock that spikes hard in the first 30 min of AH and then starts fading is NOT a buy signal — it's a blow-off top.
+
+4. **Timing conflict: early entry vs. pattern confirmation.** ASTC was entered at 22:30 CET (30 min into AH) because it was +20% and climbing. But the spike-and-fade pattern only becomes visible ~60 min later. POLA's build pattern also only becomes clear after 2+ hours of AH data. This suggests: **don't enter in the first hour of AH.** Wait for at least the 23:30 CET scan (~1.5 hours of AH data) to see if the pattern is build, hold, or fade.
+
+5. **Late AH scans are more valuable than early ones.** The 00:00 and 00:30 CET scans were the most informative — they showed the real AH trends after the initial noise settled. POLA only appeared in these late scans. ASTC's collapse was already visible by 23:00 CET.
+
+6. **POLA characteristics match prior winners:** Ultra-low float (1.8M), micro-cap ($5.2M), strong regular-hours momentum (+26%), unknown but likely material catalyst. The AH build pattern — no sharp spikes, just steady higher prices — distinguishes it from the blow-off-top losers.
