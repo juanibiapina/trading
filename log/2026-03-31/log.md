@@ -62,7 +62,72 @@ Also checked: UBXG (Day +113%, AH -34.1% to $2.20, crashing), BIRD (Day +1%, AH 
 
 **Observation only** (22:30 CET scan, learning phase). ELAB is the top candidate for the 23:00 decision. Watch if AH momentum sustains.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+Scanner: 6 AH hits. ELAB continues to dominate, now at +37.6% AH per scanner. All 22:00 candidates except ELAB continue to fade. 5 new AH movers appeared but with much lower conviction.
+
+**Updated candidates (from prior scans):**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|-------|----------|
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $5.99 | +68% | **+37.6%** | **$8.24** | 5.5M | N/A | Biotechnology |
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $2.27 | +83% | -4.0% | $2.18 | - | N/A | Information Technology Services |
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $1.68 | +60% | -0.6% | $1.67 | - | 9.1M | Packaged Software |
+| KIDZ | [TV](https://www.tradingview.com/chart/?symbol=KIDZ) | $3.08 | +50% | -1.0% | $3.05 | - | N/A | Internet Software/Services |
+| OXBR | [TV](https://www.tradingview.com/chart/?symbol=OXBR) | $1.18 | +36% | -3.4% | $1.14 | - | 6.5M | Specialty Insurance |
+
+MASK, BFRG, KIDZ, OXBR: all still fading in AH, confirming 22:30 assessment. No AH follow-through on any of them.
+
+**New candidates (first appearance at 23:00):**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|-------|----------|
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.05 | +6% | +10.5% | $1.16 | 189K | 1.0M | Household/Personal Care |
+| HPAI | [TV](https://www.tradingview.com/chart/?symbol=HPAI) | $1.50 | -25% | +10.7% | $1.66 | 52K | 7.9M | Packaged Software |
+| ASTC | [TV](https://www.tradingview.com/chart/?symbol=ASTC) | $5.23 | +13% | +7.2% | $5.60 | 166K | 1.4M | Aerospace & Defense |
+| QVCGP | [TV](https://www.tradingview.com/chart/?symbol=QVCGP) | $2.53 | -24% | +6.7% | $2.70 | 176K | 6.7M | Broadcasting |
+| LTRN | [TV](https://www.tradingview.com/chart/?symbol=LTRN) | $1.37 | +11% | +5.1% | $1.44 | 57K | 8.7M | Pharmaceuticals: Major |
+
+New candidates notes:
+- BYAH: Float 1.0M (ideal) but AH volume very low (189K). Real-time price ~$1.10 (+5%), scanner overstates. First scan, needs confirmation.
+- HPAI: AH volume only 52K, day was -25%. Bounce, not momentum.
+- ASTC: Float 1.4M (ideal) but AH gain only +5% real-time. Low conviction.
+- QVCGP, LTRN: Sub-10% AH, not actionable.
+
+None of the new candidates sustain >10% AH at real-time prices or have been tracked across 2+ scans.
+
+**ELAB AH price action (5m bars from Yahoo):**
+
+| Time (ET) | Price | High | Low | Pattern |
+|-----------|-------|------|-----|---------|
+| 16:00 | $5.82 | $6.37 | $5.66 | AH opens near close |
+| 16:10 | $6.90 | $7.17 | $5.72 | First surge |
+| 16:20 | $7.37 | $7.58 | $6.92 | Building |
+| 16:30 | $7.93 | $8.31 | $7.07 | Second surge |
+| 16:35 | $8.30 | $8.57 | $7.86 | **AH HIGH $8.57** |
+| 16:40 | $8.23 | $8.50 | $7.92 | Held near highs |
+| 16:45 | $7.80 | $8.26 | $7.80 | Starting to fade |
+| 16:55 | $7.85 | $8.05 | $7.56 | Bounced slightly |
+| 17:00 | $7.58 | $7.94 | $7.53 | Continued fade |
+| 17:10 | $7.40 | $7.50 | $7.36 | **Current ~$7.40** |
+
+ELAB peaked at $8.57 at 16:35 ET and has been fading since. Currently at $7.40 (+23% from close, down -14% from AH peak). Pattern is spike-and-fade, not build-and-hold.
+
+**Paper trade decision (23:00 CET):**
+
+ELAB is the only candidate sustaining >10% AH across 3 scans. Entering paper trade per learning phase rules.
+
+Concerns documented:
+1. **Extreme extension:** +68% regular session + 23% AH = +108% from previous close ($3.56)
+2. **Fading from peak:** $8.57 → $7.40 (-14%), classic spike-and-fade AH pattern
+3. **Unknown float:** scanner shows 0, no data available
+4. **Ultra-micro MCap:** $3.2M, extreme liquidity risk
+5. **Overnight risk:** already 1 hour into AH, fading could continue
+
+Entering anyway: catalyst is strong (multi-layered), and a paper trade with noted concerns generates data.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| ELAB | $7.40 | 23:10 CET (5:10 PM ET) | 14 | Strong multi-catalyst (earnings + 5yr aerospace defense deal). Sustained >10% AH across 3 scans. Concerns: fading from $8.57 peak, extreme extension (+108% from prev close), unknown float. |
