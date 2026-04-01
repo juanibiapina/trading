@@ -73,6 +73,26 @@ Scanner: 55 hits (REGULAR session data — AH just opened, no AH price action ye
 3. FGI — ultra-low float, any AH volume could move it significantly
 4. CYCN — watch for stabilization vs continued fade from $8.48 peak
 
+## Scan 22:30 CET (4:30 PM ET) — AH Update
+
+Scanner still returning regular session data (AH only 30 min old). Checking AH price action via Yahoo Finance for watchlist candidates:
+
+| Ticker | Chart | Close | Day% | AH Price | AH Chg | AH High | Pattern |
+|--------|-------|-------|------|----------|--------|---------|---------|
+| CYCN | [TV](https://www.tradingview.com/chart/?symbol=CYCN) | $6.38 | +311% | $6.50 | +1.9% | $8.25 | Spiked to +29% at 16:10, now fading hard |
+| SST | [TV](https://www.tradingview.com/chart/?symbol=SST) | $5.22 | +73% | $4.94 | -5.5% | $6.00 | Opened strong at $5.68, selling off |
+| BCG | [TV](https://www.tradingview.com/chart/?symbol=BCG) | $2.38 | +18% | $2.34 | -1.7% | $2.49 | Flat, no AH momentum |
+| LOCL | [TV](https://www.tradingview.com/chart/?symbol=LOCL) | $1.63 | +41% | $1.62 | -0.6% | $1.63 | Flat, holding but no build |
+| FGI | [TV](https://www.tradingview.com/chart/?symbol=FGI) | $4.97 | +33% | $4.82 | -3.0% | $5.02 | Fading in AH |
+
+**Assessment (observation only, per learning phase rules):**
+
+- **CYCN** — **Catalyst: Merger with Korsana Biosciences** (announced today, all-stock deal targeting Alzheimer's/neurodegenerative disease). Tier A catalyst (M&A). Float 2.7M. AH opened with a spike to $8.25 at 16:10 ET (+29% from close), but faded rapidly back to $6.50 by 16:30. The massive intraday move (+311% from prev close of $1.55) may be exhausting buyers. Already peaked at $8.48 during regular session. AH spike and fade pattern is concerning, but the catalyst is strong and float is low.
+- **SST** — Selling off in AH. Opened at $5.68 but fell to $4.94. Not carrying momentum.
+- **BCG, LOCL, FGI** — All flat or fading. No AH continuation of intraday moves.
+
+**No candidates currently sustaining >10% AH gains.** Will check again at 23:00 CET (5:00 PM ET) for any new activity or stabilization. CYCN is the only one worth tracking further — if it stabilizes above $7 it could be interesting, but the fade from $8.25 to $6.50 in 20 minutes is concerning.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
