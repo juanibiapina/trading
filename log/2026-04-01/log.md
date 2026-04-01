@@ -93,7 +93,70 @@ Scanner still returning regular session data (AH only 30 min old). Checking AH p
 
 **No candidates currently sustaining >10% AH gains.** Will check again at 23:00 CET (5:00 PM ET) for any new activity or stabilization. CYCN is the only one worth tracking further — if it stabilizes above $7 it could be interesting, but the fade from $8.25 to $6.50 in 20 minutes is concerning.
 
+## Scan 23:00 CET (5:00 PM ET) — AH Update
+
+Scanner: 2 AH hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| AGPU | [TV](https://www.tradingview.com/chart/?symbol=AGPU) | $3.56 | +119.8% | +18.8% | $4.23 | 5.1M | 8.7M | 0.6x | 53K | Medical Specialties |
+| GLBS | [TV](https://www.tradingview.com/chart/?symbol=GLBS) | $2.16 | -6.5% | +10.6% | $2.39 | 62K | 125K | 0.5x | 14.2M | Marine Shipping |
+
+**AH price action (5m candles from Yahoo):**
+
+AGPU AH pattern — BUILDING:
+| Time ET | Price | Chg from Close |
+|---------|-------|----------------|
+| 16:00 | $3.53 | -0.8% |
+| 16:10 | $3.74 | +5.1% |
+| 16:20 | $3.90 | +9.6% |
+| 16:30 | $4.39 | +23.3% |
+| 16:40 | $4.22 | +18.5% |
+| 16:50 | $4.37 | +22.8% |
+| 17:00 | $4.39 | +23.3% |
+
+Steady build from $3.53 to $4.39, touching $4.80 at 16:50. Higher lows throughout AH. Not fading.
+
+CYCN AH update — spike and fade, now stabilizing:
+| Time ET | Price | Chg from Close |
+|---------|-------|----------------|
+| 16:00 | $6.23 | -2.4% |
+| 16:10 | $7.64 | +19.7% (high $8.25) |
+| 16:25 | $6.64 | +4.1% |
+| 16:45 | $6.52 | +2.2% |
+| 17:00 | $6.67 | +4.5% |
+
+Stabilizing in $6.50-6.70 range after spike to $8.25. AH gain from close is small (+4.5%). The big move was intraday.
+
+**Prior watchlist updates (all fading/dead in AH):**
+- SST: $4.90 (-6.1% from close) — selling off steadily
+- LOCL: $1.62 (-0.7% from close) — flat, no AH momentum
+- FGI: $4.81 (-3.2% from close) — fading
+
+**Candidate evaluations:**
+
+**AGPU — ENTER (paper trade)**
+- Float: 53K (ultra-low, ideal)
+- Catalyst: **$12M in executed GPU infrastructure agreements** announced today (April 1, 2026 via GlobeNewswire). 20+ enterprise customers, 30+ active deployments, $835K/month estimated revenue starting Q2 2026. Company pivoted from cancer therapy to AI/GPU compute infrastructure. Full-year 2025 10-K also filed March 31 showing $343.5M capital raise. This is a Tier A catalyst (operational improvement + new revenue).
+- AH pattern: Building, not fading. Steady climb from $3.53 to $4.39 with higher lows.
+- Sustained across 2+ scans: first seen 21:30 at $3.28, now $4.39 AH.
+- Sector: Medical Specialties (pivoting to AI/GPU compute)
+- Concerns: (1) Already +168% from prev close — very extended. (2) Ultra-low 53K float means extreme thinness, could gap hard either direction. (3) VRatio 0.6x — AH volume below daily average.
+- Decision: Enter. Strong catalyst, building AH pattern, ultra-low float. Concerns noted but learning phase rules say enter and collect data.
+
+**GLBS — SKIP**
+- Float: 14.2M (above 10M ideal)
+- No catalyst found (no earnings, no press release, no SEC filing today)
+- Day was -6.5% (down day), AH only modest recovery to +5.6% from prev close
+- Skip: float too high, no catalyst, weak AH action.
+
+**CYCN — NO NEW ENTRY**
+- Already evaluated at 22:30. Catalyst confirmed (Korsana merger).
+- AH pattern: spike-and-fade, now stabilizing at $6.50-6.70 (only +4% from close).
+- Not sustaining >10% AH gains. The move was intraday, not AH. Does not meet AH entry criteria.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| AGPU | $4.39 | 17:00 ET | 22 | $12M GPU contracts announced today, Tier A catalyst. Ultra-low 53K float. AH building pattern. Extended (+168% from prev close) but strong catalyst. |
