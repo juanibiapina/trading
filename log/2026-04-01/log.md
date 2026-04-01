@@ -155,6 +155,77 @@ Stabilizing in $6.50-6.70 range after spike to $8.25. AH gain from close is smal
 - AH pattern: spike-and-fade, now stabilizing at $6.50-6.70 (only +4% from close).
 - Not sustaining >10% AH gains. The move was intraday, not AH. Does not meet AH entry criteria.
 
+## Scan 23:30 CET (5:30 PM ET) — AH Update
+
+Scanner: 4 AH hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| AGPU | [TV](https://www.tradingview.com/chart/?symbol=AGPU) | $3.56 | +119.8% | +16.0% | $4.13 | 7.8M | 9.0M | 0.9x | 53K | Medical Specialties |
+| RENX | [TV](https://www.tradingview.com/chart/?symbol=RENX) | $2.61 | +46.6% | +8.8% | $2.84 | 320K | 9.0M | 0.0x | 0 | Real Estate Development |
+| GLBS | [TV](https://www.tradingview.com/chart/?symbol=GLBS) | $2.16 | -6.5% | +10.5% | $2.39 | 108K | 131K | 0.8x | 14.2M | Marine Shipping |
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $0.60 | +58.7% | +5.5% | $0.64 | 3.1M | 65.4M | 0.0x | 18.7M | Motor Vehicles |
+
+**Latest AH prices (5m candles from Yahoo at 17:30 ET):**
+
+AGPU — FADING from peak (paper trade at $4.39):
+| Time ET | Price | Chg from Close |
+|---------|-------|----------------|
+| 16:25 | $4.22 | +18.6% |
+| 16:30 | $4.39 | +23.3% ← paper trade entry |
+| 16:35 | $4.28 | +20.2% |
+| 16:40 | $4.22 | +18.5% |
+| 16:45 | $4.35 | +22.2% |
+| 16:50 | $4.37 | +22.8% |
+| 16:55 | $4.41 | +23.9% ← AH peak |
+| 17:00 | $4.30 | +20.8% |
+| 17:05 | $4.27 | +19.9% |
+| 17:10 | $4.13 | +16.0% |
+| 17:15 | $4.23 | +18.8% |
+| 17:20 | $3.91 | +9.8% |
+| 17:25 | $3.87 | +8.7% |
+| 17:30 | $3.91 | +9.8% |
+
+Peaked at $4.41 (16:55), now fading hard. Lost ~50% of AH gains in 35 min. Paper trade entered at $4.39, currently at $3.91 (-10.9%). The build pattern from the 23:00 scan has reversed into a fade.
+
+RENX — late spike:
+| Time ET | Price | Chg from Close |
+|---------|-------|----------------|
+| 16:00-17:05 | $2.57-2.63 | flat |
+| 17:10 | $2.85 | +9.2% |
+| 17:15 | $2.80 | +7.3% |
+| 17:20 | $2.77 | +6.1% |
+| 17:25 | $2.88 | +10.3% |
+| 17:30 | $2.87 | +10.0% |
+
+Flat for 70 min then sudden spike at 17:10. Just reached +10% at 17:30.
+
+**Prior watchlist updates:**
+- SST: $5.05 at 17:30 (-3.3% from close) — bounced from $4.76 low but not recovering. AH dead.
+- CYCN: $5.93 at 16:30 (+2.2% from close) — continued fade from intraday peak. AH dead.
+- LOCL, FGI: still flat/fading as of 22:30 scan. Not rechecked.
+
+**Candidate evaluations:**
+
+**AGPU (paper trade update):** Entered at $4.39 (23:00 scan). Now $3.91, down -10.9%. The building AH pattern reversed after 16:55 peak. This is the extended-entry risk that was noted as a concern: stock was already +168% from prev close when entered. The ultra-low 53K float cuts both ways. Will hold for premarket evaluation per strategy (AH entry → PM exit). Key learning data point: entered during a build that turned into a fade.
+
+**RENX — SKIP**
+- Float: unknown (scanner shows 0). Cannot evaluate low float criteria.
+- Late AH spike just hit +10% at 17:25. Only 20 min above 10%, not sustained across 2+ scans.
+- Skip: float unknown, not sustained across multiple scans, too little AH data to confirm pattern.
+
+**UCAR — SKIP**
+- Float: 18.7M (well above 10M ideal)
+- Skip: float too high.
+
+**GLBS — SKIP (prior candidate, re-evaluated)**
+- Still at $2.39 (+10.5% from close), same as 23:00 scan. No change.
+- Float: 14.2M (above 10M ideal)
+- No catalyst found at 23:00 scan, and AH price unchanged — no re-search warranted.
+- Skip: float too high, no catalyst.
+
+**No new paper trades.** AGPU is the only position. Will evaluate in premarket tomorrow.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
