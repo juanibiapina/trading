@@ -226,6 +226,50 @@ Flat for 70 min then sudden spike at 17:10. Just reached +10% at 17:30.
 
 **No new paper trades.** AGPU is the only position. Will evaluate in premarket tomorrow.
 
+## Scan 00:00 CET (6:00 PM ET) — AH Update
+
+Scanner: 3 AH hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| AGPU | [TV](https://www.tradingview.com/chart/?symbol=AGPU) | $3.56 | +119.8% | +7.0% | $3.81 | 8.5M | 9.1M | 0.9x | 53K | Medical Specialties |
+| RENX | [TV](https://www.tradingview.com/chart/?symbol=RENX) | $2.61 | +46.6% | +5.7% | $2.76 | 447K | 9.0M | 0.0x | 0 | Real Estate Development |
+| GLBS | [TV](https://www.tradingview.com/chart/?symbol=GLBS) | $2.16 | -6.5% | +9.7% | $2.37 | 109K | 131K | 0.8x | 14.2M | Marine Shipping |
+
+**AGPU AH update (paper trade at $4.39) — continued fade:**
+| Time ET | Price | Chg from Close |
+|---------|-------|----------------|
+| 16:35 | $3.73 | +4.8% ← AH low |
+| 16:40 | $3.81 | +7.0% |
+| 16:45 | $3.93 | +10.4% |
+| 16:50 | $3.83 | +7.6% |
+| 16:55 | $3.81 | +7.0% |
+| 17:00 | $3.86 | +8.4% |
+
+Continued fade from $4.41 peak (16:55 ET). Hit low of $3.73 at 16:35, now bouncing around $3.81-3.93. Paper trade at $4.39 is down -13.2% ($3.81 current). The build-then-fade pattern is clear: peaked within 1 hour of AH open, then gave back >50% of AH gains.
+
+**RENX update — stabilizing after late spike:**
+| Time ET | Price | Chg from Close |
+|---------|-------|----------------|
+| 16:45 | $2.79 | +6.9% |
+| 16:50 | $2.85 | +9.2% |
+| 16:55 | $2.86 | +9.6% |
+| 17:00 | $2.87 | +10.0% |
+
+Holding $2.76-2.87 range since 17:10 spike. AH change from close is only +5.7% per scanner. Float still unknown (0 in scanner). Not actionable.
+
+**Prior watchlist final status:**
+- CYCN: $6.22 at 17:01 ET (-2.5% from close). Faded from intraday peak, stabilized $5.73-6.22 in AH. No AH momentum.
+- SST: $4.80 at 17:01 ET (-8.0% from close). Continued selloff in AH. Dead.
+- LOCL, FGI, BCG: all flat/fading as of earlier scans, not in scanner. Dead.
+
+**GLBS — SKIP (no change from prior evaluation)**
+- Still flat around $2.37. Float 14.2M, no catalyst. Skip: float too high, no catalyst.
+
+**No new paper trades.** Already holding AGPU (one trade per day rule). No other candidate meets criteria (float <10M + sustained >10% AH change).
+
+**AGPU paper trade assessment:** The entry at $4.39 during an apparent "build" pattern proved to be near the AH peak ($4.41). Key learning: on a stock already +168% from prev close, even a strong catalyst and ultra-low float couldn't sustain further AH gains. The intraday move may have exhausted buyers. Will hold for premarket evaluation per strategy.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
