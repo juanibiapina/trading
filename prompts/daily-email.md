@@ -6,7 +6,7 @@ Read today's logs and send a single HTML email summarizing everything.
 
 ### 1. Read Today's Data
 
-Determine today's trading date (if before 06:00 CET, use yesterday).
+Determine yesterday's US trading date. This is the date the morning evaluation used (the AH session being reviewed). The log was created by last night's post-market scans and updated by this morning's evaluation.
 
 Read:
 - `log/YYYY-MM-DD/log.md` -- morning eval: today's winner, scanner diagnostic, baseline tracking, paper trades, AH mover follow-through
