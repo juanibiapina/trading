@@ -270,6 +270,46 @@ Holding $2.76-2.87 range since 17:10 spike. AH change from close is only +5.7% p
 
 **AGPU paper trade assessment:** The entry at $4.39 during an apparent "build" pattern proved to be near the AH peak ($4.41). Key learning: on a stock already +168% from prev close, even a strong catalyst and ultra-low float couldn't sustain further AH gains. The intraday move may have exhausted buyers. Will hold for premarket evaluation per strategy.
 
+## Scan 00:30 CET (6:30 PM ET) — AH Update
+
+Scanner: 3 AH hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
+| GLBS | [TV](https://www.tradingview.com/chart/?symbol=GLBS) | $2.16 | -6.5% | +13.4% | $2.45 | 113K | 132K | 0.9x | 14.2M | Marine Shipping |
+| RENX | [TV](https://www.tradingview.com/chart/?symbol=RENX) | $2.61 | +46.6% | +8.0% | $2.82 | 729K | 9.1M | 0.1x | 0 | Real Estate Development |
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $0.60 | +58.7% | +5.7% | $0.64 | 3.4M | 65.4M | 0.1x | 18.7M | Motor Vehicles |
+
+AGPU dropped off the scanner (AH gains faded below threshold).
+
+**AGPU AH update (paper trade at $4.39) — continued fade:**
+| Time ET | Price | Chg from Close |
+|---------|-------|----------------|
+| 17:00 | $3.80 | +6.7% |
+| 17:05 | $3.73 | +4.8% |
+| 17:10 | $3.71 | +4.2% ← new AH low |
+| 17:15 | $3.72 | +4.5% |
+| 17:20 | $3.85 | +8.1% |
+| 17:25 | $3.86 | +8.4% |
+| 17:30 | $3.86 | +8.4% |
+
+Hit new AH low at $3.71 (17:10), slight bounce to $3.86. Paper trade at $4.39 is now down -12.1%. Fade continues; no sign of reversal.
+
+**GLBS — SKIP (no change from prior evaluation)**
+- Now +13.4% AH from close (up from +10.5% at 23:30 scan). Slight build but from a down day (-6.5%).
+- From prev close ($2.31), total gain is only +6.1%. Not a meaningful AH move.
+- Float: 14.2M (well above 10M ideal). No catalyst found in prior scans.
+- Skip: float too high, no catalyst, modest actual gain from prev close.
+
+**RENX — SKIP (no change)**
+- Float unknown. AH +8.0% (below 10% threshold). Holding $2.80-2.85 range, stable but not building.
+- Skip: float unknown, AH gain below 10%.
+
+**UCAR — SKIP**
+- Float: 18.7M. Skip: float too high.
+
+**No new paper trades.** Already holding AGPU (one trade per day rule). No other candidate meets criteria. Will evaluate AGPU in premarket tomorrow.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
