@@ -39,6 +39,40 @@ Also notable (high float but extreme moves):
 
 All flagged as **Watch — pending AH confirmation**. Stocks spiking intraday but not carrying into AH tend to fade (ref: SPRC -18.6%, AEMD -4.6% on March 12).
 
+## Scan 22:00 CET (4:00 PM ET) — First AH Scan
+
+Scanner: 55 hits (REGULAR session data — AH just opened, no AH price action yet).
+
+**Top candidates (low float, strongest day moves):**
+
+| Ticker | Chart | Close | Day% | Float | MCap | Volume | AvgVol | Industry |
+|--------|-------|-------|------|-------|------|--------|--------|----------|
+| CYCN | [TV](https://www.tradingview.com/chart/?symbol=CYCN) | $6.38 | +311% | 2.7M | $6.1M | 252M | 623K | Pharmaceuticals: Major |
+| SST | [TV](https://www.tradingview.com/chart/?symbol=SST) | $5.10 | +69% | 4.1M | $42.2M | 16.6M | 164K | Packaged Software |
+| LOCL | [TV](https://www.tradingview.com/chart/?symbol=LOCL) | $1.62 | +40% | 2.5M | $35.2M | 563K | 2K | Financial Conglomerates |
+| FGI | [TV](https://www.tradingview.com/chart/?symbol=FGI) | $4.97 | +33% | 523K | $9.7M | 475K | 3K | Building Products |
+| PRHI | [TV](https://www.tradingview.com/chart/?symbol=PRHI) | $0.69 | +35% | 3.4M | $8.4M | 6K | 6K | Property/Casualty Insurance |
+| WBX | [TV](https://www.tradingview.com/chart/?symbol=WBX) | $3.08 | +24% | 4.6M | $53.5M | 63K | 2K | Electronic Equipment |
+| GRDX | [TV](https://www.tradingview.com/chart/?symbol=GRDX) | $2.48 | +23% | 3.0M | $8.5M | 235K | 3K | Biotechnology |
+| FOXX | [TV](https://www.tradingview.com/chart/?symbol=FOXX) | $5.55 | +17% | 1.4M | $38.9M | 30K | 3K | Electronics Distributors |
+| FLYE | [TV](https://www.tradingview.com/chart/?symbol=FLYE) | $2.40 | +14% | 1.5M | $4.1M | 46K | 818 | Motor Vehicles |
+| LESL | [TV](https://www.tradingview.com/chart/?symbol=LESL) | $1.35 | +21% | 9.3M | $12.5M | 527K | 15K | Specialty Stores |
+
+**Observations (22:00 CET — AH just opened, observation only per learning phase rules):**
+
+- **CYCN** (+311%): Monster intraday move, pharma. Peaked at $8.48, closed $6.38 — already faded 25% from highs. Volume 252M is extreme (400x avg). Concern: the move happened during regular session. By AH, latecomers may be buying the top. Watch for AH continuation vs further fade.
+- **SST** (+69%): Strongest close-to-high ratio. Closed $5.10 vs peak $5.80 (12% below high). 16.6M volume (100x avg). Float 4.1M. Closed with building momentum into end of session. **Best candidate for AH continuation.**
+- **LOCL** (+40%): Closed $1.62 near day high $1.64 — very strong. Float 2.5M. 563K volume (281x avg). Built steadily all day with no major pullback.
+- **FGI** (+33%): Ultra-low float 523K. Closed $4.97, high $5.30. Building into close. Low absolute volume but enormous relative to avg.
+- **FLYE** (+14%): Float 1.5M but only 46K volume. Very thin. Steady grind up. Low conviction.
+- **LESL** (+21%): Float 9.3M (borderline). 527K volume (35x avg). Decent move but larger float limits squeeze potential.
+
+**Priority watchlist for next scan (22:30 CET):**
+1. SST — check for AH volume and price continuation above $5.10
+2. LOCL — check if momentum carries into AH near $1.62+
+3. FGI — ultra-low float, any AH volume could move it significantly
+4. CYCN — watch for stabilization vs continued fade from $8.48 peak
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
