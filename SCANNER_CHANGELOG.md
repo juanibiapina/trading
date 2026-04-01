@@ -47,6 +47,22 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-04-01 — Add Total% Column to AH Scanner Output
+
+**Context:** ELAB (Mar 31, +108% from prev close) and ASTC (Mar 30, +145% from prev close) were both extremely extended when entered as paper trades. The agent calculated total extension manually in the log notes ("ELAB +68% day + 23% AH = +108% from prev close") but the scanner output only showed Day% and AH Chg% separately. Meanwhile BCG (Mar 31 winner, -2% day + 39% AH = +37% total) was far less extended. The extension assessment is currently ad-hoc and inconsistent across scans.
+
+**Evaluation of previous changes:**
+- 23:00 CET Minimum Entry Time (2026-03-31): **Insufficient data (1 data point).** Mar 31 ELAB entered at 23:10 CET (compliant). Result: +8.1% (still open at morning eval). The rule was followed correctly. BCG (winner) appeared at 23:50 CET, 40 min after entry, suggesting even 23:00 may be too early, but 1 data point is not enough to adjust timing.
+- Trajectory Preference (2026-03-31): **Insufficient data (1 data point).** ELAB was the only qualifying candidate at 23:00, so no build-vs-spike comparison was possible. Agent correctly noted ELAB's "build->fade->build" trajectory.
+- Supplementary Day Movers Query (2026-03-26): **Working (2 data points).** Both Mar 30 and Mar 31 regular session scans produced ~54 hits (up from 10-15 with RVOL-only). The wider net is functioning as intended. Need more data to confirm it improves winner detection specifically.
+
+**Changes:**
+1. **scripts/scan.py** — Added "Total%" column to after-hours scanner output. Computes total change from previous close as (1 + Day%) x (1 + AH%) - 1. Displayed between "AH Price" and "AH Vol" columns.
+   - Why: The agent already calculates this manually in evaluation notes, but inconsistently. Making it a column ensures it's visible at every scan. Stocks entered above +100% total extension have underperformed: ASTC -27.4% at +145%, ELAB +8.1% but suboptimal at +108%. The Mar 31 winner BCG was only +37% total. This column enables systematic tracking of whether extension correlates with outcomes.
+   - Hypothesis: The Total% column will appear in all future AH scans. The agent will reference it when assessing extension risk, making the evaluation more consistent. Over 2 weeks of data, this enables a data-driven conclusion about whether a total-extension threshold should become a filter. Measurable: (1) the column appears in the next AH scan output, (2) the agent mentions Total% when evaluating paper trade extension risk.
+
+**Updated parameters:** No threshold changes. New output column only.
+
 ### 2026-03-31 — Enforce 23:00 CET Minimum Entry Time + Trajectory Preference
 
 **Context:** Two of the last four paper trades were entered at 22:30 CET (the second AH scan) despite the learning phase default saying "third AH scan (23:00+ CET)." Both 22:30 entries were spike-and-fade patterns that lost badly: HCTI -17.2% (Mar 25, entered at 22:30 on a +43% spike already fading to +37%) and ASTC -27.4% (Mar 30, entered at 22:30 on a +20% spike that reversed to -3% by 23:00). Meanwhile, the one entry at 23:00+ (NXTT, Mar 24) showed a build pattern across 6 scans and won +19.1%. On Mar 30, the morning evaluation explicitly noted: "don't enter in the first hour of AH" and "late AH scans are more valuable than early ones." The AH trajectory data across 4 days consistently shows build/hold patterns outperforming spike-and-fade.

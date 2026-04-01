@@ -224,17 +224,21 @@ def scan(session, biotech_only=False, day_movers=False):
         elif session == "afterhours":
             avg_vol = int(d[5]) if d[5] else 0
             ah_vol = int(d[3]) if d[3] else 0
+            day_chg = d[6] or 0
+            ah_chg = d[2] or 0
+            total_chg = ((1 + day_chg / 100) * (1 + ah_chg / 100) - 1) * 100
             results.append({
                 "ticker": ticker,
                 "exchange": exchange,
                 "name": d[0],
                 "price": d[1],
-                "change_pct": d[2] or 0,
+                "change_pct": ah_chg,
                 "ext_volume": ah_vol,
                 "ext_close": d[4] or 0,
                 "avg_vol_daily": avg_vol,
                 "vol_ratio": round(ah_vol / avg_vol, 1) if avg_vol else 0,
-                "day_change_pct": d[6] or 0,
+                "day_change_pct": day_chg,
+                "total_change_pct": round(total_chg, 1),
                 "sector": d[7],
                 "industry": d[8],
                 "float": int(d[9]) if d[9] else 0,
@@ -301,8 +305,8 @@ def print_results(results, session, previous_tickers=None):
         show_day_chg = session == "afterhours"
 
         if show_day_chg:
-            print(f"  {'Ticker':<8} {'Close':>6} {'Day%':>7} {ext_label + ' Chg%':>8} {ext_label + ' Price':>8} {ext_label + ' Vol':>8} {'AvgVol':>8} {'VRatio':>7} {'Float':>8} {'MCap':>8} {'Industry':<25} {'New'}")
-            print(f"  {'-' * 120}")
+            print(f"  {'Ticker':<8} {'Close':>6} {'Day%':>7} {ext_label + ' Chg%':>8} {ext_label + ' Price':>8} {'Total%':>8} {ext_label + ' Vol':>8} {'AvgVol':>8} {'VRatio':>7} {'Float':>8} {'MCap':>8} {'Industry':<25} {'New'}")
+            print(f"  {'-' * 129}")
         else:
             print(f"  {'Ticker':<8} {'Close':>6} {ext_label + ' Chg%':>8} {ext_label + ' Price':>8} {ext_label + ' Vol':>8} {'AvgVol':>8} {'VRatio':>7} {'Float':>8} {'MCap':>8} {'Industry':<25} {'New'}")
             print(f"  {'-' * 113}")
@@ -313,6 +317,7 @@ def print_results(results, session, previous_tickers=None):
                 is_new = " ⚡ NEW"
 
             day_chg = f"{r.get('day_change_pct', 0):>+7.1f} " if show_day_chg else ""
+            total_chg = f"{r.get('total_change_pct', 0):>+8.1f} " if show_day_chg else ""
 
             print(
                 f"  {r['ticker']:<8} "
@@ -320,6 +325,7 @@ def print_results(results, session, previous_tickers=None):
                 f"{day_chg}"
                 f"{r['change_pct']:>+8.1f} "
                 f"{r['ext_close']:>8.2f} "
+                f"{total_chg}"
                 f"{fmt_number(r['ext_volume']):>8} "
                 f"{fmt_number(r['avg_vol_daily']):>8} "
                 f"{r['vol_ratio']:>7.1f} "
