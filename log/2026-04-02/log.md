@@ -80,6 +80,51 @@
 
 **Top watchlist for 22:30 AH scan:** SKYQ (need AH data), TMDE (strengthening), COCP (high volume pharma), ICU (steady), IOTR (ultra-low float but fading)
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**AH scan (30 min into after-hours). Observation only — learning phase, no paper trades before 23:00 CET.**
+
+54 hits from scanner (regular session data unchanged). AH prices from Yahoo Finance:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|-------|----------|
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $5.10 | +102% | +3.7% | $5.29 | +109% | — | Integrated Oil |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $1.87 | +76% | -7.5% | $1.73 | +63% | — | Wholesale Distributors |
+| SELX | [TV](https://www.tradingview.com/chart/?symbol=SELX) | $0.53 | +51% | +0.3% | $0.53 | +51% | 10.9M | Financial Conglomerates |
+| COCP | [TV](https://www.tradingview.com/chart/?symbol=COCP) | $1.51 | +48% | -6.0% | $1.42 | +39% | 9.1M | Pharmaceuticals |
+| PFSA | [TV](https://www.tradingview.com/chart/?symbol=PFSA) | $0.76 | +31% | +6.7% | $0.81 | +40% | 1.3M | Financial Conglomerates |
+| NVNI | [TV](https://www.tradingview.com/chart/?symbol=NVNI) | $1.57 | +30% | -0.8% | $1.56 | +29% | 7.8M | Financial Conglomerates |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $3.17 | +26% | -1.3% | $3.13 | +24% | 95K | Pharmaceuticals |
+| ICU | [TV](https://www.tradingview.com/chart/?symbol=ICU) | $4.31 | +21% | +3.2% | $4.45 | +25% | 3.9M | Medical Specialties |
+| NBY | [TV](https://www.tradingview.com/chart/?symbol=NBY) | $1.95 | +23% | -0.5% | $1.94 | +22% | 1.3M | Pharmaceuticals |
+| DLXY | [TV](https://www.tradingview.com/chart/?symbol=DLXY) | $0.58 | +23% | -8.1% | $0.53 | +13% | 4.7M | Wholesale Distributors |
+| RCON | [TV](https://www.tradingview.com/chart/?symbol=RCON) | $0.96 | +22% | -1.6% | $0.94 | +20% | 5.7M | Electronics Distributors |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $2.45 | +15% | +2.0% | $2.50 | +17% | 733K | IT Services |
+| XHLD | [TV](https://www.tradingview.com/chart/?symbol=XHLD) | $1.51 | +16% | +0.0% | $1.51 | +16% | 1.9M | Misc Commercial Services |
+
+**Changes from 22:00 scan:**
+- **SKYQ:** Holding well in AH ($5.29, +3.7% from close). Biggest mover at +109% total. Unknown float.
+- **TMDE:** Fading in AH ($1.73 vs $1.88 close, -7.5%). Weakening — lost the strength it showed into close.
+- **COCP:** Fading in AH ($1.42 vs $1.51 close, -6.0%). Continues to weaken from intraday high of $2.03.
+- **SELX:** Flat in AH ($0.53). Was $0.55 at 22:00. 10.9M float (over limit).
+- **ICU:** Building in AH ($4.45, +3.2%). Was $4.31 at close. Most consistent buildup pattern. 3.9M float.
+- **IOTR:** Slight AH build ($2.50, +2.0%). Was $2.50 at 22:00 (no change). Ultra-low 733K float but tepid volume.
+- **PFSA** (new AH data): Building in AH ($0.81, +6.7% from close). Ultra-low 1.3M float. Best AH momentum after SKYQ.
+- **NVNI:** Flat in AH ($1.56, -0.8%). Not much interest.
+- **NBY:** Flat in AH ($1.94, -0.5%). Dead money in AH.
+- **DLXY:** Fading hard in AH ($0.53, -8.1%). Dropping out.
+- **ATPC:** Ultra-low 95K float, but fading slightly in AH ($3.13, -1.3%).
+
+**Evaluation notes (observation only — no trades yet):**
+
+Most stocks are fading or flat in AH. The day's big moves happened during regular session, with limited AH follow-through so far. No candidate has >10% AH change.
+
+**Building in AH (watch for 23:00):** PFSA (+6.7% AH, 1.3M float), ICU (+3.2% AH, 3.9M float), SKYQ (+3.7% AH but very extended at +109% total)
+
+**Fading (dropping priority):** TMDE (-7.5% AH), COCP (-6.0% AH), DLXY (-8.1% AH)
+
+**Flat/dead (low priority):** NVNI, NBY, RCON, XHLD, IOTR
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
