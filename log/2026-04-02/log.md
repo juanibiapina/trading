@@ -260,6 +260,40 @@ Scanner returned 3 AH hits (scanner snapshot caught PFSA pre-spike at $0.83; act
 
 **Tracking PFSA for comparison:** Entry would be $1.08 at 00:00 CET. Shares: 85 (~€100 at ~$1.08/€). Will compare PM outcome vs BFRG.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**AH scan (2.5 hours into after-hours). Paper trade eligible.**
+
+Scanner returned 3 AH hits:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PFSA | [TV](https://www.tradingview.com/chart/?symbol=PFSA) | $0.76 | +31.0% | +84.2% | $1.40 | +141.4% | 2.8M | 631K | 4.4x | 1.3M | Financial Conglomerates |
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $1.20 | -25.9% | +13.3% | $1.36 | -16.0% | 3.7M | 65.4M | 0.1x | 9.1M | Packaged Software |
+| BTBD | [TV](https://www.tradingview.com/chart/?symbol=BTBD) | $1.89 | +7.4% | +9.5% | $2.07 | +17.6% | 446K | 667K | 0.7x | 3.2M | Restaurants |
+
+**Changes from 00:00 scan:**
+
+- **PFSA: Continuing parabolic move.** Was $1.08 (+42.1% AH) at 00:00, now $1.40 (+84.2% AH). Peaked at $1.46 (+92.1% from close, +152% from prev close) at 17:20 ET, pulled back slightly to $1.40 at 17:30. AH volume now 2.8M vs 631K avg — VRatio climbed from 0.7x to 4.4x. This is now real, sustained volume. Pattern: base at $0.80-$0.84 for 50 min (16:00-16:50), spike to $1.09 at 16:55, then stair-step up through $1.20 → $1.31 → $1.46. Ultra-low 1.3M float driving massive moves.
+- **BFRG:** Continuing to fade. Now $1.36 (+13.3% AH) vs $1.38 (+14.9%) at 00:00. Steady decline from AH peak of $1.56 at 16:00 ET. Paper trade entry at $1.40 now at -2.9%.
+- **BTBD:** Holding steady. $2.07 (+9.5% AH), oscillating $2.00-$2.10 range all AH. Never sustained above 10%.
+
+**Prior candidates update:**
+- SKYQ: AH $4.68 (+85% from prev close). Fading steadily from $5.23 AH high. Down from $4.85 at 00:00.
+- TMDE: AH $1.80 (+70% from prev close). Oscillating $1.76-$1.82. No AH direction.
+- ICU: AH $4.25 (+19% from prev close). Sparse trading, fading slightly.
+- COCP: AH $1.43 (+40% from prev close). Flat. No interest.
+- IOTR: Dead. Only 4 prints all AH session.
+
+**Paper trade status:**
+- BFRG (entered $1.40 at 23:30): Now $1.36, **-2.9%** (-$0.04/share, -$3.12 on 78 shares). Fading as expected for dead-cat bounce.
+- PFSA (tracked $1.08 at 00:00): Now $1.40, **+29.6%** (+$0.32/share, +$27.20 on 85 shares). Massively outperforming.
+
+**Learning notes:**
+- PFSA is now the clear winner of the night. The 23:30 BFRG entry vs waiting for PFSA at 00:00 is a -$30 swing on ~$100 positions. The lesson is reinforced: dead-cat bounces (crash → AH bounce with no new catalyst, fading from peak) are poor candidates even when they technically meet criteria. Late AH spikes on ultra-low float with building momentum (PFSA's stair-step pattern) are the better setup.
+- PFSA has no catalyst, which the trading plan flags as risky ("no catalyst = no follow-through"). But on ultra-low 1.3M float, speculative momentum alone drove +84% AH. Tomorrow's premarket will test whether this holds without news.
+- No new paper trade entry: one position at a time (BFRG blocks). Continuing to track PFSA for comparison.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
