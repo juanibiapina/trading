@@ -125,6 +125,42 @@ Most stocks are fading or flat in AH. The day's big moves happened during regula
 
 **Flat/dead (low priority):** NVNI, NBY, RCON, XHLD, IOTR
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**AH scan (1 hour into after-hours). Paper trade eligible per learning phase rules.**
+
+Scanner returned 3 AH hits:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $1.20 | -25.9% | +21.7% | $1.46 | -9.9% | 2.5M | 65.3M | 0.0x | 9.1M | Packaged Software |
+| BTBD | [TV](https://www.tradingview.com/chart/?symbol=BTBD) | $1.89 | +7.4% | +9.5% | $2.07 | +17.6% | 243K | 645K | 0.4x | 3.2M | Restaurants |
+| PFSA | [TV](https://www.tradingview.com/chart/?symbol=PFSA) | $0.76 | +31.0% | +8.2% | $0.82 | +41.7% | 211K | 349K | 0.6x | 1.3M | Financial Conglomerates |
+
+**Changes from 22:30 scan:**
+- **BFRG** (new): Not in prior scans. Crashed -25.9% during regular session (from $1.62 to $1.20), now bouncing +21.7% in AH to $1.46. Dead-cat bounce pattern. AH high was ~$1.56 (+30%), now fading to $1.43-$1.46. Total still -9.9% from prior close. 2.5M AH volume is significant but VRatio 0.0x (vs 65M avg daily vol) suggests this is normal activity for this stock, not unusual.
+- **BTBD** (new): Steady climber since earnings on 3/30. AH peaked at ~$2.18 (+15.3%) but now $2.07 (+9.5%). Gradual move, not a spike.
+- **PFSA:** Was +6.7% AH at 22:30, now +8.2%. Briefly spiked to $0.897 (+18.3% AH) but faded back. Currently $0.79-$0.82 range. Losing momentum.
+- **SKYQ:** AH flat at ~$5.26 (+3.1%). No follow-through on the +102% day move. Oscillating $5.0-$5.36.
+- **ICU:** AH flat at ~$4.42 (+2.6%). No change from 22:30.
+- **TMDE:** Fading further in AH. Was $1.73 at 22:30, now ~$1.69 (-10.1% from close). Dropping.
+- **COCP:** AH flat at ~$1.45. No momentum.
+
+**Catalyst searches:**
+
+- **BFRG:** No new catalyst today. Original catalyst was March 24 pharma partnership (+126%). April 1 saw Nasdaq compliance recovery after equity raises. Today's -26% crash is the aftermath; AH bounce is a dead-cat bounce with no fresh news. Skip: dead-cat bounce, no new catalyst, total still negative from prior close.
+- **BTBD:** Earnings on 3/30 (138% EBITDA growth) + ongoing merger with Aero Velocity (drone tech). Multiple strategic alliance announcements in recent weeks. Gradual appreciation, not an AH spike pattern. AH change +9.5% (below 10% threshold).
+
+**Paper trade evaluation:**
+
+No candidate meets the learning phase criteria (float <10M AND AH change >10% in at least 2 AH scans):
+- BFRG: +21.7% AH but first appearance in AH scans (only 1 scan). Also a dead-cat bounce, not the AH spike pattern.
+- BTBD: +9.5% AH (below 10% threshold).
+- PFSA: +8.2% AH (below 10% threshold). Never sustained >10% in any scan.
+- All other prior candidates (SKYQ, ICU, TMDE, COCP): flat or fading in AH (<5% AH change).
+
+**Decision: Skip all.** No candidate sustains >10% AH across multiple scans tonight. The day's big moves (SKYQ +102%, TMDE +77%, COCP +48%) all happened during regular session with no AH follow-through. BFRG is a crash recovery bounce, not the AH momentum pattern. Quiet AH night.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
