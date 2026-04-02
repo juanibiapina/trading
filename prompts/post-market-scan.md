@@ -37,9 +37,9 @@ python3 scripts/scan.py --all
 
 - If there ARE results, format them as:
   ```markdown
-  | Ticker | Chart | Close | Day% | AH Chg | AH Price | AH Vol | AvgVol | VRatio | Float | Industry |
-  |--------|-------|-------|------|--------|----------|--------|--------|--------|-------|----------|
-  | TICK   | [TV](https://www.tradingview.com/chart/?symbol=TICK) | $X | +X% | +X% | $X | XK | XK | Xx | XM | Industry |
+  | Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+  |--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+  | TICK   | [TV](https://www.tradingview.com/chart/?symbol=TICK) | $X | +X% | +X% | $X | +X% | XK | XK | Xx | XM | Industry |
   ```
 
 ### Yahoo Finance Data
@@ -69,7 +69,7 @@ For each **new** candidate (not in prior scans), evaluate against the entry crit
 - Volume not fading, first day of unusual activity
 - Note sector and characteristics for pattern tracking (observations in Day Trading.md are NOT skip criteria)
 
-**Learning phase default:** During the learning phase (see Day Trading.md), the purpose of paper trades is data collection. **Do not enter paper trades before the 23:00 CET scan (5:00 PM ET).** The 22:00 and 22:30 scans are for observation only — track how candidates behave but do not enter. At 23:00+ CET, if at least one candidate has float <10M and AH change >10% sustained across 2+ scans, paper trade the best available candidate. When choosing among candidates, prefer those showing a build or hold AH pattern over those that spiked early and are now fading from their peak. Document concerns (extension, weak catalyst, no catalyst on ultra-low float) but enter anyway. A paper trade with noted concerns generates data; a skip generates nothing. Reserve "skip all" for nights when NO candidate sustains >10% AH across multiple scans.
+**Learning phase default:** During the learning phase (see Day Trading.md), the purpose of paper trades is data collection. **Do not enter paper trades before the 23:00 CET scan (5:00 PM ET).** The 22:00 and 22:30 scans are for observation only — track how candidates behave but do not enter. At 23:00+ CET, if at least one candidate has float <10M and AH change >10% in at least 2 after-hours scans (22:00+ CET — regular session appearances don't count toward this requirement), paper trade the best available candidate. When choosing among candidates, prefer those showing a build or hold AH pattern over those that spiked early and are now fading from their peak. Document concerns (extension, weak catalyst, no catalyst on ultra-low float) but enter anyway. A paper trade with noted concerns generates data; a skip generates nothing. Reserve "skip all" for nights when NO candidate sustains >10% AH across multiple scans.
 
 **Regular session caution (21:30 CET / before 4:00 PM ET):** If this scan is running before AH opens, do NOT enter paper trades yet. Flag candidates as "Watch — pending AH confirmation" in the evaluation notes. Only enter a paper trade if the stock reappears in a subsequent AH scan (22:00+ CET) with sustained momentum. Stocks that spike intraday but don't carry into AH tend to fade (e.g., SPRC -18.6%, AEMD -4.6% on March 12).
 

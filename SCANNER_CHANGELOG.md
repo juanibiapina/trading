@@ -34,6 +34,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: float <10M, catalyst required, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
+- **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade
 
 ## Modifiable Files
@@ -46,6 +47,27 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-04-02 — Complete Total% Prompt Integration + Clarify AH Scan Requirement
+
+**Context:** AGPU (Apr 1) was entered at 23:00 CET with +168% Total% from prev close, the fourth entry above +100% extension to produce a loss (-18.2%). The Total% column was added to the scanner terminal on Apr 1 but not to the prompt table format (same gap as Day% in Mar 11 to Mar 12). Meanwhile, AGPU had appeared in 4 scans (21:30, 22:00, 22:30 regular + 23:00 AH) but only 1 was an after-hours scan. The "sustained across 2+ scans" rule was met by counting regular session appearances, which don't measure AH momentum. The agent entered on the first AH data point with no inter-scan trajectory comparison possible.
+
+**Evaluation of previous changes:**
+- Total% Column (2026-04-01): **Working but incomplete integration (1 data point).** Scanner terminal output includes Total%. AGPU at +168% Total% was noted as a concern in the log notes. However, the prompt table format didn't include Total%, so it was computed manually in notes rather than shown consistently in tables. Same integration gap as Day% (Mar 11 scanner, Mar 12 prompt fix). Completing integration now.
+- 23:00 CET Minimum Entry Time (2026-03-31): **Working (2 data points, both compliant).** Mar 31 ELAB entered at 23:10 CET. Apr 1 AGPU entered at 23:00 CET. Rule is being followed consistently.
+- Trajectory Preference (2026-03-31): **Mixed results (2 data points).** Mar 31 ELAB entered on a "build->fade->build" pattern, +8.1% win. Apr 1 AGPU entered on a "build" pattern that was actually a 1-hour spike decelerating, -18.2% loss. The trajectory classification was unreliable for AGPU because only 1 AH data point existed. The "build" was inferred from intra-scan 5m candle data, not from comparing AH% across consecutive scans. With only 1 AH scan, trajectory cannot be reliably classified.
+- Supplementary Day Movers Query (2026-03-26): **Working (3 data points).** Mar 30, Mar 31, Apr 1 regular session scans all produced 54-58 hits. The wider net is functioning as intended.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added Total% column to the AH table format template (between AH Price and AH Vol). Same completion pattern as the Day% prompt integration on Mar 12.
+   - Why: Scanner outputs Total% since Apr 1 but the prompt template still showed the old format without it. The agent computes Total% manually in notes but inconsistently. On Apr 1, AGPU's +168% Total% was buried in evaluation notes instead of being visible in the scan table. Consistent table visibility enables better pattern recognition across scans.
+   - Hypothesis: Next AH scan tables will include a Total% column. The agent will reference Total% consistently when evaluating extension rather than computing it ad-hoc. Measurable: (1) next evening's AH scan tables include Total%, (2) Total% appears in the evaluation for every candidate, not just the one selected for paper trade.
+
+2. **prompts/post-market-scan.md** — Clarified "sustained across 2+ scans" in the learning phase default to specifically require 2+ after-hours scans (22:00+ CET). Regular session appearances don't count toward this requirement.
+   - Why: On Apr 1, AGPU appeared in 4 scans (3 regular + 1 AH) and was entered at the first AH scan (23:00 CET). With only 1 AH data point, trajectory classification was unreliable: the agent classified AGPU as "build" based on intra-scan 5m candle data, but the next scan (23:30) revealed AH% declining from +18.8% to +16.0% (fading). Requiring 2 AH data points ensures trajectory is compared between scans, not inferred within a single scan. This also provides a natural 30-minute delay after first AH appearance, allowing early spikes to reveal whether they sustain or fade.
+   - Hypothesis: Next time a stock first appears in an AH scan, the agent will wait for the next AH scan before entering. Stocks that spike early and fade (like AGPU) will show declining AH% between their first and second AH scans, triggering the trajectory preference against spike->fade. Measurable: (1) no entry on a stock's first AH appearance, (2) when AH% declines between consecutive AH scans, the stock is classified as fading and deprioritized.
+
+**Updated process:** Added "AH change >10% in at least 2 after-hours scans" to Current Process section.
 
 ### 2026-04-01 — Add Total% Column to AH Scanner Output
 
