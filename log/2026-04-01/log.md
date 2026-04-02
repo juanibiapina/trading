@@ -442,3 +442,49 @@ Only AGPU appeared in 2+ evening scans with >10% AH change. No other stock susta
 ### Notes
 
 Both AGPU and BATL show the same pattern: PM prices peak in the first 30 min (04:00-04:30 ET / 10:00-10:30 CET) and fade through later premarket. This reinforces the strategy observation that the earliest PM window is where the best exits are. The AGPU paper trade, if it had been entered at the AH low ($3.53) instead of the AH peak ($4.39), would still be losing now ($3.59).
+
+## Morning Evaluation — 14:00 CET (Pulse 3, FINAL)
+
+### Position Closed
+
+**AGPU — SOLD (paper trade closed)**
+
+| Ticker | Entry | Entry Time | Exit | Exit Time | Shares | P&L | P&L % | Status |
+|--------|-------|------------|------|-----------|--------|-----|-------|--------|
+| AGPU | $4.39 | 23:00 CET (17:00 ET) | $3.59 | 14:00 CET (08:00 ET) | 22 | -$17.60 | -18.2% | ❌ Loss |
+
+- Exit price: $3.59 (premarket at 08:00 ET)
+- Realized P&L: (3.59 - 4.39) × 22 = **-$17.60 (-18.2%)**
+- Position size: ~$96.58 entry → ~$78.98 exit
+
+**Total Paper P&L: -$17.60**
+
+**No open positions.** Next evening trade is unblocked.
+
+### Price Changes Since Pulse 2
+
+**AGPU** flat: $3.59 (Pulse 2) → $3.59 (now). Ranged $3.47-$3.65 between 06:00-08:00 ET, essentially dead. No recovery attempt. Stock settled just above regular close ($3.56, +0.8%).
+
+**BATL** (today's winner) rebounded: $4.89 (Pulse 2) → $5.38 (now, +39.7% from close). After fading from $5.50 to $4.89 between Pulse 1 and 2, it bounced back to $5.38 by 08:00 ET. Oil sector momentum resumed after the mid-PM dip.
+
+### AGPU Trade Post-Mortem
+
+Full lifecycle of the paper trade:
+
+| Phase | Time (ET) | Price | Notes |
+|-------|-----------|-------|-------|
+| Entry | 17:00 (AH) | $4.39 | Entered on "building" AH pattern |
+| AH Peak | 16:55 | $4.41 | Peaked 5 min before entry |
+| AH Fade | 17:10-18:00 | $3.71-3.86 | Gave back >50% of AH gains |
+| PM Open | 04:00 | $4.26 | Brief bounce at PM open |
+| PM Peak | 04:05 | $4.26 | Highest PM print |
+| PM Fade | 04:30-06:00 | $4.10→3.59 | Steady decline |
+| Exit | 08:00 | $3.59 | Position closed |
+
+**Key takeaway:** Even if the exit had been at the PM peak ($4.26 at 04:05 ET), the trade would still have lost -3.0%. The entry at $4.39 was the problem, not the exit timing. Entering at the AH peak on a stock already +168% from prev close left no room for profit.
+
+### Notes
+
+1. **BATL rebound is notable.** After fading from $5.50 to $4.89 between Pulses 1-2, it bounced back to $5.38 by Pulse 3. This contradicts the "PM fades through the session" pattern observed earlier. Macro-driven moves (geopolitical catalysts) may have different intraday dynamics than stock-specific catalysts.
+
+2. **AGPU confirms the extended-entry pattern.** This is the fourth paper/real trade where entering an already-extended stock resulted in a loss (PZG at +97%, SER at +69%, MNDR at +98%, now AGPU at +168%). The pattern is consistent: by the time the stock has already moved >50% from prev close, most of the momentum is exhausted.
