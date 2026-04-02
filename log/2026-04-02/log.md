@@ -214,6 +214,52 @@ BFRG is the only candidate meeting criteria (float <10M, AH >10% in 2 AH scans).
 
 Entry: $1.40 (current AH price). Shares: 78 (~€100 at ~$1.10/€).
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**AH scan (2 hours into after-hours). Paper trade eligible.**
+
+Scanner returned 3 AH hits (scanner snapshot caught PFSA pre-spike at $0.83; actual AH price at 17:00 ET was $1.08):
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $1.20 | -25.9% | +14.9% | $1.38 | -14.9% | 3.5M | 65.4M | 0.1x | 9.1M | Packaged Software |
+| BTBD | [TV](https://www.tradingview.com/chart/?symbol=BTBD) | $1.89 | +7.4% | +10.1% | $2.08 | +18.2% | 385K | 660K | 0.6x | 3.2M | Restaurants |
+| PFSA | [TV](https://www.tradingview.com/chart/?symbol=PFSA) | $0.76 | +31.0% | +42.1% | $1.08 | +86.6% | 251K | 353K | 0.7x | 1.3M | Financial Conglomerates |
+
+**Changes from 23:30 scan:**
+
+- **PFSA: MASSIVE late spike.** Was $0.84 at 16:45 ET, spiked to $1.09 at 16:55 (+29.8% in one 5-min candle), holding at $1.08 at 17:00. AH change from close now +42.1% (was +10.8% at 23:30). AH peak was $1.09 (+43.4% from close, +88.4% from prev close). Ultra-low 1.3M float. This is the strongest AH momentum of the night by far.
+- **BFRG:** Continuing to fade. Now $1.38 (+14.9% AH) vs $1.40 (+16.7%) at 23:30. Steady decline from AH peak of $1.56 (+30%). Paper trade entry at $1.40 is now underwater at -1.4%.
+- **BTBD:** First scan above +10% AH. Holding $2.07-$2.10 range. $2.10 peak at 16:55. Gradual, not spike pattern. Has earnings catalyst (3/30).
+
+**Prior candidates update:**
+- SKYQ: AH $4.85 (+91.7% from prev close, but only +1.4% from today's close $5.10). Fading from AH high of $5.23. No AH follow-through.
+- TMDE: AH $1.82 (+71.7% from prev close). Spiked to $1.86 early AH, oscillating $1.77-$1.86. Regular session move, not AH.
+- ICU: AH $4.32 (+21.3% from prev close). Sparse AH trading, only 4 prints in 1 hour. Dead.
+- COCP: AH $1.44 (+41.2% from prev close). Slowly fading from close of $1.51. No AH momentum.
+- IOTR: AH $2.50. Dead — only 4 prints, no movement.
+
+**Catalyst re-search — PFSA (4 searches):**
+1. Earnings: No earnings reported today.
+2. Press releases: No same-day press releases found. Recent news is Lumee oxygen monitoring launches and debt restructuring from earlier dates.
+3. SEC filings: No new 8-K today. Delayed annual report and convertible note restructuring are prior period.
+4. General news: Bitget article describes today's +31.7% regular session surge as "intraday volatility" with no catalyst. Company faces Nasdaq delisting risk (deadline ~April 26, 2026) and did 1-for-75 reverse split in Feb 2026.
+**Result: Still no catalyst found.** The late AH spike ($0.84 → $1.09 in one candle) on ultra-low 1.3M float with no news suggests speculative activity or low-float squeeze.
+
+**Paper trade evaluation:**
+
+| Candidate | Float <10M | AH >10% in 2+ scans | Pattern | Decision |
+|-----------|-----------|---------------------|---------|----------|
+| PFSA | ✅ 1.3M | ✅ (23:30: +10.8%, 00:00: +42.1%) | Late spike, building | Meets criteria but position blocked |
+| BFRG | ✅ 9.1M | ✅ (3 scans) | Fading dead-cat bounce | Already entered |
+| BTBD | ✅ 3.2M | ❌ (1 scan at +10.1%) | Gradual hold | Below threshold (1 scan) |
+
+**PFSA now meets all learning phase criteria** (float <10M, AH >10% in 2+ AH scans, building pattern). It is clearly the stronger candidate tonight — ultra-low float, massive late spike, building momentum. However, BFRG paper trade was already entered at 23:30.
+
+**Learning note:** The 23:30 entry was premature. BFRG was the only qualifying candidate at that time, but it was a fading dead-cat bounce. Waiting 30 more minutes would have revealed PFSA as a much stronger pick. This supports being patient with the "first qualifying candidate" rule — late AH spikes (16:50+ ET) can produce better setups than early AH bounces. However, PFSA has no catalyst (see "No catalyst = no follow-through" observation), so tracking its overnight behavior will test whether ultra-low float momentum can overcome the lack of a news driver.
+
+**Tracking PFSA for comparison:** Entry would be $1.08 at 00:00 CET. Shares: 85 (~€100 at ~$1.08/€). Will compare PM outcome vs BFRG.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
