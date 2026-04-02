@@ -1,5 +1,10 @@
 Run a morning evaluation of last night's post-market scanning session.
 
+**Schedule awareness:** This prompt runs as a premarket pulse at 10:20, 12:00, and 14:00 CET (3 pulses). Check `date` to determine which pulse this is.
+- **Pulse 1 (10:20 CET):** Full evaluation — find today's winner, diagnose scanner, check paper trade P&L.
+- **Pulse 2 (12:00 CET):** Update paper trade P&L, note any significant price changes since pulse 1.
+- **Pulse 3 (14:00 CET) — LAST PULSE:** Update paper trade P&L and **close all positions**. Sell any open paper trade at the current premarket price. Record the exit in the log. An open position blocks the next evening trade.
+
 **Primary goal: find today's winner and diagnose the scanner.**
 
 The most important question is: what stock IS exploding in premarket right now? There is almost always one. Find it first — independently, without looking at last night's watchlist — then check if our evening scanner would have caught it. This is the baseline test: if the scanner can't even detect the winners, no entry rules will make the strategy work. See "Learning Phase" in Day Trading.md for the full reasoning.
