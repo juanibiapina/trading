@@ -161,7 +161,61 @@ No candidate meets the learning phase criteria (float <10M AND AH change >10% in
 
 **Decision: Skip all.** No candidate sustains >10% AH across multiple scans tonight. The day's big moves (SKYQ +102%, TMDE +77%, COCP +48%) all happened during regular session with no AH follow-through. BFRG is a crash recovery bounce, not the AH momentum pattern. Quiet AH night.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**AH scan (1.5 hours into after-hours). Paper trade eligible.**
+
+Scanner returned 4 AH hits:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $1.20 | -25.9% | +16.7% | $1.40 | -13.6% | 3.2M | 65.3M | 0.0x | 9.1M | Packaged Software |
+| BTBD | [TV](https://www.tradingview.com/chart/?symbol=BTBD) | $1.89 | +7.4% | +6.3% | $2.01 | +14.2% | 329K | 654K | 0.5x | 3.2M | Restaurants |
+| PFSA | [TV](https://www.tradingview.com/chart/?symbol=PFSA) | $0.76 | +31.0% | +10.8% | $0.84 | +45.2% | 239K | 352K | 0.7x | 1.3M | Financial Conglomerates |
+| SRFM | [TV](https://www.tradingview.com/chart/?symbol=SRFM) | $1.16 | -0.9% | +6.0% | $1.23 | +5.1% | 59K | 1.8M | 0.0x | 50.9M | Airlines |
+
+**Changes from 23:00 scan:**
+- **BFRG:** Fading further. Was $1.46 (+21.7% AH) at 23:00, now $1.40 (+16.7%). AH peak was ~$1.56 (+30%), steadily fading. Still >10% AH in 2 consecutive scans (23:00 and 23:30).
+- **BTBD:** Fading. Was $2.07 (+9.5%) at 23:00, now $2.01 (+6.3%). Below 10% threshold.
+- **PFSA:** Building. Was $0.82 (+8.2%) at 23:00, now $0.84 (+10.8%). Just crossed 10% AH for the first time. Oscillating $0.80-$0.84 range. Only 1 scan at >10%.
+- **SRFM** (new): Airlines, 50.9M float (way over 10M limit). Skip: float too high.
+
+**Prior candidates update (from check-prices):**
+- SKYQ: AH $5.14 (+1.4% from close). Flat. No AH follow-through on +102% day.
+- ICU: AH $4.24 (-1.6% from close). Fading.
+- TMDE: AH $1.79 (-4.8% from close). Continuing to fade.
+- COCP: AH $1.46 (-3.3% from close). Flat.
+- IOTR: AH $2.51 (+0.4% from close). Dead.
+
+**Catalyst search — PFSA (4 searches, just crossed >10% AH):**
+1. Earnings: No earnings reported today.
+2. Press releases: No same-day press release found. Recent news includes Lumee oxygen monitoring launch and debt restructuring, but those are from earlier dates.
+3. SEC filings: No new 8-K found today. Recent filings relate to delayed annual report and convertible note restructuring.
+4. General news: Bitget article describes today's +31.7% surge as "intraday volatility" with no specific catalyst identified. Company faces Nasdaq delisting risk and recently did a 1-for-75 reverse split.
+**Result: No catalyst found.** Move appears to be low-float volatility without news driver.
+
+**Paper trade evaluation:**
+
+| Candidate | Float <10M | AH >10% in 2+ scans | Pattern | Decision |
+|-----------|-----------|---------------------|---------|----------|
+| BFRG | ✅ 9.1M | ✅ (23:00: +21.7%, 23:30: +16.7%) | Fading dead-cat bounce | **Enter with concerns** |
+| PFSA | ✅ 1.3M | ❌ (only 23:30: +10.8%) | Building but 1 scan only | Watch |
+| BTBD | ✅ 3.2M | ❌ (never >10%) | Gradual, not spike | Skip: below threshold |
+| SRFM | ❌ 50.9M | ❌ (+6%) | — | Skip: float too high |
+
+BFRG is the only candidate meeting criteria (float <10M, AH >10% in 2 AH scans). Entering per learning phase default: "A paper trade with noted concerns generates data; a skip generates nothing."
+
+**Concerns documented:**
+- Dead-cat bounce, NOT the standard AH spike pattern. Crashed -26% during regular session, bouncing in AH. Total from previous close is still -13.6%.
+- No new catalyst. Original catalyst was March 24 pharma partnership. Today's crash and bounce appear to be continuation of post-catalyst volatility.
+- Fading from AH peak ($1.56 → $1.46 → $1.40). Not building or holding.
+- VRatio 0.0x: AH volume (3.2M) is negligible vs 65M avg daily volume. Not unusual activity.
+- This trade tests whether the overnight hold works on dead-cat bounces. Expectation: likely fades further. Data point either way.
+
+Entry: $1.40 (current AH price). Shares: 78 (~€100 at ~$1.10/€).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| BFRG | $1.40 | 23:30 CET | 78 | Dead-cat bounce test. Only candidate with >10% AH in 2 scans. Crashed -26% reg session, bouncing +17% AH. No new catalyst, fading from peak. Learning phase data collection. |
