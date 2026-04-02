@@ -315,3 +315,107 @@ Hit new AH low at $3.71 (17:10), slight bounce to $3.86. Paper trade at $4.39 is
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | AGPU | $4.39 | 17:00 ET | 22 | $12M GPU contracts announced today, Tier A catalyst. Ultra-low 53K float. AH building pattern. Extended (+168% from prev close) but strong catalyst. |
+
+## Morning Evaluation — 10:20 CET (Pulse 1)
+
+### Today's Winner
+
+**BATL** — Oil & Gas Production (Battalion Oil Corporation)
+- Catalyst: **Trump primetime address on Iran war** (overnight Apr 1-2). Vowed to "hit Iran hard in coming weeks," threatened to bomb Iran "back to Stone Ages" if Strait of Hormuz stays blocked. Iran denied seeking ceasefire. Oil prices surged on escalation fears. This reversed the prior day's ceasefire optimism that had pushed oil stocks down.
+- Previous Close: $3.90
+- Regular Close (Apr 1): $3.85 (-1.3% from prev close, oil sold off on ceasefire hopes)
+- AH last night: $3.68-$3.83 range, last trade $3.74 (-2.9% from close). **Flat/declining, no AH signal.**
+- Premarket now: $5.50 (+42.9% from close), peaked at $6.47 (+68.1% from close) at 04:00 ET
+- Hypothetical P&L (close $3.85 to PM $5.50): +42.9% — but **no valid AH entry existed**
+- Float: 15.6M | Market Cap: $70.3M
+
+**Other oil stocks surging in sympathy (sector-wide move):**
+- EONR (EON Resources): PM $0.95 (+14.5% from $0.83 prev close), peaked at $1.03 (+24%)
+- TPET (Trio Petroleum): PM $0.82 (+18.8% from $0.69 prev close), peaked at $0.90 (+30%)
+
+**Scanner Diagnostic:**
+- Detectable at screening time (~22:15 CET)? **NO**
+- Why: BATL was flat/declining in AH ($3.68-$3.83 vs $3.85 close). Zero AH momentum. The catalyst (Trump's Iran speech) came **after AH closed** (speech was evening US time, after 8 PM ET / 2 AM CET). By the time PM opened at 4 AM ET, oil had already surged overnight.
+- Scanner gap: **Macro overnight events bypass AH entirely.** The scanner can only detect stock-specific catalysts that drive AH momentum. Geopolitical catalysts that break overnight (between 8 PM ET and 4 AM ET) create PM-only moves with no AH signal. No scanner change could have caught this within the AH window.
+- This is a **different pattern** from what our strategy targets: not AH entry -> PM exit, but overnight gap -> PM spike. No entry opportunity existed in AH.
+
+### Baseline Tracking
+
+- Days tracked: 9
+- Winners detected by scanner: 7/9 (**77.8%**) — HIT (Mar 17), SUNE (Mar 18), DRMA (Mar 19), UGRO (Mar 23), NXTT (Mar 24), POLA (Mar 30), BCG (Mar 31). NOT detected: EEIQ (Mar 25), BATL (Apr 1).
+- Winner selected for paper trade: 1/9 (**11.1%**) — only NXTT (Mar 24) was paper traded as winner
+- Target: >80% detection
+- Status: **BASELINE NOT MET** (77.8%, dropped below 80%)
+- Note: BATL miss is structural (overnight macro catalyst, no AH signal). EEIQ (Mar 25) was a stock-specific miss. If we exclude macro-only moves, detection is 7/8 (87.5%).
+
+### Retrospective Scan Results
+
+**After-hours scan (forced):** 0 hits — confirms no AH activity for any stock last night.
+
+**Premarket scan (live):** 5 hits
+
+| Ticker | Close | PM Chg% | PM Price | PM Vol | AvgVol | VRatio | Float | MCap | Industry |
+|--------|-------|---------|----------|--------|--------|--------|-------|------|----------|
+| BATL | $3.85 | +36.5% | $5.25 | 1.2M | 14.6M | 0.1 | 15.6M | $70.3M | Oil & Gas Production |
+| TPET | $0.69 | +15.2% | $0.79 | 944K | 17.1M | 0.1 | 25.0M | $21.9M | Integrated Oil |
+| EONR | $0.80 | +25.6% | $1.01 | 357K | 20.5M | 0.0 | 39.8M | $40.2M | Integrated Oil |
+| TMDE | $1.06 | +15.1% | $1.22 | 130K | 925K | 0.1 | — | $26.2M | Wholesale Distributors |
+| AGPU | $3.56 | +14.6% | $4.08 | 124K | 9.2M | 0.0 | 53K | $5.5M | Medical Specialties |
+
+3 of 5 PM movers are oil/gas stocks, driven by the same macro catalyst. Only AGPU and TMDE are non-oil.
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| AGPU | $4.39 | 23:00 CET (17:00 ET) | $3.89 | -$11.00 | -11.4% | ❌ Losing |
+
+- Shares: 22 (~$96.58 position)
+- Entry: $4.39 (AH peak area at 23:00 CET)
+- Current PM price: $3.89 (10:20 CET / 04:20 ET)
+- Unrealized P&L: (3.89 - 4.39) * 22 = **-$11.00 (-11.4%)**
+
+AGPU entered at the AH peak ($4.41 was the high, entry was $4.39). The "building" pattern that justified entry immediately reversed. Stock faded through the rest of AH to $3.71 low, and PM is bouncing around $3.89-4.10. Still above the $3.56 regular close (+9.3%) but well below entry.
+
+**Total Paper P&L: -$11.00**
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 times (21:30, 22:00, 22:30, 23:00, 23:30, 00:30 CET)
+- Candidates found: ~15 unique tickers across all scans
+- AH candidates with sustained >10% gains: 1 (AGPU only)
+- Retrospective matches (evening vs PM movers): 1/5 (AGPU appeared in both evening scans and PM scan. BATL, TPET, EONR, TMDE were not in evening scans.)
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| BATL | flat (-2.9%) | Zero AH movement. Macro catalyst (Trump Iran speech) came after AH closed. | N/A — no AH entry possible |
+| EONR | flat (-0.8%) | Same — no AH movement, overnight oil catalyst | N/A — no AH entry possible |
+| TPET | flat (-2.0%) | Same — no AH movement, overnight oil catalyst | N/A — no AH entry possible |
+
+No significant missed opportunities from scanner failure. All misses are structural: the catalyst came after the AH window.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| AGPU | $4.41 (+23.9%) | 16:55 ET | **Spike→fade**: peaked at +23.9% within 1hr, faded to +4.2% by 17:10, bounced to +8.4% at AH close | $3.89 (+9.3%) | -11.8% | +9.3% | ❌ AH fade continued. PM bounce but well below entry. |
+
+Only AGPU appeared in 2+ evening scans with >10% AH change. No other stock sustained >10% AH gains across multiple scans.
+
+**Pattern observation:** AGPU's spike→fade AH trajectory predicted poor follow-through. The stock peaked within the first hour of AH, then gave back over half its gains. This confirms the pattern seen in CYCN the same evening (spiked to +29% AH, faded to +4% by scan close). When AH momentum doesn't sustain through the full 4-hour AH session, PM follow-through is weak.
+
+### Notes
+
+1. **Macro catalysts bypass the AH scanner entirely.** Oil stocks surged 20-68% in premarket from an overnight geopolitical catalyst with zero AH signal. This is a structural limitation of the AH->PM strategy: overnight news creates PM-only moves with no AH entry opportunity. These moves are not addressable within the current strategy framework.
+
+2. **AGPU paper trade lessons:**
+   - Entered at AH peak during an apparent "build" that reversed immediately
+   - Stock was already +168% from prev close when entered — chasing extended stocks continues to produce losses (see: PZG, SER in earlier trades)
+   - The "building" AH pattern (higher lows for ~1 hour) was a false signal — too short a window to confirm
+   - Possible improvement: require AH momentum to sustain for >2 hours before entering, or require a pullback and recovery pattern rather than buying the build
+
+3. **Today's PM movers are predominantly oil sector** (3/5 hits). This is a sector rotation event driven by Iran war escalation. These stocks (float 15-40M) are much larger than the low-float micro-caps our strategy typically targets. The scanner correctly filtered them out in AH (they weren't moving), but they dominate PM due to the overnight macro event.
+
+4. **Detection rate dropped below 80% target** (77.8%). However, if we categorize misses: 1 miss (EEIQ) was a scanner gap, 1 miss (BATL) was a structural limitation (overnight macro). Adjusted for structural misses: 7/8 (87.5%) scanner effectiveness on addressable opportunities.
