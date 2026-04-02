@@ -419,3 +419,26 @@ Only AGPU appeared in 2+ evening scans with >10% AH change. No other stock susta
 3. **Today's PM movers are predominantly oil sector** (3/5 hits). This is a sector rotation event driven by Iran war escalation. These stocks (float 15-40M) are much larger than the low-float micro-caps our strategy typically targets. The scanner correctly filtered them out in AH (they weren't moving), but they dominate PM due to the overnight macro event.
 
 4. **Detection rate dropped below 80% target** (77.8%). However, if we categorize misses: 1 miss (EEIQ) was a scanner gap, 1 miss (BATL) was a structural limitation (overnight macro). Adjusted for structural misses: 7/8 (87.5%) scanner effectiveness on addressable opportunities.
+
+## Morning Evaluation — 12:00 CET (Pulse 2)
+
+### Paper Trade P&L Update
+
+| Ticker | Entry | Entry Time | Pulse 1 (10:20) | Current (12:00) | P&L | P&L % | Status |
+|--------|-------|------------|------------------|-----------------|-----|-------|--------|
+| AGPU | $4.39 | 23:00 CET | $3.89 (-11.4%) | $3.59 | -$17.60 | -18.2% | ❌ Losing |
+
+- Shares: 22 (~$96.58 position)
+- Unrealized P&L: (3.59 - 4.39) × 22 = **-$17.60 (-18.2%)**
+
+**Total Paper P&L: -$17.60**
+
+### Price Changes Since Pulse 1
+
+**AGPU** faded further: $3.89 (Pulse 1) → $3.59 (now). Dropped sharply at 05:00 ET from $3.82 to $3.65, then continued drifting lower to $3.59. The PM bounce seen at 04:00 ET ($4.10) has completely unwound. Stock is now barely above regular close ($3.56, +0.8%).
+
+**BATL** (today's winner) also selling off: $5.50 (Pulse 1) → $4.89 (now, +27% from close). Peaked at $5.49 at 04:20 ET, has sold off steadily since. Lost ~11% from PM peak. Oil sector enthusiasm fading as PM progresses.
+
+### Notes
+
+Both AGPU and BATL show the same pattern: PM prices peak in the first 30 min (04:00-04:30 ET / 10:00-10:30 CET) and fade through later premarket. This reinforces the strategy observation that the earliest PM window is where the best exits are. The AGPU paper trade, if it had been entered at the AH low ($3.53) instead of the AH peak ($4.39), would still be losing now ($3.59).
