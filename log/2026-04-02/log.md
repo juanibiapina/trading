@@ -413,3 +413,44 @@ Scanner returned 3 AH hits:
 4. **Late AH movers exist but are rare.** VVOS spiked at 01:30-02:00 CET. Extending the scanning window would catch these but adds fatigue. Track frequency before deciding.
 
 5. **Oil sector cluster in premarket.** BATL, SKYQ, TPET, EONR, USEG, INDO all running. Macro catalyst likely. These are PM-only moves (no AH spike), so they don't fit our AH→PM pattern but worth noting for sector awareness.
+
+## Morning Evaluation — 12:00 CET (Pulse 2)
+
+**No significant changes since Pulse 1 (10:20 CET).** It is 6:00 AM ET. Neither BFRG nor PFSA has traded in premarket yet. These micro-caps often don't see premarket prints until 7:00-8:00 AM ET.
+
+### Paper Trade P&L (unchanged)
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| BFRG | $1.40 | 23:30 CET | $1.29 (AH end) | -€7.80 | -7.9% | 📉 Losing |
+
+**Total Paper P&L: -€7.80**
+
+*Price is end-of-AH (20:00 ET Apr 2). No premarket prints on BFRG yet.*
+
+**Comparison trade (PFSA, tracked not traded):**
+
+| Ticker | Hyp. Entry | Entry Time | Current | Hyp. P&L | P&L % |
+|--------|------------|------------|---------|----------|-------|
+| PFSA | $1.08 | 00:00 CET | $1.26 (AH end) | +€13.91 | +16.7% |
+
+### Premarket Scan (06:00 AM ET)
+
+Oil/energy sector dominating premarket. No movement on our AH candidates:
+
+| Ticker | PM Chg% | PM Price | PM Vol | Sector |
+|--------|---------|----------|--------|--------|
+| SKYQ | +120.2% | $5.57 | 76.6M | Integrated Oil |
+| COCP | +67.6% | $1.71 | 52.9M | Pharmaceuticals |
+| TMDE | +59.5% | $1.69 | 57.4M | Wholesale Distributors |
+| BATL | +34.3% | $5.17 | 16.3M | Oil & Gas Production |
+| SELX | +33.0% | $0.47 | 27.9M | Financial Conglomerates |
+| TPET | +23.7% | $0.85 | 23.2M | Integrated Oil |
+
+*Note: PM Chg% is from previous close (Apr 1), not from Apr 2 close. These are multi-day moves, not AH→PM plays.*
+
+### Notes
+
+- Pulse 3 (14:00 CET / 8:00 AM ET) will be the final update. BFRG should have premarket trades by then.
+- If BFRG has no PM trades by Pulse 3, will close at best available price (AH end $1.29).
+- Key question for Pulse 3: does BFRG's dead-cat bounce hold or fade further in PM?
