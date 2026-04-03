@@ -454,3 +454,36 @@ Oil/energy sector dominating premarket. No movement on our AH candidates:
 - Pulse 3 (14:00 CET / 8:00 AM ET) will be the final update. BFRG should have premarket trades by then.
 - If BFRG has no PM trades by Pulse 3, will close at best available price (AH end $1.29).
 - Key question for Pulse 3: does BFRG's dead-cat bounce hold or fade further in PM?
+
+## Morning Evaluation — 14:00 CET (Pulse 3 — FINAL)
+
+**Closing all positions.** No premarket trades on BFRG or PFSA at 8:00 AM ET. These micro-caps have not printed in today's premarket session.
+
+### Paper Trade P&L — CLOSED
+
+| Ticker | Entry | Entry Time | Exit | Exit Time | P&L | P&L % | Status |
+|--------|-------|------------|------|-----------|-----|-------|--------|
+| BFRG | $1.40 | 23:30 CET | $1.29 | AH end (no PM trades) | -€7.80 | -7.9% | ❌ Loss |
+
+**Exit rationale:** No premarket prints on BFRG by 08:00 ET. Closed at end-of-AH price ($1.29 at 19:59 ET Apr 2). Position must be closed to unblock tonight's evening session.
+
+**Total Paper P&L: -€7.80**
+
+**Comparison trade (PFSA, tracked not traded):**
+
+| Ticker | Hyp. Entry | Entry Time | Current | Hyp. P&L | P&L % |
+|--------|------------|------------|---------|----------|-------|
+| PFSA | $1.08 | 00:00 CET | $1.26 (AH end) | +€13.91 | +16.7% |
+| PFSA | $0.84 | 23:30 CET | $1.26 (AH end) | +€41.92 | +50.0% |
+
+**Swing vs PFSA: -€49.72.** Dead-cat bounce (BFRG) vs building momentum (PFSA) was a clear selection error, confirmed by outcome.
+
+### Position Status
+
+All positions **CLOSED**. Ready for tonight's evening screening session.
+
+### Notes
+
+1. **No premarket liquidity on micro-caps.** Neither BFRG nor PFSA traded in premarket (4:00-8:00 AM ET). This is a recurring pattern for stocks under $2 with small float. The AH→PM→exit strategy may not work well for these ultra-micro-caps because there's no premarket exit opportunity. The AH price IS the exit price.
+2. **BFRG dead-cat bounce: confirmed loss.** Entry at $1.40 (23:30 CET), AH faded steadily to $1.29. Never recovered. The dead-cat bounce pattern is now 3+ observations of failure. Strengthen the rule: skip stocks that crashed >15% in regular session.
+3. **Key lesson for tonight:** Wait for building momentum patterns. The "first qualifying candidate" rule at 23:30 was too early. PFSA emerged as clearly stronger 30 minutes later but was blocked. Consider: minimum wait until 00:00 CET, or allow position replacement when a clearly superior candidate appears.
