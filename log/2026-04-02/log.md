@@ -299,3 +299,117 @@ Scanner returned 3 AH hits:
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | BFRG | $1.40 | 23:30 CET | 78 | Dead-cat bounce test. Only candidate with >10% AH in 2 scans. Crashed -26% reg session, bouncing +17% AH. No new catalyst, fading from peak. Learning phase data collection. |
+
+## Morning Evaluation — 10:20 CET (Pulse 1)
+
+### Today's Winner
+
+**PFSA (Profusa, Inc.)** — Financial Conglomerates / Medical Devices
+- Catalyst: None found. Low-float speculative squeeze. Company faces Nasdaq delisting risk (deadline ~Apr 26), 1-for-75 reverse split in Feb 2026.
+- Previous Close (Apr 1): $0.58
+- Apr 2 Close: $0.76 (+31% regular session)
+- AH last night: peaked at $1.46 (+92% from close) at ~18:20 ET (00:20 CET), ended AH at $1.26 (+66%)
+- Premarket now: no PM trades yet (4:20 AM ET, PM just opened)
+- Hypothetical P&L (AH entry $0.84 at 23:30 CET → AH end $1.26): +50%
+- Float: 1.3M | Market Cap: ~$1M
+
+**AH price action:** Base at $0.80-$0.84 for 50 min (16:00-16:50 ET), then spike to $1.09 at 16:55, stair-step up through $1.20 → $1.31 → $1.46 peak at 18:20 ET, gradual fade to $1.26 by end of AH.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- First appeared in 22:00 CET scan (+31% day close, no AH data yet)
+- AH tracking: 22:30 (+6.7%), 23:00 (+8.2%), 23:30 (+10.8%), 00:00 (+42.1%), 00:30 (+84.2%)
+- Why wasn't it traded: BFRG entered at 23:30 as first qualifying candidate (>10% AH in 2 scans). PFSA only hit >10% at 23:30 (1 scan). By 00:00 when PFSA was clearly the winner, BFRG was already blocking.
+- Scanner gap: Selection rule picked a fading dead-cat bounce (BFRG) over waiting for a building momentum play (PFSA). Need rule refinement: prefer building patterns over fading bounces, or allow replacing a clearly fading position with a stronger candidate.
+
+### Baseline Tracking
+
+- Days tracked: 10
+- Winners detected by scanner: 8/10 (**80%**) — HIT (Mar 17), SUNE (Mar 18), DRMA (Mar 19), UGRO (Mar 23), NXTT (Mar 24), POLA (Mar 30), BCG (Mar 31), PFSA (Apr 2). NOT detected: EEIQ (Mar 25), BATL (Apr 1).
+- Winner selected for paper trade: 1/10 (**10%**) — only NXTT (Mar 24) was paper traded as winner. Tonight BFRG was traded instead of PFSA.
+- Target: >80% detection
+- Status: **BASELINE AT THRESHOLD** (80%, borderline)
+
+### Retrospective Scan Results
+
+**Forced AH scan (03:20 ET):**
+
+| Ticker | Close | AH Chg | AH Price | Total% | AH Vol | Float | Industry |
+|--------|-------|--------|----------|--------|--------|-------|----------|
+| PFSA | $0.76 | +66.2% | $1.26 | +117.7% | 7.9M | 1.3M | Financial Conglomerates |
+| BFRG | $1.20 | +7.5% | $1.29 | -20.4% | 4.3M | 9.1M | Packaged Software |
+| BTBD | $1.89 | +18.0% | $2.23 | +26.7% | 760K | 3.2M | Restaurants |
+| ORIS | $0.66 | +14.6% | $0.75 | +27.5% | 138K | 1.1M | Food: Major Diversified |
+| VVOS | $1.32 | +21.2% | $1.60 | +23.1% | 124K | 7.9M | Medical Specialties |
+| GMEX | $0.52 | +6.2% | $0.55 | +8.9% | 58K | — | Specialty Stores |
+
+**Forced PM scan (03:20 ET):**
+
+| Ticker | Close | PM Price | PM Chg% | PM Vol | Float | Industry |
+|--------|-------|----------|---------|--------|-------|----------|
+| SKYQ | $5.10 | $5.57 | +120.2% | 76.6M | — | Integrated Oil |
+| TMDE | $1.88 | $1.69 | +59.5% | 57.4M | — | Wholesale Distributors |
+| COCP | $1.51 | $1.71 | +67.6% | 52.9M | 9.1M | Pharmaceuticals |
+| BATL | $4.21 | $5.17 | +34.3% | 16.3M | 15.6M | Oil & Gas Production |
+| TPET | $0.74 | $0.85 | +23.7% | 23.2M | 25.0M | Integrated Oil |
+| DLXY | $0.58 | $0.55 | +17.0% | 10.1M | 4.7M | Wholesale Distributors |
+
+*Note: PM Chg% is from previous close (Apr 1), not from Apr 2 close. Multiple oil/energy stocks running in PM, suggesting macro catalyst (tariffs/OPEC?).*
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| BFRG | $1.40 | 23:30 CET | $1.29 | -€7.80 | -7.9% | 📉 Losing |
+
+**Total Paper P&L: -€7.80**
+
+*Note: $1.29 is the end-of-AH price. PM just opened (4:20 AM ET), no PM trades on BFRG yet. Will update at Pulse 2.*
+
+**Comparison trade (PFSA, tracked not traded):**
+
+| Ticker | Hyp. Entry | Entry Time | Current | Hyp. P&L | P&L % |
+|--------|------------|------------|---------|----------|-------|
+| PFSA | $1.08 | 00:00 CET | $1.26 | +€13.91 | +16.7% |
+| PFSA | $0.84 | 23:30 CET | $1.26 | +€41.92 | +50.0% |
+
+**Swing: -€49.72 between BFRG and PFSA (23:30 entry).** The dead-cat bounce vs building momentum was a clear selection error.
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 times (21:30 - 00:30 CET)
+- Candidates found: 15+ unique tickers (11 in first scan, new ones each subsequent)
+- AH qualifying candidates (>10% AH in 2+ scans): 2 (BFRG, PFSA)
+- Winner (PFSA) detected: **YES**, tracked from 22:00 CET
+- Winner traded: **NO** (BFRG entered first)
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| VVOS | +27.3% peak | Late AH spike (19:30-20:00 ET = 01:30-02:00 CET). Spiked from $1.32 to $1.68 in last 30 min of AH. Our last scan was 00:30 CET (18:30 ET). | TBD — currently at $1.59 end of AH. No PM data yet. |
+| ORIS | +14.6% | Not in any evening scan. Float 1.1M, 138K AH vol. Too low volume to trigger scanner thresholds. | TBD — at $0.75 end of AH. |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current (end AH) | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|-------------------|-----------|------------|---------|
+| PFSA | $1.46 (+92%) | 00:20 CET | **Build**: +6.7% → +10.8% → +42.1% → +84.2% | $1.26 | -13.7% | +65.8% | Strongest mover; building pattern held. Faded from peak but still massively up. |
+| BFRG | $1.56 (+30%) | 22:00 CET | **Spike→fade**: peaked early AH, steady decline in every scan | $1.29 | -17.3% | +7.5% | Dead-cat bounce confirmed. Faded from +30% to +7.5% over 4 hours. |
+
+*No other stock sustained >10% AH in 2+ evening scans.*
+
+### Notes
+
+1. **Selection problem, not detection problem.** The scanner found PFSA early (22:00 CET). The issue was that BFRG met criteria first (>10% in 2 scans at 23:00) and was entered at 23:30. PFSA only crossed 10% at 23:30. The "first qualifying candidate" rule is too aggressive. Possible fixes:
+   - Wait until at least 00:00 CET (18:00 ET) before entering, to let more candidates emerge
+   - Add a "building vs fading" filter: only enter candidates whose AH% is increasing across scans, not decreasing
+   - Add a "dead-cat bounce" filter: skip stocks where total% from previous close is still negative (BFRG was -14% total when entered)
+
+2. **Dead-cat bounce = poor candidate (confirmed again).** BFRG crashed -26% regular session, bounced in AH, but never recovered to previous close. This is now 2+ observations of this pattern failing. Consider a hard rule: "Skip stocks that crashed >15% in regular session, even if AH bounce looks strong."
+
+3. **No-catalyst stock (PFSA) worked here.** Against the "no catalyst = no follow-through" observation, PFSA ran +92% AH with no news. Ultra-low float (1.3M) drove the move. The observation may need nuance: no catalyst is risky for NORMAL floats, but ultra-low floats (<2M) can run on momentum alone.
+
+4. **Late AH movers exist but are rare.** VVOS spiked at 01:30-02:00 CET. Extending the scanning window would catch these but adds fatigue. Track frequency before deciding.
+
+5. **Oil sector cluster in premarket.** BATL, SKYQ, TPET, EONR, USEG, INDO all running. Macro catalyst likely. These are PM-only moves (no AH spike), so they don't fit our AH→PM pattern but worth noting for sector awareness.
