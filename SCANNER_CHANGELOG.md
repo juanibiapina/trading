@@ -36,6 +36,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade
+- **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
 
 ## Modifiable Files
 
@@ -47,6 +48,23 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-04-03 — Add Dead-Cat Bounce Skip Rule
+
+**Context:** BFRG (Apr 2) crashed -25.9% during regular session, bounced +16.7% in AH, was entered at $1.40 as the first candidate meeting criteria (>10% AH in 2 scans). It faded to $1.29 (-7.9% loss). Total% from prev close was -16% at entry. Meanwhile PFSA (building momentum, +10.8% then +42.1% AH) was blocked by the existing position. The morning evaluation explicitly recommended: "skip stocks that crashed >15% in regular session." This is the 3rd+ observation of dead-cat bounces failing: BFRG (Apr 2, -7.9%), HPAI (Mar 31, -25% day, AH bounce to +10.7%, dead in PM with no trades), and the pattern aligns with earlier observations about crash-recovery bounces not carrying through.
+
+**Evaluation of previous changes:**
+- Total% Prompt Integration (2026-04-02): **Working (1 data point).** Apr 2 evening scan tables include Total% column consistently. BFRG's negative Total% (-14% to -16%) was visible in every scan table, and the morning eval referenced it directly. Integration complete.
+- AH Scan Requirement Clarification (2026-04-02): **Working (1 data point).** On Apr 2, the agent correctly required 2 AH scans before entering. BFRG was tracked across 23:00 (+21.7%) and 23:30 (+16.7%) before entry. PFSA was not entered at 23:30 because it had only 1 scan at >10%. Rule followed correctly. However, the rule didn't prevent the bad entry (BFRG still qualified despite being a dead-cat bounce).
+- 23:00 CET Minimum Entry Time (2026-03-31): **Working (4 data points, all compliant).** Mar 31 ELAB 23:10, Apr 1 AGPU 23:00, Apr 2 BFRG 23:30. No violations. Rule is embedded.
+- Supplementary Day Movers Query (2026-03-26): **Working (4 data points).** Regular session scans consistently produce 50-58 hits. Functioning as intended.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added dead-cat bounce skip rule to the learning phase default criteria. Stocks with Day% below -15% are now excluded from paper trade entry, even if their AH bounce exceeds +10%. Added brief explanation with evidence count.
+   - Why: Dead-cat bounces (big regular session crash followed by AH bounce) have failed in 3+ observations. The stock is recovering from a sell-off, not building new momentum. On Apr 2, this would have prevented the BFRG entry (-7.9% loss) and left the position open for PFSA (+16.7% to +50% hypothetical).
+   - Hypothesis: Next time a stock crashes >15% during regular session and bounces >10% in AH, the agent will skip it instead of entering. This frees the position for better candidates that emerge later. Measurable: (1) next dead-cat bounce candidate is explicitly skipped with this rule cited, (2) on nights where only a dead-cat bounce qualifies, "skip all" is chosen instead of entering a losing position.
+
+**Updated process:** Added "Skip dead-cat bounces" to Current Process section.
 
 ### 2026-04-02 — Complete Total% Prompt Integration + Clarify AH Scan Requirement
 
