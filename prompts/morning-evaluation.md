@@ -39,15 +39,25 @@ This is "today's winner." Document it with: sector, catalyst, float, AH entry pr
 
 **Then** go back and read last night's log. Was this stock on our radar? This is the scanner diagnostic.
 
-### Yahoo Finance Data
+### Price Timeline Data
 
-For detailed price action data (5-min bars, AH/PM history), use the Yahoo Finance fetch script:
+For AH and PM price timelines (5-min intervals), use these built-in modes:
 
+```bash
+# After-hours timeline (16:00-20:00 ET)
+python3 scripts/check-prices.py --ah-history TICKER1 TICKER2 ...
+
+# Premarket timeline (04:00-09:30 ET)
+python3 scripts/check-prices.py --pm-history TICKER1 TICKER2 ...
+```
+
+These output formatted tables with time, price, volume, and change%. Use these instead of piping yahoo-fetch.py through inline python.
+
+For raw JSON data (rare cases only):
 ```bash
 python3 scripts/yahoo-fetch.py TICKER --interval 5m --range 2d --prepost
 ```
-
-This handles the required User-Agent header. Pipe output to `python3 -c "..."` for custom processing. Do NOT use raw `curl` to Yahoo Finance (it will fail without the User-Agent header).
+Do NOT use raw `curl` to Yahoo Finance (it will fail without the User-Agent header).
 
 ### 3. Check Paper Trade P&L
 

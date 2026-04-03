@@ -5,10 +5,12 @@ Check current prices for given tickers, including premarket/after-hours data.
 Usage:
     python scripts/check-prices.py TICKER1 TICKER2 ...
     python scripts/check-prices.py --ah-history TICKER1 TICKER2 ...
+    python scripts/check-prices.py --pm-history TICKER1 TICKER2 ...
 
 Modes:
-    default:      Show current price, premarket price, and change from close
-    --ah-history: Show after-hours price action (5-min intervals) for each ticker
+    default:       Show current price, premarket price, and change from close
+    --ah-history:  Show after-hours price action (5-min intervals, 16:00-20:00 ET)
+    --pm-history:  Show premarket price action (5-min intervals, 04:00-09:30 ET)
 """
 
 import argparse
@@ -116,6 +118,57 @@ def get_ah_history(ticker):
     }
 
 
+def get_pm_history(ticker):
+    """Get premarket price action using 5-min intervals."""
+    data = fetch_yahoo(ticker, interval="5m", range_str="5d")
+    if not data or "chart" not in data:
+        return None
+
+    result = data["chart"]["result"][0]
+    meta = result["meta"]
+    timestamps = result.get("timestamp", [])
+    quotes = result["indicators"]["quote"][0]
+    closes = quotes.get("close", [])
+    volumes = quotes.get("volume", [])
+
+    # Find the most recent trading day's PM bars
+    pm_bars = []
+    for i, ts in enumerate(timestamps):
+        dt = datetime.fromtimestamp(ts, tz=ET)
+        hour, minute = dt.hour, dt.minute
+        t = hour * 60 + minute
+        # Premarket: 4:00 AM - 9:30 AM ET
+        if 4 * 60 <= t < 9 * 60 + 30:
+            price = closes[i] if i < len(closes) else None
+            vol = volumes[i] if i < len(volumes) else None
+            if price is not None:
+                pm_bars.append({
+                    "time": dt.strftime("%H:%M"),
+                    "date": dt.strftime("%Y-%m-%d"),
+                    "price": price,
+                    "volume": vol or 0,
+                })
+
+    if not pm_bars:
+        return None
+
+    latest_date = pm_bars[-1]["date"]
+    latest_bars = [b for b in pm_bars if b["date"] == latest_date]
+
+    previous_close = meta.get("previousClose") or meta.get("chartPreviousClose")
+
+    return {
+        "ticker": ticker,
+        "date": latest_date,
+        "previous_close": previous_close,
+        "bars": latest_bars,
+        "pm_high": max(b["price"] for b in latest_bars) if latest_bars else None,
+        "pm_low": min(b["price"] for b in latest_bars) if latest_bars else None,
+        "pm_volume": sum(b["volume"] for b in latest_bars),
+        "name": meta.get("longName") or meta.get("shortName", ""),
+    }
+
+
 def fmt_number(n):
     if n >= 1_000_000:
         return f"{n / 1_000_000:.1f}M"
@@ -128,10 +181,43 @@ def main():
     parser = argparse.ArgumentParser(description="Check prices via Yahoo Finance")
     parser.add_argument("tickers", nargs="+", help="Ticker symbols to check")
     parser.add_argument("--ah-history", action="store_true",
-                        help="Show after-hours price history")
+                        help="Show after-hours price history (16:00-20:00 ET)")
+    parser.add_argument("--pm-history", action="store_true",
+                        help="Show premarket price history (04:00-09:30 ET)")
     args = parser.parse_args()
 
-    if args.ah_history:
+    if args.pm_history:
+        results = {}
+        with ThreadPoolExecutor(max_workers=len(args.tickers)) as pool:
+            futures = {pool.submit(get_pm_history, t): t for t in args.tickers}
+            for future in as_completed(futures):
+                ticker = futures[future]
+                try:
+                    results[ticker] = future.result()
+                except Exception:
+                    results[ticker] = None
+
+        for ticker in args.tickers:
+            info = results[ticker]
+            if not info:
+                print(f"\n{ticker}: No PM data available")
+                continue
+
+            prev = info["previous_close"] or 0
+            print(f"\n{'=' * 60}")
+            print(f"{ticker} — {info['name']}")
+            print(f"Date: {info['date']}  |  Prev Close: ${prev:.2f}")
+            print(f"PM High: ${info['pm_high']:.2f}  |  PM Low: ${info['pm_low']:.2f}  |  PM Vol: {fmt_number(info['pm_volume'])}")
+            if prev > 0:
+                pm_chg = ((info['pm_high'] - prev) / prev) * 100
+                print(f"PM Peak Change: {pm_chg:+.1f}%")
+            print(f"{'-' * 60}")
+            print(f"  {'Time':<8} {'Price':>8} {'Vol':>8} {'Chg%':>8}")
+            for bar in info["bars"]:
+                chg = ((bar["price"] - prev) / prev * 100) if prev > 0 else 0
+                print(f"  {bar['time']:<8} ${bar['price']:>7.2f} {fmt_number(bar['volume']):>8} {chg:>+7.1f}%")
+
+    elif args.ah_history:
         # Fetch all tickers in parallel to avoid sequential timeout accumulation
         results = {}
         with ThreadPoolExecutor(max_workers=len(args.tickers)) as pool:
