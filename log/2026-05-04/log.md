@@ -79,6 +79,24 @@ Scanner still returned regular-session data, so this remains a pre-AH watchlist 
 - CWD improved from $0.90 (+12.7% AH) at 23:00 CET to $0.93 (+16.2% AH) with a small volume increase, but it is still a dead-cat bounce after a -26.6% regular-session washout. Same weak earnings-date catalyst. Skip.
 - No new paper trade added at 23:30 CET.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $1.45 | +14.2% | +46.9% | $2.13 | +67.7% | 7.9M | 1.0M | 7.5x | 0.8M | Information Technology Services |
+| INHD | [TV](https://www.tradingview.com/chart/?symbol=INHD) | $1.76 | +14.3% | +25.0% | $2.20 | +42.9% | 883K | 4.1M | 0.2x | 0.4M | Building Products |
+| HOUR | [TV](https://www.tradingview.com/chart/?symbol=HOUR) | $2.44 | +18.4% | +6.6% | $2.60 | +26.2% | 143K | 64K | 2.2x | 1.7M | Internet Retail |
+| CWD | [TV](https://www.tradingview.com/chart/?symbol=CWD) | $0.80 | -26.6% | +13.1% | $0.90 | -17.0% | 99K | 85K | 1.2x | 6.5M | Investment Managers |
+| CYPH | [TV](https://www.tradingview.com/chart/?symbol=CYPH) | $0.98 | +1.1% | +6.7% | $1.05 | +7.9% | 74K | 2.4M | 0.0x | 72.7M | Biotechnology |
+
+**Notes:**
+- MASK was already the open paper trade. Price held flat versus the 23:30 CET scan at $2.13 while AH volume rose from 7.2M to 7.9M. No new trade. Existing paper trade stays open.
+- INHD is a new candidate. Structured catalyst search found a same-day 8-K for a 1-for-20 reverse split effective May 4 to support Nasdaq compliance. That is a weak mechanical catalyst. It also is not the first unusual AH session: INHD also had large AH spikes on Apr 28-29, and tonight's scanner volume is only 0.2x average. Skip.
+- HOUR improved slightly from $2.58 to $2.60 and AH volume rose from 118K to 143K, but AH change is still only +6.6%. Watch only.
+- CWD slipped from $0.93 to $0.90. Same weak earnings-date catalyst, still a dead-cat bounce after the -26.6% regular-session washout. Skip.
+- CYPH is new on the scan, but the 72.7M float is far from the ideal profile and AH change is only +6.7% with negligible relative volume. Skip.
+- No new paper trade added at 00:00 CET. MASK remains the only paper trade for the session.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
