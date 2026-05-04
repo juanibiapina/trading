@@ -97,6 +97,24 @@ Scanner still returned regular-session data, so this remains a pre-AH watchlist 
 - CYPH is new on the scan, but the 72.7M float is far from the ideal profile and AH change is only +6.7% with negligible relative volume. Skip.
 - No new paper trade added at 00:00 CET. MASK remains the only paper trade for the session.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $1.45 | +14.2% | +49.0% | $2.16 | +70.1% | 8.3M | 1.1M | 7.5x | 0.8M | Information Technology Services |
+| INHD | [TV](https://www.tradingview.com/chart/?symbol=INHD) | $1.76 | +14.3% | +13.1% | $1.99 | +29.2% | 1.7M | 4.2M | 0.4x | 0.4M | Building Products |
+| GLND | [TV](https://www.tradingview.com/chart/?symbol=GLND) | $2.85 | -2.4% | +5.9% | $3.02 | +3.4% | 192K | 4.1M | 0.0x | 9.3M | Financial Conglomerates |
+| HOUR | [TV](https://www.tradingview.com/chart/?symbol=HOUR) | $2.44 | +18.4% | +7.8% | $2.63 | +27.7% | 161K | 66K | 2.4x | 1.7M | Internet Retail |
+| CWD | [TV](https://www.tradingview.com/chart/?symbol=CWD) | $0.80 | -26.6% | +20.0% | $0.96 | -11.9% | 102K | 85K | 1.2x | 6.5M | Investment Managers |
+
+**Notes:**
+- MASK improved from $2.13 to $2.16 while AH volume rose from 7.9M to 8.3M. Same dilution catalyst. Existing paper trade stays open.
+- INHD faded from $2.20 (+25.0% AH) to $1.99 (+13.1% AH) even as AH volume rose from 883K to 1.7M. Same reverse-split 8-K catalyst and prior unusual AH sessions. Skip.
+- GLND is a new candidate. Float fits at 9.3M, but AH change is only +5.9% and total move is still just +3.4% after a red regular session. Watch only, not an entry candidate.
+- HOUR improved from $2.60 to $2.63 and AH volume rose from 143K to 161K, but AH change is still only +7.8%. Watch only.
+- CWD rebounded from $0.90 to $0.96, but the stock is still down -11.9% versus the prior close after a -26.6% regular-session washout. Same weak earnings-date catalyst. Skip as a dead-cat bounce.
+- No new paper trade added at 00:30 CET. MASK remains the only paper trade for the session.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
