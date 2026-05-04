@@ -65,6 +65,20 @@ Scanner still returned regular-session data, so this remains a pre-AH watchlist 
 - MASK was already on the 22:30 CET scan and improved from $2.03 (+40.0% AH) to $2.26 (+55.9% AH) while AH volume expanded from 625K to 5.4M. Same-day catalyst remains the $1.3M convertible note deal, which is a dilution catalyst and a clear concern. First-day check still supports this being the first real unusual AH session. **Decision: Paper trade.** It meets the learning-phase rule with float under 10M, more than 10% AH gain in two AH scans, Day% above -15%, and a build/hold AH pattern.
 - CWD is a new candidate. Structured catalyst search found only a 4:15 PM ET GlobeNewswire release setting the date for Q1 2026 earnings. That is a weak administrative catalyst, not a strong momentum trigger. Prior AH history on 2026-05-01 only reached about -1.8%, so tonight is the first unusual AH session, but the stock crashed -26.6% in regular trading and is only bouncing after the sell-off. **Skip: dead-cat bounce and weak catalyst.**
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $1.45 | +14.2% | +46.9% | $2.13 | +67.7% | 7.2M | 978K | 7.4x | 0.8M | Information Technology Services |
+| HOUR | [TV](https://www.tradingview.com/chart/?symbol=HOUR) | $2.44 | +18.4% | +5.7% | $2.58 | +25.2% | 118K | 61K | 1.9x | 1.7M | Internet Retail |
+| CWD | [TV](https://www.tradingview.com/chart/?symbol=CWD) | $0.80 | -26.6% | +16.2% | $0.93 | -14.7% | 98K | 84K | 1.2x | 6.5M | Investment Managers |
+
+**Notes:**
+- MASK faded from the 23:00 CET paper-trade entry at $2.26 to $2.13, but AH volume expanded from 5.4M to 7.2M and it still holds a +46.9% AH gain. Same dilution catalyst. No new trade. Existing paper trade stays open.
+- HOUR was already on the 22:00 CET watchlist and now has real AH confirmation, moving from $2.27 on the close watchlist to $2.58 AH. The tape improved, but scanner AH change is only +5.7%, so it still does not meet the >10% multi-scan entry rule. Watch only.
+- CWD improved from $0.90 (+12.7% AH) at 23:00 CET to $0.93 (+16.2% AH) with a small volume increase, but it is still a dead-cat bounce after a -26.6% regular-session washout. Same weak earnings-date catalyst. Skip.
+- No new paper trade added at 23:30 CET.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
