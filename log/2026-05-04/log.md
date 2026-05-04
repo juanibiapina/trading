@@ -40,6 +40,20 @@ Scanner still returned regular-session data, so this remains a pre-AH watchlist 
 - Significant changes from 21:30 CET: ELPW, CRE, MNDR, and SHPH all faded; CNSP held price but not volume; RAYA dropped off the scan.
 - No paper trade entered. This scan was still pre-entry under the learning-phase rule.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $1.45 | +14.2% | +40.0% | $2.03 | +59.8% | 625K | 213K | 2.9x | 0.8M | Information Technology Services |
+
+**Notes:**
+- New AH candidate: MASK.
+- Sector: Technology Services. Float is 0.82M, which fits the ideal low-float profile.
+- Catalyst found: 3 E Network Technology signed a $1.3M convertible note agreement with an institutional investor. Clear catalyst, but it is dilution financing, which ranks as a weak catalyst.
+- First-day check: prior after-hours action on 2026-05-01 only reached about +4.7% with no meaningful AH volume, so tonight looks like the first real unusual AH session.
+- Tape note: strong early AH build from the close into the first 30 minutes, not a dead-cat bounce since regular-session Day% was positive.
+- Decision: Watch only. No paper trade before 23:00 CET under the learning-phase rule. It also still needs a second AH scan above +10% to qualify for a 23:00+ paper trade.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
