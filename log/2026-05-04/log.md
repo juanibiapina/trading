@@ -54,7 +54,19 @@ Scanner still returned regular-session data, so this remains a pre-AH watchlist 
 - Tape note: strong early AH build from the close into the first 30 minutes, not a dead-cat bounce since regular-session Day% was positive.
 - Decision: Watch only. No paper trade before 23:00 CET under the learning-phase rule. It also still needs a second AH scan above +10% to qualify for a 23:00+ paper trade.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $1.45 | +14.2% | +55.9% | $2.26 | +78.0% | 5.4M | 763K | 7.1x | 0.8M | Information Technology Services |
+| CWD | [TV](https://www.tradingview.com/chart/?symbol=CWD) | $0.80 | -26.6% | +12.7% | $0.90 | -17.2% | 84K | 83K | 1.0x | 6.5M | Investment Managers |
+
+**Notes:**
+- MASK was already on the 22:30 CET scan and improved from $2.03 (+40.0% AH) to $2.26 (+55.9% AH) while AH volume expanded from 625K to 5.4M. Same-day catalyst remains the $1.3M convertible note deal, which is a dilution catalyst and a clear concern. First-day check still supports this being the first real unusual AH session. **Decision: Paper trade.** It meets the learning-phase rule with float under 10M, more than 10% AH gain in two AH scans, Day% above -15%, and a build/hold AH pattern.
+- CWD is a new candidate. Structured catalyst search found only a 4:15 PM ET GlobeNewswire release setting the date for Q1 2026 earnings. That is a weak administrative catalyst, not a strong momentum trigger. Prior AH history on 2026-05-01 only reached about -1.8%, so tonight is the first unusual AH session, but the stock crashed -26.6% in regular trading and is only bouncing after the sell-off. **Skip: dead-cat bounce and weak catalyst.**
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| MASK | $2.26 | 23:00 CET | 44 | Second AH scan above +10%, 0.8M float, first unusual AH session, building tape. Weak dilution catalyst noted. |
