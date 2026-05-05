@@ -21,6 +21,15 @@ Scanner ran before after-hours opened, so this is a pre-AH watchlist only. No pa
 - No paper trade entered. This scan ran before after-hours opened and before the 23:00 CET learning-phase entry window.
 - If any of these reappear on a 22:00+ CET AH scan with more than 10% AH gain, run the structured catalyst search before any trade decision.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found.
+
+**Notes:**
+- AH scanner returned 0 hits at the open.
+- No paper trades entered. This is still before the 23:00 CET learning-phase entry window.
+- Recheck the pre-AH watch names on the next scan if any build and hold more than 10% AH with volume.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
