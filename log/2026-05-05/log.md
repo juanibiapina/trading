@@ -90,6 +90,26 @@ No candidates found.
 - **REBN:** No real change from 23:30 CET. It remains below the >10% AH follow-through threshold and is still fading versus the earlier +12.3% spike. **Decision:** Skip.
 - OCG remains the only paper trade for the day. No new paper trade was added on this scan.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| EZGO | [TV](https://www.tradingview.com/chart/?symbol=EZGO) | $1.90 | +54.5% | +42.1% | $2.70 | +119.5% | 3.0M | 2.7M | 1.1x | 20.7M | Movies/Entertainment |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.69 | +2.4% | +33.1% | $2.25 | +36.4% | 1.7M | 493K | 3.5x | 1.9M | Specialty Stores |
+| CYPH | [TV](https://www.tradingview.com/chart/?symbol=CYPH) | $1.07 | +8.8% | +14.9% | $1.23 | +25.0% | 1.2M | 2.8M | 0.4x | 72.7M | Biotechnology |
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $2.09 | +44.1% | +9.1% | $2.28 | +57.2% | 635K | 5.8M | 0.1x | 0.8M | Information Technology Services |
+| SMX | [TV](https://www.tradingview.com/chart/?symbol=SMX) | $1.16 | -26.1% | +7.8% | $1.25 | -20.4% | 308K | 4.5M | 0.1x | 3.6M | Packaged Software |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $1.30 | +9.2% | +6.2% | $1.38 | +16.0% | 165K | 27.8M | 0.0x | 1.7M | Personnel Services |
+
+**Notes:**
+- **OCG:** Existing paper trade only. Price faded from $2.36 at 00:00 CET to $2.25, while AH volume rose from 1.6M to 1.7M. The 5-minute AH history shows a build into a $2.40 peak around 17:30 ET, then a drift lower into 18:30 ET. Catalyst re-check still did not find same-day earnings, press release, or 8-K within the 4-search budget. Keep the 23:30 CET paper trade, no new action.
+- **EZGO:** Still above +10% AH, so the structured catalyst search was re-run. It still did not surface same-day earnings, a press release, or an 8-K within the 4-search budget. The tape remains very extended with a 20.7M float and is off the $2.80 AH peak. **Decision: Skip.**
+- **CYPH:** Still above +10% AH, so the structured catalyst search was re-run. Search results only surfaced older items, including a January advisor press release and 2025 SEC filings, with no same-day earnings, press release, or 8-K found. Price stayed flat near $1.23, but the 72.7M float remains too big. **Decision: Skip.**
+- **MASK:** Reappeared after the 00:00 CET scan, but the official AH move is still only +9.1%, below the >10% entry threshold. The 5-minute AH history shows it peaked near $2.38 and then faded to $2.24 by 18:30 ET. Tiny float is interesting, but this is a fade, not a build. **Decision: Watch only.**
+- **SMX:** New name, but Day% is -26.1% and AH is only +7.8%, so this is a dead-cat bounce profile under the learning-phase rules. **Decision: Skip.**
+- **BIYA:** New name with a 1.7M float, but the official AH move is only +6.2% and the scanner volume ratio is still near zero. **Decision: Watch only, no paper trade.**
+- No new paper trade was added on this scan. OCG remains the only paper trade for the day.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
