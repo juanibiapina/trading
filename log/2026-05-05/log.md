@@ -72,6 +72,24 @@ No candidates found.
 - **CYPH:** New >10% AH name versus the 23:00 scan, with volume up from 271K to 893K. Float is 72.7M and the 4-search catalyst check did not find same-day earnings, press release, or 8-K. It does not meet the ideal float profile and has only one qualifying >10% AH scan so far. **Decision: Skip.**
 - **REBN:** Previously seen at 22:30. AH volume roughly doubled from 93K to 196K, but price slipped from +6.5% to +6.1% after an earlier +12.3% spike. That is a fade, not a build, and it remains below the >10% follow-through threshold. **Decision: Skip.**
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| EZGO | [TV](https://www.tradingview.com/chart/?symbol=EZGO) | $1.90 | +54.5% | +43.7% | $2.73 | +122.0% | 1.9M | 2.6M | 0.7x | 20.7M | Movies/Entertainment |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.69 | +2.4% | +39.6% | $2.36 | +43.0% | 1.6M | 478K | 3.3x | 1.9M | Specialty Stores |
+| CYPH | [TV](https://www.tradingview.com/chart/?symbol=CYPH) | $1.07 | +8.8% | +15.0% | $1.23 | +25.0% | 1.1M | 2.8M | 0.4x | 72.7M | Biotechnology |
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $2.09 | +44.1% | +6.2% | $2.22 | +53.1% | 284K | 5.8M | 0.0x | 0.8M | Information Technology Services |
+| REBN | [TV](https://www.tradingview.com/chart/?symbol=REBN) | $2.45 | +0.4% | +6.1% | $2.60 | +6.6% | 199K | 74K | 2.7x | 4.3M | Restaurants |
+
+**Notes:**
+- **OCG:** Still the best setup on the board. It held the 23:30 breakout, stayed near the $2.40 AH high, and AH volume expanded from 1.1M to 1.6M. Structured catalyst re-check still did not surface same-day earnings, a press release, or a same-day SEC filing within the search budget. The only news-like clue remains an unverified Yahoo Finance snippet about a special cash dividend plan. **Decision:** Keep the existing paper trade from 23:30 CET. No new action.
+- **EZGO:** Biggest change of the scan. It went from a flat hold near +13% AH at 23:30 to a late squeeze above +40% AH with AH volume up from 571K to 1.9M. Structured catalyst re-check still did not find same-day earnings, a press release, or a same-day SEC filing within the search budget. Float is still 20.7M, and the move is now more extended than OCG. **Decision:** Skip.
+- **CYPH:** Still above +10% AH and volume improved from 893K to 1.1M, so the catalyst search was re-run. It still did not produce same-day earnings, a press release, or a same-day SEC filing within the search budget. The float remains 72.7M. **Decision:** Skip.
+- **MASK:** First scanner appearance after the 21:30 CET watchlist. Tiny float and a late AH push are interesting, but the official AH scan only shows +6.2% and the volume ratio is still negligible versus average. **Decision:** Watch only, no paper trade.
+- **REBN:** No real change from 23:30 CET. It remains below the >10% AH follow-through threshold and is still fading versus the earlier +12.3% spike. **Decision:** Skip.
+- OCG remains the only paper trade for the day. No new paper trade was added on this scan.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
