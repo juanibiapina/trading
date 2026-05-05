@@ -18,9 +18,10 @@ import json
 import sys
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone, timedelta
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
-ET = timezone(timedelta(hours=-5))
+ET = ZoneInfo("America/New_York")
 
 
 def fetch_yahoo(ticker, interval="1m", range_str="1d", include_pre_post=True):

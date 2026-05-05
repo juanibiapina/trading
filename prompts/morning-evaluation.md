@@ -23,12 +23,14 @@ The most important question is: what stock IS exploding in premarket right now? 
 
 **Do this BEFORE looking at last night's log.** Search fresh for what is exploding in premarket right now.
 
-Run both a forced after-hours scan and a live premarket scan:
+Run a live premarket scan, then reconstruct the prior AH session with Yahoo history for the strongest PM names:
 
 ```bash
-python3 scripts/scan.py --all --session afterhours
 python3 scripts/scan.py --all --session premarket
+python3 scripts/check-prices.py --ah-history TICKER1 TICKER2 ...
 ```
+
+A forced `python3 scripts/scan.py --all --session afterhours` can still be logged as a secondary diagnostic, but do **not** rely on it as the primary retrospective source. Overnight TradingView postmarket fields often return 0 hits even when the live evening scans clearly found AH movers.
 
 From the results, identify the **best AH→premarket trade** — the stock that:
 - Spiked in after-hours yesterday
@@ -122,7 +124,7 @@ Append a `## Morning Evaluation` section to the log:
 - Status: **BASELINE MET / NOT MET**
 
 ### Retrospective Scan Results
-[results from forced AH + PM scans]
+[results from AH reconstruction via `check-prices.py --ah-history`, optional forced AH scan diagnostic, and PM scan]
 
 ### Paper Trade P&L
 

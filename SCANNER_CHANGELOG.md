@@ -28,15 +28,17 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Current Process
 
 - 7 evening scans every 30 min (21:30–01:30 CET)
-- 2 morning evaluations (10:05, 10:20 CET)
+- 3 morning evaluations (10:20, 12:00, 14:00 CET)
 - Paper trades with ~€100 positions
 - All sectors — no sector restriction (learning phase, see Day Trading.md)
+- Session timing follows America/New_York market hours, including DST
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: float <10M, catalyst required, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade
 - **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
+- Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
 
 ## Modifiable Files
 
@@ -48,6 +50,24 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-05-05 — Fix DST Session Timing + Use Yahoo AH Reconstruction
+
+**Context:** The 2026-05-04 session showed the scanner logic was mostly sound but the plumbing around it was off. MASK was detected and CWD was correctly skipped as a dead-cat bounce, yet the 22:00 CET scan still behaved like a regular-session watchlist even though US after-hours had already opened. In the morning, the forced after-hours scan returned 0 hits even though the live evening log clearly contained AH movers. Both issues point to tool/process timing, not strategy.
+
+**Evaluation of previous changes:**
+- 2026-04-03 dead-cat bounce skip rule: **Helped.** CWD (-26.6% day) was explicitly skipped at 23:00, 23:30, 00:00, and 00:30 CET despite reaching +20.0% AH. The rule worked as intended and kept the slot free for stronger names.
+- 2026-04-02 Total% prompt integration: **Helped.** Every 2026-05-04 AH table included Total%, and the notes used it directly for both MASK (+78.0% at entry) and CWD (still negative vs previous close).
+- 2026-04-02 AH-scan requirement clarification: **Mixed but helpful.** MASK was not entered on its first AH appearance at 22:30 CET. It only qualified at 23:00 after two AH scans. That part worked. But the fixed ET offset meant the 22:00 CET run was still treated as regular session during DST, so the first true AH read came later than it should have.
+
+**Changes:**
+1. **scripts/scan.py** and **scripts/check-prices.py** — Replaced the fixed ET offset with `America/New_York` timezone handling.
+   - Why: Both scripts used a hard-coded UTC-5 offset. During DST that is one hour late, which shifts session detection and printed ET timestamps. On 2026-05-04 this made 22:00 CET behave like pre-AH instead of the first real AH scan.
+   - Hypothesis: During DST, the 22:00 CET run will classify as after-hours instead of regular session. Measurable: (1) `scripts/scan.py` prints ET timestamps that match America/New_York, (2) evening logs stop describing 22:00 CET as a regular-session placeholder on DST dates.
+
+2. **prompts/morning-evaluation.md** — Made Yahoo AH reconstruction (`check-prices.py --ah-history`) the primary retrospective source. Forced `scan.py --session afterhours` runs remain optional diagnostics only.
+   - Why: On 2026-05-04 the forced AH scan returned 0 hits even though MASK and INHD clearly had AH moves in the evening log. The prompt was steering the evaluation toward a weak overnight source.
+   - Hypothesis: Next morning evaluation will identify the winner from PM scan plus Yahoo AH reconstruction instead of treating a 0-hit forced AH scan as the main retrospective. Measurable: (1) the retrospective section explicitly cites AH reconstruction, (2) winner diagnostics use `--ah-history` data when forced AH scan is empty.
 
 ### 2026-04-03 — Add Dead-Cat Bounce Skip Rule
 
@@ -63,6 +83,7 @@ _(entries are prepended — newest first)_
 1. **prompts/post-market-scan.md** — Added dead-cat bounce skip rule to the learning phase default criteria. Stocks with Day% below -15% are now excluded from paper trade entry, even if their AH bounce exceeds +10%. Added brief explanation with evidence count.
    - Why: Dead-cat bounces (big regular session crash followed by AH bounce) have failed in 3+ observations. The stock is recovering from a sell-off, not building new momentum. On Apr 2, this would have prevented the BFRG entry (-7.9% loss) and left the position open for PFSA (+16.7% to +50% hypothetical).
    - Hypothesis: Next time a stock crashes >15% during regular session and bounces >10% in AH, the agent will skip it instead of entering. This frees the position for better candidates that emerge later. Measurable: (1) next dead-cat bounce candidate is explicitly skipped with this rule cited, (2) on nights where only a dead-cat bounce qualifies, "skip all" is chosen instead of entering a losing position.
+   - **Evaluation:** Helped. On 2026-05-04, CWD (-26.6% day) bounced as high as +20.0% AH but was skipped in every qualifying scan with the dead-cat rule cited. The filter did its job.
 
 **Updated process:** Added "Skip dead-cat bounces" to Current Process section.
 
@@ -80,10 +101,12 @@ _(entries are prepended — newest first)_
 1. **prompts/post-market-scan.md** — Added Total% column to the AH table format template (between AH Price and AH Vol). Same completion pattern as the Day% prompt integration on Mar 12.
    - Why: Scanner outputs Total% since Apr 1 but the prompt template still showed the old format without it. The agent computes Total% manually in notes but inconsistently. On Apr 1, AGPU's +168% Total% was buried in evaluation notes instead of being visible in the scan table. Consistent table visibility enables better pattern recognition across scans.
    - Hypothesis: Next AH scan tables will include a Total% column. The agent will reference Total% consistently when evaluating extension rather than computing it ad-hoc. Measurable: (1) next evening's AH scan tables include Total%, (2) Total% appears in the evaluation for every candidate, not just the one selected for paper trade.
+   - **Evaluation:** Helped. On 2026-05-04, every AH table included Total%, and the notes used it directly to frame MASK's +78.0% extension and CWD's still-negative total move.
 
 2. **prompts/post-market-scan.md** — Clarified "sustained across 2+ scans" in the learning phase default to specifically require 2+ after-hours scans (22:00+ CET). Regular session appearances don't count toward this requirement.
    - Why: On Apr 1, AGPU appeared in 4 scans (3 regular + 1 AH) and was entered at the first AH scan (23:00 CET). With only 1 AH data point, trajectory classification was unreliable: the agent classified AGPU as "build" based on intra-scan 5m candle data, but the next scan (23:30) revealed AH% declining from +18.8% to +16.0% (fading). Requiring 2 AH data points ensures trajectory is compared between scans, not inferred within a single scan. This also provides a natural 30-minute delay after first AH appearance, allowing early spikes to reveal whether they sustain or fade.
    - Hypothesis: Next time a stock first appears in an AH scan, the agent will wait for the next AH scan before entering. Stocks that spike early and fade (like AGPU) will show declining AH% between their first and second AH scans, triggering the trajectory preference against spike->fade. Measurable: (1) no entry on a stock's first AH appearance, (2) when AH% declines between consecutive AH scans, the stock is classified as fading and deprioritized.
+   - **Evaluation:** Mixed but helpful. On 2026-05-04, MASK first appeared at 22:30 CET and was not entered until the 23:00 CET scan after a second AH read. That prevented an even earlier chase. But the DST timing bug still made the 22:00 CET run regular-session only, which reduced the amount of true AH data available before the decision.
 
 **Updated process:** Added "AH change >10% in at least 2 after-hours scans" to Current Process section.
 

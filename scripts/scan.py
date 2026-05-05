@@ -17,13 +17,14 @@ import argparse
 import subprocess
 import sys
 import time
-from datetime import datetime, timezone, timedelta
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import requests
 
 API_URL = "https://scanner.tradingview.com/america/scan"
 
-ET = timezone(timedelta(hours=-5))
+ET = ZoneInfo("America/New_York")
 
 # Common filters
 MIN_PRICE = 0.5
