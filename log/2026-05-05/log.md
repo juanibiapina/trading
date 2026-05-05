@@ -42,6 +42,21 @@ No candidates found.
 - None of the 21:30 CET watchlist names reappeared on the scanner at 22:30 CET.
 - No paper trade entered.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| EZGO | [TV](https://www.tradingview.com/chart/?symbol=EZGO) | $1.90 | +54.5% | +12.6% | $2.14 | +74.0% | 481K | 2.4M | 0.2x | 20.7M | Movies/Entertainment |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.69 | +2.4% | +17.8% | $1.99 | +20.6% | 457K | 337K | 1.4x | 1.9M | Specialty Stores |
+| CYPH | [TV](https://www.tradingview.com/chart/?symbol=CYPH) | $1.07 | +8.8% | +5.6% | $1.13 | +14.9% | 271K | 2.7M | 0.1x | 72.7M | Biotechnology |
+
+**Notes:**
+- New AH names versus earlier scans: EZGO, OCG, and CYPH. REBN dropped off the scanner.
+- **OCG:** Best setup of the group. Float is 1.9M and the 5-day AH check suggests this is the first real unusual AH session. The tape built through the first hour and held above +10% AH. Catalyst search did not find same-day earnings or an 8-K. The only news hit inside the 4-search budget was a Yahoo Finance headline snippet about a special cash dividend plan, so treat the catalyst as possible but not fully verified. **Decision: Watch only.** This is the first AH scan above +10%, so it does not yet meet the two-scan rule for a paper trade.
+- **EZGO:** 5-day AH check also points to the first unusual AH session, but the float is 20.7M and no same-day catalyst was found within the 4-search budget. Strong move, weak setup quality. **Decision: Skip for now.**
+- **CYPH:** New name, but AH change is only +5.6%, float is 72.7M, and relative volume is negligible. **Decision: Skip.**
+- No paper trade entered at 23:00 CET. The best candidate, OCG, still needs a second AH scan above +10% to qualify under the learning-phase rule.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
