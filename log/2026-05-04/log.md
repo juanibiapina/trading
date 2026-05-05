@@ -120,3 +120,82 @@ Scanner still returned regular-session data, so this remains a pre-AH watchlist 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | MASK | $2.26 | 23:00 CET | 44 | Second AH scan above +10%, 0.8M float, first unusual AH session, building tape. Weak dilution catalyst noted. |
+
+## Morning Evaluation - 10:24 CET (Pulse 1)
+
+### Today's Winner
+
+**MASK** - Information Technology Services
+- Catalyst: $1.3M convertible note plus warrant financing to fund AI infrastructure expansion. Weak dilution catalyst, but it drove the tape.
+- Previous Close: $1.27
+- AH at screening time: $2.11 (+66.1%) at 22:15 CET
+- First scanner capture: $2.03 (+40.0% vs regular close, +59.8% vs previous close) at 22:30 CET
+- Premarket now: $2.42 (+90.6%) at 10:24 CET
+- Premarket peak so far: $2.58 (+103.1%) at 10:14 CET
+- Hypothetical P&L (22:15 CET AH entry -> PM peak): +22.3%
+- Float: 0.82M | Market Cap: $1.6M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- What it looked like at ~22:15 CET: already around $2.11 on a 0.82M float, up about 66% vs previous close, with price holding the opening AH spike instead of fading.
+- Was it on our radar? **YES.** It first hit the 22:30 CET scan, stayed on every later scan, and was selected for the only paper trade at 23:00 CET.
+- Scanner gap: the live evening scanner caught the winner, but the forced AH scan at 03:20 ET returned 0 hits even though MASK and INHD clearly had large AH moves. Overnight retrospective cannot rely only on TradingView postmarket fields. Need either saved evening scan snapshots or Yahoo-based AH reconstruction.
+
+### Baseline Tracking
+
+- Days tracked: 11
+- Winners detected by scanner: 9/11 (**81.8%**) - HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK
+- Winner selected for paper trade: 2/11 (**18.2%**) - NXTT and MASK
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+**Forced AH scan (03:20 ET):** No matches.
+
+**Forced PM scan (03:20 ET):**
+
+| Ticker | Close | PM Price | PM Chg% | PM Vol | Float | Industry |
+|--------|-------|----------|---------|--------|-------|----------|
+| MASK | $1.45 | $2.27 | +56.6% | 690K | 0.8M | Information Technology Services |
+| INHD | $1.76 | $2.06 | +17.2% | 106K | N/A | Building Products |
+| ELBM | $0.60 | $0.65 | +8.2% | 61K | 100.1M | Other Metals/Minerals |
+
+**Caught by evening scans:** MASK, INHD  
+**Missed by evening scans:** ELBM
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| MASK | $2.26 | 23:00 CET | $2.42 | +€7.04 | +7.1% | ✅ Winning |
+
+**Total Paper P&L: +€7.04**
+
+*Current price is the 10:24 CET premarket print. Position stays open for Pulse 2 and must be closed at Pulse 3.*
+
+### Scanner Effectiveness
+
+- Evening scans ran: 7 times (21:30 - 00:30 CET)
+- Candidates found: 14 unique tickers
+- Retrospective matches: 2/3
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| ELBM | +9.0% AH peak | Never appeared in the evening scans. AH move only briefly reached +9% and spent most of AH around +2% to +6%, so it likely stayed below threshold or below the top-ranked scanner set. | **Yes, modestly.** Around $0.62 near 22:15 CET to $0.664 now was about +7.1%. PM peak $0.7067 was about +14.0%. |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| MASK | $2.30 | 22:00 CET | **Spike->hold** | $2.42 | +5.2% | +66.9% | Clear follow-through. The winner kept extending in PM. |
+| INHD | $2.22 | 00:55 CET | **Spike->fade** | $2.15 | -3.2% | +22.2% | Still followed through, but weaker than MASK and more erratic. |
+| CWD | $0.96 | 00:30 CET | **Build** | $0.95 | -0.8% | +19.0% | Bounce held, but still low quality because the whole move came after a heavy regular-session washout. |
+
+### Notes
+
+1. The primary goal passed today: the scanner found the actual winner, and the paper trade is in the right name.
+2. The bigger tool problem is the retrospective AH scan. A forced overnight AH scan with 0 hits is unusable when MASK and INHD both had obvious AH spikes.
+3. ELBM is the only clean miss. It shows that some smaller AH moves can still continue in PM, but the reward was still smaller than MASK once entry is anchored to screening time.
