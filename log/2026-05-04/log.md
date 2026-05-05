@@ -199,3 +199,25 @@ Scanner still returned regular-session data, so this remains a pre-AH watchlist 
 1. The primary goal passed today: the scanner found the actual winner, and the paper trade is in the right name.
 2. The bigger tool problem is the retrospective AH scan. A forced overnight AH scan with 0 hits is unusable when MASK and INHD both had obvious AH spikes.
 3. ELBM is the only clean miss. It shows that some smaller AH moves can still continue in PM, but the reward was still smaller than MASK once entry is anchored to screening time.
+
+## Morning Evaluation - 12:00 CET (Pulse 2)
+
+### Update Since Pulse 1
+
+- Today's winner stays **MASK** for the AH->PM baseline test.
+- Latest premarket print: $2.29 at 12:00 CET, down from $2.42 at Pulse 1. Early PM strength faded and no new high was printed after the first pulse.
+- **CYAB** strengthened to $1.26 (+48.2% PM) after Pulse 1, but it was only a minor AH mover last night, so it does not replace MASK as the best AH->PM continuation case.
+- The forced AH scan problem remains the main scanner issue. Live evening scans caught MASK, but retrospective TradingView AH fields are still unusable in the morning.
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| MASK | $2.26 | 23:00 CET | $2.29 | +€1.32 | +1.3% | Open |
+
+**Total Paper P&L: +€1.32**
+
+### Notes
+
+1. MASK gave back **€5.72** of unrealized gain since Pulse 1.
+2. Position stays open for Pulse 3, then must be closed at the live premarket price.
