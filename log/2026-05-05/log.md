@@ -57,7 +57,23 @@ No candidates found.
 - **CYPH:** New name, but AH change is only +5.6%, float is 72.7M, and relative volume is negligible. **Decision: Skip.**
 - No paper trade entered at 23:00 CET. The best candidate, OCG, still needs a second AH scan above +10% to qualify under the learning-phase rule.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.69 | +2.4% | +38.5% | $2.34 | +41.8% | 1.1M | 422K | 2.7x | 1.9M | Specialty Stores |
+| CYPH | [TV](https://www.tradingview.com/chart/?symbol=CYPH) | $1.07 | +8.8% | +15.0% | $1.23 | +25.0% | 893K | 2.8M | 0.3x | 72.7M | Biotechnology |
+| EZGO | [TV](https://www.tradingview.com/chart/?symbol=EZGO) | $1.90 | +54.5% | +13.2% | $2.15 | +74.8% | 571K | 2.4M | 0.2x | 20.7M | Movies/Entertainment |
+| REBN | [TV](https://www.tradingview.com/chart/?symbol=REBN) | $2.45 | +0.4% | +6.1% | $2.60 | +6.6% | 196K | 74K | 2.7x | 4.3M | Restaurants |
+
+**Notes:**
+- **OCG:** Reappeared and improved from +17.8% AH / 457K volume at 23:00 to +38.5% / 1.1M at 23:30. The 5-day Yahoo AH check shows this is the first real AH volume burst this week, and the tape built through the hour instead of fading. Structured catalyst re-check still did not find same-day earnings or an 8-K within the 4-search budget. The only news-like hit remained an unverified Yahoo Finance snippet hinting at a special cash dividend plan. **Decision: Paper trade.** It now meets the learning-phase rule: float under 10M, Day% above -15%, and AH strength above +10% in two AH scans.
+- **EZGO:** Still above +10% AH and held near the 23:00 level, but the float is 20.7M and the structured catalyst re-check still found no same-day earnings, press release, or 8-K. Price action looks more like an early spike that is now flattening below the session peak. **Decision: Skip.**
+- **CYPH:** New >10% AH name versus the 23:00 scan, with volume up from 271K to 893K. Float is 72.7M and the 4-search catalyst check did not find same-day earnings, press release, or 8-K. It does not meet the ideal float profile and has only one qualifying >10% AH scan so far. **Decision: Skip.**
+- **REBN:** Previously seen at 22:30. AH volume roughly doubled from 93K to 196K, but price slipped from +6.5% to +6.1% after an earlier +12.3% spike. That is a fade, not a build, and it remains below the >10% follow-through threshold. **Decision: Skip.**
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| OCG | $2.34 | 23:30 CET | 42 | 1.9M float, second AH scan above +10%, strong build/hold pattern, first real AH activity this week. Concern: catalyst still unverified. |
