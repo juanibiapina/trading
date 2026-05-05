@@ -30,6 +30,18 @@ No candidates found.
 - No paper trades entered. This is still before the 23:00 CET learning-phase entry window.
 - Recheck the pre-AH watch names on the next scan if any build and hold more than 10% AH with volume.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| REBN | [TV](https://www.tradingview.com/chart/?symbol=REBN) | $2.45 | +0.4% | +6.5% | $2.61 | +7.0% | 93K | 63K | 1.5x | 4.3M | Restaurants |
+
+**Notes:**
+- REBN is new today. Watch only. AH move is below the >10% follow-through threshold and this scan is still before the 23:00 CET paper-entry window.
+- Float fits the ideal range, but this needs another AH scan showing sustained >10% AH strength before a paper trade is valid.
+- None of the 21:30 CET watchlist names reappeared on the scanner at 22:30 CET.
+- No paper trade entered.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
