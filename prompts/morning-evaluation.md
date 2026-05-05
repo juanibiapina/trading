@@ -1,11 +1,17 @@
-Run a morning evaluation of last night's post-market scanning session.
+Run a morning evaluation of the overnight scanning session.
 
 **Schedule awareness:** This prompt runs as a premarket pulse at 10:20, 12:00, and 14:00 CET (3 pulses). Check `date` to determine which pulse this is.
 - **Pulse 1 (10:20 CET):** Full evaluation — find today's winner, diagnose scanner, check paper trade P&L.
 - **Pulse 2 (12:00 CET):** Update paper trade P&L, note any significant price changes since pulse 1.
 - **Pulse 3 (14:00 CET) — LAST PULSE:** Update paper trade P&L and **close all positions**. Sell any open paper trade at the current premarket price. Record the exit in the log. An open position blocks the next evening trade.
 
-**Primary goal: find today's winner and diagnose the scanner.**
+**Scope by pulse:**
+- **Pulse 1:** Run the full retrospective workflow.
+- **Pulse 2:** Reuse pulse 1's winner and scanner diagnostic. Do **not** rerun `python3 scripts/scan.py --all --session afterhours` or a full winner search unless pulse 1 is missing or clearly incomplete.
+- **Pulse 3:** Same as pulse 2, then close positions.
+- This is a morning retrospective, not an evening post-market workflow. Ignore any post-market entry guidance if that skill loads.
+
+**Primary goal on pulse 1: find today's winner and diagnose the scanner.** On pulses 2 and 3, the goal is to update prices, P&L, and any notable changes since pulse 1.
 
 The most important question is: what stock IS exploding in premarket right now? There is almost always one. Find it first — independently, without looking at last night's watchlist — then check if our evening scanner would have caught it. This is the baseline test: if the scanner can't even detect the winners, no entry rules will make the strategy work. See "Learning Phase" in Day Trading.md for the full reasoning.
 
@@ -17,11 +23,14 @@ The most important question is: what stock IS exploding in premarket right now? 
 - Determine yesterday's US trading date (the AH session we're evaluating)
 - Set `LOG_FILE=log/YYYY-MM-DD/log.md` using that date
 - Pull latest changes
-- Read the existing log to understand what was found and any paper trades
+- If this is **pulse 1**, do **not** read `LOG_FILE` yet. Step 2 must happen first.
+- If this is **pulse 2 or 3**, read the existing log now so you can reuse pulse 1's winner, scanner diagnostic, and paper trades
 
-### 2. Find Today's Winner
+### 2. Find Today's Winner (Pulse 1 only, or fallback if pulse 1 is missing)
 
-**Do this BEFORE looking at last night's log.** Search fresh for what is exploding in premarket right now.
+**Pulse 1:** Do this BEFORE looking at last night's log. Search fresh for what is exploding in premarket right now.
+
+**Pulse 2 and 3:** Skip this full step if pulse 1 already logged a winner and scanner diagnostic. Reuse the existing winner, then update only the current PM price, P&L, and any important follow-through changes.
 
 Run a live premarket scan, then reconstruct the prior AH session with Yahoo history for the strongest PM names:
 
@@ -76,6 +85,8 @@ For each paper trade:
 
 ### 4. Scanner Diagnostic
 
+Run this full section on **pulse 1**. On **pulse 2 and 3**, reuse the existing scanner diagnostic unless new evidence changes the conclusion.
+
 **For today's winner (from Step 2), answer:**
 - Was it detectable at evening screening time (~22:15 CET)? YES / NO
 - If YES: what did it look like then? (price, volume, % gain) — why didn't we act on it?
@@ -92,7 +103,9 @@ For each paper trade:
 
 ### 5. Update Log
 
-Append a `## Morning Evaluation` section to the log:
+Append a `## Morning Evaluation` section to the log.
+- **Pulse 1:** use the full template below.
+- **Pulse 2 and 3:** append a shorter update that reuses pulse 1's winner and scanner diagnostic, then refreshes P&L, follow-through, and exit status.
 
 ```markdown
 ## Morning Evaluation — HH:MM CET

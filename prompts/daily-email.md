@@ -11,7 +11,9 @@ Determine yesterday's US trading date. This is the date the morning evaluation u
 Read:
 - `log/YYYY-MM-DD/log.md` -- morning eval: today's winner, scanner diagnostic, baseline tracking, paper trades, AH mover follow-through
 - `SCANNER_CHANGELOG.md` -- latest entry for today's scanner improvement
-- `log/YYYY-MM-DD/process-review.md` -- process issues found (if file exists)
+- `log/YYYY-MM-DD/process-review.md` -- process issues found (optional)
+
+Check whether `log/YYYY-MM-DD/process-review.md` exists before reading it. If it is missing, treat that as "no process review file for this cycle" rather than an error.
 
 ### 2. Send Email
 
