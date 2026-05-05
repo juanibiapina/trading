@@ -221,3 +221,32 @@ Scanner still returned regular-session data, so this remains a pre-AH watchlist 
 
 1. MASK gave back **€5.72** of unrealized gain since Pulse 1.
 2. Position stays open for Pulse 3, then must be closed at the live premarket price.
+
+## Morning Evaluation - 14:00 CET (Pulse 3, FINAL)
+
+### Position Closed
+
+**MASK - SOLD (paper trade closed)**
+
+| Ticker | Entry | Entry Time | Exit | Exit Time | Shares | P&L | P&L % | Status |
+|--------|-------|------------|------|-----------|--------|-----|-------|--------|
+| MASK | $2.26 | 23:00 CET | $2.02 | 14:00 CET (08:00 ET) | 44 | -€10.56 | -10.6% | ❌ Loss |
+
+- Exit price: $2.02 (live premarket scan at 08:01 ET)
+- Realized P&L: (2.02 - 2.26) × 44 = **-€10.56 (-10.6%)**
+- Position size: ~€99.44 entry -> ~€88.88 exit
+
+**Total Paper P&L: -€10.56**
+
+**No open positions.** Next evening trade is unblocked.
+
+### Price Changes Since Pulse 2
+
+- **MASK** fell from $2.29 at Pulse 2 to $2.02 now. That is a **-11.8%** drop in the last 2 hours and a **-21.7%** drop from the $2.58 premarket high.
+- **CLRB** is the biggest stock exploding in premarket right now at about $4.65, after printing as high as $6.90. But it was a PM-only move, not an AH continuation. It does **not** replace MASK as the baseline AH->PM winner.
+
+### Notes
+
+1. The AH->PM baseline result stays the same: **MASK was the right winner and the scanner caught it live.**
+2. The paper trade still lost because entry came after most of the AH move was already done. Winning detection did not translate into a good entry.
+3. CLRB adds a separate lesson: some of the biggest premarket names appear with no usable AH signal. That is not an evening scanner miss. It is a different pattern.
