@@ -22,7 +22,7 @@ The most important question is: what stock IS exploding in premarket right now? 
 - Run `date` to get the current time
 - Determine yesterday's US trading date (the AH session we're evaluating)
 - Set `LOG_FILE=log/YYYY-MM-DD/log.md` using that date
-- Pull latest changes
+- Pull latest changes: `git stash && git pull --ff-only && git stash pop 2>/dev/null || true`
 - If this is **pulse 1**, do **not** read `LOG_FILE` yet. Step 2 must happen first.
 - If this is **pulse 2 or 3**, read the existing log now so you can reuse pulse 1's winner, scanner diagnostic, and paper trades
 
