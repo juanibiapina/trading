@@ -229,3 +229,48 @@ Yahoo AH reconstruction confirms both real AH continuation names were **EZGO** a
 2. **OCG** is fading slowly in premarket. The $2.13–$2.24 range held for 2 hours with thin volume but the bias is lower. The paper trade loss widened modestly from -5.1% to -6.8%.
 3. Scanner diagnostic and baseline tracking unchanged from Pulse 1. The prioritization error (choosing OCG over EZGO) remains the key lesson.
 4. Position must be closed at Pulse 3 (14:00 CET).
+
+## Morning Evaluation — 14:00 CET (Pulse 3 — FINAL)
+
+### Price Update
+
+**EZGO** (today's winner) faded from the Pulse 2 level:
+- Pulse 1 (10:23 CET): $2.85 (+131.7%)
+- PM peak: $3.69 (+200.0%) at 04:30 ET / 10:30 CET
+- Pulse 2 (12:00 CET): $3.14 (+155.3%)
+- Current (08:00 ET / 14:00 CET): **$2.81 (+128.5%)**
+- Trend: steady fade from PM peak, down ~$0.90 from high. Still a monster move from previous close.
+
+**OCG** faded sharply since Pulse 2:
+- Pulse 1: $2.22 (+34.5%)
+- Pulse 2: $2.18 (+32.1%)
+- Brief spike to $2.36 at 13:15 CET / 07:15 ET (possible speculative pop)
+- Current (08:00 ET / 14:00 CET): **$1.95 (+18.2%)**
+- Trend: hard fade through the last hour, from $2.36 → $1.95 in 45 minutes
+
+### Paper Trade P&L — CLOSED
+
+| Ticker | Entry | Entry Time | Exit | Exit Time | Shares | P&L | P&L % | Status |
+|--------|-------|------------|------|-----------|--------|-----|-------|--------|
+| OCG | $2.34 | 23:30 CET | $1.95 | 14:00 CET | 42 | -$16.38 | -16.7% | ❌ Loss |
+
+**Total Paper P&L: -$16.38 (-16.7%)**
+
+Position closed at Pulse 3 as required. No open positions remain.
+
+### P&L Progression
+
+| Pulse | Time | OCG Price | P&L | P&L % |
+|-------|------|-----------|-----|-------|
+| 1 | 10:23 CET | $2.22 | -€5.04 | -5.1% |
+| 2 | 12:00 CET | $2.18 | -€6.72 | -6.8% |
+| 3 | 14:00 CET | $1.95 | -$16.38 | -16.7% |
+
+The trade deteriorated at each checkpoint. OCG peaked at $2.49 in AH (01:40 CET) and never recovered. The best premarket exit would have been $2.24 at 04:00 ET — still a loss from the $2.34 entry.
+
+### Notes
+
+1. **OCG was a losing trade regardless of exit timing.** The entry at $2.34 was near the AH peak ($2.49). Even the best PM price ($2.36 at 13:15 CET) barely matched entry. This was a buy-at-top setup.
+2. **EZGO was the clear winner** but was skipped due to 20.7M float and no verified catalyst. The hypothetical AH entry at $2.03 → PM peak $3.69 = **+81.8%** vs OCG's **-16.7%**.
+3. **Key lesson reinforced:** prioritizing "clean" setups (low float, tidy chart) over actual price leadership cost us again. The stock with the strongest tape won, not the one with the best float profile.
+4. Scanner diagnostic and baseline tracking unchanged from Pulse 1.
