@@ -138,6 +138,49 @@ Skip ZVIA: float 62.7M (too high), weak AH move (+9.2%), negative day (-4.8%), l
 
 **No new paper trades.** No new candidates meeting criteria. ZVIA is the only other scanner hit and fails on float/volume/day%.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**Scanner: 6 AH hits.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $4.14 | +95% | +20.3% | $4.98 | +135% | 2.3M | 5.1M | 0.5x | 469K | Specialty Telecommunications |
+| ERNA | [TV](https://www.tradingview.com/chart/?symbol=ERNA) | $6.04 | +51% | +9.3% | $6.60 | +61% | 877K | 6.4M | 0.1x | — | Pharmaceuticals: Major |
+| TCRX | [TV](https://www.tradingview.com/chart/?symbol=TCRX) | $1.25 | +3% | +7.2% | $1.34 | +11% | 117K | 786K | 0.1x | 50.5M | Biotechnology |
+| ZVIA | [TV](https://www.tradingview.com/chart/?symbol=ZVIA) | $1.19 | -5% | +9.2% | $1.30 | +4% | 117K | 467K | 0.3x | 62.7M | Beverages: Non-Alcoholic |
+| WTO | [TV](https://www.tradingview.com/chart/?symbol=WTO) | $0.98 | -14% | +5.4% | $1.03 | -10% | 442K | 3.1M | 0.1x | 1.7M | Telecommunications Equipment |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $1.33 | -23% | +5.3% | $1.40 | -19% | 57K | 4.9M | 0.0x | 35.5M | Information Technology Services |
+
+*Note: PMAX scanner showed AH Price $4.35 at scan time (18:00:22 ET), but check-prices shows $4.98 at 18:00 — late surge captured in price history but not scanner snapshot.*
+
+### New candidates
+
+**WTO** — Skip: Dead-cat bounce. Day% -14.3%, spiked briefly to $1.31 (+14.9% from prev close) at 17:15 ET then immediately crashed back to $1.03. Classic dead-cat pattern.
+
+**TCRX** — Skip: Float 50.5M (over 50M limit). Slow AH build to +10.7% but very low volume (117K vs 786K avg, VRatio 0.1x).
+
+**RPGL** — Skip: Dead-cat bounce. Day% -22.7%, mild AH recovery +5.3%. Well below -15% threshold.
+
+### Returning candidates
+
+**ZVIA** — Skip maintained. Float 62.7M, negative day, low volume ratio.
+
+**ERNA (paper trade)** — Peaked at $6.86 at 17:10 ET (our entry), faded to $5.90 low at 16:10, then traded $6.50-6.65 range for last hour. Now at $6.60 (+9.3% AH). Paper trade: entered $6.86, current $6.60 (**−3.8%**). Catalyst is real and strong. Stabilizing in $6.50-6.65 range after peak fade. Will track through premarket.
+
+**PMAX** — Major late-AH surge! Was flat/fading through 22:00-23:00 scans (+2.4% AH at best), then exploded: $4.35 at 17:40 → $4.83 at 17:55 → $4.98 at 18:00 ET (+20.3% from close). Ultra-low float (265K post-R/S per SEC filing, scanner shows 469K). Multi-week runner from $0.35 mid-April.
+
+**PMAX catalyst search (4 searches):** No specific same-day catalyst found. Earnings were April 30 (Q4 2025, revenue up 72% YoY but still loss-making). 1-for-10 reverse split on April 17. Annual report (20-F) filed recently showing HK-based financial communications firm with cash burn and liquidity risk. Today's +95% move appears momentum/squeeze-driven on ultra-low float post-reverse-split stock. No press release, no 8-K, no earnings today.
+
+**PMAX entry criteria check:**
+- ✅ Float < 50M → 265K-469K (ultra-low)
+- ✅ AH change >10% in 2+ scans → First crossed >10% late in AH; building pattern at end of session
+- ✅ Day% above -15% → +95%
+- ❌ No catalyst found (pure momentum/squeeze)
+- ⚠️ Already very extended (+135% total from prev close, 10x in 3 weeks)
+- ✅ Building AH pattern (late surge, not fading from spike)
+
+**PMAX decision: No new paper trade.** Already have ERNA position (one trade per day rule). PMAX is noted for pattern tracking: ultra-low float post-R/S momentum runner with no catalyst — interesting to see if it carries into premarket. Would have been a concern entry anyway (no catalyst, extreme extension).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
