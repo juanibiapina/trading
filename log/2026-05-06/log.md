@@ -181,6 +181,34 @@ Skip ZVIA: float 62.7M (too high), weak AH move (+9.2%), negative day (-4.8%), l
 
 **PMAX decision: No new paper trade.** Already have ERNA position (one trade per day rule). PMAX is noted for pattern tracking: ultra-low float post-R/S momentum runner with no catalyst — interesting to see if it carries into premarket. Would have been a concern entry anyway (no catalyst, extreme extension).
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**Scanner: 5 AH hits** (same tickers as 00:00, minus TCRX).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $4.14 | +95% | +25.8% | $5.21 | +146% | 3.1M | 5.2M | 0.6x | 469K | Specialty Telecommunications |
+| ERNA | [TV](https://www.tradingview.com/chart/?symbol=ERNA) | $6.04 | +51% | +11.1% | $6.71 | +68% | 928K | 6.4M | 0.1x | — | Pharmaceuticals: Major |
+| ZVIA | [TV](https://www.tradingview.com/chart/?symbol=ZVIA) | $1.19 | -5% | +10.1% | $1.31 | +5% | 120K | 467K | 0.3x | 62.7M | Beverages: Non-Alcoholic |
+| WTO | [TV](https://www.tradingview.com/chart/?symbol=WTO) | $0.98 | -14% | +5.4% | $1.03 | -10% | 476K | 3.1M | 0.2x | 1.7M | Telecommunications Equipment |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $1.33 | -23% | +5.3% | $1.40 | -19% | 57K | 4.9M | 0.0x | 35.5M | Information Technology Services |
+
+### Returning candidates
+
+**PMAX** — Still surging. Peaked $5.20 at 18:10 ET (+145% total), now $4.94. Trajectory: flat through 22:00-23:00 → exploded 17:40+ ET → peaked 18:10 → slight pullback. Now >10% AH in 2 consecutive scans (00:00: +20.3%, 00:30: +25.8%). **No paper trade — already holding ERNA (one trade per day).** Noted for pattern tracking: ultra-low float post-R/S momentum runner with no catalyst, late AH surge pattern.
+
+**ERNA (paper trade)** — Recovering nicely. Was $6.39 at 23:30 scan (-6.9% from entry), now $6.79 at 18:30 ET (-1.0% from $6.86 entry). Stabilized in $6.60-6.80 range for last hour, then ticking up: $6.71 → $6.75 → $6.79. AH change back above +11%. The building pattern has resumed after the post-peak dip. Holding.
+
+**STFS** (not in scanner, tracking from watchlist) — Major recovery. Was -14.3% from close at 22:30 CET, now $7.25 at 18:29 ET (-6.6% from close but +80% from prev close). Spiked to $7.65 at 16:15, faded, then rebuilt to $7.30 range. Not an AH play (negative AH change from today's close).
+
+**ZVIA, WTO, RPGL** — Skip maintained. Same reasons as prior scans.
+
+**BGDE** — Flat at $6.45 (+2.5% AH). Holding but no momentum.
+
+**OCG** — Flat at $2.20 (+2.8% AH). Multi-day runner holding gains, no new AH push.
+
+**Summary:** PMAX is the standout mover this session with a dramatic late-AH surge on no catalyst. ERNA paper trade recovering toward entry price — catalyst-driven hold looks viable for premarket. No new paper trades (one position rule).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
