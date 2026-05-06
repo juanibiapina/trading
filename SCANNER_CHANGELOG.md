@@ -33,7 +33,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - All sectors — no sector restriction (learning phase, see Day Trading.md)
 - Session timing follows America/New_York market hours, including DST
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
-- Entry rules: float <10M, catalyst required, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
+- Entry rules: float <50M, catalyst required, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade
@@ -50,6 +50,23 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-05-06 — Track Entry Extension in Morning Evaluation
+
+**Context:** Last 4 paper trades show a pattern: the one winner (NXTT, +19.1%) had the lowest Total% at entry (~+23%), while the three losers were all highly extended at entry (MASK +78%, OCG +42%, BFRG -20% dead cat). May 5's OCG was entered at +41.8% Total and peaked at +43% — essentially a buy-at-top. May 4's MASK was entered at +78% Total and never recovered. The Total% column exists in scanner output but isn't systematically tracked in the evaluation template alongside P&L, making the correlation invisible over time.
+
+**Evaluation of previous changes:**
+- 2026-05-05 DST session timing fix: **Helped.** May 5 evening scan at 22:00 CET correctly ran in AH mode (0 hits because nothing qualified yet, but 22:30 returned proper AH columns with Close/Day%/AH Chg). Compare with May 4 at 22:00 which still showed "regular-session data" before the fix.
+- 2026-05-05 Yahoo AH as primary retrospective: **Helped.** May 5 morning evaluation explicitly uses "Yahoo AH reconstruction confirms both real AH continuation names were EZGO and OCG" and doesn't rely on the forced AH scan (which returned 0 hits again). The retrospective correctly identified the winner from AH+PM data.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — Added "Entry Total%" column to the Paper Trade P&L table template (between Entry price and Entry Time).
+   - Why: Total% at entry is the best single measure of how extended the stock is when we buy it. It combines Day% + AH% into one number representing the total move from previous close. The last 4 paper trades suggest entries above ~+40% Total underperform, but with only 4 data points this is a hypothesis, not a rule. Systematic tracking in the P&L table will build the dataset needed to set a data-driven threshold.
+   - Hypothesis: Future morning evaluations will include Total% at entry alongside P&L. After 5-10 more paper trades, we'll have enough data to determine if a Total% entry ceiling improves selection. Measurable: (1) next morning evaluation P&L table includes the Entry Total% column, (2) after 10 trades total, we can compute correlation between entry extension and outcome.
+
+2. **prompts/post-market-scan.md** — Fixed float threshold in learning-phase default from `<10M` to `<50M` (consistency fix — already documented as `<50M` in Current Process section since earlier changelog entries).
+   - Why: The prompt was out of sync with the documented process. May 5's EZGO (20.7M float, +81.8% hypothetical) was skipped partly because the prompt said "<10M" even though the learning-phase rules use <50M. Aligning prevents unnecessary restrictiveness.
+   - Hypothesis: Agent will no longer over-penalize candidates with floats in the 10-50M range. Measurable: next time a candidate with float 10-50M qualifies on other criteria, it won't be dismissed for float alone.
 
 ### 2026-05-05 — Fix DST Session Timing + Use Yahoo AH Reconstruction
 

@@ -141,9 +141,9 @@ Append a `## Morning Evaluation` section to the log.
 
 ### Paper Trade P&L
 
-| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
-|--------|-------|------------|---------|-----|-------|--------|
-| XXXX   | $2.50 | 23:00 CET  | $3.10   | +€24.00 | +24.0% | ✅ Win |
+| Ticker | Entry | Entry Total% | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|--------------|------------|---------|-----|-------|--------|
+| XXXX   | $2.50 | +35.0% | 23:00 CET  | $3.10   | +€24.00 | +24.0% | ✅ Win |
 
 **Total Paper P&L: +€XX.XX**
 
