@@ -113,6 +113,31 @@ Skip ZVIA: float 62.7M (too high), weak AH move (+9.2%), negative day (-4.8%), l
 
 **Decision: ENTER paper trade.** The catalyst is strong (Tier A preclinical breakthrough), float is ultra-low (1.17M), and AH is building not fading. Per learning phase rules: "A paper trade with noted concerns generates data; a skip generates nothing." The building AH pattern (+0.3% → +2.6% → +13.6%) suggests this has legs, even though it technically only passed >10% in one scan. The 2-scan threshold is designed to filter spikes — this is the opposite pattern (steady build).
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**Scanner: 2 AH hits** (same tickers as 23:00).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ERNA | [TV](https://www.tradingview.com/chart/?symbol=ERNA) | $6.04 | +51.4% | +13.6% | $6.86 | +71.9% | 721K | 6.4M | 0.1x | — | Pharmaceuticals: Major |
+| ZVIA | [TV](https://www.tradingview.com/chart/?symbol=ZVIA) | $1.19 | -4.8% | +10.1% | $1.31 | +4.8% | 110K | 466K | 0.2x | 62.7M | Beverages: Non-Alcoholic |
+
+**ZVIA:** Now +10.1% AH (up from +9.2% at 23:00). Skip maintained — float 62.7M (way above 50M), negative Day% (-4.8%), volume ratio 0.2x. Not a momentum candidate regardless of catalyst.
+
+**Watchlist update (1.5 hours into AH):**
+
+| Ticker | Chart | Close | Day% | AH Price | AH Chg | Trend | Notes |
+|--------|-------|-------|------|----------|--------|-------|-------|
+| ERNA | [TV](https://www.tradingview.com/chart/?symbol=ERNA) | $6.04 | +51.4% | $6.39 | +5.8% | 📉 Fading from peak | Peaked $6.86 (+13.6%) at 17:10, now $6.39. Paper trade underwater |
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $4.14 | +95% | $4.12 | -0.5% | ↔️ Holding | Briefly spiked to $4.39 (+6%) at 17:00, settled back |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $7.76 | +93% | $7.07 | -8.9% | 📉 Fading (improved) | Recovered from -14.3% low, still below close |
+| BGDE | [TV](https://www.tradingview.com/chart/?symbol=BGDE) | $6.29 | +34% | $6.33 | +0.6% | ↔️ Flat | Holding near close all AH |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $2.14 | +27% | $2.15 | +0.5% | ↔️ Flat | No AH momentum |
+
+**ERNA paper trade update:** Entered at $6.86 (23:00 CET), now at $6.39 (−6.9%). The stock peaked at 17:10 ET and has been fading for 20 minutes. The AH build pattern that prompted the entry (+0.3% → +2.6% → +13.6%) reversed after hitting +13.6%. This is early — still 2.5 hours of AH left and premarket hasn't started. The catalyst (breakthrough preclinical data) is real. Holding paper trade for learning data; this will show whether "AH spike then fade" stocks can recover in premarket or not.
+
+**No new paper trades.** No new candidates meeting criteria. ZVIA is the only other scanner hit and fails on float/volume/day%.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
