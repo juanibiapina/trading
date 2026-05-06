@@ -198,3 +198,34 @@ Yahoo AH reconstruction confirms both real AH continuation names were **EZGO** a
 1. The scanner baseline still passes today because live evening scans eventually found **EZGO**.
 2. The bigger error was prioritization. We picked the cleaner low-float **OCG** setup and skipped the actual leader once **EZGO** proved it could hold and extend.
 3. The forced overnight AH scan with 0 hits is still unusable. Morning retrospectives should keep using Yahoo AH and PM reconstruction.
+
+## Morning Evaluation — 12:00 CET (Pulse 2)
+
+### Price Update
+
+**EZGO** (today's winner) surged further since Pulse 1:
+- Pulse 1 (10:23 CET): $2.85 (+131.7%)
+- PM peak: **$3.69 (+200.0%)** at 04:30 ET / 10:30 CET
+- Current (06:00 ET / 12:00 CET): **$3.14 (+155.3%)**
+- Hypothetical P&L (22:15 CET AH entry at $2.03 → PM peak $3.69): **+81.8%**
+
+**OCG** drifted slightly lower in premarket:
+- Pulse 1: $2.22 (+34.5%)
+- PM peak: $2.24 (+35.8%) at 04:00 ET
+- Current: **$2.18 (+32.1%)**
+- Trend: slow fade from PM open, holding in $2.13–$2.24 range
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| OCG | $2.34 | 23:30 CET | $2.18 | -€6.72 | -6.8% | Open |
+
+**Total Paper P&L: -€6.72** (was -€5.04 at Pulse 1)
+
+### Notes
+
+1. **EZGO** confirmed as a far stronger winner than it looked at Pulse 1. The PM peak at $3.69 represents a +200% move from previous close and +81.8% from the AH entry point at 22:15 CET. This is the best hypothetical trade in recent days.
+2. **OCG** is fading slowly in premarket. The $2.13–$2.24 range held for 2 hours with thin volume but the bias is lower. The paper trade loss widened modestly from -5.1% to -6.8%.
+3. Scanner diagnostic and baseline tracking unchanged from Pulse 1. The prioritization error (choosing OCG over EZGO) remains the key lesson.
+4. Position must be closed at Pulse 3 (14:00 CET).
