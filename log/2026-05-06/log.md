@@ -71,7 +71,50 @@
 
 **No paper trade candidates at this time.** Will re-check at 23:00 CET.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Scanner: 1 AH hit.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ZVIA | [TV](https://www.tradingview.com/chart/?symbol=ZVIA) | $1.19 | -4.8% | +9.2% | $1.30 | +4.0% | 97K | 465K | 0.2x | 62.7M | Beverages: Non-Alcoholic |
+
+Skip ZVIA: float 62.7M (too high), weak AH move (+9.2%), negative day (-4.8%), low volume ratio (0.2x). Not a momentum candidate.
+
+**Watchlist update (1 hour into AH):**
+
+| Ticker | Chart | Close | Day% | AH Price | AH Chg | Trend | Notes |
+|--------|-------|-------|------|----------|--------|-------|-------|
+| ERNA | [TV](https://www.tradingview.com/chart/?symbol=ERNA) | $6.04 | +47% | $6.86 | **+13.6%** | 📈 Building | Was +0.3% → +2.6% → +13.6%. Accelerating |
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $4.14 | +95% | $4.24 | +2.4% | ↔️ Flat | Recovered from -5.8% dip. Holding near close |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $7.76 | +93% | $6.65 | -14.3% | 📉 Fading | Volatile but trending down from close |
+| BGDE | [TV](https://www.tradingview.com/chart/?symbol=BGDE) | $6.29 | +34% | $6.23 | -1.0% | ↔️ Flat | Holding gains, no AH momentum |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $2.14 | +27% | $2.15 | +0.5% | ↔️ Flat | Multi-day runner, no new AH push |
+
+### ERNA Evaluation
+
+**Catalyst found:** Ernexa Therapeutics Unveils Breakthrough Preclinical Results — ERNA-101 achieves 100% survival and complete tumor elimination in ovarian cancer models (GlobeNewswire, May 6, 2026). Tier A catalyst (breakthrough data, collaboration with MD Anderson Cancer Center).
+
+**Additional context:** 1-for-25 reverse stock split effective May 4, 2026. Post-split outstanding shares: ~1,166,177. Ultra-low float.
+
+**Entry criteria check:**
+- ✅ Float < 50M → ~1.17M (ultra-low, post-reverse-split)
+- ⚠️ AH change >10% in 2+ AH scans → Only 1 scan (23:00). Pattern: +0.3% → +2.6% → +13.6% (building, not yet confirmed across 2 scans)
+- ✅ Day% above -15% → +47%
+- ✅ Strong catalyst (breakthrough preclinical data)
+- ✅ Biotech/Pharma sector
+- ✅ Not a dead-cat bounce (positive Day%)
+- ✅ Building AH pattern (accelerating, not fading from spike)
+
+**Concerns:**
+- Only crossed 10% AH in the 23:00 scan (doesn't strictly meet 2-scan threshold)
+- Day already extended +47% from prev close, total +67.5% including AH
+- Post-reverse-split stock — can have unusual volatility in first days
+
+**Decision: ENTER paper trade.** The catalyst is strong (Tier A preclinical breakthrough), float is ultra-low (1.17M), and AH is building not fading. Per learning phase rules: "A paper trade with noted concerns generates data; a skip generates nothing." The building AH pattern (+0.3% → +2.6% → +13.6%) suggests this has legs, even though it technically only passed >10% in one scan. The 2-scan threshold is designed to filter spikes — this is the opposite pattern (steady build).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| ERNA | $6.86 | 23:00 CET | 14 | Breakthrough preclinical data (100% tumor clearance, ovarian cancer). Ultra-low float ~1.17M post-R/S. Building AH pattern. |
