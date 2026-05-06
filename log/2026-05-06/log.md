@@ -35,6 +35,24 @@
 - VIIQ, BGDE — moderate float, strong day, watch for AH continuation
 - OCG — multi-day runner, already had AH action yesterday
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Scanner: 0 AH hits.** AH just opened — checking watchlist candidates from 21:30 scan.
+
+**Watchlist status (early AH):**
+
+| Ticker | Chart | Close | Day% | AH Price | AH Chg | Float | Industry | Notes |
+|--------|-------|-------|------|----------|--------|-------|----------|-------|
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $4.14 | +95% | $4.05 | -2.2% | 469K | Specialty Telecom | Fading. 46.8M vol today |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $7.76 | +93% | $7.41 | -4.6% | 1.1M | Advertising/Marketing | Fading from close |
+| ERNA | [TV](https://www.tradingview.com/chart/?symbol=ERNA) | $6.04 | +47% | $6.06 | +0.3% | — | Pharmaceuticals: Major | Flat. 62.8M vol |
+| BGDE | [TV](https://www.tradingview.com/chart/?symbol=BGDE) | $6.29 | +34% | $6.25 | -0.6% | 3.6M | Internet Software/Services | Flat/fading. 430K vol |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $2.14 | +27% | $2.15 | +0.5% | 1.9M | — | Multi-day runner. Flat AH |
+
+**OTC stocks (no AH data):** RAPH, SONX, VIIQ, KJFI — these trade OTC and don't have standard AH sessions.
+
+**Observation:** None of the intraday movers are carrying momentum into AH so far. All showing flat or mild fade. This is early (4:00 PM ET) — will re-check at 22:30 CET.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
