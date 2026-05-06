@@ -53,6 +53,24 @@
 
 **Observation:** None of the intraday movers are carrying momentum into AH so far. All showing flat or mild fade. This is early (4:00 PM ET) — will re-check at 22:30 CET.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Scanner: 0 AH hits.** Checking watchlist candidates from earlier scans.
+
+**Watchlist status (30 min into AH):**
+
+| Ticker | Chart | Close | Day% | AH Price | AH Chg | Float | Industry | Notes |
+|--------|-------|-------|------|----------|--------|-------|----------|-------|
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $4.14 | +95% | $3.90 | -5.8% | 469K | Specialty Telecom | Fading steadily from close |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $7.76 | +93% | $6.85 | -11.7% | 1.1M | Advertising/Marketing | Significant fade, volatile |
+| ERNA | [TV](https://www.tradingview.com/chart/?symbol=ERNA) | $6.04 | +47% | $6.20 | +2.6% | — | Pharmaceuticals: Major | Slight uptick, holding |
+| BGDE | [TV](https://www.tradingview.com/chart/?symbol=BGDE) | $6.29 | +34% | $6.22 | -1.1% | 3.6M | Internet Software/Services | Flat |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $2.14 | +27% | $2.19 | +2.3% | 1.9M | — | Multi-day runner, slight uptick |
+
+**Observation:** All candidates from the regular session are flat or fading in AH. None showing >10% AH change from today's close. These were intraday movers that didn't carry momentum into after-hours — exactly the pattern the trading plan warns about. No new AH catalysts detected.
+
+**No paper trade candidates at this time.** Will re-check at 23:00 CET.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
