@@ -115,3 +115,86 @@ No candidates found.
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | OCG | $2.34 | 23:30 CET | 42 | 1.9M float, second AH scan above +10%, strong build/hold pattern, first real AH activity this week. Concern: catalyst still unverified. |
+
+## Morning Evaluation - 10:23 CET (Pulse 1)
+
+### Today's Winner
+
+**EZGO** - Consumer discretionary
+- Catalyst: no fresh same-day PR found. The move looks momentum-driven. The latest company PR on Finviz was the Apr 21 factory ownership update.
+- Previous Close: $1.23
+- AH at screening time: $2.03 (+65.1%) at 22:15 CET
+- First scanner capture: $2.14 (+12.6% vs regular close, +74.0% vs previous close) at 23:00 CET
+- Premarket now: $2.85 (+131.7%) at 10:23 CET
+- Premarket peak so far: $2.85 (+131.7%) at 10:23 CET
+- Hypothetical P&L (22:15 CET AH entry -> PM peak): +40.4%
+- Float: 20.7M | Market Cap: $39.7M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES, on Yahoo AH tape**
+- What it looked like at ~22:15 CET: already around $2.03, up 65.1% vs previous close, and still building.
+- Was it on our radar? **Late and then skipped.** The live AH scanner missed it at 22:00 and 22:30 CET, first surfaced it at 23:00 CET, and we passed because of the 20.7M float and no verified same-day catalyst.
+- Scanner gap: the live scanner needs better early AH coverage, and the decision process needs to give more weight to the actual leading tape even when the float is above the ideal range.
+
+### Baseline Tracking
+
+- Days tracked: 12
+- Winners detected by scanner: 10/12 (**83.3%**) - HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO
+- Winner selected for paper trade: 2/12 (**16.7%**) - NXTT and MASK
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+**Forced AH scan (04:21 ET):** No matches.
+
+**Forced PM scan (04:20 ET):**
+
+| Ticker | Close | PM Price | PM Chg% | PM Vol | Float | Industry |
+|--------|-------|----------|---------|--------|-------|----------|
+| GCTK | $0.73 | $1.17 | +60.3% | 2.5M | 1.8M | Medical Specialties |
+| EZGO | $1.90 | $2.82 | +48.4% | 289K | 20.7M | Movies/Entertainment |
+| OCG | $1.69 | $2.21 | +30.8% | 70K | 1.9M | Specialty Stores |
+| UPXI | $1.38 | $1.50 | +8.7% | 65K | 57.4M | Pharmaceuticals: Other |
+
+**Caught by evening scans:** EZGO, OCG  
+**Missed by evening scans:** GCTK, UPXI
+
+Yahoo AH reconstruction confirms both real AH continuation names were **EZGO** and **OCG**. GCTK and UPXI were PM movers, not usable AH continuation setups.
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| OCG | $2.34 | 23:30 CET | $2.22 | -€5.04 | -5.1% | Open |
+
+**Total Paper P&L: -€5.04**
+
+*Current price is the 10:23 CET premarket print. Position stays open for Pulse 2 and must be closed at Pulse 3.*
+
+### Scanner Effectiveness
+
+- Evening scans ran: 7 times (21:30 - 00:30 CET)
+- Candidates found: 14 unique tickers
+- Retrospective matches: 2/4
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| GCTK | -0.8% AH peak | Not an AH mover. The PM move started at 04:00 ET, so there was no evening signal for the scanner to catch. | No clean AH entry, even though the PM move was large. |
+| UPXI | +2.9% AH peak | Stayed below threshold all AH, then gapped in PM. | Marginal. Best late AH print of $1.40 to PM high of $1.54 was about +10%. |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| EZGO | $3.05 | 01:55 CET | **Late surge** | $2.85 | -6.6% | +131.7% | Clear winner. The late AH squeeze carried straight into PM. |
+| OCG | $2.49 | 01:40 CET | **Build** | $2.22 | -10.8% | +34.5% | Good follow-through, but much weaker than EZGO. |
+| CYPH | $1.27 | 00:55 CET | **Build** | $1.21 | -4.7% | +23.5% | Moderate continuation, but the 72.7M float kept it low quality. |
+
+### Notes
+
+1. The scanner baseline still passes today because live evening scans eventually found **EZGO**.
+2. The bigger error was prioritization. We picked the cleaner low-float **OCG** setup and skipped the actual leader once **EZGO** proved it could hold and extend.
+3. The forced overnight AH scan with 0 hits is still unusable. Morning retrospectives should keep using Yahoo AH and PM reconstruction.
