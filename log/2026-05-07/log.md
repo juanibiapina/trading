@@ -159,6 +159,41 @@ Top candidates (sorted by relevance: low float, high % change, reasonable volume
 
 **No new paper trades.** AIIO already entered and building. HTOO has great characteristics but needs 2nd AH scan and is fading. RPGL has 2 scans but no catalyst.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**Session: AFTERHOURS** — 12 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AIIO | [TV](https://www.tradingview.com/chart/?symbol=AIIO) | $0.59 | -1.1% | +57.6% | $0.93 | +55.9% | 11.7M | 1.4M | 8.5x | 13.5M | Financial Conglomerates |
+| GLE | [TV](https://www.tradingview.com/chart/?symbol=GLE) | $0.55 | +52.1% | +5.8% | $0.58 | +60.9% | 2.6M | 22.6M | 0.1x | 1.3M | Packaged Software |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $2.30 | +72.9% | +9.1% | $2.51 | +88.7% | 928K | 6.0M | 0.2x | 35.5M | IT Services |
+| BATL | [TV](https://www.tradingview.com/chart/?symbol=BATL) | $2.86 | -3.1% | +5.9% | $3.03 | +2.6% | 641K | 6.5M | 0.1x | 16.8M | Oil & Gas Production |
+| CDLX | [TV](https://www.tradingview.com/chart/?symbol=CDLX) | $0.78 | -1.6% | +5.7% | $0.83 | +3.9% | 193K | 625K | 0.3x | 52.0M | Internet Software/Services |
+| HTOO | [TV](https://www.tradingview.com/chart/?symbol=HTOO) | $3.40 | +0.9% | +11.8% | $3.80 | +12.8% | 135K | 43K | 3.2x | 2.3M | Chemicals: Specialty |
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $3.97 | -11.2% | +13.3% | $4.50 | +0.7% | 116K | 3.2M | 0.0x | 3.0M | Integrated Oil |
+| ZIP | [TV](https://www.tradingview.com/chart/?symbol=ZIP) | $3.10 | -0.6% | +5.5% | $3.27 | +4.8% | 91K | 651K | 0.1x | 62.9M | Internet Software/Services |
+| LPRO | [TV](https://www.tradingview.com/chart/?symbol=LPRO) | $1.62 | -5.3% | +8.0% | $1.75 | +2.3% | 71K | 601K | 0.1x | 101.4M | Packaged Software |
+| FNKO | [TV](https://www.tradingview.com/chart/?symbol=FNKO) | $4.46 | +1.8% | +9.0% | $4.86 | +11.0% | 68K | 450K | 0.2x | 39.9M | Recreational Products |
+| PRTS | [TV](https://www.tradingview.com/chart/?symbol=PRTS) | $0.85 | -6.4% | +8.5% | $0.92 | +1.5% | 65K | 453K | 0.1x | 55.3M | Specialty Stores |
+| HOWL | [TV](https://www.tradingview.com/chart/?symbol=HOWL) | $0.62 | -4.6% | +20.6% | $0.75 | +15.0% | 56K | 398K | 0.1x | 40.6M | Pharmaceuticals: Major |
+
+**Returning Candidates — Updates:**
+
+- **AIIO** (paper traded at $0.88): Peaked $0.94 (+57.8%) at 17:35, now fading — $0.87 at 18:00 (below entry). Volume massive at 11.7M (8.5x avg). Two clear legs up (16:10 and 16:50) followed by gradual fade from 17:35 peak. Position slightly underwater at current price but typical AH volatility.
+- **HTOO**: 2nd AH scan >10% — 23:30 (+12.6%), now +11.8%. Had volatile AH: peaked $3.97 (+17.9%) at 17:30, pulled back to $3.71 at 17:59. Two spike attempts ($3.87 at 16:55, $3.97 at 17:30) but can't hold. Float 2.3M (excellent). Catalyst confirmed (FY2025 earnings + Alien Fuel JV). **Qualifies for entry** but already holding AIIO (one position at a time).
+- **RPGL**: AH fading — +9.1% (was +12.2% at 23:30, +10.9% at 23:00). Dropping below 10% threshold. No catalyst. Dead.
+- **FNKO**: AH +9.0% (was +10.7% at 23:30). Fading back below 10%. Skip: float 39.9M, fading.
+- **HOWL**: Now +20.6% AH — 2nd AH scan (23:00: +17.7%). BUT check-prices shows thin spike to $0.75 at 17:35-17:45 then back to $0.66 by 17:54. Extremely thin volume, just a few trades. Float 40.6M. Catalyst confirmed (Jazz Pharmaceuticals deal + Q1 results). Skip: unreliable AH pattern (spike-and-fade on thin volume), high float.
+- **GLE**: AH +5.8%, same as 22:30. Below 10%. Dead AH.
+- **CDLX**: Fading — +5.7% (was +8.1%). Dead.
+
+**New Candidate Catalyst Search:**
+
+**SKYQ** (AH +13.3%): ✅ Catalyst found — May 7 MOU to advance next-generation fuel technologies (released 4:30 AM ET). Also May 4 press release on 180M barrel oil sands asset RFP. BUT: Day% -11.2% (regular session crash), Total% only +0.7% from prev close — this is a recovery bounce, not new momentum. Borderline dead-cat bounce pattern. AH price ($4.50) just returning to prev close ($4.47). Skip: recovery bounce, not momentum.
+
+**Summary:** No new paper trades. AIIO remains only position. HTOO would qualify (2.3M float, 2+ AH scans >10%, catalyst) but one-position-at-a-time rule applies and AIIO was already entered.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
