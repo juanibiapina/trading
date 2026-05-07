@@ -15,7 +15,7 @@ Each entry documents:
 ```
 MIN_PRICE = 0.5
 MAX_PRICE = 10.0
-MAX_MARKET_CAP = 100,000,000 ($100M)
+MAX_MARKET_CAP = 300,000,000 ($300M)
 MIN_AH_VOLUME = 50,000
 MIN_AH_CHANGE = 5%
 MIN_PM_VOLUME = 50,000
@@ -50,6 +50,25 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-05-07 — Fix Changelog Header + Clarify Entry Total% Definition
+
+**Context:** The mcap ceiling was raised from $100M to $300M in `scripts/scan.py` on May 7 (commit 382d449) after the May 6 evaluation showed OSG ($190M) and NNBR ($126M) were both missed. The changelog header still said $100M. Separately, the May 6 ERNA paper trade logged "Entry Total% = +13.6% AH" — that's just the AH change, not the total move from previous close (+67.3%). The column was added on May 6 to track extension, but the definition was ambiguous enough that it was filled incorrectly on first use.
+
+**Evaluation of previous changes:**
+- 2026-05-06 Entry Total% column: **Working but misrecorded (1 data point).** The column appeared in the May 6 P&L table as intended. However, it was filled with "+13.6% AH" (just the AH change) instead of the actual total from prev close (~+67.3%). The column exists; the definition needs clarification so it's filled correctly going forward.
+- 2026-05-06 Float threshold fix (<10M → <50M in prompt): **Insufficient data.** No candidate in the 10-50M range was otherwise ideal on May 6. PMAX (469K float) and ERNA (~1.17M float) were both well under 10M. ZVIA (62.7M) was over 50M. The fix hasn't been tested yet.
+
+**Changes:**
+1. **SCANNER_CHANGELOG.md** — Updated "Current Scanner Parameters" header: MAX_MARKET_CAP from $100M to $300M to match the actual value in scan.py.
+   - Why: Bookkeeping. The parameter was already changed in scan.py but the changelog was out of sync. This ensures future improvement sessions read the correct baseline.
+   - Hypothesis: N/A (documentation fix only).
+
+2. **prompts/morning-evaluation.md** — Added explicit definition of "Entry Total%" below the P&L table template: total change from previous close, calculated as `(entry_price - prev_close) / prev_close`, with a worked example.
+   - Why: On May 6, the agent filled this column with "+13.6% AH" (AH change only) instead of "+67.3%" (total from prev close). The column exists to measure how extended the stock is at entry — it must include the regular session move. With 5 paper trades, the extension data is the most promising predictor of outcome, but only if recorded consistently.
+   - Hypothesis: The next morning evaluation will record Entry Total% as the total change from previous close, not just AH change. Measurable: (1) next P&L table shows a percentage clearly derived from (entry_price - prev_close) / prev_close, (2) the value includes the Day% component, not just AH%.
+
+**Updated parameters:** MAX_MARKET_CAP header corrected to $300M (scan.py already had this value).
 
 ### 2026-05-06 — Track Entry Extension in Morning Evaluation
 

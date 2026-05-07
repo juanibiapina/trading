@@ -145,6 +145,8 @@ Append a `## Morning Evaluation` section to the log.
 |--------|-------|--------------|------------|---------|-----|-------|--------|
 | XXXX   | $2.50 | +35.0% | 23:00 CET  | $3.10   | +€24.00 | +24.0% | ✅ Win |
 
+**Entry Total%** = total change from **previous close** (not just AH change). Calculate as: `(entry_price - prev_close) / prev_close`. This combines Day% + AH% into one number showing how extended the stock is at entry. Example: if prev close was $4.10 and you enter at $6.86, Entry Total% = +67.3%.
+
 **Total Paper P&L: +€XX.XX**
 
 ### Scanner Effectiveness
