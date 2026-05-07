@@ -28,6 +28,12 @@ Top candidates (sorted by relevance: low float, high % change, reasonable volume
 - AMPE: +12207% looks like a data anomaly or reverse split/restructuring
 - All flagged as **Watch — pending AH confirmation**
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Session: AFTERHOURS** — 0 hits. AH just opened; too early for movers to appear. Will re-scan at 22:30.
+
+**Regular session candidates update:** Watching SONX (372K float, +60%), ATRA (+91.8%), GLE (+71.7%, 1.3M float), SOBR (+80.6%), FALC (+22.9%) for AH continuation. No AH volume on any yet.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
