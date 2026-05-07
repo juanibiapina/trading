@@ -7,8 +7,7 @@ Run a post-market scan and update the daily log with results and paper trade dec
 - Run `date` to get the current time
 - Determine the US trading date: if current CET time is before 06:00, the trading date is yesterday (CET). Otherwise it's today.
 - Set `LOG_DIR=log/YYYY-MM-DD` and `LOG_FILE=log/YYYY-MM-DD/log.md` using the trading date
-- Make sure the repository is clean (stash if needed)
-- Pull latest changes
+- Pull latest changes: `git stash && git pull --ff-only && git stash pop 2>/dev/null || true`
 
 ### 2. Run Scanner
 
