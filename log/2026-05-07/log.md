@@ -194,6 +194,46 @@ Top candidates (sorted by relevance: low float, high % change, reasonable volume
 
 **Summary:** No new paper trades. AIIO remains only position. HTOO would qualify (2.3M float, 2+ AH scans >10%, catalyst) but one-position-at-a-time rule applies and AIIO was already entered.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**Session: AFTERHOURS** — 13 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AIIO | [TV](https://www.tradingview.com/chart/?symbol=AIIO) | $0.59 | -1.1% | +43.4% | $0.85 | +41.9% | 13.8M | 1.6M | 8.6x | 13.5M | Financial Conglomerates |
+| GLE | [TV](https://www.tradingview.com/chart/?symbol=GLE) | $0.55 | +52.1% | +9.3% | $0.60 | +66.2% | 2.9M | 22.6M | 0.1x | 1.3M | Packaged Software |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $2.30 | +72.9% | +8.3% | $2.49 | +87.2% | 973K | 6.0M | 0.2x | 35.5M | IT Services |
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $3.97 | -11.2% | +24.4% | $4.94 | +10.5% | 239K | 3.2M | 0.1x | 3.0M | Integrated Oil |
+| CDLX | [TV](https://www.tradingview.com/chart/?symbol=CDLX) | $0.78 | -1.6% | +6.1% | $0.83 | +4.4% | 195K | 625K | 0.3x | 52.0M | Internet Software/Services |
+| ANNA | [TV](https://www.tradingview.com/chart/?symbol=ANNA) | $3.14 | +1.0% | +12.7% | $3.54 | +13.8% | 193K | 767K | 0.3x | 2.8M | Oil & Gas Production |
+| HTOO | [TV](https://www.tradingview.com/chart/?symbol=HTOO) | $3.40 | +0.9% | +12.0% | $3.81 | +12.9% | 137K | 43K | 3.2x | 2.3M | Chemicals: Specialty |
+| HOVR | [TV](https://www.tradingview.com/chart/?symbol=HOVR) | $2.20 | -21.7% | +6.8% | $2.35 | -16.4% | 109K | 2.2M | 0.0x | 37.3M | Aerospace & Defense |
+| ZIP | [TV](https://www.tradingview.com/chart/?symbol=ZIP) | $3.10 | -0.6% | +5.2% | $3.26 | +4.5% | 92K | 651K | 0.1x | 62.9M | Internet Software/Services |
+| IFRX | [TV](https://www.tradingview.com/chart/?symbol=IFRX) | $2.65 | +6.0% | +6.0% | $2.81 | +12.4% | 75K | 4.2M | 0.0x | 67.9M | Biotechnology |
+| FNKO | [TV](https://www.tradingview.com/chart/?symbol=FNKO) | $4.46 | +1.8% | +7.8% | $4.81 | +9.8% | 70K | 450K | 0.2x | 39.9M | Recreational Products |
+| PRTS | [TV](https://www.tradingview.com/chart/?symbol=PRTS) | $0.85 | -6.4% | +8.5% | $0.92 | +1.5% | 65K | 453K | 0.1x | 55.3M | Specialty Stores |
+| BEAT | [TV](https://www.tradingview.com/chart/?symbol=BEAT) | $0.87 | +1.7% | +5.7% | $0.92 | +7.5% | 62K | 657K | 0.1x | 45.6M | Medical Specialties |
+
+**Returning Candidates — Updates:**
+
+- **AIIO** (paper traded at $0.88): Peaked $0.94 (+57.8%) at 17:35, then faded to $0.84-0.87 range 18:00-18:30. Currently $0.86 (+45.2%). Position underwater vs $0.88 entry. Volume remains massive at 13.8M (8.6x avg). Fade from peak is concerning but still well above base.
+- **SKYQ**: Dramatic AH build — steady climb from $3.90 at AH open to $5.07 peak (+13.4% from prev close) at 18:15, now $4.78. Previously skipped as dead-cat bounce (Day% -11.2%), but AH pattern is a strong sustained build, not a thin spike. MOU with Southern and DEVS announced May 7. Float 3.0M (excellent). However: Day% still -11.2%, Total% only +10.5% from prev close — most of the AH move is just recovering the regular session loss. Sticking with skip: recovery bounce pattern, not new momentum.
+- **HTOO**: Holding +12.0% — 4th consecutive AH scan >10% (23:30: +12.6%, 00:00: +11.8%, 00:30: +12.0%). Very consistent hold pattern. Would qualify for entry but one-position-at-a-time rule (AIIO already held).
+- **RPGL**: Faded to +8.3% (was +12.2% at 23:30). Below 10%. Dead.
+- **GLE**: AH +9.3%, still below 10%.
+- **FNKO**: AH +7.8%, fading. Skip: float 39.9M.
+- **CDLX**: AH +6.1%, fading. Dead.
+
+**New Candidate Evaluation:**
+
+- **ANNA** (AH +12.7%): Float 2.8M (excellent). Steady building AH pattern: flat 16:00-16:30, gradual ramp to $3.38 at 17:00, second leg 17:50-18:15 to peak $3.59 (+15.4%). Now $3.49. No May 7 catalyst found (4 searches — no earnings, no press release, no 8-K). Earnings scheduled May 13. Oil & Gas Production sector — may be riding crude oil spike past $110. Only 1 AH scan >10%. **Skip: no catalyst, only 1 AH scan above 10%. Watch for next scan.**
+- **HOVR**: Day% -21.7%. Dead-cat bounce. Skip.
+- **IFRX**: AH +6.0%, float 67.9M. Below threshold, high float. Skip.
+- **BEAT**: AH +5.7%. Below threshold. Skip.
+- **PRTS**: AH +8.5%, float 55.3M. Below threshold, high float. Skip.
+
+**No new paper trades.** AIIO remains only position (fading from peak but holding). HTOO continues to qualify but blocked by one-position rule. ANNA has great float but no catalyst and only 1 AH scan.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
