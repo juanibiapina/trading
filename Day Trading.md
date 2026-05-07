@@ -38,6 +38,7 @@ Catch momentum spikes by entering in after-hours and exiting in premarket before
 - Stop after winning or losing
 - ~100 euros per trade (learning phase)
 - Set premarket exit alarm + order right after entry (MNDR W08 miss: forgot to sell premarket, loss expanded)
+- **Never hold positions through the day.** Sell in premarket before open. An open position blocks the next evening trade.
 - Trade on PC
 
 **Learning Phase (started W11 2026):**
@@ -240,7 +241,7 @@ The retrospective is a diagnostic tool for the evening scanner. If a stock is a 
 ### Step 1: Screen for Candidates (7:00-8:00 AM)
 
 Use Finviz screener with these filters:
-- Market Cap: < $100M (micro-cap)
+- Market Cap: < $300M (expanded from $100M after missing OSG $190M and NNBR $126M winners on May 6)
 - Float: < 10M (low float = bigger moves)
 - Relative Volume: > 2 (unusual activity)
 - Gap: Up > 5%

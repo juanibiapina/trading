@@ -29,7 +29,7 @@ ET = ZoneInfo("America/New_York")
 # Common filters
 MIN_PRICE = 0.5
 MAX_PRICE = 10.0
-MAX_MARKET_CAP = 100_000_000  # $100M
+MAX_MARKET_CAP = 300_000_000  # $300M
 SECTOR = "Health Technology"
 
 # Regular session filters
