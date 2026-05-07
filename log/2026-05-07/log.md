@@ -121,6 +121,44 @@ Top candidates (sorted by relevance: low float, high % change, reasonable volume
 ❌ **BATL** — Skip: AH change +6.3% (below 10%)
 ❌ **ZIP** — Skip: AH change +5.5%, float 62.9M
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**Session: AFTERHOURS** — 12 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AIIO | [TV](https://www.tradingview.com/chart/?symbol=AIIO) | $0.59 | -1.1% | +50.0% | $0.88 | +48.4% | 8.4M | 1.0M | 8.2x | 13.5M | Financial Conglomerates |
+| GLE | [TV](https://www.tradingview.com/chart/?symbol=GLE) | $0.55 | +52.1% | +7.7% | $0.59 | +63.9% | 2.4M | 22.5M | 0.1x | 1.3M | Packaged Software |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $2.30 | +72.9% | +12.2% | $2.58 | +94.0% | 871K | 6.0M | 0.1x | 35.5M | IT Services |
+| BATL | [TV](https://www.tradingview.com/chart/?symbol=BATL) | $2.86 | -3.1% | +7.0% | $3.06 | +3.6% | 512K | 6.5M | 0.1x | 16.8M | Oil & Gas Production |
+| CDLX | [TV](https://www.tradingview.com/chart/?symbol=CDLX) | $0.78 | -1.6% | +8.1% | $0.84 | +6.3% | 193K | 625K | 0.3x | 52.0M | Internet Software/Services |
+| HTOO | [TV](https://www.tradingview.com/chart/?symbol=HTOO) | $3.40 | +0.9% | +12.6% | $3.83 | +13.6% | 125K | 41K | 3.1x | 2.3M | Chemicals: Specialty |
+| ANNA | [TV](https://www.tradingview.com/chart/?symbol=ANNA) | $3.14 | +1.0% | +5.4% | $3.31 | +6.4% | 96K | 757K | 0.1x | 2.8M | Oil & Gas Production |
+| ZIP | [TV](https://www.tradingview.com/chart/?symbol=ZIP) | $3.10 | -0.6% | +5.5% | $3.27 | +4.8% | 91K | 651K | 0.1x | 62.9M | Internet Software/Services |
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $3.97 | -11.2% | +8.1% | $4.29 | -4.0% | 91K | 3.2M | 0.0x | 3.0M | Integrated Oil |
+| LPRO | [TV](https://www.tradingview.com/chart/?symbol=LPRO) | $1.62 | -5.3% | +9.9% | $1.78 | +4.1% | 70K | 601K | 0.1x | 101.4M | Packaged Software |
+| FNKO | [TV](https://www.tradingview.com/chart/?symbol=FNKO) | $4.46 | +1.8% | +10.7% | $4.94 | +12.8% | 68K | 449K | 0.2x | 39.9M | Recreational Products |
+| PRTS | [TV](https://www.tradingview.com/chart/?symbol=PRTS) | $0.85 | -6.4% | +9.8% | $0.93 | +2.8% | 51K | 451K | 0.1x | 55.3M | Specialty Stores |
+
+**Returning Candidates — Updates:**
+
+- **AIIO** (paper traded at $0.88): Now at $0.91 AH high (+53.1% from prev close). Still building — two legs up then steady climb 17:10-17:25. Volume 8.4M (8.2x avg). Position working well.
+- **RPGL**: 2nd AH scan with >10% (23:00: +10.9%, 23:30: +12.2%). Re-ran catalyst search per rules (4 searches total). Only finding is April 27 strategic investment + April 30 EGM buyback/consolidation. No May 7 catalyst. Skip: no catalyst, float 35.5M.
+- **FNKO**: AH recovering to +10.7% (was +8.7% at 23:00). Earnings catalyst confirmed. Skip: float 39.9M.
+- **GLE**: AH +7.7% — slight recovery from 23:00 (dropped off scanner). Still below 10%.
+- **HOWL**: Dropped off scanner. Check-prices shows $0.62 (-4.6% AH). Dead.
+- **CDLX**: Fading — +8.1% (was +8.7%). Skip: float 52M, fading.
+
+**New Candidate Evaluation:**
+
+- **HTOO**: Float 2.3M (excellent). ✅ Catalyst: FY2025 earnings released May 7 at 16:30 ET (revenue €14.4M) + JV with Alien Fuel for biomass steam project. BUT: peaked at $3.87 (+14.8%) at 16:55, now fading to $3.60 (+6.8%). Only 1 AH scan. Doesn't meet 2+ AH scan requirement. **Watch — needs AH confirmation in next scan, but fading pattern is concerning.**
+- **SKYQ**: Day% -11.2%, AH +8.1%. Below 10% threshold. Close to dead-cat bounce territory.
+- **LPRO**: AH +9.9% (below 10%), float 101.4M. Skip.
+- **PRTS**: AH +9.8% (below 10%), float 55.3M. Skip.
+- **ANNA**: AH +5.4%. Below threshold.
+
+**No new paper trades.** AIIO already entered and building. HTOO has great characteristics but needs 2nd AH scan and is fading. RPGL has 2 scans but no catalyst.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
