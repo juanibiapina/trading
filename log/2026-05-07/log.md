@@ -72,7 +72,57 @@ Top candidates (sorted by relevance: low float, high % change, reasonable volume
 - **FNKO**: Earnings catalyst is strong. But float 39.9M — way too high for momentum strategy. MCap $249M. Skip.
 - **ATPC**: AH change +7.1% — below 10% threshold. Ultra-low float (475K) but volume thin.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Session: AFTERHOURS** — 8 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AIIO | [TV](https://www.tradingview.com/chart/?symbol=AIIO) | $0.59 | -1.1% | +27.1% | $0.75 | +25.7% | 4.4M | 615K | 7.2x | 13.5M | Financial Conglomerates |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $2.30 | +72.9% | +10.9% | $2.55 | +91.7% | 721K | 6.0M | 0.1x | 35.5M | IT Services |
+| BATL | [TV](https://www.tradingview.com/chart/?symbol=BATL) | $2.86 | -3.1% | +6.3% | $3.04 | +2.9% | 254K | 6.4M | 0.0x | 16.8M | Oil & Gas Production |
+| CDLX | [TV](https://www.tradingview.com/chart/?symbol=CDLX) | $0.78 | -1.6% | +8.7% | $0.85 | +6.9% | 182K | 624K | 0.3x | 52.0M | Internet Software/Services |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.66 | -2.2% | +9.4% | $2.91 | +7.0% | 99K | 67K | 1.5x | 475K | Pharmaceuticals: Other |
+| ZIP | [TV](https://www.tradingview.com/chart/?symbol=ZIP) | $3.10 | -0.6% | +5.5% | $3.27 | +4.8% | 91K | 651K | 0.1x | 62.9M | Internet Software/Services |
+| HOWL | [TV](https://www.tradingview.com/chart/?symbol=HOWL) | $0.62 | -4.6% | +17.7% | $0.73 | +12.3% | 55K | 398K | 0.1x | 40.6M | Pharmaceuticals: Major |
+| FNKO | [TV](https://www.tradingview.com/chart/?symbol=FNKO) | $4.46 | +1.8% | +8.7% | $4.85 | +10.7% | 55K | 448K | 0.1x | 39.9M | Recreational Products |
+
+**AH Price Action Update (through 17:02 ET):**
+- **AIIO**: Building strongly. Held $0.74-0.78 range 16:10-16:45, then second leg up: $0.83→$0.88 at 16:55-17:02. AH High $0.88 (+48.3%). Volume 4.4M (7.2x avg). Best pattern tonight.
+- RPGL: Peaked $2.74 at 16:25 (+102.2% from prev close), pulled back to $2.48, recovering to $2.57. Volatile. Only 1 AH scan.
+- HOWL: Spiked in AH to $0.73 (+17.7%). Only 1 AH scan. Has catalyst (Jazz Pharmaceuticals asset purchase deal for JZP898, Q1 results).
+- CDLX: Fading from 22:30 (+15.1% → +8.7%). Earnings-driven but losing momentum.
+- GLE: Dropped off scanner entirely. AH momentum dead.
+- FNKO: Fading from +9.9% to +8.7%. High float, skip.
+
+**New Candidate Catalyst Search:**
+
+**RPGL** (AH +10.9%): No fresh catalyst found for May 7 move. April 30 EGM approved share buyback + consolidation. Today's +72.9% regular session move appears momentum/continuation on no specific news. Skip: no catalyst, only 1 AH scan.
+
+**HOWL** (AH +17.7%): ✅ Catalyst found — entered asset purchase agreement granting Jazz Pharmaceuticals exclusive global rights to JZP898. Q1 2026 results: cash $46.5M, repaid K2 loan. Pharma/biotech deal catalyst. But: float 40.6M (high), only 1 AH scan, low VRatio (0.1x).
+
+**Paper Trade Decision:**
+
+✅ **AIIO — ENTER** (criteria met):
+- Float <50M: 13.5M ✓
+- AH change >10% in 2+ AH scans: 22:30 (+25.5%), 22:33 (+23.3%), 23:00 (+27.1%) ✓
+- Day% > -15%: -1.1% ✓
+- Not a dead cat bounce ✓
+- Clear catalyst: $100M Neurovia AI acquisition ✓
+- Building AH pattern: two legs up, holding at highs ($0.88) ✓
+- Volume 7.2x average ✓
+- **Concerns noted:** Float 13.5M above 10M ideal. Acquisition paid in stock (dilutive). $100M deal dwarfs $11.6M market cap — transformative but risky. Sector: Financial Conglomerates (not biotech — tracking for pattern data).
+
+❌ **RPGL** — Skip: no catalyst found, only 1 AH scan, float 35.5M
+❌ **HOWL** — Skip: only 1 AH scan (need 2+ for entry). Float 40.6M. Watch for next scan.
+❌ **CDLX** — Skip: float 52M, fading AH momentum
+❌ **FNKO** — Skip: float 39.9M, fading
+❌ **ATPC** — Skip: AH change +9.4% (below 10%)
+❌ **BATL** — Skip: AH change +6.3% (below 10%)
+❌ **ZIP** — Skip: AH change +5.5%, float 62.9M
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| AIIO | $0.88 | 23:00 CET | 113 | $100M Neurovia AI acquisition. Building AH pattern (2 legs up to $0.88, +48%). 7.2x vol. Float 13.5M. |
