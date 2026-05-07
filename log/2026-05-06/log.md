@@ -342,3 +342,56 @@ ERNA has been range-bound $6.17-$6.59 all premarket, currently near the middle. 
 - No significant changes to winner or scanner diagnostic from pulse 1.
 - ERNA paper trade drifting slightly worse but not crashing — the catalyst provides a floor above prev close ($4.10).
 - Will close all positions at pulse 3 (14:00 CET) per rules.
+
+## Morning Evaluation — 14:00 CET (Pulse 3 — LAST)
+
+**Closing all positions.** An open position blocks the next evening trade.
+
+### Price Updates (12:00 → 14:00 CET)
+
+| Ticker | Role | Pulse 2 (12:00) | Pulse 3 (14:00) | Change | From Prev Close |
+|--------|------|-----------------|-----------------|--------|-----------------|
+| ERNA | Paper trade | $6.34 | $7.14 | **+12.6%** | +74.3% (close $4.10) |
+| OSG | Winner | $5.76 | $5.65 | -1.9% | +29.0% (close $4.38) |
+| NNBR | Runner-up | $3.05 | $3.01 | -1.3% | +21.9% (close $2.47) |
+| PMAX | AH mover | $4.23 | $3.96 | -6.4% | +86.8% (close $2.12) |
+
+**Major development: ERNA late-PM spike.** After range-bound trading at $6.30-6.50 all morning (pulses 1 and 2), ERNA surged from $6.50 at 07:00 ET → $7.42 at 07:05 ET (+14% in 5 minutes), then settled to $7.10-7.15. The breakthrough preclinical catalyst attracted late-premarket buyers. This is the pattern: real catalysts can take hours to get attention from the broader market.
+
+### Paper Trade — POSITION CLOSED
+
+| Ticker | Entry | Entry Time | Exit | Exit Time | Shares | P&L | P&L % | Status |
+|--------|-------|------------|------|-----------|--------|-----|-------|--------|
+| ERNA | $6.86 | 23:00 CET | $7.14 | 14:00 CET | 14 | +$3.92 | **+4.1%** | ✅ Win |
+
+**Total Paper P&L: +$3.92 (~+€3.61)**
+
+P&L trajectory through pulses:
+- Pulse 1 (10:20): -$5.88 (-6.1%) — PM just started, ERNA drifting
+- Pulse 2 (12:00): -$7.28 (-7.6%) — range-bound, looking bad
+- Pulse 3 (14:00): **+$3.92 (+4.1%)** — late PM spike saved the trade
+
+If we'd sold at peak ($7.42 at 07:05 ET / 13:05 CET): +$7.84 (+8.2%). But $7.14 is a solid exit.
+
+### AH Mover Follow-Through (Final)
+
+| Ticker | AH Peak | PM Peak | PM Peak Time | Current PM | From AH Peak | From Close | Verdict |
+|--------|---------|---------|-------------|------------|--------------|------------|---------|
+| PMAX | $5.20 (+25.8%) | $4.40 (+107.5%*) | 06:10 ET | $3.96 | -23.8% | +86.8% | ⚠️ Faded from AH peak but still massive total gain |
+| ERNA | $6.86 (+13.6%) | $7.42 (+81.2%*) | 07:05 ET | $7.14 | +4.1% | +74.3% | ✅ **Surpassed AH peak in PM** |
+
+*Total% from prev close (includes Day% + AH% + PM%)
+
+**Key insight:** ERNA is the first stock in our tracking that *exceeded* its AH peak in premarket. The catalyst quality (breakthrough preclinical data, 100% tumor clearance) drove a second wave of buying hours later. This is the ideal AH→PM pattern — and it was in our paper trade.
+
+### Notes
+
+1. **Catalyst quality drives PM follow-through.** ERNA's Tier A catalyst (breakthrough preclinical data) produced late-PM buying even after the stock faded from AH peak. PMAX (no catalyst) continued fading. This is the strongest data point yet for catalyst quality as a predictor.
+
+2. **Patience matters.** The paper trade was -7.6% at pulse 2 and felt like a loss. But the catalyst was real and the stock was holding above prev close. The late-PM surge at 07:05 ET turned it into a +4.1% win. Lesson: don't panic-sell catalyst-driven holds in early PM.
+
+3. **Scanner detected the right stock.** ERNA was caught at 23:00 CET with a building AH pattern. The paper trade entry was at the AH peak ($6.86), which is suboptimal — ideally enter earlier in the build. But the trade still won because the catalyst drove PM continuation.
+
+4. **Today's winner (OSG) continues to fade.** From $5.93 (pulse 1) → $5.76 (pulse 2) → $5.65 (pulse 3). The mid-cap earnings beat is drifting toward open. Hypothetical P&L from AH entry at $5.50 would now be +2.7% (was +7.8% at pulse 1). Our micro-cap ERNA trade (+4.1%) actually outperformed OSG's drift.
+
+5. **Position closed — clear for tonight's evening scan.**
