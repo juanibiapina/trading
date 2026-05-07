@@ -214,3 +214,100 @@ Skip ZVIA: float 62.7M (too high), weak AH move (+9.2%), negative day (-4.8%), l
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | ERNA | $6.86 | 23:00 CET | 14 | Breakthrough preclinical data (100% tumor clearance, ovarian cancer). Ultra-low float ~1.17M post-R/S. Building AH pattern. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**OSG** (Octave Specialty Group) — Finance / Specialty Insurance
+- Catalyst: Q1 2026 earnings beat — Revenue up 66% to $104M, Adjusted EBITDA $20.1M (vs -$1.3M YoY), Insurance Distribution segment swung from -$3M loss to +$13M profit
+- Previous Close: $4.38
+- Regular Close May 6: $4.22 (-3.7% day)
+- AH last night: spiked from $4.22 → $5.08 at 16:50 ET (22:50 CET) → peaked $6.19 (+41.3%) at 17:00 ET → stabilized ~$5.80 (+32%)
+- Premarket now: $5.93 (+35.4% from prev close)
+- Hypothetical P&L (AH $5.50 entry → PM $5.93): +7.8%
+- Float: N/A (NYSE-listed) | Market Cap: ~$190M
+
+**Runner-up: NNBR** (NN, Inc.) — Producer Manufacturing
+- Catalyst: Q1 2026 earnings beat — Revenue +12.1% to $118.5M, raised 2026 guidance, adjusted EBITDA +33%
+- AH: spiked to $3.32 (+34.4%) at 17:25 ET, stabilized ~$3.20 (+30%)
+- PM now: $2.99 (+21.1%) — fading from AH levels
+- Market Cap: ~$126M
+
+**Scanner Diagnostic:**
+- Detectable at screening time (~22:15 CET)? **NO** — two reasons:
+  1. OSG was flat at $4.22 until 16:50 ET (22:50 CET) — 35 min after our first AH scan
+  2. Even at 23:00 CET when the spike peaked, market cap $190M exceeds our $100M filter
+- NNBR: same — mcap $126M exceeds $100M filter, spike started 17:20 ET (23:20 CET)
+- Scanner gap: Market cap ceiling ($100M) filters out mid-cap earnings beats. Both winners were $125-190M mcap stocks with strong earnings catalysts. Expanding to $200M would catch these but fundamentally changes the target universe.
+
+**Within our micro-cap universe:** The scanner DID detect the two real small-cap AH movers (ERNA and PMAX), but both faded in PM — the AH→PM pattern didn't work for micro-caps today while the mid-cap earnings beat (OSG) held.
+
+### Baseline Tracking
+
+- Days tracked: 13
+- Winners detected by scanner: 10/13 (**76.9%**) — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO
+- Winner selected for paper trade: 2/13 (**15.4%**) — NXTT and MASK
+- Target: >80% detection
+- Status: **BASELINE NOT MET** — dropped below 80% (was 83.3%). OSG and NNBR missed due to mcap ceiling. Three misses now out of 13 days.
+
+### Retrospective Scan Results
+
+**Premarket scan (04:20 ET):** 2 hits — OSRH (+11.3% PM, biotech, $19M mcap), GDC (+15.3% PM bounce on -76% crash). Neither was a true winner.
+
+**Broadened premarket scan (mcap < $500M, PM% > 3%):** 12 hits. Top movers:
+- OSG +35.1% (Finance, $190M) — **today's winner**
+- NNBR +20.6% (Manufacturing, $126M) — runner-up
+- GDC +16.1% (crash bounce, not relevant)
+- SNES +13.6% (Process Industries, $7.8M, very low volume)
+- OSRH +11.3% (Biotech, $19M)
+
+**AH reconstruction (check-prices --ah-history):**
+- OSG: flat until 16:50 ET, spiked to $6.19 (+41%) at 17:00, stabilized $5.80 (+32%)
+- NNBR: flat until 17:20 ET, spiked to $3.32 (+34%) at 17:25, stabilized $3.20 (+30%)
+- Both were earnings-driven AH spikes with strong holds through PM
+
+**Forced AH scan:** 0 hits (expected — overnight TradingView postmarket fields return 0)
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|--------------|------------|---------|-----|-------|--------|
+| ERNA | $6.86 | +13.6% AH | 23:00 CET | $6.44 | -$5.88 (14 shares) | -6.1% | 📉 Losing |
+
+**Total Paper P&L: -$5.88 (~-€5.41)**
+
+Note: PM barely started (20 min in). ERNA opened PM at $6.17, climbed to $6.59 high, currently $6.44. Still 5+ hours until regular open — could recover or fade further.
+
+### Scanner Effectiveness
+
+- Evening scans ran: 7 times (21:30 - 00:30 CET)
+- Candidates found: 8 unique tickers (PMAX, ERNA, ZVIA, TCRX, WTO, RPGL, STFS, BGDE)
+- AH hits (>5% AH change): ERNA, PMAX, ZVIA (borderline)
+- Retrospective matches: scanner caught ERNA and PMAX (the micro-cap AH movers) but missed OSG and NNBR (mid-cap, above $100M filter)
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| OSG | +41.3% | Mcap $190M > $100M filter; spike started 22:50 CET (after 22:30 scan, before 23:00 scan) | Yes (+7.8% if entered at $5.50) |
+| NNBR | +34.4% | Mcap $126M > $100M filter; spike started 23:20 CET | Marginal (PM fading: $3.20 entry → $2.99 = -6.6%) |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| PMAX | $5.20 (+25.8%) | 18:10 ET | **Late surge** (flat→+20%→+26% after 17:40) | $3.82 | -26.5% | -7.7% | ❌ Massive fade |
+| ERNA | $6.86 (+13.6%) | 17:10 ET | **Build→spike→fade→recovery** (+0.3→+2.6→+13.6→+9.3→+11.1%) | $6.44 | -6.1% | +6.6% | ⚠️ Faded from peak, holding above close |
+
+**Pattern observation:** Both micro-cap AH movers faded into premarket. PMAX (no catalyst, momentum-only) faded hardest (-26.5% from peak). ERNA (real catalyst) faded less (-6.1% from peak) and holds above close. Meanwhile, mid-cap earnings beats (OSG, NNBR) held gains much better. This reinforces that catalyst quality and company size matter for overnight holds.
+
+### Notes
+
+1. **Market cap ceiling is the scanner's biggest gap.** Three of 13 missed winners were above $100M. Today's winner (OSG, $190M) and runner-up (NNBR, $126M) were both mid-cap earnings beats. Consider adding a secondary scan at $100-300M mcap focused on earnings/catalyst plays.
+
+2. **Micro-cap AH→PM fade pattern.** Today is another data point showing micro-cap AH spikes (PMAX, ERNA) fading by premarket, while mid-cap earnings holds. The strategy's target universe (micro-caps) may have structurally worse overnight holding characteristics than mid-caps with real earnings catalysts.
+
+3. **ERNA paper trade is still early.** PM just started 20 minutes ago. The stock opened PM at $6.17 and climbed to $6.59 — it's recovering. The catalyst (breakthrough preclinical data) is real. Will reassess at pulse 2 (12:00 CET).
+
+4. **PMAX paper trade dodged.** Would have been a -26.5% loss from AH peak entry. The "no catalyst" flag was the right call for skipping, even though the AH chart looked explosive. No-catalyst momentum runners are the worst overnight holds.
