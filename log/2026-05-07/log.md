@@ -34,6 +34,44 @@ Top candidates (sorted by relevance: low float, high % change, reasonable volume
 
 **Regular session candidates update:** Watching SONX (372K float, +60%), ATRA (+91.8%), GLE (+71.7%, 1.3M float), SOBR (+80.6%), FALC (+22.9%) for AH continuation. No AH volume on any yet.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Session: AFTERHOURS** — 4 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GLE | [TV](https://www.tradingview.com/chart/?symbol=GLE) | $0.55 | +52.1% | +5.8% | $0.58 | +60.9% | 1.6M | 22.5M | 0.1x | 1.3M | Packaged Software |
+| AIIO | [TV](https://www.tradingview.com/chart/?symbol=AIIO) | $0.59 | -1.1% | +25.5% | $0.74 | +24.2% | 939K | 246K | 3.8x | 13.5M | Financial Conglomerates |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.66 | -2.2% | +7.1% | $2.85 | +4.8% | 53K | 61K | 0.9x | 475K | Pharmaceuticals: Other |
+| FNKO | [TV](https://www.tradingview.com/chart/?symbol=FNKO) | $4.46 | +1.8% | +9.9% | $4.90 | +11.9% | 51K | 448K | 0.1x | 39.9M | Recreational Products |
+
+**AH Price Action (16:00-16:30 ET):**
+- GLE: Opened AH at $0.61, drifted down to $0.57, slight recovery to $0.58. Volume only 64K actual. Fading from AH open.
+- AIIO: Started flat ($0.59), then ramped from 16:10 to peak $0.78 at 16:20 (+30.9%), pulled back to $0.74. Building pattern.
+- ATPC: Dipped to $2.66 at open, built to $3.00 peak (+10.3%) at 16:20, pulled back to $2.94. Low volume (92K).
+- FNKO: Steady climb from $4.46 to peak $4.90 at 16:10 (+11.9%), holding $4.80-4.85. Earnings-driven.
+
+**Catalyst Search:**
+
+**AIIO** (AH +25.5%): ✅ Catalyst found — announced $100M acquisition of Neurovia AI Limited (reported May 7, 2026). Acquisition paid in Class B shares with 8-year lock-up. Closing expected by June 16, 2026. Significant AI-themed deal for a micro-cap.
+
+**FNKO** (AH +9.9%): ✅ Catalyst found — Q1 2026 earnings beat released today. Net sales $200.9M (vs $190.7M prior year), record gross margin 44.2%, reiterating full-year outlook. Earnings call at 4:30 PM ET.
+
+**GLE** (AH +5.8%, prior scan): Catalyst from yesterday (May 6) — non-binding MOU with Angkasa-X for satellite-AI platform. Also has Nasdaq minimum bid compliance issue (180-day extension to Oct 26). Today's move is day-2 continuation. AH change modest.
+
+**Prior Scan Candidates — AH Update:**
+- ATRA: Closed at $9.88 (+91.8%), AH fading to $8.95 (-9.4% from close). Not an AH mover.
+- SOBR: Closed at $1.86 (+80.6%), AH fading to $1.71 (-8.1% from close). Not an AH mover.
+- SONX: No AH data for today (prior data was May 6).
+- FALC: No AH activity today.
+
+**Evaluation (observation only — no entries before 23:00 CET):**
+
+- **AIIO**: Best pure AH mover. Clear catalyst (acquisition). Building AH pattern (ramped 16:10-16:20, holding). Float 13.5M is above 10M ideal but within 50M threshold. **Watch for 23:00 scan confirmation.**
+- **GLE**: Ultra-low float (1.3M) but AH change only +5.8%. Day-2 move on yesterday's MOU. Fading in AH from open. Less interesting.
+- **FNKO**: Earnings catalyst is strong. But float 39.9M — way too high for momentum strategy. MCap $249M. Skip.
+- **ATPC**: AH change +7.1% — below 10% threshold. Ultra-low float (475K) but volume thin.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
