@@ -311,3 +311,34 @@ Note: PM barely started (20 min in). ERNA opened PM at $6.17, climbed to $6.59 h
 3. **ERNA paper trade is still early.** PM just started 20 minutes ago. The stock opened PM at $6.17 and climbed to $6.59 — it's recovering. The catalyst (breakthrough preclinical data) is real. Will reassess at pulse 2 (12:00 CET).
 
 4. **PMAX paper trade dodged.** Would have been a -26.5% loss from AH peak entry. The "no catalyst" flag was the right call for skipping, even though the AH chart looked explosive. No-catalyst momentum runners are the worst overnight holds.
+
+## Morning Evaluation — 12:00 CET (Pulse 2)
+
+Reusing pulse 1's winner (OSG) and scanner diagnostic. Updating prices and P&L.
+
+### Price Updates (10:20 → 12:00 CET)
+
+| Ticker | Role | Pulse 1 (10:20) | Pulse 2 (12:00) | Change | From Prev Close |
+|--------|------|-----------------|-----------------|--------|-----------------|
+| ERNA | Paper trade | $6.44 | $6.34 | -1.6% | +54.8% (close $4.10) |
+| OSG | Winner | $5.93 | $5.76 | -2.9% | +31.5% (close $4.38) |
+| NNBR | Runner-up | $2.99 | $3.05 | +2.0% | +23.5% (close $2.47) |
+| PMAX | AH mover | $3.82 | $4.23 | +10.7% | +99.5% (close $2.12) |
+
+**Notable:** PMAX bounced hard from its morning fade ($3.82 → $4.23, +10.7%), recovering to near yesterday's regular close of $4.14. Still well below AH peak ($5.20) but the no-catalyst momentum runner refuses to die. OSG and ERNA both drifted slightly lower — low-volume premarket drift, nothing dramatic.
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----|-------|--------|
+| ERNA | $6.86 | 23:00 CET | $6.34 | -$7.28 (14 shares) | -7.6% | 📉 Losing (was -6.1% at pulse 1) |
+
+**Total Paper P&L: -$7.28 (~-€6.70)**
+
+ERNA has been range-bound $6.17-$6.59 all premarket, currently near the middle. The catalyst (breakthrough preclinical data) hasn't generated a PM push. Pattern so far: AH spike to $6.86 → fade → PM stabilization around $6.30-6.50. Still 3.5 hours until open.
+
+### Notes
+
+- No significant changes to winner or scanner diagnostic from pulse 1.
+- ERNA paper trade drifting slightly worse but not crashing — the catalyst provides a floor above prev close ($4.10).
+- Will close all positions at pulse 3 (14:00 CET) per rules.
