@@ -357,3 +357,44 @@ Compared to Pulse 1 (04:20 ET): was $0.85 → now $0.81. Continued slow bleed, d
 - CTNT shows that some winners are PM-only and unfindable in AH. Not a scanner gap — it's outside the strategy's pattern.
 - HTOO not in PM scan — was $3.86 at Pulse 1 but dropped off. Minor follow-through.
 - Pulse 3 at 14:00 CET will close the AIIO position.
+
+## Morning Evaluation — 14:00 CET (Pulse 3 — FINAL)
+
+### Position Closed
+
+**AIIO — SOLD at $0.91** (08:00 ET / 14:00 CET)
+
+Remarkable recovery since Pulse 2. The stock bottomed at ~$0.80 around 06:00 ET, then steadily climbed back:
+- 06:25 ET: $0.82
+- 06:50 ET: $0.91
+- 07:15 ET: $0.91
+- 07:30 ET: $0.93 (PM high)
+- 07:45 ET: $0.89
+- 08:00 ET: $0.91
+
+The recovery retraced almost all the way to the AH peak ($0.94 at 17:35 ET). Classic U-shaped PM pattern: fade at open → slow bleed → recovery as more traders discover it in later premarket.
+
+### Paper Trade P&L — CLOSED
+
+| Ticker | Entry | Entry Total% | Entry Time | Exit | Exit Time | P&L | P&L % | Status |
+|--------|-------|--------------|------------|------|-----------|-----|-------|--------|
+| AIIO | $0.88 | +46.7% | 23:00 CET | $0.91 | 14:00 CET | +€3.39 | +3.6% | ✅ Win |
+
+**Total Paper P&L: +€3.39**
+
+Position is now **closed**. No open positions — clear for tonight's evening session.
+
+### Price Updates Since Pulse 2
+
+| Ticker | Pulse 1 (04:20 ET) | Pulse 2 (06:00 ET) | Pulse 3 (08:00 ET) | Trajectory |
+|--------|---------------------|---------------------|---------------------|------------|
+| AIIO | $0.85 (+43%) | $0.81 (+36%) | $0.91 (+53%) | ✅ U-recovery — fade then rally back to AH highs |
+| CTNT | — | $3.11 (+22%) | $2.63 (+3.5%) | ❌ Crashed — PM spike fully faded |
+| HTOO | $3.86 (+14.5%) | — | $3.45 (+1.5%) | ❌ Faded — AH gains mostly gone |
+
+### Notes
+- **AIIO turned profitable.** The patience of holding through the PM fade was rewarded. Entry at $0.88 looked bad at Pulse 2 ($0.81, -8%) but the stock recovered to $0.91+ by 08:00 ET.
+- **PM peak timing:** The highest PM prices were around 07:15-07:30 ET ($0.91-$0.93). This aligns with the 07:00-08:00 ET window as peak FOMO time — traders arriving for the morning session pile in.
+- **CTNT collapse:** The PM-only mover from Pulse 2 (+32.8% peak) has completely faded to +3.5%. Confirms these PM-only spikes without AH foundation are unreliable.
+- **HTOO also faded:** From +14.5% at Pulse 1 to +1.5%. Would have been a losing trade if entered at $3.80 (now $3.45 = -9.2%).
+- **Key takeaway:** AIIO was the right pick. Despite entering at an extended +46.7% from close, the stock's strong catalyst ($100M acquisition) and massive AH volume (13.8M, 8.6x avg) provided enough momentum for PM follow-through. The U-shaped PM recovery pattern is worth tracking — it may indicate that stocks with genuine catalysts recover from early PM weakness.
