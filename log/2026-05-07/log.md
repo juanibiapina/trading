@@ -322,3 +322,38 @@ HTOO (Float 2.3M, +12-13% AH, earnings + JV catalyst) would have been a viable s
 - **Key learning:** The stock peaked at $0.94 at 23:35 CET (17:35 ET) — just 35 minutes into the AH session — then spent the rest of AH fading. The paper trade entered at 23:00 CET at $0.88, near the top. Earlier entry at 22:30 ($0.74) would have captured the full move.
 - **HTOO as alternate pick:** 2.3M float, 3 scans >10%, catalyst confirmed. Would have been a smaller but cleaner entry (+12.6% at first scan vs AIIO's +25.5%). Worth noting for pattern analysis.
 - **PM is very early** (04:21 ET). AIIO could still recover to AH highs or fade further. Pulse 2 at 12:00 CET will update.
+
+## Morning Evaluation — 12:00 CET (Pulse 2)
+
+### Price Update
+
+**AIIO** at 06:00 ET: **$0.81** (+36.2% from close)
+- Steady fade since PM open. Was $0.88 at 04:00 ET → drifted to $0.80-0.83 range → now $0.81
+- No volume reported in PM bars (Yahoo showing 0) — likely very thin trading
+- PM high was $0.88 at open, low $0.80
+
+Compared to Pulse 1 (04:20 ET): was $0.85 → now $0.81. Continued slow bleed, down another -4.7%.
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|--------------|------------|---------|-----|-------|--------|
+| AIIO | $0.88 | +46.7% | 23:00 CET | $0.81 | -€7.91 | -7.95% | 📉 Underwater |
+
+**Total Paper P&L: -€7.91** (was -€3.14 at Pulse 1)
+
+### New PM Movers Since Pulse 1
+
+**CTNT** (Cheetah Net Supply Chain Service) — +32.8% in PM
+- Float: 1.9M | MCap: $4.8M | Sector: Engineering & Construction
+- AH was flat/slightly down (-3% to -5% all session) — **completely invisible to evening scanner**
+- PM ramp: started $2.71 (+6.8%) at 04:00 ET, steady build to $2.82 (+11%) by 05:20, then explosive surge at 05:25 to $3.08 (+21%), peaked **$3.37 (+32.6%)** at 05:40 ET
+- Now fading: $3.11 (+22.4%) at 06:00 ET
+- No catalyst search performed (PM-only mover, outside AH→PM pattern)
+- **Scanner diagnostic:** Undetectable in AH — stock was -3% to -5% all evening. This is a PM-only mover that doesn't fit the AH entry → PM exit strategy.
+
+### Notes
+- AIIO continues fading — the AH peak at 23:35 CET ($0.94) was the true top. Entry at $0.88 (+46.7% from close) was too extended.
+- CTNT shows that some winners are PM-only and unfindable in AH. Not a scanner gap — it's outside the strategy's pattern.
+- HTOO not in PM scan — was $3.86 at Pulse 1 but dropped off. Minor follow-through.
+- Pulse 3 at 14:00 CET will close the AIIO position.
