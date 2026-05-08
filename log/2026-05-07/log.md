@@ -239,3 +239,86 @@ Top candidates (sorted by relevance: low float, high % change, reasonable volume
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | AIIO | $0.88 | 23:00 CET | 113 | $100M Neurovia AI acquisition. Building AH pattern (2 legs up to $0.88, +48%). 7.2x vol. Float 13.5M. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**AIIO** — Financial Conglomerates (Robo.ai Inc.)
+- Catalyst: $100M acquisition of Neurovia AI Limited (announced May 7). Paid in Class B shares with 8-year lock-up. Closing expected June 16, 2026.
+- Previous Close: $0.60
+- AH last night: peaked $0.94 (+57.8%) at 17:35 ET / 23:35 CET — two legs up (16:10→$0.78, 16:50→$0.88→$0.94)
+- Premarket now: $0.85 (+43.2%) at 04:21 ET — fading slowly from $0.88 PM open
+- Hypothetical P&L (AH entry at first detection $0.74 → PM peak $0.88): +18.9%
+- Float: 13.5M | Market Cap: $11.6M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** ✅
+- First appeared: 22:30 CET scan at +25.5% ($0.74), already ramping with 939K AH vol (3.8x avg)
+- At 23:00 CET: +27.1% ($0.75) with 4.4M vol (7.2x avg) — entered paper trade at $0.88 (+48%)
+- Continued building through 23:30 (+50%), 00:00 (+57.6%), 00:30 (+43.4% fading)
+- Scanner gap: **None** — AIIO was the top candidate all evening and was correctly paper traded
+
+### Baseline Tracking
+
+- Days tracked: 14
+- Winners detected by scanner: 11/14 (**78.6%**) — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO, AIIO
+- Winner selected for paper trade: 3/14 (**21.4%**) — NXTT, MASK, AIIO
+- Target: >80% detection
+- Status: **BASELINE NOT MET** — 78.6%, still below 80%. Same 3 historical misses (incl. OSG, NNBR due to mcap ceiling, since fixed to $300M).
+
+### Retrospective Scan Results
+
+**Premarket scan** (10:20 CET): 2 hits — AIIO (+48.8%), CYAB (+5.1%). AIIO is the only real mover.
+
+**Forced AH scan**: 0 hits (overnight TradingView postmarket data returns empty — known issue, not diagnostic).
+
+**AH reconstruction via `--ah-history`:**
+- AIIO: Two legs up 16:10-17:35, peaked $0.94 (+57.8%), faded to $0.80-0.85 range by 19:00+
+- CYAB: Flat/down all AH session (+1.5% peak). PM move (+5-12%) is new.
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|--------------|------------|---------|-----|-------|--------|
+| AIIO | $0.88 | +46.7% | 23:00 CET | $0.85 | -€3.14 | -3.4% | 📉 Underwater |
+
+**Entry Total%** = (0.88 - 0.60) / 0.60 = +46.7% from previous close at time of entry.
+
+**Total Paper P&L: -€3.14**
+
+Note: PM only 21 minutes in (04:21 ET). Still very early — significant price movement expected before 09:30 ET open.
+
+### Scanner Effectiveness
+
+- Evening scans ran: 5 AH scans (22:30, 23:00, 23:30, 00:00, 00:30 CET) + 1 regular (21:30) + 1 empty AH (22:00)
+- Candidates found: 17 unique tickers across all AH scans
+- Retrospective matches: 1/1 — AIIO was in both evening scans and PM scan (the only real PM mover)
+
+### Missed Opportunities
+
+No significant missed opportunities. AIIO was the clear winner and was correctly identified and paper traded from the first AH scan.
+
+HTOO (Float 2.3M, +12-13% AH, earnings + JV catalyst) would have been a viable second trade but was blocked by the one-position-at-a-time rule. Currently $3.86 in PM (+14.5% from close). A hypothetical entry at $3.80 (23:30 CET scan) → current $3.86 = +1.6%. Modest return compared to AIIO.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| AIIO | $0.94 (+57.8%) | 23:35 CET | **Build**: +25%→+50%→+58% | $0.85 (+43%) | -9.6% | +43.2% | ✅ Holding — faded from peak but retaining most gains |
+| HTOO | $3.97 (+17.9%) | 23:30 CET | **Spike→hold**: peaked then held $3.80 | $3.86 (+14.5%) | -2.8% | +14.5% | ✅ Solid — best follow-through ratio of all movers |
+| RPGL | $2.74 (+19.1%*) | 22:25 CET | **Spike→fade**: peaked early, faded all session | $2.26 (-1.7%*) | -17.5% | -1.7%* | ❌ Faded — AH gains completely given back |
+| HOWL | $0.75 (+20.6%) | 23:35 CET | **Spike→fade**: thin spike then back to base | $0.65 (0.0%) | -13.3% | 0.0% | ❌ Dead — evaporated overnight |
+| SKYQ | $5.07 (+27.7%*) | 00:15 CET | **Late surge**: steady build 22:00→00:15 | $4.09 (+3.0%*) | -19.3% | +3.0%* | ❌ Faded — most gains given back |
+
+*RPGL and SKYQ percentages from regular close (not prev close) to show actual AH momentum.
+
+**Pattern:** Build trajectory (AIIO) and Spike→hold (HTOO) carried into PM. Spike→fade (RPGL, HOWL) and late surges that recovered day losses (SKYQ) did not follow through. This is consistent with the strategy's premise — sustained AH momentum predicts PM continuation.
+
+### Notes
+
+- **Scanner performance: excellent tonight.** AIIO was detected in the very first AH scan (22:30) and correctly identified as the top candidate. Paper trade entered at 23:00.
+- **Entry price concern:** Entered at $0.88 (+46.7% from close), which is in the "chasing extended stocks" risk zone noted in Day Trading.md. The stock had already run significantly by entry time. Hypothetical entry at first detection ($0.74 at 22:30) would have been better (+18.9% vs -3.4% currently).
+- **Key learning:** The stock peaked at $0.94 at 23:35 CET (17:35 ET) — just 35 minutes into the AH session — then spent the rest of AH fading. The paper trade entered at 23:00 CET at $0.88, near the top. Earlier entry at 22:30 ($0.74) would have captured the full move.
+- **HTOO as alternate pick:** 2.3M float, 3 scans >10%, catalyst confirmed. Would have been a smaller but cleaner entry (+12.6% at first scan vs AIIO's +25.5%). Worth noting for pattern analysis.
+- **PM is very early** (04:21 ET). AIIO could still recover to AH highs or fade further. Pulse 2 at 12:00 CET will update.
