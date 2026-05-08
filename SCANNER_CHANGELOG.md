@@ -51,6 +51,28 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-05-08 — Add Catalyst Tier to Morning Evaluation P&L Table
+
+**Context:** Last 4 paper trades (May 4-7) show catalyst quality is the strongest predictor of outcome — stronger than Entry Total%:
+- MASK (D — dilution, $1.3M convertible note): -10.6%
+- OCG (None — unverified): -16.7%
+- ERNA (A — breakthrough preclinical data): +4.1%
+- AIIO (A — $100M acquisition): +3.6%
+
+4/4 trades match: Tier A catalyst → win, weak/no catalyst → loss. Entry Total% does NOT show a clean correlation (OCG at +41.8% lost worst, ERNA at +67.3% won). The P&L table tracks extension but not catalyst quality, making this correlation invisible for systematic review.
+
+**Evaluation of previous changes:**
+- 2026-05-07 Entry Total% definition clarification: **Helped (1 data point).** May 7 AIIO correctly shows "+46.7% = (0.88 - 0.60) / 0.60" — total from prev close, not just AH change. Compare to May 6 ERNA which was misrecorded as "+13.6% AH" before the fix.
+- 2026-05-06 Float threshold fix (<10M → <50M in prompt): **Helped (1 data point).** May 7 AIIO (13.5M float) was entered without float-related hesitation. First trade in the 10-50M float range.
+- 2026-05-06 Entry Total% column: **Working (2 data points).** May 6 was misrecorded (fixed by May 7 definition change), May 7 was correct. Column integration complete.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — Added "Catalyst" column to Paper Trade P&L table template (between Entry Total% and Entry Time). Includes tier classification (A/B/C/D/None) with brief label, plus a definition note explaining the tier system from Day Trading.md.
+   - Why: 4 consecutive paper trades show a perfect correlation between catalyst tier and outcome, but the P&L table only tracked Entry Total% (which doesn't correlate as cleanly). Without a Catalyst column, this signal is buried in scan notes and requires manually cross-referencing. Systematic tracking enables data-driven conclusions about whether catalyst quality should become a hard filter.
+   - Hypothesis: The next morning evaluation will include catalyst tier in the P&L table. After 10 total paper trades, we'll have enough data to determine if catalyst tier predicts outcome better than Entry Total%. Measurable: (1) next P&L table includes the Catalyst column, (2) after 10 trades, we can compute win rate by catalyst tier.
+
+**Updated parameters:** None. New output column only.
+
 ### 2026-05-07 — Fix Changelog Header + Clarify Entry Total% Definition
 
 **Context:** The mcap ceiling was raised from $100M to $300M in `scripts/scan.py` on May 7 (commit 382d449) after the May 6 evaluation showed OSG ($190M) and NNBR ($126M) were both missed. The changelog header still said $100M. Separately, the May 6 ERNA paper trade logged "Entry Total% = +13.6% AH" — that's just the AH change, not the total move from previous close (+67.3%). The column was added on May 6 to track extension, but the definition was ambiguous enough that it was filled incorrectly on first use.
