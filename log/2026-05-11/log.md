@@ -34,6 +34,23 @@ No AH candidates found yet — after-hours just opened. Regular session candidat
 
 **Status:** Early AH scan — no entries per rules (22:00 scan is observation only). Will re-scan at 22:30 and 23:00 CET.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HPAI | [TV](https://www.tradingview.com/chart/?symbol=HPAI) | $1.27 | +28.8% | +8.7% | $1.38 | +39.9% | 223K | 4.0M | 0.1x | 7.9M | Packaged Software |
+| SKYX | [TV](https://www.tradingview.com/chart/?symbol=SKYX) | $1.21 | -11.4% | +11.2% | $1.34 | -1.5% | 125K | 2.5M | 0.0x | 88.4M | Electrical Products |
+
+**Evaluations:**
+
+**HPAI** — Float 7.9M (good). Catalyst search: QuickCEP partnership announced in April 2026 — no *fresh* catalyst. Stocktwits article confirms "No new fundamental announcements... the latest share move aligns with momentum trading typically seen in volatile small-cap stocks." AH volume ratio 0.1x (low). Was in 21:30 scan at +52.6% day, pulled back to +28.8% — weakening momentum into close. **Watch — needs sustained AH momentum at 23:00 scan.**
+
+**SKYX** — Skip: float too high (88.4M), dead-cat bounce pattern (-11.4% day, recovering in AH).
+
+**Regular session candidates update:** QVCGQ, SONX, JZXN, VIIQ from 21:30 scan did not appear in AH scanner — failed to sustain momentum into after-hours.
+
+**Status:** 22:30 scan — observation only per rules. No paper trades. Will re-scan at 23:00 CET.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
