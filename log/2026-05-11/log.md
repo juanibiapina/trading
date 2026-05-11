@@ -22,6 +22,18 @@ Notable higher-float movers:
 
 **Status:** All candidates marked "Watch — pending AH confirmation". Will re-scan at 22:00+ CET to see which sustain momentum into after-hours.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No AH candidates found yet — after-hours just opened. Regular session candidates from 21:30 scan need AH confirmation.
+
+**Regular session candidates to watch for AH activity:**
+- QVCGQ (+96.1% day, 182K float) — ultra-low float, needs to sustain in AH
+- SONX (+60.0% day, 372K float) — medical specialties
+- JZXN (+64.1% day, 1.4M float) — specialty stores
+- VIIQ (+65.0% day, 5.4M float) — financials
+
+**Status:** Early AH scan — no entries per rules (22:00 scan is observation only). Will re-scan at 22:30 and 23:00 CET.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
