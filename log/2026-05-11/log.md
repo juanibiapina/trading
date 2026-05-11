@@ -132,8 +132,37 @@ No AH candidates found yet — after-hours just opened. Regular session candidat
 
 **Status:** No new paper trades this scan — BZFD needs 2nd scan confirmation despite exceptional catalyst, HTCO needs sustained >10%. Will re-scan at 00:30 CET.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BZFD | [TV](https://www.tradingview.com/chart/?symbol=BZFD) | $0.73 | -11.3% | +141.1% | $1.76 | +113.9% | 8.3M | 1.2M | 7.0x | 23.4M | Internet Software/Services |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $1.89 | +2.7% | +26.5% | $2.39 | +29.9% | 3.4M | 462K | 7.3x | 6.6M | Motor Vehicles |
+| HTCO | [TV](https://www.tradingview.com/chart/?symbol=HTCO) | $7.05 | +20.7% | +13.5% | $8.00 | +37.0% | 164K | 1.3M | 0.1x | 3.2M | Marine Shipping |
+| MGNX | [TV](https://www.tradingview.com/chart/?symbol=MGNX) | $2.95 | -1.7% | +28.1% | $3.78 | +26.0% | 259K | 631K | 0.4x | 61.4M | Pharmaceuticals |
+| HPAI | [TV](https://www.tradingview.com/chart/?symbol=HPAI) | $1.27 | +28.8% | +10.2% | $1.40 | +42.0% | 680K | 4.0M | 0.2x | 7.9M | Packaged Software |
+| GPRO | [TV](https://www.tradingview.com/chart/?symbol=GPRO) | $1.32 | -3.6% | +9.8% | $1.45 | +5.8% | 7.2M | 8.9M | 0.8x | 122.1M | Electronics/Appliances |
+
+**Evaluations:**
+
+**BZFD** — 2nd AH scan, strong catalyst (Byron Allen $120M majority stake deal at 5:00 PM ET). BUT fading hard: peaked $2.14 (+160%) at 17:40 ET, now $1.71 (+108%). Float 23.4M (borderline). Dead-cat bounce pattern (-11.3% day). Volume ratio 7.0x (good). **Skip: fading from peak + dead-cat bounce pattern.**
+
+**HTCO** ✅ PAPER TRADE — 2nd scan >10% (was +9.2% at 23:30, now +13.5%). Float 3.2M (excellent). BUILD pattern: $7.05 → $8.29 peak at 17:50 ET, holding $8.00 — not fading. Day% +20.7% (not dead-cat).
+- Catalyst: Corporate governance enhancements shareholder approval (weak but present)
+- Concern: Weak catalyst, low AH volume ratio (0.1x)
+- Per learning phase: document concern but enter for data collection
+
+**XOS** (paper trade update) — 4th AH scan. Still holding $2.40 range. Entry $2.52, now $2.39 (-5.2%). Spiked early to $2.71, now consolidating at +30% level. Holding overnight.
+
+**MGNX** — Skip: 61.4M float (too high). Catalyst is from May 4 (Sagard ZYNYZ royalty deal) — stale, not driving today's move.
+
+**HPAI** — Confirmed skip: no fresh catalyst despite 4 AH scans. Fading pattern continues.
+
+**GPRO** — Skip: 122.1M float.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | XOS | $2.52 | 23:00 CET | 39 | Air Force EV demo catalyst today, 6.6M float, 6.5x AH volume. Concern: first AH scan only |
+| HTCO | $8.00 | 00:30 CET | 13 | 3.2M float (excellent), build pattern not fade, 2nd scan >10%. Concern: weak catalyst (governance) |
