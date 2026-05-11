@@ -104,6 +104,34 @@ No AH candidates found yet — after-hours just opened. Regular session candidat
 
 **Status:** XOS paper trade holding. No new paper trades this scan — new candidates below 10% AH threshold.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BZFD | [TV](https://www.tradingview.com/chart/?symbol=BZFD) | $0.73 | -11.3% | +193.2% | $2.14 | +160.0% | 3.7M | 698K | 5.3x | 23.4M | Internet Software |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $1.89 | +2.7% | +26.5% | $2.39 | +29.9% | 3.3M | 450K | 7.2x | 6.6M | Motor Vehicles |
+| GPRO | [TV](https://www.tradingview.com/chart/?symbol=GPRO) | $1.32 | -3.6% | +12.9% | $1.49 | +8.8% | 6.9M | 8.9M | 0.8x | 122.1M | Electronics |
+| HTCO | [TV](https://www.tradingview.com/chart/?symbol=HTCO) | $7.05 | +20.7% | +12.8% | $7.95 | +36.1% | 123K | 1.3M | 0.1x | 3.2M | Marine Shipping |
+| HPAI | [TV](https://www.tradingview.com/chart/?symbol=HPAI) | $1.27 | +28.8% | +10.2% | $1.40 | +42.0% | 629K | 4.0M | 0.2x | 7.9M | Packaged Software |
+
+**Evaluations:**
+
+**BZFD** ⭐ — Float 23.4M (larger but acceptable). **STRONG CATALYST TODAY:** Byron Allen takes majority stake in BuzzFeed in $120M deal, announced 5:00 PM ET. This is a major corporate action. AH history: spiked 17:30 ET from $0.73 → $2.14 (+193%) by 17:40 ET, now $1.97 (+140%). Volume ratio 5.3x (excellent).
+- Concern: First AH scan appearance (needs 2nd scan per criteria)
+- **Watch — pending 2nd AH scan confirmation**
+
+**HTCO** — Float 3.2M (excellent!). Now above 10% AH threshold (was +9.2% at 23:30, now +12.8%). Catalyst: "Corporate Governance Enhancements" shareholder approval announced 1:30 PM ET — weaker catalyst. AH history: steady build from $7.05 → $8.29 peak at 17:50 ET, now $8.01. Volume ratio only 0.1x (weak).
+- Concern: Only 1 scan >10% (was 9.2% at 23:30), weak volume ratio
+- **Watch — needs sustained >10% in next scan**
+
+**XOS** (paper trade update) — Now in 3rd AH scan >10% (+33.6% → +31.7% → +26.5%). Fading from peak but still strong. AH history: peaked $2.71 at 16:35 ET, now $2.41 (+30.6%). Entry was $2.52, currently down -$0.11/share (-4.4%). Volume ratio 7.2x (excellent). Holding overnight.
+
+**HPAI** — Confirmed skip. Now in 3rd scan, still no fresh catalyst. Fading (+12.6% → +7.1% → +10.2%).
+
+**GPRO** — Skip: float too high (122.1M).
+
+**Status:** No new paper trades this scan — BZFD needs 2nd scan confirmation despite exceptional catalyst, HTCO needs sustained >10%. Will re-scan at 00:30 CET.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
