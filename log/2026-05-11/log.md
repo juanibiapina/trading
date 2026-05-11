@@ -75,6 +75,35 @@ No AH candidates found yet — after-hours just opened. Regular session candidat
 
 **GPRO, BLNK, SKYX, SRFM** — Float too high (71-140M). Skip.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $1.89 | +2.7% | +31.7% | $2.49 | +35.3% | 2.8M | 399K | 7.1x | 6.6M | Motor Vehicles |
+| GPRO | [TV](https://www.tradingview.com/chart/?symbol=GPRO) | $1.32 | -3.6% | +22.0% | $1.61 | +17.5% | 5.8M | 8.7M | 0.7x | 122.1M | Electronics/Appliances |
+| HTCO | [TV](https://www.tradingview.com/chart/?symbol=HTCO) | $7.05 | +20.7% | +9.2% | $7.70 | +31.8% | 66K | 1.3M | 0.1x | 3.2M | Marine Shipping |
+| HPAI | [TV](https://www.tradingview.com/chart/?symbol=HPAI) | $1.27 | +28.8% | +7.1% | $1.36 | +37.9% | 579K | 4.0M | 0.1x | 7.9M | Packaged Software |
+| USBC | [TV](https://www.tradingview.com/chart/?symbol=USBC) | $0.51 | +16.8% | +6.3% | $0.54 | +24.1% | 87K | 302K | 0.3x | 12.3M | Electronic Equipment |
+| SKYX | [TV](https://www.tradingview.com/chart/?symbol=SKYX) | $1.21 | -11.4% | +5.4% | $1.27 | -6.6% | 633K | 2.6M | 0.2x | 88.4M | Electrical Products |
+
+**Updates on prior candidates:**
+
+**XOS** — Still holding strong at +31.7% AH ($2.49), down slightly from +33.6% ($2.52) at 23:00. Volume increased to 2.8M (was 1.2M). VRatio now 7.1x (excellent). Paper trade entered at $2.52, currently showing -$0.03/share (-1.2%). Holding overnight.
+
+**HPAI** — Fading further. Now +7.1% AH (was +12.6% at 23:00). Decision to skip at 23:00 for no catalyst confirmed.
+
+**GPRO** — Still high float (122.1M). Skip.
+
+**SKYX** — Faded significantly. Now +5.4% AH (was +13.7% at 23:00). Dead-cat bounce fading as expected. Skip.
+
+**New candidates:**
+
+**HTCO** — Float 3.2M (excellent!). +9.2% AH, just below 10% threshold. +20.7% day move. Marine Shipping sector. AH volume ratio only 0.1x (weak). Below 10% AH threshold — **Watch only**, no entry.
+
+**USBC** — Float 12.3M (borderline). +6.3% AH, well below 10% threshold. Skip.
+
+**Status:** XOS paper trade holding. No new paper trades this scan — new candidates below 10% AH threshold.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
