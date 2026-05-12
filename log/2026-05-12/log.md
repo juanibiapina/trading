@@ -113,6 +113,9 @@
 |--------|-------------|------------|-----------------|--------|
 | TDIC | $3.75 | 23:00 CET | 28 | AI partnership PR, 3M float, building AH pattern (+260%), sustained 2+ scans |
 | BZFD | $1.43 | 23:00 CET | 75 | Q1 earnings catalyst, 23.4M float, steady hold pattern (+96%), sustained 2+ scans |
+| TACT | $3.77 | 00:30 CET | 28 | Q1 earnings beat (+10% rev, return to profit), 9.1M float, 5.2x VRatio, sustained 2 scans |
+| FEAM | $1.68 | 00:30 CET | 63 | First offtake agreement (7,500 tons boric acid), 21.0M float, sustained 2 scans |
+| OCG | $2.08 | 00:30 CET | 51 | ⚠️ NO CATALYST (concern), ultra-low 1.9M float, +23% total, sustained 2 scans |
 
 ## Scan 23:30 CET (5:30 PM ET)
 
@@ -190,3 +193,46 @@
 | BZFD | $1.43 | $1.39 | -2.8% | Very steady $1.37-1.44 range, slight fade |
 
 **00:00 observation:** Both paper trades holding but below entry. TDIC consolidating after peak, BZFD steady. TACT emerging as potential add if it sustains >10% in next scan. No new paper trades this scan.
+
+## Scan 00:30 CET (6:30 PM ET)
+
+**Scanner result:** 14 hits
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TDIC | [TV](https://www.tradingview.com/chart/?symbol=TDIC) | $2.36 | +126.9% | +35.2% | $3.19 | +206.7% | 7.9M | 12.5M | 0.6x | 3.0M | Misc Commercial Services |
+| CGTL | [TV](https://www.tradingview.com/chart/?symbol=CGTL) | $0.76 | -53.9% | +13.0% | $0.86 | -47.9% | 5.6M | 2.0M | 2.8x | 16.4M | Wholesale Distributors |
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.33 | -16.4% | +34.6% | $1.79 | +12.6% | 2.8M | 709K | 4.0x | 375K | Misc Commercial Services |
+| DGXX | [TV](https://www.tradingview.com/chart/?symbol=DGXX) | $8.39 | +12.9% | +6.0% | $8.90 | +19.7% | 570K | 25.2M | 0.0x | 61.9M | Data Processing Services |
+| TACT | [TV](https://www.tradingview.com/chart/?symbol=TACT) | $3.37 | +2.6% | +12.0% | $3.77 | +14.9% | 345K | 67K | 5.2x | 9.1M | Computer Peripherals |
+| GUTS | [TV](https://www.tradingview.com/chart/?symbol=GUTS) | $0.73 | -4.6% | +7.1% | $0.79 | +2.2% | 225K | 2.0M | 0.1x | 130.8M | Biotechnology |
+| VLN | [TV](https://www.tradingview.com/chart/?symbol=VLN) | $2.70 | -5.3% | +7.4% | $2.90 | +1.7% | 160K | 7.6M | 0.0x | 76.1M | Semiconductors |
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $1.15 | -21.2% | +8.7% | $1.25 | -14.4% | 111K | 572K | 0.2x | 16.6M | Apparel/Footwear |
+| TBI | [TV](https://www.tradingview.com/chart/?symbol=TBI) | $5.28 | -1.9% | +6.1% | $5.60 | +4.1% | 109K | 494K | 0.2x | 28.3M | Personnel Services |
+| MXCT | [TV](https://www.tradingview.com/chart/?symbol=MXCT) | $0.82 | +0.6% | +9.5% | $0.90 | +10.2% | 86K | 472K | 0.2x | 98.9M | Biotechnology |
+| LODE | [TV](https://www.tradingview.com/chart/?symbol=LODE) | $2.91 | -2.0% | +5.1% | $3.06 | +3.0% | 85K | 1.2M | 0.1x | 74.7M | Chemicals |
+| FEAM | [TV](https://www.tradingview.com/chart/?symbol=FEAM) | $1.51 | -7.4% | +11.2% | $1.68 | +3.0% | 74K | 186K | 0.4x | 21.0M | Chemicals |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.86 | +10.1% | +11.8% | $2.08 | +23.1% | 67K | 1.2M | 0.1x | 1.9M | Specialty Stores |
+| SWAG | [TV](https://www.tradingview.com/chart/?symbol=SWAG) | $1.68 | -0.6% | +6.6% | $1.79 | +5.9% | 58K | 43K | 1.3x | 8.2M | Advertising/Marketing |
+
+**New candidates qualifying:**
+
+- **TACT** ✅ ENTER — Q1 2026 earnings beat today (+10% revenue, beat EPS by $0.11, return to profitability). Float 9.1M ideal, VRatio 5.2x excellent. Now has 2 AH scans >10% (00:00: +13.5%, 00:30: +12.0%). Building pattern, strong catalyst.
+
+- **FEAM** ✅ ENTER — First milestone offtake agreement signed today (7,500 tons/year boric acid with domestic customer). Float 21.0M acceptable. Now has 2 AH scans >10% (00:00: +14.6%, 00:30: +11.2%). Operational catalyst.
+
+- **OCG** ✅ ENTER (with concern) — Float 1.9M ultra-low (ideal). Now has 2 AH scans >10% (23:30: +11.8%, 00:30: +11.8%). **⚠️ NO CATALYST FOUND** after 4 searches (earnings, press releases, SEC filings). Per learning phase: document concern, enter anyway for data.
+
+**Prior candidates unchanged:**
+- **CGTL, FCHL, DBGI**: Skip — dead-cat bounces (Day% below -15%)
+- **DGXX, GUTS, VLN, MXCT, LODE**: Skip — float too high (>50M)
+- **TBI, SWAG**: Skip — AH below 10% threshold
+
+**Update on paper trade positions:**
+
+| Ticker | Entry | Current AH | Change from Entry | AH Pattern |
+|--------|-------|------------|-------------------|------------|
+| TDIC | $3.75 | $3.19 | -14.9% | Consolidating $3.10-3.20 after $3.47 peak |
+| BZFD | $1.43 | $1.42 | -0.7% | Very steady $1.39-1.44 range (not in scanner, price from API) |
+
+**00:30 observation:** Added 3 new paper trades (TACT, FEAM, OCG). TDIC and BZFD holding below entry but stable. Total 5 paper positions for tonight's data collection.
