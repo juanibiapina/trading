@@ -40,6 +40,27 @@
 
 **22:00 observation:** Too early to evaluate AH action. Wait for 22:30 and 23:00 scans to see which candidates sustain momentum.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Scanner result:** 1 new AH candidate
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CGTL | [TV](https://www.tradingview.com/chart/?symbol=CGTL) | $0.76 | -53.9% | +41.9% | $1.08 | -34.5% | 1.3M | 1.5M | 0.9x | 16.4M | Wholesale Distributors |
+
+**CGTL evaluation:** Skip — dead-cat bounce. Stock crashed -53.9% during regular session. AH bounce is recovery from sell-off, not new momentum. Per trading plan: "stocks that crashed >15% during regular session and bounce in AH are recovering from a sell-off, not building new momentum."
+
+**Update on prior candidates (AH action):**
+
+| Ticker | Prev Close | AH Price | Total% | AH Pattern | Status |
+|--------|------------|----------|--------|------------|--------|
+| TDIC | $1.04 | $2.34 | +125.0% | Very steady, holding $2.24-$2.34 | ✅ Leader, strong hold |
+| BZFD | $0.73 | $1.40 | +91.8% | Stable, holding gains | ✅ Strong |
+| WOK | $3.92 | $6.14 | +56.7% | Faded from +73.4% peak at 16:15 | ⚠️ Fading |
+| AEHL | $1.43 | $2.06 | +44.0% | Steady but modest | Watching |
+
+**22:30 observation:** This is scan 1 of AH (observation only per learning rules). TDIC and BZFD showing strong sustained AH action. Both need catalyst check at 23:00 scan if they sustain momentum. CGTL is a clear skip (dead-cat bounce).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
