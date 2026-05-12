@@ -21,6 +21,25 @@
 - **WOK** (+54.6%, 1.2M float) — Low float medical
 - **AEHL** (+54.5%, 2.2M float) — Low float, watch for AH
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Scanner result:** 0 AH candidates (AH just opened)
+
+**Update on regular session candidates:**
+
+| Ticker | Close | Day% (vs prev) | Status |
+|--------|-------|----------------|--------|
+| TDIC | $2.36 | +127% | Closed strong, watch for AH continuation |
+| WOK | $6.66 | +70% | Volatile day (low $1.87, high $7.33), watch AH |
+| AEHL | $2.11 | +48% | Faded from $2.21 at 21:30, still elevated |
+| BZFD | $1.39 | +90% | Faded from $1.54 at 21:30 |
+| SONX | $0.80 | flat | OTC stock, no movement |
+| STAK | $1.11 | flat | No continuation |
+| BWEN | $2.03 | flat | No continuation |
+| EMITF | - | - | No data available |
+
+**22:00 observation:** Too early to evaluate AH action. Wait for 22:30 and 23:00 scans to see which candidates sustain momentum.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
