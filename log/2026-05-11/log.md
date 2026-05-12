@@ -276,3 +276,46 @@ No significant missed opportunities. All major AH movers were detected by the sc
 - **HTCO confirms build pattern thesis:** Steady AH build → strong PM continuation. Paper trade entry at $8.00 would now be +18.75% even after pullback from peak.
 - **XOS confirms spike→hold ≠ spike→continuation:** Holding in AH doesn't guarantee PM run. Entry was 7% below AH peak but still too late.
 - **Lesson:** Build patterns (HTCO) outperform spike→hold patterns (XOS) for overnight holds.
+
+## Morning Evaluation — 14:00 CET (Pulse 3 — FINAL)
+
+### Position Closures
+
+**All positions closed at 14:00 CET (08:00 ET) to unblock next evening trade.**
+
+| Ticker | Entry | Exit | Shares | P&L | P&L % | Result |
+|--------|-------|------|--------|-----|-------|--------|
+| XOS | $2.52 | $2.16 | 39 | -$14.04 | -14.3% | ❌ Loss |
+| HTCO | $8.00 | $9.34 | 13 | +$17.42 | +16.75% | ✅ Win |
+
+**Total Realized P&L: +$3.38 (+€3.38)**
+
+### Price Action Since Pulse 2 (12:00 CET)
+
+**HTCO** — Rebounded from $9.50 → $9.34 exit. PM peak was $10.65 at 05:50 ET. We captured +16.75% vs potential +33.1% at peak. Solid trade.
+
+**XOS** — Continued consolidating $2.07-$2.16 range. No recovery from earlier fade. Loss confirmed.
+
+### Session Summary
+
+| Metric | Value |
+|--------|-------|
+| Trades | 2 |
+| Wins | 1 (50%) |
+| Losses | 1 (50%) |
+| Net P&L | +$3.38 |
+
+### Key Lessons
+
+1. **Build pattern worked:** HTCO's steady AH build (+13.5% at entry) → +16.75% exit. The 2-scan confirmation rule correctly identified the winner.
+2. **Spike→hold didn't work:** XOS peaked early in AH ($2.71), held, but failed to continue in PM. Entry at $2.52 was 7% below AH peak — still chasing.
+3. **Catalyst quality matters:** HTCO's weak governance catalyst still outperformed XOS's stronger Air Force demo catalyst. Pattern quality (build vs spike) mattered more than catalyst tier.
+4. **Exit timing:** HTCO peaked at $10.65 (05:50 ET) but we held through pullback. Consider setting profit targets at +25% to capture peaks.
+
+### Baseline Update
+
+- Days tracked: 1
+- Winners detected: 1/1 (100%)
+- Winner traded: 1/1 (100%) — HTCO was correctly selected
+- Net profitable: ✅ Yes (+$3.38)
+- Status: **BASELINE MET** (Day 1 — early data)
