@@ -166,3 +166,90 @@ No AH candidates found yet — after-hours just opened. Regular session candidat
 |--------|-------------|------------|-----------------|--------|
 | XOS | $2.52 | 23:00 CET | 39 | Air Force EV demo catalyst today, 6.6M float, 6.5x AH volume. Concern: first AH scan only |
 | HTCO | $8.00 | 00:30 CET | 13 | 3.2M float (excellent), build pattern not fade, 2nd scan >10%. Concern: weak catalyst (governance) |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**HTCO** — Marine Shipping
+- Catalyst: Corporate governance enhancements shareholder approval (weak but present)
+- Previous Close: $5.84
+- AH last night: $8.00 (+37%) at 00:30 CET — steady build pattern
+- Premarket now: $8.78 (+50.3%)
+- Hypothetical P&L (AH entry → PM now): **+9.75%**
+- Float: 3.2M | Market Cap: ~$50M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- Found at 23:30 CET (+9.2% AH, just below 10% threshold), confirmed at 00:00 CET (+12.8%), entered at 00:30 CET (+13.5%)
+- **We correctly identified and traded today's winner!**
+- Scanner gap: None — the 2-scan confirmation rule worked perfectly
+
+**Other major movers:**
+- **BZFD** (+115% PM): Biggest absolute move but spike-and-fade pattern. Peaked at $2.14 in AH, now $1.53 in PM. Scanner found it at 00:00 CET but correctly skipped (fading + dead-cat bounce pattern). AH entry would have been a loss.
+- **MGNX** (+26% PM): Pharma, found at 00:30 CET but correctly skipped for high float (61.4M).
+
+### Baseline Tracking
+
+- Days tracked: 1
+- Winners detected by scanner: 1/1 (**100%**)
+- Winner selected for paper trade: 1/1 (**100%**)
+- Target: >80% detection
+- Status: **BASELINE MET** (Day 1 — early, need more data)
+
+### Retrospective Scan Results
+
+**Premarket scan (04:20 ET / 10:20 CET):**
+| Ticker | Close | PM Chg% | PM Price | Float | Industry |
+|--------|-------|---------|----------|-------|----------|
+| BZFD | $0.73 | +115.1% | $1.57 | 23.4M | Internet Software |
+| XOS | $1.89 | +27.5% | $2.41 | 6.6M | Motor Vehicles |
+| MGNX | $2.95 | +26.1% | $3.72 | 61.4M | Pharmaceuticals |
+
+**AH reconstruction via check-prices.py --ah-history:**
+- BZFD: Spiked from $0.73 → $2.14 (+160%) at 17:40 ET, faded to $1.72 by end of AH. Spike→fade pattern.
+- XOS: Peaked $2.71 (+47%) at 16:35 ET, held $2.40-2.50 through AH. Spike→hold pattern.
+- HTCO: Built from $7.05 → $8.29 (+42%) peak at 17:50 ET, held $7.95-8.05. Build pattern.
+- MGNX: Built from $2.95 → $3.79 (+26%) through AH. Build pattern.
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | Current | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----|-------|--------|
+| XOS | $2.52 | +37.0% | A — Air Force EV demo | 23:00 CET | $2.45 | -€2.51 | -2.8% | 📉 Unrealized |
+| HTCO | $8.00 | +37.0% | C — Governance approval | 00:30 CET | $8.78 | +€9.32 | +9.75% | ✅ Unrealized |
+
+**Total Paper P&L: +€6.81** (unrealized)
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 times (21:30 - 00:30 CET)
+- Candidates found: 14 unique tickers
+- Retrospective matches: 4/4 major AH movers detected (BZFD, XOS, HTCO, MGNX)
+
+### Missed Opportunities
+
+No significant missed opportunities. All major AH movers were detected by the scanner.
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| — | — | — | — |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|--------|
+| BZFD | $2.14 (+160%) | 17:40 ET | Spike→fade | $1.53 | -28% | +86% | ❌ Fade — correct skip |
+| XOS | $2.71 (+47%) | 16:35 ET | Spike→hold | $2.45 | -10% | +33% | ⚠️ Flat — marginal |
+| HTCO | $8.29 (+42%) | 17:50 ET | Build | $8.78 | +6% | +50% | ✅ Winner — correct entry |
+| MGNX | $3.79 (+26%) | 19:45 ET | Build | $3.93 | +4% | +31% | ⚠️ Missed (high float) |
+
+### Notes
+
+**Key observations:**
+1. **Build patterns predict PM follow-through:** HTCO and MGNX both showed steady builds in AH → both continued into PM. BZFD spiked early and faded → continued fading in PM.
+2. **Dead-cat bounce + fade = avoid:** BZFD was -11.3% day, spiked in AH, faded. Decision to skip was correct.
+3. **2-scan confirmation rule worked:** HTCO didn't meet 10% threshold until 00:00 CET scan. Waiting for 2nd scan confirmation (00:30 CET) was the right call.
+4. **Float matters but isn't everything:** MGNX at 61.4M float showed decent follow-through (+4% from AH peak). May need to revisit float threshold for strong catalysts.
+
+**Scanner performance: Excellent.** All major movers detected. Trade selection logic (skip fading patterns, enter build patterns) produced a winning trade.
