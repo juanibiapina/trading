@@ -150,3 +150,43 @@
 | BZFD | $1.43 | $1.42 | -0.7% | Very steady hold at $1.42-1.44 range |
 
 **23:30 observation:** TDIC faded from peak but still strong (+198% total). BZFD holding steady. No new paper trades — all new candidates fail criteria (dead-cat bounces, high float, or insufficient AH scans).
+
+## Scan 00:00 CET (6:00 PM ET)
+
+**Scanner result:** 13 hits
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TDIC | [TV](https://www.tradingview.com/chart/?symbol=TDIC) | $2.36 | +126.9% | +35.6% | $3.20 | +207.7% | 7.3M | 12.5M | 0.6x | 3.0M | Misc Commercial Services |
+| CGTL | [TV](https://www.tradingview.com/chart/?symbol=CGTL) | $0.76 | -53.9% | +18.2% | $0.90 | -45.5% | 5.5M | 2.0M | 2.8x | 16.4M | Wholesale Distributors |
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.33 | -16.4% | +34.6% | $1.79 | +12.6% | 2.6M | 685K | 3.9x | 375K | Misc Commercial Services |
+| TACT | [TV](https://www.tradingview.com/chart/?symbol=TACT) | $3.37 | +2.6% | +13.5% | $3.82 | +16.5% | 339K | 66K | 5.1x | 9.1M | Computer Peripherals |
+| GUTS | [TV](https://www.tradingview.com/chart/?symbol=GUTS) | $0.73 | -4.6% | +5.6% | $0.78 | +0.8% | 206K | 2.0M | 0.1x | 130.8M | Biotechnology |
+| VLN | [TV](https://www.tradingview.com/chart/?symbol=VLN) | $2.70 | -5.3% | +9.3% | $2.95 | +3.5% | 150K | 7.6M | 0.0x | 76.1M | Semiconductors |
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $1.15 | -21.2% | +8.7% | $1.25 | -14.4% | 111K | 572K | 0.2x | 16.6M | Apparel/Footwear |
+| TBI | [TV](https://www.tradingview.com/chart/?symbol=TBI) | $5.28 | -1.9% | +9.5% | $5.78 | +7.4% | 109K | 494K | 0.2x | 28.3M | Personnel Services |
+| LODE | [TV](https://www.tradingview.com/chart/?symbol=LODE) | $2.91 | -2.0% | +5.1% | $3.06 | +3.0% | 85K | 1.2M | 0.1x | 74.7M | Chemicals |
+| MXCT | [TV](https://www.tradingview.com/chart/?symbol=MXCT) | $0.82 | +0.6% | +10.4% | $0.91 | +11.1% | 82K | 471K | 0.2x | 98.9M | Biotechnology |
+| FEAM | [TV](https://www.tradingview.com/chart/?symbol=FEAM) | $1.51 | -7.4% | +14.6% | $1.73 | +6.1% | 73K | 186K | 0.4x | 21.0M | Chemicals |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.86 | +10.1% | +7.5% | $2.00 | +18.3% | 65K | 1.2M | 0.1x | 1.9M | Specialty Stores |
+| SWAG | [TV](https://www.tradingview.com/chart/?symbol=SWAG) | $1.68 | -0.6% | +8.9% | $1.83 | +8.3% | 58K | 43K | 1.3x | 8.2M | Advertising/Marketing |
+
+**New candidate evaluations:**
+- **TACT**: Watch — Q1 2026 earnings beat today (+10% revenue, beat EPS by $0.11, return to profitability). Float 9.1M good, VRatio 5.1x excellent. But only 1 AH scan >10% (was +7.0% at 23:00, now +13.5%). Need 2+ scans >10% to qualify. Building pattern (peaked +26% at 16:15, faded, now recovering).
+- **SWAG**: Skip — AH +8.9% below 10% threshold
+- **MXCT**: Skip — float too high (98.9M)
+
+**Prior candidates unchanged:**
+- **CGTL, FCHL, DBGI**: Skip — dead-cat bounces (Day% below -15%)
+- **GUTS, VLN, LODE**: Skip — float too high
+- **TBI, FEAM**: Skip — AH below 10% threshold
+- **OCG**: Fading — was +11.8% at 23:30, now only +7.5%. No longer meets AH >10%.
+
+**Update on paper trade positions:**
+
+| Ticker | Entry | Current AH | Change from Entry | AH Pattern |
+|--------|-------|------------|-------------------|------------|
+| TDIC | $3.75 | $3.13 | -16.5% | Peaked $3.47 at 17:00, now consolidating $3.10-3.15 |
+| BZFD | $1.43 | $1.39 | -2.8% | Very steady $1.37-1.44 range, slight fade |
+
+**00:00 observation:** Both paper trades holding but below entry. TDIC consolidating after peak, BZFD steady. TACT emerging as potential add if it sustains >10% in next scan. No new paper trades this scan.
