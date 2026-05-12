@@ -51,6 +51,22 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-05-12 — Add PM Peak Tracking to Morning Evaluation P&L Table
+
+**Context:** May 11 paper trades show significant upside missed by not tracking peak timing. HTCO peaked at $10.65 (+82.4%) at 05:50 ET but was exited at $9.34 (+16.75%). XOS peaked at $2.56 at 04:20 ET but was exited at $2.16 (-14.3%). The log explicitly notes: "Consider setting profit targets at +25% to capture peaks." Without peak timing data, we can't identify optimal exit windows.
+
+**Evaluation of previous changes:**
+- 2026-05-08 Catalyst Tier column: **Working — generating data (4 data points).** Column populated correctly in all recent logs. Interesting early finding: HTCO (Tier C — governance) was the biggest winner (+16.75%), outperforming XOS (Tier A — Air Force demo) which lost -14.3%. 3/4 Tier A trades won but the correlation is weaker than expected. Need more data before drawing conclusions.
+- 2026-05-07 Entry Total% definition clarification: **Helped (4 data points).** Values now calculated correctly in all recent logs. AIIO +46.7%, XOS +37.0%, HTCO +37.0% — all correctly derived from (entry - prev_close) / prev_close.
+- 2026-05-06 Float threshold fix (<10M → <50M): **Helped (2 data points).** AIIO (13.5M float) entered without hesitation on May 7. May 11 trades (XOS 6.6M, HTCO 3.2M) were under 10M so didn't test the threshold.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — Added "PM Peak" and "Peak Time" columns to Paper Trade P&L table. Also added instruction to use `check-prices.py --pm-history` to find peak.
+   - Why: May 11 HTCO peaked at +82% but we exited at +17% — 65 points of upside missed. Without tracking when stocks peak in PM, we can't identify optimal exit windows or set data-driven profit targets.
+   - Hypothesis: After 10 paper trades with PM peak tracking, we'll identify a common peak window (e.g., 05:00-08:00 ET) and measure how much upside is missed by current exit timing. Measurable: (1) next P&L table includes PM Peak and Peak Time columns, (2) after 10 trades, compute average peak time and compare potential gain (entry→peak) vs. realized gain (entry→exit).
+
+**Updated parameters:** None. New output columns only.
+
 ### 2026-05-08 — Add Catalyst Tier to Morning Evaluation P&L Table
 
 **Context:** Last 4 paper trades (May 4-7) show catalyst quality is the strongest predictor of outcome — stronger than Entry Total%:
