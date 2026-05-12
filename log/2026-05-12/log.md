@@ -113,3 +113,40 @@
 |--------|-------------|------------|-----------------|--------|
 | TDIC | $3.75 | 23:00 CET | 28 | AI partnership PR, 3M float, building AH pattern (+260%), sustained 2+ scans |
 | BZFD | $1.43 | 23:00 CET | 75 | Q1 earnings catalyst, 23.4M float, steady hold pattern (+96%), sustained 2+ scans |
+
+## Scan 23:30 CET (5:30 PM ET)
+
+**Scanner result:** 10 hits
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TDIC | [TV](https://www.tradingview.com/chart/?symbol=TDIC) | $2.36 | +126.9% | +31.4% | $3.10 | +198.1% | 5.4M | 12.3M | 0.4x | 3.0M | Misc Commercial Services |
+| CGTL | [TV](https://www.tradingview.com/chart/?symbol=CGTL) | $0.76 | -53.9% | +14.3% | $0.87 | -47.3% | 5.2M | 1.9M | 2.7x | 16.4M | Wholesale Distributors |
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.33 | -16.4% | +34.5% | $1.79 | +12.5% | 2.1M | 619K | 3.3x | 375K | Misc Commercial Services |
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $1.15 | -21.2% | +9.6% | $1.26 | -13.7% | 110K | 572K | 0.2x | 16.6M | Apparel/Footwear |
+| TRAW | [TV](https://www.tradingview.com/chart/?symbol=TRAW) | $1.68 | -16.8% | +6.0% | $1.78 | -11.8% | 105K | 12.0M | 0.0x | 10.4M | Biotechnology |
+| LODE | [TV](https://www.tradingview.com/chart/?symbol=LODE) | $2.91 | -2.0% | +5.0% | $3.06 | +2.9% | 85K | 1.2M | 0.1x | 74.7M | Chemicals |
+| VLN | [TV](https://www.tradingview.com/chart/?symbol=VLN) | $2.70 | -5.3% | +5.6% | $2.85 | +0.0% | 73K | 7.6M | 0.0x | 76.1M | Semiconductors |
+| FEAM | [TV](https://www.tradingview.com/chart/?symbol=FEAM) | $1.51 | -7.4% | +9.3% | $1.65 | +1.3% | 71K | 186K | 0.4x | 21.0M | Chemicals |
+| MXCT | [TV](https://www.tradingview.com/chart/?symbol=MXCT) | $0.82 | +0.6% | +6.2% | $0.87 | +6.8% | 70K | 470K | 0.1x | 98.9M | Biotechnology |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.86 | +10.1% | +11.8% | $2.08 | +23.1% | 62K | 1.2M | 0.0x | 1.9M | Specialty Stores |
+
+**New candidate evaluations:**
+- **CGTL**: Skip — dead-cat bounce (Day% -53.9%)
+- **FCHL**: Skip — dead-cat bounce (Day% -16.4%)
+- **DBGI**: Skip — dead-cat bounce (Day% -21.2%)
+- **TRAW**: Skip — dead-cat bounce (Day% -16.8%)
+- **LODE**: Skip — float too high (74.7M), AH +5.0% below 10%
+- **VLN**: Skip — float too high (76.1M), AH +5.6% below 10%
+- **FEAM**: Skip — AH +9.3% below 10% threshold
+- **MXCT**: Skip — float too high (98.9M)
+- **OCG**: Watch — float 1.9M attractive, AH +11.8%, but only 1 AH scan (needs 2+), very low AH volume (0.0x VRatio), no catalyst found
+
+**Update on paper trade positions:**
+
+| Ticker | Entry | Current AH | Change from Entry | AH Pattern |
+|--------|-------|------------|-------------------|------------|
+| TDIC | $3.75 | $3.10 | -17.3% | Peaked $3.47 at 17:00, now consolidating $3.10-3.20 |
+| BZFD | $1.43 | $1.42 | -0.7% | Very steady hold at $1.42-1.44 range |
+
+**23:30 observation:** TDIC faded from peak but still strong (+198% total). BZFD holding steady. No new paper trades — all new candidates fail criteria (dead-cat bounces, high float, or insufficient AH scans).
