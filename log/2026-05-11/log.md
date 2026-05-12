@@ -253,3 +253,26 @@ No significant missed opportunities. All major AH movers were detected by the sc
 4. **Float matters but isn't everything:** MGNX at 61.4M float showed decent follow-through (+4% from AH peak). May need to revisit float threshold for strong catalysts.
 
 **Scanner performance: Excellent.** All major movers detected. Trade selection logic (skip fading patterns, enter build patterns) produced a winning trade.
+
+## Morning Evaluation — 12:00 CET (Pulse 2)
+
+### Paper Trade P&L Update
+
+| Ticker | Entry | Entry Time | Current | P&L | P&L % | Δ Since 10:20 | Status |
+|--------|-------|------------|---------|-----|-------|---------------|--------|
+| XOS | $2.52 | 23:00 CET | $2.07 | -€15.86 | -17.9% | ↓ $2.45→$2.07 | 📉 Fading |
+| HTCO | $8.00 | 00:30 CET | $9.50 | +€17.62 | +18.75% | ↑ $8.78→$9.50 | ✅ Strong |
+
+**Total Paper P&L: +€1.76** (was +€6.81 at 10:20)
+
+### Price Action Since Pulse 1
+
+**HTCO** — PM peak of **$10.65 (+82.4%)** at 05:50 ET, now pulled back to $9.50. Massive continuation from AH build pattern. If we'd set a limit sell at $10, would have captured +25% instead of holding through pullback.
+
+**XOS** — Fading hard. Peaked at $2.56 at 04:20 ET, collapsed to $2.02-$2.07 range. Air Force catalyst didn't sustain momentum. Entry was near AH peak ($2.52 vs $2.71 peak) — classic "buying extended" mistake from W05 notes.
+
+### Notes
+
+- **HTCO confirms build pattern thesis:** Steady AH build → strong PM continuation. Paper trade entry at $8.00 would now be +18.75% even after pullback from peak.
+- **XOS confirms spike→hold ≠ spike→continuation:** Holding in AH doesn't guarantee PM run. Entry was 7% below AH peak but still too late.
+- **Lesson:** Build patterns (HTCO) outperform spike→hold patterns (XOS) for overnight holds.
