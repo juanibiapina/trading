@@ -388,3 +388,57 @@ WOK, identified as "today's winner" at pulse 1, crashed from $10.85 (+177%) at 0
 2. **OCG fading** — the only winner at pulse 1 has given back gains (from +21.6% to +10.6%).
 
 3. **No position improved materially** — only TDIC and FEAM slightly better, but all are still underwater except OCG.
+
+---
+
+## Morning Evaluation — 14:00 CET (Pulse 3) — FINAL
+
+### Position Closure
+
+**All positions closed at 08:00 ET (14:00 CET).** An open position blocks the next evening trade.
+
+| Ticker | Entry | Shares | Exit Price | Exit Time | P&L | P&L % | Status |
+|--------|-------|--------|------------|-----------|-----|-------|--------|
+| TDIC | $3.75 | 28 | $3.05 | 08:00 ET | -€17.83 | -18.7% | ❌ CLOSED |
+| BZFD | $1.43 | 75 | $1.36 | 08:00 ET | -€4.78 | -4.9% | ❌ CLOSED |
+| TACT | $3.77 | 28 | $3.50 | 08:00 ET | -€6.88 | -7.2% | ❌ CLOSED |
+| FEAM | $1.68 | 63 | $1.68 | 08:00 ET | €0.00 | 0.0% | ➖ CLOSED |
+| OCG | $2.08 | 51 | $2.39 | 08:00 ET | +€14.38 | +14.9% | ✅ CLOSED |
+
+**Session Total P&L: -€15.11**
+
+### PM Trajectory Since Pulse 2
+
+| Ticker | P2 (06:00 ET) | Current (08:00 ET) | Change |
+|--------|---------------|--------------------|---------|
+| TDIC | $3.06 | $3.05 | -0.3% (stable) |
+| BZFD | $1.34 | $1.36 | +1.5% (slight bounce) |
+| TACT | $3.41 | $3.50 | +2.6% (recovered) |
+| FEAM | $1.67 | $1.68 | +0.6% (stable) |
+| OCG | $2.30 | $2.39 | +3.9% (new PM high $2.67 at 07:20!) |
+
+### Key Observations
+
+1. **OCG was the only winner** (+14.9%) despite having NO CATALYST. It peaked at $2.67 (+58%) at 07:20 ET — if we'd held longer we'd have gained more, but volatile fade after that.
+
+2. **TDIC never recovered** — peaked at $3.48 at 04:55 ET, then slowly faded. Entry at $3.75 was already past peak.
+
+3. **FEAM flat** — broke even, no PM follow-through despite good catalyst.
+
+4. **Exit timing lesson:** OCG's best exit was 07:20 ET ($2.67), not 08:00 ET ($2.39). Late PM can see surges.
+
+### Pattern Summary for 2026-05-12
+
+| Pattern | Result | Lesson |
+|---------|--------|--------|
+| High Entry Total% (>100%) | TDIC lost -18.7% | Avoid entries >100% total |
+| No catalyst | OCG won +14.9% | Catalyst not always required |
+| Late AH entry | Mixed | Need more data |
+| Early AH spiker | TDIC lost | Early spikers fade |
+
+### Scanner Improvements Identified
+
+1. **Track Entry Total%** — all 4 losers entered at high extension levels
+2. **Recovery watch** — WOK was dismissed as "fading" but was the real winner
+3. **AH trajectory classification** — Build patterns > Spike patterns
+4. **Consider max Entry Total% threshold** — maybe cap at +100%?
