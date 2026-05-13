@@ -25,6 +25,12 @@
 - BESS (+31%, 4.4M float) — electrical products, good float
 - PLSM (+28%, 3.5M float) — packaged software
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found in scanner — AH just opened.
+
+**Prior candidates status:** Checking 21:30 watch list after AH opens. Market just closed, need 22:30+ scan for meaningful AH data.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
