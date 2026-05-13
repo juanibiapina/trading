@@ -138,6 +138,71 @@ No candidates found in scanner — AH just opened.
 
 **INVZ** — Skip: Float 207.2M > 50M threshold
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SNAL | [TV](https://www.tradingview.com/chart/?symbol=SNAL) | $0.50 | -0.1% | +67.8% | $0.84 | +67.7% | 27.2M | 3.4M | 7.9x | 13.3M | Packaged Software |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $3.62 | +71.6% | +53.3% | $5.55 | +163.0% | 3.9M | 50.1M | 0.1x | 2.2M | Building Products |
+| HKIT | [TV](https://www.tradingview.com/chart/?symbol=HKIT) | $0.70 | +3.7% | +16.1% | $0.81 | +20.5% | 3.3M | 1.9M | 1.8x | 336K | Packaged Software |
+| LOBO | [TV](https://www.tradingview.com/chart/?symbol=LOBO) | $0.51 | -8.4% | +34.1% | $0.69 | +22.8% | 2.1M | 399K | 5.2x | 11.2M | Motor Vehicles |
+| LESL | [TV](https://www.tradingview.com/chart/?symbol=LESL) | $1.43 | -5.3% | +34.5% | $1.92 | +27.4% | 777K | 178K | 4.4x | 9.2M | Specialty Stores |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.04 | -1.9% | +38.5% | $1.44 | +35.8% | 101K | 27K | 3.8x | 1.5M | Financial Conglomerates |
+| HUDI | [TV](https://www.tradingview.com/chart/?symbol=HUDI) | $1.12 | -3.4% | +27.7% | $1.43 | +23.3% | 153K | 26K | 5.8x | 4.2M | Steel |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.35 | +0.0% | +19.6% | $1.61 | +19.6% | 133K | 145K | 0.9x | 633K | Electronic Production Equipment |
+
+*Also appeared: INVZ (+13.5% AH, 207M float), FOSL (+14.1% AH, 52.5M float), KULR (+10.4% AH), OCG (+8.8% AH), others below threshold.*
+
+**Paper Trade Updates:**
+
+**SNAL** — ✅ Holding (paper traded at $1.00)
+- Now at $0.84 (down from $1.00 peak at 23:00, down from $0.94 at 23:30)
+- Pattern: Fading from peak but still +68% AH, catalyst confirmed (Q1 earnings beat)
+- Paper P&L: -16% from entry
+
+**LESL** — ✅ Building (paper traded at $1.86)
+- Now at $1.92 (up from $1.86 entry)
+- Pattern: Building/holding, +34.5% AH (was +29.9% at 23:30)
+- Paper P&L: +3.2% from entry
+
+**New Candidate Evaluation:**
+
+**AEHL** — Skip: Highly extended (+71.6% day, +163% total)
+- Float 2.2M (excellent)
+- **Catalyst found:** "Genius Plan" announced $190K realized gains from crypto investments, $95K share buyback authorized
+- Concern: Already ran +71.6% during regular session — this is chasing, not catching early momentum
+- Per trading plan: "Chasing extended stocks is risky" — PZG at +97%, SER at +69% both lost
+- Decision: Skip despite catalyst — too extended to enter safely
+
+**HWH** — Skip: No catalyst found (4 searches exhausted)
+- Float 1.5M (excellent, very low)
+- +38.5% AH sustained
+- Searched: earnings, press releases, SEC filings — nothing found for today
+- Decision: Skip per "No catalyst = no follow-through" pattern
+
+**HKIT** — Skip: No catalyst found
+- Float 336K (ultra-low)
+- +16.1% AH
+- Recent news is negative (investor lawsuits, worst NASDAQ performer)
+- Decision: Skip — no catalyst, troubled stock
+
+**LOBO** — Skip: No fresh catalyst
+- Float 11.2M (above 10M ideal)
+- +34.1% AH (was +12.9% at 23:30 — building!)
+- Found older AI revenue announcement but no same-day news
+- Decision: Skip — no catalyst despite building pattern
+
+**HUDI** — Skip: No catalyst found
+- Float 4.2M (good)
+- +27.7% AH (was +11.6% at 23:30 — building significantly!)
+- Re-searched but no catalyst found
+- Decision: Skip — sustained >10% but no catalyst
+
+**LNKS** — Skip: No catalyst (from prior scan)
+- Float 633K (ultra-low)
+- +19.6% AH holding steady
+- Decision: Skip — no catalyst found in prior searches
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
