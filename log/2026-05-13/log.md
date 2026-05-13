@@ -203,6 +203,57 @@ No candidates found in scanner — AH just opened.
 - +19.6% AH holding steady
 - Decision: Skip — no catalyst found in prior searches
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SNAL | [TV](https://www.tradingview.com/chart/?symbol=SNAL) | $0.50 | -0.1% | +79.6% | $0.90 | +79.5% | 29.3M | 3.6M | 8.0x | 13.3M | Packaged Software |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $3.62 | +71.6% | +38.1% | $5.00 | +137.0% | 5.1M | 50.3M | 0.1x | 2.2M | Building Products |
+| LESL | [TV](https://www.tradingview.com/chart/?symbol=LESL) | $1.43 | -5.3% | +36.0% | $1.94 | +28.8% | 800K | 181K | 4.4x | 9.2M | Specialty Stores |
+| HUDI | [TV](https://www.tradingview.com/chart/?symbol=HUDI) | $1.12 | -3.4% | +33.9% | $1.50 | +29.3% | 198K | 32K | 6.2x | 4.2M | Steel |
+| LOBO | [TV](https://www.tradingview.com/chart/?symbol=LOBO) | $0.51 | -8.4% | +22.9% | $0.63 | +12.6% | 2.2M | 414K | 5.3x | 11.2M | Motor Vehicles |
+| IPST | [TV](https://www.tradingview.com/chart/?symbol=IPST) | $5.80 | +16.5% | +19.0% | $6.90 | +38.6% | 53K | 67K | 0.8x | 450K | Beverages: Alcoholic |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.35 | +0.0% | +16.3% | $1.57 | +16.3% | 153K | 147K | 1.0x | 633K | Electronic Production Equipment |
+| FOSL | [TV](https://www.tradingview.com/chart/?symbol=FOSL) | $4.10 | +3.8% | +14.1% | $4.68 | +18.5% | 192K | 754K | 0.3x | 52.5M | Other Consumer Specialties |
+| INVZ | [TV](https://www.tradingview.com/chart/?symbol=INVZ) | $0.92 | +16.6% | +12.3% | $1.03 | +30.9% | 1.0M | 2.9M | 0.3x | 207.2M | Electrical Products |
+| USIO | [TV](https://www.tradingview.com/chart/?symbol=USIO) | $1.31 | +2.3% | +11.4% | $1.46 | +14.0% | 133K | 57K | 2.3x | 19.6M | Finance/Rental/Leasing |
+
+**Paper Trade Updates:**
+
+**SNAL** — ⚠️ Recovering (paper traded at $1.00)
+- Now at $0.90 (was $0.84 at 00:00 — recovering from fade)
+- Still +80% AH, volume massive at 29.3M (8.0x ratio)
+- Paper P&L: **-10%** from entry
+
+**LESL** — ✅ Holding strong (paper traded at $1.86)
+- Now at $1.94 (was $1.92 at 00:00)
+- Pattern: Holding steady at +36% AH
+- Paper P&L: **+4.3%** from entry
+
+**New/Re-evaluated Candidates:**
+
+**IPST** — Skip: No catalyst found
+- Float 450K (ultra-low, excellent)
+- +19.0% AH sustained
+- Searched: earnings, press releases, SEC filings — found Numo app news from earlier May but nothing from today
+- Industry mismatch: Scanner shows "Beverages: Alcoholic" but company does IP/crypto tokens
+- Decision: Skip — no same-day catalyst
+
+**HUDI** — Skip: No catalyst found (re-searched)
+- Float 4.2M (good)
+- +33.9% AH (was +27.7% at 00:00 — significant building pattern!)
+- Re-searched per instructions (prior skip + still >10% AH)
+- No earnings, no press release, no 8-K found for May 13
+- Decision: Skip despite impressive build — no catalyst
+
+**Prior Skips (unchanged):**
+- **AEHL**: Skip — too extended (+71.6% day, +137% total)
+- **LOBO**: Skip — no catalyst
+- **LNKS**: Skip — no catalyst
+- **FOSL**: Skip — float 52.5M > 50M
+- **INVZ**: Skip — float 207.2M > 50M
+- **USIO**: Skip — AH change +11.4% marginal, no catalyst searched
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
