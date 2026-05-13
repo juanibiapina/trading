@@ -339,3 +339,52 @@
    - TDIC entered at +260.6% total → lost -21.9%
    - OCG entered at +23.1% total → won +21.6%
    - Possible pattern: lower Entry Total% = better outcomes? Need more data.
+
+---
+
+## Morning Evaluation — 12:00 CET (Pulse 2)
+
+### Price Update Since Pulse 1
+
+**⚠️ CRITICAL LESSON: WOK collapsed**
+
+WOK, identified as "today's winner" at pulse 1, crashed from $10.85 (+177%) at 04:20 ET to $2.90 (-26%) at 06:00 ET.
+
+**WOK Timeline:**
+- 04:05 ET: $11.04 (PM peak, +182%)
+- 04:45 ET: $9.78 (starting fade)
+- 05:00 ET: $4.48 (CRASHED -55% from peak in 15 min)
+- 05:45 ET: $2.57 (low, -34% from prev close)
+- 06:00 ET: $2.90 (-26% from prev close)
+
+**Lesson:** Even the "winner" would have lost money if held through premarket. The AH→PM pattern can reverse violently. Exit timing is critical — early PM (04:00-04:30 ET) may be optimal.
+
+### Paper Trade P&L Update
+
+| Ticker | Entry | Entry Time | Pulse 1 Price | Current (06:00 ET) | P&L | P&L % | Change from P1 |
+|--------|-------|------------|---------------|-------------------|-----|-------|----------------|
+| TDIC | $3.75 | 23:00 CET | $2.93 | $3.06 | -€19.32 | -18.4% | Improved +3.5% |
+| BZFD | $1.43 | 23:00 CET | $1.37 | $1.34 | -€6.75 | -6.3% | Worse -2.1% |
+| TACT | $3.77 | 00:30 CET | $3.67 | $3.41 | -€10.08 | -9.5% | Worse -6.8% |
+| FEAM | $1.68 | 00:30 CET | $1.53 | $1.67 | -€0.63 | -0.6% | Improved +8.3% |
+| OCG | $2.08 | 00:30 CET | $2.53 | $2.30 | +€11.22 | +10.6% | Worse -11.0% |
+
+**Total Paper P&L: -€25.56** (was -€16.76 at pulse 1, now worse by -€8.80)
+
+### PM Trajectory Since Pulse 1
+
+| Ticker | P1 Price (04:20 ET) | Current (06:00 ET) | Trajectory |
+|--------|---------------------|-------------------|------------|
+| TDIC | $2.93 | $3.06 | Recovered to $3.48 at 04:55, now fading |
+| OCG | $2.53 | $2.30 | Steady fade from $2.55 peak at 04:25 |
+| WOK | $10.85 | $2.90 | **COLLAPSED** -73% from PM peak |
+| FEAM | $1.53 | $1.67 | Small recovery, holding |
+| BZFD | $1.37 | $1.34 | Slight fade, stable |
+
+### Key Observations
+
+1. **Early PM is the exit window.** WOK peaked at 04:05 ET, TDIC peaked at 04:55 ET. By 06:00 ET both are well off peaks.
+
+2. **OCG fading** — the only winner at pulse 1 has given back gains (from +21.6% to +10.6%).
+
+3. **No position improved materially** — only TDIC and FEAM slightly better, but all are still underwater except OCG.
