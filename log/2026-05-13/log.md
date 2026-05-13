@@ -60,7 +60,47 @@ No candidates found in scanner — AH just opened.
 
 **Decision:** Per learning phase rules, do NOT enter paper trades before 23:00 CET scan. SNAL is the lead candidate — needs to sustain >10% AH in next scan.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SNAL | [TV](https://www.tradingview.com/chart/?symbol=SNAL) | $0.50 | -0.1% | +99.2% | $1.00 | +99.0% | 18.2M | 2.5M | 7.3x | 13.3M | Packaged Software |
+| QUCY | [TV](https://www.tradingview.com/chart/?symbol=QUCY) | $1.34 | +315.1% | +7.5% | $1.44 | +346.1% | 16.2M | 52.7M | 0.3x | 10.7M | Biotechnology |
+| LESL | [TV](https://www.tradingview.com/chart/?symbol=LESL) | $1.43 | -5.3% | +37.8% | $1.97 | +30.5% | 222K | 116K | 1.9x | 9.2M | Specialty Stores |
+| INVZ | [TV](https://www.tradingview.com/chart/?symbol=INVZ) | $0.92 | +16.6% | +8.1% | $0.99 | +26.0% | 368K | 2.9M | 0.1x | 207.2M | Electrical Products |
+| FOSL | [TV](https://www.tradingview.com/chart/?symbol=FOSL) | $4.10 | +3.8% | +15.6% | $4.74 | +20.0% | 172K | 752K | 0.2x | 52.5M | Other Consumer Specialties |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $2.36 | +26.9% | +5.1% | $2.48 | +33.3% | 97K | 4.1M | 0.0x | 1.9M | Specialty Stores |
+| LTRN | [TV](https://www.tradingview.com/chart/?symbol=LTRN) | $2.51 | +21.8% | +7.2% | $2.69 | +30.6% | 66K | 233K | 0.3x | 8.4M | Pharmaceuticals |
+| CPHI | [TV](https://www.tradingview.com/chart/?symbol=CPHI) | $1.00 | +11.6% | +6.4% | $1.06 | +18.7% | 66K | 1.4M | 0.0x | 18.9M | Pharmaceuticals |
+
+**Candidate Evaluation:**
+
+**SNAL** — ✅ PAPER TRADE
+- Float 13.3M (below 50M threshold)
+- AH change: +41.4% at 22:30 → +99.2% at 23:00 (sustained >10% in 2 AH scans ✓)
+- Day%: -0.1% (above -15% ✓)
+- **Catalyst: Q1 2026 earnings call** — announced at 4:30 PM ET today
+- Pattern: Strong building (+41% → +99%), NOT fading
+- Volume: 18.2M AH vs 2.5M avg = 7.3x volume ratio
+- Decision: Enter paper trade at $1.00
+
+**LESL** — ⏳ Watch (first AH scan appearance)
+- Float 9.2M (excellent, under 10M ideal)
+- AH change: +37.8% (but only 1 AH scan so far)
+- **Catalyst: Q2 2026 earnings call at 5:00 PM ET** (happening now)
+- Day%: -5.3% (above -15% ✓)
+- Decision: Watch for 23:30 scan — needs to sustain >10% in 2+ AH scans
+
+**QUCY** — Skip: AH change +7.5% < 10% threshold. Massive regular session run (+315%) but fading in AH.
+
+**FOSL** — Skip: Float 52.5M > 50M threshold
+
+**INVZ** — Skip: Float 207.2M > 50M threshold
+
+**OCG, LTRN, CPHI** — Skip: AH change < 10% threshold
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| SNAL | $1.00 | 23:00 CET | 100 | Q1 earnings catalyst, +99% AH building (41%→99%), 7.3x vol ratio, sustained >10% in 2 AH scans |
