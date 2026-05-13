@@ -236,3 +236,106 @@
 | BZFD | $1.43 | $1.42 | -0.7% | Very steady $1.39-1.44 range (not in scanner, price from API) |
 
 **00:30 observation:** Added 3 new paper trades (TACT, FEAM, OCG). TDIC and BZFD holding below entry but stable. Total 5 paper positions for tonight's data collection.
+
+## Morning Evaluation — 10:20 CET (Pulse 1)
+
+### Today's Winner
+
+**WOK** — Medical Specialties
+- Catalyst: Unknown (need to verify — strong day move +70% suggests news)
+- Previous Close: $3.92
+- AH last night: Built from $5.10 (+30%) at 16:00 to $11.40 (+190.8%) at 19:05 ET
+- Premarket now: $10.85 (+176.8%)
+- Hypothetical P&L (AH entry at $6.00 → PM $10.85): **+80.8%**
+- Float: 1.2M | Market Cap: $8.1M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- WOK was in 21:30 CET scan (+54.6% day) and 22:00 update (+70% day)
+- At 22:30 CET tracked with AH at $6.14 (+56.7% total) but classified as **"⚠️ Fading"**
+- The scanner stopped tracking WOK after 22:30 because early AH showed a fade from $6.66 close to $5.10
+- **But WOK then recovered massively**, building to +190.8% peak by 01:05 CET
+- Scanner gap: **Need "recovery watch" for big day movers that fade in early AH then bounce back**
+
+### Baseline Tracking
+
+- Days tracked: 1 (first formal retrospective)
+- Winners detected by scanner: 1/1 (**100%**) — WOK was visible
+- Winner selected for paper trade: 0/1 (**0%**) — WOK was classified as "fading" and not entered
+- Target: >80% detection
+- Status: **DETECTION MET, SELECTION FAILED**
+
+### Retrospective Scan Results
+
+**Premarket Scan (04:20 ET):**
+| Ticker | Close | PM Chg% | PM Price | Float | MCap | Industry |
+|--------|-------|---------|----------|-------|------|----------|
+| WOK | $6.66 | +57.7% | $10.50 | 1.2M | $8.1M | Medical Specialties |
+| TDIC | $2.36 | +18.9% | $2.81 | 3.0M | $17.5M | Misc Commercial Services |
+| OCG | $1.86 | +34.4% | $2.50 | 1.9M | $3.6M | Specialty Stores |
+| GUTS | $0.73 | +13.2% | $0.83 | 130.8M | $116.4M | Biotechnology |
+| AEHL | $2.11 | +12.6% | $2.38 | 2.2M | $10.2M | Building Products |
+| FCHL | $1.33 | +35.0% | $1.79 | 375K | $1.6M | Misc Commercial Services |
+
+**AH History Reconstruction (top movers):**
+| Ticker | Prev Close | AH Peak | Peak Time | Peak Chg% | PM Now | PM Chg% | Verdict |
+|--------|------------|---------|-----------|-----------|--------|---------|----------|
+| TDIC | $1.04 | $3.47 | 17:00 ET | +233.6% | $2.93 | +181.7% | Faded from peak |
+| WOK | $3.92 | $11.40 | 19:05 ET | +190.8% | $10.85 | +176.8% | **WINNER** - held well |
+| OCG | $1.69 | $2.71 | 19:55 ET | +60.4% | $2.53 | +49.7% | Decent hold |
+| AEHL | $1.43 | $2.19 | 17:05 ET | +53.1% | $2.38 | +66.4% | Better than AH peak! |
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Current | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|---------|-----|-------|--------|
+| TDIC | $3.75 | +260.6% | A — AI partnership | 23:00 CET | $2.94 | 04:05 ET | $2.93 | -€22.96 | -21.9% | ❌ Loss |
+| BZFD | $1.43 | +95.9% | B — Q1 earnings | 23:00 CET | $1.37 | 04:20 ET | $1.37 | -€4.50 | -4.2% | ❌ Loss |
+| TACT | $3.77 | +14.2% | A — Q1 earnings beat | 00:30 CET | $3.67 | 04:10 ET | $3.67 | -€2.80 | -2.7% | ❌ Loss |
+| FEAM | $1.68 | +3.1% | A — First offtake deal | 00:30 CET | $1.61 | 04:00 ET | $1.53 | -€9.45 | -8.9% | ❌ Loss |
+| OCG | $2.08 | +23.1% | None — NO CATALYST | 00:30 CET | $2.54 | 04:15 ET | $2.53 | +€22.95 | +21.6% | ✅ Win |
+
+**Total Paper P&L: -€16.76**
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 times (21:30 - 00:30 CET)
+- Candidates found: 14 unique tickers across all scans
+- Paper trades placed: 5
+- Wins: 1 (OCG +21.6%)
+- Losses: 4 (TDIC -21.9%, BZFD -4.2%, TACT -2.7%, FEAM -8.9%)
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| WOK | +190.8% | Classified as "fading" at 22:30, dropped from watch | **YES** — +80% potential |
+
+**Key Learning:** WOK was the clear winner today but was dismissed because it faded in early AH before recovering. The scanner correctly detected it but the "fading" classification removed it from consideration.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|--------|
+| TDIC | $3.47 | 17:00 ET | Spike→fade | $2.93 | -15.6% | +181.7% | Peak too early, faded overnight |
+| WOK | $11.40 | 19:05 ET | Build | $10.85 | -4.8% | +176.8% | **Best pattern** — late build, held PM |
+| OCG | $2.71 | 19:55 ET | Late surge | $2.53 | -6.6% | +49.7% | Good follow-through |
+| AEHL | $2.19 | 17:05 ET | Spike→hold | $2.38 | +8.7% | +66.4% | Exceeded AH peak in PM |
+
+**Pattern insight:** Late AH builders (WOK peaked 19:05 ET, OCG peaked 19:55 ET) showed better PM follow-through than early AH spikers (TDIC peaked 17:00 ET). The scanner entered TDIC at its peak.
+
+### Notes
+
+1. **Entry timing problem:** TDIC entry at $3.75 was at 23:00 CET — but TDIC had already peaked at $3.47 at 17:00 ET (23:00 CET). The 23:00 scan price of $3.75 captured a brief bounce to the peak, not a building pattern.
+
+2. **No-catalyst win:** OCG was the only winner despite having NO CATALYST. This contradicts the "catalyst required" thesis. Need more data to understand.
+
+3. **Scanner improvement needed:**
+   - Add "recovery watch" for stocks with big day moves that fade in early AH
+   - Track AH trajectory patterns (build vs spike→fade) to inform entry timing
+   - Consider later entry times for early-spikers that have already peaked
+
+4. **Entry Total% correlation:**
+   - TDIC entered at +260.6% total → lost -21.9%
+   - OCG entered at +23.1% total → won +21.6%
+   - Possible pattern: lower Entry Total% = better outcomes? Need more data.
