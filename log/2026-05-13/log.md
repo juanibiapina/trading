@@ -31,6 +31,35 @@ No candidates found in scanner — AH just opened.
 
 **Prior candidates status:** Checking 21:30 watch list after AH opens. Market just closed, need 22:30+ scan for meaningful AH data.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SNAL | [TV](https://www.tradingview.com/chart/?symbol=SNAL) | $0.50 | -0.1% | +41.4% | $0.71 | +41.3% | 1.3M | 686K | 1.9x | 13.3M | Packaged Software |
+| FOSL | [TV](https://www.tradingview.com/chart/?symbol=FOSL) | $4.10 | +3.8% | +15.2% | $4.72 | +19.6% | 120K | 747K | 0.2x | 52.5M | Other Consumer Specialties |
+| USIO | [TV](https://www.tradingview.com/chart/?symbol=USIO) | $1.31 | +2.3% | +8.4% | $1.42 | +10.9% | 105K | 54K | 1.9x | 19.6M | Finance/Rental/Leasing |
+
+**New Candidate Evaluation:**
+
+**SNAL** — ✅ Strong candidate
+- Float 13.3M (above 10M ideal but below 50M)
+- **Catalyst: Q1 2026 earnings call at 4:30 PM ET today** (happening now!)
+- Building pattern: +10% at 16:05 → +42% at 16:10 → +77% at 16:15 → **+107% at 16:31** (building, not fading)
+- First day of unusual activity, 1.9x volume ratio
+- Watch for 23:00 scan — if holds/builds, enter paper trade
+
+**FOSL** — Skip: Float 52.5M > 50M threshold
+
+**USIO** — Skip: AH change +8.4% < 10% threshold
+
+**21:30 Watch List Update:**
+- **QUCY**: +411% total at 16:30 (was +238% at close) — massive AH continuation, but 0 volume reported (suspicious data)
+- **BESS**: +33% at 16:29 (was +31% at close) — slight continuation but fading from +41.7% AH peak
+- **PLSM**: +19.7% at 16:29 (was +28% at close) — fading in AH, down from close
+- SONX, BRLL, HWGG: No AH activity today
+
+**Decision:** Per learning phase rules, do NOT enter paper trades before 23:00 CET scan. SNAL is the lead candidate — needs to sustain >10% AH in next scan.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
