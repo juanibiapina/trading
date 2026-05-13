@@ -99,8 +99,48 @@ No candidates found in scanner — AH just opened.
 
 **OCG, LTRN, CPHI** — Skip: AH change < 10% threshold
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SNAL | [TV](https://www.tradingview.com/chart/?symbol=SNAL) | $0.50 | -0.1% | +86.4% | $0.94 | +86.2% | 24.8M | 3.2M | 7.8x | 13.3M | Packaged Software |
+| LESL | [TV](https://www.tradingview.com/chart/?symbol=LESL) | $1.43 | -5.3% | +29.9% | $1.86 | +23.0% | 710K | 171K | 4.1x | 9.2M | Specialty Stores |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.35 | +0.0% | +20.7% | $1.63 | +20.7% | 91K | 140K | 0.7x | 633K | Electronic Production Equipment |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $0.82 | +4.6% | +16.2% | $0.95 | +21.6% | 224K | 538K | 0.4x | 589K | Internet Retail |
+| LOBO | [TV](https://www.tradingview.com/chart/?symbol=LOBO) | $0.51 | -8.4% | +12.9% | $0.58 | +3.4% | 1.1M | 297K | 3.8x | 11.2M | Motor Vehicles |
+| HUDI | [TV](https://www.tradingview.com/chart/?symbol=HUDI) | $1.12 | -3.4% | +11.6% | $1.25 | +7.8% | 84K | 18K | 4.7x | 4.2M | Steel |
+| INVZ | [TV](https://www.tradingview.com/chart/?symbol=INVZ) | $0.92 | +16.6% | +10.2% | $1.01 | +28.4% | 443K | 2.9M | 0.2x | 207.2M | Electrical Products |
+
+*Also appeared: QUCY (+7.5% AH), STAK (+31.4% AH, 0 float data), KULR (+9.6% AH), FOSL (+12.2% AH, 52.5M float), others below threshold.*
+
+**Candidate Evaluation:**
+
+**SNAL** — ✅ Already paper traded at 23:00
+- Now at $0.94 (was $1.00) — slight fade from peak but holding above 22:30 level ($0.71)
+- Still +86% AH, catalyst confirmed (Q1 earnings beat: EPS $0.06 vs -$0.21 expected)
+
+**LESL** — ✅ PAPER TRADE
+- Float 9.2M (under 10M ideal ✓)
+- AH change: +37.8% at 23:00 → +29.9% at 23:30 (sustained >10% in 2 AH scans ✓)
+- Day%: -5.3% (above -15% ✓)
+- **Catalyst: Q2 2026 earnings** — sales beat estimates, up 4.3% to $184.7M, comparable sales +6.6%
+- Pattern: Slight fade from peak but holding strong above +29%
+- Volume: 710K AH vs 171K avg = 4.1x volume ratio
+- Decision: Enter paper trade at $1.86
+
+**LNKS** — Skip: No catalyst found (4 searches exhausted)
+
+**IPW** — Skip: No catalyst found (4 searches exhausted)
+
+**LOBO** — Skip: No catalyst found
+
+**HUDI** — Skip: No catalyst found
+
+**INVZ** — Skip: Float 207.2M > 50M threshold
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | SNAL | $1.00 | 23:00 CET | 100 | Q1 earnings catalyst, +99% AH building (41%→99%), 7.3x vol ratio, sustained >10% in 2 AH scans |
+| LESL | $1.86 | 23:30 CET | 53 | Q2 earnings beat, +30% AH sustained (38%→30%), 4.1x vol ratio, 9.2M float (under 10M ideal)
