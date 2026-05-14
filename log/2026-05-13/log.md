@@ -396,3 +396,53 @@ Stocks appearing in 2+ evening scans with AH change >10%:
 1. Don't panic-exit based on early PM prices
 2. Late premarket (05:30+ ET) can see second legs
 3. Earnings catalyst stocks may need more patience than expected
+
+## Morning Evaluation — 14:00 CET (Pulse 3 — FINAL)
+
+### Position Closures
+
+**All positions closed at 08:00 ET (14:00 CET):**
+
+| Ticker | Entry | Entry Time | Exit | Exit Time | Shares | P&L | P&L % | Result |
+|--------|-------|------------|------|-----------|--------|-----|-------|--------|
+| SNAL | $1.00 | 23:00 CET | $1.54 | 08:00 ET | 100 | +$54.00 | **+54.0%** | ✅ WIN |
+| LESL | $1.86 | 23:30 CET | $1.88 | 08:00 ET | 53 | +$1.06 | **+1.1%** | ✅ WIN |
+
+**Total Paper P&L: +$55.06 (~€51)** — Both positions profitable!
+
+### Price Action Since Pulse 2
+
+**SNAL — Continued rally**
+- Pulse 2 (12:00 CET / 06:00 ET): $1.21 (+21% P&L)
+- Pulse 3 (14:00 CET / 08:00 ET): $1.54 (+54% P&L)
+- PM Peak: $1.59 at 07:55 ET (+216% from close)
+- Trajectory: Steady build through late premarket, new PM high after each pulse
+
+**LESL — Late recovery**
+- Pulse 2 (06:00 ET): $1.60 (-14% P&L)
+- Pulse 3 (08:00 ET): $1.88 (+1.1% P&L)
+- PM Peak: $1.88 at 08:00 ET (+24.5% from close)
+- Trajectory: Was fading all morning, then rallied hard 07:00-08:00 ET to reach PM high at close
+
+### Final Paper Trade Summary
+
+| Ticker | Entry Total% | Catalyst | AH Trajectory | PM Trajectory | Exit P&L | Lesson |
+|--------|--------------|----------|---------------|---------------|----------|--------|
+| SNAL | +99.0% | B — Q1 earnings beat | Spike→fade | Fade→rally→peak | **+54%** | Patience paid off; late PM rally |
+| LESL | +23.0% | B — Q2 earnings beat | Spike→hold | Fade→rally | **+1.1%** | Recovery in final hour |
+
+### Key Learnings
+
+1. **Don't exit early on PM fades.** Both trades were deeply negative at Pulse 1, but both ended positive:
+   - SNAL: -18% at P1 → +54% at close
+   - LESL: -11% at P1 → +1% at close
+
+2. **Late premarket (07:00-08:00 ET) can produce strongest moves.** Both stocks reached PM highs in the final hour before open.
+
+3. **The "no catalyst" skip may be wrong.** LNKS (skipped, no catalyst) peaked at +61.5% PM. Meanwhile our catalyst trades (SNAL, LESL) also worked. Sample size too small — need more data.
+
+4. **Earnings catalyst B-tier performed well.** 2/2 trades profitable. Both were "sell the news" fears that didn't materialize.
+
+### Positions Cleared
+
+✅ No open positions. Ready for tonight's post-market session.
