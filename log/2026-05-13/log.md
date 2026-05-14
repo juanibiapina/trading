@@ -359,3 +359,40 @@ Stocks appearing in 2+ evening scans with AH change >10%:
 - Consider allowing ultra-low float (<1M) stocks even without catalyst
 - Track AH trajectory pattern (Build vs Spike→fade) as entry filter
 - The stocks that continued into PM (LNKS, AIIO) both had late AH surges (18:40-18:50 ET) vs early peakers (SNAL 16:35, AEHL 17:35) that faded
+
+## Morning Evaluation — 12:00 CET (Pulse 2)
+
+### Paper Trade P&L Update
+
+| Ticker | Entry | Entry Time | Current | Change Since P1 | P&L | P&L % | Status |
+|--------|-------|------------|---------|-----------------|-----|-------|--------|
+| SNAL | $1.00 | 23:00 CET | $1.21 | +$0.39 (+48%) | +€21.00 | +21.0% | ✅ **Reversal to profit** |
+| LESL | $1.86 | 23:30 CET | $1.60 | -$0.05 (-3%) | -€13.78 | -14.0% | ❌ Still fading |
+
+**Total Paper P&L: +€7.22** (was -€29.13 at Pulse 1)
+
+### Significant Price Changes Since Pulse 1
+
+**SNAL — MAJOR REVERSAL**
+- Pulse 1 (10:20): $0.82 (-18% P&L)
+- Pulse 2 (12:00): $1.21 (+21% P&L)
+- PM trajectory: Dipped to $0.81 at 04:10, then steady build to $1.21 at 06:00 ET
+- Now at session PM high (+140.8% from prev close)
+- The AH fade that hurt us has completely reversed in late premarket
+
+**LESL — Continued fade**
+- Pulse 1: $1.65 (-11.3% P&L)
+- Pulse 2: $1.60 (-14.0% P&L)
+- PM trajectory: Peaked at $1.81 at 04:00 ET, steady decline since
+
+**LNKS (today's winner) — Fading from peak**
+- PM peak: $2.18 at 04:10 and 05:00 ET (+61.5%)
+- Current: $1.86 (+37.8%)
+- Still strong but lost ~24% from peak
+
+### Notes
+
+**Key observation:** SNAL's "spike→fade" AH pattern reversed in late premarket. The early PM fade (04:00-04:10) was the bottom, not the continuation of AH weakness. This suggests:
+1. Don't panic-exit based on early PM prices
+2. Late premarket (05:30+ ET) can see second legs
+3. Earnings catalyst stocks may need more patience than expected
