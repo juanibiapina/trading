@@ -85,7 +85,63 @@
 
 **Analysis:** BIYA showing strong AH build (+76%) but no identifiable catalyst. QUCY holding AH levels but scanner didn't pick it up. Too early for paper trade - observe at 23:00 scan to confirm sustained momentum.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $0.77 | -4.6% | +51.4% | $1.17 | +44.5% | 8.9M | 5.2M | 1.7x | 1.6M | Personnel Services |
+| PIII | [TV](https://www.tradingview.com/chart/?symbol=PIII) | $4.03 | +12.9% | +47.9% | $5.96 | +66.9% | 1.2M | 205K | 6.1x | 1.8M | Misc Commercial |
+| WYY | [TV](https://www.tradingview.com/chart/?symbol=WYY) | $8.98 | +9.0% | +13.4% | $10.18 | +23.5% | 90K | 209K | 0.4x | 8.2M | Data Processing |
+| GGRP | [TV](https://www.tradingview.com/chart/?symbol=GGRP) | $0.56 | -3.1% | +13.3% | $0.63 | +9.8% | 6.9M | 783K | 8.8x | 14.9M | Packaged Software |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $0.64 | -9.9% | +6.5% | $0.68 | -4.0% | 517K | 3.5M | 0.1x | 4.9M | Pharma |
+
+**Skipped (dead-cat bounces):**
+- TDIC: -96.5% Day, +41.2% AH → Skip
+- STAK: -62.7% Day, +26.2% AH → Skip
+
+**Skipped (float too high):**
+- BZAI: 83.9M float → Skip
+- SPCE: 80.6M float → Skip
+- VYGR: 50.3M float → Skip
+
+**Catalyst Research:**
+
+| Ticker | Catalyst | Grade | Source |
+|--------|----------|-------|--------|
+| PIII | Q1 2026 earnings beat, swung to $3.0M profit, raised FY2026 outlook | B | Business Wire |
+| WYY | Q1 2026 earnings beat, $0.01 EPS vs -$0.12 est, return to profitability | B | Stock Titan |
+| BIYA | No catalyst found (4 searches: earnings, news, SEC, crypto/Web3) | None | - |
+
+**AH Price Action (16:00-17:00 ET):**
+
+| Ticker | AH Peak | Peak Time | Current (17:01) | From Peak |
+|--------|---------|-----------|-----------------|----------|
+| PIII | $7.15 (+100%) | 16:20 ET | $5.76 (+61%) | -19% |
+| BIYA | $1.36 (+68%) | 16:10 ET | $1.12 (+38%) | -18% |
+| WYY | $11.69 (+42%) | 16:25 ET | $9.80 (+19%) | -16% |
+
+**⚠️ All candidates peaked in early AH (16:00-16:30 ET) and are now fading. This is a warning pattern per May 11-13 data (0/4 stocks that peaked early and faded continued in PM).**
+
+**Paper Trade Evaluation:**
+
+✅ **BIYA meets all mechanical criteria:**
+- Float: 1.6M ✓ (<50M)
+- AH change >10% in 2+ AH scans: 22:30 (+76%), 23:00 (+51.4%) ✓
+- Day%: -4.6% ✓ (above -15%)
+
+❌ **Concerns:**
+1. No catalyst found after structured search (4 queries exhausted)
+2. Peaked at 16:10 ET, fading 18% from peak
+3. Ultra-low float with no news = pump risk
+
+**Decision:** Per learning phase guidance, enter paper trade with documented concerns. "A paper trade with noted concerns generates data; a skip generates nothing."
+
+**Not entering (need 2+ AH scans):**
+- PIII: Strong Grade B catalyst but first AH scan appearance - observe at 23:30
+- WYY: Strong Grade B catalyst but first AH scan appearance - observe at 23:30
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
+| BIYA | $1.12 | 23:00 CET | 89 | None | Meets criteria: 1.6M float, >10% AH in 2 scans. ⚠️ CONCERNS: No catalyst, peaked early (16:10 ET), fading 18% from peak. Learning phase entry. |
