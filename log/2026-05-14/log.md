@@ -51,6 +51,40 @@
 
 **Analysis:** AH just opened. QUCY leading with +6.6% AH. LESL which ran hardest during regular session is fading. Too early for paper trade decisions - observe at 22:30/23:00.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $0.77 | -4.6% | +76.0% | $1.36 | +67.9% | 2.8M | 4.6M | 0.6x | 1.6M | Personnel Services |
+| LESL | [TV](https://www.tradingview.com/chart/?symbol=LESL) | $3.50 | +144.8% | +5.7% | $3.70 | +158.7% | 192K | 4.2M | 0.0x | 9.2M | Specialty Stores |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $0.64 | -9.9% | +16.8% | $0.75 | +5.3% | 254K | 3.5M | 0.1x | 4.9M | Pharmaceuticals |
+| GGRP | [TV](https://www.tradingview.com/chart/?symbol=GGRP) | $0.56 | -3.1% | +20.3% | $0.67 | +16.6% | 5.0M | 556K | 9x | 14.9M | Packaged Software |
+
+**Skipped (dead-cat bounces - crashed >15% during session, bouncing in AH):**
+- TDIC: -96.5% Day, +25% AH → Skip
+- WOK: -52.9% Day, +15.4% AH → Skip
+- STAK: -62.7% Day, +10% AH → Skip
+
+**Skipped (float too high):**
+- BZAI: +12.8% total, 83.9M float → Skip
+
+**Watchlist AH price action (from 22:00 scan):**
+
+| Ticker | 16:00 ET | 16:15 ET | 16:30 ET | Pattern | Notes |
+|--------|----------|----------|----------|---------|-------|
+| BIYA | +15% | +57% | +46% | Spiked → building | NEW! 1.6M float, no fresh catalyst |
+| QUCY | +119% | +126% | +119% | Holding | Biotech, 10.7M float |
+| LESL | +143% | +162% | +141% | Peaked early, fading | 9.2M float |
+| MOBX | +86% | +62% | +64% | Peaked at AH open | Fading hard, skip |
+| TVGN | +45% | +45% | +44% | Flat AH | Biotech, 962K float |
+
+**Catalyst check - BIYA:**
+- Last news: Apr 30, 2026 (FY2025 earnings) - 2 weeks old
+- No fresh catalyst today
+- Moving on crypto/Web3 speculation momentum
+
+**Analysis:** BIYA showing strong AH build (+76%) but no identifiable catalyst. QUCY holding AH levels but scanner didn't pick it up. Too early for paper trade - observe at 23:00 scan to confirm sustained momentum.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
