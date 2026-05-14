@@ -193,10 +193,39 @@ This tracks whether AH momentum carries into premarket and which AH patterns pre
 [any observations about scanner performance, threshold adjustments needed, etc.]
 ```
 
-### 6. Commit
+### 6. Generate Price Charts (Pulse 1 only)
+
+For today's winner and any strong candidates, generate ASCII price timelines:
 
 ```bash
-git add log/
+python3 scripts/price-timeline.py WINNER_TICKER CANDIDATE1 CANDIDATE2
+```
+
+This shows:
+- 2-day price range and current position
+- Peak price and timing
+- Session-by-session breakdown (AH, PM, REG)
+
+Include the chart output in the log under a `### Price Charts` section.
+
+### 7. Multi-Day Tracking (Pulse 1 only)
+
+Update `WINNERS_TRACKING.md`:
+
+1. **Add today's winner** to the "Active Watch" table
+2. **Check previous winners** still in Active Watch:
+   ```bash
+   python3 scripts/check-prices.py PREV_WINNER1 PREV_WINNER2 ...
+   ```
+3. **Move to Historical** any winners that are 5+ days old
+4. **Note any runners** (stocks that kept going after day 1)
+
+This catches multi-day runners like AIIO (+878% over 7 days) that we'd miss with premarket-only exits.
+
+### 8. Commit
+
+```bash
+git add log/ WINNERS_TRACKING.md
 git commit -m "morning evaluation YYYY-MM-DD"
 git push
 ```
