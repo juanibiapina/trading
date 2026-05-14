@@ -36,7 +36,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Entry rules: float <50M, catalyst required, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
-- Trajectory preference: build/hold patterns preferred over spike→fade
+- Trajectory preference: build/hold patterns preferred over spike→fade; at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading
 - **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
 
@@ -50,6 +50,25 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-05-14 — Add AH Peak Timing Guidance to Trajectory Preference
+
+**Context:** May 11-13 data shows a clear pattern: stocks that peak early in AH (16:00-17:30 ET) tend to fade in PM, while stocks still building or near their AH high at later scans show better continuation. Specific data points:
+- Late AH peaks (≥18:00 ET): LNKS 18:50 → +61% PM, WOK 19:05 → +177% PM, HTCO 17:50 → +50% PM (3/3 continuation)
+- Early AH peaks (<17:30 ET): SNAL 16:35 → faded initially, AEHL 17:35 → faded, TDIC 17:00 → faded, XOS 16:35 → lost (0/4 initial continuation)
+
+The existing trajectory preference ("prefer build/hold over spike→fade") doesn't explicitly consider WHEN the peak occurred. At later scans (00:00+ CET), comparing current price to AH peak provides a more actionable signal.
+
+**Evaluation of previous changes:**
+- 2026-05-12 PM Peak Tracking: **Working — generating data (2 data points).** May 13 P&L table correctly includes PM Peak and Peak Time columns. SNAL peaked $0.84 at 04:00 ET, LESL peaked $1.81 at 04:00 ET. Both showed late PM rallies — need more data to identify optimal exit windows.
+- 2026-05-08 Catalyst Tier column: **Working — generating data (6 data points).** May 13 adds SNAL (B), LESL (B). Both B-tier earnings trades won (+54%, +1.1%). Tier B now 2/3 wins. Meanwhile LNKS (None — no catalyst, skipped) would have been best (+61%). The "no catalyst = skip" rule missed the biggest winner; needs investigation.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added AH peak timing guidance to the trajectory preference section. At later scans (00:00+ CET), compare each candidate's current price to their AH peak. Stocks that peaked early and are now well below their peak should be deprioritized relative to stocks still near their AH high.
+   - Why: The existing trajectory preference ("prefer build/hold over spike→fade") is pattern-based but doesn't explicitly consider timing. The 7-datapoint pattern (3/3 late peaks → continuation, 0/4 early peaks → fade) provides a concrete timing threshold that makes the preference more actionable.
+   - Hypothesis: At scans after 00:00 CET, the agent will explicitly compare candidates' current prices to their AH peaks. When choosing between an early-peaker now fading and a late-builder still near its high, the late-builder will be selected. Measurable: (1) next evening session notes mention AH peak timing when comparing candidates, (2) next time both an early-peaker and late-builder qualify, the late-builder is entered.
+
+**Updated parameters:** None. Prompt guidance only.
 
 ### 2026-05-12 — Add PM Peak Tracking to Morning Evaluation P&L Table
 
