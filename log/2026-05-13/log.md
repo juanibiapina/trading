@@ -260,3 +260,102 @@ No candidates found in scanner — AH just opened.
 |--------|-------------|------------|-----------------|--------|
 | SNAL | $1.00 | 23:00 CET | 100 | Q1 earnings catalyst, +99% AH building (41%→99%), 7.3x vol ratio, sustained >10% in 2 AH scans |
 | LESL | $1.86 | 23:30 CET | 53 | Q2 earnings beat, +30% AH sustained (38%→30%), 4.1x vol ratio, 9.2M float (under 10M ideal)
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**LNKS** — Electronic Production Equipment (Linkers Industries Limited)
+- Catalyst: **None found** (searched 4 times during evening scans)
+- Previous Close: $1.35
+- AH last night: $1.95 peak at 18:50 ET (+44.4%), held $1.63-$1.83 during scan window
+- Premarket now: $2.10 (+55.7% from close), peaked at $2.18 (+61.5%) at 04:10 ET
+- Hypothetical P&L (AH entry at 23:30 $1.63 → PM $2.10): **+29%**
+- Float: 633K (ultra-low) | Market Cap: $2.2M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- Appeared in 23:30 scan (+20.7% AH) and 00:30 scan (+16.3% AH)
+- Why skipped: "No catalyst found (4 searches exhausted)"
+- **Scanner gap:** The "no catalyst = no follow-through" rule failed here. LNKS had massive follow-through (+61% PM) despite no news. Ultra-low float (633K) may drive moves without catalyst.
+
+**Runner-up: AIIO** — Financial Conglomerates (Robo.ai Inc.)
+- Was in 21:30 regular session scan at +96%
+- NOT in any AH scans (dipped to -4% AH at open, then surged late)
+- AH surge to $3.09 (+18% from close) happened at 18:40 ET = 00:40 CET — **between our scans**
+- PM peaked at $3.57 (+179% from prev close)
+- NOT detectable: late AH surge timing fell between scan windows
+
+### Baseline Tracking
+
+- Days tracked: 1 (starting fresh count for W20)
+- Winners detected by scanner: 1/1 (**100%**) — LNKS was in scanner
+- Winner selected for paper trade: 0/1 (**0%**) — we skipped LNKS (no catalyst rule)
+- Target: >80% detection
+- Status: **DETECTION MET, SELECTION FAILED**
+
+### Retrospective Scan Results
+
+**Premarket Scan (04:20 ET):**
+| Ticker | Close | PM Chg% | PM Price | Float | Industry |
+|--------|-------|---------|----------|-------|----------|
+| SNAL | $0.50 | +67.3% | $0.84 | 13.3M | Packaged Software |
+| AEHL | $3.62 | +45.3% | $5.26 | 2.2M | Building Products |
+| LNKS | $1.35 | +40.7% | $1.90 | 633K | Electronic Production Equipment |
+| AIIO | $2.61 | +37.1% | $3.58 | 13.5M | Financial Conglomerates |
+| BNKK | $2.20 | +19.5% | $2.63 | 4.9M | Pharmaceuticals |
+
+**AH→PM Pattern Analysis:**
+- LNKS: AH peaked +44%, PM peaked +61% — **strong continuation**
+- AIIO: AH peaked +141%, PM peaked +179% — **strong continuation** (but not detectable)
+- SNAL: AH peaked +119%, PM at +67% — **fading from AH peak**
+- AEHL: AH peaked +184%, PM at +114-150% — **fading from AH peak** (correctly skipped)
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Current | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|---------|-----|-------|--------|
+| SNAL | $1.00 | +99.0% | B — Q1 earnings beat | 23:00 CET | $0.84 | 04:00 ET | $0.82 | -€18.00 | -18.0% | ❌ Loss |
+| LESL | $1.86 | +23.0% | B — Q2 earnings beat | 23:30 CET | $1.81 | 04:00 ET | $1.65 | -€11.13 | -11.3% | ❌ Loss |
+
+**Note:** Both earnings catalyst trades are losing. PM is fading from AH peaks for both.
+
+**Total Paper P&L: -€29.13**
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 times (21:30 - 00:30 CET)
+- Candidates found: 14 unique tickers evaluated
+- Retrospective matches: SNAL ✓, LESL ✓, AEHL ✓, LNKS ✓, AIIO ✗
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| LNKS | +20.7% → +16.3% | Skipped: no catalyst found | **YES (+29%)** |
+| AIIO | (not in AH scans) | Late surge at 00:40 CET between scans | YES (+43% if caught) |
+
+### AH Mover Follow-Through
+
+Stocks appearing in 2+ evening scans with AH change >10%:
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|--------|
+| SNAL | +118.9% | 16:35 ET | Spike→fade | +67% | -52% | +67% | ⚠️ Fading |
+| AEHL | +183.9% | 17:35 ET | Spike→fade | +114% | -70% | +114% | ⚠️ Fading |
+| LESL | +37.8% | 18:00 ET | Spike→hold | +9% | -28% | +9% | ❌ Fading hard |
+| LNKS | +44.4% | 18:50 ET | Late surge | +56% | +11% | +56% | ✅ Continuation |
+
+### Notes
+
+**Key Learning:** The "no catalyst = no follow-through" rule failed badly today. LNKS had the best AH→PM follow-through (+61% PM peak) despite no detectable news. Meanwhile, both earnings catalyst trades (SNAL, LESL) are losing.
+
+**Possible explanations:**
+1. Ultra-low float (633K) can drive sustained moves without news
+2. Earnings calls may be "sell the news" events — AH peak is the exit, not PM
+3. Need to track catalyst TYPE vs PM follow-through more carefully
+
+**Scanner improvements needed:**
+- Consider allowing ultra-low float (<1M) stocks even without catalyst
+- Track AH trajectory pattern (Build vs Spike→fade) as entry filter
+- The stocks that continued into PM (LNKS, AIIO) both had late AH surges (18:40-18:50 ET) vs early peakers (SNAL 16:35, AEHL 17:35) that faded
