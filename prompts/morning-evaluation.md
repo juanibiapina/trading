@@ -1,15 +1,10 @@
 Run a morning evaluation of the overnight scanning session.
 
-**Schedule awareness:** This prompt runs as a premarket pulse at 10:20, 12:00, and 14:00 CET (3 pulses). Check `date` to determine which pulse this is.
-- **Pulse 1 (10:20 CET):** Full evaluation — find today's winner, diagnose scanner, check paper trade P&L.
-- **Pulse 2 (12:00 CET):** Update paper trade P&L, note any significant price changes since pulse 1.
-- **Pulse 3 (14:00 CET) — LAST PULSE:** Update paper trade P&L and **close all positions**. Sell any open paper trade at the current premarket price. Record the exit in the log. An open position blocks the next evening trade.
+**Schedule awareness:** This prompt runs once in early premarket at 10:20 CET.
 
-**Scope by pulse:**
-- **Pulse 1:** Run the full retrospective workflow.
-- **Pulse 2:** Reuse pulse 1's winner and scanner diagnostic. Do **not** rerun `python3 scripts/scan.py --all --session afterhours` or a full winner search unless pulse 1 is missing or clearly incomplete.
-- **Pulse 3:** Same as pulse 2, then close positions.
-- This is a morning retrospective, not an evening post-market workflow. Ignore any post-market entry guidance if that skill loads.
+**Focus:** Find today's winner for baseline tracking and diagnose scanner effectiveness. This is a retrospective analysis prompt, NOT a position management prompt.
+
+**Position management is separate:** Hold/sell decisions are handled by `position-evaluation.md` which runs at 10:30 and 14:30 CET. This prompt does NOT close positions.
 
 **Primary goal on pulse 1: find today's winner and diagnose the scanner.** On pulses 2 and 3, the goal is to update prices, P&L, and any notable changes since pulse 1.
 

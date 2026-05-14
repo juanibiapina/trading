@@ -1,5 +1,7 @@
 Run a post-market scan and update the daily log with results and paper trade decisions.
 
+**Focus:** This prompt finds ENTRIES only. Position management (hold/sell decisions) is handled by `position-evaluation.md` which runs separately in premarket.
+
 ## Steps
 
 ### 1. Setup
@@ -75,7 +77,19 @@ For each **new** candidate (not in prior scans), evaluate against the entry crit
 If a candidate passes (and it's an AH scan), add a paper trade entry to the `## Paper Trades` table:
 - Entry Price = current AH price
 - Shares = ~€100 / entry price (round down)
+- Catalyst Grade = A/B/C/D/None (see below)
 - Reason = brief justification
+
+**Catalyst Grading (determines hold strategy):**
+| Grade | Type | Examples | Hold Strategy |
+|-------|------|----------|---------------|
+| **A** | Major operational | Acquisition, major partnership, breakthrough deal | Hold up to 5 days |
+| **B** | Solid news | Earnings beat, FDA approval, contract win | Hold up to 2 days |
+| **C** | Weak news | Financing, analyst upgrade, minor PR | Exit in premarket |
+| **D** | Dilution | Stock offering, warrant exercise | Exit immediately |
+| **None** | No catalyst found | Unknown driver | Exit at first opportunity |
+
+**Also add the position to `OPEN_POSITIONS.md`** with the entry details and catalyst grade.
 
 If a candidate fails, note briefly why in the scan section (e.g., "Skip: no catalyst", "Skip: float too high").
 
