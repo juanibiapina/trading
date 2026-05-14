@@ -34,6 +34,23 @@
 
 **Next step:** Re-scan at 22:00+ CET when AH opens to see which candidates maintain momentum.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Scanner:** 0 hits (AH just opened)
+
+**Watchlist AH status:**
+
+| Ticker | Close | Day% | AH Price | AH Chg | Total% | Notes |
+|--------|-------|------|----------|--------|--------|-------|
+| QUCY | $3.00 | +124% | $3.20 | +6.6% | +139% | Building in AH - biotech, 10.7M float |
+| AIIO | $5.64 | +116% | $5.88 | +4.3% | +125% | Slight AH add - 13.5M float (borderline) |
+| MOBX | $3.11 | +79% | $3.22 | +3.5% | +85% | Holding - semiconductors, 8.7M float |
+| TVGN | $9.42 | +45% | $9.38 | -0.4% | +44% | Flat AH - biotech, 962K float |
+| LESL | $3.50 | +145% | $3.43 | -2.0% | +140% | Fading AH - retail, 9.2M float |
+| CREG | $0.71 | +257% | $0.67 | -6.8% | +233% | Fading hard - 22.5M float (too high) |
+
+**Analysis:** AH just opened. QUCY leading with +6.6% AH. LESL which ran hardest during regular session is fading. Too early for paper trade decisions - observe at 22:30/23:00.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
