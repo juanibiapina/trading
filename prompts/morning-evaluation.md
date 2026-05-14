@@ -23,6 +23,12 @@ The most important question is: what stock IS exploding in premarket right now? 
 - Determine yesterday's US trading date (the AH session we're evaluating)
 - Set `LOG_FILE=log/YYYY-MM-DD/log.md` using that date
 - Pull latest changes: `git stash && git pull --ff-only && git stash pop 2>/dev/null || true`
+- **Get cumulative baseline** (pulse 1 only): Find the most recent previous log with baseline tracking and extract the counts:
+  ```bash
+  # Find most recent log with baseline tracking (excluding today)
+  grep -l "Days tracked:" log/2026-*/log.md | sort | tail -1 | xargs grep -E "Days tracked:|Winners detected"
+  ```
+  Save these values — you'll increment them in Step 5.
 - If this is **pulse 1**, do **not** read `LOG_FILE` yet. Step 2 must happen first.
 - If this is **pulse 2 or 3**, read the existing log now so you can reuse pulse 1's winner, scanner diagnostic, and paper trades
 
@@ -130,8 +136,10 @@ Append a `## Morning Evaluation` section to the log.
 
 ### Baseline Tracking
 
-- Days tracked: X
-- Winners detected by scanner: X/Y (**X%**)
+**Use the cumulative values from Step 1.** Increment "Days tracked" by 1. If today's winner was detectable, increment the detected count and add ticker to the list.
+
+- Days tracked: [previous + 1]
+- Winners detected by scanner: X/Y (**X%**) — [list of tickers]
 - Winner selected for paper trade: X/Y (**X%**) — did we trade the right stock?
 - Target: >80% detection
 - Status: **BASELINE MET / NOT MET**

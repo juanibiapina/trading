@@ -288,8 +288,8 @@ No candidates found in scanner — AH just opened.
 
 ### Baseline Tracking
 
-- Days tracked: 1 (starting fresh count for W20)
-- Winners detected by scanner: 1/1 (**100%**) — LNKS was in scanner
+- Days tracked: 17
+- Winners detected by scanner: 14/17 (**82.4%**) — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO, AIIO, HTCO, WOK, LNKS
 - Winner selected for paper trade: 0/1 (**0%**) — we skipped LNKS (no catalyst rule)
 - Target: >80% detection
 - Status: **DETECTION MET, SELECTION FAILED**
