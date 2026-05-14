@@ -140,6 +140,43 @@
 - PIII: Strong Grade B catalyst but first AH scan appearance - observe at 23:30
 - WYY: Strong Grade B catalyst but first AH scan appearance - observe at 23:30
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TDIC | [TV](https://www.tradingview.com/chart/?symbol=TDIC) | $0.80 | -96.5% | +120.0% | $1.76 | -92.4% | 36.8M | 32.1M | 1.1x | 3.0M | Misc Commercial |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $0.77 | -4.6% | +46.9% | $1.14 | +40.1% | 10.8M | 5.4M | 2.0x | 1.6M | Personnel Services |
+| PIII | [TV](https://www.tradingview.com/chart/?symbol=PIII) | $4.03 | +12.9% | +47.6% | $5.95 | +66.7% | 1.5M | 238K | 6.2x | 1.8M | Misc Commercial |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $0.88 | -62.7% | +44.4% | $1.27 | -46.1% | 895K | 5.9M | 0.2x | 0 | Oilfield Services |
+| TOPS | [TV](https://www.tradingview.com/chart/?symbol=TOPS) | $0.95 | -45.7% | +26.8% | $1.21 | -31.1% | 240K | 335K | 0.7x | 1.3M | Marine Shipping |
+| WYY | [TV](https://www.tradingview.com/chart/?symbol=WYY) | $8.98 | +9.0% | +22.0% | $10.96 | +33.0% | 172K | 218K | 0.8x | 8.2M | Data Processing |
+| ELPW | [TV](https://www.tradingview.com/chart/?symbol=ELPW) | $1.94 | -31.0% | +17.0% | $2.27 | -19.2% | 207K | 5.2M | 0.0x | 1.4M | Electrical Products |
+| GGRP | [TV](https://www.tradingview.com/chart/?symbol=GGRP) | $0.56 | -3.1% | +10.7% | $0.62 | +7.3% | 7.4M | 829K | 8.9x | 14.9M | Packaged Software |
+
+**Skipped (dead-cat bounces):**
+- TDIC: -96.5% Day, +120% AH → Skip
+- STAK: -62.7% Day, +44.4% AH → Skip
+- TOPS: -45.7% Day, +26.8% AH → Skip
+- ELPW: -31.0% Day, +17.0% AH → Skip
+
+**Skipped (AH <10%):** SHPH, DAIO, BTOG, GREE, VBIO, ORGN, TMCI, VYGR
+
+**AH Price Action Update (16:00-18:00 ET):**
+
+| Ticker | AH Peak | Peak Time | 18:00 ET | From Peak | Pattern |
+|--------|---------|-----------|----------|-----------|----------|
+| WYY | $11.69 (+42%) | 16:25 ET | $11.25 (+37%) | -4% | ✅ BUILDING - recovered from $9.80 low, holding near highs |
+| PIII | $7.15 (+100%) | 16:20 ET | $5.88 (+65%) | -18% | Peaked early, fading but holding $5.80-6.00 |
+| BIYA | $1.36 (+68%) | 16:10 ET | $1.10 (+36%) | -19% | ⚠️ FADING - down from $1.21 at 17:30 |
+
+**Current Position (BIYA) Update:**
+- Entry: $1.12 at 23:00 CET
+- Current: $1.10 (-2% from entry)
+- Pattern: Fading after early peak, now -19% from AH high
+- ⚠️ No catalyst + fading pattern = low confidence for PM continuation
+
+**Lesson for future:** WYY showed superior pattern (building, Grade B catalyst) vs BIYA (no catalyst, faded early). The 23:00 entry on BIYA was premature - should have waited for pattern confirmation at later scans.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
