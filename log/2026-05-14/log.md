@@ -145,3 +145,48 @@
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
 | BIYA | $1.12 | 23:00 CET | 89 | None | Meets criteria: 1.6M float, >10% AH in 2 scans. ⚠️ CONCERNS: No catalyst, peaked early (16:10 ET), fading 18% from peak. Learning phase entry. |
+
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $0.77 | -4.6% | +54.0% | $1.19 | +46.9% | 10.0M | 5.3M | 1.9x | 1.6M | Personnel Services |
+| PIII | [TV](https://www.tradingview.com/chart/?symbol=PIII) | $4.03 | +12.9% | +51.1% | $6.09 | +70.6% | 1.4M | 229K | 6.2x | 1.8M | Misc Commercial |
+| WYY | [TV](https://www.tradingview.com/chart/?symbol=WYY) | $8.98 | +9.0% | +24.9% | $11.22 | +36.1% | 135K | 214K | 0.6x | 8.2M | Data Processing |
+| GGRP | [TV](https://www.tradingview.com/chart/?symbol=GGRP) | $0.56 | -3.1% | +13.7% | $0.64 | +10.2% | 7.2M | 810K | 8.9x | 14.9M | Packaged Software |
+
+**Skipped (dead-cat bounces):**
+- TDIC: -96.5% Day, +123.7% AH → Skip
+- STAK: -62.7% Day, +28.4% AH → Skip
+- TOPS: -45.7% Day, +20.0% AH → Skip
+- ELPW: -31.0% Day, +16.0% AH → Skip
+
+**AH Price Action Update (16:00-17:30 ET):**
+
+| Ticker | AH Peak | Peak Time | 17:30 ET | From Peak | Pattern |
+|--------|---------|-----------|----------|-----------|----------|
+| WYY | $11.69 (+42%) | 16:25 ET | $11.26 (+37%) | -4% | ✅ BUILDING - recovered from $9.80 low |
+| PIII | $7.15 (+100%) | 16:20 ET | $5.99 (+68%) | -16% | Fading, but holding $6.00 level |
+| BIYA | $1.36 (+68%) | 16:10 ET | $1.22 (+51%) | -10% | Recovering from $1.12 low |
+
+**Paper Trade Evaluation:**
+
+✅ **PIII now qualifies (2nd AH scan):**
+- Float: 1.8M ✓
+- AH >10% in 2 scans: 23:00 (+47.9%), 23:30 (+51.1%) ✓
+- Catalyst: Grade B (Q1 earnings beat)
+- ⚠️ Peaked early (16:20 ET), down 16% from peak
+
+✅ **WYY now qualifies (2nd AH scan):**
+- Float: 8.2M ✓
+- AH >10% in 2 scans: 23:00 (+13.4%), 23:30 (+24.9%) ✓
+- Catalyst: Grade B (Q1 earnings beat, return to profitability)
+- ✅ BUILDING pattern - recovered from 16:55 low, now near AH high
+
+**Decision:** WYY shows the best pattern (building with Grade B catalyst). Per "one position at a time" rule, we already have BIYA. 
+
+**Note for future:** WYY would have been the better entry vs BIYA:
+- WYY: Grade B catalyst + building pattern
+- BIYA: No catalyst + peaked early (though recovering)
+
+**Current position (BIYA) update:** Recovering from $1.12 to $1.22 (+9% since entry). No change to position.
