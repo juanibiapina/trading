@@ -9,11 +9,17 @@
 
 ## Issues Found
 
-None.
+### Baseline Tracking Reset Bug
+- **Severity:** Wasteful
+- **Sessions affected:** All morning evaluations since 2026-05-11
+- **Symptom:** "Days tracked" reset to 1 every session instead of accumulating
+- **Root cause:** Prompt didn't instruct sessions to read previous day's baseline count
+- **Fix:** Added step in `prompts/morning-evaluation.md` to grep previous log for baseline values; fixed 05-13 log to show correct cumulative (14/17 = 82.4%)
+- **Status:** Fixed
 
 ## Overall Assessment
 
-Sessions running cleanly. No systemic issues:
+One issue found and fixed:
 
 - ✅ No command errors (0 failures across 5 sessions)
 - ✅ No command retries (all commands executed once)
