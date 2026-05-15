@@ -33,7 +33,8 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - All sectors — no sector restriction (learning phase, see Day Trading.md)
 - Session timing follows America/New_York market hours, including DST
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
-- Entry rules: float <50M, catalyst required, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
+- Entry rules: float <50M, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
+- **No-catalyst exception:** ultra-low float (<2M) stocks can be entered without catalyst; higher float (≥2M) requires catalyst
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade; at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading
@@ -50,6 +51,29 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-05-15 — Add No-Catalyst Exception for Ultra-Low Float Stocks
+
+**Context:** May 12-14 data reveals that the "no catalyst = skip" rule is failing for ultra-low float stocks. LNKS (633K float, no catalyst) was skipped on May 13 but was the day's winner at +61% PM. OCG (1.9M float, no catalyst) was entered on May 12 and won +14.9%. Meanwhile, catalyst stocks have mixed results (TDIC A-tier lost -18.7%, XOS A-tier lost -14.3%).
+
+The post-market prompt had conflicting guidance:
+- Step 4 of catalyst search said "note 'no catalyst found' as a skip reason"
+- Learning phase default said "document concerns but enter anyway"
+
+This caused inconsistent behavior — LNKS was skipped despite the learning phase guidance.
+
+**Evaluation of previous changes:**
+- 2026-05-14 AH Peak Timing Guidance: **Insufficient data (1 data point).** May 14 evening session noted the pattern correctly ("All candidates peaked in early AH...warning pattern") and entered BIYA with concerns documented. Need PM outcome data.
+- 2026-05-12 PM Peak Tracking: **Working — generating data (4 data points).** May 13-14 P&L tables include PM Peak and Peak Time. Data accumulating but no exit timing pattern identified yet.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Removed "as a skip reason" from catalyst search step 4. Added explicit "No-catalyst handling (learning phase)" section with float-based decision:
+   - Float <2M: enter with concern noted (ultra-low float can move on momentum alone)
+   - Float ≥2M: skip (higher float needs catalyst)
+   - Why: 2/2 ultra-low float no-catalyst trades won (OCG +14.9%, LNKS +61% if entered). The prior guidance caused LNKS to be skipped despite being a clear winner.
+   - Hypothesis: Next time an ultra-low float (<2M) stock has >10% AH sustained across 2 scans but no catalyst, the agent will enter with concern noted rather than skipping. Measurable: (1) next ultra-low-float no-catalyst candidate is entered with float cited as the exception, (2) no more skips that cite "no catalyst" as the sole reason for stocks under 2M float.
+
+**Updated process:** Added "No-catalyst exception" rule to Current Process section.
 
 ### 2026-05-14 — Add AH Peak Timing Guidance to Trajectory Preference
 
