@@ -37,6 +37,28 @@ No candidates found.
 
 **Observation only** — 22:30 CET is before the 23:00 paper trade window. Continue monitoring.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| YOOV | [TV](https://www.tradingview.com/chart/?symbol=YOOV) | $0.78 | -39.1% | +20.2% | $0.94 | -26.7% | 2.2M | 6.7M | 0.3x | 183.1M | Misc Commercial Services |
+| YMAT | [TV](https://www.tradingview.com/chart/?symbol=YMAT) | $1.41 | -11.9% | +6.5% | $1.50 | -6.2% | 247K | 40.7M | 0.0x | 2.5M | Electrical Products |
+| NEOV | [TV](https://www.tradingview.com/chart/?symbol=NEOV) | $1.60 | -37.5% | +11.2% | $1.78 | -30.5% | 78K | 898K | 0.1x | 33.7M | Electrical Products |
+
+**All 3 are dead cat bounces** (Day% below -15%):
+- **YOOV**: Skip — Day% -39.1%, crashed during regular session, AH bounce is recovery not momentum
+- **YMAT**: Skip — AH change only +6.5% (below 10% threshold)
+- **NEOV**: Skip — Day% -37.5%, dead cat bounce pattern
+
+**Prior candidates status:**
+- **SBFM**: Peaked +105.2% at 16:00 ET, now +65.7% — fading from AH peak + Grade D dilution catalyst. **Skip.**
+- **CREG**: Peaked +63.0% at 16:10 ET, now +34.3% — fading from AH peak. Re-searched catalyst: Q1 earnings on May 15 (3 days old, not fresh today). Float 22.6M exceeds 2M threshold for no-catalyst entries. **Skip.**
+
+**Paper trade decision:** No entry. No candidate meets criteria:
+- Dead cat bounces dominate (YOOV, NEOV crashed >15% during day)
+- SBFM has dilution catalyst (Grade D)
+- CREG is fading from early AH peak + no fresh catalyst + high float
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
