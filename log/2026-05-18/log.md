@@ -59,7 +59,33 @@ No candidates found.
 - SBFM has dilution catalyst (Grade D)
 - CREG is fading from early AH peak + no fresh catalyst + high float
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AMST | [TV](https://www.tradingview.com/chart/?symbol=AMST) | $0.79 | -4.6% | +48.8% | $1.17 | +42.0% | 6.8M | 867K | 7.9x | 3.4M | Packaged Software | **NEW** |
+| CREG | [TV](https://www.tradingview.com/chart/?symbol=CREG) | $0.62 | +30.6% | +9.4% | $0.68 | +42.8% | 4.9M | 94.4M | 0.1x | 22.6M | Electric Utilities |
+| YMAT | [TV](https://www.tradingview.com/chart/?symbol=YMAT) | $1.41 | -11.9% | +12.1% | $1.58 | -1.3% | 268K | 40.7M | 0.0x | 2.5M | Electrical Products |
+| YOOV | [TV](https://www.tradingview.com/chart/?symbol=YOOV) | $0.78 | -39.1% | +6.7% | $0.83 | -35.0% | 2.3M | 6.7M | 0.3x | 183.1M | Misc Commercial Services |
+| NEOV | [TV](https://www.tradingview.com/chart/?symbol=NEOV) | $1.60 | -37.5% | +8.7% | $1.74 | -32.0% | 86K | 899K | 0.1x | 33.7M | Electrical Products |
+
+**Catalyst Research:**
+
+- **AMST (NEW):** Enterprise customer win — "NurseMagic™ Wins 2,700-Census Home Care Enterprise Customer" (GlobeNewswire today). This is **Grade B catalyst** (contract win). Float 3.4M excellent. Day% -4.6% (not a dead cat). AH price action shows steady BUILD from $0.79 at 16:00 → $1.45 at 17:31 (currently at AH high +76%). **Strong setup.** Concern: First AH appearance, hasn't sustained across 2 scans yet.
+- **CREG:** Fading further — was +24.8% at 22:30, now +9.4%. No fresh catalyst. **Skip: fading, no catalyst.**
+- **YMAT:** Now crossed 10% AH threshold (+12.1% vs +6.5% at 23:00). Searched for catalyst — no fresh news. Float 2.5M (≥2M threshold for no-catalyst entries). Day% -11.9% (not a dead cat). **Skip: no catalyst, float ≥2M.**
+- **YOOV:** Dead cat bounce fading — was +20.2% at 23:00, now +6.7%. **Skip: dead cat bounce.**
+- **NEOV:** Still a dead cat bounce, fading. **Skip: dead cat bounce.**
+
+**Paper trade decision:** Enter AMST.
+- Grade B catalyst (enterprise customer win)
+- Excellent float (3.4M)
+- Not a dead cat (-4.6% Day%)
+- BUILDING pattern (currently at AH high, not fading)
+- Concern noted: First AH appearance (hasn't sustained across 2 scans). Entering anyway per learning phase rules — data collection priority.
+
 ## Paper Trades
 
-| Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
-|--------|-------------|------------|-----------------|--------|
+| Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
+|--------|-------------|------------|-----------------|----------------|--------|
+| AMST | $1.17 | 17:30 ET | 85 | B | Enterprise customer win for NurseMagic™ — building AH pattern, Float 3.4M |

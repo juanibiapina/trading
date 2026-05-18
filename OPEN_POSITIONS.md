@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|
-| — | — | — | — | — | — | — | — | — |
+| AMST | 2026-05-18 | $1.17 | 85 | $99.45 | B | Enterprise customer win for NurseMagic™ | $0.99 (-15%) | Exit premarket |
 
 ## Position Rules
 
