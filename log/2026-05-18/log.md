@@ -15,6 +15,12 @@
 
 **Regular session spikes often fade in AH.** Re-evaluate at 22:00+ CET to confirm momentum continuation.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found.
+
+**Prior candidates status:** SBFM, GOVX, QVCGQ, CFOR, FRAZ, MDMLF — none appeared in AH scanner. Regular session spikes not carrying into AH (as expected).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
