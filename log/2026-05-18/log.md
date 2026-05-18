@@ -104,6 +104,24 @@ No candidates found.
 
 **No new paper trade entries.** AMST position already open and performing well.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AMST | [TV](https://www.tradingview.com/chart/?symbol=AMST) | $0.79 | -4.6% | +71.7% | $1.35 | +63.9% | 17.9M | 2.1M | 8.7x | 3.4M | Packaged Software |
+| CREG | [TV](https://www.tradingview.com/chart/?symbol=CREG) | $0.62 | +30.6% | +13.7% | $0.71 | +48.5% | 5.9M | 94.5M | 0.1x | 22.6M | Electric Utilities |
+| YOOV | [TV](https://www.tradingview.com/chart/?symbol=YOOV) | $0.78 | -39.1% | +29.5% | $1.01 | -21.1% | 2.8M | 6.8M | 0.4x | 183.1M | Misc Commercial Services |
+| YMAT | [TV](https://www.tradingview.com/chart/?symbol=YMAT) | $1.41 | -11.9% | +6.4% | $1.50 | -6.3% | 280K | 40.7M | 0.0x | 2.5M | Electrical Products |
+
+**Prior candidates update:**
+
+- **AMST (OPEN POSITION):** Pulling back from AH peak. Peaked $1.49 at 17:40 ET (+81%), now $1.35 (+64%). Paper trade entry at $1.17 still up +15%. Pattern: built steadily 16:50-17:40, now consolidating. Grade B catalyst (enterprise customer win) intact.
+- **CREG:** Back above 10% AH threshold (+13.7%), but peaked early at 16:10 ET ($0.78, +63%) and has faded to $0.71 (+48%). This matches the problematic "early AH peak → fade" pattern (0/4 in historical data). Float 22.6M + no catalyst = **Skip.**
+- **YOOV:** Dead cat bounce — Day% -39.1% crashed during regular session. Choppy AH action. **Skip.**
+- **YMAT:** Below 10% AH threshold (+6.4%). No catalyst found. **Skip.**
+
+**No new paper trade entries.** AMST position already open. Monitoring for PM continuation.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
