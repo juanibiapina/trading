@@ -84,6 +84,26 @@ No candidates found.
 - BUILDING pattern (currently at AH high, not fading)
 - Concern noted: First AH appearance (hasn't sustained across 2 scans). Entering anyway per learning phase rules — data collection priority.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AMST | [TV](https://www.tradingview.com/chart/?symbol=AMST) | $0.79 | -4.6% | +90.8% | $1.50 | +82.1% | 14.5M | 1.7M | 8.6x | 3.4M | Packaged Software |
+| CREG | [TV](https://www.tradingview.com/chart/?symbol=CREG) | $0.62 | +30.6% | +8.9% | $0.68 | +42.2% | 5.3M | 94.5M | 0.1x | 22.6M | Electric Utilities |
+| YOOV | [TV](https://www.tradingview.com/chart/?symbol=YOOV) | $0.78 | -39.1% | +7.1% | $0.84 | -34.7% | 2.4M | 6.7M | 0.4x | 183.1M | Misc Commercial Services |
+| YMAT | [TV](https://www.tradingview.com/chart/?symbol=YMAT) | $1.41 | -11.9% | +6.4% | $1.50 | -6.3% | 273K | 40.7M | 0.0x | 2.5M | Electrical Products |
+| NEOV | [TV](https://www.tradingview.com/chart/?symbol=NEOV) | $1.60 | -37.5% | +8.7% | $1.74 | -32.0% | 91K | 900K | 0.1x | 33.7M | Electrical Products |
+
+**Prior candidates update:**
+
+- **AMST (OPEN POSITION):** 🚀 Running strong! Now +90.8% AH (was +48.8% at entry scan). Peaked at $1.49 at 17:40 ET (+81%), currently $1.50. Paper trade entry at $1.17 now up +28%. Grade B catalyst holding well.
+- **CREG:** Fading further — now +8.9% AH (was +9.4% at 23:30). Below 10% AH threshold. **Skip: fading, no catalyst.**
+- **YMAT:** Fading — now +6.4% AH (was +12.1% at 23:30). Below 10% threshold now. **Skip: fading, no catalyst.**
+- **YOOV:** Dead cat bounce — Day% -39.1%. **Skip.**
+- **NEOV:** Dead cat bounce — Day% -37.5%. **Skip.**
+
+**No new paper trade entries.** AMST position already open and performing well.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
