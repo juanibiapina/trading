@@ -147,6 +147,52 @@ No candidates found.
 
 **No new paper trades.** Existing CODX position is building nicely.
 
+## Scan 00:30 CET (6:30 PM ET) — AFTER-HOURS
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CODX | [TV](https://www.tradingview.com/chart/?symbol=CODX) | $1.97 | +43.8% | +16.7% | $2.30 | +67.9% | 10.8M | 13.3M | 0.8x | 3.4M | Biotechnology |
+| JYD | [TV](https://www.tradingview.com/chart/?symbol=JYD) | $1.88 | -65.9% | +21.8% | $2.29 | -58.5% | 2.7M | 883K | 3.1x | 6.7M | Air Freight/Couriers |
+| RRGB | [TV](https://www.tradingview.com/chart/?symbol=RRGB) | $3.85 | +2.7% | +14.8% | $4.42 | +17.9% | 1.6M | 540K | 3.0x | 15.0M | Restaurants |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $4.75 | +97.1% | +20.8% | $5.74 | +138.2% | 684K | 5.2M | 0.1x | 1.2M | Internet Retail |
+| CDLX | [TV](https://www.tradingview.com/chart/?symbol=CDLX) | $0.60 | -1.6% | +7.0% | $0.64 | +5.4% | 175K | 1.2M | 0.1x | 54.4M | Internet Software |
+| BZFD | [TV](https://www.tradingview.com/chart/?symbol=BZFD) | $1.31 | -5.1% | +5.4% | $1.38 | +0.0% | 93K | 17.2M | 0.0x | 26.5M | Internet Software |
+| PEPG | [TV](https://www.tradingview.com/chart/?symbol=PEPG) | $1.38 | -6.1% | +7.2% | $1.48 | +0.7% | 59K | 945K | 0.1x | 61.8M | Biotechnology |
+
+**Evaluation:**
+
+### CODX (in position)
+- **5th AH appearance** — 22:30: +13%, 23:00: +21%, 23:30: +28%, now +17% — **fading from peak**
+- **Current:** $2.30 vs entry $2.50 = **-8.0%** unrealized
+- **AH Pattern:** Peaked $2.74 at 16:35 ET (+100%), now $2.30 — steady fade since 17:30 ET
+- **Status:** HOLD — stop at $2.13, current above stop. Catalyst still valid (Ebola outbreak ongoing).
+
+### JYD — Skip
+- **Day%:** -65.9% (crashed during regular session)
+- **Skip reason:** Dead cat bounce. Regular session crash >15%, AH recovery is not momentum building.
+
+### RRGB — Skip (continued)
+- **4th AH appearance** — 22:30: +18%, 23:00: +14%, 23:30: +17%, now +15%
+- **AH Pattern:** Peaked $4.69 at 16:05 ET (early), now $4.42 — below peak, choppy
+- **Skip reason:** Early AH peak pattern + float 15M above ideal
+
+### WNW — Skip
+- **Catalyst Search (4 searches):**
+  1. Earnings: No earnings reported
+  2. Press release: Form 4 insider ownership filing (technical, not operational)
+  3. SEC filing: Form 6-K disclosed $25M share sale at $0.626/share on May 8 (dilution)
+  4. News: "Whipsaws as insider ownership filing hits tape" — speculative volatility
+- **Catalyst:** Form 4 filing + recent dilution (Grade D)
+- **AH Pattern:** Late building (peaked $5.74 at 18:10 ET) — pattern is good
+- **Skip reason:** Day +97% ultra-extended + dilution catalyst (Grade D). Good pattern but bad catalyst.
+
+### Others
+- **CDLX:** Skip — Float 54.4M exceeds 50M, AH +7% below 10% threshold
+- **BZFD:** Skip — Float 26.5M high, AH +5.4% below threshold
+- **PEPG:** Skip — Float 61.8M too high, AH +7.2% below threshold
+
+**No new paper trades.** CODX position holding above stop loss.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
