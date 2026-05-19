@@ -53,6 +53,26 @@ No candidates found.
 
 **Note:** AH just opened. The pre-AH candidates (ZICX, INM, WNW, SVRN) need to show sustained AH momentum to be considered. Will check again at 22:30 and 23:00 CET.
 
+## Scan 22:30 CET (4:30 PM ET) — AFTER-HOURS
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NXXT | [TV](https://www.tradingview.com/chart/?symbol=NXXT) | $0.82 | +100.0% | +11.3% | $0.91 | +122.7% | 9.0M | 62.7M | 0.1x | 65.7M | Packaged Software |
+| CODX | [TV](https://www.tradingview.com/chart/?symbol=CODX) | $1.97 | +43.8% | +13.2% | $2.23 | +62.8% | 2.1M | 12.4M | 0.2x | 3.4M | Biotechnology |
+| TDIC | [TV](https://www.tradingview.com/chart/?symbol=TDIC) | $0.58 | -18.4% | +23.3% | $0.71 | +0.5% | 862K | 51.6M | 0.0x | 3.0M | Misc. Commercial Services |
+| RRGB | [TV](https://www.tradingview.com/chart/?symbol=RRGB) | $3.85 | +2.7% | +18.2% | $4.55 | +21.3% | 822K | 444K | 1.9x | 15.0M | Restaurants |
+
+**Evaluation (observation only — paper trades at 23:00+ CET):**
+
+- **NXXT:** Skip — Float 65.7M exceeds 50M threshold
+- **CODX:** ⭐ Watch — Float 3.4M, returning from 21:30 scan, now +13.2% AH. First AH appearance.
+- **TDIC:** Skip — Dead cat bounce (Day -18.4% crash, AH bounce doesn't count)
+- **RRGB:** Watch — Float 15.0M (moderate), AH +18.2%, only 1.9x volume ratio
+
+**Tracking for 23:00 scan:**
+- CODX needs second AH appearance with sustained >10% to qualify
+- RRGB moderate float, watch for catalyst confirmation
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
