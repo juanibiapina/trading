@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|
-| AMST | 2026-05-18 | $1.17 | 85 | $99.45 | B | Enterprise customer win for NurseMagic™ | $0.99 (-15%) | Exit premarket |
+| — | — | — | — | — | — | — | — | — |
 
 ## Position Rules
 
@@ -50,4 +50,5 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| AMST | $1.17 | $2.62 | +$123.25 | +124% | 1 | B - Enterprise customer win | Trail stop hit at $2.89 after $3.40 peak |
 | BIYA | $1.12 | $1.16 | +$3.56 | +3.6% | 1 | None | Exited at profit per rules, avoided fade from $1.41 peak |
