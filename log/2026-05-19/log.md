@@ -73,8 +73,43 @@ No candidates found.
 - CODX needs second AH appearance with sustained >10% to qualify
 - RRGB moderate float, watch for catalyst confirmation
 
+## Scan 23:00 CET (5:00 PM ET) — AFTER-HOURS
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CODX | [TV](https://www.tradingview.com/chart/?symbol=CODX) | $1.97 | +43.8% | +20.8% | $2.38 | +73.7% | 6.2M | 12.8M | 0.5x | 3.4M | Biotechnology |
+| RRGB | [TV](https://www.tradingview.com/chart/?symbol=RRGB) | $3.85 | +2.7% | +13.8% | $4.38 | +16.8% | 1.4M | 512K | 2.8x | 15.0M | Restaurants |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $4.75 | +97.1% | +6.7% | $5.07 | +110.4% | 163K | 5.2M | 0.0x | 1.2M | Internet Retail |
+| TDIC | [TV](https://www.tradingview.com/chart/?symbol=TDIC) | $0.58 | -18.4% | +5.8% | $0.61 | -13.7% | 3.2M | 51.9M | 0.1x | 3.0M | Misc. Commercial Services |
+| ADTX | [TV](https://www.tradingview.com/chart/?symbol=ADTX) | $1.52 | -6.5% | +10.5% | $1.68 | +3.4% | 77K | 331K | 0.2x | — | Biotechnology |
+| CDLX | [TV](https://www.tradingview.com/chart/?symbol=CDLX) | $0.60 | -1.6% | +7.6% | $0.64 | +5.9% | 137K | 1.2M | 0.1x | 54.4M | Internet Software |
+| BZFD | [TV](https://www.tradingview.com/chart/?symbol=BZFD) | $1.31 | -5.1% | +7.6% | $1.41 | +2.2% | 55K | 17.2M | 0.0x | 26.5M | Internet Software |
+
+**Evaluation:**
+
+### CODX ✅ PAPER TRADE
+- **2nd AH appearance** — qualified (22:30: +13.2%, 23:00: +20.8% — building)
+- **Float:** 3.4M ✓
+- **Catalyst:** Ebola testing strategy finalized amid Bundibugyo outbreak (announced May 19, 2026)
+- **Catalyst Grade:** B (solid health/FDA milestone)
+- **AH Pattern:** Spiked to $2.74 (+100%) at 16:35 ET, consolidating $2.35-$2.50. Peak at 16:35 (not early), holding near highs.
+- **Entry:** $2.50 @ 17:01 ET
+
+### RRGB — Skip
+- **2nd AH appearance** — 22:30: +18.2%, 23:00: +13.8% — **fading**
+- **Catalyst:** Q1 2026 earnings release (Grade B)
+- **AH Pattern:** Peaked $4.69 at **16:05 ET** (early spike), now $4.45 — steady fade from early peak
+- **Skip reason:** Early AH peak + fade pattern per Day Trading.md (0/4 in May 11-13 data)
+
+### Others
+- **WNW:** Skip — AH +6.7% doesn't meet >10% threshold
+- **TDIC:** Skip — Dead cat bounce (Day -18.4%)
+- **ADTX:** Skip — No float data, low volume
+- **CDLX:** Skip — Float 54.4M exceeds 50M threshold
+- **BZFD:** Skip — AH +7.6% doesn't meet >10% threshold
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
-| (none yet) | - | - | - | - | Pending 23:00+ CET scan |
+| CODX | $2.50 | 23:00 CET | 40 | B | Ebola testing strategy amid outbreak; 2 AH scans building (+13%→+21%); float 3.4M; peak at 16:35 ET holding near highs |

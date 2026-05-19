@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|
-| — | — | — | — | — | — | — | — | — |
+| CODX | 2026-05-19 | $2.50 | 40 | $100 | B | Ebola testing strategy amid Bundibugyo outbreak | $2.13 (-15%) | Exit in premarket |
 
 ## Position Rules
 
