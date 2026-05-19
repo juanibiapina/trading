@@ -6,7 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-05-14 | AIIO | $100M acquisition | $9.20 | $5.43 | — | 🔥 ACTIVE |
+| 2026-05-14 | AIIO | $100M acquisition | $9.20 | $5.43 | $4.02 | Day 5 - fading |
+| 2026-05-18 | AMST | Enterprise customer win | $2.98+ | — | $2.98 | 🔥 Day 1 ACTIVE |
 
 ## Historical Winners (with multi-day outcome)
 

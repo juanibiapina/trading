@@ -127,3 +127,118 @@ No candidates found.
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
 | AMST | $1.17 | 17:30 ET | 85 | B | Enterprise customer win for NurseMagic™ — building AH pattern, Float 3.4M |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**AMST** — Packaged Software (AI Healthcare)
+- Catalyst: B — NurseMagic™ enterprise customer win (2,700-census home care)
+- Previous Close: $0.82
+- AH last night: $1.49 (+81%) at 17:40 ET (23:40 CET)
+- Premarket now: $2.98 (+264%)
+- Hypothetical P&L (AH entry $1.17 → PM $2.98): +154.7%
+- Float: 3.4M | Market Cap: $4.3M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** ✅
+- First appeared at 23:30 CET with +48.8% AH, 7.9x volume ratio
+- Entered paper trade immediately at $1.17
+- Catalyst verified: Grade B enterprise customer win
+- **No scanner gap** — system worked as intended
+
+### Baseline Tracking
+
+- Days tracked: 18
+- Winners detected by scanner: 15/18 (**83.3%**) — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO, AIIO, HTCO, WOK, LNKS, AMST
+- Winner selected for paper trade: **YES** — entered AMST at $1.17
+- Target: >80% detection
+- Status: **BASELINE MET** ✅
+
+### Retrospective Scan Results
+
+**PM Scan (04:20 ET):**
+| Ticker | PM Chg% | PM Price | VRatio | Float | Industry |
+|--------|---------|----------|--------|-------|----------|
+| AMST | +81.8% | $1.43 | 0.5x | 3.4M | Packaged Software |
+| MTVA | +56.8% | $1.74 | 12.4x | 3.3M | Biotechnology |
+| SBFM | +24.5% | $0.64 | 0.1x | 4.9M | Pharmaceuticals |
+| SDA | +21.5% | $0.85 | 1.3x | 34.6M | Other Consumer Services |
+| CREG | +12.5% | $0.70 | 0.0x | 22.6M | Electric Utilities |
+
+**AH Reconstruction (via check-prices.py --ah-history):**
+- AMST: Built steadily from $0.79 at 16:00 → $1.49 at 17:40 (+81%), consolidated $1.30-$1.50 rest of AH
+- SBFM: Peaked at close (+105%), faded through AH to +60% — spike→fade pattern
+- MTVA: Minimal AH movement (+7.6% max) — move came overnight/PM
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| AMST | $1.17 | +42.7% | B — enterprise customer win | 23:30 CET | $2.98 | 04:20 ET | — | +€141.54 | +154.7% | 📈 OPEN |
+
+**Entry Total% calculation:** ($1.17 - $0.82) / $0.82 = +42.7% from previous close
+
+**Total Paper P&L: +€141.54** (unrealized, position still open)
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 times (21:30 - 00:30 CET)
+- Candidates found: 8 unique tickers (SBFM, GOVX, QVCGQ, CFOR, FRAZ, MDMLF, CREG, AMST)
+- AMST first detected: 23:30 CET (5:30 PM ET) with +48.8% AH
+- Trade entered: immediately at detection
+
+### Missed Opportunities
+
+| Ticker | PM Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| MTVA | +90.9% PM | AH move was only +7.6%, below 10% threshold. Exploded overnight/PM. | Yes (+90%) |
+
+**MTVA analysis:** Minimal AH activity (+7.6% max). Move happened entirely in overnight/PM session. Current scanner only monitors through ~00:30 CET (6:30 PM ET). This is an "overnight surge" miss — stock was dormant until after our last scan.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| AMST | $1.49 (+81%) | 17:40 ET | Build→hold | $2.98 | +100% | +264% | ✅ **WINNER** |
+| SBFM | $0.58 (+105%) | 16:00 ET | Spike→fade | $0.64 | +10% | +128% | ⚠️ Fade then bounce |
+| CREG | $0.78 (+63%) | 16:10 ET | Spike→fade | $0.70 | -10% | +46% | ❌ Faded |
+
+**Pattern observation:** AMST was the only stock with a "Build" trajectory in AH, and it was the only one that continued into PM. SBFM and CREG both peaked at market close (16:00-16:10 ET) and faded through AH — this "early spike→fade" pattern continues to predict poor PM follow-through.
+
+### Price Charts
+
+```
+AMST - 2-Day Price Timeline
+========================================================================
+Previous Close: $0.82
+Current: $2.95 (+258.1% from prev close)
+Peak: $2.98 (+264%) at 04:20 ET (still rising)
+
+Chart:
+$   2.98 │                                                            
+         │                                                            
+         │                                         ███████            
+         │                                    █ ███       ████████████
+         │                                 ███ █                      
+$   0.78 │█████████████████████████████████                           
+         └────────────────────────────────────────────────────────────
+           |-- Regular --|-- AH --|-- Overnight --|-- PM -->
+
+Key timestamps (ET):
+- 16:50: $1.14 (+38%) — move begins
+- 17:40: $1.49 (+81%) — AH peak
+- 18:00-00:00: $1.30-$1.50 — consolidation
+- 04:00: $1.43 (+74%) — PM open
+- 04:20: $2.98 (+264%) — current (still rising)
+```
+
+### Notes
+
+**Scanner working well today.** AMST was detected at first appearance (23:30 CET), catalyst verified (Grade B), paper trade entered immediately. The "Build" trajectory in AH correctly predicted PM continuation.
+
+**MTVA miss is instructive:** Stock had almost no AH activity (+7.6%) but exploded overnight/PM (+90%). This is an "overnight surge" pattern that our current scanner can't catch because we stop monitoring at ~00:30 CET. Not a scanner bug — just outside our monitoring window.
+
+**Emerging pattern (add to strategy notes):**
+- "Build" trajectory in AH (steadily increasing across scans) → strong PM follow-through
+- "Spike→fade" trajectory (peak at close, fade through AH) → weak PM follow-through
