@@ -46,3 +46,15 @@ All positions were closed in the morning evaluation.
 **Assessment:** Nearly all movers show -99% to -100% volume change, indicating early spikes that have faded. SVRN is the only one with positive volume trend (+24%). Need to confirm in AH scan whether any of these sustain momentum after 4:00 PM ET.
 
 **Pending AH confirmation:** ZICX, INM, WNW, SVRN (low float candidates)
+
+## Scan 22:00 CET (4:00 PM ET) — AFTER-HOURS
+
+No candidates found.
+
+**Note:** AH just opened. The pre-AH candidates (ZICX, INM, WNW, SVRN) need to show sustained AH momentum to be considered. Will check again at 22:30 and 23:00 CET.
+
+## Paper Trades
+
+| Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
+|--------|-------------|------------|-----------------|----------------|--------|
+| (none yet) | - | - | - | - | Pending 23:00+ CET scan |
