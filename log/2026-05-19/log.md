@@ -108,6 +108,45 @@ No candidates found.
 - **CDLX:** Skip — Float 54.4M exceeds 50M threshold
 - **BZFD:** Skip — AH +7.6% doesn't meet >10% threshold
 
+## Scan 23:30 CET (5:30 PM ET) — AFTER-HOURS
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CODX | [TV](https://www.tradingview.com/chart/?symbol=CODX) | $1.97 | +43.8% | +28.4% | $2.53 | +84.7% | 9.0M | 13.1M | 0.7x | 3.4M | Biotechnology |
+| JYD | [TV](https://www.tradingview.com/chart/?symbol=JYD) | $1.88 | -65.9% | +35.6% | $2.55 | -53.8% | 1.6M | 753K | 2.2x | 6.7M | Air Freight/Couriers |
+| RRGB | [TV](https://www.tradingview.com/chart/?symbol=RRGB) | $3.85 | +2.7% | +16.9% | $4.50 | +20.0% | 1.5M | 522K | 2.9x | 15.0M | Restaurants |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $4.75 | +97.1% | +9.9% | $5.22 | +116.6% | 482K | 5.2M | 0.1x | 1.2M | Internet Retail |
+| CDLX | [TV](https://www.tradingview.com/chart/?symbol=CDLX) | $0.60 | -1.6% | +11.9% | $0.67 | +10.2% | 145K | 1.2M | 0.1x | 54.4M | Internet Software |
+| TDIC | [TV](https://www.tradingview.com/chart/?symbol=TDIC) | $0.58 | -18.4% | +7.4% | $0.62 | -12.4% | 3.7M | 51.9M | 0.1x | 3.0M | Misc. Commercial Services |
+| BZFD | [TV](https://www.tradingview.com/chart/?symbol=BZFD) | $1.31 | -5.1% | +6.1% | $1.39 | +0.7% | 89K | 17.2M | 0.0x | 26.5M | Internet Software |
+| PEPG | [TV](https://www.tradingview.com/chart/?symbol=PEPG) | $1.38 | -6.1% | +7.2% | $1.48 | +0.7% | 54K | 945K | 0.1x | 61.8M | Biotechnology |
+
+**Evaluation:**
+
+### CODX (already in position)
+- **3rd AH appearance** — 22:30: +13%, 23:00: +21%, 23:30: +28% — **still building**
+- **Current price:** $2.53 vs entry $2.50 = +1.2%
+- **AH Pattern:** Peaked $2.74 at 16:35 ET (+100%), now consolidating $2.30-$2.55
+- **Status:** Hold position, stop at $2.13 per OPEN_POSITIONS.md rules
+
+### JYD — Skip (NEW)
+- **Day%:** -65.9% (crashed during regular session)
+- **Skip reason:** Dead cat bounce. Stocks crashing >15% in regular session that bounce in AH are recovering from sell-off, not building momentum (3+ observations in Day Trading.md: all lost or went dead in PM)
+
+### RRGB — Skip (continued)
+- **3rd AH appearance** — 22:30: +18%, 23:00: +14%, 23:30: +17%
+- **AH Pattern:** Peaked $4.69 at 16:05 ET (early), now $4.50 — holding but below early peak
+- **Skip reason:** Early AH peak pattern + float 15M above ideal <10M
+
+### Others
+- **WNW:** Skip — AH +9.9% under 10% threshold, ultra extended +97% Day%
+- **CDLX:** Skip — Float 54.4M exceeds 50M threshold
+- **TDIC:** Skip — Dead cat bounce (Day -18.4%)
+- **BZFD:** Skip — AH +6.1% under 10% threshold
+- **PEPG:** Skip — AH +7.2% under 10%, float 61.8M too high
+
+**No new paper trades.** Existing CODX position is building nicely.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
