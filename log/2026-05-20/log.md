@@ -146,6 +146,41 @@ Rationale:
 
 ---
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PHGE | [TV](https://www.tradingview.com/chart/?symbol=PHGE) | $0.60 | +59.6% | +17.8% | $0.70 | +87.9% | 9.6M | 21.3M | 0.5x | 5.9M | Biotechnology |
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $1.36 | +8.8% | +30.9% | $1.78 | +42.4% | 5.4M | 966K | 5.6x | 2.0M | Motor Vehicles |
+| BNZI | [TV](https://www.tradingview.com/chart/?symbol=BNZI) | $3.54 | -7.1% | +22.0% | $4.32 | +13.4% | 3.0M | 854K | 3.5x | 1.1M | Packaged Software |
+| GCL | [TV](https://www.tradingview.com/chart/?symbol=GCL) | $0.74 | +72.5% | +6.2% | $0.79 | +83.1% | 1.1M | 15.9M | 0.1x | 15.9M | Packaged Software |
+
+### AH Pattern Analysis
+
+**PHGE — NEW (first AH appearance)**
+- Catalyst search: **No catalyst found** (4 searches: earnings, press releases, SEC 8-K, news — nothing specific today)
+- Float: 5.9M
+- AH pattern: **BUILDING** ✓ — Started +55% at 16:00 → steadily climbed to +107.6% at 17:30, making new highs
+- **Skip: No catalyst found, float ≥2M.** Excellent AH pattern but no-catalyst rule applies to higher float stocks.
+
+**UCAR — UPDATE (from 23:00)**
+- Catalyst: C-grade (Sidoti Micro-Cap Conference presentation)
+- Float: 2.0M
+- AH pattern: Peak +53.6% at 16:20 → now +42.4%. Holding, not severely fading.
+- 2nd AH scan with >10% ✓
+- **No action: Already have open position (BNZI).** Would be a candidate otherwise, but one position at a time rule applies.
+
+**BNZI — UPDATE (open position)**
+- AH pattern: Peak +47.5% at 16:15 → now +22.0% (was +30.2% at 23:00, +40.4% at 22:30)
+- **Continuing to fade from early peak** as predicted by the 0/4 May 11-13 pattern
+- Position entered at $4.61, now $4.32 (-6.3%)
+- **Hold per B-grade rules** — stop loss at $3.92 (-15%) not triggered
+
+**GCL — Skip**
+- AH change only +6.2%, below 10% threshold
+
+---
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
