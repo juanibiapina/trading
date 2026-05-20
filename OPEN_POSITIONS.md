@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|
-| — | — | — | — | — | — | — | — | — |
+| BNZI | 2026-05-20 | $4.61 | 23 | $106.03 | B | $7.8M debt elimination "Project Fortress" | $3.92 (-15%) | Exit in premarket |
 
 ## Position Rules
 

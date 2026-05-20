@@ -99,7 +99,55 @@ No candidates found. AH just opened — checking if any pre-AH movers carry into
 
 ---
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $1.36 | +8.8% | +30.1% | $1.77 | +41.5% | 3.5M | 758K | 4.6x | 2.0M | Motor Vehicles |
+| BNZI | [TV](https://www.tradingview.com/chart/?symbol=BNZI) | $3.54 | -7.1% | +30.2% | $4.61 | +21.0% | 2.5M | 796K | 3.1x | 1.1M | Packaged Software |
+| JAGX | [TV](https://www.tradingview.com/chart/?symbol=JAGX) | $3.67 | +9.4% | +15.8% | $4.25 | +26.7% | 122K | 89K | 1.4x | 369K | Pharmaceuticals |
+
+### AH Pattern Analysis
+
+**UCAR — NEW**
+- Catalyst: C-grade — Sidoti Micro-Cap Virtual Conference presentation today (9:15 AM ET)
+- Float: 2.0M (good)
+- AH pattern: Peak $1.92 (+53.6%) at 16:20 ET → now $1.90 (+52.0%). **Building near peak** ✓
+- First AH scan appearance — watch for 2-scan confirmation
+
+**BNZI — UPDATE (from 22:30)**
+- Catalyst: B-grade — $7.8M debt elimination (confirmed at 22:30)
+- Float: 1.1M (ultra-low, excellent)
+- AH pattern: Peak $5.62 (+47.5%) at 16:15 ET → now $4.49 (+17.8%). **Early peak, now fading** ⚠️
+- Has sustained >10% across 2 AH scans (22:30: +40.4%, 23:00: +30.2%)
+- **Concern:** Early AH peak pattern (0/4 win rate in May 11-13 data)
+
+**JAGX — NEW**
+- Catalyst: None found (4 searches exhausted). Last news was Nasdaq compliance/reverse split in April.
+- Float: 369K (ultra-low)
+- AH pattern: Extremely volatile — spiked to +29.6% at 16:40 ET, crashed to +3.7%, then bounced to +15.8%
+- First AH scan appearance — watch for next scan
+- Skip: No catalyst found, float ≥2M rule doesn't apply but extreme volatility is concerning
+
+### Paper Trade Decision
+
+**BNZI — ENTER** (with concerns noted)
+
+Rationale:
+- Only candidate meeting 2-scan requirement (>10% at 22:30 and 23:00)
+- B-grade catalyst (debt elimination) is solid
+- Ultra-low float 1.1M
+- Day% -7.1% (not a dead-cat bounce)
+
+**Concerns documented (for learning):**
+- Early AH peak at 16:15 ET (+47.5%), now faded to +17.8%
+- This is the "peaked early, now fading" pattern that historically fades further in PM (0/4 May 11-13)
+- Entering anyway per learning phase rules — need data on whether B-grade catalyst overcomes fading pattern
+
+---
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
+| BNZI | $4.61 | 23:00 CET | 23 | B | Debt elimination; 2-scan sustained >10%; early-peak-fading concern noted |
