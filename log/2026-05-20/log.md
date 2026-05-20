@@ -76,6 +76,29 @@ No candidates found. AH just opened — checking if any pre-AH movers carry into
 
 ---
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BNZI | [TV](https://www.tradingview.com/chart/?symbol=BNZI) | $3.54 | -7.1% | +40.4% | $4.97 | +30.4% | 701K | 549K | 1.3x | 1.1M | Packaged Software |
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $1.02 | -4.7% | +6.9% | $1.09 | +1.9% | 64K | 749K | 0.1x | 16.6M | Apparel/Footwear |
+
+**BNZI — NEW**
+- Catalyst search: **Found — B-grade** ($7.8M debt elimination announced today ~2:30 PM ET via GlobeNewswire, "Project Fortress" balance sheet initiative)
+- Float: 1.1M (ultra-low, excellent)
+- AH action: Spiked to +47.5% ($5.62) at 16:15 ET, now holding +33.9% ($5.10)
+- Pattern: Building — not fading from peak
+- **Watch — first AH scan.** Need sustained >10% at 23:00+ CET scan to enter.
+
+**DBGI — Skip**
+- AH change only +6.9%, now fading to -3.6%
+- Below 10% threshold
+
+**Pre-AH candidates status:**
+- ELOX (+1100% regular), HCWB (+155%), PHGE (+54%), MTVA (+54%) — no AH continuation. Not appearing in AH scans.
+
+---
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
