@@ -181,6 +181,53 @@ Rationale:
 
 ---
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PHGE | [TV](https://www.tradingview.com/chart/?symbol=PHGE) | $0.60 | +59.6% | +33.6% | $0.80 | +113.2% | 16.7M | 22.0M | 0.8x | 5.9M | Biotechnology |
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $1.36 | +8.8% | +31.6% | $1.79 | +43.2% | 5.9M | 1.0M | 5.8x | 2.0M | Motor Vehicles |
+| BNZI | [TV](https://www.tradingview.com/chart/?symbol=BNZI) | $3.54 | -7.1% | +15.8% | $4.10 | +7.6% | 3.3M | 901K | 3.7x | 1.1M | Packaged Software |
+| GCL | [TV](https://www.tradingview.com/chart/?symbol=GCL) | $0.74 | +72.5% | +9.8% | $0.82 | +89.3% | 1.3M | 16.0M | 0.1x | 15.9M | Packaged Software |
+| JELD | [TV](https://www.tradingview.com/chart/?symbol=JELD) | $1.49 | +4.2% | +8.2% | $1.61 | +12.8% | 154K | 1.5M | 0.1x | 82.6M | Forest Products |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $3.88 | -18.3% | +11.3% | $4.32 | -9.1% | 59K | 5.8M | 0.0x | 1.2M | Internet Retail |
+
+### AH Pattern Analysis
+
+**PHGE — UPDATE (from 23:30)**
+- Catalyst re-search (4 searches): **No catalyst found** — Q4 2025 earnings miss was 05-14 (last week), no new news today
+- Float: 5.9M (≥2M)
+- AH pattern: Peaked +123.2% ($0.83) at 17:30 ET → now +91.0% ($0.71). Peaked mid-AH, now fading.
+- **Skip: No catalyst found, float ≥2M.** Even with strong AH pattern, no-catalyst rule applies.
+
+**UCAR — UPDATE (from 23:30)**
+- Catalyst: C-grade (Sidoti Micro-Cap Conference presentation)
+- Float: 2.0M
+- AH pattern: Peaked +53.6% at 16:20 ET → now +39.2%. **Early peak, holding relatively well** but fading.
+- 3rd AH scan with >10% ✓
+- **No action: Already have open position (BNZI).** One position at a time rule.
+
+**BNZI — POSITION UPDATE**
+- Entry: $4.61 at 23:00 CET
+- Current: $4.01 (+5.3% AH, down from +47.5% peak at 16:15 ET)
+- **Unrealized P&L: -13.0%** (entered at $4.61, now $4.01)
+- AH pattern: **Early peak pattern confirmed** — peaked at 16:15, has faded steadily from +47.5% → +15.8% (scanner) to +5.3% (current)
+- Hard stop $3.92 (-15%) not yet triggered
+- **Learning data point:** B-grade catalyst did NOT overcome the early-peak-fading pattern. BNZI is following the 0/4 May 11-13 data exactly.
+
+**GCL — Skip**
+- AH change +9.8%, below 10% threshold
+
+**JELD — Skip**
+- AH change +8.2%, below 10% threshold
+- Float 82.6M (too high)
+
+**WNW — Skip**
+- Day% -18.3% = dead-cat bounce pattern
+- Per learning rules: "stocks that crashed >15% during regular session and bounce in AH are recovering from a sell-off, not building new momentum (3+ observations: all lost or went dead in PM)"
+
+---
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
