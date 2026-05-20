@@ -24,3 +24,12 @@
 - Hard stop ($2.13) was breached overnight
 
 **Lesson:** Even solid B-grade catalysts can reverse sharply. The peak P&L of +15.2% never triggered the trail stop (requires +30%). Consider tighter stops or faster exits on health-news catalysts when initial momentum fades.
+
+---
+
+## Position Evaluation — 14:30 CET
+
+**No open positions.** Portfolio is flat after CODX exit this morning.
+
+**Actions taken:**
+- None — awaiting next after-hours scan for new entries
