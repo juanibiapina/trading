@@ -64,6 +64,18 @@
 
 ---
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found. AH just opened — checking if any pre-AH movers carry into after-hours.
+
+**Pre-AH candidates status:**
+- ELOX, HCWB, PHGE, MTVA — AH just opened, no continuation visible yet. The regular session +1100% (ELOX), +155% (HCWB), +54% (PHGE, MTVA) gains have not carried into AH.
+- Will re-check at 22:30 and 23:00 scans.
+
+**Observation:** This is the first AH scan — no entries per learning phase rules. Watching for new candidates to emerge.
+
+---
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
