@@ -233,3 +233,54 @@ Rationale:
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
 | BNZI | $4.61 | 23:00 CET | 23 | B | Debt elimination; 2-scan sustained >10%; early-peak-fading concern noted |
+
+---
+
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PHGE | [TV](https://www.tradingview.com/chart/?symbol=PHGE) | $0.60 | +59.6% | +19.9% | $0.72 | +91.4% | 20.2M | 22.4M | 0.9x | 5.9M | Biotechnology |
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $1.36 | +8.8% | +28.7% | $1.75 | +40.0% | 6.2M | 1.1M | 5.9x | 2.0M | Motor Vehicles |
+| BNZI | [TV](https://www.tradingview.com/chart/?symbol=BNZI) | $3.54 | -7.1% | +15.0% | $4.07 | +6.8% | 3.4M | 915K | 3.8x | 1.1M | Packaged Software |
+| GCL | [TV](https://www.tradingview.com/chart/?symbol=GCL) | $0.74 | +72.5% | +10.1% | $0.82 | +89.9% | 1.6M | 16.0M | 0.1x | 15.9M | Packaged Software |
+| QUCY | [TV](https://www.tradingview.com/chart/?symbol=QUCY) | $3.29 | +30.6% | +6.1% | $3.49 | +38.5% | 628K | 94.8M | 0.0x | 10.7M | Biotechnology |
+| JELD | [TV](https://www.tradingview.com/chart/?symbol=JELD) | $1.49 | +4.2% | +8.2% | $1.61 | +12.8% | 154K | 1.5M | 0.1x | 82.6M | Forest Products |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $3.88 | -18.3% | +10.1% | $4.27 | -10.1% | 68K | 5.8M | 0.0x | 1.2M | Internet Retail |
+
+### AH Pattern Analysis
+
+**BNZI — POSITION UPDATE** ⚠️
+- Entry: $4.61 at 23:00 CET
+- Current: $3.95 (check-prices at 18:30 ET)
+- **Unrealized P&L: -14.3%** — approaching hard stop at $3.92 (-15%)
+- AH pattern: Peaked +47.5% ($5.62) at 16:15 ET → now +3.7% ($3.95)
+- **Early-peak-fading pattern CONFIRMED** — BNZI has faded steadily for 2+ hours
+- Learning data point: B-grade catalyst (debt elimination) did NOT overcome early-peak pattern
+
+**PHGE — UPDATE (from 00:00)**
+- Catalyst: No catalyst found (re-searched at 00:00)
+- Float: 5.9M (≥2M)
+- AH pattern: Peaked +123.2% ($0.83) at 17:30 ET → now +84.2% ($0.69). Mid-AH peak, now fading.
+- **Skip: No catalyst found, float ≥2M.** Pattern otherwise excellent but no-catalyst rule applies.
+
+**UCAR — UPDATE (from 00:00)**
+- Catalyst: C-grade (Sidoti Micro-Cap Conference presentation)
+- Float: 2.0M
+- AH pattern: Peaked +53.6% ($1.92) at 16:20 ET → now +36.8% ($1.71). Early peak, steady fade.
+- **No action: Already have open position (BNZI).** Also shows early-peak-fading pattern.
+
+**GCL — Skip**
+- AH change +10.1%, just at threshold
+- Float 15.9M (too high for entry criteria)
+
+**QUCY — Skip**
+- AH change +6.1%, below 10% threshold
+
+**JELD — Skip**
+- AH change +8.2%, below 10% threshold
+- Float 82.6M (way too high)
+
+**WNW — Skip**
+- Day% -18.3% = dead-cat bounce pattern
+- Per learning rules: stocks that crashed >15% during regular session should be skipped
