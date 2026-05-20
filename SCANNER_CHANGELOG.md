@@ -52,6 +52,24 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-05-20 — Evaluations Only (No Changes)
+
+**Context:** CODX (entered May 19, exited May 20) lost -29.2%. This is the first significant loss since the scanner improvements began. The scanner detected CODX correctly (B-grade catalyst, 3.4M float, sustained >10% AH in 2 scans). The loss appears to be position management, not scanner failure.
+
+**Evaluation of previous changes:**
+- 2026-05-15 Ultra-Low Float No-Catalyst Exception: **Helped (1 data point).** BIYA (1.6M float, no catalyst) was entered May 14 per this rule and won +3.6%. The agent correctly cited the ultra-low float exception when entering.
+- 2026-05-14 AH Peak Timing Guidance: **Working (3 data points).** May 18 AMST entry notes "currently at AH high +76%" (build pattern), won +124%. May 19 RRGB explicitly skipped: "peaked $4.69 at 16:05 ET (early spike), now $4.45 — steady fade from early peak." May 19 CODX noted "Peak at 16:35 (not early), holding near highs" — this assessment was correct at entry time; the fade happened overnight.
+- 2026-05-12 PM Peak Tracking: **Working — generating data (7 data points).** PM Peak and Peak Time columns appearing consistently. AMST peaked $3.40 at 08:15 ET, trail stop triggered at $2.62. CODX peaked $2.88, collapsed to $1.77. Still building dataset for exit timing conclusions.
+
+**Emerging pattern (not yet actionable):**
+Recent trades suggest that Day% at entry may correlate with outcome:
+- Low Day% (fresh AH move): AMST -4.6% → +124%, SNAL -0.1% → +54%, LESL -5.3% → +1.1%, BIYA -4.6% → +3.6% (4/4 wins)
+- High Day% (already ran during session): CODX +43.8% → -29.2% (0/1)
+
+This aligns with the "first day of unusual volume" entry rule. However, with only 1 data point on the high-Day% side, no change is warranted. Will continue monitoring.
+
+**Changes:** None. Scanner and prompts working as intended. The CODX loss is a position management lesson (peak P&L +15.2% never triggered the +30% trail stop), not a scanner gap.
+
 ### 2026-05-15 — Add No-Catalyst Exception for Ultra-Low Float Stocks
 
 **Context:** May 12-14 data reveals that the "no catalyst = skip" rule is failing for ultra-low float stocks. LNKS (633K float, no catalyst) was skipped on May 13 but was the day's winner at +61% PM. OCG (1.9M float, no catalyst) was entered on May 12 and won +14.9%. Meanwhile, catalyst stocks have mixed results (TDIC A-tier lost -18.7%, XOS A-tier lost -14.3%).
@@ -72,6 +90,7 @@ This caused inconsistent behavior — LNKS was skipped despite the learning phas
    - Float ≥2M: skip (higher float needs catalyst)
    - Why: 2/2 ultra-low float no-catalyst trades won (OCG +14.9%, LNKS +61% if entered). The prior guidance caused LNKS to be skipped despite being a clear winner.
    - Hypothesis: Next time an ultra-low float (<2M) stock has >10% AH sustained across 2 scans but no catalyst, the agent will enter with concern noted rather than skipping. Measurable: (1) next ultra-low-float no-catalyst candidate is entered with float cited as the exception, (2) no more skips that cite "no catalyst" as the sole reason for stocks under 2M float.
+   - **Evaluation:** Helped. On 2026-05-14, BIYA (1.6M float, no catalyst) was entered per this rule with the ultra-low float exception cited. Won +3.6%.
 
 **Updated process:** Added "No-catalyst exception" rule to Current Process section.
 
