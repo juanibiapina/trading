@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|
-| — | — | — | — | — | — | — | — | — |
+| TRNR | 2026-05-21 | $1.31 | 82 | $107.42 | B | Q1 earnings beat, 279% rev growth | $1.11 (-15%) | Trail at +30% |
 
 ## Position Rules
 

@@ -98,7 +98,38 @@ No candidates found.
 
 **Paper Trade Decision:** No entry yet. TRNR is the best candidate (Grade B catalyst, 2.3M float) but only shows >10% AH in one scan. Need sustained >10% in next scan to qualify.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TRNR | [TV](https://www.tradingview.com/chart/?symbol=TRNR) | $1.00 | -4.8% | +31.0% | $1.31 | +24.8% | 8.6M | 3.9M | 2.2x | 2.3M | Specialty Stores |
+| SDA | [TV](https://www.tradingview.com/chart/?symbol=SDA) | $0.58 | +5.7% | +15.3% | $0.67 | +22.0% | 4.9M | 1.7M | 2.9x | 34.6M | Other Consumer Services |
+| HCWB | [TV](https://www.tradingview.com/chart/?symbol=HCWB) | $2.58 | +6.2% | +5.0% | $2.71 | +11.5% | 636K | 69.4M | 0.0x | 5.1M | Biotechnology |
+| BDTX | [TV](https://www.tradingview.com/chart/?symbol=BDTX) | $3.55 | -1.4% | +9.3% | $3.88 | +7.8% | 112K | 2.1M | 0.1x | 46.0M | Biotechnology |
+| LUCD | [TV](https://www.tradingview.com/chart/?symbol=LUCD) | $1.00 | +0.0% | +7.0% | $1.07 | +7.0% | 103K | 1.1M | 0.1x | 154M | Medical Specialties |
+| BTM | [TV](https://www.tradingview.com/chart/?symbol=BTM) | $0.58 | -19.1% | +5.3% | $0.61 | -14.8% | 89K | 1.7M | 0.1x | 5.0M | Investment Banks/Brokers |
+
+**Candidate Evaluation:**
+
+**TRNR** — Interactive Strength (+31% AH, 2.3M float)
+- Second scan with >10% AH (23:00: +53%, 23:30: +31%) — now qualifies
+- Catalyst: Grade B (Q1 2026 earnings beat, 279% revenue growth)
+- AH pattern: Peaked $1.57 (+49.5%) at 16:30 ET, now $1.31 (+24.8%) — **FADE from early peak**
+- Concern: Early AH peak pattern (0/4 in May 11-13 data per rules)
+- **Decision: ENTER with concerns noted** — rules say paper trade with concerns generates data
+
+**SDA** — SunCar Technology (+15.3% AH, 34.6M float)
+- Re-ran catalyst search: No fresh catalyst (H2 2025 earnings was May 20, not today)
+- Float 34.6M (≥2M) + no catalyst = **Skip per no-catalyst handling rules**
+
+**Other candidates:**
+- HCWB: +5% AH only — Skip: below 10% threshold
+- BDTX: +9.3% AH, 46M float — Skip: below 10% threshold + high float
+- LUCD: +7% AH, 154M float — Skip: below 10% threshold + high float
+- BTM: Day% -19.1%, +5.3% AH — **Skip: dead-cat bounce** (crashed >15% in regular session)
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|----------------|----------------|--------|
+| TRNR | $1.31 | 23:30 CET | 82 | B | Q1 earnings beat, 279% rev growth, 2.3M float. Concern: early AH peak at 16:30 ET, now fading |
