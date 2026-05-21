@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|
-| BNZI | 2026-05-20 | $4.61 | 23 | $106.03 | B | $7.8M debt elimination "Project Fortress" | $3.92 (-15%) | Exit in premarket |
+| — | — | — | — | — | — | — | — | — |
 
 ## Position Rules
 
@@ -50,6 +50,7 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| BNZI | $4.61 | $3.53 | -$24.84 | -23.4% | 2 | B - Debt elimination | Hard stop breached, overnight gap down |
 | CODX | $2.50 | $1.77 | -$29.20 | -29.2% | 2 | B - Ebola testing strategy | Hard stop breached, collapsed in premarket |
 | AMST | $1.17 | $2.62 | +$123.25 | +124% | 1 | B - Enterprise customer win | Trail stop hit at $2.89 after $3.40 peak |
 | BIYA | $1.12 | $1.16 | +$3.56 | +3.6% | 1 | None | Exited at profit per rules, avoided fade from $1.41 peak |
