@@ -128,6 +128,40 @@ No candidates found.
 - LUCD: +7% AH, 154M float — Skip: below 10% threshold + high float
 - BTM: Day% -19.1%, +5.3% AH — **Skip: dead-cat bounce** (crashed >15% in regular session)
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $2.01 | +2.6% | +91.0% | $3.84 | +95.9% | 1.0M | 896K | 1.2x | 2.3M | Medical/Nursing Services |
+| TRNR | [TV](https://www.tradingview.com/chart/?symbol=TRNR) | $1.00 | -4.8% | +27.0% | $1.27 | +21.0% | 9.7M | 4.0M | 2.4x | 2.3M | Specialty Stores |
+| SDA | [TV](https://www.tradingview.com/chart/?symbol=SDA) | $0.58 | +5.7% | +17.7% | $0.68 | +24.4% | 5.1M | 1.7M | 3.0x | 34.6M | Other Consumer Services |
+| LGPS | [TV](https://www.tradingview.com/chart/?symbol=LGPS) | $0.69 | +10.2% | +10.4% | $0.76 | +21.8% | 87K | 36K | 2.4x | 6.3M | Real Estate Development |
+| CNDT | [TV](https://www.tradingview.com/chart/?symbol=CNDT) | $1.60 | +5.3% | +11.9% | $1.79 | +17.8% | 121K | 1.6M | 0.1x | 139M | Misc Commercial Services |
+| LUCD | [TV](https://www.tradingview.com/chart/?symbol=LUCD) | $1.00 | +0.0% | +8.0% | $1.08 | +8.0% | 105K | 1.1M | 0.1x | 154M | Medical Specialties |
+| BTM | [TV](https://www.tradingview.com/chart/?symbol=BTM) | $0.58 | -19.1% | +5.3% | $0.61 | -14.8% | 92K | 1.7M | 0.1x | 5.0M | Investment Banks/Brokers |
+
+**New Candidate Evaluation:**
+
+**RYOJ** — rYojbaba Co. (+91% AH, 2.3M float)
+- Catalyst search (4 searches): No clear today's catalyst found. $3.2M labor deal is older news. Securities class action investigation announced April 2026 (negative). CEO changes in March-April 2026.
+- Float 2.3M (≥2M threshold)
+- First appearance in scans - cannot assess build pattern
+- **Skip: No catalyst + float ≥2M**
+
+**LGPS** — Landsea Homes (+10.4% AH, 6.3M float)
+- New to this scan, showing >10% AH
+- Float 6.3M (reasonable)
+- Would need catalyst search and >10% in 2+ scans to qualify
+- **Watch: first scan appearance**
+
+**Prior candidates update:**
+- **TRNR:** Now at $1.27 (+27%), down from $1.31 at 23:30 (entry price). AH peak was $1.57 at 16:30 ET. FADE pattern continues. Paper trade already entered.
+- **SDA:** Down to +17.7% from +32.9% at 23:00. Fading. Still no catalyst. Skip confirmed.
+- **CNDT, LUCD:** Float too high (139M, 154M). Skip.
+- **BTM:** Dead-cat bounce (-19.1% Day). Skip.
+
+**Paper Trade Decision:** No new entries. TRNR position from 23:30 remains the only trade.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
