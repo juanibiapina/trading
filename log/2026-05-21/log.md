@@ -162,6 +162,54 @@ No candidates found.
 
 **Paper Trade Decision:** No new entries. TRNR position from 23:30 remains the only trade.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TRNR | [TV](https://www.tradingview.com/chart/?symbol=TRNR) | $1.00 | -4.8% | +16.0% | $1.16 | +10.5% | 10.4M | 4.1M | 2.6x | 2.3M | Specialty Stores |
+| SDA | [TV](https://www.tradingview.com/chart/?symbol=SDA) | $0.58 | +5.7% | +19.8% | $0.69 | +26.7% | 5.2M | 1.7M | 3.0x | 34.6M | Other Consumer Services |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $2.01 | +2.6% | +41.3% | $2.84 | +44.9% | 2.2M | 1.1M | 2.1x | 2.3M | Medical/Nursing Services |
+| EDHL | [TV](https://www.tradingview.com/chart/?symbol=EDHL) | $2.92 | +33.9% | +37.7% | $4.02 | +84.4% | 691K | 759K | 0.9x | 541K | Advertising/Marketing |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $3.59 | +71.8% | +7.2% | $3.85 | +84.2% | 481K | 4.8M | 0.1x | 475K | Pharmaceuticals: Other |
+| CNDT | [TV](https://www.tradingview.com/chart/?symbol=CNDT) | $1.60 | +5.3% | +15.0% | $1.84 | +21.1% | 419K | 1.6M | 0.3x | 139M | Misc Commercial Services |
+| LGPS | [TV](https://www.tradingview.com/chart/?symbol=LGPS) | $0.69 | +10.2% | +8.0% | $0.74 | +19.1% | 162K | 44K | 3.7x | 6.3M | Real Estate Development |
+| LUCD | [TV](https://www.tradingview.com/chart/?symbol=LUCD) | $1.00 | +0.0% | +6.0% | $1.06 | +6.0% | 136K | 1.1M | 0.1x | 154M | Medical Specialties |
+| MYO | [TV](https://www.tradingview.com/chart/?symbol=MYO) | $0.95 | +3.8% | +5.3% | $1.00 | +9.3% | 129K | 498K | 0.3x | 35.5M | Medical Distributors |
+| BTM | [TV](https://www.tradingview.com/chart/?symbol=BTM) | $0.58 | -19.1% | +6.4% | $0.62 | -13.9% | 94K | 1.7M | 0.1x | 5.0M | Investment Banks/Brokers |
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $1.67 | +7.7% | +13.8% | $1.90 | +22.6% | 83K | 26K | 3.2x | 1.3M | Wholesale Distributors |
+| HTCR | [TV](https://www.tradingview.com/chart/?symbol=HTCR) | $2.82 | +4.4% | +9.2% | $3.08 | +14.1% | 80K | 75K | 1.1x | 505K | IT Services |
+
+**New Candidates:**
+
+**EDHL** — Everbright Digital Holding (+37.7% AH, 541K float)
+- Catalyst: No catalyst found (4 searches). Described as "no volume" spike in financial news.
+- AH pattern: BUILD — started +33.9% at close, built to +99.5% peak at 18:00 ET, now +69% at $3.69. Still near late-AH highs.
+- First appearance in AH scans — need second scan >10% to qualify
+- **Watch: ultra-low float BUILD pattern, needs confirmation**
+
+**EHGO** — Eshallgo Inc. (+13.8% AH, 1.3M float)
+- Catalyst: No catalyst found (3 searches)
+- AH pattern: Thin trading, spiked at 17:55 ET to +21.7%, now +16.8%
+- Float 1.3M (ultra-low, <2M)
+- First appearance — need second scan >10% to qualify
+- **Watch: if sustained >10%, qualifies for no-catalyst ultra-low float entry**
+
+**Prior Candidates Update:**
+
+- **TRNR (paper trade at $1.31):** Now $1.16 (+10.4% AH), down from $1.27 at 00:00. Entry now -11.5% underwater. FADE pattern confirmed — peaked $1.57 at 16:30 ET (early AH), declined steadily since. Concern noted at entry now validated.
+
+- **RYOJ:** Massive FADE — was +91% at 00:00 (peaked $4.00 at 17:45 ET), now +41.3% at $2.84. Good skip — late spike faded fast.
+
+- **SDA:** Still no catalyst, 34.6M float. Skip confirmed.
+
+- **CNDT, LUCD, MYO:** Float too high (35M+). Skip.
+
+- **BTM:** Day% -19.1%, dead-cat bounce. Skip.
+
+- **ATPC, LGPS, HTCR:** AH% below 10% threshold. Skip.
+
+**Paper Trade Decision:** No new entries. EDHL and EHGO are promising (ultra-low float) but need a second scan >10% AH to qualify. TRNR position remains, now underwater.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
