@@ -50,6 +50,22 @@ No candidates found.
 - Scanner returned 0 hits at the start of after-hours
 - Candidates from 21:30 regular session scan (NGMC, QVCGQ, NCPL, ATPC, CODX, NIVF) should be re-checked at next scan to see if momentum carries into AH
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Note:** Observation-only scan (before 23:00 CET). No paper trades yet.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SDA | [TV](https://www.tradingview.com/chart/?symbol=SDA) | $0.58 | +5.7% | +25.3% | $0.73 | +32.5% | 2.1M | 1.4M | 1.5x | 34.6M | Other Consumer Services |
+| TRNR | [TV](https://www.tradingview.com/chart/?symbol=TRNR) | $1.00 | -4.8% | +5.0% | $1.05 | +0.0% | 54K | 2.9M | 0.0x | 2.3M | Specialty Stores |
+
+**Evaluation:**
+- **SDA:** +25.3% AH but no catalyst found (4 searches: earnings, press releases, SEC filings, general news). Float 34.6M (too high for no-catalyst entry). **Skip: no catalyst + float ≥2M**
+- **TRNR:** Only +5% AH (below 10% threshold). **Skip: insufficient AH change**
+
+**Prior candidates check:**
+- NGMC, QVCGQ, NCPL, ATPC, CODX, NIVF from regular session — none reappeared in AH scan (momentum faded at close)
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
