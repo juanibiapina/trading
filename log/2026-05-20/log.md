@@ -284,3 +284,125 @@ Rationale:
 **WNW — Skip**
 - Day% -18.3% = dead-cat bounce pattern
 - Per learning rules: stocks that crashed >15% during regular session should be skipped
+
+---
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**PHGE** — Biotechnology (BiomX Inc.)
+- Catalyst: **None found** — No news, earnings, or press releases identified during evening scans
+- Previous Close: $0.37
+- AH last night: Peaked $0.83 (+123.2%) at 17:30 ET (23:30 CET)
+- Premarket now: $0.61 (+65% from close)
+- Hypothetical P&L (AH entry at $0.57 @ 22:15 CET → PM $0.68 peak): **+19.3%**
+- Float: 5.9M | Market Cap: $6.0M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** ✓
+- PHGE appeared in **4 AH scans** (23:30, 00:00, 00:30 CET) with consistent >10% AH gains
+- At 23:30 CET scan: +87.9% Total, noted as "BUILDING" pattern — excellent setup
+- **Why we didn't trade it:** Skipped due to "no catalyst found, float ≥2M" rule
+- Scanner gap: **None — scanner worked perfectly!** The failure was in selection criteria.
+
+**Critical Learning:**
+The scanner detected PHGE and correctly identified its excellent "building" AH pattern. We manually SKIPPED it because of the no-catalyst rule. Meanwhile, we entered BNZI which had a catalyst but showed the "early-peak-fading" pattern (0/4 historical win rate). **The pattern mattered more than the catalyst.**
+
+### Baseline Tracking
+
+- Days tracked: 19
+- Winners detected by scanner: 16/19 (**84.2%**) — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO, AIIO, HTCO, WOK, LNKS, AMST, PHGE
+- Winner selected for paper trade: **No** — we chose BNZI over PHGE
+- Target: >80% detection
+- Status: **BASELINE MET** ✅
+
+### Retrospective Scan Results
+
+**Premarket scan (04:20 ET / 10:20 CET):**
+| Ticker | Close | PM Chg% | PM Price | Float | MCap | Industry |
+|--------|-------|---------|----------|-------|------|----------|
+| PHGE | $0.60 | +13.8% | $0.68 | 5.9M | $6.0M | Biotechnology |
+| NXXT | $0.67 | +12.2% | $0.76 | 65.7M | $105.8M | Packaged Software |
+| GCTS | $2.74 | +6.0% | $2.90 | 64.1M | $227.6M | Semiconductors |
+
+**AH reconstruction (via check-prices --ah-history):**
+- PHGE: Built steadily from +55% (16:00 ET) → peaked +123.2% at 17:30 ET → held +60-80% through late AH
+- NXXT: Was DOWN in AH (not a winner)
+- GCTS: Minimal AH movement (+1.8% peak)
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| BNZI | $4.61 | +30.2% | B — debt elimination | 23:00 CET | — | — | $3.67 | -€21.62 | -20.4% | ❌ Loss (stop breached on gap) |
+
+**Hard stop at $3.92 (-15%) was breached overnight** — PM opened at $3.67, gapping through stop. Exit executed at PM open.
+
+**Total Paper P&L: -€21.62**
+
+### Scanner Effectiveness
+
+- Evening scans ran: 5 times (22:00 - 00:30 CET)
+- Candidates found: 6 unique tickers (BNZI, DBGI, UCAR, JAGX, PHGE, GCL)
+- Today's winner (PHGE) detected: **YES** (4/5 scans)
+- Correct selection made: **NO** — we chose BNZI over PHGE
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| PHGE | +123% peak | SKIPPED — no catalyst + float ≥2M rule | **YES** (+19.3%) |
+
+**This was not a scanner failure — it was a selection failure.**
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|--------|
+| PHGE | +123.2% | 17:30 ET | **Build** (+55% → +123%) | +65% | -58pp | +65% | ✅ Winner |
+| BNZI | +54.1% | 16:15 ET | **Spike→fade** (+54% → +7%) | -4% | -58pp | -4% | ❌ Complete fade |
+| UCAR | +53.6% | 16:20 ET | **Spike→hold** | -8% | -62pp | -8% | ❌ Faded overnight |
+
+**Pattern insight:** PHGE was the only stock with a **building** AH pattern — it gained through mid-AH while BNZI and UCAR both peaked early and faded. The "building" pattern predicted PM follow-through.
+
+### Price Charts
+
+```
+========================================================================
+ PHGE - 2-Day Price Timeline
+========================================================================
+Previous Close: $0.37  |  Peak: $0.83 (+123%) at 17:30 ET  |  Current: $0.61 (+65%)
+
+$   0.83 │                                                   █        
+         │                                                  █ █       
+         │                                                █    ██     
+         │                              █        █         █     ██   
+         │     █            █          █      ███ ██  █  █         ███
+         │                            █   █ ██      ██ ██             
+         │    █ █  ███  ████             █ █                          
+         │            ██     ███   ███                                
+         │       ██              ██                                   
+$   0.37 │████                  █                                     
+         └────────────────────────────────────────────────────────────
+                REG SESSION         │    AH BUILD    │      PM       
+```
+
+### Notes
+
+**Key insight from this session:**
+
+1. **AH pattern > catalyst** — PHGE had no catalyst but a perfect "building" AH pattern. BNZI had a B-grade catalyst but the deadly "early-peak-fading" pattern. The pattern was the better predictor.
+
+2. **The no-catalyst rule needs refinement** — Current rule: "No catalyst found + float ≥2M = skip". But PHGE's AH pattern was screaming "winner" despite no catalyst. Consider:
+   - If AH pattern is "building" (gaining into mid/late AH), catalyst may be less important
+   - If AH pattern is "spike→fade" (peaked early), even B-grade catalyst can't save it
+
+3. **BNZI followed the 0/4 pattern exactly** — We noted at entry that BNZI showed the "early-peak-fading" pattern with 0/4 historical win rate. The B-grade catalyst did NOT overcome this. Pattern-based filtering should trump catalyst grade.
+
+**Proposed rule update:**
+- Primary filter: AH pattern (Building > Spike→hold > Late surge >> Spike→fade)
+- Secondary filter: Catalyst grade
+- Float/no-catalyst rule only applies to "Spike→fade" patterns
+
+**For Day Trading.md update:** Add "AH Pattern" as primary selection criteria under Emerging Patterns.
