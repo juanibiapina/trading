@@ -74,7 +74,7 @@ For each **new** candidate (not in prior scans), evaluate against the entry crit
 
 **No-catalyst handling (learning phase):** If structured search finds no catalyst:
 - Float <2M: **enter with concern noted** — ultra-low float stocks can move on momentum alone (May 12 OCG 1.9M +14.9%, May 13 LNKS 633K +61% both had no catalyst)
-- Float ≥2M: skip — higher float stocks need catalyst for reliable follow-through
+- Float ≥2M: **skip** — higher float stocks need catalyst for reliable follow-through. *Exception: BUILD patterns (steadily increasing across scans, near/making new AH highs) may override; enter with heavy concerns if no other candidates qualify. (1 data point: May 21 PHGE 5.9M float, no catalyst, BUILD pattern → +19.3%)*
 
 **Regular session caution (21:30 CET / before 4:00 PM ET):** If this scan is running before AH opens, do NOT enter paper trades yet. Flag candidates as "Watch — pending AH confirmation" in the evaluation notes. Only enter a paper trade if the stock reappears in a subsequent AH scan (22:00+ CET) with sustained momentum. Stocks that spike intraday but don't carry into AH tend to fade (e.g., SPRC -18.6%, AEMD -4.6% on March 12).
 

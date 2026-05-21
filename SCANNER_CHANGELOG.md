@@ -34,7 +34,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Session timing follows America/New_York market hours, including DST
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: float <50M, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
-- **No-catalyst exception:** ultra-low float (<2M) stocks can be entered without catalyst; higher float (≥2M) requires catalyst
+- **No-catalyst exception:** ultra-low float (<2M) stocks can be entered without catalyst; higher float (≥2M) requires catalyst *unless* BUILD pattern (see May 21 change)
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade; at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading
@@ -51,6 +51,28 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-05-21 — Add BUILD Pattern Exception to No-Catalyst Rule
+
+**Context:** May 21 morning evaluation revealed PHGE (5.9M float, no catalyst, BUILD pattern) was skipped due to "no catalyst + float ≥2M" rule. It would have won +19.3%. Meanwhile, BNZI (1.1M float, B-grade catalyst, early-peak-fading pattern) was entered and lost -20.4%. The scanner detected both correctly — the selection logic was the failure.
+
+Key data from May 18-21:
+- AMST (BUILD pattern, B-grade) → +124% ✅
+- PHGE (BUILD pattern, no catalyst, 5.9M float) → Skipped, would have been +19.3%
+- BNZI (early-peak-fading, B-grade) → -20.4% ❌ (confirms 0/5 pattern)
+- CODX (mid-AH peak, B-grade, +43.8% Day%) → -29.2% ❌
+
+**Evaluation of previous changes:**
+- 2026-05-14 AH Peak Timing Guidance: **Confirmed (5 data points).** BNZI (peaked 16:15 ET, faded to +17.8% by entry) lost -20.4%, extending the early-peak-fading pattern to 0/5. Build patterns continue winning (AMST +124%, PHGE +19.3% hypothetical).
+- 2026-05-15 Ultra-Low Float No-Catalyst Exception: **Working (2 data points).** BIYA +3.6%, OCG +14.9%. No false positives.
+- 2026-05-12 PM Peak Tracking: **Working — generating data (9 data points).** BNZI peaked $5.87 in AH, collapsed to $3.53 in PM. Still building dataset.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added BUILD pattern exception to the no-catalyst handling for float ≥2M stocks. If a stock shows a clear BUILD pattern (steadily increasing across scans, near/making new AH highs) and no other candidates qualify, it can be entered with heavy concerns noted despite lacking a catalyst.
+   - Why: The current hard "skip" for float ≥2M + no catalyst conflicts with the learning phase philosophy ("enter anyway, document concerns"). PHGE was the only BUILD-pattern stock on May 20 and would have been the best entry. The pattern appears to be a stronger predictor than catalyst presence.
+   - Hypothesis: Next time a no-catalyst stock with float ≥2M shows a BUILD pattern (steadily increasing, near AH highs), the agent will enter with maximum concerns noted rather than skipping. Measurable: (1) next BUILD-pattern no-catalyst high-float candidate is entered with the exception cited, (2) outcome added to this dataset (currently 1/1 wins).
+
+**Updated process:** Added BUILD pattern exception note to no-catalyst rule in Current Process section.
 
 ### 2026-05-20 — Evaluations Only (No Changes)
 
