@@ -42,6 +42,14 @@ No open positions to evaluate.
 - NGMC, QVCGQ, CABI, FRAZ — extreme movers, need to see if momentum sustains into AH
 - NCPL, ATPC, CODX, NIVF — solid candidates, check for catalyst and AH follow-through
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found.
+
+**Notes:**
+- Scanner returned 0 hits at the start of after-hours
+- Candidates from 21:30 regular session scan (NGMC, QVCGQ, NCPL, ATPC, CODX, NIVF) should be re-checked at next scan to see if momentum carries into AH
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
