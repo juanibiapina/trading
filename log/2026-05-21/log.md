@@ -66,6 +66,38 @@ No candidates found.
 **Prior candidates check:**
 - NGMC, QVCGQ, NCPL, ATPC, CODX, NIVF from regular session — none reappeared in AH scan (momentum faded at close)
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TRNR | [TV](https://www.tradingview.com/chart/?symbol=TRNR) | $1.00 | -4.8% | +53.0% | $1.53 | +45.7% | 5.9M | 3.6M | 1.7x | 2.3M | Specialty Stores |
+| SDA | [TV](https://www.tradingview.com/chart/?symbol=SDA) | $0.58 | +5.7% | +32.9% | $0.77 | +40.5% | 4.0M | 1.6M | 2.5x | 34.6M | Other Consumer Services |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $0.82 | +80.7% | +9.6% | $0.90 | +98.1% | 6.1M | 15.3M | 0.4x | 4.4M | Misc Commercial Services |
+| LUCD | [TV](https://www.tradingview.com/chart/?symbol=LUCD) | $1.00 | +0.0% | +7.0% | $1.07 | +7.0% | 81K | 1.1M | 0.1x | 154M | Medical Specialties |
+| LGPS | [TV](https://www.tradingview.com/chart/?symbol=LGPS) | $0.69 | +10.2% | +5.8% | $0.73 | +16.6% | 79K | 35K | 2.3x | 6.3M | Real Estate Development |
+
+**Candidate Evaluation:**
+
+**TRNR** — Interactive Strength (+53% AH, 2.3M float)
+- Catalyst: Q1 2026 earnings released May 20 — 279% revenue growth to $5.1M, confirmed $30M+ guidance, Ergatta acquisition completed. **Grade B (Earnings beat)**
+- AH pattern: Peaked at $1.57 (+49.5%) at 16:30 ET, now $1.42 (+35%) — **FADE** from peak
+- Was +5% AH at 22:30, now +53% — big jump but only ONE scan >10%
+- **Decision: Watch** — need >10% AH in at least 2 scans per rules
+
+**SDA** — SunCar Technology (+32.9% AH, 34.6M float)
+- Catalyst search: No fresh catalyst found (H2 2025 earnings from May 20 is historical data, not today's driver)
+- AH pattern: Peaked at $0.77 (+40.5%) at 16:40 ET, now $0.70 (+27.6%) — **FADE**
+- **Skip: No catalyst + float ≥2M**
+
+**NCPL** — Netcapital (+9.6% AH, 4.4M float)
+- Catalyst: May 12 financing deal with Labrys Fund — convertible note + warrants (dilutive). **Grade D**
+- Big move happened in regular session (+80.7%), AH change only +9.6%
+- **Skip: AH change <10%**
+
+**LUCD, LGPS** — Skip: Float too high (LUCD 154M) or AH change <10% (LGPS +5.8%)
+
+**Paper Trade Decision:** No entry yet. TRNR is the best candidate (Grade B catalyst, 2.3M float) but only shows >10% AH in one scan. Need sustained >10% in next scan to qualify.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
