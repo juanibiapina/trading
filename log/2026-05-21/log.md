@@ -14,3 +14,9 @@
 **Lessons:**
 - Overnight gaps can blow through stops — consider sizing for worst-case gap
 - The +27% peak was close to trail stop trigger (+30%) but never hit it
+
+## Position Evaluation — 14:30 CET
+
+No open positions to evaluate.
+
+**Status:** Flat. Awaiting next evening scan for new candidates.
