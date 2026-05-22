@@ -6,8 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-05-18 | AMST | Enterprise customer win | $2.98+ | — | $1.73 | Day 3 - fading |
-| 2026-05-20 | PHGE | None | +123% ($0.83) | — | $0.61 | 🔥 Day 1 ACTIVE |
+| 2026-05-20 | PHGE | None | +123% ($0.83) | — | $0.60 | Day 3 - fading |
+| 2026-05-21 | GOVX | A — Ebola outbreak (biodefense) | +76.2% ($3.93) | — | $3.56 | 🔥 Day 1 ACTIVE |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -31,6 +31,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-05-12 | WOK | Unknown | $11.40 | $10.85 | $2.76 | $1.47 | ⚠️ CRASH (-87%) |
 | 2026-05-13 | LNKS | None | $1.95 | $2.18 | — | $1.35 | Back to start |
 | 2026-05-14 | AIIO | $100M acquisition | $9.20 | $5.43 | $4.24 | Day 7 | Fading from peak |
+| 2026-05-18 | AMST | Enterprise customer win | $2.98 | — | $2.03 | — | Recovered to $2.03 (day 5) |
 
 ## Patterns Observed
 
