@@ -46,6 +46,7 @@ MIN_PM_CHANGE = 5            # Minimum premarket change %
 # After-hours filters
 MIN_AH_VOLUME = 50_000       # Minimum after-hours volume
 MIN_AH_CHANGE = 5            # Minimum after-hours change %
+MIN_AH_CHANGE_HIGH = 20      # High AH change (catches data gaps where volume=0)
 
 
 def get_session():
@@ -113,8 +114,15 @@ COLUMNS_AFTERHOURS = [
 ]
 
 
-def build_filters(session, biotech_only=False, day_movers=False):
-    """Build filter list appropriate for the current session."""
+def build_filters(session, biotech_only=False, day_movers=False, high_change=False):
+    """Build filter list appropriate for the current session.
+    
+    Args:
+        session: Current trading session
+        biotech_only: Restrict to Health Technology sector
+        day_movers: Use day% change filter instead of RVOL (regular session)
+        high_change: Use high AH change filter without volume requirement (afterhours)
+    """
     filters = [
         {"left": "market_cap_basic", "operation": "in_range", "right": [0, MAX_MARKET_CAP]},
         {"left": "close", "operation": "in_range", "right": [MIN_PRICE, MAX_PRICE]},
@@ -134,10 +142,14 @@ def build_filters(session, biotech_only=False, day_movers=False):
             {"left": "premarket_change", "operation": "greater", "right": MIN_PM_CHANGE},
         ])
     elif session == "afterhours":
-        filters.extend([
-            {"left": "postmarket_volume", "operation": "greater", "right": MIN_AH_VOLUME},
-            {"left": "postmarket_change", "operation": "greater", "right": MIN_AH_CHANGE},
-        ])
+        if high_change:
+            # Catch data gaps: high AH change even if volume=0 in API
+            filters.append({"left": "postmarket_change", "operation": "greater", "right": MIN_AH_CHANGE_HIGH})
+        else:
+            filters.extend([
+                {"left": "postmarket_volume", "operation": "greater", "right": MIN_AH_VOLUME},
+                {"left": "postmarket_change", "operation": "greater", "right": MIN_AH_CHANGE},
+            ])
 
     if biotech_only:
         filters.append({"left": "sector", "operation": "equal", "right": SECTOR})
@@ -165,12 +177,12 @@ def get_columns(session):
     return COLUMNS_REGULAR
 
 
-def scan(session, biotech_only=False, day_movers=False):
+def scan(session, biotech_only=False, day_movers=False, high_change=False):
     """Run a single scan and return results."""
     columns = get_columns(session)
     payload = {
         "columns": columns,
-        "filter": build_filters(session, biotech_only, day_movers),
+        "filter": build_filters(session, biotech_only, day_movers, high_change),
         "sort": {"sortBy": get_sort_field(session), "sortOrder": "desc"},
         "markets": ["america"],
         "symbols": {"query": {"types": ["stock"]}},
@@ -378,6 +390,13 @@ def watch(interval, session, biotech_only=False):
                 for r in day_mover_results:
                     if r["ticker"] not in seen:
                         results.append(r)
+            elif session == "afterhours":
+                # Catch data gaps: high AH change even if volume=0
+                high_change_results = scan(session, biotech_only, high_change=True)
+                seen = {r["ticker"] for r in results}
+                for r in high_change_results:
+                    if r["ticker"] not in seen:
+                        results.append(r)
             current_tickers = {r["ticker"] for r in results}
             print_results(results, session, previous_tickers)
 
@@ -429,6 +448,13 @@ def main():
             day_mover_results = scan(session, biotech_only, day_movers=True)
             seen = {r["ticker"] for r in results}
             for r in day_mover_results:
+                if r["ticker"] not in seen:
+                    results.append(r)
+        elif session == "afterhours":
+            # Catch data gaps: high AH change even if volume=0
+            high_change_results = scan(session, biotech_only, high_change=True)
+            seen = {r["ticker"] for r in results}
+            for r in high_change_results:
                 if r["ticker"] not in seen:
                     results.append(r)
         print_results(results, session)

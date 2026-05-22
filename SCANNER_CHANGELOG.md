@@ -18,6 +18,7 @@ MAX_PRICE = 10.0
 MAX_MARKET_CAP = 300,000,000 ($300M)
 MIN_AH_VOLUME = 50,000
 MIN_AH_CHANGE = 5%
+MIN_AH_CHANGE_HIGH = 20%  (supplementary high-change scan, catches data gaps)
 MIN_PM_VOLUME = 50,000
 MIN_PM_CHANGE = 5%
 MIN_INTRADAY_RVOL = 10
@@ -51,6 +52,28 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-05-22 — Add High-Change Fallback for AH Data Gaps
+
+**Context:** May 22 morning evaluation revealed GOVX (the day's winner, +45.6% hypothetical) was completely missed by the scanner despite showing +21-31% AH price change throughout the scanning window (22:00-00:30 CET). The issue: TradingView's API reported AH volume as 0, so the stock was filtered out by the `postmarket_volume > 50,000` requirement. This is the 4th winner missed due to data gaps, not scanner logic.
+
+Recent trade outcomes (May 18-22):
+- AMST +124% ✅ (BUILD pattern)
+- CODX -29.2% ❌ (early peak 16:35 ET)
+- BNZI -20.4% ❌ (early peak 16:15 ET)
+- TRNR -18.3% ❌ (early peak 16:30 ET)
+
+**Evaluation of previous changes:**
+- 2026-05-21 BUILD Pattern Exception: **Insufficient data.** No BUILD-pattern no-catalyst high-float candidates have appeared since the change. GOVX (May 21 winner) wasn't detected at all due to data gap, so the BUILD exception wasn't tested.
+- 2026-05-14 AH Peak Timing Guidance: **Confirmed (6+ data points).** TRNR (peaked 16:30 ET) lost -18.3%, extending early-peak-fading pattern to 0/6. The guidance is being followed — entries are made with concerns documented, but early-peak candidates remain the only qualifying stocks on some nights.
+- 2026-05-15 Ultra-Low Float No-Catalyst Exception: **Working (3 data points).** BIYA +3.6%, OCG +14.9%, no false positives.
+
+**Changes:**
+1. **scripts/scan.py** — Added supplementary "high change" query for after-hours scans. When AH change >20%, the stock is included even if volume=0 or below threshold. This mirrors the existing "day movers" supplementary query for regular session.
+   - Why: GOVX had +21-31% AH change but volume=0 in API. The current filters require BOTH volume AND change. A fallback that catches very high change (>20%) regardless of volume would have caught GOVX.
+   - Hypothesis: Next time a stock moves >20% in AH but has 0 volume in the API (data gap scenario), it will appear in scanner results via the high-change fallback. Measurable: (1) next evening scan in AH mode will run both primary and high-change queries, (2) next data gap winner with >20% AH change will be detected.
+
+**Updated parameters:** Added `MIN_AH_CHANGE_HIGH = 20%` for supplementary high-change scan.
 
 ### 2026-05-21 — Add BUILD Pattern Exception to No-Catalyst Rule
 
