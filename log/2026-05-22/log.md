@@ -12,3 +12,9 @@
 - Faded overnight through premarket, breached -15% hard stop
 
 **Pattern observed:** Stock ran +56% in first AH pulse, then steady fade through overnight session. Entry at $1.31 was during the decline from peak. Classic earnings pop-and-fade pattern.
+
+## Position Evaluation — 14:30 CET
+
+**No open positions.**
+
+Last position (TRNR) was closed in the 10:30 evaluation. Ready for tonight's post-market screening session.
