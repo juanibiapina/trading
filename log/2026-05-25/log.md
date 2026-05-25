@@ -38,6 +38,28 @@
 
 ⚠️ **22:00 scan is observation only.** Paper trade decisions at 23:00 CET scan.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| QTEX | [TV](https://www.tradingview.com/chart/?symbol=QTEX) | $0.73 | +140.0% | +20.4% | $0.88 | +188.9% | 40.1M | 81.9M | 0.5x | 41.9M | Medical Specialties |
+| ARTL | [TV](https://www.tradingview.com/chart/?symbol=ARTL) | $1.19 | -10.5% | +64.3% | $1.96 | +47.0% | 16.4M | 2.9M | 5.6x | 2.1M | Pharmaceuticals: Major |
+| PHGE | [TV](https://www.tradingview.com/chart/?symbol=PHGE) | $0.82 | +10.5% | +22.5% | $1.00 | +35.3% | 6.7M | 26.8M | 0.3x | 7.4M | Biotechnology |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $1.33 | +64.8% | +8.3% | $1.44 | +78.4% | 2.9M | 3.3M | 0.9x | 4.6M | Miscellaneous Commercial Services |
+| CPSH | [TV](https://www.tradingview.com/chart/?symbol=CPSH) | $6.00 | +28.5% | +12.5% | $6.75 | +44.5% | 95K | 899K | 0.1x | 14.6M | Metal Fabrication |
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $3.45 | -3.4% | +5.1% | $3.63 | +1.6% | 71K | 175K | 0.4x | 1.3M | Miscellaneous Commercial Services |
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $2.68 | -3.6% | +10.8% | $2.97 | +6.8% | 68K | 1.1M | 0.1x | 3.8M | Integrated Oil |
+| RKDA | [TV](https://www.tradingview.com/chart/?symbol=RKDA) | $0.92 | +1.5% | +8.7% | $1.00 | +10.4% | 53K | 6.2M | 0.0x | 2.0M | Chemicals: Agricultural |
+
+**Changes from 22:00 scan:**
+- All 8 candidates **holding** at identical levels — no fading yet
+- ARTL: Still +64.3% AH at $1.96, 5.6x volume — strong candidate
+- PHGE: Holding +22.5% AH at $1.00 — consistent 
+
+⚠️ **22:30 scan is observation only.** Paper trade decisions at 23:00 CET scan (5:00 PM ET).
+
+**Top watch for 23:00:** ARTL (2.1M float, +64.3% AH, needs catalyst search), PHGE (7.4M float, +22.5% AH, biotech)
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
