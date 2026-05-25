@@ -126,6 +126,12 @@
 
 This is a valid "skip all" night — candidates exist but none meet catalyst+float requirements.
 
+## Scan 23:30 CET — MARKET CLOSED (Memorial Day)
+
+⚠️ **US markets closed for Memorial Day.** Scanner returned stale data from Friday May 22.
+
+No new candidates to evaluate. Resume scanning Tuesday May 26.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
