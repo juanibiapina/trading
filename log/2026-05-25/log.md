@@ -138,6 +138,12 @@ No new candidates to evaluate. Resume scanning Tuesday May 26.
 
 No trading activity today. Next live session: Tuesday May 26, 2026.
 
+## Scan 00:30 CET (6:30 PM ET) — MARKET CLOSED
+
+⚠️ **Memorial Day — US markets closed.** All scanner data is stale from Friday May 22.
+
+**Next trading session:** Tuesday May 26, 2026 (after-hours opens 22:00 CET / 4:00 PM ET).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
