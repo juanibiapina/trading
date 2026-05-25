@@ -132,6 +132,12 @@ This is a valid "skip all" night — candidates exist but none meet catalyst+flo
 
 No new candidates to evaluate. Resume scanning Tuesday May 26.
 
+## Scan 00:00 CET (6:00 PM ET) — MARKET CLOSED
+
+⚠️ **Confirmed: Markets closed for Memorial Day.** Scanner data still shows Friday May 22 prices.
+
+No trading activity today. Next live session: Tuesday May 26, 2026.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
