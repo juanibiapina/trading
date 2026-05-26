@@ -148,3 +148,121 @@ No trading activity today. Next live session: Tuesday May 26, 2026.
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+
+## Morning Evaluation — 10:21 CET
+
+**Note:** Today is Tuesday May 26, the first trading day after Memorial Day weekend. Friday May 22 was the last AH session. This evaluation covers the Friday AH → Tuesday PM period (3-day hold over the holiday weekend).
+
+### Today's Winner
+
+**PHGE** — Biotechnology (BiomX Inc.)
+- Catalyst: **None found** — no fresh news, only stale March 2026 security subsidiary announcement
+- Previous Close (Thu 5/21): $0.74
+- Friday regular close: $0.82 (+10.5%)
+- Friday AH peak: $1.16 (+57.0% from prev close) at 18:30 ET
+- Tuesday PM peak: $2.70 (+265.4% from prev close) at 08:10 ET
+- Current PM: $1.94 (+162.2%)
+- Hypothetical P&L (AH entry @ $1.00 → PM peak $2.70): **+170%**
+- Float: 7.4M | Market Cap: $8.3M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** ✓
+- PHGE appeared in all 3 evening scans (22:00, 22:30, 23:00 CET) at +22.5% AH ($1.00)
+- **Why we skipped it:** Float 7.4M (≥2M threshold) + no fresh catalyst + going concern warning in financials
+- Scanner gap: **None for detection** — the scanner found it. The issue was our SELECTION rules were too restrictive.
+
+**Lesson:** PHGE is now the second day in a row where it was detected but skipped. On May 20 it peaked +123%, now it's running +265%. Stocks that run multiple days (like AIIO's +878%) may not have traditional "A-tier" catalysts. Consider loosening float restriction for biotech/pharma with sustained AH momentum across multiple scans.
+
+### Secondary Movers (Not Friday AH, Pure PM News)
+
+**MNTS** — Aerospace & Defense (Momentus Inc.)
+- Friday AH: Flat (-2% to -5%, no movement)
+- Tuesday PM: +49.8% peak at $11.31, currently +35% at $9.95
+- Float: 9.8M | Market Cap: $73.7M
+- **This was NOT detectable Friday** — it's a pure weekend/Monday news play
+- Catalyst: Unknown (no news found)
+
+### Baseline Tracking
+
+- Days tracked: 21 (was 20 + 1 today)
+- Winners detected by scanner: 17/21 (**81.0%**) — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO, AIIO, HTCO, WOK, LNKS, AMST, PHGE (May 20), PHGE (May 26)
+- Winner selected for paper trade: N/A (skipped due to rules)
+- Target: >80% detection
+- Status: **BASELINE MET** ✓
+
+### Retrospective Scan Results
+
+**Friday AH (via price timeline reconstruction):**
+| Ticker | AH Peak | Peak Time | AH Close | Pattern |
+|--------|---------|-----------|----------|---------|
+| ARTL | $2.26 (+69.9%) | 17:10 ET | $1.96 (+47%) | Spike→fade |
+| PHGE | $1.16 (+57.0%) | 18:30 ET | $1.00 (+35%) | Build→fade |
+| QTEX | — | — | — | Held +20% AH |
+
+**Tuesday PM Scan (04:21 ET):**
+| Ticker | PM Chg | PM Price | PM Vol | Float | Industry |
+|--------|--------|----------|--------|-------|----------|
+| PHGE | +137.6% | $1.94 | 3.9M | 7.4M | Biotechnology |
+| ARTL | +70.6% | $2.03 | 775K | 2.1M | Pharmaceuticals |
+| QTEX | +59.6% | $1.16 | 6.5M | 41.9M | Medical Specialties |
+| MNTS | +34.8% | $9.95 | 341K | 9.8M | Aerospace & Defense |
+| VCIG | +23.3% | $1.64 | 248K | 4.6M | Miscellaneous |
+
+### Paper Trade P&L
+
+**No paper trades** — all candidates were skipped Friday due to float/catalyst rules.
+
+**Hypothetical tracking (if we had entered PHGE @ $1.00 Friday AH):**
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| PHGE | $1.00 | +35.0% | None | 23:00 CET | $2.70 | 08:10 ET | — | +€170 | +170% | 🔥 Missed |
+
+### Scanner Effectiveness
+
+- Evening scans ran: 4 times (22:00 - 00:30 CET)
+- Candidates found: 8 unique tickers
+- Retrospective matches: 2/2 (PHGE, ARTL both detected)
+- **Detection rate: 100%** for this session
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| MNTS | +32% PM (0% AH) | Did NOT move Friday AH — pure weekend news | YES but undetectable |
+
+**PHGE was NOT missed by scanner** — it was detected but skipped due to selection rules.
+
+### AH Mover Follow-Through (Friday AH → Tuesday PM)
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| ARTL | +69.9% | 17:10 ET | Spike→fade | +70.6% | +0.7% | +70.6% | ✅ Held gains |
+| PHGE | +57.0% | 18:30 ET | Build→fade | +162.2% | +105% | +162.2% | 🔥 EXPLODED |
+| QTEX | +20.4% | — | Hold | +59.6% | +39% | +59.6% | ✅ Continued |
+| VCIG | +8.3% | — | Hold | +23.3% | +15% | +23.3% | ✅ Continued |
+
+**Key insight:** All Friday AH movers showed PM follow-through after the 3-day weekend. PHGE especially benefited from the extended hold period (speculation built up over the holiday weekend?).
+
+### Price Charts
+
+```
+PHGE - 2-Day Price Timeline
+Previous Close: $0.74 | 2-Day Range: $0.63 - $2.70
+Current: $1.94 (+162%) | Peak: $2.70 (+265%) at 05-26 08:10 ET
+
+$   2.43 │                                                            
+         │                                                         █  
+         │                                                        █ ██
+         │                         ███████████████████  ██████████    
+$   0.63 │█████████████████████████                   ██              
+         └────────────────────────────────────────────────────────────
+           Fri AH                  Fri Late AH       |  Tue PM
+```
+
+### Notes
+
+1. **Scanner detection is working** — 81% detection rate exceeds 80% target
+2. **Selection rules may be too restrictive** — PHGE skipped twice (May 20, May 25) for float/catalyst, ran +123% and +265%
+3. **Holiday weekends create extended holds** — all AH movers followed through, some significantly (PHGE +105% additional from AH peak)
+4. **Consider revising float threshold for biotech** — 7.4M float still moves dramatically on low cap ($8.3M mcap)
+5. **MNTS shows pure PM news can't be caught** — scanner only catches AH movers, not pre-market news plays
