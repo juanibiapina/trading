@@ -256,6 +256,48 @@ Scanner: 0 hits (AH just opened)
 
 **Decision:** No new entries — VCIG position open. Monitor VCIG for stop at $3.32.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SNGX | [TV](https://www.tradingview.com/chart/?symbol=SNGX) | $0.51 | +31.5% | +58.9% | $0.82 | +108.9% | 59.3M | 8.3M | 7.2x | 14.8M | Pharmaceuticals: Major |
+| UZX | [TV](https://www.tradingview.com/chart/?symbol=UZX) | $0.77 | +72.7% | +14.0% | $0.88 | +96.8% | 14.0M | 34.0M | 0.4x | 2.4M | Packaged Software |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $2.90 | +118.0% | +20.3% | $3.49 | +162.4% | 10.8M | 11.1M | 1.0x | 4.6M | Misc Commercial Services |
+| FGL | [TV](https://www.tradingview.com/chart/?symbol=FGL) | $1.88 | +2.7% | +20.2% | $2.26 | +23.5% | 4.0M | 542K | 7.5x | 560K | Engineering & Construction |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.07 | +30.6% | +29.0% | $1.38 | +68.5% | 2.6M | 17.0M | 0.2x | 4.4M | Misc Commercial Services |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $1.65 | +26.9% | +9.1% | $1.80 | +38.5% | 564K | 16.9M | 0.0x | 1.9M | Personnel Services |
+| STEX | [TV](https://www.tradingview.com/chart/?symbol=STEX) | $1.41 | +10.2% | +6.4% | $1.50 | +17.2% | 115K | 2.0M | 0.1x | 67.1M | Investment Banks/Brokers |
+| IPWR | [TV](https://www.tradingview.com/chart/?symbol=IPWR) | $6.92 | +20.8% | +10.5% | $7.65 | +33.5% | 85K | 1.1M | 0.1x | 10.2M | Semiconductors |
+
+**AH Price Patterns (via check-prices.py):**
+
+| Ticker | AH Peak | Peak Time | Current | Pattern |
+|--------|---------|-----------|---------|--------|
+| SNGX | +116% | 17:55 | +115% | ✅ Holding near highs — strong builder |
+| UZX | +109% | 16:35 | +96% | ➖ Slight fade from peak |
+| VCIG | +212% | 16:20 | +162% | ❌ Clear fade — down 16% from AH peak |
+| NCPL | +75% | 17:50 | +61% | ⚠️ Fading from peak |
+| FGL | +49% | 16:50 | +31% | ⚠️ Fading, recovering slightly |
+
+**Position Update — VCIG:**
+- Entry: $3.91 at 23:00 CET
+- Current: $3.49 (-10.7% from entry)
+- Stop: $3.32 (-15%)
+- Pattern: Peaked at 16:20 (+212%), stabilizing around $3.48-$3.50 for last hour
+- Status: Position underwater but above stop. Holding per Grade B rules.
+
+**Candidate Updates:**
+
+1. **SNGX** — Strongest AH builder, holding near peak (+115% vs +116% peak at 17:55). Float 14.8M (high). No catalyst found. Cannot enter — VCIG position open.
+
+2. **UZX** — Float 2.4M (excellent), $8M buyback catalyst (Grade B). Slight fade (-13% from peak). Would be strong candidate if no position open.
+
+3. **FGL** — Tiny float 560K but peaked early (16:50), faded 35% from peak. Skip.
+
+4. **NCPL** — Float 4.4M, no catalyst. Peaked at 17:50, now fading. Skip.
+
+**Decision:** No new entries — VCIG position already open. Position holding above -15% stop.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
