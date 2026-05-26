@@ -160,6 +160,54 @@ Scanner: 0 hits (AH just opened)
 
 6. **MTVA** — Skip: Dead cat bounce, Day% -23%
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SNGX | [TV](https://www.tradingview.com/chart/?symbol=SNGX) | $0.51 | +31.5% | +40.4% | $0.72 | +84.6% | 37.4M | 6.0M | 6.3x | 14.8M | Pharmaceuticals |
+| UZX | [TV](https://www.tradingview.com/chart/?symbol=UZX) | $0.77 | +72.7% | +10.9% | $0.85 | +91.5% | 11.9M | 33.8M | 0.4x | 2.4M | Packaged Software |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $2.90 | +118.0% | +24.5% | $3.61 | +171.4% | 9.6M | 11.0M | 0.9x | 4.6M | Commercial Services |
+| FGL | [TV](https://www.tradingview.com/chart/?symbol=FGL) | $1.88 | +2.7% | +17.0% | $2.20 | +20.2% | 2.8M | 398K | 7.1x | 560K | Engineering |
+| IPWR | [TV](https://www.tradingview.com/chart/?symbol=IPWR) | $6.92 | +20.8% | +14.9% | $7.95 | +38.7% | 59K | 1.1M | 0.1x | 10.2M | Semiconductors |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $1.65 | +26.9% | +10.3% | $1.82 | +40.0% | 487K | 16.8M | 0.0x | 1.9M | Personnel Services |
+| KIDZ | [TV](https://www.tradingview.com/chart/?symbol=KIDZ) | $0.51 | +10.3% | +6.9% | $0.54 | +17.9% | 4.0M | 19.2M | 0.2x | 5.8M | Internet Software |
+| SEGG | [TV](https://www.tradingview.com/chart/?symbol=SEGG) | $1.40 | -26.7% | +5.0% | $1.47 | -23.0% | 108K | 2.6M | 0.0x | 10.8M | Entertainment |
+
+**AH Price Patterns (via check-prices.py):**
+
+| Ticker | AH Peak | Peak Time | Current | Pattern |
+|--------|---------|-----------|---------|--------|
+| VCIG | +212% | 16:20 | +171% | ⚠️ Faded from peak — down 13% from AH high |
+| SNGX | +85% | 17:10 | +82% | ✅ Building — recovered from +41% dip at 16:15 |
+| UZX | +109% | 16:35 | +95% | ➖ Slight fade from peak |
+| FGL | +49% | 16:50 | +25% | ❌ Clear fade — down 24% from peak |
+| IPWR | +39% | 17:05 | +37% | ✅ Holding near highs |
+| BIYA | +41% | 16:35 | +39% | ✅ Holding steady |
+
+**Position Update:**
+- **VCIG** — Entered at $3.91 (23:00), now at $3.60 (-8% from entry). Still +171% from prev close but faded from +212% AH peak. Position underwater but holding per Grade B rules (stop at -15% = $3.32).
+
+**New Candidate Evaluations:**
+
+1. **SNGX** — Interesting recovery pattern (dipped to +41% at 16:15, back to +82% at 17:10). However:
+   - Float 14.8M (above ideal 10M)
+   - No catalyst found (3 searches: general news, press releases, earnings)
+   - Already have open VCIG position → cannot enter per "one position at a time" rule
+
+2. **IPWR** — Holding near highs (+37% vs +39% peak), but:
+   - Float 10.2M (borderline)
+   - Catalyst search found dilution: registered direct offering May 14 (Grade D)
+   - Lock-up expiration May 25 — typically bearish
+   - Cannot enter — position open
+
+3. **FGL** — Tiny float 560K but clear fade pattern (down 24% from AH peak). Skip.
+
+4. **UZX** — Good float 2.4M, $8M buyback catalyst (Grade B), but slight fade. Cannot enter — position open.
+
+5. **BIYA/KIDZ/SEGG** — No compelling setups (dead cat, modest AH%, low volume ratios).
+
+**Decision:** No new entries — VCIG position already open.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
