@@ -35,7 +35,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Session timing follows America/New_York market hours, including DST
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: float <50M, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
-- **No-catalyst exception:** ultra-low float (<2M) stocks can be entered without catalyst; higher float (≥2M) requires catalyst *unless* BUILD pattern (see May 21 change)
+- **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade; at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading
@@ -52,6 +52,31 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-05-26 — Remove No-Catalyst Float-Based Skip Rule (Contradiction Fix)
+
+**Context:** The post-market prompt contained a direct contradiction:
+- Learning phase default (line 73): "Document concerns but enter anyway. A paper trade with noted concerns generates data; a skip generates nothing."
+- No-catalyst handling (lines 76-77): "Float ≥2M: skip"
+
+These rules conflicted. The May 15 change added float-based skipping based on 2 data points. The May 21 change acknowledged the conflict but added an exception instead of fixing it. Result: PHGE was skipped twice (May 20: +19.3%, May 25: +170%) despite the learning phase philosophy saying "enter anyway."
+
+Recent no-catalyst outcomes:
+- OCG 1.9M float: +14.9% ✅
+- LNKS 633K float: +61% ✅
+- PHGE 5.9M float: +19.3% 🔥 MISSED (skipped due to float ≥2M)
+- PHGE 7.4M float: +170% 🔥 MISSED (skipped due to float ≥2M)
+
+**Evaluation of previous changes:**
+- 2026-05-22 High-Change Fallback: **Insufficient data.** No data gap winners since the change.
+- 2026-05-21 BUILD Pattern Exception: **Failed — didn't solve root cause.** Added exception to skip rule instead of removing the skip. PHGE still got skipped.
+- 2026-05-15 Ultra-Low Float No-Catalyst Exception: **Superseded.** The float-based logic is being removed entirely.
+- 2026-05-14 AH Peak Timing Guidance: **Confirmed (7 data points).** Early-peak-fading pattern 0/7.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Removed the float-based no-catalyst skip rule entirely. Replaced with simple "enter with concern noted" for all no-catalyst stocks. Float is tracked for pattern analysis but is not a filter during learning phase. This aligns with the learning phase philosophy.
+   - Why: The skip rule directly contradicted "enter anyway, document concerns." Adding exceptions (May 21) didn't fix the contradiction, just narrowed when it applied. The data shows no-catalyst stocks winning across all float ranges.
+   - Hypothesis: Next no-catalyst candidate (any float) will be entered with concern noted rather than skipped. Measurable: no more skips citing "no catalyst + float ≥2M" as the reason.
 
 ### 2026-05-22 — Add High-Change Fallback for AH Data Gaps
 
