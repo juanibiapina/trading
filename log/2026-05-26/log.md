@@ -46,6 +46,24 @@ Portfolio is flat. Ready for new entries from evening scan.
 
 **Next action:** Re-scan at 22:00+ CET to see which candidates sustain momentum into AH.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+⚠️ **Observation scan only — do NOT enter paper trades at 22:00 or 22:30.** Paper trades begin at 23:00+ CET.
+
+Scanner: 0 hits (AH just opened)
+
+**Regular session watchlist status at close:**
+
+| Ticker | Chart | Close | Day% | Float | Note |
+|--------|-------|-------|------|-------|------|
+| YMAT | [TV](https://www.tradingview.com/chart/?symbol=YMAT) | $1.38 | +203% | 2.5M | Closed higher than 21:30 scan |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $2.90 | +118% | 4.6M | Steady |
+| PHGE | [TV](https://www.tradingview.com/chart/?symbol=PHGE) | $1.62 | +98% | 7.4M | Biotech |
+| CODX | [TV](https://www.tradingview.com/chart/?symbol=CODX) | $9.11 | +80% | 3.4M | Biotech |
+| ARTL | [TV](https://www.tradingview.com/chart/?symbol=ARTL) | $1.71 | +44% | 2.1M | Pharma |
+
+**AH status:** Too early — AH just opened. Re-scan at 22:30+ CET to check for AH continuation.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
