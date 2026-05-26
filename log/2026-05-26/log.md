@@ -97,7 +97,71 @@ Scanner: 0 hits (AH just opened)
 
 **Next action:** Re-scan at 23:00 CET. VCIG is the top candidate if it sustains momentum.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Paper trades can be entered starting this scan.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $2.90 | +118.0% | +34.8% | $3.91 | +194.0% | 7.5M | 10.7M | 0.7x | 4.6M | Misc Commercial Services |
+| SNGX | [TV](https://www.tradingview.com/chart/?symbol=SNGX) | $0.51 | +31.5% | +22.9% | $0.63 | +61.7% | 26.3M | 4.8M | 5.5x | 14.8M | Pharmaceuticals: Major |
+| UZX | [TV](https://www.tradingview.com/chart/?symbol=UZX) | $0.77 | +72.7% | +18.8% | $0.91 | +105.1% | 9.4M | 33.5M | 0.3x | 2.4M | Packaged Software |
+| FGL | [TV](https://www.tradingview.com/chart/?symbol=FGL) | $1.88 | +2.7% | +19.7% | $2.25 | +23.0% | 322K | 83K | 3.9x | 560K | Engineering & Construction |
+| KIDZ | [TV](https://www.tradingview.com/chart/?symbol=KIDZ) | $0.51 | +10.3% | +12.9% | $0.57 | +24.5% | 3.4M | 19.2M | 0.2x | 5.8M | Internet Software/Services |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $1.65 | +26.9% | +7.9% | $1.78 | +36.9% | 337K | 16.8M | 0.0x | 1.9M | Personnel Services |
+| MTVA | [TV](https://www.tradingview.com/chart/?symbol=MTVA) | $2.97 | -22.9% | +5.1% | $3.12 | -19.0% | 57K | 19.7M | 0.0x | 3.3M | Biotechnology |
+
+**AH Price Patterns (via check-prices.py):**
+
+| Ticker | AH Peak | Peak Time | Current | Pattern |
+|--------|---------|-----------|---------|--------|
+| VCIG | +212% | 16:20 | +205% | ✅ Holding near highs |
+| UZX | +109% | 16:35 | +107% | ✅ Building/holding |
+| BIYA | +41% | 16:35 | +36% | ➖ Slight fade |
+| SNGX | +81% | 16:10 | +65% | ⚠️ Peaked early, faded |
+| FGL | +49% | 16:50 | +31% | ⚠️ Fading from peak |
+| KIDZ | +25% | 16:05 | +20% | ➖ Choppy, modest |
+| MTVA | -18% | - | -18% | ❌ Dead cat bounce |
+
+**Catalyst Search Results:**
+
+- **VCIG** ✅ — CEO bought $900K in shares (May 26), "Gold Strategy" emerging. Strong insider confidence signal. Grade B.
+- **UZX** ✅ — $8M share repurchase program announced May 26 at 8:30 AM ET. Grade B.
+- **SNGX** ❌ — No catalyst found after 2 searches. Float 14.8M is high. Skip.
+- **FGL/KIDZ/BIYA** — Not searched (fading patterns or low AH%).
+- **MTVA** — Skip: dead cat bounce (Day -23%).
+
+**Candidate Evaluations:**
+
+1. **VCIG** ⭐ — ENTER
+   - Float 4.6M ✅
+   - AH change +35% in 3rd scan (22:00, 22:30, 23:00) ✅
+   - Day% +118% (above -15%) ✅
+   - Catalyst: CEO $900K insider buy → Grade B
+   - Pattern: Holding near AH highs (+205% vs +212% peak)
+   - **Decision: Paper trade**
+
+2. **UZX** — Strong backup
+   - Float 2.4M ✅ (lowest)
+   - AH change +19% across multiple scans ✅
+   - Day% +73% ✅
+   - Catalyst: $8M buyback → Grade B
+   - Pattern: Building, near highs
+   - Skip: VCIG has stronger catalyst (CEO personal buy > corporate buyback)
+
+3. **SNGX** — Skip
+   - Float 14.8M (high)
+   - No catalyst found
+   - Peaked early at 16:10, faded 16% from peak
+
+4. **FGL** — Skip: Fading from early AH peak (down 18% from 16:50 peak)
+
+5. **KIDZ/BIYA** — Skip: AH moves too modest (<13%)
+
+6. **MTVA** — Skip: Dead cat bounce, Day% -23%
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|----------------|----------------|--------|
+| VCIG | $3.91 | 23:00 CET | 25 | B | CEO $900K insider buy; holding near AH highs (+205%); float 4.6M |
