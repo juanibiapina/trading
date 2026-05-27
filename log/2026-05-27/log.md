@@ -134,6 +134,34 @@ No candidates found.
 - MASK, BIYA: Dead-cat bounce patterns (negative Day%).
 - JBDI, ARBE, WFF, SCKT, ZVIA, DGNX: AH% below threshold or float too high.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.85 | -5.3% | +121.4% | $6.31 | +109.6% | 8.9M | 6.1M | 1.5x | 475K | Pharmaceuticals |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.38 | -8.0% | +29.0% | $1.78 | +18.7% | 6.1M | 4.3M | 1.4x | 1.3M | Electronic Production |
+| SNGX | [TV](https://www.tradingview.com/chart/?symbol=SNGX) | $0.87 | +68.8% | +6.8% | $0.92 | +80.3% | 4.6M | 34.8M | 0.1x | 14.8M | Pharmaceuticals |
+| SUUN | [TV](https://www.tradingview.com/chart/?symbol=SUUN) | $1.04 | +32.7% | +6.7% | $1.11 | +41.7% | 2.4M | 1.9M | 1.3x | 42.6M | Alternative Power |
+| SAGT | [TV](https://www.tradingview.com/chart/?symbol=SAGT) | $1.07 | +5.9% | +5.6% | $1.13 | +11.9% | 205K | 912K | 0.2x | 580K | Packaged Software |
+
+**Position update — ATPC:**
+- Entry: $7.23 at 23:00 CET
+- Current: $6.31 (-12.7% from entry)
+- AH peak: $7.25 at 17:10 ET (+140.9%), now at $6.08-6.31
+- Pattern: SPIKE→FADE confirmed — peaked early, now ~30% below peak
+- **Lesson developing:** Entry at $7.23 was near the absolute peak ($7.25). SPIKE→FADE pattern correctly predicted this would fade.
+
+**Returning candidates:**
+- **LNKS**: +29% now, was +58% at 23:00, peaked +51% at 16:40 ET. Still fading. SPIKE→FADE confirmed.
+- **SAGT**: +5.6% now, was +12.1% at 23:30. Had BUILD pattern but now below 10% threshold. Faded.
+
+**New observations:**
+- **SNGX** (+68.8% Day%, +6.8% AH): Float 14.8M. AH shows BUILD pattern (held $0.84-0.86 for first hour, then built to $0.96 peak at 17:30, holding $0.90). AH% below 10% threshold but pattern is favorable. Day run was pharma sector. Skip: AH% below threshold.
+- **SUUN**: Float 42.6M too high.
+
+**Summary:**
+No new entries. ATPC position showing the SPIKE→FADE pattern playing out exactly as historical data predicted (0/7 for PM continuation). This may be a useful learning trade demonstrating why BUILD patterns should be preferred.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
