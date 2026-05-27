@@ -36,3 +36,12 @@
 - Peak was +21.5%, not enough to trigger trail stop (needs >+30%)
 - Better to take small loss than risk overnight gap down
 - CEO insider buy gave initial momentum but didn't sustain past day 1
+
+## Scan 22:02 CET (4:02 PM ET)
+
+No candidates found.
+
+## Paper Trades
+
+| Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
+|--------|-------------|------------|-----------------|--------|
