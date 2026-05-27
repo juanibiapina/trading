@@ -6,9 +6,10 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-05-20 | PHGE | None | +123% ($0.83) | — | $2.70 | 🚀 Day 4 - EXPLODING (+265% from orig close) |
-| 2026-05-21 | GOVX | A — Ebola outbreak (biodefense) | +76.2% ($3.93) | — | $4.05 | Day 3 - +11% PM |
-| 2026-05-26 | MNTS | Unknown (PM news) | N/A (no AH) | — | $9.95 (+32%) | 🆕 PM-only mover (undetectable) |
+| 2026-05-20 | PHGE | None | +123% ($0.83) | — | $1.40 | Day 5 - Faded from $2.70 peak |
+| 2026-05-21 | GOVX | A — Ebola outbreak (biodefense) | +76.2% ($3.93) | — | $3.27 | Day 4 - Fading (-10% from yesterday) |
+| 2026-05-26 | MNTS | Unknown (PM news) | N/A (no AH) | — | $21.35 (+189%) | 🚀 Day 2 - EXPLODING! |
+| 2026-05-27 | SNGX | None | +207% ($1.20) | — | $1.14 | 🆕 Today's winner (Build pattern)
 
 ## Historical Winners (with multi-day outcome)
 

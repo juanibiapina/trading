@@ -303,3 +303,143 @@ Scanner: 0 hits (AH just opened)
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|----------------|----------------|--------|
 | VCIG | $3.91 | 23:00 CET | 25 | B | CEO $900K insider buy; holding near AH highs (+205%); float 4.6M |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**SNGX** — Pharmaceuticals (Soligenix, Inc.)
+- Catalyst: **None found** — no news, PR, or filings found despite multiple searches
+- Previous Close: $0.39
+- AH last night: $0.92 (+135.8%) at 00:45 CET — steady build throughout AH
+- Premarket now: $1.14 (+192%)
+- PM Peak: $1.20 (+207.6%) at 10:00 CET (04:00 ET)
+- Hypothetical P&L (AH entry $0.69 at 23:00 → PM peak $1.20): **+74%**
+- Float: 14.8M | Market Cap: $7.6M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — first appeared in 22:30 CET scan at +81%
+- What it looked like at 23:00 CET: +62% AH ($0.63), 26.3M volume (5.5x avg)
+- Why we didn't act:
+  1. Float 14.8M was above our "ideal" 10M threshold
+  2. No catalyst found after 3 searches (general news, PR, earnings)
+  3. At 23:00 we noted it "peaked early at 16:10, faded" (but it recovered!)
+  4. We chose VCIG instead which had CEO insider buy catalyst
+- Scanner gap: **Float threshold too restrictive** — SNGX at 14.8M was disqualified but had the strongest AH→PM follow-through. May need to relax float filter or weight volume ratio higher.
+
+**AH Trajectory:** Build — started +46% at 16:00 ET, climbed steadily to +135% by 19:00 ET
+
+### Baseline Tracking
+
+- Days tracked: 22 (was 21 + 1 today)
+- Winners detected by scanner: 18/22 (**81.8%**) — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO, AIIO, HTCO, WOK, LNKS, AMST, PHGE (May 20), PHGE (May 26), SNGX
+- Winner selected for paper trade: 0/1 — **No, selected VCIG instead**
+- Target: >80% detection
+- Status: **BASELINE MET** ✅ (detection at 81.8%)
+
+**Note:** Detection rate is solid (81.8%). The issue today was **selection** — we detected SNGX but deprioritized it due to float and lack of catalyst, choosing VCIG instead. This suggests:
+1. Float filter may be too strict (SNGX at 14.8M was winner)
+2. Catalyst requirement may be misleading (no-catalyst SNGX beat catalyst-backed VCIG)
+3. AH trajectory pattern (Build vs Fade) may be more predictive than catalyst
+
+### Retrospective Scan Results
+
+**Premarket scan (04:20 ET):**
+
+| Ticker | Close | PM Chg% | PM Price | PM Vol | Float | Industry |
+|--------|-------|---------|----------|--------|-------|----------|
+| SNGX | $0.51 | +132.0% | $1.19 | 7.6M | 14.8M | Pharmaceuticals |
+| NNVC | $1.51 | +47.7% | $2.23 | 1.1M | 21.0M | Pharmaceuticals |
+| FGL | $1.88 | +41.5% | $2.66 | 220K | 560K | Engineering |
+| NCPL | $1.07 | +19.6% | $1.28 | 254K | 4.4M | Commercial Services |
+| VCIG | $2.90 | +6.9% | $3.10 | 159K | 4.6M | Commercial Services |
+
+**AH reconstruction (via check-prices.py --ah-history):**
+- SNGX: Steady build from +46% (16:00) to +135% (19:00) — classic builder pattern
+- FGL: Spike→fade — peaked +48.6% at 16:50, faded to +30% by close of AH
+- NNVC: PM-only mover — AH was flat/down (-6% to -8%), then gapped up PM (+47%)
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Current | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|---------|-----|-------|--------|
+| VCIG | $3.91 | +194.0% | B — CEO $900K insider buy | 23:00 CET | $3.39 | 04:15 ET | $3.38 | -€12.38 | -13.6% | ⚠️ Underwater |
+
+**PM Peak** = $3.39 at 04:15 ET (+154.9% from prev close)
+**Entry Total%** = +194% from prev close $1.33 (already very extended at entry)
+
+**Total Paper P&L: -€12.38**
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 times (21:30 - 00:30 CET)
+- Candidates found: 13 unique tickers
+- Winner detected: **YES** — SNGX appeared in 5 of 6 scans (22:30, 23:00, 23:30, 00:00, 00:30)
+- Winner selected: **NO** — chose VCIG instead
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| SNGX | +135% AH → +207% PM | Float too high (14.8M), no catalyst, chose VCIG | **Yes — +74% hypothetical** |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| VCIG | +212% | 16:20 | Spike→fade | +154% | -58pp | +154% | ⚠️ Faded from AH peak |
+| SNGX | +135% | 18:45 | Build | +192% | +57pp | +192% | ✅ PM continuation |
+| FGL | +49% | 16:50 | Spike→fade | +41% | -8pp | +41% | ➖ Holding |
+| UZX | +109% | 16:35 | Spike→hold | — | — | — | No PM data |
+
+**Key Insight:** SNGX had **Build** pattern (increasing across scans), VCIG had **Spike→fade** pattern. The builder won, the fader lost. This pattern correlation deserves more tracking.
+
+### Price Charts
+
+```
+SNGX - 2-Day Price Timeline
+========================================================================
+Previous Close: $0.39
+2-Day Range: $0.37 - $1.30
+Current: $1.14 (+192% from prev close)
+Peak: $1.20 (+207.6%) at 05-27 04:00 ET
+
+Session Timeline (key points):
+  [AH]  05-26 16:00 ET: $0.57 (+46%)    ← AH start
+  [AH]  05-26 17:55 ET: $0.84 (+116%)   ← Building
+  [AH]  05-26 18:45 ET: $0.92 (+135%)   ← AH peak
+  [OVN] 05-26 23:30 ET: $0.92 (+135%)   ← Holding overnight
+  [PM]  05-27 04:00 ET: $1.20 (+207%)   ← PM peak
+  [PM]  05-27 04:20 ET: $1.14 (+192%)   ← Current
+```
+
+```
+VCIG - 2-Day Price Timeline
+========================================================================
+Previous Close: $1.33
+2-Day Range: $1.43 - $4.75
+Current: $3.38 (+154% from prev close)
+Peak: $4.75 (+257%) at 05-26 16:25 ET
+
+Session Timeline (key points):
+  [AH]  05-26 16:20 ET: $4.15 (+212%)   ← AH peak (EARLY)
+  [AH]  05-26 17:30 ET: $3.50 (+163%)   ← Fading
+  [OVN] 05-26 23:00 ET: $3.91 (+194%)   ← Our entry
+  [OVN] 05-26 23:55 ET: $3.10 (+133%)   ← Late AH drop
+  [PM]  05-27 04:15 ET: $3.39 (+155%)   ← PM peak
+  [PM]  05-27 04:20 ET: $3.38 (+154%)   ← Current
+```
+
+### Notes
+
+**Learning from today:**
+
+1. **AH Trajectory > Catalyst** — SNGX (no catalyst, Build pattern) beat VCIG (strong catalyst, Spike→fade pattern). The "where is it going" matters more than "why is it moving."
+
+2. **Float filter needs review** — SNGX at 14.8M float was excluded but won. Consider:
+   - Raising float threshold to 20M, OR
+   - Using volume ratio as primary filter (SNGX had 5.5x-7.2x volume ratio vs VCIG 0.7x-1.0x)
+
+3. **Entry price too extended** — VCIG entered at +194% from prev close. Our observation "Chasing extended stocks is risky" applies. SNGX entry would have been +61% at 23:00 — much less extended.
+
+4. **Tracking needed:** Start logging AH trajectory (Build/Spike→fade/Spike→hold) and correlating with PM follow-through.
