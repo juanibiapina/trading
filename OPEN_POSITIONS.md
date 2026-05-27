@@ -6,9 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|
-| — | — | — | — | — | — | — | — | — |
-
-*No open positions*
+| ATPC | 2026-05-27 | $7.23 | 13 | $94.00 | None | No catalyst found | Exit premarket | First opportunity |
 
 ## Position Rules
 
