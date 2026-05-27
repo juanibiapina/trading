@@ -6,7 +6,10 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|
-| VCIG | 2026-05-26 | $3.91 | 25 | $97.75 | B | CEO $900K insider buy | $3.32 (-15%) | Exit in premarket |
+| VCIG | 2026-05-26 | $3.91 | 25 | $97.75 | B | CEO $900K insider buy | $3.32 (-15%) | Day 2 exit or trail if >+30% |
+
+### Position Notes (2026-05-27 10:30 CET)
+- **VCIG**: Current $3.55 (-9.2%), Peak $4.75 (+21.5%). Holding - above hard stop, day 1 of 2.
 
 ## Position Rules
 
