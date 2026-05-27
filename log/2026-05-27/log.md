@@ -162,6 +162,41 @@ No candidates found.
 **Summary:**
 No new entries. ATPC position showing the SPIKE→FADE pattern playing out exactly as historical data predicted (0/7 for PM continuation). This may be a useful learning trade demonstrating why BUILD patterns should be preferred.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.85 | -5.3% | +100.4% | $5.71 | +89.7% | 9.4M | 6.1M | 1.5x | 475K | Pharmaceuticals |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.38 | -8.0% | +27.5% | $1.76 | +17.3% | 6.4M | 4.3M | 1.5x | 1.3M | Electronic Production |
+| SNGX | [TV](https://www.tradingview.com/chart/?symbol=SNGX) | $0.87 | +68.8% | +5.4% | $0.91 | +77.9% | 5.7M | 35.0M | 0.2x | 14.8M | Pharmaceuticals |
+| SUUN | [TV](https://www.tradingview.com/chart/?symbol=SUUN) | $1.04 | +32.7% | +12.4% | $1.17 | +49.2% | 2.7M | 1.9M | 1.4x | 42.6M | Alternative Power |
+| WFF | [TV](https://www.tradingview.com/chart/?symbol=WFF) | $2.01 | +17.5% | +7.1% | $2.15 | +25.9% | 291K | 57K | 5.1x | 1.6M | Textiles |
+| SAGT | [TV](https://www.tradingview.com/chart/?symbol=SAGT) | $1.07 | +5.9% | +8.4% | $1.16 | +14.9% | 216K | 913K | 0.2x | 580K | Packaged Software |
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $1.38 | -20.2% | +12.6% | $1.55 | -10.2% | 170K | 251K | 0.7x | 822K | IT Services |
+
+**Position update — ATPC:**
+- Entry: $7.23 at 23:00 CET
+- Current: $5.71 (-21.0% from entry)
+- AH peak: $7.25 at 17:10 ET (+140.9%), now at $5.71-5.85
+- Pattern: SPIKE→FADE continues — peaked early (17:10 ET), fading steadily through AH session
+- **Lesson developing:** Entry near absolute peak confirmed. SPIKE→FADE pattern (0/7 historical) correctly predicted this fade. The 23:30 scan noted SAGT's BUILD pattern would have been better.
+
+**Returning candidates:**
+- **LNKS**: +27.5% now, was +45.3% at 23:30, peaked +50.7% at 16:40 ET. SPIKE→FADE confirmed, still fading.
+- **SNGX**: +5.4% AH now, BUILD pattern (holding $0.91-0.93 near day's high of $0.96). AH% below 10% threshold but pattern favorable. Float 14.8M slightly elevated.
+- **SAGT**: +8.4% AH now, was +12.1% at 23:30. Had BUILD pattern initially but faded below 10% threshold.
+- **SUUN**: +12.4% AH, BUILD then HOLD pattern (holding $1.17-1.18 near peak $1.21). Skip: Float 42.6M too high.
+- **WFF**: +7.1% AH. Skip: Below 10% threshold despite 5.1x volume ratio.
+- **MASK**: +12.6% AH. Skip: Day% -20.2% is dead-cat bounce pattern.
+
+**No new entries:** Already have ATPC position. No other candidates meet criteria (>10% AH in 2+ scans, float <50M, Day% >-15%) except SUUN which has float too high.
+
+**Pattern observation:** Tonight's AH session clearly demonstrates SPIKE→FADE vs BUILD patterns:
+- ATPC/LNKS: Peaked early (16:35-16:40 ET), fading steadily = SPIKE→FADE
+- SNGX/SUUN: Started flat, built gradually, holding near highs = BUILD pattern
+
+BUILD pattern stocks (SNGX, SUUN) are holding better but either have float issues (SUUN 42.6M) or below 10% AH threshold (SNGX +5.4%).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
