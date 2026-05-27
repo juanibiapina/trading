@@ -41,6 +41,25 @@
 
 No candidates found.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.85 | -5.3% | +61.1% | $4.59 | +52.5% | 1.3M | 5.1M | 0.3x | 475K | Pharmaceuticals |
+| IFBD | [TV](https://www.tradingview.com/chart/?symbol=IFBD) | $1.05 | +18.9% | +12.2% | $1.18 | +33.4% | 870K | 102K | 8.5x | 8.2M | Packaged Software |
+| OPTU | [TV](https://www.tradingview.com/chart/?symbol=OPTU) | $0.62 | -3.4% | +9.5% | $0.68 | +5.8% | 454K | 4.6M | 0.1x | 260.8M | Major Telecom |
+| NCT | [TV](https://www.tradingview.com/chart/?symbol=NCT) | $2.45 | -9.3% | +14.3% | $2.80 | +3.7% | 112K | 39K | 2.9x | 321K | Marine Shipping |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.38 | -8.0% | +15.9% | $1.60 | +6.7% | 73K | 3.6M | 0.0x | 1.3M | Electronic Production |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $1.18 | -28.5% | +5.9% | $1.25 | -24.2% | 60K | 17.2M | 0.0x | 1.9M | Personnel Services |
+
+**Observation notes (22:30 scan — no entries until 23:00):**
+- **ATPC** (+61.1% AH): Ultra-low float (475K), pharma sector — strongest mover. Watch for catalyst.
+- **IFBD** (+12.2% AH): 8.5x volume ratio, but this ticker lost previously on no-catalyst fade. Re-evaluate at 23:00.
+- **NCT** (+14.3% AH): Very low float (321K), marine shipping. Volume 2.9x avg.
+- **LNKS** (+15.9% AH): Low float (1.3M), but low volume ratio (0.0x).
+- **BIYA**: Skip — Day% -28.5% is dead-cat bounce pattern.
+- **OPTU**: Skip — Float 260.8M too high.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
