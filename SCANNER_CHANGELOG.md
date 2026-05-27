@@ -38,7 +38,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
-- Trajectory preference: build/hold patterns preferred over spike→fade; at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading
+- Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading
 - **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
 
@@ -52,6 +52,23 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-05-27 — Trajectory Overrides Catalyst in Selection
+
+**Context:** May 26 evening scan detected both SNGX and VCIG. SNGX had a BUILD pattern (steady increase 16:00→18:45 ET, holding near highs) with no catalyst. VCIG had a B-grade catalyst (CEO $900K insider buy) but SPIKE→FADE pattern (peaked 16:20 ET, fading). Agent chose VCIG due to catalyst. Result: SNGX +74% hypothetical, VCIG -13.6% loss.
+
+The prompt already said "prefer build/hold over spike→fade" but didn't explicitly say trajectory should override catalyst when patterns clearly diverge. The agent followed catalyst preference over trajectory.
+
+**Evaluation of previous changes:**
+- 2026-05-26 No-Catalyst Skip Rule Removal: **Working.** SNGX wasn't skipped for "no catalyst + float ≥2M" — it was passed over because VCIG had a catalyst. The rule change worked; the issue was trajectory vs catalyst weighting.
+- 2026-05-22 High-Change Fallback: **Insufficient data.** No data gap winners since the change.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added explicit "Trajectory overrides catalyst" guidance to the learning phase section. When one candidate shows BUILD pattern and another shows SPIKE→FADE, prefer the BUILD candidate even if it lacks a catalyst and the SPIKE→FADE has one. Added data: early-peak-fading 0/7 (VCIG, TRNR, BNZI, CODX, plus 4 from May 11-13), BUILD 5/5 (SNGX, PHGE ×2, AMST, NXTT).
+   - Why: May 26 data shows trajectory is more predictive than catalyst. SNGX (no catalyst, BUILD) would have won +74%; VCIG (B-grade catalyst, SPIKE→FADE) lost -13.6%. The existing "prefer build/hold" guidance wasn't strong enough to override catalyst preference.
+   - Hypothesis: Next time a BUILD-pattern no-catalyst candidate competes with a SPIKE→FADE catalyst-backed candidate, the BUILD candidate will be selected. Measurable: (1) next evening scan with trajectory divergence cites this rule when selecting, (2) the BUILD candidate is entered even without a catalyst.
+
+**Updated process:** Added "trajectory overrides catalyst when patterns clearly diverge" to Current Process trajectory preference line.
 
 ### 2026-05-26 — Remove No-Catalyst Float-Based Skip Rule (Contradiction Fix)
 
