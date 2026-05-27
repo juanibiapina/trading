@@ -93,6 +93,47 @@ No candidates found.
 - IFBD (was +12.2% at 22:30) — likely faded below scanner thresholds
 - NCT (was +14.3% at 22:30) — likely faded below scanner thresholds
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.85 | -5.3% | +152.6% | $7.20 | +139.2% | 8.1M | 6.0M | 1.4x | 475K | Pharmaceuticals |
+| HOTH | [TV](https://www.tradingview.com/chart/?symbol=HOTH) | $1.36 | +92.0% | +14.0% | $1.55 | +118.8% | 13.8M | 16.4M | 0.8x | 18.6M | Pharmaceuticals |
+| NTCL | [TV](https://www.tradingview.com/chart/?symbol=NTCL) | $0.56 | +110.1% | +16.8% | $0.65 | +145.5% | 5.9M | 9.6M | 0.6x | 11.8M | Packaged Software |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.38 | -8.0% | +45.3% | $2.00 | +33.7% | 5.2M | 4.2M | 1.2x | 1.3M | Electronic Production |
+| SAGT | [TV](https://www.tradingview.com/chart/?symbol=SAGT) | $1.07 | +5.9% | +12.1% | $1.20 | +18.8% | 165K | 908K | 0.2x | 580K | Packaged Software |
+| SUUN | [TV](https://www.tradingview.com/chart/?symbol=SUUN) | $1.04 | +32.7% | +10.6% | $1.15 | +46.8% | 861K | 1.7M | 0.5x | 42.6M | Alternative Power |
+
+**Position update:**
+- **ATPC** (in @ $7.23): Now $6.42 (-11.2% from entry). Peaked at $7.25 at 17:10 ET, now fading. SPIKE→FADE pattern confirmed.
+
+**New candidates:**
+
+**HOTH** (+14.0% AH, 18.6M float): Pharma, +92% day run.
+- Catalyst search: No specific catalyst found. Has Nasdaq compliance warning (180 days to regain $1.00 compliance as of Oct 27). Today's run may be compliance-related momentum.
+- Pattern: Mixed — peaked $1.66 (+134%) at 16:55, now $1.46 (+106%), slight fade.
+- Float 18.6M above ideal 10M.
+- Skip: No clear catalyst, float elevated.
+
+**NTCL** (+16.8% AH, 11.8M float): Packaged software, +110% day run.
+- Catalyst search: No catalyst found.
+- Pattern: BUILD then spike — ran from $0.50 to $0.72 peak at 17:05, now $0.62.
+- Float 11.8M slightly above ideal.
+- Skip: Already have position; no new entry needed.
+
+**SAGT** (+12.1% AH, 580K float): Packaged software, ultra-low float.
+- Catalyst search: No catalyst found.
+- Pattern: **BUILD** — started $1.07, steadily climbing to $1.20, holding $1.20 for last 25 minutes.
+- ⚠️ **Learning note:** SAGT shows BUILD pattern (5/5 win rate) vs ATPC's SPIKE→FADE (0/7 win rate). Per trajectory rules, SAGT would have been the better entry choice. Already have position so no change, but important pattern observation.
+
+**Returning candidates:**
+- **LNKS**: Continuing to fade — was +58% at 23:00, now +45.3%. Peaked at $2.26, now $1.81. SPIKE→FADE confirmed.
+
+**Skipped:**
+- SUUN: Float 42.6M too high.
+- MASK, BIYA: Dead-cat bounce patterns (negative Day%).
+- JBDI, ARBE, WFF, SCKT, ZVIA, DGNX: AH% below threshold or float too high.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
