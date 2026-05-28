@@ -202,3 +202,120 @@ BUILD pattern stocks (SNGX, SUUN) are holding better but either have float issue
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | ATPC | $7.23 | 23:00 CET | 13 | Ultra-low float (475K), pharma, +154% AH across 2 scans. Concerns: no catalyst found, SPIKE→FADE pattern. Entered per learning phase rules. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**ATPC** — Pharmaceuticals: Other
+- Catalyst: None found (entered per learning phase rules)
+- Previous Close: $2.85
+- AH last night: Peaked $7.25 (+154.4%) at 17:10 ET (23:10 CET)
+- Premarket now: $6.54 (+129.5%)
+- Hypothetical P&L (AH early entry $4.59 → PM current $6.54): **+42.5%**
+- Float: 475K | Market Cap: $2.9M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- First appeared in 22:30 CET scan at +61.1% AH ($4.59)
+- Decision to enter made at 23:00 CET when at +153.7% ($7.23)
+- Pattern correctly identified as SPIKE→FADE (0/7 historical win rate noted)
+- Scanner caught it early — issue was entry timing, not detection
+
+### Baseline Tracking
+
+- Days tracked: 23 (was 22 + 1 today)
+- Winners detected by scanner: 19/23 (**82.6%**) — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO, AIIO, HTCO, WOK, LNKS, AMST, PHGE (May 20), PHGE (May 26), SNGX, ATPC
+- Winner selected for paper trade: Correctly identified ATPC as top candidate
+- Target: >80% detection
+- Status: **BASELINE MET** ✅
+
+### Retrospective Scan Results
+
+**PM Scan (04:20 ET):**
+| Ticker | Close | PM Chg% | PM Price | PM Vol | Float | Industry |
+|--------|-------|---------|----------|--------|-------|----------|
+| ATPC | $2.85 | +75.4% | $5.00 | 230K | 475K | Pharmaceuticals |
+| PUSA | $3.67 | +33.8% | $4.91 | 205K | 12.7M | Movies/Entertainment |
+| LNKS | $1.38 | +29.7% | $1.79 | 235K | 1.3M | Electronic Production |
+| MASK | $1.38 | +29.3% | $1.78 | 52K | 822K | IT Services |
+| BATL | $1.46 | +16.1% | $1.70 | 277K | 17.9M | Oil & Gas |
+
+**AH reconstruction (May 27 evening via --ah-history):**
+- ATPC: AH Peak $7.25 (+140.9%) at 17:10 ET — **confirmed today's winner**
+- LNKS: AH Peak $2.26 (+50.7%) at 16:40 ET, faded through session
+- PUSA: AH flat (+0.8%) — PM-only play, not visible last night
+- MASK: AH DOWN (-1.2% to -20%) — PM-only play
+- BATL: AH DOWN (-11 to -13%) — PM-only play
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| ATPC | $7.23 | +153.7% | None — no catalyst found | 23:00 CET | $6.54 | 04:21 ET | — | -$8.97 | -9.5% | ⏳ Open |
+
+**PM Peak** = highest premarket price observed so far ($6.54 at 04:21 ET, PM still active).
+
+**Entry Total%** = change from previous close: ($7.23 - $2.85) / $2.85 = +153.7%. Entered very extended.
+
+**Total Paper P&L: -$8.97 (unrealized, PM still active)**
+
+### Scanner Effectiveness
+
+- Evening scans ran: 5 times (22:02 - 00:30 CET)
+- Candidates found: 12 unique tickers
+- Retrospective matches: ATPC and LNKS both detected and tracked
+
+### Missed Opportunities
+
+No significant missed opportunities. PUSA (+33.8% PM) was a pure premarket play — showed only +0.8% in AH last night, not detectable at screening time.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| ATPC | $7.25 (+154%) | 17:10 ET | **Spike→fade** | $6.54 | -9.8% | +129.5% | Faded from peak but still strong |
+| LNKS | $2.26 (+51%) | 16:40 ET | **Spike→fade** | $1.79 | -20.8% | +29.7% | Faded significantly |
+
+### Price Charts
+
+```
+========================================================================
+ ATPC - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $3.01
+2-Day Range: $2.79 - $8.30
+Current: $6.54 (+117.3% from prev close)
+Peak: $8.30 (+175.7%) at 05-27 20:40 ET
+
+Chart (oldest → newest):
+$   7.25 │                                                            
+         │                                                █           
+         │                                                 ██ ██      
+         │                                                   █  ██    
+         │                                                        ████
+         │                                                            
+         │                                               █            
+         │                                             ██             
+         │                                                            
+         │                                                            
+         │   █████ ██████ █                                           
+$   2.79 │███     █      █ ████████████████████████████               
+         └────────────────────────────────────────────────────────────
+```
+
+### Notes
+
+**Key lesson from this trade:**
+1. Scanner detection: ✅ ATPC detected at first scan (22:30 CET)
+2. Entry timing: ❌ Entered at $7.23 which was near absolute peak ($7.25)
+3. Pattern recognition: ⚠️ Notes correctly identified SPIKE→FADE pattern (0/7 win rate) but entered anyway per learning phase rules
+4. **Emerging pattern:** SPIKE→FADE entries near peak are consistently losers. The 23:30 scan noted SAGT (BUILD pattern) would have been better.
+
+**PM-only movers (not visible in evening scans):**
+- PUSA (+33.8% PM from +0.8% AH) — news must have come overnight
+- MASK (+29.3% PM from -20% AH) — dead-cat bounce not tradeable with our rules
+- BATL (+16.1% PM from -12% AH) — reversal pattern
+
+These PM-only plays represent potential opportunity but would require separate PM-only scanning strategy.

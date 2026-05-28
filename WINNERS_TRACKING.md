@@ -6,10 +6,9 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-05-20 | PHGE | None | +123% ($0.83) | — | $1.40 | Day 5 - Faded from $2.70 peak |
-| 2026-05-21 | GOVX | A — Ebola outbreak (biodefense) | +76.2% ($3.93) | — | $3.27 | Day 4 - Fading (-10% from yesterday) |
-| 2026-05-26 | MNTS | Unknown (PM news) | N/A (no AH) | — | $21.35 (+189%) | 🚀 Day 2 - EXPLODING! |
-| 2026-05-27 | SNGX | None | +207% ($1.20) | — | $1.14 | 🆕 Today's winner (Build pattern)
+| 2026-05-26 | MNTS | Unknown (PM news) | N/A (no AH) | — | $15.48 | Day 3 - Faded from $21 peak |
+| 2026-05-27 | SNGX | None | +207% ($1.20) | — | $0.51 | Day 2 - Heavy fade (-55% from Day 1) |
+| 2026-05-28 | ATPC | None | +154% ($7.25) | — | $6.54 | 🆕 Day 1 - Spike→fade pattern |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -34,6 +33,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-05-13 | LNKS | None | $1.95 | $2.18 | — | $1.35 | Back to start |
 | 2026-05-14 | AIIO | $100M acquisition | $9.20 | $5.43 | $4.24 | Day 7 | Fading from peak |
 | 2026-05-18 | AMST | Enterprise customer win | $2.98 | — | $2.03 | — | Recovered to $2.03 (day 5) |
+| 2026-05-20 | PHGE | None | $0.83 | $2.70 | $1.62 | $1.62 | Day 8: Faded from $2.70 peak |
+| 2026-05-21 | GOVX | A — Ebola outbreak | $3.93 | $3.53 | $3.49 | $3.49 | Day 7: Faded slightly |
 
 ## Patterns Observed
 
