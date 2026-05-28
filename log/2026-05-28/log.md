@@ -90,6 +90,44 @@ Scanner returned **0 hits** — AH just opened, no qualifying AH volume yet.
 - ATPC has reverse split history — likely manipulation, avoid
 - 22:30 CET scan is observation only — will re-evaluate at 23:00 CET
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $1.92 | +11% | +7% | $2.06 | +19% | 6.2M | 1.3M | 4.8x | 4.5M | Biotechnology |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $2.80 | +29% | +36% | $3.81 | +76% | 1.7M | 1.2M | 1.4x | 644K | IT Services |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $3.21 | -9% | +28% | $4.10 | +17% | 298K | 321K | 0.9x | 1.4M | Commercial Services |
+
+**AH Pattern Analysis (updated):**
+
+| Ticker | AH Peak | Peak Time | Current (17:00) | Pattern | Notes |
+|--------|---------|-----------|-----------------|---------|-------|
+| ELAB | $2.44 (+41%) | 16:10 | $1.92 (+11%) | SPIKE→FADE | Down 21% from peak, fading steadily |
+| IOTR | $4.90 (+126%) | **17:00** | $4.90 (+126%) | **BUILD** | Still at peak! Steady climb from $2.80→$4.90 |
+| MIMI | $4.10 (+17%) | 16:40 | $4.06 (+15%) | BUILD (weak) | Holding near highs, started day negative |
+
+**Catalyst Research:**
+
+- **ELAB**: No clear catalyst found (22:30 scan). Q1 earnings were May 15 (old). Equity facility was April 17 (old).
+- **IOTR**: No catalyst found after 4 searches. Singapore-based maritime digital tech company.
+- **MIMI**: ✓ **Two press releases TODAY (May 28)** on GlobeNewswire + SEC filing today. AI/robotics company (FLOKI Minibot).
+
+**Entry Evaluation:**
+
+| Ticker | Float <50M | AH >10% 2+ scans | Day% >-15% | Pattern | Catalyst | Decision |
+|--------|------------|------------------|------------|---------|----------|----------|
+| ELAB | ✓ 4.5M | ✓ (22:30, 23:00) | ✓ +11% | SPIKE→FADE | None | **Skip** - SPIKE→FADE 0/10+ PM continuation |
+| IOTR | ✓ 644K | ✗ (1 scan only) | ✓ +29% | BUILD | None | **Watch** - await 2nd AH scan confirmation |
+| MIMI | ✓ 1.4M | ✗ (1 scan only) | ✗ -9% | BUILD (weak) | Yes (2 PRs) | **Watch** - await 2nd AH scan confirmation |
+
+**Decision: No paper trades this scan.**
+
+- Only qualifying candidate (ELAB) shows SPIKE→FADE pattern → skip per rules
+- IOTR has strongest BUILD pattern (still climbing at 17:00!) but only 1 AH scan appearance
+- MIMI has catalyst but weaker AH change and started day negative (-9%)
+
+**Watch for 23:30/00:00 scans:** If IOTR maintains >10% AH change in next scan → paper trade candidate.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
