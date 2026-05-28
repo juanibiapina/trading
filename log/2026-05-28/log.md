@@ -220,6 +220,39 @@ IOTR and OLOX both spiked and peaked within 1 hour of AH open, then faded signif
 - PRFX is BUILD/HOLD (5/5 PM continuation for BUILD patterns), has catalyst, micro float
 - The "2-scan" rule filters SPIKE→FADE stocks; PRFX's 25-min hold at peak demonstrates persistence
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PRFX | [TV](https://www.tradingview.com/chart/?symbol=PRFX) | $1.37 | +1.5% | +540.9% | $8.78 | +550.4% | 8.6M | 1.6M | 5.3x | 792K | Pharmaceuticals |
+| NEXR | [TV](https://www.tradingview.com/chart/?symbol=NEXR) | $1.16 | +5.5% | +47.4% | $1.71 | +55.4% | 4.8M | 644K | 7.5x | 650K | Recreational Products |
+| OLOX | [TV](https://www.tradingview.com/chart/?symbol=OLOX) | $4.92 | +0.6% | +63.4% | $8.04 | +64.4% | 2.3M | 379K | 6.1x | 744K | Metal Fabrication |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $3.21 | -8.8% | +19.0% | $3.82 | +8.5% | 563K | 354K | 1.6x | 1.4M | Commercial Services |
+
+*Excluded: NTCL (11.8M float), GMEX (0 float data), CNEY (-15.7% dead cat), BIYA (-15.3% dead cat), BRR/UIS (>60M float), BTOG/SDOT/PLCE/ATPC (AH% <10%)*
+
+**AH Pattern Analysis:**
+
+| Ticker | AH Peak | Peak Time | Current | % Off Peak | Pattern |
+|--------|---------|-----------|---------|------------|--------|
+| **PRFX** | $8.96 | **18:20** | $8.78 | **-2.0%** | **BUILD** 🔥 Still climbing! |
+| NEXR | $2.08 | 17:40 | $1.71 | -18% | SPIKE→FADE |
+| OLOX | $9.80 | 17:15 | $8.04 | -18% | SPIKE→FADE (choppy) |
+| MIMI | $4.10 | 16:40 | $3.82 | -7% | SPIKE→FADE |
+
+**PRFX Update (our paper trade):**
+- Entry: $7.28 @ 00:00 CET → Current: $8.78 → **+20.6% gain**
+- AH history shows continued BUILD pattern:
+  - 17:15: Exploded from $1.43 → $2.23
+  - 17:25: Hit $6.96 (+415%)
+  - 17:35: Consolidated at $7.37
+  - 18:05: Broke higher to $8.75
+  - 18:20: NEW PEAK at $8.96 (+564%)
+  - 18:30: Holding at $8.78
+- **This is NOT a SPIKE→FADE** — it's still making higher highs late in AH
+
+**All other candidates confirmed as SPIKE→FADE.** PRFX was the correct call.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
