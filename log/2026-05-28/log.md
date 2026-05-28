@@ -40,6 +40,24 @@ All positions closed in morning evaluation.
 **Watch list for 22:00 CET scan:**
 - MASK, CTARF, NCT, TOPP, FATN, DAIO
 
+## Scan 22:00 CET (4:00 PM ET) — AH JUST OPENED
+
+Scanner returned **0 hits** — AH just opened, no qualifying AH volume yet.
+
+**Regular session candidates update (from 21:30 scan):**
+
+| Ticker | Close | Day% | AH Price | AH Chg | Float | Status |
+|--------|-------|------|----------|--------|-------|--------|
+| MASK | $4.13 | +199% | — | — | 822K | AH just started, watch |
+| ATPC | $6.07 | +113% | — | — | 475K | Just sold at loss this AM, re-ripping |
+| NCT | $3.88 | +58% | — | — | 321K | AH just started, watch |
+
+**Notes:**
+- 22:00 CET = AH opens — too early for meaningful AH data
+- All three candidates have ultra-low float (<1M)
+- ATPC interesting: sold at $6.21 this morning (-14.1%), closed at $6.07, was +133% at 21:30 scan
+- Will re-scan at 22:30 and 23:00 for AH confirmation
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
