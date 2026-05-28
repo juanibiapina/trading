@@ -38,7 +38,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
-- Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading
+- Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading; **skip all on SPIKE→FADE-only nights** (0/10+ win rate)
 - **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
 
@@ -52,6 +52,24 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-05-28 — Skip SPIKE→FADE-Only Nights
+
+**Context:** Three consecutive paper trade losses (ATPC -14.1%, VCIG -7.9%, TRNR -18.3%) all shared the same pattern: SPIKE→FADE (peaked before 17:30 ET in early AH, then declining). In each case, the agent correctly identified the pattern and noted the 0/7+ historical failure rate, but entered anyway because learning phase rules said "enter with concerns." On May 27, the log explicitly noted "SAGT shows BUILD pattern (5/5 win rate) vs ATPC's SPIKE→FADE (0/7 win rate)" — but SAGT only appeared at 23:30 (after position was opened), and by 00:00 it had faded below threshold.
+
+The existing rules covered BUILD vs SPIKE→FADE selection but didn't address what to do when ALL candidates are SPIKE→FADE. Result: predictable losses.
+
+**Evaluation of previous changes:**
+- 2026-05-27 Trajectory Overrides Catalyst: **Not yet testable.** On May 27 evening, both qualifying candidates (ATPC, LNKS) showed SPIKE→FADE patterns — there was no BUILD alternative at decision time to trigger the rule. The rule was not violated; the situation didn't arise.
+- 2026-05-26 No-Catalyst Skip Rule Removal: **Working.** ATPC was entered despite no catalyst (entered with concern noted). The rule isn't causing skips. The issue is trajectory, not catalyst.
+- 2026-05-22 High-Change Fallback: **Insufficient data.** No data gap winners since the change.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added explicit "SPIKE→FADE-only nights" guidance. If all qualifying candidates at entry time show SPIKE→FADE pattern (peaked before 17:30 ET and now declining), skip all rather than entering the least-bad option. Clarified that a skip on such nights is not lost data — it's avoiding a predictable loss.
+   - Why: Three consecutive entries (ATPC, VCIG, TRNR) followed SPIKE→FADE patterns despite concern notes. All lost. SPIKE→FADE is now 0/10+ for PM continuation. The learning phase philosophy of "enter anyway" doesn't apply when the historical data is this clear.
+   - Hypothesis: Next SPIKE→FADE-only night (all candidates peaked early, now fading) will produce a "skip all" decision with this rule cited, instead of an entry. Measurable: (1) next evening scan where all qualifying candidates show early peaks and declining AH% will result in "skip all — SPIKE→FADE-only night", (2) this preserves capital for BUILD pattern nights.
+
+**Updated process:** Added "skip all on SPIKE→FADE-only nights (0/10+ win rate)" to trajectory preference line.
 
 ### 2026-05-27 — Trajectory Overrides Catalyst in Selection
 
