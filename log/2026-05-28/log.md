@@ -58,6 +58,38 @@ Scanner returned **0 hits** — AH just opened, no qualifying AH volume yet.
 - ATPC interesting: sold at $6.21 this morning (-14.1%), closed at $6.07, was +133% at 21:30 scan
 - Will re-scan at 22:30 and 23:00 for AH confirmation
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $1.92 | +11% | +27% | $2.44 | +41% | 2.0M | 815K | 2.5x | 4.5M | Biotechnology |
+| CUPR | [TV](https://www.tradingview.com/chart/?symbol=CUPR) | $3.30 | +49% | +20% | $3.95 | +78% | 1.1M | 281K | 4.0x | 0 | Pharma |
+| SPWR | [TV](https://www.tradingview.com/chart/?symbol=SPWR) | $1.03 | -4% | +7% | $1.10 | +3% | 59K | 1.7M | 0.0x | 100.8M | Engineering |
+
+**AH Pattern Analysis:**
+
+| Ticker | AH Peak | Peak Time | Current | Pattern | Notes |
+|--------|---------|-----------|---------|---------|-------|
+| ELAB | $2.44 (+41%) | 16:10 | $2.01 (+16%) | SPIKE→FADE | Peaked early, fading -18% from peak |
+| CUPR | $4.40 (+99%) | 16:00 | $3.28 (+48%) | SPIKE→FADE | Peaked at AH open, fading -25% from peak |
+| MASK | $4.37 (+217%) | 16:00 | $4.08 (+196%) | SPIKE→FADE | Peaked at AH open, slow fade |
+| ATPC | $6.57 (+131%) | 16:15 | $6.32 (+122%) | HOLD | Still near AH highs |
+| NCT | $3.99 (+63%) | 16:15 | $3.90 (+59%) | HOLD | Steady, not fading |
+
+**Catalyst Research:**
+- **CUPR**: Skip — 1-for-8 reverse split effective May 27 (yesterday). Not a real catalyst.
+- **ELAB**: No clear catalyst. Q1 earnings were May 15 (old). $40M equity facility was April 17.
+- **SPWR**: Skip — 100.8M float way too high, minimal AH activity.
+- **MASK**: Financing PR ("Proactive Financing Strategy for Semiconductor Blueprint"). Ultra-low float.
+- **ATPC**: Reverse split history (1-for-50 announced). Concerning — Grade D territory.
+- **NCT**: No catalyst found.
+
+**Assessment:**
+- All new scanner hits (ELAB, CUPR, SPWR) are either SPIKE→FADE or have invalid catalysts
+- Prior watchlist: ATPC and NCT showing HOLD patterns but both lack catalysts
+- ATPC has reverse split history — likely manipulation, avoid
+- 22:30 CET scan is observation only — will re-evaluate at 23:00 CET
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
