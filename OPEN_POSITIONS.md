@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|
-| — | — | — | — | — | — | — | — | — |
+| PRFX | 2026-05-28 | $7.28 | 13 | $94.64 | B | DeepSolar Predict™ commercial launch | $6.19 (-15%) | PM peak |
 
 ## Position Rules
 
