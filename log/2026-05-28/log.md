@@ -128,6 +128,47 @@ Scanner returned **0 hits** — AH just opened, no qualifying AH volume yet.
 
 **Watch for 23:30/00:00 scans:** If IOTR maintains >10% AH change in next scan → paper trade candidate.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $2.80 | +29% | +49% | $4.17 | +92% | 4.2M | 1.6M | 2.7x | 644K | IT Services |
+| OLOX | [TV](https://www.tradingview.com/chart/?symbol=OLOX) | $4.92 | +1% | +65% | $8.11 | +66% | 996K | 184K | 5.4x | 744K | Metal Fabrication |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $3.21 | -9% | +17% | $3.76 | +7% | 496K | 346K | 1.4x | 1.4M | Commercial Services |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $6.07 | +113% | +6% | $6.43 | +126% | 350K | 11.6M | 0.0x | 475K | Pharma |
+
+**AH Pattern Analysis:**
+
+| Ticker | AH Peak | Peak Time | Current | Pattern | Notes |
+|--------|---------|-----------|---------|---------|-------|
+| IOTR | $4.83 (+123%) | 16:55 | $3.60 (+66%) | **SPIKE→FADE** | Down 25% from peak, peaked 35 min ago |
+| OLOX | $9.80 (+100%) | 17:15 | $7.49 (+53%) | **SPIKE→FADE** | Down 24% from peak, started late then faded |
+| MIMI | $4.10 (+17%) | 16:40 | $3.71 (+5%) | SPIKE→FADE | Below scanner threshold now |
+| ATPC | — | — | — | — | Avoided (reverse split history) |
+
+**Catalyst Research:**
+
+- **IOTR**: No catalyst found after 4 searches. Singapore-based maritime digital tech company.
+- **OLOX**: ✓ **$30M CS Digital acquisition announced today** (8-K SEC filing, press release). Grade A catalyst.
+- **MIMI**: 2 PRs today (AI/robotics). Already researched at 23:00.
+
+**Entry Evaluation:**
+
+| Ticker | Float <50M | AH >10% 2+ scans | Day% >-15% | Pattern | Catalyst | Decision |
+|--------|------------|------------------|------------|---------|----------|----------|
+| IOTR | ✓ 644K | ✓ (23:00, 23:30) | ✓ +29% | SPIKE→FADE | None | **Skip** |
+| OLOX | ✓ 744K | ✗ (1 scan only) | ✓ +1% | SPIKE→FADE | ✓ Grade A | **Watch** |
+| MIMI | ✓ 1.4M | ✗ (fading) | ✗ -9% | SPIKE→FADE | Yes | **Skip** |
+
+**Decision: Skip all — SPIKE→FADE-only night**
+
+- IOTR has 2 scans but peaked at 16:55 and down 25% from peak → SPIKE→FADE
+- OLOX has excellent catalyst (Grade A acquisition) but only 1 scan and already 24% off peak → need confirmation
+- MIMI fading below 10% AH threshold
+- Per rules: "If all qualifying candidates show SPIKE→FADE pattern, skip all rather than entering the 'least bad' option"
+
+IOTR and OLOX both spiked and peaked within 1 hour of AH open, then faded significantly. This matches the 0/10+ SPIKE→FADE pattern from prior data — even with Grade A catalysts, early-peakers don't continue into PM.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
