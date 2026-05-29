@@ -40,6 +40,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading; **skip all on SPIKE→FADE-only nights** (0/10+ win rate)
 - **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
+- **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close (no margin for overnight fade)
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
 
 ## Modifiable Files
@@ -52,6 +53,31 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-05-29 — Entry Extension Ceiling (150% Total%)
+
+**Context:** Three consecutive paper trade losses all shared extreme entry extension:
+- PRFX: Entry at +439% Total% → -28.8% loss
+- VCIG: Entry at +194% Total% → -7.9% loss  
+- ATPC: Entry at +154% Total% → -14.1% loss
+
+Meanwhile, lower-extension entries have been winning:
+- AMST: Entry at +76% Total% → +124% win
+- NXTT: Entry at ~+23% Total% → +19% win
+
+The May 29 morning evaluation explicitly recommended: "Consider maximum entry extension threshold." When a stock is already up 400%+ from the previous close, even a modest overnight fade (which is normal) turns a paper profit into a loss. PRFX peaked at $8.96 in AH but entry was at $7.28 — already 22% below peak at entry time.
+
+**Evaluation of previous changes:**
+- 2026-05-28 Skip SPIKE→FADE-Only Nights: **Working.** On May 28 evening, SPIKE→FADE candidates (ELAB, IOTR, OLOX) were correctly skipped at 23:00-23:30. Entry waited for PRFX's BUILD pattern at 00:00. The rule didn't prevent the loss because PRFX genuinely had BUILD pattern — the issue was extension, not trajectory.
+- 2026-05-27 Trajectory Overrides Catalyst: **Still insufficient data.** May 27-28 evenings had no BUILD vs SPIKE→FADE choice — all qualifying candidates shared the same trajectory type.
+- 2026-05-22 High-Change Fallback: **Insufficient data.** No data gap winners since the change.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added "Entry extension ceiling" guidance. Candidates with Entry Total% above +150% should be skipped. Extended entries leave no margin for overnight fade. If a BUILD-pattern stock exceeds 150%, note the concern but consider skipping unless no alternatives.
+   - Why: 3/3 entries above +150% Total% lost (-28.8%, -14.1%, -7.9%). 2/2 entries below +100% Total% won (+124%, +19%). The pattern is clear: chasing extremely extended stocks fails even when trajectory and catalyst are favorable.
+   - Hypothesis: Next time a candidate exceeds +150% Entry Total%, it will be skipped or entered with heavy concern noted. This prevents chasing parabolic moves that leave no margin for overnight pullback. Measurable: (1) next evening scan with a >150% Total% candidate cites this rule, (2) entries stay below 150% extension.
+
+**Updated process:** Added "Entry extension ceiling: 150% Total%" to Current Process section.
 
 ### 2026-05-28 — Skip SPIKE→FADE-Only Nights
 
