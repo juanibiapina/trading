@@ -258,3 +258,112 @@ IOTR and OLOX both spiked and peaked within 1 hour of AH open, then faded signif
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|----------------|--------|
 | PRFX | $7.28 | 00:00 CET | 13 | BUILD/HOLD at 98.8% of peak, Grade B catalyst (DeepSolar Predict launch), 792K micro float, +438% AH |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**PRFX** — Pharmaceuticals: Major
+- Catalyst: DeepSolar Predict™ commercial launch advancement (Grade B — product milestone)
+- Previous Close: $1.35
+- AH last night: Exploded at 17:15 ET (23:15 CET), peaked at $8.96 at 18:20 ET (+564%)
+- Premarket now: $5.61 (+315%)
+- Hypothetical P&L (AH entry $2.23 → PM $5.83): +161%
+- Float: 792K | Market Cap: $1.2M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — caught at 00:00 CET (18:00 ET) scan at +438%
+- Move started at 17:15 ET (23:15 CET) — between scan windows
+- Earlier scans (22:00-23:30 CET) missed it because move hadn't started
+- Paper trade entered correctly at 00:00 CET
+- Scanner gap: Earlier detection would have required catching the initial $1.43→$2.23 move at 23:15 CET, but no scan ran at that exact moment
+
+### Baseline Tracking
+
+- Days tracked: 24 (was 23 + 1 today)
+- Winners detected by scanner: 20/24 (**83.3%**) — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO, AIIO, HTCO, WOK, LNKS, AMST, PHGE (May 20), PHGE (May 26), SNGX, ATPC, PRFX
+- Winner selected for paper trade: 1/1 — correctly traded today's winner
+- Target: >80% detection
+- Status: **BASELINE MET** ✅
+
+### Retrospective Scan Results
+
+**Premarket Scan (04:20 ET):**
+| Ticker | Close | PM Chg% | PM Price | Float | Industry |
+|--------|-------|---------|----------|-------|----------|
+| PRFX | $1.37 | +326.3% | $5.84 | 792K | Pharmaceuticals |
+| GMEX | $1.77 | +77.4% | $3.14 | 0 | Specialty Stores |
+| NEXR | $1.16 | +56.9% | $1.82 | 650K | Recreational Products |
+
+**AH History Reconstruction:**
+| Ticker | AH Peak | Peak Time | Pattern | PM Follow-Through |
+|--------|---------|-----------|---------|-------------------|
+| PRFX | $8.96 (+564%) | 18:20 ET | BUILD | ✅ +315% PM |
+| NEXR | $2.15 (+96%) | 18:45 ET | BUILD→FADE | ✅ +57% PM |
+| GMEX | $3.03 (+73%) | 17:50 ET | SPIKE→FADE | ✅ +77% PM |
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| PRFX | $7.28 | +439.3% | B — DeepSolar Predict launch | 00:00 CET | $5.83 | 04:00 ET | — | -€20.17 | -23.0% | ❌ Open loss |
+
+**PM Peak** = $5.83 at 04:00 ET (PM just started)
+**Entry Total%** = ($7.28 - $1.35) / $1.35 = +439.3%
+
+**Analysis:** Entry at +439% extension was too late. Stock peaked at $8.96 in AH (+564%), faded to $3.96 by AH close, then gapped up to $5.83 at PM open. Entry should have been at initial explosion ($2.23) or first consolidation ($6.80-$7.00), not after BUILD confirmation at $7.28.
+
+**Total Paper P&L: -€20.17**
+
+### Scanner Effectiveness
+
+- Evening scans ran: 7 times (21:30 - 00:30 CET)
+- Candidates found: 12 unique tickers
+- Retrospective matches: PRFX caught at 00:00 CET ✅
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| NEXR | +96% | Appeared at 00:00 CET, 1 scan only | Yes (+57% PM) |
+| GMEX | +73% | Float data issue (0), low volume | Yes (+77% PM) |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| PRFX | $8.96 (+564%) | 18:20 ET | Late surge (17:15→18:20) | $5.61 | -37% | +315% | ✅ PM follows |
+| OLOX | $9.80 (+100%) | 17:15 ET | Spike→fade | — | — | — | No PM data |
+| IOTR | $4.83 (+123%) | 16:55 ET | Spike→fade | — | — | — | No PM data |
+| NEXR | $2.15 (+96%) | 18:45 ET | Build→fade | $1.82 | -15% | +57% | ✅ PM follows |
+| GMEX | $3.03 (+73%) | 17:50 ET | Spike→fade | $3.14 | +4% | +77% | ✅ PM follows |
+
+### Price Charts
+
+```
+========================================================================
+ PRFX - 2-Day Price Timeline
+========================================================================
+
+Previous Close: $1.35
+2-Day Range: $1.30 - $9.30
+Current: $5.61 (+315.3% from prev close)
+Peak: $9.30 (+588.9%) at 05-28 22:05 ET
+
+Session Timeline (key points):
+  [AH] 05-28 21:15 ET: $   2.23 ( +65.2%)  ← Initial explosion
+  [AH] 05-28 21:25 ET: $   6.96 (+415.5%)  ← Ramp
+  [AH] 05-28 22:20 ET: $   8.96 (+563.7%)  ← AH PEAK
+  [AH] 05-28 23:55 ET: $   3.96 (+193.3%)  ← AH close (faded)
+  [PM] 05-29 08:00 ET: $   5.83 (+331.9%)  ← PM gap up
+  [PM] 05-29 08:20 ET: $   5.61 (+315.3%)  ← Current
+```
+
+### Notes
+
+**Key Insight — Entry Timing:**
+The scanner caught PRFX correctly, but paper trade entry at $7.28 (+439%) was too extended. The stock had already run from $1.35 to $7.28 (5.4x) before entry. Better entry points:
+- **$2.23** at initial explosion (23:15 CET) → would require faster scan cadence
+- **$6.80-$7.00** at first consolidation (23:50-23:55 CET) → would have caught the move to $8.96
+
+**Lesson:** BUILD pattern confirmation is valuable, but entering at extreme extension (+400%+) leaves no margin for overnight fade. Consider maximum entry extension threshold.

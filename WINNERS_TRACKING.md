@@ -6,9 +6,10 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-05-26 | MNTS | Unknown (PM news) | N/A (no AH) | — | $15.48 | Day 3 - Faded from $21 peak |
-| 2026-05-27 | SNGX | None | +207% ($1.20) | — | $0.51 | Day 2 - Heavy fade (-55% from Day 1) |
-| 2026-05-28 | ATPC | None | +154% ($7.25) | — | $6.54 | 🆕 Day 1 - Spike→fade pattern |
+| 2026-05-26 | MNTS | Unknown (PM news) | N/A (no AH) | — | $18.80 | Day 4 - Steady around $18-19 |
+| 2026-05-27 | SNGX | None | +207% ($1.20) | — | $0.88 | Day 3 - Recovered from $0.51 low |
+| 2026-05-28 | ATPC | None | +154% ($7.25) | — | $6.07 | Day 2 - Fading further |
+| 2026-05-29 | PRFX | B — DeepSolar Predict launch | +564% ($8.96) | — | $5.61 | 🆕 Day 1 - Late surge pattern |
 
 ## Historical Winners (with multi-day outcome)
 
