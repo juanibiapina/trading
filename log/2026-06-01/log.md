@@ -45,6 +45,48 @@
 
 **Observation only** — no entries until 23:00+ CET. Re-scan in 30-60 minutes to check for AH buildup.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $0.84 | +73.4% | +80.1% | $1.51 | +212.2% | 16.7M | 11.1M | 1.5x | 23.0M | Apparel/Footwear |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $4.02 | +111.6% | +17.2% | $4.71 | +147.9% | 2.0M | 12.0M | 0.2x | 4.1M | IT Services |
+| EEIQ | [TV](https://www.tradingview.com/chart/?symbol=EEIQ) | $3.56 | +10.6% | +23.6% | $4.40 | +36.6% | 591K | 495K | 1.2x | 846K | Misc. Commercial |
+| EQ | [TV](https://www.tradingview.com/chart/?symbol=EQ) | $3.08 | +6.2% | +34.1% | $4.13 | +42.4% | 447K | 696K | 0.6x | 48.3M | Biotechnology |
+| ABTS | [TV](https://www.tradingview.com/chart/?symbol=ABTS) | $2.14 | +115.8% | +5.6% | $2.26 | +127.9% | 305K | 10.0M | 0.0x | 2.2M | Data Processing |
+| DTSS | [TV](https://www.tradingview.com/chart/?symbol=DTSS) | $0.85 | +0.8% | +11.5% | $0.95 | +12.4% | 231K | 82K | 2.8x | 6.0M | Packaged Software |
+| GFAI | [TV](https://www.tradingview.com/chart/?symbol=GFAI) | $0.60 | +13.2% | +8.2% | $0.65 | +22.5% | 206K | 4.3M | 0.0x | 27.7M | IT Services |
+| FRGT | [TV](https://www.tradingview.com/chart/?symbol=FRGT) | $4.18 | -4.0% | +10.0% | $4.60 | +5.6% | 153K | 512K | 0.3x | 509K | Financial Conglomerates |
+| JSPR | [TV](https://www.tradingview.com/chart/?symbol=JSPR) | $0.53 | -35.6% | +7.1% | $0.57 | -31.0% | 77K | 455K | 0.2x | 24.3M | Biotechnology |
+| RKTO | [TV](https://www.tradingview.com/chart/?symbol=RKTO) | $1.34 | -8.2% | +5.2% | $1.41 | -3.4% | 67K | 30.4M | 0.0x | 18.6M | Pharmaceuticals |
+
+**AH Trajectory Analysis (16:00-16:30 ET):**
+
+| Ticker | Pattern | 16:00 | Peak | 16:30 | Notes |
+|--------|---------|-------|------|-------|-------|
+| EEIQ | SPIKE→FADE | +61.5% | +64.6% (16:05) | +9.9% | Massive fade, -55 pts from peak |
+| DBGI | SPIKE→FADE | +123.1% | +214.1% (16:10) | +170.7% | Fading, -44 pts from peak |
+| HKIT | SPIKE→FADE | +293.8% | +293.8% (16:00) | +254.1% | Faded from open, -40 pts |
+| **ANY** | **HOLD** | +127.4% | +148.4% (16:10) | +142.1% | **Best pattern — holding near high** |
+| DTSS | SPIKE→FADE | +5.3% | +12.4% (16:10) | +0.8% | Faded back to flat |
+| FRGT | ERRATIC | +16.0% | +24.0% (16:20) | -3.5% | Wild swings, skip |
+
+**Skips:**
+- **EQ** — Float 48.3M too high
+- **GFAI** — Float 27.7M too high  
+- **JSPR** — Dead-cat bounce (Day% -35.6%, bouncing from crash)
+- **RKTO** — Minimal AH activity, negative total%
+- **FRGT** — Erratic price action, low conviction
+- **EEIQ** — Despite excellent 846K float, faded from +64% to +9%
+- **DTSS** — Faded from +12% to flat
+
+**Top Candidates for 23:00 Scan:**
+1. **ANY** — Only stock showing HOLD pattern. 4.1M float, +142% total, holding near highs. Need catalyst.
+2. **DBGI** — Biggest AH mover (+80% from close) but SPIKE→FADE pattern. 23M float higher than ideal.
+3. **HKIT** — Still +254% total but fading. 422K float excellent. Very extended (entry ceiling concern).
+
+**Action:** This is 22:30 CET — observation only per learning phase rules. Re-scan at 23:00 CET for entry decisions. Watch if ANY maintains HOLD pattern.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
