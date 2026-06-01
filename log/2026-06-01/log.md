@@ -237,6 +237,49 @@
 
 **Action:** Hold ANY position overnight. No additional entries.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $0.84 | +73.4% | +44.2% | $1.21 | +150.1% | 45.3M | 14.1M | 3.2x | 23.0M | Apparel/Footwear |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $4.02 | +111.6% | +26.6% | $5.09 | +167.9% | 9.5M | 12.9M | 0.7x | 4.1M | IT Services |
+| TGHL | [TV](https://www.tradingview.com/chart/?symbol=TGHL) | $1.35 | +288.2% | +5.2% | $1.42 | +308.3% | 5.2M | 13.3M | 0.4x | 12.7M | IT Services |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $1.60 | +2.6% | +96.9% | $3.15 | +101.9% | 3.5M | 464K | 7.4x | 1.2M | Environmental Services |
+| BNRG | [TV](https://www.tradingview.com/chart/?symbol=BNRG) | $1.46 | -12.0% | +11.0% | $1.62 | -2.4% | 2.5M | 2.0M | 1.3x | 489K | Engineering & Construction |
+| ABTS | [TV](https://www.tradingview.com/chart/?symbol=ABTS) | $2.14 | +115.8% | +18.7% | $2.54 | +156.1% | 1.8M | 10.1M | 0.2x | 2.2M | Data Processing Services |
+| GFAI | [TV](https://www.tradingview.com/chart/?symbol=GFAI) | $0.60 | +13.2% | +5.0% | $0.63 | +18.9% | 1.8M | 4.4M | 0.4x | 27.7M | IT Services |
+| CTNT | [TV](https://www.tradingview.com/chart/?symbol=CTNT) | $1.82 | +9.6% | +7.1% | $1.95 | +17.5% | 959K | 269K | 3.6x | 3.0M | Engineering & Construction |
+
+**AH Trajectory Analysis (16:00-18:30 ET):**
+
+| Ticker | Pattern | Peak | Peak Time | 18:30 | Notes |
+|--------|---------|------|-----------|-------|-------|
+| **ANY** | **HOLD** | +168.2% | 17:15 | +161.1% | **Holding near high**, entry $4.84, current $4.96 = +2.5% unrealized |
+| **DXST** | **LATE BUILD** | +110.2% | 18:20 | +101.9% | **Massive late spike** from $2.32 to $3.28 at 18:20, now $3.15 |
+| ABTS | FADE | +173.8% | 17:55 | +142.0% | Faded 32 pts from peak |
+| DBGI | SPIKE→FADE | +214.1% | 16:10 | +152.3% | Continued fade, -62 pts from peak |
+| BNRG | FADE | +16.9% | 17:30 | -6.0% | Crashed back to negative |
+
+**Position Update:**
+- **ANY** — Still holding well. Entry $4.84, current $4.96 = **+2.5%** unrealized. HOLD pattern near AH high ($5.09 peak).
+
+**DXST Re-evaluation (per rules: re-search catalyst for >10% AH stock previously skipped):**
+- Float: 1.2M ✓ (excellent)
+- Pattern: **LATE BUILD** — spiked from $2.32 to $3.28 (+41%) between 18:10-18:20 ET
+- Catalyst search (4 searches): No earnings, no press releases, no SEC 8-K filings found.
+- **Catalyst: None found** — still no identifiable driver for the late spike.
+- **Skip (cannot enter):** Already have ANY position (one position per day rule). Note pattern for data collection.
+
+**Other Updates:**
+- DBGI — Continued fade from early AH peak. Skip: Float 23M too high, SPIKE→FADE pattern.
+- ABTS — Faded from 17:55 peak. Skip: Already have ANY position.
+- BNRG — Crashed back to -6% total. Skip: Dead-cat bounce, negative total%.
+- GFAI — Skip: Float 27.7M too high.
+- CTNT — Skip: AH% only +7.1%, minimal activity.
+- TGHL — Skip: Minimal AH movement (+5.2%), just regular session spike residual.
+
+**Action:** Hold ANY position overnight. No additional entries.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
