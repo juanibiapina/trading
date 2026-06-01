@@ -127,6 +127,61 @@
 
 6. **DTSS** — Skip: AH% only +6.5%, fading.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $0.84 | +73.4% | +56.2% | $1.31 | +170.7% | 38.2M | 13.4M | 2.9x | 23.0M | Apparel/Footwear |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $4.02 | +111.6% | +20.6% | $4.85 | +155.3% | 7.7M | 12.6M | 0.6x | 4.1M | IT Services |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $1.60 | +2.6% | +38.1% | $2.21 | +41.7% | 2.7M | 371K | 7.4x | 1.2M | Environmental Services |
+| GFAI | [TV](https://www.tradingview.com/chart/?symbol=GFAI) | $0.60 | +13.2% | +5.1% | $0.63 | +19.0% | 1.5M | 4.4M | 0.3x | 27.7M | IT Services |
+| BNRG | [TV](https://www.tradingview.com/chart/?symbol=BNRG) | $1.46 | -12.0% | +13.7% | $1.66 | +0.0% | 1.5M | 1.9M | 0.8x | 489K | Engineering & Construction |
+| CTNT | [TV](https://www.tradingview.com/chart/?symbol=CTNT) | $1.82 | +9.6% | +9.9% | $2.00 | +20.5% | 924K | 265K | 3.5x | 3.0M | Engineering & Construction |
+| CING | [TV](https://www.tradingview.com/chart/?symbol=CING) | $3.60 | -13.5% | +5.1% | $3.78 | -9.1% | 133K | 798K | 0.2x | 10.6M | Pharmaceuticals |
+
+**AH Trajectory Analysis (16:00-17:30 ET):**
+
+| Ticker | Pattern | 16:00 | Peak | 17:30 | Notes |
+|--------|---------|-------|------|-------|-------|
+| **ANY** | **BUILD** | +127.4% | +168.2% (17:15) | +164.2% | **Still building**, new high at 17:15, holding near peak |
+| DBGI | SPIKE→FADE | +123.1% | +214.1% (16:10) | +139.7% | Continued fade, -74 pts from peak |
+| DXST | VOLATILE | +2.6% | +59.0% (16:45) | +44.2% | Bouncing between +37% and +54%, no clear trend |
+| BNRG | LATE BUILD | -12.0% | +17.4% (17:30) | +17.4% | Built from -12% to +17%, but Day% was -12% |
+| CTNT | SPIKE→FADE | +9.6% | +33.2% (16:20) | +12.7% | Faded from peak |
+
+**Position Update:**
+- **ANY** — Still building. Now at +164% (was +152% at entry). Price $5.02 vs entry $4.84. Holding overnight.
+
+**New Candidate Evaluation:**
+
+1. **DXST** — Now has 2 AH scans (23:00: +53.1%, 23:30: +38.1%)
+   - Float: 1.2M ✓
+   - Pattern: VOLATILE (not BUILD or HOLD)
+   - Catalyst: **None found** — searched GlobeNewswire, recent news. Only found old reverse split and $8M offering.
+   - Skip: No catalyst, volatile pattern, already have ANY position.
+
+2. **BNRG** — NEW candidate
+   - Float: 489K ✓ (excellent)
+   - Pattern: LATE BUILD (+17% from -12% day)
+   - Catalyst: **Grade B** — Tempo Beverages project began delivering steam (major commercial milestone for thermal energy storage company).
+   - ⚠️ Day% -12% — close to dead-cat bounce territory. Stock crashed during regular session before recovering in AH.
+   - Total% only +0% from previous close (still recovering from day's loss)
+   - Skip: Day% -12% near dead-cat threshold, Total% not >10%, already have ANY position.
+
+3. **CTNT** — NEW candidate
+   - Float: 3.0M ✓
+   - Pattern: SPIKE→FADE (peaked +33% at 16:20, now +12.7%)
+   - Catalyst: Not searched (SPIKE→FADE pattern disqualifies)
+   - Skip: SPIKE→FADE pattern.
+
+4. **CING** — Skip: Day% -13.5% = dead-cat bounce, negative Total%.
+
+5. **DBGI** — Skip: Float 23M too high, continued fade.
+
+6. **GFAI** — Skip: Float 27.7M too high.
+
+**Action:** Hold ANY position overnight. No additional entries (one position per day rule).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
