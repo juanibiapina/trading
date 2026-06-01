@@ -182,6 +182,61 @@
 
 **Action:** Hold ANY position overnight. No additional entries (one position per day rule).
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $0.84 | +73.4% | +49.0% | $1.25 | +158.3% | 43.3M | 13.9M | 3.1x | 23.0M | Apparel/Footwear |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $4.02 | +111.6% | +22.6% | $4.93 | +159.5% | 9.0M | 12.8M | 0.7x | 4.1M | IT Services |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $1.60 | +2.6% | +33.8% | $2.14 | +37.2% | 3.2M | 435K | 7.4x | 1.2M | Environmental Services |
+| SUUN | [TV](https://www.tradingview.com/chart/?symbol=SUUN) | $1.53 | +77.0% | +17.6% | $1.80 | +108.2% | 1.4M | 4.9M | 0.3x | 42.6M | Alt. Power |
+| BNRG | [TV](https://www.tradingview.com/chart/?symbol=BNRG) | $1.46 | -12.0% | +8.9% | $1.59 | -4.2% | 2.3M | 2.0M | 1.2x | 489K | Engineering |
+| ABTS | [TV](https://www.tradingview.com/chart/?symbol=ABTS) | $2.14 | +115.8% | +9.3% | $2.34 | +136.0% | 953K | 10.0M | 0.1x | 2.2M | Data Processing |
+| GFAI | [TV](https://www.tradingview.com/chart/?symbol=GFAI) | $0.60 | +13.2% | +6.7% | $0.64 | +20.8% | 1.7M | 4.4M | 0.4x | 27.7M | IT Services |
+| CTNT | [TV](https://www.tradingview.com/chart/?symbol=CTNT) | $1.82 | +9.6% | +6.6% | $1.94 | +16.8% | 947K | 268K | 3.5x | 3.0M | Engineering |
+
+**AH Trajectory Analysis (16:00-18:00 ET):**
+
+| Ticker | Pattern | Peak | Peak Time | 18:00 | Notes |
+|--------|---------|------|-----------|-------|-------|
+| **ANY** | **HOLD** | +168.2% | 17:15 | +163.2% | **Holding near high**, $5.00 current (entry $4.84) |
+| ABTS | LATE BUILD | +173.8% | 17:55 | +164.2% | Recovered from 16:50 low (+113%), now $2.62 |
+| DXST | VOLATILE | +59.0% | 16:45 | +48.7% | Erratic, bouncing +37-54%, slight recovery to $2.32 |
+| SUUN | SPIKE→FADE | +108.2% | 17:40 | +77.0% | Faded 31 pts from peak back to AH open level |
+| DBGI | SPIKE→FADE | +214.1% | 16:10 | +156.3% | Continued fade, -58 pts from peak |
+
+**Position Update:**
+- **ANY** — Holding well. Current $5.00 vs entry $4.84 = **+3.3%** unrealized. Still HOLD pattern near AH high.
+
+**New/Updated Candidate Evaluation:**
+
+1. **ABTS** — Interesting LATE BUILD pattern
+   - Float: 2.2M ✓
+   - Pattern: LATE BUILD (recovered from +113% low to +164%)
+   - ⚠️ Total% +136% (scanner shows +9.3% AH but actual is higher at 18:00)
+   - Skip: Already have ANY position (one position per day rule).
+
+2. **DXST** — Now has 3 AH scans but still volatile
+   - Float: 1.2M ✓
+   - Pattern: VOLATILE (no clear BUILD or HOLD)
+   - Catalyst: None found in prior searches
+   - Skip: No catalyst, volatile pattern, already have ANY position.
+
+3. **SUUN** — NEW candidate but poor profile
+   - Float: 42.6M ✗ (way too high)
+   - Pattern: SPIKE→FADE (peaked +108% at 17:40, now +77%)
+   - Skip: Float too high, SPIKE→FADE pattern.
+
+4. **BNRG** — Skip: Day% -12% = dead-cat bounce territory, Total% negative.
+
+5. **DBGI** — Skip: Float 23M too high, continued SPIKE→FADE.
+
+6. **GFAI** — Skip: Float 27.7M too high.
+
+7. **CTNT** — Skip: AH% only +6.6%, previously showed SPIKE→FADE.
+
+**Action:** Hold ANY position overnight. No additional entries.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
