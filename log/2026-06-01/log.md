@@ -87,7 +87,48 @@
 
 **Action:** This is 22:30 CET — observation only per learning phase rules. Re-scan at 23:00 CET for entry decisions. Watch if ANY maintains HOLD pattern.
 
+## Scan 23:00 CET (5:00 PM ET) — Entry Time
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $0.84 | +73.4% | +72.8% | $1.45 | +199.6% | 31.9M | 12.7M | 2.5x | 23.0M | Apparel/Footwear |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $4.02 | +111.6% | +20.4% | $4.84 | +154.7% | 5.9M | 12.4M | 0.5x | 4.1M | IT Services |
+| WTO | [TV](https://www.tradingview.com/chart/?symbol=WTO) | $1.15 | +11.7% | +12.2% | $1.29 | +25.2% | 1.7M | 509K | 3.3x | 808K | Telecom Equipment |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $1.60 | +2.6% | +53.1% | $2.45 | +57.1% | 717K | 118K | 6.1x | 1.2M | Environmental Services |
+| GFAI | [TV](https://www.tradingview.com/chart/?symbol=GFAI) | $0.60 | +13.2% | +6.2% | $0.64 | +20.3% | 426K | 4.3M | 0.1x | 27.7M | IT Services |
+| DTSS | [TV](https://www.tradingview.com/chart/?symbol=DTSS) | $0.85 | +0.8% | +6.5% | $0.91 | +7.4% | 355K | 97K | 3.7x | 6.0M | Packaged Software |
+
+**AH Trajectory Analysis (16:00-17:00 ET):**
+
+| Ticker | Pattern | 16:00 | Peak | 17:00 | Notes |
+|--------|---------|-------|------|-------|-------|
+| **ANY** | **BUILD** | +127.4% | +157.4% (16:50) | +152.6% | **Best pattern — built steadily, holding near high** |
+| DBGI | SPIKE→FADE | +123.1% | +214.1% (16:10) | +179.0% | Faded 35 pts from peak |
+| WTO | SPIKE→FADE | +11.7% | +70.4% (16:25) | +24.3% | Massive fade, -46 pts from peak |
+| DXST | LATE SPIKE | +2.6% | +59.0% (16:45) | +48.8% | New candidate, spiked at 16:30 |
+| DTSS | FADE | +5.3% | +12.4% (16:10) | +7.4% | Faded back toward flat |
+
+**Candidate Evaluation:**
+
+1. **ANY** ⭐ ENTRY
+   - Float: 4.1M ✓
+   - Pattern: BUILD (best trajectory)
+   - AH >10% in 2+ scans: ✓ (22:30: +17.2%, 23:00: +20.4%)
+   - Catalyst: **Grade A** — Cathedra Bitcoin acquisition closing announced today. Creates scaled data infrastructure platform with 53MW capacity + 100MW pipeline.
+   - ⚠️ Total% +154.7% exceeds 150% ceiling (marginally). No alternatives exist — entering with concern noted.
+
+2. **DXST** — Skip: Only 1 AH scan (doesn't meet 2-scan requirement). No catalyst found. Track for later scans.
+
+3. **WTO** — Skip: Only 1 AH scan, SPIKE→FADE pattern (peaked +70% at 16:25, now +24%).
+
+4. **DBGI** — Skip: Float 23M too high, SPIKE→FADE pattern.
+
+5. **GFAI** — Skip: Float 27.7M too high.
+
+6. **DTSS** — Skip: AH% only +6.5%, fading.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| ANY | $4.84 | 23:00 CET | 20 ($96.80) | BUILD pattern, 4.1M float, Grade A catalyst (Cathedra Bitcoin acquisition closing). ⚠️ Entry at +154.7% exceeds 150% ceiling but no alternatives. |

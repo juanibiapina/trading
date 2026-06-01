@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|
-| — | — | — | — | — | — | — | — | — |
+| ANY | 2026-06-01 | $4.84 | 20 | $96.80 | A | Cathedra Bitcoin acquisition closing | $3.87 (-20%) | Trail from peak |
 
 ## Position Rules
 
