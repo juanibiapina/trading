@@ -285,3 +285,145 @@
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | ANY | $4.84 | 23:00 CET | 20 ($96.80) | BUILD pattern, 4.1M float, Grade A catalyst (Cathedra Bitcoin acquisition closing). ⚠️ Entry at +154.7% exceeds 150% ceiling but no alternatives. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**DXST** — Decent Holding Inc. — Environmental Services
+- Catalyst: **None found** — no identifiable news driver for the late AH spike
+- Previous Close: $1.56
+- AH last night: Started +2.6%, built steadily, peaked at $4.22 (+170.5%) at 22:35 ET (04:35 CET)
+- Premarket now: $3.26 (+109.0%) — peaked at $3.93 (+151.9%) at 08:00 ET
+- Hypothetical P&L (AH entry $2.25 at 23:00 CET → PM peak $3.93): **+74.7%**
+- Float: 1.2M | Market Cap: $2.6M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- At 23:00 CET (17:00 ET): DXST showed AH +53.1%, $2.45, VRatio 6.1x — BUILD pattern visible
+- Why not selected:
+  1. No catalyst found (4 searches confirmed nothing)
+  2. Volatile pattern at first (stabilized by 00:30 scan)
+  3. Already had ANY position (one position per day rule)
+- Scanner gap: **Catalyst dependency may be too strict.** DXST ran +170% in AH with zero news. The scanner detected it, but selection rules blocked entry.
+
+**Other Notable Moves:**
+- **DAIC** +220% in PM but only +32% in AH — overnight spike, NOT catchable with evening screening
+- **SBFM** was DOWN in AH (-5% to -9%), spiked +69% in PM — NOT catchable
+- These confirm the strategy is correct: the catchable winners move in AH, not overnight
+
+### Baseline Tracking
+
+- Days tracked: 25 (was 24 + 1 today)
+- Winners detected by scanner: 21/25 (**84.0%**) — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO, AIIO, HTCO, WOK, LNKS, AMST, PHGE (May 20), PHGE (May 26), SNGX, ATPC, PRFX, DXST
+- Winner selected for paper trade: 0/25 (**0%**) — scanner detects winners but selection rules block them
+- Target: >80% detection
+- Status: **BASELINE MET** (84.0% detection rate)
+
+**Diagnosis:** The scanner works. Detection rate exceeds 80%. The bottleneck is now the **selection process** — too many filters (catalyst requirement, one position rule, pattern strictness) are blocking detected winners.
+
+### Retrospective Scan Results
+
+**PM Scan at 10:20 CET (04:20 ET):**
+
+| Ticker | Close | PM% | PM Price | Float | Industry | Notes |
+|--------|-------|-----|----------|-------|----------|-------|
+| DAIC | $4.54 | +152.1% | $11.44 | — | Misc. | Overnight spike, not AH tradeable |
+| DXST | $1.60 | +146.9% | $3.95 | 1.2M | Environmental | ⭐ TODAY'S WINNER |
+| SBFM | $2.39 | +82.0% | $4.35 | — | Pharma | Was DOWN in AH |
+| CTNT | $1.82 | +66.3% | $3.03 | 3.0M | Engineering | Late AH surge at 18:25+ ET |
+| DBGI | $0.84 | +32.3% | $1.11 | 23.0M | Apparel | AH spike→fade pattern |
+| ABTS | $2.14 | +26.2% | $2.70 | 2.2M | Data Processing | Late AH build |
+
+**AH Reconstruction (via check-prices.py --ah-history):**
+
+| Ticker | Close | AH Peak | Peak Time | AH Pattern | PM Follow-Through |
+|--------|-------|---------|-----------|------------|-------------------|
+| DXST | $1.56 | $4.22 (+170.5%) | 18:35 ET | LATE BUILD | $3.93 (+151.9%) ✓ |
+| ABTS | $0.99 | $3.13 (+215.6%) | 19:20 ET | LATE BUILD | $2.80 (+182.7%) ✓ |
+| CTNT | $1.66 | $3.80 (+128.8%) | 18:50 ET | LATE SURGE | $3.07 (+85.1%) fading |
+| DBGI | $0.48 | $1.52 (+214.1%) | 16:10 ET | SPIKE→FADE | $1.11 (+131%) faded |
+| DAIC | $3.50 | $4.61 (+31.7%) | 17:05 ET | HOLD | $11.22 (+220.3%) overnight |
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| ANY | $4.84 | +154.7% | A — Cathedra Bitcoin acquisition | 23:00 CET | $5.15 | 23:55 ET | — | -€4.94 | -5.4% | 📉 Unrealized |
+
+**Current:** ANY at $4.58 vs entry $4.84 = **-5.4%** unrealized loss ($4.58 - $4.84) × 20 shares = -$5.20 ≈ -€4.94
+
+**PM Peak:** $5.15 at 23:55 ET (05:55 CET) — would have been +$6.20 (+6.4%) if sold there.
+
+**Observation:** ANY peaked in late AH/overnight ($5.15-5.30), then faded into PM. The catalyst was strong (Grade A), but the stock was already extended at entry (+154.7%). Early PM exit would have captured gains.
+
+**Total Paper P&L: -€4.94** (unrealized)
+
+### Scanner Effectiveness
+
+- Evening scans ran: 6 times (21:30 - 00:30 CET)
+- Candidates found: 12 unique tickers tracked
+- Retrospective matches: DXST, CTNT, DBGI, ABTS all appeared in evening scans
+- Today's winner (DXST) was detected in 4 scans but not selected
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| DXST | +170.5% | No catalyst, already had ANY position | YES — +74.7% from 23:00 entry |
+
+**Key Learning:** The "one position per day" rule prevented entering DXST even though it was detected and showed excellent characteristics (1.2M float, BUILD pattern, strong AH momentum). The lack of catalyst was noted but the stock ran anyway.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| DXST | +170.5% | 18:35 ET | LATE BUILD | $3.26 (+109%) | -36% | +109% | ✅ Winner |
+| ABTS | +215.6% | 19:20 ET | LATE BUILD | $2.76 (+178%) | -17% | +178% | ✅ Strong |
+| CTNT | +128.8% | 18:50 ET | LATE SURGE | $2.40 (+44%) | -43% | +44% | ⚠️ Fading |
+| DBGI | +214.1% | 16:10 ET | SPIKE→FADE | $1.11 (+131%) | -39% | +131% | ⚠️ Early fade |
+| ANY | +26.6% | 17:15 ET | BUILD | $4.58 (+14%) | -10% | +14% | ⚠️ Paper trade |
+
+**Pattern Observations:**
+- **LATE BUILD** (DXST, ABTS) → Strong PM follow-through
+- **SPIKE→FADE** (DBGI) → Continued fade into PM
+- **BUILD** (ANY) → Held overnight but fading PM
+
+### Price Charts
+
+```
+DXST - Today's Winner
+Previous Close: $1.56 | Current: $3.26 (+109.0%) | Peak: $4.79 (+207.1%) at 06-02 08:00 ET
+
+$   4.22 │                                                            
+         │                                                       █ ███
+         │                                                        █   
+$   1.52 │███████████████████████████████████████████████████████     
+
+ANY - Paper Trade
+Previous Close: $1.90 | Current: $4.58 (+141.1%) | Peak: $5.30 (+178.9%) at 06-01 21:20 ET
+
+$   5.15 │                                    ██                   ███
+         │       █                     █    █    ██ ███████████ ██    
+         │        █ █ ██     █           █                            
+$   1.96 │██                                                          
+```
+
+### Notes
+
+1. **Scanner baseline met.** 84% detection rate exceeds 80% target. Scanner reliably finds winners.
+
+2. **Selection is the bottleneck.** DXST was detected 4 times but rejected due to:
+   - No catalyst (but ran +170% without one)
+   - Already had ANY position
+   - Volatile pattern classification
+
+3. **Catalyst requirement may be too strict.** DXST ran without news. Pattern quality (LATE BUILD, excellent float, 6x VRatio) may matter more than catalyst presence for selection.
+
+4. **One position per day rule** blocked the better trade. ANY was mediocre (+6% max, now negative), DXST would have been +74%.
+
+5. **Entry extension ceiling** (150% Total%) didn't help either — ANY entered at +154.7%, DXST at +57.1% would have been better.
+
+**Recommendation:** Now that baseline is met, refine selection rules:
+- Consider allowing no-catalyst entries if pattern quality is excellent (BUILD, low float, high VRatio)
+- Review whether "one position per day" should allow switching to better candidates mid-session
