@@ -82,6 +82,52 @@ No candidates found.
 
 **Summary:** All candidates with >10% AH showing SPIKE→FADE pattern. Per strategy rules: "SPIKE→FADE stocks are 0/10+ for PM continuation regardless of float, catalyst, or AH% — entering one still loses." Would skip all tonight even without the ANY position block.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+⚠️ **Open position in ANY blocks new entries**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $2.23 | -4.7% | +121.1% | $4.93 | +110.7% | 9.4M | 1.2M | 7.8x | 5.5M | Motor Vehicles |
+| YMAT | [TV](https://www.tradingview.com/chart/?symbol=YMAT) | $0.91 | -8.0% | +39.6% | $1.27 | +28.3% | 9.4M | 16.4M | 0.6x | 2.0M | Electrical Products |
+| TOPS | [TV](https://www.tradingview.com/chart/?symbol=TOPS) | $1.11 | +20.0% | +21.6% | $1.35 | +46.0% | 3.7M | 848K | 4.4x | 2.0M | Marine Shipping |
+| EFOI | [TV](https://www.tradingview.com/chart/?symbol=EFOI) | $3.77 | +0.0% | +13.5% | $4.28 | +13.5% | 142K | 66K | 2.2x | 2.9M | Electrical Products |
+
+**Candidate Evaluation:**
+
+**XOS — BUILD pattern ✓ (would enter if not blocked)**
+- Float: 5.5M ✓
+- AH trajectory: BUILD — started $2.23, jumped to $4.34 at 16:20, continued building to peak $5.20 (+122%) at 17:15 ET
+- Current: $4.81 (+106%) — still near peak, not fading
+- Catalyst: **Grade B** — Xos launched 2.5MWh Power Hub for data center energy storage (June 2 PR via GlobeNewswire)
+- Total%: +110.7% — below 150% extension ceiling ✓
+- **Would paper trade** if no open position
+
+**TOPS — BUILD pattern (secondary candidate)**
+- Float: 2.0M ✓
+- AH trajectory: BUILD — started $1.07-1.09, built steadily to peak $1.37 (+48%) at 16:50 ET
+- Current: $1.31 (+41%) — holding near peak
+- Catalyst: No catalyst found today (May 29 news about payment deadline extension is stale)
+- **Concern:** No same-day catalyst, but BUILD pattern and low float are positive
+
+**YMAT — SKIP (SPIKE→FADE confirmed)**
+- Peaked $1.72 (+74%) at 16:05 ET, now $1.23 (+24%) — down 28% from peak
+- Trajectory continues downward from 22:30 scan evaluation
+- Still fading despite bounce attempts
+
+**EFOI — SKIP (SPIKE→FADE)**
+- Peaked $4.50 (+19%) at 16:45 ET, now $3.98 (+6%) — fading significantly
+- Thin AH volume (142K)
+
+**Other tickers not qualifying:**
+- LASE: +7% AH only, float 24.6M too high
+- STAK: +6.8% AH only, float data missing
+- SPWH: Float 35.6M too high
+- QTEX: Float 41.9M too high, Day% -24.7% (dead-cat bounce risk)
+- TNYA, RUBI: AH change <10%
+
+**Summary:** XOS is the clear top candidate with BUILD pattern, strong catalyst, and reasonable extension. TOPS is a secondary option with BUILD pattern but no catalyst. Both blocked by open ANY position.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
