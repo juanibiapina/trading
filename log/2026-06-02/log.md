@@ -128,6 +128,52 @@ No candidates found.
 
 **Summary:** XOS is the clear top candidate with BUILD pattern, strong catalyst, and reasonable extension. TOPS is a secondary option with BUILD pattern but no catalyst. Both blocked by open ANY position.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+⚠️ **Open position in ANY blocks new entries**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LASE | [TV](https://www.tradingview.com/chart/?symbol=LASE) | $2.42 | +160.9% | +27.3% | $3.08 | +232.1% | 31.1M | 28.6M | 1.1x | 24.6M | Electronic Equipment |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $2.23 | -4.7% | +108.5% | $4.65 | +98.7% | 12.4M | 1.6M | 7.9x | 5.5M | Motor Vehicles |
+| TOPS | [TV](https://www.tradingview.com/chart/?symbol=TOPS) | $1.11 | +20.0% | +25.2% | $1.39 | +50.3% | 5.4M | 1.0M | 5.2x | 2.0M | Marine Shipping |
+| YMAT | [TV](https://www.tradingview.com/chart/?symbol=YMAT) | $0.91 | -8.0% | +40.7% | $1.28 | +29.3% | 10.1M | 16.5M | 0.6x | 2.0M | Electrical Products |
+| RUBI | [TV](https://www.tradingview.com/chart/?symbol=RUBI) | $0.55 | -8.3% | +76.4% | $0.97 | +61.8% | 4.7M | 6.8M | 0.7x | 0 | Marine Shipping |
+
+**Candidate Evaluation:**
+
+**XOS — HOLD pattern ✓ (would enter if not blocked)**
+- Float: 5.5M ✓
+- AH trajectory: Peaked $5.20 (+122.2%) at 17:15 ET, now $4.81 (+105.5%) — holding 93% of peak
+- Pattern: BUILD → HOLD — not fading, consolidating near highs
+- Catalyst: Grade B — Xos 2.5MWh Power Hub for data center energy storage (June 2 PR)
+- Total%: +98.7% — well below 150% extension ceiling ✓
+- **Would paper trade** if no open position
+
+**TOPS — Late BUILD pattern (would consider if not blocked)**
+- Float: 2.0M ✓ (excellent)
+- AH trajectory: Started slow $1.07-1.09, gradually built, then SPIKED at 18:20-18:25
+- New AH high: $1.66 at 18:25 (+79.5%), now $1.62 (+75.3%)
+- Catalyst: No fresh catalyst found — May 29 payment deadline extension is stale
+- Concern: No same-day catalyst, but late BUILD pattern is promising
+- **Would monitor** — late spike needs to hold through next scan
+
+**YMAT — SKIP (SPIKE→FADE confirmed)**
+- Peaked $1.72 (+73.8%) at 16:05 ET, now $1.33 (+34.4%)
+- Still down 23% from early peak — classic fade continues
+- Consistent with 22:30 and 23:30 evaluations
+
+**RUBI — SKIP (reverse split volatility)**
+- 1:10 reverse split today explains AH volatility
+- Late spike $0.98 (+63%) at 18:10, already fading to $0.82 (+36.8%)
+- Reverse splits are typically negative catalysts (done to avoid delisting)
+
+**LASE — SKIP**
+- Day move (+160.9%) was the main event, AH only +27.3%
+- Float 24.6M too high
+
+**Summary:** XOS remains the clear top candidate with HOLD pattern near peak. TOPS showing late strength but no catalyst. Both blocked by open ANY position.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
