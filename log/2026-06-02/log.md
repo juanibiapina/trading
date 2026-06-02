@@ -46,6 +46,42 @@ No candidates found.
 - Prior regular session candidates (DXST, BJDX, etc.) did not carry AH momentum
 - This is the first AH scan — will re-scan at 22:30 and 23:00 CET
 
+## Scan 22:30 CET (4:30 PM ET)
+
+⚠️ **Open position in ANY blocks new entries**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| YMAT | [TV](https://www.tradingview.com/chart/?symbol=YMAT) | $0.91 | -8.0% | +70.3% | $1.55 | +56.6% | 4.6M | 15.9M | 0.3x | 2.0M | Electrical Products |
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.75 | +2.9% | +40.4% | $1.05 | +44.4% | 2.3M | 875K | 2.6x | 5.4M | Wholesale Distributors |
+| HKIT | [TV](https://www.tradingview.com/chart/?symbol=HKIT) | $0.62 | -90.6% | +17.9% | $0.73 | -88.9% | 1.6M | 11.3M | 0.1x | 422K | Packaged Software |
+| SPWH | [TV](https://www.tradingview.com/chart/?symbol=SPWH) | $1.42 | +2.9% | +23.2% | $1.75 | +26.7% | 658K | 411K | 1.6x | 35.6M | Specialty Stores |
+| NXXT | [TV](https://www.tradingview.com/chart/?symbol=NXXT) | $0.60 | +0.3% | +6.3% | $0.64 | +6.6% | 188K | 65.9M | 0.0x | 65.7M | Packaged Software |
+| ELPW | [TV](https://www.tradingview.com/chart/?symbol=ELPW) | $0.93 | +7.1% | +6.2% | $0.99 | +13.8% | 60K | 933K | 0.1x | 1.4M | Electrical Products |
+
+**Candidate Evaluation:**
+
+**YMAT — SKIP (SPIKE→FADE pattern)**
+- Float: 2.0M ✓
+- AH trajectory: SPIKE→FADE — peaked at $1.72 (+73.8%) at 16:05 ET, now $1.16 (+17.2%)
+- Catalyst: J-Star solid-state battery facility news (June 1) — old catalyst, day 2+ of move
+- Pattern concern: Early peak fading, 0/10+ win rate historically
+
+**UFG — SKIP (SPIKE→FADE pattern)**
+- Float: 5.4M ✓
+- AH trajectory: SPIKE→FADE — peaked at $1.05 (+44.4%) at 16:10 ET, now $0.82 (+12.4%)
+- Catalyst: Q1 earnings beat + raised guidance (May 26) — old catalyst, 1 week old
+- Pattern concern: Early peak fading
+
+**HKIT — SKIP (dead-cat bounce)**
+- Crashed -90.6% during regular session, bouncing in AH
+- Classic dead-cat bounce pattern, not new momentum
+
+**SPWH, NXXT, ELPW — not qualifying**
+- Float too high (35.6M, 65.7M) or AH change <10%
+
+**Summary:** All candidates with >10% AH showing SPIKE→FADE pattern. Per strategy rules: "SPIKE→FADE stocks are 0/10+ for PM continuation regardless of float, catalyst, or AH% — entering one still loses." Would skip all tonight even without the ANY position block.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
