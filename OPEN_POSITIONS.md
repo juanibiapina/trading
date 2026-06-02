@@ -4,9 +4,9 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 ## Current Positions
 
-| Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target |
-|--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|
-| ANY | 2026-06-01 | $4.84 | 20 | $96.80 | A | Cathedra Bitcoin acquisition closing | $3.87 (-20%) | Trail from peak |
+| Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
+|--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
+| ANY | 2026-06-01 | $4.84 | 20 | $96.80 | A | Cathedra Bitcoin acquisition closing | $3.87 (-20%) | Trail from peak | $5.30 |
 
 ## Position Rules
 
