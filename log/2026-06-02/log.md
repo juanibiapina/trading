@@ -37,6 +37,15 @@
 
 **Next steps:** Re-scan at 22:00+ CET to see which candidates maintain momentum into after-hours.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found.
+
+**Notes:**
+- Open position in ANY blocks new entries regardless
+- Prior regular session candidates (DXST, BJDX, etc.) did not carry AH momentum
+- This is the first AH scan — will re-scan at 22:30 and 23:00 CET
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
