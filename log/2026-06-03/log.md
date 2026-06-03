@@ -46,6 +46,12 @@
 
 **Next scan:** 22:00+ CET for AH confirmation.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found.
+
+**Note:** AH just opened. Regular session movers (WCT, XOS, SDOT, CHEV, FOFO, STAK) need to reappear in subsequent AH scans with sustained momentum to qualify.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
