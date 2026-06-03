@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| ANY | 2026-06-01 | $4.84 | 20 | $96.80 | A | Cathedra Bitcoin acquisition closing | $3.87 (-20%) | Trail from peak | $5.30 |
+| — | — | — | — | — | — | — | — | — | — |
 
 ## Position Rules
 
@@ -50,6 +50,7 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| ANY | $4.84 | $3.81 | -$20.60 | -21.3% | 2 | A - Cathedra Bitcoin acquisition | Stop breached overnight (low $3.54), peaked at $5.50 (+13.6%) |
 | PRFX | $7.28 | $5.18 | -$27.30 | -28.8% | 1 | B - DeepSolar Predict™ launch | Hard stop breached, peaked at $9.30 (+27.7%) then overnight fade |
 | ATPC | $7.23 | $6.21 | -$13.26 | -14.1% | 1 | None | Hard stop breached, peaked at $8.30 (+14.8%) then faded |
 | VCIG | $3.91 | $3.60 | -$7.75 | -7.9% | 2 | B - CEO insider buy | Day 2 exit per Grade B rules, peak +21.5% |
