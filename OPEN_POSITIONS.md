@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| FOXX | 2026-06-03 | $5.62 | 17 | $95.54 | None | No catalyst found | $4.50 (-20%) | Exit PM | $5.63 |
+| FOXX | 2026-06-03 | $5.62 | 17 | $95.54 | None | No catalyst found | $4.50 (-20%) | Exit PM | $6.10 |
 
 ## Position Rules
 

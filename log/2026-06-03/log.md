@@ -200,6 +200,50 @@ No candidates found.
 
 **Summary:** FOXX paper trade showing -10% from entry. Pattern shifted to SPIKE→FADE after BUILD thesis at entry. TWAV new candidate needs another scan to qualify. No new entries — position rules limit to one at a time.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| FOXX | [TV](https://www.tradingview.com/chart/?symbol=FOXX) | $2.86 | +20.8% | +83.2% | $5.24 | +121.2% | 9.1M | 1.2M | 7.4x | 989K | Electronics Distributors |
+| TWAV | [TV](https://www.tradingview.com/chart/?symbol=TWAV) | $1.42 | -2.1% | +40.1% | $1.99 | +37.2% | 4.2M | 567K | 7.3x | 3.0M | Computer Communications |
+| ACCL | [TV](https://www.tradingview.com/chart/?symbol=ACCL) | $1.48 | +2.8% | +13.5% | $1.68 | +16.7% | 1.4M | 205K | 6.6x | 2.3M | Misc Commercial Services |
+| CHNR | [TV](https://www.tradingview.com/chart/?symbol=CHNR) | $4.45 | +9.5% | +18.7% | $5.28 | +29.9% | 334K | 54K | 6.2x | 533K | Wholesale Distributors |
+
+**Skipped:**
+- **SUGP** — Only 0.7x volume ratio (below threshold).
+- **TLYS** — Float too high (22.4M).
+- **RPGL** — Dead-cat bounce (Day -73.1%).
+- **SPWR** — Float too high (100.8M).
+
+**Position Update — FOXX:** 🚀
+- Entry: $5.62 at 23:00 CET
+- Current: $5.76 at 18:30 ET
+- Change: **+2.5% from entry**
+- NEW AH High: **$6.10** at 18:20 ET (+157.6% from close)
+- Pattern: SECOND BUILD — after fading to $4.99 at 17:50, rallied to new AH highs!
+- Status: Strong recovery, holding near highs
+
+**TWAV — Now Qualifies (2 AH scans >10%):**
+- Float: 3.0M ✓
+- AH trajectory: Flat 16:00-17:20 ($1.48-$1.56), SPIKE at 17:25 to $2.08, peaked $2.38 at 17:40, faded to $1.94, now recovering $2.15
+- Pattern: SPIKE→PARTIAL RECOVERY (peaked 50 min ago at $2.38, now below peak at $2.15)
+- No catalyst found (4 searches exhausted)
+- **Decision: SKIP** — Already have FOXX position open (one position at a time rule)
+
+**CHNR Update:**
+- 5th consecutive AH scan
+- Pattern: HOLD (range-bound $5.11-$5.36 last hour)
+- Float: 533K (excellent)
+- Still no catalyst
+- **Decision: SKIP** — Already have FOXX position open
+
+**ACCL Update:**
+- Pattern: Confirmed SPIKE→FADE (peaked $2.10 at 17:15, now $1.81 — down 14% from peak)
+- Slight recovery to $1.83 but still well below peak
+- **Decision: SKIP** — Clear SPIKE→FADE pattern
+
+**Summary:** FOXX paper trade turning profitable (+2.5%). New AH high at $6.10 confirms BUILD thesis. TWAV qualifies but position limit reached. No new entries.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
