@@ -40,7 +40,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading; **skip all on SPIKE→FADE-only nights** (0/10+ win rate)
 - **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
-- **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close (no margin for overnight fade)
+- **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close; if only 23:00 candidate exceeds 150%, wait for later scans (late-building candidates often have better entry points)
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
 
 ## Modifiable Files
@@ -53,6 +53,25 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-06-03 — Delay Entry When Only 23:00 Candidate Exceeds 150%
+
+**Context:** June 1-2 showed that the 150% extension ceiling exception clause ("unless no alternatives exist") was being interpreted too loosely. ANY was entered at +154.7% at 23:00 because no other candidates qualified at that exact scan. Result: -21.3% loss. Meanwhile, DXST emerged at 00:30 with a +57% entry point and went on to gain +74.7%. The exception clause let the agent enter an extended position 90 minutes before a much better candidate appeared.
+
+Additional data point: On June 2 evening, XOS showed BUILD pattern at 23:30 with +110.7% extension (within ceiling) but was blocked by the open ANY position.
+
+**Evaluation of previous changes:**
+- 2026-05-29 Entry Extension Ceiling: **Threshold correct, exception too loose.** ANY at +154.7% was allowed because "no alternatives at 23:00." The ceiling correctly flagged the concern, but the escape clause enabled the bad entry. Data: ANY +155%→-21.3%, while DXST +57%→+74.7% appeared 90 minutes later.
+- 2026-05-28 Skip SPIKE→FADE-Only Nights: **Working.** June 2 correctly identified YMAT (+70% early peak→+17% fade), UFG (+40% early peak→+12% fade) as SPIKE→FADE and noted "would skip all."
+- 2026-05-27 Trajectory Overrides Catalyst: **Insufficient data.** One-position rule blocks most test scenarios where trajectory vs catalyst choice is needed.
+- 2026-05-22 High-Change Fallback: **Insufficient data.** No data gap winners since the change.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Strengthened the 150% extension ceiling from soft exception to explicit wait-for-later-scans guidance. If the only candidate at 23:00 exceeds 150%, wait for 23:30/00:00 before entering. Only enter above 150% if it's past 00:00 CET and no lower-extension alternatives have appeared across all scans.
+   - Why: The previous wording ("unless no alternatives exist") was interpreted as "no alternatives at this exact scan." This allowed ANY (+155%) entry at 23:00 while DXST (+57%) was still building and appeared 90 minutes later.
+   - Hypothesis: Next time a candidate exceeds 150% at 23:00 and is the only option, the agent will wait for 23:30 or 00:00 scans before entering. This allows late-building candidates to emerge. Measurable: (1) next 23:00 scan with only >150% candidate results in wait, (2) late-building alternatives are evaluated, (3) entries that happen are either below 150% or made after 00:00 with no alternatives across all scans.
+
+**Updated parameters:** Added ANY +155%→-21.3% and DXST +57%→+75% to extension data in prompt.
 
 ### 2026-05-29 — Entry Extension Ceiling (150% Total%)
 
