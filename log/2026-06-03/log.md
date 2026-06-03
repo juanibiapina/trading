@@ -85,7 +85,45 @@ No candidates found.
 
 **Decision:** 22:30 scan — observation only per trading plan. All current candidates show SPIKE→FADE patterns (peaked before 16:30 ET and already declining). Will reassess at 23:00 CET.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| FOXX | [TV](https://www.tradingview.com/chart/?symbol=FOXX) | $2.86 | +20.8% | +96.5% | $5.62 | +137.3% | 4.9M | 684K | 7.2x | 989K | Electronics Distributors |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $7.46 | +234.5% | +7.6% | $8.03 | +260.1% | 3.0M | 12.4M | 0.2x | 5.5M | Motor Vehicles |
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $4.44 | -0.7% | +25.8% | $5.59 | +25.0% | 788K | 320K | 2.5x | 22.4M | Apparel/Footwear Retail |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $3.03 | -73.1% | +93.1% | $5.85 | -48.0% | 451K | 222K | 2.0x | 1.1M | IT Services |
+| CHNR | [TV](https://www.tradingview.com/chart/?symbol=CHNR) | $4.45 | +9.5% | +13.3% | $5.04 | +24.0% | 270K | 44K | 6.2x | 533K | Wholesale Distributors |
+| ACCL | [TV](https://www.tradingview.com/chart/?symbol=ACCL) | $1.48 | +2.8% | +23.6% | $1.83 | +27.1% | 153K | 35K | 4.4x | 2.3M | Misc Commercial Services |
+
+**Skipped:**
+- **XOS** — Total +260% exceeds 150% extension ceiling.
+- **TLYS** — Float too high (22.4M), SPIKE→FADE pattern.
+- **RPGL** — Dead-cat bounce (Day -73.1%).
+- **ACCL** — Only 1 AH scan so far (needs 2 AH scans >10% to qualify).
+
+**Candidate Evaluation:**
+
+**FOXX** — PATTERN REVERSAL from SPIKE→FADE to BUILD:
+- Float: 989K ✓ (excellent)
+- AH trajectory: Peaked $5.00 at 16:15, faded to $4.47 at 16:40, then RECOVERED to $5.62 at 17:00 — NEW AH HIGH!
+- In 2 AH scans (22:30 +57%, 23:00 +96.5%) ✓
+- Total: +137.3% (within 150% ceiling) ✓
+- Day%: +20.8% (not dead-cat bounce) ✓
+- Catalyst search (4 queries): No catalyst found — earnings, press releases, SEC filings all negative
+- **Decision: ENTER** — BUILD pattern overrides no-catalyst concern per trading plan
+
+**CHNR** — HOLD pattern (not building, not fading):
+- Float: 533K ✓
+- AH trajectory: Choppy between $4.97-$5.25, currently $5.04
+- In 2 AH scans (22:30 +10.1%, 23:00 +13.3%) ✓
+- No catalyst found (March 2026 acquisition LOI is old news)
+- **Decision: PASS** — FOXX has clearer BUILD pattern
+
+**Entry:** FOXX selected (BUILD pattern, ultra-low float, >10% in 2 AH scans)
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
+| FOXX | $5.62 | 23:00 CET | 17 | BUILD pattern (recovered from fade to new AH high), float 989K, no catalyst (Grade: None) |
