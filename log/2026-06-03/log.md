@@ -52,6 +52,39 @@ No candidates found.
 
 **Note:** AH just opened. Regular session movers (WCT, XOS, SDOT, CHEV, FOFO, STAK) need to reappear in subsequent AH scans with sustained momentum to qualify.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| FOXX | [TV](https://www.tradingview.com/chart/?symbol=FOXX) | $2.86 | +20.8% | +57.0% | $4.49 | +89.6% | 1.9M | 295K | 6.3x | 989K | Electronics Distributors |
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $4.44 | -0.7% | +37.4% | $6.10 | +36.5% | 316K | 259K | 1.2x | 22.4M | Apparel/Footwear Retail |
+| CHNR | [TV](https://www.tradingview.com/chart/?symbol=CHNR) | $4.45 | +9.5% | +10.1% | $4.90 | +20.6% | 225K | 37K | 6.1x | 533K | Wholesale Distributors |
+
+**Skipped:**
+- **RPGL** — Dead-cat bounce (Day -73.1%). Per trading plan: "Skip stocks that crashed >15% during regular session."
+- **SPPL** — Very low AH volume ratio (0.04x), only +5% AH change.
+
+**Candidate Observations:**
+
+**FOXX** — Excellent float (989K), strong AH move (+57%). BUT shows SPIKE→FADE pattern:
+- Peaked at $5.00 (+111.1%) at 16:15 ET
+- Now $4.74 (+100.2%) at 16:30 ET — already fading from peak
+- No catalyst found after structured search (4 searches: earnings calendars, press releases, SEC filings)
+
+**CHNR** — Tiny float (533K), decent move (+10.1% AH). Also SPIKE→FADE:
+- Peaked at $5.25 (+29.2%) at 16:00 ET (AH open)
+- Now $5.10 (+25.6%) — fading from open
+- No catalyst found
+
+**TLYS** — SPIKE→FADE, float too high (22.4M). Skip.
+- Peaked at $6.68 (+49.5%) at 16:05 ET
+- Now $5.72 (+28.0%) — significant fade
+
+**Regular session candidates (pending AH confirmation):**
+- WCT, XOS, SDOT, CHEV, FOFO, STAK — did not reappear in AH scans. Faded after market close.
+
+**Decision:** 22:30 scan — observation only per trading plan. All current candidates show SPIKE→FADE patterns (peaked before 16:30 ET and already declining). Will reassess at 23:00 CET.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
