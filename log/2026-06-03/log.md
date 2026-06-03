@@ -122,6 +122,40 @@ No candidates found.
 
 **Entry:** FOXX selected (BUILD pattern, ultra-low float, >10% in 2 AH scans)
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| FOXX | [TV](https://www.tradingview.com/chart/?symbol=FOXX) | $2.86 | +20.8% | +91.3% | $5.47 | +131.0% | 7.7M | 1.0M | 7.4x | 989K | Electronics Distributors |
+| ACCL | [TV](https://www.tradingview.com/chart/?symbol=ACCL) | $1.48 | +2.8% | +34.1% | $1.99 | +37.8% | 452K | 76K | 6.0x | 2.3M | Misc Commercial Services |
+| CHNR | [TV](https://www.tradingview.com/chart/?symbol=CHNR) | $4.45 | +9.5% | +11.9% | $4.98 | +22.5% | 291K | 47K | 6.2x | 533K | Wholesale Distributors |
+
+**Skipped:**
+- **TLYS** — Float too high (22.4M), SPIKE→FADE pattern.
+- **RPGL** — Dead-cat bounce (Day -73.1%).
+- **SUGP** — Only +7.7% AH change (below 10% threshold).
+- **SLQT** — Only +6.0% AH change, massive float (137M).
+
+**Position Update — FOXX:**
+- Entry: $5.62 at 23:00 CET
+- Current: $5.47 (-2.7% from entry)
+- AH Peak: $5.63 at 17:25 ET
+- Status: Holding near highs, normal volatility
+
+**New Qualifier — ACCL:**
+- Now in 2 AH scans >10% ✓ (23:00 +23.6%, 23:30 +34.1%)
+- Float: 2.3M ✓
+- Trajectory: SPIKE→FADE (peaked $2.10 at 17:15 ET, now $1.93)
+- Catalyst search (4 queries): No catalyst found
+- **Decision: SKIP** — SPIKE→FADE pattern (peaked at 17:15 ET and declining)
+
+**CHNR Update:**
+- 3rd consecutive AH scan
+- Pattern: HOLD (choppy $4.90-$5.25 range)
+- No compelling entry signal
+
+**Summary:** FOXX paper trade holding. No new entries — ACCL shows SPIKE→FADE pattern.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
