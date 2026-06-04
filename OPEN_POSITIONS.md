@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| FOXX | 2026-06-03 | $5.62 | 17 | $95.54 | None | No catalyst found | $4.50 (-20%) | Exit PM | $6.10 |
+| — | — | — | — | — | — | — | — | — | — |
 
 ## Position Rules
 
@@ -58,4 +58,5 @@ Based on historical data (17 winners tracked):
 | CODX | $2.50 | $1.77 | -$29.20 | -29.2% | 2 | B - Ebola testing strategy | Hard stop breached, collapsed in premarket |
 | AMST | $1.17 | $2.62 | +$123.25 | +124% | 1 | B - Enterprise customer win | Trail stop hit at $2.89 after $3.40 peak |
 | TRNR | $1.31 | $1.07 | -$19.68 | -18.3% | 1 | B - Q1 earnings beat | Hard stop breached, faded from $1.64 AH peak |
+| FOXX | $5.62 | $4.74 | -$14.96 | -15.7% | 1 | None | Hard stop breached, peaked at $6.10 (+8.5%) then overnight fade |
 | BIYA | $1.12 | $1.16 | +$3.56 | +3.6% | 1 | None | Exited at profit per rules, avoided fade from $1.41 peak |
