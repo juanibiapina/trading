@@ -38,7 +38,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
-- Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading; **skip all on SPIKE→FADE-only nights** (0/10+ win rate)
+- Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); **AH peak timing: before 18:00 ET = 0/5+ PM follow-through, after 19:00 ET = 4/4 PM follow-through**; at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading; **skip all on SPIKE→FADE-only nights** (0/10+ win rate)
 - **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
 - **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close; if only 23:00 candidate exceeds 150%, wait for later scans (late-building candidates often have better entry points)
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
@@ -53,6 +53,24 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-06-04 — Sharpen AH Peak Timing Threshold
+
+**Context:** June 1-4 data shows a clear pattern in AH peak timing vs PM follow-through:
+- Late peaks (after 19:00 ET / 01:00 CET): TWAV 19:50→+38.5%, DXST 18:35→+74.7%, LNKS 18:50→+61%, WOK 19:05→+177% — **4/4 winners**
+- Early peaks (before 18:00 ET / 00:00 CET): FOXX 18:20→-15.7%, ACCL 17:15→fade, SNAL 16:35→fade, TDIC 17:00→fade, XOS 16:35→lost — **0/5+ failures**
+
+The current prompt said "16:00-17:30 ET" as the early peak window. Data shows 18:00 ET is the real boundary, with stocks peaking after 19:00 ET being the strongest.
+
+**Evaluation of previous changes:**
+- 2026-06-03 Delay Entry When Only 23:00 Candidate Exceeds 150%: **Insufficient data.** On June 3 evening, FOXX was at +137% (under 150% ceiling), so the rule wasn't tested. Need a case where a candidate exceeds 150% at 23:00 to evaluate.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Updated AH peak timing guidance from vague "16:00-17:30 ET" to specific thresholds with data: before 18:00 ET = 0/5+ failures, after 19:00 ET = 4/4 wins. Added explicit preference for late-peaking or still-building candidates.
+   - Why: FOXX peaked at 18:20 ET and lost -15.7%. TWAV peaked at 19:50 ET and would have won +38.5%. The prior guidance wasn't specific enough to distinguish these cases.
+   - Hypothesis: At later scans, the agent will explicitly check peak times and prefer candidates that peaked after 19:00 ET or are still building. Measurable: (1) next evening scan at 00:00+ CET mentions peak TIME when comparing candidates, (2) when choosing between an early-peaker and late-peaker, the late-peaker is preferred.
+
+**Updated process:** Added specific peak timing thresholds to trajectory preference line.
 
 ### 2026-06-03 — Delay Entry When Only 23:00 Candidate Exceeds 150%
 
