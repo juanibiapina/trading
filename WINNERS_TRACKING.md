@@ -6,8 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-05-29 | PRFX | B — DeepSolar Predict launch | +564% ($8.96) | — | $3.00 | Day 4 - Faded from peak |
-| 2026-06-01 | DXST | None | +170% ($4.22) | — | $3.26 | 🆕 Day 1 - No catalyst, pure momentum |
+| 2026-06-01 | DXST | None | +170% ($4.22) | — | $4.95 | Day 3 - Recovered from fade |
+| 2026-06-03 | TWAV | None | +98.6% ($2.88) | — | $2.68 | 🆕 Day 1 - Late BUILD pattern |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -37,6 +37,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-05-26 | MNTS | Unknown (PM news) | N/A | — | — | $16.85 | Day 7: Faded from $18-19 |
 | 2026-05-27 | SNGX | None | $1.20 | — | — | $0.91 | Day 6: Faded, recovered from $0.51 low |
 | 2026-05-28 | ATPC | None | $7.25 | — | — | $4.87 | Day 5: Faded further |
+| 2026-05-29 | PRFX | B — DeepSolar | $8.96 (+564%) | — | — | $2.02 | Day 5: Faded significantly |
 
 ## Patterns Observed
 
@@ -56,6 +57,11 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 ### New Pattern: No-Catalyst Runners
 - **DXST (2026-06-01)**: Ran +170% in AH with zero news. 1.2M float, LATE BUILD pattern, 6x VRatio. Suggests pattern quality (low float + momentum) can matter more than catalyst for day 1 gains.
+
+### New Pattern: Late AH Peak → PM Follow-Through
+- **TWAV (2026-06-03)**: Peaked at 19:50 ET (+66.2%), continued to +98.6% PM peak at 08:10 ET
+- **FOXX (2026-06-03)**: Peaked at 18:20 ET (+157.6%), faded to +98.4% by PM
+- **Hypothesis**: Stocks that peak late in AH (19:00+ ET) may have better PM follow-through than early AH peakers (16:00-18:00 ET). Early peaks give more time to fade overnight.
 
 ## How to Use This File
 

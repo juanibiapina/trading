@@ -249,3 +249,161 @@ No candidates found.
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | FOXX | $5.62 | 23:00 CET | 17 | BUILD pattern (recovered from fade to new AH high), float 989K, no catalyst (Grade: None) |
+
+---
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**TWAV** — Computer Communications
+- Catalyst: None found (4 structured searches exhausted)
+- Previous Close: $1.45
+- AH last night: $2.41 (+66.2%) at 19:50 ET — Late BUILD pattern
+- Premarket now: $2.68 (+84.8%)
+- PM Peak: $2.88 (+98.6%) at 08:10 ET
+- Hypothetical P&L (AH entry $2.08 → PM peak $2.88): **+38.5%**
+- Float: 3.0M | Market Cap: $4.9M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- TWAV first appeared in 00:00 CET scan at +67.6% AH change
+- Also appeared in 00:30 CET scan at +40.1% AH change (lower due to fade)
+- Why we didn't act: **Position limit** — FOXX was already open (one position at a time rule)
+- Scanner gap: **None** — scanner caught TWAV, but trading rules prevented entry
+
+**Observation:** This is a case where the scanner worked but position management rules caused a miss. The "one position at a time" rule prevented entering TWAV when it appeared. FOXX (the active position) was showing -10% at that time but the rule doesn't allow switching.
+
+### Baseline Tracking
+
+- Days tracked: 26 (was 25 + 1 today)
+- Winners detected by scanner: 22/26 (**84.6%**) — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO, AIIO, HTCO, WOK, LNKS, AMST, PHGE (May 20), PHGE (May 26), SNGX, ATPC, PRFX, DXST, TWAV
+- Winner selected for paper trade: 17/26 (**65.4%**) — sometimes we picked the wrong stock
+- Target: >80% detection
+- Status: **BASELINE MET** ✅
+
+### Retrospective Scan Results
+
+**PM Scan (04:20 ET):**
+| Ticker | PM Chg% | PM Price | PM Vol | Float | Industry |
+|--------|---------|----------|--------|-------|----------|
+| TWAV | +81.7% | $2.58 | 969K | 3.0M | Computer Communications |
+| FOXX | +60.8% | $4.60 | 227K | 989K | Electronics Distributors |
+| SUGP | +17.9% | $1.38 | 87K | 470K | Misc Commercial Services |
+| AIM | +5.9% | $0.78 | 81K | 13.7M | Pharmaceuticals: Major |
+| ACCL | +18.2% | $1.75 | 53K | 2.3M | Misc Commercial Services |
+
+**AH Reconstruction (via check-prices.py --ah-history):**
+| Ticker | AH Peak | Peak Time | AH Trajectory | Pattern |
+|--------|---------|-----------|---------------|----------|
+| FOXX | $6.10 (+157.6%) | 18:20 ET | Spike→fade from $5.00 to $4.47, then BUILD to $6.10, then fade | SPIKE→BUILD→FADE |
+| TWAV | $2.41 (+66.2%) | 19:50 ET | Slow build, spike at 17:25, held +45-65% range | LATE BUILD |
+| ACCL | $2.10 (+45.8%) | 17:15 ET | Early spike, faded to +27% by close | SPIKE→FADE |
+| SUGP | $1.57 (+45.4%) | 16:50 ET | Early spike, faded to +38% by close | SPIKE→FADE |
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| FOXX | $5.62 | +137.1% | None — no catalyst found | 23:00 CET | $4.77 | 04:20 ET | — | -€15.64 | -16.4% | ❌ Loss |
+
+**PM Peak** = $4.77 at 04:20 ET (highest observed so far). AH peak was $6.10 at 18:20 ET — position peaked at +8.5% after entry but we couldn't exit in AH.
+
+**Entry Total%** = +137.1% (from prev close $2.37 to entry $5.62). This is extremely extended.
+
+**Key insight:** FOXX peaked in AH at $6.10 (00:20 CET), only 80 minutes after our entry at $5.62. If we could exit in AH at peak, this would have been a +8.5% win. Instead, overnight fade to PM caused -16.4% loss. This pattern (AH peak → overnight fade → PM lower) is the opposite of what the strategy relies on (AH entry → PM peak).
+
+**Total Paper P&L: -€15.64**
+
+### Scanner Effectiveness
+
+- Evening scans ran: 7 times (21:30 - 00:30 CET)
+- Candidates found: 15 unique tickers (WCT, XOS, SDOT, CHEV, FOFO, STAK, ATPC, ANY, BNRG, NCT, FOXX, TLYS, CHNR, ACCL, TWAV)
+- Stocks meeting criteria (2 AH scans >10%): FOXX ✓, CHNR ✓, ACCL ✓, TWAV ✓
+- Today's winner in evening scans: **YES** (TWAV at 00:00 and 00:30 CET)
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| TWAV | +67.6% | Position limit (FOXX open) | YES (+38.5% if bought AH, sold PM peak) |
+
+**Root cause:** The "one position at a time" rule blocked TWAV entry when it appeared at 00:00 CET. At that time, FOXX was down -10% from entry but we didn't have a rule to exit losing positions to free up capital for better opportunities.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|----------|
+| FOXX | $6.10 (+157.6%) | 18:20 ET | Spike→Build→Fade | $4.70 (+98.4%) | -22.9% | +98.4% | ❌ FADE overnight |
+| TWAV | $2.41 (+66.2%) | 19:50 ET | Late Build | $2.68 (+84.8%) | +11.2% | +84.8% | ✅ FOLLOW-THROUGH |
+| ACCL | $2.10 (+45.8%) | 17:15 ET | Spike→Fade | $1.75 (+18.2%) | -16.7% | +18.2% | ❌ FADE |
+| CHNR | $5.60 (+30.4%) | 17:30 ET | Hold | — | — | — | No PM data |
+
+**Pattern observation:** TWAV (Late Build pattern, peaked at 19:50 ET) showed PM follow-through. FOXX, ACCL (both peaked early at 17:15-18:20 ET) faded overnight. **Late AH peaks may indicate stronger PM follow-through.**
+
+### Price Charts
+
+```
+========================================================================
+ TWAV - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $1.45
+2-Day Range: $1.35 - $2.88
+Current: $2.68 (+84.8% from prev close)
+Peak: $2.88 (+98.6%) at 06-04 08:10 ET
+
+Chart (oldest → newest):
+$   2.68 │                                                            
+         │                                                            
+         │                                 ███                     █  
+         │                                             █ █          ██
+         │                                █    █ █    █ █ █████████   
+         │                                      █ ████                
+         │                                    █                       
+         │     █                ██████████                            
+$   1.35 │█████ ████████████████                                      
+         └────────────────────────────────────────────────────────────
+
+========================================================================
+ FOXX - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $2.37
+2-Day Range: $2.23 - $6.14
+Current: $4.70 (+98.4% from prev close)
+Peak: $6.14 (+159.3%) at 06-03 22:25 ET
+
+Chart (oldest → newest):
+$   6.10 │                                       █                    
+         │                                      █ █                   
+         │                       ██████            ███████████        
+         │                     ██      ████  █ █              █████ █ 
+         │              ████               ██ █                    █  
+         │             █    ███                                      █
+         │            █                                               
+         │           █                                                
+         │         ██                                                 
+         │        █                                                   
+$   2.23 │████████                                                    
+         └────────────────────────────────────────────────────────────
+```
+
+### Notes
+
+**Key learning from today:**
+
+1. **Position selection matters more than detection.** Scanner detected TWAV (+67.6%) at 00:00 CET, but we were locked into FOXX (which was already -10% at that point). The strategy assumes we pick the right stock — but when multiple candidates qualify, how do we choose?
+
+2. **Early AH peaks predict overnight fades.** FOXX peaked at 18:20 ET (00:20 CET), only 20 minutes into our screening window. By the time we entered at 23:00 CET, it was already past peak. TWAV peaked at 19:50 ET (01:50 CET) — a LATE peak — and continued into PM.
+
+3. **Potential rule addition:** Consider "peak timing" as a selection criterion:
+   - Early peak (16:00-18:00 ET): Higher fade risk → weight down
+   - Late peak (19:00+ ET): Better follow-through odds → weight up
+
+4. **The "one position at a time" rule needs refinement.** When a better opportunity appears and current position is losing, we should consider:
+   - Exit current position at loss
+   - Enter new opportunity
+   - This is still "one position at a time" but allows switching
+
+**Extension ceiling observation:** FOXX entry at +137.1% from close exceeded the 150% ceiling mentioned in earlier logs but was entered anyway because the BUILD pattern seemed compelling. Result: loss. This reinforces the extension ceiling as a valid filter.
