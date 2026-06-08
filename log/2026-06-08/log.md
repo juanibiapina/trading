@@ -85,6 +85,36 @@ AH 5-min history for each new candidate:
 
 **Plan:** Re-scan at 23:30 / 00:00 CET. Only enter if a BUILD candidate emerges that holds/builds near its AH high (ideally peaking after 18:30 ET), float <50M, AH >10% across ≥2 AH scans, Day% >-15%, and Total% <+150%.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**AH scan — entry-eligible.** 8 hits. New AH candidates this scan: SLGB, WCT.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CHAI | [TV](https://www.tradingview.com/chart/?symbol=CHAI) | $0.82 | -1.3% | +309.8% | $3.36 | +304.3% | 28.8M | 3.3M | 8.6x | 18.3M | Packaged Software |
+| CNET | [TV](https://www.tradingview.com/chart/?symbol=CNET) | $0.71 | +6.0% | +25.0% | $0.89 | +32.5% | 2.9M | 321K | 8.9x | 3.0M | Advertising/Marketing |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.80 | +5.9% | +23.3% | $2.22 | +30.6% | 2.4M | 742K | 3.3x | 1.9M | Specialty Stores |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.51 | +2.8% | +5.7% | $0.54 | +8.6% | 788K | 586K | 1.3x | 1.0M | Air Freight/Couriers |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $4.48 | -36.8% | +12.9% | $5.06 | -28.6% | 374K | 12.8M | 0.0x | 3.9M | Misc Commercial Services |
+| INDP | [TV](https://www.tradingview.com/chart/?symbol=INDP) | $2.10 | -42.6% | +23.8% | $2.60 | -28.9% | 343K | 4.9M | 0.1x | 3.5M | Pharmaceuticals: Major |
+| TOON | [TV](https://www.tradingview.com/chart/?symbol=TOON) | $0.73 | -0.8% | +15.3% | $0.84 | +14.4% | 314K | 552K | 0.6x | 55.9M | Movies/Entertainment |
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.32 | -6.4% | +20.5% | $1.59 | +12.8% | 37K | 9.8M | 0.0x | 849K | Packaged Software |
+
+### Evaluation Notes — DECISION: NO ENTRY
+
+AH 5-min history reviewed for each candidate:
+
+- **CHAI** — The only genuine BUILD: dipped to +145% at 17:00, then climbed to a **new AH high +416% at 17:20** ($4.29), now +364% at 17:30. Building to new highs after 17:00 is the pattern we want — **but Total% is ~+304–365%, far above the +150% extension ceiling.** Per the hard rule (PRFX +439%→-28.8%, VCIG +194%→-7.9% all lost), extended entries leave no overnight margin. **Skip: extension >150%** (catalyst search at 23:00 already found no company-specific news; extension disqualifies regardless).
+- **OCG** — Now in its 2nd AH scan >10% (23:00 +21.6%, 23:30 +23.3%), float 1.9M (prior no-catalyst winner profile), Day +5.9%, Total +30.6% — passes the numeric gates. **But pattern is early-peak fade:** spiked +65.6% at 16:35 ET, never reclaimed it, choppy +30–40%, now drifting to its AH low **+21.8% at 17:30**. Peaked before 18:30 ET (0/6+ historically) and is NOT holding near its AH high. **Skip: early-peak SPIKE→FADE, drifting to session lows.**
+- **WCT** — Float 849K but spiked +12.8% at 17:10 then immediately crashed to **-11% to -13%**, now negative in AH. Dead. **Skip.**
+- **CNET** — Faded from +83.7% (16:45) to **-11.9% at 17:30** (below prior close in AH). Dead. **Skip.**
+- **SLGB** — Choppy sub-10% (peaked +19.9% at 17:00, now +8%). Below threshold. **Skip.**
+- **VCIG** (Day -36.8%) / **INDP** (Day -42.6%) — dead-cat bounces, Day% well below -15%. **TOON** — float 55.9M (>50M). All skip.
+
+**Why no entry:** The single BUILD candidate (CHAI) is excluded by the +150% extension ceiling. Every other qualifying mover (OCG, CNET, WCT) peaked before 17:30 ET and is now fading toward — or below — its AH lows. This remains a SPIKE→FADE-dominated night with no enter-able BUILD setup. A skip here avoids a predictable loss rather than forfeiting data.
+
+**Plan:** Re-scan at 00:00 / 00:30 CET. Watch CHAI for whether it consolidates to a lower-extension entry (unlikely given it's at +365%), and watch for any fresh late-building candidate that holds near its AH high, ideally peaking after 18:30 ET, float <50M, Total% <+150%.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
