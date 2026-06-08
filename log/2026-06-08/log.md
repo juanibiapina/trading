@@ -55,6 +55,36 @@ None of the 21:30 watch candidates (GRAN, BYAH, PN, ITOC, PAVS, CLIK) have confi
 
 **Plan:** Re-scan at 23:00 CET (5:00 PM ET) — first scan eligible for entries. Need a candidate with float <50M, AH change >10% across ≥2 AH scans (22:00+ CET), Day% above -15%, BUILD/hold pattern, and entry extension below +150%. So far no clean BUILD candidate: CLWT faded, VCIG is a dead-cat, STAK is holding but thin and early-peaked. Carry GRAN/PN watch from regular session forward if they reappear in AH.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**AH scan — first scan eligible for entries.** 11 hits. New AH candidates this scan: CHAI, OCG, CNET.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CHAI | [TV](https://www.tradingview.com/chart/?symbol=CHAI) | $0.82 | -1.3% | +217.1% | $2.60 | +212.9% | 11.6M | 1.4M | 8.6x | 18.3M | Packaged Software |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.80 | +5.9% | +21.6% | $2.19 | +28.8% | 1.3M | 602K | 2.1x | 1.9M | Specialty Stores |
+| CNET | [TV](https://www.tradingview.com/chart/?symbol=CNET) | $0.71 | +6.0% | +57.7% | $1.12 | +67.2% | 200K | 28K | 7.1x | 3.0M | Advertising/Marketing |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $4.48 | -36.8% | +31.7% | $5.90 | -16.8% | 334K | 12.8M | 0.0x | 3.9M | Misc Commercial Services |
+| CPSH | [TV](https://www.tradingview.com/chart/?symbol=CPSH) | $7.75 | +15.3% | +7.1% | $8.30 | +23.5% | 162K | 6.7M | 0.0x | 15.6M | Metal Fabrication |
+| INDP | [TV](https://www.tradingview.com/chart/?symbol=INDP) | $2.10 | -42.6% | +26.2% | $2.65 | -27.6% | 53K | 4.9M | 0.0x | 3.5M | Pharmaceuticals: Major |
+| MB | [TV](https://www.tradingview.com/chart/?symbol=MB) | $6.07 | -11.4% | +31.8% | $8.00 | +16.8% | 4K | 6K | 0.7x | 4.7M | Restaurants |
+
+(Sub-10% / high-float hits omitted: NYXH, MDXH, BMGL, SLGB.)
+
+### Evaluation Notes — DECISION: NO ENTRY (SPIKE→FADE-only night)
+
+AH 5-min history for each new candidate:
+
+- **CHAI** — Peaked **+233% at 16:45 ET** ($2.77), now fading to +170% at 17:00. Classic SPIKE→FADE, peaked far before the 18:30 ET continuation cutoff. **Total% +212.9% also blows past the +150% extension ceiling.** Catalyst search (2 calls): no company-specific news, only generic AI-stock lists. **Skip: extension >150% + early-peak SPIKE→FADE + no catalyst.**
+- **CNET** — Peaked **+83.7% at 16:45 ET** ($1.23), now faded to +44.8% at 17:00. Float 3.0M, VRatio 7.1x. SPIKE→FADE, early peak. Catalyst search (1 call): no company-specific news. First AH appearance (only 1 AH scan). **Skip: early-peak SPIKE→FADE, fails 2-AH-scan rule.**
+- **OCG** — Choppy: spiked **+65.6% at 16:35 ET** ($2.82), dropped to +29%, bounced to +42% at 16:55, now +19% at 17:00. Float 1.9M (very low, prior no-catalyst winner profile). Catalyst search (1 call): no news found. First AH appearance. **Skip: choppy/early-peak fade, fails 2-AH-scan rule.**
+- **VCIG** — Day **-36.8%** crash, AH bounce. Dead-cat bounce (Day% well below -15% cutoff). **Skip.**
+- **INDP** — Day -42.6%, dead-cat. **MB** — AH vol only 4K (illiquid). **CPSH** — float 15.6M, MCap 149M, AH only +7%. All skip.
+
+**Why skip all:** Every qualifying candidate (CHAI, CNET, OCG) peaked **before 17:00 ET** and is now declining — a textbook SPIKE→FADE-only night. Per learning-phase rules, SPIKE→FADE stocks (peaked <17:30 ET, now fading) are 0/10+ for PM continuation; skip all rather than entering the least-bad option. Additionally none meet the "AH >10% across ≥2 AH scans" requirement — all three are first-time AH appearances. CHAI also exceeds the +150% extension ceiling. No catalysts found for any candidate.
+
+**Plan:** Re-scan at 23:30 / 00:00 CET. Only enter if a BUILD candidate emerges that holds/builds near its AH high (ideally peaking after 18:30 ET), float <50M, AH >10% across ≥2 AH scans, Day% >-15%, and Total% <+150%.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
