@@ -24,6 +24,16 @@
 
 **Plan:** Re-scan at 22:00+ CET when AH opens. Only candidates that reappear with sustained AH momentum become entry candidates. Per learning-phase rules, no entries before 23:00 CET (5:00 PM ET) — 22:00/22:30 scans are observation-only.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**AH just opened** — scanner returned 0 hits. AH price bars have not yet accumulated this early (4:00 PM ET sharp), so no momentum can be confirmed. Observation-only scan per learning-phase rules (no entries before 23:00 CET).
+
+No candidates found.
+
+### Watch-list status (from 21:30 regular-session scan)
+
+None of the 21:30 watch candidates (GRAN, BYAH, PN, ITOC, PAVS, CLIK) have confirmed AH momentum yet — no AH bars available this early. Re-check at 22:30 / 23:00 CET when AH volume builds. GRAN remains the most constructive profile (4.7M float, building volume into close) to watch for carry-through.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
