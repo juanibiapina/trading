@@ -115,6 +115,36 @@ AH 5-min history reviewed for each candidate:
 
 **Plan:** Re-scan at 00:00 / 00:30 CET. Watch CHAI for whether it consolidates to a lower-extension entry (unlikely given it's at +365%), and watch for any fresh late-building candidate that holds near its AH high, ideally peaking after 18:30 ET, float <50M, Total% <+150%.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**AH scan — entry-eligible.** 14 hits. New AH candidates this scan: MTEN, BGI, VSME.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CHAI | [TV](https://www.tradingview.com/chart/?symbol=CHAI) | $0.82 | -1.3% | +357.3% | $3.75 | +351.3% | 41.9M | 5.0M | 8.5x | 18.3M | Packaged Software |
+| MTEN | [TV](https://www.tradingview.com/chart/?symbol=MTEN) | $1.94 | +81.3% | +132.5% | $4.51 | +321.5% | 3.7M | 2.1M | 1.7x | 843K | Industrial Machinery |
+| BGI | [TV](https://www.tradingview.com/chart/?symbol=BGI) | $0.62 | +1.1% | +77.3% | $1.10 | +79.2% | 1.3M | 145K | 8.8x | 2.8M | Specialty Stores |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.80 | +5.9% | +24.4% | $2.24 | +31.8% | 2.7M | 770K | 3.4x | 1.9M | Specialty Stores |
+| TOON | [TV](https://www.tradingview.com/chart/?symbol=TOON) | $0.73 | -0.8% | +32.6% | $0.97 | +31.6% | 10.1M | 1.6M | 6.2x | 55.9M | Movies/Entertainment |
+| VSME | [TV](https://www.tradingview.com/chart/?symbol=VSME) | $0.77 | +6.7% | +6.5% | $0.82 | +13.7% | 648K | 151K | 4.3x | 2.6M | Advertising/Marketing |
+
+(Sub-10% / high-float / dead-cat hits omitted: QTEX, VCIG, AMPG, INDP, CPSH, NXXT, MDXH, FABC.)
+
+### Evaluation Notes — DECISION: NO ENTRY
+
+AH 5-min history reviewed for each candidate:
+
+- **MTEN** (NEW) — Float 843K (very low), Day +81.3% in regular session. In AH it held flat $1.5–1.7 until 17:30, then **spiked to +321.5% ($4.51) at 17:40 ET**, and is now fading hard to +170% ($2.89) at 18:00. Two hard-rule fails: (1) **Total% +321.5% blows past the +150% extension ceiling**; (2) AH spike peaked at 17:40 ET — before 18:30 cutoff — and is collapsing. Catalyst search (2 calls): no June 8-specific news; automotive-mold Chinese small-cap, likely a low-float squeeze. **Skip: extension >150% + early-peak SPIKE→FADE.**
+- **BGI** (NEW) — Float 2.8M, Day +1.1% (flat regular session). AH spike started 17:40, **peaked +148.8% ($1.53) at 17:50 ET**, then choppy +100–140%, now ~+139%. First AH appearance — **fails the 2-AH-scan rule.** Peaked at 17:50 ET (before 18:30). Catalyst search (1 call): only recent news is a **June 5 term-loan / credit-facility refinancing ($32.5M)** — a financing event (Grade C/D), not a fresh June 8 catalyst. **Skip: fails 2-AH-scan rule, early-peak spike, financing-only catalyst.**
+- **OCG** — Now its **3rd consecutive AH scan >10%** (23:00 +21.6%, 23:30 +23.3%, 00:00 +24.4%), float 1.9M, Day +5.9%, Total +31.8% (well under ceiling) — passes all numeric gates. **But pattern remains early-peak fade:** spiked +65.6% at 16:35 ET, never reclaimed it, has churned in a +20–40% band for two hours, now drifting at the lower end (+24.7% at 18:00, vs +20.6% at 17:30). Peaked before 18:30 ET (0/6+ historically) and is NOT holding near its AH high. **Skip: early-peak, not holding near high.**
+- **CHAI** — Still building (+416% peak at 17:20, now +299% at 18:00) but **Total% ~+300–350%, far above the +150% extension ceiling.** Catalyst search at 23:00 found no company-specific news. **Skip: extension >150%.**
+- **VSME** — AH only +6.5%, below the 10% threshold. **Skip.**
+- **TOON** — Float 55.9M (>50M). **Skip.**
+
+**Why no entry:** No candidate clears the bar tonight. The only BUILD-pattern names (CHAI, MTEN) are excluded by the +150% extension ceiling and/or early-peak fade. OCG passes the numeric gates but peaked at 16:35 ET and is drifting below its high — the 0/6+ pre-18:30-peak profile. BGI is a fresh first-appearance spike that already peaked at 17:50 ET on a financing-only catalyst. This stays a SPIKE→FADE-dominated night with no enter-able setup that peaks/holds after 18:30 ET under the extension ceiling. A skip avoids a predictable loss rather than forfeiting data.
+
+**Plan:** Re-scan at 00:30 / 01:00 CET. Watch for a fresh late-building candidate that holds near its AH high (ideally peaking after 18:30 ET), float <50M, AH >10% across ≥2 AH scans, Day% >-15%, Total% <+150%. OCG remains worth tracking if it breaks back toward its high on rising volume; MTEN/BGI only if they rebuild new highs after 18:30 (unlikely given current fades).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
