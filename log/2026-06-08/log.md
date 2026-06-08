@@ -145,6 +145,38 @@ AH 5-min history reviewed for each candidate:
 
 **Plan:** Re-scan at 00:30 / 01:00 CET. Watch for a fresh late-building candidate that holds near its AH high (ideally peaking after 18:30 ET), float <50M, AH >10% across ≥2 AH scans, Day% >-15%, Total% <+150%. OCG remains worth tracking if it breaks back toward its high on rising volume; MTEN/BGI only if they rebuild new highs after 18:30 (unlikely given current fades).
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**AH scan — entry-eligible.** 20 hits. New AH candidates this scan: ZTG, GRAN (carried from regular-session watch), plus continued CHAI/MTEN/BGI/OCG.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CHAI | [TV](https://www.tradingview.com/chart/?symbol=CHAI) | $0.82 | -1.3% | +248.8% | $2.86 | +244.2% | 45.1M | 5.3M | 8.5x | 18.3M | Packaged Software |
+| ZTG | [TV](https://www.tradingview.com/chart/?symbol=ZTG) | $2.54 | +4.5% | +111.8% | $5.38 | +121.4% | 656K | 121K | 5.4x | — | Data Processing Services |
+| GRAN | [TV](https://www.tradingview.com/chart/?symbol=GRAN) | $1.43 | +39.7% | +43.2% | $2.04 | +100.0% | 814K | 2.9M | 0.3x | 4.7M | Misc Commercial Services |
+| MTEN | [TV](https://www.tradingview.com/chart/?symbol=MTEN) | $1.94 | +81.3% | +30.9% | $2.54 | +137.4% | 6.1M | 2.4M | 2.5x | 843K | Industrial Machinery |
+| BGI | [TV](https://www.tradingview.com/chart/?symbol=BGI) | $0.62 | +1.1% | +24.8% | $0.77 | +26.1% | 10.5M | 1.2M | 8.8x | 2.8M | Specialty Stores |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.80 | +5.9% | +15.0% | $2.07 | +21.8% | 2.7M | 779K | 3.5x | 1.9M | Specialty Stores |
+| TOON | [TV](https://www.tradingview.com/chart/?symbol=TOON) | $0.73 | -0.8% | +33.4% | $0.97 | +32.4% | 12.7M | 1.9M | 6.7x | 55.9M | Movies/Entertainment |
+
+(Sub-10% / high-float / dead-cat hits omitted: SLGB, FLD, ZTG-dupes, VSME, AMPG, CYPH, INDP, VCIG, KUST, PRFX, LZMH, HAIN, MDXH, MWG.)
+
+### Evaluation Notes — DECISION: NO ENTRY (SPIKE→FADE-only night)
+
+AH 5-min history reviewed for each candidate:
+
+- **ZTG** (NEW) — Float unreported, Day +4.5%. AH price action is **chaotic/erratic** with thin 0-volume prints: $8.91 (18:00) → $4.60 (18:15) → $9.38 (18:20) → $11.81 peak **+327.9% at 18:30 ET**. The peak is far above the +150% extension ceiling, and current scanner read ($5.38 / Total +121.4%) sits in the middle of violent whipsaws — not a clean BUILD or hold, just illiquid squeeze spikes. First AH appearance (**fails the 2-AH-scan rule**), unknown float, conflicting prev-close data. Catalyst search (1 call): no company-specific news (results all ZTS/ZETA/META, not Zenta). **Skip: erratic illiquid prints, peak >150% ceiling, fails 2-AH-scan rule, no catalyst.**
+- **GRAN** (NEW in AH; was on regular-session watch) — Float 4.7M, Day +39.7%. AH **held a flat +27–43% base for two hours** (16:00–18:00), then spiked to **+137.3% ($2.42) at 18:05 ET**, and is now **fading hard back toward base**: $2.11 (18:10) → $1.69 (18:15) → $1.59 (18:30, +55.9%). Textbook SPIKE→FADE — spiked and immediately rolling over, NOT holding near its high. First clean AH >10% appearance (fails 2-AH-scan rule). Catalyst search (1 call): no company-specific news. **Skip: spike-and-fade off 18:05 peak, not holding near high, fails 2-AH-scan rule, no catalyst.**
+- **MTEN** — Peaked **+321.5% at 17:40 ET**, now faded to +123.4%. Early-peak SPIKE→FADE + extension >150%. **Skip** (confirmed from prior scans).
+- **BGI** — Peaked **+144.4% at 17:50 ET**, now collapsed to +19.7%. **Skip.**
+- **OCG** — 4th consecutive AH scan >10% (float 1.9M, Total +21.8%, passes numeric gates) but peaked +65.6% at **16:35 ET** and is **drifting at session lows** (+17.6% at 18:29). Pre-18:30-peak profile (0/6+), not holding near high. **Skip: early-peak, drifting low.**
+- **CHAI** — Still extended (peak +416% at 17:20, now +244%), Total% far above +150% ceiling, no catalyst found earlier. **Skip: extension >150%.**
+- **TOON** — Float 55.9M (>50M). **Skip.**
+
+**Why no entry:** This stays a SPIKE→FADE-dominated night. The two new names both fail: ZTG is erratic illiquid squeeze noise that peaked +327% (>ceiling) on its first appearance, and GRAN spiked at 18:05 then immediately rolled over — neither is holding near its AH high after 18:30 ET. The continuing names (CHAI extension, MTEN/BGI early-peak collapse, OCG early-peak drift) remain disqualified. No candidate combines a BUILD/hold pattern, post-18:30 ET strength, float <50M, AH >10% across ≥2 scans, Day% >-15%, and Total% <+150%. A skip avoids a predictable loss rather than forfeiting data.
+
+**Plan:** Re-scan at 01:00 / 01:30 CET (AH closes 02:00 CET / 8:00 PM ET). Only enter if a fresh late-building candidate emerges that holds near its AH high (peaking after 18:30 ET), float <50M, AH >10% across ≥2 AH scans, Day% >-15%, Total% <+150%. Tonight is trending toward a full SPIKE→FADE skip night.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
