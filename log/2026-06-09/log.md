@@ -134,6 +134,39 @@ Scanner ran at 17:30:16 ET. 12 hits. MSW (the 23:00 lead watch) confirmed its BU
 
 Reasoning: MSW is the only candidate clearing the full entry gate AND showing a BUILD-and-hold profile. It meets float <50M (4.6M), AH >10% across 2 AH scans (23:00, 23:30), Day >-15% (flat at +0.0%), and is making new highs into the scan rather than fading — the strategy's strongest positive signal (BUILD patterns 5/5; "still building / haven't peaked yet" is the preferred entry condition). UK is rejected (dead-cat -12.2%, no catalyst, rolling over from 17:10 peak); all other hits are SPIKE→FADE, dead-cat, or microstructure-driven. **Primary concern logged: +145.5% extension** is just under the +150% hard ceiling and sits in the historical loser zone — entry taken because the hard ceiling is not breached and the BUILD signal + flat day + real catalyst justify the data-collection entry. Secondary concern: dilutive convertible notes (Grade C → exit in premarket).
 
+## Scan 00:00 CET (6:00 PM ET) — OPEN POSITION (no new entry)
+
+Scanner ran at 18:00:19 ET. 16 hits. **Position MSW already open** (entered $3.24 at 23:30). Per the "one position at a time" rule, no new entries tonight regardless of candidates — this scan is for position tracking + data collection.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MSW | [TV](https://www.tradingview.com/chart/?symbol=MSW) | $1.32 | +0.0% | +170.5% | $3.57 | +170.5% | 12.5M | 1.7M | 7.3x | 4.6M | Engineering & Construction |
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $1.02 | +8.5% | +7.8% | $1.10 | +17.0% | 8.9M | 24.6M | 0.4x | 992K | Pharmaceuticals: Other |
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $1.85 | +63.7% | +28.1% | $2.37 | +109.7% | 7.4M | 18.9M | 0.4x | 4.4M | Specialty Stores |
+| UK | [TV](https://www.tradingview.com/chart/?symbol=UK) | $2.59 | -12.2% | +45.9% | $3.78 | +28.1% | 6.4M | 1.2M | 5.3x | 665K | Real Estate Development |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $3.58 | -9.6% | +22.9% | $4.40 | +11.1% | 2.4M | 14.9M | 0.2x | 5.6M | Motor Vehicles |
+| MMA | [TV](https://www.tradingview.com/chart/?symbol=MMA) | $0.81 | +24.2% | +8.6% | $0.88 | +34.9% | 1.0M | 1.7M | 0.6x | 21.1M | Other Consumer Services |
+| WBUY | [TV](https://www.tradingview.com/chart/?symbol=WBUY) | $0.98 | +14.0% | +21.1% | $1.19 | +38.1% | 823K | 267K | 3.1x | 3.6M | Food Retail |
+| LAKE | [TV](https://www.tradingview.com/chart/?symbol=LAKE) | $9.54 | +1.4% | +16.9% | $11.16 | +18.6% | 624K | 177K | 3.5x | 8.4M | Apparel/Footwear |
+| HXHX | [TV](https://www.tradingview.com/chart/?symbol=HXHX) | $0.51 | +27.9% | +18.1% | $0.60 | +51.1% | 611K | 5.1M | 0.1x | 4.0M | Trucking |
+| AHMA | [TV](https://www.tradingview.com/chart/?symbol=AHMA) | $1.47 | +36.1% | +13.6% | $1.67 | +54.6% | 577K | 7.4M | 0.1x | 2.0M | Miscellaneous Commercial Services |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.73 | +41.8% | +13.9% | $0.83 | +61.5% | 449K | 7.3M | 0.1x | 1.0M | Air Freight/Couriers |
+| SCKT | [TV](https://www.tradingview.com/chart/?symbol=SCKT) | $0.84 | -2.0% | +10.4% | $0.93 | +8.1% | 160K | 308K | 0.5x | 5.4M | Computer Peripherals |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.23 | +4.7% | +10.2% | $1.35 | +15.4% | 88K | 43K | 2.0x | 1.5M | Financial Conglomerates |
+
+(Also: SPWR, JZXN, GMEX <10% AH change — below catalyst threshold.)
+
+**Position note — MSW:** continuing to BUILD. Across AH scans: 23:00 +25.8% → 23:30 +65.2%/peak +145% → **00:00 +170.5% ($3.57)**. Now ~+10% above our $3.24 entry and printing fresh AH highs. VRatio still strong (7.3x). The late-BUILD-and-hold thesis is holding up into the close of the 6:00 PM ET window. Exit decision deferred to premarket position-evaluation (Grade C → premarket exit).
+
+**New candidates (data tracking only — no entry, position open):**
+- **WBUY** — late mover, float 3.6M, VRatio 3.1x, Total +38% (within ceiling), Day +14%. Genuine BUILD profile; would have been a watch candidate on a flat night. Noted for pattern library.
+- **SLGB** — float 1.0M (tiny), Total +61.5%, but VRatio 0.1x (AH vol 449K vs 7.3M avg = thin/fading). Day +41.8% already extended in regular session. Marginal.
+- **HXHX / AHMA** — sub-threshold-ish AH moves on already-extended regular-session days (Day +27.9% / +36.1%); low VRatio. Skip-type.
+- **UK** — re-accelerated to +45.9% AH ($3.78) but still Day -12.2% (dead-cat risk) + no catalyst. Tiny float 665K. Tracking as a no-catalyst dead-cat case.
+- **AZI** — Total +109.7%, still microstructure/Nasdaq-compliance driven. Skip-type.
+
+**No new entry** — MSW position is open; one-position-at-a-time rule blocks additional trades. MSW is the night's entry and is performing well so far.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
