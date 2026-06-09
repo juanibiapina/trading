@@ -101,10 +101,44 @@ The two genuine BUILD candidates (**MSW**, UK) only have **1 AH scan** each and 
 
 **Watch for 23:30:** MSW (primary — confirm hold + 2nd AH scan), UK (secondary).
 
+## Scan 23:30 CET (5:30 PM ET) — ENTRY-ELIGIBLE
+
+Scanner ran at 17:30:16 ET. 12 hits. MSW (the 23:00 lead watch) confirmed its BUILD with a 2nd AH scan and broke out to new highs.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XELB | [TV](https://www.tradingview.com/chart/?symbol=XELB) | $2.10 | +10.5% | +5.2% | $2.21 | +16.3% | 12.7M | 1.6M | 7.9x | 4.1M | Apparel/Footwear |
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $1.02 | +8.5% | +6.9% | $1.09 | +15.9% | 7.7M | 24.5M | 0.3x | 992K | Pharmaceuticals: Other |
+| MSW | [TV](https://www.tradingview.com/chart/?symbol=MSW) | $1.32 | +0.0% | +65.2% | $2.18 | +65.2% | 7.6M | 1.1M | 6.8x | 4.6M | Engineering & Construction |
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $1.85 | +63.7% | +21.7% | $2.25 | +99.2% | 7.0M | 18.9M | 0.4x | 4.4M | Specialty Stores |
+| UK | [TV](https://www.tradingview.com/chart/?symbol=UK) | $2.59 | -12.2% | +90.0% | $4.92 | +66.8% | 4.9M | 1.0M | 4.7x | 665K | Real Estate Development |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $3.58 | -9.6% | +31.4% | $4.71 | +18.8% | 1.1M | 14.7M | 0.1x | 5.6M | Motor Vehicles |
+| MMA | [TV](https://www.tradingview.com/chart/?symbol=MMA) | $0.81 | +24.2% | +9.7% | $0.89 | +36.3% | 839K | 1.7M | 0.5x | 21.1M | Other Consumer Services |
+| LAKE | [TV](https://www.tradingview.com/chart/?symbol=LAKE) | $9.54 | +1.4% | +15.6% | $11.03 | +17.2% | 610K | 175K | 3.5x | 8.4M | Apparel/Footwear |
+| DSS | [TV](https://www.tradingview.com/chart/?symbol=DSS) | $0.50 | +19.6% | +5.7% | $0.53 | +26.3% | 536K | 6.6M | 0.1x | 3.9M | Commercial Printing/Forms |
+| HXHX | [TV](https://www.tradingview.com/chart/?symbol=HXHX) | $0.51 | +27.9% | +6.3% | $0.54 | +35.9% | 301K | 5.1M | 0.1x | 4.0M | Trucking |
+| JZXN | [TV](https://www.tradingview.com/chart/?symbol=JZXN) | $1.37 | +8.7% | +5.1% | $1.44 | +14.3% | 269K | 7.1M | 0.0x | 1.4M | Specialty Stores |
+
+**AH 5m trajectory analysis:**
+- **MSW** — genuine late BUILD still making new highs at scan time. 5m path: flat $1.32 until 16:30 → ramp to $2.66 (16:50) → dip $2.19 (17:00) → re-accelerate $2.68 (17:15) → $3.02 (17:25) → **$3.10–3.24 new high at 17:30 (latest print ~$3.24, +145.5%)**. Across AH scans: 23:00 +25.8% → 23:30 +65.2%/peak +145% (rising, NOT fading). Float 4.6M, Day +0.0% (no regular-session sell-off, so not a dead-cat), VRatio 6.8x, Grade C catalyst. **2nd AH scan confirmed → meets entry gate. Concern: +145.5% extension is just under the +150% ceiling (danger zone — winners historically <80% extension).**
+- **UK** — late BUILD but choppy and now fading from peak. 5m path: crashed to $2.41 (16:15) → ramp to $4.81 (16:45) → peaked $4.89 (17:10) → fading $4.15 (17:30, +40.7%). Tiny float 665K, but **Day -12.2% (recovering from regular-session sell-off = dead-cat risk)** + **no catalyst found** + peaked 17:10 and rolling over. Secondary to MSW.
+- **AZI** — peaked $3.37 (16:10), Total +99% but microstructure/Nasdaq-compliance catalyst (not operational), early peak. **Skip.**
+- **LAKE** — still SPIKE→FADE (peaked 16:05, +22%→+15.6% across scans). Grade B earnings but early-peak-fading (0/7 PM continuation). **Skip.**
+- **XELB** — collapsed from +126% peak to +16%. Hard SPIKE→FADE. **Skip.**
+- **PAVS** — dead-cat bounce (intraday $26.69→$1.02 crash). **Skip.**
+- **XOS, MMA, DSS, HXHX, JZXN** — AH change <10% or fading / below threshold. **Skip.**
+
+**Catalyst (MSW, carried + re-confirmed from 23:00):** GlobeNewswire — "Closing of the Acquisition of PMA Nano Carbon Tech Limited **and Issuance of Unsecured Convertible Promissory Notes**." Operational acquisition close (A-type) paired with dilutive convertible notes (D-type). Net **Grade C** (real operational news with dilution attached).
+
+**Decision: ENTER MSW** at ~$3.24, 30 shares (~€97).
+
+Reasoning: MSW is the only candidate clearing the full entry gate AND showing a BUILD-and-hold profile. It meets float <50M (4.6M), AH >10% across 2 AH scans (23:00, 23:30), Day >-15% (flat at +0.0%), and is making new highs into the scan rather than fading — the strategy's strongest positive signal (BUILD patterns 5/5; "still building / haven't peaked yet" is the preferred entry condition). UK is rejected (dead-cat -12.2%, no catalyst, rolling over from 17:10 peak); all other hits are SPIKE→FADE, dead-cat, or microstructure-driven. **Primary concern logged: +145.5% extension** is just under the +150% hard ceiling and sits in the historical loser zone — entry taken because the hard ceiling is not breached and the BUILD signal + flat day + real catalyst justify the data-collection entry. Secondary concern: dilutive convertible notes (Grade C → exit in premarket).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
+| MSW | $3.24 | 23:30 CET (17:30 ET) | 30 | C | Late BUILD making new highs into scan; float 4.6M, Day +0.0%, VRatio 6.8x, 2 AH scans >10%, acquisition-close catalyst (w/ dilutive notes). Concern: +145.5% extension near ceiling; Grade C → premarket exit. |
 
 ## Position Evaluation — 10:30 CET
 
