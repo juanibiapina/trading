@@ -30,6 +30,37 @@ No candidates found. Per learning-phase rules, the 22:00 scan is observation-onl
 
 **No entries** (observation-only window; no qualifying candidates).
 
+## Scan 22:30 CET (4:30 PM ET) — OBSERVATION ONLY
+
+Scanner ran at 16:30:15 ET. 6 hits. Still in observation-only window (before 23:00 CET / 5:00 PM ET) — **NO entries**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $1.02 | +8.5% | +30.3% | $1.33 | +41.4% | 3.8M | 24.1M | 0.2x | 992K | Pharmaceuticals: Other |
+| CCTG | [TV](https://www.tradingview.com/chart/?symbol=CCTG) | $1.78 | +271.5% | +18.5% | $2.11 | +340.3% | 3.3M | 15.0M | 0.2x | 3.0M | Electronic Components |
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $1.85 | +63.7% | +80.5% | $3.34 | +195.6% | 3.1M | 18.4M | 0.2x | 4.4M | Specialty Stores |
+| DUO | [TV](https://www.tradingview.com/chart/?symbol=DUO) | $0.91 | +3.2% | +21.3% | $1.10 | +25.1% | 1.6M | 638K | 2.5x | 38.5M | Internet Software/Services |
+| LAKE | [TV](https://www.tradingview.com/chart/?symbol=LAKE) | $9.54 | +1.4% | +22.1% | $11.65 | +23.8% | 370K | 143K | 2.6x | 8.4M | Apparel/Footwear |
+| CTNT | [TV](https://www.tradingview.com/chart/?symbol=CTNT) | $1.92 | +6.7% | +6.0% | $2.04 | +13.1% | 51K | 3.0M | 0.0x | 3.0M | Engineering & Construction |
+
+**AH price-action analysis (5m bars):**
+- **PAVS** — regularMarketDayHigh was **$26.69** vs $1.02 close: a massive intraday pump-and-dump that crashed back ~96%. AH high $1.33 at 16:00, fading to $1.22. Clear dead-cat bounce off a crash. **Skip.**
+- **DUO** — AH peaked $1.12 at 16:10, faded to $0.92. Day% only +3.2%, float 38.5M (high). SPIKE→FADE. **Skip.**
+- **LAKE** — AH high $12.48 at 16:05, pulled back to $10.85, now holding ~$11.5 base. Within ceiling (+24%), float 8.4M. **Earnings beat today (Grade B)** — best candidate. **Watch for 23:00 confirmation.**
+- **CCTG** — Total% +340% (peak +436%), far over +150% ceiling. Catalyst = Nasdaq compliance deadline / microstructure squeeze, not operational. Peaked at 16:00. **Skip (ceiling + no operational catalyst).**
+- **AZI** — AH high $3.37 at 16:10, faded to $2.72. Total% +196% (over ceiling). Catalyst = founder insider-buy signal + Nasdaq compliance deadline (microstructure-driven, per Investing.com). **Skip (ceiling + early peak).**
+- **CTNT** — AH change only +6% (below the 10% threshold for catalyst search). Marginal. **Skip.**
+
+**Catalyst search results:**
+- **LAKE**: Reported quarterly earnings today (Tue Jun 9), beat consensus (estimate was a $0.14 loss). Protective-clothing/PPE maker. **Grade B (earnings beat).**
+- **CCTG**: Nasdaq listing-compliance deadline (<1 week away) + microcap squeeze. No operational catalyst. Over ceiling.
+- **AZI**: Founder insider-purchase signal + Nasdaq compliance deadline + funding announcements. Microstructure-driven, not operational. Over ceiling.
+- **PAVS**: No clean catalyst — behaving as a pump-and-dump (intraday $26 → $1).
+
+**Carryover from prior scans:** CCTG and AZI were watched at 21:30; both remain over the extension ceiling. MTEN, CHAI, AHMA from 21:30 did not register in this AH scan.
+
+**No entries** (observation-only window). LAKE is the candidate to re-evaluate at 23:00 — if it holds its base near $11.5 with sustained AH volume, it qualifies (float 8.4M, within ceiling, Grade B earnings catalyst). Concern: it peaked early at 16:05 ET; watch whether it builds or fades into 23:00+.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
