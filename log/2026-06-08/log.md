@@ -181,3 +181,96 @@ AH 5-min history reviewed for each candidate:
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
+
+(No paper trades — NO-ENTRY night per learning-phase rules.)
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**CHAI** — Core AI Holdings (Packaged Software)
+- Catalyst: None confirmed — evening catalyst searches (2 calls) found no company-specific news, only generic AI-stock lists. Low-float AI-name squeeze profile.
+- Previous Close: $0.83
+- AH last night: peaked **$4.29 (+416%) at 17:20 ET (23:20 CET)**, then held a $2.8–3.4 base for hours (genuine BUILD, not spike→fade)
+- Premarket now: **$4.47 (+438%) at 04:15 ET** — opened PM at $3.25 and pushed straight to a new high (PM still very early, only 20 min in)
+- Hypothetical P&L (AH entry $2.60 at first entry-eligible 23:00 scan → PM peak $4.47): **+72%**
+- Float: 18.3M | Market Cap: $16.3M | AH VRatio: 8.6x
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — CHAI appeared in **all four entry-eligible evening scans** (23:00 +217%, 23:30 +310%, 00:00 +357%, 00:30 +249% CET), float 18.3M, VRatio 8.6x. Detection was not the problem.
+- Why we didn't act: the **+150% extension ceiling rule** disqualified it on every scan (it was already +200–416%). Per the rule's basis (PRFX +439%→-28.8%, VCIG +194%→-7.9% both lost), extended entries leave no overnight margin.
+- But CHAI was the **rare extended stock that kept building**: it made a *new* AH high at 17:20 ET (after the 17:00 dip), held its base all evening, and continued into PM. This is exactly the BUILD/hold + post-17:00 high profile — yet the flat extension ceiling excluded it.
+- **Scanner gap:** This is an **entry-rule tension, not a detection gap.** The +150% extension ceiling protects against blow-off tops but also rejects genuine BUILD-pattern continuation winners. Question for the strategy: should the ceiling be relaxed (or replaced by a "holds near AH high + peaks after 17:00 + high VRatio" gate) when a stock shows a true BUILD pattern rather than a spike→fade?
+
+### Baseline Tracking
+
+- Days tracked: **27** (was 26 + 1)
+- Winners detected by scanner: **23/27 (85.2%)** — HIT, SUNE, DRMA, UGRO, NXTT, POLA, BCG, PFSA, MASK, EZGO, AIIO, HTCO, WOK, LNKS, AMST, PHGE (May 20), PHGE (May 26), SNGX, ATPC, PRFX, DXST, TWAV, **CHAI**
+- Winner selected for paper trade: **17/27 (63.0%)** — not incremented (no entry; CHAI was detected but skipped on extension ceiling)
+- Target: >80% detection
+- Status: **BASELINE MET** (detection 85.2%) — detection is solid; the open problem has shifted to **entry rules** (we detect winners but our filters skip them)
+
+### Retrospective Scan Results
+
+Live PM scan (04:20 ET) top movers: **CHAI +296%→$3.25** (now $4.47), MTEN +71%, ZTG +47.6%, INDP +40.5%, TDIC +23.5%, TOON +25.9%. Forced AH scan returned 0 hits (overnight postmarket fields empty, as expected).
+
+AH reconstruction (`--ah-history`) confirms the winner set:
+- **CHAI** — AH $0.82→$4.29 (+416%) at 17:20 ET, held $2.8–3.4 base → PM $4.47. **The clean BUILD winner.**
+- **MTEN** — AH spiked $4.51 (+321%) at 17:40 ET, faded, re-surged to $4.25 at 19:25 ET → PM $3.33 (+211% from close). Held a large share of its gain.
+- **ZTG** — AH peaked $11.11 (+302%) at 18:50 ET on erratic thin prints → PM $3.75 (+43%). Massive fade from AH peak.
+
+### Paper Trade P&L
+
+No paper trades entered (NO-ENTRY night). **Total Paper P&L: €0.00**
+
+Hypothetical (had we traded the detected winner CHAI): AH entry $2.60 → PM peak $4.47 = **+72% / +~€72** on a €100 paper position. The extension-ceiling skip cost a profitable trade this night.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 times** (21:30 regular → 00:30 CET AH)
+- Candidates found: ~15 unique tickers across scans (CHAI, MTEN, ZTG, OCG, CNET, BGI, GRAN, TOON, STAK, CLWT, VCIG, INDP, SLGB, WCT, …)
+- Retrospective matches: winner CHAI + secondary movers MTEN, ZTG all caught → **3/3 of the night's real AH movers were detected**
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+
+No **detection** misses — every significant AH mover (CHAI, MTEN, ZTG) was caught by the evening scans. The only "miss" was a **skip-by-rule**: CHAI excluded by the +150% extension ceiling despite a textbook BUILD pattern.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| CHAI | $4.29 | 17:20 ET | Build→hold base | $4.47 | +4% | +438% | 🚀 Winner — built into PM |
+| MTEN | $4.51 | 17:40 ET | Spike→fade→re-surge | $3.33 | -26% | +211% | Held large share |
+| ZTG | $11.11 | 18:50 ET | Erratic spike→fade | $3.75 | -66% | +43% | Faded hard |
+| OCG | $2.82 | 16:35 ET | Early spike→fade | $1.70 | -40% | -6% | Dead — below close |
+| CNET | $1.23 | 16:45 ET | Early spike→fade | $0.67 | -46% | -6% | Dead — below close |
+| BGI | $1.53 | 17:50 ET | Spike→fade | $0.61 | -60% | -2% | Faded to close |
+| TOON | $0.97 | ~18:00 ET | Mild build | $0.92 | -5% | +26% | High float (55.9M), mild |
+
+**Pattern reinforced:** the only names that carried into PM (CHAI, MTEN) **peaked late (17:20–17:40 ET) and held a base**. Every early-peak (16:35–16:45 ET) spike→fade (OCG, CNET) died below its prior close. Confirms the "late AH peak + hold near high → PM follow-through" hypothesis.
+
+### Price Charts
+
+CHAI 2-day timeline — AH BUILD to $4.29 (17:20 ET), held $2.8–3.4 base overnight, PM gapped up to $4.47:
+
+```
+$   4.47 │                                          █                 
+         │                                         █ ██               
+         │                                              ██            
+         │                                        █    █  ██ █        
+         │                                  ██   █             ███ █ █
+         │                                 █                          
+$   0.81 │████████████████████████████████                            
+         └────────────────────────────────────────────────────────────
+   AH spike (17:20 ET) → overnight base → PM continuation ($4.47)
+```
+
+### Notes
+
+- **The baseline is met (85.2% detection).** The bottleneck has moved downstream: we reliably *detect* winners but our *entry filters* skip them. CHAI is the 2nd recent case (after the extension-ceiling pattern) where a detected BUILD winner was excluded purely on the +150% ceiling.
+- **Threshold to investigate:** the +150% extension ceiling is a blunt instrument. It correctly skips spike→fade blow-offs (OCG, CNET, BGI all died) but wrongly skips BUILD-and-hold continuations (CHAI). A smarter gate might be: *allow extension >150% only if the stock (a) made its AH high after 17:00 ET, (b) is holding within ~20% of that high across ≥2 scans, and (c) has VRatio >5x.* CHAI passed all three; OCG/CNET/BGI failed (a)/(b).
+- Next step is not "fix detection" — it's collecting more BUILD-vs-extension cases to decide whether the ceiling should become conditional.
+

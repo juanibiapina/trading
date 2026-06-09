@@ -6,8 +6,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-01 | DXST | None | +170% ($4.22) | — | $4.95 | Day 3 - Recovered from fade |
-| 2026-06-03 | TWAV | None | +98.6% ($2.88) | — | $2.68 | 🆕 Day 1 - Late BUILD pattern |
+| 2026-06-09 | CHAI | None (AI squeeze) | +438% ($4.47 PM) | — | $4.47 | 🆕 Day 1 - BUILD→hold→PM continuation (detected, skipped on ext. ceiling) |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -38,6 +37,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-05-27 | SNGX | None | $1.20 | — | — | $0.91 | Day 6: Faded, recovered from $0.51 low |
 | 2026-05-28 | ATPC | None | $7.25 | — | — | $4.87 | Day 5: Faded further |
 | 2026-05-29 | PRFX | B — DeepSolar | $8.96 (+564%) | — | — | $2.02 | Day 5: Faded significantly |
+| 2026-06-01 | DXST | None | $4.22 (+170%) | — | — | $4.14 | Day 8: Held near peak (no fade) |
+| 2026-06-03 | TWAV | None | $2.88 (+98.6%) | — | — | $1.68 | Day 6: Faded back to start |
 
 ## Patterns Observed
 
