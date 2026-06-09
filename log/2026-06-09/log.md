@@ -22,6 +22,14 @@
 - **AHMA** — float 2.0M, +98.4%, IRVol 513. Reasonable extension. Watch.
 - Faders (skip): AZI (VChg -99.9%), EPSM (VChg -100%) — volume already collapsed.
 
+## Scan 22:00 CET (4:00 PM ET) — OBSERVATION ONLY
+
+Scanner ran at 16:00:21 ET — the AH session had just opened (~20 seconds prior), so no AH volume/price action had formed yet. **0 hits.**
+
+No candidates found. Per learning-phase rules, the 22:00 scan is observation-only regardless. The 21:30 watched candidates (MTEN, CCTG, CHAI, AHMA) did not yet register in the AH scan because the session just opened. Will reassess at 22:30 / 23:00 once AH volume builds.
+
+**No entries** (observation-only window; no qualifying candidates).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
