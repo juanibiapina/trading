@@ -40,7 +40,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); **AH peak timing: before 18:30 ET = 0/6+ failures, after 18:30 ET = 4/4 wins**; at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading; **skip all on SPIKE→FADE-only nights** (0/10+ win rate)
 - **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
-- **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close; if only 23:00 candidate exceeds 150%, wait for later scans (late-building candidates often have better entry points)
+- **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close; if only 23:00 candidate exceeds 150%, wait for later scans (late-building candidates often have better entry points). **Ceiling-override watch:** candidates that exceed 150% but show BUILD-and-hold (AH high after 17:00 ET, holding within ~20% of high across ≥2 scans, VRatio >5x) are still skipped but flagged with a hypothetical entry for data collection.
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
 
 ## Modifiable Files
@@ -53,6 +53,24 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-06-09 — Instrument Ceiling-Override Watch for BUILD-and-Hold Cases
+
+**Context:** June 8 was a NO-ENTRY night, but the morning evaluation surfaced a clear entry-rule tension (not a detection gap). CHAI was detected in all four entry-eligible scans (23:00 +217% → 00:30 +249% CET), made a *new* AH high at 17:20 ET, held a $2.8–3.4 base all evening, and continued into PM ($4.47, +438% from close). Had we entered at the first eligible scan ($2.60), the hypothetical return was **+72%**. It was skipped on every scan purely by the **+150% extension ceiling**. Meanwhile the early-peak fades that same night (OCG 16:35 ET, CNET 16:45 ET, BGI 17:50 ET) all died below their prior close — the ceiling correctly excluded those. Detection baseline is solidly met (23/27 = 85.2%); the bottleneck has moved downstream to entry rules. The June 8 eval explicitly recommended *collecting more BUILD-vs-extension cases* before deciding whether the ceiling should become conditional.
+
+**Evaluation of previous changes:**
+- 2026-06-05 Correct AH Peak Timing Boundary to 18:30 ET: **Applied, with new nuance.** June 8 scans repeatedly cited the "18:30 ET continuation cutoff" when classifying candidates, so the boundary is being used as intended. However, the night's two PM carriers (CHAI peak 17:20 ET, MTEN peak 17:40 ET) both peaked *before* 18:30 ET yet still followed through because they **held a base** rather than fading. The clean failures (OCG 16:35, CNET 16:45) peaked early *and* faded. This suggests hold-vs-fade is the dominant signal and peak time is secondary — but it's one night of data. No revision to the boundary yet; the ceiling-override watch (below) will help disentangle hold-vs-fade from absolute peak time.
+- 2026-06-03 Delay Entry When Only 23:00 Candidate Exceeds 150%: **Working / reinforced.** On June 8, CHAI exceeded 150% at 23:00 and the agent correctly waited rather than entering; no lower-extension BUILD alternative appeared, so it remained a no-entry. The wait behaved as designed.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added a "Ceiling-override watch (data collection)" clause to the extension-ceiling rule. When a candidate exceeds +150% Total% but shows a genuine BUILD-and-hold profile (AH high after 17:00 ET, holding within ~20% of that high across ≥2 AH scans, VRatio >5x), still skip the entry but flag it **CEILING-OVERRIDE WATCH** and record a hypothetical entry.
+   - Why: CHAI is the 2nd recent detected BUILD winner skipped solely on the ceiling. Relaxing the ceiling on one data point risks re-admitting blow-off tops (PRFX +439%→-28.8%). Instrumenting collects evidence without risking capital.
+   - Hypothesis: Over the next 2–4 weeks we accumulate a clean tally of ceiling-skipped BUILD-and-hold candidates and their PM outcomes. Measurable: (1) the next night with a >150% BUILD-and-hold candidate logs a CEILING-OVERRIDE WATCH flag with hypothetical entry; (2) the morning eval records its follow-through. If these candidates win consistently (≥4/5), it justifies making the ceiling conditional; if they're mixed, the flat ceiling stands.
+2. **prompts/morning-evaluation.md** — Added a Scanner Diagnostic instruction to look up any CEILING-OVERRIDE WATCH flags from the prior night's log and record their hypothetical P&L (skipped entry → PM peak) in Notes, tallying over time.
+   - Why: The evening flag is only useful if the morning loop closes it with an outcome.
+   - Hypothesis: The ceiling-override dataset grows by one row per qualifying night, giving the future decision an evidence base instead of anecdote.
+
+**Updated process:** Added the ceiling-override watch clause to the "Entry extension ceiling" line in Current Process.
 
 ### 2026-06-05 — Correct AH Peak Timing Boundary to 18:30 ET
 

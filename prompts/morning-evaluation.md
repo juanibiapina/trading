@@ -94,6 +94,8 @@ Run this full section on **pulse 1**. On **pulse 2 and 3**, reuse the existing s
 - If NO: why not? (news came later, AH move started after midnight, no volume yet, etc.)
 - What scanner change would have caught it?
 
+**Ceiling-override watch outcomes:** If last night's log flagged any **CEILING-OVERRIDE WATCH** candidates (BUILD-and-hold stocks skipped only on the +150% ceiling), look up each one's PM follow-through and record the hypothetical P&L (skipped entry price → PM peak) in the Notes section. Tally these over time — they are the dataset for deciding whether the extension ceiling should become conditional for genuine BUILD-and-hold patterns.
+
 **Then compare all retrospective results with evening scans:**
 - **Caught**: stocks in both evening scans and retrospective
 - **Missed**: stocks in retrospective that evening scans never found
