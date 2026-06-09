@@ -167,6 +167,39 @@ Scanner ran at 18:00:19 ET. 16 hits. **Position MSW already open** (entered $3.2
 
 **No new entry** — MSW position is open; one-position-at-a-time rule blocks additional trades. MSW is the night's entry and is performing well so far.
 
+## Scan 00:30 CET (6:30 PM ET) — OPEN POSITION (no new entry)
+
+Scanner ran at 18:30:18 ET. 16 hits. **Position MSW already open** (entered $3.24 at 23:30). One-position-at-a-time rule → no new entries; this scan is position tracking + data collection.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MSW | [TV](https://www.tradingview.com/chart/?symbol=MSW) | $1.32 | +0.0% | +262.1% | $4.78 | +262.1% | 17.6M | 2.4M | 7.4x | 4.6M | Engineering & Construction |
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $1.02 | +8.5% | +7.8% | $1.10 | +17.0% | 9.6M | 24.7M | 0.4x | 992K | Pharmaceuticals: Other |
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $1.85 | +63.7% | +29.7% | $2.40 | +112.4% | 8.0M | 19.0M | 0.4x | 4.4M | Specialty Stores |
+| UK | [TV](https://www.tradingview.com/chart/?symbol=UK) | $2.59 | -12.2% | +44.4% | $3.74 | +26.8% | 7.0M | 1.3M | 5.4x | 665K | Real Estate Development |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $3.58 | -9.6% | +22.6% | $4.39 | +10.9% | 2.5M | 14.9M | 0.2x | 5.6M | Motor Vehicles |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.73 | +41.8% | +22.1% | $0.89 | +73.1% | 1.5M | 7.4M | 0.2x | 1.0M | Air Freight/Couriers |
+| MMA | [TV](https://www.tradingview.com/chart/?symbol=MMA) | $0.81 | +24.2% | +13.6% | $0.92 | +41.1% | 1.2M | 1.7M | 0.7x | 21.1M | Other Consumer Services |
+| HXHX | [TV](https://www.tradingview.com/chart/?symbol=HXHX) | $0.51 | +27.9% | +12.2% | $0.57 | +43.5% | 687K | 5.1M | 0.1x | 4.0M | Trucking |
+| LAKE | [TV](https://www.tradingview.com/chart/?symbol=LAKE) | $9.54 | +1.4% | +14.4% | $10.91 | +15.9% | 630K | 178K | 3.5x | 8.4M | Apparel/Footwear |
+| JZXN | [TV](https://www.tradingview.com/chart/?symbol=JZXN) | $1.37 | +8.7% | +25.5% | $1.72 | +36.5% | 358K | 7.1M | 0.1x | 1.4M | Specialty Stores |
+| SCKT | [TV](https://www.tradingview.com/chart/?symbol=SCKT) | $0.84 | -2.0% | +22.3% | $1.03 | +19.8% | 221K | 315K | 0.7x | 5.4M | Computer Peripherals |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.23 | +4.7% | +11.8% | $1.37 | +17.1% | 113K | 46K | 2.4x | 1.5M | Financial Conglomerates |
+| HTCO | [TV](https://www.tradingview.com/chart/?symbol=HTCO) | $4.47 | +33.8% | +5.4% | $4.71 | +41.0% | 86K | 1.4M | 0.1x | 3.2M | Marine Shipping |
+
+(Also: SPWR, GMEX, FNGR <10% AH change or below threshold.)
+
+**Position note — MSW:** still BUILDING into the 6:00–6:30 PM ET window. 5m AH path: ramp from $1.32 → peak **$5.18 at 18:00 ET (00:00 CET)** → pulled back to ~$4.49 by 18:25 ET. Across AH scans: 23:00 +25.8% → 23:30 +65.2% → 00:00 +170.5% → **00:30 +262.1% (high $5.18)**. Now ~+39% above our $3.24 entry even after the pullback; VRatio still strong (7.4x). Late-BUILD thesis fully validated — MSW is the night's clear momentum winner. Exit decision deferred to premarket position-evaluation (Grade C → premarket exit). **New AH peak $5.18 (was $3.57) — updated in OPEN_POSITIONS.md.**
+
+**New candidates (data tracking only — no entry, position open):**
+- **SLGB** — float 1.0M (tiny), Total +73.1%, but VRatio 0.2x (AH vol 1.5M vs 7.4M avg = thin) and Day +41.8% already extended intraday. Marginal.
+- **UK** — re-accelerated to +44.4% AH ($3.74), VRatio 5.4x, tiny float 665K, but still Day -12.2% (dead-cat) + no catalyst. Tracking as no-catalyst dead-cat case.
+- **AZI** — Total +112.4%, microstructure/Nasdaq-compliance driven. Skip-type.
+- **HTCO** — new this scan, Day +33.8%, Total +41%, but AH change only +5.4% and VRatio 0.1x (thin). Skip-type.
+- **JZXN / SCKT / HXHX** — sub-threshold or thin-volume AH moves. Skip-type.
+
+**No new entry** — MSW position open; one-position-at-a-time rule blocks additional trades. MSW remains the night's entry and is the clear winner so far.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |

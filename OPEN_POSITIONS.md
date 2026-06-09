@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| MSW | 2026-06-09 | $3.24 | 30 | $97.20 | C | Acquisition close (PMA Nano Carbon Tech) + dilutive convertible notes | $2.92 (-10%) | Premarket exit | $3.57 |
+| MSW | 2026-06-09 | $3.24 | 30 | $97.20 | C | Acquisition close (PMA Nano Carbon Tech) + dilutive convertible notes | $2.92 (-10%) | Premarket exit | $5.18 |
 
 ## Position Rules
 
