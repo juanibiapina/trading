@@ -253,8 +253,48 @@ _(Lower rows — SCKT +6.8%, SEGG -14.3%, MTEN +6.4%, ANNA +6.7% — below the 1
 - No CEILING-OVERRIDE WATCH candidates (nothing exceeds +150% Total% with a BUILD-and-hold profile; SKYQ peaked at +129% and is fading).
 - **00:00 CET watch:** SKYQ (priority — float 3.6M, VRatio 2.5x) — re-evaluate if it stabilizes/rebuilds toward its $3.58 high and prints a 2nd AH scan; BATL (secondary) — confirm it holds its range on improving volume.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**Session: AFTERHOURS (18:00 ET, 2h in). Entry-eligible scan.** `scan.py --all`: **15 hits.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $1.91 | +22.4% | +8.9% | $2.08 | +33.3% | 13.1M | 3.7M | 3.6x | 3.6M | Integrated Oil |
+| BATL | [TV](https://www.tradingview.com/chart/?symbol=BATL) | $2.06 | +57.3% | +5.8% | $2.18 | +66.3% | 10.7M | 28.0M | 0.4x | 17.9M | Oil & Gas Production |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $1.85 | -4.1% | +16.8% | $2.16 | +11.9% | 6.2M | 4.3M | 1.4x | 721K | Miscellaneous |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $0.91 | +8.9% | +20.9% | $1.10 | +31.6% | 2.1M | 1.3M | 1.7x | 16.5M | Wholesale Distributors |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.42 | +15.9% | +22.2% | $1.74 | +41.7% | 1.6M | 3.6M | 0.4x | 1.5M | Financial Conglomerates |
+| TGHL | [TV](https://www.tradingview.com/chart/?symbol=TGHL) | $0.55 | +6.9% | +16.7% | $0.65 | +24.7% | 1.5M | 14.5M | 0.1x | 12.7M | IT Services |
+| RBNE | [TV](https://www.tradingview.com/chart/?symbol=RBNE) | $1.07 | +0.9% | +54.2% | $1.65 | +55.7% | 1.3M | 470K | 2.7x | 7.3M | Marine Shipping |
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $0.62 | +9.0% | +12.0% | $0.69 | +22.0% | 991K | 1.6M | 0.6x | 39.8M | Integrated Oil |
+| GLBS | [TV](https://www.tradingview.com/chart/?symbol=GLBS) | $2.14 | -0.9% | +19.2% | $2.55 | +18.1% | 942K | 194K | 4.9x | 13.9M | Marine Shipping |
+| FATE | [TV](https://www.tradingview.com/chart/?symbol=FATE) | $1.87 | -1.6% | +5.9% | $1.98 | +4.2% | 319K | 4.2M | 0.1x | 110.5M | Biotechnology |
+| SCKT | [TV](https://www.tradingview.com/chart/?symbol=SCKT) | $0.95 | +12.8% | +7.4% | $1.02 | +21.1% | 231K | 358K | 0.6x | 5.4M | Computer Peripherals |
+| SEGG | [TV](https://www.tradingview.com/chart/?symbol=SEGG) | $1.39 | -20.6% | +9.4% | $1.52 | -13.1% | 183K | 1.6M | 0.1x | 10.8M | Movies/Entertainment |
+| INDO | [TV](https://www.tradingview.com/chart/?symbol=INDO) | $2.84 | +7.2% | +5.6% | $3.00 | +13.2% | 133K | 836K | 0.2x | 9.9M | Integrated Oil |
+| HCWB | [TV](https://www.tradingview.com/chart/?symbol=HCWB) | $1.21 | +2.5% | +9.9% | $1.33 | +12.7% | 95K | 1.6M | 0.1x | 4.2M | Biotechnology |
+| AGIG | [TV](https://www.tradingview.com/chart/?symbol=AGIG) | $1.17 | +0.9% | +6.0% | $1.24 | +6.9% | 94K | 175K | 0.5x | 12.4M | Oil & Gas Production |
+
+**Macro driver — oil-sector rally:** The board is dominated by oil & integrated-oil names (SKYQ, BATL, EONR, INDO, AGIG) plus shipping (RBNE, GLBS). Catalyst search confirms **BATL "surges 78%+ on Trump Iran comments"** (Reddit/news, Jun 10) and **SKYQ "as energy momentum flips into domestic oil and refinery plays"** (Instagram/news). This is a **sector-wide macro move (Trump/Iran → oil), not company-specific catalysts.** EONR +19%, INDO +11% in AH confirm the sector beta. No individual operational catalyst on any name.
+
+**AH trajectory (check-prices --ah-history):**
+- **SKYQ** — flat ~+20% until 16:45, ramped on genuine volume (1M+ share 5m prints) to **peak +129.5% ($3.58) at 17:00 ET**, collapsed to +33% (17:30), then *rebuilt a base* +33→+47→+40→+44→**+46.2% ($2.28) at 18:00**. Float 3.6M (ideal), VRatio 3.6x (genuine fresh AH volume). Day +22.4%. **2nd AH scan** (23:30 +40% → 00:00 +46%, holding/rebuilding across scans). Early peak (17:00) but NOT declining across scans.
+- **BATL** — opened +58.8%, chopped, **peak +79.4% ($2.35) at 17:15 ET**, holding +71.8% ($2.25) at 18:00 — near its high. BUT **VRatio 0.4x** and AH history shows ~0 volume after the 16:00 open (72K) — the "hold" is stale quotes, **not genuine AH trading**. Day +57.3% (already extended in regular session). Float 17.9M.
+- **RBNE** — flat ~+5% until 17:35, then **late spike to +55.7% ($1.65) at 17:40 ET**, settled +29% by 18:00. **New — only 1 AH scan.** Late spike, float 7.3M, VRatio 2.7x. Shipping (sector beta).
+- **DAIC** — clean SPIKE→FADE, **peak +69.9% at 16:10 ET**, declined to +14% across 4 scans. 1-for-25 reverse split, no catalyst. Skip.
+- **GLBS** — peaked +23.1% (16:15), chopping ~+14%. Q1 earnings beat (B-grade) but AH decayed/modest. Float 13.9M.
+- **TMDE** — peaked +37.6% (17:10), choppy +30%. Float 16.5M. On non-biotech 0/6 loss list.
+- **HWH** — stale multi-day runner (ran +210% on 06-09 AH). Fails first-day. Skip.
+- **EONR/INDO/AGIG** — oil-sector beta, low AH% (+22/+13/+7), thin volume. SEGG red (-13% total, dead-cat). Not actionable.
+
+**Decision: ENTER SKYQ** (paper). Per the 23:00+ baseline rule, SKYQ is the **best available gate-qualifier**: float 3.6M (ideal), VRatio 3.6x (the only candidate with both ideal float AND genuine fresh AH volume), AH >10% across 2 scans (23:30 +40% → 00:00 +46%, holding/rebuilding — not declining), Day +22.4% (not over-extended), Total% +46% (well under the 150 ceiling, lots of overnight room).
+- **Why SKYQ over BATL:** BATL "holds near high" but on **near-zero AH volume** (VRatio 0.4x, stale quotes) and is already **+57% on the regular day** — a no-volume hold of an extended regular-session mover, not genuine AH momentum. SKYQ has real volume and ideal float with room under the ceiling.
+- **Concerns noted:** (1) SKYQ spiked to +129% at 17:00 ET and collapsed -36% to its base — early-peak character (mitigant: it is *holding/rebuilding* across the last two scans, like the CHAI "held base despite early peak" case, not declining). (2) Catalyst is **macro oil-sector (Trump/Iran), not company-specific** → **Grade None** (exit at first premarket opportunity).
+- This is a learning-phase data-collection entry: macro-sector AH spike + early-peak-then-base-hold + low-float genuine-volume oil name. Skip everything else (DAIC/FLYE SPIKE→FADE, GLBS decayed, HWH stale, RBNE only 1 scan).
+- No CEILING-OVERRIDE WATCH candidates (nothing exceeds +150% Total% with a BUILD-and-hold profile).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
-| _(none — skip-all: strongest movers SKYQ/BATL only 1 AH scan; gate-qualifiers DAIC/FLYE SPIKE→FADE, GLBS decayed to threshold)_ | | | | | |
+| SKYQ | $2.28 | 00:00 CET (18:00 ET) | 43 | None | Best gate-qualifier: float 3.6M (ideal), VRatio 3.6x (genuine AH vol), AH +46% holding across 2 scans, Total% +46% (room under ceiling), Day +22.4%. Concerns: early-peak spike +129%→base; macro oil-sector catalyst (Trump/Iran), not company-specific |

@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| _(none)_ | | | | | | | | | |
+| SKYQ | 2026-06-10 | $2.28 | 43 | €98.04 | None | Macro oil-sector rally (Trump/Iran comments); no company-specific catalyst. Float 3.6M, VRatio 3.6x, AH peak +129% then holding +46% base | -10% ($2.05) | premarket exit | $3.58 (AH) |
 
 ## Position Rules
 
