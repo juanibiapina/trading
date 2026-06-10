@@ -136,6 +136,23 @@ Scanner returned 62 hits, but most high-% rows are single-print artifacts (5mVol
 
 **Decision:** No entries (pre-AH). Re-scan at 22:00+ CET once after-hours opens; only enter a candidate that shows *fresh* sustained AH momentum (float <50M, AH >10% across ≥2 AH scans, Day% > −15%, BUILD/hold pattern). Prefer fresh first-day setups over CIIT/HWH multi-day extensions.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Session: AFTERHOURS (just opened, 16:00 ET).** Observation-only per learning-phase default — no entries before 23:00 CET.
+
+`scan.py --all`: **0 hits.** AH session opened seconds ago (16:00:19 ET); no after-hours bars have printed yet, so nothing to evaluate.
+
+**Prior watch candidates (21:30) — regular-session outcome:** all faded into the close, confirming the regular-session caution. None carried momentum to support AH follow-through:
+
+| Ticker | Prev Close | Day High | Reg Close | Verdict |
+|--------|-----------|----------|-----------|---------|
+| CIIT | $1.20 | $4.65 | $1.61 (+34%) | Spiked intraday to $4.65, dumped to close near lows — faded |
+| HWH | $1.22 | $2.60 | $1.42 (+16%) | Faded from $2.60 high to close |
+| WCT | $1.31 | $3.90 | $1.71 (+30%) | Big intraday spike to $3.90, gave it all back |
+| MSW | $1.32 | $2.18 | $1.35 (+2%) | Yesterday's trade — dead, back near flat |
+
+**Decision:** No entries (AH just opened, 0 scanner hits). Re-scan at 22:30 / 23:00 CET once after-hours volume builds. Watch for *fresh* first-day AH momentum (float <50M, AH >10% across ≥2 AH scans, Day% > −15%, BUILD/hold). The stale multi-day runners (CIIT, HWH) and the faded intraday spikers (WCT) are low priority unless they build genuinely new AH volume.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
