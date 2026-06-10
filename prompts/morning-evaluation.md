@@ -186,6 +186,8 @@ How did last night's top AH movers perform into premarket? Include every stock t
 
 This tracks whether AH momentum carries into premarket and which AH patterns predict follow-through.
 
+**AH-peak-vs-PM-peak check:** For each mover, note whether the PM peak *exceeded* or *fell short of* the AH peak. When the AH peak was higher (AH was the better exit), flag it. We are testing the hypothesis that extreme AH runners (AH peak >250% from close) tend to peak in after-hours and fade into PM rather than continuing — MSW (Jun 9: AH +292% > PM +221%) is the first data point. Tally these cases in Notes; if the pattern recurs, it argues for taking partial profit in late AH on extreme runners.
+
 ### Notes
 [any observations about scanner performance, threshold adjustments needed, etc.]
 ```

@@ -38,7 +38,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
-- Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); **AH peak timing: before 18:30 ET = 0/6+ failures, after 18:30 ET = 4/4 wins**; at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading; **skip all on SPIKE→FADE-only nights** (0/10+ win rate)
+- Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); **AH peak timing is a secondary tiebreaker — hold-vs-fade dominates:** early-peakers that *also fade* are 0/6+ (OCG, CNET, FOXX, ANY), peaks after 18:30 ET are 4/4 wins, but before-18:30 BUILD-and-hold names still follow through (CHAI 17:20, MSW 18:00); at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading; **skip all on SPIKE→FADE-only nights** (0/10+ win rate)
 - **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
 - **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close; if only 23:00 candidate exceeds 150%, wait for later scans (late-building candidates often have better entry points). **Ceiling-override watch:** candidates that exceed 150% but show BUILD-and-hold (AH high after 17:00 ET, holding within ~20% of high across ≥2 scans, VRatio >5x) are still skipped but flagged with a hypothetical entry for data collection.
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
@@ -53,6 +53,24 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-06-10 — Subordinate AH Peak Time to Hold-vs-Fade; Instrument AH-vs-PM Peak Tracking
+
+**Context:** June 9 night was a clean detection + selection win. MSW (Engineering & Construction, float 4.6M) was caught at the 23:00 CET entry-eligible scan (+25.8%), confirmed BUILD with a 2nd scan at 23:30 (+65.2%), and was traded at $3.24. It ran to an AH high of $5.18 (+292%) at 18:00 ET, then a PM high of $4.24 (+221%) — i.e. it **peaked before the 18:30 ET boundary** yet still followed through (+31% over entry at PM peak). Two issues surfaced: (1) MSW is the second before-18:30 BUILD-and-hold winner (after CHAI 17:20 / MTEN 17:40 on June 8), directly contradicting the "before 18:30 = 0/6 failures" framing; (2) MSW's AH peak (+292%) exceeded its PM peak (+221%) — the AH was the better exit, breaking the strategy's AH→PM-continuation thesis. Baseline detection is at 24/28 = 85.7% (met).
+
+**Evaluation of previous changes:**
+- 2026-06-09 Ceiling-override watch for BUILD-and-hold: **Insufficient data.** June 9 produced no qualifying CEILING-OVERRIDE WATCH candidate — the names exceeding +150% (CCTG, AZI) were SPIKE→FADE / microstructure-driven, not BUILD-and-hold with VRatio >5x. The morning eval correctly logged "nothing to tally." Tangentially supportive: MSW entered at +145.5% (just under the ceiling) as a BUILD-and-hold and won big (AH +292%), reinforcing that near-ceiling BUILD-and-hold can work — but it was below the ceiling, so not a ceiling-override case. Watch remains open, awaiting a qualifying >150% BUILD-and-hold night.
+- 2026-06-05 Correct AH Peak Timing Boundary to 18:30 ET: **Boundary is real but the failure stat was over-attributed to peak time.** MSW (peak 18:00 ET) is now the 2nd before-18:30 BUILD-and-hold to follow through. The losers behind the "0/6" stat (OCG, CNET, FOXX, ANY) were all *early-peakers that also faded*. The distinguishing factor is hold-vs-fade, not the absolute 18:30 timestamp. Revised this entry (see change 1) rather than the boundary value itself.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Reframed the "AH peak timing" rule as "AH peak timing matters, but trajectory dominates." The 0/6 failure stat is now explicitly attributed to early-peakers that are *also fading*; added CHAI and MSW as before-18:30 BUILD-and-hold counter-examples; stated that an early peak is only a disqualifier when the stock is *also* declining across scans.
+   - Why: Two clean counter-examples (CHAI, MSW) show before-18:30 peaks following through when the candidate holds/builds. The prior wording risked deprioritizing a genuine BUILD-and-hold purely on peak timestamp.
+   - Hypothesis: Future scans will no longer flag a before-18:30 peak as a concern when the candidate is holding/building. Measurable: (1) the next night with a before-18:30 BUILD-and-hold candidate evaluates it on trajectory, not peak time, and is not deprioritized solely for the early peak; (2) early-peak *faders* continue to be skipped. No hard rule changed.
+2. **prompts/morning-evaluation.md** — Added an "AH-peak-vs-PM-peak check" to the AH Mover Follow-Through section: record whether each mover's PM peak exceeded or fell short of its AH peak, flag AH-was-better-exit cases, and tally extreme AH runners (>250% from close) to test whether they peak in AH and fade into PM.
+   - Why: MSW peaked higher in AH than PM, breaking the AH→PM thesis. This is one data point; systematic tracking builds the dataset before any exit-timing conclusion.
+   - Hypothesis: Each future night with an extreme AH runner logs an AH-vs-PM peak comparison, accumulating a tally. If extreme AH runners repeatedly peak in AH (≥4/5), it argues for partial late-AH profit-taking on those names (an exit-domain decision left to the user).
+
+**Updated process:** Reworded the "AH peak timing" clause in the Trajectory preference line to mark peak time as a secondary tiebreaker subordinate to hold-vs-fade.
 
 ### 2026-06-09 — Instrument Ceiling-Override Watch for BUILD-and-Hold Cases
 
