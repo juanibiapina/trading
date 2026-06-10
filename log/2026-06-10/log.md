@@ -176,6 +176,44 @@ Scanner returned 62 hits, but most high-% rows are single-print artifacts (5mVol
 
 **Decision:** No entries (observation-only, before 23:00 CET). Both DAIC and FLYE peaked very early (16:10-16:15 ET) and are fading from their AH highs — early-peak-fading is 0/7 for PM continuation. Will re-evaluate at 23:00 CET: re-run catalyst search (PRs often appear 15-30 min after 4:00 PM ET) and check whether either rebuilds toward its AH high or keeps fading. FLYE has the better volume profile (4.5x VRatio, green Day%); DAIC's red Day% + sub-1x VRatio is a dead-cat/weak-volume concern.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Session: AFTERHOURS (17:00 ET, 1h in). Entry-eligible scan.** `scan.py --all`: **10 hits.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $1.85 | -4.1% | +61.1% | $2.98 | +54.4% | 5.3M | 4.2M | 1.2x | 721K | Miscellaneous |
+| FLYE | [TV](https://www.tradingview.com/chart/?symbol=FLYE) | $2.00 | +14.3% | +24.0% | $2.48 | +41.7% | 2.7M | 362K | 7.4x | 1.5M | Motor Vehicles |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.42 | +15.9% | +21.8% | $1.73 | +41.2% | 828K | 3.5M | 0.2x | 1.5M | Financial Conglomerates |
+| EDHL | [TV](https://www.tradingview.com/chart/?symbol=EDHL) | $3.50 | +12.9% | +22.0% | $4.27 | +37.7% | 680K | 6.5M | 0.1x | 0 | Advertising/Marketing |
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.71 | +30.5% | +29.8% | $2.22 | +69.5% | 341K | 17.7M | 0.0x | 849K | Packaged Software |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $3.29 | -12.7% | +27.4% | $4.19 | +11.1% | 340K | 524K | 0.6x | 570K | Internet Retail |
+| TGHL | [TV](https://www.tradingview.com/chart/?symbol=TGHL) | $0.55 | +6.9% | +15.7% | $0.64 | +23.7% | 618K | 14.4M | 0.0x | 12.7M | IT Services |
+| GLBS | [TV](https://www.tradingview.com/chart/?symbol=GLBS) | $2.14 | -0.9% | +12.6% | $2.41 | +11.6% | 751K | 173K | 4.4x | 13.9M | Marine Shipping |
+| NVNI | [TV](https://www.tradingview.com/chart/?symbol=NVNI) | $0.91 | -8.7% | +10.6% | $1.01 | +1.0% | 106K | 2.5M | 0.0x | 7.8M | Financial Conglomerates |
+| TANH | [TV](https://www.tradingview.com/chart/?symbol=TANH) | $0.51 | +11.1% | +6.6% | $0.54 | +18.5% | 71K | 333K | 0.2x | 14.1M | Chemicals: Specialty |
+
+**AH trajectory (check-prices --ah-history):**
+- **DAIC** — peaked **+69.9% ($3.28) at 16:10 ET**, faded steadily to +28.5% at 17:01. Early peak, SPIKE→FADE. Float 721K. Day -4.1% (red).
+- **FLYE** — peaked **+97% ($3.45) at 16:15 ET**, faded hard to +32.6% at 17:01. Early peak, SPIKE→FADE. Float 1.5M, VRatio 7.4x (real volume). Day +14.3%.
+- **EDHL** — peaked **+64.2% ($5.09) at 16:30 ET**, settled and holding a base ~+36–39% for 30 min. Early peak but holding, not actively fading. Recent IPO.
+- **GLBS** — peaked +23.1% at 16:15, dipped to +7.6%, **recovered to +20.4% (16:55)**, now +17.6%. Hold/recover pattern. Float 13.9M, MCap 46.2M (higher).
+- **HWH** — peaked +54.9% at 16:35, holding +43%. **Stale multi-day runner** (ran +210% on 06-09 AH) — fails first-day-of-unusual-activity.
+- **IPW** — peaked +11.7% at 16:40, now **-15.3% (below close)**. Day -12.7%. Dead/dead-cat.
+- **TGHL / NVNI / TANH / WCT** — single-print spikes or below 10% sustained; faded to flat/red. Not actionable.
+
+**Catalyst search (>10% AH movers):**
+- **GLBS** — **Q1 2026 earnings beat** reported after close: $0.05 EPS vs -$0.05 consensus (beat +$0.10). **B-grade catalyst.** Driver identified.
+- **EDHL** — recent **IPO** (began Nasdaq trading after IPO pricing/closing); flagged on metaverse-stock watchlists. No same-day operational catalyst. Recent-IPO momentum, **no fresh catalyst**.
+- **DAIC** — **1-for-25 reverse split** (corporate action, not a bullish operational catalyst). Multi-day runner (+47% Tue, +98% Wed premarket per Benzinga). **No catalyst found** + fails first-day.
+- **FLYE** — re-ran search (was no-catalyst at 22:30); searches return Firefly Aerospace (FLY), not Fly-E (FLYE). **No catalyst found** within budget. EV bike maker.
+
+**Decision: NO ENTRY (skip-all).**
+- The only candidates meeting the full entry gate (float <50M, AH >10% across ≥2 AH scans 22:00+, Day% > −15%) are **DAIC** and **FLYE** (both seen at 22:30 + 23:00). **Both are clear SPIKE→FADE** — peaked at 16:10/16:15 ET and have declined steadily across both scans. Per the SPIKE→FADE-only-night rule, skip all rather than entering the least-bad option (SPIKE→FADE is 0/10+ for PM continuation regardless of float/catalyst/AH%). Neither has a catalyst anyway.
+- **EDHL** (holding base, recent IPO, no catalyst) and **GLBS** (earnings beat B-grade, hold/recover) are the more interesting *trajectories* but each has only **1 AH scan** so far — they don't meet the ≥2-scan requirement. **Watch both at 23:30**: confirm whether EDHL holds its ~+37% base / GLBS rebuilds toward its AH high. GLBS's earnings catalyst + recover pattern makes it the better B-grade watch despite higher float and modest AH%.
+- **HWH** — stale multi-day runner, fails first-day. Skip.
+- No CEILING-OVERRIDE WATCH candidates (nothing exceeds +150% Total% with a BUILD-and-hold profile).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
