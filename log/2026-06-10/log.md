@@ -99,3 +99,12 @@ Verdict:  BUILD-and-hold that peaked in AH; PM opened near $4.24 then faded.
 - No open positions remaining.
 
 **Note:** Confirms the morning pattern flag — MSW peaked in AH ($5.18 / +60% over entry), not PM. PM peak only $4.24 (+31%), then steady fade. The Grade C "exit in premarket" rule captured a smaller but positive gain; the best exit was last night in AH.
+
+## Position Evaluation — 14:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| _(none)_ | | | | | | | | No open positions |
+
+**Actions taken:**
+- No open positions to evaluate (MSW closed at 10:30 CET). No action.
