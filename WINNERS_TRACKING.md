@@ -6,7 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-09 | CHAI | None (AI squeeze) | +438% ($4.47 PM) | — | $4.47 | 🆕 Day 1 - BUILD→hold→PM continuation (detected, skipped on ext. ceiling) |
+| 2026-06-09 | CHAI | None (AI squeeze) | +438% ($4.47 PM) | — | $1.75 | Day 2 - faded hard from $4.47 peak to $1.75 PM (+114% vs close) |
+| 2026-06-10 | MSW | C — acquisition close + dilutive notes | +292% ($5.18 AH) | — | $3.51 | 🆕 Day 1 - BUILD, peaked in AH ($5.18); PM peak lower ($4.24); TRADED @ $3.24 |
 
 ## Historical Winners (with multi-day outcome)
 
