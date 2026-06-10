@@ -108,3 +108,36 @@ Verdict:  BUILD-and-hold that peaked in AH; PM opened near $4.24 then faded.
 
 **Actions taken:**
 - No open positions to evaluate (MSW closed at 10:30 CET). No action.
+
+---
+
+# Post-Market Screening — 2026-06-10
+
+## Scan 21:30 CET (3:30 PM ET)
+
+**Session: REGULAR (pre-AH).** AH opens at 22:00 CET / 4:00 PM ET. Per the regular-session caution rule, **no paper trade entries** — candidates are watch-only pending AH confirmation. Stocks that spike intraday but don't carry into AH tend to fade.
+
+Scanner returned 62 hits, but most high-% rows are single-print artifacts (5mVol 100–500 shares with VChg ~−99%, e.g. DSY +411%, VSME +189%, CPOP +401%, CNET +42%). Filtering for real sustained volume and reasonable float:
+
+| Ticker | Chart | Price | Day% | 5mVol | Avg5m | IRVol | Float | MCap | Industry | Note |
+|--------|-------|-------|------|-------|-------|-------|-------|------|----------|------|
+| CIIT | [TV](https://www.tradingview.com/chart/?symbol=CIIT) | $1.92 | +60.0% | 41K | 57K | 1025 | 1.3M | 6.9M | Air Freight/Couriers | Stale — ran in 06-09 AH; multi-day runner |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.69 | +38.0% | 18K | 21K | 461 | 1.5M | 12.6M | Financial Conglomerates | Stale — +210% in 06-09 AH; multi-day runner |
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.92 | +46.6% | 11K | 61K | 6.5 | 849K | 5.9M | Packaged Software | Vol fading (−89% VChg); low float |
+| HXHX | [TV](https://www.tradingview.com/chart/?symbol=HXHX) | $0.79 | +55.5% | 7K | 69K | 10.0 | 4.0M | 10.9M | Trucking | Vol fading (−80% VChg) |
+| GLAI | [TV](https://www.tradingview.com/chart/?symbol=GLAI) | $0.90 | +50.0% | 2K | 2K | 6.4 | 14.4M | 139.4M | Misc Commercial Svcs | High float/MCap; thin vol |
+| MSW | [TV](https://www.tradingview.com/chart/?symbol=MSW) | $1.57 | +19.3% | 2K | 31K | 81.2 | 4.6M | 20.4M | Engineering & Construction | Already traded last night; faded from $5.18 AH peak |
+
+**Watch assessment:**
+- **CIIT** — low float (1.3M), highest IRVol on the board, but already ran in 06-09 AH (peak +12.5% then PM-only continuation). Today's +60% is a multi-day extension, fails "first day of unusual activity." Watch only if it builds *fresh* AH volume tonight.
+- **HWH** — surged +210% in 06-09 AH (late, 18:45–19:00 ET), faded into PM. Today +38% is a continuation. Same stale-runner concern. Watch for fresh AH build.
+- **WCT / HXHX** — both fading volume into the close; unlikely AH follow-through. Low priority.
+- Remaining rows are single-print artifacts or high-float/MCap — not actionable.
+
+**Decision:** No entries (pre-AH). Re-scan at 22:00+ CET once after-hours opens; only enter a candidate that shows *fresh* sustained AH momentum (float <50M, AH >10% across ≥2 AH scans, Day% > −15%, BUILD/hold pattern). Prefer fresh first-day setups over CIIT/HWH multi-day extensions.
+
+## Paper Trades
+
+| Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
+|--------|-------------|------------|-----------------|----------------|--------|
+| _(none yet — pre-AH watch scan)_ | | | | | |
