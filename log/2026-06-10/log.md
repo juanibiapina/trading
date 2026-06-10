@@ -214,8 +214,47 @@ Scanner returned 62 hits, but most high-% rows are single-print artifacts (5mVol
 - **HWH** — stale multi-day runner, fails first-day. Skip.
 - No CEILING-OVERRIDE WATCH candidates (nothing exceeds +150% Total% with a BUILD-and-hold profile).
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**Session: AFTERHOURS (17:30 ET, 1.5h in). Entry-eligible scan.** `scan.py --all`: **12 hits.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BATL | [TV](https://www.tradingview.com/chart/?symbol=BATL) | $2.06 | +57.3% | +10.7% | $2.28 | +74.0% | 8.0M | 27.7M | 0.3x | 17.9M | Oil & Gas Production |
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $1.56 | +22.4% | +66.0% | $3.17 | +103.2% | 7.7M | 3.1M | 2.5x | 3.6M | Integrated Oil |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $1.85 | -4.1% | +34.1% | $2.48 | +28.5% | 6.0M | 4.3M | 1.4x | 721K | Miscellaneous |
+| FLYE | [TV](https://www.tradingview.com/chart/?symbol=FLYE) | $2.00 | +14.3% | +14.0% | $2.28 | +30.3% | 2.9M | 392K | 7.4x | 1.5M | Motor Vehicles |
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.71 | +30.5% | +8.2% | $1.85 | +41.2% | 2.1M | 17.9M | 0.1x | 849K | Packaged Software |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $0.91 | +8.9% | +26.4% | $1.15 | +37.6% | 1.1M | 1.2M | 1.0x | 16.5M | Wholesale Distributors |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.42 | +15.9% | +19.0% | $1.69 | +38.0% | 974K | 3.5M | 0.3x | 1.5M | Financial Conglomerates |
+| GLBS | [TV](https://www.tradingview.com/chart/?symbol=GLBS) | $2.14 | -0.9% | +11.7% | $2.39 | +10.6% | 907K | 190K | 4.8x | 13.9M | Marine Shipping |
+
+_(Lower rows — SCKT +6.8%, SEGG -14.3%, MTEN +6.4%, ANNA +6.7% — below the 10% AH threshold or red; not actionable.)_
+
+**AH trajectory (check-prices --ah-history):**
+- **SKYQ** — flat ~+20% until 16:45, then ramped: +67.8% (16:50) → +92.3% (16:55) → **peak +129.5% ($3.58) at 17:00 ET** → faded hard: +106% (17:05), +76% (17:15), +41% (17:20), now **+40% ($2.19) at 17:30**. Late BUILD then SPIKE→FADE off the 17:00 peak. Float 3.6M (ideal), VRatio 2.5x (genuine volume). Day +22.4%. **New — only 1 AH scan.**
+- **BATL** — opened +58.8%, chopped +48–79%, **peak +79.4% ($2.35) at 17:15 ET**, now +68.7%. HOLD/range pattern near its high. But VRatio 0.3x (AH vol well below avg — weak). Float 17.9M, Day +57.3% (already extended in regular session). **New — only 1 AH scan.**
+- **DAIC** — **peak +69.9% ($3.28) at 16:10 ET**, faded to +22.3% at 17:30. Clean SPIKE→FADE, declining across all 3 scans (22:30/23:00/23:30). Float 721K, Day -4.1%.
+- **FLYE** — **peak +97% ($3.45) at 16:15 ET**, faded to +17.1% at 17:30. Clean SPIKE→FADE across all 3 scans. Float 1.5M, VRatio 7.4x, Day +14.3%.
+- **GLBS** — peak +23.1% (16:15), faded to base, recovered +20% (16:55), back to **+9.9% at 17:30**. Early-peak → decaying to the +10% threshold. Float 13.9M. Earnings beat (B-grade).
+- **TMDE** — peak +37.6% (17:10), choppy, now +23%. Float 16.5M. On the non-biotech 0/6 loss list. Modest.
+- **HWH/WCT** — stale multi-day runners (ran in 06-09 AH). Fail first-day-of-unusual-activity. Skip.
+
+**Catalyst search:**
+- **SKYQ** — only news is the **June 8 SAF MOU** (non-binding multi-party MOU with Southern Energy Renewables + DevvStream re: sustainable aviation fuel at the Foreland refinery) — **2 days stale**. No same-day (June 10) press release or 8-K found within budget (tavily week, brave day, tavily 8-K day). The move looks like a multi-day continuation/momentum run on the SAF story (stock already +22.4% in regular session). **No fresh same-day catalyst found.**
+- **GLBS** — Q1 2026 **earnings beat** (carried from 23:00 search). **B-grade.**
+- **DAIC** — 1-for-25 reverse split (corporate action, not bullish operational). No catalyst.
+- **FLYE** — searches return Firefly Aerospace, not Fly-E. No catalyst found.
+
+**Decision: NO ENTRY (skip-all).**
+- **The strongest movers (SKYQ +129% peak, BATL +79%) are new this scan — only 1 AH scan each**, so they fail the ≥2-AH-scan (22:00+) entry requirement. They cannot be entered tonight; they become **00:00 CET watches.** SKYQ additionally is *fading hard* from its 17:00 peak (BUILD→SPIKE→FADE, +129%→+40%); BATL holds near its high but has weak AH volume (VRatio 0.3x) and is already +57% on the regular day.
+- **The gate-qualifying candidates (≥2 AH scans) are all weak/fading:** DAIC and FLYE are clean SPIKE→FADE (peaked 16:10/16:15 ET, declining across all 3 scans) → 0/10+ for PM continuation, skip. GLBS qualifies on its B-grade earnings beat but its AH move has *decayed to the +10% threshold* and it peaked early (16:15) — not building, marginal. Per "skip-all when no candidate sustains >10% AH across multiple scans," GLBS is too weak to anchor an entry.
+- **SPIKE→FADE / weak night** → skip all rather than entering the least-bad option.
+- No CEILING-OVERRIDE WATCH candidates (nothing exceeds +150% Total% with a BUILD-and-hold profile; SKYQ peaked at +129% and is fading).
+- **00:00 CET watch:** SKYQ (priority — float 3.6M, VRatio 2.5x) — re-evaluate if it stabilizes/rebuilds toward its $3.58 high and prints a 2nd AH scan; BATL (secondary) — confirm it holds its range on improving volume.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
-| _(none yet — pre-AH watch scan)_ | | | | | |
+| _(none — skip-all: strongest movers SKYQ/BATL only 1 AH scan; gate-qualifiers DAIC/FLYE SPIKE→FADE, GLBS decayed to threshold)_ | | | | | |
