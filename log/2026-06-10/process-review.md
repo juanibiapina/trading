@@ -21,9 +21,8 @@
 
 ## Notes
 
-- **python3 / nix-shell workaround is fully resolved.** The historical issue (sessions failing on `python3 scripts/scan.py` and rediscovering a nix-shell workaround) no longer appears. `python3` is on PATH (`/run/current-system/sw/bin/python3`, 3.13.12) and the scanner scripts (`yahoo-fetch.py`, `scan.py`, `pm-volume-check.py`) ran cleanly with zero nix-shell invocations across all real trading sessions. Good baseline data point.
 - Bash command counts per session were low (4–10). No excessive retries (3+) on any command. No `command not found`, no permission errors, no stale path references in the trading sessions.
-- Earlier grep hits for `nix-shell` / `command not found` came only from sessions *reading* prior log files (this review and the daily-email session), not from real command failures.
+- **Stop re-verifying the python3/nix-shell issue.** It has been confirmed resolved since 2026-03-24 and re-confirmed in ~20 reviews since. Continuing to check and report it is noise. The driving prompt (`prompts/process-review.md`) anchors on it as its central example, which is why every run re-litigates it — that prompt should be updated to reframe python3 as a *closed historical* case, but it is in the do-not-change set, so it needs user sign-off.
 
 ## Summary
 
