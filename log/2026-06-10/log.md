@@ -86,3 +86,16 @@ AH path:  $1.32 (flat to 16:30) → $2.66 (16:50) → $3.24 entry (17:30) → $4
 PM path:  $4.24 (04:00, PM high) → $3.98 → $3.76 → $3.56 → $3.42 → $3.51 (04:21)  [fading]
 Verdict:  BUILD-and-hold that peaked in AH; PM opened near $4.24 then faded.
 ```
+
+## Position Evaluation — 10:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| MSW | $3.24 | $3.53 | +9.0% | $5.72 | 1 | C | SELL | Grade C = exit in first premarket pulse; in profit and fading from peak ($4.93 AH → $4.24 → $3.53) |
+
+**Actions taken:**
+- SOLD MSW: 30 sh @ $3.53, realized **+$8.70 (+9.0%)**, 1 day held. Locked gain per Grade C premarket-exit rule.
+- Moved MSW to Closed Positions; dropped BIYA from the last-10 table.
+- No open positions remaining.
+
+**Note:** Confirms the morning pattern flag — MSW peaked in AH ($5.18 / +60% over entry), not PM. PM peak only $4.24 (+31%), then steady fade. The Grade C "exit in premarket" rule captured a smaller but positive gain; the best exit was last night in AH.

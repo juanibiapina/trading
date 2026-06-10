@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| MSW | 2026-06-09 | $3.24 | 30 | $97.20 | C | Acquisition close (PMA Nano Carbon Tech) + dilutive convertible notes | $2.92 (-10%) | Premarket exit | $5.18 |
+| _(none)_ | | | | | | | | | |
 
 ## Position Rules
 
@@ -50,6 +50,7 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| MSW | $3.24 | $3.53 | +$8.70 | +9.0% | 1 | C - Acquisition close + dilutive notes | Grade C premarket exit at profit; AH peak $5.18 was best window, faded into PM |
 | ANY | $4.84 | $3.81 | -$20.60 | -21.3% | 2 | A - Cathedra Bitcoin acquisition | Stop breached overnight (low $3.54), peaked at $5.50 (+13.6%) |
 | PRFX | $7.28 | $5.18 | -$27.30 | -28.8% | 1 | B - DeepSolar Predict™ launch | Hard stop breached, peaked at $9.30 (+27.7%) then overnight fade |
 | ATPC | $7.23 | $6.21 | -$13.26 | -14.1% | 1 | None | Hard stop breached, peaked at $8.30 (+14.8%) then faded |
@@ -59,4 +60,3 @@ Based on historical data (17 winners tracked):
 | AMST | $1.17 | $2.62 | +$123.25 | +124% | 1 | B - Enterprise customer win | Trail stop hit at $2.89 after $3.40 peak |
 | TRNR | $1.31 | $1.07 | -$19.68 | -18.3% | 1 | B - Q1 earnings beat | Hard stop breached, faded from $1.64 AH peak |
 | FOXX | $5.62 | $4.74 | -$14.96 | -15.7% | 1 | None | Hard stop breached, peaked at $6.10 (+8.5%) then overnight fade |
-| BIYA | $1.12 | $1.16 | +$3.56 | +3.6% | 1 | None | Exited at profit per rules, avoided fade from $1.41 peak |
