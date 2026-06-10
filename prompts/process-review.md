@@ -2,12 +2,14 @@ Review recent pi session logs for operational problems — not trading quality, 
 
 This runs daily after scanner-improvement. The goal: catch systemic issues where automated sessions waste time, fail repeatedly, or work around broken tooling.
 
-**The python3 example:** for weeks, every session failed on `python3 scripts/scan.py`, then spent time discovering a nix-shell workaround. No existing task caught this because they all focused on trading outcomes, not operational health. This task would have caught it on day one.
+**Why this task exists (historical example, now closed):** for weeks every session failed on `python3 scripts/scan.py` and re-discovered a nix-shell workaround. No trading-focused task caught it because they looked at outcomes, not operational health. That specific issue was resolved on 2026-03-24 — **do not re-verify it.** It's named here only to illustrate the *class* of problem to hunt for: a permanent fix that never got made permanent.
+
+**Don't re-litigate closed issues.** Before reporting anything, skim the recent `log/*/process-review.md` entries. If an issue has been confirmed resolved across multiple prior reviews, leave it out — re-confirming dead issues is noise. Only report what's actually happening now.
 
 ## What To Look For
 
 1. **Repeated errors** — the same command failing across multiple sessions (missing tools, bad paths, permission errors)
-2. **Workarounds** — sessions discovering the same fix every time instead of it being permanent (e.g., nix-shell for python3)
+2. **Workarounds** — sessions discovering the same fix every time instead of it being permanent
 3. **Excessive retries** — commands being retried 3+ times before succeeding
 4. **Token waste** — long debugging sequences that could be avoided with a simple environment fix
 5. **Prompt confusion** — sessions misinterpreting instructions, doing steps out of order, or skipping steps
@@ -52,8 +54,8 @@ For each issue found, classify it:
 
 | Severity | Description | Example |
 |----------|-------------|---------|
-| **Critical** | Blocks the session from completing its task | python3 not on PATH |
-| **Wasteful** | Session completes but burns time/tokens on workarounds | Retrying with nix-shell every time |
+| **Critical** | Blocks the session from completing its task | A required tool missing from PATH |
+| **Wasteful** | Session completes but burns time/tokens on workarounds | Re-discovering the same fix every run |
 | **Minor** | Cosmetic or low-impact inefficiency | Unnecessary commands |
 
 ### 3. Fix or Report
