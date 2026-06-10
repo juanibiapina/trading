@@ -293,6 +293,40 @@ _(Lower rows — SCKT +6.8%, SEGG -14.3%, MTEN +6.4%, ANNA +6.7% — below the 1
 - This is a learning-phase data-collection entry: macro-sector AH spike + early-peak-then-base-hold + low-float genuine-volume oil name. Skip everything else (DAIC/FLYE SPIKE→FADE, GLBS decayed, HWH stale, RBNE only 1 scan).
 - No CEILING-OVERRIDE WATCH candidates (nothing exceeds +150% Total% with a BUILD-and-hold profile).
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**Session: AFTERHOURS (18:30 ET, 2.5h in). Entry-eligible scan, but SKYQ is OPEN → one-position rule blocks new entries.** `scan.py --all`: **20 hits.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $1.91 | +22.4% | +22.0% | $2.33 | +49.4% | 15.1M | 3.9M | 3.9x | 3.6M | Integrated Oil |
+| CPOP | [TV](https://www.tradingview.com/chart/?symbol=CPOP) | $1.52 | +322.2% | +11.2% | $1.69 | +369.4% | 14.8M | 39.8M | 0.4x | 20.4M | Advertising/Marketing |
+| BATL | [TV](https://www.tradingview.com/chart/?symbol=BATL) | $2.06 | +57.3% | +9.7% | $2.26 | +72.5% | 12.5M | 28.1M | 0.4x | 17.9M | Oil & Gas Production |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $1.85 | -4.1% | +15.1% | $2.13 | +10.4% | 6.4M | 4.3M | 1.5x | 721K | Miscellaneous |
+| RBNE | [TV](https://www.tradingview.com/chart/?symbol=RBNE) | $1.07 | +0.9% | +30.9% | $1.40 | +32.2% | 4.7M | 851K | 5.5x | 7.3M | Marine Shipping |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $0.91 | +8.9% | +18.7% | $1.08 | +29.2% | 2.3M | 1.3M | 1.8x | 16.5M | Wholesale Distributors |
+| VIVK | [TV](https://www.tradingview.com/chart/?symbol=VIVK) | $0.64 | +15.6% | +39.0% | $0.89 | +60.8% | 1.4M | 4.7M | 0.3x | 4.2M | Chemicals: Specialty |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.42 | +15.9% | +14.8% | $1.63 | +33.1% | 1.8M | 3.6M | 0.5x | 1.5M | Financial Conglomerates |
+| BQ | [TV](https://www.tradingview.com/chart/?symbol=BQ) | $0.89 | +7.6% | +14.6% | $1.02 | +23.3% | 987K | 5.7M | 0.2x | 3.9M | Internet Retail |
+| GLBS | [TV](https://www.tradingview.com/chart/?symbol=GLBS) | $2.14 | -0.9% | +10.7% | $2.37 | +9.7% | 966K | 197K | 4.9x | 13.9M | Marine Shipping |
+
+_(Lower rows — EONR +12%, SCKT +9.5%, MTEN +7.6%, SEGG -10.3% total, ANNA +5.3%, AGIG, HCWB, NCT, MSW +6.7% — below the 10% AH threshold, red, or stale. Not actionable.)_
+
+**AH trajectory (check-prices --ah-history):**
+- **SKYQ (OPEN)** — peaked +129.5% ($3.58) at 17:00 ET, collapsed to +33% base, now **rebuilt to +48.7% ($2.33) at 18:30** — third consecutive scan holding/building above the base (23:30 +40% → 00:00 +46% → 00:30 +49%). VRatio 3.9x (genuine, climbing). Above our $2.28 entry (+2.2%). Thesis intact: low-float oil name holding its base, not fading.
+- **RBNE** — late spike to +55.7% ($1.65) at 17:40 ET, settled, choppy ~+32% ($1.40) now. **2nd AH scan** (00:00 +55% snapshot → 00:30 +32%). Float 7.3M, VRatio 5.5x (real volume). Shipping — part of the same macro oil/shipping rally, not a company catalyst.
+- **CPOP** — **+322% regular day**, AH total +369% (history shows erratic prints to +597%). Multi-day blow-off / extreme extension. **Skip — far above the +150% ceiling.**
+- **BQ** — peaked +28% at 16:50, faded, holding ~+22% ($1.02). Float 3.9M, VRatio 0.2x (thin). Modest.
+- **VIVK** — +60.8% total, +39% AH, float 4.2M but VRatio 0.3x (thin AH volume). Specialty chemicals.
+- **BATL** — holds +72% but VRatio 0.4x (stale quotes, no genuine AH volume) and already +57% regular day. Same no-volume-hold concern as prior scans.
+- **DAIC** — clean SPIKE→FADE (peak 16:10 ET), decayed to +10% across 5 scans. Reverse split, no catalyst. Skip.
+
+**Decision: NO NEW ENTRY.**
+- **SKYQ is open → one-position rule blocks any new entry**, and SKYQ is behaving well (holding/building above entry across 3 scans). No reason to consider a swap.
+- Even absent the open position, tonight's fresh strong movers are weak fits: CPOP is far over the +150% ceiling (+369%), RBNE/BATL/VIVK are macro oil-shipping beta with no company catalyst (RBNE only choppy 2nd scan; BATL/VIVK thin AH volume), and DAIC is a confirmed SPIKE→FADE.
+- No CEILING-OVERRIDE WATCH candidates (CPOP exceeds +150% but is a multi-day blow-off, not a post-17:00 BUILD-and-hold within ~20% of high; it spiked +369%→erratic).
+- **This is the last scheduled evening scan (00:30 CET).** SKYQ carries overnight; exit decision handled by position-evaluation.md in premarket.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
