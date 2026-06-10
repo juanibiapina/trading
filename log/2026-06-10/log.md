@@ -153,6 +153,29 @@ Scanner returned 62 hits, but most high-% rows are single-print artifacts (5mVol
 
 **Decision:** No entries (AH just opened, 0 scanner hits). Re-scan at 22:30 / 23:00 CET once after-hours volume builds. Watch for *fresh* first-day AH momentum (float <50M, AH >10% across ≥2 AH scans, Day% > −15%, BUILD/hold). The stale multi-day runners (CIIT, HWH) and the faded intraday spikers (WCT) are low priority unless they build genuinely new AH volume.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Session: AFTERHOURS (16:30 ET, 30 min in).** Observation-only per learning-phase default — no entries before 23:00 CET.
+
+`scan.py --all`: **3 hits.** All three are *new* (not in 21:30 / 22:00 scans). The stale runners CIIT/HWH/WCT did not reappear.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $1.85 | -4.1% | +77.8% | $3.29 | +70.5% | 2.1M | 3.8M | 0.5x | 721K | Miscellaneous |
+| FLYE | [TV](https://www.tradingview.com/chart/?symbol=FLYE) | $2.00 | +14.3% | +44.0% | $2.88 | +64.6% | 237K | 52K | 4.5x | 1.5M | Motor Vehicles |
+| SCKT | [TV](https://www.tradingview.com/chart/?symbol=SCKT) | $0.95 | +12.8% | +6.3% | $1.01 | +19.9% | 94K | 344K | 0.3x | 5.4M | Computer Peripherals |
+
+**AH trajectory (check-prices --ah-history):**
+- **DAIC** — spiked to +69.9% ($3.28) at **16:10 ET**, faded to +40%, chopped back to +60%, now +54.6% at 16:30. Early peak, choppy. Float 721K (very low). VRatio 0.5x (AH vol below avg — weak). SPIKE→chop so far.
+- **FLYE** — spiked to +97% ($3.45) at **16:15 ET**, faded hard to +56-57% and flat since. Early peak, SPIKE→FADE so far. Float 1.5M, VRatio 4.5x (genuine fresh AH volume). Day +14.3%.
+- **SCKT** — only +6.3% AH (below 10% threshold), VRatio 0.3x. Not actionable.
+
+**Catalyst search (DAIC, FLYE — both >10% AH):**
+- **FLYE** — next earnings Jun 30, 2026 (not today). No same-day press release or 8-K surfaced (tavily/brave, freshness day). **No catalyst found so far.** EV bike maker; the +14.3% regular Day% + AH spike with 4.5x VRatio suggests a real driver but none located within search budget.
+- **DAIC** — CID HoldCo. **No catalyst found** (no results on tavily/brave). Day% -4.1% (was red in regular session, then AH spike — possible dead-cat character given the red day). Very low float (721K).
+
+**Decision:** No entries (observation-only, before 23:00 CET). Both DAIC and FLYE peaked very early (16:10-16:15 ET) and are fading from their AH highs — early-peak-fading is 0/7 for PM continuation. Will re-evaluate at 23:00 CET: re-run catalyst search (PRs often appear 15-30 min after 4:00 PM ET) and check whether either rebuilds toward its AH high or keeps fading. FLYE has the better volume profile (4.5x VRatio, green Day%); DAIC's red Day% + sub-1x VRatio is a dead-cat/weak-volume concern.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
