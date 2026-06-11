@@ -267,6 +267,38 @@ No candidates found. Watch from the 21:30 list to track into AH: RKDA (2.1M floa
 
 **Decision: No new entry — RKDA position already open (one trade per day, one position at a time).** Held RKDA is holding its base (+39.5% at 18:00, ~7% off AH high, entry flat). Tonight's fresh BUILD names are disqualified or unusable anyway: BYAH (best BUILD, +130%) is a Day −15.3% dead-cat; RUBI builds late but is shipping beta with unknown float and only +17% AH; OTLK builds but float 98.7M ≫ gate. The rest are SPIKE→FADE (RITR, CCHH) or ceiling-breach (EDHL). Entries remain blocked while RKDA is open; next scan continues tracking.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**Session: AFTERHOURS (2.5h in).** Scanner returned **20 hits**. AH peak times span 16:00–18:30 ET. **A position is already open (RKDA, entered 23:00 CET) — the one-position rule blocks any new entry tonight.** This is the last scheduled scan; it tracks the held position and logs late movers for the retrospective.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.05 | −15.3% | +140.9% | $2.53 | +104.0% | 17.5M | 4.6M | 3.8x | 1.0M | Household/Personal Care |
+| RITR | [TV](https://www.tradingview.com/chart/?symbol=RITR) | $0.75 | +29.7% | +24.4% | $0.93 | +61.3% | 14.7M | 2.1M | 7.1x | 17.3M | REIT |
+| RKTO | [TV](https://www.tradingview.com/chart/?symbol=RKTO) | $1.48 | +11.3% | +32.4% | $1.96 | +47.4% | 11.6M | 13.9M | 0.8x | 21.7M | Pharma: Major |
+| VSME | [TV](https://www.tradingview.com/chart/?symbol=VSME) | $1.11 | −45.9% | +50.5% | $1.67 | −18.5% | 6.5M | 24.0M | 0.3x | 2.6M | Advertising/Marketing |
+| RKDA | [TV](https://www.tradingview.com/chart/?symbol=RKDA) | $1.07 | +18.4% | +16.8% | $1.25 | +38.4% | 5.0M | 12.3M | 0.4x | 2.1M | Chemicals: Agricultural |
+| RUBI | [TV](https://www.tradingview.com/chart/?symbol=RUBI) | $0.62 | +32.0% | +15.2% | $0.71 | +52.1% | 4.0M | 22.7M | 0.2x | ~0 | Marine Shipping |
+| CCHH | [TV](https://www.tradingview.com/chart/?symbol=CCHH) | $0.52 | +50.3% | +13.3% | $0.59 | +70.3% | 3.7M | 17.1M | 0.2x | 4.1M | Restaurants |
+| EDHL | [TV](https://www.tradingview.com/chart/?symbol=EDHL) | $5.98 | +70.9% | +28.8% | $7.70 | +120.0% | 3.7M | 12.7M | 0.3x | ~0 | Advertising/Marketing |
+| OTLK | [TV](https://www.tradingview.com/chart/?symbol=OTLK) | $1.10 | +23.6% | +11.8% | $1.23 | +38.2% | 2.4M | 21.0M | 0.1x | 120.7M | Pharma: Major |
+| MTEN | [TV](https://www.tradingview.com/chart/?symbol=MTEN) | $2.29 | +33.9% | +13.1% | $2.59 | +51.5% | 1.5M | 12.5M | 0.1x | 843K | Industrial Machinery |
+| SDEV | [TV](https://www.tradingview.com/chart/?symbol=SDEV) | $1.09 | +1.9% | +20.2% | $1.31 | +22.4% | 1.2M | 272K | 4.3x | 27.1M | Pharma: Major |
+| TOON | [TV](https://www.tradingview.com/chart/?symbol=TOON) | $1.08 | +24.1% | +6.5% | $1.15 | +32.2% | 453K | 3.9M | 0.1x | 55.9M | Movies/Entertainment |
+| CPSH | [TV](https://www.tradingview.com/chart/?symbol=CPSH) | $8.59 | +26.1% | +6.8% | $9.17 | +34.7% | 333K | 3.6M | 0.1x | 15.6M | Metal Fabrication |
+
+**AH trajectory (16:00–18:30 ET, `check-prices.py --ah-history`):**
+- **RKDA (HELD)** — +18.4% (16:00) → **+50% peak ($1.35, 16:15)** → tight chop $1.18–1.30 for 2.5h, softening to **+31.7% ($1.19) at 18:30** (within ~12% of high). Entry $1.26 → $1.19 (−5.6%). Still a base-hold, slight late softening but not a collapse. Thesis unchanged; exit handled by position-evaluation.md in premarket.
+- **BYAH** *(night's best BUILD)* — Day −15.3% dead-cat, but the strongest BUILD on the board: +66.9% (16:40) → +108.9% (17:30) → **+116.5% peak ($2.68, 17:35)** → holding +83.9% ($2.28) at 18:30 (~16% off high). 1.0M float. **Disqualified: Day% −15.3% (dead-cat-bounce rule).** Track for retrospective — best BUILD shape of the night and a clean test of whether the dead-cat filter costs winners.
+- **RUBI** — late build to **+67% peak ($0.79, 17:45)** → faded to +47.9% (18:30). Marine shipping (sector beta — BATL/RBNE/GLBS all faded recently), float ~0/unknown. Not actionable (position open); only +15% AH anyway.
+- **EDHL** — faded off +178.6% (16:30) peak to +117% (18:30). Total% +120% still near ceiling earlier; VRatio 0.3 (<5x) → fails ceiling-override. Chinese micro-cap pump. Skip.
+- **RITR** — still SPIKE→FADE off +108.7% (16:20) peak, bounced to +24.4% AH. 17.3M float. Skip (0/10+).
+- **CCHH** — SPIKE→FADE off +108.4% (17:05), now +13.3%. Skip.
+- **VSME (−45.9%) / KMRK (−22.6%) / FJET (−16.7%) / WTO (−15.0%)** — Day% ≤ −15% → disqualified (dead-cat).
+- **RKTO / MTEN / SDEV / OTLK / TOON / CPSH** — modest AH or float over gate (OTLK 120.7M, SDEV 27.1M, TOON 55.9M, RKTO 21.7M); no fresh catalyst confirmed. Not actionable.
+
+**Decision: No new entry — RKDA position already open (one trade per day, one position at a time).** Last scheduled scan of the night. Held RKDA holds its base (+31.7% at 18:30, ~12% off AH high, entry −5.6%). No fresh qualifying BUILD candidate appeared anyway: BYAH (best BUILD, +116.5%) is a Day −15.3% dead-cat; RUBI builds late but is shipping beta with unknown float and only +15% AH; EDHL ceiling-breach; the rest SPIKE→FADE or float over gate. Premarket exit for RKDA handled by position-evaluation.md.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
