@@ -150,6 +150,31 @@ Scanner returned 56 hits; most high-% rows are single-print artifacts (5mVol 100
 
 No candidates found. Watch from the 21:30 list to track into AH: RKDA (2.1M float, first-day), FABC (4.5M float), TMDE (multi-day extension). Re-scan at 22:30 once AH volume builds.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Session: AFTERHOURS (30 min in).** Scanner returned **7 hits**. AH opened 16:00 ET, so all trajectories are early (16:00–16:30 ET only). Observation-only per learning-phase rules (no entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| RITR | [TV](https://www.tradingview.com/chart/?symbol=RITR) | $0.75 | +29.7% | +31.4% | $0.98 | +70.4% | 3.5M | 902K | 3.8x | 17.3M | REIT |
+| EDHL | [TV](https://www.tradingview.com/chart/?symbol=EDHL) | $5.98 | +70.9% | +17.1% | $7.00 | +100.0% | 674K | 12.3M | 0.1x | ~0 | Advertising/Marketing |
+| SMSI | [TV](https://www.tradingview.com/chart/?symbol=SMSI) | $4.55 | +26.7% | +24.6% | $5.67 | +57.9% | 2.1M | 333K | 6.3x | 5.1M | Packaged Software |
+| RKDA | [TV](https://www.tradingview.com/chart/?symbol=RKDA) | $1.07 | +18.4% | +20.6% | $1.29 | +42.8% | 498K | 11.8M | 0.0x | 2.1M | Chemicals: Agricultural |
+| ZDGE | [TV](https://www.tradingview.com/chart/?symbol=ZDGE) | $3.31 | +6.1% | +29.6% | $4.29 | +37.5% | 500K | 150K | 3.3x | 10.2M | Packaged Software |
+| CPOP | [TV](https://www.tradingview.com/chart/?symbol=CPOP) | $1.05 | −30.9% | +13.3% | $1.19 | −21.7% | 2.4M | 52.7M | 0.0x | 20.4M | Advertising/Marketing |
+| STKE | [TV](https://www.tradingview.com/chart/?symbol=STKE) | $1.21 | +3.4% | +5.8% | $1.28 | +9.4% | 55K | 189K | 0.3x | 18.9M | Financial Conglomerates |
+
+**AH trajectory (16:00–16:30 ET, `check-prices.py --ah-history`):**
+- **RITR** — +40.9% (16:00) → **+108.7% peak (16:20)** → +84.4% (16:30). Early SPIKE→FADE forming. 17.3M float, REIT.
+- **SMSI** — +63.8% (16:00) → **+83.9% peak (16:05)** → hard fade to +28.1% (16:30). Immediate SPIKE→FADE. **Catalyst = 1-for-5 reverse split executed today** (mechanical price move, no operational news; warrant-exercise 13D/A on file → dilution-flavored). Reverse-split runner. 5.1M float.
+- **ZDGE** — +6.1% → **+35.6% peak (16:10)** → faded back to +9.6% (near flat). SPIKE→FADE. 10.2M float.
+- **RKDA** — +18.4% → **+50% peak (16:15)** → +33.9% (16:30). Mild fade, best float on board (2.1M), ag-chemicals. Watched since 21:30.
+- **EDHL** — +116% (16:00) → dip +98.6% → **+175.4% peak (16:25)** → +172.6% (16:30). Only BUILD/hold profile, **but Total% +100–175% breaches the +150% extension ceiling**; Chinese micro-cap advertising name, float ~0/unknown, classic pump shape. Watch, not a candidate.
+- **CPOP** — Day **−30.9%** → **DISQUALIFIED** (Day% below −15% = dead-cat bounce).
+- **STKE** — AH +5.8% (below 10% threshold), modest. Not actionable.
+
+**Observation assessment:** It's 30 min into AH. Four of five real movers (RITR, SMSI, ZDGE, RKDA) already peaked 16:05–16:20 ET and are fading — early SPIKE→FADE shapes. EDHL is the lone BUILD but is over the extension ceiling with unknown float. No fresh first-day operational catalyst confirmed yet (SMSI = reverse split, the rest unchecked pending 23:00). **No entries (observation-only + pre-23:00).** Re-scan at 23:00 CET: if RITR/RKDA/ZDGE keep fading they're skips; only act on a candidate that builds/holds a fresh AH base, float <50M, AH >10% across ≥2 AH scans, Day% > −15%, Total% < +150%. RKDA (2.1M float) is the float standout to watch if it stops fading.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
