@@ -144,6 +144,12 @@ Scanner returned 56 hits; most high-% rows are single-print artifacts (5mVol 100
 
 **Decision:** No entries (pre-AH). Re-scan at 22:00+ CET once after-hours opens. Per learning-phase rules, observe-only through the 22:00/22:30 scans; only enter at 23:00+ CET a candidate with fresh sustained AH momentum (float <50M, AH >10% across ≥2 AH scans, Day% > −15%, BUILD/hold pattern, Total% < +150%). Prefer fresh first-day setups (RKDA, FABC) over TMDE's multi-day extension.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Session: AFTERHOURS (just opened).** Scanner returned **0 hits** — AH opened at 16:00 ET this minute; post-market prints are still sparse so the scanner has no AH volume/% to work with yet. Observation-only scan per learning-phase rules (no entries before 23:00 CET).
+
+No candidates found. Watch from the 21:30 list to track into AH: RKDA (2.1M float, first-day), FABC (4.5M float), TMDE (multi-day extension). Re-scan at 22:30 once AH volume builds.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
