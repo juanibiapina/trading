@@ -102,4 +102,16 @@ AH path:  +9% (16:00) → +37.6% peak (17:10) → chop → +29% (18:30, last sca
 PM path:  $1.49 peak (+78%, 04:00) → faded to $1.18–1.19 (+41%, 04:20)
 Verdict:  Late BUILD that peaked in AH; explosive leg came AFTER the 00:30 last scan. AH was the better exit.
 ```
+
+## Position Evaluation — 10:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| SKYQ | $2.28 | $1.65 | -27.6% | $3.58 (AH, pre-entry) | 1 | None | **SELL** | Stop ($2.05) breached overnight; Grade None = exit at first premarket. Round-tripped entire AH spike, PM high only $1.80 |
+
+**Actions taken:**
+- **SOLD SKYQ** @ $1.65 (43 sh) → **-$27.09 (-27.6%)**. Moved to Closed Positions.
+- No positions remain open. Evening trade slot is now free.
+
+**Note:** SKYQ confirms the morning diagnosis — Grade None macro-beta entry (no company catalyst) that peaked early in AH (+129% before entry) faded all the way to a -27% loss. Stop losses do not execute in extended hours (known risk), so the -10% stop ($2.05) was blown through overnight to a -27.6% realized loss.
 </content>
