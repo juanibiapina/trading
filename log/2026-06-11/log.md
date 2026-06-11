@@ -200,6 +200,39 @@ No candidates found. Watch from the 21:30 list to track into AH: RKDA (2.1M floa
 
 **Decision: ENTER RKDA** @ $1.26 (79 sh ≈ €100). Only candidate clearing all entry gates: float 2.1M (<50M ✓), AH >10% across 2 AH scans (22:30 +20.6%, 23:00 +14–20% ✓), Day% +18.4% (> −15% ✓), Total% +35% (< +150% ✓), HOLD pattern within ~7% of AH high (not a fade ✓). Catalyst grade **None** — no catalyst found (concern noted); per learning-phase no-catalyst handling, enter with concern, exit at first premarket opportunity. RITR/BYAH SPIKE→FADE and EDHL ceiling-breach correctly skipped; MTEN dilution skipped.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**Session: AFTERHOURS (1.5h in).** Scanner returned **13 hits**. AH peak times now span 16:00–17:30 ET. **A position is already open (RKDA, entered 23:00 CET) — the one-position rule blocks any new entry tonight.** This scan is for tracking and for confirming the held position's behavior.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| RITR | [TV](https://www.tradingview.com/chart/?symbol=RITR) | $0.75 | +29.7% | +14.1% | $0.85 | +47.9% | 13.3M | 1.9M | 6.9x | 17.3M | REIT |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.05 | −15.3% | +101.0% | $2.11 | +70.2% | 9.3M | 3.7M | 2.5x | 1.0M | Household/Personal Care |
+| RKTO | [TV](https://www.tradingview.com/chart/?symbol=RKTO) | $1.48 | +11.3% | +16.9% | $1.73 | +30.1% | 7.6M | 13.5M | 0.6x | 21.7M | Pharma: Major |
+| RKDA | [TV](https://www.tradingview.com/chart/?symbol=RKDA) | $1.07 | +18.4% | +17.3% | $1.25 | +38.9% | 4.7M | 12.3M | 0.4x | 2.1M | Chemicals: Agricultural |
+| EDHL | [TV](https://www.tradingview.com/chart/?symbol=EDHL) | $5.98 | +70.9% | +49.2% | $8.92 | +154.9% | 3.2M | 12.7M | 0.3x | ~0 | Advertising/Marketing |
+| VSME | [TV](https://www.tradingview.com/chart/?symbol=VSME) | $1.11 | −45.9% | +32.9% | $1.48 | −28.0% | 2.9M | 23.6M | 0.1x | 2.6M | Advertising/Marketing |
+| CCHH | [TV](https://www.tradingview.com/chart/?symbol=CCHH) | $0.52 | +50.3% | +15.1% | $0.60 | +72.9% | 2.5M | 16.9M | 0.1x | 4.1M | Restaurants |
+| ZDGE | [TV](https://www.tradingview.com/chart/?symbol=ZDGE) | $3.31 | +6.1% | +7.3% | $3.55 | +13.8% | 1.3M | 253K | 5.3x | 10.2M | Packaged Software |
+| MTEN | [TV](https://www.tradingview.com/chart/?symbol=MTEN) | $2.29 | +33.9% | +7.0% | $2.45 | +43.3% | 1.2M | 12.5M | 0.1x | 843K | Industrial Machinery |
+| SDEV | [TV](https://www.tradingview.com/chart/?symbol=SDEV) | $1.09 | +1.9% | +15.6% | $1.26 | +17.8% | 643K | 211K | 3.0x | 27.1M | Pharma: Major |
+| CPSH | [TV](https://www.tradingview.com/chart/?symbol=CPSH) | $8.59 | +26.1% | +5.4% | $9.05 | +32.9% | 297K | 3.6M | 0.1x | 15.6M | Metal Fabrication |
+| KMRK | [TV](https://www.tradingview.com/chart/?symbol=KMRK) | $1.44 | −22.6% | +9.0% | $1.57 | −15.6% | 72K | 2.1M | 0.0x | 4.6M | Misc Commercial Services |
+| FJET | [TV](https://www.tradingview.com/chart/?symbol=FJET) | $6.75 | −16.7% | +5.9% | $7.15 | −11.7% | 72K | 4.0M | 0.0x | 29.4M | Misc Commercial Services |
+
+**AH trajectory (16:00–17:30 ET, `check-prices.py --ah-history`):**
+- **RKDA (HELD)** — +18.4% (16:00) → **+50% peak ($1.35, 16:15)** → tight chop $1.24–1.30, holding **+37.3% ($1.24) at 17:30**, within ~8% of high. **HOLD pattern intact** 2.5h into AH. Entry $1.26 → now $1.24 (−1.6%). Behaving as a base-hold, not a fade. Position thesis unchanged; exit handled by position-evaluation.md in premarket.
+- **BYAH** *(new build)* — Day −15.3% dead-cat, flat to 16:20 then **strong BUILD: +66.9% (16:40) → +84.7% (17:20) → +103.9% peak ($2.53, 17:30)**, making new highs. 1.0M float. Best BUILD shape on the board — **but disqualified: Day% −15.3% (dead-cat-bounce rule, recovering from a sell-off).** Track for the retrospective; do not enter.
+- **RITR** — still SPIKE→FADE: +108.7% peak (16:20) → faded to +33.9% (17:05), small recovery to +49.6% (17:30). 17.3M float. Skip (0/10+).
+- **EDHL** — still over ceiling: holding +144–178% all session, +144% ($8.54) at 17:30. Total% +155% breaches +150% extension ceiling; VRatio 0.3 (<5x) → fails ceiling-override. Chinese micro-cap pump, float ~0. Skip.
+- **CCHH** *(new)* — Day +50.3%; held +47–56% then **late spike +108.4% (17:05) → faded to +65% (17:30)**. SPIKE→FADE off the 17:05 high. 4.1M float, Restaurants. Skip (SPIKE→FADE).
+- **SDEV** *(new)* — Day +1.9%; clean BUILD +1.9% (16:00) → **+26.6% peak ($1.35, 17:25), holding +26.2% (17:30)**, near high. Only genuine non-disqualified BUILD besides BYAH, but float 27.1M and modest +15.6% AH on one scan. Track; cannot enter (position open).
+- **ZDGE** — SPIKE→FADE: +35.6% peak (16:10) → +11.7% (17:24). Skip.
+- **VSME (−45.9%) / KMRK (−22.6%) / FJET (−16.7%)** — all Day% ≤ −15% → disqualified (dead-cat / recovering from sell-off).
+- **RKTO / MTEN / CPSH** — modest AH (<20%), no fresh catalyst confirmed; not actionable.
+
+**Decision: No new entry — RKDA position already open (one trade per day, one position at a time).** Even absent that block, tonight's fresh BUILD candidates are disqualified or unusable: BYAH (best BUILD, +103.9%) is a Day −15.3% dead-cat; SDEV builds cleanly but is a modest 27.1M-float move; the rest are SPIKE→FADE (RITR, CCHH, ZDGE) or ceiling-breach (EDHL). Held RKDA is holding its base (+37% at 17:30, ~8% off AH high). Next scan continues tracking; entries remain blocked while RKDA is open.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
