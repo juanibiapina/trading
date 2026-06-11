@@ -115,3 +115,37 @@ Verdict:  Late BUILD that peaked in AH; explosive leg came AFTER the 00:30 last 
 
 **Note:** SKYQ confirms the morning diagnosis — Grade None macro-beta entry (no company catalyst) that peaked early in AH (+129% before entry) faded all the way to a -27% loss. Stop losses do not execute in extended hours (known risk), so the -10% stop ($2.05) was blown through overnight to a -27.6% realized loss.
 </content>
+
+---
+
+# Post-Market Screening — 2026-06-11
+
+## Scan 21:30 CET (3:30 PM ET)
+
+**Session: REGULAR (pre-AH).** AH opens at 22:00 CET / 4:00 PM ET. Per the regular-session caution rule, **no paper trade entries** — candidates are watch-only pending AH confirmation. Stocks that spike intraday but don't carry into AH tend to fade.
+
+Scanner returned 56 hits; most high-% rows are single-print artifacts (5mVol 100–600 shares with VChg ~−99%, e.g. PPCB +143.7%, GELS +87.1%, ADIL +45.4%, EDHL +91.6%, GLXG +131.5% stale). Filtering for real sustained volume and reasonable float:
+
+| Ticker | Chart | Price | Day% | 5mVol | Avg5m | IRVol | VChg% | Float | MCap | Industry | Note |
+|--------|-------|-------|------|-------|-------|-------|-------|-------|------|----------|------|
+| RKDA | [TV](https://www.tradingview.com/chart/?symbol=RKDA) | $1.17 | +29.0% | 172K | 108K | 1075 | +167.4% | 2.1M | 2.4M | Chemicals: Agricultural | Real volume building, low float — strongest |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $1.07 | +17.6% | 28K | 28K | 20.3 | +23.7% | 16.5M | 25.2M | Wholesale Distributors | Yesterday's AH→PM winner; multi-day continuation |
+| FABC | [TV](https://www.tradingview.com/chart/?symbol=FABC) | $3.89 | +15.1% | 29K | 7K | 1.0 | +660.5% | 4.5M | 18.9M | Auto Parts: OEM | Volume building into close; low float |
+| RFL | [TV](https://www.tradingview.com/chart/?symbol=RFL) | $2.10 | +17.7% | 26K | 9K | 3.0 | +653.8% | 35.1M | 109.0M | Real Estate Development | Volume building; higher float |
+| SBNYL | [TV](https://www.tradingview.com/chart/?symbol=SBNYL) | $2.60 | +14.0% | 78K | 9K | 18.3 | +3825% | 59.6M | 31.5M | Regional Banks | High volume but high float; bank, unlikely AH catalyst |
+
+**Watch assessment:**
+- **RKDA** — best profile on the board: 2.1M float, $2.4M MCap, highest IRVol (1075), and *real* sustained volume (172K vs 108K avg, VChg +167%). Agricultural chemicals. First-day unusual activity. Top watch for AH confirmation.
+- **TMDE** — yesterday's AH→PM winner (+98.6% AH peak Jun 10), now +17.6% as a multi-day continuation. Fails "first day of unusual activity." Watch only if it builds *fresh* AH volume; stale Jun 8 bioenergy MOA catalyst.
+- **FABC** — auto parts, 4.5M float, volume spiking into the close (VChg +660%). Watch for AH follow-through.
+- **RFL / SBNYL** — real volume but higher float (35M / 60M); SBNYL is a regional bank preferred share, unlikely to carry an AH momentum catalyst. Lower priority.
+- GLXG +131.5% is yesterday's PM-only monster (now stale, 5mVol 441, VChg −99.7%) — multi-day extension, not actionable.
+- Remaining rows are single-print artifacts (5mVol 100–600, VChg ~−99%) or down >15% (ATOS −41.6%, NYC −14.9%) — not actionable.
+
+**Decision:** No entries (pre-AH). Re-scan at 22:00+ CET once after-hours opens. Per learning-phase rules, observe-only through the 22:00/22:30 scans; only enter at 23:00+ CET a candidate with fresh sustained AH momentum (float <50M, AH >10% across ≥2 AH scans, Day% > −15%, BUILD/hold pattern, Total% < +150%). Prefer fresh first-day setups (RKDA, FABC) over TMDE's multi-day extension.
+
+## Paper Trades
+
+| Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
+|--------|-------------|------------|-----------------|----------------|--------|
+| _(none — pre-AH scan, no entries)_ | | | | | |
