@@ -40,6 +40,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); **AH peak timing is a secondary tiebreaker — hold-vs-fade dominates:** early-peakers that *also fade* are 0/6+ (OCG, CNET, FOXX, ANY), peaks after 18:30 ET are 4/4 wins, but before-18:30 BUILD-and-hold names still follow through (CHAI 17:20, MSW 18:00); at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading; **skip all on SPIKE→FADE-only nights** (0/10+ win rate)
 - **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
+- **Early-peak base-hold requires holding within ~20% of the AH high** (or making new highs); a deep collapse (>20% off the AH high) that stabilizes at a much lower base is a fade, not a hold, especially on Grade-None macro/sector-beta names (basis: SKYQ Jun 10 +129% peak → +46% rebuild → -27.6%)
 - **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close; if only 23:00 candidate exceeds 150%, wait for later scans (late-building candidates often have better entry points). **Ceiling-override watch:** candidates that exceed 150% but show BUILD-and-hold (AH high after 17:00 ET, holding within ~20% of high across ≥2 scans, VRatio >5x) are still skipped but flagged with a hypothetical entry for data collection.
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
 
@@ -53,6 +54,22 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-06-11 — Quantify the Early-Peak Base-Hold Exception (SKYQ Loss)
+
+**Context:** June 10 night was a detection win but a selection loss. SKYQ was entered at $2.28 (00:00 CET / 18:00 ET) and closed at -27.6% the next morning. The entry reasoning explicitly invoked the CHAI "held base despite early peak" exception: SKYQ peaked +129% ($3.58) at 17:00 ET, collapsed -36% to a base, and was "holding/rebuilding" across the 23:30 (+40%) → 00:00 (+46%) → 00:30 (+49%) scans. But that rebuild was to a base **64% below the AH high** ($2.28 vs $3.58), it had **no company catalyst** (Grade None, macro oil/Iran sector beta), and it round-tripped the entire AH spike overnight (PM high only $1.80). The CHAI/MSW exception was over-applied: CHAI made a *new* AH high at 17:20 and held within 20% of it; MSW was entered while still building toward its peak. SKYQ never reclaimed — it stabilized at less than half its peak level. The existing rule said "holding near its AH high" with no quantitative threshold, so a deep-collapse-low-rebuild was misread as a hold. Detection baseline remains met (25/29 = 86.2%); this is a downstream selection-quality fix.
+
+**Evaluation of previous changes:**
+- 2026-06-10 Instrument AH-vs-PM peak tracking (morning-evaluation): **Working.** The June 11 morning eval ran the AH-peak-vs-PM-peak check and tallied that *every* AH mover (SKYQ, TMDE, BATL, FLYE, DAIC, RBNE, GLBS) peaked in AH and faded into PM, adding TMDE (AH +98.6% > PM +78%) to the running "AH was the better exit" tally alongside MSW. The instrumentation is producing the dataset as designed. TMDE also showed a *moderate* AH runner (<+250%) peaks in AH, extending the pattern beyond extreme runners. Exit-timing conclusions remain the user's domain.
+- 2026-06-10 Subordinate AH peak time to hold-vs-fade (post-market-scan reframe): **Partially tested / mixed.** June 10 had no clean before-18:30 BUILD-and-hold to validate the admit-side, but the reframe's hold-vs-fade emphasis was the exact lever that *misfired* on SKYQ — the agent classified a deep-collapse low-rebuild as a "hold." This entry sharpens that exception with a quantitative threshold rather than reverting it.
+- 2026-06-09 Ceiling-override watch for BUILD-and-hold: **Insufficient data (2 more nights).** June 10 (CPOP +369% multi-day blow-off) and June 11 (CPOP again) produced no qualifying post-17:00 BUILD-and-hold >150% candidate. Watch remains open.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added a quantitative definition to the early-peak base-hold exception: "holding" requires the current price to be within ~20% of the AH high (or making new highs); a deep collapse (>20% off the high) that stabilizes at a much lower base is a fade, not a hold — especially on Grade-None macro/sector-beta names. Cited SKYQ (+129%→+46% rebuild→-27.6%) as the counter-example alongside CHAI/MSW.
+   - Why: SKYQ was entered by over-applying the qualitative "holding near its AH high" wording to a base 64% below the peak. CHAI/MSW both held within 20% of their high (or were still building); SKYQ did not. A threshold disambiguates the two cases.
+   - Hypothesis: Next time a candidate peaks early, collapses >20% off its AH high, and stabilizes at a much lower base (especially Grade None / macro-beta), the agent classifies it as a fade and skips it, rather than entering on a "holding/rebuilding" rationale. Measurable: (1) no entry on a >20%-off-high low-rebuild Grade-None name; (2) genuine CHAI/MSW-style within-20%-of-high or still-building candidates are still admitted.
+
+**Updated process:** Added the early-peak base-hold "within ~20% of AH high" qualifier to Current Process.
 
 ### 2026-06-10 — Subordinate AH Peak Time to Hold-vs-Fade; Instrument AH-vs-PM Peak Tracking
 
