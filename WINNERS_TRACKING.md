@@ -6,8 +6,10 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-09 | CHAI | None (AI squeeze) | +438% ($4.47 PM) | — | $1.75 | Day 2 - faded hard from $4.47 peak to $1.75 PM (+114% vs close) |
-| 2026-06-10 | MSW | C — acquisition close + dilutive notes | +292% ($5.18 AH) | — | $3.51 | 🆕 Day 1 - BUILD, peaked in AH ($5.18); PM peak lower ($4.24); TRADED @ $3.24 |
+| 2026-06-09 | CHAI | None (AI squeeze) | +438% ($4.47 PM) | — | $1.28 | Day 3 - faded further to ~$1.28 PM; squeeze fully unwound |
+| 2026-06-10 | MSW | C — acquisition close + dilutive notes | +292% ($5.18 AH) | — | $1.30 | Day 2 - round-tripped to ~$1.30 (near original $1.32 base); sold @ $3.53 (+9%) — good exit |
+| 2026-06-11 | GLXG | None (PM-only squeeze) | +343% ($4.56 PM) | — | $4.56 | 🆕 Day 1 - PM-ONLY (flat AH); 1.7M float, no catalyst; uncatchable by AH scanner |
+| 2026-06-11 | TMDE | A (stale Jun 8 bioenergy MOA) | +98.6% ($1.66 AH) | $1.49 | $1.19 | 🆕 Day 1 - AH→PM winner; late BUILD, peaked in AH; detected but late-surge after last scan |
 
 ## Historical Winners (with multi-day outcome)
 
