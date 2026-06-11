@@ -34,11 +34,11 @@ Catch momentum spikes by entering in after-hours and exiting in premarket before
 ### Rules
 
 **Position Management:**
-- One trade per day, one position at a time
-- Stop after winning or losing
-- ~100 euros per trade (learning phase)
-- Set premarket exit alarm + order right after entry (MNDR W08 miss: forgot to sell premarket, loss expanded)
-- **Never hold positions through the day.** Sell in premarket before open. An open position blocks the next evening trade.
+- **Multiple positions allowed** (changed W24 2026). Each qualifying candidate can be entered, even if other positions are already open. Rationale: the one-position rule was blocking data collection — most nights only the first qualifying candidate got tested, and trajectory-vs-catalyst test scenarios were never reached (see SCANNER_CHANGELOG 2026-05-27). More concurrent paper trades = more data per night.
+- Still one entry per candidate per night (don't average into the same ticker).
+- ~100 euros per trade (learning phase), sized independently per position.
+- Set premarket exit alarm + order right after each entry (MNDR W08 miss: forgot to sell premarket, loss expanded)
+- **Never hold positions through the day.** Sell every position in premarket before open.
 - Trade on PC
 
 **Learning Phase (started W11 2026):**

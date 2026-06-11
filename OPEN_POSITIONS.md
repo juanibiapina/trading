@@ -12,7 +12,9 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 ### Entry (after-hours scans)
 - Enter when stock meets scanner criteria (float, AH%, catalyst)
-- Position size: €100 per trade (learning phase)
+- **Multiple concurrent positions allowed** (W24 2026). An open position no longer blocks new entries; enter every qualifying candidate.
+- One entry per candidate per night (don't average into the same ticker).
+- Position size: €100 per trade (learning phase), sized independently per position
 - Record catalyst grade at entry (A/B/C/D/None)
 
 ### Holding Rules (based on catalyst grade)
