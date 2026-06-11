@@ -175,8 +175,33 @@ No candidates found. Watch from the 21:30 list to track into AH: RKDA (2.1M floa
 
 **Observation assessment:** It's 30 min into AH. Four of five real movers (RITR, SMSI, ZDGE, RKDA) already peaked 16:05–16:20 ET and are fading — early SPIKE→FADE shapes. EDHL is the lone BUILD but is over the extension ceiling with unknown float. No fresh first-day operational catalyst confirmed yet (SMSI = reverse split, the rest unchecked pending 23:00). **No entries (observation-only + pre-23:00).** Re-scan at 23:00 CET: if RITR/RKDA/ZDGE keep fading they're skips; only act on a candidate that builds/holds a fresh AH base, float <50M, AH >10% across ≥2 AH scans, Day% > −15%, Total% < +150%. RKDA (2.1M float) is the float standout to watch if it stops fading.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Session: AFTERHOURS (1h in).** Scanner returned **11 hits**. Entries now allowed (23:00+ CET). AH peak times are 16:00–17:00 ET.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| RITR | [TV](https://www.tradingview.com/chart/?symbol=RITR) | $0.75 | +29.7% | +20.7% | $0.90 | +56.5% | 11.2M | 1.7M | 6.5x | 17.3M | REIT |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.05 | −15.3% | +98.1% | $2.08 | +67.7% | 5.3M | 3.2M | 1.7x | 1.0M | Household/Personal Care |
+| RKDA | [TV](https://www.tradingview.com/chart/?symbol=RKDA) | $1.07 | +18.4% | +14.0% | $1.22 | +35.1% | 4.3M | 12.2M | 0.4x | 2.1M | Chemicals: Agricultural |
+| EDHL | [TV](https://www.tradingview.com/chart/?symbol=EDHL) | $5.98 | +70.9% | +46.3% | $8.75 | +150.0% | 2.4M | 12.5M | 0.2x | ~0 | Advertising/Marketing |
+| RKTO | [TV](https://www.tradingview.com/chart/?symbol=RKTO) | $1.48 | +11.3% | +19.6% | $1.77 | +33.1% | 654K | 12.7M | 0.1x | 21.7M | Pharma: Major |
+| MTEN | [TV](https://www.tradingview.com/chart/?symbol=MTEN) | $2.29 | +33.9% | +9.6% | $2.51 | +46.8% | 476K | 12.4M | 0.0x | 843K | Industrial Machinery |
+| TOON | [TV](https://www.tradingview.com/chart/?symbol=TOON) | $1.08 | +24.1% | +5.6% | $1.14 | +31.0% | 272K | 3.9M | 0.1x | 55.9M | Movies/Entertainment |
+| CPSH | [TV](https://www.tradingview.com/chart/?symbol=CPSH) | $8.59 | +26.1% | +6.9% | $9.18 | +34.8% | 262K | 3.6M | 0.1x | 15.6M | Metal Fabrication |
+
+**AH trajectory (16:00–17:00 ET, `check-prices.py --ah-history`):**
+- **RKDA** — +18.4% (16:00) → **+50% peak (16:15)** → holding +39.5% ($1.26) at 17:00, within ~7% of high. **HOLD pattern.** 2.1M float, **116M regular-session volume** (real, not artifact). Catalyst: structured search → QuiverQuant/StocksToTrade both confirm *"no clear new headline catalyst"* — pure low-float speculative pump. No catalyst (concern noted, not a skip in learning phase). Total% +35% (well under ceiling), Day +18.4%. **Best qualifying candidate.**
+- **RITR** — +40.9% (16:00) → **+108.7% peak (16:20)** → faded to +39.2% ($0.80) at 17:00. Clear early-peak SPIKE→FADE. 17.3M float. Skip per SPIKE→FADE rule (0/10+).
+- **BYAH** — Day **−15.3%** (dead-cat). Flat/down until 16:20, then **+66.9% peak (16:40)** → fading to +31.5% (17:00). Dead-cat bounce + SPIKE→FADE. 1.0M float but disqualified (Day% ≤ −15%, recovering from sell-off).
+- **MTEN** — +33.9% → **+55% peak (16:45)** → +35.7% (17:00). 843K float, but catalyst = **$2.26M registered direct offering** priced/closed Jun 9–10 (dilution, **Grade D**). Skip — dilution. Also only 1 AH scan.
+- **EDHL** — BUILD/hold to **+178.6% peak (16:30)**, holding +178% (17:00). **Total% +150–178% breaches the +150% extension ceiling.** Ceiling-override check: VRatio 0.2 (<5x) and peak before 17:00 ET → **fails override criteria.** Chinese micro-cap pump shape, float ~0. Skip.
+- **RKTO / TOON / CPSH** — AH chg under threshold or float too high (TOON 55.9M); RKTO modest +19.6% but 21.7M float, pharma with no confirmed catalyst. Not actionable.
+
+**Decision: ENTER RKDA** @ $1.26 (79 sh ≈ €100). Only candidate clearing all entry gates: float 2.1M (<50M ✓), AH >10% across 2 AH scans (22:30 +20.6%, 23:00 +14–20% ✓), Day% +18.4% (> −15% ✓), Total% +35% (< +150% ✓), HOLD pattern within ~7% of AH high (not a fade ✓). Catalyst grade **None** — no catalyst found (concern noted); per learning-phase no-catalyst handling, enter with concern, exit at first premarket opportunity. RITR/BYAH SPIKE→FADE and EDHL ceiling-breach correctly skipped; MTEN dilution skipped.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
-| _(none — pre-AH scan, no entries)_ | | | | | |
+| RKDA | $1.26 | 23:00 CET (17:00 ET) | 79 | None | 2.1M float, HOLD pattern (+50% AH peak 16:15, holding +39.5% within ~7% of high), 116M reg-session vol, Total% +35% under ceiling. No catalyst — speculative low-float pump (concern noted, exit at first premarket). |

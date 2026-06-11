@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| _(none)_ | | | | | | | | | |
+| RKDA | 2026-06-11 | $1.26 | 79 | $99.54 | None | None found — low-float speculative pump, 116M reg-session vol | $1.13 (-10%) | premarket exit | $1.35 (AH 16:15 ET) |
 
 ## Position Rules
 
