@@ -112,3 +112,7 @@ Verdict:  Near-extreme runner; peaked in AH, faded into PM. +150% ceiling correc
 **Actions taken:**
 - Sold RKDA at $1.04 (79 shares). Final P&L: -$17.38 (-17.5%). Moved to Closed Positions.
 - No open positions remaining.
+
+## Position Evaluation — 14:30 CET
+
+No open positions. RKDA was closed in the 10:30 window. Nothing to evaluate.
