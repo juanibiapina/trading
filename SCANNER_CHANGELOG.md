@@ -39,7 +39,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
 - Trajectory preference: build/hold patterns preferred over spike→fade; **trajectory overrides catalyst when patterns clearly diverge** (0/7 early-peak-fading vs 5/5 BUILD); **AH peak timing is a secondary tiebreaker — hold-vs-fade dominates:** early-peakers that *also fade* are 0/6+ (OCG, CNET, FOXX, ANY), peaks after 18:30 ET are 4/4 wins, but before-18:30 BUILD-and-hold names still follow through (CHAI 17:20, MSW 18:00); at later scans (00:00+ CET), prefer stocks near their AH high over early-peakers now fading; **skip all on SPIKE→FADE-only nights** (0/10+ win rate)
-- **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong
+- **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong. **Dead-cat-override watch:** a Day% ≤ -15% candidate that BUILDS in AH to reclaim *above its regular close* (AH% rising across ≥2 scans) is not a dead-cat bounce; still skipped from live entry but flagged DEAD-CAT-OVERRIDE WATCH with a hypothetical entry for data collection (basis: BYAH Jun 11, hypothetical +72%)
 - **Early-peak base-hold requires holding within ~20% of the AH high** (or making new highs); a deep collapse (>20% off the AH high) that stabilizes at a much lower base is a fade, not a hold, especially on Grade-None macro/sector-beta names (basis: SKYQ Jun 10 +129% peak → +46% rebuild → -27.6%)
 - **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close; if only 23:00 candidate exceeds 150%, wait for later scans (late-building candidates often have better entry points). **Ceiling-override watch:** candidates that exceed 150% but show BUILD-and-hold (AH high after 17:00 ET, holding within ~20% of high across ≥2 scans, VRatio >5x) are still skipped but flagged with a hypothetical entry for data collection.
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
@@ -54,6 +54,24 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-06-12 — Instrument Dead-Cat-Override Watch (BYAH Miss)
+
+**Context:** June 11 night was the second consecutive detection win / selection loss. BYAH (Household/Personal Care, 1.0M float, no catalyst) was the night's best BUILD shape and was on the board in **all four** entry-window scans (23:00 +98% → 00:30 +141% CET), explicitly logged each scan as "a clean test of whether the dead-cat filter costs winners." It was disqualified solely by the **Day% ≤ -15% dead-cat filter** (Day -15.3%, sitting *exactly* on the threshold). It went on to a PM peak of $3.58 (+189% from prev close), making **new highs above its AH peak** — a hypothetical +72% AH-detection trade and the night's best setup. We instead traded RKDA (Day +18.4%, no dead-cat flag), which round-tripped to -17.5%. The dead-cat filter's thesis is "recovering from a sell-off, still falling" — but BYAH's AH BUILD reclaimed ~+100% above its regular close, which the filter is blind to. Detection holds at 86.7% (26/30, baseline met); the bottleneck is now **selection** (60%), with a filter blocking the winner two nights running (Jun 11 one-position rule on TMDE, Jun 12 dead-cat on BYAH).
+
+**Evaluation of previous changes:**
+- 2026-06-11 Quantify the early-peak base-hold exception (within ~20% of AH high): **Insufficient data — no clean test.** June 11 produced no deep-collapse-low-rebuild candidate to exercise the SKYQ exception. BYAH was a clean BUILD (held within 20%, made new highs) and was blocked by a different filter (dead-cat). RKDA, the name actually traded, was an early-peaker entered within ~7% of its AH high ($1.26 vs $1.35) — inside the 20% band, so the rule correctly *did not* block it; it still faded to -17.5%, but that is a no-catalyst-pump outcome, not a within-20% misclassification. The threshold neither misfired nor was validated. Watch continues.
+- 2026-06-09 Ceiling-override watch for BUILD-and-hold: **Insufficient data (still open).** June 11 EDHL breached the +150% ceiling, ran to a near-extreme $11.39 AH late surge, then faded into PM (PM < AH) — it failed the override criteria (VRatio <5x, early peak) so nothing was tallied, but it again supports keeping the ceiling on extreme late surges. No qualifying post-17:00 BUILD-and-hold >150% candidate yet.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added a "Dead-cat-override watch (data collection)" clause to the dead-cat skip rule. A Day% ≤ -15% candidate that BUILDS in AH to *reclaim above its regular close* (AH% rising across ≥2 after-hours scans) is no longer treated as a plain dead-cat bounce: still skipped from live entry, but flagged **DEAD-CAT-OVERRIDE WATCH** with a hypothetical entry recorded. Cited BYAH as the founding case.
+   - Why: BYAH was blocked solely on Day% sitting on the threshold, despite an AH BUILD that reclaimed ~+100% above its regular close — logically distinct from "still falling from a sell-off." Removing the filter outright risks re-admitting genuine bounces (only 1 winner vs the filter's 3+ losers), so this instruments the case without relaxing protection, mirroring the proven ceiling-override-watch pattern.
+   - Hypothesis: Over the next 2–4 weeks we accumulate a tally of dead-cat-override candidates (deep regular-session sell-off + AH BUILD reclaiming above close) and their PM outcomes. Measurable: (1) the next night with such a candidate logs a DEAD-CAT-OVERRIDE WATCH flag with hypothetical entry; (2) the morning eval records its follow-through. If these win consistently (≥4/5), it justifies making the dead-cat filter conditional; if mixed, the flat filter stands.
+2. **prompts/morning-evaluation.md** — Added a "Dead-cat-override watch outcomes" instruction beside the ceiling-override one: look up any DEAD-CAT-OVERRIDE WATCH flags from the prior night's log and record their hypothetical P&L (skipped entry → PM peak) in Notes, tallying over time.
+   - Why: The evening flag only builds the dataset if the morning loop closes it with an outcome.
+   - Hypothesis: The dead-cat-override dataset grows by one row per qualifying night, giving the future decision an evidence base instead of a single anecdote.
+
+**Updated process:** Added the dead-cat-override watch clause to the "Skip dead-cat bounces" line in Current Process.
 
 ### 2026-06-11 — Quantify the Early-Peak Base-Hold Exception (SKYQ Loss)
 

@@ -96,6 +96,8 @@ Run this full section on **pulse 1**. On **pulse 2 and 3**, reuse the existing s
 
 **Ceiling-override watch outcomes:** If last night's log flagged any **CEILING-OVERRIDE WATCH** candidates (BUILD-and-hold stocks skipped only on the +150% ceiling), look up each one's PM follow-through and record the hypothetical P&L (skipped entry price → PM peak) in the Notes section. Tally these over time — they are the dataset for deciding whether the extension ceiling should become conditional for genuine BUILD-and-hold patterns.
 
+**Dead-cat-override watch outcomes:** If last night's log flagged any **DEAD-CAT-OVERRIDE WATCH** candidates (Day% ≤ -15% stocks that reclaimed above their regular close on a multi-scan AH BUILD, skipped only by the dead-cat filter), look up each one's PM follow-through and record the hypothetical P&L (skipped entry price → PM peak) in Notes. Tally these over time — they are the dataset for deciding whether the dead-cat filter should become conditional for AH builds that reclaim above the regular close. (Founding case: BYAH Jun 11, hypothetical +72%.)
+
 **Then compare all retrospective results with evening scans:**
 - **Caught**: stocks in both evening scans and retrospective
 - **Missed**: stocks in retrospective that evening scans never found
