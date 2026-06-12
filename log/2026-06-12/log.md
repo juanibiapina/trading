@@ -102,3 +102,13 @@ Verdict:  Near-extreme runner; peaked in AH, faded into PM. +150% ceiling correc
 - **RKDA (held) confirms the no-catalyst low-float pump risk** again: clean HOLD pattern, ideal float (2.1M), but zero catalyst → round-tripped to −17.5%. Pattern quality alone (float + BUILD) did not save it. Exit handled by position-evaluation.md.
 </content>
 </invoke>
+
+## Position Evaluation — 10:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| RKDA | $1.26 | $1.04 | -17.5% | $1.35 (AH) | 1 | None | SELL | Grade None premarket exit; stop $1.13 breached overnight, PM high only $1.07 |
+
+**Actions taken:**
+- Sold RKDA at $1.04 (79 shares). Final P&L: -$17.38 (-17.5%). Moved to Closed Positions.
+- No open positions remaining.

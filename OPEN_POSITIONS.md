@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| RKDA | 2026-06-11 | $1.26 | 79 | $99.54 | None | None found — low-float speculative pump, 116M reg-session vol | $1.13 (-10%) | premarket exit | $1.35 (AH 16:15 ET) |
+| _(none)_ | | | | | | | | | |
 
 ## Position Rules
 
@@ -52,6 +52,7 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| RKDA | $1.26 | $1.04 | -$17.38 | -17.5% | 1 | None - low-float speculative pump | Grade None premarket exit; stop ($1.13) breached overnight, round-tripped AH base, PM high only $1.07 |
 | SKYQ | $2.28 | $1.65 | -$27.09 | -27.6% | 1 | None - Macro oil/Iran sector beta | Grade None, stop ($2.05) breached overnight; round-tripped AH spike ($3.58 peak before entry), PM high only $1.80 |
 | MSW | $3.24 | $3.53 | +$8.70 | +9.0% | 1 | C - Acquisition close + dilutive notes | Grade C premarket exit at profit; AH peak $5.18 was best window, faded into PM |
 | ANY | $4.84 | $3.81 | -$20.60 | -21.3% | 2 | A - Cathedra Bitcoin acquisition | Stop breached overnight (low $3.54), peaked at $5.50 (+13.6%) |
