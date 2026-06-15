@@ -29,6 +29,24 @@ No AH momentum confirmable yet for the 21:30 watch candidates (RGNT, PRFX, CUPR,
 
 No candidates found.
 
+## Scan 22:30 CET (4:30 PM ET) — AH
+
+Scanner ran at 16:30 ET. 3 AH hits. Observation-only per learning phase (no entries before 23:00 CET / 5:00 PM ET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HITI | [TV](https://www.tradingview.com/chart/?symbol=HITI) | $2.25 | -2.6% | +15.1% | $2.59 | +12.1% | 2.0M | 585K | 3.4x | 76.7M | Specialty Stores |
+| ZNB | [TV](https://www.tradingview.com/chart/?symbol=ZNB) | $0.95 | +2.9% | +34.5% | $1.28 | +38.3% | 1.2M | 3.2M | 0.4x | 1.6M | Internet Software/Services |
+| AVAT | [TV](https://www.tradingview.com/chart/?symbol=AVAT) | $1.17 | -13.3% | +18.8% | $1.39 | +3.0% | 281K | 489K | 0.6x | 20.2M | Financial Conglomerates |
+
+**Trajectory notes (observation only):**
+- **HITI** — peaked +17.4% at 16:05 ET, holding ~+13% across scans. Float 76.7M (high). AH vol tiny (10K bars). Hold pattern but high float, modest move. Re-check at 23:00.
+- **ZNB** — SPIKE→FADE: spiked +66.4% at 16:15 ET, faded to +29.7%. Float 1.6M (very low) but VRatio 0.4 (volume *below* average — no real participation). Watch for SPIKE→FADE disqualifier at entry time.
+- **AVAT** — Day -13.3%, choppy +2-4%, Total only +3%. Weak; possible dead-cat. Skip-leaning.
+- None of the 21:30 regular-session watch candidates (RGNT, PRFX, CUPR, etc.) appeared in AH. Carry-forward check at 23:00.
+
+No paper trades (observation-only scan).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
