@@ -8,6 +8,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
 | HUBC | 2026-06-15 | $2.06 | 48 | $98.88 | None | No catalyst found (4-query search); dilution-risk history | $1.75 | trail from peak | $2.17 (AH) |
 | WCT | 2026-06-15 | $1.94 | 51 | $98.94 | D | 1-for-400 reverse share consolidation (SEC Jun 11); thin AH liquidity | $1.65 | premarket exit | $1.99 (AH) | |
+| CRVO | 2026-06-15 | $3.64 | 27 | $98.28 | None | No fresh catalyst (4-query search); Jun 10 $10.5M private placement dilution overhang | $3.10 | premarket exit | $3.77 (AH) |
 
 ## Position Rules
 
