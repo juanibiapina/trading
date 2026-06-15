@@ -21,6 +21,14 @@ After-hours not yet open. No paper trades (regular session caution). Top low-flo
 
 Other movers (smaller %): FREDF +57.1%, NATM +49.6%, NXTS +23.1%, RTB +32.5%, BTQ +29.7%, GENTF +27.4%, GLXG +26.7%.
 
+## Scan 22:00 CET (4:00 PM ET) — AH open
+
+Scanner ran at 16:00:27 ET, 27 seconds after AH open. 0 AH hits — Yahoo has not populated today's after-hours bars yet (helper returns prior-day data). Observation-only scan per learning phase (no entries before 23:00 CET / 5:00 PM ET).
+
+No AH momentum confirmable yet for the 21:30 watch candidates (RGNT, PRFX, CUPR, etc.). Carry forward, re-check at 22:30/23:00 when AH volume and price action become readable.
+
+No candidates found.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
