@@ -47,6 +47,31 @@ Scanner ran at 16:30 ET. 3 AH hits. Observation-only per learning phase (no entr
 
 No paper trades (observation-only scan).
 
+## Scan 23:00 CET (5:00 PM ET) — AH (entries allowed)
+
+Scanner ran at 17:00 ET. 6 AH hits. Entry window open per learning phase.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ZNB | [TV](https://www.tradingview.com/chart/?symbol=ZNB) | $0.95 | +2.9% | +16.6% | $1.11 | +19.9% | 8.2M | 4.0M | 2.1x | 1.6M | Internet Software/Services |
+| HITI | [TV](https://www.tradingview.com/chart/?symbol=HITI) | $2.25 | -2.6% | +15.6% | $2.60 | +12.6% | 2.6M | 659K | 4.0x | 76.7M | Specialty Stores |
+| AVAT | [TV](https://www.tradingview.com/chart/?symbol=AVAT) | $1.17 | -13.3% | +16.2% | $1.36 | +0.7% | 1.3M | 604K | 2.1x | 20.2M | Financial Conglomerates |
+| HUBC | [TV](https://www.tradingview.com/chart/?symbol=HUBC) | $1.68 | +42.4% | +23.2% | $2.07 | +75.4% | 1.1M | 11.1M | 0.1x | 3.3M | Misc Commercial Services |
+| CIIT | [TV](https://www.tradingview.com/chart/?symbol=CIIT) | $1.48 | -15.9% | +7.4% | $1.59 | -9.7% | 420K | 12.4M | 0.0x | 1.3M | Air Freight/Couriers |
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.51 | +4.1% | +19.9% | $1.81 | +24.8% | 140K | 18.1M | 0.0x | 909K | Packaged Software |
+
+**Night activation gate met** (ZNB/AVAT: float <50M, AH >10% in 2 AH scans, Day% > -15%). Evaluating each candidate against entry gates.
+
+**Per-candidate evaluation:**
+- **HUBC** — **TOP WATCH (1 AH scan only).** BUILD-and-hold: +42% at 16:00 → peak +73.2% at 16:40 ET → holding +63-67% (currently +63.6%, within ~13% of AH high). Float 3.3M (ideal), Day +42.4%, Total +75.4% (under +150% ceiling). Real AH volume ~30M+ across bars (scanner VRatio 0.1 is misleading — AvgVol 11.1M is inflated). **Fails 2-scan gate** (new this scan; did not appear at 22:30). Catalyst search (3 queries): no same-day catalyst found — only week-old insider sells (Jun 8) + 13G filings; 52wk high 66450 shows massive prior dilution/reverse splits → **dilution-risk concern**. If it holds the BUILD at 23:30, becomes a strong entry (no-catalyst + dilution concern noted).
+- **ZNB** — SKIP. SPIKE→FADE: peaked +66.4% at 16:15 ET, faded to +12.4% at 17:00. Float 1.6M but trajectory disqualifies (0/10+ SPIKE→FADE for PM continuation).
+- **HITI** — SKIP. Clean hold (~+12-15% all scans) but float 76.7M >50M gate.
+- **AVAT** — SKIP. Crashed -13.3% intraday; AH bounce only recovered to ~breakeven (Total +0.7%) and now fading. No net momentum; dead-cat-ish loss recovery, not new momentum.
+- **WCT** — WATCH. Faded from +37.2% peak (16:45) to +15.9% (17:00) — >20% off high. Float 909K (very low) but 1 AH scan and fading. Re-check 23:30 for hold-vs-fade.
+- **CIIT** — SKIP. Day -15.9% (≤ -15 gate), AH +7.4% (<10%), negative trajectory.
+
+**No paper trades this scan.** No candidate clears all entry gates (ZNB SPIKE→FADE, HITI float, AVAT dead-cat, HUBC fails 2-scan, WCT/CIIT fail). HUBC is the lead — confirm BUILD hold at 23:30.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
