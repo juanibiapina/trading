@@ -97,6 +97,38 @@ Scanner ran at 17:30 ET. 7 AH hits. Entry window open.
 
 **Paper trades this scan: HUBC (Grade None), WCT (Grade D).**
 
+## Scan 00:00 CET (6:00 PM ET) — AH (entries allowed)
+
+Scanner ran at 18:00 ET. 10 AH hits. Entry window open.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HUBC | [TV](https://www.tradingview.com/chart/?symbol=HUBC) | $1.68 | +42.4% | +22.0% | $2.05 | +73.7% | 5.5M | 11.6M | 0.5x | 3.3M | Misc Commercial Services |
+| RGNT | [TV](https://www.tradingview.com/chart/?symbol=RGNT) | $9.40 | +526.7% | +11.0% | $10.43 | +595.3% | 4.5M | 31.0M | 0.1x | 2.5M | Biotechnology |
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.51 | +4.1% | +22.5% | $1.85 | +27.6% | 3.2M | 18.4M | 0.2x | 909K | Packaged Software |
+| HITI | [TV](https://www.tradingview.com/chart/?symbol=HITI) | $2.25 | -2.6% | +18.7% | $2.67 | +15.6% | 3.2M | 716K | 4.4x | 76.7M | Specialty Stores |
+| AVAT | [TV](https://www.tradingview.com/chart/?symbol=AVAT) | $1.17 | -13.3% | +19.7% | $1.40 | +3.7% | 1.5M | 628K | 2.4x | 20.2M | Financial Conglomerates |
+| GELS | [TV](https://www.tradingview.com/chart/?symbol=GELS) | $1.16 | +17.2% | +7.6% | $1.25 | +26.1% | 329K | 22.0M | 0.0x | 0 | Pharmaceuticals: Major |
+| CRVO | [TV](https://www.tradingview.com/chart/?symbol=CRVO) | $2.48 | +1.2% | +35.9% | $3.37 | +37.6% | 232K | 212K | 1.1x | 4.8M | Misc Commercial Services |
+| AHMA | [TV](https://www.tradingview.com/chart/?symbol=AHMA) | $1.93 | +43.0% | +5.7% | $2.04 | +51.1% | 170K | 12.6M | 0.0x | 2.1M | Misc Commercial Services |
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $1.22 | +0.8% | +6.6% | $1.30 | +7.4% | 112K | 803K | 0.1x | 23.7M | Motor Vehicles |
+| GMM | [TV](https://www.tradingview.com/chart/?symbol=GMM) | $3.44 | +2.4% | +5.2% | $3.62 | +7.7% | 60K | 8.0M | 0.0x | 50.8M | Packaged Software |
+
+**New candidates this scan:** GELS, CRVO, AHMA, UCAR, GMM. (HUBC, WCT are open positions — managed by premarket position-evaluation, not re-entered here.)
+
+**Per-candidate evaluation (new names):**
+- **CRVO** — WATCH (fails 2-scan gate). Dead-flat all afternoon (+0-2%), then single late spike at 17:40 ET to +36.7% ($3.35), now holding $3.19 (+30.2%). Float 4.8M (ideal), VRatio 1.1x (real but modest volume), Total +37.6% (under ceiling). **Only 1 AH scan with >10%** — needs a 2nd AH scan to activate. Catalyst search (4 queries): no *fresh* same-day catalyst — only a $10.5M private placement (Jun 10, Grade D dilution, already dropped stock -15%) and an H.C. Wainwright Neuro Summit appearance (Jun 15, 7:00 AM ET, minor). Late unexplained spike. Re-check next scan: if it holds >10% it activates; trajectory (BUILD vs SPIKE→FADE) and dilution overhang to weigh then.
+- **GELS** — SKIP. AH +7.6% (<10% gate). Float unknown (0).
+- **AHMA** — SKIP. AH +5.7% (<10% gate) despite Day +43% / Total +51%; AH leg too small.
+- **UCAR** — SKIP. AH +6.6% (<10% gate), float 23.7M, Total +7.4%.
+- **GMM** — SKIP. AH +5.2% (<10% gate), float 50.8M (>50M).
+
+**Open-position status (info only):**
+- **HUBC** — holding the BUILD: made a new AH high $2.19 (+85.6%) at 17:30 ET, now $2.00 (+69.5%), slightly below $2.06 entry. Structurally intact.
+- **WCT** — faded from +33% (23:30) to +20% ($1.74), ~10% below $1.94 entry. Choppy whipsaw, Grade D overhang. Drifting down.
+
+**No new paper trades this scan.** No new candidate clears all entry gates (CRVO fails 2-scan; GELS/AHMA/UCAR/GMM fail AH>10%). CRVO is the only watch — confirm 2nd AH scan next round.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
