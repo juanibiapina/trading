@@ -72,7 +72,34 @@ Scanner ran at 17:00 ET. 6 AH hits. Entry window open per learning phase.
 
 **No paper trades this scan.** No candidate clears all entry gates (ZNB SPIKE→FADE, HITI float, AVAT dead-cat, HUBC fails 2-scan, WCT/CIIT fail). HUBC is the lead — confirm BUILD hold at 23:30.
 
+## Scan 23:30 CET (5:30 PM ET) — AH (entries allowed)
+
+Scanner ran at 17:30 ET. 7 AH hits. Entry window open.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HUBC | [TV](https://www.tradingview.com/chart/?symbol=HUBC) | $1.68 | +42.4% | +25.0% | $2.10 | +78.0% | 3.7M | 11.4M | 0.3x | 3.3M | Misc Commercial Services |
+| RGNT | [TV](https://www.tradingview.com/chart/?symbol=RGNT) | $9.40 | +526.7% | +5.2% | $9.89 | +559.3% | 3.2M | 30.9M | 0.1x | 2.5M | Biotechnology |
+| HITI | [TV](https://www.tradingview.com/chart/?symbol=HITI) | $2.25 | -2.6% | +15.6% | $2.60 | +12.5% | 2.8M | 681K | 4.1x | 76.7M | Specialty Stores |
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.51 | +4.1% | +16.1% | $1.75 | +21.0% | 2.1M | 18.3M | 0.1x | 909K | Packaged Software |
+| AVAT | [TV](https://www.tradingview.com/chart/?symbol=AVAT) | $1.17 | -13.3% | +17.1% | $1.37 | +1.5% | 1.4M | 617K | 2.3x | 20.2M | Financial Conglomerates |
+| CIIT | [TV](https://www.tradingview.com/chart/?symbol=CIIT) | $1.48 | -15.9% | +5.4% | $1.56 | -11.4% | 587K | 12.4M | 0.0x | 1.3M | Air Freight/Couriers |
+| SKYA | [TV](https://www.tradingview.com/chart/?symbol=SKYA) | $1.25 | +11.6% | +5.6% | $1.32 | +17.9% | 178K | 384K | 0.5x | 27.6M | Medical Specialties |
+
+**Per-candidate evaluation:**
+- **HUBC** — **ENTER.** BUILD-and-hold confirmed, now 2nd AH scan (23:00 +23.2%, 23:30 +25.0%). AH trajectory: +42% at 16:00 → +73.2% at 16:40 → made a **new AH high $2.17 (+83.9%) at 17:15 ET** (after 17:00) → holding +74.5% at 17:30 (current $2.06, ~5% off high). Float 3.3M (ideal). Day +42.4%, Total ~+75% (under +150% ceiling). All trajectory gates pass (BUILD, late new high, holding within 20%). Catalyst search (4 queries: news/PR/8-K/same-day): **no same-day catalyst found** — only week-old insider activity (HRT buy Jun 5 @ $0.206, sell Jun 8). 52wk-high history shows massive prior dilution/reverse splits → **dilution-risk concern**. Grade None, enter with concern noted (no-catalyst handling).
+- **WCT** — **ENTER (with concerns).** Float 909K (ideal), 2nd AH scan (23:00 +19.9%, 23:30 +16.1%), Day +4.1%, Total ~+34% (well under ceiling). Trajectory choppy whipsaw (+37.2% 16:45 → +17% → +29.7% 17:00 → +17% → +36.5% 17:25 → +33.8% 17:30) but currently $1.94, within ~2.5% of AH high $1.99 → qualifies as holding (not SPIKE→FADE; keeps reclaiming highs). Catalyst: proposed **1-for-400 reverse share consolidation** (SEC filing Jun 11) → Grade D dilution/restructuring overhang, days-old, not fresh. **Liquidity concern:** scanner live quote $1.75 vs 5m bar $1.94 (10% spread) signals thin AH trading. Grade D, exit-immediately strategy. Entered for data collection per W24 multiple-positions rule.
+- **RGNT** — SKIP. Total +559% (far above +150% extension ceiling). Regular-session +527% blow-off; AH only +5.2%. Extended, no margin.
+- **HITI** — SKIP. Clean hold (~+12%) but float 76.7M > 50M gate.
+- **AVAT** — SKIP. Day -13.3% intraday crash; AH bounce only to Total +1.5%, fading. Dead-cat loss recovery, not new momentum.
+- **CIIT** — SKIP. Day -15.9% (≤ -15 gate), AH +5.4% (<10%), negative Total.
+- **SKYA** — SKIP. AH +5.6% (<10%), only 1 AH scan, modest move.
+
+**Paper trades this scan: HUBC (Grade None), WCT (Grade D).**
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
+| HUBC | $2.06 | 23:30 CET | 48 | None | BUILD-and-hold, new AH high 17:15 ET, float 3.3M ideal; no catalyst found + dilution-risk concern |
+| WCT | $1.94 | 23:30 CET | 51 | D | Float 909K ideal, holding near AH high; 1-for-400 reverse consolidation overhang, thin liquidity |

@@ -6,7 +6,8 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| _(none)_ | | | | | | | | | |
+| HUBC | 2026-06-15 | $2.06 | 48 | $98.88 | None | No catalyst found (4-query search); dilution-risk history | $1.75 | trail from peak | $2.17 (AH) |
+| WCT | 2026-06-15 | $1.94 | 51 | $98.94 | D | 1-for-400 reverse share consolidation (SEC Jun 11); thin AH liquidity | $1.65 | premarket exit | $1.99 (AH) | |
 
 ## Position Rules
 
