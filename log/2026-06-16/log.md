@@ -127,3 +127,31 @@ All three were Grade None/D, all exit in first premarket per risk rules. None ha
 No open positions. All three positions (HUBC, WCT, CRVO) were closed in the 10:30 CET evaluation. Nothing to evaluate.
 
 **Actions taken:** None.
+
+---
+
+## Post-Market Screening
+
+## Scan 21:30 CET (3:30 PM ET)
+
+_Regular-session scan (before AH opens at 22:00 CET / 4:00 PM ET). No entries per regular-session caution rule. Candidates flagged **Watch — pending AH confirmation**; only enter if they reappear in an AH scan (22:00+ CET) with sustained momentum. 61 hits total; notable low-float / high-move names below._
+
+| Ticker | Price | Day% | IRVol | Float | MCap | Industry | Note |
+|--------|-------|------|-------|-------|------|----------|------|
+| SEAC | $5.00 | +100.0% | 2.6 | 1.8M | $12.9M | Packaged Software | Ideal float, big move — Watch |
+| RBLK | $1.60 | +110.1% | 0.8 | 596K | $956K | Packaged Software | Tiny float, but IRVol fading — Watch |
+| CCTG | $1.44 | +84.1% | 45.7 | 3.0M | $5.6M | Electronic Components | Low float, high IRVol — Watch |
+| CRVO | $4.72 | +90.3% | 1377.8 | 4.8M | $23.0M | Misc Commercial Svcs | Last night's AH→PM winner; already traded+closed today — Watch for re-spike |
+| TDIC | $8.27 | +52.3% | 2.1 | 0/14.1M | $14.1M | Misc Commercial Svcs | This morning's PM-only gapper (+140% PM); now regular-session — Watch |
+| VIIQ | $1.00 | +376.2% | 0.9 | 2.1M | $2.1M | Financial Conglomerates | Huge % but low IRVol (0.9), thin — Watch with caution |
+| CFOR | $2.00 | +300.0% | 0.9 | 3.6M | $24.4M | Misc Commercial Svcs | Big % but low IRVol — Watch |
+| OBAI | $1.07 | +100.2% | 588.9 | 14.7M | $13.1M | Packaged Software | Float >10M, very high IRVol — Watch |
+| NMRA | $1.52 | +66.2% | 11.8 | 78.5M | $281.6M | Pharma: Major | Float too high — low priority |
+
+**Assessment:** Regular-session only. No AH price action yet — TradingView postmarket fields are 0 until 22:00 CET. All names above are observation-only until they confirm in an AH scan. The 22:00 and 22:30 AH scans are also observation-only per learning-phase rules (no entries before 23:00 CET / 5:00 PM ET).
+
+## Paper Trades
+
+| Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
+|--------|-------------|------------|-----------------|----------------|--------|
+| — | — | — | — | — | No entries — regular-session scan, AH not yet open |
