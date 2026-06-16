@@ -150,6 +150,12 @@ _Regular-session scan (before AH opens at 22:00 CET / 4:00 PM ET). No entries pe
 
 **Assessment:** Regular-session only. No AH price action yet — TradingView postmarket fields are 0 until 22:00 CET. All names above are observation-only until they confirm in an AH scan. The 22:00 and 22:30 AH scans are also observation-only per learning-phase rules (no entries before 23:00 CET / 5:00 PM ET).
 
+## Scan 22:00 CET (4:00 PM ET)
+
+_AH just opened. Scanner returned 0 hits — TradingView postmarket fields are still settling at the open and no candidate cleared the filter. Observation-only scan per learning phase (no entries before 23:00 CET). Regular-session watch names from 21:30 (SEAC, CCTG, CRVO, TDIC, etc.) need to reappear in a later AH scan with sustained AH momentum before they qualify._
+
+No candidates found.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
