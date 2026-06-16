@@ -263,8 +263,45 @@ _Entry-eligible AH scan. 14 hits. Two new names clear the AH >10% threshold (NIV
 
 **Decision: No new entries.** The two new AH >10% names (NIVF, CRE) are both 1st AH appearance and cannot clear the 2-scan gate; CRE additionally shows a SPIKE→FADE shape. No prior candidate offers a fresh BUILD setup. LNAI remains the only open position.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+_Entry-eligible AH scan. 15 hits. Four new names (ONCO, AIFC, BEAT, GUTS) all have AH <10% → skip. **NIVF logs its 2nd AH scan >10%** (00:00 +18.8% → 00:30 +16.4%) and clears all numeric gates with a tiny 568K float, real same-day anti-dilution catalyst, and a base holding within 15% of its AH high. **ENTERED NIVF.** LNAI (open position) pulled to $5.13; management handled by position-evaluation._
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LNAI | [TV](https://www.tradingview.com/chart/?symbol=LNAI) | $2.85 | +9.0% | +80.3% | $5.13 | +96.6% | 11.8M | 1.7M | 6.8x | 2.9M | Biotechnology |
+| MYSE | [TV](https://www.tradingview.com/chart/?symbol=MYSE) | $2.30 | +13.9% | +6.1% | $2.44 | +20.8% | 11.7M | 1.6M | 7.2x | 4.8M | Packaged Software |
+| NIVF | [TV](https://www.tradingview.com/chart/?symbol=NIVF) | $0.70 | +20.4% | +16.4% | $0.81 | +40.1% | 4.5M | 13.4M | 0.3x | 568K | Medical/Nursing Services |
+| GDHG | [TV](https://www.tradingview.com/chart/?symbol=GDHG) | $1.60 | -1.8% | +42.5% | $2.28 | +39.9% | 1.5M | 1.8M | 0.8x | 18.6M | Engineering & Construction |
+| CREG | [TV](https://www.tradingview.com/chart/?symbol=CREG) | $2.07 | +7.8% | +45.4% | $3.01 | +56.8% | 1.2M | 509K | 2.4x | 2.7M | Electric Utilities |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $3.27 | +3.8% | +18.3% | $3.87 | +22.9% | 692K | 2.4M | 0.3x | 1.1M | Commercial Printing/Forms |
+| FLD | [TV](https://www.tradingview.com/chart/?symbol=FLD) | $0.56 | -14.6% | +6.4% | $0.60 | -9.1% | 519K | 13.1M | 0.0x | 7.4M | Packaged Software |
+| STEX | [TV](https://www.tradingview.com/chart/?symbol=STEX) | $0.99 | -2.2% | +6.3% | $1.05 | +4.0% | 478K | 1.5M | 0.3x | 67.3M | Investment Banks/Brokers |
+| TDIC | [TV](https://www.tradingview.com/chart/?symbol=TDIC) | $7.60 | +40.0% | +6.6% | $8.10 | +49.2% | 450K | 4.5M | 0.1x | 0/12.9M | Misc Commercial Services |
+| SDOT | [TV](https://www.tradingview.com/chart/?symbol=SDOT) | $8.67 | -63.1% | +55.8% | $13.51 | -42.4% | 379K | 7.7M | 0.0x | 741K | Restaurants |
+| ONCO | [TV](https://www.tradingview.com/chart/?symbol=ONCO) | $1.08 | -0.9% | +9.3% | $1.18 | +8.3% | 319K | 390K | 0.8x | 3.7M | Pharmaceuticals: Major |
+| REI | [TV](https://www.tradingview.com/chart/?symbol=REI) | $1.12 | -4.3% | +5.4% | $1.18 | +0.9% | 99K | 3.9M | 0.0x | 228.1M | Integrated Oil |
+| AIFC | [TV](https://www.tradingview.com/chart/?symbol=AIFC) | $0.69 | -4.9% | +9.2% | $0.76 | +3.8% | 96K | 1.2M | 0.1x | 137.0M | Environmental Services |
+| BEAT | [TV](https://www.tradingview.com/chart/?symbol=BEAT) | $0.72 | -6.6% | +6.4% | $0.77 | -0.7% | 94K | 755K | 0.1x | 47.4M | Medical Specialties |
+| GUTS | [TV](https://www.tradingview.com/chart/?symbol=GUTS) | $0.78 | -8.7% | +5.9% | $0.82 | -3.3% | 63K | 2.2M | 0.0x | 129.7M | Biotechnology |
+
+**Per-candidate evaluation:**
+
+- **NIVF — ✅ ENTER.** Float **568K** (exceptionally tiny, ideal), Day +20.4% (above -15%). **2nd AH scan >10%:** 00:00 +18.8% → 00:30 +16.4%, clears the ≥2-AH-scan gate. **Total% +40.1%** — well under the +150% ceiling. **Trajectory:** flat ~+20% all afternoon → single-bar spike to AH high $0.96 (+65.1%) at **17:45 ET** → faded to a higher base ~$0.82 (+41%) and **holding flat** $0.82 across 18:10–18:30 ET. Current $0.82 is **-14.6% off the AH high (within 20%)** → counts as holding, not a SKYQ-style deep-collapse rebuild. Peak at 17:45 is before 18:30, but hold-vs-fade is the primary signal and NIVF is holding its base, not declining hard ($0.84→$0.81 across the two scans, marginal). **Catalyst (Grade C):** June 16 Repurchase & Forbearance Agreement to repurchase all outstanding convertible notes and warrants from a key investor — eliminates dilutive overhang (balance-sheet strengthening, anti-dilution = positive but minor PR → Grade C). **Concerns noted:** single-bar spike (not a steady BUILD like LNAI); VRatio 0.3 (below-average vs an unusually high 13.4M avg — though 4.5M AH vol on a 568K float is ~8x float turnover, real volume). On balance, clears all entry gates with a real catalyst and exceptional float → enter per learning-phase default. **ENTER $0.81, 123 sh.**
+- **CREG** — Float 2.7M (ideal), Day +7.8%, AH +45.4%, VRatio 2.4. But **1st AH appearance** >10% (was +8.7% at 00:00, below threshold) → fails the ≥2-AH-scan gate. **WATCH** for a 2nd qualifying scan.
+- **GDHG** — Float 18.6M (above ideal), VRatio 0.8 (thin). Prior early-peak fade qualifier, still choppy. **SKIP — thin volume + early-peak fade.**
+- **CRE** — Float 1.1M, but 2nd AH scan now +18.3% (was +27.2% at 00:00, fading). SPIKE→FADE shape from the $4.65 high at 17:30. VRatio 0.3 (thin). **SKIP — early-peak fade.**
+- **MYSE** — Faded further to +6.1% AH (below 10% now). **SKIP.**
+- **SDOT** — Day **-63.1%** crash, Total still **-42.4%** (far below close). Dead-cat bounce, no reclaim above close → no override. **SKIP.**
+- **ONCO / AIFC / BEAT / GUTS** (new) — all AH <10% (+9.3%, +9.2%, +6.4%, +5.9%). **SKIP — below AH threshold.**
+- **TDIC / FLD / STEX / REI** — AH <10% and/or high float / negative Total. **SKIP.**
+- **LNAI (open position)** — entered $5.80 at 23:30. AH high $6.42 (+146%) at 17:15, now $5.13 (+80.3% AH, ~-11.5% vs entry). Hold/sell decision deferred to position-evaluation.
+
+**Decision: 1 new entry — NIVF $0.81, 123 sh, Grade C.** Only NIVF cleared the 2-scan gate this scan; CREG is a fresh BUILD candidate but on its 1st qualifying scan (watch). All new names fell below the AH threshold.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
 | LNAI | $5.80 | 23:30 CET | 17 | C | BUILD pattern, float 2.9M, 2nd AH scan >10% (+20.9%→+103.9%), VRatio 6.6, holding within 10% of AH high, Total +122% under ceiling; 8-K Nasdaq bid-compliance regain |
+| NIVF | $0.81 | 00:30 CET | 123 | C | Tiny 568K float, 2nd AH scan >10% (+18.8%→+16.4%), Total +40% under ceiling, holding within 15% of AH high; anti-dilution note/warrant buyback agreement (Jun 16) |
