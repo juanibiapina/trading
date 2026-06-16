@@ -203,8 +203,35 @@ _First entry-eligible AH scan (entries allowed at 23:00+ CET). 7 hits. Three nam
 
 **Decision: No entries.** All numeric qualifiers (FLZH, GDHG, MYSE) are SPIKE→FADE/early-peak-fading — a SPIKE→FADE-only night among qualifiers, where the rule is skip-all rather than enter the least-bad (0/10+ historical). The only BUILD pattern (LNAI) doesn't yet clear the 2-scan gate. Watch LNAI at 23:30 for a qualifying 2nd AH scan while still building.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+_Entry-eligible AH scan. 8 hits. **LNAI exploded from +20.9% AH (23:00) to +103.9% AH (23:30)** — the BUILD candidate I was watching now clears the 2-scan gate (23:00 +20.9%, 23:30 +103.9%) and all numeric gates with a clean BUILD/hold trajectory. **ENTERED LNAI.** The prior SPIKE→FADE qualifiers (MYSE, FLZH, GDHG) continue to fade — skipped._
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LNAI | [TV](https://www.tradingview.com/chart/?symbol=LNAI) | $2.85 | +9.0% | +103.9% | $5.80 | +122.2% | 6.0M | 914K | 6.6x | 2.9M | Biotechnology |
+| MYSE | [TV](https://www.tradingview.com/chart/?symbol=MYSE) | $2.30 | +13.9% | +15.6% | $2.66 | +31.7% | 10.7M | 1.5M | 7.1x | 4.8M | Packaged Software |
+| FLZH | [TV](https://www.tradingview.com/chart/?symbol=FLZH) | $3.85 | +22.2% | +19.0% | $4.58 | +45.4% | 5.8M | 0 | 0.0x | 1.6M | Wholesale Distributors |
+| GDHG | [TV](https://www.tradingview.com/chart/?symbol=GDHG) | $1.60 | -1.8% | +47.5% | $2.36 | +44.8% | 938K | 1.8M | 0.5x | 18.6M | Engineering & Construction |
+| SDOT | [TV](https://www.tradingview.com/chart/?symbol=SDOT) | $8.67 | -63.1% | +75.8% | $15.24 | -35.1% | 347K | 7.7M | 0.0x | 741K | Restaurants |
+| FLD | [TV](https://www.tradingview.com/chart/?symbol=FLD) | $0.56 | -14.6% | +6.4% | $0.60 | -9.1% | 514K | 13.1M | 0.0x | 7.4M | Packaged Software |
+| STEX | [TV](https://www.tradingview.com/chart/?symbol=STEX) | $0.99 | -2.2% | +6.3% | $1.05 | +4.0% | 478K | 1.5M | 0.3x | 67.5M | Investment Banks/Brokers |
+| REI | [TV](https://www.tradingview.com/chart/?symbol=REI) | $1.12 | -4.3% | +5.3% | $1.18 | +0.8% | 68K | 3.9M | 0.0x | 228.1M | Integrated Oil |
+
+**Per-candidate evaluation:**
+
+- **LNAI — ✅ ENTER.** Float 2.9M (ideal). Day +9.0% (above -15%). **2nd AH scan >10%:** 23:00 +20.9% → 23:30 +103.9%, clears the ≥2-AH-scan gate. VRatio 6.6 (real volume, 6.0M AH). **Trajectory: clean BUILD** — climbed 16:00 +11.9% → 17:00 +100.4% → AH high $6.42 (+146%) at **17:15 ET**, pulled to $5.50, then **rebuilding** $5.50→$5.65→$5.78 on the last 3 bars. Current $5.78 is -10% off the AH high = within 20% → holding/building, not fading. Peak at 17:15 ET is before 18:30, but hold-vs-fade is the primary signal (CHAI/MSW precedent) and LNAI is rebuilding toward its high. **Total% +122%** — under the +150% extension ceiling. **Catalyst (Grade C):** 8-K filed today (~16:35 ET) — regained Nasdaq $1.00 minimum bid-price compliance, under 1-year Panel monitor. Removing the delisting overhang on a 2.9M float is a plausible squeeze driver. Administrative/minor PR → Grade C (exit premarket). Older items (Feb oncology pilot, Geneial LOI) predate the move. **ENTER $5.80, 17 sh.**
+- **MYSE** — Float 4.8M, VRatio 7.1 (best volume). But AH faded from +27.8% (23:00) to +15.6% now. Peaked $3.17 (+56.9%) at **16:25 ET**, now $2.67 (+32%), declining. **SKIP — early-peak fade.**
+- **FLZH** — Float 1.6M (ideal) but AH faded from +36.4% to +19.0%. Peaked $6.19 (+93.4%) at **16:10 ET**, now $4.35-$4.58 (+36-47%), >20% off high. **SKIP — SPIKE→FADE.**
+- **GDHG** — Float 18.6M (above ideal), VRatio 0.5 (thin, 938K AH vs 1.8M avg). Early peak fade. **SKIP — thin volume + early-peak fade.**
+- **SDOT** — Day **-63.1%** regular crash; AH bounce +75.8% but Total% **-35.1%** (far below regular close). Classic dead-cat bounce, no reclaim above close → no override. **SKIP.**
+- **FLD** — Day -14.6%, AH +6.4% (below 10%). **SKIP.**
+- **STEX / REI** — AH +6.3% / +5.3% (below 10%), high floats. **SKIP.**
+
+**Decision: 1 entry — LNAI $5.80, 17 sh, Grade C.** First BUILD candidate of the night to clear the 2-scan gate, ideal float, real volume, holding within 10% of its AH high, same-day 8-K catalyst, extension under ceiling. The SPIKE→FADE names (MYSE/FLZH/GDHG) correctly skipped per the early-peak-fade rule.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
-| — | — | — | — | — | No entries — SPIKE→FADE-only night among qualifiers; LNAI (BUILD) needs 2nd AH scan at 23:30 |
+| LNAI | $5.80 | 23:30 CET | 17 | C | BUILD pattern, float 2.9M, 2nd AH scan >10% (+20.9%→+103.9%), VRatio 6.6, holding within 10% of AH high, Total +122% under ceiling; 8-K Nasdaq bid-compliance regain |

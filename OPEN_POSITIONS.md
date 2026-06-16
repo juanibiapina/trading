@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| _(none)_ | | | | | | | | | |
+| LNAI | 2026-06-16 | $5.80 | 17 | $98.60 | C | 8-K: regained Nasdaq $1.00 bid-price compliance (1-yr Panel monitor) | $5.22 (-10%) | Exit premarket | $6.42 (AH, pre-entry) |
 
 ## Position Rules
 
