@@ -6,11 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-09 | CHAI | None (AI squeeze) | +438% ($4.47 PM) | — | $1.37 | Day 4 - flat around ~$1.37; squeeze fully unwound, stabilizing |
-| 2026-06-10 | MSW | C — acquisition close + dilutive notes | +292% ($5.18 AH) | — | $1.35 | Day 3 - holding ~$1.35 (near original $1.32 base); sold @ $3.53 (+9%) — good exit |
-| 2026-06-11 | GLXG | None (PM-only squeeze) | +343% ($4.56 PM) | — | $0.98 | Day 2 - CRASHED to $0.98 from $4.56 PM peak (−79%); classic no-catalyst PM-only pump & dump |
-| 2026-06-11 | TMDE | A (stale Jun 8 bioenergy MOA) | +98.6% ($1.66 AH) | $1.49 | $0.91 | Day 2 - faded to $0.91 (below original $0.84 base); stale catalyst, no follow-through |
-| 2026-06-12 | BYAH | None (low-float pump, Day −15% dead-cat) | +121.8% ($2.75 AH) | $3.58 | $3.58 | 🆕 Day 1 - AH→PM winner; PM exceeded AH; 1.0M float; blocked by dead-cat filter |
+| 2026-06-12 | BYAH | None (low-float pump, Day −15% dead-cat) | +121.8% ($2.75 AH) | $3.58 | $1.47 | Day 4 - faded to $1.47 from $3.58 (below original $0.84... well below PM peak); no catalyst, unwound |
+| 2026-06-16 | CRVO | None (late AH spike, Jun 10 dilution) | +53.9% ($3.77 AH) | $3.74 (so far) | $3.74 | 🆕 Day 1 - AH→PM winner; caught & paper-traded @ $3.64; 4.8M float; held AH→PM |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -43,6 +40,10 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-05-29 | PRFX | B — DeepSolar | $8.96 (+564%) | — | — | $2.02 | Day 5: Faded significantly |
 | 2026-06-01 | DXST | None | $4.22 (+170%) | — | — | $4.14 | Day 8: Held near peak (no fade) |
 | 2026-06-03 | TWAV | None | $2.88 (+98.6%) | — | — | $1.68 | Day 6: Faded back to start |
+| 2026-06-09 | CHAI | None (AI squeeze) | — | $4.47 | — | $1.32 | Day 7: Faded, squeeze fully unwound |
+| 2026-06-10 | MSW | C — acquisition close + dilutive notes | $5.18 | — | — | $1.25 | Day 6: Faded to base; sold @ $3.53 (+9%) — good exit |
+| 2026-06-11 | GLXG | None (PM-only squeeze) | — | $4.56 | $0.98 | $1.46 | Day 5: Crashed -79%, partial bounce to $1.46 |
+| 2026-06-11 | TMDE | A (stale Jun 8 bioenergy MOA) | $1.66 | $1.49 | $0.91 | $0.87 | Day 5: Faded below base, no follow-through |
 
 ## Patterns Observed
 
