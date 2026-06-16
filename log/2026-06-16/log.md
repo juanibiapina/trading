@@ -121,3 +121,9 @@ PM prices at 04:30 ET (via check-prices --pm-history, the reliable snapshot).
 - **Total realized P&L: -$36.90**
 
 All three were Grade None/D, all exit in first premarket per risk rules. None had a fresh catalyst to justify a hold. WCT's hard stop was breached overnight. CRVO's PM peak ($3.74, +52.7% from close) was the best exit window but it faded to $3.19 by 04:30 ET; entry at $3.64 left no profit. Consistent pattern: weak/no-catalyst AH movers fade overnight.
+
+## Position Evaluation — 14:30 CET
+
+No open positions. All three positions (HUBC, WCT, CRVO) were closed in the 10:30 CET evaluation. Nothing to evaluate.
+
+**Actions taken:** None.
