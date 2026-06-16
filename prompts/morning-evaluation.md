@@ -98,6 +98,8 @@ Run this full section on **pulse 1**. On **pulse 2 and 3**, reuse the existing s
 
 **Dead-cat-override watch outcomes:** If last night's log flagged any **DEAD-CAT-OVERRIDE WATCH** candidates (Day% ≤ -15% stocks that reclaimed above their regular close on a multi-scan AH BUILD, skipped only by the dead-cat filter), look up each one's PM follow-through and record the hypothetical P&L (skipped entry price → PM peak) in Notes. Tally these over time — they are the dataset for deciding whether the dead-cat filter should become conditional for AH builds that reclaim above the regular close. (Founding case: BYAH Jun 11, hypothetical +72%.)
 
+**PM-only gapper tracking:** Identify the morning's single **biggest raw PM mover** (highest % from previous close, regardless of strategy fit). Classify it as either (a) an **AH→PM continuation** the evening scanner could detect (moved >10% in after-hours), or (b) a **PM-only gapper** (flat/down in after-hours, move began only after 04:00 ET on overnight news — structurally undetectable by the AH scanner). Record the classification and maintain a running tally in Notes. Known cases so far: PM-only gappers — CIIT (Jun 10, +140%), GLXG (Jun 11, +343%), TDIC (Jun 16, +140%). This tally is the dataset for deciding whether the morning's biggest movers are dominated by PM-only gappers (which would justify a separate early-PM scan workflow) or whether AH→PM continuations are competitive. A PM-only gapper is **not** a scanner failure — do not count it against detection baseline.
+
 **Then compare all retrospective results with evening scans:**
 - **Caught**: stocks in both evening scans and retrospective
 - **Missed**: stocks in retrospective that evening scans never found

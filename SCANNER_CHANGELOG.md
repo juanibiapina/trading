@@ -43,6 +43,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **Early-peak base-hold requires holding within ~20% of the AH high** (or making new highs); a deep collapse (>20% off the AH high) that stabilizes at a much lower base is a fade, not a hold, especially on Grade-None macro/sector-beta names (basis: SKYQ Jun 10 +129% peak → +46% rebuild → -27.6%)
 - **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close; if only 23:00 candidate exceeds 150%, wait for later scans (late-building candidates often have better entry points). **Ceiling-override watch:** candidates that exceed 150% but show BUILD-and-hold (AH high after 17:00 ET, holding within ~20% of high across ≥2 scans, VRatio >5x) are still skipped but flagged with a hypothetical entry for data collection.
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
+- **PM-only gapper tracker:** each morning eval classifies the biggest raw PM mover as an AH→PM continuation (detectable) or a PM-only gapper (flat/down in AH, undetectable), with a running tally. PM-only gappers are a structural blind spot of the AH→PM strategy, not a detection-baseline failure (data collection: CIIT Jun 10, GLXG Jun 11, TDIC Jun 16)
 
 ## Modifiable Files
 
@@ -54,6 +55,22 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-06-16 — Instrument PM-Only Gapper Frequency (TDIC Blind Spot)
+
+**Context:** June 15 night was a clean detection + selection day for the AH→PM strategy (CRVO caught, activated on the 2-scan gate, traded), pushing detection to 87.1% (27/31, baseline met). But the morning's *biggest raw mover* was again a **PM-only gapper** the AH scanner cannot see by design: **TDIC** exploded to +140% in premarket (peak $13.83, 04:05 ET) while sitting flat-to-down (-4% to -8%) all evening in after-hours. This is the recurring structural blind spot: a stock with no AH footprint that gaps on overnight/early-AM news after 04:00 ET. It is the 3rd such case in recent weeks — CIIT (Jun 10, +140%), GLXG (Jun 11, +343%), now TDIC (Jun 16, +140%) — and each was noted ad hoc in its log with no running tally. The Jun 16 eval explicitly recommended tracking *how often* the morning's biggest mover is a PM-only gapper vs an AH→PM continuation, to decide whether a separate early-PM scan workflow is warranted. There is no detection-threshold gap to fix (a flat-AH stock has nothing to detect), so this is pure instrumentation, mirroring the proven ceiling-override / dead-cat-override watch pattern.
+
+**Evaluation of previous changes:**
+- 2026-06-12 Instrument dead-cat-override watch (BYAH): **Insufficient data.** June 15 night flagged no DEAD-CAT-OVERRIDE WATCH candidate (no Day% ≤ -15% name that BUILT in AH to reclaim above its regular close). The morning eval correctly recorded "no override-watch outcomes to tally." Watch remains open.
+- 2026-06-11 Quantify the early-peak base-hold exception (within ~20% of AH high): **Insufficient data.** June 15 produced no deep-collapse-low-rebuild candidate to exercise the SKYQ exception. The names traded (HUBC, WCT, CRVO) were not within-20%-of-high misclassifications — CRVO was a genuine BUILD-and-hold (entered $3.64 vs AH high $3.77, inside the band) that still faded as a no-catalyst name. Threshold neither misfired nor validated.
+- 2026-06-09 Ceiling-override watch for BUILD-and-hold: **Insufficient data (still open).** June 15 RGNT breached the ceiling but on a regular-session blow-off (+564% Day), not an AH BUILD-and-hold with VRatio >5x, so nothing qualified. The morning eval correctly logged nothing to tally. No qualifying post-17:00 BUILD-and-hold >150% candidate yet.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — Added a "PM-only gapper tracking" instruction to Step 4 (Scanner Diagnostic). Each morning, identify the single biggest raw PM mover and classify it as an AH→PM continuation (detectable) or a PM-only gapper (flat/down in AH, undetectable), keeping a running tally seeded with the three known cases (CIIT, GLXG, TDIC). Explicitly states a PM-only gapper is not a detection-baseline failure.
+   - Why: PM-only gappers have been the morning's biggest mover 3 times recently, each noted ad hoc with no tally. Without a running count we cannot tell whether they dominate (justifying an early-PM scan experiment) or are occasional. Instrumenting builds the dataset without changing the strategy or risking the scanner.
+   - Hypothesis: Over the next 2–4 weeks the morning eval logs a PM-only-vs-AH→PM classification of the biggest mover each night, accumulating a tally. Measurable: (1) the next morning eval records the classification line for its biggest mover; (2) after ~15 sessions the tally shows the PM-only share. If PM-only gappers are the biggest mover in a clear majority (≥60%), it argues for a separate early-PM scan workflow (a coverage decision left to the user); if AH→PM continuations stay competitive, the current AH-only coverage stands.
+
+**Updated process:** Added the PM-only gapper tracker to the morning evaluation diagnostics (Current Process list below).
 
 ### 2026-06-12 — Instrument Dead-Cat-Override Watch (BYAH Miss)
 
