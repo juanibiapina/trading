@@ -156,6 +156,27 @@ _AH just opened. Scanner returned 0 hits — TradingView postmarket fields are s
 
 No candidates found.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+_First AH scan with hits (22:00 returned 0). Observation-only per learning phase (no entries before 23:00 CET / 5:00 PM ET). All 5 names are new vs prior scans. To qualify for entry at 23:00+, a candidate needs float <50M, AH change >10% in ≥2 AH scans (22:00+ CET), and Day% above -15%. This is only their 1st AH appearance, so none can qualify yet._
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| FLZH | [TV](https://www.tradingview.com/chart/?symbol=FLZH) | $3.85 | +22.2% | +61.0% | $6.20 | +96.8% | 2.4M | 0 | 0.0x | 1.6M | Wholesale Distributors |
+| SDOT | [TV](https://www.tradingview.com/chart/?symbol=SDOT) | $8.67 | -63.1% | +44.9% | $12.56 | -46.5% | 117K | 7.7M | 0.0x | 741K | Restaurants |
+| GDHG | [TV](https://www.tradingview.com/chart/?symbol=GDHG) | $1.60 | -1.8% | +31.2% | $2.10 | +28.8% | 56K | 1.6M | 0.0x | 18.6M | Engineering & Construction |
+| MYSE | [TV](https://www.tradingview.com/chart/?symbol=MYSE) | $2.30 | +13.9% | +24.3% | $2.86 | +41.6% | 3.4M | 614K | 5.5x | 4.8M | Packaged Software |
+| LNAI | [TV](https://www.tradingview.com/chart/?symbol=LNAI) | $2.85 | +9.0% | +8.6% | $3.09 | +18.4% | 54K | 58K | 0.9x | 2.9M | Biotechnology |
+
+**Observations (no entries — observation-only scan):**
+- **FLZH** — Float 1.6M (ideal), AH +61% on 2.4M AH vol. Strongest mover. Watch for re-appearance + sustained build at 23:00.
+- **SDOT** — Day **-63.1%** regular-session crash, AH bounce +44.9% but Total% still **-46.5%** (well below regular close). Classic **dead-cat bounce** — recovering from a sell-off, not new momentum. Day% < -15% → fails entry gate. Would only flag DEAD-CAT-OVERRIDE WATCH if it reclaims *above* its regular close, which it is far from doing. Skip-track.
+- **GDHG** — AH +31% but float 18.6M (above 10M ideal, under 50M cap). Watch.
+- **MYSE** — Float 4.8M, AH +24%, VRatio 5.5x (only name with real volume ratio). Watch for build.
+- **LNAI** — AH +8.6% (below 10% threshold), low AH vol 54K. Marginal; low priority.
+
+Catalyst searches deferred to 23:00+ scan when candidates can actually qualify for entry (need 2nd AH appearance first). No entries this scan.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
