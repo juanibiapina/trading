@@ -230,6 +230,39 @@ _Entry-eligible AH scan. 8 hits. **LNAI exploded from +20.9% AH (23:00) to +103.
 
 **Decision: 1 entry — LNAI $5.80, 17 sh, Grade C.** First BUILD candidate of the night to clear the 2-scan gate, ideal float, real volume, holding within 10% of its AH high, same-day 8-K catalyst, extension under ceiling. The SPIKE→FADE names (MYSE/FLZH/GDHG) correctly skipped per the early-peak-fade rule.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+_Entry-eligible AH scan. 14 hits. Two new names clear the AH >10% threshold (NIVF, CRE) but both are **1st AH appearance** — neither can meet the ≥2-AH-scan gate, so no entry possible. Prior SPIKE→FADE qualifiers (MYSE, FLZH, GDHG) keep fading. **LNAI** (open position from 23:30) pulled back to $5.16 from the $6.42 high; position management handled separately by position-evaluation. **Decision: no new entries.**_
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MYSE | [TV](https://www.tradingview.com/chart/?symbol=MYSE) | $2.30 | +13.9% | +15.7% | $2.66 | +31.7% | 11.2M | 1.6M | 7.1x | 4.8M | Packaged Software |
+| LNAI | [TV](https://www.tradingview.com/chart/?symbol=LNAI) | $2.85 | +9.0% | +81.4% | $5.16 | +97.7% | 9.6M | 1.4M | 6.7x | 2.9M | Biotechnology |
+| FLZH | [TV](https://www.tradingview.com/chart/?symbol=FLZH) | $3.85 | +22.2% | +7.8% | $4.15 | +31.7% | 6.1M | 0 | 0.0x | 1.6M | Wholesale Distributors |
+| GDHG | [TV](https://www.tradingview.com/chart/?symbol=GDHG) | $1.60 | -1.8% | +43.7% | $2.30 | +41.1% | 1.4M | 1.8M | 0.8x | 18.6M | Engineering & Construction |
+| NIVF | [TV](https://www.tradingview.com/chart/?symbol=NIVF) | $0.70 | +20.4% | +18.8% | $0.83 | +43.1% | 774K | 13.0M | 0.1x | 568K | Medical/Nursing Services |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $3.27 | +3.8% | +27.2% | $4.16 | +32.1% | 527K | 2.4M | 0.2x | 1.1M | Commercial Printing/Forms |
+| AHMA | [TV](https://www.tradingview.com/chart/?symbol=AHMA) | $2.69 | +39.4% | +9.3% | $2.94 | +52.3% | 316K | 16.5M | 0.0x | 2.1M | Misc Commercial Services |
+| CREG | [TV](https://www.tradingview.com/chart/?symbol=CREG) | $2.07 | +7.8% | +8.7% | $2.25 | +17.2% | 489K | 415K | 1.2x | 2.7M | Electric Utilities |
+| UPXI | [TV](https://www.tradingview.com/chart/?symbol=UPXI) | $0.95 | -11.9% | +5.1% | $1.00 | -7.4% | 1.0M | 2.4M | 0.4x | 47.3M | Pharmaceuticals: Other |
+| TDIC | [TV](https://www.tradingview.com/chart/?symbol=TDIC) | $7.60 | +40.0% | +5.3% | $8.00 | +47.3% | 442K | 4.5M | 0.1x | 0/14.1M | Misc Commercial Services |
+| SDOT | [TV](https://www.tradingview.com/chart/?symbol=SDOT) | $8.67 | -63.1% | +72.4% | $14.95 | -36.3% | 361K | 7.7M | 0.0x | 741K | Restaurants |
+| STEX | [TV](https://www.tradingview.com/chart/?symbol=STEX) | $0.99 | -2.2% | +6.3% | $1.05 | +4.0% | 478K | 1.5M | 0.3x | 67.3M | Investment Banks/Brokers |
+| XTIA | [TV](https://www.tradingview.com/chart/?symbol=XTIA) | $1.73 | -7.0% | +5.2% | $1.82 | -2.2% | 294K | 1.5M | 0.2x | 38.4M | IT Services |
+| REI | [TV](https://www.tradingview.com/chart/?symbol=REI) | $1.12 | -4.3% | +5.4% | $1.18 | +0.9% | 94K | 3.9M | 0.0x | 228.1M | Integrated Oil |
+
+**Per-candidate evaluation:**
+
+- **NIVF — WATCH (1st AH appearance).** Float 568K (tiny, ideal), Day +20.4%. AH was flat ~+20% all afternoon, then **late spike** to AH high $0.96 (+65.1%) at **17:45 ET**, now easing to $0.84 (-12.5% off high). Late peak is encouraging but it's the 1st AH scan >10% — fails the ≥2-AH-scan gate. VRatio 0.1 (774K AH vs 13.0M avg — very thin). **Cannot enter this scan; watch for a 2nd qualifying AH scan that holds the spike.**
+- **CRE — WATCH/skip-track (1st AH appearance).** Float 1.1M (ideal), Day +3.8%. **Single-bar spike** to AH high $4.65 (+47.6%) at **17:30 ET**, then steady decline to $3.88 (-16.6% off high) = SPIKE→FADE shape. 1st AH scan >10%, fails 2-scan gate. VRatio 0.2 (thin). **Cannot enter; the fade shape makes it low priority even if it returns.**
+- **MYSE / FLZH / GDHG** — prior SPIKE→FADE/early-peak qualifiers, continuing to fade (MYSE +15.7%, FLZH now +7.8% below threshold, GDHG +43.7% on thin 0.8x volume). **SKIP (unchanged).**
+- **AHMA** — AH +9.3% (below 10%), VRatio 0.0 (316K vs 16.5M avg — dead volume). **SKIP.**
+- **SDOT** — Day -63.1% crash, Total still -36.3% (far below close). Dead-cat bounce, no reclaim → no override. **SKIP.**
+- **CREG / UPXI / TDIC / STEX / XTIA / REI** — all AH <10% and/or negative Total / high float. **SKIP.**
+- **LNAI (open position)** — entered $5.80 at 23:30. AH high $6.42 (+146%) at 17:15, pulled to $4.74 low, rebuilt to ~$5.35, now $5.16 (~-11% vs entry). Hold/sell decision deferred to position-evaluation.
+
+**Decision: No new entries.** The two new AH >10% names (NIVF, CRE) are both 1st AH appearance and cannot clear the 2-scan gate; CRE additionally shows a SPIKE→FADE shape. No prior candidate offers a fresh BUILD setup. LNAI remains the only open position.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
