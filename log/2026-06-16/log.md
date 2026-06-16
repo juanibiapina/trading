@@ -177,8 +177,34 @@ _First AH scan with hits (22:00 returned 0). Observation-only per learning phase
 
 Catalyst searches deferred to 23:00+ scan when candidates can actually qualify for entry (need 2nd AH appearance first). No entries this scan.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+_First entry-eligible AH scan (entries allowed at 23:00+ CET). 7 hits. Three names now have ≥2 AH scans >10% (FLZH, GDHG, MYSE) and clear the numeric gates, but all three peaked before 17:00 ET and are declining = SPIKE→FADE/early-peak-fading. LNAI is the only BUILD candidate (new AH highs at 17:00) but has just 1 qualifying AH scan. **Decision: skip all entries — SPIKE→FADE-only night among qualifiers; watch LNAI for 23:30.**_
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MYSE | [TV](https://www.tradingview.com/chart/?symbol=MYSE) | $2.30 | +13.9% | +27.8% | $2.94 | +45.5% | 8.9M | 1.3M | 6.9x | 4.8M | Packaged Software |
+| FLZH | [TV](https://www.tradingview.com/chart/?symbol=FLZH) | $3.85 | +22.2% | +36.4% | $5.25 | +66.7% | 5.1M | 0 | 0.0x | 1.6M | Wholesale Distributors |
+| GDHG | [TV](https://www.tradingview.com/chart/?symbol=GDHG) | $1.60 | -1.8% | +59.3% | $2.55 | +56.4% | 596K | 1.7M | 0.3x | 18.6M | Engineering & Construction |
+| STEX | [TV](https://www.tradingview.com/chart/?symbol=STEX) | $0.99 | -2.2% | +5.3% | $1.04 | +3.0% | 478K | 1.5M | 0.3x | 67.5M | Investment Banks/Brokers |
+| SDOT | [TV](https://www.tradingview.com/chart/?symbol=SDOT) | $8.67 | -63.1% | +84.7% | $16.01 | -31.8% | 257K | 7.7M | 0.0x | 741K | Restaurants |
+| TDIC | [TV](https://www.tradingview.com/chart/?symbol=TDIC) | $7.60 | +40.0% | +16.3% | $8.84 | +62.8% | 237K | 4.4M | 0.1x | 0/14.1M | Misc Commercial Services |
+| LNAI | [TV](https://www.tradingview.com/chart/?symbol=LNAI) | $2.85 | +9.0% | +20.9% | $3.44 | +31.8% | 147K | 69K | 2.1x | 2.9M | Biotechnology |
+
+**Per-candidate evaluation:**
+
+- **FLZH** — Float 1.6M (ideal), Day +22.2%, 2nd AH scan >10% (22:30 +61% → 23:00 +36.4%). Clears numeric gates. **Trajectory: SPIKE→FADE.** AH peaked $6.19 (+93%) at **16:10 ET** (early), now $4.65, **-25% off high**, declining every bar since. Current price >20% below AH high = fade, not hold. No same-day catalyst found (Seeking Alpha/TipRanks only general listings). **SKIP — SPIKE→FADE, 0/10+ for PM continuation.**
+- **GDHG** — Float 18.6M (above ideal, under 50M cap), Day -1.8%, 2nd AH scan >10% (+31% → +59%). Clears gates. **Trajectory: early peak + fading.** Peaked $2.55 (+59%) at **16:40 ET**, now $2.13 (+33%), -16.5% off high, declining last 20 min. VRatio 0.3 (596K AH vs 1.7M avg — thin volume, no conviction). **SKIP — early-peak fade on thin volume.**
+- **MYSE** — Float 4.8M (ideal), Day +13.9%, 2nd AH scan >10% (+24% → +28%), VRatio 6.9 (real volume, 8.9M AH). Best volume profile of the night. **Trajectory: early peak + fading.** Peaked $3.17 (+57%) at **16:25 ET**, now $2.74 (+36%), -13.6% off high, drifting down 30 min. No same-day catalyst found (latest news Apr 2026). The "least bad" option, but it peaked early and is fading. **SKIP — per SPIKE→FADE-only-night rule, do not enter the least-bad.**
+- **LNAI** — Float 2.9M (ideal), Day +9.0%, VRatio 2.1. **Trajectory: BUILD — the only one tonight.** Built from +12% (16:00) to new AH high $4.36/$4.57 (+67%/+75%) at **17:00 ET**, still climbing on the last bar. Late peak, holding/building. **But only 1 qualifying AH scan** (22:30 reading was +8.6%, below 10%). Fails the ≥2 AH scans >10% gate. No same-day catalyst found (prior catalysts: Mar 2026 $20M CNS acquisition, all old). **WATCH for 23:30 — if it logs a 2nd AH scan >10% and holds the build, it's the entry candidate.**
+- **SDOT** — Day **-63.1%** regular crash; AH bounce +84.7% but Total% **-31.8%** (still well below regular close). Classic **dead-cat bounce** — recovering from a sell-off, far below close, no override (would need to reclaim *above* close). **SKIP.**
+- **TDIC** — This morning's PM-only gapper (+140% PM), now AH +16.3%. Only 1 AH scan >10%. Float 0/14.1M. **Watch.**
+- **STEX** — AH +5.3% (below 10% threshold). **SKIP.**
+
+**Decision: No entries.** All numeric qualifiers (FLZH, GDHG, MYSE) are SPIKE→FADE/early-peak-fading — a SPIKE→FADE-only night among qualifiers, where the rule is skip-all rather than enter the least-bad (0/10+ historical). The only BUILD pattern (LNAI) doesn't yet clear the 2-scan gate. Watch LNAI at 23:30 for a qualifying 2nd AH scan while still building.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
-| — | — | — | — | — | No entries — regular-session scan, AH not yet open |
+| — | — | — | — | — | No entries — SPIKE→FADE-only night among qualifiers; LNAI (BUILD) needs 2nd AH scan at 23:30 |
