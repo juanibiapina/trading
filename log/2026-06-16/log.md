@@ -103,3 +103,21 @@ _(price-timeline.py output omitted — its post-04:20 ET timestamps are a timezo
 - No ceiling-override or dead-cat-override watch candidates were flagged last night, so no override-watch outcomes to tally.
 </content>
 </invoke>
+
+## Position Evaluation — 10:30 CET
+
+PM prices at 04:30 ET (via check-prices --pm-history, the reliable snapshot).
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| HUBC | $2.06 | $1.98 | -3.9% | $2.11 (PM) | 1 | None | SELL | Grade None — exit at first premarket pulse; faded from AH |
+| WCT | $1.94 | $1.53 | -21.1% | $1.62 (PM) | 1 | D | SELL | Hard stop ($1.65) breached + Grade D premarket exit |
+| CRVO | $3.64 | $3.19 | -12.4% | $3.74 (PM) | 1 | None | SELL | Grade None — exit at first premarket pulse; PM peak $3.74 faded |
+
+**Actions taken:**
+- SELL HUBC at $1.98 (48 sh) → -$3.84 (-3.9%)
+- SELL WCT at $1.53 (51 sh) → -$20.91 (-21.1%)
+- SELL CRVO at $3.19 (27 sh) → -$12.15 (-12.4%)
+- **Total realized P&L: -$36.90**
+
+All three were Grade None/D, all exit in first premarket per risk rules. None had a fresh catalyst to justify a hold. WCT's hard stop was breached overnight. CRVO's PM peak ($3.74, +52.7% from close) was the best exit window but it faded to $3.19 by 04:30 ET; entry at $3.64 left no profit. Consistent pattern: weak/no-catalyst AH movers fade overnight.

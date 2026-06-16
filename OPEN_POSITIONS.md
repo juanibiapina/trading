@@ -6,9 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| HUBC | 2026-06-15 | $2.06 | 48 | $98.88 | None | No catalyst found (4-query search); dilution-risk history | $1.75 | trail from peak | $2.17 (AH) |
-| WCT | 2026-06-15 | $1.94 | 51 | $98.94 | D | 1-for-400 reverse share consolidation (SEC Jun 11); thin AH liquidity | $1.65 | premarket exit | $1.99 (AH) | |
-| CRVO | 2026-06-15 | $3.64 | 27 | $98.28 | None | No fresh catalyst (4-query search); Jun 10 $10.5M private placement dilution overhang | $3.10 | premarket exit | $3.77 (AH) |
+| _(none)_ | | | | | | | | | |
 
 ## Position Rules
 
@@ -54,6 +52,9 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| HUBC | $2.06 | $1.98 | -$3.84 | -3.9% | 1 | None | Grade None premarket exit; AH peak $2.19 faded, PM peak $2.11 |
+| WCT | $1.94 | $1.53 | -$20.91 | -21.1% | 1 | D - 1-for-400 reverse split | Hard stop ($1.65) breached overnight; choppy AH, faded into PM |
+| CRVO | $3.64 | $3.19 | -$12.15 | -12.4% | 1 | None - Jun 10 dilution overhang | Grade None premarket exit; PM peak $3.74 (+52.7%) faded, entry left no profit |
 | RKDA | $1.26 | $1.04 | -$17.38 | -17.5% | 1 | None - low-float speculative pump | Grade None premarket exit; stop ($1.13) breached overnight, round-tripped AH base, PM high only $1.07 |
 | SKYQ | $2.28 | $1.65 | -$27.09 | -27.6% | 1 | None - Macro oil/Iran sector beta | Grade None, stop ($2.05) breached overnight; round-tripped AH spike ($3.58 peak before entry), PM high only $1.80 |
 | MSW | $3.24 | $3.53 | +$8.70 | +9.0% | 1 | C - Acquisition close + dilutive notes | Grade C premarket exit at profit; AH peak $5.18 was best window, faded into PM |
@@ -64,5 +65,3 @@ Based on historical data (17 winners tracked):
 | BNZI | $4.61 | $3.53 | -$24.84 | -23.4% | 2 | B - Debt elimination | Hard stop breached, overnight gap down |
 | CODX | $2.50 | $1.77 | -$29.20 | -29.2% | 2 | B - Ebola testing strategy | Hard stop breached, collapsed in premarket |
 | AMST | $1.17 | $2.62 | +$123.25 | +124% | 1 | B - Enterprise customer win | Trail stop hit at $2.89 after $3.40 peak |
-| TRNR | $1.31 | $1.07 | -$19.68 | -18.3% | 1 | B - Q1 earnings beat | Hard stop breached, faded from $1.64 AH peak |
-| FOXX | $5.62 | $4.74 | -$14.96 | -15.7% | 1 | None | Hard stop breached, peaked at $6.10 (+8.5%) then overnight fade |
