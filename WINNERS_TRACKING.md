@@ -6,8 +6,9 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-12 | BYAH | None (low-float pump, Day −15% dead-cat) | +121.8% ($2.75 AH) | $3.58 | $1.47 | Day 4 - faded to $1.47 from $3.58 (below original $0.84... well below PM peak); no catalyst, unwound |
-| 2026-06-16 | CRVO | None (late AH spike, Jun 10 dilution) | +53.9% ($3.77 AH) | $3.74 (so far) | $3.74 | 🆕 Day 1 - AH→PM winner; caught & paper-traded @ $3.64; 4.8M float; held AH→PM |
+| 2026-06-16 | CRVO | None (late AH spike, Jun 10 dilution) | +53.9% ($3.77 AH) | $3.74 | $4.05 | Day 2 - 🚀 still running: $4.05 (+63% from $2.48) after our PM exit; low-float multi-day runner |
+| 2026-06-17 | LNAI | C — 8-K Nasdaq bid-price compliance | +146.0% ($6.42 AH) | $7.12 (so far) | $6.82 | 🆕 Day 1 - AH→PM winner; caught & paper-traded @ $5.80; 2.9M float; clean BUILD→hold→PM gap |
+| 2026-06-17 | NIVF | C — note/warrant buyback (anti-dilution) | +65.1% ($0.96 AH) | $1.55 (so far) | $1.43 | 🆕 Day 1 - AH→PM winner; caught & paper-traded @ $0.81; 568K float; late AH spike→PM explosion |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -44,6 +45,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-06-10 | MSW | C — acquisition close + dilutive notes | $5.18 | — | — | $1.25 | Day 6: Faded to base; sold @ $3.53 (+9%) — good exit |
 | 2026-06-11 | GLXG | None (PM-only squeeze) | — | $4.56 | $0.98 | $1.46 | Day 5: Crashed -79%, partial bounce to $1.46 |
 | 2026-06-11 | TMDE | A (stale Jun 8 bioenergy MOA) | $1.66 | $1.49 | $0.91 | $0.87 | Day 5: Faded below base, no follow-through |
+| 2026-06-12 | BYAH | None (low-float pump, Day −15% dead-cat) | $2.75 | — | $3.58 | $1.50 | Day 5: Faded to $1.50 from $3.58 peak; no catalyst, fully unwound |
 
 ## Patterns Observed
 
