@@ -106,3 +106,17 @@ $   0.55 │███████          ██
 - **CRE fade-rule false negative:** the one notable miss. AH faded (skip per rule) then PM-gapped +90%. First clear case of an AH-fader re-exploding in PM. Watch for repeats — if the pattern recurs, the SPIKE→FADE skip may need a "but re-check at PM open" exception.
 - **PM-only-gapper tally unchanged** (CIIT, GLXG, TDIC). Today's biggest mover was an AH→PM continuation — a point in favor of the AH strategy being competitive with PM-only gappers.
 - No CEILING-OVERRIDE or DEAD-CAT-OVERRIDE watch candidates were flagged last night (LNAI Total% +122% was under the +150% ceiling; SDOT never reclaimed above its close). Nothing to follow up on those datasets today.
+
+## Position Evaluation — 10:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| LNAI | $5.80 | $6.43 | +10.9% | $7.12 | 1 | C | SELL | Grade C premarket exit at profit; PM pulse, +$10.71 |
+| NIVF | $0.81 | $1.36 | +67.9% | $1.55 | 1 | C | SELL | Grade C premarket exit at profit; PM pulse, +$67.65 |
+
+**Actions taken:**
+- SELL LNAI 17 sh @ $6.43 → +$10.71 (+10.9%). Cost $98.60 → proceeds $109.31. Grade C premarket exit.
+- SELL NIVF 123 sh @ $1.36 → +$67.65 (+67.9%). Cost $99.63 → proceeds $167.28. Grade C premarket exit.
+- Both moved to Closed Positions. No open positions remaining.
+
+**Session realized P&L: +$78.36** (LNAI +$10.71, NIVF +$67.65)

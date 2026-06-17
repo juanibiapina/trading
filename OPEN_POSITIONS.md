@@ -6,8 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| LNAI | 2026-06-16 | $5.80 | 17 | $98.60 | C | 8-K: regained Nasdaq $1.00 bid-price compliance (1-yr Panel monitor) | $5.22 (-10%) | Exit premarket | $6.42 (AH, pre-entry) |
-| NIVF | 2026-06-16 | $0.81 | 123 | $99.63 | C | Repurchase & Forbearance Agreement: buy back all convertible notes + warrants from key investor (anti-dilution, Jun 16) | $0.73 (-10%) | Exit premarket | $0.96 (AH, pre-entry) |
+| _(none)_ | | | | | | | | | |
 
 ## Position Rules
 
@@ -53,6 +52,8 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| LNAI | $5.80 | $6.43 | +$10.71 | +10.9% | 1 | C - Nasdaq bid-price compliance | Grade C premarket exit at profit; PM peak $7.12 (+22.8%), exited on PM pulse |
+| NIVF | $0.81 | $1.36 | +$67.65 | +67.9% | 1 | C - note/warrant buyback (anti-dilution) | Grade C premarket exit at profit; PM peak $1.55 (+91%), exited on PM pulse |
 | HUBC | $2.06 | $1.98 | -$3.84 | -3.9% | 1 | None | Grade None premarket exit; AH peak $2.19 faded, PM peak $2.11 |
 | WCT | $1.94 | $1.53 | -$20.91 | -21.1% | 1 | D - 1-for-400 reverse split | Hard stop ($1.65) breached overnight; choppy AH, faded into PM |
 | CRVO | $3.64 | $3.19 | -$12.15 | -12.4% | 1 | None - Jun 10 dilution overhang | Grade None premarket exit; PM peak $3.74 (+52.7%) faded, entry left no profit |
