@@ -44,6 +44,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close; if only 23:00 candidate exceeds 150%, wait for later scans (late-building candidates often have better entry points). **Ceiling-override watch:** candidates that exceed 150% but show BUILD-and-hold (AH high after 17:00 ET, holding within ~20% of high across ≥2 scans, VRatio >5x) are still skipped but flagged with a hypothetical entry for data collection.
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
 - **PM-only gapper tracker:** each morning eval classifies the biggest raw PM mover as an AH→PM continuation (detectable) or a PM-only gapper (flat/down in AH, undetectable), with a running tally. PM-only gappers are a structural blind spot of the AH→PM strategy, not a detection-baseline failure (data collection: CIIT Jun 10, GLXG Jun 11, TDIC Jun 16)
+- **Fade-rule false-negative tracker:** each morning eval records any candidate skipped on the SPIKE→FADE / early-peak-fade rule that then re-exploded in premarket (PM peak above its AH peak and above a profitable entry), with a running tally. A single case does not justify relaxing the fade rule; only a recurring pattern (≥4/5) would (data collection: CRE Jun 17, AH +48% faded → PM +90%)
 
 ## Modifiable Files
 
@@ -55,6 +56,23 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-06-17 — Instrument Fade-Rule False-Negative Tracker (CRE PM Re-Explosion)
+
+**Context:** June 16→17 was the **best scanner night on record**: both of the morning's biggest movers (LNAI +173%, NIVF +166%) were detected AND traded. LNAI cleared the 2-AH-scan gate at 23:30 CET (+20.9% → +103.9%) on a clean BUILD-and-hold and was entered at $5.80; NIVF cleared at 00:30 CET (568K float, anti-dilution catalyst) entered at $0.81. Both were sold green in the premarket pulse (LNAI +10.9%, NIVF +67.9%; session realized +$78.36). The BUILD-and-hold + 2-scan + hold-vs-fade logic selected both correctly and rejected every fader (MYSE, FLZH, GDHG all faded into PM as predicted). Detection ticked to 87.5% (28/32), selection to 62.5% (20/32). The one notable miss was **CRE**: it spiked to an AH peak $4.65 (+48%) at 17:30 ET then faded steadily (correctly skipped on the SPIKE→FADE rule), but **re-exploded in premarket to $5.99 (+90%)** — its PM peak exceeded its AH peak. This is the first clear case of an AH-fader re-exploding in PM, a potential false negative of the fade-skip rule. The morning eval recommended tracking repeats before deciding whether the rule needs a PM-open re-check exception. No detection or selection gap to fix (the scanner did everything right), so this is pure instrumentation, mirroring the proven ceiling-override / dead-cat-override / PM-only-gapper watch pattern.
+
+**Evaluation of previous changes:**
+- 2026-06-16 Instrument PM-only gapper frequency (TDIC): **Working.** The June 17 eval ran the classification on its biggest raw mover (LNAI, +172.9%) and correctly logged it as an **AH→PM continuation** (moved +146% in AH, fully detectable and traded), explicitly leaving the PM-only tally unchanged (CIIT, GLXG, TDIC). The instrumentation produced its first data point exactly as designed, and the point favors the AH strategy being competitive (the night's biggest mover was a continuation we caught).
+- 2026-06-12 Instrument dead-cat-override watch (BYAH): **Insufficient data.** SDOT (Day -63.1% crash, AH bounce to Total -35%) appeared all night but never reclaimed above its regular close, so no DEAD-CAT-OVERRIDE WATCH was flagged. The eval correctly logged nothing to tally. Watch remains open.
+- 2026-06-11 Quantify the early-peak base-hold exception (within ~20% of AH high): **Tangentially supportive.** NIVF was an early-peaker (AH high $0.96 at 17:45 ET) entered at $0.81, -14.6% off its high (inside the 20% band) on a holding base, and won big (+67.9%). The rule correctly admitted it rather than misclassifying it as a fade. No deep-collapse-low-rebuild candidate appeared to exercise the skip side. Threshold behaved correctly on the admit side.
+- 2026-06-09 Ceiling-override watch for BUILD-and-hold: **Insufficient data (still open).** LNAI's Total% +122% was under the +150% ceiling; no qualifying >150% BUILD-and-hold candidate appeared. Nothing to tally. Watch remains open.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — Added a "Fade-rule false-negative tracking" instruction to Step 4 (Scanner Diagnostic). Each morning, identify any candidate skipped on the SPIKE→FADE / early-peak-fade rule that then re-exploded in premarket (PM peak above its AH peak and above a profitable hypothetical entry), and record it in a running tally with hypothetical AH-entry→PM-peak P&L, seeded with CRE. Explicitly states a single case does not justify relaxing the rule (the fade rule correctly skipped MYSE/FLZH/GDHG the same night); only a recurring pattern (≥4/5 re-exploding) would warrant a PM-open re-check exception.
+   - Why: CRE is the first clean case of an AH-fader re-exploding in PM, and it was noted ad hoc in the Jun 17 log with no running count. Without a tally we cannot tell whether AH-faders that re-explode are a recurring exploitable pattern or a one-off. Instrumenting builds the dataset without changing the SPIKE→FADE rule or risking false positives (the rule still saved capital on three faders the same night).
+   - Hypothesis: Over the next 2–4 weeks the morning eval logs each AH-fader→PM-re-explosion case with hypothetical P&L, accumulating a tally. Measurable: (1) the next night a fade-skipped candidate re-explodes in PM, the eval records a tracker row; (2) after ~15 sessions the tally shows how often fade-skips are false negatives. If ≥4/5 of fade-skipped names re-explode in PM, it argues for a PM-open re-check exception (a rule decision left to the user); if they stay rare, the flat SPIKE→FADE skip stands.
+
+**Updated process:** Added the fade-rule false-negative tracker to the morning evaluation diagnostics (Current Process list above).
 
 ### 2026-06-16 — Instrument PM-Only Gapper Frequency (TDIC Blind Spot)
 
