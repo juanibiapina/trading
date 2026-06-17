@@ -135,6 +135,37 @@ No open positions. LNAI and NIVF both closed at the 10:30 CET evaluation (Grade 
 |--------|-------------|------------|-----------------|----------------|--------|
 | LPA | $5.21 | 23:00 CET | 19 | B | $145M asset sale (Lima logistics park to FIBRA Prime); cleared 2-AH-scan gate, holding within ~7% of AH high, float 5.1M, VRatio 6.4-7.7x |
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**AH open ~1.5h.** LPA already entered at 23:00.
+
+Scanner returned **10 AH hits**:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LPA | [TV](https://www.tradingview.com/chart/?symbol=LPA) | $3.14 | -6.5% | +65.5% | $5.20 | +54.6% | 6.7M | 871K | 7.7x | 5.1M | Real Estate Development |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.60 | -3.0% | +10.0% | $1.76 | +6.7% | 6.4M | 1.2M | 5.3x | 1.5M | Electronic Production Equipment |
+| TGE | [TV](https://www.tradingview.com/chart/?symbol=TGE) | $1.08 | +12.5% | +6.5% | $1.15 | +19.8% | 4.9M | 1.6M | 3.0x | 44.2M | Financial Conglomerates |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.20 | -20.0% | +20.8% | $1.45 | -3.3% | 3.8M | 17.5M | 0.2x | 1.0M | Household/Personal Care |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.73 | -3.5% | +16.5% | $3.18 | +12.4% | 2.7M | 585K | 4.6x | 475K | Pharmaceuticals: Other |
+| HAO | [TV](https://www.tradingview.com/chart/?symbol=HAO) | $1.08 | +1.9% | +5.8% | $1.14 | +7.8% | 1.7M | 2.0M | 0.8x | 2.2M | Advertising/Marketing Services |
+| FTHM | [TV](https://www.tradingview.com/chart/?symbol=FTHM) | $1.11 | +75.4% | +7.2% | $1.19 | +88.0% | 1.6M | 9.0M | 0.2x | 19.3M | Packaged Software |
+| BIRD | [TV](https://www.tradingview.com/chart/?symbol=BIRD) | $5.48 | +39.1% | +7.5% | $5.89 | +49.5% | 634K | 4.9M | 0.1x | 5.7M | Apparel/Footwear Retail |
+| SPRO | [TV](https://www.tradingview.com/chart/?symbol=SPRO) | $2.11 | -23.8% | +6.6% | $2.25 | -18.8% | 232K | 2.0M | 0.1x | 42.9M | Biotechnology |
+| NRSN | [TV](https://www.tradingview.com/chart/?symbol=NRSN) | $0.70 | +0.9% | +7.1% | $0.76 | +8.0% | 185K | 171K | 1.1x | 23.9M | Pharmaceuticals: Major |
+
+**New this scan: HAO, BIRD, NRSN** — all AH change <10% (5.8%, 7.5%, 7.1%), fail the >10% gate. No catalyst search required (search budget reserved for >10% AH movers).
+- **HAO** ($1.14, +5.8% AH, 2.2M float) — low float but thin AH (VRatio 0.8x) and small move. Noise.
+- **BIRD** ($5.89, +7.5% AH, Day +39.1%, 5.7M float) — regular-session runner (Day +39%); AH carry only +7.5% on thin AH volume (VRatio 0.1x). Not a fresh AH catalyst move.
+- **NRSN** ($0.76, +7.1% AH, 23.9M float) — small move, high float, thin volume.
+
+**Prior candidates:**
+- **LPA ✅ HOLDING** — entered $5.21 at 23:00; now $5.20 (+65.5% AH), flat at entry across the 23:00→23:30 scans. Volume still building (4.9M → 6.7M AH vol, VRatio 7.7x). BUILD-and-hold thesis intact. Position unchanged.
+- **BYAH — Skip (confirmed dead-cat).** Now +20.8% AH but declining from 23:00's +54.2%; Total% -3.3% (still below close), Day% -20% (below -15% gate). AH% falling and never reclaimed above close = no dead-cat-override. Fails Day% gate regardless.
+- **LNKS, TGE, ATPC, FTHM, SPRO** — unchanged from prior scans; all fading or failing gates (LNKS +10% but SPIKE→FADE, TGE/SPRO high float + fade, ATPC SPIKE→FADE, FTHM regular runner thin AH).
+
+**No new entries.** No new candidate cleared the >10% AH / 2-scan / Day% gates. LPA remains the only position.
+
 ## Scan 23:00 CET (5:00 PM ET)
 
 **AH open ~1h. First entry-eligible scan of the night** (learning-phase rule: no entries before 23:00 CET).
