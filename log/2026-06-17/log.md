@@ -135,6 +135,14 @@ No open positions. LNAI and NIVF both closed at the 10:30 CET evaluation (Grade 
 |--------|-------------|------------|-----------------|----------------|--------|
 | _none yet_ | | | | | Regular-session scan only; AH not open |
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**AH open.** First after-hours scan of the night. Observation-only per learning-phase rule (no entries before 23:00 CET).
+
+Scanner returned **0 AH hits**. None of the 21:30 regular-session watch candidates (EHGO, CIIT, ICCM, VIIQ, CFOR, EMSKF, YMAT, RBLK) carried into the after-hours scan with qualifying volume/change at AH open. The thin-print names (ICCM, VIIQ, CFOR, EMSKF, YMAT, RBLK) appear to have been illiquid regular-session prints that didn't continue. EHGO and CIIT (the two real-volume names) also did not register in the AH scan.
+
+No candidates. Re-evaluate at 22:30 and 23:00 CET.
+
 ## Scan 21:30 CET (3:30 PM ET)
 
 **Regular session still open** (AH opens 22:00 CET / 4:00 PM ET). Watch-only per regular-session caution rule — no entries. Candidates flagged below only enter if they reappear in an AH scan (22:00+ CET) with sustained momentum.
