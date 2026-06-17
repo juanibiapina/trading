@@ -135,6 +135,28 @@ No open positions. LNAI and NIVF both closed at the 10:30 CET evaluation (Grade 
 |--------|-------------|------------|-----------------|----------------|--------|
 | _none yet_ | | | | | Regular-session scan only; AH not open |
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**AH open ~30 min.** Observation-only per learning-phase rule (no entries before 23:00 CET).
+
+Scanner returned **5 AH hits**:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LPA | [TV](https://www.tradingview.com/chart/?symbol=LPA) | $3.14 | -6.5% | +59.2% | $5.00 | +48.8% | 493K | 78K | 6.4x | 5.1M | Real Estate Development |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.60 | -3.0% | +38.1% | $2.21 | +33.9% | 4.2M | 957K | 4.4x | 1.5M | Electronic Production Equipment |
+| TGE | [TV](https://www.tradingview.com/chart/?symbol=TGE) | $1.08 | +12.5% | +18.5% | $1.28 | +33.3% | 2.9M | 1.4M | 2.1x | 44.2M | Financial Conglomerates |
+| NXGL | [TV](https://www.tradingview.com/chart/?symbol=NXGL) | $0.61 | +15.1% | +6.4% | $0.65 | +22.4% | 51K | 226K | 0.2x | 7.1M | Chemicals: Specialty |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.73 | -3.5% | +8.9% | $2.97 | +5.0% | 116K | 264K | 0.4x | 475K | Pharmaceuticals: Other |
+
+**AH trajectory check (check-prices.py --ah-history):**
+- **LPA** — $3.14 → jumped to $5.00 at 16:10, peaked **$5.60 (+66.7%) at 16:25 ET**, holding $5.59. **BUILD pattern**, real volume (VRatio 6.4), 5.1M float. Best candidate of the night so far — watch for 23:00 confirmation.
+- **LNKS** — peaked $2.31 (+40%) at 16:05 ET, faded to $2.06 (+24.9%) by 16:30. **SPIKE→FADE** so far. Prior winner (May), 1.5M float — watch whether it rebuilds.
+- **TGE** — peaked $1.40 (+45.8%) at 16:05 ET, faded to $1.25 (+30.2%) by 16:30. **SPIKE→FADE**, 44.2M float (high).
+- **NXGL / ATPC** — thin AH volume (VRatio 0.2-0.4x), small AH change. Noise unless volume builds.
+
+No entries (observation-only). LPA is the lone BUILD candidate; need a 2nd qualifying AH scan (≥10% AH) before any entry at 23:00+. Re-evaluate at 23:00 CET.
+
 ## Scan 22:00 CET (4:00 PM ET)
 
 **AH open.** First after-hours scan of the night. Observation-only per learning-phase rule (no entries before 23:00 CET).
