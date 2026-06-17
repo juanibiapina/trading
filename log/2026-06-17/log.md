@@ -135,6 +135,36 @@ No open positions. LNAI and NIVF both closed at the 10:30 CET evaluation (Grade 
 |--------|-------------|------------|-----------------|----------------|--------|
 | LPA | $5.21 | 23:00 CET | 19 | B | $145M asset sale (Lima logistics park to FIBRA Prime); cleared 2-AH-scan gate, holding within ~7% of AH high, float 5.1M, VRatio 6.4-7.7x |
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**AH open ~2.5h.** LPA holding (entered 23:00). Observation for new entries.
+
+Scanner returned **9 AH hits**:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LPA | [TV](https://www.tradingview.com/chart/?symbol=LPA) | $3.14 | -6.5% | +64.0% | $5.15 | +53.3% | 8.5M | 1.1M | 7.7x | 5.1M | Real Estate Development |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.60 | -3.0% | +22.8% | $1.97 | +19.1% | 8.5M | 1.3M | 5.5x | 1.5M | Electronic Production Equipment |
+| TGE | [TV](https://www.tradingview.com/chart/?symbol=TGE) | $1.08 | +12.5% | +10.3% | $1.19 | +24.1% | 5.1M | 1.6M | 3.2x | 44.2M | Financial Conglomerates |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.20 | -20.0% | +32.5% | $1.59 | +6.0% | 4.6M | 17.6M | 0.3x | 1.0M | Household/Personal Care |
+| FTHM | [TV](https://www.tradingview.com/chart/?symbol=FTHM) | $1.11 | +75.4% | +8.1% | $1.20 | +89.6% | 2.0M | 9.1M | 0.2x | 19.3M | Packaged Software |
+| SPRO | [TV](https://www.tradingview.com/chart/?symbol=SPRO) | $2.11 | -23.8% | +7.6% | $2.27 | -18.1% | 265K | 2.0M | 0.1x | 42.9M | Biotechnology |
+| DWTX | [TV](https://www.tradingview.com/chart/?symbol=DWTX) | $1.49 | -0.7% | +11.4% | $1.66 | +10.7% | 257K | 105K | 2.4x | 8.7M | Pharmaceuticals: Major |
+| CTNT | [TV](https://www.tradingview.com/chart/?symbol=CTNT) | $1.58 | -1.6% | +9.1% | $1.73 | +7.5% | 187K | 971K | 0.2x | 3.0M | Engineering & Construction |
+| LICN | [TV](https://www.tradingview.com/chart/?symbol=LICN) | $2.75 | -19.6% | +6.9% | $2.94 | -14.0% | 60K | 551K | 0.1x | 16.3M | Misc Commercial Services |
+
+**New this scan: DWTX, CTNT.**
+- **DWTX** ($1.66, +11.4% AH, 8.7M float, Pharma) — scanner snapshot >10% but AH history exposes it as a **single thin-print spike**: chopped +5-12% for ~2h, one bar to $2.03 (+35.3%) at 18:00, then immediately collapsed to $1.47 (**-2.0%, below prev close**) by 18:25-18:30. The +11.4% reading is stale. Fails ≥2-AH-scan gate (first appearance) AND now trading below close. No real volume behind the spike. Skip (stale single-print fade, below close). Catalyst search skipped — already disqualified (faded below close, fails 2-scan gate).
+- **CTNT** ($1.73, +9.1% AH, 3.0M float) — low float but single-bar spike $1.79 (+11.2%) at 18:05 faded to $1.64-1.69; sustained AH <10%, thin volume (VRatio 0.2x). Skip (under 10% gate, thin fade).
+
+**Prior candidates:**
+- **LPA ✅ HOLDING** — open position (entered $5.21 at 23:00). Now $5.06-5.15 (+50-53% AH), settled after building to $5.40 (+60.7%) at 18:00. Within ~10% of AH high $5.59. Volume still building (8.5M AH, VRatio 7.7x). BUILD-and-hold thesis intact. Position unchanged.
+- **YMAT — Skip (2-scan gate, confirmed).** Was WATCH for this scan. AH history shows it held its base (peaked $0.87 +125% at 17:40 from $0.39 prior close, holding $0.77-0.78 = ~+100%), but it **dropped off the scanner this scan** = no 2nd qualifying AH scan registered. Thin AH volume (VRatio 0.1x), regular-session explosion (Day +94%) with thin AH carry. Fails the ≥2-AH-scan gate. Skip.
+- **LNKS — Skip (SPIKE→FADE, confirmed).** Scanner +22.8% is a partial rebuild; AH peak was $2.31 (+40%) at 16:05 ET (first bar), never reclaimed. SPIKE→FADE 0/10+ for PM continuation. Skip.
+- **TGE, BYAH, FTHM, SPRO, LICN** — unchanged: TGE 44.2M float + fade; BYAH Day% -20% (below gate), dead-cat (Total +6%, never sustained reclaim across ≥2 AH scans); FTHM regular runner thin AH; SPRO Total% -18.1% negative + 42.9M float; LICN Day -19.6% below gate, Total negative.
+
+**No new entries.** All new candidates are thin single-print fades or fail the 2-scan gate. YMAT held its base but never registered a 2nd qualifying scan. LPA remains the only open position, holding within ~10% of its AH high.
+
 ## Scan 00:00 CET (6:00 PM ET)
 
 **AH open ~2h.** LPA entered at 23:00 (open position). Observation for new entries.
