@@ -124,3 +124,38 @@ $   0.55 │███████          ██
 ## Position Evaluation — 14:30 CET
 
 No open positions. LNAI and NIVF both closed at the 10:30 CET evaluation (Grade C premarket exits at profit). Nothing to evaluate.
+
+---
+
+# Post-Market Screening - 2026-06-17
+
+## Paper Trades
+
+| Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
+|--------|-------------|------------|-----------------|----------------|--------|
+| _none yet_ | | | | | Regular-session scan only; AH not open |
+
+## Scan 21:30 CET (3:30 PM ET)
+
+**Regular session still open** (AH opens 22:00 CET / 4:00 PM ET). Watch-only per regular-session caution rule — no entries. Candidates flagged below only enter if they reappear in an AH scan (22:00+ CET) with sustained momentum.
+
+Scanner returned 55 regular-session hits. Most high-% movers have tiny 5-min volume (thin/illiquid prints — ICCM 170 sh, VIIQ 300 sh, CFOR 400 sh, EMSKF 500 sh, YMAT 650 sh) and are not reliable signals. Notable candidates with real volume or extreme moves:
+
+| Ticker | Chart | Price | Day% | 5mVol | Avg5m | IRVol | Float | MCap | Industry |
+|--------|-------|-------|------|-------|-------|-------|-------|------|----------|
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $2.58 | +95.5% | 47K | 113K | 780.5 | 1.3M | $2.7M | Wholesale Distributors |
+| CIIT | [TV](https://www.tradingview.com/chart/?symbol=CIIT) | $0.64 | +45.2% | 54K | 70K | 3.0 | 1.3M | $2.3M | Air Freight/Couriers |
+| ICCM | [TV](https://www.tradingview.com/chart/?symbol=ICCM) | $6.47 | +203.8% | 170 | 328K | 1313.6 | 1.2M | $6.0M | Medical Specialties |
+| VIIQ | [TV](https://www.tradingview.com/chart/?symbol=VIIQ) | $1.00 | +376.2% | 300 | 432 | 0.9 | 2.1M | $2.1M | Financial Conglomerates |
+| CFOR | [TV](https://www.tradingview.com/chart/?symbol=CFOR) | $2.00 | +300.0% | 400 | 408 | 0.9 | 3.7M | $24.4M | Misc Commercial Services |
+| EMSKF | [TV](https://www.tradingview.com/chart/?symbol=EMSKF) | $0.50 | +233.3% | 500 | 1K | 1.0 | 11.4M | $1.9M | Precious Metals |
+| YMAT | [TV](https://www.tradingview.com/chart/?symbol=YMAT) | $0.94 | +143.9% | 650 | 1.6M | 43.5 | 7.9M | $7.7M | Electrical Products |
+| RBLK | [TV](https://www.tradingview.com/chart/?symbol=RBLK) | $1.60 | +110.1% | 500 | 530 | 0.8 | 596K | $956K | Packaged Software |
+
+**Watch — pending AH confirmation:**
+- **EHGO** ($2.58, +95.5%, 1.3M float) — best regular-session signal: real volume (47K 5m), low float, strong move. Watch for AH carry-through.
+- **CIIT** ($0.64, +45.2%, 1.3M float) — real volume (54K 5m), low float. Note: CIIT was a prior PM-only gapper in earlier retrospectives; watch AH behavior.
+- **ICCM** ($6.47, +203.8%) — huge IRVol but VChg -100% (fading) and only 170 sh in last 5m. Likely halt/thin print. Watch only if AH shows real volume.
+- **VIIQ / CFOR / EMSKF / YMAT / RBLK** — extreme % moves on negligible volume (300-650 sh). Treat as noise unless AH brings genuine volume.
+
+No paper trades entered (regular session). Re-evaluate at 22:00+ CET AH scans.
