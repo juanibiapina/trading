@@ -135,6 +135,43 @@ No open positions. LNAI and NIVF both closed at the 10:30 CET evaluation (Grade 
 |--------|-------------|------------|-----------------|----------------|--------|
 | LPA | $5.21 | 23:00 CET | 19 | B | $145M asset sale (Lima logistics park to FIBRA Prime); cleared 2-AH-scan gate, holding within ~7% of AH high, float 5.1M, VRatio 6.4-7.7x |
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**AH open ~2h.** LPA entered at 23:00 (open position). Observation for new entries.
+
+Scanner returned **15 AH hits**:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LPA | [TV](https://www.tradingview.com/chart/?symbol=LPA) | $3.14 | -6.5% | +60.8% | $5.05 | +50.3% | 7.6M | 984K | 7.7x | 5.1M | Real Estate Development |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.60 | -3.0% | +24.4% | $1.99 | +20.6% | 6.8M | 1.3M | 5.4x | 1.5M | Electronic Production Equipment |
+| TGE | [TV](https://www.tradingview.com/chart/?symbol=TGE) | $1.08 | +12.5% | +13.0% | $1.22 | +27.1% | 5.0M | 1.6M | 3.1x | 44.2M | Financial Conglomerates |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.20 | -20.0% | +27.5% | $1.53 | +2.0% | 4.3M | 17.6M | 0.2x | 1.0M | Household/Personal Care |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.73 | -3.5% | +6.2% | $2.90 | +2.5% | 2.8M | 597K | 4.7x | 475K | Pharmaceuticals: Other |
+| YMAT | [TV](https://www.tradingview.com/chart/?symbol=YMAT) | $0.75 | +94.3% | +15.6% | $0.87 | +124.5% | 2.1M | 18.0M | 0.1x | 7.9M | Electrical Products |
+| FTHM | [TV](https://www.tradingview.com/chart/?symbol=FTHM) | $1.11 | +75.4% | +6.3% | $1.18 | +86.4% | 1.8M | 9.0M | 0.2x | 19.3M | Packaged Software |
+| BIRD | [TV](https://www.tradingview.com/chart/?symbol=BIRD) | $5.48 | +39.1% | +5.2% | $5.77 | +46.4% | 1.3M | 5.0M | 0.3x | 5.7M | Apparel/Footwear Retail |
+| VIVK | [TV](https://www.tradingview.com/chart/?symbol=VIVK) | $0.51 | -3.6% | +10.8% | $0.56 | +6.8% | 762K | 13.6M | 0.1x | 4.2M | Chemicals: Specialty |
+| NXGL | [TV](https://www.tradingview.com/chart/?symbol=NXGL) | $0.61 | +15.1% | +6.4% | $0.65 | +22.4% | 458K | 269K | 1.7x | 7.1M | Chemicals: Specialty |
+| CREG | [TV](https://www.tradingview.com/chart/?symbol=CREG) | $2.64 | +27.5% | +5.3% | $2.78 | +34.3% | 357K | 1.6M | 0.2x | 2.7M | Electric Utilities |
+| SPRO | [TV](https://www.tradingview.com/chart/?symbol=SPRO) | $2.11 | -23.8% | +5.7% | $2.23 | -19.5% | 247K | 2.0M | 0.1x | 42.9M | Biotechnology |
+| NRSN | [TV](https://www.tradingview.com/chart/?symbol=NRSN) | $0.70 | +0.9% | +7.8% | $0.76 | +8.7% | 208K | 174K | 1.2x | 23.9M | Pharmaceuticals: Major |
+| ZCMD | [TV](https://www.tradingview.com/chart/?symbol=ZCMD) | $0.63 | -5.9% | +5.5% | $0.66 | -0.7% | 63K | 1.9M | 0.0x | 101K | Miscellaneous Commercial Services |
+| LICN | [TV](https://www.tradingview.com/chart/?symbol=LICN) | $2.75 | -19.6% | +6.9% | $2.94 | -14.0% | 59K | 551K | 0.1x | 16.3M | Miscellaneous Commercial Services |
+
+**New this scan: YMAT, VIVK, CREG, ZCMD, LICN.**
+- **YMAT** ($0.87, +15.6% AH, Total +124.5%, 7.9M float) — regular-session explosion (Day +94.3%) with modest AH carry. AH history: opened +84% (16:00), chopped +65-85% for ~1.5h, climbed to AH high $0.87 (+125%) at 17:40 ET, faded to +110% by 18:00. AH high after 17:30 and holding within ~12% of it, BUT **thin AH volume (VRatio 0.1x, 2.1M vs 18M avg)** and **first AH-scan appearance >10% → fails the ≥2-AH-scan gate**. Cannot enter tonight. Total +124.5% is under the 150 ceiling. **Skip (2-scan gate); WATCH for 00:30** — a 2nd AH scan >10% would clear the gate.
+- **VIVK** ($0.56, +10.8% AH, 4.2M float) — AH peak only +6.8% from prev close, choppy around flat, VRatio 0.1x (thin). Noise. Skip.
+- **CREG** ($2.78, +5.3% AH, 2.7M float) — yesterday's PM re-exploder, but tonight AH only +5.3% on thin volume (VRatio 0.2x). Fails >10% gate. Skip.
+- **ZCMD** ($0.66, Total -0.7%) / **LICN** ($2.94, Day -19.6%, Total -14.0%) — negative total / Day% below -15% gate, AH <10%. Skip.
+
+**Prior candidates:**
+- **LPA ✅ HOLDING** — open position (entered $5.21 at 23:00). Now $5.05 (+60.8% AH), building into close: $5.02 (17:30) → $5.13 → $5.29 → $5.39 (+60.4%) at 18:00. AH high $5.59 (+66.4%) at 16:25; current within ~10% of high and rising into the close. Volume still building (7.6M AH, VRatio 7.7x). BUILD-and-hold thesis intact. Position unchanged.
+- **LNKS — Skip (SPIKE→FADE, confirmed).** Scanner snapshot +24.4% looks like a rebuild, but AH history shows the real pattern: AH high $2.31 (+40%) at **16:05 ET** (very first bar), collapsed to $1.76 (+6.7%) by 16:35, chopped $1.76-1.86 for ~1.5h, brief bounce to $2.01 (17:30) faded back to $1.85 (+12.1%) by 18:00. Earliest-possible peak, never made new highs, chopping at a base below the high. Clears the numeric 2-scan gate but trajectory dominates: SPIKE→FADE 0/10+ for PM continuation. Not a CHAI-style hold (CHAI made a NEW high at 17:20). Skip.
+- **TGE, BYAH, ATPC, FTHM, BIRD, SPRO, NRSN, NXGL** — unchanged: TGE high float (44.2M) + fade; BYAH Day% -20% (below gate), dead-cat; ATPC faded to +6.2%; FTHM/BIRD regular runners w/ thin AH carry; SPRO Total negative + 42.9M float; NRSN/NXGL small moves + thin/high float.
+
+**No new entries.** All new candidates fail gates (2-scan, thin volume, or Day% floor). LNKS is a confirmed SPIKE→FADE skip. LPA remains the only open position. YMAT flagged WATCH for the 00:30 scan.
+
 ## Scan 23:30 CET (5:30 PM ET)
 
 **AH open ~1.5h.** LPA already entered at 23:00.
