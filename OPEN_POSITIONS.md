@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| _(none)_ | | | | | | | | | |
+| LPA | 2026-06-17 | $5.21 | 19 | $98.99 | B | $145M asset sale (Lima logistics park to FIBRA Prime REIT, ~$85M net, pending regulatory approval) | $4.43 (-15%) | hold up to 2 days | $5.59 (AH high) |
 
 ## Position Rules
 

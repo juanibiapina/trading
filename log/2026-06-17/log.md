@@ -133,7 +133,36 @@ No open positions. LNAI and NIVF both closed at the 10:30 CET evaluation (Grade 
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
-| _none yet_ | | | | | Regular-session scan only; AH not open |
+| LPA | $5.21 | 23:00 CET | 19 | B | $145M asset sale (Lima logistics park to FIBRA Prime); cleared 2-AH-scan gate, holding within ~7% of AH high, float 5.1M, VRatio 6.4-7.7x |
+
+## Scan 23:00 CET (5:00 PM ET)
+
+**AH open ~1h. First entry-eligible scan of the night** (learning-phase rule: no entries before 23:00 CET).
+
+Scanner returned **9 AH hits**:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LPA | [TV](https://www.tradingview.com/chart/?symbol=LPA) | $3.14 | -6.5% | +65.9% | $5.21 | +55.1% | 4.9M | 641K | 7.7x | 5.1M | Real Estate Development |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $1.20 | -20.0% | +54.2% | $1.85 | +23.4% | 979K | 17.2M | 0.1x | 1.0M | Household/Personal Care |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.73 | -3.5% | +17.6% | $3.21 | +13.4% | 2.3M | 543K | 4.3x | 475K | Pharmaceuticals: Other |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $1.60 | -3.0% | +16.2% | $1.86 | +12.7% | 6.0M | 1.2M | 5.2x | 1.5M | Electronic Production Equipment |
+| NXGL | [TV](https://www.tradingview.com/chart/?symbol=NXGL) | $0.61 | +15.1% | +15.9% | $0.71 | +33.3% | 218K | 243K | 0.9x | 7.1M | Chemicals: Specialty |
+| SPRO | [TV](https://www.tradingview.com/chart/?symbol=SPRO) | $2.11 | -23.8% | +8.5% | $2.29 | -17.3% | 181K | 1.9M | 0.1x | 42.9M | Biotechnology |
+| FTHM | [TV](https://www.tradingview.com/chart/?symbol=FTHM) | $1.11 | +75.4% | +6.3% | $1.18 | +86.4% | 1.2M | 9.0M | 0.1x | 19.3M | Packaged Software |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.82 | -3.6% | +6.2% | $0.87 | +2.3% | 271K | 1.3M | 0.2x | 549K | Real Estate Investment Trusts |
+| CHGG | [TV](https://www.tradingview.com/chart/?symbol=CHGG) | $1.03 | -11.2% | +5.8% | $1.09 | -6.0% | 58K | 1.2M | 0.0x | 101.9M | Misc Commercial Services |
+
+**Gate check (float<50M, >10% AH in ≥2 AH scans [22:00+ CET], Day% >-15%):**
+- **LPA ✅ ENTERED** — 22:30 +59.2%, 23:00 +65.9% (2 AH scans >10%). Float 5.1M, Day% -6.5%, Total% +55.1% (under +150% ceiling). AH peak $5.59 (+66%) at 16:25 ET, dipped to $4.65 (16:45) then rebuilt to $4.98 (17:00); current $5.21 = within ~7% of high and UP across the two AH scans ($5.00 → $5.21). Holding/building, not fading. Real volume (VRatio 6.4-7.7x). **Catalyst: $145M asset sale** — divesting Parque Logístico Lima Sur (Peru logistics park) to FIBRA Prime REIT, ~$85M net proceeds after debt, pending regulatory approval. Material for a $99M mcap company. **Grade B** (solid operational deal, pending approval — hold up to 2 days). Early-peak (16:25, before 17:30) is the one caution, but hold-vs-fade dominates and LPA is holding within 20% of high.
+  - **Entry: $5.21, 19 sh, cost $98.99.**
+- **LNKS — Skip (SPIKE→FADE).** Peaked $2.31 (+40%) at 16:05 ET, declined steadily to ~$1.78 then weak bounce to $1.86. Across AH scans: 22:30 +38.1% → 23:00 +16.2% = decline. Early peak + declining across scans = fade. SPIKE→FADE 0/10+ for PM continuation regardless of its 1.5M float / prior-winner status.
+- **BYAH — Skip (dead-cat bounce, stale catalyst).** Day% -20.0% (below -15% gate). Started AH at -20%, spiked to +27% (16:45) then faded to +5% by 17:00. Only 1 AH scan, faded — does NOT meet dead-cat-override criteria (needs AH% rising across ≥2 AH scans while reclaiming above close). Catalyst is the June 12 Star Plus Action AI partnership = 5 days stale, not today's driver. No override flag.
+- **ATPC — Skip.** Fails 2-scan gate (22:30 +8.9% below 10%, only 23:00 +17.6% qualifies) AND SPIKE→FADE (peaked $4.29 +51.6% at 16:20, faded to $3.11 by 17:00).
+- **NXGL — Skip/watch.** Fails 2-scan gate (22:30 +6.4% below 10%, only 23:00 +15.9%). Thin AH volume (VRatio 0.9). Holding +22% but needs a 2nd qualifying scan.
+- **SPRO, FTHM, WHLR, CHGG — Skip.** SPRO Total% -17.3% (negative, dead-cat, 42.9M float). FTHM AH only +6.3% (regular-session runner Day +75%, 19.3M float). WHLR/CHGG AH <7%, CHGG 101.9M float.
+
+**Entered LPA only.** One BUILD/hold candidate cleared all gates; everything else was a fade, failed the 2-scan gate, or below the Day% floor. Not a skip-all night (LPA qualified).
 
 ## Scan 22:30 CET (4:30 PM ET)
 
