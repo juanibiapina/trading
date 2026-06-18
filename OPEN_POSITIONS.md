@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| LPA | 2026-06-17 | $5.21 | 19 | $98.99 | B | $145M asset sale (Lima logistics park to FIBRA Prime REIT, ~$85M net, pending regulatory approval) | $4.43 (-15%) | hold up to 2 days | $6.39 (PM high) |
+| _none_ | | | | | | | | | |
 
 ## Position Rules
 
@@ -52,6 +52,7 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| LPA | $5.21 | $4.21 | -$19.00 | -19.2% | 1 | B - $145M asset sale (Lima logistics park) | Hard stop ($4.43) breached; PM spiked to $7.77 (+49%) at 08:00 ET then faded below stop |
 | LNAI | $5.80 | $6.43 | +$10.71 | +10.9% | 1 | C - Nasdaq bid-price compliance | Grade C premarket exit at profit; PM peak $7.12 (+22.8%), exited on PM pulse |
 | NIVF | $0.81 | $1.36 | +$67.65 | +67.9% | 1 | C - note/warrant buyback (anti-dilution) | Grade C premarket exit at profit; PM peak $1.55 (+91%), exited on PM pulse |
 | HUBC | $2.06 | $1.98 | -$3.84 | -3.9% | 1 | None | Grade None premarket exit; AH peak $2.19 faded, PM peak $2.11 |

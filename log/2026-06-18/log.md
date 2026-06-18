@@ -114,3 +114,13 @@ $   3.14 │█████
 **Actions taken:**
 - Updated LPA peak to $6.39 (PM high 08:00 ET, above prior $5.59 AH high)
 - No sells, no trail stop activated (peak P&L +22.6% < +30% threshold)
+
+## Position Evaluation — 14:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| LPA | $5.21 | $4.21 | -19.2% | $7.77 (+49%) | 1 | B | SELL | Hard stop ($4.43) breached |
+
+**Actions taken:**
+- SOLD LPA @ $4.21 (19 sh) → -$19.00 (-19.2%). Hard stop -15% ($4.43) breached. PM spiked to $7.77 (+49% from entry) at 08:00 ET but evaluation windows missed the peak; faded below stop by midday.
+- No remaining open positions.
