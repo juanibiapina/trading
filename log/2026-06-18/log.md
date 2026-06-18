@@ -104,3 +104,13 @@ $   3.14 │█████
 - **Multi-day check:** LNAI faded $7.12 PM peak → $2.85 close (PM bounce to $3.66) and NIVF $1.55 → $0.70 (PM $0.78) — both faded hard after our Jun 17 PM exits, confirming the premarket-exit discipline. CRVO Day 3: ~$3.8 PM (off its $4.52 close but still +50% above its $2.48 origin) — low-float multi-day runner continuing.
 </content>
 </invoke>
+
+## Position Evaluation — 10:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| LPA | $5.21 | $5.26 | +1.0% | $6.39 (+22.6%) | 1 | B | HOLD | Within Grade B 2-day window; peak +22.6% below +30% trail trigger; hard stop $4.43 not hit; catalyst intact |
+
+**Actions taken:**
+- Updated LPA peak to $6.39 (PM high 08:00 ET, above prior $5.59 AH high)
+- No sells, no trail stop activated (peak P&L +22.6% < +30% threshold)
