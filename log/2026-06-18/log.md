@@ -105,6 +105,37 @@ $   3.14 │█████
 </content>
 </invoke>
 
+## Scan 21:30 CET (3:30 PM ET)
+
+**Regular session — market not yet closed (closes 4:00 PM ET / 22:00 CET).** Observation only, no entries. Candidates flagged "Watch — pending AH confirmation"; only enter if they reappear in a 22:00+ CET AH scan with sustained momentum.
+
+Scanner: 55 hits. Low-float (<10M) movers worth watching into AH:
+
+| Ticker | Chart | Price | Day% | 5mVol | Avg5m | VRatio | VChg% | Float | MCap | Industry |
+|--------|-------|-------|------|-------|-------|--------|-------|-------|------|----------|
+| VIIQ | [TV](https://www.tradingview.com/chart/?symbol=VIIQ) | $1.00 | +376.2% | 300 | 432 | 0.9x | +200% | 2.1M | $2.1M | Financial Conglomerates |
+| CFOR | [TV](https://www.tradingview.com/chart/?symbol=CFOR) | $2.00 | +300.0% | 400 | 408 | 0.9x | -50% | 3.7M | $24.4M | Misc Commercial Services |
+| RBLK | [TV](https://www.tradingview.com/chart/?symbol=RBLK) | $1.60 | +110.1% | 500 | 530 | 0.8x | +400% | 596K | $956K | Packaged Software |
+| LNKS | [TV](https://www.tradingview.com/chart/?symbol=LNKS) | $2.81 | +75.6% | 100 | 498K | 93.1x | -100% | 1.5M | $5.0M | Electronic Production Equipment |
+| CDT | [TV](https://www.tradingview.com/chart/?symbol=CDT) | $1.17 | +68.8% | 279 | 806K | 1435.6x | -100% | 1.6M | $5.7M | Pharmaceuticals: Major |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $4.06 | +48.7% | 100 | 54K | 654.5x | -99.6% | 475K | $4.1M | Pharmaceuticals: Other |
+| BESS | [TV](https://www.tradingview.com/chart/?symbol=BESS) | $5.93 | +40.5% | 100 | 78K | 1.3x | -100% | 4.4M | $42.1M | Electrical Products |
+| WKSP | [TV](https://www.tradingview.com/chart/?symbol=WKSP) | $0.84 | +40.1% | 500 | 258K | 266.8x | -99.7% | 9.8M | $10.5M | Auto Parts: OEM |
+| APWC | [TV](https://www.tradingview.com/chart/?symbol=APWC) | $1.92 | +38.1% | 100 | 32K | 2525.6x | -99.6% | 3.1M | $39.6M | Telecom Equipment |
+| IHT | [TV](https://www.tradingview.com/chart/?symbol=IHT) | $1.57 | +13.0% | 23K | 28K | 775.1x | -37.2% | 3.0M | $19.2M | REIT |
+
+**Notes:**
+- Most high-% movers (LNKS, CDT, ATPC, APWC, WKSP) show 5m volume collapsing (-99% to -100%) — they spiked earlier in the day and are fading into the close, not building. Watch whether any re-ignite once AH opens.
+- LNKS already ran its course today (today's PM winner +184%); reappearing here on intraday continuation, not a fresh setup.
+- VIIQ/CFOR/RBLK posted the biggest % gains but on near-zero relative volume (VRatio <1x) — thin, illiquid, likely low-quality. Watch only.
+- No action until the 22:00+ CET AH scans confirm sustained momentum.
+
+## Paper Trades
+
+| Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
+|--------|-------------|------------|-----------------|----------------|--------|
+| _none — regular-session scan, no entries_ | | | | | |
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
