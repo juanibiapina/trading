@@ -17,8 +17,11 @@ Check whether `log/YYYY-MM-DD/process-review.md` exists before reading it. If it
 
 ### 2. Send Email
 
+Send as `zero@inboxkit.cc` via InboxKit (not from Juan's Gmail). Juan replies to
+these emails with feedback; the `check-email-replies` pulse reads those replies.
+
 ```bash
-node scripts/send-email.js \
+node scripts/send-email-inboxkit.js \
   --to juanibiapina@gmail.com \
   --subject "Trading Scanner Report - YYYY-MM-DD" \
   --body '<div style="font-family: -apple-system, Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
@@ -58,3 +61,6 @@ AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;
 - Use `&amp;` for `&`, `&mdash;` for em dashes, `&euro;` for euros
 - Color wins green (`#2e7d32`), losses red (`#c62828`)
 - Keep it short -- scannable on a phone in under 30 seconds
+- Sender is `zero@inboxkit.cc`. Invite a reply for feedback (it feeds the
+  `check-email-replies` pulse). If `STRATEGY_ROADMAP.md` has open asks for Juan,
+  surface them briefly in the email.
