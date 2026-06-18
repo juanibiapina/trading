@@ -130,6 +130,12 @@ Scanner: 55 hits. Low-float (<10M) movers worth watching into AH:
 - VIIQ/CFOR/RBLK posted the biggest % gains but on near-zero relative volume (VRatio <1x) — thin, illiquid, likely low-quality. Watch only.
 - No action until the 22:00+ CET AH scans confirm sustained momentum.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**AH scan at exactly market close (16:00 ET).** Scanner: **0 hits** — postmarket TradingView fields are empty this early (AH just opened, no AH volume/quotes yet, as documented). `check-prices.py --ah-history` also returns only yesterday's (06-17) AH bars; today's AH data not yet on Yahoo. Observation only, no entries (learning phase: no entries before 23:00 CET).
+
+Carryover watch from the 21:30 regular-session list: LNKS, ATPC, CDT, WKSP, APWC, VIIQ, CFOR, RBLK, BESS, IHT. Most were fading into the close (5m vol -99/-100%). Will re-check once AH data populates at the 22:30/23:00 scans.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
