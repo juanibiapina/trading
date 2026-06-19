@@ -45,6 +45,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Morning retrospective uses Yahoo AH history as the primary source; forced AH scans are secondary diagnostics only
 - **PM-only gapper tracker:** each morning eval classifies the biggest raw PM mover as an AH→PM continuation (detectable) or a PM-only gapper (flat/down in AH, undetectable), with a running tally. PM-only gappers are a structural blind spot of the AH→PM strategy, not a detection-baseline failure (data collection: CIIT Jun 10, GLXG Jun 11, TDIC Jun 16)
 - **Fade-rule false-negative tracker:** each morning eval records any candidate skipped on the SPIKE→FADE / early-peak-fade rule that then re-exploded in premarket (PM peak above its AH peak and above a profitable entry), with a running tally. A single case does not justify relaxing the fade rule; only a recurring pattern (≥4/5) would (data collection: CRE Jun 17, AH +48% faded → PM +90%)
+- **Scan-coverage check:** each morning eval verifies how many of the 7 scheduled evening scans actually ran (count `## Scan` sections / git commits), records `Evening scans ran: X of 7`, and keeps a coverage-failure tally in Notes. On a night the scanner did not cover the entry window, the night's winner is **not** counted as a detection miss and selection is not penalized — it is logged as a coverage failure, not a threshold gap (founding case: Jun 18–19, only 2 of 7 scans ran)
 
 ## Modifiable Files
 
@@ -56,6 +57,23 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-06-19 — Institutionalize Scan-Coverage Check (Jun 18 Cron Outage)
+
+**Context:** June 18→19 was a **coverage failure, not a detection or selection failure.** Only **2 of 7** scheduled evening scans ran (21:30 + 22:00 CET); the entire entry window (23:00–00:30 CET) was uncaptured. Session files confirm it: trading sessions exist for 19:30 and 20:00 UTC (21:30/22:00 CET), then nothing until 09:01 the next morning — the 22:30/23:00/23:30/00:00/00:30 CET crons never started a session. The crons are correctly registered (`list_crons` shows all 7) and the scanner binary is healthy (manual runs returned 22 PM / 20 AH hits at 04:22 ET), so this was a scheduler/bridge outage during 22:30–00:30 CET, which is **outside the scanner/process files this loop may edit** (scheduler.json is off-limits). No paper trade was possible; today's morning eval correctly did not increment the selection count and kept detection baseline at 88.2% (CDT, the biggest liquid mover, was on the 21:30/22:00 watch — an AH→PM continuation, not a true miss). Because the night produced no usable detection/selection signal, making threshold changes today would be guessing. Per the be-conservative rule, the one in-scope improvement is to **institutionalize detection of this failure mode** so it is quantified going forward and never silently contaminates the baseline.
+
+**Evaluation of previous changes:**
+- 2026-06-18 Add float to fade-rule false-negative tracker (LNKS): **Insufficient data (coverage failure).** The AH window was never scanned Jun 18 night, so no fade-skip could be evaluated and no new false-negative or contrast-fader float could be recorded. Tally unchanged (CRE, LNKS = 2). Instrumentation untestable this cycle, not broken.
+- 2026-06-16 Instrument PM-only gapper frequency (TDIC): **Working.** The Jun 19 eval ran the classification on its biggest *liquid* mover (CDT, +31% from close) and correctly logged it as an AH→PM continuation (on the pre-close watch), tally left unchanged (CIIT, GLXG, TDIC). It also correctly excluded WOK (+78% but 9K float) as an untradeable artifact rather than a gapper. Classifier behaved as designed even on a degraded-data morning.
+- 2026-06-12 Instrument dead-cat-override watch (BYAH): **Insufficient data (still open).** No AH scan ran, so no DEAD-CAT-OVERRIDE WATCH candidate could be flagged. Watch remains open.
+- 2026-06-09 Ceiling-override watch for BUILD-and-hold: **Insufficient data (still open).** No AH scan ran; nothing to flag or tally. Watch remains open.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — Added a "Scan coverage check (run first)" instruction at the top of Step 4 (Scanner Diagnostic). Each morning, count how many of the 7 scheduled evening scans actually ran (via `## Scan` log sections or `post-market scan` git commits), record `Evening scans ran: X of 7`, and keep a running coverage-failure tally in Notes. Explicitly instructs that on a night the scanner did not cover the entry window, the night's winner is **not** counted as a detection miss and selection is not penalized — it is logged as a coverage failure. Adds an escalation trigger: ≥2 coverage failures within ~10 sessions flags scheduler/bridge reliability for the user to investigate.
+   - Why: Jun 18's outage was caught ad hoc and thoroughly this morning, but nothing in the process formally distinguishes a coverage failure from a detection/threshold gap, and nothing tracks recurrence. Without a formal check, a future partial-coverage night could silently deflate the detection/selection baseline (making the scanner look worse than it is) or be misread as a threshold problem prompting a wrong scanner change.
+   - Hypothesis: Going forward, every morning eval logs `Evening scans ran: X of 7`. Measurable: (1) the next eval records the coverage line; (2) any future <7 night is tallied and excluded from detection-miss/selection penalties rather than guessed at; (3) if coverage failures recur (≥2 in ~10 sessions) the eval surfaces an infra-reliability flag instead of churning scanner thresholds. A clean run streak leaves the tally empty and the baseline untouched.
+
+**Updated process:** Added the scan-coverage check to the morning evaluation diagnostics (Current Process list above).
 
 ### 2026-06-18 — Add Float to Fade-Rule False-Negative Tracker (LNKS Re-Explosion)
 

@@ -88,6 +88,8 @@ For each paper trade:
 
 Run this full section on **pulse 1**. On **pulse 2 and 3**, reuse the existing scanner diagnostic unless new evidence changes the conclusion.
 
+**Scan coverage check (run first):** Before diagnosing detection, verify how many of the scheduled evening scans actually ran last night. There are **7 scheduled evening scans** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET). Count the `## Scan HH:MM CET` sections in last night's `LOG_FILE` (or `git log` commits matching `post-market scan`). Record `Evening scans ran: X of 7` in the Scanner Effectiveness section, and keep a running **coverage-failure tally** in Notes (date + how many scans ran) whenever fewer than 7 ran. A coverage failure means the entry window (23:00–00:30 CET) may have been partly or fully uncaptured. **Critical:** on a night where the scanner did not run during the entry window, do **not** count that night's winner as a detection *miss* and do **not** increment the selection count against us — there was no opportunity to detect or trade. Note it as a coverage failure instead. Founding case: Jun 18–19 (only 2 of 7 scans ran; entry window lost). If coverage failures recur (≥2 within ~10 sessions), flag in Notes that the scheduler/bridge reliability needs investigation (a infra decision left to the user) — a one-off is likely transient.
+
 **For today's winner (from Step 2), answer:**
 - Was it detectable at evening screening time (~22:15 CET)? YES / NO
 - If YES: what did it look like then? (price, volume, % gain) — why didn't we act on it?
