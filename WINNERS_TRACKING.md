@@ -6,10 +6,11 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-16 | CRVO | None (late AH spike, Jun 10 dilution) | +53.9% ($3.77 AH) | $3.74 | ~$3.8 | Day 3 - 🚀 still running: ~$3.8 PM (+50% from $2.48 origin) though off its $4.52 close; low-float multi-day runner |
-| 2026-06-17 | LNAI | C — 8-K Nasdaq bid-price compliance | +146.0% ($6.42 AH) | $7.12 PM | $2.85 (PM $3.66) | Day 2 - faded hard from $7.12 PM peak → $2.85 close; PM exit @ $6.43 was right |
-| 2026-06-17 | NIVF | C — note/warrant buyback (anti-dilution) | +65.1% ($0.96 AH) | $1.55 PM | $0.70 (PM $0.78) | Day 2 - faded $1.55 → $0.70; PM exit @ $1.36 was right |
-| 2026-06-18 | LNKS | None (repeat low-float runner, prior winner May 13) | +40.0% ($2.31 AH, faded) | $4.70 PM (+184.7%) | $4.32 | 🆕 Day 1 - AH SPIKE→FADE (skipped on fade rule) then PM-exploded +185%; fade-rule false negative #2 |
+| 2026-06-16 | CRVO | None (late AH spike, Jun 10 dilution) | +53.9% ($3.77 AH) | $3.74 | $4.66 PM | Day 4 - 🚀 still running: $4.66 PM (+10% from $4.24 close); low-float multi-day runner |
+| 2026-06-17 | LNAI | C — 8-K Nasdaq bid-price compliance | +146.0% ($6.42 AH) | $7.12 PM | ~$4.0 | Day 3 - recovered toward $4.0 from $2.85; below scan thresholds |
+| 2026-06-17 | NIVF | C — note/warrant buyback (anti-dilution) | +65.1% ($0.96 AH) | $1.55 PM | ~$0.8 | Day 3 - faded, ~$0.8; PM exit @ $1.36 was right |
+| 2026-06-18 | LNKS | None (repeat low-float runner, prior winner May 13) | +40.0% ($2.31 AH, faded) | $4.70 PM (+184.7%) | $2.98 PM | Day 2 - faded from $4.70 PM peak to ~$2.7-3.0; fade-rule false negative #2 |
+| 2026-06-19 | CDT | None (low-float 1.6M; ran +48% Jun 18 intraday) | +31% ($1.34 PM) | — | $1.34 PM | 🆕 Day 1 - weak morning, marginal winner; scanner failed before AH/entry window so no trade |
 
 ## Historical Winners (with multi-day outcome)
 
