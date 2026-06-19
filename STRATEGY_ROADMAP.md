@@ -64,7 +64,10 @@ big % move, so a volume-first trigger could front-run the price-first trigger.
 account available in Europe, so numbers reflect real fills/spreads/liquidity.
 Eventually switch the same integration to live trading.
 
-**Status:** Research / awaiting Juan's broker choice.
+**Status:** Alpaca chosen (Juan, 2026-06-19) — building integration. Blocked on
+working API keys: `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` are still `unset` in
+zero's `.envrc`. Juan said the key "should be available" but it is not populated
+yet — re-asked in the next email.
 
 **Findings:**
 - The environment already scaffolds `ALPACA_API_KEY`, `ALPACA_SECRET_KEY`,
@@ -94,6 +97,31 @@ tradable before committing.
 - Decide broker (recommend Alpaca for paper).
 - Create the paper account and add `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` to
   zero's `.envrc` (and set `ALPACA_PAPER_TRADE=1`).
+
+---
+
+## Initiative 5 — Charts in the daily email (5m + volume)
+
+**Idea (Juan, 2026-06-19):** The daily email should eventually include graphs —
+"probably 5m including volume" — for the candidates/positions it reports, not
+just text.
+
+**Status:** Research / backlog.
+
+**Findings/notes:**
+- Need a data source for 5-minute OHLCV bars. Yahoo's chart API already serves
+  5m bars (`interval=5m&range=5d`, with `includePrePost=true` for AH/PM). Alpaca
+  bars API (Initiative 2) is another source once keys land.
+- Render to PNG (e.g. lightweight candlestick + volume subplot) and attach to
+  the InboxKit email, or inline as base64. Verify InboxKit attachment support.
+- Keep it cheap: only chart the reported tickers, not the whole scan.
+
+**Rollout plan:**
+1. Prototype a 5m+volume candlestick PNG from Yahoo data for one ticker.
+2. Wire attachment into `scripts/send-email-inboxkit.js`.
+3. Add charts to the daily email for reported candidates/positions.
+
+**Needs from Juan:** nothing yet; will confirm look/format on first prototype.
 
 ---
 
@@ -152,8 +180,9 @@ requiring action (keys, decisions) will be listed in the email and here.
 
 ## Open asks for Juan (consolidated)
 
-- [ ] Initiative 2: choose broker (recommend Alpaca paper) and add
-      `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` / `ALPACA_PAPER_TRADE=1` to
-      zero's `.envrc`.
+- [ ] Initiative 2: Alpaca chosen ✓. Still need working keys — add
+      `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` / `ALPACA_PAPER_TRADE=1` to zero's
+      `.envrc` (currently `unset` on line 7). Juan thought they were available;
+      they are not populated yet.
 - [ ] Initiative 3: confirm whether to trim/retime the scan schedule once the
       audit proposes a plan.

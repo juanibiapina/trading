@@ -6,6 +6,29 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-06-19 — re: Trading Strategy Roadmap - setup done, slow rollout starting
+
+**Juan said:** "Great! I also want graphs eventually, probably 5m including
+volume. The alpaca key should be available."
+
+**Interpretation:** Two points. (1) New want: the daily email should eventually
+include charts — 5-minute candles with volume — for the candidates/positions it
+reports. (2) Broker decision resolved: go with Alpaca for paper trading, and he
+believes the API key is already provisioned.
+
+**Action:**
+- Broker choice (Initiative 2): Alpaca is approved. Updated Initiative 2 status
+  from "awaiting broker choice" to "Alpaca chosen — building integration."
+  Flagged a blocker: `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` are still `unset` in
+  zero's `.envrc` (line 7 unsets them). The key is NOT actually available yet —
+  noted as an open ask so the next email asks Juan to confirm/paste the keys.
+- Charts in email: added Initiative 5 (5m + volume chart attachments in the
+  daily email) to STRATEGY_ROADMAP.md, status research/backlog. Alpaca's bars
+  API can supply the 5m+volume data once keys land, so this dovetails with
+  Initiative 2.
+
+---
+
 ### 2026-06-18 — initial strategy direction (chat, not email)
 
 **Juan said:** Time to start changing the strategy, slowly, building evidence
