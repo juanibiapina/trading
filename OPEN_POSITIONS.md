@@ -8,6 +8,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
 | VTAK | 2026-06-22 | $1.49 | 67 | $99.83 | B | Patent allowance PR (heart-failure IP), GlobeNewswire | -15% ($1.27) | premarket peak | $1.53 (AH) |
 | SKYQ | 2026-06-22 | $1.87 | 53 | $99.11 | C | Nevada refinery production phase PR (ACCESS Newswire) | -10% ($1.68) | premarket peak | $1.93 (AH) |
+| EHGO | 2026-06-22 | $3.85 | 25 | $96.25 | C | Vague AI-partnership sentiment (StocksToTrade); dilution overhang (convert default, public offering, 16:1 RS) | -10% ($3.47) | premarket peak | $4.00 (AH) |
 
 ## Position Rules
 

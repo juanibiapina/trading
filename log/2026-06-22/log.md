@@ -98,9 +98,42 @@ First AH bars available. **Observation only** (learning phase: no entries before
 
 Next scan 23:30 CET to track VTAK/SKYQ momentum and re-check EHGO.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Scanner returned 4 AH hits (VTAK held, SUGP/TUSK already skipped, LFMD new). Prior watch candidates tracked via AH history. **Held positions VTAK + SKYQ from 23:00 unchanged here (management handled in premarket).**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.87 | +3.5% | +69.0% | $1.47 | +75.0% | 19.1M | 2.2M | 8.8x | 2.0M | Medical Specialties |
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $0.92 | -10.3% | +15.8% | $1.06 | +3.9% | 2.9M | 29.1M | 0.1x | 470K | Misc Commercial Svcs |
+| TUSK | [TV](https://www.tradingview.com/chart/?symbol=TUSK) | $2.92 | -3.6% | +6.5% | $3.11 | +2.6% | 95K | 242K | 0.4x | 47.0M | Oilfield Services |
+| LFMD | [TV](https://www.tradingview.com/chart/?symbol=LFMD) | $4.31 | -9.3% | +5.1% | $4.53 | -4.6% | 51K | 957K | 0.1x | 39.6M | Medical/Nursing Services |
+
+**Prior watch candidates (AH history, prev-close basis):**
+
+| Ticker | Prev Close | AH High | AH Now | AH% now | Pattern |
+|--------|-----------|---------|--------|---------|---------|
+| EHGO | $1.80 | $4.00 (+122% @17:15) | $3.85 | +113.9% | **REBUILD: made a NEW AH high $4.00 at 17:15, holding +114% within ~7% of high. Fade thesis negated.** |
+| SKYQ | $1.17 | $1.93 (+65% @16:10) | $1.76 | +50.5% | Drifting down from +59% (held). Still holding +50%, no collapse. |
+| TNON | $0.35 | $0.60 (+72% @16:00) | ~$0.53 | +52% | Early-peak FADE continuing (60%→55%→52%). 10M float. Dead. |
+
+**Catalyst re-search (EHGO, now a fresh AH high):**
+- **EHGO** — StocksToTrade (~7h ago) attributes the move to "breakthrough AI partnership" sentiment, but it's vague and likely recycled from prior Maxsun/AI Enlighten narratives. Heavy dilution overhang: $5M convertible-debenture default + forbearance, recent public offering (TipRanks rally that crashed -37.7%), 16-for-1 reverse split in April. No clean same-day operational PR confirmed. **Grade C** (momentum + weak/recycled catalyst, dilution risk).
+
+**Evaluation:**
+- **EHGO — ENTER (Grade C).** The 23:00 skip was on early-peak-fade trajectory (108%→98%). At 23:30 EHGO made a *new* AH high $4.00 (+122%) at 17:15 ET and is holding +114% within ~7% of it — the fade thesis is negated ("only treat an early peak as a disqualifier when the stock is *also* declining"; it's no longer declining, it set a new high). Float 1.3M (ideal), Day +125%, sustained >10% AH across 4 scans, Total +114% (under 150% ceiling). No-catalyst/weak-catalyst is a concern to note, not a skip, during learning phase; BUILD patterns include low-float no-catalyst winners. Concern: dilution overhang → Grade C, exit premarket. **25 sh @ $3.85.**
+- **VTAK (held)** — holding +72.6% (now $1.45), drifted from +75-82% peak but near AH high. Position fine.
+- **SKYQ (held)** — drifted to +50.5% from +59% entry. No collapse; still holding +50%. Premarket management decides exit.
+- **TNON — SKIP.** Early-peak fade continuing, 10M float. Dead.
+- **LFMD — SKIP.** Day -9.3%, AH +5.1% (under 10%), Total -4.6% (negative), 39.6M float, VRatio 0.1. Weak.
+- **SUGP / TUSK — SKIP.** Unchanged from 23:00: SUGP Day -10.3% negative total, TUSK VRatio 0.4x / 47M float.
+
+Next scan 00:00 CET to track EHGO/VTAK build and SKYQ drift.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
 | VTAK | $1.49 | 23:00 CET (17:00 ET) | 67 | B | 2.0M float, BUILD (new AH high 16:55 ET), patent allowance PR, Total +77% under ceiling |
 | SKYQ | $1.87 | 23:00 CET (17:00 ET) | 53 | C | 3.8M float, HOLD near AH high +60% across 4 scans, Nevada refinery production PR; financing/reverse-split overhang |
+| EHGO | $3.85 | 23:30 CET (17:30 ET) | 25 | C | 1.3M float (ideal), REBUILD to new AH high $4.00 @17:15 negates 23:00 fade-skip; Day +125%, Total +114% under ceiling; vague AI-partnership catalyst + dilution overhang |
