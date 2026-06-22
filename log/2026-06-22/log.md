@@ -38,6 +38,31 @@ AH just opened — scanner returned 0 AH hits (no post-market bars built yet). *
 - **VIIQ / APHD** (extreme intraday % on <1.2x rel vol) dropped from watch — thin illiquid spikes, no real momentum.
 - No paper trades. Next scan 22:30 CET to read early AH action; entry window opens at 23:00 CET.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+First AH bars available. **Observation only** (learning phase: no entries before 23:00 CET). Scanner AH hits + tracking of prior watch candidates:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ICMB | [TV](https://www.tradingview.com/chart/?symbol=ICMB) | $1.20 | +1.7% | +20.8% | $1.45 | +22.8% | 469K | 122K | 3.8x | 12.1M | Investment Trusts |
+| KIDZ | [TV](https://www.tradingview.com/chart/?symbol=KIDZ) | $1.43 | -4.0% | +32.9% | $1.90 | +27.5% | 214K | 1.9M | 0.1x | 1.1M | Internet Software/Services |
+
+**Prior watch candidates (AH action, prev-close basis):**
+
+| Ticker | Prev Close | AH High | AH Now | AH% (from prev close) | Pattern |
+|--------|-----------|---------|--------|------------------------|---------|
+| EHGO | $1.80 | $3.85 | $3.74 | +107.8% | Holding ~+108%, flat vs $4.06 close. Best low-float profile (1.3M). |
+| SKYQ | $1.17 | $1.93 | $1.91 | +63.1% | Holding ~+63%. Burned us Jun 10 (-27.6%). |
+| TNON | $0.35 | $0.60 | $0.56 | +59.6% | Peaked +72% at 16:00, fading to +60%. 10M float. |
+
+**Notes:**
+- **ICMB** — 12.1M float (above ideal), only +1.7% day. The AH move (+20.8%) isn't backed by an intraday catalyst-driven day move. Real VRatio 3.8x. Low priority.
+- **KIDZ** — tiny 1.1M float but Day -4.0%, AH vol effectively nil, and SPIKE→FADE (peaked +27.5% at 16:15 → +15.5% by 16:30). Faded spike, no day strength. Skip-leaning.
+- **EHGO** — still the cleanest setup: 1.3M float, holding +108% from prev close, near its $4.06 close. Watch for a build vs fade across 23:00/23:30 scans.
+- **SKYQ** — holding +63% but prior burn (Jun 10 faded-spike misread). Caution.
+- **TNON** — already fading from its early AH peak; 10M float. Early-peak fade watch.
+- No paper trades (before 23:00 CET). Entry window opens at the 23:00 scan — will re-evaluate which candidates are building vs fading and run catalyst searches then.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
