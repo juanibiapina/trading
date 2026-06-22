@@ -163,6 +163,44 @@ Scanner returned 7 AH hits (VTAK held; SUGP/ZKIN/TUSK already skipped; GETY/NXGL
 
 All three open positions (VTAK, SKYQ, EHGO) holding or building near their AH highs — no new entries warranted. Premarket position-evaluation handles exits.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+Scanner returned 10 AH hits (VTAK held; GETY/SUGP/NXGL/ZKIN/TUSK/CTXR already skipped; NIXX/BOXL/BZFD new this round). Held positions VTAK + SKYQ + EHGO tracked via AH history (management handled in premarket).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.87 | +3.5% | +65.5% | $1.44 | +71.3% | 26.0M | 2.9M | 8.9x | 2.0M | Medical Specialties |
+| GETY | [TV](https://www.tradingview.com/chart/?symbol=GETY) | $1.15 | +90.1% | +6.1% | $1.22 | +101.6% | 4.9M | 23.7M | 0.2x | 85.0M | Internet Software/Services |
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $0.92 | -10.3% | +10.3% | $1.01 | -1.0% | 3.5M | 29.2M | 0.1x | 470K | Misc Commercial Svcs |
+| NXGL | [TV](https://www.tradingview.com/chart/?symbol=NXGL) | $0.61 | +7.9% | +6.4% | $0.65 | +14.8% | 998K | 571K | 1.7x | 7.1M | Chemicals: Specialty |
+| ZKIN | [TV](https://www.tradingview.com/chart/?symbol=ZKIN) | $1.34 | -0.7% | +9.7% | $1.47 | +8.9% | 685K | 103K | 6.7x | 16.3M | Industrial Machinery |
+| NIXX | [TV](https://www.tradingview.com/chart/?symbol=NIXX) | $1.42 | +21.4% | +6.3% | $1.51 | +29.1% | 407K | 15.0M | 0.0x | 24.1M | Personnel Services |
+| BOXL | [TV](https://www.tradingview.com/chart/?symbol=BOXL) | $3.58 | -0.1% | +11.7% | $4.00 | +11.6% | 300K | 81K | 3.7x | 3.2M | Computer Peripherals |
+| BZFD | [TV](https://www.tradingview.com/chart/?symbol=BZFD) | $1.42 | -5.3% | +9.9% | $1.56 | +4.0% | 210K | 959K | 0.2x | 11.8M | Internet Software/Services |
+| TUSK | [TV](https://www.tradingview.com/chart/?symbol=TUSK) | $2.92 | -3.6% | +7.9% | $3.15 | +4.0% | 106K | 243K | 0.4x | 47.0M | Oilfield Services |
+| CTXR | [TV](https://www.tradingview.com/chart/?symbol=CTXR) | $0.57 | +4.2% | +5.4% | $0.60 | +9.8% | 50K | 307K | 0.2x | 27.0M | Medical Specialties |
+
+**Held positions (AH history, prev-close basis):**
+
+| Ticker | AH High | AH Now | AH% now | Pattern |
+|--------|---------|--------|---------|---------|
+| VTAK | $1.58 (+88% @17:35) | $1.37 | +63.1% | BUILD/HOLD: peaked +88% at 17:35, drifted to +63% by 18:30 but still holding well above +60%. Healthy. |
+| SKYQ | $1.93 (+65% @16:10) | $1.74 | +48.7% | HOLD: oscillating +48-65% all session, now near low end (+49%). No collapse. |
+| EHGO | $4.00 (+122% @17:15) | $3.77 | +109.4% | HOLD: peaked +122% at 17:15, holding +109% well above its $4.06 regular close. Healthy. |
+
+**Evaluation — no new entries:**
+- **BOXL — SKIP.** New AH hit (+11.7%), float 3.2M (good), VRatio 3.7. But choppy SPIKE→FADE→bump: peaked +17.2% at 16:35, faded to +1-3% for most of 17:00-18:00, second bump to +13.3% at 18:15, now fading again (+8.8% @18:27). Day flat (-0.1%, no intraday strength). First scanner appearance — fails the 2-AH-scan >10% requirement. Erratic whipsaw, not a clean build. Skip.
+- **NIXX — SKIP.** AH +6.3% (under 10%), VRatio 0.0x (no AH volume vs 15M avg), float 24.1M (above gate). The +29.1% Total is a regular-session move (Day +21.4%), not AH momentum. Skip.
+- **BZFD — SKIP.** AH +9.9% (under 10%), VRatio 0.2x, Total +4.0%, Day -5.3%, float 11.8M. Weak. Skip.
+- **GETY — SKIP.** Unchanged: +101.6% Total is a regular-session move (Day +90.1%), AH only +6.1%, float 85M. Daytime mover, not AH→PM pattern.
+- **SUGP — SKIP.** Day -10.3%, Total -1.0%, VRatio 0.1x. Unchanged skip.
+- **NXGL — SKIP.** Faded to AH +6.4% (under 10%), VRatio 1.7, float 7.1M. Unchanged skip.
+- **ZKIN — SKIP.** AH +9.7% (under 10%), Total +8.9%, float 16.3M. Unchanged skip.
+- **TUSK — SKIP.** VRatio 0.4x, 47M float, +4.0% total. Unchanged skip.
+- **CTXR — SKIP.** AH +5.4% (under 10%), VRatio 0.2x, thin. Unchanged skip.
+
+All three open positions (VTAK, SKYQ, EHGO) holding near their AH highs — no new entries warranted. Premarket position-evaluation handles exits.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
