@@ -130,6 +130,39 @@ Scanner returned 4 AH hits (VTAK held, SUGP/TUSK already skipped, LFMD new). Pri
 
 Next scan 00:00 CET to track EHGO/VTAK build and SKYQ drift.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Scanner returned 7 AH hits (VTAK held; SUGP/ZKIN/TUSK already skipped; GETY/NXGL/CTXR new this round). Held positions VTAK + SKYQ + EHGO tracked via AH history (management handled in premarket).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.87 | +3.5% | +72.5% | $1.50 | +78.6% | 24.1M | 2.7M | 8.9x | 2.0M | Medical Specialties |
+| GETY | [TV](https://www.tradingview.com/chart/?symbol=GETY) | $1.15 | +90.1% | +7.8% | $1.24 | +104.9% | 4.1M | 23.6M | 0.2x | 85.0M | Internet Software/Services |
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $0.92 | -10.3% | +14.7% | $1.05 | +2.9% | 3.3M | 29.2M | 0.1x | 470K | Misc Commercial Svcs |
+| ZKIN | [TV](https://www.tradingview.com/chart/?symbol=ZKIN) | $1.34 | -0.7% | +8.6% | $1.46 | +7.8% | 679K | 102K | 6.6x | 16.3M | Industrial Machinery |
+| NXGL | [TV](https://www.tradingview.com/chart/?symbol=NXGL) | $0.61 | +7.9% | +7.3% | $0.66 | +15.7% | 481K | 516K | 0.9x | 7.1M | Chemicals: Specialty |
+| TUSK | [TV](https://www.tradingview.com/chart/?symbol=TUSK) | $2.92 | -3.6% | +7.9% | $3.15 | +4.0% | 103K | 242K | 0.4x | 47.0M | Oilfield Services |
+| CTXR | [TV](https://www.tradingview.com/chart/?symbol=CTXR) | $0.57 | +4.2% | +5.4% | $0.60 | +9.8% | 50K | 307K | 0.2x | 27.0M | Medical Specialties |
+
+**Held positions (AH history, prev-close basis):**
+
+| Ticker | AH High | AH Now | AH% now | Pattern |
+|--------|---------|--------|---------|---------|
+| VTAK | $1.58 (+88% @17:35) | $1.45 | +72.7% | BUILD/HOLD: made a new AH high $1.58 at 17:35, holding +73% near high. Healthy. |
+| SKYQ | $1.93 (+65% @16:10) | $1.82 | +55.5% | HOLD: recovered from +50% (23:30) to +55%, oscillating +50-65% all session. No collapse. |
+| EHGO | $4.00 (+122% @17:15) | $3.70 | +105.6% | HOLD: peaked +122% at 17:15, drifting to +106%, still well above its $4.06 regular close base. |
+
+**Evaluation — no new entries:**
+- **GETY — SKIP.** The +104.9% Total% is a *regular-session* move (Day +90.1%); AH change is only +7.8%, under the 10% AH-momentum threshold. Float 85M (well above 50M gate). Not the AH→PM pattern — this is a daytime mover. Skip.
+- **NXGL — SKIP.** Choppy SPIKE→FADE: peaked +23.7% (17:20 and 17:45) then faded to +6.7% by 18:00. AH now under 10%, VRatio 0.9 (no volume), float 7.1M. Skip.
+- **CTXR — SKIP.** Thin (23K AH vol, VRatio 0.2), AH peaked only +9.8%, now +5.4%. Below threshold. Skip.
+- **SUGP — SKIP.** Day -10.3%, Total +2.9%, VRatio 0.1x. Unchanged skip.
+- **ZKIN — SKIP.** AH +8.6% (under 10%), Total +7.8%, float 16.3M. Unchanged skip.
+- **TUSK — SKIP.** VRatio 0.4x, 47M float, +4.0% total. Unchanged skip.
+- **TNON (prior watch) — SKIP.** Early-peak fade, oscillating +52-68% all session off its 16:00 peak, 10M float. Dead.
+
+All three open positions (VTAK, SKYQ, EHGO) holding or building near their AH highs — no new entries warranted. Premarket position-evaluation handles exits.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
