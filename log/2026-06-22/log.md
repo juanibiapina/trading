@@ -22,6 +22,22 @@ Regular session still open (AH opens 22:00 CET / 4:00 PM ET). **Observation only
 
 No paper trades. Next scan at 22:00+ CET (AH open) to confirm which candidates carry momentum.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+AH just opened — scanner returned 0 AH hits (no post-market bars built yet). **Observation only** (learning phase: no entries before 23:00 CET). Tracking how the 21:30 watch candidates settled into the close:
+
+| Ticker | Chart | Close | Day% | DayHigh | DayVol | Float | vs 21:30 | Note |
+|--------|-------|-------|------|---------|--------|-------|----------|------|
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $4.06 | +125.6% | $6.75 | 116M | 1.3M | $3.68→$4.06 | Strengthened into close. Best profile. |
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $1.90 | +62.4% | $2.34 | 216M | 3.8M | $2.05→$1.90 | Faded into close. Burned us Jun 10 (-27.6%). |
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $0.62 | +77.7% | $0.80 | 268M | 10.0M | $0.61→$0.62 | Held. Borderline float. |
+
+**Notes:**
+- No AH price action available yet at 16:00 ET. Real AH momentum can only be judged from 22:30+ CET once post-market bars accumulate.
+- **EHGO** remains the cleanest setup: 1.3M float, closed near the high of a +125% day with 116M volume. Watch for AH carry.
+- **VIIQ / APHD** (extreme intraday % on <1.2x rel vol) dropped from watch — thin illiquid spikes, no real momentum.
+- No paper trades. Next scan 22:30 CET to read early AH action; entry window opens at 23:00 CET.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
