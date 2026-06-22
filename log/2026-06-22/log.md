@@ -63,7 +63,44 @@ First AH bars available. **Observation only** (learning phase: no entries before
 - **TNON** — already fading from its early AH peak; 10M float. Early-peak fade watch.
 - No paper trades (before 23:00 CET). Entry window opens at the 23:00 scan — will re-evaluate which candidates are building vs fading and run catalyst searches then.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Entry window open.** Scanner returned 4 fresh AH hits; prior watch candidates (EHGO, SKYQ, TNON) dropped off the scanner but tracked via AH history.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.87 | +3.5% | +71.3% | $1.49 | +77.4% | 11.7M | 1.3M | 8.7x | 2.0M | Medical Specialties |
+| ZKIN | [TV](https://www.tradingview.com/chart/?symbol=ZKIN) | $1.34 | -0.7% | +2.2% | $1.38 | +4.4% | 805K | 98K | 6.6x | 16.3M | Industrial Machinery |
+| TUSK | [TV](https://www.tradingview.com/chart/?symbol=TUSK) | $2.92 | -3.6% | +6.2% | $3.10 | +2.3% | 73K | 239K | 0.3x | 47.0M | Oilfield Services |
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $0.92 | -10.3% | +7.1% | $0.98 | -3.9% | 68K | 28.8M | 0.0x | 470K | Misc Commercial Svcs |
+
+**Prior watch candidates (AH history, prev-close basis):**
+
+| Ticker | Prev Close | AH High | AH Now | AH% now | Pattern |
+|--------|-----------|---------|--------|---------|---------|
+| EHGO | $1.80 | $3.85 (+114% @16:05) | $3.56 | +97.8% | Early peak 16:05, declined to +98% base. Below $4.06 close. Fading scan-over-scan (22:30 +108% → 23:00 +98%). |
+| SKYQ | $1.17 | $1.93 (+65% @16:10) | $1.87 | +59.8% | HOLD: oscillating +55-65% all session, now near AH high. |
+| TNON | $0.35 | $0.60 (+72% @16:00) | $0.54 | +55.3% | Early-peak FADE, declining (22:30 +60% → 23:00 +55%). 10M float. |
+
+**Catalyst searches (AH >10%):**
+- **VTAK** — "Catheter Precision Announces Allowance of Key Intellectual Property" (GlobeNewswire/Manila Times, ~8h ago): patent allowances covering heart-failure technologies. Real IP/operational milestone, not dilution. **Grade B.**
+- **SKYQ** — "Sky Quarry Enters Production Phase at Nevada's Only Refinery" (ACCESS Newswire, today) + non-binding SAF MOU with Southern Energy Renewables/DevvStream. Operational PR but reverse-split + financing/outage-loss overhang per analyst coverage. **Grade C.**
+- **EHGO** — no same-day operational catalyst found; momentum/volume spike with convertible-debenture/dilution history. **Grade None.**
+
+**Evaluation:**
+- **VTAK — ENTER (Grade B).** Float 2.0M (ideal), BUILD pattern: made a *new* AH high $1.53 (+82%) at 16:55 ET, holding $1.49 near high. VRatio 8.7. Total +77.4% (under 150% ceiling). Real catalyst (patent allowance). Single scanner appearance, but AH history confirms sustained >10% momentum across both the 22:30 (+63% @16:30) and 23:00 windows. Late-building + catalyst + low float = the plan's 5/5 BUILD profile. **67 sh @ $1.49.**
+- **SKYQ — ENTER (Grade C).** Float 3.8M, Day +62%, HOLD near AH high (+60%, within ~3% of $1.93 high) across 4 scans. Total +59.8% (under ceiling). Operational PR catalyst. The Jun 10 burn (-27.6%) was a faded-spike/low-rebuild misread; today SKYQ never collapsed and is holding at its high, so that disqualifier does not apply. Concern: financing/reverse-split overhang → Grade C, exit premarket. **53 sh @ $1.87.**
+- **EHGO — SKIP.** Best float (1.3M) and biggest day (+125%), but trajectory disqualifies: early AH peak (16:05 ET) + declining scan-over-scan (108% → 98%) + now below its $4.06 regular close + no catalyst. Early-peak fades are 0/6+. Watch 23:30 — only re-consider if it rebuilds above its close.
+- **TNON — SKIP.** Early-peak FADE (peaked 16:00, declining 60%→55% across scans), 10M float. Disqualified on trajectory.
+- **ZKIN — SKIP.** AH only +2.2% now (peaked +17.8% @16:25 then faded), float 16.3M. Below 10% threshold.
+- **TUSK / SUGP — SKIP.** Weak (TUSK VRatio 0.3x, 47M float, +2.3% total; SUGP Day -10.3%, VRatio 0.0x, negative total).
+- **ICMB / KIDZ (from 22:30) — SKIP.** Both collapsed: ICMB +23%→+0.4%, KIDZ +27.5%→-10.7% AH. Dead fades.
+
+Next scan 23:30 CET to track VTAK/SKYQ momentum and re-check EHGO.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
+| VTAK | $1.49 | 23:00 CET (17:00 ET) | 67 | B | 2.0M float, BUILD (new AH high 16:55 ET), patent allowance PR, Total +77% under ceiling |
+| SKYQ | $1.87 | 23:00 CET (17:00 ET) | 53 | C | 3.8M float, HOLD near AH high +60% across 4 scans, Nevada refinery production PR; financing/reverse-split overhang |
