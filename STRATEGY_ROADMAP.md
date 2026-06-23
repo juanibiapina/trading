@@ -42,6 +42,36 @@ Implications that drive decisions:
 
 The `strategy-advance` pulse uses this section as its prioritisation lens.
 
+## Priority order (current)
+
+Ranked by the North Star (expected $/time), adjusted for Juan's steer
+(2026-06-23) that a working **Alpaca paper account** (path to real money) and a
+better **data + review surface** (graphs, sources) are high-value enablers.
+
+1. **Initiative 2 - Alpaca paper trading (foundation, do first).** Cheap now
+   (keys work, just build `broker.js`) and it de-risks every other bet: it tells
+   us whether our paper fills on micro-float sub-$10 names are even real. If the
+   assumed fills do not hold, the current "wins" are partly illusory and the
+   edge needs rethinking. It is also the only path to real money, which is the
+   goal. Low effort, low risk, high leverage.
+2. **Initiative 6 - catch the extreme runners (+300-600%).** The biggest raw
+   money lever: the current strategy tops out on +20-100% AH movers that fade,
+   while the biggest moves keep being PM-only gappers we ignore. Start with the
+   cheap census (no new infra). Highest upside, higher uncertainty, so research
+   first and pilot only once the data justifies it.
+3. **Initiative 5 - better data + review surface (graphs, sources).** Juan needs
+   to review data to steer. Charts (5m + volume) and a stronger data source
+   (Alpaca market data, now available via the Init 2 keys; financialdatasets.ai
+   as backup to gappy Yahoo) improve every decision and make the loop auditable.
+4. **Initiative 1 - earlier volume-lead entries.** Refines the existing edge and
+   overlaps Init 6's minute-volume analysis, so it rides on that data work.
+   Lower standalone priority.
+5. **Initiative 3 - adaptive scheduling.** Ongoing enabler; the strategy-advance
+   loop already exists. Retime/add pulses (e.g. the PM-open scan Init 6 may
+   need) as evidence accrues. No standalone push.
+
+Done: Initiative 4 (email identity + reply feedback).
+
 ## How we roll changes out
 
 1. **Research** — understand the mechanism, the data we need, and the cost.
@@ -131,18 +161,22 @@ tradable before committing.
 
 ---
 
-## Initiative 5 — Charts in the daily email (5m + volume)
+## Initiative 5 — Better data + review surface (charts, sources)
 
-**Idea (Juan, 2026-06-19):** The daily email should eventually include graphs —
-"probably 5m including volume" — for the candidates/positions it reports, not
-just text.
+**Idea (Juan, 2026-06-19; broadened 2026-06-23):** Juan needs to **review the
+data to steer**. Two parts: (a) graphs in the daily email, "probably 5m
+including volume," for the candidates/positions reported; (b) improve the
+underlying **data sources** so the numbers are reliable enough to act on and
+chart (Yahoo AH/PM data is gappy; Alpaca market data and financialdatasets.ai
+are candidates).
 
-**Status:** Research / backlog.
+**Status:** Research / backlog. Data-source upgrade is newly unblocked — the
+Alpaca keys (Init 2) now provide a market-data API for bars/quotes.
 
 **Findings/notes:**
 - Need a data source for 5-minute OHLCV bars. Yahoo's chart API already serves
   5m bars (`interval=5m&range=5d`, with `includePrePost=true` for AH/PM). Alpaca
-  bars API (Initiative 2) is another source once keys land.
+  bars API (Initiative 2) is now available (keys live) as a sturdier source.
 - Render to PNG (e.g. lightweight candlestick + volume subplot) and attach to
   the InboxKit email, or inline as base64. Verify InboxKit attachment support.
 - Keep it cheap: only chart the reported tickers, not the whole scan.

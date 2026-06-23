@@ -9,6 +9,29 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-06-23 — Roadmap re-ranked by money-fast + enablers
+
+**Evaluated:** Loop bootstrap (same day) — done; this is the first prioritisation pass.
+
+**Step taken:** Re-ranked the roadmap under the North Star, weighting Juan's
+steer that working Alpaca paper (path to real money) and a better data/review
+surface (graphs + sources) are high-value enablers. Added a "Priority order"
+section to `STRATEGY_ROADMAP.md` and broadened Init 5 from "charts in email" to
+"better data + review surface (charts, sources)."
+
+**Result:** Order is 2 (Alpaca, foundation) -> 6 (extreme runners, biggest raw
+lever) -> 5 (data + graphs to review/steer) -> 1 (earlier entries) -> 3
+(adaptive scheduling, ongoing). Init 4 done. Key insight driving #1: Alpaca
+shadow fills will reveal whether our micro-float paper "wins" are real.
+
+**Hypothesis / next step:** Next run starts Init 2 — build `scripts/broker.js`
+against the live paper account (submit/track orders, read fills), then shadow
+the existing paper entries/exits to compare assumed vs real fills.
+
+**Needs from Juan:** nothing blocking.
+
+---
+
 ### 2026-06-23 — Loop bootstrapped
 
 **Evaluated:** n/a — first entry.
