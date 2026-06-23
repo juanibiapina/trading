@@ -9,6 +9,37 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-06-23 — Init 2 broker + Init 5 chart prototype built
+
+**Evaluated:** Re-rank (same day) — acted on it by working the top two priorities.
+
+**Step taken:** Two next steps, both log-only / paper (no live-trading or pulse
+rule changes, so no Juan sign-off needed):
+- **Init 2:** built `scripts/broker.js` (Alpaca paper CLI, no deps) and tested
+  the full path against the live paper account — account/positions, order
+  submit -> new -> cancel, live quote, asset tradable lookup.
+- **Init 5:** built `scripts/chart.py` (dependency-free 5m+volume candlestick,
+  Yahoo data, AH/PM shading, SVG -> PNG) and verified on ORIS and VTAK.
+
+**Result:**
+- Micro-float names are tradable on Alpaca (VTAK, ORIS `tradable=true`) — the
+  universe is not blocked. De-risks Init 2.
+- Alpaca free IEX bars are sparse; Yahoo stays the history/5m source, Alpaca is
+  for live quotes + real fills. Settled the data-source question for Init 5.
+- ORIS chart visibly shows the AH->PM pattern (build in after-hours, premarket
+  spike to ~$5.85 then fade) — a usable review surface.
+
+**Hypothesis / next step:**
+- Init 2 pilot: shadow-mirror paper entries/exits as Alpaca paper orders during
+  market hours; compare assumed vs real fills (this is the one pilot slot).
+- Init 5: confirm InboxKit attachment API, then attach charts to the daily
+  email so Juan reviews them in-channel.
+
+**Needs from Juan:** nothing blocking. (Heads-up: the Init 2 pilot will place
+real paper orders on Alpaca during market hours — still paper, no real money.)
+
+---
+
 ### 2026-06-23 — Roadmap re-ranked by money-fast + enablers
 
 **Evaluated:** Loop bootstrap (same day) — done; this is the first prioritisation pass.

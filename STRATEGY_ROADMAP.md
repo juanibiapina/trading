@@ -128,12 +128,15 @@ big % move, so a volume-first trigger could front-run the price-first trigger.
 account available in Europe, so numbers reflect real fills/spreads/liquidity.
 Eventually switch the same integration to live trading.
 
-**Status:** Alpaca chosen (Juan, 2026-06-19) — **keys now working (2026-06-23).**
-Juan removed the `unset` line so `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` /
-`ALPACA_BASE_URL` inherit from the parent env. Verified against `/v2/account`:
-paper account ACTIVE, $100k, `paper-api.alpaca.markets`. Unblocked — next step is
-to build the broker integration (shadow mode). `ALPACA_PAPER_TRADE` is still
-empty, but the base URL already points at the paper endpoint.
+**Status:** **Instrument stage — `scripts/broker.js` built and tested
+(2026-06-23).** Keys work; verified the full path against the live paper
+account: account/positions, order submit -> `new` -> cancel lifecycle, live
+quotes, and asset lookup. Key findings: (a) our micro-float names ARE tradable
+on Alpaca (VTAK on AMEX, ORIS on NASDAQ both `tradable=true`), so the universe
+is not blocked; (b) Alpaca's free IEX market-data feed returns sparse/no
+historical bars, so Yahoo stays the chart/history source while Alpaca provides
+live quotes + real fills. Next (pilot): shadow-mirror each paper entry/exit as
+an Alpaca paper order during market hours and compare assumed vs real fills.
 
 **Findings:**
 - The environment already scaffolds `ALPACA_API_KEY`, `ALPACA_SECRET_KEY`,
@@ -173,8 +176,15 @@ underlying **data sources** so the numbers are reliable enough to act on and
 chart (Yahoo AH/PM data is gappy; Alpaca market data and financialdatasets.ai
 are candidates).
 
-**Status:** Research / backlog. Data-source upgrade is newly unblocked — the
-Alpaca keys (Init 2) now provide a market-data API for bars/quotes.
+**Status:** **Prototype built (2026-06-23) — `scripts/chart.py`.** Dependency-free
+5m + volume candlestick that fetches Yahoo bars (incl. AH/PM), shades the pre/
+post sessions, and renders SVG -> PNG via ImageMagick. Verified on ORIS (the
+AH->PM winner: regular climb -> after-hours build -> premarket spike to ~$5.85
+then fade, all visible) and VTAK. Data-source eval: Yahoo is the better history/
+5m source (Alpaca IEX bars are sparse); Alpaca is best for live quotes/fills.
+Next step: wire PNG attachments into `scripts/send-email-inboxkit.js` so the
+daily email carries charts — needs the InboxKit attachment API format confirmed
+first (don't guess and break the sender).
 
 **Findings/notes:**
 - Need a data source for 5-minute OHLCV bars. Yahoo's chart API already serves
