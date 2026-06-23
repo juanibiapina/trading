@@ -28,6 +28,31 @@ No open positions remaining.
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
+| VTAK | $1.16 | 23:30 CET (17:30 ET) | 86 | C | BUILD/hold near AH high (new high $1.22 @17:10 ET), float 2.0M, only BUILD candidate of the night. Concerns: re-pump on spent catalyst (patent PR already failed today -16.1%), dilutive resale registration. Exit premarket, stop -10% ($1.04). |
+
+## Scan 23:30 CET (5:30 PM ET)
+
+AH scan — entries eligible (past 23:00 CET). Scanner: 6 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MNDR | [TV](https://www.tradingview.com/chart/?symbol=MNDR) | $0.57 | -2.7% | +23.3% | $0.70 | +19.9% | 11.4M | 1.5M | 7.8x | 1.8M | Medical/Nursing Services |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.92 | +5.8% | +32.6% | $1.22 | +40.3% | 3.2M | 7.3M | 0.4x | 2.0M | Medical Specialties |
+| EPOW | [TV](https://www.tradingview.com/chart/?symbol=EPOW) | $0.62 | +6.5% | +18.9% | $0.74 | +26.6% | 2.3M | 366K | 6.3x | 25.6M | Packaged Software |
+| HUMA | [TV](https://www.tradingview.com/chart/?symbol=HUMA) | $0.70 | -16.5% | +5.7% | $0.74 | -11.8% | 618K | 15.9M | 0.0x | 244.5M | Biotechnology |
+| EGHT | [TV](https://www.tradingview.com/chart/?symbol=EGHT) | $1.66 | -3.5% | +5.3% | $1.75 | +1.7% | 161K | 1.8M | 0.1x | 134.2M | Packaged Software |
+| ALPS | [TV](https://www.tradingview.com/chart/?symbol=ALPS) | $0.65 | -3.8% | +21.5% | $0.79 | +16.9% | 100 | 11K | 0.0x | 45.0M | Miscellaneous |
+
+**Night gate: MET.** MNDR has float <50M (1.8M), Day% above -15% (-2.7%), and AH >10% across 2 AH scans (23:00 +16.2%, 23:30 +23.3%). Night qualifies for entries; evaluate each candidate against the per-candidate gates.
+
+**AH-history check (trajectory):**
+- **VTAK** — Float 2.0M. **BUILD/hold pattern:** climbed +8% → +33.6% (16:45) → dipped → made a *new* AH high +40.3% ($1.22) at **17:10 ET**, now holding $1.16 (+33%, ~5% off high). Best trajectory of the night. Catalyst search: only Monday (Jun 22) news — patent allowance PR + Flyte sports partnership + a **resale-share registration filing** (dilutive overhang). No fresh Tuesday catalyst. **This is a re-pump on a spent catalyst:** the exact patent-allowance PR (graded B) already drove the Monday AH spike we entered at $1.49 and it failed today — we closed VTAK at **-16.1%** this afternoon, full intraday round-trip $1.49 → $0.92. VRatio 0.4 (AH vol 3.2M below today's heavy avg 7.3M) = not unusual relative volume. **ENTER** on trajectory dominance (BUILD candidate, non-SPIKE→FADE night), Grade C with concerns flagged.
+- **MNDR** — Float 1.8M, VRatio 7.8x (real volume). Peaked **+37.6% at 16:30 ET** (first AH candle, very early), faded to +17.6% by 17:30. Early-peak + fading = 0/6+ pattern. Catalyst confirmed: only a **1-for-6 reverse stock split** (effective Jun 29) — Grade D restructuring, likely the pre-split pump driver. **MNDR is the documented repeat loser** in Day Trading.md ("6.8x AH vol, no news, lost -16.5%") now repeating (7.8x vol, no real catalyst). **Skip.**
+- **EPOW** — Float 25.6M. Peaked **+28.2% at 16:55 ET** (early), faded to +17.7% by 17:30. Only 1 AH scan >10% (was +6.5% at 23:00). Early-peak + fading, no catalyst found, higher float. **Skip.**
+- **HUMA** — Day -16.5% (below -15%), float 244.5M (huge), AH still -11.8% total = dead-cat. **Skip.**
+- **EGHT / ALPS** — Float >45M / stale 100-share print, no real AH volume. **Skip.**
+
+**Decision: 1 paper trade — VTAK @ $1.16 (Grade C).** VTAK is the only BUILD/hold candidate on a night that is not SPIKE→FADE-only, clears all entry gates (float 2.0M, Day +5.8%, Total +40.3% under ceiling, BUILD trajectory, has a catalyst). Concerns documented: catalyst is stale (Monday) and already failed once today (-16.1% on the same patent PR), dilutive resale registration overhang, sub-unusual relative volume. Entered for data collection on the "same-day spent-catalyst re-pump" scenario — does a BUILD-pattern re-pump on a spent catalyst continue or fail? Grade C → exit in premarket, stop -10%.
 
 ## Scan 23:00 CET (5:00 PM ET)
 
