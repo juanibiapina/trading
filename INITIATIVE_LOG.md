@@ -9,6 +9,40 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-06-23 — Init 2: first live extended-hours shadow fill
+
+**Evaluated:** Prior step (build broker.js + chart.py) — **worked.** broker.js
+runs against the live paper account; chart.py renders. This run advanced the
+Init 2 next step (the one pilot slot).
+
+**Step taken:** Added `--ext` (extended_hours) limit-order support to
+`scripts/broker.js`, then ran a live premarket shadow round-trip on VTAK
+(mirroring today's closed 67-share paper trade). It's 09:00 ET, US premarket.
+
+**Result:** Real fills captured.
+- Ext-hours marketable limit BUY 67 VTAK filled at **$1.14 (the ask)**.
+- Ext-hours limit SELL 67 VTAK filled at **$1.13 (the bid)**. Position flat, no
+  leftover exposure.
+- **Core Init 2 question answered: Alpaca paper DOES fill our micro-float
+  sub-$10 names in extended hours, at the NBBO bid/ask.** Realistic fill model
+  = buy@ask / sell@bid; spread is the real slippage (~1c, ~0.9% round trip on
+  VTAK at $1.14). This means our assumed paper "wins" are not pure fiction, but
+  each round trip pays the spread.
+- Coverage caveat: VTAK and SKYQ had fresh 09:00 ET premarket IEX quotes; EHGO's
+  quote was stale (prior close) — some names may not fill in extended hours.
+
+**Hypothesis / next step:** Over the next sessions with open paper positions,
+mirror real entries/exits as Alpaca ext-hours orders and tabulate assumed price
+vs ask(entry)/bid(exit) to measure how much paper P&L survives realistic fills.
+If the spread routinely eats a big share of the edge on the cheapest names, that
+reshapes entry sizing/price selection.
+
+**Needs from Juan:** nothing blocking. (Heads-up: the Init 2 pilot places real
+paper orders on Alpaca during market/extended hours — still paper, no real
+money. Today's test round-tripped one position and left the account flat.)
+
+---
+
 ### 2026-06-23 — Init 2 broker + Init 5 chart prototype built
 
 **Evaluated:** Re-rank (same day) — acted on it by working the top two priorities.

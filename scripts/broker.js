@@ -16,8 +16,9 @@
  *   node scripts/broker.js positions
  *   node scripts/broker.js orders [open|closed|all]
  *   node scripts/broker.js order <id>
- *   node scripts/broker.js buy  <SYM> <qty> [--limit P] [--tif day|gtc]
- *   node scripts/broker.js sell <SYM> <qty> [--limit P] [--tif day|gtc]
+ *   node scripts/broker.js buy  <SYM> <qty> [--limit P] [--tif day|gtc] [--ext]
+ *   node scripts/broker.js sell <SYM> <qty> [--limit P] [--tif day|gtc] [--ext]
+ *      --ext = extended-hours (pre/post market). Requires --limit; forces tif=day.
  *   node scripts/broker.js cancel <id>
  *   node scripts/broker.js quote <SYM>
  *   node scripts/broker.js bars  <SYM> [--tf 5Min] [--start ISO] [--limit N]
@@ -111,15 +112,17 @@ async function cmdOrder(flags, positional) {
 
 async function submit(side, flags, positional) {
   const [symbol, qtyStr] = positional;
-  if (!symbol || !qtyStr) throw new Error(`usage: ${side} <SYM> <qty> [--limit P] [--tif day|gtc]`);
+  if (!symbol || !qtyStr) throw new Error(`usage: ${side} <SYM> <qty> [--limit P] [--tif day|gtc] [--ext]`);
+  if (flags.ext && !flags.limit) throw new Error("--ext (extended hours) requires --limit (limit orders only)");
   const body = {
     symbol: symbol.toUpperCase(),
     qty: qtyStr,
     side,
     type: flags.limit ? "limit" : "market",
-    time_in_force: flags.tif || "day",
+    time_in_force: flags.ext ? "day" : (flags.tif || "day"),
   };
   if (flags.limit) body.limit_price = String(flags.limit);
+  if (flags.ext) body.extended_hours = true;
   const o = await api(TRADING, "/v2/orders", { method: "POST", body: JSON.stringify(body) });
   if (flags.json) return console.log(JSON.stringify(o, null, 2));
   console.log(`Submitted ${side} ${o.qty} ${o.symbol} (${o.type}/${o.time_in_force}) -> ${o.status}  id=${o.id}`);

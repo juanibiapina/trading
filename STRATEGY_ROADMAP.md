@@ -128,15 +128,21 @@ big % move, so a volume-first trigger could front-run the price-first trigger.
 account available in Europe, so numbers reflect real fills/spreads/liquidity.
 Eventually switch the same integration to live trading.
 
-**Status:** **Instrument stage — `scripts/broker.js` built and tested
-(2026-06-23).** Keys work; verified the full path against the live paper
-account: account/positions, order submit -> `new` -> cancel lifecycle, live
-quotes, and asset lookup. Key findings: (a) our micro-float names ARE tradable
-on Alpaca (VTAK on AMEX, ORIS on NASDAQ both `tradable=true`), so the universe
-is not blocked; (b) Alpaca's free IEX market-data feed returns sparse/no
-historical bars, so Yahoo stays the chart/history source while Alpaca provides
-live quotes + real fills. Next (pilot): shadow-mirror each paper entry/exit as
-an Alpaca paper order during market hours and compare assumed vs real fills.
+**Status:** **Pilot stage — first live extended-hours fill captured
+(2026-06-23).** Added `--ext` (extended_hours) order support to `broker.js` and
+ran a live premarket shadow round-trip on VTAK (mirroring today's 67-share paper
+trade): marketable ext-hours limit BUY filled at **$1.14 (the ask)**, SELL
+filled at **$1.13 (the bid)**, position flat. **Key result: Alpaca paper DOES
+fill our micro-float sub-$10 names in extended hours, at the NBBO bid/ask.** So
+the realistic fill model is buy-at-ask / sell-at-bid, and the spread is the real
+slippage — on VTAK at ~$1.14 that was 1c (~0.9% round trip). Caveat: coverage is
+uneven — VTAK/SKYQ had fresh premarket IEX quotes but EHGO's quote was stale
+(yesterday's close), so some names may not fill in extended hours. Earlier
+instrument findings still hold: micro-float names are `tradable=true` (VTAK/ORIS);
+Alpaca IEX historical bars are sparse so Yahoo stays the chart/history source.
+Next: over coming sessions, mirror real paper entries/exits and compare our
+assumed paper prices against the ask (entry) / bid (exit) to quantify how much
+of the paper P&L survives realistic fills.
 
 **Findings:**
 - The environment already scaffolds `ALPACA_API_KEY`, `ALPACA_SECRET_KEY`,
@@ -156,10 +162,11 @@ tradable before committing.
 
 **Rollout plan:**
 1. ~~Juan creates an Alpaca paper account, provides API key/secret.~~ ✓ done.
-2. Build `scripts/broker.js` (or .py): submit/track paper orders, read fills.
+2. ~~Build `scripts/broker.js`: submit/track orders, read fills; add `--ext`.~~ ✓ done.
 3. Shadow mode: mirror existing paper entries/exits as Alpaca paper orders,
-   compare real fills to our assumed prices for a few weeks.
-4. Switch the paper-trade ledger to use real fills.
+   compare real fills to our assumed prices for a few weeks. **In progress** —
+   first round-trip fills at ask/bid; collect more across sessions.
+4. Switch the paper-trade ledger to use real fills (buy@ask / sell@bid).
 5. Much later, after a proven edge: flip to live with tiny size.
 
 **Needs from Juan:** nothing blocking — keys are live. (Optional: set
