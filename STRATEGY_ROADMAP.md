@@ -54,15 +54,18 @@ better **data + review surface** (graphs, sources) are high-value enablers.
    assumed fills do not hold, the current "wins" are partly illusory and the
    edge needs rethinking. It is also the only path to real money, which is the
    goal. Low effort, low risk, high leverage.
-2. **Initiative 6 - catch the extreme runners (+300-600%).** The biggest raw
+2. **Initiative 5 - better data + review surface (graphs, sources).** Juan needs
+   to review data to steer, and the work below (especially the Init 6 census)
+   should land as something he can actually review. Charts (5m + volume) and a
+   stronger data source (Alpaca market data, now available via the Init 2 keys;
+   financialdatasets.ai as backup to gappy Yahoo) improve every decision and
+   make the loop auditable. Sequenced ahead of Init 6 at Juan's call (2026-06-23).
+3. **Initiative 6 - catch the extreme runners (+300-600%).** The biggest raw
    money lever: the current strategy tops out on +20-100% AH movers that fade,
    while the biggest moves keep being PM-only gappers we ignore. Start with the
-   cheap census (no new infra). Highest upside, higher uncertainty, so research
-   first and pilot only once the data justifies it.
-3. **Initiative 5 - better data + review surface (graphs, sources).** Juan needs
-   to review data to steer. Charts (5m + volume) and a stronger data source
-   (Alpaca market data, now available via the Init 2 keys; financialdatasets.ai
-   as backup to gappy Yahoo) improve every decision and make the loop auditable.
+   cheap census (no new infra), surfaced through the Init 5 review tooling.
+   Highest upside, higher uncertainty, so research first and pilot only once the
+   data justifies it.
 4. **Initiative 1 - earlier volume-lead entries.** Refines the existing edge and
    overlaps Init 6's minute-volume analysis, so it rides on that data work.
    Lower standalone priority.

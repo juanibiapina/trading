@@ -19,10 +19,11 @@ surface (graphs + sources) are high-value enablers. Added a "Priority order"
 section to `STRATEGY_ROADMAP.md` and broadened Init 5 from "charts in email" to
 "better data + review surface (charts, sources)."
 
-**Result:** Order is 2 (Alpaca, foundation) -> 6 (extreme runners, biggest raw
-lever) -> 5 (data + graphs to review/steer) -> 1 (earlier entries) -> 3
-(adaptive scheduling, ongoing). Init 4 done. Key insight driving #1: Alpaca
-shadow fills will reveal whether our micro-float paper "wins" are real.
+**Result:** Order is 2 (Alpaca, foundation) -> 5 (data + graphs to review/steer)
+-> 6 (extreme runners, biggest raw lever) -> 1 (earlier entries) -> 3 (adaptive
+scheduling, ongoing). Init 4 done. Juan put 5 before 6 (2026-06-23) so the
+census and big-mover work land as something he can review. Key insight driving
+#1: Alpaca shadow fills will reveal whether our micro-float paper "wins" are real.
 
 **Hypothesis / next step:** Next run starts Init 2 — build `scripts/broker.js`
 against the live paper account (submit/track orders, read fills), then shadow
