@@ -6,6 +6,34 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-06-23 — re: Trading Scanner Report - 2026-06-22
+
+**Juan said:** "I think the env vars are there! I removed the unset on zero's
+.envrc, so they should appear from the parent env. Also, for a long time the
+winners are 20 to 100%. I was hoping you could catch 600% and others like that."
+
+**Interpretation:** Two points. (1) The Alpaca blocker is resolved — Juan
+removed the `unset` line so the keys now inherit from the parent env. (2) New
+strategic want: the daily winner has been a +20-100% AH->PM mover for weeks, but
+he wants the system to catch the rare +600% explosions too. Those big movers are
+typically the PM-only gappers (GLXG +343%, etc.) and extreme runners the current
+AH->PM scanner structurally misses or scans too early to see.
+
+**Action:**
+- Initiative 2 (Alpaca): **unblocked.** Verified the keys are now live in the
+  env (`ALPACA_API_KEY` / `ALPACA_SECRET_KEY` / `ALPACA_BASE_URL` all set) and
+  hit `/v2/account` — paper account is ACTIVE, $100k, `paper-api.alpaca.markets`.
+  Updated Initiative 2 status to keys-working / build broker integration next.
+  Checked the consolidated Alpaca ask off. Note: `ALPACA_PAPER_TRADE` itself is
+  still empty, but the base URL already points at the paper endpoint.
+- The +600% want: added **Initiative 6 — catch the rare extreme runners
+  (+300-600%)** to STRATEGY_ROADMAP.md (research/backlog). It ties to the
+  existing PM-only-gapper tracker (the biggest raw movers keep being PM-only
+  gappers the AH strategy can't see) and Initiative 1 (earlier volume-lead
+  entries). Routed for research, not acted on here.
+
+---
+
 ### 2026-06-19 — re: Trading Strategy Roadmap - setup done, slow rollout starting
 
 **Juan said:** "Great! I also want graphs eventually, probably 5m including

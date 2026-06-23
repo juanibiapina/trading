@@ -64,10 +64,12 @@ big % move, so a volume-first trigger could front-run the price-first trigger.
 account available in Europe, so numbers reflect real fills/spreads/liquidity.
 Eventually switch the same integration to live trading.
 
-**Status:** Alpaca chosen (Juan, 2026-06-19) — building integration. Blocked on
-working API keys: `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` are still `unset` in
-zero's `.envrc`. Juan said the key "should be available" but it is not populated
-yet — re-asked in the next email.
+**Status:** Alpaca chosen (Juan, 2026-06-19) — **keys now working (2026-06-23).**
+Juan removed the `unset` line so `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` /
+`ALPACA_BASE_URL` inherit from the parent env. Verified against `/v2/account`:
+paper account ACTIVE, $100k, `paper-api.alpaca.markets`. Unblocked — next step is
+to build the broker integration (shadow mode). `ALPACA_PAPER_TRADE` is still
+empty, but the base URL already points at the paper endpoint.
 
 **Findings:**
 - The environment already scaffolds `ALPACA_API_KEY`, `ALPACA_SECRET_KEY`,
@@ -86,17 +88,15 @@ target later. Validate that our typical tickers (sub-$10, low float) are
 tradable before committing.
 
 **Rollout plan:**
-1. Juan creates an Alpaca paper account, provides API key/secret.
+1. ~~Juan creates an Alpaca paper account, provides API key/secret.~~ ✓ done.
 2. Build `scripts/broker.js` (or .py): submit/track paper orders, read fills.
 3. Shadow mode: mirror existing paper entries/exits as Alpaca paper orders,
    compare real fills to our assumed prices for a few weeks.
 4. Switch the paper-trade ledger to use real fills.
 5. Much later, after a proven edge: flip to live with tiny size.
 
-**Needs from Juan:**
-- Decide broker (recommend Alpaca for paper).
-- Create the paper account and add `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` to
-  zero's `.envrc` (and set `ALPACA_PAPER_TRADE=1`).
+**Needs from Juan:** nothing blocking — keys are live. (Optional: set
+`ALPACA_PAPER_TRADE=1` explicitly, though the base URL already targets paper.)
 
 ---
 
@@ -178,11 +178,51 @@ requiring action (keys, decisions) will be listed in the email and here.
 
 ---
 
+## Initiative 6 — Catch the rare extreme runners (+300-600%)
+
+**Idea (Juan, 2026-06-23):** For weeks the daily winner has been a +20-100%
+AH->PM mover. Juan wants the system to also catch the rare +600% explosions
+("600% and others like that"), not just the moderate movers.
+
+**Status:** Research / backlog.
+
+**Why it is hard / where the big moves hide:**
+- The biggest raw movers each morning keep being **PM-only gappers** — flat or
+  down in after-hours, then exploding only after 04:00 ET on overnight news
+  (CIIT +140%, GLXG +343%, TDIC +140%, MBRX +131%). The AH->PM scanner cannot
+  see these by design (no AH footprint to detect).
+- True AH extreme runners (>250% in AH) are very rare in our data (MSW Jun 9 is
+  the only one tracked). Most AH movers we catch top out at +60-130% and then
+  fade into PM.
+- So "catch 600%" is really two separate problems: (a) a PM-open scan workflow
+  for gappers with no AH signal, and (b) holding/letting winners run instead of
+  the premarket-exit rule capping gains.
+
+**Open questions:**
+- Are the +300-600% names reachable at a tradable price, or do they spike and
+  collapse in minutes (MBRX $6.64->$3.77 in 10 min) — i.e. uninvestable?
+- Would an early-PM scan (04:00-05:00 ET) plus a momentum-hold rule actually
+  capture them, or just add chop and false positives?
+- Does this conflict with the proven premarket-exit discipline (most movers
+  peak in PM then dump at open)?
+
+**Rollout plan:**
+1. Quantify: over the last ~6 weeks, list every +200% mover (AH or PM) and tag
+   each detectable / PM-only-gapper / uninvestable-spike. Use the PM-only-gapper
+   tracker already running in the morning eval as the seed dataset.
+2. If a tradable subset exists, instrument a PM-open scan (log only, no action).
+3. Pilot hypothetical entries on that subset; compare to the current strategy.
+4. Promote only if the extreme-runner capture beats current net of false spikes.
+
+**Needs from Juan:** nothing yet (research uses existing data + the gapper
+tracker).
+
+---
+
 ## Open asks for Juan (consolidated)
 
-- [ ] Initiative 2: Alpaca chosen ✓. Still need working keys — add
-      `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` / `ALPACA_PAPER_TRADE=1` to zero's
-      `.envrc` (currently `unset` on line 7). Juan thought they were available;
-      they are not populated yet.
+- [x] Initiative 2: Alpaca keys are live (Juan removed the `unset`, 2026-06-23);
+      verified against `/v2/account`. Nothing blocking. Optional: set
+      `ALPACA_PAPER_TRADE=1` explicitly.
 - [ ] Initiative 3: confirm whether to trim/retime the scan schedule once the
       audit proposes a plan.
