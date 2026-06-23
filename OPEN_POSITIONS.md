@@ -6,7 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| VTAK | 2026-06-22 | $1.49 | 67 | $99.83 | B | Patent allowance PR (heart-failure IP), GlobeNewswire | -15% ($1.27) | premarket peak | $1.65 |
+| _none_ | | | | | | | | | |
 
 ## Position Rules
 
@@ -52,6 +52,7 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| VTAK | $1.49 | $1.25 | -$16.08 | -16.1% | 1 | B - Patent allowance PR (heart-failure IP) | Hard stop ($1.27) breached; PM peaked only $1.32 (below entry), faded through stop into regular session |
 | SKYQ | $1.87 | $1.66 | -$11.13 | -11.2% | 1 | C - Nevada refinery production phase PR | Hard stop ($1.68) breached in PM; AH peak $1.93 faded, PM high only $1.91 |
 | EHGO | $3.85 | $3.43 | -$10.50 | -10.9% | 1 | C - Vague AI-partnership; dilution overhang | Hard stop ($3.47) breached in PM; AH peak $4.00 faded steadily into PM |
 | LPA | $5.21 | $4.21 | -$19.00 | -19.2% | 1 | B - $145M asset sale (Lima logistics park) | Hard stop ($4.43) breached; PM spiked to $7.77 (+49%) at 08:00 ET then faded below stop |
