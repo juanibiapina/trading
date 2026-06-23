@@ -6,9 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| VTAK | 2026-06-22 | $1.49 | 67 | $99.83 | B | Patent allowance PR (heart-failure IP), GlobeNewswire | -15% ($1.27) | premarket peak | $1.53 (AH) |
-| SKYQ | 2026-06-22 | $1.87 | 53 | $99.11 | C | Nevada refinery production phase PR (ACCESS Newswire) | -10% ($1.68) | premarket peak | $1.93 (AH) |
-| EHGO | 2026-06-22 | $3.85 | 25 | $96.25 | C | Vague AI-partnership sentiment (StocksToTrade); dilution overhang (convert default, public offering, 16:1 RS) | -10% ($3.47) | premarket peak | $4.00 (AH) |
+| VTAK | 2026-06-22 | $1.49 | 67 | $99.83 | B | Patent allowance PR (heart-failure IP), GlobeNewswire | -15% ($1.27) | premarket peak | $1.65 |
 
 ## Position Rules
 
@@ -54,6 +52,8 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| SKYQ | $1.87 | $1.66 | -$11.13 | -11.2% | 1 | C - Nevada refinery production phase PR | Hard stop ($1.68) breached in PM; AH peak $1.93 faded, PM high only $1.91 |
+| EHGO | $3.85 | $3.43 | -$10.50 | -10.9% | 1 | C - Vague AI-partnership; dilution overhang | Hard stop ($3.47) breached in PM; AH peak $4.00 faded steadily into PM |
 | LPA | $5.21 | $4.21 | -$19.00 | -19.2% | 1 | B - $145M asset sale (Lima logistics park) | Hard stop ($4.43) breached; PM spiked to $7.77 (+49%) at 08:00 ET then faded below stop |
 | LNAI | $5.80 | $6.43 | +$10.71 | +10.9% | 1 | C - Nasdaq bid-price compliance | Grade C premarket exit at profit; PM peak $7.12 (+22.8%), exited on PM pulse |
 | NIVF | $0.81 | $1.36 | +$67.65 | +67.9% | 1 | C - note/warrant buyback (anti-dilution) | Grade C premarket exit at profit; PM peak $1.55 (+91%), exited on PM pulse |
