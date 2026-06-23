@@ -6,11 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-16 | CRVO | None (late AH spike, Jun 10 dilution) | +53.9% ($3.77 AH) | $3.74 | $4.66 PM | Day 4 - 🚀 still running: $4.66 PM (+10% from $4.24 close); low-float multi-day runner |
-| 2026-06-17 | LNAI | C — 8-K Nasdaq bid-price compliance | +146.0% ($6.42 AH) | $7.12 PM | ~$4.0 | Day 3 - recovered toward $4.0 from $2.85; below scan thresholds |
-| 2026-06-17 | NIVF | C — note/warrant buyback (anti-dilution) | +65.1% ($0.96 AH) | $1.55 PM | ~$0.8 | Day 3 - faded, ~$0.8; PM exit @ $1.36 was right |
-| 2026-06-18 | LNKS | None (repeat low-float runner, prior winner May 13) | +40.0% ($2.31 AH, faded) | $4.70 PM (+184.7%) | $2.98 PM | Day 2 - faded from $4.70 PM peak to ~$2.7-3.0; fade-rule false negative #2 |
-| 2026-06-19 | CDT | None (low-float 1.6M; ran +48% Jun 18 intraday) | +31% ($1.34 PM) | — | $1.34 PM | 🆕 Day 1 - weak morning, marginal winner; scanner failed before AH/entry window so no trade |
+| 2026-06-19 | CDT | None (low-float 1.6M; ran +48% Jun 18 intraday) | +31% ($1.34 PM) | — | $1.26-1.42 PM | Day 4 - holding $1.26-1.42; marginal winner, never traded |
+| 2026-06-23 | ORIS | None (Nasdaq delisting determination = negative; low-float squeeze) | +60.8% ($3.28 AH @19:25 ET) | $3.93 PM (+92.5%) | $3.17 PM | 🆕 Day 1 - winner, NOT traded; AH surge fired after last scan |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -48,6 +45,10 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-06-11 | GLXG | None (PM-only squeeze) | — | $4.56 | $0.98 | $1.46 | Day 5: Crashed -79%, partial bounce to $1.46 |
 | 2026-06-11 | TMDE | A (stale Jun 8 bioenergy MOA) | $1.66 | $1.49 | $0.91 | $0.87 | Day 5: Faded below base, no follow-through |
 | 2026-06-12 | BYAH | None (low-float pump, Day −15% dead-cat) | $2.75 | — | $3.58 | $1.50 | Day 5: Faded to $1.50 from $3.58 peak; no catalyst, fully unwound |
+| 2026-06-16 | CRVO | None (late AH spike, Jun 10 dilution) | $3.77 | $4.66 | — | $3.8 | Day 7: Faded from $4.66 PM peak to ~$3.8; low-float multi-day runner cooled |
+| 2026-06-17 | LNAI | C — 8-K Nasdaq bid-price compliance | $6.42 | $7.12 | $2.85 | $3.9 | Day 6: Stabilized ~$3.9 after deep fade from $7.12 PM peak |
+| 2026-06-17 | NIVF | C — note/warrant buyback (anti-dilution) | $0.96 | $1.55 | — | $0.61 | Day 6: Faded to $0.61; PM exit @ $1.36 was right |
+| 2026-06-18 | LNKS | None (repeat low-float runner, prior winner May 13) | $2.31 | $4.70 (+184.7%) | $2.98 | $2.1 | Day 5: Faded to ~$2.1 from $4.70 PM peak; fade-rule false negative #2 |
 
 ## Patterns Observed
 

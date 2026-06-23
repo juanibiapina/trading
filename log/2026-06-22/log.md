@@ -208,3 +208,101 @@ All three open positions (VTAK, SKYQ, EHGO) holding near their AH highs — no n
 | VTAK | $1.49 | 23:00 CET (17:00 ET) | 67 | B | 2.0M float, BUILD (new AH high 16:55 ET), patent allowance PR, Total +77% under ceiling |
 | SKYQ | $1.87 | 23:00 CET (17:00 ET) | 53 | C | 3.8M float, HOLD near AH high +60% across 4 scans, Nevada refinery production PR; financing/reverse-split overhang |
 | EHGO | $3.85 | 23:30 CET (17:30 ET) | 25 | C | 1.3M float (ideal), REBUILD to new AH high $4.00 @17:15 negates 23:00 fade-skip; Day +125%, Total +114% under ceiling; vague AI-partnership catalyst + dilution overhang |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**ORIS** — Oriental Rise Holdings (Chinese tea, Food: Major Diversified)
+- Catalyst: No clean positive catalyst. Only news is "Oriental Rise Receives Nasdaq Staff Delisting Determination" (negative). Stocktwits flagged ORIS+VTAK+INFQ as AH gainers. Read as a low-float speculative squeeze, **Grade None**.
+- Previous Close: $2.04 (regular session closed ~$2.42, +18.6% day)
+- AH last night: built to ~+28% ($2.62) by 17:00 ET, held +22%, then **late surge to $3.28 (+60.8%) at 19:25 ET (01:25 CET)**
+- Premarket now: $3.17 (+55.4%), PM peak **$3.93 (+92.5%) at 04:05 ET**
+- Hypothetical P&L (AH window entry ~$2.55 → PM peak $3.93): **+54%**; from regular close $2.42 → PM peak: +62%
+- Float: 4.1M | Market Cap: $3.1M
+- **PM peak ($3.93) exceeded AH peak ($3.28)** — genuine AH→PM continuation.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **NO** (as an AH→PM play during the scanned window)
+- At ~22:15 CET (16:15 ET) ORIS was $2.36, roughly flat vs its $2.42 regular close. During the full entry window (17:00–18:30 ET / 23:00–00:30 CET) its AH change *from the regular close* stayed only +3% to +8% — under the 10% AH-momentum threshold, so the scanner correctly did not flag it. The big +60.8% figure combines its +18.6% day move with the AH run.
+- The defining AH explosion ($2.49 → $3.28, a +32% pure-AH move) hit at **19:25–19:50 ET (01:25–01:50 CET)** — **after the last scheduled scan (00:30 CET / 18:30 ET)**, in the unscanned 18:30–20:00 ET tail of the AH session.
+- ORIS also never showed in the 21:30/22:00 CET regular-session watch despite a +18.6% day on a 4.1M float (CDT-style profile that the watch *did* catch Jun 19) — likely below the relvol gate at that hour.
+- **Scanner gap:** (1) add 1–2 late AH scans (~01:00 / 01:30 CET) to cover the 18:30–20:00 ET tail where late surges fire; (2) the day-gap watch missed a qualifying +18.6% low-float gapper — worth checking the 21:30 relvol threshold.
+
+### Baseline Tracking
+
+- Days tracked: **35** (was 34 + 1)
+- Winners detected by scanner: **30/35 (85.7%)** — ORIS **not** added (defining AH surge came after the last scan; never appeared in any scan)
+- Winner selected for paper trade: **20/35 (57.1%)** — not incremented. We traded VTAK/SKYQ/EHGO, not ORIS.
+- Target: >80% detection
+- Status: **BASELINE MET** (85.7%)
+
+### Retrospective Scan Results
+
+- Live PM scan (04:20 ET): 4 hits — MBRX +106%, ORIS +61%, VTAK +40%, GITS +10%.
+- AH reconstruction (`check-prices --ah-history`): ORIS AH peak $3.28 (+60.8% @19:25 ET, late surge); VTAK AH peak $1.58 (+88% @17:35 ET); MBRX AH peak $3.13 (+8.7%, flat — PM-only gapper).
+- Forced AH scan (secondary diagnostic): **0 hits** (expected — overnight TradingView postmarket fields return 0).
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| VTAK | $1.49 | +77.4% | B — patent allowance | 23:00 CET | $1.35 | 04:05 ET | — | -€12.06 | -12.1% | 🔻 Down (early PM) |
+| SKYQ | $1.87 | +59.8% | C — refinery production PR | 23:00 CET | $1.76 | 04:00 ET | — | -€10.60 | -10.7% | 🔻 Down (early PM) |
+| EHGO | $3.85 | +113.9% | C — vague AI partnership | 23:30 CET | $3.77 | 04:00 ET | — | -€7.75 | -8.1% | 🔻 Down (early PM) |
+
+All three opened PM **below** their entry — none recovered to entry even at PM peak. Very early PM (04:22 ET); position-evaluation (10:30/14:30 CET) handles exits.
+
+**Total Paper P&L (current, unrealized): -€30.41**
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) — full coverage.
+- Candidates found: ~15 unique tickers across scans.
+- Retrospective matches: winner ORIS **not** caught (late surge after last scan). The three traded names (VTAK/SKYQ/EHGO) were all caught and traded.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| ORIS | +60.8% (peak @19:25 ET) | AH surge fired at 01:25 CET, after last scan (00:30 CET). During scanned window AH-from-close stayed <10%. | Yes (+54–62% AH→PM) |
+| MBRX | +8.7% AH only | PM-only gapper (flat AH, exploded only after 04:00 ET) — structurally undetectable by AH scanner. Not counted as a miss. | Yes but uninvestable (spiked $6.64→$3.77 in 10 min) |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| ORIS | $3.28 (+60.8%) | 19:25 ET | Late surge | $3.17 | -3% | +55.4% | **PM peak $3.93 EXCEEDED AH peak — winner** |
+| EHGO | $4.00 (+122%) | 17:15 ET | Rebuild (new high) | $3.54 | -12% | +96.6% | AH better exit (PM peak $3.77 < AH peak) |
+| VTAK | $1.58 (+88%) | 17:35 ET | Build/hold | $1.31 | -17% | +56.0% | AH better exit (PM peak $1.35 < AH peak) |
+| SKYQ | $1.93 (+65%) | 16:10 ET | Spike→hold | $1.67 | -13% | +42.7% | AH better exit (PM peak $1.76 < AH peak) |
+| TNON | $0.60 (+72%) | 16:00 ET | Spike→fade | $0.48 | -20% | +37.1% | AH better exit, dead fade |
+
+**AH-peak-vs-PM-peak:** 4 of 5 movers (EHGO, VTAK, SKYQ, TNON) peaked in AH and faded into PM — AH was the better exit. Only ORIS (the one we did NOT trade) continued higher in PM. No mover exceeded +250% AH (extreme-runner tally unchanged: MSW Jun 9 only data point).
+
+### Notes
+
+- **Scanner ran full coverage (7/7).** No coverage failure last night. The Jun 18–19 cron outage did not recur — coverage-failure tally stays at Jun 18–19 (1 episode, 2 nights). No infra escalation.
+- **Today's lesson:** the winner (ORIS) and the runner-up raw mover (MBRX) were both effectively outside the scanner's reach — ORIS surged after the last scan, MBRX was a PM-only gapper. The three names we *did* trade all peaked in AH and faded into PM. This is the recurring pattern: extreme AH runners we catch tend to fade, while the cleaner PM continuations come from late-AH surges we scan too early to see.
+- **PM-only gapper tally** (biggest raw PM mover = PM-only): CIIT (Jun 10 +140%), GLXG (Jun 11 +343%), TDIC (Jun 16 +140%), **MBRX (Jun 23 +131%)** = 4. MBRX flat in AH (+8.7%), exploded only after 04:00 ET, then crashed $6.64→$3.77 in 10 min.
+- **Fade-rule false-negative tally unchanged = 2** (CRE Jun 17, LNKS Jun 18). Last night's faders all correctly skipped — PM stayed below AH peak for every one: KIDZ (1.1M float, PM -22.8%), NXGL (7.1M, +9.5%), BOXL (3.2M, +4.6%), TNON (10M, +42.9% but below its +72% AH peak). **KIDZ at 1.1M float faded and did NOT re-explode** — a clean counter-example to the low-float-re-explode hypothesis (CRE/LNKS were the only re-exploders, both <3M float; KIDZ shows low float alone doesn't predict re-explosion).
+- **No CEILING-OVERRIDE or DEAD-CAT-OVERRIDE watch candidates** flagged last night. Both tallies unchanged.
+- **Multi-day check** handled in WINNERS_TRACKING.md update.
+
+### Price Charts
+
+ORIS — late-AH surge into PM continuation (the winner). Built +28% AH by 17:00 ET, held, then surged $2.49→$3.28 (+60.8%) at 19:25 ET (after last scan), continued to PM peak $3.93 (+92.5%) at 04:05 ET. PM peak exceeded AH peak.
+
+```
+ORIS  prev close $2.04
+$3.93 │                                                          ██   (PM peak 04:05 ET)
+      │                                         █████ ███       █
+      │                              █ ██████        █   ███████      (late AH surge 19:25 ET)
+      │                     █████████ █      ███
+      │  █████   ███████████                                          (entry-window build +22-28%)
+$1.77 │██     ███
+      └────────────────────────────────────────────────────────────
+       16:00 ET ───── AH ───── 19:55   |   04:00 ── PM ── now
+```
+
+Note: `price-timeline.py` labels are offset +4h (showed future 08:xx timestamps); times above corrected from `check-prices.py` (last point 04:22 ET = now).
