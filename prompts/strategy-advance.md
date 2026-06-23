@@ -5,6 +5,18 @@ surgical scanner/process tweaks inside the daily cycle. This loop moves the
 **bigger initiatives** in `STRATEGY_ROADMAP.md` forward — one initiative at a
 time, one small step per day, with evidence discipline.
 
+## North Star
+
+The objective is **making the most money, fast** = maximizing account-growth
+rate, per the North Star section of `STRATEGY_ROADMAP.md`. Detection rate,
+baseline, and clean process are proxies, not the goal. The core AH->PM strategy
+is a hypothesis that can be replaced if another approach compounds faster. Every
+run, sanity-check that the active initiative is still the highest expected
+dollars-per-unit-time lever; if a bigger lever has appeared (including changing
+the core strategy or universe), surface it. Strategy pivots that touch
+`Day Trading.md` or live trading are *proposed to Juan*, not applied alone, but
+they are always in scope to raise.
+
 ## Rules
 
 - **One initiative at a time.** Pick the single active initiative and advance
@@ -58,13 +70,19 @@ no, note "insufficient data" and continue.
 
 ### 3. Select Today's Active Initiative
 
-Pick exactly one:
+Pick exactly one, ranked by the North Star (expected dollars per unit time =
+edge size x frequency x scalability, discounted by effort and uncertainty):
 1. If an initiative is in the *pilot* stage, continue it (only one pilot at a
    time).
-2. Else pick the highest-priority unblocked initiative in Research/Instrument.
-   Skip any initiative whose `Needs from Juan` is unmet (note it as blocked).
+2. Else pick the unblocked initiative with the highest expected money-fast
+   impact in Research/Instrument. Skip any whose `Needs from Juan` is unmet
+   (note it as blocked).
+3. If the highest-impact lever is not on the roadmap (e.g. a core-strategy or
+   universe change looks like it would compound faster), add it as a new
+   initiative and, if it touches live trading, flag it for Juan.
 
-State which initiative you chose and why in one sentence.
+State which initiative you chose and why (the money-fast rationale) in one
+sentence.
 
 ### 4. Take the Next Smallest Step
 

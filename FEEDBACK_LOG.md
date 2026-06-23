@@ -6,6 +6,30 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-06-23 — north star: make the most money, fast (chat)
+
+**Juan said:** "The goal is to make the most amount of money fast. Somehow this
+should drive our decision making. The strategy itself can be adapted."
+
+**Interpretation:** The objective function is account-growth rate, not detection
+rate. Detection baseline / win rate / clean process are proxies, valuable only
+when they convert to faster money. The core AH->PM strategy is a hypothesis that
+can be replaced if another approach compounds faster. This should be the lens
+the daily loops prioritise by.
+
+**Action:**
+- Added a **North Star** section to the top of `STRATEGY_ROADMAP.md`: objective
+  = most money fast; proxies are subordinate; core strategy is adaptable; rank
+  work by expected dollars-per-unit-time (edge x frequency x scalability less
+  effort/uncertainty); proof before scale; don't go broke; strategy pivots
+  touching `Day Trading.md` / live trading are proposed to Juan.
+- Wired `prompts/strategy-advance.md` to this lens: added a North Star block and
+  changed initiative selection to rank by money-fast impact, with explicit
+  permission to add a new initiative (incl. core-strategy/universe change) if it
+  is the highest lever.
+
+---
+
 ### 2026-06-23 — re: Trading Scanner Report - 2026-06-22
 
 **Juan said:** "I think the env vars are there! I removed the unset on zero's

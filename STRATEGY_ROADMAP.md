@@ -11,6 +11,37 @@ scanner-improvement loop (which is restricted to surgical scanner/process
 tweaks). The scanner-improvement task may reference this file but must not
 change strategy on its own.
 
+## North Star (the objective everything serves)
+
+**Make the most money, fast.** The single objective is maximizing the
+account-growth rate, paper now and real later. Everything else, detection rate,
+the >80% baseline, win rate, clean process, is a **proxy**, valuable only while
+it converts into faster account growth. When a proxy stops serving the
+objective, change or drop it.
+
+Implications that drive decisions:
+
+- **The core strategy is a hypothesis, not a constant.** AH->PM momentum is the
+  current best guess. If another setup compounds faster (PM-only gappers, the
+  +300-600% runners in Initiative 6, earlier volume-lead entries in
+  Initiative 1, a different universe entirely), pivot toward it. Nothing is
+  sacred except the objective.
+- **Prioritise by expected dollars per unit time.** Rank work by
+  edge size x frequency x scalability, discounted by effort and uncertainty.
+  The highest expected $/time lever wins the day. A clean process that earns
+  little loses to a messy process that earns a lot.
+- **Don't go broke; that is the slowest path.** "Fast" still means surviving to
+  compound. While in paper/learning, "fast" = find the highest-expectancy
+  repeatable edge and prove it cheaply, then scale size and concentration once
+  proven. Avoid ruin, not volatility.
+- **Proof before scale.** Bigger size and concentration are how money is made
+  fast, but only on an edge that has shown itself. Validate cheaply (shadow /
+  paper / instrument), then push size.
+- **Strategy pivots that touch `Day Trading.md` or live trading are proposed to
+  Juan**, not applied unilaterally, but they are always in scope to raise.
+
+The `strategy-advance` pulse uses this section as its prioritisation lens.
+
 ## How we roll changes out
 
 1. **Research** — understand the mechanism, the data we need, and the cost.
