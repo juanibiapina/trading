@@ -29,6 +29,36 @@ No open positions remaining.
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
 | VTAK | $1.16 | 23:30 CET (17:30 ET) | 86 | C | BUILD/hold near AH high (new high $1.22 @17:10 ET), float 2.0M, only BUILD candidate of the night. Concerns: re-pump on spent catalyst (patent PR already failed today -16.1%), dilutive resale registration. Exit premarket, stop -10% ($1.04). |
+| EPOW | $0.69 | 00:30 CET (18:30 ET) | 144 | None | Hold-near-high (within ~5% of $0.75 AH high), real volume VRatio 6.6x, AH >10% across ≥2 AH scans, float 25.6M, Total +18% (under ceiling). Concerns: no catalyst found (3 searches), early AH peak 16:55 ET (not declining across scans = holding, not disqualified), float >10M. Data-collection entry: early-peak-but-holding, no catalyst. Exit at first premarket opportunity, stop -10% ($0.62). |
+
+## Scan 00:30 CET (6:30 PM ET)
+
+AH scan — entries eligible. Scanner: 11 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ATLN | [TV](https://www.tradingview.com/chart/?symbol=ATLN) | $1.33 | +202.4% | +5.3% | $1.40 | +218.3% | 11.8M | 42.6M | 0.3x | 24.4M | Pharmaceuticals: Major |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.92 | +5.8% | +30.4% | $1.20 | +38.0% | 8.2M | 7.9M | 1.0x | 2.0M | Medical Specialties |
+| EPOW | [TV](https://www.tradingview.com/chart/?symbol=EPOW) | $0.62 | +6.5% | +10.9% | $0.69 | +18.2% | 2.7M | 406K | 6.6x | 25.6M | Packaged Software |
+| EU | [TV](https://www.tradingview.com/chart/?symbol=EU) | $1.48 | -3.3% | +7.4% | $1.59 | +3.9% | 1.4M | 4.9M | 0.3x | 0 | Other Metals/Minerals |
+| HUMA | [TV](https://www.tradingview.com/chart/?symbol=HUMA) | $0.70 | -16.5% | +6.2% | $0.74 | -11.4% | 656K | 15.9M | 0.0x | 244.5M | Biotechnology |
+| NXTS | [TV](https://www.tradingview.com/chart/?symbol=NXTS) | $5.81 | -55.3% | +11.0% | $6.45 | -50.4% | 283K | 7.6M | 0.0x | 554K | Household/Personal Care |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $2.37 | -3.7% | +7.6% | $2.55 | +3.7% | 98K | 75K | 1.3x | 2.3M | Medical/Nursing Services |
+| CNEY | [TV](https://www.tradingview.com/chart/?symbol=CNEY) | $0.71 | -0.5% | +12.7% | $0.80 | +12.1% | 74K | 105K | 0.7x | 5.0M | Electrical Products |
+| GALT | [TV](https://www.tradingview.com/chart/?symbol=GALT) | $3.12 | +11.4% | +9.0% | $3.40 | +21.4% | 73K | 649K | 0.1x | 46.9M | Biotechnology |
+| DWTX | [TV](https://www.tradingview.com/chart/?symbol=DWTX) | $1.55 | +0.6% | +6.5% | $1.65 | +7.1% | 52K | 124K | 0.4x | 8.7M | Pharmaceuticals: Major |
+| DCGO | [TV](https://www.tradingview.com/chart/?symbol=DCGO) | $0.51 | -5.0% | +6.1% | $0.54 | +0.8% | 51K | 715K | 0.1x | 92.3M | Medical/Nursing Services |
+
+**AH-history check (trajectory):**
+- **VTAK** (open position, entered $0.92→$1.16 @23:30) — Made a new AH high +58.7% ($1.38) at **17:35 ET**, now $1.15 (+32%, ~15% off high but holding within range). Position roughly flat from entry ($1.16→$1.15). One entry per candidate per night — no new action; continue holding to premarket (Grade C, stop $1.04).
+- **EPOW** (new entry) — Float 25.6M, **VRatio 6.6x (real unusual volume)**. AH peaked +28.2% at **16:55 ET** (early), then chopped $0.68–0.75; currently $0.69–0.71, ~5% off the $0.75 high = **holding near high, not declining across scans** (23:30 +18.9%, 00:00 +8.1%, 00:30 +10.9%). Early peak is a disqualifier only when *also fading* — EPOW is holding, so not disqualified. Catalyst re-search (3 queries: earnings, press release, news) found **no catalyst** (all results are unrelated American Electric Power/AEP). Total +18% well under +150% ceiling, Day +6.5% above -15%. **ENTER** (Grade None) — clears all hard gates, hold-near-high with real volume; data-collection on the early-peak-but-holding + no-catalyst scenario.
+- **CNEY** (new) — Scanner snapshot showed +12.7% AH, but 5-min history shows the real AH peak was only **+3.6%** ($0.74 @16:25) and it now sits **-3.2%** ($0.69) on just 3K AH volume. The +12.7% was a stale/illiquid print, not a sustained move. **Skip: no real AH volume, not sustaining.**
+- **ATLN** — Day +202% regular session; AH +5.3%, Total +218% far above ceiling, stale prints. **Skip: regular-session spike, AH <10%, over ceiling.**
+- **NXTS** — Day -55.3%, AH bounce still -50.4% total = dead-cat. **Skip.**
+- **HUMA** — Day -16.5% (below -15%), float 244.5M, AH still -11.4% total = dead-cat. **Skip.**
+- **GALT / DWTX / EU / RYOJ / DCGO** — AH <10% (+9.0% / +6.5% / +7.4% / +7.6% / +6.1%); GALT/DCGO also high float. **Skip.**
+
+**Decision: 1 new paper trade — EPOW @ $0.69 (Grade None).** EPOW is the only new candidate clearing all entry gates: float <50M, AH >10% across ≥2 AH scans, Day above -15%, Total under ceiling, holding near its AH high with real 6.6x volume. Concerns documented (no catalyst, early 16:55 peak but holding not fading, float 25.6M). VTAK (open position) continues to hold near its AH high — no new action (one entry per candidate per night). All other hits are dead-cats (NXTS, HUMA), regular-session spikes over ceiling (ATLN), sub-10% AH (GALT/DWTX/EU/RYOJ/DCGO), or stale illiquid prints (CNEY).
 
 ## Scan 00:00 CET (6:00 PM ET)
 

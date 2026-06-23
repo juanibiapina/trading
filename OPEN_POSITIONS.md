@@ -7,6 +7,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
 | VTAK | 2026-06-23 | $1.16 | 86 | $99.76 | C | Patent allowance PR + Flyte partnership (Monday, spent — already failed today -16.1%); resale-share registration overhang | $1.04 | premarket exit | $1.22 |
+| EPOW | 2026-06-23 | $0.69 | 144 | $99.36 | None | No catalyst found (3 searches); hold-near-high (within ~5% of $0.75 AH high), VRatio 6.6x real volume, early 16:55 ET peak but not declining across scans; float 25.6M | $0.62 | premarket exit | $0.75 |
 
 ## Position Rules
 
