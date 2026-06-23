@@ -29,6 +29,27 @@ No open positions remaining.
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
 
+## Scan 22:30 CET (4:30 PM ET)
+
+AH scan — **observation only** (before 23:00 CET, learning-phase rule). Scanner: 4 hits, none with real AH volume.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ATLN | [TV](https://www.tradingview.com/chart/?symbol=ATLN) | $1.33 | +202.4% | +6.0% | $1.41 | +220.6% | 3.2M | 41.7M | 0.1x | 24.4M | Pharmaceuticals: Major |
+| ILLR | [TV](https://www.tradingview.com/chart/?symbol=ILLR) | $0.73 | -50.5% | +8.2% | $0.79 | -46.4% | 1.2M | 450K | 2.6x | 177.5M | Packaged Software |
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $2.10 | -1.9% | +11.9% | $2.35 | +9.8% | 424K | 3.6M | 0.1x | 822K | Information Technology Services |
+| ALPS | [TV](https://www.tradingview.com/chart/?symbol=ALPS) | $0.65 | -3.8% | +21.5% | $0.79 | +16.9% | 45.0M | — | 0.0x | 45.0M | Miscellaneous |
+
+**AH-history check (trajectory):**
+- **ATLN** — Day already +202% in regular session; AH change only +6%. Only the 16:00 bar (21K) had volume, all later bars stale prints drifting $1.37–1.49. Total% +220 far exceeds the +150 extension ceiling. Regular-session spike, no fresh AH momentum. Skip.
+- **ILLR** — Crashed -50.5% in regular session; AH bounce to -34.9% off prev close is still deeply negative = dead-cat. Float 177.5M (huge). Skip.
+- **MASK** — AH vol 0 (all stale prints), +9.3% peak then faded to -0.5%. Tiny float 822K but no real volume. Skip.
+- **ALPS** — Stale 06-22 print, 100-share AH vol. No real action. Skip.
+
+Watch-list carry-forward (GITS, HSCS, RDGT, CRMT, CYAN) did **not** appear in this AH scan — intraday spikes did not carry into after-hours.
+
+**Decision:** No paper trades (observation-only scan + no qualifying candidates). Re-scan at 23:00 CET when entries become eligible.
+
 ## Scan 22:00 CET (4:00 PM ET)
 
 AH scan, run right at the 16:00 ET open. Scanner: **0 hits** — no AH volume registered yet (bars not populated at the open). `check-prices --ah-history` on the 21:30 watch shortlist still returned prior-day bars (06-22/06-18), confirming today's AH feed hasn't updated.
