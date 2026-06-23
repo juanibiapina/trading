@@ -30,6 +30,31 @@ No open positions remaining.
 |--------|-------------|------------|-----------------|----------------|--------|
 | VTAK | $1.16 | 23:30 CET (17:30 ET) | 86 | C | BUILD/hold near AH high (new high $1.22 @17:10 ET), float 2.0M, only BUILD candidate of the night. Concerns: re-pump on spent catalyst (patent PR already failed today -16.1%), dilutive resale registration. Exit premarket, stop -10% ($1.04). |
 
+## Scan 00:00 CET (6:00 PM ET)
+
+AH scan — entries eligible. Scanner: 8 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MNDR | [TV](https://www.tradingview.com/chart/?symbol=MNDR) | $0.57 | -2.7% | +14.5% | $0.65 | +11.4% | 13.3M | 1.7M | 8.0x | 1.8M | Medical/Nursing Services |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.92 | +5.8% | +44.6% | $1.33 | +52.9% | 6.4M | 7.7M | 0.8x | 2.0M | Medical Specialties |
+| EPOW | [TV](https://www.tradingview.com/chart/?symbol=EPOW) | $0.62 | +6.5% | +8.1% | $0.67 | +15.1% | 2.6M | 399K | 6.6x | 25.6M | Packaged Software |
+| TPST | [TV](https://www.tradingview.com/chart/?symbol=TPST) | $1.25 | +0.4% | +6.8% | $1.34 | +7.2% | 1.0M | 168K | 6.0x | 8.4M | Pharmaceuticals: Major |
+| FCUV | [TV](https://www.tradingview.com/chart/?symbol=FCUV) | $4.11 | +89.2% | +6.3% | $4.37 | +101.2% | 542K | 7.8M | 0.1x | 1.7M | Advertising/Marketing Services |
+| NXTS | [TV](https://www.tradingview.com/chart/?symbol=NXTS) | $5.81 | -55.3% | +7.7% | $6.26 | -51.8% | 226K | 7.6M | 0.0x | 554K | Household/Personal Care |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $2.37 | -3.7% | +7.6% | $2.55 | +3.7% | 98K | 75K | 1.3x | 2.3M | Medical/Nursing Services |
+| DCGO | [TV](https://www.tradingview.com/chart/?symbol=DCGO) | $0.51 | -5.0% | +6.1% | $0.54 | +0.8% | 51K | 715K | 0.1x | 92.3M | Medical/Nursing Services |
+
+**AH-history check (trajectory):**
+- **VTAK** (open position, entered $1.16 @ 23:30) — **BUILD continuing.** Made a *new* AH high +58.7% ($1.38) at **17:35 ET**, now $1.33 (+44.6%, ~4% off high). Position +14.6% from entry. Holding near AH high, best trajectory of the night sustained. No new action (one entry per candidate per night).
+- **MNDR** — Float 1.8M, VRatio 8.0x. Faded from 23:30 +23.3% to +14.5% (early peak +37.6% @16:30 ET, now drifting $0.61–0.65). Early-peak + fading. Catalyst remains the Grade-D 1-for-6 reverse split (no fresh news). Documented repeat loser. **Skip** (consistent with prior scans).
+- **TPST** (new) — Float 8.4M. AH peaked +12.8% ($1.41 @17:05 ET), faded to +5.6%; this scan +6.8%, below 10%. All AH bars stale (0 vol). Only 1 brief touch >10%. **Skip: AH <10%, no real volume.**
+- **FCUV** (new) — Day +89.2% in regular session; AH change only +6.3% (Total +101%). AH bars are stale prints (9K total vol), holding the regular-session spike with no fresh AH momentum. **Skip: regular-session move, AH <10%, no fresh AH volume.**
+- **NXTS** (new) — Day -55.3%, AH bounce still -51.8% total = dead-cat. **Skip.**
+- **RYOJ / DCGO** (new) — AH <10% (+7.6% / +6.1%); DCGO float 92.3M. **Skip.**
+
+**Decision: No new paper trades.** VTAK (the night's BUILD candidate) is already entered and continuing to build — position +14.6%. No new candidate clears the gates: MNDR is a fading early-peak Grade-D repeat loser; TPST/FCUV/RYOJ/DCGO are all below the 10% AH threshold this scan; NXTS is a dead-cat. Continue holding VTAK to premarket per Grade C (exit premarket, stop -10% $1.04).
+
 ## Scan 23:30 CET (5:30 PM ET)
 
 AH scan — entries eligible (past 23:00 CET). Scanner: 6 hits.
