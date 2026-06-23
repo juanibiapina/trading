@@ -29,6 +29,32 @@ No open positions remaining.
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
 
+## Scan 23:00 CET (5:00 PM ET)
+
+First AH scan with real volume populated (22:00 = 0 hits, 22:30 = stale prints). Scanner: 8 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MNDR | [TV](https://www.tradingview.com/chart/?symbol=MNDR) | $0.57 | -2.7% | +16.2% | $0.66 | +13.0% | 5.9M | 886K | 6.7x | 1.8M | Medical/Nursing Services |
+| EPOW | [TV](https://www.tradingview.com/chart/?symbol=EPOW) | $0.62 | +6.5% | +6.5% | $0.66 | +13.4% | 1.2M | 246K | 4.8x | 25.6M | Packaged Software |
+| ATLN | [TV](https://www.tradingview.com/chart/?symbol=ATLN) | $1.33 | +202.4% | +6.0% | $1.41 | +220.6% | 7.6M | 42.2M | 0.2x | 24.4M | Pharmaceuticals: Major |
+| ILLR | [TV](https://www.tradingview.com/chart/?symbol=ILLR) | $0.73 | -50.5% | +13.6% | $0.83 | -43.7% | 3.2M | 662K | 4.9x | 177.5M | Packaged Software |
+| ORIS | [TV](https://www.tradingview.com/chart/?symbol=ORIS) | $1.83 | -24.4% | +9.3% | $2.00 | -17.4% | 923K | 1.3M | 0.7x | 4.1M | Food: Major Diversified |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.92 | +5.8% | +6.5% | $0.98 | +12.7% | 197K | 7.0M | 0.0x | 2.0M | Medical Specialties |
+| EGHT | [TV](https://www.tradingview.com/chart/?symbol=EGHT) | $1.66 | -3.5% | +5.3% | $1.75 | +1.7% | 161K | 1.8M | 0.1x | 134.2M | Packaged Software |
+| ALPS | [TV](https://www.tradingview.com/chart/?symbol=ALPS) | $0.65 | -3.8% | +21.5% | $0.79 | +16.9% | 100 | 11K | 0.0x | 45.0M | Miscellaneous |
+
+**AH-history check (trajectory):**
+- **MNDR** — Float 1.8M, VRatio 6.7x (real volume). But peaked **+37.6% at 16:30 ET** (very early, before 17:30), then chopped/faded: +13% @16:40, bouncing $0.64–0.76, now +25% off close (~8% below AH high). Early-peak SPIKE→chop. Catalyst search: a pending **reverse stock split** (StockTitan, "Change in Effective Date of Reverse Stock Split") — Grade D restructuring, not momentum news. No fresh catalyst today. **MNDR is the same ticker flagged in Day Trading.md as a prior loser** ("6.8x AH volume, no news, lost -16.5%") — now repeating the exact pattern (6.7x vol, no catalyst). Strong negative.
+- **EPOW** — Float 25.6M. Peaked **+28.2% at 16:55 ET** (early), now +23.4%. No catalyst found (1 search, unrelated results). Early-peak pattern, higher float.
+- **ATLN** — Day already +202% in regular session; AH only +6%, Total +220% far above the +150 extension ceiling. Regular-session spike, no fresh AH momentum. Skip.
+- **ILLR** — Crashed -50.5% regular session; AH bounce still -43.7% total = dead-cat. Float 177.5M. Skip.
+- **ORIS** — Day -24.4% (below -15%), AH all negative fading to -34.3% total. Dead-cat. Skip.
+- **VTAK** — Already traded today (sold $1.25). AH +6.5%, VRatio 0.0x, no real volume. Skip.
+- **EGHT / ALPS** — Float >45M / stale 100-share print. Skip.
+
+**Decision: No paper trades.** Night-level gate not met — the rule requires a candidate with float <50M and **AH >10% across ≥2 after-hours scans**; MNDR and EPOW are both *first* AH appearances (22:00/22:30 had no real candidates). Both also peaked early (before 17:30 ET) and are fading from their AH highs. MNDR additionally carries a Grade-D reverse split and matches a documented loser pattern. Re-scan at 23:30/00:00 CET to see whether MNDR/EPOW sustain >10% AH for a second scan (BUILD/hold vs continued fade) before any entry.
+
 ## Scan 22:30 CET (4:30 PM ET)
 
 AH scan — **observation only** (before 23:00 CET, learning-phase rule). Scanner: 4 hits, none with real AH volume.
