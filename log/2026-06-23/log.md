@@ -23,3 +23,26 @@
 - SELL VTAK @ $1.25 (67 sh): -$16.08 (-16.1%). Grade B hard stop breached. PM never recovered above entry; fill near stop crossing (PM 08:55 $1.24 → 09:00 $1.14).
 
 No open positions remaining.
+
+## Paper Trades
+
+| Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
+|--------|-------------|------------|-----------------|----------------|--------|
+
+## Scan 21:30 CET (3:30 PM ET)
+
+Regular session scan (market still open). No entries — flagging candidates as **Watch — pending AH confirmation**. Per regular-session caution: only enter if a name reappears in an AH scan (22:00+ CET) with sustained momentum.
+
+Watch shortlist (float <10M, real volume, sustained move):
+
+| Ticker | Chart | Price | Chg% | 5mVol | IRVol | VChg% | Float | MCap | Industry | Note |
+|--------|-------|-------|------|-------|-------|-------|-------|------|----------|------|
+| GITS | [TV](https://www.tradingview.com/chart/?symbol=GITS) | $2.00 | +32.1% | 71K | 674x | +142.5% | 2.2M | 7.3M | Packaged Software | Volume building into close — best watch |
+| HSCS | [TV](https://www.tradingview.com/chart/?symbol=HSCS) | $2.68 | +51.4% | 57K | 2763x | -85.4% | 3.1M | 8.5M | Medical Specialties | Big move but volume fading |
+| RDGT | [TV](https://www.tradingview.com/chart/?symbol=RDGT) | $1.75 | +27.7% | 25K | 77x | -55.0% | 884K | 1.6M | Medical Distributors | Tiny float, fading vol |
+| CRMT | [TV](https://www.tradingview.com/chart/?symbol=CRMT) | $3.93 | +30.6% | 34K | 4.0x | -35.2% | 7.6M | 32.6M | Specialty Stores | Earnings reaction likely |
+| CYAN | [TV](https://www.tradingview.com/chart/?symbol=CYAN) | $0.52 | +33.2% | 1K | 4.0x | +36.8% | 4.0M | 3.8M | Pharma | Low vol, sub-$1 |
+
+Other movers were mostly low-volume noise (5mVol <1K) or high-float (AZREF 64M, OBGRF 29.5M, FWRXF 44.5M). 58 raw hits; full list in scanner output.
+
+**Decision:** No paper trades — regular session, before AH. Re-scan at 22:00+ CET to confirm which of these carry momentum into after-hours.
