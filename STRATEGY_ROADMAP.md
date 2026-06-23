@@ -132,7 +132,11 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** Research / not started.
+**Status:** In progress — the daily **`strategy-advance` pulse** (2026-06-23) is
+the first deliverable: a loop that advances this roadmap one initiative per day
+and is explicitly allowed to add/retime pulses as part of this initiative. Next:
+audit which pulses produce actionable output vs run empty, then propose a
+trimmed/retimed schedule.
 
 **Current schedule (cron, Europe/Berlin local time):**
 - Post-market scans: 21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 (7 scans)
