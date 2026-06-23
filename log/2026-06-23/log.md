@@ -29,6 +29,24 @@ No open positions remaining.
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Catalyst Grade | Reason |
 |--------|-------------|------------|-----------------|----------------|--------|
 
+## Scan 22:00 CET (4:00 PM ET)
+
+AH scan, run right at the 16:00 ET open. Scanner: **0 hits** — no AH volume registered yet (bars not populated at the open). `check-prices --ah-history` on the 21:30 watch shortlist still returned prior-day bars (06-22/06-18), confirming today's AH feed hasn't updated.
+
+Learning-phase rule: 22:00 scan is **observation only** — no entries before 23:00 CET regardless.
+
+Watch shortlist carry-forward (to confirm at 22:30/23:00 when AH data populates):
+
+| Ticker | Float | 21:30 Price | 21:30 Chg% | Status |
+|--------|-------|-------------|------------|--------|
+| GITS | 2.2M | $2.00 | +32.1% | Best watch — vol was building into close |
+| HSCS | 3.1M | $2.68 | +51.4% | Big move, vol was fading at 21:30 |
+| RDGT | 884K | $1.75 | +27.7% | Tiny float, fading vol |
+| CRMT | 7.6M | $3.93 | +30.6% | Likely earnings reaction |
+| CYAN | 4.0M | $0.52 | +33.2% | Low vol, sub-$1 |
+
+**Decision:** No paper trades. Re-scan at 22:30/23:00 CET to see which carry into AH with sustained volume.
+
 ## Scan 21:30 CET (3:30 PM ET)
 
 Regular session scan (market still open). No entries — flagging candidates as **Watch — pending AH confirmation**. Per regular-session caution: only enter if a name reappears in an AH scan (22:00+ CET) with sustained momentum.
