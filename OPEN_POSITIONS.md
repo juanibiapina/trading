@@ -6,8 +6,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-
-_No open positions._
+| AZI | 2026-06-24 | $1.62 | 61 | $98.82 | None | No fresh catalyst; recent driver was $30M private placement (dilution, ~Jun 10). Secondary AH bounce, not first-day. | $1.46 (-10%) | premarket exit | $1.78 (16:35 ET AH) |
 
 ## Position Rules
 
