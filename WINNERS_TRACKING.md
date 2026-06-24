@@ -6,8 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-19 | CDT | None (low-float 1.6M; ran +48% Jun 18 intraday) | +31% ($1.34 PM) | — | $1.26-1.42 PM | Day 4 - holding $1.26-1.42; marginal winner, never traded |
-| 2026-06-23 | ORIS | None (Nasdaq delisting determination = negative; low-float squeeze) | +60.8% ($3.28 AH @19:25 ET) | $3.93 PM (+92.5%) | $3.17 PM | 🆕 Day 1 - winner, NOT traded; AH surge fired after last scan |
+| 2026-06-23 | ORIS | None (Nasdaq delisting determination = negative; low-float squeeze) | +60.8% ($3.28 AH @19:25 ET) | $4.24 PM (+75.2%) | $1.83 | Day 2 - faded hard from $4.24 PM peak to $1.83 intraday; NOT traded |
+| 2026-06-24 | VTAK | C — spent patent PR re-pump (low-float 2.0M) | $1.38 AH (+58.7%) | $1.89 PM (+117.4%) | $1.89 PM | 🆕 Day 1 - winner, TRADED @ $1.16 (paper, +63% to peak); AH-fader re-exploded PM |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -49,6 +49,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-06-17 | LNAI | C — 8-K Nasdaq bid-price compliance | $6.42 | $7.12 | $2.85 | $3.9 | Day 6: Stabilized ~$3.9 after deep fade from $7.12 PM peak |
 | 2026-06-17 | NIVF | C — note/warrant buyback (anti-dilution) | $0.96 | $1.55 | — | $0.61 | Day 6: Faded to $0.61; PM exit @ $1.36 was right |
 | 2026-06-18 | LNKS | None (repeat low-float runner, prior winner May 13) | $2.31 | $4.70 (+184.7%) | $2.98 | $2.1 | Day 5: Faded to ~$2.1 from $4.70 PM peak; fade-rule false negative #2 |
+| 2026-06-19 | CDT | None (low-float 1.6M; ran +48% Jun 18 intraday) | $1.34 PM (+31%) | $1.34 | — | $1.10 | Day 5: Faded to $1.10 from $1.34 PM peak; marginal winner, never traded |
 
 ## Patterns Observed
 

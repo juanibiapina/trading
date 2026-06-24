@@ -191,3 +191,83 @@ Watch shortlist (float <10M, real volume, sustained move):
 Other movers were mostly low-volume noise (5mVol <1K) or high-float (AZREF 64M, OBGRF 29.5M, FWRXF 44.5M). 58 raw hits; full list in scanner output.
 
 **Decision:** No paper trades — regular session, before AH. Re-scan at 22:00+ CET to confirm which of these carry momentum into after-hours.
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**VTAK** — Medical Specialties (Catheter Precision)
+- Catalyst: Patent allowance PR + Flyte sports partnership (Grade C, Monday Jun 22 news; spent catalyst re-pumping). PM re-explosion is low-float momentum, no fresh Tuesday/Wednesday news found.
+- Previous Close (Tue): $0.92
+- AH last night: peak $1.38 (+58.7%) at 17:35 ET (23:35 CET), then faded to ~$1.08 by 19:55 ET
+- Premarket now: peak **$1.79 (+105.8%)** at ~04:15 ET, currently $1.61 (+85.1%)
+- Hypothetical P&L (AH entry $1.16 → PM peak $1.79): **+54.3%**
+- Float: 2.0M | Market Cap: ~$2.5M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES — and we traded it.**
+- At ~23:00–23:30 CET VTAK showed AH +32.6% ($1.22), float 2.0M, BUILD trajectory (climbed +8%→+33.6%→new high $1.38). We entered the paper trade at **$1.16 @ 23:30 CET** (Grade C). It built further to +44.6% ($1.33) by 00:00 CET.
+- This is a **detection + selection success**: scanner found the night's eventual winner and the paper trade is currently +38.8% (peak +54.3%).
+- Scanner gap: none for this name. Note VTAK is a **low-float (2.0M) AH-fader that re-exploded in PM** (AH peak $1.38 faded to $1.08, PM re-explosion to $1.79). It supports the hypothesis that very-low-float AH names can re-explode in PM even after an AH fade — but here we held through, so it counts as a win, not a fade-skip false negative.
+
+### Baseline Tracking
+
+- Days tracked: **36** (was 35 + 1)
+- Winners detected by scanner: **31/36 (86.1%)** — VTAK added
+- Winner selected for paper trade: **21/36 (58.3%)** — VTAK was traded; we picked the right stock
+- Target: >80% detection
+- Status: **BASELINE MET** (detection 86.1%)
+
+### Retrospective Scan Results
+
+- Live PM scan (04:20 ET): 2 hits — **CUPR +73.4%** ($6.83, float 921K), **VTAK +25.0%** ($1.15, float 2.0M).
+- AH reconstruction (`--ah-history`): VTAK built to AH peak $1.38 (+58.7%) at 17:35 ET. CUPR was **flat in after-hours** (AH high $3.94 = +0.3%, drifted down to $3.73) — its move began only after 04:00 ET.
+- PM reconstruction (`--pm-history`): VTAK PM peak $1.79 (+105.8%) at 04:15 ET; CUPR PM peak $7.12 (+81.1%) at 04:10 ET (timeline tool flagged a thin $9.74 tick — treated as illiquid print).
+
+### Paper Trade P&L
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| VTAK | $1.16 | +26.1% | C — spent patent PR re-pump | 23:30 CET | $1.79 | 04:15 ET | open | +€38.70 | +38.8% | 🟢 Open (peak +54.3%) |
+| EPOW | $0.69 | +11.3% | None — no catalyst | 00:30 CET | $0.62 | 04:00 ET | open | -€10.08 | -10.1% | 🔴 Open (faded to close) |
+
+**Total Paper P&L (unrealized): +€28.62**
+
+(Exits handled by position-evaluation.md at 10:30/14:30 CET — not closed here.)
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) — full coverage, entry window captured.
+- Candidates found: ~14 unique tickers across scans
+- Retrospective matches: VTAK caught (winner). CUPR not catchable (PM-only gapper, undetectable in AH).
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| CUPR | +0.3% (flat) | PM-only gapper — move began after 04:00 ET on overnight news, no AH footprint | Yes (+81% PM) but structurally undetectable by AH scanner; not a detection miss |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| VTAK | $1.38 (+58.7%) | 17:35 ET | Build→hold (faded late AH, re-exploded PM) | $1.61 (peak $1.79) | PM peak **exceeded** AH peak | +85.1% | ✅ Continuation — PM was better exit |
+| MNDR | ~$0.78 (+37.6%) | 16:30 ET | Spike→fade (early peak, faded across scans) | $0.51 (-12.5%) | far below | -12.5% | ❌ Faded as predicted (correctly skipped) |
+| EPOW | $0.75 (+28.2%) | 16:55 ET | Spike→fade/chop | $0.62 | far below | ~flat | ❌ Round-tripped to close (entry -10%) |
+
+**AH-peak-vs-PM-peak check:** VTAK PM peak ($1.79) **exceeded** AH peak ($1.38) — continuation, PM was the better exit. No extreme runner (>250% AH) tonight, so no MSW-type fade data point. MNDR and EPOW both peaked in AH and faded (AH was the better exit), consistent with the early-peak-fade skip logic.
+
+### Notes
+
+- **PM-only gapper tally:** Today's single biggest raw PM mover by % is **VTAK (+105.8%)**, an **AH→PM continuation** (moved +58.7% in AH, detectable). This is a positive data point that AH→PM continuations can be the morning's top mover, not only PM-only gappers. Secondary mover **CUPR (+81% PM)** is a **PM-only gapper** (pharma, float 921K, flat in AH, overnight news). Running PM-only-gapper tally: CIIT (Jun 10 +140%), GLXG (Jun 11 +343%), TDIC (Jun 16 +140%), MBRX (Jun 23 +131%), **CUPR (Jun 24 +81%)**. Today the biggest PM mover was a continuation, not the gapper — argues AH scanner is competitive on its best nights.
+- **Coverage:** 7 of 7 evening scans ran. No coverage failure.
+- **Late-AH-tail tally:** No new case. VTAK's defining surge (17:35 ET) was inside the scanned window.
+- **Fade-rule false-negative tally:** No new case. VTAK faded late in AH and re-exploded in PM, but we entered it (not skipped), so it is not a false negative. Low-float (2.0M) — consistent with the <3M re-explosion hypothesis, logged as supporting evidence that we correctly held a low-float AH-fader through to a PM re-explosion.
+- **Ceiling-override / dead-cat-override watch:** none flagged last night.
+- **Best night so far on the core thesis:** scanner detected the winner, we selected and entered it at $1.16, and it is the morning's top % mover at +105.8% PM peak. Detection baseline holds at 86.1%.
+
+### Price Charts
+
+**VTAK** — 2-day range $0.94–$1.89 | PM peak **$1.89 (+117.4%)** and still climbing at scan time (04:23 ET). AH build to $1.38 (17:35 ET) → late-AH fade to ~$1.08 → PM re-explosion past AH peak to new highs.
+
+**CUPR** — 2-day range $3.70–$9.74 | Prev close $3.93, flat all after-hours, gapped to PM $6.60–7.12 (+68–81%) on overnight news. Thin $9.74 tick treated as illiquid. PM-only gapper.
