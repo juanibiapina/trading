@@ -6,8 +6,8 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| VTAK | 2026-06-23 | $1.16 | 86 | $99.76 | C | Patent allowance PR + Flyte partnership (Monday, spent — already failed today -16.1%); resale-share registration overhang | $1.04 | premarket exit | $1.22 |
-| EPOW | 2026-06-23 | $0.69 | 144 | $99.36 | None | No catalyst found (3 searches); hold-near-high (within ~5% of $0.75 AH high), VRatio 6.6x real volume, early 16:55 ET peak but not declining across scans; float 25.6M | $0.62 | premarket exit | $0.75 |
+
+_No open positions._
 
 ## Position Rules
 
@@ -53,6 +53,8 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| VTAK | $1.16 | $1.98 | +$70.52 | +70.7% | 1 | C - Patent allowance PR + Flyte partnership | Grade C premarket-pulse exit; PM ran $1.14→$2.03 peak (08:25 ET), exited near high $1.98 |
+| EPOW | $0.69 | $0.62 | -$10.08 | -10.1% | 1 | None | Grade None PM exit; hard stop ($0.62) hit, faded from $0.79 AH peak |
 | VTAK | $1.49 | $1.25 | -$16.08 | -16.1% | 1 | B - Patent allowance PR (heart-failure IP) | Hard stop ($1.27) breached; PM peaked only $1.32 (below entry), faded through stop into regular session |
 | SKYQ | $1.87 | $1.66 | -$11.13 | -11.2% | 1 | C - Nevada refinery production phase PR | Hard stop ($1.68) breached in PM; AH peak $1.93 faded, PM high only $1.91 |
 | EHGO | $3.85 | $3.43 | -$10.50 | -10.9% | 1 | C - Vague AI-partnership; dilution overhang | Hard stop ($3.47) breached in PM; AH peak $4.00 faded steadily into PM |
