@@ -131,6 +131,44 @@ No candidate qualifies for entry even setting aside the time gate: AZI/SAGT both
 
 No qualifying new entries: every new ticker is under the 10% AH gate, and the two qualifiers (AZI, AMS) are already open positions.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $1.14 | -3.4% | +82.5% | $2.08 | +76.3% | 13.4M | 6.3M | 2.1x | 4.4M | Specialty Stores |
+| AMS | [TV](https://www.tradingview.com/chart/?symbol=AMS) | $1.41 | -4.1% | +13.5% | $1.60 | +8.8% | 1.6M | 306K | 5.1x | 4.4M | Finance/Rental/Leasing |
+| SLNH | [TV](https://www.tradingview.com/chart/?symbol=SLNH) | $1.37 | -14.9% | +7.3% | $1.47 | -8.7% | 1.5M | 18.6M | 0.1x | 78.7M | Electronic Equipment/Instruments |
+| CALC | [TV](https://www.tradingview.com/chart/?symbol=CALC) | $0.60 | -25.6% | +7.7% | $0.64 | -20.0% | 763K | 5.8M | 0.1x | 9.3M | Biotechnology |
+| QTEX | [TV](https://www.tradingview.com/chart/?symbol=QTEX) | $1.70 | -10.5% | +5.9% | $1.80 | -5.3% | 625K | 24.5M | 0.0x | 42.6M | Medical Specialties |
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $3.70 | -7.5% | +9.2% | $4.04 | +1.0% | 146K | 26.5M | 0.0x | 1.3M | Wholesale Distributors |
+| CGTX | [TV](https://www.tradingview.com/chart/?symbol=CGTX) | $1.02 | -38.2% | +5.9% | $1.08 | -34.5% | 137K | 2.4M | 0.1x | 81.9M | Biotechnology |
+| SAGT | [TV](https://www.tradingview.com/chart/?symbol=SAGT) | $1.21 | -6.9% | +13.2% | $1.37 | +5.4% | 105K | 7.0M | 0.0x | 5.2M | Packaged Software |
+| CYPH | [TV](https://www.tradingview.com/chart/?symbol=CYPH) | $0.61 | -6.5% | +8.0% | $0.66 | +0.9% | 93K | 4.3M | 0.0x | 90.4M | Biotechnology |
+| VLN | [TV](https://www.tradingview.com/chart/?symbol=VLN) | $2.02 | -7.3% | +5.4% | $2.13 | -2.3% | 81K | 2.6M | 0.0x | 76.3M | Semiconductors |
+| CNTN | [TV](https://www.tradingview.com/chart/?symbol=CNTN) | $2.67 | -17.5% | +5.8% | $2.82 | -12.7% | 72K | 1.5M | 0.0x | 61.0M | Biotechnology |
+| CHAI | [TV](https://www.tradingview.com/chart/?symbol=CHAI) | $0.71 | -9.7% | +8.0% | $0.77 | -2.5% | 67K | 3.1M | 0.0x | 7.7M | Packaged Software |
+| BEAT | [TV](https://www.tradingview.com/chart/?symbol=BEAT) | $0.69 | +1.0% | +5.3% | $0.73 | +6.4% | 54K | 570K | 0.1x | 47.4M | Medical Specialties |
+| ZPTA | [TV](https://www.tradingview.com/chart/?symbol=ZPTA) | $1.50 | -19.4% | +9.3% | $1.64 | -11.8% | 54K | 497K | 0.1x | 83.4M | Packaged Software |
+
+**Entry window open. No new entries.**
+
+**New candidates this scan (not in prior scans):**
+- **CALC** (Biotech) — Day -25.6% (deep dead-cat), AH +7.7% <10%, Total -20.0%. Skip.
+- **CGTX** (Cognition Therapeutics) — Day -38.2% (deep dead-cat), AH +5.9% <10%, Total -34.5%. Skip.
+- **CYPH** — AH +8.0% <10%, float 90.4M (too high), Total +0.9%. Skip.
+- **VLN** (Valens Semiconductor) — AH +5.4% <10%, float 76.3M (too high). Skip.
+- **BEAT** — AH +5.3% <10%, float 47.4M, Day +1.0%. Skip.
+- **CHAI** — AH +8.0% <10%, Day -9.7%, float 7.7M, Total -2.5%. Different occurrence from the Jun 8 CHAI winner; today's AH is sub-10% and Total% negative. Skip.
+
+**Prior-candidate updates:**
+- **AZI** — entered 23:00 ($1.62). Surged further: AH +82.5% / $2.08, Total +76.3%, vol 13.4M (2.1x). New AH high, well above entry (+28% on the position). No action (position management runs premarket).
+- **AMS** — entered 23:30 ($1.64). Flat: AH +13.5% / $1.60, VRatio 5.1x. Holding the +11-13% AH base, slightly below entry. No action.
+- **SAGT** — headline +13.2% but 5-min action persistently SPIKE→FADE (peaked +10.0% at 16:15), not first-day. Skip.
+- **SLNH / QTEX / CNTN / ZPTA** — AH <10% and/or dead-cat (Day ≤-14.9% with negative Total%). Skip.
+- **EHGO** — float 1.3M (tiny) but AH +9.2% still <10%, Total +1.0%. Watch; fails AH gate. Skip.
+
+No qualifying new entries: every new ticker is under the 10% AH gate or in dead-cat territory, and the two qualifiers (AZI, AMS) are already open positions.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
