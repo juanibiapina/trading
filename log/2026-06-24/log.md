@@ -12,3 +12,16 @@
 - SELL EPOW 144 sh @ $0.62 → proceeds $89.28, P&L -$10.08 (-10.1%). No catalyst; faded from $0.79 AH peak, stop breached in PM.
 
 **Net session P&L:** +$60.44 across both exits.
+
+---
+
+## Post-Market Screening
+
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found. (Scanner ran at the very start of after-hours; no AH volume built yet — 0 hits is expected this early.)
+
+## Paper Trades
+
+| Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
+|--------|-------------|------------|-----------------|--------|
