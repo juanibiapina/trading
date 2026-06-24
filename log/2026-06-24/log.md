@@ -100,6 +100,37 @@ No candidate qualifies for entry even setting aside the time gate: AZI/SAGT both
 
 **Entries:** AMS (Grade None, no-catalyst concern noted).
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $1.14 | -3.4% | +49.1% | $1.70 | +44.1% | 10.2M | 6.0M | 1.7x | 4.4M | Specialty Stores |
+| AMS | [TV](https://www.tradingview.com/chart/?symbol=AMS) | $1.41 | -4.1% | +14.9% | $1.62 | +10.2% | 1.5M | 302K | 5.1x | 4.4M | Finance/Rental/Leasing |
+| SLNH | [TV](https://www.tradingview.com/chart/?symbol=SLNH) | $1.37 | -14.9% | +6.6% | $1.46 | -9.3% | 1.5M | 18.6M | 0.1x | 78.7M | Electronic Equipment/Instruments |
+| QTEX | [TV](https://www.tradingview.com/chart/?symbol=QTEX) | $1.70 | -10.5% | +6.5% | $1.81 | -4.8% | 588K | 24.5M | 0.0x | 42.6M | Medical Specialties |
+| MX | [TV](https://www.tradingview.com/chart/?symbol=MX) | $4.86 | -6.9% | +6.8% | $5.19 | -0.6% | 174K | 2.0M | 0.1x | 26.9M | Semiconductors |
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $3.70 | -7.5% | +6.2% | $3.93 | -1.7% | 128K | 26.4M | 0.0x | 1.3M | Wholesale Distributors |
+| SAGT | [TV](https://www.tradingview.com/chart/?symbol=SAGT) | $1.21 | -6.9% | +11.6% | $1.35 | +3.8% | 102K | 7.0M | 0.0x | 5.2M | Packaged Software |
+| INVZ | [TV](https://www.tradingview.com/chart/?symbol=INVZ) | $0.57 | -6.5% | +5.2% | $0.60 | -1.6% | 87K | 3.3M | 0.0x | 206.1M | Electrical Products |
+| CNTN | [TV](https://www.tradingview.com/chart/?symbol=CNTN) | $2.67 | -17.5% | +6.2% | $2.83 | -12.4% | 70K | 1.5M | 0.0x | 61.0M | Biotechnology |
+| BNRG | [TV](https://www.tradingview.com/chart/?symbol=BNRG) | $0.83 | -23.6% | +5.9% | $0.88 | -19.1% | 55K | 514K | 0.1x | 489K | Engineering & Construction |
+| ZPTA | [TV](https://www.tradingview.com/chart/?symbol=ZPTA) | $1.50 | -19.4% | +9.3% | $1.64 | -11.8% | 54K | 497K | 0.1x | 83.4M | Packaged Software |
+
+**Entry window open. No new entries.**
+
+**New candidates this scan (not in prior scans):**
+- **EHGO** (EHang-style Wholesale Distributor) — float 1.3M (tiny) but AH only +6.2%, Total% negative (-1.7%). Fails the AH>10% gate. Skip.
+- **INVZ** (Innoviz) — AH +5.2% <10%, float 206.1M (far too high), Total% negative. Skip.
+- **BNRG** (Brenmiller Energy) — AH +5.9% <10%, Day -23.6% (deep dead-cat), Total% -19.1%. Skip.
+
+**Prior-candidate updates:**
+- **AZI** — entered 23:00 ($1.62). AH +49.1% / $1.70, vol up to 10.2M (1.7x). Bounced back near its AH high after the 23:30 dip — holding/rebuilding. Above entry. No action (position management runs premarket).
+- **AMS** — entered 23:30 ($1.64). Flat vs prior scan: AH +14.9% / $1.62, VRatio 5.1x. Holding the +11-12% AH base. No action.
+- **SAGT** — headline +11.6% but 5-min action faded to +3.8% ($1.35); persistent SPIKE→FADE, not first-day. Skip.
+- **SLNH / QTEX / MX / CNTN / ZPTA** — AH <10% and/or dead-cat (Day ≤-14.9% with negative Total%). Skip.
+
+No qualifying new entries: every new ticker is under the 10% AH gate, and the two qualifiers (AZI, AMS) are already open positions.
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
