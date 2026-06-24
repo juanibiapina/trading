@@ -7,6 +7,7 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
 | AZI | 2026-06-24 | $1.62 | 61 | $98.82 | None | No fresh catalyst; recent driver was $30M private placement (dilution, ~Jun 10). Secondary AH bounce, not first-day. | $1.46 (-10%) | premarket exit | $1.78 (16:35 ET AH) |
+| AMS | 2026-06-24 | $1.64 | 60 | $98.40 | None | Only same-day event is routine Annual Shareholder Meeting (Jun 24); no earnings/PR/8-K explaining the +14% AH pop. First-day unusual activity (~16x regular vol, VRatio 4.9x). | $1.48 (-10%) | premarket exit | $1.68 (16:30 ET AH) |
 
 ## Position Rules
 

@@ -70,8 +70,39 @@ No candidate qualifies for entry even setting aside the time gate: AZI/SAGT both
 
 **Entries:** AZI (Grade None, concerns noted). Watching KIDZ + AMS for 23:30.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $1.14 | -3.4% | +40.4% | $1.60 | +35.6% | 9.3M | 5.9M | 1.6x | 4.4M | Specialty Stores |
+| KIDZ | [TV](https://www.tradingview.com/chart/?symbol=KIDZ) | $0.98 | +0.5% | +5.6% | $1.04 | +6.1% | 3.8M | 3.2M | 1.2x | 1.1M | Internet Software/Services |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $1.19 | +29.3% | +5.0% | $1.25 | +35.9% | 2.8M | 18.0M | 0.2x | 2.0M | Medical Specialties |
+| AMS | [TV](https://www.tradingview.com/chart/?symbol=AMS) | $1.41 | -4.1% | +14.9% | $1.62 | +10.2% | 1.4M | 287K | 4.9x | 4.4M | Finance/Rental/Leasing |
+| SLNH | [TV](https://www.tradingview.com/chart/?symbol=SLNH) | $1.37 | -14.9% | +8.0% | $1.48 | -8.1% | 1.4M | 18.6M | 0.1x | 78.7M | Electronic Equip/Instruments |
+| QTEX | [TV](https://www.tradingview.com/chart/?symbol=QTEX) | $1.70 | -10.5% | +5.9% | $1.80 | -5.3% | 544K | 24.5M | 0.0x | 42.6M | Medical Specialties |
+| MX | [TV](https://www.tradingview.com/chart/?symbol=MX) | $4.86 | -6.9% | +7.0% | $5.20 | -0.4% | 172K | 2.0M | 0.1x | 26.9M | Semiconductors |
+| SAGT | [TV](https://www.tradingview.com/chart/?symbol=SAGT) | $1.21 | -6.9% | +15.7% | $1.40 | +7.7% | 98K | 7.0M | 0.0x | 5.2M | Packaged Software |
+| ATOM | [TV](https://www.tradingview.com/chart/?symbol=ATOM) | $7.41 | -1.6% | +5.3% | $7.80 | +3.6% | 77K | 970K | 0.1x | 36.5M | Misc Commercial Services |
+| FWDI | [TV](https://www.tradingview.com/chart/?symbol=FWDI) | $3.67 | -11.0% | +5.3% | $3.86 | -6.3% | 55K | 1.3M | 0.0x | 55.3M | Other Consumer Specialties |
+| ZPTA | [TV](https://www.tradingview.com/chart/?symbol=ZPTA) | $1.50 | -19.4% | +9.3% | $1.64 | -11.8% | 54K | 497K | 0.1x | 83.4M | Packaged Software |
+
+**Entry window open. New entry: AMS.**
+
+**Entry-gate check (float <50M, AH>10% in ≥2 AH scans, Day% >-15%):**
+- **AMS** (American Shared Hospital Services) — NEW qualifier. Float 4.4M ✓. AH>10% now in 2 AH scans: 23:00 (+13.5%) and 23:30 (+14.9% headline / +11.6% on 5-min chart) ✓. Day -4.1% ✓. Total% +10.2% — far under the 150% ceiling. **Trajectory:** peaked +14.3% ($1.68) at 16:30 ET, dipped to +7.5% (~16:55), then REBUILT to +12.9% at 17:15 and holding +11.6% ($1.64) at 17:30 — current price within 3% of the AH high = HOLD/rebuild, not SPIKE→FADE, not dead-cat (Day only -4.1%). VRatio 4.9x AH; regular-session volume 1.6M vs ~100K prior days = ~16x = clear first-day unusual activity. **Catalyst search (3 calls):** only same-day event is the routine Annual Shareholder Meeting held today (June 24) — procedural, does not explain a +14% pop. No earnings (Q1 reported May 14), no fresh same-day 8-K/PR. **Catalyst = None, concern noted.** Per learning-phase default (enter every candidate clearing all gates), **ENTER. Grade None.**
+- **AZI** — already entered at 23:00 ($1.62). Update: faded from peak +50.9% ($1.78, 16:35 ET) to +33% ($1.57) at 17:30, AH volume now 9.3M (1.6x). Holding above +30% but off its high. No action (entries-only prompt; position management runs premarket).
+- **SAGT** — scanner headline +15.7% but 5-min chart shows clear SPIKE→FADE: peaked +10.0% ($1.43) at 16:15, choppy fade to +3.8% ($1.35) at 17:29. Below 10% on real action; not first-day (Monday +41% spike). Skip.
+- **KIDZ** — SPIKE→FADE: peaked +25.5% ($1.23) at 16:45, collapsed to -0.9% ($0.97) at 17:30. Only 1 scan >10% and now negative. Skip.
+- **SLNH** — float 78.7M, Total% negative, Day -14.9% (dead-cat territory). Skip.
+- **QTEX / MX / ATOM / FWDI** — AH <10%. QTEX/FWDI also Day -10%/-11% with negative Total%. Skip.
+- **ZPTA** — Day -19.4% (dead-cat), Total% negative. Skip.
+- **VTAK** — exited this morning; AH only +5.0% and weak. Do not re-enter. Skip.
+
+**Entries:** AMS (Grade None, no-catalyst concern noted).
+
 ## Paper Trades
 
 | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
 |--------|-------------|------------|-----------------|--------|
 | AZI | $1.62 | 23:00 CET (17:00 ET) | 61 | Clears all hard gates (float 4.4M, AH>10% ×2 scans, Day -3.4%, Total +46.6%). BUILD/HOLD near AH high. Grade None — no fresh catalyst, not first-day, thin AH vol. Data-collection entry. |
+| AMS | $1.64 | 23:30 CET (17:30 ET) | 60 | Clears all hard gates (float 4.4M, AH>10% ×2 scans, Day -4.1%, Total +10.2%). HOLD/rebuild within 3% of AH high, VRatio 4.9x, ~16x regular volume = first-day activity. Grade None — only same-day event is routine AGM, no fresh catalyst. Data-collection entry. |
