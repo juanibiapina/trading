@@ -9,6 +9,47 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-06-24 — Init 2: second ext-hours round-trip + shadow-fills ledger
+
+**Evaluated:** Prior step (first VTAK ext-hours round-trip, buy@ask/sell@bid) —
+**worked and now replicated.** A second VTAK round-trip this morning filled the
+same way: BUY 86 @ **$1.35 (ask)**, SELL 86 @ **$1.34 (bid)**, flat. The fill
+model holds on a second occasion.
+
+**Step taken:** It's 09:00 ET (US premarket), account flat. Ran a fresh VTAK
+ext-hours shadow round-trip (86 sh, mirroring today's real paper size), checked
+EPOW (today's other paper name) for ext-hours fill viability, and started a
+persistent ledger `log/shadow-fills.csv` to accumulate assumed-vs-real fill
+comparisons. Then applied the fill model to today's two closed paper trades.
+
+**Result:**
+- VTAK BUY @ $1.35 = ask, SELL @ $1.34 = bid. Spread held at **1c** even at the
+  higher price, so relative round-trip cost shrank to **0.74%** (vs 0.88% at
+  $1.14 yesterday). Cheaper the name, bigger the relative spread bite.
+- EPOW ($0.52, sub-$1) had **no fresh ext-hours quote** (ask $0.00, stale
+  06-23 20:00 ET close) — would **not** have filled in extended hours. Coverage
+  gap is worst on the cheapest names (matches yesterday's EHGO caveat).
+- Spread cost on today's real paper trades (1c/leg): VTAK (+70.7%) loses only
+  ~1-2% of its gain — survives easily. EPOW (-10.1%) would have its loss widened
+  ~29% and might not have filled at all. **Spread is a rounding error on big
+  winners but meaningfully erodes small losers; sub-$1 names carry non-fill
+  risk.**
+
+**Hypothesis / next step:** Free-tier Alpaca has no historical NBBO, so past
+fills can't be reconstructed — a real assumed-vs-real comparison needs fills
+captured *at the moment* of each paper entry/exit. Next run: decide between (a)
+a log-only shadow pulse that mirrors open paper positions to Alpaca at the
+entry/exit windows, or (b) wiring a shadow order into the scan/eval pulses.
+Option (b) changes pulse behavior and must be proposed to Juan; option (a) is a
+new log-only pulse and can be built directly. Lean toward (a). Keep appending
+to `log/shadow-fills.csv`.
+
+**Needs from Juan:** nothing blocking. Heads-up for the next step: if we mirror
+live paper entries/exits automatically, it will place real (paper) Alpaca orders
+during scan/eval windows — still paper, no real money.
+
+---
+
 ### 2026-06-23 — Init 2: first live extended-hours shadow fill
 
 **Evaluated:** Prior step (build broker.js + chart.py) — **worked.** broker.js

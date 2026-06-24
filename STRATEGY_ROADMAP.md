@@ -128,21 +128,29 @@ big % move, so a volume-first trigger could front-run the price-first trigger.
 account available in Europe, so numbers reflect real fills/spreads/liquidity.
 Eventually switch the same integration to live trading.
 
-**Status:** **Pilot stage — first live extended-hours fill captured
-(2026-06-23).** Added `--ext` (extended_hours) order support to `broker.js` and
-ran a live premarket shadow round-trip on VTAK (mirroring today's 67-share paper
-trade): marketable ext-hours limit BUY filled at **$1.14 (the ask)**, SELL
-filled at **$1.13 (the bid)**, position flat. **Key result: Alpaca paper DOES
-fill our micro-float sub-$10 names in extended hours, at the NBBO bid/ask.** So
-the realistic fill model is buy-at-ask / sell-at-bid, and the spread is the real
-slippage — on VTAK at ~$1.14 that was 1c (~0.9% round trip). Caveat: coverage is
-uneven — VTAK/SKYQ had fresh premarket IEX quotes but EHGO's quote was stale
-(yesterday's close), so some names may not fill in extended hours. Earlier
-instrument findings still hold: micro-float names are `tradable=true` (VTAK/ORIS);
-Alpaca IEX historical bars are sparse so Yahoo stays the chart/history source.
-Next: over coming sessions, mirror real paper entries/exits and compare our
-assumed paper prices against the ask (entry) / bid (exit) to quantify how much
-of the paper P&L survives realistic fills.
+**Status:** **Pilot stage — second ext-hours round-trip + shadow-fills ledger
+started (2026-06-24).** Repeated the VTAK shadow round-trip in premarket: BUY 86
+filled at **$1.35 (the ask)**, SELL filled at **$1.34 (the bid)**, position
+flat. Spread held at **1c** even at the higher price, so relative cost shrank to
+**0.74%** round trip (vs 0.88% at $1.14 yesterday) — the buy@ask / sell@bid
+model is confirmed twice. EPOW (sub-$1, $0.52) had **no fresh ext-hours quote**
+(ask $0.00, stale prior close) and would not have filled in extended hours —
+confirming the coverage gap is worst on the cheapest names. Started a
+shadow-fills ledger at `log/shadow-fills.csv` to accumulate these comparisons.
+Applied the fill model to today's two real closed paper trades: VTAK (+70.7%)
+loses only ~1-2% of its gain to spread (survives easily); EPOW (-10.1%) would
+have its loss widened ~29% by spread and might not have filled at all. **Takeaway
+so far:** spread is a rounding error on big winners but meaningfully erodes small
+losers, and sub-$1 names carry real ext-hours non-fill risk. Earlier findings
+hold: micro-float names are `tradable=true`; Alpaca IEX historical bars are
+sparse so Yahoo stays the chart/history source.
+
+**Open question for next step:** historical NBBO isn't available on the free
+tier, so reconstructing past fills is impossible — real comparison needs fills
+captured *at the moment* of each paper entry/exit. Options: (a) a log-only
+shadow pulse that mirrors current open paper positions to Alpaca at entry/exit
+windows, or (b) wiring a shadow order into the scan/eval pulses (changes pulse
+behavior -> propose to Juan, don't apply silently).
 
 **Findings:**
 - The environment already scaffolds `ALPACA_API_KEY`, `ALPACA_SECRET_KEY`,
