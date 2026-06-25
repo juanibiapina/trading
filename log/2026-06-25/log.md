@@ -214,6 +214,43 @@ First entry-eligible scan of the night. Scanner returned **7 hits**.
 
 **Net: 0 entries this scan.** The night's one all-gates qualifier (SHPH) is untradable on Alpaca. No tradable BUILD candidate cleared the 2-scan requirement. Re-scan at 23:30 for IPW 2nd-scan confirmation and any new BUILD names.
 
+## Scan 23:30 CET (5:30 PM ET) — ENTRY WINDOW OPEN
+
+Scanner returned **9 hits**. New names since 23:00: LGCL, IVF, PBK, TII, LABT. Carried: NEXR, SHPH, ILLR, YYGH.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NEXR | [TV](https://www.tradingview.com/chart/?symbol=NEXR) | $1.10 | +95.6% | +27.3% | $1.40 | +148.9% | 13.1M | 32.7M | 0.4x | 6.1M | Recreational Products |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.78 | +2.4% | +59.8% | $6.04 | +63.7% | 6.1M | 970K | 6.2x | 596K | Pharmaceuticals: Major |
+| ILLR | [TV](https://www.tradingview.com/chart/?symbol=ILLR) | $3.05 | +296.6% | +25.6% | $3.83 | +397.9% | 5.2M | 22.6M | 0.2x | n/a | Packaged Software |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $0.94 | -34.2% | +48.9% | $1.40 | -2.1% | 1.9M | 306K | 6.2x | 1.6M | Personnel Services |
+| IVF | [TV](https://www.tradingview.com/chart/?symbol=IVF) | $1.24 | -6.1% | +13.7% | $1.41 | +6.8% | 1.3M | 242K | 5.3x | 1.8M | Medical/Nursing Services |
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.27 | -26.2% | +10.2% | $1.40 | -18.6% | 765K | 2.1M | 0.4x | 4.0M | Misc Commercial Services |
+| PBK | [TV](https://www.tradingview.com/chart/?symbol=PBK) | $0.73 | -1.9% | +5.5% | $0.77 | +3.4% | 358K | 5.9M | 0.1x | 43.0M | Alternative Power Generation |
+| TII | [TV](https://www.tradingview.com/chart/?symbol=TII) | $2.23 | +2.8% | +5.4% | $2.35 | +8.3% | 137K | 314K | 0.4x | 28.5M | Other Metals/Minerals |
+| LABT | [TV](https://www.tradingview.com/chart/?symbol=LABT) | $3.43 | -7.8% | +10.2% | $3.78 | +1.6% | 94K | 202K | 0.5x | 1.4M | Biotechnology |
+
+### AH trajectory (5-min)
+
+- **SHPH** — BUILD then hold: peaked **+75.9% ($6.49) at 16:45**, eased to +58-67%, now $6.14 (+66.4%). Holding within ~5-13% of the AH high across the whole session. Float **596K**, VRatio 6.2x. Still the cleanest profile of the night.
+- **NEXR** — regular-day continuation on near-zero AH volume. AH peaked +147% ($1.39) at 17:10, now $1.32. AH Vol just 5K total — these are illiquid noise prints, not a real AH base. Already +95.6% on the regular day.
+- **IVF** — NEW. Choppy spike→fade→spike: +16.7% peak (17:00) → +5.3% (17:10) → +15.9% (17:20) → +10.7% now. Real volume (VRatio 5.3x), float 1.8M. No clean BUILD; whipsaw pattern.
+- **LGCL** — dead-cat bounce that already failed: spiked +49% ($2.13) at 16:50 → faded straight down to -12.6% ($1.25) now, *below* the regular close. Day -34.2%.
+- **LABT** — no real move: AH high only +3.2% ($3.84), chopping around flat. The scan's +10.2% is a momentary print; VRatio 0.5x.
+
+### Entry evaluation (per-candidate)
+
+- **SHPH — QUALIFIES on all gates, but STILL NOT TRADABLE on Alpaca → no position.** Gates all pass (float 596K, AH >10% in 3 AH scans, Day +2.4%, Total +63.7% <150, BUILD holding within ~13% of high, VRatio 6.2x). Catalyst already graded **C** at 23:00 (United Dogecoin crypto/AI-hosting narrative PR, no signed deal; StockTitan flagged prior similar PRs faded -23% to -33%). **`tradable=false shortable=false`** on Alpaca; Alpaca shows a quote (bid $5.91 / ask $6.03) but will not accept the order. No position. Hypothetical entry ~$6.03 for tracking (carried from 23:00).
+- **NEXR — SKIP (no real AH volume + extension).** Technically 2 AH scans >10% (22:30 +13.1%, 23:30 +27.3%), Total +148.9% just under the 150 ceiling. But AH Vol is ~5K total (VRatio 0.4x) — the AH prints are illiquid noise, not a tradable base. Alpaca quote bid $1.08 / ask $1.22 is a ~12% spread confirming the thin book. Also a chase of an already +95.6% regular-session runner at the ceiling. Skip.
+- **IVF — WATCH (only 1 AH scan >10%).** NEW name, first appearance; needs a 2nd AH scan >10% to qualify. Real volume (VRatio 5.3x, float 1.8M) but choppy spike→fade→spike, no clean BUILD. Re-check at 00:00.
+- **LGCL — SKIP (Day% gate + dead-cat).** Day -34.2% below the -15 floor. AH spiked +49% then collapsed to -12.6%, staying *below* the regular close → genuine failed dead-cat bounce. No override (price falling, below close).
+- **LABT — SKIP.** AH high only +3.2%; no sustained >10% move, VRatio 0.5x.
+- **ILLR — SKIP (extension ceiling).** Total +397.9% >> 150%. VRatio 0.2x fails ceiling-override (needs >5x).
+- **YYGH — SKIP.** Day -26.2% below floor; AH stays below regular close (dead-cat, no reclaim).
+- **PBK / TII — SKIP.** AH <10%.
+
+**Net: 0 entries this scan.** Same as 23:00 — the night's one all-gates qualifier (SHPH) is untradable on Alpaca, and no tradable candidate cleared the 2-scan BUILD requirement on real volume. IVF is the only fresh watch (needs a 2nd scan). Re-scan at 00:00 for IVF confirmation and any new BUILD names.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
