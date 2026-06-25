@@ -94,3 +94,16 @@ then held +82-95% through the AH tail. Textbook AH BUILD → PM hold.
 
 No open positions on Alpaca. AZI/AMS were never executed (pre-Alpaca candidates). Nothing to evaluate.
 Switched the workflow to Alpaca paper execution as source of truth (see OPEN_POSITIONS.md).
+
+## Position Evaluation — 14:30 CET
+
+No open positions on Alpaca (`positions` returns empty; equity $99,998.41). `OPEN_POSITIONS.md`
+current table is empty and reconciles with Alpaca. Nothing to hold, trail, or sell.
+
+Order history shows only closed VTAK round-trips from Jun 23–24 — `broker.js` validation test
+trades made before today's source-of-truth switch, not strategy entries:
+- Jun 23: BUY 67 @ $1.14 → SELL 67 @ $1.13 = −$0.67 (scratch)
+- Jun 24: BUY 86 @ $1.35 → SELL 86 @ $1.34 = −$0.86 (scratch)
+- Jun 23: canceled $0.50 GTC test order (never filled)
+
+These predate the clean slate and are not logged as strategy trades. No action taken.
