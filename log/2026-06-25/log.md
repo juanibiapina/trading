@@ -129,6 +129,19 @@ Top day movers worth watching into AH (filtered for float and real activity):
 Larger %-movers (APHD +702%, CFOR +345%, KJFI +274%, TNSGF +778%) are all sub-1K 5mVol thin
 names — noise, not watched. Will re-scan once AH opens (22:00 CET).
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**AH just opened.** Scanner (`scan.py --all`) returned **0 hits** — no tickers cleared the
+after-hours filter at the open. This is the observation-only window (entries don't begin until
+23:00 CET per learning-phase rule); nothing to evaluate yet regardless.
+
+Watchlist carried from the 21:30 regular-session scan (ILLR, AZI, ASPD, NEXR, VINO) showed no
+qualifying AH footprint at the open. The 21:30 day-movers were end-of-session prints; none has
+posted sustained AH momentum yet. Will re-scan at 22:30 / 23:00 CET when AH volume builds and
+catalyst searches become productive (PRs often land 4:05-4:30 PM ET).
+
+No candidates found.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
