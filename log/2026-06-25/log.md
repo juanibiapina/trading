@@ -142,6 +142,40 @@ catalyst searches become productive (PRs often land 4:05-4:30 PM ET).
 
 No candidates found.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Observation-only window** — entries begin at 23:00 CET per learning-phase rule. Scanner returned
+**6 hits** (first real AH footprint of the night). No paper entries this scan.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NEXR | [TV](https://www.tradingview.com/chart/?symbol=NEXR) | $1.09 | +93.8% | +13.1% | $1.23 | +119.1% | 7.5M | 32.1M | 0.2x | 6.1M | Recreational Products |
+| DLHC | [TV](https://www.tradingview.com/chart/?symbol=DLHC) | $5.50 | +0.0% | +22.7% | $6.75 | +22.7% | 517K | 81K | 6.4x | 12.7M | Personnel Services |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.78 | +2.4% | +25.1% | $4.73 | +28.2% | 308K | 173K | 1.8x | 596K | Pharmaceuticals: Major |
+| NGEN | [TV](https://www.tradingview.com/chart/?symbol=NGEN) | $1.91 | -4.0% | +6.8% | $2.04 | +2.5% | 137K | 924K | 0.1x | 64.0M | Pharmaceuticals: Major |
+| ELDN | [TV](https://www.tradingview.com/chart/?symbol=ELDN) | $3.65 | -7.8% | +6.6% | $3.89 | -1.8% | 78K | 1.8M | 0.0x | 73.8M | Pharmaceuticals: Major |
+| CNEY | [TV](https://www.tradingview.com/chart/?symbol=CNEY) | $0.52 | -21.6% | +6.8% | $0.55 | -16.3% | 56K | 744K | 0.1x | 5.0M | Electrical Products |
+
+### AH trajectory (5-min)
+
+- **SHPH** — BUILD: +10.6% (16:05) → +30% (16:10) → +37% peak (16:15) → holding +33–37% through 16:30. Float **596K** (very tiny), VRatio 1.8x. Strongest pattern of the night so far.
+- **DLHC** — SPIKE then flatten: +16% (16:05) → +22% peak (16:10) → easing to +17% by 16:30. Real volume (VRatio 6.4x). Float 12.7M (>10M ideal).
+- **NEXR** — already +93.8% on the *regular* day; AH only +13% and VRatio 0.2x (volume faded into AH). Extended continuation name, not a fresh AH base. On watchlist since the 21:30 scan.
+
+### Catalyst checks (>10% AH movers)
+
+- **DLHC — Grade B (contract win).** Navy logistics IT contract, multiple-award ID/IQ, **$250M ceiling**, announced ~21 min before this scan (StockTitan). Real catalyst + real volume. Concern: float 12.7M above 10M ideal, and price already easing off the +22% spike.
+- **SHPH — no catalyst found** (4 searches: earnings, PR, 8-K, clinical). Only notable item is a recent 1-for-10 reverse split (~1 week ago). Tiny 596K float + clean BUILD is the draw; no fresh news to explain the move. Concern noted per no-catalyst handling.
+- **NEXR — extended day mover.** AH +13% is continuation of a +93.8% regular-session run; not re-searching catalyst this scan (will re-check at 23:00 if it holds). Volume fading (VRatio 0.2x).
+
+### Watch into 23:00 entry window
+
+- **SHPH** — BUILD + 596K float is the most interesting profile. Watch whether it holds/extends above ~$4.7 into 23:00. No-catalyst is a concern, not a blocker (learning phase). Needs >10% AH in ≥2 AH scans to qualify (this is its 1st).
+- **DLHC** — Grade B catalyst, but spike→flatten and float >10M. Watch for a second AH scan above +10% and whether it rebuilds or keeps fading.
+- **NEXR** — fading volume; low priority unless it re-accelerates.
+
+No paper trades (observation window). Re-scan at 23:00 CET for the entry decision.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
