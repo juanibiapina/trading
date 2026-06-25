@@ -6,8 +6,8 @@ Active paper trade positions. Updated by evening scans (entries) and position ev
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| AZI | 2026-06-24 | $1.62 | 61 | $98.82 | None | No fresh catalyst; recent driver was $30M private placement (dilution, ~Jun 10). Secondary AH bounce, not first-day. | $1.46 (-10%) | premarket exit | $1.78 (16:35 ET AH) |
-| AMS | 2026-06-24 | $1.64 | 60 | $98.40 | None | Only same-day event is routine Annual Shareholder Meeting (Jun 24); no earnings/PR/8-K explaining the +14% AH pop. First-day unusual activity (~16x regular vol, VRatio 4.9x). | $1.48 (-10%) | premarket exit | $1.68 (16:30 ET AH) |
+
+_No open positions._
 
 ## Position Rules
 
@@ -53,6 +53,8 @@ Based on historical data (17 winners tracked):
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| AZI | $1.62 | $2.05 | +$26.23 | +26.5% | 1 | None - $30M private placement dilution overhang | Grade None PM exit at profit; ran to $2.38 overnight (+47%), exited PM pulse $2.05 |
+| AMS | $1.64 | $1.52 | -$7.20 | -7.3% | 1 | None - routine annual shareholder meeting, no PR | Grade None PM exit; AH peak $1.78 faded, exited above stop in PM |
 | VTAK | $1.16 | $1.98 | +$70.52 | +70.7% | 1 | C - Patent allowance PR + Flyte partnership | Grade C premarket-pulse exit; PM ran $1.14→$2.03 peak (08:25 ET), exited near high $1.98 |
 | EPOW | $0.69 | $0.62 | -$10.08 | -10.1% | 1 | None | Grade None PM exit; hard stop ($0.62) hit, faded from $0.79 AH peak |
 | VTAK | $1.49 | $1.25 | -$16.08 | -16.1% | 1 | B - Patent allowance PR (heart-failure IP) | Hard stop ($1.27) breached; PM peaked only $1.32 (below entry), faded through stop into regular session |

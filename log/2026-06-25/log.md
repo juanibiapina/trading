@@ -93,3 +93,16 @@ AH Peak: $2.34 (+98.3%) at 18:45 ET → held +80%+ through AH close → PM $2.25
 AH trajectory: steady BUILD from 16:05 (+26%) → 16:35 (+51%) → 18:00 (+64%) → 18:45 peak (+98%),
 then held +82-95% through the AH tail. Textbook AH BUILD → PM hold.
 ```
+
+## Position Evaluation — 10:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| AZI | $1.62 | $2.05 | +26.5% | $2.38 | 1 | None | SELL | Grade None — exit at any profit in premarket; ran to $2.38 overnight, exited PM pulse $2.05 |
+| AMS | $1.64 | $1.52 | -7.3% | $1.78 | 1 | None | SELL | Grade None — exit at first premarket opportunity; above stop ($1.48), AH peak faded |
+
+**Actions taken:**
+- SOLD AZI: 61 sh @ $2.05 → $125.05, P&L **+$26.23 (+26.5%)**
+- SOLD AMS: 60 sh @ $1.52 → $91.20, P&L **-$7.20 (-7.3%)**
+- Realized P&L this session: **+$19.03**
+- Both moved to Closed Positions; no open positions remaining
