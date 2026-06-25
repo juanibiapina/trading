@@ -298,6 +298,43 @@ Scanner returned **11 hits**. New names since 23:30: PROP, HUMA. Carried: NEXR, 
 
 **Net: 1 entry this scan — IVF (60 @ $1.58, Grade None).** First Alpaca-executed strategy trade. SHPH would have been the night's cleanest profile but is untradable on Alpaca across all four entry-window scans.
 
+## Scan 00:30 CET (6:30 PM ET) — ENTRY WINDOW OPEN
+
+Scanner returned **10 hits**. New big mover since 00:00: **TII** jumped +15.5% → +76.2%. Carried: NEXR, ILLR, SHPH, IVF (open position), LGCL, DLHC, PBK, PROP, ELDN.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NEXR | [TV](https://www.tradingview.com/chart/?symbol=NEXR) | $1.10 | +95.6% | +20.0% | $1.32 | +134.7% | 16.4M | 33.1M | 0.5x | 6.1M | Recreational Products |
+| ILLR | [TV](https://www.tradingview.com/chart/?symbol=ILLR) | $3.05 | +296.6% | +22.5% | $3.73 | +385.6% | 9.0M | 23.0M | 0.4x | n/a | Packaged Software |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.78 | +2.4% | +44.4% | $5.46 | +48.0% | 7.0M | 1.1M | 6.4x | 596K | Pharmaceuticals: Major |
+| TII | [TV](https://www.tradingview.com/chart/?symbol=TII) | $2.23 | +2.8% | +76.2% | $3.93 | +81.1% | 3.4M | 692K | 4.9x | 28.5M | Other Metals/Minerals |
+| IVF | [TV](https://www.tradingview.com/chart/?symbol=IVF) | $1.24 | -6.1% | +22.5% | $1.52 | +15.1% | 3.2M | 459K | 6.9x | 1.8M | Medical/Nursing Services |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $0.94 | -34.2% | +25.5% | $1.18 | -17.5% | 2.9M | 420K | 6.9x | 1.6M | Personnel Services |
+| DLHC | [TV](https://www.tradingview.com/chart/?symbol=DLHC) | $5.50 | +0.0% | +6.7% | $5.87 | +6.7% | 1.5M | 218K | 6.8x | 12.7M | Personnel Services |
+| PBK | [TV](https://www.tradingview.com/chart/?symbol=PBK) | $0.73 | -1.9% | +6.8% | $0.78 | +4.8% | 442K | 5.9M | 0.1x | 43.0M | Alternative Power Generation |
+| PROP | [TV](https://www.tradingview.com/chart/?symbol=PROP) | $0.70 | +6.7% | +5.9% | $0.74 | +13.0% | 436K | 3.7M | 0.1x | 37.7M | Integrated Oil |
+| ELDN | [TV](https://www.tradingview.com/chart/?symbol=ELDN) | $3.65 | -7.8% | +5.2% | $3.84 | -3.0% | 83K | 1.8M | 0.0x | 73.8M | Pharmaceuticals: Major |
+
+### AH trajectory (5-min)
+
+- **TII** — looks like a strong late BUILD on the scanner: +8% midday → +29% (17:45) → +60% (18:00) → +81% (18:10) → **+110.1% peak ($4.56) at 18:25** → +107% (18:30). Peak after 18:00 ET would normally be the 4/4 late-peak profile. **BUT every AH 5-min bar shows volume = 0.** The Yahoo 5m feed confirms real volume only in the regular-session close bars (341K, 128K, 115K near 4 PM); the entire $2.20→$4.56 AH ramp printed on zero recorded volume. The scanner's "AH Vol 3.4M / VRatio 4.9x" is the regular-session close volume, not AH liquidity.
+- **SHPH** — BUILD then slow bleed: peaked +75.9% ($6.49, 16:45), now $5.46 (+44.4%). The slow fade across scans continues (76% → 64% → 58% → 44%), now ~16% off the AH high. Float 596K, VRatio 6.4x. Still cleanest *real-volume* profile but weakening.
+- **NEXR / ILLR** — regular-day continuations on thin AH volume (VRatio 0.5x / 0.4x), both near or over the extension ceiling.
+- **LGCL** — failed dead-cat, AH +25.5% but Total -17.5% (still below regular close). Day -34.2%.
+
+### Entry evaluation (per-candidate)
+
+- **TII — SKIP (no real AH volume + dead book).** Every AH 5-min bar = 0 volume; the +110% ramp is illiquid noise prints, the NEXR pattern. Alpaca book confirms it: bid $1.89 (stale 4 PM close) / **ask $0.00 x0** — no offer to lift, no real liquidity. `tradable=true` is meaningless with an empty book. Also float 28.5M (>10M ideal). A limit order would not fill at a sane price. Skip.
+- **SHPH — SKIP (untradable).** 5th AH scan >10%, all strategy gates still pass, but `tradable=false shortable=false` on Alpaca across the entire night — cannot place the order. Grade C (United Dogecoin crypto/AI-hosting narrative PR, graded at 23:00). Slow fade (76%→44%) also weakening. Hypothetical entry ~$5.46 for tracking (carried; the night's best real-volume profile, blocked solely by Alpaca tradability).
+- **IVF — OPEN POSITION (no new entry).** Entered 00:00 (60 @ $1.58, Grade None). Now +22.5% AH / $1.52, fading from the +31.5% high at 00:00. Hold/sell handled by premarket position-evaluation. This prompt is entries-only; not re-entering (one entry per candidate per night).
+- **NEXR — SKIP.** Regular-day continuation, thin AH (VRatio 0.5x), Total +134.7% near ceiling.
+- **ILLR — SKIP (extension ceiling).** Total +385.6% >> 150%; VRatio 0.4x fails ceiling-override.
+- **LGCL — SKIP (Day% gate + dead-cat).** Day -34.2% below the -15 floor; AH stays below regular close (Total -17.5%) → failed dead-cat.
+- **DLHC — SKIP.** AH +6.7% (<10%); SPIKE→FADE confirmed earlier.
+- **PBK / PROP / ELDN — SKIP.** AH <10%, thin VRatio.
+
+**Net: 0 new entries this scan.** TII looked like the night's standout BUILD but is a zero-volume illiquid trap (dead Alpaca book). SHPH remains the only clean real-volume qualifier and stays untradable on Alpaca. IVF position (entered 00:00) continues to be the night's single executed trade.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
