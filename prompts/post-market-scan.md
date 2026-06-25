@@ -23,10 +23,10 @@ python3 scripts/scan.py --all
   ```markdown
   # Post-Market Screening - YYYY-MM-DD
 
-  ## Paper Trades
+  ## Paper Trades (Alpaca fills)
 
-  | Ticker | Entry Price | Entry Time | Shares (~€100) | Reason |
-  |--------|-------------|------------|-----------------|--------|
+  | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+  |--------|------------|------------|-----------------|----------|--------|
   ```
 
 - Append a timestamped scan section **before** the `## Paper Trades` section:
@@ -76,9 +76,19 @@ For each **new** candidate (not in prior scans), evaluate against the entry crit
 
 **Regular session caution (21:30 CET / before 4:00 PM ET):** If this scan is running before AH opens, do NOT enter paper trades yet. Flag candidates as "Watch — pending AH confirmation" in the evaluation notes. Only enter a paper trade if the stock reappears in a subsequent AH scan (22:00+ CET) with sustained momentum. Stocks that spike intraday but don't carry into AH tend to fade (e.g., SPRC -18.6%, AEMD -4.6% on March 12).
 
-If a candidate passes (and it's an AH scan), add a paper trade entry to the `## Paper Trades` table:
-- Entry Price = current AH price
-- Shares = ~€100 / entry price (round down)
+If a candidate passes (and it's an AH scan), **submit a real Alpaca paper order** (extended-hours limit):
+
+```bash
+node scripts/broker.js tradable SYM      # confirm Alpaca can trade it
+node scripts/broker.js quote SYM         # check bid/ask
+node scripts/broker.js buy SYM QTY --limit PRICE --ext
+node scripts/broker.js orders all        # confirm fill, read filled_avg_price
+```
+
+- QTY = floor(~$100 / ask price)
+- Limit a few cents above the ask to fill in thin AH books
+- If `tradable=false` or the order doesn't fill, note it and skip (no fill = no position)
+- Entry Price = **real filled_avg_price** from Alpaca, not the quote
 - Catalyst Grade = A/B/C/D/None (see below)
 - Reason = brief justification
 
@@ -91,7 +101,7 @@ If a candidate passes (and it's an AH scan), add a paper trade entry to the `## 
 | **D** | Dilution | Stock offering, warrant exercise | Exit immediately |
 | **None** | No catalyst found | Unknown driver | Exit at first opportunity |
 
-**Also add the position to `OPEN_POSITIONS.md`** with the entry details and catalyst grade.
+**Also add the position to `OPEN_POSITIONS.md`** with the real fill price, shares, and catalyst grade. Only record positions that actually filled on Alpaca.
 
 If a candidate fails, note briefly why in the scan section (e.g., "Skip: no catalyst", "Skip: float too high").
 

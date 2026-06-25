@@ -13,7 +13,15 @@ date
 git stash && git pull --ff-only && git stash pop 2>/dev/null || true
 ```
 
-Read `OPEN_POSITIONS.md` to get current positions.
+Get current positions from Alpaca (source of truth), then cross-check `OPEN_POSITIONS.md`:
+
+```bash
+node scripts/broker.js account
+node scripts/broker.js positions
+node scripts/broker.js orders all
+```
+
+If `OPEN_POSITIONS.md` disagrees with Alpaca, Alpaca wins. Reconcile the file.
 
 ### 2. Get Current Prices
 
@@ -61,10 +69,18 @@ For each position, output one of:
 
 ### 5. Execute Sells
 
-For any SELL decisions:
-1. Record exit in `OPEN_POSITIONS.md` (move to Closed Positions)
-2. Calculate final P&L
-3. Log the trade in `log/YYYY-MM-DD/log.md`
+For any SELL decisions, submit a real Alpaca order (extended-hours limit during pre/post market):
+
+```bash
+node scripts/broker.js sell SYM QTY --limit PRICE --ext
+```
+
+Set the limit a few cents below the bid to ensure a fill in thin pre/post-market books.
+Then:
+1. Confirm the fill: `node scripts/broker.js orders all` (read `filled_avg_price`)
+2. Record exit in `OPEN_POSITIONS.md` (move to Closed Positions) using the **real fill price**
+3. Calculate final P&L from the real fill
+4. Log the trade in `log/YYYY-MM-DD/log.md`
 
 ### 6. Update Tracking
 
@@ -117,11 +133,11 @@ No-catalyst moves are often pump-and-dumps or momentum plays that reverse violen
 
 ### Position Sizing for Risk
 
-With €100 positions:
-- Max loss on Grade D (quick exit at -10%): €10
-- Max loss on Grade A (hold to -25% stop): €25
-- Potential gain on Grade A runner (+200%): €200
+With ~$100 positions:
+- Max loss on Grade D (quick exit at -10%): $10
+- Max loss on Grade A (hold to -25% stop): $25
+- Potential gain on Grade A runner (+200%): $200
 
-**Risk/reward ratio for Grade A:** Risk €25 to potentially make €200+ = 8:1
+**Risk/reward ratio for Grade A:** Risk $25 to potentially make $200+ = 8:1
 
 This justifies holding Grade A positions through volatility that would trigger exits on lower-grade positions.

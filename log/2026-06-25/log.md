@@ -15,8 +15,8 @@
 **Scanner Diagnostic:**
 - Detectable at screening time? **YES**
 - It was the biggest AH mover from the first scan. At 22:30 CET (+37.7%, $1.57), 23:00 (+51.8%, $1.73), built to +82.5% ($2.08) by 00:30. Float 4.4M, clean BUILD trajectory across every scan.
-- **We caught AND traded it.** Entered $1.62 at 23:00 CET (Grade None, data-collection entry with concerns logged: no fresh catalyst, not first-day activity, thin Yahoo AH volume). Position is +32% in PM.
-- Scanner gap: none. This is a clean detection + selection win — the scanner found the day's winner and we entered it in the window.
+- **We caught AND selected it.** Flagged at 23:00 CET as the night's top candidate (Grade None; concerns logged: no fresh catalyst, not first-day activity, thin Yahoo AH volume). No Alpaca order was placed (pre-Alpaca; execution starts 2026-06-25).
+- Scanner gap: none. This is a clean detection + selection win — the scanner found the day's winner in the window.
 
 ### Baseline Tracking
 
@@ -39,16 +39,12 @@ Live premarket scan (04:20 ET) — 4 hits:
 
 AH reconstruction confirms AZI as the standout AH→PM continuation. NEXR/ROLR/BCDA are PM-side moves with no qualifying AH footprint (NEXR was -4% in AH last night). No other AH→PM winner.
 
-### Paper Trade P&L
+### Trade Execution
 
-| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
-|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
-| AZI | $1.62 | +37.3% | None — low-float squeeze, no fresh catalyst | 23:00 CET | $2.25 | 04:00 ET | open | +€31.72 | +32.1% | 🟢 Up (open) |
-| AMS | $1.64 | +11.6% | None — routine AGM only | 23:30 CET | $1.61 | 04:00 ET | open | -€7.20 | -7.3% | 🔴 Down (open) |
-
-Prices as of 04:20 ET (AZI $2.14, AMS $1.52). Positions are open — hold/sell decisions run separately at 10:30 CET (`position-evaluation.md`).
-
-**Total Paper P&L (unrealized): +€24.52**
+**No trades executed.** AZI and AMS were tracked as candidates only. This is the last day of the
+pre-Alpaca period: from 2026-06-25 all entries/exits run on the Alpaca paper account via
+`scripts/broker.js`, and only real fills are logged. The earlier hand-maintained paper ledger
+(assumed prices, never executed) has been discarded.
 
 ### Scanner Effectiveness
 
@@ -96,13 +92,5 @@ then held +82-95% through the AH tail. Textbook AH BUILD → PM hold.
 
 ## Position Evaluation — 10:30 CET
 
-| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
-|--------|-------|---------|-------|------|------|-------|----------|--------|
-| AZI | $1.62 | $2.05 | +26.5% | $2.38 | 1 | None | SELL | Grade None — exit at any profit in premarket; ran to $2.38 overnight, exited PM pulse $2.05 |
-| AMS | $1.64 | $1.52 | -7.3% | $1.78 | 1 | None | SELL | Grade None — exit at first premarket opportunity; above stop ($1.48), AH peak faded |
-
-**Actions taken:**
-- SOLD AZI: 61 sh @ $2.05 → $125.05, P&L **+$26.23 (+26.5%)**
-- SOLD AMS: 60 sh @ $1.52 → $91.20, P&L **-$7.20 (-7.3%)**
-- Realized P&L this session: **+$19.03**
-- Both moved to Closed Positions; no open positions remaining
+No open positions on Alpaca. AZI/AMS were never executed (pre-Alpaca candidates). Nothing to evaluate.
+Switched the workflow to Alpaca paper execution as source of truth (see OPEN_POSITIONS.md).

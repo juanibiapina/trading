@@ -52,6 +52,16 @@ The strategy is in a learning phase because we don't yet know what makes a winni
 3. **Fix** — Improve the scanner until it reliably catches winners (target: >80% detection rate)
 4. **Refine** — Only then do entry rules (sector, catalyst, price) matter — because now we're choosing among detected winners
 
+**Execution (from 2026-06-25):** Paper trades run on the **Alpaca paper account** (`PA37U2Y192A7`), not a hand-maintained markdown ledger. Use `scripts/broker.js` for all entries/exits and record only real fills. Alpaca is the source of truth; `OPEN_POSITIONS.md` mirrors `broker.js positions`.
+
+```bash
+node scripts/broker.js account                       # equity, buying power
+node scripts/broker.js positions                     # open positions
+node scripts/broker.js buy  SYM QTY --limit P --ext  # entry (extended hours)
+node scripts/broker.js sell SYM QTY --limit P --ext  # exit  (extended hours)
+node scripts/broker.js orders all                    # fills (filled_avg_price)
+```
+
 Until the baseline is met, we paper trade and focus entirely on scanner accuracy:
 - No hard sector or entry-price restrictions — let the data reveal what works
 - Every morning, run the retrospective (Step 0) — this is the most important part of the workflow
@@ -89,7 +99,7 @@ These are patterns noticed so far, NOT hard rules. They may evolve as more data 
 - Extended hours have wider spreads and lower liquidity
 - **CRITICAL: Stop losses DO NOT execute in extended hours** - PZG (Jan 29) had SL at $2.49, stock crashed to $1.70, SL never triggered. Accept full loss potential or size smaller.
 - Can gap against you overnight
-- Need broker that supports extended hours trading
+- Need broker that supports extended hours trading — **using Alpaca paper (extended-hours limit orders) as of 2026-06-25**
 
 ### Baseline Status
 

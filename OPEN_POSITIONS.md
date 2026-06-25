@@ -1,6 +1,8 @@
 # Open Positions
 
-Active paper trade positions. Updated by evening scans (entries) and position evaluation (exits).
+Active paper trade positions, executed on the **Alpaca paper account** (`PA37U2Y192A7`).
+Alpaca is the source of truth. This file mirrors `node scripts/broker.js positions`.
+Every entry/exit must be a real Alpaca order; do not record trades that were not submitted.
 
 ## Current Positions
 
@@ -15,8 +17,9 @@ _No open positions._
 - Enter when stock meets scanner criteria (float, AH%, catalyst)
 - **Multiple concurrent positions allowed** (W24 2026). An open position no longer blocks new entries; enter every qualifying candidate.
 - One entry per candidate per night (don't average into the same ticker).
-- Position size: €100 per trade (learning phase), sized independently per position
+- Position size: ~$100 per trade (learning phase), sized independently per position
 - Record catalyst grade at entry (A/B/C/D/None)
+- **Execute via Alpaca:** `node scripts/broker.js buy SYM QTY --limit P --ext` (extended-hours limit). Record the real fill price returned by the order, not the quoted/assumed price.
 
 ### Holding Rules (based on catalyst grade)
 | Grade | Description | Hold Strategy |
@@ -31,6 +34,8 @@ _No open positions._
 2. **Target reached** — Trail stop, don't exit all at once
 3. **Time limit** — Grade A: 5 days, Grade B: 2 days, Others: premarket
 4. **Catalyst invalidated** — News changes thesis → exit
+
+Execute exits via Alpaca: `node scripts/broker.js sell SYM QTY --limit P --ext`. Record the real fill price.
 
 ## Risk Calculation
 
@@ -49,30 +54,12 @@ Based on historical data (17 winners tracked):
 
 **Conclusion:** Hold Grade A, exit others quickly.
 
-## Closed Positions (Last 10)
+## Closed Positions
+
+Clean slate as of 2026-06-25. Only real Alpaca paper fills are recorded here going forward.
+The pre-Alpaca markdown ledger used assumed prices that were never executed and has been discarded.
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
-| AZI | $1.62 | $2.05 | +$26.23 | +26.5% | 1 | None - $30M private placement dilution overhang | Grade None PM exit at profit; ran to $2.38 overnight (+47%), exited PM pulse $2.05 |
-| AMS | $1.64 | $1.52 | -$7.20 | -7.3% | 1 | None - routine annual shareholder meeting, no PR | Grade None PM exit; AH peak $1.78 faded, exited above stop in PM |
-| VTAK | $1.16 | $1.98 | +$70.52 | +70.7% | 1 | C - Patent allowance PR + Flyte partnership | Grade C premarket-pulse exit; PM ran $1.14→$2.03 peak (08:25 ET), exited near high $1.98 |
-| EPOW | $0.69 | $0.62 | -$10.08 | -10.1% | 1 | None | Grade None PM exit; hard stop ($0.62) hit, faded from $0.79 AH peak |
-| VTAK | $1.49 | $1.25 | -$16.08 | -16.1% | 1 | B - Patent allowance PR (heart-failure IP) | Hard stop ($1.27) breached; PM peaked only $1.32 (below entry), faded through stop into regular session |
-| SKYQ | $1.87 | $1.66 | -$11.13 | -11.2% | 1 | C - Nevada refinery production phase PR | Hard stop ($1.68) breached in PM; AH peak $1.93 faded, PM high only $1.91 |
-| EHGO | $3.85 | $3.43 | -$10.50 | -10.9% | 1 | C - Vague AI-partnership; dilution overhang | Hard stop ($3.47) breached in PM; AH peak $4.00 faded steadily into PM |
-| LPA | $5.21 | $4.21 | -$19.00 | -19.2% | 1 | B - $145M asset sale (Lima logistics park) | Hard stop ($4.43) breached; PM spiked to $7.77 (+49%) at 08:00 ET then faded below stop |
-| LNAI | $5.80 | $6.43 | +$10.71 | +10.9% | 1 | C - Nasdaq bid-price compliance | Grade C premarket exit at profit; PM peak $7.12 (+22.8%), exited on PM pulse |
-| NIVF | $0.81 | $1.36 | +$67.65 | +67.9% | 1 | C - note/warrant buyback (anti-dilution) | Grade C premarket exit at profit; PM peak $1.55 (+91%), exited on PM pulse |
-| HUBC | $2.06 | $1.98 | -$3.84 | -3.9% | 1 | None | Grade None premarket exit; AH peak $2.19 faded, PM peak $2.11 |
-| WCT | $1.94 | $1.53 | -$20.91 | -21.1% | 1 | D - 1-for-400 reverse split | Hard stop ($1.65) breached overnight; choppy AH, faded into PM |
-| CRVO | $3.64 | $3.19 | -$12.15 | -12.4% | 1 | None - Jun 10 dilution overhang | Grade None premarket exit; PM peak $3.74 (+52.7%) faded, entry left no profit |
-| RKDA | $1.26 | $1.04 | -$17.38 | -17.5% | 1 | None - low-float speculative pump | Grade None premarket exit; stop ($1.13) breached overnight, round-tripped AH base, PM high only $1.07 |
-| SKYQ | $2.28 | $1.65 | -$27.09 | -27.6% | 1 | None - Macro oil/Iran sector beta | Grade None, stop ($2.05) breached overnight; round-tripped AH spike ($3.58 peak before entry), PM high only $1.80 |
-| MSW | $3.24 | $3.53 | +$8.70 | +9.0% | 1 | C - Acquisition close + dilutive notes | Grade C premarket exit at profit; AH peak $5.18 was best window, faded into PM |
-| ANY | $4.84 | $3.81 | -$20.60 | -21.3% | 2 | A - Cathedra Bitcoin acquisition | Stop breached overnight (low $3.54), peaked at $5.50 (+13.6%) |
-| PRFX | $7.28 | $5.18 | -$27.30 | -28.8% | 1 | B - DeepSolar Predict™ launch | Hard stop breached, peaked at $9.30 (+27.7%) then overnight fade |
-| ATPC | $7.23 | $6.21 | -$13.26 | -14.1% | 1 | None | Hard stop breached, peaked at $8.30 (+14.8%) then faded |
-| VCIG | $3.91 | $3.60 | -$7.75 | -7.9% | 2 | B - CEO insider buy | Day 2 exit per Grade B rules, peak +21.5% |
-| BNZI | $4.61 | $3.53 | -$24.84 | -23.4% | 2 | B - Debt elimination | Hard stop breached, overnight gap down |
-| CODX | $2.50 | $1.77 | -$29.20 | -29.2% | 2 | B - Ebola testing strategy | Hard stop breached, collapsed in premarket |
-| AMST | $1.17 | $2.62 | +$123.25 | +124% | 1 | B - Enterprise customer win | Trail stop hit at $2.89 after $3.40 peak |
+
+_No closed positions yet._
