@@ -107,3 +107,31 @@ trades made before today's source-of-truth switch, not strategy entries:
 - Jun 23: canceled $0.50 GTC test order (never filled)
 
 These predate the clean slate and are not logged as strategy trades. No action taken.
+
+## Scan 21:30 CET (3:30 PM ET)
+
+**REGULAR session — after-hours not open yet (close is 4:00 PM ET).** Observation only per the
+regular-session caution. No paper entries. Candidates below are flagged **Watch — pending AH
+confirmation**; only enter if they reappear with sustained momentum in a 22:00+ CET AH scan. The
+`VChg%` of -99/-100% on most names is end-of-day volume tapering, not AH action. Catalyst searches
+deferred to the AH scans.
+
+Top day movers worth watching into AH (filtered for float and real activity):
+
+| Ticker | Chart | Price | Day% | 5mVol | IRVol | Float | MCap | Industry | Note |
+|--------|-------|-------|------|-------|-------|-------|------|----------|------|
+| ILLR | [TV](https://www.tradingview.com/chart/?symbol=ILLR) | $2.85 | +270.6% | 100 | 477.2 | n/a | $15.3M | Packaged Software | Big day move; vol fading into close |
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $2.00 | +75.4% | 399 | 13.2 | 4.4M | $136M | Specialty Stores | Last night's AH→PM winner, still elevated |
+| ASPD | [TV](https://www.tradingview.com/chart/?symbol=ASPD) | $2.90 | +190.0% | 240 | 4.3 | n/a | $1.7M | REIT | Thin |
+| NEXR | [TV](https://www.tradingview.com/chart/?symbol=NEXR) | $1.15 | +104.4% | 200 | 490.5 | 6.1M | $3.4M | Recreational Products | Low float, vol faded into close |
+| VINO | [TV](https://www.tradingview.com/chart/?symbol=VINO) | $1.44 | +157.1% | 200 | 0.1 | 920K | $1.4M | Real Estate Dev | Micro float, very thin |
+
+Larger %-movers (APHD +702%, CFOR +345%, KJFI +274%, TNSGF +778%) are all sub-1K 5mVol thin
+names — noise, not watched. Will re-scan once AH opens (22:00 CET).
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+
+_No entries — pre-AH observation scan only._
