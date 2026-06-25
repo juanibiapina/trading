@@ -6,8 +6,9 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-23 | ORIS | None (Nasdaq delisting determination = negative; low-float squeeze) | +60.8% ($3.28 AH @19:25 ET) | $4.24 PM (+75.2%) | $1.83 | Day 2 - faded hard from $4.24 PM peak to $1.83 intraday; NOT traded |
-| 2026-06-24 | VTAK | C — spent patent PR re-pump (low-float 2.0M) | $1.38 AH (+58.7%) | $1.89 PM (+117.4%) | $1.89 PM | 🆕 Day 1 - winner, TRADED @ $1.16 (paper, +63% to peak); AH-fader re-exploded PM |
+| 2026-06-23 | ORIS | None (Nasdaq delisting determination = negative; low-float squeeze) | +60.8% ($3.28 AH @19:25 ET) | $4.24 PM (+75.2%) | $1.83 | Day 3 - holding ~$1.83, faded from $4.24 PM peak; NOT traded |
+| 2026-06-24 | VTAK | C — spent patent PR re-pump (low-float 2.0M) | $1.38 AH (+58.7%) | $1.89 PM (+117.4%) | $0.92 | Day 2 - faded to $0.92 from $1.89 PM peak; sold @ $1.98 (+70.7%, good exit) |
+| 2026-06-25 | AZI | None (low-float 4.4M squeeze; recent driver was Jun 9-10 $30M placement = dilution) | $2.34 AH (+98.3%) | $2.25 PM (+90.7%) | $2.14 PM | 🆕 Day 1 - winner, TRADED @ $1.62 (paper, +32% open); clean AH BUILD → PM hold |
 
 ## Historical Winners (with multi-day outcome)
 
