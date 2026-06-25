@@ -71,18 +71,15 @@ python3 scripts/yahoo-fetch.py TICKER --interval 5m --range 2d --prepost
 ```
 Do NOT use raw `curl` to Yahoo Finance (it will fail without the User-Agent header).
 
-### 3. Check Paper Trade P&L
+### 3. Check Open Position P&L (Alpaca)
 
-If there are paper trades in the log, check their current prices:
+Open positions live on the **Alpaca paper account** (source of truth), not in the log. Pull them read-only for context:
 
 ```bash
-python3 scripts/check-prices.py TICKER1 TICKER2 ...
+node scripts/broker.js positions
 ```
 
-For each paper trade:
-- Get current premarket price (or latest available price)
-- Calculate unrealized P&L: `(current_price - entry_price) * shares`
-- Calculate P&L percentage: `((current_price - entry_price) / entry_price) * 100`
+For each open position, note the unrealized P&L Alpaca reports (entry = the real `filled_avg_price`). **Do not place hold/sell orders here** — exits are handled by `position-evaluation.md` (10:30 / 14:30 CET). If there are no open positions, state that and move on. The hand-maintained markdown ledger was discarded 2026-06-25; do **not** reconstruct P&L from assumed/quoted prices for stocks that never filled on Alpaca.
 
 ### 4. Scanner Diagnostic
 
@@ -154,7 +151,9 @@ Append a `## Morning Evaluation` section to the log.
 ### Retrospective Scan Results
 [results from AH reconstruction via `check-prices.py --ah-history`, optional forced AH scan diagnostic, and PM scan]
 
-### Paper Trade P&L
+### Open Position P&L (Alpaca)
+
+Only real Alpaca fills go in this table (entry/exit = `filled_avg_price` from `broker.js`). Candidates that were tracked but never filled belong in the Scanner Diagnostic as *hypothetical* (AH entry → PM peak), **not** here. If there were no Alpaca fills, write "No executed positions."
 
 | Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
 |--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
@@ -166,7 +165,7 @@ Append a `## Morning Evaluation` section to the log.
 
 **Catalyst** = tier from Day Trading.md catalyst ranking + brief label. Use: **A** (operational improvement, partnership, breakthrough data), **B** (FDA milestone), **C** (analyst target), **D** (financing/dilution), or **None** (no catalyst found/unverified). This tracks whether catalyst quality predicts PM follow-through.
 
-**Total Paper P&L: +€XX.XX**
+**Total Realized P&L (Alpaca fills only): +€XX.XX**
 
 ### Scanner Effectiveness
 
