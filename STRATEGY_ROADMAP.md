@@ -48,13 +48,13 @@ Ranked by the North Star (expected $/time), adjusted for Juan's steer
 (2026-06-23) that a working **Alpaca paper account** (path to real money) and a
 better **data + review surface** (graphs, sources) are high-value enablers.
 
-1. **Initiative 2 - Alpaca paper trading (foundation, do first).** Cheap now
-   (keys work, just build `broker.js`) and it de-risks every other bet: it tells
-   us whether our paper fills on micro-float sub-$10 names are even real. If the
-   assumed fills do not hold, the current "wins" are partly illusory and the
-   edge needs rethinking. It is also the only path to real money, which is the
-   goal. Low effort, low risk, high leverage.
-2. **Initiative 5 - better data + review surface (graphs, sources).** Juan needs
+1. ~~**Initiative 2 - Alpaca paper trading.**~~ **Promoted to the live paper
+   cycle (2026-06-25).** Real Alpaca paper fills now drive entries/exits via
+   `broker.js`, wired into the scan/eval/position pulses; the fictional ledger
+   was discarded. Only step 5 (flip to live real money, tiny size) remains,
+   gated on a proven edge + Juan. Pilot slot freed.
+2. **Initiative 5 - better data + review surface (graphs, sources).** Now the
+   active initiative (pilot slot free). Juan needs
    to review data to steer, and the work below (especially the Init 6 census)
    should land as something he can actually review. Charts (5m + volume) and a
    stronger data source (Alpaca market data, now available via the Init 2 keys;
@@ -128,8 +128,22 @@ big % move, so a volume-first trigger could front-run the price-first trigger.
 account available in Europe, so numbers reflect real fills/spreads/liquidity.
 Eventually switch the same integration to live trading.
 
-**Status:** **Pilot stage — second ext-hours round-trip + shadow-fills ledger
-started (2026-06-24).** Repeated the VTAK shadow round-trip in premarket: BUY 86
+**Status:** **PROMOTED to the live paper cycle (2026-06-25).** The
+scanner-improvement loop wired `broker.js` directly into the trading pulses
+(commits `0c43af9` "switch to Alpaca paper execution; clean break from fictional
+ledger" and `a508bfe`): `post-market-scan.md` submits real ext-hours Alpaca
+paper buys, `position-evaluation.md` submits real sells, and
+`morning-evaluation.md` reads positions/P&L from Alpaca as the source of truth.
+The hand-maintained assumed-price ledger was discarded; `OPEN_POSITIONS.md` now
+mirrors Alpaca. This makes the shadow-fills comparison moot — real fills are
+captured natively at entry/exit, which is what rollout steps 3-4 aimed for.
+Account `PA37U2Y192A7` is flat at ~$99,998.41 (two validation round-trips paid
+~$1.59 spread). The only remaining step is 5 (live real money, tiny size),
+gated on a proven edge and Juan's sign-off — not now. **The single pilot slot
+is now free for Initiative 5.**
+
+**Prior pilot status (2026-06-24, superseded):** second ext-hours round-trip + shadow-fills ledger
+started. Repeated the VTAK shadow round-trip in premarket: BUY 86
 filled at **$1.35 (the ask)**, SELL filled at **$1.34 (the bid)**, position
 flat. Spread held at **1c** even at the higher price, so relative cost shrank to
 **0.74%** round trip (vs 0.88% at $1.14 yesterday) — the buy@ask / sell@bid
@@ -197,9 +211,30 @@ post sessions, and renders SVG -> PNG via ImageMagick. Verified on ORIS (the
 AH->PM winner: regular climb -> after-hours build -> premarket spike to ~$5.85
 then fade, all visible) and VTAK. Data-source eval: Yahoo is the better history/
 5m source (Alpaca IEX bars are sparse); Alpaca is best for live quotes/fills.
-Next step: wire PNG attachments into `scripts/send-email-inboxkit.js` so the
-daily email carries charts — needs the InboxKit attachment API format confirmed
-first (don't guess and break the sender).
+
+**Update (2026-06-25) — InboxKit has NO attachment API; the attach-PNG plan is
+dead.** Checked the authoritative spec (`https://inboxkit.cc/api/openapi.json`):
+`POST /api/messages` accepts only `to`, `subject`, `text`, `html` — no
+attachment or multipart field. So charts cannot be attached. Re-verified the
+chart pipeline on today's winner **AZI**: `chart.py AZI --range 2d` renders the
+full AH->PM pattern (flat regular session ~$1.25 -> after-hours spike to ~$2.34
+-> premarket fade to ~$1.79, with the volume panel) — the renderer is fine; only
+delivery is blocked. Two viable delivery paths remain:
+- **(a) Inline `<img src="https://...">` with a hosted PNG.** Gmail proxies and
+  displays remote https images. Needs somewhere to host each daily chart with a
+  public URL (base64 data URIs are stripped by Gmail, so those won't work).
+- **(b) Commit charts to the daily log dir as a gallery + link from the email.**
+  Charts already follow the `log/YYYY-MM-DD/TICKER-HHMM.png` convention; Juan is
+  authenticated to the (private) GitHub repo, so an email link to the day's log
+  dir shows the charts with zero hosting. Lowest effort, no new infra.
+
+Leaning **(b)**: it reuses the existing chart-capture convention and needs no
+host. Recommend the daily-email pulse generate `chart.py` PNGs for the reported
+winner + open positions into the log dir and link them; propose to Juan to
+confirm he'd rather click a repo link than get inline images.
+
+Prior next step (now obsolete): wire PNG attachments into
+`scripts/send-email-inboxkit.js`.
 
 **Findings/notes:**
 - Need a data source for 5-minute OHLCV bars. Yahoo's chart API already serves
@@ -328,3 +363,7 @@ tracker).
       `ALPACA_PAPER_TRADE=1` explicitly.
 - [ ] Initiative 3: confirm whether to trim/retime the scan schedule once the
       audit proposes a plan.
+- [ ] Initiative 5: InboxKit can't attach files. Confirm chart delivery
+      preference: **(b)** charts committed to the daily log dir + a link in the
+      email (no hosting, click into the repo — recommended), or **(a)** inline
+      images requiring a public host. Default to (b) unless Juan prefers inline.
