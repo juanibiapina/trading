@@ -6,6 +6,25 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-06-24 — re: Trading Scanner Report - 2026-06-24
+
+**Juan said:** "yes, apply the scheduler changes if you need to"
+
+**Interpretation:** Standing approval to add the 1-2 late post-market scans
+(~01:00/01:30 CET) that the late-AH-tail tracker is building a case for. The
+"if you need to" is conditional: apply when the data warrants, not
+automatically. This clears the Initiative 3 blocker ("approval of any schedule
+change before applying") for this specific change.
+
+**Action:** Recorded the standing approval; did **not** add the scans yet. The
+late-AH-tail tally is at 1 (ORIS, Jun 22); the tracker's own trigger for adding
+late scans is a cluster of >=3-4 winners in the 18:30-20:00 ET tail. Applying
+now would be guessing ahead of the data. Updated Initiative 3 to mark the
+schedule change pre-authorized so the next qualifying night can apply it without
+a fresh ask. Routed to: Initiative 3 (schedule) + late-AH-tail tracker.
+
+---
+
 ### 2026-06-23 — north star: make the most money, fast (chat)
 
 **Juan said:** "The goal is to make the most amount of money fast. Somehow this

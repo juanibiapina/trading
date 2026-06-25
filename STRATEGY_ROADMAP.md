@@ -252,6 +252,11 @@ trimmed/retimed schedule.
 
 **Needs from Juan:** approval of any schedule change before applying (the agent
 can edit its own crons but should confirm timing changes here first).
+- **Pre-authorized (2026-06-24):** Juan approved adding the 1-2 late
+  post-market scans (~01:00/01:30 CET) that the late-AH-tail tracker is building
+  a case for ("apply the scheduler changes if you need to"). Apply when the
+  tracker's evidence warrants (>=3-4 winners clustering in the 18:30-20:00 ET
+  tail); tally is at 1 (ORIS) as of Jun 24, so not yet applied.
 
 ---
 
