@@ -176,6 +176,44 @@ No candidates found.
 
 No paper trades (observation window). Re-scan at 23:00 CET for the entry decision.
 
+## Scan 23:00 CET (5:00 PM ET) — ENTRY WINDOW OPEN
+
+First entry-eligible scan of the night. Scanner returned **7 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NEXR | [TV](https://www.tradingview.com/chart/?symbol=NEXR) | $1.10 | +95.6% | +7.7% | $1.19 | +110.7% | 10.1M | 32.4M | 0.3x | 6.1M | Recreational Products |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.78 | +2.4% | +72.0% | $6.50 | +76.2% | 3.9M | 670K | 5.8x | 596K | Pharmaceuticals: Major |
+| ILLR | [TV](https://www.tradingview.com/chart/?symbol=ILLR) | $3.05 | +296.6% | +12.8% | $3.44 | +347.3% | 3.3M | 22.3M | 0.1x | n/a | Packaged Software |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $2.58 | +8.4% | +24.0% | $3.20 | +34.5% | 1.9M | 515K | 3.6x | 570K | Internet Retail |
+| DLHC | [TV](https://www.tradingview.com/chart/?symbol=DLHC) | $5.50 | +0.0% | +13.5% | $6.24 | +13.5% | 1.2M | 183K | 6.6x | 12.7M | Personnel Services |
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.27 | -26.2% | +14.2% | $1.45 | -15.7% | 585K | 2.1M | 0.3x | 4.0M | Misc Commercial Services |
+| NGEN | [TV](https://www.tradingview.com/chart/?symbol=NGEN) | $1.91 | -4.0% | +6.8% | $2.04 | +2.5% | 137K | 924K | 0.1x | 64.0M | Pharmaceuticals: Major |
+
+### AH trajectory (5-min)
+
+- **SHPH** — strong BUILD: +10.6% (16:05) → +30% (16:10) → +37% (16:15) → +52% (16:30) → +66% (16:35) → +75.3% (16:40) → **+75.9% peak (16:45)** → easing to +61.8% ($5.97) by 17:00. Currently ~8-12% off the AH high → **holding**, not a deep fade. Float **596K**, VRatio 5.8x. Cleanest profile of the night.
+- **DLHC** — SPIKE→FADE: +16.4% (16:05) → **+22.4% peak (16:10)** → steady decline +16.5% (16:30) → +13.5% (16:40) → +10.7% (16:45) → **+6.5% ($5.86) by 17:00**. Early peak + declining across every print, now sub-10%.
+- **IPW** — BUILD then ease: +10.9% (16:05) → +25.6% (16:20) → **+34.5% peak (16:40)** → +22% (17:00). Float 570K, VRatio 3.6x. NEW name; first AH scan >10%.
+- **NEXR** — AH peaked +127.6% at 16:05 (regular-day continuation), now +7.7%, volume fading (VRatio 0.3).
+- **ILLR** — AH peaked +381% (16:55-17:00), holding — but Total +347% (>150 ceiling) and VRatio 0.1 (no real AH volume).
+- **YYGH** — AH high $1.48 vs close $1.72: stays *below* regular close (Total -13.9% at best). Day -26.2%.
+
+### Entry evaluation (per-candidate)
+
+- **SHPH — QUALIFIES on all gates, but NOT TRADABLE on Alpaca → no position.**
+  - Gates: float 596K (<50M ✓, <10M ideal ✓), AH >10% in 2 AH scans (22:30 +25.1%, 23:00 +72.0% ✓), Day% +2.4% (>-15 ✓), Total% +76% (<150 ceiling ✓), BUILD holding within ~12% of AH high (early 16:45 peak does NOT disqualify a hold per CHAI/MSW precedent ✓), VRatio 5.8x ✓.
+  - **Catalyst — Grade C (strategic/crypto-pivot PR).** Subsidiary United Dogecoin (acquired May 2026) outlined a data-centre/power-infrastructure strategy for DOGE mining + future AI hosting (evaluating assets in Idaho/Alberta, electrifying ElphaPex miners). No signed deal, no revenue, no contract — a narrative PR. StockTitan: Neutral sentiment, Moderate impact, *"Pattern Detected: SHPH has often seen sharp declines following seemingly positive strategic announcements"* — prior crypto/AI PRs moved -32.8%, -32.8%, -22.9%. Recent 1-for-10 reverse split (Jun 9). Grade C → would exit premarket.
+  - **Execution: `tradable=false shortable=false fractionable=false`.** Alpaca will not trade SHPH. Quote was bid $5.91 / ask $6.03. **No order placed, no position.** Logged as qualified-but-untradable — hypothetical entry ~$6.03 for tracking.
+- **DLHC — SKIP (trajectory).** Has 2 AH scans >10% (22:30 +22.7%, 23:00 +13.5%) and a Grade B catalyst (Navy logistics IT contract, $250M ceiling). But it's a textbook early-peak SPIKE→FADE: peaked +22.4% at 16:10, declined every print to +6.5% by 17:00 (now sub-10%). Trajectory overrides catalyst (BUILD-vs-FADE rule); early-peak + declining across scans = 0/7 PM-continuation profile. Skip.
+- **IPW — WATCH (only 1 AH scan >10%).** Float 570K, VRatio 3.6x, BUILD to +34.5% then easing. NEW name; needs a 2nd AH scan >10% to qualify. Re-check at 23:30.
+- **NEXR — SKIP.** Only 1 AH scan >10% (22:30 +13.1%; now +7.7%). AH is regular-day continuation, volume fading.
+- **ILLR — SKIP (extension ceiling).** Total +347% >> 150% ceiling. VRatio 0.1 fails ceiling-override (needs >5x), so no override watch.
+- **YYGH — SKIP (Day% gate + dead-cat).** Day -26.2% below the -15 floor. AH high stays *below* regular close → genuine dead-cat bounce, not an override-watch (no reclaim above close).
+- **NGEN — SKIP.** Float 64M (>50M), AH +6.8% (<10%).
+
+**Net: 0 entries this scan.** The night's one all-gates qualifier (SHPH) is untradable on Alpaca. No tradable BUILD candidate cleared the 2-scan requirement. Re-scan at 23:30 for IPW 2nd-scan confirmation and any new BUILD names.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
