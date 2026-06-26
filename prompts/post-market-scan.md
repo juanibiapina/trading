@@ -87,6 +87,7 @@ node scripts/broker.js orders all        # confirm fill, read filled_avg_price
 
 - QTY = floor(~$100 / ask price)
 - Limit a few cents above the ask to fill in thin AH books
+- **AH-liquidity sanity check (skip illiquid ramps):** before sizing the order, confirm `broker.js quote SYM` shows a real two-sided after-hours book — a non-zero ask price *with* size (`ask $X xN`, N>0) and a non-zero bid. If the quote shows `ask $0.00 x0` (or zero size on either side), the TradingView `AH Vol`/`VRatio` is a **stale regular-session artifact**, not real AH liquidity — skip as **illiquid (no AH book)** and record it, do not enter. (Basis: TII Jun 26 showed AH Vol 3.4M / VRatio 4.9x but the Alpaca book was `ask $0.00 x0`; same NEXR zero-AH-volume ramp pattern. These ramps print a price with no fillable liquidity and round-trip in PM.)
 - If `tradable=false` or the order doesn't fill, note it and skip (no fill = no position)
 - Entry Price = **real filled_avg_price** from Alpaca, not the quote
 - Catalyst Grade = A/B/C/D/None (see below)
