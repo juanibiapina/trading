@@ -205,7 +205,8 @@ underlying **data sources** so the numbers are reliable enough to act on and
 chart (Yahoo AH/PM data is gappy; Alpaca market data and financialdatasets.ai
 are candidates).
 
-**Status:** **Prototype built (2026-06-23) — `scripts/chart.py`.** Dependency-free
+**Status:** **Wired into the daily email (2026-06-26, path b).** `scripts/chart.py`
+is dependency-free,
 5m + volume candlestick that fetches Yahoo bars (incl. AH/PM), shades the pre/
 post sessions, and renders SVG -> PNG via ImageMagick. Verified on ORIS (the
 AH->PM winner: regular climb -> after-hours build -> premarket spike to ~$5.85
@@ -228,10 +229,19 @@ delivery is blocked. Two viable delivery paths remain:
   authenticated to the (private) GitHub repo, so an email link to the day's log
   dir shows the charts with zero hosting. Lowest effort, no new infra.
 
-Leaning **(b)**: it reuses the existing chart-capture convention and needs no
-host. Recommend the daily-email pulse generate `chart.py` PNGs for the reported
-winner + open positions into the log dir and link them; propose to Juan to
-confirm he'd rather click a repo link than get inline images.
+**Update (2026-06-26) — path (b) wired into the daily-email pulse.** Juan didn't
+object to the (b) recommendation, so applied it: `prompts/daily-email.md` now has
+a "Generate Charts" step that runs `chart.py` for the winner + each open Alpaca
+position into `log/YYYY-MM-DD/`, and a "Charts (5m + volume)" email section that
+links each PNG via its GitHub blob URL
+(`https://github.com/juanibiapina/trading/blob/main/log/.../TICKER-HHMM.png`).
+Log-only change, no trading logic touched. Verified the full pipeline on today's
+real tickers: `chart.py ILLR --range 2d` and `chart.py IVF --range 2d` both
+rendered (49 KB / 44 KB PNGs); the ILLR chart clearly shows the regular-session
+climb -> after-hours build to ~$4.20 (amber) -> premarket spike to ~$7 then fade
+(blue) with the volume surge in the panel. First live use: tomorrow's daily
+email. Remaining check: confirm the committed PNG actually displays when Juan
+opens the GitHub blob link (it resolves only after the cycle's git push).
 
 Prior next step (now obsolete): wire PNG attachments into
 `scripts/send-email-inboxkit.js`.
@@ -363,7 +373,7 @@ tracker).
       `ALPACA_PAPER_TRADE=1` explicitly.
 - [ ] Initiative 3: confirm whether to trim/retime the scan schedule once the
       audit proposes a plan.
-- [ ] Initiative 5: InboxKit can't attach files. Confirm chart delivery
-      preference: **(b)** charts committed to the daily log dir + a link in the
-      email (no hosting, click into the repo — recommended), or **(a)** inline
-      images requiring a public host. Default to (b) unless Juan prefers inline.
+- [x] Initiative 5: chart delivery resolved (2026-06-26). Defaulted to **(b)**
+      — charts committed to the daily log dir, linked from the email via GitHub
+      blob URLs — since Juan didn't object. Wired into `daily-email.md`. Juan can
+      still ask for inline images (path a) if he'd rather not click into the repo.

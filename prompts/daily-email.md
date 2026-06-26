@@ -15,7 +15,41 @@ Read:
 
 Check whether `log/YYYY-MM-DD/process-review.md` exists before reading it. If it is missing, treat that as "no process review file for this cycle" rather than an error.
 
-### 2. Send Email
+### 2. Generate Charts (Initiative 5)
+
+Render a 5m + volume chart for the **winner** and for each **open Alpaca
+position** reported in the email, into today's log dir. The renderer is
+dependency-free (Yahoo bars -> SVG -> PNG, AH/PM shaded):
+
+```bash
+python3 scripts/chart.py TICKER --range 2d --out log/YYYY-MM-DD/TICKER-HHMM.png
+```
+
+Use the cycle date for the dir and the current time (CET) for `HHMM`. If
+`chart.py` fails for a ticker (no Yahoo data, etc.), skip that chart and still
+send the email -- charts are a review aid, not a blocker.
+
+InboxKit has **no attachment API**, so charts are delivered as **GitHub repo
+links** (Juan is authenticated to the private repo; the PNGs are committed by
+the daily cycle's git step). Link format:
+
+```
+https://github.com/juanibiapina/trading/blob/main/log/YYYY-MM-DD/TICKER-HHMM.png
+```
+
+Add a "Charts" section to the email body with one link per chart, e.g.:
+
+```html
+<h3 style="color: #555;">Charts (5m + volume)</h3>
+<p><a href="https://github.com/juanibiapina/trading/blob/main/log/YYYY-MM-DD/TICKER-HHMM.png">TICKER (winner)</a><br/>
+<a href="https://github.com/juanibiapina/trading/blob/main/log/YYYY-MM-DD/TICKER-HHMM.png">TICKER (open position)</a></p>
+```
+
+The link resolves only after the PNG is committed and pushed. If this email
+pulse runs before the day's git commit, the link 404s until the cycle's commit
+lands; that is acceptable (Juan opens it after the cycle finishes).
+
+### 3. Send Email
 
 Send as `zero@inboxkit.cc` via InboxKit (not from Juan's Gmail). Juan replies to
 these emails with feedback; the `check-email-replies` pulse reads those replies.

@@ -9,6 +9,43 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-06-26 — Init 5: charts wired into the daily email (path b)
+
+**Evaluated:** Prior step (2026-06-25 Init 5: default to path (b) and wire
+chart.py PNGs + repo links into the daily-email pulse if Juan doesn't object) —
+**proceeded; Juan didn't object.** No new feedback touched chart delivery (the
+only feedback since, 2026-06-24, was the scheduler approval), so the (b)
+recommendation stands and was applied.
+
+**Step taken:** (1) Proved the chart pipeline end-to-end on today's *real*
+reported tickers, not just old samples: `chart.py ILLR --range 2d` and
+`chart.py IVF --range 2d` rendered into `log/2026-06-26/` (49 KB / 44 KB PNGs).
+Visually confirmed the ILLR PNG shows the full AH->PM pattern (regular climb ->
+after-hours build to ~$4.20 amber -> premarket spike to ~$7 then fade blue, with
+the early volume surge). (2) Wired path (b) into `prompts/daily-email.md`: a new
+"Generate Charts" step runs `chart.py` for the winner + each open Alpaca position
+into `log/YYYY-MM-DD/`, and a "Charts (5m + volume)" email section links each PNG
+via its GitHub blob URL. Log-only change; no trading logic touched.
+
+**Result:** The daily email now has an auditable chart surface with zero new
+infra (no host, no attachment API). `convert` (ImageMagick) is present, so the
+pipeline runs in the cron environment. Charts ride the existing
+`log/YYYY-MM-DD/TICKER-HHMM.png` convention and are committed by the cycle's git
+step, so the email links resolve for Juan (authenticated to the private repo).
+
+**Hypothesis / next step:** Tomorrow's daily email is the first live use. Next
+run: confirm the email actually rendered a Charts section and that the GitHub
+blob link displays the committed PNG when opened (resolves only after the
+cycle's push). If links work, Init 5's email-charts rollout step is done and the
+focus shifts to data-source quality (the second half of Init 5) or hands the
+pilot slot to Init 6 (the +200%-mover census, now surfaceable through these
+charts).
+
+**Needs from Juan:** nothing blocking. Optional: if he'd rather not click into
+the repo, he can ask for inline hosted images (path a) instead.
+
+---
+
 ### 2026-06-25 — Init 2 promoted to live paper; Init 5 attachment path resolved
 
 **Evaluated:** Prior step (2026-06-24 Init 2: decide shadow-pulse vs wire-into-pulses
