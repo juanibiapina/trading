@@ -252,7 +252,6 @@ The retrospective is a diagnostic tool for the evening scanner. If a stock is a 
 
 Use Finviz screener with these filters:
 - Market Cap: < $300M (expanded from $100M after missing OSG $190M and NNBR $126M winners on May 6)
-- Float: < 10M (low float = bigger moves)
 - Relative Volume: > 2 (unusual activity)
 - Gap: Up > 5%
 - Price: $0.50 - $10
@@ -264,13 +263,13 @@ This should return 5-20 candidates on an active day.
 
 For each stock that passes the screener:
 
-**A. Check the fundamentals:**
-| Metric | Ideal | Why |
-|--------|-------|-----|
-| Float | < 5M | Easier to move |
-| Market Cap | < $50M | More volatile |
+**A. Check the fundamentals:** (record for pattern tracking; NOT pass/fail gates)
+| Metric | Note | Why track it |
+|--------|------|-----|
+| Float | Record actual value (not a filter) | Pattern analysis only — float is not a gate |
+| Market Cap | < $300M (screener gate) | More volatile |
 | Sector | Any (note it for pattern tracking) | Learning phase |
-| Short Float | > 10% | Squeeze potential |
+| Short Float | Record if > 10% | Squeeze potential |
 
 **B. Check for news:**
 - Look on Finviz news section
@@ -303,14 +302,14 @@ Link in daily log with `![TICKER](TICKER-HHMM.png)`.
 
 Rank candidates by conviction:
 
+**Float is NOT a filter or grading criterion** (learning-phase policy, set 2026-05-26; see SCANNER_CHANGELOG "Remove No-Catalyst Float-Based Skip Rule"). Float is recorded for pattern analysis only. Do not skip or downgrade a candidate for having a float above any threshold. No-catalyst winners have come from across the float range (LNKS 633K, OCG 1.9M, PHGE 5.9M, PHGE 7.4M).
+
 **A-Grade (High conviction):**
-- Low float (< 2M)
 - Fresh news catalyst
 - Premarket volume > 10x average
-- Price holding gains or building
+- Price holding gains or building (BUILD pattern, not spike→fade)
 
 **B-Grade (Medium conviction):**
-- Low float (< 5M)
 - News or unusual activity
 - Some premarket volume
 
