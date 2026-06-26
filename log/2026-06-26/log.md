@@ -86,3 +86,14 @@ ILLR — 2-Day: Prev close $0.77 | Range $0.71–$7.20 | AH peak $4.20 (19:55 ET
 IVF  — 2-Day: Prev close $1.32 | AH peak $1.80 (19:40 ET) | PM peak $2.08 (04:10 ET); entry $1.58 → +31% at PM peak
 TII  — 2-Day: Prev close $2.17 | AH peak $4.56 (18:25 ET, ZERO volume) | PM $3.25, faded -29% from AH peak
 ```
+
+## Position Evaluation — 10:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| IVF | $1.58 | $2.00 | +26.6% | $2.59 | 1 | None | SELL | Grade None rule: exit at any profit in premarket. Sold 60 @ $2.00. |
+
+**Actions taken:**
+- SELL IVF 60 @ $2.00 (Alpaca order 89e65d5d, filled@$2.00). Realized **+$25.20 (+26.6%)**.
+- IVF moved to Closed Positions in OPEN_POSITIONS.md. No open positions remain.
+- Note: PM peaked at $2.59 (+64% from entry) at 08:00 ET, then pulled back to $2.00. Exited at $2.00 per Grade None rule (take any premarket profit, don't chase the peak).

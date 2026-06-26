@@ -8,7 +8,8 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| IVF | 2026-06-25 | $1.58 | 60 | $94.80 | None | No fresh bullish catalyst; 1-for-8 reverse split today (corporate action). Q1 earnings were Jun 22 (stale). Low-float (1.8M) AH BUILD on real volume (VRatio 6.2x). | -10% | premarket exit | $1.67 (AH 17:35 ET) |
+
+_No open positions._
 
 ## Position Rules
 
@@ -60,5 +61,4 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
-
-_No closed positions yet._
+| IVF | $1.58 | $2.00 | +$25.20 | +26.6% | 1 | None (Grade None) | Low-float AH build, no fresh catalyst. Sold premarket per Grade None rule (exit at any profit). PM ran to $2.59 peak (+64% from entry); exited at $2.00. |
