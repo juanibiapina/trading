@@ -9,6 +9,49 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-06-29 — Init 6: extreme-movers census seeded; pattern extraction started
+
+**Evaluated:** Prior step (2026-06-26 Init 5: wire chart.py PNGs + repo links
+into the daily-email pulse, path b; confirm links resolve) — **mechanism
+verified, works.** The chart PNGs (ILLR, IVF) are committed and pushed in
+`origin/main` (b79a276); the daily-email prompt has the "Generate Charts" step +
+"Charts (5m + volume)" link section. The blob/raw URLs 404 to an unauthenticated
+curl, but so does the repo root page — the repo is **private**, so the 404 is
+expected gating, not a broken link (Juan is authenticated). Init 5's email-charts
+rollout step is mechanically done; full live confirmation waits on the first
+trading day that runs the wired pulse end-to-end (no log dir since Fri 06-26).
+
+**Step taken:** With the pilot slot free and Juan's strong 2026-06-26
+endorsement of the +760% target, switched the active initiative to **Init 6**
+(highest expected $/time lever). Took the cheapest research step (rollout 1/1b):
+built `INIT6_EXTREME_MOVERS.md`, a structured census consolidating the extreme
+movers already tracked in prose across daily logs into one reviewable table with
+the pattern-extraction columns Juan asked for (catalyst tier, float, AH-vs-PM
+timing, volume, price path, detectability, investability, outcome). Mined logs
+for Jun 9-26 cases.
+
+**Result:** 9 cases seeded (MSW, CIIT, GLXG, EDHL, TDIC, MBRX, CUPR, ILLR, TII)
+with 5 extracted patterns. Strongest signals: (3) **catalyst tier separates AH
+continuers from faders** — ILLR (Tier A, fresh SpaceX news) ran AH->PM to +760%
+while MSW (Grade C, dilutive notes) faded AH->PM; (4) **headline AH % on zero AH
+volume is an untradeable trap** — ILLR and TII both printed huge AH % on
+VRatio <0.5x / ask $0.00, so no real fill; (2) the two PM-only gappers
+classified so far (MBRX, CUPR) were both uninvestable, supporting the low-cost
+blind-spot hypothesis. `chart.py` verified available for the next classification
+step.
+
+**Hypothesis / next step:** Expand the census toward ~15-20 cases (the analytic
+threshold to test the patterns): mine Mar-May logs for more +200% movers (EVOL,
+CCTG, CPOP, CHAI, PHGE, HKIT, EEIQ, ATLN already spotted) and classify
+investability (holdable vs uninvestable) for the unlabeled PM-only gappers
+(CIIT, GLXG, TDIC) via their PM 5-min bars. Then test whether pattern 3
+(catalyst-tier discriminator) is strong enough to justify a conditional
+hold/skip rule for Tier-A AH runners (proposal to Juan, not applied).
+
+**Needs from Juan:** nothing (research uses existing logs + chart.py).
+
+---
+
 ### 2026-06-26 — Init 5: charts wired into the daily email (path b)
 
 **Evaluated:** Prior step (2026-06-25 Init 5: default to path (b) and wire

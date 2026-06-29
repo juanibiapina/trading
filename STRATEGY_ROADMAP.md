@@ -53,19 +53,17 @@ better **data + review surface** (graphs, sources) are high-value enablers.
    `broker.js`, wired into the scan/eval/position pulses; the fictional ledger
    was discarded. Only step 5 (flip to live real money, tiny size) remains,
    gated on a proven edge + Juan. Pilot slot freed.
-2. **Initiative 5 - better data + review surface (graphs, sources).** Now the
-   active initiative (pilot slot free). Juan needs
-   to review data to steer, and the work below (especially the Init 6 census)
-   should land as something he can actually review. Charts (5m + volume) and a
-   stronger data source (Alpaca market data, now available via the Init 2 keys;
-   financialdatasets.ai as backup to gappy Yahoo) improve every decision and
-   make the loop auditable. Sequenced ahead of Init 6 at Juan's call (2026-06-23).
-3. **Initiative 6 - catch the extreme runners (+300-600%).** The biggest raw
-   money lever: the current strategy tops out on +20-100% AH movers that fade,
-   while the biggest moves keep being PM-only gappers we ignore. Start with the
-   cheap census (no new infra), surfaced through the Init 5 review tooling.
-   Highest upside, higher uncertainty, so research first and pilot only once the
-   data justifies it.
+2. **Initiative 6 - catch the extreme runners (+300-600%).** Now the **active
+   initiative** (2026-06-29). Juan's strong recent endorsement (2026-06-26,
+   ILLR +760% "exactly the kind of stuff we want to catch") plus the pattern-
+   extraction ask make this the highest expected $/time lever. The census/
+   pattern work uses existing data (no new infra) and is surfaceable through the
+   now-built Init 5 charts. Research first; pilot only once the data justifies.
+3. **Initiative 5 - better data + review surface (graphs, sources).** Email-
+   charts rollout (path b) is mechanically **done** (charts committed + linked,
+   verified). Remaining half is data-source quality (Yahoo gaps vs Alpaca/
+   financialdatasets.ai). Lower money-impact than the Init 6 census, so it cedes
+   the pilot slot to Init 6.
 4. **Initiative 1 - earlier volume-lead entries.** Refines the existing edge and
    overlaps Init 6's minute-volume analysis, so it rides on that data work.
    Lower standalone priority.
@@ -331,10 +329,16 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** Research / backlog. Juan reiterated priority (2026-06-26): the
-ILLR +760% case is "exactly the kind of stuff we want to catch" and "it's
-really important to try to extract patterns from those for the future." Pattern
-extraction from the extreme movers is now an explicit, co-equal goal with
+**Status:** **Research — ACTIVE (2026-06-29).** Census seed dataset built:
+`INIT6_EXTREME_MOVERS.md` consolidates 9 tracked extreme movers (Jun 9-26) into
+one reviewable table with the pattern-extraction columns Juan asked for
+(catalyst tier, float, AH-vs-PM timing, volume, price path, detectability,
+investability, outcome). Five patterns extracted so far (see file); strongest:
+(3) catalyst tier separates AH continuers from faders — ILLR (Tier A, fresh
+SpaceX) ran AH->PM +760%, MSW (Grade C dilution) faded; (4) headline AH % on
+zero AH volume (ILLR, TII) is an untradeable trap. Juan reiterated priority
+(2026-06-26): the ILLR +760% case is "exactly the kind of stuff we want to
+catch" and "extract patterns from those." Pattern extraction is co-equal with
 catching them — see rollout step 1b.
 
 **Why it is hard / where the big moves hide:**
@@ -361,6 +365,9 @@ catching them — see rollout step 1b.
 1. Quantify: over the last ~6 weeks, list every +200% mover (AH or PM) and tag
    each detectable / PM-only-gapper / uninvestable-spike. Use the PM-only-gapper
    tracker already running in the morning eval as the seed dataset.
+   **In progress (2026-06-29):** seed census of 9 cases built in
+   `INIT6_EXTREME_MOVERS.md`; next, mine older logs (Mar-May) for more +200%
+   cases and classify investability of the PM-only gappers (CIIT/GLXG/TDIC).
 1b. **Extract patterns (Juan, 2026-06-26):** for every extreme runner and
    ceiling-watch name (e.g. ILLR +760%), characterize catalyst tier, float,
    AH-vs-PM timing, volume profile (VRatio path), and price path through the
