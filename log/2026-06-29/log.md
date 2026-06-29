@@ -16,6 +16,12 @@ Top movers (regular-session, AH data not yet available):
 
 Only enter if a candidate reappears in a subsequent AH scan (22:00+ CET) with sustained momentum.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+First AH scan. `scan.py --all` returned 0 hits — none of the regular-session watch candidates (TVRD, AZI, ZCMD, KUST, CNET) carried into after-hours with qualifying momentum/volume. Observation-only window anyway (22:00/22:30 scans are no-entry during learning phase).
+
+No candidates found.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
