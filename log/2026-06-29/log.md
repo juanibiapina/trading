@@ -64,8 +64,31 @@ Third AH scan, first entry-eligible scan (23:00+ CET / 5:00 PM ET). `scan.py --a
 
 **Entries this scan: 1 (GANX, Grade B).**
 
+## Scan 23:30 CET (5:30 PM ET) — ENTRY WINDOW
+
+Fourth AH scan. `scan.py --all` returned 5 hits. GANX already entered at 23:00 (position managed separately by premarket position-evaluation).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GANX | [TV](https://www.tradingview.com/chart/?symbol=GANX) | $1.98 | +13.1% | +19.2% | $2.36 | +34.9% | 9.0M | 1.5M | 6.0x | 41.4M | Biotechnology |
+| CTNT | [TV](https://www.tradingview.com/chart/?symbol=CTNT) | $1.54 | -1.3% | +39.6% | $2.15 | +37.8% | 8.6M | 3.5M | 2.4x | 3.0M | Engineering & Construction |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $1.08 | -41.9% | +68.5% | $1.82 | -2.2% | 6.5M | 1.3M | 4.9x | 0 | Wholesale Distributors |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.55 | -1.1% | +5.8% | $0.58 | +4.6% | 168K | 1.5M | 0.1x | 3.0M | Air Freight/Couriers |
+| TMCI | [TV](https://www.tradingview.com/chart/?symbol=TMCI) | $4.27 | -4.3% | +7.7% | $4.60 | +3.1% | 86K | 1.7M | 0.1x | 48.1M | Medical Specialties |
+
+**Evaluation:**
+
+- **CTNT — ENTERED.** New qualifying candidate. Now clears the 2-AH-scan requirement: 23:00 (+16.9%) and 23:30 (+39.6%) — and it is **BUILDING**, not fading (AH% rose +16.9% → +39.6% across the two scans). Yahoo 5m: AH high $2.15 at 17:10 ET, holding $2.07 at 17:30 (within ~5% of peak → BUILD/hold profile). Peak 17:10 is before 18:30 but stock is holding near high, not declining → hold-vs-fade primary signal favors entry. Float 3.0M (ideal <10M), Day -1.3% (>-15%), Total% +37.8% (well under +150% ceiling), VRatio 2.4x. Not a dead-cat (Day only -1.3%). AH liquidity confirmed real two-sided book (bid $1.95 x100 / ask $2.01 x100); CTNT traded real AH volume (8.6M, Yahoo 5m bars confirm). **Catalyst Grade None:** structured search (4 calls) found no same-day driver. Recent items are 4 days old — board authorized up-to-1-for-2,000 reverse split (Jun 25, Nasdaq $1 bid compliance = distress overhang) and short interest +511% to 9.5% of float (May 31→Jun 15). Likely a low-float short squeeze; no company catalyst. Entered with concern noted per learning-phase no-catalyst handling. **Order: bought 48 @ limit $2.05 → filled $2.05** (id 4f35924a; first order at $2.04 didn't fill against stale frozen quote, replaced at $2.10 → filled $2.05, stale order canceled). Cost basis $98.40. Grade None → exit at first premarket opportunity.
+- **GANX — already held** (entered 23:00 @ $2.39). AH +19.2%/$2.36 at 23:30, AH Vol up to 9.0M, VRatio 6.0x. Holding. Managed by premarket position-evaluation, not re-entered.
+- **JEM — Skip (dead-cat, fading).** Day -41.9% (regular-session crash). Yahoo (prev close $1.86): AH peaked +11.8% ($2.08) at 16:30 ET, now fading to ~$1.92 (+3.2%). Scan Total% -2.2% → back *below* prior close. Stays below close + fading from 16:30 peak → genuine dead-cat, not a reclaim. No override flag.
+- **SLGB — Skip.** AH +5.8% (<10% threshold), VRatio 0.1x (168K, negligible AH volume).
+- **TMCI — Skip.** AH +7.7% (<10% threshold), VRatio 0.1x (86K, negligible AH volume).
+
+**Entries this scan: 1 (CTNT, Grade None — low-float squeeze, no catalyst, concern noted).**
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | GANX | $2.39 | 23:00 CET | 41 | ea649b1f | Grade B: positive Phase 1b data (GT-02287, Parkinson's GBA1); BUILD/hold, VRatio 5.5x, Total +42% |
+| CTNT | $2.05 | 23:30 CET | 48 | 4f35924a | Grade None: low-float (3.0M) squeeze, no catalyst; BUILD +16.9%→+39.6%, Total +38%, concern: reverse-split overhang |
