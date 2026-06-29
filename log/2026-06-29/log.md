@@ -116,6 +116,38 @@ Fifth AH scan. `scan.py --all` returned 9 hits. GANX (entered 23:00) and CTNT (e
 
 **Entries this scan: 0.** No new candidate clears the entry gates — all new tickers (LGCL, ZJYL, EQ, LFMD) fail the AH >10% momentum threshold; SLGB has negligible AH volume. GANX and CTNT remain held from earlier scans.
 
+## Scan 00:30 CET (6:30 PM ET) — ENTRY WINDOW
+
+Sixth AH scan. `scan.py --all` returned 11 hits. GANX (entered 23:00) and CTNT (entered 23:30) already held; positions managed separately by premarket position-evaluation.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CTNT | [TV](https://www.tradingview.com/chart/?symbol=CTNT) | $1.54 | -1.3% | +27.3% | $1.96 | +25.6% | 11.2M | 3.8M | 2.9x | 3.0M | Engineering & Construction |
+| GANX | [TV](https://www.tradingview.com/chart/?symbol=GANX) | $1.98 | +13.1% | +18.7% | $2.35 | +34.3% | 9.7M | 1.6M | 6.1x | 41.4M | Biotechnology |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $1.08 | -41.9% | +59.3% | $1.72 | -7.5% | 7.2M | 1.4M | 5.1x | 0 | Wholesale Distributors |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $0.85 | +15.1% | +63.2% | $1.39 | +87.8% | 3.3M | 4.2M | 0.8x | 1.6M | Personnel Services |
+| MTEK | [TV](https://www.tradingview.com/chart/?symbol=MTEK) | $1.05 | -11.3% | +6.2% | $1.12 | -5.9% | 695K | 771K | 0.9x | 5.6M | Electronics/Appliances |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.55 | -1.1% | +5.5% | $0.58 | +4.3% | 182K | 1.5M | 0.1x | 3.0M | Air Freight/Couriers |
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $0.81 | -32.5% | +6.1% | $0.86 | -28.3% | 88K | 281K | 0.3x | 3.7M | Medical Specialties |
+| TMCI | [TV](https://www.tradingview.com/chart/?symbol=TMCI) | $4.27 | -4.3% | +7.7% | $4.60 | +3.1% | 86K | 1.7M | 0.1x | 48.1M | Medical Specialties |
+| EQ | [TV](https://www.tradingview.com/chart/?symbol=EQ) | $3.08 | +1.0% | +5.5% | $3.25 | +6.6% | 79K | 372K | 0.2x | 50.3M | Biotechnology |
+| LFMD | [TV](https://www.tradingview.com/chart/?symbol=LFMD) | $4.20 | +1.7% | +5.5% | $4.43 | +7.3% | 71K | 1.1M | 0.1x | 39.6M | Medical/Nursing Services |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $1.29 | -15.1% | +5.4% | $1.36 | -10.5% | 50K | 644K | 0.1x | 549K | Real Estate Investment Trusts |
+
+**Evaluation:**
+
+- **GANX — already held** (entered 23:00 @ $2.39). AH +18.7%/$2.35, VRatio 6.1x. Now $2.36, P&L -1.2%. Holding within ~6% of AH high. Managed by premarket position-evaluation.
+- **CTNT — already held** (entered 23:30 @ $2.05). AH +27.3%/$1.96, VRatio 2.9x, AH Vol up to 11.2M (still building volume). Now $1.90, P&L -7.3%. Managed by premarket position-evaluation.
+- **LGCL — Skip.** NEW qualifier on paper (AH +63.2%, Total +87.8%, float 1.6M ideal) but fails on three counts: (1) **Fails 2-AH-scan requirement** — at 00:00 it was only +8.5% (<10%); this is its first AH scan >10%. (2) **SPIKE→FADE** — Yahoo 5m: spiked to AH high $1.42 (+91.9%) at 18:15 ET then collapsed to $0.99 (+34%) by 18:30. Current price is ~30% off the AH high → fade, not hold. The scan's $1.39/+63.2% snapshot is stale vs the live collapse. (3) **Illiquid/stale volume** — Yahoo shows 0 AH volume across all bars; the scan's 3.3M AH Vol / 0.8x VRatio (below average) is a stale regular-session artifact, not real AH liquidity. Skip on all three.
+- **JEM — Skip (dead-cat, fading).** Day -41.9% regular-session crash. AH Total% -7.5% → back below prior close. Genuine dead-cat, not a reclaim. No override flag.
+- **MTEK — Skip.** NEW. AH +6.2% (<10% threshold), VRatio 0.9x, Total% -5.9% (below close). Fails AH-momentum gate.
+- **CELZ — Skip.** NEW. Day -32.5% (regular-session crash), AH +6.1% (<10% threshold), VRatio 0.3x (88K, negligible), Total% -28.3%. Dead-cat + fails AH gate.
+- **WHLR — Skip.** NEW. Day -15.1%, AH +5.4% (<10% threshold), VRatio 0.1x (50K, negligible AH volume). Fails AH gate.
+- **SLGB — Skip (illiquid).** AH +5.5%, VRatio 0.1x (182K vs 1.5M avg — negligible AH volume across all scans). Stale/thin book.
+- **TMCI / EQ / LFMD — Skip.** All AH <10% (+7.7% / +5.5% / +5.5%) with negligible AH volume (VRatio 0.1-0.2x). Fail AH-momentum gate.
+
+**Entries this scan: 0.** No new candidate clears the gates. LGCL was the only new ticker with a >10% AH move but it fails the 2-AH-scan requirement, is in SPIKE→FADE off its 18:15 peak, and has zero real AH volume. GANX and CTNT remain held from earlier scans.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
