@@ -42,7 +42,30 @@ Second AH scan. `scan.py --all` returned 4 hits. Observation-only window (22:00/
 
 No paper trades this scan (pre-23:00 observation window). GANX carried as the entry candidate for the 23:00 scan pending second AH-scan confirmation.
 
+## Scan 23:00 CET (5:00 PM ET) — ENTRY WINDOW OPEN
+
+Third AH scan, first entry-eligible scan (23:00+ CET / 5:00 PM ET). `scan.py --all` returned 5 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GANX | [TV](https://www.tradingview.com/chart/?symbol=GANX) | $1.98 | +13.1% | +25.8% | $2.49 | +42.3% | 7.1M | 1.3M | 5.5x | 41.4M | Biotechnology |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $1.08 | -41.9% | +80.1% | $1.94 | +4.6% | 5.7M | 1.2M | 4.6x | 0 | Wholesale Distributors |
+| CTNT | [TV](https://www.tradingview.com/chart/?symbol=CTNT) | $1.54 | -1.3% | +16.9% | $1.80 | +15.4% | 4.1M | 3.0M | 1.4x | 3.0M | Engineering & Construction |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.55 | -1.1% | +11.0% | $0.61 | +9.8% | 131K | 1.5M | 0.1x | 3.0M | Air Freight/Couriers |
+| TMCI | [TV](https://www.tradingview.com/chart/?symbol=TMCI) | $4.27 | -4.3% | +7.7% | $4.60 | +3.1% | 86K | 1.7M | 0.1x | 48.1M | Medical Specialties |
+
+**Evaluation:**
+
+- **GANX — ENTERED.** All gates cleared: 2 AH scans >10% (22:30 +24.7%, 23:00 +25.8%), float 41.4M (<50M), Day +13.1% (>-15%), Total% +42.3% (well under +150% ceiling), VRatio 5.5x. AH liquidity confirmed real two-sided book (bid $2.42 x200 / ask $2.43 x300). Yahoo intraday: AH high $2.50 at 16:40 ET, holding $2.40 at 17:00 (within ~5% of peak — BUILD/hold, not fade). Peak at 16:40 ET is before 18:30 but stock is holding near high, not declining → hold-vs-fade primary signal favors entry. **Catalyst Grade B:** positive interim Phase 1b data for GT-02287 (Parkinson's, GBA1) presented at 3rd International GBA1 Meeting 2026. **Order: bought 41 @ limit $2.46 → filled $2.39** (id ea649b1f). Cost basis $97.99.
+- **JEM — Skip.** Day -41.9% (regular-session crash). Yahoo granular data (prev close $1.86) shows AH peak +11.8% ($2.08) at 16:30 ET, now fading to $1.84 (~flat). The scan's Total% +4.6% reflects a slight reclaim, but the granular intraday shows it *fading from its 16:30 peak*, not building across scans. No clean dead-cat-override (override needs AH% rising across ≥2 AH scans AND holding the reclaim — JEM is declining toward close). Data discrepancy noted (scan close $1.08 vs Yahoo prev close $1.86). Skip: dead-cat bounce, fading.
+- **CTNT — Skip (watch).** Day -1.3%, AH +16.9%, low float 3.0M. First AH-scan appearance (22:00/22:30 had no CTNT) → only 1 AH scan >10%, fails the 2-AH-scan requirement. VRatio 1.4x (modest). Carry as watch for later scans.
+- **SLGB — Skip.** AH +11.0% but VRatio 0.1x (131K vs 1.5M avg — negligible AH volume, likely fading). Total% +9.8% under threshold.
+- **TMCI — Skip.** AH +7.7% (<10% threshold), VRatio 0.1x (86K, negligible AH volume).
+
+**Entries this scan: 1 (GANX, Grade B).**
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| GANX | $2.39 | 23:00 CET | 41 | ea649b1f | Grade B: positive Phase 1b data (GT-02287, Parkinson's GBA1); BUILD/hold, VRatio 5.5x, Total +42% |

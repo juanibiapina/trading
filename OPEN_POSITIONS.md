@@ -8,8 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-
-_No open positions._
+| GANX | 2026-06-29 | $2.39 | 41 | $97.99 | B | Positive interim Phase 1b data for GT-02287 (Parkinson's GBA1) at 3rd Intl GBA1 Meeting 2026 | -15% ($2.03) | premarket peak | $2.50 (16:40 ET) |
 
 ## Position Rules
 
