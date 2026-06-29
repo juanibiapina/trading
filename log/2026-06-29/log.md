@@ -86,6 +86,36 @@ Fourth AH scan. `scan.py --all` returned 5 hits. GANX already entered at 23:00 (
 
 **Entries this scan: 1 (CTNT, Grade None — low-float squeeze, no catalyst, concern noted).**
 
+## Scan 00:00 CET (6:00 PM ET) — ENTRY WINDOW
+
+Fifth AH scan. `scan.py --all` returned 9 hits. GANX (entered 23:00) and CTNT (entered 23:30) already held; positions managed separately by premarket position-evaluation.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CTNT | [TV](https://www.tradingview.com/chart/?symbol=CTNT) | $1.54 | -1.3% | +27.3% | $1.96 | +25.7% | 10.5M | 3.7M | 2.8x | 3.0M | Engineering & Construction |
+| GANX | [TV](https://www.tradingview.com/chart/?symbol=GANX) | $1.98 | +13.1% | +18.2% | $2.34 | +33.7% | 9.5M | 1.6M | 6.1x | 41.4M | Biotechnology |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $1.08 | -41.9% | +70.4% | $1.84 | -1.1% | 6.9M | 1.4M | 5.0x | 0 | Wholesale Distributors |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $0.85 | +15.1% | +8.5% | $0.92 | +24.9% | 1.3M | 4.0M | 0.3x | 1.6M | Personnel Services |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.55 | -1.1% | +14.7% | $0.63 | +13.5% | 177K | 1.5M | 0.1x | 3.0M | Air Freight/Couriers |
+| ZJYL | [TV](https://www.tradingview.com/chart/?symbol=ZJYL) | $2.23 | -1.3% | +7.6% | $2.40 | +6.2% | 87K | 21K | 4.1x | 1.8M | Medical Specialties |
+| TMCI | [TV](https://www.tradingview.com/chart/?symbol=TMCI) | $4.27 | -4.3% | +7.7% | $4.60 | +3.1% | 86K | 1.7M | 0.1x | 48.1M | Medical Specialties |
+| EQ | [TV](https://www.tradingview.com/chart/?symbol=EQ) | $3.08 | +1.0% | +5.5% | $3.25 | +6.6% | 78K | 372K | 0.2x | 50.3M | Biotechnology |
+| LFMD | [TV](https://www.tradingview.com/chart/?symbol=LFMD) | $4.20 | +1.7% | +5.5% | $4.43 | +7.3% | 71K | 1.1M | 0.1x | 39.6M | Medical/Nursing Services |
+
+**Evaluation:**
+
+- **GANX — already held** (entered 23:00 @ $2.39). AH +18.2%/$2.34, VRatio 6.1x, AH Vol 9.5M. Holding within ~6% of its AH high. Managed by premarket position-evaluation, not re-entered.
+- **CTNT — already held** (entered 23:30 @ $2.05). AH +27.3%/$1.96, VRatio 2.8x, AH Vol up to 10.5M — still building volume. Managed by premarket position-evaluation, not re-entered.
+- **JEM — Skip (dead-cat, fading).** Day -41.9% regular-session crash. AH Total% -1.1% → back below prior close. Genuine dead-cat, not a reclaim. No override flag.
+- **LGCL — Skip.** NEW. AH +8.5% (<10% threshold), VRatio 0.3x (1.3M vs 4.0M avg — volume fading). Day +15.1% but AH move too weak. Fails AH-momentum gate.
+- **SLGB — Skip (illiquid).** AH +14.7% but VRatio 0.1x (177K vs 1.5M avg — negligible AH volume across all scans: 131K→168K→177K). Stale/thin AH book pattern, no real liquidity. Total% +13.5%.
+- **ZJYL — Skip.** NEW. AH +7.6% (<10% threshold), AH Vol 87K (negligible). Fails AH-momentum gate.
+- **TMCI — Skip.** AH +7.7% (<10% threshold), VRatio 0.1x (86K, negligible AH volume).
+- **EQ — Skip.** NEW. AH +5.5% (<10% threshold), VRatio 0.2x (78K, negligible AH volume).
+- **LFMD — Skip.** NEW. AH +5.5% (<10% threshold), VRatio 0.1x (71K, negligible AH volume).
+
+**Entries this scan: 0.** No new candidate clears the entry gates — all new tickers (LGCL, ZJYL, EQ, LFMD) fail the AH >10% momentum threshold; SLGB has negligible AH volume. GANX and CTNT remain held from earlier scans.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
