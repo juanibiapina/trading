@@ -331,7 +331,11 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** Research / backlog.
+**Status:** Research / backlog. Juan reiterated priority (2026-06-26): the
+ILLR +760% case is "exactly the kind of stuff we want to catch" and "it's
+really important to try to extract patterns from those for the future." Pattern
+extraction from the extreme movers is now an explicit, co-equal goal with
+catching them — see rollout step 1b.
 
 **Why it is hard / where the big moves hide:**
 - The biggest raw movers each morning keep being **PM-only gappers** — flat or
@@ -357,6 +361,12 @@ AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 1. Quantify: over the last ~6 weeks, list every +200% mover (AH or PM) and tag
    each detectable / PM-only-gapper / uninvestable-spike. Use the PM-only-gapper
    tracker already running in the morning eval as the seed dataset.
+1b. **Extract patterns (Juan, 2026-06-26):** for every extreme runner and
+   ceiling-watch name (e.g. ILLR +760%), characterize catalyst tier, float,
+   AH-vs-PM timing, volume profile (VRatio path), and price path through the
+   move. Goal: turn the ceiling-watch dataset into reusable entry/skip signals
+   so the system recognizes the setup early instead of only flagging and
+   skipping it. This is co-equal with "catch them," not a sub-task.
 2. If a tradable subset exists, instrument a PM-open scan (log only, no action).
 3. Pilot hypothetical entries on that subset; compare to the current strategy.
 4. Promote only if the extreme-runner capture beats current net of false spikes.

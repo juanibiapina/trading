@@ -6,6 +6,28 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-06-26 — re: Trading Scanner Report - 2026-06-26
+
+**Juan said:** "+760% is exactly the kind of stuff we want to catch!! it's
+really important to try to extract patterns from those for the future!"
+
+**Interpretation:** Strong endorsement of Initiative 6 (catch the extreme
+runners). The ILLR +760% case — detected by the scanner but correctly skipped
+on the extension ceiling + zero AH volume — is the target profile, not a miss.
+Juan wants emphasis on **pattern extraction** from these extreme movers (the
+ceiling-watch dataset), so future cycles can recognize and act on the setup
+rather than only flagging and skipping. Pattern mining of the big movers is now
+an explicit priority within Init 6, ranked alongside the "catch them" goal.
+
+**Action:** Routed to Initiative 6. Added a pattern-extraction work item to its
+rollout plan (systematically characterize each ceiling-watch / extreme-runner
+name: catalyst tier, float, AH-vs-PM timing, volume profile, price path) so the
+dataset produces reusable entry/skip signals. No live strategy change here;
+captured and routed. Confirmed the scanner's ILLR skip was the correct call —
+the gap is downstream pattern learning, not the skip logic.
+
+---
+
 ### 2026-06-24 — re: Trading Scanner Report - 2026-06-24
 
 **Juan said:** "yes, apply the scheduler changes if you need to"
