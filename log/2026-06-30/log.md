@@ -20,6 +20,22 @@ No candidates found. Scanner ran at AH open (16:00 ET); no after-hours hits yet 
 
 Watchlist carry-over from 21:30 (GVH, INTZ, BTCT): no live AH volume yet this session. Re-check at 22:30/23:00 for AH confirmation.
 
+## Scan 22:30 CET (4:30 PM ET) — AH
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LGPS | [TV](https://www.tradingview.com/chart/?symbol=LGPS) | $0.69 | -5.2% | +75.3% | $1.21 | +66.1% | 6.2M | 690K | 8.9x | 6.3M | Real Estate Development |
+| CYPH | [TV](https://www.tradingview.com/chart/?symbol=CYPH) | $0.61 | -3.6% | +6.9% | $0.65 | +3.1% | 91K | 2.5M | 0.0x | 90.4M | Biotechnology |
+
+**Observation-only scan** (learning-phase rule: no entries before 23:00 CET).
+
+AH trajectory:
+- **LGPS** — peaked +84.1% ($1.34) at 16:15 ET, now fading to +59.3% ($1.16) at 16:30. SPIKE→FADE so far (early peak, declining). Float 6.3M (good), VRatio 8.9x. Catalyst: structured search found no same-day company catalyst (LGPS ticker collides with UK pension-scheme news; only a routine dividend payable today). Concern: early-peak fade + no catalyst.
+- **CYPH** — AH +6.9% only, VRatio 0.0x (no real AH volume), float 90.4M. Weak, ignore.
+- Carryover watchlist (GVH, INTZ, BTCT): all early-peak fades. GVH peaked +41.6% at 16:05→+32.4%; INTZ flat ~+35%; BTCT +22.3%→+17.2%. None building. AH Vol reads 0 in Yahoo helper for all — confirm real book before any entry.
+
+All candidates showing early-peak fade. Re-check at 23:00 for any BUILD pattern before considering entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
