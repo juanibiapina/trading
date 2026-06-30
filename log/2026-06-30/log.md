@@ -68,6 +68,29 @@ No SPIKE→FADE-only "least bad" entry taken. Re-check 23:30 for ALZN 2nd-scan c
 - **LGPS — SKIP (confirmed): SPIKE→FADE + no catalyst.** Peaked $1.34 at 16:15 ET (early), faded to $1.06–1.11 range, current $1.11 (+52.4%). Still satisfies night gate but the early-peak fade + no catalyst (re-confirmed: Japanese RE 6-K filer, May 15 dividend + old buyback only) = 0/10+ pattern. Skip.
 - Prior watchlist (CYPH, GVH, INTZ, BTCT, MASK) did not reappear with sustained AH momentum.
 
+## Scan 00:00 CET (6:00 PM ET) — AH (entry-eligible)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LGPS | [TV](https://www.tradingview.com/chart/?symbol=LGPS) | $0.69 | -5.2% | +56.5% | $1.08 | +48.3% | 21.7M | 2.4M | 9.2x | 6.3M | Real Estate Development |
+| YOOV | [TV](https://www.tradingview.com/chart/?symbol=YOOV) | $0.77 | +99.5% | +12.1% | $0.86 | +123.6% | 10.9M | 6.2M | 1.7x | 35.0M | Misc Commercial Services |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $3.97 | +267.6% | +114.1% | $8.50 | +687.0% | 6.8M | 12.6M | 0.5x | 0 | Wholesale Distributors |
+| ALZN | [TV](https://www.tradingview.com/chart/?symbol=ALZN) | $1.20 | +3.4% | +10.0% | $1.32 | +13.8% | 1.4M | 282K | 5.1x | 3.2M | Pharmaceuticals: Major |
+| KTTA | [TV](https://www.tradingview.com/chart/?symbol=KTTA) | $0.52 | -2.0% | +10.5% | $0.57 | +8.2% | 591K | 2.9M | 0.2x | 30.6M | Pharmaceuticals: Major |
+| SCKT | [TV](https://www.tradingview.com/chart/?symbol=SCKT) | $0.60 | +3.9% | +7.3% | $0.65 | +11.5% | 387K | 285K | 1.4x | 5.4M | Computer Peripherals |
+| SPWR | [TV](https://www.tradingview.com/chart/?symbol=SPWR) | $0.69 | +7.4% | +6.2% | $0.73 | +14.1% | 170K | 4.3M | 0.0x | 106.5M | Engineering & Construction |
+| GVH | [TV](https://www.tradingview.com/chart/?symbol=GVH) | $4.80 | +36.8% | +5.2% | $5.05 | +43.9% | 98K | 1.5M | 0.1x | 2.2M | Air Freight/Couriers |
+
+**Decision: NO NEW ENTRIES.** ALZN already held from 23:30 (no averaging). Only big new mover (JEM) is a phantom ramp + ceiling skip.
+
+- **JEM — SKIP: illiquid phantom ramp + extension ceiling.** Headline mover (Day +267.6%, AH ramp to $9.95 = +821% peak). But the AH ramp is fake liquidity: every 5m bar after 16:00 prints **0 volume** (16:00 = 9K, then all zeros to 18:00), so the $4.15→$9.95 climb happened on no real fills. Alpaca quote `bid $4.03 x100 / ask $4.13 x100` (16:58 ET) doesn't even match the Yahoo $9.77 print — no real two-sided book at the ramped price. Also Total% +687% (peak +821%) is ~5x the +150% ceiling, and VRatio 0.5x fails the ceiling-override test (needs >5x). Multiple independent skip reasons — record, do not enter.
+- **ALZN — HELD (entered 23:30 @ $1.31).** Still on book, now $1.32 (+0.8%). AH +10.0% confirmed again this scan (VRatio 5.1x). No averaging into existing position. Position management handled in premarket eval.
+- **SCKT — SKIP: weak/below threshold.** AH peaked +20.3% ($0.70) at 17:20 ET but choppy and now +5.2% ($0.61). VRatio 1.4x, only 1 AH scan, fading off peak. Below sustained-10% gate.
+- **KTTA — SKIP: no real volume.** AH vol 0 in 5m bars, peak only +13.1% then faded to ~-3%. VRatio 0.2x. Dead.
+- **SPWR / GVH — SKIP: weak.** Both AH <7%, VRatio ~0, large/declining. GVH carryover never built real AH volume.
+- **LGPS — SKIP (confirmed prior): SPIKE→FADE + no catalyst.** Now +48.3% ($1.08), faded further from the early $1.34 peak. Same 0/10+ pattern.
+- **YOOV — SKIP (confirmed prior): illiquid ramp + ceiling.** Total% +123.6%, AH book still unfillable. No change.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
