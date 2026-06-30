@@ -53,10 +53,26 @@ All candidates showing early-peak fade. Re-check at 23:00 for any BUILD pattern 
 
 No SPIKE→FADE-only "least bad" entry taken. Re-check 23:30 for ALZN 2nd-scan confirmation or any new BUILD pattern.
 
+## Scan 23:30 CET (5:30 PM ET) — AH (entry-eligible)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LGPS | [TV](https://www.tradingview.com/chart/?symbol=LGPS) | $0.69 | -5.2% | +57.9% | $1.09 | +49.7% | 20.3M | 2.2M | 9.2x | 6.3M | Real Estate Development |
+| YOOV | [TV](https://www.tradingview.com/chart/?symbol=YOOV) | $0.77 | +99.5% | +29.9% | $1.00 | +159.1% | 7.1M | 5.8M | 1.2x | 35.0M | Misc Commercial Services |
+| ALZN | [TV](https://www.tradingview.com/chart/?symbol=ALZN) | $1.20 | +3.4% | +6.7% | $1.28 | +10.3% | 1.3M | 267K | 4.9x | 3.2M | Pharmaceuticals: Major |
+
+**Decision: ENTERED ALZN.** Night gate met (LGPS: float 6.3M <50M, AH >10% across 22:30/23:00/23:30, Day -5.2% > -15%).
+
+- **ALZN — ENTERED.** Filled 73 sh @ **$1.31** (limit $1.40 ext, order 986d0efe). Clears all entry gates: float 3.2M (excellent), AH >10% in ≥2 AH scans (23:00 +15.8%, 23:30 real book), Day% +3.4% (not dead-cat), Total% ~+16% (well under 150% ceiling), real two-sided book (bid $1.32 x100 / ask $1.36 x100). **Pattern: HOLD** — peaked $1.40 at 16:20 ET, oscillating $1.24–1.40, holding $1.35 at 17:30 (3.6% off AH high). Early peak (16:20) but holding within 20% of high → CHAI/MSW-style hold, not a fade. Catalyst: structured search (earnings / PR / 8-K, 3 searches) found **no same-day catalyst** (next earnings 7/19/2026; no PR or 8-K today). **Grade None** — concern noted, entered per learning-phase no-catalyst rule. Exit at first PM opportunity.
+- **YOOV — SKIP: illiquid (no AH book).** Scanner showed AH Vol 7.1M / VRatio 1.2x but Alpaca quote is `ask $0.00 x0` (bid $0.66 x100), timestamp 16:00 ET stale. No fillable AH liquidity — TII Jun 26 pattern. Also Total% +159% exceeds 150% ceiling and only 1 AH scan. Trajectory: built to peak $1.02 at 17:05 ET then faded to $0.82 (17:30), -20% off peak. Big regular-session move (+99.5%) but no fillable AH book = skip.
+- **LGPS — SKIP (confirmed): SPIKE→FADE + no catalyst.** Peaked $1.34 at 16:15 ET (early), faded to $1.06–1.11 range, current $1.11 (+52.4%). Still satisfies night gate but the early-peak fade + no catalyst (re-confirmed: Japanese RE 6-K filer, May 15 dividend + old buyback only) = 0/10+ pattern. Skip.
+- Prior watchlist (CYPH, GVH, INTZ, BTCT, MASK) did not reappear with sustained AH momentum.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| ALZN | $1.31 | 23:30 CET | 73 | 986d0efe | Float 3.2M, AH HOLD near high (within 3.6%), +16% Total% under ceiling, real 2-sided book. Grade None (no catalyst). |
 
 
 ## Position Evaluation — 10:30 CET

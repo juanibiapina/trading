@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| _(none)_ | | | | | | | | | |
+| ALZN | 2026-06-30 | $1.31 | 73 | $95.63 | None | No catalyst found (earnings due 7/19; no same-day PR/8-K) | exit first PM opportunity | — | $1.40 (AH 16:20 ET) |
 
 ## Position Rules
 
