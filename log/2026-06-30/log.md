@@ -14,6 +14,12 @@ Liquid movers (sustained 5m volume):
 
 **Watch — pending AH confirmation.** 56 other hits were low-volume artifacts (100-750 shares/5m, stale VChg). The two cleanest setups are GVH (float 2.2M, +537% vol change) and INTZ (706x intraday rel-vol). Only enter if they reappear in a 22:00+ CET AH scan with sustained momentum. No paper trades this scan.
 
+## Scan 22:00 CET (4:00 PM ET) — AH open
+
+No candidates found. Scanner ran at AH open (16:00 ET); no after-hours hits yet — books still thin. Observation-only scan per learning-phase rule (no entries before 23:00 CET).
+
+Watchlist carry-over from 21:30 (GVH, INTZ, BTCT): no live AH volume yet this session. Re-check at 22:30/23:00 for AH confirmation.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
