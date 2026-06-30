@@ -9,6 +9,46 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-06-30 — Init 6: PM-only gappers classified; pattern 2 flipped (real cost)
+
+**Evaluated:** Prior step (2026-06-29 Init 6: build the extreme-movers census,
+seed 9 cases, extract patterns) — **worked.** `INIT6_EXTREME_MOVERS.md` exists
+with the 9-case table and 5 patterns; it gave a concrete, prioritised next
+question (classify the unlabeled PM-only gappers), which this run answered.
+
+**Step taken:** Took the highest-decision-value next step from the census: pull
+the premarket price path for the three unclassified PM-only gappers (CIIT Jun 10,
+GLXG Jun 11, TDIC Jun 16) and label each holdable vs uninvestable. Built
+`scripts/init6-pmbars.py` (Yahoo 15m + `range=1mo` + a `Mozilla/5.0` UA reaches
+~1 month of historical premarket bars; the `chart.py --range 2d` 5m path only
+goes ~5 days back, so it couldn't reach mid-June). Verified it runs.
+
+**Result:** **Pattern 2 flipped — PM-only gappers are NOT mostly uninvestable.**
+CIIT (+140%) held +126-414% across the *entire* 04:00-09:15 premarket (20+
+consecutive 15m bars) and opened +203% on 53M shares; GLXG (+343%) held
++180-380% all premarket and opened +225% on 48M shares — both clearly
+**holdable** (a multi-hour exit window existed). Only TDIC was **uninvestable**
+(spiked 04:00, decayed to negative within 90 min). PM-only tally is now 2
+holdable (CIIT, GLXG) / 3 uninvestable (MBRX, CUPR, TDIC), and the two holdable
+ones are exactly the +140%/+343% movers Juan wants. So the AH-blind-spot has
+**real cost**: a PM-open scan could have caught two large holdable runners in one
+week. Census + roadmap updated. Caveat: Yahoo 15m PM bars report vol=0, so true
+premarket fillability still needs live NBBO (the Init 2 caveat).
+
+**Hypothesis / next step:** The holdable-PM-gapper evidence (2/5 and growing)
+raises rollout step 2. Next run: mine Mar-May logs for more +200% cases toward
+the ~15-20 threshold AND classify any new PM-only gappers' premarket paths; if
+the holdable count keeps climbing, draft a proposal to Juan for a **log-only
+PM-open scan** (~04:00-05:00 ET / 10:00-11:00 CET, instrumentation only, no
+orders) to start capturing these structurally-missed runners. A new log-only
+pulse is allowed to apply directly, but flag it for Juan first since it touches
+the scan cadence.
+
+**Needs from Juan:** nothing yet (research uses existing logs + Yahoo). Heads-up:
+a log-only PM-open scan proposal is likely within a few runs.
+
+---
+
 ### 2026-06-29 — Init 6: extreme-movers census seeded; pattern extraction started
 
 **Evaluated:** Prior step (2026-06-26 Init 5: wire chart.py PNGs + repo links

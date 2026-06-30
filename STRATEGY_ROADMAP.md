@@ -329,17 +329,20 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **Research — ACTIVE (2026-06-29).** Census seed dataset built:
-`INIT6_EXTREME_MOVERS.md` consolidates 9 tracked extreme movers (Jun 9-26) into
-one reviewable table with the pattern-extraction columns Juan asked for
-(catalyst tier, float, AH-vs-PM timing, volume, price path, detectability,
-investability, outcome). Five patterns extracted so far (see file); strongest:
-(3) catalyst tier separates AH continuers from faders — ILLR (Tier A, fresh
-SpaceX) ran AH->PM +760%, MSW (Grade C dilution) faded; (4) headline AH % on
-zero AH volume (ILLR, TII) is an untradeable trap. Juan reiterated priority
-(2026-06-26): the ILLR +760% case is "exactly the kind of stuff we want to
-catch" and "extract patterns from those." Pattern extraction is co-equal with
-catching them — see rollout step 1b.
+**Status:** **Research — ACTIVE (2026-06-30).** Census in
+`INIT6_EXTREME_MOVERS.md` (9 cases, Jun 9-26). **Key update 2026-06-30:**
+classified the three unlabeled PM-only gappers from their 15m premarket bars
+(`scripts/init6-pmbars.py`) and **flipped pattern 2** — PM-only gappers are NOT
+mostly uninvestable. CIIT (+140%) and GLXG (+343%) both held elevated across the
+entire 5h premarket and opened on 48-53M shares = **holdable**; only TDIC
+decayed instantly. Running PM-only tally: 2 holdable / 3 uninvestable, and the
+two holdable ones are exactly the big movers Juan wants. So the AH-blind-spot
+has **real cost**, raising the priority of rollout step 2 (a log-only PM-open
+scan). Other strong patterns: (3) catalyst tier separates AH continuers from
+faders — ILLR (Tier A, SpaceX) ran +760%, MSW (Grade C dilution) faded; (4)
+headline AH % on zero AH volume (ILLR, TII) is an untradeable trap. Juan
+reiterated priority (2026-06-26): ILLR +760% is "exactly the kind of stuff we
+want to catch." Pattern extraction is co-equal with catching them (rollout 1b).
 
 **Why it is hard / where the big moves hide:**
 - The biggest raw movers each morning keep being **PM-only gappers** — flat or
@@ -365,9 +368,11 @@ catching them — see rollout step 1b.
 1. Quantify: over the last ~6 weeks, list every +200% mover (AH or PM) and tag
    each detectable / PM-only-gapper / uninvestable-spike. Use the PM-only-gapper
    tracker already running in the morning eval as the seed dataset.
-   **In progress (2026-06-29):** seed census of 9 cases built in
-   `INIT6_EXTREME_MOVERS.md`; next, mine older logs (Mar-May) for more +200%
-   cases and classify investability of the PM-only gappers (CIIT/GLXG/TDIC).
+   **In progress (2026-06-30):** 9-case census built; the three unlabeled
+   PM-only gappers now classified (CIIT/GLXG holdable, TDIC uninvestable). Next:
+   mine older logs (Mar-May) for more +200% cases toward the ~15-20 threshold,
+   then decide whether the holdable-PM-gapper evidence justifies proposing
+   rollout step 2 (a log-only PM-open scan) to Juan.
 1b. **Extract patterns (Juan, 2026-06-26):** for every extreme runner and
    ceiling-watch name (e.g. ILLR +760%), characterize catalyst tier, float,
    AH-vs-PM timing, volume profile (VRatio path), and price path through the

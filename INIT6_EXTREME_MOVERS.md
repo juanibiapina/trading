@@ -29,10 +29,10 @@ kept as reference, marked *ref*).
 | Date | Ticker | Peak% | AH peak% | PM peak% | Lead | Detect | Invest | Cat | Catalyst | Float | Vol note | Outcome |
 |------|--------|-------|----------|----------|------|--------|--------|-----|----------|-------|----------|---------|
 | 2026-06-09 | MSW | +292% | +292% ($5.18 ~18:00 ET) | +221% | AH | AH-detect | traded | C | Acquisition close + dilutive convertible notes | 4.6M | VRatio real, BUILD-and-hold, entered $3.24 | fade |
-| 2026-06-10 | CIIT | +140% *ref* | +14.9% (flat) | +140% | PM | PM-gapper | ? | None | None found | — | flat AH | continue |
-| 2026-06-11 | GLXG | +343% | declined | +343% | PM | PM-gapper | ? | None | None (week-long decline, tiny-float squeeze) | 1.7M | no AH move | continue |
+| 2026-06-10 | CIIT | +140% *ref* | +14.9% (flat) | +140% | PM | PM-gapper | holdable | None | None found | — | flat AH; PM held +126-414% across 5h, opened +203% on 53M sh | continue |
+| 2026-06-11 | GLXG | +343% | declined | +343% | PM | PM-gapper | holdable | None | None (week-long decline, tiny-float squeeze) | 1.7M | no AH move; PM held +180-380% across 5h, opened +225% on 48M sh | continue |
 | 2026-06-11 | EDHL | +225% | +225% ($11.39 19:15 ET late surge) | <+225% | AH | AH-detect | ? | ? | — | — | near-extreme late surge | fade |
-| 2026-06-16 | TDIC | +140% *ref* | -4 to -8% | +140% | PM | PM-gapper | ? | None | None fresh | — | no AH move | continue |
+| 2026-06-16 | TDIC | +140% *ref* | -4 to -8% | +140% | PM | PM-gapper | uninvestable | None | None fresh | — | no AH move; PM spiked 04:00 then decayed straight to NEG by 05:30, never recovered | fade-from-open |
 | 2026-06-23 | MBRX | +131% *ref* | flat | +131% | PM | PM-gapper | uninvestable | ? | — | — | crashed $6.64->$3.77 in 10 min | continue-then-crash |
 | 2026-06-24 | CUPR | +81% *ref* | — | +81% | PM | PM-gapper | uninvestable | — | — | — | $9.74 high was an illiquid single tick | — |
 | 2026-06-26 | ILLR | +760% | +446% ($4.20 19:55 ET) | +760% | AH | AH-detect | skipped | A | SpaceX position acquisition (fresh, ongoing news cycle) | — | ZERO real AH volume (VRatio 0.1-0.4x), AH fill questionable | continue |
@@ -44,12 +44,22 @@ kept as reference, marked *ref*).
    GLXG, TDIC, MBRX, CUPR) are flat/down in AH and explode only after 04:00 ET
    — the AH scanner cannot see them by design. (b) AH-detectable runners (MSW,
    ILLR, EDHL, TII) have an AH footprint the scanner does catch.
-2. **PM-only gappers skew uninvestable.** The two PM-only cases classified so
-   far (MBRX, CUPR) were both uninvestable (instant crash / thin tick). This
-   supports the standing hypothesis that the AH-blind-spot has low real cost
-   unless a cluster of *holdable* PM-only gappers appears. Most PM-only cases
-   (CIIT, GLXG, TDIC) are still unclassified for investability — **next mining
-   priority: pull their 5-min PM bars and label holdable vs uninvestable.**
+2. **PM-only gappers are NOT mostly uninvestable — it is ~50/50, and the
+   holdable ones are exactly the targets (UPDATED 2026-06-30).** Classifying the
+   three remaining PM-only gappers from their 15m premarket price path flipped
+   this pattern: **CIIT (+140%) and GLXG (+343%) were holdable** — both held
+   elevated (+126-414% / +180-380%) across the *entire* 04:00-09:15 premarket
+   window (20+ consecutive 15m bars, impossible to sustain on a single tick) and
+   opened on 48-53M shares, so a multi-hour exit window existed. Only **TDIC was
+   uninvestable** (spiked at 04:00, decayed to negative within 90 min). Running
+   PM-only tally: **2 holdable (CIIT, GLXG), 3 uninvestable (MBRX, CUPR, TDIC)**.
+   The holdable two are precisely the +140%/+343% movers Juan wants. So the
+   AH-blind-spot has **real cost**, not low cost — a PM-open scan could have
+   caught two large holdable runners in a single week. This raises the priority
+   of rollout step 2 (instrument a log-only PM-open scan). Caveat: Yahoo 15m PM
+   bars report vol=0, so true premarket *fillability* (vs sustained quotes) still
+   needs live NBBO at the moment, the same Init 2 caveat; price persistence + the
+   real-volume opens are strong but not conclusive on slippage.
 3. **Catalyst tier separates the continuers from the faders among AH runners.**
    ILLR (Tier A, fresh SpaceX news) continued AH->PM to +760%; MSW (Grade C,
    dilutive notes) faded AH->PM. EDHL/TII faded with weak/no catalyst. One
@@ -64,8 +74,11 @@ kept as reference, marked *ref*).
 
 ## Open data gaps (next runs)
 
-- Classify investability (holdable vs uninvestable) for CIIT, GLXG, TDIC via
-  their PM 5-min bars (`scripts/chart.py TICKER --range 2d` or pm-history).
+- ~~Classify investability for CIIT, GLXG, TDIC via PM bars.~~ **Done
+  2026-06-30** (`scripts/init6-pmbars.py`): CIIT & GLXG holdable, TDIC
+  uninvestable. Use 15m + `range=1mo` + a `Mozilla/5.0` User-Agent to reach
+  historical premarket bars (the `query2` host and a UA are both required;
+  `chart.py --range 2d` 5m only reaches ~5 days back).
 - Backfill float + catalyst tier for EDHL, TDIC, CIIT, MBRX, CUPR, TII.
 - Mine the older logs (Mar-May) for additional +200% cases (EVOL +300%, CCTG,
   CPOP +322%, CHAI +416-438%, PHGE +265%, HKIT +254%, EEIQ +209%, ATLN +220%)
