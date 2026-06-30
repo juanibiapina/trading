@@ -8,8 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry Date | Entry Price | Shares | Cost Basis | Catalyst Grade | Catalyst | Stop Loss | Target | Peak |
 |--------|------------|-------------|--------|------------|----------------|----------|-----------|--------|------|
-| GANX | 2026-06-29 | $2.39 | 41 | $97.99 | B | Positive interim Phase 1b data for GT-02287 (Parkinson's GBA1) at 3rd Intl GBA1 Meeting 2026 | -15% ($2.03) | premarket peak | $2.50 (16:40 ET) |
-| CTNT | 2026-06-29 | $2.05 | 48 | $98.40 | None | No same-day catalyst found; low-float (3.0M) squeeze, short interest +511% to 9.5%; reverse-split overhang (Jun 25) | exit first PM opp | first premarket opportunity | $2.15 (17:10 ET) |
+| GANX | 2026-06-29 | $2.39 | 41 | $97.99 | B | Positive interim Phase 1b data for GT-02287 (Parkinson's GBA1) at 3rd Intl GBA1 Meeting 2026 | -15% ($2.03) | premarket peak | $2.59 (06-29 20:10 ET) |
 
 ## Position Rules
 
@@ -62,3 +61,4 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
 | IVF | $1.58 | $2.00 | +$25.20 | +26.6% | 1 | None (Grade None) | Low-float AH build, no fresh catalyst. Sold premarket per Grade None rule (exit at any profit). PM ran to $2.59 peak (+64% from entry); exited at $2.00. |
+| CTNT | $2.05 | $1.90 | -$7.20 | -7.3% | 1 | None (Grade None) | Low-float squeeze, no catalyst. Sold first premarket opportunity per Grade None rule. AH peaked $2.21; faded to $1.94 PM. Exited at $1.90 (real fill). |
