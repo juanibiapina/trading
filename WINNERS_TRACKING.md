@@ -6,10 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-23 | ORIS | None (Nasdaq delisting determination = negative; low-float squeeze) | +60.8% ($3.28 AH @19:25 ET) | $4.24 PM (+75.2%) | $1.83 | Day 4 - flat ~$1.83, faded from $4.24 PM peak; NOT traded |
-| 2026-06-24 | VTAK | C — spent patent PR re-pump (low-float 2.0M) | $1.38 AH (+58.7%) | $1.89 PM (+117.4%) | $1.19 | Day 3 - $1.19, bounced off $0.92; sold @ $1.98 (+70.7%, good exit) |
-| 2026-06-25 | AZI | None (low-float 4.4M squeeze; recent driver was Jun 9-10 $30M placement = dilution) | $2.34 AH (+98.3%) | $2.25 PM (+90.7%) | $1.14 | Day 2 - faded to $1.14 from $2.25 PM peak; TRADED @ $1.62 (paper) |
-| 2026-06-26 | ILLR | A — Triller Group to acquire significant SpaceX position (TikTok rival) | $4.20 AH (+446% vs $0.77) | $6.62 PM (+760%) | $6.62 PM | 🆕 Day 1 - winner; NOT traded (extension ceiling >150% + zero AH volume); regular-day +296% continuation |
+| 2026-06-26 | ILLR | A — Triller Group to acquire significant SpaceX position (TikTok rival) | $4.20 AH (+446% vs $0.77) | $6.62 PM (+760%) | $4.46 | Day 4 - faded to $4.46 from $6.62 PM peak; NOT traded (extension ceiling >150% + zero AH volume) |
+| 2026-06-30 | BTCT | None (unverified; low-float crypto bounce/squeeze) | $1.77 AH (+139.2% @18:50 ET) | $1.39 PM (+88.0%) | $1.39 PM | 🆕 Day 1 - winner; late-AH-tail surge (peaked after last scan); NOT traded; AH peak beat PM |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -52,6 +50,9 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-06-17 | NIVF | C — note/warrant buyback (anti-dilution) | $0.96 | $1.55 | — | $0.61 | Day 6: Faded to $0.61; PM exit @ $1.36 was right |
 | 2026-06-18 | LNKS | None (repeat low-float runner, prior winner May 13) | $2.31 | $4.70 (+184.7%) | $2.98 | $2.1 | Day 5: Faded to ~$2.1 from $4.70 PM peak; fade-rule false negative #2 |
 | 2026-06-19 | CDT | None (low-float 1.6M; ran +48% Jun 18 intraday) | $1.34 PM (+31%) | $1.34 | — | $1.10 | Day 5: Faded to $1.10 from $1.34 PM peak; marginal winner, never traded |
+| 2026-06-23 | ORIS | None (Nasdaq delisting determination; low-float squeeze) | $3.28 (+60.8%) | $4.24 | — | $1.83 | Day 7: Faded to $1.83 from $4.24 PM peak; late-AH-tail founding case; NOT traded |
+| 2026-06-24 | VTAK | C — spent patent PR re-pump (low-float 2.0M) | $1.38 | $1.89 | — | $1.09 | Day 6: Faded to $1.09; sold @ $1.98 (+70.7%, good PM exit) |
+| 2026-06-25 | AZI | None (low-float 4.4M squeeze; Jun 9-10 $30M placement) | $2.34 | $2.25 | $1.14 | $1.86 | Day 5: Faded to $1.14 then bounced to $1.86; TRADED @ $1.62 (paper) |
 
 ## Patterns Observed
 

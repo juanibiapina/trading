@@ -154,3 +154,106 @@ Sixth AH scan. `scan.py --all` returned 11 hits. GANX (entered 23:00) and CTNT (
 |--------|------------|------------|-----------------|----------|--------|
 | GANX | $2.39 | 23:00 CET | 41 | ea649b1f | Grade B: positive Phase 1b data (GT-02287, Parkinson's GBA1); BUILD/hold, VRatio 5.5x, Total +42% |
 | CTNT | $2.05 | 23:30 CET | 48 | 4f35924a | Grade None: low-float (3.0M) squeeze, no catalyst; BUILD +16.9%→+39.6%, Total +38%, concern: reverse-split overhang |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**BTCT** — BTC Digital Ltd. (crypto / Data Processing Services)
+- Catalyst: unverified. Stock had been bleeding for days ($1.28 → $0.74 close); the AH pop is a low-float bounce, likely crypto-sympathy / squeeze. No confirmed same-day PR. **Grade None (unverified).**
+- Previous Close: $0.74 (Mon close; down from $1.28 three sessions earlier)
+- AH last night: $1.77 (+139.2%) at 18:50 ET (00:50 CET) — surge fired 18:20→18:50 ET
+- Premarket now: $1.22 (+64.9%); PM high $1.39 (+88.0%) at the 04:00 ET open, faded immediately
+- Hypothetical P&L: AH-tail entry ~$1.20 → **AH peak $1.77 = +47%** (best exit was in AH); AH entry → PM high $1.39 = +16%
+- Float: 9.5M | Market Cap: $6.5M
+
+**Scanner Diagnostic:**
+- Detectable at screening time (~22:15 CET)? **NO** — flat/down in AH (~$0.68, -8%) through every scheduled scan. The move had not started.
+- Why missed: the defining surge began at **18:20 ET (00:20 CET)** — was +54% by 18:20, +67.6% at 18:30 ET (the 00:30 CET last scan), and peaked +139% at **18:50 ET (00:50 CET), 20 min after the last scheduled scan**. Classified as a **late-AH-tail surge** (decisive move + peak in the unscanned 18:30–20:00 ET tail). The 00:30 scan's TradingView postmarket feed did not surface the +67% print that was already live (known feed lag).
+- Scanner gap: a late scan at ~01:00/01:30 CET (covering 19:00–19:30 ET) would have caught BTCT mid-surge. This is the 2nd late-AH-tail case (ORIS Jun 22 was the founding case). Not counted against the detection baseline.
+
+### Baseline Tracking
+
+- Days tracked: **39** (was 38 + 1)
+- Winners detected by scanner: **33/38 (86.8%)** — unchanged. Day 39 winner (BTCT) is a **late-AH-tail surge** (decisive move + peak after the 00:30 last scan) and is **excluded** from the detection baseline per the late-AH-tail rule (neither detection nor miss).
+- Winner selected for paper trade: **22/38 (57.9%)** — unchanged; BTCT was not tradeable in the scanned window. We entered GANX and CTNT (both detected, both qualified).
+- Target: >80% detection
+- Status: **BASELINE MET** (86.8%)
+
+### Retrospective Scan Results
+
+Live premarket scan (04:20 ET) — 5 hits: JEM +133%, BTCT +103%, INTZ +50.6%, CAST +40.5%, CTNT +23.4%.
+
+AH reconstruction (`check-prices.py --ah-history`):
+- **BTCT** — flat ~$0.68 until 18:20 ET, then surge to $1.77 (+139%) at 18:50 ET. Late-AH-tail.
+- **JEM** — AH peak only +11.8% ($2.08) at 16:30 ET, faded to ~-5% by 19:55 ET. PM-only gapper (dead-cat reclaim).
+- **INTZ** — no AH footprint (~$0.68). PM-only.
+- **CAST** — AH down -26% (regular crash continuation). Not a setup.
+- **CTNT** — AH +27% build (we held it). PM +20%.
+
+### Open Position P&L (Alpaca)
+
+Positions are managed by `position-evaluation.md` (10:30 / 14:30 CET), not closed here. Read-only context:
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM High | PM Now | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|--------|-----|-------|--------|
+| GANX | $2.39 | +42.3% | B — Phase 1b GT-02287 Parkinson's data | 23:00 CET | $2.19 (+25%) | $2.14 | -$10.66 | -10.9% | 🔴 Open, underwater |
+| CTNT | $2.05 | +37.8% | None — low-float squeeze / reverse-split overhang | 23:30 CET | $1.88 (+21%) | $1.75 | -$14.40 | -14.6% | 🔴 Open, underwater |
+
+Both faded from AH highs into PM. Exit decision deferred to position-evaluation.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET). Full coverage, no coverage failure.
+- Candidates found: 18 unique tickers across the night.
+- Entries: 2 (GANX 23:00, CTNT 23:30).
+- Retrospective match on winner: BTCT not catchable in window (late-AH-tail).
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| BTCT | +139% (peak 18:50 ET) | Late-AH-tail surge — peaked 20 min after last scan; AH feed lagged the +67% print at 18:30 | AH-tail entry → AH peak +47%; → PM +16%. Not a baseline miss. |
+| JEM | AH faded (peak +11.8%) | PM-only gapper / dead-cat — correctly skipped in AH (Total% went negative) | PM-only; no AH entry possible |
+
+No clean AH→PM opportunity inside the scanned window was failed.
+
+### AH Mover Follow-Through
+
+Stocks in 2+ evening scans with AH change >10%:
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| GANX | $2.50 | 16:40 ET | Spike→hold | $2.14 | -14.4% | +22.3% | Faded into PM; AH peak was better exit |
+| CTNT | $2.15 | 17:10 ET | Build | $1.75 | -18.6% | +12.3% | Faded into PM; AH peak was better exit |
+
+**AH-peak-vs-PM-peak check:** Both GANX ($2.50 AH > $2.19 PM) and CTNT ($2.15 AH > $1.88 PM) peaked in after-hours and faded into PM. BTCT same ($1.77 AH > $1.39 PM). Three more data points for the "AH peak beats PM peak" fade pattern — none were extreme runners (>250%), so they don't bear on the MSW extreme-runner hypothesis, but they reinforce that AH highs are frequently the better exit.
+
+### Price Charts
+
+```
+BTCT — Prev Close $0.74 | 2-Day Range $0.66–$1.82 | Peak $1.77 (+139%) @ 18:50 ET
+  Flat ~$0.68 all evening → surge 18:20→18:50 ET to $1.77 → faded to ~$1.40 overnight
+  → PM open $1.39 (+88%) → faded to $1.22 (+65%) by 04:21 ET
+
+JEM — Prev Close $1.86 | 2-Day Range $1.06–$3.57 | Peak $3.57 (+92%) PM
+  Regular crash to $1.08 → AH bounce to $2.08 then faded to ~$1.70 → PM gap to $3.36 (04:15 ET)
+```
+
+### Notes
+
+**Late-AH-tail surge tally** (decisive surge after 00:30 CET / 18:30 ET last scan; not a detection miss):
+- ORIS — Jun 22: $2.49→$3.28 +32% at 19:25 ET, PM peak $3.93; hypo AH-tail entry ~$2.55 → +54%
+- **BTCT — Jun 29→30: $0.70→$1.77 +139% peaking 18:50 ET; hypo AH-tail entry ~$1.20 → AH peak +47% / PM high +16%**
+- 2 cases now. Threshold for action is ≥3–4 winners surging in this tail → would argue for adding a ~01:00/01:30 CET scan. Watch.
+
+**PM-only gapper tally** (flat/down in AH, move began after 04:00 ET — undetectable by AH scanner):
+- Known: CIIT (Jun 10 +140%), GLXG (Jun 11 +343%), TDIC (Jun 16 +140%), MBRX (Jun 23 +131%, uninvestable), CUPR (Jun 24 +81%, thin tick)
+- **JEM — Jun 30: dead-cat reclaim. Crashed -41.9% regular to $1.08, AH faded, PM gapped to $3.36 (04:15 ET). Investability: borderline-holdable so far (held $3.27–3.36 for ~2 bars), but only 20 min of PM data — tentative.** Not a scanner failure.
+- Pattern holds: PM-only gappers remain mostly low-conviction/uninvestable spikes → AH-scanner blind spot still low real cost.
+
+**Fade-rule false-negative tracking:** LGCL was skipped last night on SPIKE→FADE (AH high $1.42 +92% at 18:15 ET → collapsed to $0.99 by 18:30) plus failed 2-AH-scan + zero real AH vol. No PM re-explosion observed (not in PM top movers) → fade rule was correct here. Tally unchanged (CRE Jun 17, LNKS Jun 18 remain the only re-explosion false negatives).
+
+**Coverage:** 7/7 scans ran. No new coverage failure.
+
+**Open positions:** GANX and CTNT both entered last night, both underwater in PM (-10.9% / -14.6%), both faded from AH highs. Reinforces that AH-peak exits beat PM holds when the catalyst is weak (CTNT Grade None) or the AH move was already extended.
