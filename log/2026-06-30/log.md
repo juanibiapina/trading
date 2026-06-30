@@ -36,6 +36,23 @@ AH trajectory:
 
 All candidates showing early-peak fade. Re-check at 23:00 for any BUILD pattern before considering entries.
 
+## Scan 23:00 CET (5:00 PM ET) — AH (entry-eligible)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LGPS | [TV](https://www.tradingview.com/chart/?symbol=LGPS) | $0.69 | -5.2% | +79.6% | $1.24 | +70.2% | 15.7M | 1.7M | 9.1x | 6.3M | Real Estate Development |
+| ALZN | [TV](https://www.tradingview.com/chart/?symbol=ALZN) | $1.20 | +3.4% | +15.8% | $1.39 | +19.8% | 1.1M | 245K | 4.6x | 3.2M | Pharmaceuticals: Major |
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $2.01 | +0.5% | +10.0% | $2.21 | +10.5% | 257K | 633K | 0.4x | 822K | IT Services |
+
+**Decision: NO ENTRIES.** SPIKE→FADE / unconfirmed night.
+
+- **LGPS** — Triggers the night gate (float 6.3M <50M, AH >10% across 22:30 + 23:00 scans, Day% -5.2% > -15%, real liquid book: bid $1.12 x900 / ask $1.16 x900). **SKIP — SPIKE→FADE + no catalyst.** Post-market 5m bars: peaked $1.34 at **16:10 ET** (early, before 17:30), then progressively lower highs $1.23 (16:35) → $1.19 (16:40) → $1.14 (16:50-17:00). Current $1.14 is 14.9% off the high but the trajectory is a clear fade with lower rebuilds, not a hold near high. Catalyst re-search (required, was skipped earlier for no catalyst): LogProstyle is a Japanese real-estate 6-K filer; most recent items are a May 15 special dividend and an old buyback program — **no same-day earnings, PR, or 8-K**. Early-peak fade + no catalyst = 0/10+ pattern. Skip.
+- **ALZN** — Clean hold/build: peaked +20.6% ($1.40) at 16:20 ET, holding +19.8% ($1.39) at 17:00, right at its AH high. Float 3.2M (excellent), VRatio 4.6x, book bid $1.32 x100 / ask $1.36 x100 (thin but two-sided). **WATCH — not entry-eligible: only 1 AH scan** (needs >10% AH across ≥2 AH scans to confirm sustaining). Catalyst search found no same-day driver (only a routine analyst comparison). Best-looking pattern of the night; re-check 23:30 — if it holds near $1.39 it becomes a candidate.
+- **MASK** — Fading: peaked +17.5% ($2.35) at 16:35 ET → +9% ($2.18) at 17:00. VRatio 0.4x (AH vol 257K below 633K avg = volume below normal). Float 822K. Only 1 AH scan, fading, weak volume. **WATCH/skip.**
+- Prior watchlist (GVH, INTZ, BTCT) did not reappear with sustained AH volume — dropped.
+
+No SPIKE→FADE-only "least bad" entry taken. Re-check 23:30 for ALZN 2nd-scan confirmation or any new BUILD pattern.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
