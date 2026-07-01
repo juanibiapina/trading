@@ -126,6 +126,37 @@ Regular-session watch candidates from 21:30 (LHAI, WMTN, ABVN, EHGO, STKE, CLEV)
 
 **Final EOD watch:** JEM — track overnight/PM reclaim vs $4.98 hypothetical (dead-cat-override data collection). EHGO — record whether the faded early peak continues to bleed in PM (fade-pattern confirmation data).
 
+## Scan 00:30 CET (6:30 PM ET) — AH, entry-eligible
+
+`scan.py --all` (AFTERHOURS): **13 hits.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DSY | [TV](https://www.tradingview.com/chart/?symbol=DSY) | $2.88 | +7.5% | +83.3% | $5.28 | +97.0% | 383K | 133K | 2.9x | 1.3M | Miscellaneous (Big Tree Cloud) |
+| USDE | [TV](https://www.tradingview.com/chart/?symbol=USDE) | $2.08 | -24.4% | +214.4% | $6.54 | +137.8% | 4.0M | 753K | 5.3x | 5.5M | Packaged Software |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $3.21 | -19.1% | +25.2% | $4.02 | +1.3% | 8.6M | 21.3M | 0.4x | ~4.5M | Wholesale Distributors |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.99 | -20.8% | +19.1% | $1.18 | -5.7% | 1.7M | 923K | 1.9x | 549K | REIT |
+| CAST | [TV](https://www.tradingview.com/chart/?symbol=CAST) | $4.86 | -27.7% | +14.4% | $5.56 | -17.3% | 672K | 15.8M | 0.0x | 16.5M | Internet Software/Services |
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $2.97 | -19.1% | +6.4% | $3.16 | -13.9% | 406K | 37.1M | 0.0x | 3.8M | Integrated Oil |
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.21 | +29.2% | +40.5% | $1.70 | +81.6% | 378K | 301K | 1.3x | 909K | Packaged Software |
+| HUMA | [TV](https://www.tradingview.com/chart/?symbol=HUMA) | $0.67 | -13.8% | +5.4% | $0.71 | -9.1% | 315K | 26.6M | 0.0x | 244.5M | Biotechnology |
+| AVAT | [TV](https://www.tradingview.com/chart/?symbol=AVAT) | $0.50 | +0.1% | +10.3% | $0.55 | +10.4% | 279K | 902K | 0.3x | 20.7M | Financial Conglomerates |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.66 | +5.4% | +6.1% | $0.70 | +11.8% | 129K | 248K | 0.5x | 3.0M | Air Freight/Couriers |
+| DEFT | [TV](https://www.tradingview.com/chart/?symbol=DEFT) | $0.51 | -0.7% | +5.5% | $0.54 | +4.8% | 76K | 3.4M | 0.0x | 352.9M | Investment Managers |
+| SENS | [TV](https://www.tradingview.com/chart/?symbol=SENS) | $5.36 | -5.6% | +5.2% | $5.64 | -0.7% | 74K | 1.2M | 0.1x | 45.9M | Electronic Components |
+| BTCS | [TV](https://www.tradingview.com/chart/?symbol=BTCS) | $1.12 | +0.9% | +6.2% | $1.19 | +7.2% | 70K | 1.3M | 0.1x | 38.5M | Regional Banks |
+
+**SIP verification (bars from 20:00Z / 16:00 ET):**
+- **DSY** (NEW to AH, 1st AH appearance) — **REAL accumulation, fresh late BUILD.** Flat/quiet through 16:00–17:55 ET (~140–1,000 sh/bar), then broke out at **18:05 ET**: $2.95→$5.17 high, 82,444 sh / 1,156 trades → 18:10 ET $5.88 high, **511,276 sh / 8,619 trades** → 18:15 ET **new AH high $6.46**, 389,013 sh / 6,768 trades (close $6.26). Yahoo shows a spike to $6.99 then pullback to ~$5.51. Real spike, positive Day +7.5% (NOT dead-cat), ideal float 1.3M, Total% +97% (under 150% ceiling). **Book stale** (`bid $2.40 / ask $3.27 @20:00Z` = 16:00 ET, pre-breakout — not a current fillable read). **Catalyst:** structured search (4 calls) found **no same-day catalyst** — recent DSY news is stale (Apr listing transfer, Feb/Jan AI-buzzword PRs). Chinese small-cap with 1-for-20 reverse-split history = classic low-float squeeze profile. **Two blocks: (1) 1st AH appearance → fails the ≥2-AH-scan confirmation gate; (2) stale book can't confirm fillable AH liquidity at the breakout price.** Skip live; **top watch for 01:00** — if it confirms a 2nd AH scan >10% AND holds within ~20% of its ~$6.99 high with a real two-sided book, re-evaluate.
+- **USDE** — **BAD PRINT + dead-cat.** Scanner AH $6.54 (+214%) is not corroborated by SIP: SIP high only $2.79 (16:35 ET), now faded to $2.33–2.57; quote `bid $2.52 / ask $2.55`. The $6.54 print is spurious. Real move is an early-peak (16:35 ET) fade off a Day -24.4% sell-off (dead-cat). Skip as stale VRatio / bad print + dead-cat.
+- **JEM** — **DEAD-CAT-OVERRIDE WATCH continues.** AH now fading further: peak $5.47 @16:50 ET → $4.02 now. Real book unchanged `bid $4.94 / ask $4.98`. Day -19.1% (≤-15% dead-cat zone), weak AI/blockchain "exploration" PR + F-1 dilution overhang (Grade C). Skip live — hypothetical already recorded at 23:00 @ $4.98 (unchanged).
+- **WHLR** (Total -5.7%) / **CAST** (Total -17.3%, VRatio 0.0x) / **SKYQ** (Day -19.1%, Total -13.9%, VRatio 0.0x — same faded-spike profile as the SKYQ Jun 10 -27.6% loss) / **HUMA** (Total -9.1%, float 244.5M) — dead-cat bounces still below their regular close and/or thin. Skip.
+- **WCT** (VRatio 1.3x, AH vol 378K but float 909K, Total +81.6% — climbing but tiny AvgVol base, no SIP-confirmed real book) / **AVAT / SLGB / DEFT / SENS / BTCS** — thin AH (VRatio 0.0–0.5x), no real extended-hours spike. Skip.
+
+**Decision: No live entry.** DSY is the one genuine fresh real-volume BUILD (positive day, ideal 1.3M float, real accumulation) but fails the ≥2-AH-scan confirmation gate (1st AH appearance) and has a stale book at the breakout price, plus no same-day catalyst found → skip live, top watch for 01:00 (consistent with the EHGO 1-AH-scan skip earlier tonight). USDE is a bad print off a dead-cat. JEM stays in dead-cat-override watch (hypothetical tracked at $4.98). All others dead-cat or thin.
+
+**Watch for 01:00 CET:** DSY — if it confirms a 2nd AH scan >10%, holds within ~20% of its ~$6.99 high, and shows a real two-sided book, re-evaluate for entry. JEM — track PM reclaim vs $4.98 hypothetical.
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
