@@ -21,7 +21,9 @@
  *      --ext = extended-hours (pre/post market). Requires --limit; forces tif=day.
  *   node scripts/broker.js cancel <id>
  *   node scripts/broker.js quote <SYM>
- *   node scripts/broker.js bars  <SYM> [--tf 5Min] [--start ISO] [--limit N]
+ *   node scripts/broker.js bars  <SYM> [--tf 5Min] [--start ISO] [--limit N] [--feed sip|iex]
+ *      feed defaults to sip (full-market volume, incl. real ext-hours); falls back
+ *      to iex if the free tier blocks recent SIP data (~last 15 min).
  *   node scripts/broker.js tradable <SYM>     # is the asset tradable on Alpaca?
  *
  * Add --json to any command for raw JSON output.
@@ -146,16 +148,34 @@ async function cmdQuote(flags, positional) {
 
 async function cmdBars(flags, positional) {
   const sym = (positional[0] || "").toUpperCase();
-  if (!sym) throw new Error("usage: bars <SYM> [--tf 5Min] [--start ISO] [--limit N]");
+  if (!sym) throw new Error("usage: bars <SYM> [--tf 5Min] [--start ISO] [--limit N] [--feed sip|iex]");
   const tf = flags.tf || "5Min";
   const limit = flags.limit || 20;
   const start = flags.start ? `&start=${encodeURIComponent(flags.start)}` : "";
-  const q = await api(DATA, `/v2/stocks/${sym}/bars?timeframe=${tf}&limit=${limit}&feed=iex${start}`);
+  // Default to SIP (full consolidated tape incl. real extended-hours volume).
+  // Free tier serves SIP historical but blocks the most recent ~15 min; on that
+  // error, fall back to IEX so live/recent queries still return something.
+  let feed = flags.feed || "sip";
+  const path = (f) => `/v2/stocks/${sym}/bars?timeframe=${tf}&limit=${limit}&feed=${f}${start}`;
+  let q;
+  try {
+    q = await api(DATA, path(feed));
+  } catch (e) {
+    if (feed === "sip" && !flags.feed && /recent SIP data/i.test(e.message)) {
+      feed = "iex";
+      q = await api(DATA, path(feed));
+    } else {
+      throw e;
+    }
+  }
   if (flags.json) return console.log(JSON.stringify(q, null, 2));
   const bars = q.bars || [];
-  if (!bars.length) return console.log(`${sym}: no bars (IEX feed; AH/PM may be sparse).`);
+  if (!bars.length) return console.log(`${sym}: no bars (feed=${feed}${feed === "iex" ? "; AH/PM may be sparse" : ""}).`);
+  console.log(`# ${sym} feed=${feed}`);
   for (const b of bars) {
-    console.log(`${b.t}  O ${fmtUsd(b.o)} H ${fmtUsd(b.h)} L ${fmtUsd(b.l)} C ${fmtUsd(b.c)}  vol ${b.v}`);
+    const vw = b.vw !== undefined && b.vw !== null ? `  vwap ${fmtUsd(b.vw)}` : "";
+    const n = b.n !== undefined && b.n !== null ? `  trades ${b.n}` : "";
+    console.log(`${b.t}  O ${fmtUsd(b.o)} H ${fmtUsd(b.h)} L ${fmtUsd(b.l)} C ${fmtUsd(b.c)}  vol ${b.v}${vw}${n}`);
   }
 }
 

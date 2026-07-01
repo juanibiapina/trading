@@ -36,7 +36,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: float <50M, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
-- **Phantom-ramp detection uses the Alpaca book, not Yahoo ext-hours volume** — Yahoo's 5-min AH/PM bars report no volume for any ticker (real or phantom), so `--ah-history`/`--pm-history` show `Vol: n/a`; zero-volume bars are not phantom evidence. Classify a phantom only from a Yahoo ext-hours price far above the real Alpaca bid/ask (`broker.js quote`) or `ask $0.00 x0` (basis: JEM Jun 30 Yahoo AH $12.67 vs book ~$4)
+- **Extended-hours volume & bad-print detection use Alpaca SIP bars, not Yahoo volume** — Yahoo's 5-min AH/PM bars report no volume for any ticker (real or phantom), so `--ah-history`/`--pm-history` show `Vol: n/a`; Yahoo zero-volume bars are not evidence of anything. For real ext-hours volume use `node scripts/broker.js bars SYM --tf 5Min --start <AH-start-UTC>` (defaults to the SIP consolidated feed — full-market vol + `vwap` + `trades`; free tier serves SIP historical, only last ~15 min blocked). Detect Yahoo bad prints by comparing the Yahoo AH/PM high vs the SIP high/VWAP (Yahoo high >> SIP = bad tick, trust SIP); cross-check the live book (`broker.js quote`, `ask $0.00 x0` = no fillable liquidity). Basis: JEM Jun 30 Yahoo AH $12.67 vs SIP high $4.54 / VWAP $4.27 on 1.5M shares — JEM traded heavily, the $12.67 was a Yahoo bad print
 - **AH-liquidity sanity check before entry** — confirm `broker.js quote` shows a real two-sided after-hours book (non-zero ask price with size, non-zero bid) before sizing an order; an `ask $0.00 x0`/zero-size book means the TradingView `AH Vol`/`VRatio` is stale regular-session volume, not real AH liquidity — skip as illiquid (basis: TII Jun 26 VRatio 4.9x but `ask $0.00 x0`; recurring NEXR zero-AH-volume ramp pattern)
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
@@ -60,6 +60,27 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-07-01 (b) — Switch broker.js Bars to SIP for Real Extended-Hours Volume
+
+**Context:** Follow-up to the earlier 2026-07-01 entry (Yahoo omits ext-hours volume). User asked whether we were getting bad data / delays and whether to pay for Alpaca SIP or Polygon. Investigation (verified live against our own credentials, not just docs):
+- Yahoo's chart API structurally returns **volume=0 for all extended-hours bars** on every ticker, verified on AAPL and TSLA at 1m/5m/15m intervals. Not a delay or a fetch bug — a hard endpoint limitation.
+- Worse, Yahoo ext-hours *prices* can be **bad prints**: JEM Jun 30 Yahoo AH "high" $12.67 (+1073%) never traded. Alpaca SIP shows JEM's real first AH bar at high $4.54 / VWAP $4.27 on **1,526,796 shares / 16,998 trades** — a real, heavily-traded mover, not a no-volume phantom. The "+1073%" was fictional.
+- **Our free Alpaca account already serves full-market SIP historical bars** (incl. real ext-hours volume, VWAP, trade count); we were only querying `feed=iex` (~2-3% of consolidated volume, which returned "no bars" for low-IEX names like GANX). The free tier blocks only the most recent ~15 min of SIP (`"subscription does not permit querying recent SIP data"`), which does not affect a next-morning retrospective. So **no paid feed is needed** for the ext-hours-volume gap; a one-word feed switch fixes it at zero cost. (Paid options for real-time full-market during the live AH window: Alpaca Algo Trader Plus $99/mo — trivial integration; Polygon Developer $79/mo — new integration. Left to the user; not needed now.)
+
+**Evaluation of previous changes:**
+- 2026-07-01 (a) Kill spurious zero-volume-bar tell: **Superseded/extended by this entry.** That change correctly stopped Yahoo ext-hours volume being read as a phantom tell (relabeled to `n/a`). This entry adds the positive source (SIP bars) so evals have *real* ext-hours volume instead of just an absence, and reframes JEM from "phantom" to "real mover with a Yahoo bad print." The relabel stands; the phantom-detection note is upgraded (see below).
+- Older watches (Jun 30 feed-lag/true-tail, Jun 26 AH-liquidity, Jun 12 dead-cat, Jun 09 ceiling): unchanged since the (a) entry today; not re-evaluated (same session).
+
+**Changes:**
+1. **scripts/broker.js** — `bars` now defaults to the **SIP** consolidated feed (was hardcoded `feed=iex`). Added a `--feed sip|iex` flag; on the free-tier "recent SIP data" block it auto-falls back to IEX (only when `--feed` was not explicitly set), so recent/live queries still return something. Output now also prints `vwap` and `trades` per bar and a `# SYM feed=<f>` header.
+   - Why: IEX-only bars saw ~2-3% of volume and returned "no bars" for real movers with little IEX routing; SIP gives the full-market ext-hours volume the retrospective needs, for free.
+   - Hypothesis: the next retrospective can cite real ext-hours volume/VWAP from `broker.js bars` (SIP). Measurable: (1) a phantom/bad-print night's eval quotes SIP `vol`/`vwap`/`trades` rather than "zero-volume bars"; (2) real low-IEX movers (GANX-style) now return bars instead of "no bars"; (3) recent-data queries do not error out (fall back to IEX). If bars still default to IEX or evals still cite Yahoo volume, the change didn't take.
+2. **prompts/morning-evaluation.md** — Upgraded the phantom note to instruct pulling real ext-hours volume via `broker.js bars --tf 5Min --start <AH-start-UTC>` (SIP), using `vol`/`trades` for real liquidity and comparing the Yahoo AH/PM high vs SIP high/VWAP to detect Yahoo bad prints (JEM example), with the book (`quote`) as the live liquidity cross-check.
+   - Why: gives evals a concrete positive method for ext-hours volume and bad-print detection instead of relying on the (now-relabeled) absent Yahoo volume.
+   - Hypothesis: same measurable as change 1.
+
+**Updated process:** Ext-hours volume & bad-print detection now use Alpaca **SIP** bars (`broker.js bars`, full-market vol + VWAP + trades) plus the live book; Yahoo ext-hours volume is unused. (No scanner parameters changed.)
 
 ### 2026-07-01 — Kill the Spurious "Zero-Volume Bars" Phantom Tell (Yahoo Ext-Hours Vol)
 

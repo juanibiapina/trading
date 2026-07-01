@@ -42,7 +42,16 @@ python3 scripts/check-prices.py --ah-history TICKER1 TICKER2 ...
 
 A forced `python3 scripts/scan.py --all --session afterhours` can still be logged as a secondary diagnostic, but do **not** rely on it as the primary retrospective source. Overnight TradingView postmarket fields often return 0 hits even when the live evening scans clearly found AH movers.
 
-**Phantom-ramp detection (do NOT use Yahoo ext-hours volume):** Yahoo's 5-min extended-hours bars report **no volume** for every ticker — real and phantom alike (`--ah-history`/`--pm-history` now show `AH/PM Vol: n/a` and `—` per bar). Zero-volume bars are therefore **not** evidence of a phantom; do not cite them as such. The reliable phantom tell is a large gap between the Yahoo extended-hours *price* and the real Alpaca book: run `node scripts/broker.js quote SYM` and compare. A phantom ramp prints a Yahoo AH/PM price far above a bid/ask stuck near the regular close, or shows `ask $0.00 x0` (e.g. JEM Jun 30: Yahoo AH $12.67 vs Alpaca book ~$4). Classify a mover as a phantom only from that book divergence, never from Yahoo bar volume.
+**Extended-hours volume & bad-print detection (use Alpaca SIP bars, NOT Yahoo volume):** Yahoo's 5-min extended-hours bars report **no volume** for any ticker — real and phantom alike (`--ah-history`/`--pm-history` show `AH/PM Vol: n/a` and `—` per bar), so Yahoo zero-volume bars are **not** evidence of anything. For real extended-hours volume, use Alpaca SIP bars:
+
+```bash
+# AH session = 20:00-24:00 UTC (16:00-20:00 ET) of the trading date; PM = 08:00-13:30 UTC (04:00-09:30 ET)
+node scripts/broker.js bars SYM --tf 5Min --start YYYY-MM-DDT20:00:00Z --limit 48
+```
+
+This returns real full-market OHLCV plus `vwap` and `trades` per bar (defaults to the SIP consolidated feed; free tier serves SIP historical, only the last ~15 min is blocked — irrelevant next morning). Use it two ways:
+- **Real liquidity:** the `vol`/`trades` columns show whether the move actually traded (a true low-liquidity ramp shows tiny `vol`/`trades`; a real mover shows sustained volume).
+- **Bad-print detection:** compare the Yahoo AH/PM *high* against the SIP `H`/`vwap`. When Yahoo's high is far above the SIP high/VWAP, Yahoo printed a **bad tick**, not a real level — trust the SIP price. (Example: JEM Jun 30 Yahoo AH high $12.67 vs SIP high $4.54 / VWAP $4.27 on 1.5M shares — JEM traded heavily but never near $12.67; the $12.67 was a Yahoo bad print, and the "+1073%" was fictional.) Also cross-check the live Alpaca book (`node scripts/broker.js quote SYM`): `ask $0.00 x0` or a book stuck near the regular close confirms no fillable liquidity. Base phantom/bad-print calls on SIP bars + the book, never on Yahoo bar volume.
 
 From the results, identify the **best AH→premarket trade** — the stock that:
 - Spiked in after-hours yesterday
