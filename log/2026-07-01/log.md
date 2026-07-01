@@ -24,6 +24,23 @@ Regular-session watch candidates from 21:30 (LHAI, WMTN, ABVN, EHGO, STKE, CLEV)
 
 **Decision:** No entries (observation only — before 23:00 CET learning-phase gate, and no qualifying AH candidates). Re-scan at 22:30 / 23:00 CET as AH volume builds.
 
+## Scan 22:30 CET (4:30 PM ET) — AH observation
+
+`scan.py --all` (AFTERHOURS): **3 hits.** None of the 21:30 regular-session watch names (LHAI, WMTN, ABVN, EHGO, STKE, CLEV) confirmed in AH.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $3.21 | -19.1% | +36.8% | $4.39 | +10.6% | 2.1M | 20.5M | 0.1x | ~4.5M | Wholesale Distributors |
+| ALPS | [TV](https://www.tradingview.com/chart/?symbol=ALPS) | $0.58 | +0.5% | +23.5% | $0.72 | +24.1% | 2.1M | 296K | 7.0x | 45.0M | Miscellaneous |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.99 | -20.8% | +21.3% | $1.20 | -4.0% | 91K | 743K | 0.1x | 549K | REIT |
+
+**SIP verification (bars from 20:00Z / 16:00 ET):**
+- **JEM** — REAL accumulation: 375K → 728K → 1.51M → 745K sh/bar, 3,046→13,643 trades/bar. SIP VWAP $4.47 corroborates AH price $4.39 (no bad print). Peak $4.83 @16:10 ET, now $4.24. Day% -19.1 (≤-15 dead-cat zone) but AH BUILDS to reclaim +10.6% above previous close → **DEAD-CAT-OVERRIDE WATCH**. Quote stale (`ask $0.00 x0` @20:00Z) — recheck book at 23:00.
+- **ALPS** — REAL accumulation: 93K → 1.78M → 346K → 213K sh/bar, VWAP $0.66–0.74 corroborates. Real two-sided book (`ask $0.75 x100`, bid $0.75 x100). Clean BUILD from a flat regular day (Day +0.5%), float 45M (<50M gate), VRatio 7.0x. Peaked $0.86 @16:05 ET (early), now softening to $0.70–0.72 — watch for hold vs fade.
+- **WHLR** — dead-cat: Day -20.8%, Total -4.0% (still below regular close), thin AH vol (peak 74K sh/bar). Textbook bounce off a sell-off. Skip.
+
+**Decision:** No entries — observation only (before 23:00 CET learning-phase gate). Best BUILD candidate for the 23:00 scan is **ALPS** (real book, sub-50M float, reclaim from flat) provided it holds near its AH high rather than fading. **JEM** flagged dead-cat-override watch (record hypothetical if it holds the reclaim). Re-scan at 23:00 CET to confirm momentum before any entry.
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
