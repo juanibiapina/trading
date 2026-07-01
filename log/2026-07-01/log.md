@@ -16,6 +16,14 @@ Scan ran before AH open (16:00 ET / 22:00 CET). Per regular-session caution: no 
 
 **Action:** Re-scan at 22:00+ CET once AH opens. Enter only at 23:00+ CET (learning-phase default) if a candidate shows sustained AH momentum.
 
+## Scan 22:00 CET (4:00 PM ET) — first AH scan
+
+`scan.py --all` (AFTERHOURS mode): **0 AH hits.** Expected — AH just opened at 16:00 ET, no extended-hours volume has accumulated yet to trip the VRatio filter.
+
+Regular-session watch candidates from 21:30 (LHAI, WMTN, ABVN, EHGO, STKE, CLEV) still pending AH confirmation. No fresh AH volume signal yet.
+
+**Decision:** No entries (observation only — before 23:00 CET learning-phase gate, and no qualifying AH candidates). Re-scan at 22:30 / 23:00 CET as AH volume builds.
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
