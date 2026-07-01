@@ -97,6 +97,35 @@ Regular-session watch candidates from 21:30 (LHAI, WMTN, ABVN, EHGO, STKE, CLEV)
 
 **Watch for 00:00 CET:** EHGO — if it confirms a 2nd AH scan >10% AND holds/rebuilds within ~20% of $3.48, re-evaluate (dilution still caps grade). JEM — track PM reclaim vs $4.98 hypothetical.
 
+## Scan 00:00 CET (6:00 PM ET) — AH, entry-eligible
+
+`scan.py --all` (AFTERHOURS): **12 hits.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $3.21 | -19.1% | +46.1% | $4.69 | +18.1% | 8.0M | 21.3M | 0.4x | ~4.5M | Wholesale Distributors |
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $2.66 | +104.6% | +7.1% | $2.85 | +119.2% | 4.7M | 34.1M | 0.1x | 1.4M | Wholesale Distributors |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.99 | -20.8% | +19.3% | $1.18 | -5.5% | 1.6M | 908K | 1.7x | 549K | REIT |
+| CAST | [TV](https://www.tradingview.com/chart/?symbol=CAST) | $4.86 | -27.7% | +13.4% | $5.51 | -18.0% | 581K | 15.8M | 0.0x | 16.5M | Internet Software/Services |
+| USDE | [TV](https://www.tradingview.com/chart/?symbol=USDE) | $2.08 | -24.4% | +21.6% | $2.53 | -8.0% | 393K | 230K | 1.7x | 5.5M | Packaged Software |
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $2.97 | -19.1% | +9.1% | $3.24 | -11.7% | 367K | 37.1M | 0.0x | 3.8M | Integrated Oil |
+| HUMA | [TV](https://www.tradingview.com/chart/?symbol=HUMA) | $0.67 | -13.8% | +7.0% | $0.72 | -7.7% | 300K | 26.6M | 0.0x | 244.5M | Biotechnology |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $0.54 | -3.7% | +5.9% | $0.57 | +2.0% | 298K | 45.3M | 0.0x | 2.3M | Personnel Services |
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.21 | +29.2% | +5.8% | $1.28 | +36.7% | 87K | 270K | 0.3x | 909K | Packaged Software |
+| DEFT | [TV](https://www.tradingview.com/chart/?symbol=DEFT) | $0.51 | -0.7% | +5.5% | $0.54 | +4.8% | 75K | 3.4M | 0.0x | 352.9M | Investment Managers |
+| BTCS | [TV](https://www.tradingview.com/chart/?symbol=BTCS) | $1.12 | +0.9% | +7.1% | $1.20 | +8.1% | 69K | 1.3M | 0.1x | 38.5M | Regional Banks |
+| VFF | [TV](https://www.tradingview.com/chart/?symbol=VFF) | $1.99 | -0.5% | +5.0% | $2.09 | +4.5% | 52K | 1.2M | 0.0x | 108.7M | Agricultural Commodities |
+
+**SIP verification (bars from 20:00Z / 16:00 ET, fresh to ~17:35 ET):**
+- **EHGO** (top watch from 23:30, now its 2nd AH scan) — **SPIKE→FADE confirmed.** Broke out to peak **$3.48 @17:05 ET** (1.30M sh / 9,496 trades), then declined every bar since: $3.35→$3.13→$2.97→$2.69→$2.85→$2.86→$2.79 (17:35 ET), now ~-20% off peak. Volume/trades fading in lockstep (9,496→5,229→4,131→2,846→2,054→1,124→1,000). AH% dropped across the 2 AH scans: +17.7% (23:30) → +7.1% (00:00). Book stale bid $2.55 / ask $2.61. **Fails hold/rebuild** (current $2.79 vs $3.48 high = >20% off, and declining, not rebuilding) + active **$1.00/share dilution (Grade D)**. Early 17:05 peak + fading = 0/7 pattern → **skip.**
+- **JEM** — **DEAD-CAT-OVERRIDE WATCH continues.** AH% now fading from its peak read: +36.8% (22:30) → +38.9% (23:00) → +51.7% (23:30) → +46.1% (00:00). Peak $5.47 @16:50 ET, now $4.69. Real book unchanged bid $4.94 / ask $4.98. Day -19.1% (≤-15% dead-cat zone), weak AI/blockchain "exploration" PR + F-1 dilution overhang (Grade C). **Skip live** — hypothetical already recorded at 23:00 @ $4.98 (unchanged). Track PM reclaim vs $4.98.
+- **WHLR** (Total -5.5%) / **USDE** (Total -8.0%) / **CAST** (Total -18.0%, VRatio 0.0x) / **SKYQ** (Day -19.1%, Total -11.7%, VRatio 0.0x — same faded-spike profile as the SKYQ Jun 10 -27.6% loss) / **HUMA** (Total -7.7%, float 244.5M) — all dead-cat bounces still below their regular close and/or thin AH. Skip.
+- **BIYA / WCT / DEFT / BTCS / VFF** — thin AH (VRatio 0.0–0.3x, tiny AH vol), no real extended-hours spike. Skip.
+
+**Decision: No live entry.** SPIKE→FADE / dead-cat-only night. The 00:00 top watch (EHGO) confirmed a fade off its early 17:05 peak on its 2nd AH scan (fails hold/rebuild) with $1.00 dilution. JEM stays in dead-cat-override watch (skip live, hypothetical tracked at $4.98). Every other hit is a dead-cat bounce below its close or thin AH. Per SPIKE→FADE-only-night rule, skip all rather than entering the least-bad option — a skip here avoids a predictable loss, it is not lost data.
+
+**Final EOD watch:** JEM — track overnight/PM reclaim vs $4.98 hypothetical (dead-cat-override data collection). EHGO — record whether the faded early peak continues to bleed in PM (fade-pattern confirmation data).
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
