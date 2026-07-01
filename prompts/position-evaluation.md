@@ -4,6 +4,14 @@ Evaluate open positions and decide whether to hold or sell based on risk rules.
 
 **Schedule:** Runs at 10:30 CET and 14:30 CET (premarket windows for selling)
 
+## Data Sources (read first, every pulse)
+
+Apply this data hierarchy from the start of the pulse:
+- **Position state + current price (source of truth):** `node scripts/broker.js positions` (Alpaca `current_price`, real entry). This — not Yahoo — is the P&L basis.
+- **Fillable exit price (real-time):** `node scripts/broker.js quote SYM` — set the sell limit off the real bid; `ask $0.00 x0` / thin book means low fillability.
+- **Real premarket volume + bad-print detection:** `node scripts/broker.js bars SYM --tf 5Min --start <PM-start-UTC>` — SIP feed (full-market `vol` + `vwap`). PM open 04:00 ET = `08:00:00Z` (EDT) / `09:00:00Z` (EST). Use SIP `H`/`vwap` to sanity-check any peak.
+- **Do NOT trust Yahoo for volume or exact levels:** Yahoo ext-hours *volume* is always 0; Yahoo PM *prices* can bad-print on illiquid names and overstate the peak. Yahoo is fine for the timeline shape, not for the exit price or peak level.
+
 ## Steps
 
 ### 1. Setup
@@ -25,16 +33,18 @@ If `OPEN_POSITIONS.md` disagrees with Alpaca, Alpaca wins. Reconcile the file.
 
 ### 2. Get Current Prices
 
-For each open position:
+The P&L basis is Alpaca's `current_price` from `broker.js positions` (Step 1), not Yahoo. Use Yahoo only for the premarket timeline *shape*:
 
 ```bash
 python3 scripts/check-prices.py TICKER1 TICKER2 ...
 python3 scripts/price-timeline.py TICKER1 TICKER2 ...
 ```
 
+**Verify any peak against SIP** before acting on it — Yahoo PM prices bad-print on illiquid names and can overstate the peak. Cross-check with `node scripts/broker.js bars SYM --tf 5Min --start <PM-start-UTC>` (SIP `H`/`vwap`); if Yahoo's peak is far above the SIP high/VWAP, use the SIP level. Before placing a sell, take the real sellable bid from `node scripts/broker.js quote SYM`.
+
 Calculate for each position:
-- **Current P&L %** = (current_price - entry_price) / entry_price
-- **Peak P&L %** = (peak_price - entry_price) / entry_price (if tracked)
+- **Current P&L %** = (current_price - entry_price) / entry_price  (current_price from Alpaca)
+- **Peak P&L %** = (peak_price - entry_price) / entry_price (peak verified against SIP)
 - **Days held** = today - entry_date
 
 ### 3. Apply Risk Rules

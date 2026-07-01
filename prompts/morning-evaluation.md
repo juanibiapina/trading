@@ -10,6 +10,14 @@ Run a morning evaluation of the overnight scanning session.
 
 The most important question is: what stock IS exploding in premarket right now? There is almost always one. Find it first — independently, without looking at last night's watchlist — then check if our evening scanner would have caught it. This is the baseline test: if the scanner can't even detect the winners, no entry rules will make the strategy work. See "Learning Phase" in Day Trading.md for the full reasoning.
 
+## Data Sources (read first, every pulse)
+
+Apply this data hierarchy from the start of the pulse:
+- **Discovery (whole-market spike detection):** `scripts/scan.py` (TradingView screener, VRatio). Only source that scans all symbols. VRatio is a first-pass signal, not proof of real liquidity (TradingView `postmarket_volume` can be stale regular-session volume).
+- **Real extended-hours volume + bad-print detection:** `node scripts/broker.js bars SYM --tf 5Min --start <AH-start-UTC>` — SIP consolidated feed (full-market `vol` + `vwap` + `trades`). Free tier serves SIP historical; last ~15 min blocked (auto-falls back to IEX). AH open 16:00 ET = `20:00:00Z` (EDT) / `21:00:00Z` (EST) of the trading date.
+- **Fillable liquidity (real-time):** `node scripts/broker.js quote SYM` — `ask $0.00 x0` = no fillable book.
+- **Do NOT trust Yahoo for volume or exact levels:** Yahoo ext-hours *volume* is always 0 for every ticker; Yahoo ext-hours *prices* bad-print on illiquid names (JEM Jun 30 "$12.67" vs SIP VWAP $4.27). Yahoo is fine for the price *timeline shape* (`check-prices.py --ah-history`/`--pm-history`), not volume or precise price.
+
 ## Steps
 
 ### 1. Setup

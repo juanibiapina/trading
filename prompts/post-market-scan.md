@@ -2,6 +2,14 @@ Run a post-market scan and update the daily log with results and paper trade dec
 
 **Focus:** This prompt finds ENTRIES only. Position management (hold/sell decisions) is handled by `position-evaluation.md` which runs separately in premarket.
 
+## Data Sources (read first, every pulse)
+
+Apply this data hierarchy from the start of the pulse:
+- **Discovery (whole-market spike detection):** `scripts/scan.py` (TradingView screener, VRatio = AH vol / avg vol). Only source that scans all symbols. VRatio is a **first-pass signal, not proof of real AH liquidity** — TradingView `postmarket_volume` can be stale regular-session volume (e.g. TII VRatio 4.9x with no fillable book).
+- **Real extended-hours volume + bad-print detection:** `node scripts/broker.js bars SYM --tf 5Min --start <AH-start-UTC>` — SIP consolidated feed (full-market `vol` + `vwap` + `trades` per bar). Free tier serves SIP historical; only the last ~15 min is blocked (auto-falls back to IEX). AH open 16:00 ET = `20:00:00Z` (EDT) / `21:00:00Z` (EST) of the trading date.
+- **Fillable liquidity (real-time):** `node scripts/broker.js quote SYM` — `ask $0.00 x0` (or zero size) = no fillable book.
+- **Do NOT trust Yahoo for volume or exact levels:** Yahoo extended-hours *volume* is always 0 for every ticker, and Yahoo ext-hours *prices* bad-print on illiquid names (JEM Jun 30 "$12.67" vs SIP VWAP $4.27). Yahoo is fine for the price *timeline shape*, not volume or precise price.
+
 ## Steps
 
 ### 1. Setup
@@ -87,6 +95,7 @@ node scripts/broker.js orders all        # confirm fill, read filled_avg_price
 
 - QTY = floor(~$100 / ask price)
 - Limit a few cents above the ask to fill in thin AH books
+- **SIP volume confirmation (the spike must be real):** before sizing, pull real after-hours volume with `node scripts/broker.js bars SYM --tf 5Min --start <trading-date>T20:00:00Z` (EDT; use `T21:00:00Z` in EST). Confirm two things: (1) AH volume is **actually accumulating on real trades across bars** (rising/sustained `vol` and `trades`), not a single stale figure — a real spike shows thousands of trades and hundreds of K+ shares per bar (e.g. JEM Jun 30 first bar 1.5M sh / 16,998 trades), a fake VRatio shows a handful of trades or tiny volume; and (2) the SIP `H`/`vwap` **corroborates the scanner's AH price** — if the scanner/Yahoo AH price is far above the SIP high/VWAP, it is a bad print, skip. Free-tier SIP lags ~15 min, so this confirms accumulation up to ~15 min ago; pair it with the real-time book check below for the current instant. Skip as **stale VRatio / bad print** if SIP shows the spike is thin, not accumulating, or a bad print.
 - **AH-liquidity sanity check (skip illiquid ramps):** before sizing the order, confirm `broker.js quote SYM` shows a real two-sided after-hours book — a non-zero ask price *with* size (`ask $X xN`, N>0) and a non-zero bid. If the quote shows `ask $0.00 x0` (or zero size on either side), the TradingView `AH Vol`/`VRatio` is a **stale regular-session artifact**, not real AH liquidity — skip as **illiquid (no AH book)** and record it, do not enter. (Basis: TII Jun 26 showed AH Vol 3.4M / VRatio 4.9x but the Alpaca book was `ask $0.00 x0`; same NEXR zero-AH-volume ramp pattern. These ramps print a price with no fillable liquidity and round-trip in PM.)
 - If `tradable=false` or the order doesn't fill, note it and skip (no fill = no position)
 - Entry Price = **real filled_avg_price** from Alpaca, not the quote

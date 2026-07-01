@@ -37,6 +37,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Entry rules: float <50M, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
 - **Extended-hours volume & bad-print detection use Alpaca SIP bars, not Yahoo volume** — Yahoo's 5-min AH/PM bars report no volume for any ticker (real or phantom), so `--ah-history`/`--pm-history` show `Vol: n/a`; Yahoo zero-volume bars are not evidence of anything. For real ext-hours volume use `node scripts/broker.js bars SYM --tf 5Min --start <AH-start-UTC>` (defaults to the SIP consolidated feed — full-market vol + `vwap` + `trades`; free tier serves SIP historical, only last ~15 min blocked). Detect Yahoo bad prints by comparing the Yahoo AH/PM high vs the SIP high/VWAP (Yahoo high >> SIP = bad tick, trust SIP); cross-check the live book (`broker.js quote`, `ask $0.00 x0` = no fillable liquidity). Basis: JEM Jun 30 Yahoo AH $12.67 vs SIP high $4.54 / VWAP $4.27 on 1.5M shares — JEM traded heavily, the $12.67 was a Yahoo bad print
+- **SIP volume confirmation at entry** — before sizing, confirm the TradingView VRatio spike is *real* with `broker.js bars SYM --tf 5Min --start <AH-start-UTC>` (SIP): AH volume must be accumulating on real trades across bars (not a single stale figure) and SIP high/VWAP must corroborate the scanner AH price (far-above = bad print → skip). Discovery stays TradingView (only whole-market screener); SIP + book are the confirmation layer. All three pulse prompts (post-market-scan, morning-evaluation, position-evaluation) carry a "Data Sources (read first)" preamble so every pulse applies this hierarchy from its first action
 - **AH-liquidity sanity check before entry** — confirm `broker.js quote` shows a real two-sided after-hours book (non-zero ask price with size, non-zero bid) before sizing an order; an `ask $0.00 x0`/zero-size book means the TradingView `AH Vol`/`VRatio` is stale regular-session volume, not real AH liquidity — skip as illiquid (basis: TII Jun 26 VRatio 4.9x but `ask $0.00 x0`; recurring NEXR zero-AH-volume ramp pattern)
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
@@ -60,6 +61,27 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-07-01 (c) — SIP Volume Confirmation at Entry + Data-Source Preamble on Every Pulse
+
+**Context:** With `broker.js bars` now on SIP (entry 2026-07-01 (b)), we have real full-market extended-hours volume, VWAP, and trade counts. Two follow-through gaps remained: (1) the **entry flow** still confirmed only fillability (the book), never that the TradingView VRatio spike was *real* — the exact hole that let stale-VRatio names (TII 4.9x, NEXR) look tradeable; and (2) the SIP/phantom knowledge lived deep in individual steps, so a fresh pulse could act before internalizing it. The strategy goal is to make money, which requires each pulse to apply the reliable data hierarchy from its first action, not rediscover it. Alpaca has **no screener**, so TradingView stays the discovery layer; SIP + book are the confirmation layer.
+
+**Evaluation of previous changes:**
+- 2026-07-01 (b) Switch bars to SIP: **Working.** Verified live — SIP returns full-market ext-hours volume (JEM 1.5M sh/bar vs IEX 2.3K), recent-data queries auto-fall back to IEX without erroring, and SIP is usable live for anything older than ~15 min (returned today's PM bars). This entry builds the entry/exit workflow on top of it.
+- 2026-07-01 (a) Kill spurious zero-vol tell / earlier entries: unchanged this session.
+
+**Changes:**
+1. **prompts/post-market-scan.md** — Added a **SIP volume-confirmation** step to the entry flow (before order sizing): pull `broker.js bars SYM --tf 5Min --start <AH-start-UTC>` and require (a) real accumulating AH volume/trades across bars (not a single stale figure) and (b) SIP `H`/`vwap` corroborating the scanner's AH price (Yahoo/TV far above SIP high = bad print → skip). Paired with the existing real-time book check for the current instant.
+   - Why: closes the stale-VRatio hole — the scanner's VRatio can be stale regular-session volume; SIP bars prove whether the AH spike actually traded.
+   - Hypothesis: no entry is sized against a stale-VRatio/bad-print name going forward. Measurable: (1) the next TII/NEXR-style stale-VRatio candidate is skipped citing thin/absent SIP volume or a bad print; (2) real accumulating movers (GANX-style, real SIP volume) are unaffected and still entered. If an entry is placed against a name whose SIP bars show a handful of trades, the step didn't take.
+2. **prompts/{post-market-scan, morning-evaluation, position-evaluation}.md** — Added an identical **"Data Sources (read first, every pulse)"** preamble at the top of all three pulse prompts: discovery = TradingView (VRatio is first-pass, not liquidity proof); real ext-hours volume + bad-print detection = SIP bars (`broker.js bars`); fillability = real-time book (`quote`); Yahoo ext-hours volume/exact levels are untrustworthy (0 volume for all; bad prints on illiquid names). So every pulse applies the hierarchy from its first action.
+   - Why: user directive — the data-source knowledge must be reflected at the beginning of all pulses, not buried mid-prompt.
+   - Hypothesis: each pulse uses SIP/book (not Yahoo volume) from the start. Measurable: post-cutover logs cite SIP volume/VWAP and the book for volume/liquidity calls; none cite Yahoo ext-hours volume.
+3. **prompts/position-evaluation.md** — Repointed Step 2 P&L basis to Alpaca `current_price` (not Yahoo) and required verifying any peak against SIP `H`/`vwap` before acting (Yahoo PM bad-prints overstate peaks), taking the real sellable bid from `quote` before selling.
+   - Why: exits were computing P&L/peaks off Yahoo PM prices, which bad-print on the illiquid names we trade.
+   - Hypothesis: exit decisions use the Alpaca price/book; no sell or trail is triggered by a Yahoo bad-print peak. Measurable: the next exit pulse cites Alpaca current_price and a SIP-verified peak.
+
+**Updated process:** Entry now requires SIP volume confirmation (real accumulating AH volume + VWAP corroboration) alongside the book check; all three pulse prompts carry a Data Sources preamble; exits use Alpaca price + SIP-verified peaks. (No scanner parameters changed.)
 
 ### 2026-07-01 (b) — Switch broker.js Bars to SIP for Real Extended-Hours Volume
 
