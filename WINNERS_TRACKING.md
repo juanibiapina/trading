@@ -6,8 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-26 | ILLR | A — Triller Group to acquire significant SpaceX position (TikTok rival) | $4.20 AH (+446% vs $0.77) | $6.62 PM (+760%) | $4.46 | Day 4 - faded to $4.46 from $6.62 PM peak; NOT traded (extension ceiling >150% + zero AH volume) |
-| 2026-06-30 | BTCT | None (unverified; low-float crypto bounce/squeeze) | $1.77 AH (+139.2% @18:50 ET) | $1.39 PM (+88.0%) | $1.39 PM | 🆕 Day 1 - winner; late-AH-tail surge (peaked after last scan); NOT traded; AH peak beat PM |
+| 2026-06-30 | BTCT | None (unverified; low-float crypto bounce/squeeze) | $1.77 AH (+139.2% @18:50 ET) | $1.39 PM (+88.0%) | $0.68 | Day 2 - CRASHED to $0.68 (-51% from $1.39 PM peak); NOT traded — correct |
+| 2026-07-01 | JEM | None (unverified; low-float squeeze, +267% Jun 30 reg) | $12.67 AH (+219% vs $3.97) phantom | $9.27 PM phantom | $4.13 (real book) | 🆕 Day 1 - phantom ramp; zero-volume bars, real Alpaca book stuck $4.03/$4.13; detected + correctly skipped; NOT tradeable |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -26,6 +26,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-05-04 | MASK | Financing news | $2.11 | $2.58 | — | $1.90 | Faded |
 | 2026-05-05 | EZGO | None | $2.03 | $2.85 | $0.16 | $0.03 | ⚠️ CRASH (-99%) |
 | 2026-05-06 | OSG | Q1 earnings beat | $6.19 | $5.93 | — | — | Faded |
+| 2026-06-26 | ILLR | A — Triller/SpaceX position | $4.20 AH | $6.62 PM | — | $3.77 | Day 6: faded to $3.77 from $6.62 PM peak; NOT traded (ceiling >150% + zero AH vol) |
 | 2026-05-07 | AIIO | $100M acquisition | $0.94 | $0.88 | $1.30 | $9.20 | 🚀 RUNNER (+878%!) |
 | 2026-05-11 | HTCO | Governance approval | $8.00 | $8.78 | — | $7.25 | Modest fade |
 | 2026-05-12 | WOK | Unknown | $11.40 | $10.85 | $2.76 | $1.47 | ⚠️ CRASH (-87%) |

@@ -143,3 +143,94 @@ No SPIKE→FADE-only "least bad" entry taken. Re-check 23:30 for ALZN 2nd-scan c
 **Actions taken:**
 - Sold 41 GANX @ $1.97 (real fill), P&L -$17.22 (-17.6%). Grade B hard stop hit. Moved to Closed Positions.
 - No open positions remaining.
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**JEM (707 Cayman Holdings)** — Wholesale Distributors — *headline mover, but uninvestable phantom ramp*
+- Catalyst: unverified (low-float IPO/squeeze; ran +267.6% in Jun 30 regular session, then AH melt-up)
+- Previous Close (Jun 30 regular): $3.97
+- AH last night: Yahoo peak **$12.67 (+219% vs $3.97 close)** at 00:10 CET (18:10 ET)
+- Premarket now: Yahoo $9.27 fading (04:00 ET), **but real Alpaca book still bid $4.03 / ask $4.13** — no fillable liquidity at the ramped price
+- Hypothetical P&L (AH entry → PM peak): **N/A — not fillable.** Every AH/PM 5m bar prints 0 volume; the real two-sided book never left ~$4
+- Float: unknown (scan returned 0) | Market Cap: ~$1.5M (stale)
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — JEM appeared in the 00:00 and 00:30 CET scans (Day +267.6%, AH ramp $9.95→$12.69)
+- The scanner surfaced it AND correctly skipped it: illiquid phantom ramp (zero-volume bars, Alpaca quote $4.03/$4.13 vs Yahoo $9.77), plus Total% ~+687% is ~5x the +150% extension ceiling, VRatio 0.5x fails the >5x override. Multiple independent skip reasons.
+- Confirmed this morning: the real book is *still* $4.03/$4.13 (stale 16:58 ET) — the $9–12 Yahoo prints were never tradeable. **Correct skip, not a scanner failure.**
+- Scanner gap: none. This is the phantom-ramp filter working as intended. The night's biggest raw mover was uninvestable.
+
+**No genuine investable AH→PM winner tonight.** JEM (phantom) and BTOG (+71% AH, same zero-volume phantom, book $1.06/$1.43) were both correctly skipped. LGPS faded (AH peak $1.34 > PM peak $1.17). The only real, liquid setup was ALZN, which is roughly flat.
+
+### Baseline Tracking
+
+- Days tracked: **40** (was 39 + 1)
+- Winners detected by scanner: **34/39 (87.2%)** — JEM detected (added to list). Day-39 BTCT remains excluded (late-AH-tail).
+- Winner selected for paper trade: **22/39 (57.9%)** — JEM correctly *not* selected (uninvestable phantom ramp; there was no fillable winner to trade tonight).
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+Live premarket scan (04:20 ET): 5 hits — JEM +133% (phantom), LGPS +50.7%, BTOG +35.2% (phantom), EHGO +22.3% (bounce off a -50% crash), LGO +17.1%.
+
+AH reconstruction (`--ah-history`, Jun 30 16:00–20:00 ET):
+- **JEM**: $3.71 (16:15) → ramp began 17:20 → peak **$12.67 @ 18:10 ET** → closed AH $10.14. Zero-volume bars throughout. Phantom.
+- **BTOG**: peak $2.11 (+71.5%) near 18:00–18:30 ET. Zero-volume phantom; real book $1.06/$1.43.
+- **LGPS**: peak $1.34 @ 16:15 ET (early), faded to $1.01–1.17 range. SPIKE→FADE.
+- **EHGO**: stayed ~-50% all AH (down day); PM +22% is a low bounce, still far below $2.67 close.
+- **LGO**: small drift $0.63→$0.71 (+7.6%).
+
+### Open Position P&L (Alpaca)
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| ALZN | $1.31 | +9.2% | None | 23:30 CET | $1.31 | 04:05 ET | — (open) | -€1.46 | -1.5% | 🟡 Open |
+
+ALZN is the only Alpaca fill. PM $1.28 (04:22 ET), oscillating $1.23–1.31, roughly flat vs entry. Exit decision handled by position-evaluation.md at 10:30 CET — not here.
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits yet)
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET). Full coverage — entry window captured.
+- Candidates found: ALZN (entered), LGPS/JEM/BTOG (skipped, documented).
+- Retrospective matches: JEM, BTOG, LGPS all appeared in evening scans. No missed movers.
+
+### Missed Opportunities
+
+No significant missed opportunities. Every retrospective mover was surfaced in the evening scans and correctly classified (JEM/BTOG phantom, LGPS fade).
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| JEM | $12.67 (+219%) | 00:10 CET | Build (phantom) | $9.27 | -27% | +133% | Phantom — never fillable; AH peak > PM peak |
+| BTOG | $2.11 (+71%) | ~00:30 CET | Build (phantom) | $1.69 | -20% | +35% | Phantom — book $1.06/$1.43; AH peak > PM peak |
+| LGPS | $1.34 (+84%) | 22:15 CET | Spike→fade | $1.17 | -13% | +60% | Fade correct; AH peak > PM peak |
+| ALZN | $1.40 (+21%) | 22:20 CET | Spike→hold | $1.31 | -6% | +11% | Held near high; traded (real book) |
+
+**AH-peak-vs-PM-peak check:** All four had AH peak ≥ PM peak (AH was the better exit). For the two phantoms this is moot (no fills). ALZN's real move was modest and held.
+
+### Notes
+
+- **Phantom-ramp night.** Both headline AH movers (JEM +1073% Yahoo, BTOG +71%) were zero-volume phantom ramps with real books stuck near the regular close. The phantom filter (zero-vol bars + Alpaca quote mismatch) worked correctly on both. This is the JEM/YOOV/BTOG pattern — Yahoo prints huge AH gains on illiquid single ticks that never trade. Do **not** treat these as detection misses.
+- **PM-only gapper tracking:** biggest raw PM mover = JEM. Classified as **AH→PM continuation** (had AH footprint, detectable) but **uninvestable** (phantom, 0 volume, book never left ~$4). Not a PM-only gapper; not a scanner failure.
+- **Late-AH-tail tracking:** none tonight. JEM's decisive surge (17:20→18:10 ET) fired inside the scanned window (00:00/00:30 CET scans caught it). No late-tail case.
+- **Fade-rule tracking:** LGPS skipped as SPIKE→FADE + no catalyst (AH peak $1.34 @ 22:15 CET) → PM peak $1.17 stayed **below** AH peak. Fade rule **correct**. Float 6.3M (correct-skip contrast, mid-float — consistent with the "faders that stay faded aren't ultra-low-float" read).
+- **Coverage-failure tally:** none tonight (7/7). No recurrence.
+- **ALZN:** entered @ $1.31 with Grade None (no catalyst, learning-phase rule). Modest HOLD pattern, no PM follow-through so far. Exit handled at 10:30 CET.
+
+### Price Charts
+
+```
+JEM — 2-Day (5-min), phantom ramp
+Prev Close: $3.97 (Jun 30 reg) | AH peak $12.67 @ 18:10 ET | PM $9.27 @ 04:00 ET
+Real Alpaca book throughout: bid $4.03 / ask $4.13 — the ramp is not fillable.
+16:15 $3.71 ─ 17:25 $6.99 ─ 17:45 $9.74 ─ 18:10 $12.67 (peak) ─ 19:55 $10.14 ─ PM $9.27→$8.07
+
+ALZN — real book, modest hold
+Entry $1.31 (23:30 CET) | AH peak $1.40 @ 16:20 ET | PM $1.31 @ 04:05 ET | now ~$1.28
+```
