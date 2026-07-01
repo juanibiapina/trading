@@ -72,6 +72,31 @@ Regular-session watch candidates from 21:30 (LHAI, WMTN, ABVN, EHGO, STKE, CLEV)
 |--------|-----------|-----------|-------|-------|
 | JEM | $4.98 (ask) | 23:00 CET (5:00 PM ET) | Day -19.1% but AH reclaims +54% above close, AH% rising ≥2 scans, real book, new AH high 16:45 ET | Compare PM peak vs $4.98 to test whether dead-cat filter should become conditional |
 
+## Scan 23:30 CET (5:30 PM ET) — AH, entry-eligible
+
+`scan.py --all` (AFTERHOURS): **8 hits.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $3.21 | -19.1% | +51.7% | $4.87 | +22.7% | 7.0M | 21.1M | 0.3x | ~4.5M | Wholesale Distributors |
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $2.66 | +104.6% | +17.7% | $3.13 | +140.8% | 3.5M | 33.9M | 0.1x | 1.4M | Wholesale Distributors |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.99 | -20.8% | +16.2% | $1.15 | -8.0% | 1.3M | 874K | 1.5x | 549K | REIT |
+| USDE | [TV](https://www.tradingview.com/chart/?symbol=USDE) | $2.08 | -24.4% | +13.5% | $2.36 | -14.2% | 350K | 224K | 1.6x | 5.5M | Packaged Software |
+| HUMA | [TV](https://www.tradingview.com/chart/?symbol=HUMA) | $0.67 | -13.8% | +8.5% | $0.73 | -6.5% | 240K | 26.6M | 0.0x | 244.5M | Biotechnology |
+| STKE | [TV](https://www.tradingview.com/chart/?symbol=STKE) | $1.60 | +36.8% | +6.9% | $1.71 | +46.2% | 148K | 673K | 0.2x | 25.9M | Financial Conglomerates |
+| CAST | [TV](https://www.tradingview.com/chart/?symbol=CAST) | $4.86 | -27.7% | +9.1% | $5.30 | -21.1% | 97K | 15.7M | 0.0x | 16.5M | Internet Software/Services |
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.21 | +29.2% | +8.3% | $1.31 | +39.9% | 76K | 268K | 0.3x | 909K | Packaged Software |
+
+**SIP verification (bars from 20:00Z / 16:00 ET, fresh to ~17:15 ET):**
+- **EHGO** (NEW to AH — 21:30 appearance was regular session, doesn't count toward ≥2 AH-scan gate) — REAL accumulation. Consolidated $2.42–2.70 (16:00–16:50 ET), then **broke out at 17:00 ET**: $3.20 high / 1.12M sh / 7,519 trades → **peak $3.48 @17:05 ET** / 1.30M sh / 9,496 trades. Last 3 bars **declining**: close $3.35 (17:05) → $3.13 (17:10) → $2.97 (17:15); Yahoo timeline chops $2.69–2.83 after. Off peak ~-15%. Positive Day +104.6% (NOT a dead-cat), float 1.4M (ideal), Total% +140.8% (under 150% ceiling). Book (stale @16:51 ET): bid $2.55 / ask $2.61. **Catalyst:** "breakthrough AI product platform" (buzzword, drove intraday +65–85%) **BUT active heavy dilution** — $750K registered direct offering priced at **$1.00/share** closing today (July 1), on top of a $1.479M offering closed June 25. Dilution at $1.00 vs $2.66+ price = **Grade D overhang**. Stock has whipsawed $6.75→$1.30 in weeks. **Two disqualifiers: (1) only 1 AH scan — fails the ≥2-AH-scan confirmation gate; (2) early peak (17:05 ET) now fading across 3 bars.** Plus dilution. **Skip live; top watch for 00:00** — needs to confirm a 2nd AH scan AND hold/rebuild, but the $1.00 dilution keeps grade weak even then.
+- **JEM** — continue **DEAD-CAT-OVERRIDE WATCH**. Real accumulation, AH% still rising across scans: +36.8% (22:30) → +38.9% (23:00) → +51.7% (now). Peak $5.47 @16:50 ET, now fading to $4.82 (17:15 ET, -12% off peak). Real book bid $4.94 / ask $4.98. Day -19.1% (≤-15% dead-cat zone) but reclaims +22.7% above close. Catalyst still weak (AI/blockchain "exploration" PR) + F-1 dilution overhang → Grade C. **Skip live** (hypothetical already recorded at 23:00 @ $4.98; entry unchanged, still ~$4.98 book).
+- **WHLR** (Total -8.0%, below close) / **USDE** (Total -14.2%, below close) / **HUMA** (Total -6.5%, float 244.5M, VRatio 0.0x) / **CAST** (Total -21.1%, below close, VRatio 0.0x) — dead-cat bounces still under their regular close and/or thin. Skip.
+- **STKE / WCT** — thin AH (VRatio 0.2x / 0.3x, tiny AH vol). No real spike. Skip.
+
+**Decision: No live entry.** EHGO is the only fresh real AH build with positive day + ideal float, but it fails the ≥2-AH-scan gate (first AH appearance), is fading off an early 17:05 peak, and carries active $1.00/share dilution → skip live, top watch for 00:00. JEM stays in dead-cat-override watch (skip live, hypothetical tracked). All others dead-cat or thin. No candidate clears the entry gates tonight.
+
+**Watch for 00:00 CET:** EHGO — if it confirms a 2nd AH scan >10% AND holds/rebuilds within ~20% of $3.48, re-evaluate (dilution still caps grade). JEM — track PM reclaim vs $4.98 hypothetical.
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
