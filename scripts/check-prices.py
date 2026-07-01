@@ -208,7 +208,8 @@ def main():
             print(f"\n{'=' * 60}")
             print(f"{ticker} — {info['name']}")
             print(f"Date: {info['date']}  |  Prev Close: ${prev:.2f}")
-            print(f"PM High: ${info['pm_high']:.2f}  |  PM Low: ${info['pm_low']:.2f}  |  PM Vol: {fmt_number(info['pm_volume'])}")
+            pm_vol_str = fmt_number(info['pm_volume']) if info['pm_volume'] else "n/a (Yahoo omits ext-hours vol)"
+            print(f"PM High: ${info['pm_high']:.2f}  |  PM Low: ${info['pm_low']:.2f}  |  PM Vol: {pm_vol_str}")
             if prev > 0:
                 pm_chg = ((info['pm_high'] - prev) / prev) * 100
                 print(f"PM Peak Change: {pm_chg:+.1f}%")
@@ -216,7 +217,8 @@ def main():
             print(f"  {'Time':<8} {'Price':>8} {'Vol':>8} {'Chg%':>8}")
             for bar in info["bars"]:
                 chg = ((bar["price"] - prev) / prev * 100) if prev > 0 else 0
-                print(f"  {bar['time']:<8} ${bar['price']:>7.2f} {fmt_number(bar['volume']):>8} {chg:>+7.1f}%")
+                vol_str = fmt_number(bar["volume"]) if bar["volume"] else "\u2014"
+                print(f"  {bar['time']:<8} ${bar['price']:>7.2f} {vol_str:>8} {chg:>+7.1f}%")
 
     elif args.ah_history:
         # Fetch all tickers in parallel to avoid sequential timeout accumulation
@@ -240,7 +242,8 @@ def main():
             print(f"\n{'=' * 60}")
             print(f"{ticker} — {info['name']}")
             print(f"Date: {info['date']}  |  Prev Close: ${prev:.2f}")
-            print(f"AH High: ${info['ah_high']:.2f}  |  AH Low: ${info['ah_low']:.2f}  |  AH Vol: {fmt_number(info['ah_volume'])}")
+            ah_vol_str = fmt_number(info['ah_volume']) if info['ah_volume'] else "n/a (Yahoo omits ext-hours vol)"
+            print(f"AH High: ${info['ah_high']:.2f}  |  AH Low: ${info['ah_low']:.2f}  |  AH Vol: {ah_vol_str}")
             if prev > 0:
                 ah_chg = ((info['ah_high'] - prev) / prev) * 100
                 print(f"AH Peak Change: {ah_chg:+.1f}%")
@@ -248,7 +251,8 @@ def main():
             print(f"  {'Time':<8} {'Price':>8} {'Vol':>8} {'Chg%':>8}")
             for bar in info["bars"]:
                 chg = ((bar["price"] - prev) / prev * 100) if prev > 0 else 0
-                print(f"  {bar['time']:<8} ${bar['price']:>7.2f} {fmt_number(bar['volume']):>8} {chg:>+7.1f}%")
+                vol_str = fmt_number(bar["volume"]) if bar["volume"] else "\u2014"
+                print(f"  {bar['time']:<8} ${bar['price']:>7.2f} {vol_str:>8} {chg:>+7.1f}%")
     else:
         # Fetch all tickers in parallel
         results = {}

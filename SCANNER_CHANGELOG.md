@@ -36,6 +36,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: float <50M, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
+- **Phantom-ramp detection uses the Alpaca book, not Yahoo ext-hours volume** — Yahoo's 5-min AH/PM bars report no volume for any ticker (real or phantom), so `--ah-history`/`--pm-history` show `Vol: n/a`; zero-volume bars are not phantom evidence. Classify a phantom only from a Yahoo ext-hours price far above the real Alpaca bid/ask (`broker.js quote`) or `ask $0.00 x0` (basis: JEM Jun 30 Yahoo AH $12.67 vs book ~$4)
 - **AH-liquidity sanity check before entry** — confirm `broker.js quote` shows a real two-sided after-hours book (non-zero ask price with size, non-zero bid) before sizing an order; an `ask $0.00 x0`/zero-size book means the TradingView `AH Vol`/`VRatio` is stale regular-session volume, not real AH liquidity — skip as illiquid (basis: TII Jun 26 VRatio 4.9x but `ask $0.00 x0`; recurring NEXR zero-AH-volume ramp pattern)
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
@@ -59,6 +60,29 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-07-01 — Kill the Spurious "Zero-Volume Bars" Phantom Tell (Yahoo Ext-Hours Vol)
+
+**Context:** June 30→July 1 was another clean, well-run night. Full coverage (7/7 scans), the AH-liquidity sanity check (Jun 26) fired correctly — ALZN was entered with its real two-sided book confirmed, while YOOV (`ask $0.00 x0`), JEM (+1073% Yahoo AH) and BTOG (+71%) were all skipped as phantom/illiquid ramps. Detection baseline 87.2% (34/39), selection 57.9% (22/39). The scanner and entry gates did their job; touching thresholds would be guessing against a working system. The one real, in-scope defect surfaced while verifying the phantom-detection logic: the morning-eval logs repeatedly cite **"zero-volume bars throughout"** as evidence a mover is a phantom (Jun 30 JEM: "Zero-volume bars throughout. Phantom."; the Notes even called it "the phantom filter (zero-vol bars + Alpaca quote mismatch)"). Live testing of `check-prices.py --ah-history` / `--pm-history` shows this is **false reasoning**: Yahoo's 5-min extended-hours bars return volume=0 for *every* ticker — the phantom JEM, the real traded ALZN, and the real traded GANX all show `AH Vol: 0` and 0 on every bar. The volume column and the `AH/PM Vol` header are a systematic Yahoo endpoint limitation, not a phantom signal. The tool was printing a hard "0" that reads like a genuine no-volume finding, so evals kept citing it as corroborating phantom evidence when it actually says nothing. The reliable phantom tell — already used and codified — is the divergence between the Yahoo ext-hours *price* and the real Alpaca book (`broker.js quote`), e.g. JEM's Yahoo AH $12.67 vs its Alpaca book stuck near $4.
+
+**Evaluation of previous changes:**
+- 2026-06-30 Feed-lag vs true-tail split: **Insufficient data (no case).** The Jul 1 eval recorded "Late-AH-tail tracking: none tonight" — JEM's decisive surge (17:20→18:10 ET) fired inside the scanned window (00:00/00:30 CET caught it), so there was no late-AH-tail case to apply the new sub-label to. The tracker did not misfire on a no-case night. Still open.
+- 2026-06-26 AH-liquidity sanity check: **Working.** The Jul 1 eval/scan log shows YOOV skipped as "illiquid (no AH book)" (`ask $0.00 x0`) and JEM/BTOG skipped as zero-real-book phantoms, while ALZN was entered only after its real two-sided book was confirmed. No order sized against a phantom. This is exactly the guard's job, and it also exposed today's defect (the guard is the *correct* phantom tell; the Yahoo volume column is the wrong one).
+- 2026-06-25 Align morning-eval P&L with Alpaca: **Working.** The Jul 1 eval Step 3 pulled ALZN read-only from Alpaca (entry $1.31, real fill), recorded only that fill, kept JEM/BTOG as hypothetical/phantom in the diagnostic, and deferred hold/sell to position-evaluation. No fictional ledger P&L.
+- 2026-06-24 Investability label on PM-only gapper tracker: **Working.** The Jul 1 eval classified its biggest raw PM mover (JEM) as an AH→PM continuation (had AH footprint) but **uninvestable** (phantom, book never left ~$4). Label applied; tally unchanged.
+- 2026-06-19 Scan-coverage check: **Working.** Jul 1 recorded `Evening scans ran: 7 of 7`, no coverage failure.
+- 2026-06-18 / 2026-06-17 fade-rule trackers: **Working.** LGPS skipped SPIKE→FADE (AH peak $1.34 @ 22:15 CET) with PM peak $1.17 staying below → rule correct, tally held.
+- 2026-06-12 dead-cat-override watch / 2026-06-09 ceiling-override watch: **Insufficient data (still open).** No qualifying candidate Jun 30 night (JEM stayed below its regular close → genuine dead-cat/phantom, no override flag).
+
+**Changes:**
+1. **scripts/check-prices.py** — `--ah-history` and `--pm-history` no longer print a misleading `0` for extended-hours volume. When the summed ext-hours volume is 0 (the normal case — Yahoo omits it), the header now shows `AH/PM Vol: n/a (Yahoo omits ext-hours vol)` and each per-bar `Vol` cell shows `—` instead of `0`. If Yahoo ever does return real ext-hours volume (non-zero), the real numbers still print unchanged.
+   - Why: the hard `0` reads like a real no-volume finding and was being cited in evals as corroborating phantom evidence, when in fact every ticker (real and phantom) shows 0 here. Relabeling it as unavailable removes the false signal at the source.
+   - Hypothesis: the next eval that inspects `--ah-history`/`--pm-history` no longer records "zero-volume bars" as a phantom tell. Measurable: (1) no eval after today cites Yahoo ext-hours bar volume as phantom evidence; (2) phantom calls cite the Alpaca book divergence (`broker.js quote`) instead. If a future eval still leans on "zero-volume bars," the relabel/prompt note didn't take and needs reinforcement.
+2. **prompts/morning-evaluation.md** — Added a "Phantom-ramp detection (do NOT use Yahoo ext-hours volume)" note to Step 2: Yahoo 5-min ext-hours bars report no volume for any ticker, so zero-volume bars are not phantom evidence; classify a phantom only from the Yahoo ext-hours *price* vs the real Alpaca book (`broker.js quote` — price far above a stuck bid/ask, or `ask $0.00 x0`), citing JEM Jun 30 ($12.67 Yahoo AH vs ~$4 book) as the example.
+   - Why: the flawed "zero-volume bars" reasoning appeared in the actual Jun 30 eval Notes; the note redirects future evals to the one reliable phantom tell that is already codified in the entry flow.
+   - Hypothesis: same measurable as change 1 — future evals classify phantoms from book divergence, not Yahoo bar volume.
+
+**Updated process:** Phantom-ramp classification relies on the Alpaca book divergence (`broker.js quote`), not on Yahoo extended-hours bar volume (which is uniformly absent). (No scanner parameters changed.)
 
 ### 2026-06-30 — Split Late-AH-Tail Tracker Into Feed-Lag vs True-Tail (BTCT)
 

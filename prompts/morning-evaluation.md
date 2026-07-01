@@ -42,6 +42,8 @@ python3 scripts/check-prices.py --ah-history TICKER1 TICKER2 ...
 
 A forced `python3 scripts/scan.py --all --session afterhours` can still be logged as a secondary diagnostic, but do **not** rely on it as the primary retrospective source. Overnight TradingView postmarket fields often return 0 hits even when the live evening scans clearly found AH movers.
 
+**Phantom-ramp detection (do NOT use Yahoo ext-hours volume):** Yahoo's 5-min extended-hours bars report **no volume** for every ticker — real and phantom alike (`--ah-history`/`--pm-history` now show `AH/PM Vol: n/a` and `—` per bar). Zero-volume bars are therefore **not** evidence of a phantom; do not cite them as such. The reliable phantom tell is a large gap between the Yahoo extended-hours *price* and the real Alpaca book: run `node scripts/broker.js quote SYM` and compare. A phantom ramp prints a Yahoo AH/PM price far above a bid/ask stuck near the regular close, or shows `ask $0.00 x0` (e.g. JEM Jun 30: Yahoo AH $12.67 vs Alpaca book ~$4). Classify a mover as a phantom only from that book divergence, never from Yahoo bar volume.
+
 From the results, identify the **best AH→premarket trade** — the stock that:
 - Spiked in after-hours yesterday
 - Is still running or peaking in premarket now
