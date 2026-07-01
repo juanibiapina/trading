@@ -60,10 +60,12 @@ better **data + review surface** (graphs, sources) are high-value enablers.
    pattern work uses existing data (no new infra) and is surfaceable through the
    now-built Init 5 charts. Research first; pilot only once the data justifies.
 3. **Initiative 5 - better data + review surface (graphs, sources).** Email-
-   charts rollout (path b) is mechanically **done** (charts committed + linked,
-   verified). Remaining half is data-source quality (Yahoo gaps vs Alpaca/
-   financialdatasets.ai). Lower money-impact than the Init 6 census, so it cedes
-   the pilot slot to Init 6.
+   charts rollout (path b, GitHub blob links) **failed in the field** — Juan
+   (2026-06-30) reports the link 404s (private repo) and wants the chart embedded
+   in the email body. Switching to path (a): host each PNG publicly and inline
+   it with `<img src>`. Remaining half is data-source quality (Yahoo gaps vs
+   Alpaca/financialdatasets.ai). Lower money-impact than the Init 6 census, so it
+   cedes the pilot slot to Init 6.
 4. **Initiative 1 - earlier volume-lead entries.** Refines the existing edge and
    overlaps Init 6's minute-volume analysis, so it rides on that data work.
    Lower standalone priority.
@@ -240,6 +242,18 @@ climb -> after-hours build to ~$4.20 (amber) -> premarket spike to ~$7 then fade
 (blue) with the volume surge in the panel. First live use: tomorrow's daily
 email. Remaining check: confirm the committed PNG actually displays when Juan
 opens the GitHub blob link (it resolves only after the cycle's git push).
+
+**Update (2026-06-30) — path (b) is DEAD; switch to path (a) inline images.**
+Juan's reply to the 06-29 email: "The link to the chart didn't work. Also I'd
+like the chart image directly in the email." The GitHub blob link 404s (verified)
+because the repo is private, so Gmail and any not-logged-in viewer can't open it,
+and a blob URL can't render inline regardless. Path (b) is abandoned. Reviving
+path (a): host each daily PNG at a public https URL and inline it with
+`<img src="https://...">` (Gmail proxies remote https images; base64 data URIs
+are stripped, so hosting is mandatory). InboxKit needs no new features — it
+already sends `html`; the only gap is a zero-auth public host. Next step: choose
+a host (public gist raw, Cloudflare R2, or a dedicated public assets repo) and
+update `prompts/daily-email.md` to emit inline `<img>` instead of blob links.
 
 Prior next step (now obsolete): wire PNG attachments into
 `scripts/send-email-inboxkit.js`.

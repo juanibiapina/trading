@@ -6,6 +6,29 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-06-30 — re: Trading Scanner Report - 2026-06-29
+
+**Juan said:** "The link to the chart didn't work. Also I'd like the chart image
+directly in the email. Let me know if inboxkit needs new email features."
+
+**Interpretation:** Path (b) of Initiative 5 (commit charts + link the GitHub
+blob URL) has failed on both counts. The `github.com/.../blob/...` link 404s
+(verified) because the repo is private — Gmail/anyone not logged into GitHub
+can't open it — and a blob URL can never render inline anyway. Juan wants the
+chart **embedded in the email body**, not linked. That requires path (a): host
+each PNG at a public https URL and inline it with `<img src>`. The "inboxkit
+needs new email features" note is a false lead — InboxKit already sends `html`,
+and Gmail proxies remote https images; the gap is hosting, not the send API
+(InboxKit has no attachment API, confirmed 2026-06-25).
+
+**Action:** Routed to Initiative 5. Flipped the recommended delivery path from
+(b) to (a) and marked path (b) dead in the roadmap. Next scanner/infra run: pick
+a zero-auth public host for the daily PNG (e.g. a raw-served public gist, R2/
+Cloudflare, or a public assets repo) and switch `prompts/daily-email.md` to emit
+`<img src>` inline instead of blob links.
+
+---
+
 ### 2026-06-26 — re: Trading Scanner Report - 2026-06-26
 
 **Juan said:** "+760% is exactly the kind of stuff we want to catch!! it's
