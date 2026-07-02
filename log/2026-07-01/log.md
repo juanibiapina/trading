@@ -169,3 +169,99 @@ Regular-session watch candidates from 21:30 (LHAI, WMTN, ABVN, EHGO, STKE, CLEV)
 - Hard stop $1.18 (-10%) not hit. Position near breakeven.
 
 **Note:** Confirm fill at 14:30 CET run; record real fill price and move ALZN to Closed Positions.
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**USDE (StablecoinX Inc.)** — Packaged Software (crypto/stablecoin treasury) — *real, liquid AH→PM winner; DETECTED but wrongly skipped*
+- Catalyst: crypto/stablecoin-treasury news (specifics unverified premarket) — real-volume AH melt-up, not a phantom. Likely Grade A/B given the 1M+ share/16k+ trade bars.
+- Jun 30 close: $2.75 | Jul 1 regular close: ~$2.08 (Day **-24.4%**, a down day → dead-cat starting point)
+- AH last night: chopped $2.1–2.5 until 17:45 ET, then exploded → **peak $7.69 @18:30 ET (SIP)** / Yahoo $7.30. That is **+270% from the $2.08 reg close / +180% from the $2.75 prior close.**
+- Premarket now: $5.61 (+104% vs $2.75); PM peak **$5.70 @04:00 ET**
+- Hypothetical P&L: AH breakout entry ~$4.40 (17:55 ET) → AH peak $7.69 = **+75%**; → PM peak $5.70 = **+30%**. AH was the better exit (AH peak > PM peak).
+- Float: 5.5M | Market Cap: ~$12M
+- **Liquidity: real.** SIP bars during the run: 675K→951K→1.35M→1.14M→1.11M sh/bar, 7,271→16,763 trades/bar, VWAP $3.59→$6.57. Fully fillable — this was a tradeable winner, not a phantom.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — USDE appeared in every AH scan (23:00, 23:30, 00:00, 00:30 CET) and at **00:30 CET the scanner showed the real move: AH $6.54 (+214%), VRatio 5.3x.** SIP confirms $6.54 exactly (22:10Z bar: H $6.88 / C $6.54 / VWAP $6.12 on 1.1M sh, 17,654 trades). It was **not** a bad print.
+- **Why we didn't act — verification-layer false-negative (the key finding):**
+  1. **TradingView postmarket feed lag.** At the 00:00 CET scan (18:00 ET), USDE was really $5.98 (+117%) on a 1.35M-share bar, but TradingView showed a stale AH $2.53 / Total -8% / VRatio 1.7x → classified dead-cat. The feed lagged ~30 min during the fast move.
+  2. **Stale SIP/quote verification.** At the 00:30 CET scan TradingView caught up (+214%/$6.54), but the live SIP-bar pull and the `broker.js quote` both returned stale ~16:35–16:44 ET data ($2.52/$2.55, SIP high $2.79) that didn't reflect the 17:45+ ET explosion → the real +214% was wrongly called a **BAD PRINT** and skipped. (Confirmed this morning: `broker.js quote USDE` *still* returns `bid $2.52 / ask $2.55 @16:44 ET` — the free-tier quote endpoint serves a stale cached quote; the SIP bars I pulled retrospectively show the real $6–7.69 run.)
+- This is a **data-source reliability failure, not a detection miss.** The scanner surfaced USDE; the price/volume feeds serving the live scan (both TradingView and the verification SIP/quote) were stale during the fast move, and the bad-print heuristic fired a false negative on a real winner.
+- Scanner gap / fix: add a **freshness check** to the verification step — compare the SIP-bar / quote timestamp against the scan time. If the "trusted" verification source is stale (timestamp far behind the scan), do **not** use it to override a strong scanner signal (high VRatio + large AH%); treat the scanner reading as unconfirmed-but-live rather than a bad print, and re-pull. Also flag TradingView feed lag when a name's AH% jumps discontinuously between scans (−8% → +214% in one 30-min step is a lag artifact, not reality).
+
+### Baseline Tracking
+
+- Days tracked: **41** (was 40 + 1)
+- Winners detected by scanner: **35/40 (87.5%)** — USDE detected (added to list). Day-39 BTCT remains excluded (late-AH-tail).
+- Winner selected for paper trade: **22/40 (55.0%)** — USDE **NOT** selected (wrongly rejected as bad print by stale verification data). First genuinely-investable, liquid winner in a while that was detected but wrongly skipped — selection rate drops 57.9% → 55.0%.
+- Target: >80% detection
+- Status: **BASELINE MET** (detection) — but a **selection/verification failure** to fix.
+
+### Retrospective Scan Results
+
+Live premarket scan (04:20 ET): 6 hits — WHLR +138.5% (PM-only gapper), USDE +175% (winner, AH→PM continuation), JEM +30.8% (dead-cat-override fade), DSY +50%, SDEV +27.9%, BTOG +6%.
+
+AH reconstruction (SIP bars, Jul 1 16:00–20:00 ET):
+- **USDE**: down/chop to 17:45 ET, then ramp $2.85→$7.69 by 18:30 ET on 1M+ sh/bar, 16k+ trades/bar. Real, liquid. AH peak $7.69 > PM peak $5.70.
+- **DSY**: quiet to 18:05 ET, then broke out $2.95→$6.46 (18:15 ET) on 511K/389K-sh bars, held $5–6 through 19:55 ET. Real. Caught at 00:30 (+83.3%, VRatio 2.9x) but skipped on ≥2-AH-scan gate + stale book. AH peak ~$6.46 > PM peak $4.73.
+- **WHLR**: flat $1.0–1.4 all AH (peak $1.37 @19:10 ET, only +10%, thin ≤124K-sh bars). PM-only gapper (below).
+- **EHGO**: SPIKE→FADE off $3.48 early peak (17:05 ET). PM peak $2.67 stayed **below** AH peak — fade rule correct.
+
+### Open Position P&L (Alpaca)
+
+`broker.js positions`: **No open positions.** (ALZN SELL from the 10:30 position-evaluation run — fill confirmation is that run's job, not this one.)
+
+**No executed positions this session.** USDE was a real winner but was skipped (verification false-negative); no fill. It belongs in the Scanner Diagnostic as hypothetical (AH ~$4.40 → PM peak $5.70 = +30%), not here.
+
+**Total Realized P&L (Alpaca fills only): €0.00**
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET). Full coverage — entry window captured.
+- Candidates found: USDE (detected, wrongly skipped), DSY, JEM, EHGO, WHLR, WCT, and thin names.
+- Retrospective matches: USDE, DSY, JEM, EHGO all appeared in evening scans. No missed movers — the failure was classification, not detection.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| USDE | +214% (AH $6.54, SIP-confirmed) | **Not a detection miss** — surfaced at 00:00/00:30 CET. Skipped by stale verification: TradingView feed-lagged at 00:00 ($2.53 vs real $5.98), then SIP/quote verification returned stale 16:44 ET data at 00:30 → false bad-print call. | Yes — hypo AH ~$4.40 → PM peak +30%, → AH peak +75%. Liquid/fillable. |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| USDE | $7.69 (+180% vs $2.75) | 18:30 ET | Build (real, 1M+ sh/bar) | $5.61 | -27% | +104% | Real winner; DETECTED, wrongly skipped; AH peak > PM peak |
+| DSY  | $6.46 (+141% vs $2.68) | 18:15 ET | Late Build (18:05 ET) | $4.32 | -33% | +61% | Real; skipped on ≥2-scan gate; AH peak > PM peak |
+| JEM  | $5.47 (+38% vs $3.97) | 16:50 ET | Spike→fade | $4.09 | -25% | +3% | Dead-cat-override; faded; AH peak > PM peak |
+| EHGO | $3.48 (+31%) | 17:05 ET | Spike→fade | $2.54 | -27% | +95% | Fade correct; PM peak $2.67 < AH peak |
+
+**AH-peak-vs-PM-peak check:** All four had AH peak > PM peak — AH was the better exit. **USDE AH peak +180% > PM peak +107%** — another extreme-runner data point where AH peak beat PM (the AH-peak-fade hypothesis; USDE at +180% is under the 250% threshold but still faded AH→PM). DSY (+141%) and EHGO also AH>PM.
+
+### Price Charts
+
+```
+USDE — 2-Day (5-min), real liquid AH→PM winner
+Jun30 close $2.75 | Jul1 reg close ~$2.08 (Day -24.4%) | AH peak $7.69 @18:30 ET | PM peak $5.70 @04:00 ET | now $5.61
+17:45 $2.90 ─ 17:50 $3.83 ─ 17:55 $4.38 ─ 18:00 $5.98 ─ 18:10 $6.56 ─ 18:30 $7.30/7.69 (peak) ─ 23:55 $5.84 ─ PM $5.70→$5.61
+SIP volume during run: 675K→951K→1.35M→1.14M sh/bar, 7.3k→16.8k trades/bar — fully fillable.
+
+WHLR — PM-only gapper (549K float REIT)
+Prev close $1.25 | AH flat $1.0-1.4 (peak $1.37 @19:10 ET, thin) | PM peak $2.66 @04:10 ET | now $2.16
+PM: 04:00 $2.36 ─ 04:05 $2.57 ─ 04:10 $2.66 (peak) ─ 04:15 $2.50 ─ 04:20 $2.27 (2 bars near peak then fade)
+
+DSY — real late-AH BUILD, faded into PM
+Prev close $2.68 | AH breakout 18:05 ET → peak $6.46 @18:15 ET | PM peak $4.73 @04:05 ET | now $4.32
+```
+
+### Notes
+
+- **KEY FINDING — verification-layer false-negative on a real winner (USDE).** For the first time in a while, a genuinely investable, liquid winner (+180% AH on 1M+ sh/bar) was **detected** by the scanner but **wrongly skipped** — not by a strategy gate but by **stale verification data**. Two stacked data failures: (1) TradingView postmarket feed lagged ~30 min at the 00:00 CET scan (showed $2.53 vs real $5.98); (2) the SIP-bar pull + `broker.js quote` returned stale ~16:44 ET data at 00:30, triggering a false "bad print" rejection of the real +214% read. **The bad-print heuristic fired a false negative because the trusted verification source was itself stale.** Fix: freshness-check the SIP/quote timestamp before letting it override a live scanner signal; flag discontinuous AH% jumps (−8%→+214% in one step) as feed-lag artifacts. This is a **data-reliability** fix, not a threshold change. (Confirmed 10:20 CET: `broker.js quote USDE` still returns the stale $2.52/$2.55 @16:44 ET.)
+- **Dead-cat-override angle on USDE.** USDE was also a dead-cat-override candidate: Day -24.4% (down big) that then reclaimed to +138% above the prior close **on real 1M-share volume**. Unlike the JEM/BYAH low-volume bounces, this reclaim was massive and real → this is the **strongest data point yet that the dead-cat filter should be conditional on real reclaim volume** (a Day-down stock reclaiming far above its close on sustained 1M+ sh/bar volume is not a dead cat). Tally with BYAH (Jun 11, hypo +72%) — dead-cat-override winners now include a huge one.
+- **DEAD-CAT-OVERRIDE WATCH outcome (JEM, from last night):** hypo entry $4.98 (23:00 CET) → PM peak $4.19 = **-15.9%**. JEM faded — supports the dead-cat filter *here* (low-volume, weak/dilution catalyst). Contrast with USDE (real-volume reclaim, big winner): the discriminator is **reclaim volume**, not the dead-cat label alone.
+- **Fade-rule tracking (EHGO):** skipped SPIKE→FADE off $3.48 early peak (17:05 ET). PM peak $2.67 stayed **below** AH peak → fade rule **correct**. Float **1.4M (ultra-low)** yet it did **not** re-explode above its AH peak — a low-float fader that stayed faded, which **weakens** the "low-float faders re-explode in PM" hypothesis (CRE/LNKS). Record as a correct-skip low-float contrast.
+- **PM-only gapper tracking:** biggest raw PM mover = **WHLR** (+112.7% vs $1.25, PM peak $2.66). AH was flat (<10%, thin) → **PM-only gapper** (structurally undetectable by the AH scanner). Investability: **holdable-marginal** — 2 consecutive 5-min bars near peak ($2.57, $2.66) then faded to $2.27 within 10 min; 549K float REIT. Not a scanner failure; do not count against detection.
+- **Late-AH-tail tracking:** none tonight. USDE's surge (17:45 ET) and DSY's breakout (18:05 ET) both fired **inside** the scanned window and were caught at 00:00/00:30 CET. No post-18:30-ET tail case.
+- **Coverage-failure tally:** none tonight (7/7). No recurrence.

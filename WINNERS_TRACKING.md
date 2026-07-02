@@ -6,8 +6,9 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-30 | BTCT | None (unverified; low-float crypto bounce/squeeze) | $1.77 AH (+139.2% @18:50 ET) | $1.39 PM (+88.0%) | $0.68 | Day 2 - CRASHED to $0.68 (-51% from $1.39 PM peak); NOT traded — correct |
-| 2026-07-01 | JEM | None (unverified; low-float squeeze, +267% Jun 30 reg) | $12.67 AH (+219% vs $3.97) phantom | $9.27 PM phantom | $4.13 (real book) | 🆕 Day 1 - phantom ramp; zero-volume bars, real Alpaca book stuck $4.03/$4.13; detected + correctly skipped; NOT tradeable |
+| 2026-06-30 | BTCT | None (unverified; low-float crypto bounce/squeeze) | $1.77 AH (+139.2% @18:50 ET) | $1.39 PM (+88.0%) | $0.82 | Day 3 - stayed crashed ~$0.82 (-41% from $1.39 PM peak); NOT traded — correct |
+| 2026-07-01 | JEM | None (unverified; low-float squeeze, +267% Jun 30 reg) | $12.67 AH (+219% vs $3.97) phantom | $9.27 PM phantom | $4.09 | Day 2 - phantom ramp fully unwound to real book ~$4.09; dead-cat-override hypo $4.98→PM $4.19 = -15.9%; correctly skipped |
+| 2026-07-02 | USDE | Crypto/stablecoin treasury (unverified specifics); real 1M+ sh/bar volume | $7.69 AH (+180% vs $2.75, +270% vs $2.08 reg close) @18:30 ET | $5.70 PM (+107%) | $5.61 | 🆕 Day 1 - REAL liquid winner; DETECTED (00:30 +214% VRatio 5.3x) but wrongly skipped as bad print (stale SIP/quote verification); hypo AH $4.40→PM $5.70 = +30% |
 
 ## Historical Winners (with multi-day outcome)
 
