@@ -65,6 +65,29 @@ No candidates found.
 
 **Decision:** No paper trades (observation-only per learning phase; entries start at 23:00 CET / 5:00 PM ET). UPC and ICON both show BUILD patterns with real SIP volume and fillable books — primary watch names for the 23:00 scan. Need each to hold >10% AH across the 23:00 scan and clear entry gates (Day% > -15%, Total% < 150%, not a fade). No catalyst search yet — will run at 23:00 for any that clear.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**AH session scan** (5:00 PM ET). Scanner returned 5 hits. This is the first entry-eligible scan of the night (learning-phase entries start at 23:00).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ICON | [TV](https://www.tradingview.com/chart/?symbol=ICON) | $1.04 | +0.0% | +35.6% | $1.41 | +35.6% | 6.5M | 783K | 8.3x | ~3.3M mcap | Marine Shipping |
+| CLRO | [TV](https://www.tradingview.com/chart/?symbol=CLRO) | $6.48 | +101.2% | +18.2% | $7.66 | +137.9% | 2.7M | 8.6M | 0.3x | 740K | Electronics/Appliances |
+| UPC | [TV](https://www.tradingview.com/chart/?symbol=UPC) | $6.32 | +13.7% | +31.2% | $8.29 | +49.1% | 2.3M | 8.0M | 0.3x | 326K | Pharmaceuticals: Major |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $2.49 | +1.6% | +17.3% | $2.92 | +19.2% | 399K | 117K | 3.4x | 1.1M | Commercial Printing |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.63 | -4.5% | +6.3% | $0.67 | +1.6% | 54K | 273K | 0.2x | 3.0M | Air Freight/Couriers |
+
+**Two-AH-scan qualifiers (>10% AH in ≥2 AH scans, 22:00+ CET):** ICON (22:30 +22% → 23:00 +35.6%) and UPC (22:30 +42.4% → 23:00 +31.2%). CLRO appeared in the 21:30 regular scan only (regular appearances don't count) — first AH scan tonight. CRE new. SLGB below 10% threshold.
+
+**SIP verification + live book (bars to 16:45 ET, quotes fresh at ~16:57-16:59 ET):**
+- **ICON** — Real accumulation: 670K → 1.78M → 1.18M → 1.06M → 811K → 341K → 1.33M → 1.40M sh/bar, 2K–8.8K trades/bar. AH peak $1.49 at **16:40 ET**. Live quote bid $1.19 / ask $1.20 x300 @ 16:59 (fresh) — now **-19.5% off the AH high, rolling over**. Peaked before 17:30 and declining = SPIKE→FADE. **Catalyst:** Icon Energy Corp (Greek LNG shipping); 4 searches (earnings, PR, 8-K) found **no ticker-specific catalyst** → no catalyst found.
+- **UPC** — Real volume (143K–763K sh/bar early), AH peak $9.69 at **16:20 ET** (very early), steady decline since: $8.85 → $8.30 → $8.10 by 16:45. Quote bid $8.02 / ask $8.17 @ 16:42, ~-16% off high. Clear SPIKE→FADE. **Catalyst:** Universe Pharmaceuticals (China pharma); already in a multi-day run — $2.96 close Jun 26 → $6.32 close Jul 2 (+113% over the week). No fresh Jul 2 PR/earnings surfaced in searches. Extended, no new catalyst.
+- **CLRO** — Holding best: dipped to $6.15, ramped $7.34 → $8.20 (peak 16:40 ET), live bid $7.59 / ask $7.70 @ 16:57 (only -6% off high). BUT Day% **+101.2%** — already exploded in the regular session; Total% +137.9% is an extended regular-session-continuation, not a fresh AH spike. Only **1 AH scan** (fails the 2-AH-scan gate).
+- **CRE** — AH peaked $4.37 at 16:30 ET, faded to $2.94–3.05 (**-30% off high**). Book bid $2.14 / ask $2.98 wide/stale @ 16:00. SPIKE→FADE, 1 AH scan.
+- **SLGB** — AH +6.3%, Total +1.6%, below the 10% threshold. Skip-tier.
+
+**Decision: No paper trades.** Both two-AH-scan qualifiers (ICON, UPC) peaked before 17:30 ET and are declining at entry time — a **SPIKE→FADE-only night among qualifiers**. Per the SPIKE→FADE rule, skip all rather than enter the least-bad option (SPIKE→FADE stocks are 0/10+ for PM continuation). CLRO holds better but fails the 2-AH-scan gate and is an extended (+101% Day) regular-session continuation. CRE faded -30%; SLGB sub-threshold. No dead-cat-override (no Day% ≤ -15% candidate) or ceiling-override (all under +150% Total%) flags apply. A skip here avoids a predictable loss; will re-scan at 23:30 / 00:00 for BUILD/hold patterns as later movers emerge.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
