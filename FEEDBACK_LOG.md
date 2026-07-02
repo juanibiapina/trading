@@ -6,6 +6,37 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-01 — re: Trading Scanner Report - 2026-06-30
+
+**Juan said:** "For the images, can I add a feature to inboxkit that would allow
+emails with images? Alternatively, is the trading repo safe to make public? If
+so, we could have HTML reports published as GitHub pages."
+
+**Interpretation:** Response to Initiative 5's open ask (inline charts). Juan
+offers two new delivery paths beyond the "host a PNG + `<img src>`" plan:
+- **(c) InboxKit image feature.** Juan owns InboxKit (repo at
+  `~/Sync/notes/zero`), so he can add attachment/inline-image support to the
+  send API. This removes the "no attachment API" blocker that killed the
+  earlier attach plan.
+- **(d) Public repo + GitHub Pages.** Make `juanibiapina/trading` public and
+  publish HTML reports (with charts) as GitHub Pages. This also gives a
+  zero-auth public host for the PNGs (solving path (a)'s hosting gap) and a
+  richer review surface than email — which is the broader Initiative 5 goal.
+
+Secrets check done: no credentials are committed. `broker.js` and
+`send-email-inboxkit.js` read all keys (Alpaca, InboxKit) from env vars; the
+only config-ish tracked file (`.config/dev-session`) is a harmless tmux layout.
+Repo is safe to make public from a secrets standpoint. Decision to publish is
+Juan's (it exposes the full strategy + trade history).
+
+**Action:** Routed to Initiative 5. Added paths (c) and (d) to the initiative
+and flagged the secrets-safety finding. These are the two most promising routes
+(both remove the hosting blocker); path (d) doubles as the "better review
+surface" half of Initiative 5. Left the pick to the next strategy-advance /
+infra run since choosing between them (and the make-public call) is Juan's.
+
+---
+
 ### 2026-06-30 — re: Trading Scanner Report - 2026-06-29
 
 **Juan said:** "The link to the chart didn't work. Also I'd like the chart image

@@ -255,6 +255,29 @@ already sends `html`; the only gap is a zero-auth public host. Next step: choose
 a host (public gist raw, Cloudflare R2, or a dedicated public assets repo) and
 update `prompts/daily-email.md` to emit inline `<img>` instead of blob links.
 
+**Update (2026-07-01) — Juan proposes two better paths (c, d).** Reply to the
+06-30 email: "can I add a feature to inboxkit that would allow emails with
+images? Alternatively, is the trading repo safe to make public? If so, we could
+have HTML reports published as GitHub pages." Two new options, both removing the
+hosting blocker:
+- **(c) InboxKit image feature.** Juan owns InboxKit (`~/Sync/notes/zero`), so
+  attachment/inline-image support can be added to its send API — this reverses
+  the 2026-06-25 "no attachment API" blocker. Would let
+  `send-email-inboxkit.js` attach or inline the PNG directly.
+- **(d) Public repo + GitHub Pages.** Make `juanibiapina/trading` public and
+  publish HTML reports (charts inline) as GitHub Pages. Doubles as a zero-auth
+  public PNG host (fixes path (a)'s only gap) AND delivers the "better review
+  surface" half of this initiative in one move — richer than email.
+- **Secrets-safety check (done 2026-07-01):** repo is safe to publish. No
+  credentials committed; `broker.js` (Alpaca) and `send-email-inboxkit.js`
+  (InboxKit) read all keys from env vars, and the only config-ish tracked file
+  (`.config/dev-session`) is a harmless tmux layout. The make-public decision
+  (exposes full strategy + trade history) is Juan's.
+
+**Recommended next step:** path (d) — highest leverage (solves inline charts +
+review surface together, no InboxKit code). Needs Juan's go on making the repo
+public. If he prefers to keep it private, fall back to (c).
+
 Prior next step (now obsolete): wire PNG attachments into
 `scripts/send-email-inboxkit.js`.
 
