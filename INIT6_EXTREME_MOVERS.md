@@ -28,11 +28,16 @@ kept as reference, marked *ref*).
 
 | Date | Ticker | Peak% | AH peak% | PM peak% | Lead | Detect | Invest | Cat | Catalyst | Float | Vol note | Outcome |
 |------|--------|-------|----------|----------|------|--------|--------|-----|----------|-------|----------|---------|
+| 2026-05-14 | EVOL | +300% *ref* | — | — | regular | regular-spike | ? | None | None found ("needs catalyst") | 3.7M | +300% regular session, only in pre-AH watchlist; no AH follow-up captured | — |
+| 2026-06-01 | HKIT | +293.8% | +293.8% ($... 16:00 ET) | <+254% | AH | AH-detect | uninvestable | None | None (negative news: investor lawsuits) | 336K | peaked at 16:00 open, faded -40pts from peak (SPIKE->FADE) | fade |
+| 2026-06-08 | CHAI | +416% | +416% ($4.29 17:20 ET) | +72% | AH | AH-detect | uninvestable | None | None (generic AI-stock lists only) | 18.3M | VRatio 8.6x real; +233%@16:45 fade -> new AH high +416%@17:20; over ceiling; faded AH->PM to +72% | fade |
 | 2026-06-09 | MSW | +292% | +292% ($5.18 ~18:00 ET) | +221% | AH | AH-detect | traded | C | Acquisition close + dilutive convertible notes | 4.6M | VRatio real, BUILD-and-hold, entered $3.24 | fade |
 | 2026-06-10 | CIIT | +140% *ref* | +14.9% (flat) | +140% | PM | PM-gapper | holdable | None | None found | — | flat AH; PM held +126-414% across 5h, opened +203% on 53M sh | continue |
+| 2026-06-10 | CPOP | +369% (erratic +597%) | +369% | — | regular | regular-spike | uninvestable | ? | None (multi-day blow-off) | 20.4M | +322% regular day, AH total +369%, history erratic prints to +597%; multi-day extension | fade |
 | 2026-06-11 | GLXG | +343% | declined | +343% | PM | PM-gapper | holdable | None | None (week-long decline, tiny-float squeeze) | 1.7M | no AH move; PM held +180-380% across 5h, opened +225% on 48M sh | continue |
 | 2026-06-11 | EDHL | +225% | +225% ($11.39 19:15 ET late surge) | <+225% | AH | AH-detect | ? | ? | — | — | near-extreme late surge | fade |
 | 2026-06-16 | TDIC | +140% *ref* | -4 to -8% | +140% | PM | PM-gapper | uninvestable | None | None fresh | — | no AH move; PM spiked 04:00 then decayed straight to NEG by 05:30, never recovered | fade-from-open |
+| 2026-06-23 | ATLN | +220% *ref* | +6% | — | regular | regular-spike | uninvestable | ? | None | 24.4M | +202% regular session, AH <10% (stale prints), no fresh AH momentum | fade |
 | 2026-06-23 | MBRX | +131% *ref* | flat | +131% | PM | PM-gapper | uninvestable | ? | — | — | crashed $6.64->$3.77 in 10 min | continue-then-crash |
 | 2026-06-24 | CUPR | +81% *ref* | — | +81% | PM | PM-gapper | uninvestable | — | — | — | $9.74 high was an illiquid single tick | — |
 | 2026-06-26 | ILLR | +760% | +446% ($4.20 19:55 ET) | +760% | AH | AH-detect | skipped | A | SpaceX position acquisition (fresh, ongoing news cycle) | — | ZERO real AH volume (VRatio 0.1-0.4x), AH fill questionable | continue |
@@ -60,17 +65,29 @@ kept as reference, marked *ref*).
    bars report vol=0, so true premarket *fillability* (vs sustained quotes) still
    needs live NBBO at the moment, the same Init 2 caveat; price persistence + the
    real-volume opens are strong but not conclusive on slippage.
-3. **Catalyst tier separates the continuers from the faders among AH runners.**
-   ILLR (Tier A, fresh SpaceX news) continued AH->PM to +760%; MSW (Grade C,
-   dilutive notes) faded AH->PM. EDHL/TII faded with weak/no catalyst. One
-   strong signal forming: *extreme AH runner + fresh Tier-A catalyst = let it
-   run; extreme AH runner on dilution/no catalyst = fade, take AH profit.*
+3. **Catalyst tier separates the continuers from the faders among AH runners
+   (STRENGTHENED 2026-07-02).** Every AH-detectable extreme runner that *faded*
+   lacked a fresh Tier-A catalyst: MSW (Grade C dilution), CHAI (none), HKIT
+   (none / negative news), TII (none), EDHL (weak). The only *continuer*, ILLR
+   (+760%), had a fresh Tier-A catalyst (SpaceX). Running tally is now **5
+   faders / 1 continuer, 100% consistent** with catalyst tier as the
+   discriminator: *extreme AH runner + fresh Tier-A catalyst = let it run;
+   extreme AH runner on dilution/no catalyst = fade, take AH profit or skip.*
 4. **Real AH volume gates investability of AH runners.** Both ILLR (+760%) and
    TII (+110%) printed huge headline AH % but on ZERO real AH liquidity
    (VRatio <0.5x, ask $0.00), so an AH fill was questionable/impossible even
    though the move was "detected." Headline AH % without AH volume is a trap.
-5. **Extreme-runner fade tally (AH peak vs PM peak):** 1 fade (MSW), 1 continue
-   (ILLR), with the catalyst tier as the apparent discriminator (pattern 3).
+5. **Extreme-runner fade tally (AH peak vs PM peak):** 4 fades (MSW, CHAI,
+   HKIT, TII/EDHL weak), 1 continue (ILLR), catalyst tier the discriminator
+   (pattern 3).
+
+6. **Regular-session spikes are a distinct negative class the AH->PM strategy
+   correctly cannot trade (NEW 2026-07-02).** EVOL (+300%), CPOP (+369%), ATLN
+   (+220%) all did their move in the *regular* session with AH <10% follow-
+   through, so the AH scanner sees no signal and shouldn't — these are not
+   AH->PM setups at all. Not every +200% is our pattern; separating regular-
+   session blow-offs from PM-only gappers and AH runners keeps the "catch 600%"
+   goal from chasing structurally-untradeable moves.
 
 ## Open data gaps (next runs)
 
@@ -80,10 +97,12 @@ kept as reference, marked *ref*).
   historical premarket bars (the `query2` host and a UA are both required;
   `chart.py --range 2d` 5m only reaches ~5 days back).
 - Backfill float + catalyst tier for EDHL, TDIC, CIIT, MBRX, CUPR, TII.
-- Mine the older logs (Mar-May) for additional +200% cases (EVOL +300%, CCTG,
-  CPOP +322%, CHAI +416-438%, PHGE +265%, HKIT +254%, EEIQ +209%, ATLN +220%)
-  and tag each — several are regular-session spikes, not AH/PM, which is itself
-  a useful negative class.
+- ~~Mine the older logs for additional +200% cases (EVOL, CPOP, CHAI, HKIT,
+  ATLN).~~ **Done 2026-07-02** — added 5 (census now 14). EVOL/CPOP/ATLN are
+  regular-session spikes (negative class, pattern 6); CHAI/HKIT are catalyst-less
+  AH spike-fades (support pattern 3). Still open: CCTG, PHGE +265%, EEIQ (log
+  shows only +64%, likely mis-noted). Census is at the ~15-case analytic
+  threshold; pattern 3 and pattern 2 can now be tested.
 - Once ~15-20 cases are tagged, test pattern 3 (catalyst-tier discriminator)
   and pattern 2 (PM-gapper investability) for whether they justify (a) a PM-open
   scan workflow and/or (b) a conditional hold rule for Tier-A AH runners.

@@ -9,6 +9,51 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-02 — Init 6: census expanded to 14; pattern 3 strengthened, pattern 6 added
+
+**Evaluated:** Prior step (2026-06-30 Init 6: classify PM-only gappers, then
+mine older logs toward ~15-20 cases and classify new gappers) — **worked.** The
+PM-gapper classification held; this run executed the second half (mine older
+logs). No new PM-only gappers appeared in the mined set, so the holdable-gapper
+tally is unchanged (still 2 holdable / 3 uninvestable) — the PM-open-scan
+proposal stays pending more gapper evidence, not triggered yet.
+
+**Step taken:** Mined the pre-Jun-9 daily logs for the +200% candidates flagged
+in the census open-gaps (EVOL, CPOP, CHAI, HKIT, EEIQ, ATLN) and characterized
+each from its log entry (peak %, AH vs PM vs regular lead, catalyst, outcome).
+Added 5 to `INIT6_EXTREME_MOVERS.md` (census now **14 cases**); dropped EEIQ (log
+shows only +64%, below the +200% threshold — the "+209%" note was wrong).
+
+**Result:** Two pattern updates, both decision-relevant:
+- **Pattern 3 (catalyst tier) strengthened to 5 faders / 1 continuer, 100%
+  consistent.** The two new AH runners CHAI (+416%, no catalyst) and HKIT
+  (+293%, negative news) both faded AH->PM, joining MSW/TII/EDHL. Every faded
+  extreme AH runner lacked a fresh Tier-A catalyst; the only continuer (ILLR
+  +760%) had one. This is now a strong enough signal to consider drafting a
+  conditional hold/skip rule (Tier-A AH runner = let run; no/dilution catalyst =
+  take AH profit or skip) — but that touches live trading, so it is a *proposal
+  to Juan*, not applied.
+- **New pattern 6: regular-session spikes are a distinct untradeable negative
+  class.** EVOL (+300%), CPOP (+369%), ATLN (+220%) all moved in the regular
+  session with AH <10% follow-through — the AH->PM scanner sees nothing and
+  correctly shouldn't. Confirms "catch 600%" must not chase these; the reachable
+  targets are AH runners (pattern 3) and holdable PM-only gappers (pattern 2).
+
+**Hypothesis / next step:** The census is at the ~15-case analytic threshold and
+two patterns are now firm. Next run should shift from data-gathering to
+*decision*: draft the two candidate proposals for Juan and pick the higher-value
+one to formalize — (i) a conditional **Tier-A-catalyst hold rule** for extreme AH
+runners (pattern 3, touches live trading -> propose only), or (ii) a **log-only
+PM-open scan** for holdable gappers (pattern 2; needs 1-2 more holdable gappers
+to justify). Expectation: pattern 3 has more cases behind it and a clearer edge,
+so lead with (i) as a written proposal, framed as instrument-first (log the
+catalyst-tier tag on extreme AH runners before acting).
+
+**Needs from Juan:** nothing yet. Heads-up: a proposal to add catalyst-tier
+hold/skip logic for extreme AH runners (a live-trading rule) is likely next run.
+
+---
+
 ### 2026-06-30 — Init 6: PM-only gappers classified; pattern 2 flipped (real cost)
 
 **Evaluated:** Prior step (2026-06-29 Init 6: build the extreme-movers census,

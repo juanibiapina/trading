@@ -366,8 +366,15 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **Research — ACTIVE (2026-06-30).** Census in
-`INIT6_EXTREME_MOVERS.md` (9 cases, Jun 9-26). **Key update 2026-06-30:**
+**Status:** **Research — ACTIVE (2026-07-02).** Census in
+`INIT6_EXTREME_MOVERS.md` (**14 cases, May 14-Jun 26** after mining older logs on
+07-02). **Key update 2026-07-02:** pattern 3 (catalyst-tier discriminator)
+**strengthened to 5 faders / 1 continuer, 100% consistent** — every AH-
+detectable extreme runner that faded (MSW, CHAI, HKIT, TII, EDHL) lacked a fresh
+Tier-A catalyst; the only continuer (ILLR +760%) had one (SpaceX). Added a new
+**pattern 6:** regular-session spikes (EVOL +300%, CPOP +369%, ATLN +220%) are a
+distinct negative class the AH->PM strategy structurally cannot and should not
+trade (AH <10%). Prior key update (2026-06-30): **Key update 2026-06-30:**
 classified the three unlabeled PM-only gappers from their 15m premarket bars
 (`scripts/init6-pmbars.py`) and **flipped pattern 2** — PM-only gappers are NOT
 mostly uninvestable. CIIT (+140%) and GLXG (+343%) both held elevated across the
