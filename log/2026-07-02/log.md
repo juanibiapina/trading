@@ -40,6 +40,14 @@ Top intraday movers (57 hits). Columns: intraday relative-vol (IRVol), volume ch
 
 **Decision:** No paper trades. AH not open. Re-scan at 22:00+ CET to confirm which of these carry into after-hours with sustained momentum. Per plan, learning-phase entries only start at 23:00 CET (5:00 PM ET) scans anyway.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**AH session scan** (after-hours just opened at 16:00 ET). Scanner returned 0 hits — no symbols meeting AH spike criteria yet. Expected: AH volume/prices take 15-30 min to build after 4:00 PM ET.
+
+No candidates found.
+
+**Decision:** No paper trades (observation-only scan per learning phase; entries start at 23:00 CET). Re-scan at 22:30 and 23:00 to catch AH movers as volume builds. None of the 21:30 regular-session watch names (SKFG, SDEV, WMTN, etc.) surfaced in the AH scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
