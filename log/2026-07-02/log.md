@@ -118,7 +118,38 @@ No candidates found.
 
 **Decision: No paper trades.** No candidate clears all entry gates. The three fresh BUILD/mover candidates (ZCMD, SEER, LHSW) are all on their first AH scan and fail the 2-AH-scan requirement. The two-AH-scan qualifiers (UPC, ICON, CRE, CLRO) are all SPIKE→FADE or extended regular-session continuations — a SPIKE→FADE-only night among qualifiers, skip all per the 0/10+ rule. ZCMD is a genuine +445% AH explosion on 10M+ real shares but exceeds the +150% ceiling with VRatio too low for override; logged for tomorrow's retrospective. No dead-cat-override (no Day% ≤ -15% candidate) applies. Re-scan at 00:00 CET — if ZCMD/SEER hold and post a 2nd qualifying AH scan, re-evaluate (ZCMD would still need VRatio >5x to clear the ceiling-override).
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**AH session scan** (6:00 PM ET). Scanner returned 13 hits. New vs prior scans: RDGT, HLP, UFG, RAYA, NCT, ALZN, GNLN. Prior names ZCMD, SEER, CLRO, UPC, CRE, ILAG still present.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ZCMD | [TV](https://www.tradingview.com/chart/?symbol=ZCMD) | $1.11 | -0.9% | +404.5% | $5.60 | +400.0% | 10.6M | 4.7M | 2.3x | 1.1M | Misc Commercial |
+| SEER | [TV](https://www.tradingview.com/chart/?symbol=SEER) | $1.62 | -0.6% | +34.6% | $2.18 | +33.8% | 4.6M | 805K | 5.7x | 36.2M | Biotechnology |
+| RDGT | [TV](https://www.tradingview.com/chart/?symbol=RDGT) | $1.53 | +5.5% | +6.5% | $1.63 | +12.4% | 4.0M | 10.5M | 0.4x | 884K | Medical Distributors |
+| CLRO | [TV](https://www.tradingview.com/chart/?symbol=CLRO) | $6.48 | +101.2% | +11.9% | $7.25 | +125.2% | 4.0M | 8.7M | 0.5x | 740K | Electronics/Appliances |
+| UPC | [TV](https://www.tradingview.com/chart/?symbol=UPC) | $6.32 | +13.7% | +16.0% | $7.33 | +31.8% | 2.8M | 8.1M | 0.3x | 326K | Pharmaceuticals: Major |
+| HLP | [TV](https://www.tradingview.com/chart/?symbol=HLP) | $0.75 | +34.4% | +6.6% | $0.80 | +43.3% | 988K | 5.7M | 0.2x | 44.4M | Metal Fabrication |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $2.49 | +1.6% | +9.6% | $2.73 | +11.4% | 574K | 141K | 4.1x | 1.1M | Commercial Printing |
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.69 | -6.4% | +14.8% | $0.79 | +7.4% | 325K | 156K | 2.1x | 9.8M | Wholesale Distributors |
+| RAYA | [TV](https://www.tradingview.com/chart/?symbol=RAYA) | $2.79 | +1.1% | +7.0% | $2.98 | +8.1% | 262K | 82K | 3.2x | 975K | Electrical Products |
+| ILAG | [TV](https://www.tradingview.com/chart/?symbol=ILAG) | $3.49 | -3.6% | +5.2% | $3.67 | +1.4% | 109K | 35K | 3.1x | 987K | Tools & Hardware |
+| NCT | [TV](https://www.tradingview.com/chart/?symbol=NCT) | $3.25 | +3.5% | +6.8% | $3.47 | +10.5% | 79K | 80K | 1.0x | 321K | Marine Shipping |
+| ALZN | [TV](https://www.tradingview.com/chart/?symbol=ALZN) | $1.16 | +3.6% | +5.2% | $1.22 | +8.9% | 69K | 595K | 0.1x | 3.2M | Pharmaceuticals: Major |
+| GNLN | [TV](https://www.tradingview.com/chart/?symbol=GNLN) | $2.27 | -3.4% | +21.3% | $2.75 | +17.2% | 9K | 12K | 0.7x | 608K | Wholesale Distributors |
+
+**Two-AH-scan gate (>10% AH in ≥2 AH scans, 22:00+ CET):** SEER (23:30 +31.5% → 00:00 +34.6% — **qualifies**), UPC (4 scans, faded), ZCMD (23:30 +450.5% → 00:00 +404.5% — now 2nd AH scan), CLRO (extended +101% Day), CRE (fading below threshold). RDGT, HLP, UFG, RAYA, NCT, GNLN all first AH scan and/or below the 10% AH threshold.
+
+**SIP verification (bars fresh to 17:45 ET / 21:45Z; quotes returned stale IEX 16:00 ET on free tier):**
+- **SEER** — **ENTERED.** Real accumulation: 1.09M → 1.12M → 779K → 364K → 415K → 202K → 711K (2nd push 17:30 ET) → 334K → 242K → 226K sh/bar, 890–7.2K trades/bar. AH peak $2.33 at **17:05 ET**, second push to $2.29 at 17:30, now holding $2.21 (−5% off high) = **HOLD pattern** (within 20% of high, like CHAI/MSW; early peak not disqualifying when holding). SIP $2.16–$2.21 corroborates scanner AH $2.18 (no bad print). Quote stale (16:00 ET, ask=$1.62=regular close) — freshness guard: stale-not-contradicting, real live liquidity confirmed by fresh SIP bars. Gates: 2-AH-scan ✓, Day% -0.6% ✓, Total% +33.8% <150% ✓, VRatio 5.7x ✓. **Catalyst (Grade A):** unsolicited **CEO buyout proposal at $2.45/share** + active activist proxy contest ($2.40 cash+CVR). AH $2.21 sits below the $2.45 offer (deal-risk discount) — room to entry.
+- **ZCMD** — Now 2nd AH scan (23:30 +450.5% → 00:00 +404.5%), genuine +400% on 10M+ real AH shares. **Still skip:** Total% +400% massively exceeds the +150% ceiling; VRatio 2.3x fails the >5x ceiling-override gate. Real mover, logged for retrospective; too extended to enter.
+- **UPC / CLRO / CRE** — UPC fading (peaked $9.69 16:20 ET, now $7.33, −24% off high), extended multi-day run, no fresh catalyst — SPIKE→FADE skip. CLRO +101% Day extended regular continuation, fading. CRE +9.6% AH now below threshold, −35% off its $4.37 high — SPIKE→FADE skip.
+- **RDGT, HLP, UFG, RAYA, NCT, ALZN, GNLN** — all first AH scan, below 10% AH threshold (except GNLN +21.3% but only 9K AH vol / VRatio 0.7x — no real accumulation, skip-tier). ALZN is yesterday's closed position bouncing +5.2% AH on thin volume — skip.
+
+**Decision: ENTERED SEER** — 43 shares @ **$2.26** real fill (order 1a03c698), $97.18. First entry of the night. SEER is the only candidate clearing all gates: 2-AH-scan qualifier, HOLD pattern near AH high, VRatio 5.7x on real SIP accumulation, Grade A acquisition catalyst (CEO $2.45 buyout proposal) with AH price below the offer. ZCMD is a real +400% mover but ceiling-blocked (VRatio fails override). All other qualifiers SPIKE→FADE or extended. No dead-cat-override (no Day% ≤ -15% candidate). Grade A hold: up to 5 days, trail stop -20% from peak — position management runs in premarket.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| SEER | $2.26 | 2026-07-03 00:03 CET (18:03 ET) | 43 | 1a03c698 | Grade A: CEO $2.45/sh buyout proposal + activist proxy contest. 2-AH-scan qualifier, HOLD near AH high, VRatio 5.7x real SIP vol. |

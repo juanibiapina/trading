@@ -6,7 +6,9 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 ## Current Positions
 
-_No open positions._ (Confirmed against `broker.js positions`, 2026-07-02 10:30 CET.)
+| Ticker | Entry | Shares | Cost | Entry Time | Catalyst | Grade | Hold Strategy |
+|--------|-------|--------|------|-----------|----------|-------|---------------|
+| SEER | $2.26 | 43 | $97.18 | 2026-07-03 00:03 CET (18:03 ET) | CEO unsolicited buyout proposal $2.45/share (+ activist proxy contest, $2.40 cash+CVR) | A | Hold up to 5 days, trail stop -20% from peak |
 
 ## Position Rules
 
