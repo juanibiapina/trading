@@ -148,6 +148,38 @@ No candidates found.
 
 **Decision: ENTERED SEER** — 43 shares @ **$2.26** real fill (order 1a03c698), $97.18. First entry of the night. SEER is the only candidate clearing all gates: 2-AH-scan qualifier, HOLD pattern near AH high, VRatio 5.7x on real SIP accumulation, Grade A acquisition catalyst (CEO $2.45 buyout proposal) with AH price below the offer. ZCMD is a real +400% mover but ceiling-blocked (VRatio fails override). All other qualifiers SPIKE→FADE or extended. No dead-cat-override (no Day% ≤ -15% candidate). Grade A hold: up to 5 days, trail stop -20% from peak — position management runs in premarket.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**AH session scan** (6:30 PM ET). Scanner returned 13 hits. New vs prior scans: RENX, MGNX, FXHO, HDSN. Prior names ZCMD, SEER, LHSW, UFG, CLRO, UPC, HLP, CRE, ILAG still present. SEER is the open position entered at 00:00.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ZCMD | [TV](https://www.tradingview.com/chart/?symbol=ZCMD) | $1.11 | -0.9% | +378.4% | $5.31 | +374.1% | 13.6M | 5.2M | 2.6x | 1.1M | Misc Commercial |
+| SEER | [TV](https://www.tradingview.com/chart/?symbol=SEER) | $1.62 | -0.6% | +36.4% | $2.21 | +35.6% | 5.4M | 897K | 6.0x | 36.2M | Biotechnology |
+| LHSW | [TV](https://www.tradingview.com/chart/?symbol=LHSW) | $1.80 | +1.7% | +8.4% | $1.95 | +10.2% | 4.7M | 1.2M | 3.8x | 147K | Computer Proc Hardware |
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.69 | -6.4% | +21.6% | $0.84 | +13.8% | 4.4M | 612K | 7.3x | 9.8M | Wholesale Distributors |
+| CLRO | [TV](https://www.tradingview.com/chart/?symbol=CLRO) | $6.48 | +101.2% | +19.2% | $7.73 | +139.9% | 4.3M | 8.8M | 0.5x | 740K | Electronics/Appliances |
+| UPC | [TV](https://www.tradingview.com/chart/?symbol=UPC) | $6.32 | +13.7% | +11.6% | $7.05 | +26.8% | 2.9M | 8.1M | 0.4x | 326K | Pharmaceuticals: Major |
+| HLP | [TV](https://www.tradingview.com/chart/?symbol=HLP) | $0.75 | +34.4% | +6.4% | $0.80 | +42.9% | 1.1M | 5.7M | 0.2x | 44.4M | Metal Fabrication |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $2.49 | +1.6% | +5.2% | $2.62 | +6.9% | 590K | 143K | 4.1x | 1.1M | Commercial Printing |
+| RENX | [TV](https://www.tradingview.com/chart/?symbol=RENX) | $2.00 | +2.6% | +7.5% | $2.15 | +10.3% | 151K | 126K | 1.2x | 2.3M | Real Estate Dev |
+| ILAG | [TV](https://www.tradingview.com/chart/?symbol=ILAG) | $3.49 | -3.6% | +16.0% | $4.05 | +11.9% | 116K | 36K | 3.2x | 987K | Tools & Hardware |
+| MGNX | [TV](https://www.tradingview.com/chart/?symbol=MGNX) | $4.71 | +1.9% | +5.2% | $4.95 | +7.2% | 109K | 2.0M | 0.1x | 61.3M | Pharmaceuticals: Major |
+| FXHO | [TV](https://www.tradingview.com/chart/?symbol=FXHO) | $7.20 | -25.0% | +168.1% | $19.30 | +101.0% | 79K | 95K | 0.8x | 97K | Telecom Equipment |
+| HDSN | [TV](https://www.tradingview.com/chart/?symbol=HDSN) | $5.99 | +5.6% | +5.3% | $6.31 | +11.3% | 74K | 550K | 0.1x | 36.2M | Wholesale Distributors |
+
+**Two-AH-scan gate (>10% AH in ≥2 AH scans, 22:00+ CET):** SEER (qualified at 00:00, entered), UPC (5 scans, faded), ZCMD (23:30/00:00/00:30, ceiling-blocked). All four new names (RENX, MGNX, FXHO, HDSN) are on their **first AH scan** — fail the 2-AH gate regardless of trajectory.
+
+**SIP verification (new names; bars fresh to ~18:15 ET / 22:15Z; quotes returned stale IEX 16:00 ET on free tier):**
+- **FXHO** — **Real +168% AH spike, NOT a bad print.** SIP shows genuine accumulation igniting late: flat ~$7.20–7.44 through 22:00Z, then 22:05Z 26.8K sh / 921 trades, 22:10Z **173.6K sh / 7,789 trades** peaking $19.30, 22:15Z 86.5K sh / 4,645 trades ($16.00 close). SIP high $19.30 corroborates the scanner AH price exactly. The scanner's AH Vol 79K / VRatio 0.8x is **stale TradingView lag** — real move is ~287K sh in the last 15 min. **Skip (live entry):** Day% **-25.0%** ≤ -15% → dead-cat gate; and this is the **first AH scan** (fails 2-AH gate). The spike DOES reclaim far above the $7.20 regular close (dead-cat-override territory), but the override watch requires AH% rising across **≥2 AH scans** — only 1 scan so far. Nano float 97K, MCap $1.4M. **Strong watch for the 01:00 scan:** if it holds/builds and posts a 2nd AH scan above close, it becomes a **DEAD-CAT-OVERRIDE WATCH** (record hypothetical entry then). No live entry now.
+- **RENX** — AH +7.5%, Total +10.3%, AH Vol 151K, VRatio 1.2x — below the 10% AH threshold, no real accumulation. Skip-tier.
+- **MGNX** — AH +5.2%, VRatio 0.1x (109K vs 2.0M avg). Below threshold, no unusual AH volume. Skip.
+- **HDSN** — AH +5.3%, VRatio 0.1x. Below threshold. Skip.
+
+**Prior-name status:** ZCMD still a genuine +374% mover (13.6M real AH sh) but ceiling-blocked (Total% +374% ≫ 150%, VRatio 2.6x fails >5x override) — logged for retrospective. UPC/CLRO/CRE/UPC continue fading / extended regular continuations — SPIKE→FADE skips. LHSW faded to +8.4% (below threshold). ILAG/HLP sub-threshold.
+
+**Decision: No new paper trades.** No new candidate clears the gates: RENX/MGNX/HDSN are sub-threshold with low VRatio; FXHO is a real +168% AH spike but blocked by the -25% Day% dead-cat gate and its first-AH-scan status (flagged as strong dead-cat-override watch for 01:00). SEER remains the night's only entry (position management runs in premarket, not here). No ceiling-override (ZCMD VRatio fails) applies.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
