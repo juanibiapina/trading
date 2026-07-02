@@ -48,6 +48,23 @@ No candidates found.
 
 **Decision:** No paper trades (observation-only scan per learning phase; entries start at 23:00 CET). Re-scan at 22:30 and 23:00 to catch AH movers as volume builds. None of the 21:30 regular-session watch names (SKFG, SDEV, WMTN, etc.) surfaced in the AH scan.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**AH session scan** (4:30 PM ET). Scanner returned 3 hits — all new (22:00 had 0). SIP verified.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| UPC | [TV](https://www.tradingview.com/chart/?symbol=UPC) | $6.32 | +13.7% | +42.4% | $9.00 | +61.9% | 1.0M | 7.8M | 0.1x | 326K | Pharma: Major |
+| ICON | [TV](https://www.tradingview.com/chart/?symbol=ICON) | $1.04 | +0.0% | +22.1% | $1.27 | +22.1% | 631K | 138K | 4.6x | 0 | Marine Shipping |
+| UK | [TV](https://www.tradingview.com/chart/?symbol=UK) | $2.07 | +0.0% | +8.7% | $2.25 | +8.7% | 118K | 73K | 1.6x | 665K | Real Estate Dev |
+
+**SIP verification (bars from 20:00Z):**
+- **UPC** — Real accumulation: 143K → 763K → 601K → 272K sh/bar, 2.2K–16.5K trades/bar. Peaked $9.36 at 16:10 ET, now bid $8.86 / ask $9.19 x100 (real two-sided book). Holding within ~5% of AH high. BUILD pattern, Total +62% (under 150% ceiling), float 326K nano. **Strong watch for 23:00.**
+- **ICON** — Building hard: 636 → 4.5K → 670K → 1.78M sh/bar, making new AH high ($1.43 at 16:15 ET). Book bid $1.40 / ask $1.41 x100. BUILD, Total +22% (low extension). **Strong watch for 23:00.**
+- **UK** — Only +8.7% AH (below 10% threshold). Spiked $2.48 (16:10 ET) → fading $2.16. Quote wide/stale (bid $1.76 / ask $2.34 @ 16:00 ET). SPIKE→FADE, sub-threshold. **Skip-tier.**
+
+**Decision:** No paper trades (observation-only per learning phase; entries start at 23:00 CET / 5:00 PM ET). UPC and ICON both show BUILD patterns with real SIP volume and fillable books — primary watch names for the 23:00 scan. Need each to hold >10% AH across the 23:00 scan and clear entry gates (Day% > -15%, Total% < 150%, not a fade). No catalyst search yet — will run at 23:00 for any that clear.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
