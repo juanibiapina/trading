@@ -88,6 +88,36 @@ No candidates found.
 
 **Decision: No paper trades.** Both two-AH-scan qualifiers (ICON, UPC) peaked before 17:30 ET and are declining at entry time — a **SPIKE→FADE-only night among qualifiers**. Per the SPIKE→FADE rule, skip all rather than enter the least-bad option (SPIKE→FADE stocks are 0/10+ for PM continuation). CLRO holds better but fails the 2-AH-scan gate and is an extended (+101% Day) regular-session continuation. CRE faded -30%; SLGB sub-threshold. No dead-cat-override (no Day% ≤ -15% candidate) or ceiling-override (all under +150% Total%) flags apply. A skip here avoids a predictable loss; will re-scan at 23:30 / 00:00 for BUILD/hold patterns as later movers emerge.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**AH session scan** (5:30 PM ET). Scanner returned 9 hits. New vs prior scans: ZCMD, LHSW, SEER, ILAG, YYGH. Prior names ICON/UPC/CLRO/CRE still present but fading.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ZCMD | [TV](https://www.tradingview.com/chart/?symbol=ZCMD) | $1.11 | -0.9% | +450.5% | $6.11 | +445.5% | 6.6M | 4.1M | 1.6x | 1.1M | Misc Commercial |
+| SEER | [TV](https://www.tradingview.com/chart/?symbol=SEER) | $1.62 | -0.6% | +31.5% | $2.13 | +30.7% | 2.6M | 581K | 4.5x | 36.2M | Biotechnology |
+| LHSW | [TV](https://www.tradingview.com/chart/?symbol=LHSW) | $1.80 | +1.7% | +25.6% | $2.26 | +27.7% | 3.6M | 1.1M | 3.2x | 147K | Computer Proc Hardware |
+| ICON | [TV](https://www.tradingview.com/chart/?symbol=ICON) | $1.04 | +0.0% | +9.6% | $1.14 | +9.6% | 9.4M | 1.1M | 8.5x | ~3.3M mcap | Marine Shipping |
+| CLRO | [TV](https://www.tradingview.com/chart/?symbol=CLRO) | $6.48 | +101.2% | +10.8% | $7.18 | +123.1% | 3.6M | 8.7M | 0.4x | 740K | Electronics/Appliances |
+| UPC | [TV](https://www.tradingview.com/chart/?symbol=UPC) | $6.32 | +13.7% | +14.9% | $7.26 | +30.6% | 2.7M | 8.1M | 0.3x | 326K | Pharmaceuticals: Major |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $2.49 | +1.6% | +13.7% | $2.83 | +15.5% | 530K | 135K | 3.9x | 1.1M | Commercial Printing |
+| ILAG | [TV](https://www.tradingview.com/chart/?symbol=ILAG) | $3.49 | -3.6% | +5.2% | $3.67 | +1.4% | 109K | 35K | 3.1x | 987K | Tools & Hardware |
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.25 | -3.8% | +8.7% | $1.36 | +4.5% | 53K | 1.1M | 0.0x | 133K | Misc Commercial |
+
+**Two-AH-scan gate (>10% AH in ≥2 AH scans, 22:00+ CET):** UPC (3 scans), ICON (22:30/23:00 qualified, now faded to +9.6%), CLRO (23:00 +18.2%, 23:30 +10.8% — but +101% Day extended regular continuation), CRE (23:00 +17.3%, 23:30 +13.7%). All three new movers (ZCMD, SEER, LHSW) are on their **first AH scan** — fail the 2-AH-scan gate regardless of trajectory.
+
+**SIP verification (bars to 21:15Z / 17:15 ET — fresh, ~15 min lag; quotes returned stale IEX 16:00–16:59 ET, so trajectory read off SIP bars):**
+- **ZCMD** — **Real explosive move.** SIP accumulation 418K → 1.05M → 2.6M → 2.13M → 2.08M → 1.74M sh/bar, 2.7K–25K trades/bar. Peaked $6.57 at **17:15 ET**, holding $6.06 (within 8% of high) = BUILD/hold. Genuine +445% on 10M+ real AH shares. **Skip:** Total% +445% massively exceeds the +150% ceiling; VRatio 1.6x (real ~2.4x vs avg) fails the >5x ceiling-override gate; and first AH scan (fails 2-AH gate). Not a ceiling-override watch (VRatio gate fails). **Notable real mover for tomorrow's retrospective** — came late (first surfaced 17:30 ET) and too extended to enter.
+- **SEER** — Real volume, peaked $2.33 at **17:00 ET**, holding $2.17 (within ~7% of high) but volume fading across bars (1.1M → 1.12M → 779K → 364K sh/bar). Biotech, float 36.2M. First AH scan → fails 2-AH gate. Watch for 00:00.
+- **LHSW** — Peaked $3.40 at **16:55 ET**, faded to $2.31 = **−32% off high** (>20%). SPIKE→FADE. Low float 147K. First AH scan. Skip-tier.
+- **UPC** — Continues fading: peaked $9.69 at 16:20 ET, now $7.26 (−25% off high). SPIKE→FADE, extended multi-day run, no fresh catalyst. Skip.
+- **ICON** — Faded below threshold (+35.6% at 23:00 → +9.6% now). SPIKE→FADE confirmed, rolling over. Skip.
+- **CLRO** — +101% Day extended regular-session continuation, fading in AH ($8.20 peak → $7.18). Skip.
+- **CRE** — Still holding low base $2.83 far below its $4.37 AH high (16:30 ET), −35% off high. SPIKE→FADE. Skip.
+- **ILAG / YYGH** — AH +5.2% / +8.7%, both below the 10% threshold. Skip-tier.
+
+**Decision: No paper trades.** No candidate clears all entry gates. The three fresh BUILD/mover candidates (ZCMD, SEER, LHSW) are all on their first AH scan and fail the 2-AH-scan requirement. The two-AH-scan qualifiers (UPC, ICON, CRE, CLRO) are all SPIKE→FADE or extended regular-session continuations — a SPIKE→FADE-only night among qualifiers, skip all per the 0/10+ rule. ZCMD is a genuine +445% AH explosion on 10M+ real shares but exceeds the +150% ceiling with VRatio too low for override; logged for tomorrow's retrospective. No dead-cat-override (no Day% ≤ -15% candidate) applies. Re-scan at 00:00 CET — if ZCMD/SEER hold and post a 2nd qualifying AH scan, re-evaluate (ZCMD would still need VRatio >5x to clear the ceiling-override).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
