@@ -98,7 +98,9 @@ Open positions live on the **Alpaca paper account** (source of truth), not in th
 node scripts/broker.js positions
 ```
 
-For each open position, note the unrealized P&L Alpaca reports (entry = the real `filled_avg_price`). **Do not place hold/sell orders here** — exits are handled by `position-evaluation.md` (10:30 / 14:30 CET). If there are no open positions, state that and move on. The hand-maintained markdown ledger was discarded 2026-06-25; do **not** reconstruct P&L from assumed/quoted prices for stocks that never filled on Alpaca.
+For each open position, note the unrealized P&L Alpaca reports (entry = the real `filled_avg_price`). **Do not place hold/sell orders here** — exits are handled by `position-evaluation.md` (10:30 / 14:30 CET). If there are no open positions, state that and move on.
+
+**Quote-freshness guard (do NOT report a stale Alpaca P&L as fact):** Alpaca `positions` `current_price` on the free tier is frequently **stale** — for an extended-hours-active name it often returns the *prior regular close* (20:00 ET quote), not the live overnight/premarket price. Before reporting an open position's P&L, sanity-check the price: pull `node scripts/broker.js quote SYM` and check its timestamp; if the quote is far behind the eval time (e.g. last night's 20:00 ET close while you evaluate at 10:20 CET), the Alpaca P&L is stale. Cross-check the real overnight/PM level with SIP bars (`broker.js bars`) or the Yahoo timeline (`--pm-history`) and report the P&L against the **live** price, explicitly flagging the stale Alpaca figure as not tradeable. A stale `current_price` must not be reported as a real loss/gain. (Basis: SEER Jul 3 — Alpaca showed $1.62 / −28.3% from a stale 20:00 ET close while SEER traded ~$2.30 overnight, +1.8%.) The hand-maintained markdown ledger was discarded 2026-06-25; do **not** reconstruct P&L from assumed/quoted prices for stocks that never filled on Alpaca.
 
 ### 4. Scanner Diagnostic
 
@@ -172,7 +174,7 @@ Append a `## Morning Evaluation` section to the log.
 
 ### Open Position P&L (Alpaca)
 
-Only real Alpaca fills go in this table (entry/exit = `filled_avg_price` from `broker.js`). Candidates that were tracked but never filled belong in the Scanner Diagnostic as *hypothetical* (AH entry → PM peak), **not** here. If there were no Alpaca fills, write "No executed positions."
+Only real Alpaca fills go in this table (entry/exit = `filled_avg_price` from `broker.js`). Candidates that were tracked but never filled belong in the Scanner Diagnostic as *hypothetical* (AH entry → PM peak), **not** here. If there were no Alpaca fills, write "No executed positions." **Apply the quote-freshness guard (Step 3):** if Alpaca `current_price` is stale (prior 20:00 ET close on an ext-hours-active name), report P&L against the live overnight/PM price and flag the stale figure — do not print a stale loss/gain as fact.
 
 | Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
 |--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
