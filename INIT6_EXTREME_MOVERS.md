@@ -89,6 +89,44 @@ kept as reference, marked *ref*).
    session blow-offs from PM-only gappers and AH runners keeps the "catch 600%"
    goal from chasing structurally-untradeable moves.
 
+## Decision analysis (2026-07-03) — which proposal to formalize
+
+The census reached the ~15-case threshold, so this run tested the two candidate
+proposals (Tier-A-catalyst **hold rule** vs **PM-open scan**) against the data
+instead of gathering more.
+
+**Cross-tab of pattern 3 (catalyst tier) against pattern 4 (real-AH-volume
+gate), all 6 AH-detectable extreme runners:**
+
+| Ticker | Cat | AH vol | Holdable | Outcome | Hold-rule verdict |
+|--------|-----|--------|----------|---------|-------------------|
+| MSW | C | real | yes (traded) | fade | no Tier-A -> don't hold -> **correct (PM exit)** |
+| CHAI | None | real 8.6x | no (spike-fade) | fade | no Tier-A -> skip -> correct |
+| HKIT | None | real | no | fade | no Tier-A -> skip -> correct |
+| TII | ? | **zero** (ask $0.00) | no | fade | untradeable anyway |
+| EDHL | ? | ? | ? | fade | weak |
+| ILLR | **A** | **zero** (VRatio 0.1-0.4x) | — | **continue** | want to hold, but **untradeable in AH** |
+
+**Result — the Tier-A hold rule has zero tradeable supporting cases.** The only
+*continuer* (ILLR) was untradeable in AH (zero real volume, pattern 4), and every
+*tradeable* AH runner faded (so the current premarket-exit discipline was
+correct on each). Pattern 3 is a real statistical discriminator, but pattern 4
+neutralizes its only actionable instance: no case exists where a Tier-A-catalyst
+AH runner was tradeable *and* holding past the premarket exit would have earned
+more. Formalizing the hold rule now would act on an untradeable pattern. **Shelve
+it** until a tradeable Tier-A AH runner (real AH volume + holdable) appears; keep
+logging the catalyst tag on extreme AH runners so that case is captured if it
+comes.
+
+**Higher-value lever is pattern 2 (PM-open scan).** Its holdable targets — CIIT
+(+140%) and GLXG (+343%), both held elevated across the full 5h premarket on
+48-53M-share opens — are real, tradeable-looking, and structurally missed by the
+AH scanner today. That is where the reachable +200-600% money is, not in the AH
+hold rule. So the PM-open scan (rollout step 2), not the hold rule, is the
+proposal to advance. Gate remains: 2 holdable gappers so far; want 1-2 more (or a
+live-fillability check) before wiring even a log-only pulse, since a single
+illiquid tick can masquerade as a holdable 15m bar (Yahoo PM bars report vol=0).
+
 ## Open data gaps (next runs)
 
 - ~~Classify investability for CIIT, GLXG, TDIC via PM bars.~~ **Done

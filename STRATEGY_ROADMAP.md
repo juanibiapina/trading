@@ -366,15 +366,24 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **Research — ACTIVE (2026-07-02).** Census in
-`INIT6_EXTREME_MOVERS.md` (**14 cases, May 14-Jun 26** after mining older logs on
-07-02). **Key update 2026-07-02:** pattern 3 (catalyst-tier discriminator)
-**strengthened to 5 faders / 1 continuer, 100% consistent** — every AH-
-detectable extreme runner that faded (MSW, CHAI, HKIT, TII, EDHL) lacked a fresh
-Tier-A catalyst; the only continuer (ILLR +760%) had one (SpaceX). Added a new
-**pattern 6:** regular-session spikes (EVOL +300%, CPOP +369%, ATLN +220%) are a
-distinct negative class the AH->PM strategy structurally cannot and should not
-trade (AH <10%). Prior key update (2026-06-30): **Key update 2026-06-30:**
+**Status:** **Research — ACTIVE (2026-07-03).** Census in
+`INIT6_EXTREME_MOVERS.md` (**14 cases, May 14-Jun 26**). **Key decision
+2026-07-03: the Tier-A-catalyst hold rule is SHELVED; the PM-open scan (pattern 2)
+is the lever to advance.** Cross-tabbing pattern 3 (catalyst tier) against
+pattern 4 (real-AH-volume gate) shows the hold rule has **zero tradeable
+supporting cases**: the only AH continuer (ILLR) had zero real AH volume
+(untradeable), and every *tradeable* AH runner faded (premarket exit was correct
+each time). So formalizing a catalyst hold rule would act on an untradeable
+pattern — parked until a tradeable Tier-A AH runner (real AH volume + holdable)
+appears; keep logging the catalyst tag so it's captured if it comes. The
+reachable +200-600% money is in pattern 2's **holdable PM-only gappers** (CIIT
++140%, GLXG +343%), so rollout step 2 (a log-only PM-open scan) is the next
+proposal — gated on 1-2 more holdable gappers or a live-fillability check. **Prior
+key update 2026-07-02:** pattern 3
+**strengthened to 5 faders / 1 continuer, 100% consistent**; added **pattern 6:**
+regular-session spikes (EVOL +300%, CPOP +369%, ATLN +220%) are a distinct
+negative class the AH->PM strategy structurally cannot and should not trade
+(AH <10%). Prior key update (2026-06-30): **Key update 2026-06-30:**
 classified the three unlabeled PM-only gappers from their 15m premarket bars
 (`scripts/init6-pmbars.py`) and **flipped pattern 2** — PM-only gappers are NOT
 mostly uninvestable. CIIT (+140%) and GLXG (+343%) both held elevated across the

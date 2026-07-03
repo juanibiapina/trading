@@ -9,6 +9,49 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-03 — Init 6: hold rule shelved (no tradeable case); PM-open scan is the lever
+
+**Evaluated:** Prior step (2026-07-02 Init 6: expand census to ~15, firm up
+patterns, then next run shift to *decision* and lead with the Tier-A hold-rule
+proposal) — **worked, and the decision test flipped the recommendation.** The
+census (14 cases) and patterns 3/6 held. Executing the "draft the proposal" step
+by first cross-checking it against pattern 4 (real-AH-volume gate) showed the
+hold rule should NOT be led with.
+
+**Step taken:** Cross-tabbed pattern 3 (catalyst tier) against pattern 4 (real
+AH volume) across all 6 AH-detectable extreme runners to test whether the
+Tier-A-catalyst hold rule has any *tradeable* supporting case, before proposing
+it to Juan. Recorded the table + verdict as a "Decision analysis (2026-07-03)"
+section in `INIT6_EXTREME_MOVERS.md` and updated Init 6 status in the roadmap.
+
+**Result:** **The Tier-A hold rule has zero tradeable supporting cases, so it is
+shelved (not proposed).** The only AH *continuer* (ILLR +760%) had zero real AH
+volume (untradeable, ask $0.00 / VRatio 0.1-0.4x); every *tradeable* AH runner
+(MSW holdable-traded, CHAI, HKIT) faded, meaning the current premarket-exit
+discipline was correct on each. Pattern 3 is a real statistical discriminator but
+pattern 4 neutralizes its only actionable instance — no case exists where a
+Tier-A AH runner was tradeable *and* holding past the PM exit would have earned
+more. This redirects Init 6: the reachable +200-600% money is in pattern 2's
+**holdable PM-only gappers** (CIIT +140%, GLXG +343%), not the AH hold rule. The
+**log-only PM-open scan** (rollout step 2) is now the proposal to advance, gated
+on 1-2 more holdable gappers or a live-fillability check.
+
+**Hypothesis / next step:** Next run should advance the PM-open-scan case, not
+the hold rule. Two options: (a) mine remaining older-log +200% cases (CCTG, PHGE
++265%) and classify any new PM-only gappers' premarket paths to push the holdable
+tally past ~3-4 (the trigger to draft the pulse); or (b) if the tally is judged
+sufficient at 2, draft the log-only PM-open scan pulse (~04:00-05:00 ET /
+10:00-11:00 CET, instrumentation only, no orders) and flag it for Juan before
+applying. Expectation: one more holdable gapper makes the case decisive, so lean
+(a) first, then (b).
+
+**Needs from Juan:** nothing yet. Heads-up: the likely next proposal is a *new
+log-only PM-open scan pulse* (no orders, no change to existing trading-scan
+timing). Log-only pulses can be added directly, but it will be flagged here for
+veto before applying since it touches scan cadence.
+
+---
+
 ### 2026-07-02 — Init 6: census expanded to 14; pattern 3 strengthened, pattern 6 added
 
 **Evaluated:** Prior step (2026-06-30 Init 6: classify PM-only gappers, then
