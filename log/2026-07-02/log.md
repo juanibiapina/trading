@@ -185,3 +185,92 @@ No candidates found.
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | SEER | $2.26 | 2026-07-03 00:03 CET (18:03 ET) | 43 | 1a03c698 | Grade A: CEO $2.45/sh buyout proposal + activist proxy contest. 2-AH-scan qualifier, HOLD near AH high, VRatio 5.7x real SIP vol. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**CWD** — CaliberCos Inc. (Investment Managers / real estate asset manager)
+- Catalyst: **None verified** — 338M-share regular-session explosion on an 8.3M float (squeeze/momentum); no ticker-specific PR surfaced.
+- Previous Close (Jul 1): $0.65
+- Jul 2 regular session: ran $0.65 → intraday peak **$1.74** (13:15 ET) → closed $1.23 (+89%) on 338M sh
+- AH last night: **faded** $1.23 → $0.91 (real heavy SIP volume, 100K–960K sh/bar)
+- Premarket now (04:20 ET): **$1.46 (+126% from $0.65)**; Yahoo PM high $1.58
+- Hypothetical P&L (late-AH fade entry ~$0.92 → PM peak $1.58): **+72%** — but the AH pattern was a fade, not a spike
+- Float: 8.3M | Market Cap: ~$11M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- Appeared in the **21:30 CET (15:30 ET) regular-session scan** at +75.9% Day, flagged *"volume gone — spike over"* (VChg% -100%). It then faded through after-hours exactly as flagged (never re-surfaced in the AH scans), so it was correctly not entered — an AH-fade entry would have been flat-to-losing until the unpredictable PM re-ramp.
+- Pattern is **regular-session runner → AH fade → PM re-ramp**, not the target AH→PM spike. The scanner saw it and read the AH fade correctly.
+- Scanner gap: **none for detection.** The PM re-explosion is not forecastable from AH data (AH was declining on real volume the whole session). Note float 8.3M — not the <3M low-float profile of the fade-re-explode hypothesis, so this is a mid-float counter-example, not a case for relaxing the fade skip.
+
+### Baseline Tracking
+
+- Days tracked: **42** (was 41 + 1)
+- Winners detected by scanner: **36/41 (87.8%)** — CWD detected (added to list; seen in 21:30 scan).
+- Winner selected for paper trade: **22/41 (53.7%)** — CWD **not** selected (correctly: AH was a fade, "volume gone" at screening; the winning move was an unforecastable PM re-ramp).
+- Target: >80% detection
+- Status: **BASELINE MET** (detection)
+
+### Retrospective Scan Results
+
+Live premarket scan (04:20 ET): 20 hits. Top raw movers — **CWD +126.3%** ($1.46, winner), **USDE +86.5%** ($3.88, Jul 1 winner day-2 continuation), DSY +45.1% ($4.18, thin AH), SURG +40.4%, PPCB +40.3%, SDEV +26.0%, CETX +21.3%.
+
+AH reconstruction (SIP bars, Jul 2 20:00–24:00 UTC):
+- **CWD** — real heavy AH liquidity (100K–960K sh/bar), fading $1.23→$0.91 all session. Regular runner cooling off, not an AH spike.
+- **USDE** — real volume (10–150K sh/bar), AH faded $2.78→$2.33; PM re-ramp to $3.88. Multi-day runner (Jul 1 winner).
+- **DSY** — **thin AH** (2–18K sh/bar), price ran to $4.65 high on tiny size; VWAP ~$4.2–4.5. Real price, low liquidity. Not in any evening scan.
+
+All three big movers **faded in AH and re-ramped in PM** — no clean AH-spike-and-hold winner tonight.
+
+### Open Position P&L (Alpaca)
+
+Open position pulled read-only (exit handled by position-evaluation, not here):
+
+| Ticker | Entry | Now | Unrealized P&L | Status |
+|--------|-------|-----|----------------|--------|
+| SEER | $2.26 | ~$1.62 | -$27.52 (-28.3%) | 🔴 Open — Grade A hold, trail-stop logic runs in position-eval |
+
+No exits executed this pulse. No realized P&L today.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) — **full coverage**, no coverage failure.
+- Candidates found across scans: ZCMD, SEER, LHSW, ICON, UPC, CLRO, CRE, ILAG, FXHO, RENX, MGNX, HDSN, RDGT, HLP, UFG, RAYA, NCT, ALZN, GNLN + CWD (21:30 regular).
+- Retrospective winner (CWD) detected: **YES** (21:30 scan).
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| DSY | +57% AH ($2.85→$4.48) | **Thin AH** (2–18K sh/bar) — below volume/VRatio thresholds; never surfaced in AH scans | Marginal — AH entry ~$4.3 → PM $4.18 (flat); Yahoo PM high $6.05 is a likely thin bad print. Low real liquidity = questionable investability |
+
+CWD (biggest raw mover) was **detected**, so not a miss.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| ZCMD | $6.57 (+445%) | 17:15 ET | Spike→hold (extreme) | $1.05 | **-84%** | -4.5% | 🔴 Full revert — ceiling-block validated |
+| UPC | $9.69 (+53%) | 16:20 ET | Spike→fade | ~$5.56 | -43% | fade | Faded, correctly skipped |
+| ICON | $1.49 | 16:40 ET | Spike→fade | ~$1.04 | -30% | fade | Faded, correctly skipped |
+| CRE | $4.37 (+48%) | 16:30 ET | Spike→fade | $2.63 | -40% | +7.3% | Faded, correctly skipped |
+| SEER | ~$2.35 | AH | Build→hold | ~$1.62 | -31% | -27% | 🔴 Entered, now underwater |
+| CWD | $1.23 (AH open) | 16:00 ET | Fade→PM re-ramp | $1.46 | +19% | +126% (vs $0.65) | Regular runner, PM re-explosion |
+
+**AH-peak-vs-PM-peak check:** **ZCMD** is the strongest extreme-runner data point yet — AH peak +445% ($6.57) fully reverted to **-4.5%** ($1.05) by PM. Ceiling-block (Total% >150%, VRatio <5x) validated: an override entry would have lost ~80%. Adds to the MSW (Jun 9) / extreme-AH-runner-fades tally: extreme AH runners (>250% from close) peak in AH and fade — **do not chase; AH is the exit.**
+
+### Notes
+
+- **Coverage:** 7/7 scans ran. No coverage failure.
+- **Ceiling-override watch:** ZCMD (+445% AH, ceiling-blocked, VRatio failed override) → PM -4.5%. Fully reverted. Ceiling rule + VRatio override gate both **validated** (hypo override entry ~$6 → PM $1.05 = ~-83%). Strongest confirmation to date that the +150% ceiling protects against extreme-runner reversion.
+- **Dead-cat-override watch:** FXHO (real +168% AH spike, Day% -25%, nano float 97K) was flagged as a *strong watch pending a 2nd AH scan at 01:00* — but there is no 01:00 scan (last is 00:30) and it had only 1 AH scan, so it never became a confirmed dead-cat-override watch. PM: **no liquid data** (97K float, illiquid). No tradeable follow-through; nothing to add to the dead-cat tally.
+- **Fade-rule false-negatives:** none tonight. The AH faders correctly skipped (LHSW -0% PM, CRE +7.3% PM, ICON/UPC faded) did **not** re-explode in PM. CWD faded-then-re-ramped but was a mid-float (8.3M) regular-session runner, not the <3M low-float profile under test — noted as counter-example, not a tally case.
+- **PM-only gapper:** biggest raw PM mover = CWD (+126%), classified **AH→PM/regular-continuation, detectable** (seen in 21:30 scan) — NOT a PM-only gapper, no blind-spot cost. No true PM-only gapper tonight.
+- **Late-AH-tail:** none. CWD faded through the whole AH; ZCMD peaked 17:15 ET (inside scanned window). No decisive 18:30–20:00 ET tail surge.
+- **Multi-day runners:** USDE (Jul 1 winner) still active — bounced to $3.88 PM after fading from its $5.70 Jul 1 PM peak to $2.78 Jul 2 close. Day-2 continuation on real volume.
+
+### Price Charts
+
+**CWD** (2-day, 5-min): Prev close $0.65 | 2-day range $0.63–$1.74 | Peak **$1.74 at 07-02 13:15 ET** (regular session) | AH faded steadily $1.14→$0.91 | PM re-ramp toward $1.46–1.58. Classic regular-runner cooldown then overnight PM re-explosion.

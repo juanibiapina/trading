@@ -6,9 +6,10 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-30 | BTCT | None (unverified; low-float crypto bounce/squeeze) | $1.77 AH (+139.2% @18:50 ET) | $1.39 PM (+88.0%) | $0.82 | Day 3 - stayed crashed ~$0.82 (-41% from $1.39 PM peak); NOT traded — correct |
-| 2026-07-01 | JEM | None (unverified; low-float squeeze, +267% Jun 30 reg) | $12.67 AH (+219% vs $3.97) phantom | $9.27 PM phantom | $4.09 | Day 2 - phantom ramp fully unwound to real book ~$4.09; dead-cat-override hypo $4.98→PM $4.19 = -15.9%; correctly skipped |
-| 2026-07-02 | USDE | Crypto/stablecoin treasury (unverified specifics); real 1M+ sh/bar volume | $7.69 AH (+180% vs $2.75, +270% vs $2.08 reg close) @18:30 ET | $5.70 PM (+107%) | $5.61 | 🆕 Day 1 - REAL liquid winner; DETECTED (00:30 +214% VRatio 5.3x) but wrongly skipped as bad print (stale SIP/quote verification); hypo AH $4.40→PM $5.70 = +30% |
+| 2026-06-30 | BTCT | None (unverified; low-float crypto bounce/squeeze) | $1.77 AH (+139.2% @18:50 ET) | $1.39 PM (+88.0%) | $0.90 | Day 4 - stayed crashed ~$0.90 (-35% from $1.39 PM peak); NOT traded — correct |
+| 2026-07-01 | JEM | None (unverified; low-float squeeze, +267% Jun 30 reg) | $12.67 AH (+219% vs $3.97) phantom | $9.27 PM phantom | $3.21 | Day 3 - continues fading, real book ~$3.21 (PM bounce to $3.5); phantom ramp long unwound; correctly skipped |
+| 2026-07-02 | USDE | Crypto/stablecoin treasury (unverified specifics); real 1M+ sh/bar volume | $7.69 AH (+180% vs $2.75, +270% vs $2.08 reg close) @18:30 ET | $5.70 PM (+107%) | $3.88 | Day 2 - faded from $5.70 PM peak to $2.78 Jul 2 close, bounced $3.88 PM Jul 3 (+40% off close); real volume, still active |
+| 2026-07-03 | CWD | None verified (338M-sh regular-session squeeze on 8.3M float) | $1.74 reg (13:15 ET); AH faded $1.23→$0.91 | $1.58 PM (+143% vs $0.65) | $1.46 | 🆕 Day 1 - regular runner → AH fade → PM re-ramp; DETECTED (21:30 scan +75.9%, flagged "spike over"); not traded (AH fade), correct |
 
 ## Historical Winners (with multi-day outcome)
 
