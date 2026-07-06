@@ -16,6 +16,10 @@ Most extreme %-gainers in the scan (LHSW +220%, ZCMD +100%, WMTN +458%, PLMTF +3
 
 **Decision:** No paper trades. Regular-session scan before AH open. Re-scan at 22:00+ CET to confirm which names carry into after-hours.
 
+## Scan 22:00 CET (4:00 PM ET) — AH OPEN
+
+Scanner ran at 16:00:17 ET, right at after-hours open before AH volume accumulates. **No candidates found.** Watchlist names from 21:30 (FBGL, CLEV, WRAP, EVTV, TRUG) did not surface with AH momentum in this pass. Per learning-phase default, this is an observation-only scan (no entries before 23:00 CET). Re-scan at 22:30/23:00 to see which names build AH volume.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
