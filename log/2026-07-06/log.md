@@ -39,6 +39,30 @@ First pass with real AH candidates. Observation-only (before 23:00 CET entry thr
 
 Re-scan at 23:00 to see which names build. Only ALGS currently shows a real VRatio.
 
+## Scan 23:00 CET (5:00 PM ET) — AH OPEN, entry-eligible
+
+Scanner ran 17:00 ET. First entry-eligible scan of the night. Prior scans: LGPS, ALGS, GVH, CLRO (22:30). New this scan: EDHL, JLHL.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LGPS | [TV](https://www.tradingview.com/chart/?symbol=LGPS) | $0.98 | +28.5% | +13.3% | $1.11 | +45.6% | 10.7M | 6.2M | 1.7x | 6.3M | Real Estate Development |
+| ALGS | [TV](https://www.tradingview.com/chart/?symbol=ALGS) | $5.85 | +4.7% | +17.4% | $6.87 | +22.9% | 1.9M | 314K | 6.1x | 4.8M | Pharmaceuticals: Major |
+| GVH | [TV](https://www.tradingview.com/chart/?symbol=GVH) | $3.67 | -17.5% | +18.5% | $4.35 | -2.2% | 1.2M | 2.1M | 0.6x | 2.2M | Air Freight/Couriers |
+| EDHL | [TV](https://www.tradingview.com/chart/?symbol=EDHL) | $3.96 | -0.5% | +17.4% | $4.65 | +16.8% | 306K | 77K | 4.0x | ~0 | Advertising/Marketing Services |
+| JLHL | [TV](https://www.tradingview.com/chart/?symbol=JLHL) | $3.69 | -49.7% | +22.0% | $4.50 | -38.6% | 213K | 436K | 0.5x | 1.3M | Miscellaneous Commercial Services |
+| CLRO | [TV](https://www.tradingview.com/chart/?symbol=CLRO) | $7.00 | +8.0% | +6.7% | $7.47 | +15.3% | 112K | 9.6M | 0.0x | 740K | Electronics/Appliances |
+
+**Gate check & evaluation:**
+
+- **ALGS** — Qualifies on gates (float 4.8M, Day +4.7%, AH >10% in both 22:30 & 23:00 scans, VRatio 6.1x, Total +22.9% under ceiling). SIP confirms a **real** spike: first bar 643K sh / 7,817 trades, book live (bid $6.94 x100 / ask $7.12 x100), tradable=true. **Grade A catalyst found:** $25M upfront cash from exclusive China license deal for pevifoscorvir sodium (Hep B) with Xiamen Amoytop Biotech (GlobeNewswire, same day). **But trajectory = SPIKE→FADE:** peaked $7.46/+33% at **16:05 ET** (very early), declining across both AH scans (+23.8% → +17.4%), volume fading hard (643K→45K/bar), price grinding $7.46→$7.02. Per "SPIKE→FADE 0/10+ regardless of catalyst; trajectory overrides catalyst," **SKIP**. Flagging as a **catalyst-override watch** data point: Grade-A partnership on a fading chart — retrospective should check tomorrow whether the strong catalyst overcame the early-peak fade.
+- **LGPS** — Qualifies on gates but weak. VRatio only 1.7x. **SPIKE→FADE:** peaked +85% at **16:00 ET** (first bar), collapsed -30% off high (beyond 20% hold threshold) to +30%, volume fading 3.3M→246K/bar. **SKIP** — faded spike.
+- **GVH** — Day -17.5% below -15% gate. Dead-cat (crashed regular session, bouncing AH), Total still -2.2% below regular close = not reclaiming. No dead-cat-override trigger. **SKIP**.
+- **EDHL** — New this scan, only 1 AH appearance (needs ≥2 AH scans >10%). Day -0.5%, VRatio 4.0x, Total +16.8% — decent profile. **Watch** for build at 23:30+; can't enter on first AH sighting.
+- **JLHL** — Day -49.7%, Total -38.6% = deep dead-cat crash. **SKIP**.
+- **CLRO** — AH +6.7% below the 10% gate, VRatio 0.0x (negligible AH participation). **SKIP**.
+
+**Decision: No entries. SPIKE→FADE-only night.** Both qualifying candidates (ALGS, LGPS) peaked before 17:30 ET (16:00–16:05) and are declining across scans on fading volume. Per the SPIKE→FADE-only-night rule, skip all rather than entering the least-bad option — a skip here avoids a predictable loss. ALGS's Grade-A catalyst noted for retrospective (catalyst-override watch). Watch EDHL for a build into 23:30/00:00.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
