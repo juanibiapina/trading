@@ -20,6 +20,25 @@ Most extreme %-gainers in the scan (LHSW +220%, ZCMD +100%, WMTN +458%, PLMTF +3
 
 Scanner ran at 16:00:17 ET, right at after-hours open before AH volume accumulates. **No candidates found.** Watchlist names from 21:30 (FBGL, CLEV, WRAP, EVTV, TRUG) did not surface with AH momentum in this pass. Per learning-phase default, this is an observation-only scan (no entries before 23:00 CET). Re-scan at 22:30/23:00 to see which names build AH volume.
 
+## Scan 22:30 CET (4:30 PM ET) — AH OPEN
+
+First pass with real AH candidates. Observation-only (before 23:00 CET entry threshold). None of these appeared in prior scans today.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LGPS | [TV](https://www.tradingview.com/chart/?symbol=LGPS) | $0.98 | +28.5% | +28.6% | $1.26 | +65.3% | 5.9M | 5.7M | 1.0x | 6.3M | Real Estate Development |
+| ALGS | [TV](https://www.tradingview.com/chart/?symbol=ALGS) | $5.85 | +4.7% | +23.8% | $7.24 | +29.5% | 870K | 180K | 4.8x | 4.8M | Pharmaceuticals: Major |
+| GVH | [TV](https://www.tradingview.com/chart/?symbol=GVH) | $3.67 | -17.5% | +19.6% | $4.39 | -1.3% | 219K | 2.0M | 0.1x | 2.2M | Air Freight/Couriers |
+| CLRO | [TV](https://www.tradingview.com/chart/?symbol=CLRO) | $7.00 | +8.0% | +8.9% | $7.62 | +17.6% | 65K | 9.6M | 0.0x | 740K | Electronics/Appliances |
+
+**Observation notes (no entries — before 23:00 CET):**
+- **ALGS** — strongest signal: VRatio 4.8x on a 4.8M float, Pharma. Total +29.5% is well under the 150% ceiling. Track for build/fade into 23:00.
+- **LGPS** — VRatio 1.0x means AH vol only matches average daily vol, no unusual AH accumulation despite Total +65.3%. Weak-liquidity flag; needs SIP confirmation before any entry.
+- **GVH** — Day -17.5% = dead-cat territory (crashed regular session, bouncing in AH). Total still -1.3% (below regular close). Classic dead-cat setup, VRatio 0.1x thin. Skip candidate unless it reclaims above close on rising AH% (dead-cat-override watch).
+- **CLRO** — VRatio 0.0x, AH vol 65K vs 9.6M avg = negligible AH participation. Thin.
+
+Re-scan at 23:00 to see which names build. Only ALGS currently shows a real VRatio.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
