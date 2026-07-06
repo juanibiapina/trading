@@ -9,6 +9,47 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-06 — Init 6: PM-open-scan gate MET (live-fillability confirmed via Alpaca SIP)
+
+**Evaluated:** Prior step (2026-07-03 Init 6: advance the PM-open-scan case via
+either (a) mine more holdable gappers or (b) a live-fillability check) —
+**worked, and the fillability check was decisive.** Chose (b) because it directly
+kills the one caveat holding the proposal back (Yahoo PM bars report `vol=0`, so
+"holdable" rested on price persistence alone).
+
+**Step taken:** Ran the live-fillability check on the two holdable PM-only
+gappers (CIIT 2026-06-10, GLXG 2026-06-11) plus TDIC (uninvestable control)
+using Alpaca SIP historical 5-min bars (`node scripts/broker.js bars <SYM> --tf
+5Min --feed sip`). Recorded results as a "Fillability check (2026-07-06)" section
+in `INIT6_EXTREME_MOVERS.md` and updated Init 6 status in the roadmap.
+
+**Result:** **Gate met.** Both holdable gappers had deep, real premarket
+liquidity across the entire 04:00-05:00 ET ramp — CIIT: 0.4-3.2M sh and
+3.8K-55K trades per 5-min bar ($1.49->$7.68); GLXG: 2-3.6M sh and 18K-58K trades
+per bar ($1.94->$5.39). Not single ticks; a multi-hour exit window genuinely
+existed. TDIC (uninvestable) *also* had deep liquidity (632K sh / 18.7K trades
+first bar) but peaked $16.23 in the opening bar and decayed straight down —
+confirming uninvestability is a **price-path** property, not a liquidity one.
+Yahoo's `vol=0` was a data gap. Bonus finding: **Alpaca SIP** (`broker.js bars
+--feed sip`) is a validated premarket data source where Yahoo is blind (free-tier
+SIP blocks only the most recent ~15 min, fine for a log-only pulse).
+
+**Hypothesis / next step:** The gate to instrument rollout step 2 is now met, so
+next run should **draft the log-only PM-open scan pulse**: a prompt (~04:00-05:00
+ET / 10:00-11:00 CET) that lists overnight gappers with no AH footprint, pulls
+their Alpaca-SIP premarket price-path + liquidity, tags each holdable vs
+uninvestable, and logs to a tracker CSV — **no orders, no change to existing
+trading-scan timing.** Expectation: a few weeks of shadow logging shows whether
+real-time holdable gappers recur often enough to justify piloting hypothetical
+entries.
+
+**Needs from Juan:** nothing blocking. Heads-up (repeat): the next step adds a
+*new log-only PM-open scan pulse* (instrumentation only, no orders, no retiming
+of any existing trading scan). Log-only pulses can be added directly, but it will
+be flagged here for veto before applying.
+
+---
+
 ### 2026-07-03 — Init 6: hold rule shelved (no tradeable case); PM-open scan is the lever
 
 **Evaluated:** Prior step (2026-07-02 Init 6: expand census to ~15, firm up

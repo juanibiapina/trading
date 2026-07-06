@@ -127,6 +127,37 @@ proposal to advance. Gate remains: 2 holdable gappers so far; want 1-2 more (or 
 live-fillability check) before wiring even a log-only pulse, since a single
 illiquid tick can masquerade as a holdable 15m bar (Yahoo PM bars report vol=0).
 
+## Fillability check (2026-07-06) — gate MET, PM-open scan justified
+
+The one caveat blocking the PM-open-scan proposal was that Yahoo 15m PM bars
+report `vol=0`, so the "holdable" CIIT/GLXG classification rested on price
+persistence alone — a single illiquid tick could masquerade as a sustained 15m
+bar. Ran the **live-fillability check** the gate asked for using Alpaca SIP
+historical minute bars (`broker.js bars <SYM> --tf 5Min --feed sip`, times UTC =
+ET+4):
+
+- **CIIT 2026-06-10 (holdable):** deep, real premarket liquidity the *entire*
+  ramp — 418K sh / 3,803 trades in the 04:00 ET bar, rising to **3.18M sh /
+  55,293 trades** at 04:20 ET, **2.98M sh / 53,926 trades** at 04:35 ET
+  ($7.68 area), and 0.4–2.2M sh/bar sustained through 05:00+ ET. Not a tick.
+- **GLXG 2026-06-11 (holdable):** thin only in the first 04:00 ET bar (12.8K sh),
+  then **2.28M sh / 18,819 trades** at 04:05, **3.60M sh / 57,279 trades** at
+  04:10, staying 0.4–3.6M sh/bar as price built $1.94 -> $5.39 by 05:00 ET.
+- **TDIC 2026-06-16 (uninvestable control):** *also* had deep liquidity (632K sh
+  / 18,718 trades in the first bar), so uninvestability is a **price-path**
+  property (peaked $16.23 in the opening bar, decayed straight down), not a
+  liquidity one.
+
+**Verdict:** Yahoo's `vol=0` was a data gap, not reality. Both holdable gappers
+were genuinely fillable across a multi-hour premarket window on millions of
+shares and tens of thousands of trades per 5-min bar — a real exit window
+existed. The pattern-2 caveat is closed and the gate to advance the **log-only
+PM-open scan** (rollout step 2) is **met**. Bonus: **Alpaca SIP is a validated
+premarket data source** (`broker.js bars ... --feed sip`) the scan can use for
+live-ish liquidity/price-path reads, where Yahoo is blind. Note: SIP historical
+blocks the most recent ~15 min on the free tier, so a live PM-open scan reads a
+slightly delayed tape — fine for a log-only observation pulse.
+
 ## Open data gaps (next runs)
 
 - ~~Classify investability for CIIT, GLXG, TDIC via PM bars.~~ **Done

@@ -376,8 +376,18 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **Research — ACTIVE (2026-07-03).** Census in
-`INIT6_EXTREME_MOVERS.md` (**14 cases, May 14-Jun 26**). **Key decision
+**Status:** **Research — ACTIVE (2026-07-06).** Census in
+`INIT6_EXTREME_MOVERS.md` (**14 cases, May 14-Jun 26**). **Key update 2026-07-06:
+the PM-open-scan gate is MET — live-fillability confirmed.** Ran the fillability
+check the gate required (Alpaca SIP historical minute bars via `broker.js bars
+--feed sip`): both holdable PM-only gappers, CIIT (+140%) and GLXG (+343%), traded
+on **millions of shares and 18K-58K trades per 5-min bar across the whole 04:00-05:00
+ET ramp** — genuinely fillable, not the single-tick risk Yahoo's `vol=0` implied.
+TDIC (uninvestable control) also had deep liquidity, confirming uninvestability is
+a price-*path* property, not a liquidity one. Alpaca SIP is now a validated
+premarket data source the scan can use. **Next: draft the log-only PM-open scan
+pulse** (~04:00-05:00 ET, instrumentation only, no orders); a new log-only pulse
+may be added directly but will be flagged for Juan's veto first. **Prior decision
 2026-07-03: the Tier-A-catalyst hold rule is SHELVED; the PM-open scan (pattern 2)
 is the lever to advance.** Cross-tabbing pattern 3 (catalyst tier) against
 pattern 4 (real-AH-volume gate) shows the hold rule has **zero tradeable
