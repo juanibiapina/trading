@@ -63,7 +63,28 @@ Scanner ran 17:00 ET. First entry-eligible scan of the night. Prior scans: LGPS,
 
 **Decision: No entries. SPIKE→FADE-only night.** Both qualifying candidates (ALGS, LGPS) peaked before 17:30 ET (16:00–16:05) and are declining across scans on fading volume. Per the SPIKE→FADE-only-night rule, skip all rather than entering the least-bad option — a skip here avoids a predictable loss. ALGS's Grade-A catalyst noted for retrospective (catalyst-override watch). Watch EDHL for a build into 23:30/00:00.
 
+## Scan 23:30 CET (5:30 PM ET) — AH OPEN, entry-eligible
+
+Scanner ran 17:30 ET. Prior scans: LGPS, ALGS, GVH, CLRO (22:30); EDHL, JLHL (23:00, EDHL was watch). This scan hits: ALGS, GVH, JLHL, EDHL.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ALGS | [TV](https://www.tradingview.com/chart/?symbol=ALGS) | $5.85 | +4.7% | +18.6% | $6.94 | +24.2% | 2.1M | 338K | 6.2x | 4.8M | Pharmaceuticals: Major |
+| GVH | [TV](https://www.tradingview.com/chart/?symbol=GVH) | $3.67 | -17.5% | +13.7% | $4.17 | -6.3% | 1.4M | 2.1M | 0.6x | 2.2M | Air Freight/Couriers |
+| JLHL | [TV](https://www.tradingview.com/chart/?symbol=JLHL) | $3.69 | -49.7% | +25.2% | $4.62 | -37.0% | 988K | 551K | 1.8x | 1.3M | Miscellaneous Commercial Services |
+| EDHL | [TV](https://www.tradingview.com/chart/?symbol=EDHL) | $3.96 | -0.5% | +32.3% | $5.24 | +31.7% | 557K | 114K | 4.9x | ~0 | Advertising/Marketing Services |
+
+**Gate check & evaluation:**
+
+- **EDHL — ENTERED.** Second AH appearance >10% (23:00 +17.4%, 23:30 +32.3%) clears the ≥2-AH-scan gate. All gates pass: float tiny (post 1-for-16 reverse split Feb 2026), Day -0.5% (> -15%), Total ~+20-31% (well under 150% ceiling), VRatio 4.9x. **SIP confirms a real spike, not a bad print:** first pump 16:15 ET bar 167K sh / 3,359 trades, second pump 17:05 ET bar 219K sh / 3,487 trades, VWAP $5.07-5.54 corroborates. Book two-sided (ask $4.96 x100 / bid $3.34 x100), tradable=true. **Trajectory = double-pump HOLD:** peaked $5.07 (+26%) at 16:25 ET, based $4.50, then made a *new* AH high $5.54 (+37.5%) at **17:05 ET**, now holding $4.83 (+20%, 12.8% off high = within 20% hold threshold). Not declining across scans (real price held $4.65→$4.83). Making new highs later + holding within 20% = hold, not fade; early-peak disqualifier doesn't apply (rule: only disqualify early peak when *also* declining across scans). **Catalyst: NONE found** — structured search returned only stale reverse split (Feb 2026) and Nasdaq compliance; Quiver Quantitative explicitly notes "heavy-volume, low-float momentum with no obvious company catalyst." Per learning-phase no-catalyst rule, enter with concern noted (no-catalyst winners: OCG, LNKS, PHGE, IVF last week). **Grade None.** Filled 20 sh @ $4.81 (id c91919e4), $96.20.
+- **ALGS** — SPIKE→FADE confirmed. SIP peaked $8.60/$7.46 at **16:05 ET**, grinding down since ($7.46→$6.93), volume fading hard (643K→16K/bar). Grade-A catalyst ($25M China license deal) but trajectory overrides catalyst. **SKIP** (catalyst-override watch — retrospective check tomorrow whether Grade-A overcame the early fade).
+- **GVH** — Day -17.5% below -15% gate, dead-cat (Total -6.3%, still below regular close, not reclaiming). **SKIP**.
+- **JLHL** — Day -49.7%, Total -37.0% = deep dead-cat crash. **SKIP**.
+
+**Decision: 1 entry (EDHL).** First BUILD/HOLD-pattern candidate of the night with real SIP liquidity. ALGS remains a SPIKE→FADE skip despite its Grade-A catalyst.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| EDHL | $4.81 | 2026-07-06 23:30 CET (17:30 ET) | 20 | c91919e4 | Low-float double-pump hold, new AH high $5.54 at 17:05 ET, VRatio 4.9x, real SIP spike. Grade None (no catalyst found). |
