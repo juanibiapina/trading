@@ -110,6 +110,32 @@ Scanner ran 18:00 ET. Prior scans: LGPS, ALGS, GVH, CLRO (22:30); EDHL, JLHL (23
 
 **Decision: No new entries.** The two AH>10% new names are both first-appearance (can't clear the ≥2-AH-scan gate): NIVF is already SPIKE→FADE off a $2.17 peak, OLOX is a fresh build but on an illiquid 57%-spread book. Watch OLOX for a 2nd AH appearance with a tighter book at 00:30. EDHL position holding ~+20%.
 
+## Scan 00:30 CET (6:30 PM ET) — AH OPEN, entry-eligible
+
+Scanner ran 18:30 ET. Prior scans: LGPS, ALGS, GVH, CLRO (22:30); EDHL, JLHL (23:00); EDHL entered 23:30; LUCY, NIVF, BYAH, OLOX (00:00). This scan hits: ALGS, NIVF, JLHL, EDHL, TDIC, WOK, SLGB. New this scan: TDIC, WOK, SLGB.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ALGS | [TV](https://www.tradingview.com/chart/?symbol=ALGS) | $5.85 | +4.7% | +17.9% | $6.90 | +23.4% | 2.3M | 360K | 6.3x | 4.8M | Pharmaceuticals: Major |
+| NIVF | [TV](https://www.tradingview.com/chart/?symbol=NIVF) | $1.49 | +7.8% | +5.4% | $1.57 | +13.6% | 1.7M | 1.1M | 1.6x | 10.1M | Medical/Nursing Services |
+| JLHL | [TV](https://www.tradingview.com/chart/?symbol=JLHL) | $3.69 | -49.7% | +24.9% | $4.61 | -37.1% | 1.2M | 581K | 2.1x | 1.3M | Miscellaneous Commercial Services |
+| EDHL | [TV](https://www.tradingview.com/chart/?symbol=EDHL) | $3.96 | -0.5% | +25.0% | $4.95 | +24.4% | 755K | 143K | 5.3x | ~0 | Advertising/Marketing Services |
+| TDIC | [TV](https://www.tradingview.com/chart/?symbol=TDIC) | $3.59 | -25.5% | +15.9% | $4.16 | -13.7% | 561K | 1.0M | 0.5x | 616K | Miscellaneous Commercial Services |
+| WOK | [TV](https://www.tradingview.com/chart/?symbol=WOK) | $2.11 | -4.5% | +12.3% | $2.37 | +7.2% | 205K | 450K | 0.5x | 2.4M | Medical Specialties |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.69 | +9.5% | +8.7% | $0.75 | +19.1% | 54K | 333K | 0.2x | 3.0M | Air Freight/Couriers |
+
+**Gate check & evaluation:**
+
+- **EDHL (open position)** — Still holding: AH +25.0%, Total +24.4%, VRatio 5.3x. Real price ~$4.95 vs $4.81 entry (~+3%). Holding the base / making new AH highs. Position management handled in premarket per position-evaluation workflow.
+- **TDIC** — New, **first AH appearance**. Day -25.5% below the -15% gate = dead-cat (crashed regular session, bouncing AH). Total -13.7% still below regular close = not reclaiming, no dead-cat-override trigger. VRatio 0.5x thin. **SKIP**.
+- **WOK** — New, **first AH appearance** (needs ≥2 AH scans >10%). AH +12.3% clears the 10% bar but VRatio 0.5x = negligible AH participation (205K vs 450K avg), Total only +7.2%. Can't enter on first sighting anyway. **Watch** for a build with rising volume into 01:00.
+- **SLGB** — New. AH +8.7% below the 10% gate, VRatio 0.2x (54K vs 333K avg = negligible AH participation). **SKIP**.
+- **NIVF** — Faded further: AH +5.4% (was +20.1% at 00:00), now below the 10% gate. SPIKE→FADE confirmed. **SKIP**.
+- **ALGS** — Unchanged SPIKE→FADE (peaked 16:05 ET, still grinding, VRatio 6.3x). Grade-A catalyst noted (catalyst-override watch). **SKIP**.
+- **JLHL** — Day -49.7%, Total -37.1% = deep dead-cat crash. **SKIP**.
+
+**Decision: No new entries.** The only new AH>10% names are first-appearance and fail on liquidity: TDIC is a dead-cat (Day -25.5%, below close), WOK has VRatio 0.5x thin volume. Neither can clear the ≥2-AH-scan gate on first sighting. EDHL position holding ~+24% (slightly above entry). Watch WOK for a 2nd AH appearance with rising volume at 01:00.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
