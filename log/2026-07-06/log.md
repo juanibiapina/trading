@@ -83,6 +83,33 @@ Scanner ran 17:30 ET. Prior scans: LGPS, ALGS, GVH, CLRO (22:30); EDHL, JLHL (23
 
 **Decision: 1 entry (EDHL).** First BUILD/HOLD-pattern candidate of the night with real SIP liquidity. ALGS remains a SPIKE→FADE skip despite its Grade-A catalyst.
 
+## Scan 00:00 CET (6:00 PM ET) — AH OPEN, entry-eligible
+
+Scanner ran 18:00 ET. Prior scans: LGPS, ALGS, GVH, CLRO (22:30); EDHL, JLHL (23:00); EDHL entered 23:30. New this scan: LUCY, NIVF, BYAH, OLOX.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LUCY | [TV](https://www.tradingview.com/chart/?symbol=LUCY) | $1.24 | +63.2% | +5.6% | $1.31 | +72.4% | 5.2M | 19.4M | 0.3x | 5.8M | Internet Retail |
+| ALGS | [TV](https://www.tradingview.com/chart/?symbol=ALGS) | $5.85 | +4.7% | +17.9% | $6.90 | +23.4% | 2.2M | 351K | 6.3x | 4.8M | Pharmaceuticals: Major |
+| GVH | [TV](https://www.tradingview.com/chart/?symbol=GVH) | $3.67 | -17.5% | +7.6% | $3.95 | -11.2% | 1.4M | 2.2M | 0.7x | 2.2M | Air Freight/Couriers |
+| JLHL | [TV](https://www.tradingview.com/chart/?symbol=JLHL) | $3.69 | -49.7% | +16.8% | $4.31 | -41.2% | 1.1M | 569K | 1.9x | 1.3M | Miscellaneous Commercial Services |
+| NIVF | [TV](https://www.tradingview.com/chart/?symbol=NIVF) | $1.49 | +7.8% | +20.1% | $1.79 | +29.5% | 890K | 964K | 0.9x | 10.1M | Medical/Nursing Services |
+| EDHL | [TV](https://www.tradingview.com/chart/?symbol=EDHL) | $3.96 | -0.5% | +20.7% | $4.78 | +20.1% | 673K | 131K | 5.1x | ~0 | Advertising/Marketing Services |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $0.71 | -14.7% | +6.2% | $0.76 | -9.4% | 186K | 2.7M | 0.1x | 2.0M | Household/Personal Care |
+| OLOX | [TV](https://www.tradingview.com/chart/?symbol=OLOX) | $5.42 | +6.1% | +25.5% | $6.80 | +33.1% | 20K | 16K | 1.3x | 1.0M | Metal Fabrication |
+
+**Gate check & evaluation:**
+
+- **EDHL (open position)** — Still holding: AH +20.7%, Total +20.1%, VRatio 5.1x. Real price ~$4.78 vs $4.81 entry. Holding the base. Position management handled in premarket per position-evaluation workflow.
+- **OLOX** — New, **first AH appearance** (needs ≥2 AH scans >10% — regular-session doesn't count). Float 1.0M, AH +25.5%. SIP shows a **fresh real build just started 17:40 ET**: 21:40Z bar 35K sh / 784 trades, 21:45Z bar 122K sh / 2,914 trades, peaked $7.31 (+35%) at 17:40 ET (after 17:30). But **book is illiquid/wide**: bid $4.34 x100 / ask $6.82 x100 (~57% spread), quote timestamp stale (16:00 ET). Can't enter on first sighting anyway. **Watch** for a build with tightening book into 00:30.
+- **NIVF** — New, **first AH appearance**. Float 10.1M, AH +20.1%. SIP shows a **real spike that is now fading (SPIKE→FADE)**: peaked $2.17 (+45%) at 17:30 ET on 588K sh / 4,982 trades, then collapsed to $1.52 (-30% off high) by 17:45 ET. Faded spike + first sighting. **SKIP** (watch only).
+- **LUCY** — AH +5.6% below the 10% gate, VRatio 0.3x (AH vol 5.2M vs 19.4M avg = negligible AH participation). **SKIP**.
+- **ALGS** — Unchanged SPIKE→FADE (peaked 16:05 ET, still grinding, VRatio 6.3x). Grade-A catalyst noted (catalyst-override watch). **SKIP**.
+- **GVH** — Day -17.5% below -15% gate, dead-cat (Total -11.2%, still below regular close). **SKIP**.
+- **JLHL** — Day -49.7%, Total -41.2% = deep dead-cat crash. **SKIP**.
+
+**Decision: No new entries.** The two AH>10% new names are both first-appearance (can't clear the ≥2-AH-scan gate): NIVF is already SPIKE→FADE off a $2.17 peak, OLOX is a fresh build but on an illiquid 57%-spread book. Watch OLOX for a 2nd AH appearance with a tighter book at 00:30. EDHL position holding ~+20%.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
