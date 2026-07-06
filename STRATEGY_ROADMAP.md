@@ -274,9 +274,19 @@ hosting blocker:
   (`.config/dev-session`) is a harmless tmux layout. The make-public decision
   (exposes full strategy + trade history) is Juan's.
 
-**Recommended next step:** path (d) — highest leverage (solves inline charts +
-review surface together, no InboxKit code). Needs Juan's go on making the repo
-public. If he prefers to keep it private, fall back to (c).
+**Update (2026-07-03) — Juan approved path (d); repo is now PUBLIC.** Reply to
+the 07-02 email: "Make the repo public." Re-ran the secrets scan (clean — all
+keys from env / `~/.gmcli/accounts.json`, only tracked config is the tmux
+`.config/dev-session`) and set `juanibiapina/trading` to public via `gh repo
+edit`. Hosting blocker is gone: GitHub blob/raw URLs and (once enabled) GitHub
+Pages now serve `log/YYYY-MM-DD/TICKER-HHMM.png` with zero auth. Next steps:
+(1) update `prompts/daily-email.md` to inline charts via a raw.githubusercontent
+`<img src>` (Gmail proxies remote https images), and optionally (2) publish HTML
+reports via GitHub Pages for the richer review surface.
+
+**Recommended next step:** wire inline `<img>` raw-URL charts into
+`prompts/daily-email.md` (the blob links that 404'd on 06-30 now resolve, and
+raw URLs render inline). GitHub Pages HTML reports are a follow-on.
 
 Prior next step (now obsolete): wire PNG attachments into
 `scripts/send-email-inboxkit.js`.

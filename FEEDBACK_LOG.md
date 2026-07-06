@@ -6,6 +6,26 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-03 — re: Trading Scanner Report - 2026-07-02
+
+**Juan said:** "Make the repo public."
+
+**Interpretation:** Go-ahead for Initiative 5 path (d) — the 07-02 email's Open
+Ask offered (c) an InboxKit image feature vs (d) making `juanibiapina/trading`
+public + GitHub Pages. Juan picked (d). This unblocks inline charts (public repo
+doubles as a zero-auth PNG host, fixing path (a)'s only gap) and enables the
+richer HTML-report review surface.
+
+**Action:** Done now. Re-ran the secrets-safety scan (no credentials in tracked
+files; `broker.js`, `send-email-inboxkit.js`, `send-email.js` all read keys from
+env / `~/.gmcli/accounts.json` outside the repo; only tracked config is the
+harmless `.config/dev-session` tmux layout). Set repo visibility to PUBLIC via
+`gh repo edit`. Roadmap Initiative 5 updated. Next scanner-improvement / daily-
+email run can now wire inline `<img src>` PNGs (GitHub raw / Pages) and publish
+HTML reports.
+
+---
+
 ### 2026-07-01 — re: Trading Scanner Report - 2026-06-30
 
 **Juan said:** "For the images, can I add a feature to inboxkit that would allow
