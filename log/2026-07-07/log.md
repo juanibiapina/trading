@@ -4,7 +4,7 @@
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-| _(none)_ | | | | | |
+| DCX | $1.34 | 2026-07-07 23:35 CET (17:35 ET) | 66 | 82259652 | Low-float (2.1M) AH BUILD, Total +38%, late spike 17:05 ET on 1M+ sh/bar making new highs. Grade None (no catalyst; delisting overhang). |
 
 ## Scan 21:30 CET (3:30 PM ET) — REGULAR session, pre-AH
 
@@ -75,6 +75,27 @@ Scanner ran at 17:00 ET — **3 hits**. **None overlap** with the 22:30 hits (FR
 **WFF — skip (dead-cat + illiquid):** Day% -31.6% (crashed regular session), AH Vol 825 sh / VRatio 0.1x (essentially no AH trades), Total% -15.8% (still below close). Quote bid $1.73 / ask $3.28 = massive spread, stale 20:00Z — no fillable AH book. Dead-cat shape with no liquidity.
 
 **Watchlist for 23:30 CET:** IOTR primary (needs 2nd-AH-scan hold/rebuild + real book; currently fading off 16:35 peak). Re-run structured catalyst search at 23:30 in case a PR drops.
+
+## Scan 23:30 CET (5:30 PM ET) — AH
+
+Scanner ran at 17:30 ET — **8 hits**. IOTR and VTAK reappeared (2nd AH scan — night trigger met); DCX and VEEE are new BUILD candidates.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DCX | [TV](https://www.tradingview.com/chart/?symbol=DCX) | $1.02 | -2.9% | +42.2% | $1.45 | +38.1% | 2.3M | 1.1M | 2.0x | 2.1M | Motor Vehicles (crypto) |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $2.52 | -4.9% | +29.8% | $3.27 | +23.4% | 2.3M | 351K | 6.4x | 644K | IT Services |
+| VEEE | [TV](https://www.tradingview.com/chart/?symbol=VEEE) | $5.63 | +10.2% | +11.0% | $6.25 | +22.3% | 73K | 43K | 1.7x | 443K | Recreational Products |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.71 | -7.0% | +25.2% | $0.89 | +16.5% | 16.8M | 17.2M | 1.0x | 2.0M | Medical Specialties |
+
+(Also hit but skipped on quality: SLNH VRatio 0.0, ANVS 0.1x, RDGT Day -20.8% dead-cat, WFF dead-cat/illiquid.)
+
+**ENTERED — DCX (66 @ $1.34, Grade None):** Digital Currency X Technology. Night trigger met (IOTR + VTAK both posted AH>10% across 2 AH scans). DCX clears all entry gates: float 2.1M <50M ✓, Day% -2.9% > -15% ✓, Total% +38% ≤ 150% ✓, real accumulating BUILD ✓, not dead-cat ✓. SIP bars show a genuine **late BUILD**: spike started 17:05 ET (21:05Z O$1.08→H$1.48 vol 1.06M/6,586 trades), 21:10Z H$1.49 vol 1.58M/9,673 trades, made **new high $1.55 at 17:16 ET** on 155-440K sh/min. VWAP $1.45-1.51 corroborates the scanner AH price (no bad print). Quote endpoint returned stale @16:00 ET data, but the thousands of trades/min confirm a deep live book (freshness guard: no skip on stale quote for a strong signal). **Catalyst: none found** — structured search (4 queries) found no fresh 07-07 PR; only a ~1-week-old Nasdaq delisting-pressure/reverse-split story. No-catalyst is a concern noted, not a skip (learning phase). Grade None → exit first premarket. Order 82259652 filled 66 @ $1.34 (below $1.58 limit).
+
+**VEEE — attempted, no fill (canceled):** Twin Vee Powercats. Hold-near-high BUILD ($6.11-6.30 vs $6.53 AH high, within ~6%), float 443K, Day% +10.2%, Total% +22%. Clears trajectory gates but AH volume is thin (~1K sh/bar, 22-63 trades/bar) and quote showed no ask (`ask $0.00 x0`). Limit buy 16 @ $6.40 did not fill — no fillable book. No fill = no position (order 32ac0cb2 canceled). No fresh catalyst (only a 6-day-old comparison article).
+
+**IOTR — skip (SPIKE→FADE):** 2nd AH scan but declining hard: 23:00 total +58.8% → 23:30 +23.4%. SIP bars: peaked $4.65 at 16:35 ET, now $3.15 (~32% off peak, not holding within 20%). Early peak + declining across scans = textbook SPIKE→FADE (0/10+ for PM continuation). No fresh catalyst (checked at 23:00).
+
+**VTAK — skip (weak signal):** 2nd AH scan but VRatio 1.0x (AH vol not unusual vs its 17M avg), sub-$1, fading (+45.9% → +25.2% AH). No unusual accumulation.
 
 ## Position Evaluation — 10:30 CET
 

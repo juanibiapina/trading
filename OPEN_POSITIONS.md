@@ -8,7 +8,8 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Cost | Entry Time | Catalyst | Grade | Hold Strategy |
 |--------|-------|--------|------|-----------|----------|-------|---------------|
-| SEER | $2.26 | 43 | $97.18 | 2026-07-03 00:03 CET (18:03 ET) | CEO unsolicited buyout proposal $2.45/share (+ activist proxy contest, $2.40 cash+CVR) | A | Hold up to 5 days (day 4/5), trail stop -20% from peak. Peak $2.34 (OVN 07-02 23:20 ET), +3.5% — no trail yet. Current $2.19 (-3.1%) at 14:30 CET 07-07, holding below $2.45 offer floor. Hard stop $1.695. |
+| SEER | $2.26 | 43 | $97.18 | 2026-07-03 00:03 CET (18:03 ET) | CEO unsolicited buyout proposal $2.45/share (+ activist proxy contest, $2.40 cash+CVR) | A | Hold up to 5 days (day 4/5), trail stop -20% from peak. Peak $2.34 (OVN 07-02 23:20 ET), +3.5% — no trail yet. Current $2.18 (-3.5%) at 23:30 CET 07-07, holding below $2.45 offer floor. Hard stop $1.695. |
+| DCX | $1.34 | 66 | $88.44 | 2026-07-07 23:35 CET (17:35 ET) | None found (Digital Currency X Technology — no fresh 07-07 PR; Nasdaq delisting/reverse-split overhang ~1wk old). Low-float AH BUILD | None | Exit at first premarket opportunity (Grade None). Late AH spike started 17:05 ET, 1M+ sh/bar, new high $1.55 at 17:16 ET. Float 2.1M. |
 
 ## Position Rules
 
