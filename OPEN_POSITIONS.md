@@ -8,8 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Cost | Entry Time | Catalyst | Grade | Hold Strategy |
 |--------|-------|--------|------|-----------|----------|-------|---------------|
-| SEER | $2.26 | 43 | $97.18 | 2026-07-03 00:03 CET (18:03 ET) | CEO unsolicited buyout proposal $2.45/share (+ activist proxy contest, $2.40 cash+CVR) | A | Hold up to 5 days, trail stop -20% from peak. Peak $2.34 (OVN 07-02 23:20 ET). Overnight ~$2.30, near $2.45 offer. Hard stop $1.695. |
-| EDHL | $4.81 | 20 | $96.20 | 2026-07-06 23:30 CET (17:30 ET) | None — low-float double-pump momentum, no company catalyst (Quiver: heavy-volume low-float, no obvious catalyst). New AH high $5.54 at 17:05 ET, VRatio 4.9x, real SIP spike (167K/219K sh bars). | None | Exit at first premarket opportunity per Grade None rule. AH high $5.54; entered $4.81. |
+| SEER | $2.26 | 43 | $97.18 | 2026-07-03 00:03 CET (18:03 ET) | CEO unsolicited buyout proposal $2.45/share (+ activist proxy contest, $2.40 cash+CVR) | A | Hold up to 5 days (day 4/5), trail stop -20% from peak. Peak $2.34 (OVN 07-02 23:20 ET), +3.5% — no trail yet. PM 07-07 ~$2.15, near $2.45 offer. Hard stop $1.695. |
 
 ## Position Rules
 
@@ -65,3 +64,4 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 | IVF | $1.58 | $2.00 | +$25.20 | +26.6% | 1 | None (Grade None) | Low-float AH build, no fresh catalyst. Sold premarket per Grade None rule (exit at any profit). PM ran to $2.59 peak (+64% from entry); exited at $2.00. |
 | CTNT | $2.05 | $1.90 | -$7.20 | -7.3% | 1 | None (Grade None) | Low-float squeeze, no catalyst. Sold first premarket opportunity per Grade None rule. AH peaked $2.21; faded to $1.94 PM. Exited at $1.90 (real fill). |
 | ALZN | $1.31 | $1.29 | -$1.46 | -1.5% | 1 | None (Grade None) | No catalyst (earnings due 7/19; no same-day PR). Sold first PM opportunity per Grade None rule. OVN peak $1.45 (+10.7%); faded overnight. SELL 73 @ $1.29 ext (id f7da27e2) filled 2026-07-01 08:33 UTC. Real fill $1.29. |
+| EDHL | $4.81 | $5.10 | +$5.80 | +6.0% | 1 | None (Grade None) | Low-float double-pump momentum, no catalyst. Sold first PM opportunity per Grade None rule. OVN peak $5.83 (+21% from entry); PM opened $6.29 spike then faded to ~$5.15. SELL 20 @ $5.10 ext (id cdfa66da) filled 2026-07-07. Real fill $5.10. |
