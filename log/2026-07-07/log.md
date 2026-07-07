@@ -24,6 +24,14 @@ Top intraday movers (regular-session data; Chg% and IRVol are intraday, not AH):
 
 **Watchlist for AH (22:00+ CET):** TVRD (primary), CLEV, SKIN. Re-scan after AH opens to confirm which carry momentum into extended hours.
 
+## Scan 22:00 CET (4:00 PM ET) — AH open
+
+Scanner ran at AH open (16:00:14 ET) — **0 hits**. Post-market volume hasn't accumulated yet this early; no real AH spikes register in the first minute of extended hours. Yahoo also has no fresh 07-07 ext-hours data yet (still serving 07-06 session).
+
+**Observation only** (learning phase: no entries before 23:00 CET). No candidates found.
+
+**Watchlist carried from 21:30 (reconfirm at 22:30/23:00):** TVRD (primary, $3.10 +54% intraday, 6.1M float biotech), CLEV ($0.75 +41%, 6.1M float), SKIN ($1.07 +42%, 79M float). SKYQ flagged as prior dead-cat loser — caution.
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
