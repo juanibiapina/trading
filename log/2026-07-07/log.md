@@ -122,6 +122,34 @@ Scanner ran at 18:00 ET — **11 hits**. DCX (open position) still present but e
 
 **SKYQ — skip (regular-session gainer, not an AH spike; prior dead-cat loser):** Day% +41.5% is a *regular-session* move; AH Chg only +5.7% on VRatio 0.1x (AH vol 2.4M well below its 18.6M avg = no unusual AH accumulation). Total% +49.5% is almost entirely the regular-session gain, not an AH BUILD. Also flagged Jun 10 as a dead-cat loser (-27.6%). Not an AH-momentum entry.
 
+## Scan 00:30 CET (6:30 PM ET) — AH
+
+Scanner ran at 18:30 ET — **9 hits**. Both open positions (DCX, VEEE) still present. IOTR reappeared strong (AH +48.8%, back up from +35.5%); one new name BYAH. **No new entries.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.71 | -7.0% | +27.8% | $0.91 | +18.9% | 18.7M | 17.4M | 1.1x | 2.0M | Medical Specialties |
+| DCX | [TV](https://www.tradingview.com/chart/?symbol=DCX) | $1.02 | -2.9% | +24.5% | $1.27 | +21.0% | 5.6M | 1.5M | 3.7x | 2.1M | Motor Vehicles (crypto) |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $2.52 | -4.9% | +48.8% | $3.75 | +41.5% | 3.4M | 506K | 6.7x | 644K | IT Services |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $0.75 | +5.0% | +5.1% | $0.79 | +10.3% | 927K | 8.8M | 0.1x | 2.0M | Household/Personal Care |
+| WFF | [TV](https://www.tradingview.com/chart/?symbol=WFF) | $2.03 | -31.6% | +57.6% | $3.20 | +7.7% | 251K | 45K | 5.5x | 1.6M | Textiles |
+| VEEE | [TV](https://www.tradingview.com/chart/?symbol=VEEE) | $5.63 | +10.2% | +14.4% | $6.44 | +26.0% | 228K | 66K | 3.4x | 443K | Recreational Products |
+| INTJ | [TV](https://www.tradingview.com/chart/?symbol=INTJ) | $3.69 | +0.3% | +5.7% | $3.90 | +6.0% | 184K | 174K | 1.1x | 1.1M | Misc Commercial Services |
+| RDGT | [TV](https://www.tradingview.com/chart/?symbol=RDGT) | $1.33 | -20.8% | +7.5% | $1.43 | -14.9% | 158K | 11.1M | 0.0x | 884K | Medical Distributors |
+| ANVS | [TV](https://www.tradingview.com/chart/?symbol=ANVS) | $1.92 | -2.5% | +5.7% | $2.03 | +3.0% | 116K | 928K | 0.1x | 36.7M | Pharmaceuticals: Major |
+
+**DECISION: No new entries.** Both entry-eligible names this scan are already open positions (DCX, VEEE — managed by premarket position-evaluation). The only names above their AH gates are re-appearances already evaluated and skipped; the one new name (BYAH) doesn't qualify.
+
+**IOTR — skip (SPIKE→FADE, deep-collapse rebuild):** 4th AH appearance. AH bounced to +48.8% but SIP bars confirm the same early-peak profile: peaked **$4.65 at 16:35 ET**, collapsed −33% to $3.12, oscillated $3.30–3.75 for ~1.5h, now rebuilding to $3.93 (22:05Z / 18:05 ET) — still ~15% below the 16:35 peak and *never reclaimed its high*. A rebuild off a deep collapse on an early-peak name with **no catalyst** is a faded spike, not a BUILD/hold (same shape the SKYQ Jun 10 loss warns against). Early peak (16:35, well before 17:30) + never reclaimed = SPIKE→FADE (0/10+ for PM continuation). Skip stands.
+
+**BYAH — skip (nascent, sub-$1, no unusual volume):** New name. AH only +5.1% / Total +10.3% (borderline), VRatio 0.1x (927K AH vol vs 8.8M avg — *below* average, no unusual accumulation). SIP bars show it only started moving at 21:30Z (17:30 ET): $0.73→$0.84 on 204K sh/642 trades — a single late push, 1 AH scan, tiny sub-$1 move. Doesn't clear the >10% AH gate across ≥2 AH scans. Watch only.
+
+**DCX (open position) — easing:** +21% Total (down from +38% at entry). Managed by premarket position-evaluation, not this scan.
+
+**VEEE (open position) — holding:** +26% Total, AH $6.44. Managed by premarket position-evaluation, not this scan.
+
+**Others:** VTAK VRatio 1.1x (AH vol ≈ its 17M avg, not unusual), INTJ VRatio 1.1x + weak %, WFF Day −31.6% dead-cat / illiquid, RDGT Day −20.8% dead-cat / VRatio 0.0x, ANVS VRatio 0.1x — all previously skipped, unchanged.
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
