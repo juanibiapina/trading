@@ -54,6 +54,28 @@ Scanner ran at 16:30 ET — **3 hits**. None from the 21:30 intraday watchlist (
 
 **Watchlist for 23:00 CET (first entry-eligible scan):** FRGT primary. Enter only if it clears all gates (float <50M ✓, AH >10% in ≥2 AH scans — needs 23:00 reconfirm, Day% > -15% ✓, Total% ≤ +150% ✓, BUILD/hold not SPIKE→FADE, real book ✓).
 
+## Scan 23:00 CET (5:00 PM ET) — AH, first entry-eligible scan
+
+Scanner ran at 17:00 ET — **3 hits**. **None overlap** with the 22:30 hits (FRGT/INTJ/ANVS). The 22:30 primary FRGT **faded out** and did not reappear.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $2.52 | -4.9% | +67.0% | $4.21 | +58.8% | 988K | 171K | 5.8x | 644K | IT Services |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.71 | -7.0% | +45.9% | $1.04 | +35.7% | 12.9M | 16.8M | 0.8x | 2.0M | Medical Specialties |
+| WFF | [TV](https://www.tradingview.com/chart/?symbol=WFF) | $2.03 | -31.6% | +23.2% | $2.50 | -15.8% | 825 | 6K | 0.1x | 1.6M | Textiles |
+
+**DECISION: No entries.** Night-level trigger NOT met — no candidate has posted AH >10% across **≥2 after-hours scans**. FRGT (the only 22:30 candidate with a real spike) faded out and did not reconfirm; all three 23:00 hits are first-appearances (1 AH scan each).
+
+**FRGT (22:30 primary) — faded, SPIKE→FADE:** SIP bars show peak $5.40 at 20:10Z (16:10 ET, ~10 min after AH open), then a clean fade: $4.76 → $4.65 → $4.10 → $4.00 → $3.78 → $3.71 (20:45Z). AH volume collapsed with it (442K sh/5,651 trades at peak → 5K sh/112 trades). Now ~$3.71 = **-11% AH (negative)**. Early peak (16:10 ET, well before 17:30) + declining across scans = textbook SPIKE→FADE (0/10+ for PM continuation). Correctly skipped.
+
+**IOTR — real fresh spike, but 1 AH scan and already fading; watch for 23:30:** Genuine accumulation, not a stale VRatio — SIP bars: 20:35Z O$2.70→H$4.65 vol **741K / 12,043 trades**, 20:40Z H$4.47 C$4.18 vol **808K / 15,444 trades**, 20:45Z H$4.21 L$3.12 C$3.37 vol 715K / 11,042 trades. Real two-sided book (bid $3.39 x100 / ask $3.44 x100). But: spike started 16:35 ET, peaked $4.65, and is **already -27% off peak** ($3.39) 14 min later. Only 1 AH scan. Structured catalyst search (3 queries) found **no fresh 07-07 catalyst** — recent IOTR news is a Jan 10 securities purchase (dilution) and Jan type approvals; nothing dated today. iOThree = tiny 644K-float Singapore maritime-AI microcap. **Primary watch for 23:30:** enter only if it holds/rebuilds for a 2nd AH scan (within ~20% of its AH high) rather than continuing to fade. If it keeps sliding off the 16:35 peak, it's a SPIKE→FADE — skip.
+
+**VTAK — skip (weak signal):** VRatio 0.8x means AH vol (12.9M) is *below* its huge avg (16.8M) — no unusual accumulation. Sub-$1 ($0.71→$1.04), Day% -7%. Book real (bid $1.00/ask $1.04) but the spike isn't statistically unusual for this high-turnover name.
+
+**WFF — skip (dead-cat + illiquid):** Day% -31.6% (crashed regular session), AH Vol 825 sh / VRatio 0.1x (essentially no AH trades), Total% -15.8% (still below close). Quote bid $1.73 / ask $3.28 = massive spread, stale 20:00Z — no fillable AH book. Dead-cat shape with no liquidity.
+
+**Watchlist for 23:30 CET:** IOTR primary (needs 2nd-AH-scan hold/rebuild + real book; currently fading off 16:35 peak). Re-run structured catalyst search at 23:30 in case a PR drops.
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
