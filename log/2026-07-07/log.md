@@ -32,6 +32,28 @@ Scanner ran at AH open (16:00:14 ET) — **0 hits**. Post-market volume hasn't a
 
 **Watchlist carried from 21:30 (reconfirm at 22:30/23:00):** TVRD (primary, $3.10 +54% intraday, 6.1M float biotech), CLEV ($0.75 +41%, 6.1M float), SKIN ($1.07 +42%, 79M float). SKYQ flagged as prior dead-cat loser — caution.
 
+## Scan 22:30 CET (4:30 PM ET) — AH
+
+Scanner ran at 16:30 ET — **3 hits**. None from the 21:30 intraday watchlist (TVRD/CLEV/SKIN did not carry into AH). **Observation only** (learning phase: no entries before 23:00 CET / 5:00 PM ET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| FRGT | [TV](https://www.tradingview.com/chart/?symbol=FRGT) | $4.17 | +8.0% | +20.9% | $5.04 | +30.6% | 369K | 95K | 3.9x | 524K | Financial Conglomerates |
+| INTJ | [TV](https://www.tradingview.com/chart/?symbol=INTJ) | $3.69 | +0.3% | +11.1% | $4.10 | +11.4% | 137K | 168K | 0.8x | 1.1M | Misc Commercial Services |
+| ANVS | [TV](https://www.tradingview.com/chart/?symbol=ANVS) | $1.92 | -2.5% | +7.8% | $2.07 | +5.1% | 53K | 922K | 0.1x | 36.7M | Pharmaceuticals: Major |
+
+**Primary observation — FRGT:** 524K float (very low), Total% +30.6%, VRatio 3.9x. SIP AH bars confirm a **real, accumulating spike**, not a stale VRatio:
+- 20:00Z O$4.17 H$4.97 C$4.29 vol 25.7K / 351 trades
+- 20:05Z C$4.75 vol 87K / 1,516 trades
+- 20:10Z H$5.40 C$4.76 vol **442K / 5,651 trades** (VWAP $5.07)
+- 20:15Z C$4.65 vol 232K / 2,949 trades
+- Quote: bid $4.96 x100 / ask $5.19 x100 — real two-sided book. SIP VWAP corroborates the ~$5.04 scanner AH price (no bad print).
+- Pattern so far: spiked to $5.40 in the 20:10Z bar, now easing to $4.65 (slight fade off peak). Watch at 23:00 for BUILD vs SPIKE→FADE.
+
+**Others:** INTJ VRatio 0.8x (AH vol below avg — weak), ANVS VRatio 0.1x + Day% negative (dead-cat shape) — both low priority.
+
+**Watchlist for 23:00 CET (first entry-eligible scan):** FRGT primary. Enter only if it clears all gates (float <50M ✓, AH >10% in ≥2 AH scans — needs 23:00 reconfirm, Day% > -15% ✓, Total% ≤ +150% ✓, BUILD/hold not SPIKE→FADE, real book ✓).
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
