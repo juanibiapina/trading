@@ -1,0 +1,2 @@
+date,ticker,pm_gap_pct,ah_footprint,pm_high,pm_high_time_et,ramp_start_et,peak_vol_per_bar,peak_trades_per_bar,classification,catalyst,notes
+2026-07-07,SUGP,+14.2,unknown,1.16,07:25,07:00,5794480,18384,holdable,-,pipeline-verification row; ramped 07:00 ET on 3.4-5.8M sh/bar, held $1.00-1.10 across 6+ bars

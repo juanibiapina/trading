@@ -9,6 +9,46 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-07 — Init 6: log-only PM-open scan pulse built + scheduled (rollout step 2 done)
+
+**Evaluated:** Prior step (2026-07-06 Init 6: gate met, so next run *draft the
+log-only PM-open scan pulse*) — **worked.** The gate (live-fillability via Alpaca
+SIP) held, and this run executed the drafting step: the pulse is built, the
+discovery + classification pipeline runs end-to-end on a live gapper, and it is
+scheduled.
+
+**Step taken:** Built `prompts/pm-open-scan.md` — a log-only pulse that (1)
+discovers whole-market PM gappers via `scan.py` (which auto-detects the premarket
+session and screens `premarket_change`/`premarket_volume`), (2) classifies each
+gapper holdable / uninvestable / thin from real Alpaca-SIP 5-min bars
+(`broker.js bars --feed sip`, the source validated on 07-06), using the census
+heuristic (held within ~20% of PM high across >=2 bars on real volume =
+holdable), and (3) appends to a new tracker `log/pm-open-scan.csv`. **No orders,
+no `OPEN_POSITIONS.md` touch, no change to any existing trading-scan timing.**
+Added cron `trading-pm-open-scan-1100` (11:00 CET / 05:00 ET, Mon-Fri).
+
+**Result:** Rollout step 2 (instrument a log-only PM-open scan) is **done**.
+Verified the full pipeline live at 09:01 ET: `scan.py --all` returned 11
+premarket hits; classified today's top gapper **SUGP** via SIP bars — it ramped
+at 07:00 ET on **3.4-5.8M shares / 14-18K trades per 5-min bar** and held
+$1.00-1.10 across 6+ bars = **holdable**, seeded as the first tracker row (marked
+pipeline-verification). Both halves (discovery, SIP classification) run in the
+cron environment. First scheduled run: tomorrow 11:00 CET.
+
+**Hypothesis / next step:** Let the pulse accumulate real-time gappers for a few
+weeks. Next run(s): confirm the first scheduled run fired and logged rows, then
+watch the holdable-vs-uninvestable tally build. **Trigger for rollout step 3
+(propose a hypothetical-entry pilot to Juan):** ~3-4 real-time *holdable* PM-only
+gappers logged, showing they recur often enough to be worth piloting. Until then,
+just collect.
+
+**Needs from Juan:** nothing blocking. **Heads-up / veto window:** the new
+log-only PM-open scan pulse was applied directly (permitted for log-only pulses)
+and first runs tomorrow 11:00 CET. It places no orders and retimes no existing
+trading scan. Say the word to remove it before then.
+
+---
+
 ### 2026-07-06 — Init 6: PM-open-scan gate MET (live-fillability confirmed via Alpaca SIP)
 
 **Evaluated:** Prior step (2026-07-03 Init 6: advance the PM-open-scan case via

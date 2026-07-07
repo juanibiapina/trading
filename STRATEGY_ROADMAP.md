@@ -376,7 +376,16 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **Research — ACTIVE (2026-07-06).** Census in
+**Status:** **Instrument — ACTIVE (2026-07-07).** Log-only **PM-open scan pulse
+is built and scheduled.** `prompts/pm-open-scan.md` runs at 11:00 CET / 05:00 ET
+(Mon-Fri, cron `trading-pm-open-scan-1100`): discovers whole-market PM gappers via
+`scan.py` (premarket session), classifies each holdable / uninvestable / thin from
+real Alpaca-SIP 5-min bars (`broker.js bars --feed sip`), and appends to
+`log/pm-open-scan.csv`. **No orders, no change to any existing trading-scan
+timing.** Pipeline verified live on today's gapper SUGP (ramped 07:00 ET on
+3.4-5.8M sh/bar, held $1.00-1.10 across 6+ bars = holdable). First scheduled run:
+tomorrow 11:00 CET. **Flagged for Juan to veto (log-only, so applied directly).**
+Prior status (Research, 2026-07-06): Census in
 `INIT6_EXTREME_MOVERS.md` (**14 cases, May 14-Jun 26**). **Key update 2026-07-06:
 the PM-open-scan gate is MET — live-fillability confirmed.** Ran the fillability
 check the gate required (Alpaca SIP historical minute bars via `broker.js bars
@@ -438,9 +447,9 @@ want to catch." Pattern extraction is co-equal with catching them (rollout 1b).
   peak in PM then dump at open)?
 
 **Rollout plan:**
-1. Quantify: over the last ~6 weeks, list every +200% mover (AH or PM) and tag
-   each detectable / PM-only-gapper / uninvestable-spike. Use the PM-only-gapper
-   tracker already running in the morning eval as the seed dataset.
+1. ~~Quantify: list every +200% mover, tag detectable / PM-gapper /
+   uninvestable.~~ **Done** (census, 14 cases). Seeded from the PM-only-gapper
+   tracker in the morning eval.
    **In progress (2026-06-30):** 9-case census built; the three unlabeled
    PM-only gappers now classified (CIIT/GLXG holdable, TDIC uninvestable). Next:
    mine older logs (Mar-May) for more +200% cases toward the ~15-20 threshold,
@@ -452,7 +461,10 @@ want to catch." Pattern extraction is co-equal with catching them (rollout 1b).
    move. Goal: turn the ceiling-watch dataset into reusable entry/skip signals
    so the system recognizes the setup early instead of only flagging and
    skipping it. This is co-equal with "catch them," not a sub-task.
-2. If a tradable subset exists, instrument a PM-open scan (log only, no action).
+2. ~~Instrument a PM-open scan (log only, no action).~~ **Done 2026-07-07** —
+   `prompts/pm-open-scan.md` + cron `trading-pm-open-scan-1100` (11:00 CET /
+   05:00 ET, Mon-Fri) log holdable/uninvestable/thin gappers to
+   `log/pm-open-scan.csv`. Now accumulating real-time gapper cases.
 3. Pilot hypothetical entries on that subset; compare to the current strategy.
 4. Promote only if the extreme-runner capture beats current net of false spikes.
 
@@ -468,6 +480,11 @@ tracker).
       `ALPACA_PAPER_TRADE=1` explicitly.
 - [ ] Initiative 3: confirm whether to trim/retime the scan schedule once the
       audit proposes a plan.
+- [ ] Initiative 6: **veto window** — a new log-only PM-open scan pulse
+      (`trading-pm-open-scan-1100`, 11:00 CET / 05:00 ET Mon-Fri) was added
+      2026-07-07. It places no orders and changes no existing trading-scan
+      timing; it only logs gappers to `log/pm-open-scan.csv`. Applied directly
+      per the loop's log-only-pulse allowance; say the word to remove it.
 - [x] Initiative 5: chart delivery resolved (2026-06-26). Defaulted to **(b)**
       — charts committed to the daily log dir, linked from the email via GitHub
       blob URLs — since Juan didn't object. Wired into `daily-email.md`. Juan can
