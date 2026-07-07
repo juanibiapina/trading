@@ -5,6 +5,7 @@
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | DCX | $1.34 | 2026-07-07 23:35 CET (17:35 ET) | 66 | 82259652 | Low-float (2.1M) AH BUILD, Total +38%, late spike 17:05 ET on 1M+ sh/bar making new highs. Grade None (no catalyst; delisting overhang). |
+| VEEE | $6.28 | 2026-07-08 00:05 CET (18:05 ET) | 15 | a28c6f41 | Low-float (443K) AH BUILD, Total +26%, held $6.39 within ~13% of $7.31 high (17:25 ET) building across 2 AH scans. Grade C (DoD LYNX defense-platform PR). |
 
 ## Scan 21:30 CET (3:30 PM ET) — REGULAR session, pre-AH
 
@@ -96,6 +97,30 @@ Scanner ran at 17:30 ET — **8 hits**. IOTR and VTAK reappeared (2nd AH scan �
 **IOTR — skip (SPIKE→FADE):** 2nd AH scan but declining hard: 23:00 total +58.8% → 23:30 +23.4%. SIP bars: peaked $4.65 at 16:35 ET, now $3.15 (~32% off peak, not holding within 20%). Early peak + declining across scans = textbook SPIKE→FADE (0/10+ for PM continuation). No fresh catalyst (checked at 23:00).
 
 **VTAK — skip (weak signal):** 2nd AH scan but VRatio 1.0x (AH vol not unusual vs its 17M avg), sub-$1, fading (+45.9% → +25.2% AH). No unusual accumulation.
+
+## Scan 00:00 CET (6:00 PM ET) — AH
+
+Scanner ran at 18:00 ET — **11 hits**. DCX (open position) still present but easing (+23.5% AH / +20% Total, down from 23:30). **VEEE reappeared with a much deeper book and entered.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VEEE | [TV](https://www.tradingview.com/chart/?symbol=VEEE) | $5.63 | +10.2% | +14.4% | $6.44 | +26.0% | 196K | 62K | 3.1x | 443K | Recreational Products |
+| DCX | [TV](https://www.tradingview.com/chart/?symbol=DCX) | $1.02 | -2.9% | +23.5% | $1.26 | +20.0% | 5.1M | 1.5M | 3.5x | 2.1M | Motor Vehicles (crypto) |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $2.52 | -4.9% | +42.5% | $3.59 | +35.5% | 2.5M | 386K | 6.5x | 644K | IT Services |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.71 | -7.0% | +29.3% | $0.92 | +20.3% | 17.7M | 17.3M | 1.0x | 2.0M | Medical Specialties |
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $3.00 | +41.5% | +5.7% | $3.17 | +49.5% | 2.4M | 18.6M | 0.1x | 3.8M | Integrated Oil |
+
+(Also hit/skipped: SLNH VRatio 0.0, RDGT Day -20.8% dead-cat, ANVS 0.1x, TMDE VRatio 0.4x, SLQT negative, WFF dead-cat/illiquid.)
+
+**ENTERED — VEEE (15 @ $6.28, Grade C):** Twin Vee PowerCats. Night trigger already met. VEEE clears all entry gates on its 2nd AH scan: float 443K <10M ✓, Day% +10.2% > -15% ✓, Total% +26% ≤ 150% ✓, AH >10% across 2 AH scans (23:30 +11%, 00:00 +14.4%) ✓, VRatio 3.1x ✓, BUILD/hold ✓. SIP bars show a genuine **BUILD-and-hold**: 20:30Z first real bar $5.92→H$6.53 (191 trades), climbed to a **new AH high $7.31 at 21:25Z (17:25 ET)** on 62K sh/1,512 trades, now holding $6.39 (VWAP $6.42) = ~13% off peak (within 20% – CHAI/MSW-style hold), volume sustained 12-29K sh/bar. Peak 17:25 ET is before 18:30 but it is *holding/building*, not fading – valid per the hold-vs-fade primary signal. **Catalyst: Grade C** – structured search found VEEE registered on the DoD's **LYNX Platform** for its **Black Line Defense** subsidiary (defense-sector procurement-pathway PR; the fresh driver flagged on r/Pennystock "entering the defense sector"). Enabling registration, not a signed contract → Grade C, exit premarket. **Freshness guard applied:** `quote` returned stale @16:00 ET (`ask $0.00 x0`), same artifact as DCX; the 1,000+ trades/bar at peak confirm a deep live book, so no skip on the stale quote. Limit buy 15 @ $6.55 filled at **$6.28** (order a28c6f41). This is a valid re-entry after the 23:30 no-fill – the book has since deepened materially (23:30 ~1K sh/bar → 00:00 12-63K sh/bar).
+
+**DCX (open position) — easing, no action here:** Now +20% Total (down from +38% at 23:35 entry). SIP bars: peaked $1.55 at 17:16 ET, now ~$1.29 (21:45Z VWAP $1.29). Managed by premarket position-evaluation, not this entry scan.
+
+**IOTR — skip (SPIKE→FADE, still an open-and-shut fade):** 3rd AH appearance but the same 16:35 ET peak ($4.65) profile; rebounded to $3.59 AH but that is still ~23% off peak and it has been declining/oscillating across scans. Textbook SPIKE→FADE (0/10+). No fresh catalyst.
+
+**VTAK — skip (weak signal):** 3rd AH scan but VRatio still 1.0x (AH vol 17.7M ≈ its 17.3M avg – not unusual), sub-$1. No accumulation edge.
+
+**SKYQ — skip (regular-session gainer, not an AH spike; prior dead-cat loser):** Day% +41.5% is a *regular-session* move; AH Chg only +5.7% on VRatio 0.1x (AH vol 2.4M well below its 18.6M avg = no unusual AH accumulation). Total% +49.5% is almost entirely the regular-session gain, not an AH BUILD. Also flagged Jun 10 as a dead-cat loser (-27.6%). Not an AH-momentum entry.
 
 ## Position Evaluation — 10:30 CET
 

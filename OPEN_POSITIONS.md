@@ -10,6 +10,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 |--------|-------|--------|------|-----------|----------|-------|---------------|
 | SEER | $2.26 | 43 | $97.18 | 2026-07-03 00:03 CET (18:03 ET) | CEO unsolicited buyout proposal $2.45/share (+ activist proxy contest, $2.40 cash+CVR) | A | Hold up to 5 days (day 4/5), trail stop -20% from peak. Peak $2.34 (OVN 07-02 23:20 ET), +3.5% — no trail yet. Current $2.18 (-3.5%) at 23:30 CET 07-07, holding below $2.45 offer floor. Hard stop $1.695. |
 | DCX | $1.34 | 66 | $88.44 | 2026-07-07 23:35 CET (17:35 ET) | None found (Digital Currency X Technology — no fresh 07-07 PR; Nasdaq delisting/reverse-split overhang ~1wk old). Low-float AH BUILD | None | Exit at first premarket opportunity (Grade None). Late AH spike started 17:05 ET, 1M+ sh/bar, new high $1.55 at 17:16 ET. Float 2.1M. |
+| VEEE | $6.28 | 15 | $94.20 | 2026-07-08 00:05 CET (18:05 ET) | DoD LYNX Platform registration for Black Line Defense subsidiary (defense-sector procurement-pathway PR). Low-float (443K) AH BUILD | C | Exit in premarket, stop -10%. AH high $7.31 at 17:25 ET, held $6.39 (within ~13%) building across 2 AH scans (23:30 +11%, 00:00 +14.4%). VRatio 3.1x, Total +26%. |
 
 ## Position Rules
 
