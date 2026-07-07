@@ -6,10 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-06-30 | BTCT | None (unverified; low-float crypto bounce/squeeze) | $1.77 AH (+139.2% @18:50 ET) | $1.39 PM (+88.0%) | $0.90 | Day 4 - stayed crashed ~$0.90 (-35% from $1.39 PM peak); NOT traded — correct |
-| 2026-07-01 | JEM | None (unverified; low-float squeeze, +267% Jun 30 reg) | $12.67 AH (+219% vs $3.97) phantom | $9.27 PM phantom | $3.21 | Day 3 - continues fading, real book ~$3.21 (PM bounce to $3.5); phantom ramp long unwound; correctly skipped |
-| 2026-07-02 | USDE | Crypto/stablecoin treasury (unverified specifics); real 1M+ sh/bar volume | $7.69 AH (+180% vs $2.75, +270% vs $2.08 reg close) @18:30 ET | $5.70 PM (+107%) | $3.88 | Day 2 - faded from $5.70 PM peak to $2.78 Jul 2 close, bounced $3.88 PM Jul 3 (+40% off close); real volume, still active |
-| 2026-07-03 | CWD | None verified (338M-sh regular-session squeeze on 8.3M float) | $1.74 reg (13:15 ET); AH faded $1.23→$0.91 | $1.58 PM (+143% vs $0.65) | $1.46 | 🆕 Day 1 - regular runner → AH fade → PM re-ramp; DETECTED (21:30 scan +75.9%, flagged "spike over"); not traded (AH fade), correct |
+| 2026-07-03 | CWD | None verified (338M-sh regular-session squeeze on 8.3M float) | $1.74 reg (13:15 ET); AH faded $1.23→$0.91 | $1.58 PM (+143% vs $0.65) | $1.23 | Day 4 - faded to $1.23 from $1.58 PM peak; not traded (AH fade), correct |
+| 2026-07-07 | TDIC | None (repeat low-float gapper, +140% Jun 16) | $5.37 AH (+49.6% @18:00 ET) | $6.60 PM (+83.8% @04:00 ET) | — | 🆕 Day 1 - reg pump $7.70 → crash $3.59 → AH dead-cat/fade → PM re-ramp $6.60; DETECTED (00:30 scan), not traded (dead-cat, correct) |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -28,6 +26,9 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-05-04 | MASK | Financing news | $2.11 | $2.58 | — | $1.90 | Faded |
 | 2026-05-05 | EZGO | None | $2.03 | $2.85 | $0.16 | $0.03 | ⚠️ CRASH (-99%) |
 | 2026-05-06 | OSG | Q1 earnings beat | $6.19 | $5.93 | — | — | Faded |
+| 2026-06-30 | BTCT | None (low-float crypto bounce/squeeze) | $1.77 (+139% @18:50 ET) | $1.39 | — | $0.90 | Day 7: crashed to $1.06; NOT traded (correct) |
+| 2026-07-01 | JEM | None (low-float squeeze; phantom AH ramp) | $12.67 phantom (real $4.54) | $9.27 phantom | — | $3.21 | Phantom ramp unwound; real book ~$2.30; correctly skipped |
+| 2026-07-02 | USDE | Crypto/stablecoin treasury; real 1M+ sh/bar vol | $7.69 (+180%) | $5.70 | $2.78 | $2.78 | Day 5: faded from $5.70 PM peak to $2.78; real volume |
 | 2026-06-26 | ILLR | A — Triller/SpaceX position | $4.20 AH | $6.62 PM | — | $3.77 | Day 6: faded to $3.77 from $6.62 PM peak; NOT traded (ceiling >150% + zero AH vol) |
 | 2026-05-07 | AIIO | $100M acquisition | $0.94 | $0.88 | $1.30 | $9.20 | 🚀 RUNNER (+878%!) |
 | 2026-05-11 | HTCO | Governance approval | $8.00 | $8.78 | — | $7.25 | Modest fade |

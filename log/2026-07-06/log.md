@@ -141,3 +141,85 @@ Scanner ran 18:30 ET. Prior scans: LGPS, ALGS, GVH, CLRO (22:30); EDHL, JLHL (23
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | EDHL | $4.81 | 2026-07-06 23:30 CET (17:30 ET) | 20 | c91919e4 | Low-float double-pump hold, new AH high $5.54 at 17:05 ET, VRatio 4.9x, real SIP spike. Grade None (no catalyst found). |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**TDIC** — Miscellaneous Commercial Services (Dreamland Limited, China micro-cap)
+- Catalyst: None verified — repeat low-float momentum gapper (also gapped +140% Jun 16). Pumped to $7.70 intraday Jul 6, crashed to $3.59 close (-25%), AH dead-cat bounce, then PM re-ramp.
+- Previous Close (reg Jul 6): $3.59
+- AH last night: peaked ~$5.37 (+49.6%) at 18:00 ET / 00:00 CET on real volume (271K sh/bar, 3,696 trades), faded to $4.07 by 20:00 ET
+- Premarket now: SIP high **$6.60 (+83.8%)** at 04:00 ET on 830K sh/bar (14,496 trades); sustained ~$5.50–5.95, ~$5.45 at 04:20
+- Hypothetical P&L (AH spike entry ~$4.00 → PM peak $6.60): **+65%**
+- Float: 616K | Market Cap: $5.4M
+
+**Scanner Diagnostic:**
+- Detectable at screening time (~22:15 CET / 16:15 ET)? **NO at 22:15** (TDIC was −30%, no spike yet) — **but DETECTED later**: appeared in the **00:30 CET scan** (18:30 ET).
+- The 00:00 CET scan (18:00 ET, exactly at the $5.37 AH peak) **missed it — TradingView postmarket feed lag**; TDIC only surfaced at 00:30, already faded to $4.16.
+- Correctly **skipped from entry** at 00:30: dead-cat (Day −25.5% < −15% gate), first AH appearance (fails ≥2-AH-scan gate), thin VRatio 0.5x, Total −13.7% (below reg close, no dead-cat-override trigger).
+- The winning leg was the **PM re-ramp to $6.60 — unforecastable at scan time** (same shape as CWD Jul 3: AH dead-cat/fade → overnight PM re-explosion).
+- Scanner gap: none actionable. TDIC *was* surfaced by the scanner; entry-skip was correct (dead-cat crashed −25% in regular, never reclaimed close in AH). No entry rule catches an unforecastable overnight PM re-ramp on a dead-cat.
+
+### Baseline Tracking
+
+- Days tracked: **43** (was 42 + 1)
+- Winners detected by scanner: **37/42 (88.1%)** — TDIC detected (00:30 scan; added to list).
+- Winner selected for paper trade: **22/42 (52.4%)** — TDIC **not** selected (correct: dead-cat, first-appearance, thin; winning move was an unforecastable PM re-ramp).
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+- Live PM scan (04:20 ET): TDIC +51.5% ($5.44), EDHL +26.3% ($5.00), QTEX +5.4%, BJDX +8.6%, EDHL/TDIC the only real movers.
+- AH reconstruction (SIP): TDIC AH peak $5.37 @18:00 ET (real vol); EDHL double-pump AH peak $5.90 @17:05 ET (219K sh/bar); ALGS SPIKE→FADE peak $7.46 @16:05 ET.
+- PM SIP: TDIC opened $6.60 (830K sh); EDHL opened $6.29 (new PM high > AH); ALGS $6.66 (below AH peak).
+
+### Open Position P&L (Alpaca)
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| EDHL | $4.81 | +19.4% | None | 2026-07-06 17:30 ET | $6.29 (SIP) | 04:00 ET | open | +$3.80 | +4.0% | 🟡 Open |
+| SEER | $2.26 | — | None | 2026-07-03 | $2.19 | 04:00 ET | open | −$3.87 | −4.0% | 🟡 Open |
+
+- EDHL current ~$5.00 (live, roughly matches SIP PM ~$5.31 drift) — P&L not stale. PM spiked to $6.29 (+31% over entry) at 04:00 ET then faded; **exit handled by position-evaluation (10:30 CET)**, not here.
+- SEER current ~$2.13–2.17 (SIP PM confirms live, not stale). Leftover position from Jul 3. Exit handled by position-evaluation.
+- No new fills this session. **Total Realized P&L (Alpaca fills only): +€0.00** (both positions still open).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET). Full coverage.
+- Candidates found: EDHL (entered), ALGS, LGPS, GVH, CLRO, JLHL, NIVF, LUCY, BYAH, OLOX, TDIC, WOK, SLGB.
+- Retrospective matches: TDIC (00:30), EDHL (entered), ALGS all surfaced. Winner detected.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| — | — | No true miss. TDIC surfaced (00:30); winning leg was an unforecastable PM re-ramp on a dead-cat. | n/a |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| EDHL | $5.90 | 17:05 ET | Double-pump build/hold | $6.29 peak → ~$5.31 | +7% (new PM high) | +56% | ✅ Continued; PM > AH, exited window +31% over entry |
+| ALGS | $7.46 | 16:05 ET | Spike→fade | $6.66 peak | −11% | +19% | Faded (correct SPIKE→FADE skip); PM < AH |
+| TDIC | $5.37 | 18:00 ET | Spike→fade (dead-cat) | $6.60 peak | +23% | +84% | Re-ramped in PM after AH fade; PM > AH |
+
+**AH-peak-vs-PM-peak:** EDHL PM ($6.29) > AH ($5.90); TDIC PM ($6.60) > AH ($5.37). ALGS PM ($6.66) < AH ($7.46). No extreme AH runner (>250%) tonight.
+
+### Notes
+
+- **Coverage:** 7/7 scans ran. No coverage failure.
+- **Catalyst-override watch (ALGS):** Grade-A catalyst ($25M China license for pevifoscorvir, Xiamen Amoytop), SPIKE→FADE skip. Outcome: **catalyst did NOT overcome the early fade** — AH peak $7.46 (16:05 ET) > PM peak $6.66. Hypo first-sighting entry ~$7.02 → PM $6.66 = **−5%**. Skip correct; another data point for "trajectory overrides catalyst."
+- **Dead-cat-override watch:** TDIC was a dead-cat (Day −25.5%) but **never reclaimed above reg close in AH** (Total stayed −13.7%), so no dead-cat-override trigger fired. It then PM-re-ramped to +84% — a **dead-cat that re-exploded in PM without an AH reclaim**. Counter-example, not a dead-cat-override tally case (the override requires an AH reclaim above close, which never happened; the winning move was unforecastable overnight).
+- **Fade-rule false-negatives:** none tonight. ALGS/LGPS/NIVF faders did not re-explode in PM (all PM ≤ AH peak).
+- **PM-only gapper:** biggest raw PM mover = TDIC (+84%). Classified **AH→PM continuation, detectable** (had +49% AH footprint, seen in 00:30 scan) — NOT a PM-only gapper. Winning leg was a PM re-ramp on a dead-cat (CWD-shape). No true PM-only gapper tonight.
+- **Late-AH-tail:** none. TDIC AH peak (18:00 ET) was inside the scanned window; the 00:00 scan feed-lagged and it surfaced at 00:30. A **feed-lag** detection nuance, not a true-tail surge — TDIC was a dead-cat skip regardless.
+- **Multi-day runners:** TDIC is a repeat gapper (Jun 16 +140%). CWD (Jul 3), USDE (Jul 1) still tracked.
+
+### Price Charts
+
+**TDIC** (2-day, 5-min): Prev close $3.59 (reg) | 2-day range $3.12–$7.70 | intraday peak **$7.70 @07-06 11:00 ET** (regular), crashed to $3.59 close | AH dead-cat bounce to $5.37 @18:00 ET, faded to $4.07 | PM re-ramp to **$6.60 @04:00 ET**. Regular pump → crash → AH bounce/fade → overnight PM re-explosion.
+
+**EDHL** (2-day, 5-min): Prev close $4.03 | 2-day range $3.90–$6.30 | AH double-pump peak $5.90 @17:05 ET | PM new high **$6.30 @04:00 ET (+56%)** then fade. Clean BUILD/HOLD that carried into PM — the tradeable pattern (entered @$4.81).
