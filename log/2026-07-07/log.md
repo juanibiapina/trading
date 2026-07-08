@@ -178,3 +178,103 @@ Scanner ran at 18:30 ET — **9 hits**. Both open positions (DCX, VEEE) still pr
 - SEER: SIP PM (07-07) stable $2.12-2.20 through 08:15 ET, currently ~$2.19 (bid $2.18/ask $2.20). Price sits below the $2.45 buyout offer, arb gap intact. No invalidating news.
 - Tomorrow 07-08 is day 5 (hold limit). Plan to exit next pulse if still no continuation toward the $2.45 offer.
 - Alpaca `quote` again returned stale timestamp (07-06 20:59Z); relied on SIP 5-min bars for live PM price.
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**IOTR** — Information Technology Services (iOThree Ltd, Singapore maritime-AI microcap)
+- Catalyst: **None found** — 4 structured searches across last night's scans returned no fresh 07-07 PR (only stale Jan securities-purchase/type-approval items). Low-float momentum spike, no news.
+- Previous Close: $2.65
+- AH last night: spiked to SIP high **~$4.65–4.69 (+75–77%) at 16:35 ET**; held ~$3.6–3.9 through the AH session on real volume (740K–808K sh/bar, 12–15K trades at the spike)
+- Premarket now: $4.37 (+65%) — PM peak **$4.52 (+70.6%) at 04:15 ET**
+- Hypothetical P&L (AH entry → PM peak): first-sighting entry $4.21 (23:00 scan) → $4.52 = **+7.4%**; fade-zone entry ~$3.5 → $4.52 = **+29%**
+- Float: 644K (very low) | Market Cap: $6.5M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- Caught in all 4 entry-eligible scans (23:00, 23:30, 00:00, 00:30 CET). At ~23:00 it showed Total +58.8% / AH price $4.21 on 5.8x VRatio — clearly on the radar.
+- Why not selected: **correctly skipped as SPIKE→FADE** — early peak $4.65 at 16:35 ET, collapsed −33% to $3.12, oscillated $3.30–3.75 for ~1.5h, never reclaimed its high, no catalyst. Live logic was sound.
+- Outcome: it re-ramped in PM to $4.52 but that peak **fell just short of the $4.65 AH peak** — the AH high was still the better exit. This is a *marginal* fade-rule false negative (unlike CRE/LNKS which blew past their AH peaks). Recorded in the fade tally below.
+- Scanner gap: none on detection. The open question is the SPIKE→FADE entry rule on very-low-float (644K) names that re-ramp in PM — but here the fade skip was effectively vindicated (PM < AH peak).
+
+### Baseline Tracking
+
+- Days tracked: **44** (was 43 + 1)
+- Winners detected by scanner: **38/43 (88.4%)** — IOTR detected (all 4 entry scans; added to list).
+- Winner selected for paper trade: **22/43 (51.2%)** — IOTR **not** selected (correct: SPIKE→FADE, no catalyst, PM peak fell short of AH peak).
+- Target: >80% detection
+- Status: **BASELINE MET** (88.4%)
+
+### Retrospective Scan Results
+- Live PM scan (04:20 ET): 6 hits — IOTR +64% (peaked +70.6%), NCRA +37% (PM-only, flat in AH), DCX +31%, BATL/VTAK/LUCY small.
+- Forced AH scan: 0 hits (TradingView postmarket feed empty overnight, as usual — not a real signal).
+- AH reconstruction (SIP bars + Yahoo `--ah-history`): IOTR real liquid spike confirmed (VWAP $3.3–4.2, millions of shares, no bad print). SIP AH high $4.65 vs Yahoo AH high $4.18 (Yahoo undercounted; no phantom).
+
+### Open Position P&L (Alpaca)
+
+Raw Alpaca `quote` endpoint returned **stale @20:00 UTC (yesterday's regular close)** for all three names — P&L below is against **live PM prices** (Yahoo PM history / `positions` current), stale quotes flagged and not used.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| DCX  | $1.34 | +38% | None | 07-07 23:35 CET | $1.48 | 04:15 ET | open | — | +7% to +9% (live ~$1.44–1.46) | 🟢 Open |
+| VEEE | $6.28 | +26% | C — DoD LYNX registration | 07-08 00:05 CET | $6.90 | 04:00 ET | open | — | +2% to +4% (live ~$6.40–6.43) | 🟢 Open |
+| SEER | $2.26 | — | A — $2.45 buyout offer | (day-5 carryover) | $2.19 | 04:17 ET | open | — | −3.1% (live ~$2.19) | 🟢 Open |
+
+Exits are handled by `position-evaluation.md` (10:30 / 14:30 CET), not here. **Total Realized P&L (Alpaca fills only, this session): €0.00** (no exits yet today).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30 – 00:30 CET). Full coverage — entry window fully captured.
+- Candidates found: ~8 unique tickers (FRGT, IOTR, VTAK, DCX, VEEE, INTJ, ANVS, BYAH).
+- Retrospective match: winner IOTR = caught (4 scans). No detection miss.
+
+### Missed Opportunities
+
+No significant missed opportunities. The morning's biggest mover (IOTR) was detected in all entry scans. NCRA (+37% PM) was a PM-only gapper (flat +7.6% in AH) — structurally outside the AH scanner, not a miss.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| IOTR | $4.65 (+75%) | 16:35 ET | Spike→fade→PM re-ramp | $4.37 (+65%) | −6% | +65% | PM peak $4.52 fell short of AH peak — AH was better exit |
+| VTAK | $1.04 (+46%) | ~17:00 ET | Spike→fade | $0.76 (+7%) | −27% | +7% | Faded as predicted; correctly skipped (VRatio ~1.0, no accumulation) |
+| DCX | $1.55 (+52%) | 17:16 ET | Late BUILD | $1.46 (+43%) | −6% | +43% | Held into PM; traded (open) |
+| VEEE | $7.31 (+38%) | 17:25 ET | BUILD-and-hold | $6.43 (+24%) | −12% | +24% | Held into PM; traded (open) |
+
+**AH-peak-vs-PM-peak:** IOTR PM peak $4.52 < AH peak $4.65 — AH was the better exit (fits the extreme-runner-fades-into-PM pattern, though IOTR at +75% is below the 250% extreme threshold). VTAK PM well below AH peak. Both DCX/VEEE PM below AH peak too (all four names peaked in AH, not PM).
+
+### Notes
+
+- **Coverage: 7/7 scans ran.** No coverage failure.
+- **Fade-rule false-negative tally (add IOTR, marginal):** IOTR (Jul 7, AH peak $4.65 +75% faded −33% → PM peak $4.52 +70.6%, **float 644K**, catalyst **None**, hypo first-sighting $4.21 → PM peak **+7.4%**). Unlike prior cases (CRE Jun 17 $4.65→$5.99; LNKS Jun 18 $2.31→$4.70), **PM peak fell *short* of AH peak** — the fade skip was effectively correct (AH high was the better exit). Fits the low-float (<3M) profile of the re-ramp hypothesis, but the shallow PM re-ramp does not argue for relaxing the fade rule. Running low-float fade re-ramps: CRE, LNKS (blew past AH peak); IOTR (fell short). Still no recurring cluster justifying a PM-open re-check exception.
+- **PM-only gapper tally (add NCRA):** NCRA (Jul 7→8, +37% PM, flat +7.6% in AH → PM-only). Investability: thin — 176K float, VRatio 1.5x, single-name low volume; **likely uninvestable** (needs 5-min confirm, but tiny float + modest %). Biggest raw PM mover today was IOTR (+70.6%), which was an **AH→PM continuation** (detectable), so no holdable PM-only blind spot today.
+- **No CEILING-OVERRIDE or DEAD-CAT-OVERRIDE watches** were flagged last night — none to follow up.
+- **No late-AH-tail case:** IOTR's defining surge fired at 16:35 ET (right after AH open), well inside the scanned window.
+
+### Price Charts
+
+```
+
+========================================================================
+ IOTR - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $2.65
+2-Day Range: $2.51 - $4.69
+Current: $4.24 (+60.1% from prev close)
+Peak: $4.69 (+77.0%) at 07-07 20:35 ET
+
+Chart (oldest → newest):
+$   4.52 │                                                            
+         │                                                           █
+         │                 █                                        █ 
+         │                █                                        █  
+         │                                  █ █   █                   
+         │                     █       ███ █ █ ███ █████ ███ ██████   
+         │                         █      █             █   █         
+         │                  ███ ██  ███                               
+         │                        █                                   
+         │                                                            
+         │ █             █                                            
+```

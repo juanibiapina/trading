@@ -6,8 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-07-03 | CWD | None verified (338M-sh regular-session squeeze on 8.3M float) | $1.74 reg (13:15 ET); AH faded $1.23→$0.91 | $1.58 PM (+143% vs $0.65) | $1.23 | Day 4 - faded to $1.23 from $1.58 PM peak; not traded (AH fade), correct |
-| 2026-07-07 | TDIC | None (repeat low-float gapper, +140% Jun 16) | $5.37 AH (+49.6% @18:00 ET) | $6.60 PM (+83.8% @04:00 ET) | — | 🆕 Day 1 - reg pump $7.70 → crash $3.59 → AH dead-cat/fade → PM re-ramp $6.60; DETECTED (00:30 scan), not traded (dead-cat, correct) |
+| 2026-07-07 | TDIC | None (repeat low-float gapper, +140% Jun 16) | $5.37 AH (+49.6% @18:00 ET) | $6.60 PM (+83.8% @04:00 ET) | $3.59 | Day 2 - faded to $3.59; not traded (dead-cat, correct) |
+| 2026-07-08 | IOTR | None (low-float 644K maritime-AI squeeze, no PR) | $4.65 AH (+75% @16:35 ET) | $4.52 PM (+70.6% @04:15 ET) | — | 🆕 Day 1 - AH spike→fade→PM re-ramp (peak fell short of AH); DETECTED (4 scans), not traded (SPIKE→FADE, correct); marginal fade-rule FN |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -57,6 +57,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-06-23 | ORIS | None (Nasdaq delisting determination; low-float squeeze) | $3.28 (+60.8%) | $4.24 | — | $1.83 | Day 7: Faded to $1.83 from $4.24 PM peak; late-AH-tail founding case; NOT traded |
 | 2026-06-24 | VTAK | C — spent patent PR re-pump (low-float 2.0M) | $1.38 | $1.89 | — | $1.09 | Day 6: Faded to $1.09; sold @ $1.98 (+70.7%, good PM exit) |
 | 2026-06-25 | AZI | None (low-float 4.4M squeeze; Jun 9-10 $30M placement) | $2.34 | $2.25 | $1.14 | $1.86 | Day 5: Faded to $1.14 then bounced to $1.86; TRADED @ $1.62 (paper) |
+| 2026-07-03 | CWD | None (338M-sh reg-session squeeze on 8.3M float) | $1.74 reg | $1.58 PM (+143%) | — | $1.05 | Day 5: Faded to $1.05 from $1.58 PM peak; not traded (AH fade), correct |
 
 ## Patterns Observed
 
