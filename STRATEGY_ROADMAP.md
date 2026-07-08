@@ -376,8 +376,15 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **Instrument — ACTIVE (2026-07-07).** Log-only **PM-open scan pulse
-is built and scheduled.** `prompts/pm-open-scan.md` runs at 11:00 CET / 05:00 ET
+**Status:** **Instrument — ACTIVE (2026-07-07).** **Juan steer 2026-07-07** (re:
+07-06 email): "I'd rather catch the bigger jump, not a 'clean 6%'... catching BIG
+wins." Reinforces this initiative as the priority and pushes on rollout problem
+(b) — the premarket-exit / no-hold rule caps gains and is the mechanism stopping
+winners from running (07-06 EDHL exited +6% while TDIC re-ramped +65% overnight).
+The daily email framing moderate exits as the "win" also drew the critique. The
+exit-rule change touches `Day Trading.md`/live trading, so it stays a proposal
+for the strategy-advance pulse to raise, not a unilateral change. Log-only
+**PM-open scan pulse is built and scheduled.** `prompts/pm-open-scan.md` runs at 11:00 CET / 05:00 ET
 (Mon-Fri, cron `trading-pm-open-scan-1100`): discovers whole-market PM gappers via
 `scan.py` (premarket session), classifies each holdable / uninvestable / thin from
 real Alpaca-SIP 5-min bars (`broker.js bars --feed sip`), and appends to

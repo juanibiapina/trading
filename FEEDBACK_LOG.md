@@ -6,6 +6,31 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-07 — re: Trading Scanner Report - 2026-07-06
+
+**Juan said:** "This isn't good. I'd rather catch the bigger jump, not a
+'clean 6%'. Remember our goal, which you should always consider when making
+decisions: catching BIG wins."
+
+**Interpretation:** Direct reiteration of the North Star and a critique of the
+07-06 cycle's framing. The email led with a "clean +6.0%" EDHL exit as the
+headline result while TDIC (+65% overnight PM re-ramp) was skipped. Juan is
+unhappy that the system is optimizing for and celebrating moderate, safe
+movers. Two threads: (1) don't frame a +6% premarket exit as the win — it maps
+to Initiative 6 rollout problem (b): the premarket-exit rule caps gains and
+stops winners running. (2) Keep prioritizing Initiative 6 (catch the +300-600%
+runners); the moderate AH->PM movers are not the target.
+
+**Action:** Routed to Initiative 6 (active). Updated its Status note with this
+steer — reinforces PM-open scan priority and flags that the premarket-exit /
+no-hold rule is the gain-capping mechanism Juan is pushing against (rollout
+problem b, "let winners run"). No unilateral strategy change; the exit-rule
+question is a `Day Trading.md` / live-trading change, so it stays a proposal
+for the strategy-advance pulse to raise with Juan. Also a process note: the
+daily email should stop headlining moderate exits as the "win."
+
+---
+
 ### 2026-07-03 — re: Trading Scanner Report - 2026-07-02
 
 **Juan said:** "Make the repo public."
