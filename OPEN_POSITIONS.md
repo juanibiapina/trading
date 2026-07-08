@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Cost | Entry Time | Catalyst | Grade | Hold Strategy |
 |--------|-------|--------|------|-----------|----------|-------|---------------|
-| _(none)_ | | | | | | | No open positions. |
+| SUNE | $2.56 | 36 | $92.16 | 2026-07-08 23:30 CET | None (no same-day catalyst; SUNation Energy solar) | None | Exit at first premarket opportunity |
 
 ## Position Rules
 

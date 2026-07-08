@@ -39,6 +39,7 @@ Premarket window (08:30 ET). Second pulse to exit SEER at the deeper-book window
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| SUNE | $2.56 | 23:30 CET | 36 | b932b0fc | BUILD-and-hold, float 3.4M, VRatio 6.8x, AH>10% ×2 scans. No catalyst (concern noted). |
 
 ## Scan 21:30 CET (3:30 PM ET)
 
@@ -116,3 +117,29 @@ Per-candidate evaluation (SIP bars + real-time quote):
 - **JLHL** — Day -29.2% (dead-cat territory), Total -18.8% still below close, AH vol only 81K. Skip: dead-cat + illiquid.
 
 Re-scan at 23:30 CET: if RPGL and/or SUNE reappear with AH >10% (2nd scan) and hold their BUILD, they become entry-eligible.
+
+## Scan 23:30 CET (5:30 PM ET)
+
+**AFTERHOURS session** — second entry window. `scan.py --all` returned **7 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SRXH | [TV](https://www.tradingview.com/chart/?symbol=SRXH) | $1.97 | +45.9% | +12.2% | $2.21 | +63.7% | 7.7M | 10.6M | 0.7x | 0 | Biotechnology |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.11 | +2.4% | +23.2% | $2.60 | +26.2% | 6.6M | 974K | 6.8x | 3.4M | Engineering & Construction |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $1.78 | -3.3% | +33.7% | $2.38 | +29.3% | 4.8M | 616K | 7.7x | 1.1M | IT Services |
+| GPRO | [TV](https://www.tradingview.com/chart/?symbol=GPRO) | $0.73 | +4.2% | +5.4% | $0.77 | +9.9% | 998K | 6.7M | 0.1x | 129.2M | Electronics/Appliances |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $3.54 | +40.5% | +5.1% | $3.72 | +47.6% | 208K | 3.0M | 0.1x | 644K | IT Services |
+| JLHL | [TV](https://www.tradingview.com/chart/?symbol=JLHL) | $3.06 | -29.2% | +10.8% | $3.39 | -21.5% | 89K | 1.0M | 0.1x | 1.3M | Misc Commercial Services |
+| AP | [TV](https://www.tradingview.com/chart/?symbol=AP) | $7.17 | -2.8% | +14.4% | $8.20 | +11.1% | 62K | 414K | 0.2x | 14.1M | Steel |
+
+**Decision: ENTER SUNE.** Two candidates cleared the 2-AH-scan gate this pulse (SUNE, RPGL). SUNE is a clean BUILD-and-hold; RPGL is fading off its peak → skip per SPIKE→FADE discipline.
+
+Per-candidate evaluation (SIP bars to 21:15Z / 17:15 ET + real-time book):
+
+- **SUNE** — **ENTERED**. Float 3.4M, VRatio 6.8x, Day +2.4%, Total +26.2% (well under 150% ceiling). Cleared 2-AH-scan gate (23:00 +14.7% → 23:30 +23.2%, AH% **building**). SIP bars: peaked $2.85 @17:00 ET, holding $2.67 (~6% off high) on sustained 1M+ sh/bar, thousands of trades/bar — real accumulating liquidity, VWAP $2.65 corroborates scanner AH price. Two-sided book (bid $2.69 x100 / ask $2.74 x100). Peak 17:00 ET is before 18:30 but stock is HOLDING within 20% of high → not disqualified (CHAI/MSW precedent). **Catalyst: none found** (SUNation Energy, solar; 3 searches — only a week-old law-firm investigation PR, not a same-day driver). No-catalyst = concern noted, not a skip (learning phase). BUY 36 @ limit $2.78 ext → **filled $2.56** (id b932b0fc), ~$92 cost. Grade **None**.
+- **RPGL** — **SKIP: SPIKE→FADE.** Cleared mechanical gates (float 1.1M, Day -3.3%, Total +29.3%, AH>10% ×2 scans) but trajectory rolling over: AH% **declined** across the two entry scans (23:00 +42.1% → 23:30 +33.7%). SIP bars: spiked $2.69 @17:05 ET, now $2.39 (~11% off high) with the last two 5-min bars down on collapsing volume (204K vs 704K–1.1M peak bars). Early peak (before 17:30) + declining across scans + fading volume = SPIKE→FADE (0/10+ for PM continuation). Catalyst: same-day PR "Republic Power Group regains Nasdaq minimum-bid compliance" (GlobeNewswire Jul 8) = minor PR, **Grade C** — but trajectory overrides catalyst. Borderline (still within 20% of high), skipped on the declining momentum.
+- **SRXH** — AH +12.2% but VRatio still 0.7x (AH vol 7.7M < avg 10.6M — not outpacing normal daily flow). Carried since 21:30. Biotech, float 0/n-a. Watch only, not outpacing.
+- **GPRO** — new. Float 129.2M (huge), AH +5.4% (<10%), VRatio 0.1x. Skip: high float + sub-threshold AH.
+- **IOTR** — Day +40.5% but AH only +5.1%, AH vol 208K, VRatio 0.1x. Thin. Skip.
+- **JLHL** — Day -29.2% (dead-cat), Total -21.5% still below close, AH vol 89K. Skip: dead-cat + illiquid.
+- **AP** — AH +14.4% but AH vol 62K, VRatio 0.2x, float 14.1M. Thin book. Steel. Skip.
