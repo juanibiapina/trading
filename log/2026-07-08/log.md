@@ -58,3 +58,16 @@ Notable regular-session movers (sorted by relative volume / Chg%):
 | SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $3.75 | +24.8% | 3.7x | 3.8M | $18.0M | Integrated Oil | Prior-loss name (Jun 10 -27.6%) |
 
 No entries — regular-session scan. Watch list carried to AH scans.
+
+## Scan 22:00 CET (4:00 PM ET)
+
+**AFTERHOURS session** — but AH opened this exact minute (16:00 ET). `scan.py --all` returned **0 hits**; ext-hours volume has not accumulated yet and Yahoo still serves yesterday's AH history. Nothing to evaluate this pulse.
+
+Per learning-phase default, the 22:00 pulse is observation-only regardless (no entries before 23:00 CET). Watchlist carried from 21:30 for the next AH scan:
+
+- **NVVE** — micro-float (416K) +88.9% Day%, 752.9x IRVol; top AH-watch if it sustains after the open.
+- **VTAK** — sub-2M float (2.0M) +95% intraday.
+- **IOTR** — 644K float but very thin (300 sh/5m); watch for real AH book.
+- **YAAS / SKYQ / TVRD / SRXH / WTXR** — secondary watches.
+
+No candidates found (0 scanner hits). Re-scan at 22:30 CET once AH volume builds.
