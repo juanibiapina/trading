@@ -8,9 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Cost | Entry Time | Catalyst | Grade | Hold Strategy |
 |--------|-------|--------|------|-----------|----------|-------|---------------|
-| SEER | $2.26 | 43 | $97.18 | 2026-07-03 00:03 CET (18:03 ET) | CEO unsolicited buyout proposal $2.45/share (+ activist proxy contest, $2.40 cash+CVR) | A | Hold up to 5 days (day 4/5), trail stop -20% from peak. Peak $2.34 (OVN 07-02 23:20 ET), +3.5% — no trail yet. Current $2.18 (-3.5%) at 23:30 CET 07-07, holding below $2.45 offer floor. Hard stop $1.695. |
-| DCX | $1.34 | 66 | $88.44 | 2026-07-07 23:35 CET (17:35 ET) | None found (Digital Currency X Technology — no fresh 07-07 PR; Nasdaq delisting/reverse-split overhang ~1wk old). Low-float AH BUILD | None | Exit at first premarket opportunity (Grade None). Late AH spike started 17:05 ET, 1M+ sh/bar, new high $1.55 at 17:16 ET. Float 2.1M. |
-| VEEE | $6.28 | 15 | $94.20 | 2026-07-08 00:05 CET (18:05 ET) | DoD LYNX Platform registration for Black Line Defense subsidiary (defense-sector procurement-pathway PR). Low-float (443K) AH BUILD | C | Exit in premarket, stop -10%. AH high $7.31 at 17:25 ET, held $6.39 (within ~13%) building across 2 AH scans (23:30 +11%, 00:00 +14.4%). VRatio 3.1x, Total +26%. |
+| SEER | $2.26 | 43 | $97.18 | 2026-07-03 00:03 CET (18:03 ET) | CEO unsolicited buyout proposal $2.45/share (+ activist proxy contest, $2.40 cash+CVR) | A | Hold up to 5 days (day 5/5 — time limit TODAY), trail stop -20% from peak. Peak $2.34 (OVN 07-02 23:20 ET), +3.5% — no trail. PM 07-08 ~$2.16 (-4.4%), thin book (621 sh/bar). Catalyst intact ($2.45 floor). **Exit at 14:30 CET window today** (deeper book). Hard stop $1.695. |
 
 ## Position Rules
 
@@ -67,3 +65,5 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 | CTNT | $2.05 | $1.90 | -$7.20 | -7.3% | 1 | None (Grade None) | Low-float squeeze, no catalyst. Sold first premarket opportunity per Grade None rule. AH peaked $2.21; faded to $1.94 PM. Exited at $1.90 (real fill). |
 | ALZN | $1.31 | $1.29 | -$1.46 | -1.5% | 1 | None (Grade None) | No catalyst (earnings due 7/19; no same-day PR). Sold first PM opportunity per Grade None rule. OVN peak $1.45 (+10.7%); faded overnight. SELL 73 @ $1.29 ext (id f7da27e2) filled 2026-07-01 08:33 UTC. Real fill $1.29. |
 | EDHL | $4.81 | $5.10 | +$5.80 | +6.0% | 1 | None (Grade None) | Low-float double-pump momentum, no catalyst. Sold first PM opportunity per Grade None rule. OVN peak $5.83 (+21% from entry); PM opened $6.29 spike then faded to ~$5.15. SELL 20 @ $5.10 ext (id cdfa66da) filled 2026-07-07. Real fill $5.10. |
+| DCX | $1.34 | $1.39 | +$3.30 | +3.7% | 1 | None (Grade None) | Low-float AH BUILD, no catalyst. Sold first PM opportunity per Grade None rule. PM 07-08 opened strong ($1.63 H, 2.5M sh/bar) then faded; peak +10% (~$1.48). Exited on the fade. SELL 66 @ $1.39 ext (id a10d862b) filled 2026-07-08. Real fill $1.39. |
+| VEEE | $6.28 | $6.17 | -$1.65 | -1.8% | 1 | C (DoD LYNX Platform registration) | Grade C — exit in first PM pulse. AH high $7.31; PM opened $6.97 then faded to $6.30/vwap $6.45. Sold in first PM pulse per Grade C rule, small loss (above -10% stop). SELL 15 @ $6.17 ext (id 590df196) filled 2026-07-08. Real fill $6.17. |
