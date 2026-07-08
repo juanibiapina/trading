@@ -30,3 +30,31 @@ Premarket window (08:30 ET). Second pulse to exit SEER at the deeper-book window
 
 **Realized 14:30 pulse:** -$2.58 (SEER).
 **Realized today total:** +$3.30 (DCX) − $1.65 (VEEE) − $2.58 (SEER) = **-$0.93 net**. All positions flat.
+
+---
+
+# Post-Market Screening - 2026-07-08
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+
+## Scan 21:30 CET (3:30 PM ET)
+
+**REGULAR session** (scanner reports `Session: REGULAR`). AH opens 16:00 ET / 22:00 CET. Per the regular-session caution rule, no paper trades enter now — all candidates are **Watch — pending AH confirmation**. Re-check at the 22:00+ CET AH scans; only enter if a name reappears with sustained AH momentum (and per learning-phase default, no entries before 23:00 CET).
+
+Notable regular-session movers (sorted by relative volume / Chg%):
+
+| Ticker | Chart | Price | Day% | IRVol | Float | MCap | Industry | Note |
+|--------|-------|-------|------|-------|-------|------|----------|------|
+| NVVE | [TV](https://www.tradingview.com/chart/?symbol=NVVE) | $9.80 | +88.9% | 752.9x | 416K | $5.1M | Electrical Products | Micro-float, huge Day% + IRVol — top AH-watch |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $1.39 | +95.0% | 20.6x | 2.0M | $1.9M | Medical Specialties | Sub-2M float, +95% intraday |
+| TVRD | [TV](https://www.tradingview.com/chart/?symbol=TVRD) | $4.76 | +53.5% | 4.5x | 6.1M | $44.7M | Biotechnology | Biotech, mid Day% |
+| WTXR | [TV](https://www.tradingview.com/chart/?symbol=WTXR) | $0.69 | +52.3% | 15.9x | 43.2M | $61.0M | Oil & Gas Production | High float |
+| SRXH | [TV](https://www.tradingview.com/chart/?symbol=SRXH) | $1.99 | +47.0% | 8.4x | — | $19.5M | Biotechnology | Biotech |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $3.55 | +40.9% | 1192x | 644K | $17.3M | IT Services | Low float, very thin (300 sh/5m) |
+| YAAS | [TV](https://www.tradingview.com/chart/?symbol=YAAS) | $0.91 | +27.7% | 34.1x | 12.0M | $20.7M | Packaged Software | — |
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $3.75 | +24.8% | 3.7x | 3.8M | $18.0M | Integrated Oil | Prior-loss name (Jun 10 -27.6%) |
+
+No entries — regular-session scan. Watch list carried to AH scans.
