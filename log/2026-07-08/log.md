@@ -171,3 +171,27 @@ SIP freshness: last bars ~17:40–17:45 ET vs 18:00 ET scan (fresh). Per-candida
 - **GPRO** — float 129.2M (huge), AH +6.8% (<10%), VRatio 0.3x. Skip.
 - **JLHL** — Day -29.2% (dead-cat), Total -19.2% still below close, AH vol 93K. Skip: dead-cat + illiquid.
 - **AP** — AH +14.6% but AH vol 65K, VRatio 0.2x, float 14.1M. Thin book, Steel. Skip.
+
+## Scan 00:30 CET (6:30 PM ET)
+
+**AFTERHOURS session** — `scan.py --all` returned **7 hits**. All 7 carried from prior scans; **no new candidates** this pulse.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SRXH | [TV](https://www.tradingview.com/chart/?symbol=SRXH) | $1.97 | +45.9% | +5.6% | $2.08 | +54.1% | 9.2M | 10.8M | 0.9x | 0 | Biotechnology |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.11 | +2.4% | +20.9% | $2.55 | +23.8% | 8.4M | 1.2M | 7.1x | 3.4M | Engineering & Construction |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $1.78 | -3.3% | +33.1% | $2.37 | +28.8% | 6.3M | 791K | 8.0x | 1.1M | IT Services |
+| LIQT | [TV](https://www.tradingview.com/chart/?symbol=LIQT) | $0.77 | +2.5% | +11.4% | $0.86 | +14.2% | 1.4M | 387K | 3.6x | 24.2M | Industrial Machinery |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $3.54 | +40.5% | +5.1% | $3.72 | +47.6% | 276K | 3.0M | 0.1x | 644K | IT Services |
+| JLHL | [TV](https://www.tradingview.com/chart/?symbol=JLHL) | $3.06 | -29.2% | +7.8% | $3.30 | -23.6% | 104K | 1.0M | 0.1x | 1.3M | Misc Commercial Services |
+| AP | [TV](https://www.tradingview.com/chart/?symbol=AP) | $7.17 | -2.8% | +13.0% | $8.10 | +9.8% | 66K | 414K | 0.2x | 14.1M | Steel |
+
+**Decision: NO NEW ENTRY.** No new candidates; SUNE already held (one entry per candidate). SIP fresh (last bars ~17:45 ET vs 18:30 ET scan).
+
+- **SUNE** — *held position* (entered 23:30 @ $2.56). Now fading off its $2.85 peak (@17:00 ET) to $2.53 (~11% off high) on bleeding volume (66K–162K sh/bar vs 1M peak bars). AH% 23:30 +23.2% → 00:00 +19.4% → 00:30 +20.9% — flat/holding near entry. No re-entry; hold/sell handled in premarket.
+- **RPGL** — **SKIP: SPIKE→FADE (stands).** Peaked $2.69 @17:05 ET, now $2.37 (~12% off high) on collapsing volume (56K–105K/bar vs 700K–1.1M peak). AH% flat-to-down across all scans. Grade C PR (Nasdaq bid compliance) but trajectory overrides.
+- **LIQT** — SKIP: weak rebuild on collapsing volume (stands). AH +11.4%, VRatio 3.6x, but early peak $0.97 @16:15 ET, faded spike.
+- **SRXH** — carried since 21:30. AH +5.6% (<10%), VRatio 0.9x (9.2M AH < 10.8M avg — still not outpacing normal flow). Watch only.
+- **IOTR** — AH +5.1%, AH vol 276K, VRatio 0.1x. Thin. Skip.
+- **JLHL** — Day -29.2% (dead-cat), Total -23.6% still below close, AH vol 104K. Skip.
+- **AP** — AH +13.0% but AH vol 66K, VRatio 0.2x, float 14.1M. Thin, Steel. Skip.
