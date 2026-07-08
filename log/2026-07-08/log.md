@@ -143,3 +143,31 @@ Per-candidate evaluation (SIP bars to 21:15Z / 17:15 ET + real-time book):
 - **IOTR** — Day +40.5% but AH only +5.1%, AH vol 208K, VRatio 0.1x. Thin. Skip.
 - **JLHL** — Day -29.2% (dead-cat), Total -21.5% still below close, AH vol 89K. Skip: dead-cat + illiquid.
 - **AP** — AH +14.4% but AH vol 62K, VRatio 0.2x, float 14.1M. Thin book. Steel. Skip.
+
+## Scan 00:00 CET (6:00 PM ET)
+
+**AFTERHOURS session** — `scan.py --all` returned **8 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SRXH | [TV](https://www.tradingview.com/chart/?symbol=SRXH) | $1.97 | +45.9% | +7.1% | $2.11 | +56.3% | 8.7M | 10.7M | 0.8x | 0 | Biotechnology |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.11 | +2.4% | +19.4% | $2.52 | +22.3% | 8.0M | 1.1M | 7.0x | 3.4M | Engineering & Construction |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $1.78 | -3.3% | +34.3% | $2.39 | +29.9% | 6.0M | 750K | 7.9x | 1.1M | IT Services |
+| GPRO | [TV](https://www.tradingview.com/chart/?symbol=GPRO) | $0.73 | +4.2% | +6.8% | $0.78 | +11.4% | 1.8M | 6.8M | 0.3x | 129.2M | Electronics/Appliances |
+| LIQT | [TV](https://www.tradingview.com/chart/?symbol=LIQT) | $0.77 | +2.5% | +15.3% | $0.89 | +18.2% | 1.3M | 377K | 3.4x | 24.2M | Industrial Machinery |
+| VERU | [TV](https://www.tradingview.com/chart/?symbol=VERU) | $2.66 | -7.6% | +7.9% | $2.87 | -0.3% | 160K | 348K | 0.5x | 14.0M | Pharmaceuticals: Major |
+| JLHL | [TV](https://www.tradingview.com/chart/?symbol=JLHL) | $3.06 | -29.2% | +14.1% | $3.49 | -19.2% | 93K | 1.0M | 0.1x | 1.3M | Misc Commercial Services |
+| AP | [TV](https://www.tradingview.com/chart/?symbol=AP) | $7.17 | -2.8% | +14.6% | $8.22 | +11.4% | 65K | 414K | 0.2x | 14.1M | Steel |
+
+**Decision: NO NEW ENTRY.** SUNE (entered 23:30) is the only clean BUILD-and-hold; one entry per candidate so no re-entry. No new candidate clears the entry gate with a valid trajectory.
+
+SIP freshness: last bars ~17:40–17:45 ET vs 18:00 ET scan (fresh). Per-candidate evaluation:
+
+- **SUNE** — *held position* (entered 23:30 @ $2.56). Still BUILD-and-hold: AH% 23:00 +14.7% → 23:30 +23.2% → 00:00 +19.4%, holding well above entry. VRatio 7.0x, AH vol 8.0M accumulating. No re-entry (one entry per candidate; position management handled in premarket). Looking good.
+- **LIQT** — **SKIP: weak rebuild on collapsing volume.** Mechanically clears gates (float 24.2M, Day +2.5%, Total +18.2%, AH>10% ×2 scans: 22:30 +10.1%, 23:00 +12.7%, 00:00 +15.3%). But SIP shows early peak $0.97 @16:15 ET → faded -18% to $0.79 @17:00-17:15 → rebuilt to ~$0.90 @17:40 on **collapsing volume** (100–270 trades/bar vs 2149 at the peak bar). Rebuild is within ~7% of high by price but momentum is bleeding out, not building. Quote frozen/wide ($0.66 x100 / $0.91 x100 @ 20:00Z, re-pulled once, still stale) — no fresh two-sided book, doubtful fill. Faded spike, not a clean BUILD. Watch only.
+- **RPGL** — **SKIP: SPIKE→FADE (stands).** Peaked $2.69 @17:05 ET (before 17:30), now $2.34 (~13% off high) on collapsing volume (86K/bar vs 700K–1.1M peak bars). AH% declining/flat: 23:00 +42.1% → 23:30 +33.7% → 00:00 +34.3%. Grade C catalyst (Nasdaq bid compliance PR) but trajectory overrides. 0/10+ pattern.
+- **VERU** — new. AH +7.9% (<10%), Total -0.3% (no net move from close), VRatio 0.5x, AH vol 160K. Quote wide/stale ($2.27/$3.08 @ 20:00Z). Pharma, Day -7.6%. Skip: sub-threshold AH + no net move + thin.
+- **SRXH** — carried since 21:30. AH +7.1% (<10%), VRatio 0.8x (8.7M AH vol < 10.7M avg — still not outpacing normal daily flow). Watch only.
+- **GPRO** — float 129.2M (huge), AH +6.8% (<10%), VRatio 0.3x. Skip.
+- **JLHL** — Day -29.2% (dead-cat), Total -19.2% still below close, AH vol 93K. Skip: dead-cat + illiquid.
+- **AP** — AH +14.6% but AH vol 65K, VRatio 0.2x, float 14.1M. Thin book, Steel. Skip.
