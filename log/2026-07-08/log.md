@@ -88,3 +88,31 @@ No candidates found (0 scanner hits). Re-scan at 22:30 CET once AH volume builds
 - **Watchlist attrition:** NVVE / VTAK / IOTR (top regular-session micro-floats) did NOT reappear as AH hits — regular-session spikes not carrying into AH so far. Re-check at 23:00.
 
 No entries (observation-only). Re-scan at 23:00 CET for first entry window.
+
+## Scan 23:00 CET (5:00 PM ET)
+
+**AFTERHOURS session** — first entry window. `scan.py --all` returned **7 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SRXH | [TV](https://www.tradingview.com/chart/?symbol=SRXH) | $1.97 | +45.9% | +8.1% | $2.13 | +57.8% | 6.1M | 10.5M | 0.6x | 0 | Biotechnology |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.11 | +2.4% | +14.7% | $2.42 | +17.5% | 3.0M | 557K | 5.5x | 3.4M | Engineering & Construction |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $1.78 | -3.3% | +42.1% | $2.53 | +37.5% | 2.4M | 325K | 7.5x | 1.1M | IT Services |
+| BATL | [TV](https://www.tradingview.com/chart/?symbol=BATL) | $1.64 | -7.9% | +7.3% | $1.76 | -1.2% | 1.7M | 21.4M | 0.1x | 18.0M | Oil & Gas Production |
+| LIQT | [TV](https://www.tradingview.com/chart/?symbol=LIQT) | $0.77 | +2.5% | +12.7% | $0.87 | +15.6% | 1.1M | 356K | 3.1x | 24.2M | Industrial Machinery |
+| JLHL | [TV](https://www.tradingview.com/chart/?symbol=JLHL) | $3.06 | -29.2% | +14.7% | $3.51 | -18.8% | 81K | 1.0M | 0.1x | 1.3M | Misc Commercial Services |
+| AP | [TV](https://www.tradingview.com/chart/?symbol=AP) | $7.17 | -2.8% | +15.8% | $8.30 | +12.5% | 59K | 413K | 0.1x | 14.1M | Steel |
+
+**Decision: NO ENTRY.** The only candidate clearing the learning-phase entry gate (float <50M, AH >10% in ≥2 AH scans, Day% >-15%) is LIQT, and it fails the trajectory test. The two strongest movers (RPGL, SUNE) are fresh this scan (1 AH scan only) and need a 23:30 confirmation.
+
+Per-candidate evaluation (SIP bars + real-time quote):
+
+- **LIQT** — *only 2-AH-scan qualifier* (22:30 +10.1%, 23:00 +12.7%), float 24.2M, Day +2.5%. **SKIP: SPIKE→FADE.** SIP bars peaked $0.97 at 16:15 ET, then volume collapsed (687K→253K→37K→27K→18K sh/bar) and price faded to $0.85. Yahoo timeline confirms fade: peak +18.9% @16:30 → +6% @17:01, now *below* the +10% AH threshold. Quote stale/wide ($0.66 x100 / $0.91 x100 @ 20:00Z). Early peak + collapsing volume = 0/6+ for PM continuation.
+- **RPGL** — *strong watch, not yet eligible* (new this scan, move began 16:30 ET after the 22:30 scan). Micro float 1.1M, VRatio 7.5x, **real** AH liquidity: fresh tight book ($2.27 x100 / $2.30 x100 @ 20:59Z), SIP bars 0.5–1.1M sh/bar, ~9,600 trades/bar. Trajectory: peaked $2.51 @16:40, holding ~$2.30 (≈8% off high) — BUILD-then-hold. Catalyst: **no same-day catalyst found** (2 searches; only prior April 27 RWA/tokenization PR + Feb reverse split). Needs 2nd AH confirmation at 23:30 to clear the 2-scan gate.
+- **SUNE** — *strong watch, not yet eligible* (new this scan). Float 3.4M, VRatio 5.5x, fresh tight book ($2.69 x100 / $2.74 x100 @ 20:54Z), SIP bars to 1.16M sh/bar. Trajectory: peaked $2.83 @16:55, holding $2.77 near high — BUILD near high. Catalyst: **no same-day catalyst found** (2 searches). Solar/energy. Needs 2nd AH confirmation at 23:30.
+- **AP** — Skip: thin AH book (807 sh / 9 trades last bar; 59K total AH vol), float 14.1M, only 1 AH scan. Steel. Not real momentum.
+- **SRXH** — carried from 21:30/22:30. Now AH +8.1% (below 10%), VRatio 0.6x (AH vol 6.1M < avg 10.5M — not outpacing normal flow). Fading. Watch only.
+- **BATL** — Total -1.2% (no net move from close), VRatio 0.1x. Skip.
+- **JLHL** — Day -29.2% (dead-cat territory), Total -18.8% still below close, AH vol only 81K. Skip: dead-cat + illiquid.
+
+Re-scan at 23:30 CET: if RPGL and/or SUNE reappear with AH >10% (2nd scan) and hold their BUILD, they become entry-eligible.
