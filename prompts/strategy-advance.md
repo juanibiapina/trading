@@ -2,8 +2,11 @@ Advance the strategy roadmap by one concrete step. Runs daily.
 
 This is the strategy-level twin of `scanner-improvement.md`. That loop makes
 surgical scanner/process tweaks inside the daily cycle. This loop moves the
-**bigger initiatives** in `STRATEGY_ROADMAP.md` forward — one initiative at a
-time, one small step per day, with evidence discipline.
+**bigger initiatives** in `STRATEGY_ROADMAP.md` forward with evidence
+discipline. Only the **pilot** stage is serialized (one live experiment at a
+time, for attribution); research / instrument / build work runs in parallel, so
+each run advances the active pilot **and** clears ready low-risk items instead
+of queuing them.
 
 ## North Star
 
@@ -19,8 +22,11 @@ they are always in scope to raise.
 
 ## Rules
 
-- **One initiative at a time.** Pick the single active initiative and advance
-  only that one today. Never run two initiatives in the *pilot* stage at once.
+- **Serialize pilots only.** Never run two initiatives in the *pilot* stage at
+  once (keeps P&L attributable). Research, instrument (log-only), and
+  build/delivery work carry no attribution conflict, so advance them in
+  parallel: each run does the top pilot step **plus** up to ~1-2 ready low-risk
+  non-pilot items. Cap it so runs stay focused and never break the daily cycle.
 - **Smallest next step.** Walk each initiative through Research -> Instrument ->
   Pilot -> Promote. Do the next smallest step that produces evidence, not a
   whole stage in one day.
@@ -70,19 +76,20 @@ no, note "insufficient data" and continue.
 
 ### 3. Select Today's Active Initiative
 
-Pick exactly one, ranked by the North Star (expected dollars per unit time =
+Advance the active **pilot** (if any) first, then clear ready low-risk
+non-pilot items, all ranked by the North Star (expected dollars per unit time =
 edge size x frequency x scalability, discounted by effort and uncertainty):
 1. If an initiative is in the *pilot* stage, continue it (only one pilot at a
    time).
-2. Else pick the unblocked initiative with the highest expected money-fast
-   impact in Research/Instrument. Skip any whose `Needs from Juan` is unmet
-   (note it as blocked).
+2. Then advance up to ~1-2 unblocked Research/Instrument/build items with the
+   highest expected money-fast impact (these run in parallel with the pilot).
+   Skip any whose `Needs from Juan` is unmet (note it as blocked).
 3. If the highest-impact lever is not on the roadmap (e.g. a core-strategy or
    universe change looks like it would compound faster), add it as a new
    initiative and, if it touches live trading, flag it for Juan.
 
-State which initiative you chose and why (the money-fast rationale) in one
-sentence.
+State which initiatives you advanced and why (the money-fast rationale) in one
+sentence each.
 
 ### 4. Take the Next Smallest Step
 

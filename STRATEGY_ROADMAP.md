@@ -1,10 +1,17 @@
 # Strategy Roadmap
 
-Bigger changes to the trading system, rolled out **one at a time**. Each idea
-gets researched, piloted in a low-risk way (instrument / paper / shadow), and
-only promoted to the live cycle once it has earned evidence. This file is the
-single source of truth for what we are working on, what is parked, and what
-needs Juan.
+Bigger changes to the trading system. Each idea gets researched, piloted in a
+low-risk way (instrument / paper / shadow), and only promoted to the live cycle
+once it has earned evidence. This file is the single source of truth for what we
+are working on, what is parked, and what needs Juan.
+
+**Parallelism (2026-07-08, Juan's steer "move faster"):** only the **pilot**
+stage is serialized (one live experiment at a time, so P&L stays attributable).
+Research, instrument (log-only), and build/delivery work carry no attribution
+conflict and near-zero risk, so they run **in parallel** and should not queue
+behind the active pilot. Each `strategy-advance` run advances the top pilot step
+**plus** clears ready low-risk build/research items (cap ~1-2 extra per run so
+runs stay focused and never break the daily cycle).
 
 These are strategy-level changes and live **outside** the daily
 scanner-improvement loop (which is restricted to surgical scanner/process
@@ -83,8 +90,10 @@ Done: Initiative 4 (email identity + reply feedback).
 3. **Pilot** — act on it in paper/shadow mode, measure against the baseline.
 4. **Promote** — only after evidence (target: a clear edge over several weeks).
 
-Never run more than one initiative in the *pilot* stage at a time, so effects
-stay attributable.
+Serialization applies to the **pilot** stage only: never run more than one
+initiative in *pilot* at a time, so effects stay attributable. Non-pilot work
+(Research, Instrument/log-only, build/delivery) is **not** serialized and runs
+in parallel.
 
 ---
 
