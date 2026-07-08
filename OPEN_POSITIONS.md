@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Cost | Entry Time | Catalyst | Grade | Hold Strategy |
 |--------|-------|--------|------|-----------|----------|-------|---------------|
-| SEER | $2.26 | 43 | $97.18 | 2026-07-03 00:03 CET (18:03 ET) | CEO unsolicited buyout proposal $2.45/share (+ activist proxy contest, $2.40 cash+CVR) | A | Hold up to 5 days (day 5/5 — time limit TODAY), trail stop -20% from peak. Peak $2.34 (OVN 07-02 23:20 ET), +3.5% — no trail. PM 07-08 ~$2.16 (-4.4%), thin book (621 sh/bar). Catalyst intact ($2.45 floor). **Exit at 14:30 CET window today** (deeper book). Hard stop $1.695. |
+| _(none)_ | | | | | | | No open positions. |
 
 ## Position Rules
 
@@ -67,3 +67,4 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 | EDHL | $4.81 | $5.10 | +$5.80 | +6.0% | 1 | None (Grade None) | Low-float double-pump momentum, no catalyst. Sold first PM opportunity per Grade None rule. OVN peak $5.83 (+21% from entry); PM opened $6.29 spike then faded to ~$5.15. SELL 20 @ $5.10 ext (id cdfa66da) filled 2026-07-07. Real fill $5.10. |
 | DCX | $1.34 | $1.39 | +$3.30 | +3.7% | 1 | None (Grade None) | Low-float AH BUILD, no catalyst. Sold first PM opportunity per Grade None rule. PM 07-08 opened strong ($1.63 H, 2.5M sh/bar) then faded; peak +10% (~$1.48). Exited on the fade. SELL 66 @ $1.39 ext (id a10d862b) filled 2026-07-08. Real fill $1.39. |
 | VEEE | $6.28 | $6.17 | -$1.65 | -1.8% | 1 | C (DoD LYNX Platform registration) | Grade C — exit in first PM pulse. AH high $7.31; PM opened $6.97 then faded to $6.30/vwap $6.45. Sold in first PM pulse per Grade C rule, small loss (above -10% stop). SELL 15 @ $6.17 ext (id 590df196) filled 2026-07-08. Real fill $6.17. |
+| SEER | $2.26 | $2.20 | -$2.58 | -2.65% | 5 | A (CEO $2.45/share buyout proposal + activist proxy contest) | Grade A held full 5-day window (entry 07-03). Catalyst intact ($2.45 floor) but never re-rated above entry; peak $2.34 (+3.5%, OVN 07-02). Sold on day-5 time limit at 14:30 CET pulse. SELL 43 @ limit $2.12 ext (id 34b9f54e), filled @ $2.20 (real bid). |

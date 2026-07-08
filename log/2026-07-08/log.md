@@ -16,3 +16,17 @@ Premarket window (04:30 ET). Source of truth: Alpaca positions + SIP bars. Quote
 - SEER held; flagged for exit at 14:30 CET pulse (final day, thin PM book now).
 
 **Realized today:** +$3.30 (DCX) − $1.65 (VEEE) = **+$1.65 net**.
+
+## Position Evaluation — 14:30 CET
+
+Premarket window (08:30 ET). Second pulse to exit SEER at the deeper-book window per the 10:30 plan.
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| SEER | $2.26 | $2.20 | -2.7% | $2.34 (+3.5%) | 5 | A | SELL | Day 5/5 Grade A time limit reached. Catalyst intact ($2.45 buyout floor) but hold window over. SIP PM prints steady $2.16–2.20; no trail/stop hit. |
+
+**Actions taken:**
+- SELL 43 SEER @ limit $2.12 ext (id 34b9f54e) — filled @ $2.20 (filled at the real bid, better than limit). P&L -$2.58 (-2.65%).
+
+**Realized 14:30 pulse:** -$2.58 (SEER).
+**Realized today total:** +$3.30 (DCX) − $1.65 (VEEE) − $2.58 (SEER) = **-$0.93 net**. All positions flat.
