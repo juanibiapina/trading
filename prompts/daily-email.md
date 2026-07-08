@@ -29,25 +29,38 @@ Use the cycle date for the dir and the current time (CET) for `HHMM`. If
 `chart.py` fails for a ticker (no Yahoo data, etc.), skip that chart and still
 send the email -- charts are a review aid, not a blocker.
 
-InboxKit has **no attachment API**, so charts are delivered as **GitHub repo
-links** (Juan is authenticated to the private repo; the PNGs are committed by
-the daily cycle's git step). Link format:
+InboxKit has **no attachment API**, but the repo is **public** (2026-07-03), so
+charts are **inlined into the email body** via `raw.githubusercontent.com`
+image URLs. Gmail proxies remote https images, so `<img src>` renders inline.
+
+**Commit + push the charts BEFORE sending the email** so the raw URL resolves
+when Gmail's proxy fetches it (Juan reported the old blob links 404'd, and Gmail
+can cache a 404 if the image isn't live at send time):
+
+```bash
+git add log/YYYY-MM-DD/*.png
+git commit -m "daily-email charts YYYY-MM-DD"
+git push
+```
+
+Raw URL format (verified 200 on the public repo):
 
 ```
-https://github.com/juanibiapina/trading/blob/main/log/YYYY-MM-DD/TICKER-HHMM.png
+https://raw.githubusercontent.com/juanibiapina/trading/main/log/YYYY-MM-DD/TICKER-HHMM.png
 ```
 
-Add a "Charts" section to the email body with one link per chart, e.g.:
+Add a "Charts" section to the email body with one inline image per chart, e.g.:
 
 ```html
 <h3 style="color: #555;">Charts (5m + volume)</h3>
-<p><a href="https://github.com/juanibiapina/trading/blob/main/log/YYYY-MM-DD/TICKER-HHMM.png">TICKER (winner)</a><br/>
-<a href="https://github.com/juanibiapina/trading/blob/main/log/YYYY-MM-DD/TICKER-HHMM.png">TICKER (open position)</a></p>
+<p style="margin: 0 0 4px;"><strong>TICKER (winner)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/YYYY-MM-DD/TICKER-HHMM.png" alt="TICKER 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+<p style="margin: 0 0 4px;"><strong>TICKER (open position)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/YYYY-MM-DD/TICKER-HHMM.png" alt="TICKER 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+</p>
 ```
 
-The link resolves only after the PNG is committed and pushed. If this email
-pulse runs before the day's git commit, the link 404s until the cycle's commit
-lands; that is acceptable (Juan opens it after the cycle finishes).
+If `chart.py` produced no charts for this cycle, omit the Charts section.
 
 ### 3. Send Email
 

@@ -9,6 +9,46 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-08 — Init 5: inline charts shipped to the email; Init 6 first scheduled PM-open run logged 4 gappers
+
+**Evaluated:** Prior step (2026-07-07 Init 6: confirm the first scheduled PM-open
+run fired and logged rows) — **worked.** The 11:00 CET pulse ran today (commit
+a59fccc) and appended **4 rows** to `log/pm-open-scan.csv`, all classified
+holdable: IOTR (+62.7%), DCX (+36.3%), BATL (+18.3%) — all AH-detected — and
+**SHPH (+13.8%), a genuine PM-only gapper with no AH footprint** (DOGE-mining
+acquisition catalyst), held $3.65-4.13 within 20% of its $4.34 PM high across 6+
+bars. SHPH is the blind-spot target class. The pulse runs end-to-end in the cron
+environment.
+
+**Step taken:** Two moves this run. (1) **Init 6 (active):** recorded the first
+scheduled run's result and started the running real-time holdable PM-only-gapper
+tally at **1 (SHPH)** — the trigger to propose a hypothetical-entry pilot
+(rollout step 3) is ~3-4, so keep collecting. (2) **Init 5 (parallel, ready,
+Juan-requested):** switched `prompts/daily-email.md` from GitHub **blob links**
+(which 404'd for Juan on 06-30, private-repo era) to **inline
+`<img src="https://raw.githubusercontent.com/...">` images**, now that the repo
+is public. Added a **commit + push charts BEFORE sending the email** step so the
+raw URL is live when Gmail's image proxy fetches it (avoids Gmail caching a 404).
+
+**Result:** Init 5's email-charts delivery is rebuilt on the path Juan asked for
+(image in the body, not a link). Verified: a `raw.githubusercontent.com` chart
+URL returns **HTTP 200** on the public repo, and `chart.py SHPH --range 2d`
+still renders (45 KB PNG). First live use is the next daily-email run. Init 6
+continues accumulating gappers with no code change needed.
+
+**Hypothesis / next step:** (Init 5) confirm the next daily email actually
+displays the inline chart in Juan's Gmail; if yes, the email-charts half is DONE
+and focus shifts to GitHub Pages HTML reports + data-source quality. (Init 6)
+watch the holdable PM-only-gapper tally climb toward 3-4, then draft the
+hypothetical-entry pilot proposal for Juan.
+
+**Needs from Juan:** nothing blocking. The premarket-exit / let-winners-run
+question (Juan's 07-07 "catch BIG wins, not clean 6%" steer) remains a
+live-trading proposal to raise once the PM-open data or a hold-rule backtest
+justifies it; not proposed this run (still gathering evidence).
+
+---
+
 ### 2026-07-07 — Init 6: log-only PM-open scan pulse built + scheduled (rollout step 2 done)
 
 **Evaluated:** Prior step (2026-07-06 Init 6: gate met, so next run *draft the

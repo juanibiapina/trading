@@ -293,12 +293,22 @@ Pages now serve `log/YYYY-MM-DD/TICKER-HHMM.png` with zero auth. Next steps:
 `<img src>` (Gmail proxies remote https images), and optionally (2) publish HTML
 reports via GitHub Pages for the richer review surface.
 
-**Recommended next step:** wire inline `<img>` raw-URL charts into
-`prompts/daily-email.md` (the blob links that 404'd on 06-30 now resolve, and
-raw URLs render inline). GitHub Pages HTML reports are a follow-on.
+**Update (2026-07-08) — inline `<img>` raw-URL charts WIRED into the daily
+email.** Switched `prompts/daily-email.md` step 2 from blob links (which 404'd
+for Juan on 06-30) to inline `<img src="https://raw.githubusercontent.com/...">`
+images, now that the repo is public. Verified a `raw.githubusercontent.com` PNG
+URL returns **HTTP 200** on the public repo and that `chart.py` still renders
+(SHPH 2d, 45 KB). Added a **commit + push charts BEFORE sending** step so the
+raw URL is live when Gmail's image proxy fetches it (prevents Gmail caching a
+404 the way the old flow risked). First live use: next daily-email run. Remaining
+check: confirm the inline image actually displays in Juan's Gmail on the next
+report. GitHub Pages HTML reports remain a follow-on for the richer review
+surface.
 
-Prior next step (now obsolete): wire PNG attachments into
-`scripts/send-email-inboxkit.js`.
+**Recommended next step:** confirm the next daily email renders the inline chart
+in Gmail (Juan's reply); if yes, Init 5's email-charts half is DONE and focus
+shifts to the GitHub Pages HTML-report review surface + the data-source-quality
+half.
 
 **Findings/notes:**
 - Need a data source for 5-minute OHLCV bars. Yahoo's chart API already serves
@@ -401,6 +411,19 @@ real Alpaca-SIP 5-min bars (`broker.js bars --feed sip`), and appends to
 timing.** Pipeline verified live on today's gapper SUGP (ramped 07:00 ET on
 3.4-5.8M sh/bar, held $1.00-1.10 across 6+ bars = holdable). First scheduled run:
 tomorrow 11:00 CET. **Flagged for Juan to veto (log-only, so applied directly).**
+
+**Update (2026-07-08) - first scheduled run fired; 4 gappers logged.** The
+11:00 CET pulse ran (commit a59fccc) and appended 4 rows to
+`log/pm-open-scan.csv`, all classified **holdable**: IOTR (+62.7%, AH-detected
+continuation), DCX (+36.3%, AH-detected), BATL (+18.3%, AH-detected BUILD), and
+**SHPH (+13.8%, genuine PM-only gapper, no AH footprint, DOGE-mining
+acquisition catalyst)** - held $3.65-4.13 within 20% of the $4.34 PM high across
+6+ bars. SHPH is the target class (structurally invisible to the AH scanner).
+**Running real-time holdable PM-only-gapper tally: 1 (SHPH).** Trigger for
+rollout step 3 (propose hypothetical-entry pilot to Juan) is ~3-4; keep
+collecting. The three AH-detected names confirm the pulse also captures
+AH->PM continuers the main scanner already sees (useful cross-check, not the
+blind-spot target).
 Prior status (Research, 2026-07-06): Census in
 `INIT6_EXTREME_MOVERS.md` (**14 cases, May 14-Jun 26**). **Key update 2026-07-06:
 the PM-open-scan gate is MET — live-fillability confirmed.** Ran the fillability
@@ -501,7 +524,8 @@ tracker).
       2026-07-07. It places no orders and changes no existing trading-scan
       timing; it only logs gappers to `log/pm-open-scan.csv`. Applied directly
       per the loop's log-only-pulse allowance; say the word to remove it.
-- [x] Initiative 5: chart delivery resolved (2026-06-26). Defaulted to **(b)**
-      — charts committed to the daily log dir, linked from the email via GitHub
-      blob URLs — since Juan didn't object. Wired into `daily-email.md`. Juan can
-      still ask for inline images (path a) if he'd rather not click into the repo.
+- [x] Initiative 5: inline charts in the email body shipped (2026-07-08). With
+      the repo public, `daily-email.md` now inlines each chart via
+      `raw.githubusercontent.com` `<img src>` (verified HTTP 200), replacing the
+      blob links that 404'd for Juan on 06-30. First live use is the next daily
+      email; open check is whether the image displays in Juan's Gmail.
