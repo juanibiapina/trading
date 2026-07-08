@@ -71,3 +71,20 @@ Per learning-phase default, the 22:00 pulse is observation-only regardless (no e
 - **YAAS / SKYQ / TVRD / SRXH / WTXR** — secondary watches.
 
 No candidates found (0 scanner hits). Re-scan at 22:30 CET once AH volume builds.
+
+## Scan 22:30 CET (4:30 PM ET)
+
+**AFTERHOURS session** — AH volume now building. `scan.py --all` returned **2 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SRXH | [TV](https://www.tradingview.com/chart/?symbol=SRXH) | $1.97 | +45.9% | +11.7% | $2.20 | +63.0% | 2.7M | 10.1M | 0.3x | 0 | Biotechnology |
+| LIQT | [TV](https://www.tradingview.com/chart/?symbol=LIQT) | $0.77 | +2.5% | +10.1% | $0.85 | +12.9% | 72K | 247K | 0.3x | 24.2M | Industrial Machinery |
+
+**Observation-only pulse** (learning-phase default: no entries before 23:00 CET). Notes:
+
+- **SRXH** — carried from the 21:30 watchlist (regular +47%). Now building in AH: Day +45.9% → AH +11.7% → Total +63.0%. BUILD pattern from regular into AH. Biotech. VRatio 0.3x is weak (AH Vol 2.7M < AvgVol 10.1M) — the scanner counts it a hit on absolute AH volume, but AH is not yet outpacing normal daily flow. Top watch for the 23:00 entry scan; needs a real two-sided book and sustained AH% to qualify.
+- **LIQT** — new. +10.1% AH, Total only +12.9%, float 24.2M, VRatio 0.3x (72K AH vs 247K avg). Weak AH volume, modest move, mid float. Low priority.
+- **Watchlist attrition:** NVVE / VTAK / IOTR (top regular-session micro-floats) did NOT reappear as AH hits — regular-session spikes not carrying into AH so far. Re-check at 23:00.
+
+No entries (observation-only). Re-scan at 23:00 CET for first entry window.
