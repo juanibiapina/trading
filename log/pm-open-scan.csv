@@ -1,2 +1,6 @@
 date,ticker,pm_gap_pct,ah_footprint,pm_high,pm_high_time_et,ramp_start_et,peak_vol_per_bar,peak_trades_per_bar,classification,catalyst,notes
 2026-07-07,SUGP,+14.2,unknown,1.16,07:25,07:00,5794480,18384,holdable,-,pipeline-verification row; ramped 07:00 ET on 3.4-5.8M sh/bar, held $1.00-1.10 across 6+ bars
+2026-07-08,IOTR,+62.7,ah-detected,4.57,04:20,04:00,1119454,16172,holdable,-,ah-detected AH->PM continuation (AH peak $4.65 16:35 ET); held $4.1-4.5 within 20pct across 10 bars on 150K-1.1M sh/bar
+2026-07-08,DCX,+36.3,ah-detected,1.63,04:00,04:00,2535021,12521,holdable,-,ah-detected (paper-traded 07-07, now exited); peaked $1.63 04:00-04:10 then held $1.38-1.48 above gap-mid on real vol, slow bleed
+2026-07-08,BATL,+18.3,ah-detected,2.16,04:40,04:00,1946664,10731,holdable,-,ah-detected; BUILD - dipped $1.82 then rebuilt to new PM high $2.16 04:40 ET on 850K sh/bar
+2026-07-08,SHPH,+13.8,none,4.34,04:20,04:00,159016,2231,holdable,DOGE mining platform acquisition (crypto pivot),PM-only gapper (no AH footprint); held $3.65-4.13 within 20pct of $4.34 high across 6+ bars on moderate 11-159K sh/bar, thinning mid-window
