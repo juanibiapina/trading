@@ -519,11 +519,12 @@ tracker).
       `ALPACA_PAPER_TRADE=1` explicitly.
 - [ ] Initiative 3: confirm whether to trim/retime the scan schedule once the
       audit proposes a plan.
-- [ ] Initiative 6: **veto window** — a new log-only PM-open scan pulse
+- [x] Initiative 6: **veto window** — a new log-only PM-open scan pulse
       (`trading-pm-open-scan-1100`, 11:00 CET / 05:00 ET Mon-Fri) was added
       2026-07-07. It places no orders and changes no existing trading-scan
-      timing; it only logs gappers to `log/pm-open-scan.csv`. Applied directly
-      per the loop's log-only-pulse allowance; say the word to remove it.
+      timing; it only logs gappers to `log/pm-open-scan.csv`. Juan confirmed
+      2026-07-08: keep it ("no need to remove") and granted standing autonomy
+      to create pulses ("you're free to create pulses").
 - [x] Initiative 5: inline charts in the email body shipped (2026-07-08). With
       the repo public, `daily-email.md` now inlines each chart via
       `raw.githubusercontent.com` `<img src>` (verified HTTP 200), replacing the

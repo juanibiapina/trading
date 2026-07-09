@@ -6,6 +6,22 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-08 — re: Trading Scanner Report - 2026-07-07
+
+**Juan said:** "no need to remove, you're free to create pulses"
+
+**Interpretation:** Reply to the Open Ask about the new log-only PM-open scan
+pulse (`trading-pm-open-scan-1100`, added 07-07). Two points: (1) keep that
+pulse — do not remove it. (2) Broader grant of autonomy: the loop is free to
+create pulses without asking first. This widens the existing log-only-pulse
+allowance toward general pulse creation.
+
+**Action:** Resolved the Initiative 6 veto-window open ask (kept the pulse).
+Updated the Open Asks list to mark it confirmed and noted the standing
+autonomy to create pulses. No strategy change.
+
+---
+
 ### 2026-07-07 — re: Trading Scanner Report - 2026-07-06
 
 **Juan said:** "This isn't good. I'd rather catch the bigger jump, not a
