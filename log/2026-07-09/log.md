@@ -10,3 +10,7 @@
 - SELL 36 SUNE @ limit $2.35 ext (id 54d1a663), filled @ $2.44. Final P&L −$4.32 (−4.7%).
 - PM opened $2.72 spike (single-bar, L $2.36 same bar) then faded to $2.41 / vwap $2.39. OVN peak ~$2.67. Never re-rated above entry. Grade None rule applied.
 - No open positions remaining.
+
+## Position Evaluation — 14:30 CET
+
+No open positions. Alpaca `positions` empty; `OPEN_POSITIONS.md` reconciled (clean slate). SUNE was closed in the 10:30 pulse. Nothing to hold or sell.
