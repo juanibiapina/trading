@@ -195,3 +195,92 @@ SIP freshness: last bars ~17:40–17:45 ET vs 18:00 ET scan (fresh). Per-candida
 - **IOTR** — AH +5.1%, AH vol 276K, VRatio 0.1x. Thin. Skip.
 - **JLHL** — Day -29.2% (dead-cat), Total -23.6% still below close, AH vol 104K. Skip.
 - **AP** — AH +13.0% but AH vol 66K, VRatio 0.2x, float 14.1M. Thin, Steel. Skip.
+
+---
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**RPGL** — Republic Power Group (IT Services / power)
+- Catalyst: Same-day PR "Republic Power Group regains Nasdaq minimum-bid compliance" (GlobeNewswire Jul 8) — **Grade C** (compliance PR, not an operational driver)
+- Previous Close: $1.80
+- AH last night: SIP peak **$2.69** (+49.4%) @ 17:05 ET (Yahoo under-reported $2.53); held ~$2.30–2.40 through the AH tail
+- Premarket now: **$2.90** (+60.9%), opened at the PM peak
+- PM peak: SIP **$3.05** (+69.4%) @ 04:00 ET (Yahoo under-reported $2.89)
+- Hypothetical P&L (first-sighting AH entry $2.53 @ 23:00 CET → PM peak $3.05): **+20.6%**
+- Float: 1.1M | Market Cap: $1.9M | AH liquidity real (1.0–1.1M sh/bar, ~9,600 trades/bar at peak)
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — RPGL appeared in **all 5 entry scans** (23:00, 23:30, 00:00, 00:30 CET), VRatio 7.5–8.0x, float 1.1M, real two-sided book. Detection was not the problem.
+- Why we didn't act: **correctly skipped as SPIKE→FADE at live-entry time.** AH% declined across the entry scans (23:00 +42.1% → 23:30 +33.7% → 00:00 +34.3% → 00:30 +33.1%), peaked early ($2.69 @ 17:05 ET, before 17:30) and faded ~12% off high on collapsing volume (56–105K sh/bar vs 700K–1.1M peak bars). The disciplined call was to skip — but it then **re-exploded in PM** to +69.4%.
+- Scanner gap: **none — this is an entry-rule false negative, not a detection miss.** RPGL is a low-float (1.1M) AH-fader that re-ramped in premarket, the exact pattern under test for a possible PM-open re-check exception to the SPIKE→FADE rule.
+
+### Baseline Tracking
+
+- Days tracked: **45** (was 44 + 1)
+- Winners detected by scanner: **39/44 (88.6%)** — RPGL detected (all 5 entry scans; added to list).
+- Winner selected for paper trade: **22/44 (50.0%)** — RPGL **not** selected (correct SPIKE→FADE skip at entry time; re-explosion was unforeseeable from the fading AH trajectory). We entered SUNE instead.
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+- Live PM scan (04:20 ET): 3 hits — **RPGL +62.3%** (top), BJDX +32.0%, SUNE +17.1%.
+- Forced AH scan: 0 hits (TradingView postmarket feed empty overnight, as usual — not a reliable retrospective source).
+- AH reconstruction (SIP bars): RPGL traded on **real** volume all session (1M+ sh/bar at peak, VWAP $2.34–2.55), confirming a genuine mover, not a phantom print. PM open bar (08:00Z) 1.6M sh / 18,012 trades — heavy real PM liquidity.
+
+### Open Position P&L (Alpaca)
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| SUNE   | $2.56 | +21.3% | None (solar, no same-day PR) | 23:30 CET | $2.72 (SIP) | 04:00 ET | open | -€4.30 | -4.7% | ⏳ Open |
+
+- SUNE Alpaca `current_price` $2.42 ≈ live SIP PM $2.44 (08:05Z), so the reported P&L is roughly valid (quote endpoint itself stale @ 20:54Z — used SIP for the live level). Real fill, 36 sh @ $2.56.
+- PM peak SIP $2.72 (+6.3% over entry) briefly at 04:00 ET, then faded to ~$2.44. **Hold/sell handled by position-evaluation at 10:30 CET — not decided here.**
+
+**Total Realized P&L (Alpaca fills, this eval): €0.00** (SUNE still open).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30 – 00:30 CET). No coverage failure.
+- Candidates found: ~10 unique tickers across the night (SRXH, LIQT, SUNE, RPGL, BATL, JLHL, AP, GPRO, IOTR, VERU).
+- Retrospective match: today's winner (RPGL) was in 5/7 scans — caught.
+
+### Missed Opportunities
+
+No detection misses. Today's winner was caught; the only "miss" was an entry-rule (SPIKE→FADE) skip, tracked below as a fade-rule false negative.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| RPGL | $2.69 (+49.4%) | 17:05 ET | Spike→fade | $3.05 (PM peak) | +13.4% | +69.4% | PM **exceeded** AH — fade-rule FN |
+| SUNE | $2.85 (+35.1%) | 17:00 ET | Build-and-hold | $2.72 (PM peak) | -4.6% | +28.9% | AH peak was better exit (flag) |
+| LIQT | $0.97 (+25.9%) | 16:15 ET | Spike→fade | $0.85 (PM peak) | -12.4% | +15.4% | Fade continued (skip correct) |
+| AP | $8.30 (+15.8%) | 17:00 ET | Build (thin) | $8.85 (PM peak) | +6.6% | +19.9% | PM slightly exceeded; thin book, skip correct |
+| SRXH | $2.21 (+12.2%) | AH | Choppy <10% | $2.07 (PM high) | -6.3% | ~flat | Never outpaced avg vol (VRatio<1); watch only |
+
+**AH-peak-vs-PM-peak check:** SUNE (our position) peaked in AH ($2.85 vs PM $2.72) — AH was the better exit, but AH peak +35% is not an extreme runner. No AH peak >250% today (extreme-runner tally unchanged).
+
+### Notes
+
+- **Coverage: 7/7 scans ran.** No coverage failure.
+- **Fade-rule false-negative tally (add RPGL):** RPGL (Jul 8→9, AH peak $2.69 +49% faded −12% across entry scans → PM peak **$3.05 +69.4%**, **float 1.1M**, catalyst **Grade C**, hypo first-sighting $2.53 → PM peak **+20.6%**). PM peak **exceeded** AH peak — a genuine false negative. Fits the low-float (<3M) re-ramp profile. Running low-float AH-faders that re-ramped in PM: **CRE** (Jun 17, $4.65→$5.99, blew past), **LNKS** (Jun 18, float 1.5M, $2.31→$4.70, blew past), **IOTR** (Jul 7, float 644K, $4.65→$4.52, fell short), **RPGL** (Jul 8→9, float 1.1M, $2.69→$3.05, blew past). Now **3 of 4** low-float faders blew past their AH peak in PM. Same-night faders the rule correctly skipped (LIQT this night, higher float 24.2M, kept fading) still support a **low-float-conditional** exception rather than a blanket relax. Approaching the ≥4/5 cluster threshold — flag for review: a PM-open re-check on sub-3M-float AH-faders is the leading candidate change.
+- **Catalyst-override annotation:** RPGL was **Grade C** (Nasdaq compliance PR), so it belongs in the general/weak-catalyst fade tally, not the strong-catalyst (A/B) subset. Strong-catalyst faders still have NOT rescued fades (ALGS Jul 6 remains the only A/B case, faded further). RPGL's re-ramp was float-driven, not catalyst-driven.
+- **PM-only gapper tally:** Biggest raw PM mover today = **RPGL +69.4%**, an **AH→PM continuation** (moved +49% in AH, detectable). **No holdable PM-only blind spot today.** BJDX (+32%) was the only real PM-only gapper (flat/down in AH, medical), thin (936K float, VRatio 0.0x) — **uninvestable**.
+- **No CEILING-OVERRIDE or DEAD-CAT-OVERRIDE watches** were flagged last night (RPGL/SUNE well under the +150% ceiling; JLHL was dead-cat but never reclaimed above close, so not a dead-cat-override candidate).
+- **No late-AH-tail case:** RPGL's defining surge fired 16:30–17:05 ET (right after AH open), fully inside the scanned window (detected at 23:00 CET / 17:00 ET).
+
+### Price Charts
+
+```
+========================================================================
+ RPGL - 2-Day Price Timeline (5-min intervals)
+========================================================================
+Previous Close: $1.80  |  2-Day Range: $1.76 - $3.05
+Peak: $3.05 (+69.4%) at 07-09 08:00 ET  |  Current: $2.90 (+60.9%)
+
+AH (07-08): spike to $2.69 @17:05 ET → held $2.30–2.40 → faded to $2.37 by 18:30 ET
+PM (07-09): gapped to $3.05 @04:00 ET (open = peak), holding $2.82–2.93
+```
