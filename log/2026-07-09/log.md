@@ -95,8 +95,36 @@ No open positions. Alpaca `positions` empty; `OPEN_POSITIONS.md` reconciled (cle
 
 **Order:** BUY 60 PMA @ limit $1.68 ext (id bfc7adfc) — **filled @ $1.66**. Cost $99.60. Grade C.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**AH entry scan** — 7 hits. Entries allowed. SIP bars (5Min from 20:00Z / 16:00 ET, fresh to 17:15 ET) + real books:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ELPW | [TV](https://www.tradingview.com/chart/?symbol=ELPW) | $0.57 | -12.0% | +78.5% | $1.01 | +57.1% | 10.0M | 3.1M | 3.3x | 1.4M | Electrical Products |
+| PMA | [TV](https://www.tradingview.com/chart/?symbol=PMA) | $1.29 | +3.2% | +33.3% | $1.72 | +37.6% | 5.2M | 2.6M | 2.0x | 4.6M | Engineering & Construction |
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $1.06 | +0.0% | +17.0% | $1.24 | +17.0% | 4.7M | 6.2M | 0.8x | 4.5M | Biotechnology |
+| WRAP | [TV](https://www.tradingview.com/chart/?symbol=WRAP) | $2.36 | +48.4% | +11.4% | $2.63 | +65.4% | 1.9M | 6.6M | 0.3x | 37.9M | Medical Specialties |
+| RKTO | [TV](https://www.tradingview.com/chart/?symbol=RKTO) | $0.91 | +13.4% | +5.0% | $0.96 | +19.1% | 1.3M | 15.3M | 0.1x | 21.7M | Pharmaceuticals: Major |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $3.32 | -6.2% | +14.8% | $3.81 | +7.6% | 345K | 195K | 1.8x | 23.7M | Internet Retail |
+| DSS | [TV](https://www.tradingview.com/chart/?symbol=DSS) | $0.61 | -0.0% | +8.2% | $0.66 | +8.2% | 112K | 84K | 1.3x | 3.9M | Commercial Printing/Forms |
+
+**SIP bars (5Min) + books:**
+- **ELPW** — strong late BUILD. Flat $0.57–0.63 until 16:40 ET, then accelerated: 16:55 ET bar 2.4M sh/6466 trades ($0.67→$0.89), then 2.1M / 2.2M / 2.9M / 3.6M sh across bars, price $0.89→$1.01→new high $1.12 at 17:15 ET (last bar, 10,139 trades). Massive real accumulation, still making new highs after 17:00 ET. Float 1.4M (post 1-for-80 reverse split). Day -12% (NOT ≤-15%, dead-cat filter does not apply); Total +57.1% (under 150 ceiling). Quote frozen/stale at 16:59 ET (bid $0.70 / ask $7.00 garbage) — **freshness guard**: strong signal (VRatio 3.3, AH +78.5%, built across 2 AH scans), stale quote is not a bad print / not an illiquid book; SIP shows real fillable liquidity (10k+ trades/bar). **ENTERED** (limit fill confirmed real book).
+- **PMA** (already entered 23:00 @ $1.66) — continued build, AH now +33.3% / $1.72, 5.2M AH vol. Holding. No action (one entry per candidate per night).
+- **ELAB** — still SPIKE→FADE from 16:00 ET peak $1.44. Skip per trajectory rule.
+- **WNW** — AH +14.8% but Total only +7.6% (Day -6.2%), 1 AH scan, float 23.7M. Weak/single-scan. Skip.
+- **RKTO / DSS** — AH Chg <10% gate (5.0% / 8.2%). Skip.
+
+**Catalyst (ELPW):** Discounted **US$6.0M public offering** (dilution — crashed the stock ~52% on pricing) + a **1-for-80 reverse share consolidation** (source of the tiny 1.4M float). Catalyst is negative/dilutive → **Grade D**. But the AH move is a genuine low-float squeeze on real volume, a clear BUILD peaking after 17:00 ET. Per learning-phase rule, trajectory (BUILD, 5/5) overrides catalyst; dilution concern noted → exit at first premarket opportunity.
+
+**Decision:** Enter ELPW. Passes gates — float 1.4M (<10M), AH >10% in 2 AH scans (23:00 +15.8%, 23:30 +78.5%, building), Day% -12 (>-15), Total% +57.1 (<150), strong late BUILD, real SIP accumulation, tradable, freshness-guarded fillable book. Grade D catalyst → hold-to-first-PM.
+
+**Order:** BUY 83 ELPW @ limit $1.20 ext (id fdb8f5d7) — **filled @ $1.18**. Cost $97.94. Grade D.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | PMA | $1.66 | 2026-07-09 17:00 ET | 60 | bfc7adfc | BUILD-and-hold, float 4.6M, AH +20.9% (2 scans), Total +24.8%. Grade C (ticker rebrand MSW→PMA + dilutive convertibles). |
+| ELPW | $1.18 | 2026-07-09 17:30 ET | 83 | fdb8f5d7 | Late BUILD low-float squeeze, float 1.4M, AH +78.5% (2 scans), Total +57.1%. Grade D ($6M discounted offering + 1:80 reverse split). |
