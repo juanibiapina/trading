@@ -67,8 +67,36 @@ No open positions. Alpaca `positions` empty; `OPEN_POSITIONS.md` reconciled (cle
 - No entries (observation-only scan). AEHL is the lead BUILD candidate; ELAB fading; PMA weak build.
 - Catalyst searches deferred to 23:00 entry scan (search budget). Re-evaluate all three at 23:00 CET with fresh bars + catalyst check.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**AH entry scan** — 7 hits. Entries allowed (23:00+ CET). SIP bars (5Min from 20:00Z / 16:00 ET, fresh to 16:45 ET) + real books:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PMA | [TV](https://www.tradingview.com/chart/?symbol=PMA) | $1.29 | +3.2% | +20.9% | $1.56 | +24.8% | 2.3M | 2.3M | 1.0x | 4.6M | Engineering & Construction |
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $1.06 | +0.0% | +15.6% | $1.23 | +15.6% | 4.1M | 6.1M | 0.7x | 4.5M | Biotechnology |
+| ZNB | [TV](https://www.tradingview.com/chart/?symbol=ZNB) | $0.51 | +1.8% | +16.5% | $0.59 | +18.6% | 2.2M | 2.3M | 0.9x | 1.6M | Internet Software/Services |
+| ELPW | [TV](https://www.tradingview.com/chart/?symbol=ELPW) | $0.57 | -12.0% | +15.8% | $0.66 | +1.9% | 602K | 2.1M | 0.3x | 1.4M | Electrical Products |
+| WRAP | [TV](https://www.tradingview.com/chart/?symbol=WRAP) | $2.36 | +48.4% | +6.8% | $2.52 | +58.5% | 514K | 6.4M | 0.1x | 37.9M | Medical Specialties |
+| THRY | [TV](https://www.tradingview.com/chart/?symbol=THRY) | $4.32 | +5.9% | +8.5% | $4.69 | +14.9% | 118K | 710K | 0.2x | 40.2M | Packaged Software |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $3.88 | +31.5% | +5.7% | $4.10 | +39.0% | 72K | 1.2M | 0.1x | 2.3M | Medical/Nursing Services |
+
+**SIP bars (5Min) + books:**
+- **PMA** — BUILD-and-hold. Gapped to $1.74 at open (+39% from prior ~$1.25), faded all day to $1.29 close (+3.2%), then AH built to a *new* high $1.80 at 16:35 ET (above the intraday high $1.745). Vol accelerating: 50K→245K→341K→744K→751K→266K→434K sh, trades to 3798/4714. Holding ~$1.62 (~11% off high = within 20% → hold). SIP corroborates (H $1.80, no bad print). Book bid $1.16 / ask $1.57 (wide but sized). Float 4.6M. **ENTERED.**
+- **ELAB** — SPIKE→FADE. Peaked $1.44 in first bar (16:00 ET) on 419K sh, huge 1.6M-sh second bar, now settling $1.24. Early-peak fade. Tight book bid $1.24/ask $1.25. Skip per trajectory rule (0/7+ PM continuation).
+- **ZNB** — strong SIP build ($0.51→$0.70 new highs, 1.7M sh/5005 trades latest bar) BUT `quote ask $0.00 x0` = **no fillable AH book**. Skip as illiquid (no AH book) per liquidity sanity check. Also only 1 AH scan.
+- **AEHL** (22:30 lead) — dropped from scan; SIP shows collapse $1.49 (16:15 ET) → $1.04 (~30% off high, round-trip below close). Faded spike. Skip.
+- **ELPW** — Day -12%, Total only +1.9%, thin (602K vs 2.1M avg), 1 scan. Skip.
+- **WRAP / THRY / RYOJ** — AH Chg <10% gate (6.8% / 8.5% / 5.7%). Skip.
+
+**Catalyst (PMA):** Former ticker **MSW** (Ming Shing Group, HK wet-trades construction) — documented prior BUILD-and-hold winner (+31% over entry). MSW acquired *PMA Nano Carbon Tech Limited* (closed Jun 9) via stock purchase + **convertible promissory notes** (dilutive), and the Nasdaq ticker changed **MSW→PMA effective today (Jul 9)**. Today's trigger is the ticker-change/rebrand — a weak/symbolic catalyst with dilution overhang, not fresh operational news. **Grade C** (leaning None), dilution concern noted → exit premarket.
+
+**Decision:** Enter PMA. Passes all gates — float 4.6M (<10M), AH >10% in 2 AH scans (22:30 +10.1%, 23:00 +20.9%, building), Day% +3.2 (>-15%), Total% +24.8 (<150 ceiling), BUILD-and-hold, real SIP accumulation, fillable/tradable, SIP corroborates price. Weak-catalyst concern noted per learning-phase rule. All others fail a gate.
+
+**Order:** BUY 60 PMA @ limit $1.68 ext (id bfc7adfc) — **filled @ $1.66**. Cost $99.60. Grade C.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-| _(none yet)_ | | | | | |
+| PMA | $1.66 | 2026-07-09 17:00 ET | 60 | bfc7adfc | BUILD-and-hold, float 4.6M, AH +20.9% (2 scans), Total +24.8%. Grade C (ticker rebrand MSW→PMA + dilutive convertibles). |

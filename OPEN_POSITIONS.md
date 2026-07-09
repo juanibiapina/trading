@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Cost | Entry Time | Catalyst | Grade | Hold Strategy |
 |--------|-------|--------|------|-----------|----------|-------|---------------|
-| _(none)_ | | | | | | | |
+| PMA | $1.66 | 60 | $99.60 | 2026-07-09 17:00 ET | Ticker change MSW→PMA (rebrand to PMA Nano Carbon Tech) + prior dilutive convertible notes | C | Exit in premarket (weak/dilutive catalyst) |
 
 ## Position Rules
 
