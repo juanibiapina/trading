@@ -33,6 +33,21 @@ No open positions. Alpaca `positions` empty; `OPEN_POSITIONS.md` reconciled (cle
 - Ultra-high %s (CYDX +493%, RBNE +1623%, VRAX +109%, WMTN +458%, SRRCF +3010%) all have <1K share prints = illiquid noise. Ignore unless real AH book appears.
 - No entries: pre-AH observation scan. Re-evaluate at 22:00+ CET AH scans.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**AH open** — scanner 0 hits at 16:00 ET (volume not yet accumulated; normal this early). Observation only per learning-phase rule (no entries before 23:00 CET). Watchlist from 21:30 checked via broker quotes:
+
+| Ticker | Quote (bid/ask) | Note |
+|--------|-----------------|------|
+| SUNE | $2.20 x100 / $2.96 x100 | Wide spread, thin. Our closed position (Grade None, do-not-re-enter). |
+| EVGN | $0.42 x100 / $0.59 x500 | Wide spread, low price. Watch AH build. |
+| HYEX | no quote | No Alpaca AH book. |
+| DOGZ | $0.83 x100 / $0.00 x0 | Ask $0.00 x0 = no fillable AH book. |
+
+**Notes:**
+- No candidates. Books thin/wide at AH open, no accumulation yet.
+- No entries (observation-only scan + no fillable liquidity). Re-evaluate at 22:30 / 23:00 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
