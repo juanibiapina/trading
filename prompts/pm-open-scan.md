@@ -5,6 +5,8 @@ It exists to accumulate evidence for Initiative 6 (catch the +300-600% runners):
 are holdable PM-only gappers (CIIT +140%, GLXG +343%) frequent enough in real
 time to justify piloting hypothetical entries?
 
+**Non-interactive:** This pulse runs unattended. Never ask Juan questions or show Telegram buttons here — no one answers. Route anything needing his input to the **daily email** (questions go in emails only).
+
 See `STRATEGY_ROADMAP.md` Initiative 6 and `INIT6_EXTREME_MOVERS.md` for context.
 The AH->PM scanner (`post-market-scan.md`) only sees stocks with an after-hours
 footprint. The biggest raw morning movers keep being **PM-only gappers**: flat or

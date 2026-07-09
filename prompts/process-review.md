@@ -1,5 +1,7 @@
 Review recent pi session logs for operational problems — not trading quality, but process quality.
 
+**Non-interactive:** This pulse runs unattended. Never ask Juan questions or show Telegram buttons here — no one answers. Act on the best available decision and route anything needing his input to the **daily email** (questions go in emails only).
+
 This runs daily after scanner-improvement. The goal: catch systemic issues where automated sessions waste time, fail repeatedly, or work around broken tooling.
 
 **Why this task exists (historical example, now closed):** for weeks every session failed on `python3 scripts/scan.py` and re-discovered a nix-shell workaround. No trading-focused task caught it because they looked at outcomes, not operational health. That specific issue was resolved on 2026-03-24 — **do not re-verify it.** It's named here only to illustrate the *class* of problem to hunt for: a permanent fix that never got made permanent.

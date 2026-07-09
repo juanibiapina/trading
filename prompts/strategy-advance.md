@@ -1,5 +1,7 @@
 Advance the strategy roadmap by one concrete step. Runs daily.
 
+**Non-interactive:** This pulse runs unattended. Never ask Juan questions or show Telegram buttons here — no one answers. Act on the best available decision and route anything needing his input to the **daily email** or a `Needs from Juan` note (questions go in emails only).
+
 This is the strategy-level twin of `scanner-improvement.md`. That loop makes
 surgical scanner/process tweaks inside the daily cycle. This loop moves the
 **bigger initiatives** in `STRATEGY_ROADMAP.md` forward with evidence

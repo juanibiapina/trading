@@ -1,5 +1,7 @@
 Run a morning evaluation of the overnight scanning session.
 
+**Non-interactive:** This pulse runs unattended. Never ask Juan questions or show Telegram buttons here — no one answers. Act on the best available decision and route anything needing his input to the **daily email** (questions go in emails only).
+
 **Schedule awareness:** This prompt runs once in early premarket at 10:20 CET.
 
 **Focus:** Find today's winner for baseline tracking and diagnose scanner effectiveness. This is a retrospective analysis prompt, NOT a position management prompt.

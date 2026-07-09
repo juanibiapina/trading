@@ -1,5 +1,7 @@
 Run a post-market scan and update the daily log with results and paper trade decisions.
 
+**Non-interactive:** This pulse runs unattended. Never ask Juan questions or show Telegram buttons here — no one answers. Act on the best available decision and route anything needing his input to the **daily email** (questions go in emails only).
+
 **Focus:** This prompt finds ENTRIES only. Position management (hold/sell decisions) is handled by `position-evaluation.md` which runs separately in premarket.
 
 ## Data Sources (read first, every pulse)

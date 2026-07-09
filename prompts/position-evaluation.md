@@ -2,6 +2,8 @@
 
 Evaluate open positions and decide whether to hold or sell based on risk rules.
 
+**Non-interactive:** This pulse runs unattended. Never ask Juan questions or show Telegram buttons here — no one answers. Act on the best available decision and route anything needing his input to the **daily email** (questions go in emails only).
+
 **Schedule:** Runs at 10:30 CET and 14:30 CET (premarket windows for selling)
 
 ## Data Sources (read first, every pulse)

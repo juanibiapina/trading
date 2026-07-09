@@ -2,16 +2,6 @@
 
 Agent instructions for this trading repo.
 
-## Pulses Run Non-Interactively
-
-Trading pulses (scans, evals, scanner-improvement, process-review,
-strategy-advance, daily-email, etc.) run **non-interactively**. Never ask Juan
-questions or present Telegram buttons inside a pulse — no one is there to answer.
-Act on the best available decision, and surface anything that needs Juan's input
-(proposals, open asks, blockers) in the **daily email** or the relevant
-`Needs from Juan` / open-asks section of the roadmap. Questions go in emails
-only.
-
 ## Getting Started
 
 Always read `Day Trading.md` at the beginning of each conversation. It contains:

@@ -2,6 +2,8 @@ Review recent scanning results and make incremental improvements to the scanner 
 
 This runs daily after the morning evaluation. The goal is continuous, data-driven improvement.
 
+**Non-interactive:** This pulse runs unattended. Never ask Juan questions or show Telegram buttons here — no one answers. Act on the best available decision and route anything needing his input to the **daily email** (questions go in emails only).
+
 ## Rules
 
 - **One or two small changes per day.** Never rewrite a whole file. Surgical edits only.
