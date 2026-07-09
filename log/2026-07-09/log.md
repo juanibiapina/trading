@@ -48,6 +48,25 @@ No open positions. Alpaca `positions` empty; `OPEN_POSITIONS.md` reconciled (cle
 - No candidates. Books thin/wide at AH open, no accumulation yet.
 - No entries (observation-only scan + no fillable liquidity). Re-evaluate at 22:30 / 23:00 CET.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**AH scan** — 3 hits. Observation only per learning-phase rule (no entries before 23:00 CET). SIP bars + real books:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $1.06 | +0.0% | +19.8% | $1.27 | +19.8% | 2.5M | 5.9M | 0.4x | 4.5M | Biotechnology |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $1.07 | +8.6% | +15.9% | $1.24 | +25.8% | 599K | 176K | 3.4x | 15.4M | Building Products |
+| PMA | [TV](https://www.tradingview.com/chart/?symbol=PMA) | $1.29 | +3.2% | +10.1% | $1.42 | +13.6% | 90K | 2.0M | 0.0x | 4.6M | Engineering & Construction |
+
+**SIP bars (5Min, from 20:00Z / 16:00 ET) + real books:**
+- **AEHL** — BUILD pattern. $1.07→$1.10→$1.26→$1.41, vol accelerating 13K→32K→641K→1.4M sh, trades 54→102→3079→7338, new high $1.49 in latest bar. Real accumulation. Book bid $1.14 x100 / ask $1.53 x100 (wide). Strongest candidate into 23:00 — watch for continued build. Float 15.4M, Building Products (non-bio).
+- **ELAB** — SPIKE→FADE. Peaked $1.44 in first bar (16:00-16:05 ET) on 418K sh, huge 1.6M-sh second bar, now settling $1.26-1.28. Early peak, fading off high. Tight book bid $1.21 x200 / ask $1.22 x100. Float 4.5M biotech. Early-peak fade — low priority.
+- **PMA** — building on lighter volume. $1.34→$1.54, vol 49K→17K→39K→245K sh. Book bid $1.16 / ask $1.57 (wide). Float 4.6M. Lower conviction than AEHL.
+
+**Notes:**
+- No entries (observation-only scan). AEHL is the lead BUILD candidate; ELAB fading; PMA weak build.
+- Catalyst searches deferred to 23:00 entry scan (search budget). Re-evaluate all three at 23:00 CET with fresh bars + catalyst check.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
