@@ -395,7 +395,25 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **Instrument — ACTIVE (2026-07-07).** **Juan steer 2026-07-07** (re:
+**Status:** **Instrument — ACTIVE (2026-07-09).** **Update 2026-07-09 — problem
+(b) now has hard evidence.** Built `scripts/exit-cost.js` (log-only research, no
+orders) and ran it across all 10 closed paper round-trips: it compares each
+premarket exit to the *same regular session's* high/close (Alpaca daily bars =
+regular-session only). Result: **3 LEFT (rule clipped a runner) / 5 SAVED (dodged
+a dump) / 2 flat; avg upside missed on LEFT trades = +34.3%.** The standout is
+**IVF**, our biggest realized winner (+26.6%): it traded to **+55.5% above our
+exit in the regular session**, with its $3.11 high at **14:55 ET (midday)** — ~10h
+after our 04:30 ET premarket exit — a direct counter-example to the "peaks in PM,
+dumps at open" thesis. Takeaway: the blanket premarket-exit rule protects capital
+on faders (every SAVED case was a loser/small-gainer, downside already size-
+capped) but clips the rare BIG regular-session runner, which is exactly Juan's
+"catch BIG wins" critique. Full analysis + proposed pilot in
+`INIT6_EXIT_COST.md`. A blanket change is NOT justified (DCX -31%, VEEE -25% to
+close show holding everything would bleed faders); the edge is *selectively*
+holding movers still green + making higher highs at the exit check. **This is a
+proposal for Juan** (it edits the `Day Trading.md` "never hold through the day"
+rule) — not applied. PM-only-gapper tally (rollout a) advanced to **2 holdable**
+(SHPH 07-08, BJDX 07-09; ELPW 07-09 was thin). **Juan steer 2026-07-07** (re:
 07-06 email): "I'd rather catch the bigger jump, not a 'clean 6%'... catching BIG
 wins." Reinforces this initiative as the priority and pushes on rollout problem
 (b) — the premarket-exit / no-hold rule caps gains and is the mechanism stopping
@@ -519,6 +537,13 @@ tracker).
       `ALPACA_PAPER_TRADE=1` explicitly.
 - [ ] Initiative 3: confirm whether to trim/retime the scan schedule once the
       audit proposes a plan.
+- [ ] Initiative 6 (problem b): approve a **partial-hold pilot** that edits the
+      `Day Trading.md` "never hold through the day" rule — on a position still
+      green + making higher highs at the premarket-exit check, hold a partial
+      into the regular session with a trailing stop instead of all-out in
+      premarket. Evidence: `INIT6_EXIT_COST.md` (10 round-trips, avg +34.3%
+      upside missed on the 3 clipped runners; IVF ran to +55.5% mid-regular-
+      session after our exit). Until approved, this stays log-only research.
 - [x] Initiative 6: **veto window** — a new log-only PM-open scan pulse
       (`trading-pm-open-scan-1100`, 11:00 CET / 05:00 ET Mon-Fri) was added
       2026-07-07. It places no orders and changes no existing trading-scan

@@ -9,6 +9,50 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-09 — Init 6: quantified the premarket-exit rule's cost (problem b); IVF ran +55% mid-regular-session after exit
+
+**Evaluated:** Prior step (2026-07-08: watch the holdable PM-only-gapper tally
+climb; confirm the next PM-open scan fired) — **worked.** Today's 11:00 CET pulse
+ran (commit 4a12663) and logged 5 more gappers, including a second holdable
+PM-only gapper **BJDX (+14.9%, no AH footprint)** — tally now **2 holdable**
+(SHPH, BJDX); ELPW was thin. Init 5's inline-chart confirmation is still
+**insufficient data** (no Juan reply since 07-08).
+
+**Step taken:** Advanced Init 6 **problem (b)** (let winners run vs premarket
+exit), the lever Juan's 07-07 steer points at. Built `scripts/exit-cost.js`
+(log-only, no orders): pairs every closed Alpaca round-trip FIFO and compares the
+premarket exit to the *same regular session's* high/close (daily bars =
+regular-session only). Ran it over all 10 round-trips; wrote up
+`INIT6_EXIT_COST.md` with the table, findings, and a proposed pilot.
+
+**Result:** **3 LEFT (rule clipped a runner) / 5 SAVED (dodged a dump) / 2 flat;
+avg upside missed on the 3 LEFT trades = +34.3%.** Standout: **IVF**, our biggest
+realized winner (+26.6%), traded to **+55.5% above our exit in the regular
+session** — its $3.11 high hit **14:55 ET (midday)**, ~10h after our 04:30 ET
+premarket exit — a direct counter-example to the core "peaks in PM, dumps at
+open" thesis and exactly the BIG win Juan wants. But a blanket change is NOT
+justified: every SAVED case was a loser/small-gainer (downside size-capped),
+and DCX (-31% to close) / VEEE (-25%) show holding everything would bleed the
+faders. The edge is *selectively* holding movers still green + making higher
+highs at the exit check, not holding all. Verified the script runs end-to-end.
+
+**Hypothesis / next step:** The exit-rule cost is now evidenced. Next run: (1)
+keep `exit-cost.js` accumulating (re-run to grow the LEFT/SAVED tally on live
+trades); (2) work the open question — what signal at the premarket-exit check
+separates IVF-type regular-session runners from DCX-type open-dumpers (still-
+green + higher-highs into 09:00 ET, sustained volume, Tier-A catalyst)? A few
+more logged cases sharpen the partial-hold pilot proposal. PM-open tally keeps
+collecting toward 3-4 holdable PM-only gappers.
+
+**Needs from Juan:** **new ask** — approve a **partial-hold pilot** that edits
+the `Day Trading.md` "never hold through the day" rule (hold a partial into the
+regular session on a position still green + rising at the premarket-exit check,
+trailing stop, exit the rest in premarket; 1 position at a time for
+attribution). Evidence in `INIT6_EXIT_COST.md`. Until approved, log-only
+research only — nothing applied to live trading.
+
+---
+
 ### 2026-07-08 — Init 5: inline charts shipped to the email; Init 6 first scheduled PM-open run logged 4 gappers
 
 **Evaluated:** Prior step (2026-07-07 Init 6: confirm the first scheduled PM-open
