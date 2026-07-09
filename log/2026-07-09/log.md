@@ -147,9 +147,39 @@ No open positions. Alpaca `positions` empty; `OPEN_POSITIONS.md` reconciled (cle
 
 **Decision: No new entries this scan.** WNW is the only 2-scan qualifier and it's SPIKE→FADE (skip-all on a SPIKE→FADE-only qualifier). YYGH is a fresh, real, tiny-float BUILD but on its first AH scan — the strongest watch for 00:30 CET; if it prints a 2nd AH scan >10% while holding/building, it's a prime entry (float 133K, late build after 17:30 ET, real accumulation). Held positions PMA/ELPW unchanged.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**AH entry scan** — 8 hits. Entries allowed. Two positions open (PMA @ $1.66, ELPW @ $1.18). SIP bars (5Min from 20:00Z / 16:00 ET, fresh to 18:15 ET) + real books:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.37 | -3.5% | +39.4% | $1.91 | +34.5% | 2.5M | 1.1M | 2.2x | 133K | Misc Commercial Services |
+| ELPW | [TV](https://www.tradingview.com/chart/?symbol=ELPW) | $0.57 | -12.0% | +49.8% | $0.85 | +31.8% | 32.7M | 5.5M | 6.0x | 1.4M | Electrical Products |
+| ELAB | [TV](https://www.tradingview.com/chart/?symbol=ELAB) | $1.06 | +0.0% | +23.6% | $1.31 | +23.6% | 6.7M | 6.4M | 1.0x | 4.5M | Biotechnology |
+| PMA | [TV](https://www.tradingview.com/chart/?symbol=PMA) | $1.29 | +3.2% | +13.2% | $1.46 | +16.8% | 6.5M | 2.8M | 2.4x | 4.6M | Engineering & Construction |
+| WRAP | [TV](https://www.tradingview.com/chart/?symbol=WRAP) | $2.36 | +48.4% | +7.2% | $2.53 | +59.1% | 2.4M | 6.6M | 0.4x | 37.9M | Medical Specialties |
+| HCTI | [TV](https://www.tradingview.com/chart/?symbol=HCTI) | $1.91 | +12.4% | +5.7% | $2.02 | +18.8% | 531K | 554K | 1.0x | 1.9M | IT Services |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $3.32 | -6.2% | +18.1% | $3.92 | +10.7% | 454K | 210K | 2.2x | 23.7M | Internet Retail |
+| PEPG | [TV](https://www.tradingview.com/chart/?symbol=PEPG) | $2.30 | +15.6% | +5.1% | $2.42 | +21.5% | 170K | 858K | 0.2x | 60.7M | Biotechnology |
+
+**SIP bars (5Min) + books:**
+- **YYGH** (NEW entry) — the WATCH flagged at 00:00 CET now on its 2nd AH scan >10% (00:00 +13.1%, 00:30 +39.4%). SIP confirms real accelerating BUILD: dead until 17:35 ET, then 15K→86K→470K→357K→353K→325K→531K→686K sh/bar, trades to 4155, new high **$2.00 at 18:10 ET** (late peak, historically 4/4 for PM continuation). Latest fresh bar 18:15 ET reversed O $1.91 H $1.94 L $1.60 C $1.60 on 565K sh (~20% off the $2.00 high — noted risk). Scan-over-scan still rising ($1.55 00:00 → $1.60 real / $1.91 lagged). Quote stale (bid $1.16/ask $1.56 @ 16:00 ET) — freshness guard: not a bad print, SIP shows real fillable liquidity (3.5k trades/bar). Float 133K (extreme low). **ENTERED.**
+- **ELPW** (open position @ $1.18) — AH now +49.8% / $0.85 (faded from +89% peak $1.12 at 17:15 ET). VRatio 6.0x. No new entry (one per candidate; position -28.5%, management deferred to premarket).
+- **PMA** (open position @ $1.66) — AH +13.2% / $1.46, faded from earlier. No action (position -12.7%, deferred to premarket).
+- **ELAB** — still SPIKE→FADE from 16:00 ET peak $1.44. Skip (0/7+).
+- **WNW** — SPIKE→FADE (peaked $4.50 at 16:15 ET, still fading), float 23.7M, Total +10.7%. Skip.
+- **WRAP / HCTI / PEPG** — AH Chg <10% gate (7.2% / 5.7% / 5.1%). Skip.
+
+**Catalyst (YYGH):** YY Group Holdings (Singapore facility-management / AI). Driver is the **30-for-1 reverse stock split** (~Jun 18) that produced the 133K float; earlier PRs (OpenClaw agentic AI, humanoid-robotics) are weeks old. No fresh same-day (Jul 9) operational catalyst — low-float post-reverse-split squeeze. **Grade None** (concern noted; not a skip reason during learning phase) → exit at first premarket opportunity.
+
+**Decision:** Enter YYGH. Clears all gates — float 133K (<10M), AH >10% in 2 AH scans (00:00 +13.1%, 00:30 +39.4%, building), Day% -3.5 (>-15), Total% +34.5 (<150 ceiling), late BUILD peaking 18:10 ET on real SIP accumulation, tradable, freshness-guarded fillable book. Fade risk from the last reversal bar noted. Grade None → hold-to-first-PM. All others fail a gate.
+
+**Order:** BUY 58 YYGH @ limit $1.70 ext (id 10a73764) — **filled @ $1.66**. Cost $96.28. Grade None.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | PMA | $1.66 | 2026-07-09 17:00 ET | 60 | bfc7adfc | BUILD-and-hold, float 4.6M, AH +20.9% (2 scans), Total +24.8%. Grade C (ticker rebrand MSW→PMA + dilutive convertibles). |
 | ELPW | $1.18 | 2026-07-09 17:30 ET | 83 | fdb8f5d7 | Late BUILD low-float squeeze, float 1.4M, AH +78.5% (2 scans), Total +57.1%. Grade D ($6M discounted offering + 1:80 reverse split). |
+| YYGH | $1.66 | 2026-07-09 18:30 ET | 58 | 10a73764 | Late BUILD low-float squeeze, float 133K, AH +39.4% (2 scans), Total +34.5%, peak $2.00 @ 18:10 ET. Grade None (30:1 reverse split, no fresh catalyst). |
