@@ -6,11 +6,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 ## Current Positions
 
-| Ticker | Entry | Shares | Cost | Entry Time | Catalyst | Grade | Hold Strategy |
-|--------|-------|--------|------|-----------|----------|-------|---------------|
-| PMA | $1.66 | 60 | $99.60 | 2026-07-09 17:00 ET | Ticker change MSW→PMA (rebrand to PMA Nano Carbon Tech) + prior dilutive convertible notes | C | Exit in premarket (weak/dilutive catalyst) |
-| ELPW | $1.18 | 83 | $97.94 | 2026-07-09 17:30 ET | Low-float squeeze after $6M discounted public offering + 1-for-80 reverse split (dilution) | D | Exit at first premarket opportunity |
-| YYGH | $1.66 | 58 | $96.28 | 2026-07-09 18:30 ET | Low-float squeeze (133K float), 30-for-1 reverse split; no fresh same-day catalyst | None | Exit at first premarket opportunity |
+_No open positions (all closed 2026-07-10 premarket)._
 
 ## Position Rules
 
@@ -71,3 +67,6 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 | VEEE | $6.28 | $6.17 | -$1.65 | -1.8% | 1 | C (DoD LYNX Platform registration) | Grade C — exit in first PM pulse. AH high $7.31; PM opened $6.97 then faded to $6.30/vwap $6.45. Sold in first PM pulse per Grade C rule, small loss (above -10% stop). SELL 15 @ $6.17 ext (id 590df196) filled 2026-07-08. Real fill $6.17. |
 | SEER | $2.26 | $2.20 | -$2.58 | -2.65% | 5 | A (CEO $2.45/share buyout proposal + activist proxy contest) | Grade A held full 5-day window (entry 07-03). Catalyst intact ($2.45 floor) but never re-rated above entry; peak $2.34 (+3.5%, OVN 07-02). Sold on day-5 time limit at 14:30 CET pulse. SELL 43 @ limit $2.12 ext (id 34b9f54e), filled @ $2.20 (real bid). |
 | SUNE | $2.56 | $2.44 | -$4.32 | -4.7% | 1 | None | No same-day catalyst (SUNation Energy solar). Sold first PM opportunity per Grade None rule. OVN peak ~$2.67 (+4.3%); PM opened $2.72 spike (single-bar) then faded to $2.41/vwap $2.39. SELL 36 @ limit $2.35 ext (id 54d1a663) filled 2026-07-09. Real fill $2.44. |
+| PMA | $1.66 | $1.48 | -$10.80 | -10.8% | 1 | C (ticker change MSW→PMA rebrand + dilutive convertibles) | Grade C — exit first PM pulse. Below -10% hard stop. OVN faded to -18%; PM bounced to $1.67 H then back to $1.48/vwap $1.54. Sold in first PM pulse. SELL 60 @ limit $1.44 ext (id a40736bf) filled 2026-07-10. Real fill $1.48. |
+| ELPW | $1.18 | $0.97 | -$17.43 | -17.8% | 1 | D (dilutive $6M offering + 1-for-80 reverse split) | Grade D — exit at first PM opportunity + below -10% stop. OVN peak $1.37 (+16%); faded overnight, PM opened $1.27 H then dropped to $0.95/vwap $0.99. Sold first PM opportunity. SELL 83 @ limit $0.92 ext (id 21ed3062) filled 2026-07-10. Real fill $0.97. |
+| YYGH | $1.66 | $1.37 | -$16.82 | -17.5% | 1 | None (low-float 133K, 30-for-1 reverse split, no fresh catalyst) | Grade None — exit at first PM opportunity + below -10% stop. OVN peak $2.00 (pre-entry); post-entry faded, PM $1.37-1.44 on thin volume (~8K/bar). Sold first PM opportunity. SELL 58 @ limit $1.33 ext (id 72970f69) filled 2026-07-10. Real fill $1.37. |
