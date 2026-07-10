@@ -417,8 +417,25 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **Instrument — ACTIVE (2026-07-09).** **Update 2026-07-09 — problem
-(b) now has hard evidence.** Built `scripts/exit-cost.js` (log-only research, no
+**Status:** **Instrument — ACTIVE (2026-07-10).** **Update 2026-07-10 — the
+exit-time signal test came back NEGATIVE, which reshapes the pilot.** Built
+`scripts/exit-signal.js` (log-only) to answer the open question “what signal at
+the premarket-exit check separates the IVF-type regular-session runners from the
+DCX-type open-dumpers?” It pulls each exit-day’s premarket 5-min SIP bars up to
+the exit and measures green%, momentum, off-PM-high, and volume-trend at the
+exit check, grouped by verdict (n=11). **None of the signals separate the two
+classes** (LEFT vs SAVED means: green +0.9/-1.5, momo -5.7/-11.3, offHigh
+-20.7/-19.2, volTrend -0.9/+16.2). The runners look identical to the dumpers at
+04:30 ET — all fading ~5-12% off a PM high, near-flat green; **IVF was itself
+fading -11.6% into its exit** yet ran to +55% mid-session. This **kills the
+“hold if still-green + higher-highs” filter** and points the pilot at a
+**trailing-stop partial hold on every green exit** (the stop, not a predictive
+signal, sorts runners from faders). Also refreshed `exit-cost.js`: SUNE
+(exited 07-09) closed as a 4th **LEFT** (+16% left), so the tally is now **4
+LEFT / 5 SAVED / 2 flat, avg +29.7% upside missed** on the clipped runners.
+Full analysis in `INIT6_EXIT_COST.md`. Still a proposal for Juan (edits the
+`Day Trading.md` no-hold rule); not applied. **Prior update 2026-07-09 — problem
+(b) got its first hard evidence.** Built `scripts/exit-cost.js` (log-only research, no
 orders) and ran it across all 10 closed paper round-trips: it compares each
 premarket exit to the *same regular session's* high/close (Alpaca daily bars =
 regular-session only). Result: **3 LEFT (rule clipped a runner) / 5 SAVED (dodged
@@ -560,12 +577,16 @@ tracker).
 - [ ] Initiative 3: confirm whether to trim/retime the scan schedule once the
       audit proposes a plan.
 - [ ] Initiative 6 (problem b): approve a **partial-hold pilot** that edits the
-      `Day Trading.md` "never hold through the day" rule — on a position still
-      green + making higher highs at the premarket-exit check, hold a partial
-      into the regular session with a trailing stop instead of all-out in
-      premarket. Evidence: `INIT6_EXIT_COST.md` (10 round-trips, avg +34.3%
-      upside missed on the 3 clipped runners; IVF ran to +55.5% mid-regular-
-      session after our exit). Until approved, this stays log-only research.
+      `Day Trading.md` "never hold through the day" rule — on any position
+      **green at the premarket-exit check**, hold a partial into the regular
+      session under a **trailing stop** (updated 2026-07-10: the “still making
+      higher highs” gate was dropped because `exit-signal.js` shows runners and
+      dumpers are indistinguishable at the exit check — the trailing stop, not a
+      predictive filter, must do the sorting), exit the rest in premarket.
+      Evidence: `INIT6_EXIT_COST.md` (11 round-trips, 4 LEFT / 5 SAVED / 2 flat,
+      avg +29.7% upside missed on the clipped runners; IVF ran to +55% mid-
+      regular-session after our exit). Until approved, this stays log-only
+      research.
 - [x] Initiative 6: **veto window** — a new log-only PM-open scan pulse
       (`trading-pm-open-scan-1100`, 11:00 CET / 05:00 ET Mon-Fri) was added
       2026-07-07. It places no orders and changes no existing trading-scan

@@ -9,6 +9,52 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-10 — Init 6: the at-exit signal test came back NEGATIVE — no filter separates runners from dumpers; pilot pivots to a trailing-stop partial hold
+
+**Evaluated:** Prior step (2026-07-09: keep `exit-cost.js` accumulating on live
+trades; work the open question of what signal separates IVF-type runners from
+DCX-type dumpers) — **worked, and produced a decisive result.** Re-ran
+`exit-cost.js`: SUNE (exited 07-09) closed as a 4th **LEFT** case (exit $2.44,
+regular high $2.83 = +16% left), so the tally grew to **4 LEFT / 5 SAVED / 2
+flat, avg +29.7% upside missed** on the clipped runners — evidence accumulating
+on live trades as hypothesized.
+
+**Step taken:** Built `scripts/exit-signal.js` (log-only, no orders) to answer
+the open question head-on. For each closed round-trip it pulls the exit-day
+premarket 5-min SIP bars up to the exit moment and measures four candidate
+“hold?” signals at the exit check — green% (vs entry), momentum (last-bar high vs
+~30 min earlier), off-PM-high%, and volume-trend — then groups the means by the
+LEFT/SAVED verdict. Wrote the result into `INIT6_EXIT_COST.md` and updated the
+pilot proposal + roadmap.
+
+**Result:** **NEGATIVE — none of the at-exit signals separate the two classes**
+(LEFT vs SAVED means: green +0.9/-1.5, momo -5.7/-11.3, offHigh -20.7/-19.2,
+volTrend -0.9/+16.2). At the 04:30 ET exit the runners look identical to the
+dumpers: all fading ~5-12% off a PM high they already made, all near-flat green.
+**IVF, the +55% mid-session runner, was itself fading -11.6% into its exit** —
+the separating event happens *next session*, not at the exit check. This kills
+the “hold if still-green + making higher highs” gate in the prior pilot
+proposal. The pilot now pivots to a **trailing-stop partial hold on every green
+exit**, where the stop (not a predictive filter) sorts runners from faders. All
+scripts verified end-to-end.
+
+**Hypothesis / next step:** The exit-time-filter question is answered (no edge
+there). Next run: (1) keep `exit-cost.js` / `exit-signal.js` accumulating (three
+07-10 exits — YYGH, PMA, ELPW — refresh into the tally once their regular
+session forms); (2) to firm up the trailing-stop asymmetry with real numbers,
+extend the analysis to pull each LEFT/SAVED trade’s *full regular-session* 5-min
+SIP path and simulate a few trailing-stop widths (e.g. 8/12/15%) so the pilot
+proposal carries an expected-capture estimate instead of a hand-wave. PM-open
+holdable-PM-only-gapper tally unchanged at 2 (SHPH, BJDX); no new PM-only gapper
+today (GMM was AH-detected, ELPW/ELAB uninvestable).
+
+**Needs from Juan:** same open ask, refined — approve the **partial-hold pilot**
+(now a trailing-stop hold on green exits, gate dropped) that edits the
+`Day Trading.md` no-hold rule. Evidence in `INIT6_EXIT_COST.md`. Until approved,
+log-only research only.
+
+---
+
 ### 2026-07-09 — Init 6: quantified the premarket-exit rule's cost (problem b); IVF ran +55% mid-regular-session after exit
 
 **Evaluated:** Prior step (2026-07-08: watch the holdable PM-only-gapper tally
