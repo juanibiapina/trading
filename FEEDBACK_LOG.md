@@ -6,6 +6,36 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-09 — re: Trading Scanner Report - 2026-07-08
+
+**Juan said:** "- RPGL chart isn't showing - SUNE chart is showing, yes! but
+problem: there's no volume in post market. we need volume in post market!"
+
+**Interpretation:** Two separate issues with the inline email charts (Init 5).
+(1) One of the two inline `<img>` charts (RPGL) did not render in Gmail while the
+other (SUNE) did. Both raw.githubusercontent PNGs were committed in the same
+commit (86cbfb7, 11:30:56 CET) and both return HTTP 200 now, so the files are
+fine — this is a Gmail image-proxy race: the proxy fetched RPGL before the raw
+CDN had propagated the new commit and cached the miss, while SUNE landed. The
+"push before send" step exists but doesn't verify each URL is live first.
+(2) The bigger, structural one: the volume panel is empty in the post-market
+(and pre-market) region of every chart. Confirmed root cause — Yahoo's 5m chart
+feed returns volume ONLY for the regular session (tested AAPL/TSLA: 0/132 pre,
+0/97 post bars carry volume; 156/156 regular do). Since our entire AH->PM edge
+lives in extended hours, a blank extended-hours volume panel defeats the point
+of the chart. This is the data-source-quality half of Init 5.
+
+**Action:** Routed both to Initiative 5. (a) Post-market volume: needs a second
+data source for extended-hours 5m volume (Alpaca bars, live keys; or TradingView,
+already used in `pm-volume-check.py`) merged into `chart.py` for pre/post bars —
+sized so it does not lie about liquidity. Logged as Init 5's next concrete step.
+(b) Chart-render race: small process tweak for the daily-email pulse — after
+push, poll each raw URL for HTTP 200 (and/or add a short delay) before sending,
+so Gmail's proxy never caches a miss. Noted for the next scanner/process run. No
+trading logic changed here.
+
+---
+
 ### 2026-07-08 — re: Trading Scanner Report - 2026-07-07
 
 **Juan said:** "no need to remove, you're free to create pulses"

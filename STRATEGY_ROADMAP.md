@@ -305,10 +305,32 @@ check: confirm the inline image actually displays in Juan's Gmail on the next
 report. GitHub Pages HTML reports remain a follow-on for the richer review
 surface.
 
-**Recommended next step:** confirm the next daily email renders the inline chart
-in Gmail (Juan's reply); if yes, Init 5's email-charts half is DONE and focus
-shifts to the GitHub Pages HTML-report review surface + the data-source-quality
-half.
+**Update (2026-07-09) — first live inline-chart reply: partial render + a real
+data gap.** Juan's reply to the 07-08 email: "RPGL chart isn't showing"; "SUNE
+chart is showing, yes! but... there's no volume in post market. we need volume in
+post market!" Two findings:
+- **Render race (minor).** SUNE's inline `<img>` displayed; RPGL's did not, even
+  though both PNGs are in the same commit (86cbfb7) and both raw URLs return 200
+  now. Cause: Gmail's image proxy fetched RPGL before the raw CDN propagated the
+  new commit and cached the miss. The "push before send" step is not enough — add
+  a post-push check that polls each `raw.githubusercontent` URL for HTTP 200 (and
+  a short delay) before sending. Routed as a daily-email process tweak.
+- **Extended-hours volume is BLANK (structural).** Confirmed Yahoo's 5m chart
+  feed returns volume only for the regular session: tested AAPL and TSLA, both
+  0/132 pre and 0/97 post bars carry volume vs 156/156 regular. `chart.py` draws
+  volume per bar, so the pre/post (blue/amber) panel is empty by construction —
+  exactly the region our AH->PM edge lives in. This is the **data-source-quality
+  half** of this initiative and now the priority within Init 5. Fix: source
+  extended-hours 5m volume from a second feed and use it for pre/post bars —
+  candidates are **Alpaca bars** (keys live via Init 2) and **TradingView**
+  (already the PM-volume source in `scripts/pm-volume-check.py`). Keep the
+  regular session on Yahoo or unify on the better feed; scale bars honestly.
+
+**Recommended next step:** merge an extended-hours volume source into `chart.py`
+(Alpaca 5m bars first, TradingView fallback) so the post/pre volume panel is
+populated, then add the post-push raw-URL 200-check to the daily-email pulse.
+After that, Init 5's email-charts half is done and focus shifts to GitHub Pages
+HTML reports.
 
 **Findings/notes:**
 - Need a data source for 5-minute OHLCV bars. Yahoo's chart API already serves
