@@ -6,9 +6,10 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-07-07 | TDIC | None (repeat low-float gapper, +140% Jun 16) | $5.37 AH (+49.6% @18:00 ET) | $6.60 PM (+83.8% @04:00 ET) | $4.07 | Day 3 - bounced $3.59→$4.07; not traded (dead-cat, correct) |
-| 2026-07-08 | IOTR | None (low-float 644K maritime-AI squeeze, no PR) | $4.65 AH (+75% @16:35 ET) | $4.52 PM (+70.6% @04:15 ET) | $2.53 | Day 2 - faded to $2.53; not traded (SPIKE→FADE, correct) |
-| 2026-07-09 | RPGL | Grade C (Nasdaq bid-compliance PR) | $2.69 AH (+49.4% @17:05 ET) | $3.05 PM (+69.4% @04:00 ET) | $2.90 | 🆕 Day 1 - AH spike→fade→PM re-explosion (blew past AH peak); DETECTED (5 scans), not traded (SPIKE→FADE); low-float fade-rule FN |
+| 2026-07-07 | TDIC | None (repeat low-float gapper, +140% Jun 16) | $5.37 AH (+49.6% @18:00 ET) | $6.60 PM (+83.8% @04:00 ET) | $3.98 | Day 4 - ~flat $3.98; not traded (dead-cat, correct) |
+| 2026-07-08 | IOTR | None (low-float 644K maritime-AI squeeze, no PR) | $4.65 AH (+75% @16:35 ET) | $4.52 PM (+70.6% @04:15 ET) | $3.54 | Day 3 - Day-2 bounce $2.53→$3.54; not traded (SPIKE→FADE, correct) |
+| 2026-07-09 | RPGL | Grade C (Nasdaq bid-compliance PR) | $2.69 AH (+49.4% @17:05 ET) | $3.05 PM (+69.4% @04:00 ET) | $1.78 | Day 2 - faded $2.90→$1.78; not traded (SPIKE→FADE); low-float fade-rule FN |
+| 2026-07-10 | GMM | None found (tiny-float 1.7M AI-metaverse squeeze) | $3.50 AH SIP (+89% @19:00 ET) | $4.07 PM SIP (+120% @04:05 ET) | $3.6–$3.7 | 🆕 Day 1 - AH→PM continuation (PM peak > AH peak); NOT detected (late-AH-tail surge after last scan); not counted vs baseline |
 
 ## Historical Winners (with multi-day outcome)
 

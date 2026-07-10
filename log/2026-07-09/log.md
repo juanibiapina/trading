@@ -183,3 +183,88 @@ No open positions. Alpaca `positions` empty; `OPEN_POSITIONS.md` reconciled (cle
 | PMA | $1.66 | 2026-07-09 17:00 ET | 60 | bfc7adfc | BUILD-and-hold, float 4.6M, AH +20.9% (2 scans), Total +24.8%. Grade C (ticker rebrand MSW→PMA + dilutive convertibles). |
 | ELPW | $1.18 | 2026-07-09 17:30 ET | 83 | fdb8f5d7 | Late BUILD low-float squeeze, float 1.4M, AH +78.5% (2 scans), Total +57.1%. Grade D ($6M discounted offering + 1:80 reverse split). |
 | YYGH | $1.66 | 2026-07-09 18:30 ET | 58 | 10a73764 | Late BUILD low-float squeeze, float 133K, AH +39.4% (2 scans), Total +34.5%, peak $2.00 @ 18:10 ET. Grade None (30:1 reverse split, no fresh catalyst). |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**GMM** — Global Mofy AI Limited (Packaged Software / AI, China)
+- Catalyst: unverified — no fresh same-day PR confirmed in scan window; tiny-float (1.7M) AI-metaverse name, classic low-float squeeze profile. Grade None pending news check.
+- Previous Close: $1.85
+- AH last night: flat through 17:45 ET, then late BUILD — $2.10 (+13%) at 18:00 ET → SIP peak **$3.50 at 19:00 ET** (Yahoo $3.33, +79.9%). SIP-confirmed real liquidity: 276K sh @18:35 ET, **925K sh / 7621 trades @18:40 ET**, 700K+ sh/bar through 19:00 ET. No bad print.
+- Premarket now: $3.55–3.74 (+92% to +102%); **PM peak SIP $4.07 @04:05 ET** (+120%), 1.5M sh/bar, 21k trades.
+- Hypothetical P&L (AH volume-confirmed entry $2.50 @18:35 ET → PM peak $4.07): **+63%** (from first 10% cross $2.10 → +94%)
+- Float: 1.7M | Market Cap: $3.6M
+
+**Scanner Diagnostic:**
+- Detectable at screening time (~22:15 CET / 16:15 ET)? **NO** — GMM was flat at $1.85 (0%) through 17:45 ET; the move started only at 18:00 ET.
+- At the last scheduled scan (00:30 CET / 18:30 ET) GMM was +22% ($2.26) but on negligible cumulative AH volume (~66K vs 703K avg, VRatio ~0.1) — below the scanner's volume/VRatio gate, so correctly not surfaced. The volume-confirmed explosion (276K→925K sh/bar) fired 18:35–19:00 ET, **after** the last scan.
+- Classification: **late-AH-tail surge (true-tail)**. Decisive volume-backed move fired in the unscanned 18:30–20:00 ET tail. Not a detection-threshold miss; **not counted against the detection baseline.** Nuance: price was technically already +22% at 18:30 ET, but the scanner requires volume confirmation, which arrived after the last scan — so this leans true-tail (a late scan would have helped), not feed-lag.
+- Scanner gap: a late scan at ~01:00 CET (19:00 ET) would have caught GMM at $3.33 +80% on 700K+ sh/bar. Adds to the late-AH-tail dataset (see Notes).
+
+### Baseline Tracking
+
+- Days tracked: **46** (was 45 + 1)
+- Winners detected by scanner: **39/44 (88.6%)** — GMM excluded from denominator (late-AH-tail surge, decisive move after last scan; not counted against baseline).
+- Winner selected for paper trade: **22/44 (50.0%)** — GMM not selectable (surged after last scan).
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+Live PM scan (04:20 ET) top hits: **GMM +95.7% ($3.62)**, ELPW +83.7% ($1.04, held), ELAB +20.8%, WOK +18.3%, PMA +8.7% (held). GMM AH reconstruction (Yahoo `--ah-history` + SIP bars) confirms the AH→PM continuation above. No forced AH scan needed — SIP bars give the definitive AH footprint.
+
+### Open Position P&L (Alpaca)
+
+Three positions carried from last night's entries. **All Alpaca quotes are stale (20:00 ET regular close);** P&L reported against live PM. Exits handled by position-evaluation (10:30 / 14:30 CET), not here.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | Live PM | From Entry | Status |
+|--------|-------|--------------|----------|------------|---------|------------|--------|
+| ELPW | $1.18 | +57.1% | D — $6M offering + 1:80 reverse split | 17:30 ET | ~$1.03 (+61% from close, faded from AH peak $1.27) | **−12.7%** | Holding |
+| PMA  | $1.66 | +24.8% | C — MSW→PMA rebrand + convertibles | 17:00 ET | ~$1.45 (PM range $1.42–1.63) | **−12.7%** | Holding |
+| YYGH | $1.66 | +34.5% | None — 30:1 reverse split, no fresh PR | 18:30 ET | ~$1.40 (PM range $1.38–1.42) | **−15.7%** | Holding |
+
+Alpaca stale figures were ELPW $1.01 / PMA $1.47 / YYGH $1.39 (all @20:00 ET close). **No executed exits yet** — no realized P&L. All three faded from AH peaks into PM (ELPW AH $1.27→PM $1.03; the AH peak was the better exit on the low-float squeezes).
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30 – 00:30 CET). No coverage failure.
+- Candidates found: PMA, ELPW, YYGH (entered), plus WNW, ELAB, AEHL, WRAP/HCTI/PEPG (skipped).
+- Retrospective match on winner: **GMM not in any of the 7 scans** — surfaced only in the 18:30–20:00 ET tail after the last scan.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| GMM | +80% (peak 19:00 ET) | Late-AH-tail: flat through 17:45 ET; volume-confirmed surge fired 18:35–19:00 ET, after the 00:30 CET last scan | Yes — hypo AH $2.50 → PM peak $4.07 = **+63%** |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| ELPW | $1.27 | 17:30 ET | Spike→fade | ~$1.03 | −19% | +61% | AH peak was better exit; faded overnight |
+| PMA  | $1.80 | 16:35 ET | Build→fade | ~$1.45 | −19% | +12% | Faded from AH high into PM |
+| YYGH | $2.00 | 18:10 ET | Late build→fade | ~$1.40 | −30% | +9% | Late-build peak faded hard; AH peak was exit |
+| WNW  | $4.50 | 16:15 ET | Spike→fade | faded | — | — | Correctly skipped (SPIKE→FADE, float 23.7M) |
+| ELAB | $1.44 | 16:00 ET | Spike→fade | ~$1.28 | −11% | +21% | Correctly skipped (early-peak fade) |
+
+**AH-peak-vs-PM-peak check:** All held names (ELPW/PMA/YYGH) peaked in AH and faded into PM — AH was the better exit on each. None reached the >250%-from-close extreme-runner bar (extreme-runner tally unchanged). GMM (winner) is the exception: PM peak $4.07 **exceeded** AH peak $3.50 — a true AH→PM continuation, not an AH-peak fader.
+
+### Price Charts
+
+```
+GMM — flat $1.85 through 17:45 ET → late BUILD to $3.33/$3.50 SIP @19:00 ET (+80%)
+      → held ~$2.75-3.20 overnight → PM peak $4.07 @04:05 ET (+120%). 2-day range $1.83-$4.10.
+      Decisive volume: 925K sh/7621 trades @18:40 ET (after 00:30 CET last scan).
+```
+
+### Notes
+
+- **Late-AH-tail tally (add GMM):** ORIS (Jun 22, true-tail), BTCT (Jun 29→30, feed-lag), **GMM (Jul 9→10, true-tail)** — flat through 17:45 ET, +22% at 18:30 ET last scan but on ~66K sh (VRatio ~0.1, below volume gate), volume-confirmed surge to +80% fired 18:35–19:00 ET; hypo AH-tail entry $2.50 → PM peak $4.07 = **+63%**. **True-tail count now 2** (ORIS, GMM). Threshold to propose a late scan (~01:00/01:30 CET) is ≥3–4 true-tail winners — 2 of ≥3–4, watch. One more true-tail tail-surge reaches the flag.
+- **PM-only gapper tally:** biggest raw PM mover today = **GMM +102%**, an **AH→PM continuation** (moved +80% in AH), not a PM-only gapper. No holdable PM-only blind spot today.
+- **Fade-rule false-negative tally:** no new sub-3M case tonight. WNW faded as predicted (float 23.7M — high-float negative control); ELAB faded (float 4.5M). **Standing sub-3M count unchanged: 3 of 4** (LNKS, RPGL, CRE blew past; IOTR fell short).
+- **Coverage tally:** 7/7 scans ran. No coverage failure. No CEILING-OVERRIDE or DEAD-CAT-OVERRIDE watches were flagged last night.
+- **Held-position pattern:** all three entries (ELPW/PMA/YYGH) were AH BUILDs that peaked in AH and faded overnight into PM (each now −13% to −16% from entry). Consistent with prior observation that low-float AH squeezes often top in after-hours; the fade-into-PM on these mirrors the SPIKE→FADE names we skip. Data point for position-evaluation, not acted on here.
+- **Prev-winner watch:** IOTR bounced $2.53→$3.54 (Day-2 dead-cat bounce); RPGL faded $2.90→$1.78; TDIC ~$3.98 (flat).
