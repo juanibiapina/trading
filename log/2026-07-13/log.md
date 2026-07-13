@@ -52,7 +52,30 @@ Scanner (`scan.py --all`): **3 AH hits.** Observation-only scan (learning phase:
 
 **Decision:** No paper trades (observation-only window). At 23:00 CET, re-evaluate: LVLU (Grade B, low float, holding) is the lead; SHPH (build, no catalyst) secondary; JEM (Grade D split, fading) skip-lean. Watch whether LVLU holds/builds vs continues fading, and whether it stays within 20% of its AH high.
 
+## Scan 23:00 CET (5:00 PM ET) — AH, entries allowed
+
+Scanner (`scan.py --all`): **5 AH hits.** First entry-eligible scan (learning phase: entries at 23:00+ CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SOBR | [TV](https://www.tradingview.com/chart/?symbol=SOBR) | $1.20 | +176.8% | +10.0% | $1.32 | +204.4% | 8.2M | 27.7M | 0.3x | 2.3M | Electronic Equipment |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $2.96 | +1.4% | +37.8% | $4.08 | +39.7% | 1.9M | 650K | 2.9x | 596K | Pharmaceuticals: Major |
+| LVLU | [TV](https://www.tradingview.com/chart/?symbol=LVLU) | $8.32 | -3.7% | +25.7% | $10.46 | +21.1% | 216K | 40K | 5.4x | 1.2M | Internet Retail |
+| GMEX | [TV](https://www.tradingview.com/chart/?symbol=GMEX) | $1.87 | -11.4% | +19.3% | $2.23 | +5.7% | 202K | 1.7M | 0.1x | 0 | Specialty Stores |
+| TOP | [TV](https://www.tradingview.com/chart/?symbol=TOP) | $1.84 | -12.8% | +6.5% | $1.96 | -7.1% | 57K | 401K | 0.1x | 14.3M | Investment Banks |
+
+**Evaluation:**
+
+- **LVLU — ENTERED.** Grade B catalyst (strategic-alternatives review, special committee, ~16:06 ET). Float 1.2M. AH >10% across 2 AH scans (22:30 +27.2%, 23:00 +25.7%). Day -3.7% (> -15%). Total +21% (under 150% ceiling). SIP bars: real volume (2021 trades first bar, VWAP ~$10.9 corroborates AH price). Peaked 16:15 ET ($11.26) but **holding/rebuilding** — Yahoo shows $10.99 at 17:00 ET, within 3% of high (hold, not fade). Passes all gates. `tradable=true`. **Filled 9 @ $11.03** (order 6c546167). Alpaca quote was stale (stuck 20:00Z) but SIP + Yahoo confirm active real AH trading; limit $11.10 filled at $11.03.
+- **SHPH — QUALIFIED but NO FILL (`tradable=false` on Alpaca).** Textbook BUILD: SIP volume accumulating hard (68K→194K→174K→480K→588K→1.5M sh/bar, trades to 17,275), price $3.07→$4.94, VWAP corroborates. Float 596K. AH >10% across 2 scans (22:30 +16.2%, 23:00 +37.8%). Re-ran catalyst search: **no fresh catalyst found** (latest news 07/07 insider trades; microcap pharma near lows) — would enter as Grade None with concern noted, but Alpaca reports `tradable=false`. No fill = no position. Recording as a strong BUILD candidate the broker blocked.
+- **SOBR — Skip.** Day +176.8% is a regular-session spike; AH only +10.0% (borderline, 1 AH scan). Total +204% **exceeds +150% ceiling**. VRatio 0.3x (weak — AH vol likely stale regular-session volume). Extended-entry skip.
+- **GMEX — Skip.** VRatio 0.1x (stale regular-session artifact), Day -11.4%, Total only +5.7%. No real AH liquidity.
+- **TOP — Skip.** VRatio 0.1x, Total -7.1% (negative), Day -12.8%. No momentum.
+
+**Decision:** 1 entry — **LVLU** (Grade B, 9 sh @ $11.03). SHPH blocked by broker (`tradable=false`). Others skipped on ceiling / weak VRatio / no liquidity.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| LVLU | $11.03 | 2026-07-13 23:01 CET | 9 | 6c546167 | Grade B strategic-alternatives review; float 1.2M; holding near AH high; VRatio 5.4x |

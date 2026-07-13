@@ -6,7 +6,9 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 ## Current Positions
 
-_No open positions (all closed 2026-07-10 premarket)._
+| Ticker | Entry | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
+|--------|-------|--------|------------|----------------|----------|-------|
+| LVLU | $11.03 | 9 | 2026-07-13 23:01 CET | B (strategic-alternatives review, special committee ~16:06 ET) | 6c546167 | Lulu's Fashion Lounge. Float 1.2M, VRatio 5.4x. AH >10% across 2 scans (22:30 +27%, 23:00 +26%). Peaked 16:15 ET $11.26; holding/rebuilding ($10.99 @ 17:00 ET, within 3% of high). Total +21%. Grade B: hold up to 2 days, stop -15% from entry ($9.38). Exit premarket per plan. |
 
 ## Position Rules
 
