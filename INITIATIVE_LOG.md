@@ -9,6 +9,54 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-13 — Init 6: trailing-stop simulation is NEGATIVE — the partial-hold pilot is withdrawn; PM-only-gapper tally hit the rollout-3 trigger (4 holdable)
+
+**Evaluated:** Prior step (2026-07-10: extend the analysis to pull each
+LEFT/SAVED trade's full regular-session 5-min SIP path and simulate trailing-
+stop widths so the pilot proposal carries an expected-capture number) — **done,
+and it came back decisively NEGATIVE.** First refreshed `exit-cost.js`: the three
+07-10 exits (YYGH, PMA, ELPW) formed their regular sessions, so the tally is now
+**14 round-trips, 6 LEFT / 6 SAVED / 2 flat, avg +29.1% upside missed on LEFT**
+(ELPW closed a 6th SAVED at -64.9%).
+
+**Step taken:** Built `scripts/trailing-sim.js` (log-only, no orders). For every
+closed round-trip it takes the premarket exit as the hypothetical hold-start,
+walks the exit-day **regular-session (09:30-16:00 ET) 5-min SIP bars**, and
+simulates a trailing stop at 8/12/15/20% widths (exit at the stop, at the open
+if it gaps through, or at the session close), for both the green-at-exit gate
+(the pilot's population) and hold-all. Reports the held partial's capture vs the
+all-out-premarket baseline. Verified end-to-end.
+
+**Result:** **Every stop width and both gate configs LOSE vs the baseline.**
+Green-gate added return -3.2 to -5.1%/trade; hold-all -4.1 to -5.0%/trade. Two
+reasons: (1) only **3 of 14** exits were green (IVF, EDHL, DCX) and 2 of those
+faded — the big regular-session runners (VTAK +33.6% regHigh, GANX, SUNE, PMA
++41.9%, YYGH) were **RED at premarket exit**, so the "safe" green gate excludes
+them, confirming the 07-10 finding with real cost; (2) the +29% "upside left" is
+**not mechanically harvestable** — these microcaps whipsaw to their highs (IVF's
++55.5% high at 14:55 ET but an 8% trail stops at -8.0%), so a tight trail is
+knocked out early and a wide one gives back too much, drowned by ELPW -66%.
+**The trailing-stop partial-hold pilot is withdrawn; the premarket-exit rule is
+validated by the data.** Full write-up appended to `INIT6_EXIT_COST.md`.
+Separately, today's PM-open scan (commit d674f98) logged **MIMI (+68%) and EHGO
+(+75%) as holdable PM-only gappers with no AH footprint**, taking the holdable
+PM-only-gapper tally to **4 (SHPH, BJDX, MIMI, EHGO)** — the ~3-4 trigger for
+rollout step 3.
+
+**Hypothesis / next step:** Problem (b) is closed (no mechanical edge; re-run
+`trailing-sim.js` only if the sample grows a lot). Init 6 pivots to **problem
+(a)**: with 4 holdable PM-only gappers logged, the next run should design a
+**log-only hypothetical-entry pilot** for PM-only gappers — hypothetical buy at
+PM-open-scan detection, hypothetical exit at the premarket-exit window and at
+regular open, P&L logged against the current strategy. This is shadow/log-only
+(no live orders, no `Day Trading.md` edit), so it needs no Juan gate; it just
+quantifies whether the AH-blind-spot names are worth a live-pulse proposal.
+
+**Needs from Juan:** nothing. The problem-(b) partial-hold ask is withdrawn (the
+sim shows it loses), so that open ask is now closed.
+
+---
+
 ### 2026-07-10 — Init 6: the at-exit signal test came back NEGATIVE — no filter separates runners from dumpers; pilot pivots to a trailing-stop partial hold
 
 **Evaluated:** Prior step (2026-07-09: keep `exit-cost.js` accumulating on live

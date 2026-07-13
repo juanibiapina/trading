@@ -123,3 +123,49 @@ it. That is what the pilot is for.
 
 **Needs from Juan:** approval to pilot a partial-hold variant (it edits the
 `Day Trading.md` premarket-exit rule). Until then this stays log-only research.
+
+### 2026-07-13 — the trailing-stop simulation came back NEGATIVE — the partial-hold pilot does NOT beat the premarket-exit baseline
+
+Before proposing the trailing-stop pilot to Juan, simulated it on real fills.
+`scripts/trailing-sim.js` (log-only) takes each closed round-trip's premarket
+exit as the hypothetical hold-start, walks the exit-day **regular-session
+(09:30-16:00 ET) 5-min SIP bars**, and simulates a trailing stop at 8/12/15/20%
+widths (peak starts at the exit price; exit at the stop, at the open if it gaps
+through, or at the session close). It reports the held partial's capture vs the
+all-out-premarket exit, for the green-at-exit population (the pilot's gate) and
+for hold-all. Refreshed tally first: **14 round-trips, 6 LEFT / 6 SAVED / 2
+flat, avg +29.1% upside missed on LEFT** (the three 07-10 exits YYGH/PMA/ELPW
+formed their regular sessions; ELPW closed as a 6th SAVED at -64.9%).
+
+**Result — every width, every gate, LOSES vs the baseline:**
+
+| config | 8% | 12% | 15% | 20% |
+|--------|----|-----|-----|-----|
+| green-gate avg capture% | -10.2 | -6.4 | -7.3 | -9.0 |
+| green-gate added return/trade @50% partial | -5.1 | -3.2 | -3.7 | -4.5 |
+| hold-all avg capture% | -8.2 | -8.2 | -8.3 | -9.9 |
+| hold-all added return/trade @50% partial | -4.1 | -4.1 | -4.2 | -5.0 |
+
+Two reasons the trailing stop fails:
+1. **The green-at-exit gate is the wrong population.** Only **3 of 14** exits
+   were green (IVF, EDHL, DCX), and 2 of those 3 (EDHL, DCX) faded. Most of the
+   big regular-session runners were **RED at premarket exit** — VTAK 06-24
+   (regHigh +33.6%), GANX (+13.7%), SUNE (+16.0%), PMA (+41.9%), YYGH (+13.9%)
+   — so the gate that seemed "safe" excludes the very runners we wanted. This
+   confirms the 2026-07-10 finding (runners ≠ green at exit) with real cost.
+2. **The +29% "upside left" is not mechanically harvestable.** These microcaps
+   whipsaw to their highs, so a tight trail (8-12%) gets knocked out early
+   (IVF's +55.5% high came at 14:55 ET but an 8% trail stops at -8.0%) while a
+   wide trail (20%) gives back too much on the faders. Best single capture is
+   PMA +15.4% at ts15, drowned by ELPW -66% and a wall of -8 to -15% stop-outs.
+
+**Conclusion: the trailing-stop partial-hold pilot is WITHDRAWN.** On this
+sample no mechanical hold rule (any width, gated or not) beats the all-out-
+premarket exit; the premarket-exit discipline is validated by the data. The
++29% avg "upside left" on LEFT trades is real but the choppy path there makes it
+uncapturable by a trailing stop. **Problem (b) has no demonstrated mechanical
+edge** — do not propose it as a live change. Init 6's reachable money is in
+**problem (a)**: the holdable PM-only gappers (SHPH, BJDX, MIMI, EHGO), whose
+tally just hit the rollout-step-3 trigger. Re-run `trailing-sim.js` if the
+sample grows a lot; a genuine smooth-trending runner could shift it, but 14
+trades pointing uniformly negative is a strong signal to stop here.

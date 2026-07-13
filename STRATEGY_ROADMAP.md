@@ -426,8 +426,27 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **Instrument — ACTIVE (2026-07-10).** **Update 2026-07-10 — the
-exit-time signal test came back NEGATIVE, which reshapes the pilot.** Built
+**Status:** **Instrument — ACTIVE (2026-07-13).** **Update 2026-07-13 — the
+trailing-stop simulation came back NEGATIVE; the problem-(b) partial-hold pilot
+is WITHDRAWN, and problem (a) (PM-only gappers) hit its rollout-step-3
+trigger.** Built `scripts/trailing-sim.js` (log-only): it takes each closed
+round-trip's premarket exit as a hypothetical hold-start, walks the exit-day
+regular-session 5-min SIP path, and simulates a trailing stop at 8/12/15/20%.
+**Every width, both gate configs (green-at-exit and hold-all), LOSES vs the
+all-out-premarket baseline** (green-gate added return -3.2 to -5.1%/trade;
+hold-all -4.1 to -5.0%/trade). Two reasons: only 3 of 14 exits were green and 2
+of those faded (the runners — VTAK/GANX/SUNE/PMA/YYGH — were RED at exit, so the
+gate excludes them), and the +29% "upside left" is uncapturable because these
+microcaps whipsaw to their highs (IVF's +55% high at 14:55 ET, but an 8% trail
+stops at -8%). So problem (b) has **no demonstrated mechanical edge** — the
+premarket-exit rule is validated by the data and the pilot ask is withdrawn.
+Full analysis in `INIT6_EXIT_COST.md`. **Meanwhile the PM-open scan (07-13)
+logged MIMI (+68%) and EHGO (+75%) as holdable PM-only gappers with no AH
+footprint, bringing the holdable PM-only-gapper tally to 4 (SHPH, BJDX, MIMI,
+EHGO)** — the ~3-4 trigger for rollout step 3. Next lever: design a log-only
+hypothetical-entry pilot on PM-only gappers (no live orders, no Juan gate).
+**Prior update 2026-07-10 — the
+exit-time signal test came back NEGATIVE, which reshaped the earlier pilot.** Built
 `scripts/exit-signal.js` (log-only) to answer the open question “what signal at
 the premarket-exit check separates the IVF-type regular-session runners from the
 DCX-type open-dumpers?” It pulls each exit-day’s premarket 5-min SIP bars up to
@@ -585,17 +604,13 @@ tracker).
       `ALPACA_PAPER_TRADE=1` explicitly.
 - [ ] Initiative 3: confirm whether to trim/retime the scan schedule once the
       audit proposes a plan.
-- [ ] Initiative 6 (problem b): approve a **partial-hold pilot** that edits the
-      `Day Trading.md` "never hold through the day" rule — on any position
-      **green at the premarket-exit check**, hold a partial into the regular
-      session under a **trailing stop** (updated 2026-07-10: the “still making
-      higher highs” gate was dropped because `exit-signal.js` shows runners and
-      dumpers are indistinguishable at the exit check — the trailing stop, not a
-      predictive filter, must do the sorting), exit the rest in premarket.
-      Evidence: `INIT6_EXIT_COST.md` (11 round-trips, 4 LEFT / 5 SAVED / 2 flat,
-      avg +29.7% upside missed on the clipped runners; IVF ran to +55% mid-
-      regular-session after our exit). Until approved, this stays log-only
-      research.
+- [x] Initiative 6 (problem b): the **partial-hold pilot ask is WITHDRAWN**
+      (2026-07-13). `scripts/trailing-sim.js` simulated the trailing-stop hold
+      on all 14 closed round-trips' real regular-session 5-min SIP paths; every
+      stop width (8/12/15/20%) and both gate configs LOSE vs the all-out-
+      premarket baseline (-3 to -5% added return/trade). No Juan action needed —
+      the premarket-exit rule stands, and problem (b) needs no `Day Trading.md`
+      edit. Init 6 refocuses on problem (a), the holdable PM-only gappers.
 - [x] Initiative 6: **veto window** — a new log-only PM-open scan pulse
       (`trading-pm-open-scan-1100`, 11:00 CET / 05:00 ET Mon-Fri) was added
       2026-07-07. It places no orders and changes no existing trading-scan
