@@ -6,6 +6,32 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-10 — re: Trading Scanner Report - 2026-07-09
+
+**Juan said:** "The chart still has no volume in AH. If you have no data there,
+how can we even enter?"
+
+**Interpretation:** Repeat and escalation of the 07-09 AH-volume feedback. The
+07-09 report shipped the same blank extended-hours volume panel (Yahoo's 5m feed
+carries volume only for the regular session), so nothing visibly changed since
+Juan flagged it. His sharper point reframes it from a chart-cosmetics issue to a
+decision-integrity one: if the volume panel is empty in exactly the AH window
+where we claim our edge, the chart can't justify an entry — and by extension the
+scanner's own AH volume numbers (VRatio, the 925K-sh/bar surge cited for GMM)
+need a trustworthy source too. This is the data-source-quality half of Init 5,
+already its top priority; the escalation means it should be done before the next
+cosmetic email work.
+
+**Action:** Routed to Initiative 5, bumped to the immediate next task. Did not
+implement here (this pulse captures/routes, no large changes). Concrete step
+unchanged from 07-09: merge an extended-hours 5m volume feed into `chart.py`
+(Alpaca 5m bars first — keys live via Init 2 — TradingView as fallback, already
+used in `scripts/pm-volume-check.py`), populate the pre/post volume panel, scale
+bars honestly. Flagged the priority in Init 5's notes for the next
+scanner-improvement run to pick up.
+
+---
+
 ### 2026-07-09 — re: Trading Scanner Report - 2026-07-08
 
 **Juan said:** "- RPGL chart isn't showing - SUNE chart is showing, yes! but

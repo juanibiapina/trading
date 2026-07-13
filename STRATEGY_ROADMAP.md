@@ -326,6 +326,15 @@ post market!" Two findings:
   (already the PM-volume source in `scripts/pm-volume-check.py`). Keep the
   regular session on Yahoo or unify on the better feed; scale bars honestly.
 
+**Update (2026-07-10) — Juan escalated the blank AH volume; make it the
+immediate next task.** Reply to the 07-09 email: "The chart still has no volume
+in AH. If you have no data there, how can we even enter?" Same panel shipped
+unchanged, so he reframed it from cosmetics to decision integrity: an empty
+volume panel in the exact AH window where our edge lives can't justify an entry,
+and the scanner's own AH volume figures (VRatio, per-bar surge) need a
+trustworthy feed too. No new fix — this is the already-documented recommended
+step below, now the priority ahead of the render-race 200-check and GitHub Pages.
+
 **Recommended next step:** merge an extended-hours volume source into `chart.py`
 (Alpaca 5m bars first, TradingView fallback) so the post/pre volume panel is
 populated, then add the post-push raw-URL 200-check to the daily-email pulse.
