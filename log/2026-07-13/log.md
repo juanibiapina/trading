@@ -74,6 +74,30 @@ Scanner (`scan.py --all`): **5 AH hits.** First entry-eligible scan (learning ph
 
 **Decision:** 1 entry — **LVLU** (Grade B, 9 sh @ $11.03). SHPH blocked by broker (`tradable=false`). Others skipped on ceiling / weak VRatio / no liquidity.
 
+## Scan 23:30 CET (5:30 PM ET) — AH, entries allowed
+
+Scanner (`scan.py --all`): **6 AH hits.** New candidate: **VMAR**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $0.50 | -7.0% | +10.7% | $0.56 | +3.0% | 13.8M | 27.2M | 0.5x | 0 | Wholesale Distributors |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $2.96 | +1.4% | +45.3% | $4.30 | +47.3% | 5.7M | 1.2M | 4.9x | 596K | Pharmaceuticals: Major |
+| VMAR | [TV](https://www.tradingview.com/chart/?symbol=VMAR) | $1.41 | +11.0% | +19.9% | $1.69 | +33.1% | 4.3M | 5.5M | 0.8x | 670K | Recreational Products |
+| GMEX | [TV](https://www.tradingview.com/chart/?symbol=GMEX) | $1.87 | -11.4% | +8.6% | $2.03 | -3.8% | 1.4M | 1.8M | 0.8x | 0 | Specialty Stores |
+| LVLU | [TV](https://www.tradingview.com/chart/?symbol=LVLU) | $8.32 | -3.7% | +28.7% | $10.71 | +23.9% | 248K | 44K | 5.6x | 1.2M | Internet Retail |
+| TOP | [TV](https://www.tradingview.com/chart/?symbol=TOP) | $1.84 | -12.8% | +6.0% | $1.95 | -7.6% | 57K | 402K | 0.1x | 14.3M | Investment Banks/Brokers |
+
+**Evaluation:**
+
+- **VMAR — WATCH (new, only 1 AH scan; fails 2-AH-scan gate).** Very low float (670K), MCap 1.0M. Strong accelerating **BUILD** on real SIP volume: early AH ~$1.30-1.35, then ramping hard in the last 20 min — 21:00Z bar 1.04M sh / 6,207 trades ($1.52→$1.74), 21:05Z 1.03M sh / 6,599 trades (peak $1.78), 21:10Z 555K, 21:15Z 693K sh / 4,441 trades ($1.75). VWAP corroborates, `tradable=true`, quote bid $1.41 / ask $1.45 (IEX quote ~15 min stale; SIP shows current ~$1.75). Peaked late (17:05 ET) and still building — textbook late BUILD. Total ~+38% at $1.75 (under 150% ceiling). Catalyst search (3 queries): **no fresh same-day catalyst** — running on momentum; recent story is July 9 Fort Lauderdale property-sale plan (~$13.1M gross) plus a reverse split effective 06/17. Only in this one AH scan, so it does not yet meet the ≥2-AH-scan requirement. **If it holds/builds and reappears at 00:00 CET, it becomes entry-eligible** (would enter as Grade None with concern noted).
+- **SHPH — QUALIFIED but STILL NO FILL (`tradable=false`).** BUILD strengthened further: SIP volume peaked 20:45Z 1.5M sh / 17,275 trades, price ran to $5.08 (VWAP $4.31-4.78), now $4.30-4.56. AH +45.3% across 3 AH scans. Float 596K. Re-checked `tradable` — Alpaca still reports `tradable=false`. No fill = no position. Recording again as a strong BUILD the broker blocks.
+- **LVLU — HELD (open position).** AH +28.7% (up from +25.7% at 23:00). Position: 9 sh @ $11.03, now ~$10.87, P&L -1.5%. Holding near AH high, thesis intact.
+- **JEM — Skip.** Grade D reverse split (effective 07/14), sub-penny, Total only +3.0%, fading.
+- **GMEX — Skip.** VRatio 0.8x, Day -11.4%, Total -3.8% (negative).
+- **TOP — Skip.** VRatio 0.1x, Total -7.6% (negative), Day -12.8%.
+
+**Decision:** No new entries. VMAR is a strong BUILD but needs a 2nd AH scan to clear the gate (watch at 00:00). SHPH still broker-blocked. LVLU held. Others skipped on weak/negative momentum.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
