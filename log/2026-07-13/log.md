@@ -98,8 +98,29 @@ Scanner (`scan.py --all`): **6 AH hits.** New candidate: **VMAR**.
 
 **Decision:** No new entries. VMAR is a strong BUILD but needs a 2nd AH scan to clear the gate (watch at 00:00). SHPH still broker-blocked. LVLU held. Others skipped on weak/negative momentum.
 
+## Scan 00:00 CET (6:00 PM ET) — AH, entries allowed
+
+Scanner (`scan.py --all`): **4 AH hits.** VMAR reappears (now 2 AH scans, entry-eligible).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $2.96 | +1.4% | +78.4% | $5.28 | +80.8% | 9.1M | 1.6M | 5.6x | 596K | Pharmaceuticals: Major |
+| VMAR | [TV](https://www.tradingview.com/chart/?symbol=VMAR) | $1.41 | +11.0% | +19.1% | $1.68 | +32.3% | 6.5M | 5.7M | 1.1x | 670K | Recreational Products |
+| LVLU | [TV](https://www.tradingview.com/chart/?symbol=LVLU) | $8.32 | -3.7% | +36.4% | $11.35 | +31.4% | 275K | 49K | 5.6x | 1.2M | Internet Retail |
+| TOP | [TV](https://www.tradingview.com/chart/?symbol=TOP) | $1.84 | -12.8% | +6.0% | $1.95 | -7.6% | 57K | 402K | 0.1x | 14.3M | Investment Banks/Brokers |
+
+**SIP verification (fresh, last bar 21:35Z / 17:35 ET, ~25 min lag):**
+
+- **VMAR — ENTERED.** Now clears the ≥2-AH-scan gate (23:30 +19.9%, 00:00 +19.1%, both >10%). Float 670K (ideal, ultra-low). Day +11.0% (positive — not a dead-cat). Total +32.3% (under 150% ceiling). Real SIP volume: massive accumulation at peak (21:00Z 1.04M sh / 6,207 trades, 21:05Z 1.03M sh / 6,599 trades, peak $1.78), VWAP corroborates. Peaked 21:05Z ($1.78), consolidating $1.55–1.60 (21:35Z C $1.59 / VWAP $1.60) — within ~11% of high, **holding not fading**. Peak was 17:05 ET (before 18:30) but hold-vs-fade is primary signal; it's holding within 20%, so early peak is not disqualifying. `tradable=true`. Catalyst search (23:30, 3 queries): **no fresh same-day catalyst** — running on momentum; July 9 property-sale plan (~$13.1M) + 06/17 reverse split are the recent story. Grade None, concern noted. **Filled 62 @ $1.57** (order d02ec65c; Alpaca IEX quote stale bid $1.41/ask $1.45 @ 20:59Z, SIP shows real ~$1.59; limit $1.62 filled $1.57).
+- **SHPH — QUALIFIED but STILL NO FILL (`tradable=false`).** BUILD strengthened massively: AH +78.4% at $5.28, SIP now $5.35 (21:35Z), VWAP $5.48, 906K sh / 12,168 trades that bar; earlier peaks 20:45Z 1.5M sh / 17,275 trades, 21:25Z 1.35M sh / 17,570 trades. Float 596K, VRatio 5.6x. Re-checked `tradable` — Alpaca still `tradable=false`. No fill = no position. Recording again as the strongest BUILD of the night, broker-blocked.
+- **LVLU — HELD (open position).** AH +36.4% (up from +28.7% at 23:30), new AH high $11.35. Position 9 @ $11.03, now building above entry. Thesis intact (Grade B strategic-alternatives). Mgmt handled premarket.
+- **TOP — Skip.** VRatio 0.1x (stale regular-session artifact), Total -7.6% (negative), Day -12.8%. No momentum, no real AH liquidity.
+
+**Decision:** 1 new entry — **VMAR** (Grade None, 62 sh @ $1.57; ultra-low float 670K, holding BUILD, real SIP volume). SHPH still broker-blocked (`tradable=false`). LVLU held. TOP skipped.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | LVLU | $11.03 | 2026-07-13 23:01 CET | 9 | 6c546167 | Grade B strategic-alternatives review; float 1.2M; holding near AH high; VRatio 5.4x |
+| VMAR | $1.57 | 2026-07-14 00:00 CET | 62 | d02ec65c | Grade None; ultra-low float 670K; holding BUILD (peak $1.78, consol $1.55-60); real SIP vol 1M+ sh/bar; 2 AH scans >10% |
