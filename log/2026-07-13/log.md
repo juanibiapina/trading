@@ -20,6 +20,21 @@ Many other small % movers with negligible real volume (VChg% -99% type = stale).
 
 **Decision:** No paper trades. Regular-session scan only. Reassess at 22:00+ CET AH scans for entries.
 
+## Scan 22:00 CET (4:00 PM ET) — AH open
+
+Scanner (`scan.py --all`): **0 AH hits.** Observation-only scan (learning phase: no entries before 23:00 CET).
+
+Early-AH quotes on the 21:30 watchlist (scan hit ~30s after AH open, books still forming):
+
+| Ticker | Bid | Ask | Note |
+|--------|-----|-----|------|
+| MIMI | $2.51 x100 | $3.36 x100 | Wide spread, thin |
+| SOBR | $0.61 x500 | $1.70 x1100 | Very wide spread, unstable |
+| SKYQ | $3.43 x100 | $0.00 x0 | No AH ask (no fillable book) |
+| EHGO | $1.82 x100 | $2.46 x100 | Wide spread, thin |
+
+**Decision:** No paper trades. No scanner AH hits; watchlist books thin/unstable seconds into AH. Reassess at 22:30 / 23:00 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
