@@ -118,6 +118,30 @@ Scanner (`scan.py --all`): **4 AH hits.** VMAR reappears (now 2 AH scans, entry-
 
 **Decision:** 1 new entry — **VMAR** (Grade None, 62 sh @ $1.57; ultra-low float 670K, holding BUILD, real SIP volume). SHPH still broker-blocked (`tradable=false`). LVLU held. TOP skipped.
 
+## Scan 00:30 CET (6:30 PM ET) — AH, entries allowed
+
+Scanner (`scan.py --all`): **6 AH hits.** New candidates: EHGO, CDTG.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $2.96 | +1.4% | +83.4% | $5.43 | +86.0% | 11.1M | 1.9M | 5.8x | 596K | Pharmaceuticals: Major |
+| VMAR | [TV](https://www.tradingview.com/chart/?symbol=VMAR) | $1.41 | +11.0% | +12.1% | $1.58 | +24.4% | 7.2M | 5.8M | 1.2x | 670K | Recreational Products |
+| LVLU | [TV](https://www.tradingview.com/chart/?symbol=LVLU) | $8.32 | -3.7% | +29.7% | $10.79 | +24.9% | 293K | 52K | 5.7x | 1.2M | Internet Retail |
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $2.12 | +29.3% | +7.5% | $2.28 | +39.0% | 209K | 10.1M | 0.0x | 2.2M | Wholesale Distributors |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $1.81 | +0.0% | +7.2% | $1.94 | +7.2% | 146K | 235K | 0.6x | 3.0M | Industrial Machinery |
+| TOP | [TV](https://www.tradingview.com/chart/?symbol=TOP) | $1.84 | -12.8% | +5.1% | $1.93 | -8.3% | 58K | 402K | 0.1x | 14.3M | Investment Banks/Brokers |
+
+**Evaluation:**
+
+- **EHGO — Skip (new).** AH +7.5% is **below the 10% AH threshold** (no catalyst search triggered). VRatio 0.0x (AH vol 209K vs AvgVol 10.1M = stale/no real AH liquidity). Day +29.3% is a regular-session spike, not AH momentum. Fails the >10%-in-2-AH-scans gate on the first look.
+- **CDTG — Skip (new).** AH +7.2%, **below 10% threshold.** VRatio 0.6x (weak). Day flat (+0.0%), Total +7.2%. No real AH momentum.
+- **SHPH — QUALIFIED but STILL NO FILL (`tradable=false`).** Strongest BUILD of the night continues: AH +83.4% at $5.43, VRatio 5.8x, float 596K. Re-checked `tradable` — Alpaca still reports `tradable=false`. No fill = no position. Recording again as the strongest broker-blocked BUILD.
+- **VMAR — HELD (open position).** AH +12.1% (down from +19.1% at 00:00 but still >10%). Position 62 @ $1.57, now $1.58, P&L +0.6%. Holding above entry, thesis intact.
+- **LVLU — HELD (open position).** AH +29.7% (up from +36.4% peak read at 00:00; still strong). Position 9 @ $11.03, now $10.65, P&L -3.4%. Grade B strategic-alternatives thesis intact; premarket exit handled by position-evaluation.
+- **TOP — Skip.** VRatio 0.1x (stale), Total -8.3% (negative), Day -12.8%. No momentum, no liquidity.
+
+**Decision:** No new entries. New candidates EHGO/CDTG both below 10% AH threshold with weak/zero VRatio. SHPH still broker-blocked (`tradable=false`). VMAR and LVLU held.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
