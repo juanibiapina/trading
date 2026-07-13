@@ -35,6 +35,23 @@ Early-AH quotes on the 21:30 watchlist (scan hit ~30s after AH open, books still
 
 **Decision:** No paper trades. No scanner AH hits; watchlist books thin/unstable seconds into AH. Reassess at 22:30 / 23:00 CET.
 
+## Scan 22:30 CET (4:30 PM ET) — AH observation
+
+Scanner (`scan.py --all`): **3 AH hits.** Observation-only scan (learning phase: no entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $0.50 | -7.0% | +22.9% | $0.62 | +14.3% | 6.5M | 26.4M | 0.2x | 0 | Wholesale Distributors |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $2.96 | +1.4% | +16.2% | $3.44 | +17.8% | 211K | 435K | 0.5x | 596K | Pharmaceuticals: Major |
+| LVLU | [TV](https://www.tradingview.com/chart/?symbol=LVLU) | $8.32 | -3.7% | +27.2% | $10.58 | +22.5% | 123K | 25K | 5.0x | 1.2M | Internet Retail |
+
+**SIP verification (bars from 20:00Z / 16:00 ET):**
+- **JEM** — real high volume (1.7M→3.6M→1.6M→629K sh/bar, thousands of trades), VWAP ~$0.60 corroborates AH price. **SPIKE→FADE**: peaked 20:05 ($0.69), fading to $0.57. Catalyst: **1-for-12 reverse split effective Jul 14** (Grade D, compliance/dilution). Sub-penny, Day -7%. Skip-lean.
+- **SHPH** — **BUILD** volume (2.7K→68K→194K→174K, accumulating), VWAP $3.43-3.51 corroborates. Float 596K (very low). Pharma. **No catalyst found** (latest news 07/07 insider trades; reverse-split microcap near lows). Note for 23:00.
+- **LVLU** — real SIP volume, VWAP ~$10.9 corroborates AH $10.58. Float 1.2M (low). Peaked 20:05 ($11.90), mild fade to ~$11.10 but **holding within 20% of high**. Volume fading after first bar (116K→69K→59K). Catalyst: **strategic-alternatives review** announced ~16:06 ET (24 min before scan) — special committee to evaluate options to maximize stockholder value (**Grade B**, solid news, can precede acquisition). Total +22.5%, well under 150% ceiling. **Strongest candidate for 23:00 if it holds/builds.**
+
+**Decision:** No paper trades (observation-only window). At 23:00 CET, re-evaluate: LVLU (Grade B, low float, holding) is the lead; SHPH (build, no catalyst) secondary; JEM (Grade D split, fading) skip-lean. Watch whether LVLU holds/builds vs continues fading, and whether it stays within 20% of its AH high.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
