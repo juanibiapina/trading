@@ -41,3 +41,11 @@ AH not open yet (opens 22:00 CET / 4:00 PM ET). No paper entries per regular-ses
 Rest of the 63-hit scan was thin regular-session prints (single/low-hundred share 5m vol) or downside movers (SPRO -20%). LVLU (+7.9%, $8.98) appears but is an open managed position (Grade B, day 1 of 2) handled by position-evaluation. No action here.
 
 **Next AH scan ~22:15 CET** will re-run with real extended-hours volume/VRatio and evaluate entries.
+
+## Scan 22:00 CET (4:00 PM ET) — AH open
+
+**No candidates found.** Scanner returned 0 hits with real extended-hours volume.
+
+None of the 21:30 regular-session watch candidates (CNEY, CRMT, NIXX, LOOP, NXTC, LEDS) reappeared in the AH scan — their intraday spikes did not carry into after-hours with sustained volume. Per regular-session caution rule, no entries.
+
+First AH scan of the night; observation only per learning-phase default (no entries before 23:00 CET). Next scan ~22:30 CET.
