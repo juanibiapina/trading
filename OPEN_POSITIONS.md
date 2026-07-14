@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|--------|------------|----------------|----------|-------|
 | LVLU | $11.03 | 9 | 2026-07-13 23:01 CET | B (strategic-alternatives review, special committee ~16:06 ET) | 6c546167 | Lulu's Fashion Lounge. Float 1.2M, VRatio 5.4x. AH >10% across 2 scans (22:30 +27%, 23:00 +26%). Post-entry OVN peak $11.99 (+8.7%). Current $9.44 (-14.4% Alpaca; SIP PM ~$9.75, -11.6%), day 1 of 2. **Barely above -15% hard stop ($9.38)**; peak P&L never above +30% so no trail. Catalyst intact. Grade B: hold up to 2 days. HOLD (14:30 CET 07-14) — flag: sell next pulse if below $9.38. |
+| XCUR | $2.40 | 41 | 2026-07-14 23:00 CET | None (no catalyst found; distressed biotech, Nasdaq min-equity deadline July 20) | 13d1b6bb | Exicure. Float 4.2M, VRatio 7.9x. AH >10% across 2 AH scans (22:30 +39%, 23:00 +33%). Total% +38.8%. SIP-verified real accumulation (1M+ sh/bar, 10K+ trades). BUILD-and-hold, current ~$2.40 within 6% of AH high $2.55. **Grade None → exit at first premarket opportunity** (dilution/reverse-split risk from July 20 non-compliance deadline). |
 
 ## Position Rules
 

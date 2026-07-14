@@ -70,3 +70,21 @@ First AH scan of the night; observation only per learning-phase default (no entr
 **BTTC — skip:** no fillable AH book (`ask $0.00 x0`) and AH chg only +8.7% (below the 10% threshold). Illiquid ramp.
 
 Next scan ~23:00 CET — first entry-eligible scan of the night.
+
+## Scan 23:00 CET (5:00 PM ET) — AH, first entry-eligible scan
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XCUR | [TV](https://www.tradingview.com/chart/?symbol=XCUR) | $1.72 | +4.2% | +33.1% | $2.29 | +38.8% | 5.9M | 744K | 7.9x | 4.2M | Biotechnology |
+| CRDF | [TV](https://www.tradingview.com/chart/?symbol=CRDF) | $1.31 | -3.0% | +5.3% | $1.38 | +2.2% | 77K | 827K | 0.1x | 62.5M | Medical Specialties |
+
+**XCUR (Exicure) — ENTERED paper trade. Filled 41 sh @ $2.40 (id 13d1b6bb).**
+- All entry gates cleared: float 4.2M (<50M ✓), AH >10% across 2 AH scans (22:30 +39%, 23:00 +33.1% ✓), Day% +4.2% (> -15% ✓, positive = not dead-cat), Total% +38.8% (< 150% ceiling ✓), real SIP liquidity ✓.
+- **Verified fresh & real:** `tradable=true`; live two-sided book bid $2.39 x100 / ask $2.42 x100 @ 20:59:57Z (fresh vs scan). SIP bars show sustained accumulation across the whole AH session — 20:25Z 1.60M sh/10,996 trades ($2.55 H), 20:45Z 1.09M sh/7,818 trades ($2.52 H). Volume not fading; rebuilding toward highs. VWAP $2.43.
+- **Trajectory: BUILD-and-hold.** Built $1.72→$2.50 (20:15), pulled to $2.22, rebuilt to $2.55 (20:25), consolidated $2.26-2.29, pushed back to $2.52 (20:45). Current ~$2.40 = within ~6% of AH high $2.55 → holding qualifies.
+- **Catalyst: NONE found** (4-search budget exhausted at 22:30 scan). Distressed biotech: 66% workforce cut + halted R&D (June), Nasdaq min-equity non-compliance notice, regain-compliance deadline **July 20, 2026**. No same-day PR/8-K driving the +33% move. Looming July 20 deadline raises dilution/reverse-split risk. **Grade None → exit at first premarket opportunity.** Entered with concern noted per no-catalyst learning-phase handling.
+- QTY = floor(100 / 2.42) = 41 sh. Limit $2.46 (above ask for thin AH book), filled $2.40.
+
+**CRDF — skip:** AH chg +5.3% (below 10% threshold), VRatio 0.1x (no real AH volume — 77K vs 827K avg), float 62.5M, wide illiquid book (bid $1.07 / ask $1.54, quote stale @ 20:00Z). Not a real AH spike.
+
+Next scan ~23:30 CET.
