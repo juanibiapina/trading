@@ -88,3 +88,32 @@ Next scan ~23:00 CET — first entry-eligible scan of the night.
 **CRDF — skip:** AH chg +5.3% (below 10% threshold), VRatio 0.1x (no real AH volume — 77K vs 827K avg), float 62.5M, wide illiquid book (bid $1.07 / ask $1.54, quote stale @ 20:00Z). Not a real AH spike.
 
 Next scan ~23:30 CET.
+
+## Scan 23:30 CET (5:30 PM ET) — AH
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XCUR | [TV](https://www.tradingview.com/chart/?symbol=XCUR) | $1.72 | +4.2% | +31.4% | $2.26 | +37.0% | 8.7M | 1.1M | 8.1x | 4.2M | Biotechnology |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.56 | -13.9% | +31.8% | $0.74 | +13.5% | 2.8M | 24.2M | 0.1x | 2.0M | Medical Specialties |
+| TGHL | [TV](https://www.tradingview.com/chart/?symbol=TGHL) | $0.66 | +3.9% | +18.6% | $0.78 | +23.2% | 675K | 992K | 0.7x | 12.7M | IT Services |
+| BTTC | [TV](https://www.tradingview.com/chart/?symbol=BTTC) | $0.80 | +5.9% | +10.0% | $0.88 | +16.4% | 290K | 68K | 4.3x | 1.9M | Packaged Software |
+
+**No new entries this scan.** VTAK and TGHL are fresh real spikes but both fail the 2-AH-scan entry gate (first AH appearance). Watches for 00:00 CET.
+
+**XCUR (open position, entered 23:00 @ $2.40) — update:** now $2.23 bid $2.39 / ask $2.42 (fresh @ 20:59:57Z), P&L -7.1%. AH price faded $2.29 (23:00) → $2.26 (23:30) off the $2.55 AH high. Grade None, managed by position-evaluation (premarket exit). No action here.
+
+**VTAK (VirTra? — Medical Specialties) — WATCH for 00:00, not entered:**
+- **Verified real via SIP:** fresh spike began 17:00 ET (21:00Z). Real accumulation across bars — 21:00Z 326K sh/814 trades, 21:05Z **1.40M sh/3,572 trades**, 21:10Z 1.11M sh/3,073 trades, 21:15Z 801K sh/2,093 trades. VWAP $0.70-0.77, high $0.80 corroborates scanner AH price $0.74. Not stale/bad print — the low VRatio (0.1x) is an artifact of a very high 24.2M avg volume, not thin AH liquidity.
+- **Entry gate not met:** first AH-scan appearance (not in 22:00/22:30/23:00 AH scans) → fails the "AH >10% in ≥2 AH scans" requirement. Cannot enter this scan.
+- Float 2.0M (ideal). Day% -13.9% (above -15%, and AH reclaims well above today's close — not a dead-cat bounce). Total% +13.5% (well under ceiling). Trajectory: BUILD (spike just starting, elevated at last bar). Catalyst: not yet searched (defer to 00:00 if it holds).
+- **Plan:** if VTAK reappears at 00:00 CET still holding/building (2nd AH appearance), it clears the 2-scan gate — run catalyst search + book check and enter.
+
+**TGHL (Ted Global Holdings — IT Services) — WATCH for 00:00, not entered:**
+- **Verified real via SIP:** fresh spike began 17:00 ET (21:00Z). 21:05Z 199K sh/644 trades, 21:10Z **478K sh/1,552 trades**, 21:15Z 134K sh/606 trades. VWAP $0.73-0.80, high $0.86 corroborates scanner AH price $0.78. Real but smaller book than VTAK.
+- **Entry gate not met:** first AH-scan appearance → fails 2-AH-scan requirement. Cannot enter this scan.
+- Float 12.7M, Day% +3.9%, Total% +23.2% (under ceiling). Trajectory: BUILD. Quote book still wide ($0.56/$0.80, stale @ 20:00Z) — recheck live book at 00:00.
+- **Plan:** if TGHL reappears at 00:00 CET holding/building, run catalyst search + confirm a real two-sided book, then enter.
+
+**BTTC — skip (carried):** AH chg +10.0% marginal; still an illiquid ramp pattern (VRatio 4.3x on tiny 290K vol). No fresh two-sided book demonstrated. Same skip as 22:30.
+
+Next scan ~00:00 CET.
