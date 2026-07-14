@@ -163,6 +163,8 @@ Append a `## Morning Evaluation` section to the log.
 
 [If no clear winner today: "No stock showed the AH→PM pattern today. Reason: [market conditions, etc.]"]
 
+**Broker-block tracking:** For each candidate that **cleared all entry gates but never filled because Alpaca reported `tradable=false`** (a broker limitation, not a scanner or selection miss), add a row to a running tally in Notes: date, ticker, which/how many scans it qualified in, catalyst grade, and the hypothetical AH-entry→PM-peak P&L (the gain the tradability gap cost us). Known cases: SHPH (Jun 25, qualified all 5 scans, Grade C, hypo untradable); SHPH (Jul 13, qualified all 5 scans, Grade None, AH-entry ~$3.45 → PM peak $4.46 = +29%, AH-peak $5.86 = +70%). Hypothesis under test: a recurring subset of genuine qualifiers (esp. ultra-low-float pharma like SHPH) is systematically unfillable on Alpaca, suppressing the selection rate independent of scanner quality. This tally quantifies the cumulative cost of the tradability gap — the dataset for the user's broker-coverage decision (do NOT count a broker-block against the detection baseline or the selection rate; it is neither a detection miss nor a selection miss).
+
 ### Baseline Tracking
 
 **Use the cumulative values from Step 1.** Increment "Days tracked" by 1. If today's winner was detectable, increment the detected count and add ticker to the list.
