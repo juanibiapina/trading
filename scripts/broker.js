@@ -20,6 +20,7 @@
  *   node scripts/broker.js sell <SYM> <qty> [--limit P] [--tif day|gtc] [--ext]
  *      --ext = extended-hours (pre/post market). Requires --limit; forces tif=day.
  *   node scripts/broker.js cancel <id>
+ *   node scripts/broker.js clock                # market clock: is_open + next open/close (ET)
  *   node scripts/broker.js quote <SYM>
  *   node scripts/broker.js bars  <SYM> [--tf 5Min] [--start ISO] [--limit N] [--feed sip|iex]
  *      feed defaults to sip (full-market volume, incl. real ext-hours); falls back
@@ -179,6 +180,12 @@ async function cmdBars(flags, positional) {
   }
 }
 
+async function cmdClock(flags) {
+  const c = await api(TRADING, "/v2/clock");
+  if (flags.json) return console.log(JSON.stringify(c, null, 2));
+  console.log(`now ${c.timestamp} | is_open=${c.is_open} | next_open ${c.next_open} | next_close ${c.next_close}`);
+}
+
 async function cmdTradable(flags, positional) {
   const sym = (positional[0] || "").toUpperCase();
   if (!sym) throw new Error("usage: tradable <SYM>");
@@ -190,7 +197,7 @@ async function cmdTradable(flags, positional) {
 const COMMANDS = {
   account: cmdAccount, positions: cmdPositions, orders: cmdOrders, order: cmdOrder,
   buy: (f, p) => submit("buy", f, p), sell: (f, p) => submit("sell", f, p),
-  cancel: cmdCancel, quote: cmdQuote, bars: cmdBars, tradable: cmdTradable,
+  cancel: cmdCancel, clock: cmdClock, quote: cmdQuote, bars: cmdBars, tradable: cmdTradable,
 };
 
 async function main() {
