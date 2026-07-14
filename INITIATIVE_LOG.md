@@ -9,6 +9,55 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-14 — Init 6: PM-only-gapper entry pilot is NEGATIVE (problem a closed); Init 5 AH/PM volume blank fixed in chart.py
+
+**Evaluated:** Prior step (2026-07-13: design a log-only hypothetical-entry
+pilot for the 4 holdable PM-only gappers) — **done, and it came back decisively
+NEGATIVE.** The tracker now holds 5 holdable + no-AH-footprint gappers (SHPH
+07-08, BJDX 07-09, MIMI 07-13, EHGO 07-13, BJDX 07-14).
+
+**Step taken (pilot / Init 6):** Built `scripts/pm-gapper-sim.js` (log-only, no
+orders). For each holdable PM-only gapper it hypothetically buys at the 05:00 ET
+pulse time (09:00Z bar open) and, as a separate scenario, at an earlier 04:10 ET
+pulse (08:10Z, two bars after the 04:00 ramp), then exits at PM-last (09:25 ET),
+regular-open (09:30 ET), regular-high (best-case), and regular-close, off real
+Alpaca SIP 5-min bars. Verified end-to-end; wrote up `INIT6_PM_GAPPER_SIM.md`.
+
+**Step taken (parallel / Init 5):** Added `backfill_ext_volume()` to
+`scripts/chart.py` — after the Yahoo fetch (vol=0 for all pre/post bars) it
+pulls Alpaca SIP 5m bars via `broker.js` and fills the missing extended-hours
+volume by timestamp. Verified on MIMI: **170 ext-hours bars backfilled**, the
+premarket volume panel now renders. Closes Juan's escalated 07-10 ask ("the
+chart still has no volume in AH... how can we even enter?").
+
+**Result:** **Init 6 problem (a) is NEGATIVE.** Mean return, entry at 05:00 ET:
+PM-last -11.7%, RegOpen -11.4%, RegClose -13.4% (n=4); the earlier 04:10 entry
+is -8.2 / -7.9 / -9.7%. **12 of 12 realistic entry×exit combinations lose;** only
+the untradeable best-case RegHigh is positive (+1.9% / +6.8%). The "holdable"
+tag measures exitability, not profitability — these names peak in the first 1-2
+bars then bleed, so by the time holding is confirmed the entry has already
+faded, and earlier detection helps only a few points. **No PM-only-gapper long
+pulse is proposed; `pm-open-scan` stays cheap log-only.** With both problem (a)
+and problem (b, trailing-stop, 07-13) now negative, the AH->PM core strategy
+stands unchallenged by the extreme-mover work, and the review surface's AH/PM
+volume blind spot is closed.
+
+**Hypothesis / next step:** Init 6's two structured levers are answered (both
+negative). The only surviving thread is a possible **intraday momentum-
+continuation re-entry** (buy a confirmed intraday breakout, not the overnight
+gap) — a different, harder setup; park it until the holdable-gapper sample grows
+and the RegHigh dispersion justifies the build. Next run: re-rank the roadmap by
+the North Star (Init 6's active-initiative claim is weaker now that its two
+tested hypotheses failed — Init 1 earlier-volume-lead or Init 3 scheduling may
+outrank it), and take the top Init 5 follow-up (post-push raw-URL 200-check or
+GitHub Pages). Keep `pm-gapper-sim.js` accumulating as gappers log.
+
+**Needs from Juan:** nothing. Both Init 6 asks (problem a and b) are now closed
+with documented negative results; the Init 5 AH-volume ask is closed by the
+chart.py fix.
+
+---
+
 ### 2026-07-13 — Init 6: trailing-stop simulation is NEGATIVE — the partial-hold pilot is withdrawn; PM-only-gapper tally hit the rollout-3 trigger (4 holdable)
 
 **Evaluated:** Prior step (2026-07-10: extend the analysis to pull each

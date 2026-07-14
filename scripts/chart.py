@@ -20,6 +20,8 @@ import json
 import shutil
 import subprocess
 import sys
+import os
+import re
 import urllib.request
 
 W, H = 1100, 560
@@ -48,6 +50,42 @@ def fetch(ticker, interval, rng, prepost):
         local = dt.datetime.fromtimestamp(t + off, dt.timezone.utc).replace(tzinfo=None)
         bars.append({"o": o, "h": h, "l": l, "c": c, "v": v or 0, "t": local})
     return bars, res["meta"]
+
+
+def backfill_ext_volume(ticker, bars, meta):
+    """Yahoo reports vol=0 for every extended-hours 5m bar, which blanks the
+    volume panel in exactly the AH/PM window our edge lives in. Fill those bars
+    from Alpaca SIP 5m bars (real ext-hours volume) via broker.js, matched by
+    timestamp. Degrades silently to Yahoo volume if Alpaca is unavailable."""
+    off = meta.get("gmtoffset", 0)  # exchange local = utc + off
+    # earliest bar -> utc start for the Alpaca pull
+    start_utc = min(b["t"] for b in bars) - dt.timedelta(seconds=off)
+    start_iso = start_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
+    here = os.path.dirname(os.path.abspath(__file__))
+    try:
+        out = subprocess.run(
+            ["node", os.path.join(here, "broker.js"), "bars", ticker,
+             "--tf", "5Min", "--start", start_iso, "--limit", "600", "--feed", "sip"],
+            capture_output=True, text=True, timeout=40,
+        ).stdout
+    except Exception:
+        return 0
+    # parse "2026-07-13T08:00:00Z  O $.. H $.. L $.. C $..  vol N  vwap $..  trades N"
+    vol_by_local = {}
+    rx = re.compile(r"^(\S+Z)\s+O \$[\d.]+ H \$[\d.]+ L \$[\d.]+ C \$[\d.]+\s+vol (\d+)")
+    for line in out.splitlines():
+        m = rx.match(line)
+        if not m:
+            continue
+        u = dt.datetime.strptime(m.group(1), "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=None)
+        local = u + dt.timedelta(seconds=off)
+        vol_by_local[local] = int(m.group(2))
+    filled = 0
+    for b in bars:
+        if b["v"] == 0 and b["t"] in vol_by_local:
+            b["v"] = vol_by_local[b["t"]]
+            filled += 1
+    return filled
 
 
 def session(t):
@@ -175,6 +213,10 @@ def main():
     if not bars:
         print(f"No bars for {a.ticker}", file=sys.stderr)
         sys.exit(1)
+    if not a.no_prepost:
+        n = backfill_ext_volume(a.ticker.upper(), bars, meta)
+        if n:
+            print(f"backfilled {n} ext-hours volume bars from Alpaca SIP", file=sys.stderr)
     svg = build_svg(a.ticker.upper(), bars, meta)
 
     out = a.out or f"/tmp/{a.ticker.upper()}-chart.png"

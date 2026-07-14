@@ -335,11 +335,23 @@ and the scanner's own AH volume figures (VRatio, per-bar surge) need a
 trustworthy feed too. No new fix — this is the already-documented recommended
 step below, now the priority ahead of the render-race 200-check and GitHub Pages.
 
-**Recommended next step:** merge an extended-hours volume source into `chart.py`
-(Alpaca 5m bars first, TradingView fallback) so the post/pre volume panel is
-populated, then add the post-push raw-URL 200-check to the daily-email pulse.
-After that, Init 5's email-charts half is done and focus shifts to GitHub Pages
-HTML reports.
+**Update (2026-07-14) — extended-hours volume backfill WIRED into `chart.py`.**
+Addressed Juan's escalated ask ("the chart still has no volume in AH... how can
+we even enter?"). Added `backfill_ext_volume()` to `scripts/chart.py`: after the
+Yahoo fetch (which returns vol=0 for every pre/post bar) it pulls Alpaca SIP 5m
+bars via `broker.js`, matches by timestamp, and fills the missing extended-hours
+volume (degrades silently to Yahoo if Alpaca is unavailable). Verified on MIMI
+(a 07-13 PM-only gapper): **170 ext-hours bars backfilled**, the premarket volume
+panel now renders the 04:00 ramp that was previously blank. The AH/PM volume
+blind spot in the review surface is closed. Remaining Init 5 items: (1) minor
+cosmetic — the regular-open volume bar can dwarf the ext-hours bars on the shared
+scale (follow-up, not blocking); (2) the post-push raw-URL 200-check for the
+daily-email render race; (3) GitHub Pages HTML reports for the richer surface.
+
+**Prior recommended step (superseded above):** merge an extended-hours volume
+source into `chart.py` (Alpaca 5m bars first, TradingView fallback) so the
+post/pre volume panel is populated, then add the post-push raw-URL 200-check to
+the daily-email pulse.
 
 **Findings/notes:**
 - Need a data source for 5-minute OHLCV bars. Yahoo's chart API already serves
@@ -426,7 +438,27 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **Instrument — ACTIVE (2026-07-13).** **Update 2026-07-13 — the
+**Status:** **Instrument — ACTIVE (2026-07-14).** **Update 2026-07-14 — the
+PM-only-gapper hypothetical-entry pilot came back NEGATIVE; problem (a) is
+closed with no live-pulse proposal.** Built `scripts/pm-gapper-sim.js`
+(log-only): for the 5 holdable + no-AH-footprint gappers in `pm-open-scan.csv`
+it hypothetically buys at the 05:00 ET pulse time (and, as a separate scenario,
+at an earlier 04:10 ET pulse) and exits at PM-last / regular-open / regular-
+close. **12 of 12 realistic entry×exit combinations lose** (entry@05:00: PM-last
+-11.7%, RegOpen -11.4%, RegClose -13.4%; even the earlier 04:10 entry stays -8
+to -10%). Only the untradeable best-case RegHigh is positive (+1.9% / +6.8%).
+The "holdable" tag measures **exitability, not profitability**: these names peak
+in the first 1-2 bars (04:00-04:35 ET) then bleed, so by the time holding is
+confirmed the entry is already faded. Earlier detection helps a few points but
+does not rescue it. **Conclusion: do not promote a PM-only-gapper long pilot;
+keep `pm-open-scan` as cheap log-only accumulation, no live entry rule proposed
+to Juan.** Full analysis in `INIT6_PM_GAPPER_SIM.md`. Both problem (a) and
+problem (b) now have documented negative results, so the AH->PM core strategy
+stands unchallenged by the extreme-mover work to date; the only surviving thread
+is a possible intraday momentum-continuation re-entry (different, harder setup),
+parked pending a bigger sample.
+
+**Prior update 2026-07-13 — the
 trailing-stop simulation came back NEGATIVE; the problem-(b) partial-hold pilot
 is WITHDRAWN, and problem (a) (PM-only gappers) hit its rollout-step-3
 trigger.** Built `scripts/trailing-sim.js` (log-only): it takes each closed
@@ -622,3 +654,11 @@ tracker).
       `raw.githubusercontent.com` `<img src>` (verified HTTP 200), replacing the
       blob links that 404'd for Juan on 06-30. First live use is the next daily
       email; open check is whether the image displays in Juan's Gmail.
+- [x] Initiative 5: **AH/PM volume blank fixed** (2026-07-14). `chart.py` now
+      backfills extended-hours volume from Alpaca SIP (Yahoo returns vol=0
+      there); verified on MIMI (170 bars filled). Closes Juan's escalated
+      07-10 ask ("the chart still has no volume in AH"). No Juan action needed.
+- [x] Initiative 6 (problem a): the **holdable PM-only gappers carry no long
+      edge** (2026-07-14). `scripts/pm-gapper-sim.js` shows all realistic
+      entry×exit combos lose (-8 to -13%/trade); no live-pulse entry rule is
+      proposed. `pm-open-scan` stays log-only. No Juan action needed.
