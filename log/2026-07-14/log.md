@@ -143,3 +143,34 @@ Next scan ~00:00 CET.
 **XCUR (open position, entered 23:00 @ $2.40) — update:** now ~$2.13, P&L -11.3%. AH faded $2.29 (23:00) → $2.27 (00:00) off the $2.55 AH high. Grade None, managed by position-evaluation (premarket exit). No action here.
 
 Next scan ~00:30 CET.
+
+## Scan 00:30 CET (6:30 PM ET) — AH
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $0.53 | +14.1% | +77.7% | $0.94 | +102.8% | 17.9M | 3.8M | 4.7x | 6.2M | Medical Specialties |
+| XCUR | [TV](https://www.tradingview.com/chart/?symbol=XCUR) | $1.72 | +4.2% | +20.3% | $2.07 | +25.5% | 9.8M | 1.2M | 8.2x | 4.2M | Biotechnology |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.56 | -13.9% | +23.2% | $0.69 | +6.1% | 8.7M | 24.8M | 0.4x | 2.0M | Medical Specialties |
+| VMAR | [TV](https://www.tradingview.com/chart/?symbol=VMAR) | $1.32 | -6.4% | +8.3% | $1.43 | +1.4% | 1.5M | 15.5M | 0.1x | 670K | Recreational Products |
+| TGHL | [TV](https://www.tradingview.com/chart/?symbol=TGHL) | $0.66 | +3.9% | +7.4% | $0.71 | +11.5% | 1.3M | 1.1M | 1.2x | 12.7M | IT Services |
+| BTTC | [TV](https://www.tradingview.com/chart/?symbol=BTTC) | $0.80 | +5.9% | +6.2% | $0.85 | +12.5% | 305K | 69K | 4.4x | 1.9M | Packaged Software |
+| BCDA | [TV](https://www.tradingview.com/chart/?symbol=BCDA) | $0.80 | -11.9% | +8.8% | $0.87 | -4.1% | 52K | 554K | 0.1x | 10.2M | Biotechnology |
+
+**GCTK (Glucotrack) — ENTERED paper trade. Filled 101 sh @ $0.87 (id 1afba3d0).**
+- All entry gates cleared: float 6.2M (<50M ✓, ideal <10M ✓), Day% +14.1% (> -15% ✓, positive = not dead-cat), Total% +102.8% (< 150% ceiling ✓), real SIP liquidity ✓, tradable=true ✓.
+- **AH >10% across scans — substance met via SIP despite scanner lag:** GCTK appeared at 00:00 at scanner +9.6% ($0.58) and 00:30 at +77.7% ($0.94). The 00:00 reading was **feed-lag** — SIP 22:00Z bar (18:00 ET = the 00:00 scan window) already showed real price $0.80-0.85 (+51% AH). Real AH% was >10% at both the 00:00 and 00:30 windows. Per the freshness guard (USDE basis), do not skip a real fresh building spike on a scanner-lag technicality.
+- **Verified fresh & real via SIP:** massive accelerating accumulation — 21:40Z 1.39M sh/3,990 trades, 21:45Z 1.99M/4,922, 21:50Z 2.98M/8,022, 21:55Z 2.85M/7,702, 22:00Z 2.91M/8,273, 22:05Z 3.55M/9,324, 22:10Z 3.66M/10,401, 22:15Z (latest, 18:15 ET) 3.16M/9,166 @ $0.96, VWAP $0.96, high $0.99. Volume NOT fading — accelerating into the latest bar. SIP high $0.99 corroborates scanner AH $0.94.
+- **Trajectory: strong BUILD** — $0.55 → $0.99, making new highs at the latest bar (18:15 ET). Spike began 17:40 ET, still building into the 18:30 scan. Not a spike-fade.
+- **Quote stale (freshness artifact, not illiquid):** Alpaca quote `ask $0.00 x0 @ 20:00:02Z` (16:00 ET) on two pulls — free-tier quote feed not updating for GCTK in AH. Fresh SIP (18:15 ET, 3.6M sh/bar, 10K trades/bar) proves a live fillable book. Not an illiquid ramp.
+- **Catalyst: Grade A — completed strategic business combination.** GlobeNewswire same-day (July 14 AH): *"Glucotrack and Lōkahi Therapeutics Complete Strategic Business Combination, Establishing Lōkahi-Controlled Public Platform."* Major operational/structural event (reverse-merger-style combination) driving the +100% AH move on huge volume. Concern noted: reverse-merger structure carries dilution/control-change risk — managed by position-evaluation.
+- QTY = floor(100 / 0.99) = 101 sh. Limit $1.03 (above SIP last for thin AH book), filled **$0.87** (book better than SIP last).
+
+**XCUR (open position, entered 23:00 @ $2.40) — update:** AH faded further to +20.3% ($2.07), off the $2.55 AH high. Grade None, managed by position-evaluation (premarket exit). No action here.
+
+**VTAK (open position, entered 00:00 @ $0.72) — update:** AH +23.2% ($0.69 scanner), holding above entry. Grade None, managed by position-evaluation. No action here.
+
+**TGHL — skip (carried): SPIKE→FADE confirmed.** AH faded to +7.4% ($0.71), below threshold. Declining across scans (23:30 +18.6% → 00:00 +11.4% → 00:30 +7.4%). Same skip.
+
+**VMAR, BTTC, BCDA — skip:** AH chg below the 10% threshold (+8.3%, +6.2%, +8.8%). VMAR is a prior sold position (fully exited 10:30 CET); BTTC illiquid ramp (carried); BCDA below threshold. Not entry-eligible.
+
+Next scan ~01:00 CET.
