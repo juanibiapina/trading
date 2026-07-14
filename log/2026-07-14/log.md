@@ -117,3 +117,29 @@ Next scan ~23:30 CET.
 **BTTC — skip (carried):** AH chg +10.0% marginal; still an illiquid ramp pattern (VRatio 4.3x on tiny 290K vol). No fresh two-sided book demonstrated. Same skip as 22:30.
 
 Next scan ~00:00 CET.
+
+## Scan 00:00 CET (6:00 PM ET) — AH
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XCUR | [TV](https://www.tradingview.com/chart/?symbol=XCUR) | $1.72 | +4.2% | +32.0% | $2.27 | +37.6% | 9.3M | 1.1M | 8.2x | 4.2M | Biotechnology |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.56 | -13.9% | +41.1% | $0.79 | +21.5% | 7.2M | 24.6M | 0.3x | 2.0M | Medical Specialties |
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $0.53 | +14.1% | +9.6% | $0.58 | +25.1% | 1.4M | 2.0M | 0.7x | 6.2M | Medical Specialties |
+| TGHL | [TV](https://www.tradingview.com/chart/?symbol=TGHL) | $0.66 | +3.9% | +11.4% | $0.74 | +15.8% | 1.2M | 1.0M | 1.1x | 12.7M | IT Services |
+| TOON | [TV](https://www.tradingview.com/chart/?symbol=TOON) | $0.59 | +0.3% | +6.9% | $0.63 | +7.2% | 239K | 3.2M | 0.1x | 56.0M | Movies/Entertainment |
+| BCDA | [TV](https://www.tradingview.com/chart/?symbol=BCDA) | $0.80 | -11.9% | +9.0% | $0.87 | -3.9% | 52K | 554K | 0.1x | 10.2M | Biotechnology |
+
+**VTAK (Catheter Precision) — ENTERED paper trade. Filled 125 sh @ $0.72 (id 3dbb0e53).**
+- All entry gates cleared: float 2.0M (<50M ✓, ideal), AH >10% across 2 AH scans (23:30 +31.8%, 00:00 +41.1% ✓), Day% -13.9% (> -15% ✓; AH reclaims well above $0.56 close = not a dead-cat bounce), Total% +21.5% (< 150% ceiling ✓), real SIP liquidity ✓, tradable=true ✓.
+- **Verified fresh & real via SIP:** spike began 17:00 ET (21:00Z) with sustained accumulation across every bar — 21:05Z 1.40M sh/3,572 trades, 21:10Z 1.11M/3,073, 21:30Z 1.37M/3,869, and still 677K/1,885 (21:40Z) and 466K/1,659 (21:45Z, latest). Volume NOT fading. VWAP $0.75-0.81, high $0.84 corroborates scanner AH price $0.79. The 0.3x VRatio is an artifact of the very high 24.6M avg regular volume, not thin AH liquidity. Alpaca quote feed stale (@ 20:00Z) but book shows non-zero sized ask ($0.70 x100) — passes liquidity sanity check.
+- **Trajectory: BUILD-and-hold.** $0.56 → $0.72 → new high $0.84 at 17:30 ET (21:30Z), holding $0.72-0.81 across the last four bars. Current ~$0.72-0.76 within ~10-14% of the AH high → holding qualifies. Peaked 17:30 (before 18:30) but building/holding, not fading — hold-vs-fade is the primary signal.
+- **Catalyst: NONE fresh (4-search budget used).** Flyte/LifeVac partnership + patent news drove the stock July 6-8, but no same-day (July 14) PR/8-K/earnings found driving the +41% AH move. **Notable squeeze setup:** short interest up 606% in June on a 2.0M float — today's spike is a squeeze/continuation, not fresh news. **Grade None → exit at first premarket opportunity.** Entered with concern noted per no-catalyst learning-phase handling.
+- QTY = floor(100 / 0.80) ≈ 125 sh. Limit $0.82 (above real ~$0.76 price for thin AH book), filled $0.72.
+
+**TGHL (Ted Global Holdings) — skip: SPIKE→FADE.** 2nd AH appearance (23:30 +18.6%, 00:00 +11.4%) clears the 2-scan gate, but trajectory disqualifies. SIP: peaked $0.86 at 17:10 ET (21:10Z, 478K sh/1,552 trades), then volume faded hard — 134K (17:15), 60K (17:20), 30K (17:25), a secondary push to $0.85 at 17:30 on lower 145K vol, then back down to 36-58K/bar and price $0.73. Declining volume + pre-17:30 peak + fading price = SPIKE→FADE (0/10+ for PM continuation). Skip rather than enter the weaker of the two candidates. Float 12.7M.
+
+**GCTK, TOON, BCDA — skip:** AH chg below the 10% threshold (+9.6%, +6.9%, +9.0%). Not entry-eligible.
+
+**XCUR (open position, entered 23:00 @ $2.40) — update:** now ~$2.13, P&L -11.3%. AH faded $2.29 (23:00) → $2.27 (00:00) off the $2.55 AH high. Grade None, managed by position-evaluation (premarket exit). No action here.
+
+Next scan ~00:30 CET.
