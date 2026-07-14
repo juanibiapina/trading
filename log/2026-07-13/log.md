@@ -148,3 +148,88 @@ Scanner (`scan.py --all`): **6 AH hits.** New candidates: EHGO, CDTG.
 |--------|------------|------------|-----------------|----------|--------|
 | LVLU | $11.03 | 2026-07-13 23:01 CET | 9 | 6c546167 | Grade B strategic-alternatives review; float 1.2M; holding near AH high; VRatio 5.4x |
 | VMAR | $1.57 | 2026-07-14 00:00 CET | 62 | d02ec65c | Grade None; ultra-low float 670K; holding BUILD (peak $1.78, consol $1.55-60); real SIP vol 1M+ sh/bar; 2 AH scans >10% |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**VMAR** — Recreational Products (Vision Marine Technologies)
+- Catalyst: **No fresh same-day catalyst** (Grade None) — momentum/short squeeze on ultra-low float. Recent story: July 9 Fort Lauderdale property-sale plan (~$13.1M gross) + reverse split effective 06/17 (weeks-old).
+- Previous Close: $1.27 (07-13 regular close)
+- AH last night: peak **$1.85 (+45.6%)** at 19:20 ET (01:20 CET) — BUILD across the AH session, real SIP volume (1.0M sh/bar, 6.2k trades at the 21:00Z ramp)
+- Premarket now: peak **$3.35 (+163.8%)** at 04:00 ET (SIP: 4.56M sh, 37,981 trades, VWAP $2.62 — real, liquid). Now ~$2.54–2.63, fading from open.
+- Hypothetical P&L (our AH entry $1.57 → PM peak $3.35): **+113%**
+- Float: 670K | Market Cap: ~$1.0M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- Best-case outcome: VMAR appeared in the 23:30, 00:00, and 00:30 CET scans and we **ENTERED it at 00:00 @ $1.57** (62 sh) once it cleared the ≥2-AH-scan gate. Detected AND selected AND it ran — the ideal path.
+- Scanner gap: **none.** VMAR is a clean win for the scanner: ultra-low float (670K), real SIP volume, holding BUILD, entered on the second qualifying scan, PM continued well past the AH peak.
+- Note: VMAR's AH *peak* ($1.85 @ 19:20 ET) formed in the unscanned 18:30–20:00 ET tail, but detection and entry had already happened during the scanned window on the earlier build — not a tail miss.
+
+### Baseline Tracking
+
+- Days tracked: **47** (was 46 + 1)
+- Winners detected by scanner: **40/45 (88.9%)** — VMAR added (detected). GMM still excluded from denominator (late-AH-tail surge).
+- Winner selected for paper trade: **23/45 (51.1%)** — VMAR entered. We traded the right stock.
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+Live PM scan (04:20 ET) top hits: **VMAR +129% ($3.23)**, SHPH +48% ($4.38), BJDX +13%. VMAR AH→PM reconstruction (Yahoo `--ah-history` + SIP bars) confirms the continuation: AH peak $1.85 → PM peak $3.35 on 4.56M sh / 38k trades. SHPH built to AH +100% ($5.86) then faded to PM +52% ($4.46) — AH was the better exit. No forced AH scan needed; SIP bars give the definitive AH footprint.
+
+### Open Position P&L (Alpaca)
+
+Both positions still open — exits handled by `position-evaluation.md` (10:30 / 14:30 CET), not here.
+
+**Quote-freshness note:** The `broker.js quote` endpoint returned stale timestamps (VMAR/SHPH @ 20:59Z, LVLU @ 20:00Z last night). The `broker.js positions` `current_price` values track the live PM prints (VMAR $2.56 ≈ live PM $2.54; LVLU $10.25 ≈ Yahoo PM $10.56), so P&L below is against live PM, not the stale quote.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| VMAR   | $1.57 | +23.6% | None — low-float squeeze | 00:00 CET | $3.35 (SIP) | 04:00 ET | — | open | +63% (now) / +113% (peak) | 🟢 Held |
+| LVLU   | $11.03 | +32.6% | B — strategic-alternatives review | 23:01 CET | $10.90 | 04:05 ET | — | open | −4.3% (now) | 🟡 Held |
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits yet)
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) — full coverage of the entry window.
+- Candidates found: JEM, SHPH, LVLU, VMAR, SOBR, GMEX, TOP, EHGO, CDTG (9 unique)
+- Retrospective matches: VMAR ✅ (entered), SHPH ✅ (qualified, broker-blocked), LVLU ✅ (entered)
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| SHPH | +100.7% AH peak | **Not a scanner miss** — detected in 5 scans, qualified as strongest BUILD of the night, but Alpaca `tradable=false` blocked the fill | Hypo AH-entry ~$3.45 → PM peak $4.46 = +29%; AH-entry → AH-peak $5.86 = +70% |
+
+No scanner detection misses. SHPH is a broker limitation, not a scanner gap.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| VMAR | $1.85 (+45.6%) | 19:20 ET | Build→hold | $3.35 peak | +81% | +164% | **PM exceeded AH peak — continued** ✅ (entered) |
+| SHPH | $5.86 (+100.7%) | ~18:10 ET | Build | $4.46 peak | −24% | +53% | PM below AH peak — **AH was better exit** (broker-blocked) |
+| LVLU | $11.35 (+36.4%) | 18:00 ET | Build | $10.90 peak | −4% | +26% | PM ~flat vs AH peak — held (entered, now −4%) |
+| JEM | ~$0.69 (+38%) | 16:05 ET | Spike→fade | faded | — | — | Grade D reverse split, correctly skipped |
+
+**AH-peak-vs-PM-peak check:** SHPH AH peak $5.86 (+100.7%) > PM peak $4.46 — AH was the better exit, but AH peak was +100% from close (not >250%), so it does not test the extreme-runner (>250%) fade hypothesis. VMAR PM peak $3.35 > AH peak $1.85 — a clean AH→PM continuation.
+
+### Price Charts
+
+```
+VMAR — 2-Day: prev close $1.27 | range $1.17–$3.35 | peak $3.35 (+163.8%) @ 07-14 08:00 ET
+  AH build 20:20Z→23:20Z ($1.50→$1.85), overnight hold ~$1.55–1.60, PM gap to $3.35 at open then fade to ~$2.54.
+SHPH — AH build $3.07→$5.86 (peak ~18:10 ET), overnight ~$5.0, PM open $4.37 fading to ~$4.27 (AH was the exit).
+LVLU — AH build $8.32→$11.35, PM $10.90 peak fading to ~$10.56 (held, slightly below AH peak).
+```
+
+### Notes
+
+- **VMAR is the model win:** ultra-low float (670K), real SIP volume, BUILD across ≥2 AH scans, entered on the second qualifying scan @ $1.57, PM continued to $3.35 (+113% on entry). No catalyst needed — low-float + sustained AH volume carried it.
+- **Reverse-split-squeeze fade tracking:** VMAR (06/17 reverse split, **weeks-old**, float 670K, entered $1.57 → PM peak $3.35, **+113%, CONTINUED**). Counter-example supporting the *recency* hypothesis — a weeks-old (not fresh) reverse split ran hard, unlike the fresh-split faders ELPW/YYGH (both this-week splits, both faded −17%). Split recency is looking like the better fade predictor than the split itself.
+- **Broker-block cost (SHPH):** the strongest BUILD of the night (AH +100%, float 596K, VRatio 5.8x, 17k+ trades/bar) never filled because Alpaca reports `tradable=false`. Recurring pattern — SHPH was flagged unfillable across all 5 scans. If low-float pharma names keep getting broker-blocked, the paper-account selection rate is being suppressed by broker coverage, not scanner quality. (Infra note for Juan — Alpaca tradability gap.)
+- **Multi-day runner:** GMM (07-10 winner, not detected — late-AH-tail) kept running: day-1 PM peak $4.07 → now **$4.57**. Added to the runner watch. Others faded (TDIC $3.68, IOTR $3.30, RPGL $2.13).
+- **Coverage:** 7/7 evening scans ran. No coverage failure.
