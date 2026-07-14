@@ -49,3 +49,24 @@ Rest of the 63-hit scan was thin regular-session prints (single/low-hundred shar
 None of the 21:30 regular-session watch candidates (CNEY, CRMT, NIXX, LOOP, NXTC, LEDS) reappeared in the AH scan — their intraday spikes did not carry into after-hours with sustained volume. Per regular-session caution rule, no entries.
 
 First AH scan of the night; observation only per learning-phase default (no entries before 23:00 CET). Next scan ~22:30 CET.
+
+## Scan 22:30 CET (4:30 PM ET) — AH
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XCUR | [TV](https://www.tradingview.com/chart/?symbol=XCUR) | $1.72 | +4.2% | +39.0% | $2.39 | +44.8% | 1.2M | 179K | 6.6x | 4.2M | Biotechnology |
+| BTTC | [TV](https://www.tradingview.com/chart/?symbol=BTTC) | $0.80 | +5.9% | +8.7% | $0.87 | +15.1% | 145K | 51K | 2.8x | 1.9M | Packaged Software |
+
+**Observation only (before 23:00 CET) — no entries this scan.**
+
+**XCUR (Exicure, Inc.) — strong watch for 23:00 entry scan:**
+- **Verified real via SIP:** AH bars show genuine accumulation — 20:05Z 164K sh/1,040 trades, 20:10Z 1.27M sh/10,369 trades, 20:15Z 1.45M sh/12,099 trades. Real two-sided book (bid $2.37 x100 / ask $2.40 x100). `tradable=true`. SIP VWAP $2.36 / high $2.50 corroborates scanner AH price $2.39. Not a stale VRatio or bad print.
+- **Trajectory: BUILD** — $1.72 → $2.09 → $2.39, peaked $2.50 at 20:15Z, now ~$2.38. Building across the first three AH bars, not a spike-fade. Day% +4.2% (positive — not a dead-cat bounce).
+- **Total% +44.8%** — well under the +150% extension ceiling.
+- **Float 4.2M** (ideal <10M range).
+- **Catalyst: NONE found (4-search budget exhausted).** Distressed biotech: 66% workforce reduction + halted R&D (June), Nasdaq minimum-equity ($2.5M) non-compliance notice (June 5), plan-to-regain-compliance deadline **July 20, 2026**. No same-day PR/8-K found driving the +39% move. The looming July 20 deadline raises dilution/reverse-split risk → Grade None (exit at first opportunity) if entered. Per no-catalyst handling, enter with concern noted at 23:00+ if it holds the build.
+- **Plan:** if XCUR reappears at 23:00 CET still building/holding within ~20% of its AH high, it clears all entry gates (float <50M, AH >10% across 2 AH scans, Day% > -15%, Total% < 150%, real SIP liquidity) — enter a paper trade then.
+
+**BTTC — skip:** no fillable AH book (`ask $0.00 x0`) and AH chg only +8.7% (below the 10% threshold). Illiquid ramp.
+
+Next scan ~23:00 CET — first entry-eligible scan of the night.
