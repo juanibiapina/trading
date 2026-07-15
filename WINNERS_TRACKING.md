@@ -6,13 +6,14 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-07-10 | GMM | None found (tiny-float 1.7M AI-metaverse squeeze) | $3.50 AH SIP (+89% @19:00 ET) | $4.07 PM SIP (+120% @04:05 ET) | $4.57 | 🚀 Day 4 - RUNNER, kept climbing past day-1 PM peak ($4.07→$4.57); NOT detected (late-AH-tail); not counted vs baseline |
-| 2026-07-13 | VMAR | None (low-float 670K squeeze; wks-old 06/17 reverse split) | $1.85 AH (+45.6% @19:20 ET) | $3.35 PM SIP (+163.8% @04:00 ET) | $2.54 | 🆕 Day 1 - AH→PM continuation (PM >> AH peak); **DETECTED + ENTERED @ $1.57** (+113% on entry at peak) |
+| 2026-07-13 | VMAR | None (low-float 670K squeeze; wks-old 06/17 reverse split) | $1.85 AH (+45.6% @19:20 ET) | $3.35 PM SIP (+163.8% @04:00 ET) | $1.41 | Day 2 - faded to $1.41 from $3.35 PM peak; **DETECTED + ENTERED @ $1.57**, sold $2.22 (+41%) |
+| 2026-07-15 | KUST | Unverified (news-driven AH volume spike 18:25 ET; 577K float) | $1.34 AH SIP (+38% @19:50 ET) | $1.95 PM SIP (+101.7% @04:10 ET) | $1.79 | 🆕 Day 1 - AH build → PM continuation to fresh high; **NOT detected (feed-lag at 00:30 last scan)**, unenterable (single scan) |
 
 ## Historical Winners (with multi-day outcome)
 
 | Date | Ticker | Catalyst | AH Peak | PM Peak | Day 2 | Day 5 | Outcome |
 |------|--------|----------|---------|---------|-------|-------|---------|
+| 2026-07-10 | GMM | None (tiny-float 1.7M AI-metaverse squeeze) | $3.50 AH (+89%) | $4.07 PM (+120%) | $4.57 | $3.45 | 🚀 RUNNER to $4.57 day 4, fading to $3.45 day 5; NOT detected (late-AH-tail) |
 | 2026-03-17 | HIT | AWS partnership | $2.23 | $2.27 | — | — | Faded |
 | 2026-03-18 | SUNE | Q4 earnings beat | $1.74 | $1.76 | — | — | Faded |
 | 2026-03-19 | DRMA | Patent news | $1.56 | $1.59 | — | — | Faded |

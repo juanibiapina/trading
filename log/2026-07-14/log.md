@@ -174,3 +174,99 @@ Next scan ~00:30 CET.
 **VMAR, BTTC, BCDA — skip:** AH chg below the 10% threshold (+8.3%, +6.2%, +8.8%). VMAR is a prior sold position (fully exited 10:30 CET); BTTC illiquid ramp (carried); BCDA below threshold. Not entry-eligible.
 
 Next scan ~01:00 CET.
+
+## Morning Evaluation — 10:26 CET
+
+### Today's Winner
+
+**KUST** — Kustom Entertainment (Miscellaneous Commercial Services)
+- Catalyst: **unverified** — sharp AH volume spike at 18:25 ET (445K→812K sh/bar, 3.5–4.5K trades/bar) points to a fresh news/PR drop; no evening research (never surfaced in scans).
+- Previous Close: $0.97
+- AH last night: peaked **$1.34 SIP (+38%)** at 19:50 ET; surge fired 18:25 ET (00:25 CET)
+- Premarket now: peaked **$1.95 (+101.7%)** at 08:10 ET; currently ~$1.75–1.79 (+81–85%)
+- Hypothetical P&L (AH entry $1.30 @ 18:30 ET → PM peak $1.95): **+50%**
+- Float: 577K (ultra-low) | Market Cap: ~$633K (scan artifact)
+- **SIP-verified real:** PM 08:00Z bar 4.10M sh / 30,537 trades, vwap $1.74; AH 18:30 ET bar 812K sh / 4,463 trades. Genuine liquidity both sessions, not a phantom ramp.
+
+**Scanner Diagnostic:**
+- Detectable at screening time (~22:15 CET)? At 16:15 ET KUST was +5.5% — **below threshold**. It crossed 10% only at 18:20–18:25 ET (00:20–00:25 CET) and hit **+34% at 18:30 ET = the 00:30 CET last scan**.
+- Detectable at the final scan window? **YES (feed-lag).** At the 00:30 CET / 18:30 ET last scan KUST was already +34% on 812K sh of real SIP volume, but the TradingView postmarket feed did not surface it — same failure mode as GCTK the same night (GCTK we *did* rescue via SIP cross-check).
+- Could it have been **entered**? **No.** It was above threshold in only the single last scan (fails the 2-AH-scan gate) and the surge was 5 min before that scan. Feed-lag, not a schedule gap — a later scan would not have helped.
+- Scanner gap: at the final scan, cross-check the top raw AH movers against a second data source (Yahoo/SIP AH) to catch feed-lagged spikes. This is the recurring fix (KUST today, GCTK/BTCT before).
+
+### Baseline Tracking
+
+- Days tracked: **48** (was 47 + 1)
+- Winners detected by scanner: **41/46 (89.1%)** — KUST added (detected, feed-lag substance at last scan). GMM still excluded (late-AH-tail).
+- Winner selected for paper trade: **23/46 (50.0%)** — KUST not entered (feed-lag + single-scan, unenterable). We entered XCUR/VTAK/GCTK, none the top winner.
+- Target: >80% detection
+- Status: **BASELINE MET** (89.1%)
+
+### Retrospective Scan Results
+
+Live PM scan (04:20 ET, 6 hits): KUST +63.4% ($1.65), VTAK +56.4% ($0.88), GCTK +42.3% ($0.75), XCUR +15.1% ($1.98), VMAR +7.6%, BJDX +8.0%. AH reconstruction (SIP + Yahoo) identifies KUST as the best AH→PM trade: only name that both spiked in AH *and* made a fresh PM high on heavy real volume. GCTK peaked in AH (+106%) and faded to +42% PM (AH was the better exit). VTAK modest AH (+23%) → re-exploded PM (+42%).
+
+### Open Position P&L (Alpaca)
+
+Open positions only (managed by `position-evaluation.md` at 10:30/14:30 CET — **not** closed here). All `quote` endpoints returned stale 20:00Z books; `positions current_price` aligns with live PM levels (used below). LVLU has no PM trades — $8.89 is its last regular close.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | Current (live) | PM/AH Peak | P&L % | Status |
+|--------|-------|--------------|----------|------------|----------------|------------|-------|--------|
+| VTAK | $0.72 | +28.6% | None (squeeze, 2.0M float) | 00:00 CET | ~$0.85 | **PM $1.27 (SIP)** | **+17.6%** | 🟢 OPEN |
+| XCUR | $2.40 | +39.5% | None (distressed biotech) | 23:00 CET | ~$2.05 | AH $2.55 > PM | −14.6% | 🔴 OPEN |
+| GCTK | $0.87 | +64.2% | A — business combination | 00:30 CET | ~$0.70 | AH $0.99 > PM $0.75 | −19.5% | 🔴 OPEN |
+| LVLU | $11.03 | carried | B — carried from 07-13 | 07-13 | $8.89 (last reg close) | OVN peak +8.7% | −19.4% | 🔴 OPEN (day 2) |
+
+No exits taken here. XCUR and GCTK both peaked in AH and faded into PM (AH was the better exit); VTAK is the one continuation winner. **Total realized P&L (Alpaca fills today): €0.00** (no exits this pulse).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30–00:30 CET). Full coverage, no coverage failure.
+- Candidates found: XCUR, CRDF, VTAK, TGHL, BTTC, GCTK, TOON, BCDA, VMAR (+ regular-session watch CNEY/CRMT/SHPH/NIXX/LOOP/NXTC/LEDS).
+- Retrospective matches: winner KUST **missed** (feed-lag at last scan). Entered names VTAK/GCTK/XCUR all caught.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| KUST | +34% @ 18:30 ET | Feed-lag — real +34% mover on 812K sh at the 00:30 scan, TradingView PM feed did not surface it; surge fired 18:25 ET (5 min pre-scan), single scan only | Yes — hypo AH $1.30 → PM peak $1.95 = +50% (but unenterable: fails 2-scan gate) |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| VTAK | $0.84 (SIP) | 17:30 ET | Build→hold | $1.27 PM peak (SIP) | +51% | +95% | ✅ PM >> AH — big continuation |
+| GCTK | $0.99 (SIP, +106%) | 18:15 ET | Spike→hold | $0.75 | −24% | +42% | ⚠️ AH peak > PM — AH was better exit |
+| XCUR | $2.55 (SIP) | 20:15 ET | Build→fade | ~$2.05 | −20% | +19% | ⚠️ AH peak > PM — AH was better exit |
+| TGHL | $0.86 (SIP) | 17:10 ET | Spike→fade | no PM trades | — | ~flat | Faded as predicted (correctly skipped) |
+
+**AH-peak-vs-PM-peak check:** GCTK (AH +106% > PM +42%) and XCUR (AH peak > PM) both peaked in after-hours and faded into PM — two more data points for the "extreme AH runner fades into PM" pattern (though GCTK's +106% is below the >250% extreme-runner threshold from MSW). VTAK is the counter-case (PM > AH on a 2.0M float). Note: GCTK is Grade A yet still faded PM — strong catalyst did not prevent the AH→PM fade.
+
+### Notes
+
+- **VTAK PM peak under-reported by Yahoo (DCX pattern):** Yahoo `--pm-history` showed VTAK PM high $0.92, but SIP shows a real **$1.27** print at 04:05 ET on **6.13M sh / 27,277 trades** (vwap $1.04) — a genuine, liquid peak Yahoo missed. Our VTAK entry $0.72 → PM peak $1.27 = **+76% available** (currently faded back to $0.85, +17%). Flag for the 10:30 position-eval: VTAK already printed its optimal exit; it is fading off the peak.
+- **KUST feed-lag miss (data-source fix, not schedule):** the winner was a real +34% / 812K-sh mover at the 00:30 CET last scan that TradingView's postmarket feed missed. This is the recurring feed-lag failure (KUST today, GCTK same-night rescued via SIP, BTCT Jun 29–30). The fix remains: at the final scan, cross-check top raw movers against a second AH source. KUST would still have been unenterable (single scan above threshold, surge 5 min pre-scan), so it costs detection cleanliness, not a tradeable entry.
+- **PM-only gapper tracking:** biggest raw PM mover today = KUST (+63% PM), an **AH→PM continuation** (moved >10% in AH) — not a PM-only gapper. No PM-only gapper this session.
+- **Late-AH-tail tally:** KUST logged as **feed-lag** (already +34% at 18:30 ET last-scan timestamp, feed missed it) — not a true-tail. Does not argue for an added late scan; argues for data-source verification. Joins BTCT (Jun 29–30) on the feed-lag side vs ORIS (true-tail).
+- **Fade-rule false-negative tracking:** no sub-3M AH-fader was skipped-then-re-exploded tonight. VTAK (2.0M, AH build→hold) was **entered**, not skipped. TGHL (12.7M) faded as predicted. Standing sub-3M count unchanged at **3 of 4**.
+- **Reverse-split-squeeze tracking:** none of tonight's entries (XCUR/VTAK/GCTK) had a reverse-split catalyst. No new row.
+- **Broker-block tracking:** SHPH again flagged `tradable=false` in the 21:30 regular watch but never cleared AH gates (did not reappear in AH), so no qualifier this night. No new row.
+- **Catalyst vs trajectory:** GCTK was the only Grade A entry and it faded PM (AH $0.99 → PM $0.75); the no-catalyst BUILD-and-hold VTAK (2.0M float) was the only PM winner. Continued weak support for "trajectory/float over catalyst grade."
+- **Coverage:** 7/7 evening scans ran. No coverage failure.
+
+### Price Charts
+
+```
+KUST — Previous Close $0.97 | 2-Day Range $0.92–$1.95
+  Flat $1.00–1.06 (16:00–18:20 ET) → surge 18:25 ET → AH peak $1.34 (19:50 ET)
+  → PM open $1.50 → PM peak $1.95 (+101.7%) at 04:10 ET on 3.2M sh/19K trades
+  Current ~$1.79 (+85%). Clean AH build → PM continuation to fresh high.
+
+GCTK — Previous Close $0.46 | 2-Day Range $0.44–$0.99
+  AH spike to peak $0.99 (+113.6%) at 18:15 ET → held ~$0.90 → PM faded to $0.71–0.75.
+  AH was the better exit (Grade A, still faded PM).
+
+VTAK — Previous Close $0.65 | 2-Day Range $0.55–$1.27
+  AH peak $0.84 (17:30 ET) → faded → PM re-explode to $1.27 (+95%) at 04:05 ET
+  on 6.1M sh/27K trades → faded to $0.85. PM >> AH (2.0M float continuation).
+```
