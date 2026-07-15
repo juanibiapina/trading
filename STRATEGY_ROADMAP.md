@@ -51,34 +51,39 @@ The `strategy-advance` pulse uses this section as its prioritisation lens.
 
 ## Priority order (current)
 
-Ranked by the North Star (expected $/time), adjusted for Juan's steer
-(2026-06-23) that a working **Alpaca paper account** (path to real money) and a
-better **data + review surface** (graphs, sources) are high-value enablers.
+Ranked by the North Star (expected $/time). **Re-ranked 2026-07-15** after Init 6's
+two tested levers (problem a: PM-only-gapper long; problem b: trailing-stop hold)
+both came back negative and Init 1's volume-lead hypothesis was falsified — the
+AH->PM core strategy stands, and the surviving lever is **when/how fast we detect
+the ignition**, not a new signal.
 
 1. ~~**Initiative 2 - Alpaca paper trading.**~~ **Promoted to the live paper
    cycle (2026-06-25).** Real Alpaca paper fills now drive entries/exits via
-   `broker.js`, wired into the scan/eval/position pulses; the fictional ledger
-   was discarded. Only step 5 (flip to live real money, tiny size) remains,
-   gated on a proven edge + Juan. Pilot slot freed.
-2. **Initiative 6 - catch the extreme runners (+300-600%).** Now the **active
-   initiative** (2026-06-29). Juan's strong recent endorsement (2026-06-26,
-   ILLR +760% "exactly the kind of stuff we want to catch") plus the pattern-
-   extraction ask make this the highest expected $/time lever. The census/
-   pattern work uses existing data (no new infra) and is surfaceable through the
-   now-built Init 5 charts. Research first; pilot only once the data justifies.
-3. **Initiative 5 - better data + review surface (graphs, sources).** Email-
-   charts rollout (path b, GitHub blob links) **failed in the field** — Juan
-   (2026-06-30) reports the link 404s (private repo) and wants the chart embedded
-   in the email body. Switching to path (a): host each PNG publicly and inline
-   it with `<img src>`. Remaining half is data-source quality (Yahoo gaps vs
-   Alpaca/financialdatasets.ai). Lower money-impact than the Init 6 census, so it
-   cedes the pilot slot to Init 6.
-4. **Initiative 1 - earlier volume-lead entries.** Refines the existing edge and
-   overlaps Init 6's minute-volume analysis, so it rides on that data work.
-   Lower standalone priority.
-5. **Initiative 3 - adaptive scheduling.** Ongoing enabler; the strategy-advance
-   loop already exists. Retime/add pulses (e.g. the PM-open scan Init 6 may
-   need) as evidence accrues. No standalone push.
+   `broker.js`. Only step 5 (flip to live real money, tiny size) remains, gated
+   on a proven edge + Juan. **No pilot active.**
+2. **Initiative 3 - adaptive scheduling / faster ignition detection.** Promoted
+   to the top research lever (2026-07-15). Init 1's 1-min backtest shows winners
+   ignite in a single minute (IVF 16:53 ET) that our ~22:15 CET / 16:15 ET AH
+   scan runs *before*, so we see the name flat and catch it late once it's
+   already +50-100%. The edge is monitoring frequency / scan timing (catch the
+   volume+price co-spike fast), which is exactly this initiative. Next: audit
+   which scans fire before vs after the typical ignition window; propose a
+   retimed/added AH observation scan (schedule changes -> propose to Juan).
+3. **Initiative 5 - better data + review surface (graphs, sources).** AH/PM
+   volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
+   raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports
+   (richer review surface). Juan-facing; clear as parallel low-risk items.
+4. **Initiative 6 - catch the extreme runners (+300-600%).** **No longer an
+   active pilot** (2026-07-15): both structured levers tested negative (problem a
+   PM-gapper long -8 to -13%/trade; problem b trailing-stop hold -3 to -5%/trade).
+   `pm-open-scan` stays cheap log-only accumulation. Only surviving thread is a
+   possible intraday momentum-continuation re-entry — parked pending a bigger
+   sample. Re-open only if the accumulating gapper data changes the picture.
+5. **Initiative 1 - earlier volume-lead entries.** **Hypothesis falsified
+   (2026-07-15):** volume does not lead price — ignition is a single-minute
+   co-spike at both 5m and 1m resolution (`INIT1_VOLUME_LEAD.md`). No standalone
+   edge; its value folds into Init 3 (detect the ignition fast). Effectively
+   closed as a distinct initiative.
 
 Done: Initiative 4 (email identity + reply feedback).
 
@@ -103,7 +108,20 @@ in parallel.
 suggest a volume surge precedes the price explosion. If we detect the volume
 ramp (e.g. ~10x normal) we could enter earlier, before the move.
 
-**Status:** Research / not started.
+**Status:** **Research done — hypothesis FALSIFIED (2026-07-15).** Built
+`scripts/volume-lead.js` (log-only) and ran it on 7 winners with real Alpaca SIP
+bars. Volume does **not** lead price: on every real AH mover (IVF, VTAK, EDHL,
+MSW) the price reaches +20% at or before the volume threshold (LEAD ≈ 0 or
+negative). Zoomed to 1-min on the clearest case, **IVF ignited in a single
+minute (16:53 ET): +19% price jump and the 25k-share/72-trade volume spike in
+the same bar** — no quiet volume ramp to front-run. The two PM-only gappers
+(GLXG/CIIT) showed a big "lead" but it is a **false positive** on thin AH prints
+(hundreds of shares, <40 trades); their real move is a news-driven 04:00 ET PM
+explosion with no tradeable AH precursor. Full write-up in `INIT1_VOLUME_LEAD.md`.
+**Reframe:** "we catch late" is real, but the fix is **faster ignition detection
+/ scan timing** (our AH scan at ~16:15 ET runs *before* IVF's 16:53 ET ignition),
+which is Initiative 3, not a volume-lead entry rule. This initiative folds into
+Init 3 and is effectively closed.
 
 **Why it is plausible:** the scanner already computes VRatio (AH volume vs avg)
 and IRVol (intraday relative volume). The winners (LNAI, LPA) showed VRatio
@@ -377,11 +395,17 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** In progress — the daily **`strategy-advance` pulse** (2026-06-23) is
-the first deliverable: a loop that advances this roadmap one initiative per day
-and is explicitly allowed to add/retime pulses as part of this initiative. Next:
-audit which pulses produce actionable output vs run empty, then propose a
-trimmed/retimed schedule.
+**Status:** In progress — **promoted to the top research lever (2026-07-15).**
+The daily **`strategy-advance` pulse** (2026-06-23) was the first deliverable.
+Init 1's 1-min backtest (`INIT1_VOLUME_LEAD.md`) gives this initiative concrete
+evidence: winners ignite in a single minute (IVF 16:53 ET) and our AH scan at
+~22:15 CET / **16:15 ET runs ~38 min *before* that ignition**, so we see the
+name flat and only catch it on a later scan once it is already +50-100% — the
+"we catch late" problem is a **scan-timing / monitoring-frequency** problem, not
+a missing signal. Next: audit each recent winner's ignition time (ET) vs our
+scan grid to quantify how often the AH scans fire before ignition, then propose
+a retimed/added AH observation scan (a trading-scan timing change -> propose to
+Juan for veto, don't apply silently).
 
 **Current schedule (cron, Europe/Berlin local time):**
 - Post-market scans: 21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 (7 scans)

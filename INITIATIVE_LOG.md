@@ -9,6 +9,51 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-15 — Init 1: volume-lead hypothesis FALSIFIED (ignition is a single-minute co-spike); roadmap re-ranked, Init 3 promoted
+
+**Evaluated:** Prior step (2026-07-14: Init 6 problem-(a) PM-gapper entry pilot,
+plus re-rank the roadmap since Init 6's two tested hypotheses failed) — **worked;
+both Init 6 levers are confirmed negative.** With no active pilot and Init 6
+exhausted, this run re-ranked by the North Star and advanced the top *untested*
+money lever, Init 1 (earlier volume-lead entries — Juan: "we catch spikes late,
+once +50-100%").
+
+**Step taken (research / Init 1):** Built `scripts/volume-lead.js` (log-only, no
+orders): for a ticker + AH-evening date it pulls real Alpaca SIP 5-min bars
+across the AH + next-morning PM sessions and measures when per-bar volume crosses
+a relative threshold vs when price crosses +20%/+50% (LEAD = t(price+20%) −
+t(volSurge); positive => volume leads). Ran it on 7 winners; zoomed the clearest
+(IVF) to 1-min bars. Wrote up `INIT1_VOLUME_LEAD.md`.
+
+**Result:** **Hypothesis falsified.** On every real AH mover (IVF, VTAK, EDHL,
+MSW) price reaches +20% at or before the volume threshold (LEAD ≈ 0 or negative)
+— volume does not lead. At 1-min resolution IVF was dead (100-300 sh, 1 trade/min,
+flat $1.24) until **16:53 ET, when a single bar carried both a +19% price jump
+and a 25k-share / 72-trade volume spike** — no quiet volume ramp to front-run.
+The two PM-only gappers (GLXG/CIIT) flagged a big "lead" but it is a false
+positive on thin AH prints (hundreds of shares, <40 trades); their real move is a
+news-driven 04:00 ET PM explosion with no tradeable AH precursor. **Reframe:**
+"we catch late" is real, but the fix is faster ignition detection / scan timing —
+our AH scan runs ~22:15 CET / 16:15 ET, ~38 min *before* IVF's ignition — which
+is **Initiative 3**, not a volume-lead entry rule. Init 1 folds into Init 3 and
+is effectively closed. Re-ranked the roadmap: Init 3 promoted to the top research
+lever; Init 6 demoted (no active pilot, both levers negative); Init 1 marked
+falsified.
+
+**Hypothesis / next step:** Advance Init 3 with the timing audit — for each
+recent winner, find the ignition minute (ET) from 1-min SIP bars and tabulate it
+against the current AH scan grid (21:30–00:30 CET) to quantify how often our
+scans fire *before* vs *after* ignition. If winners systematically ignite in a
+window our grid misses, that justifies a concrete retimed/added AH observation
+scan — a trading-scan timing change, so **propose to Juan for veto, don't apply
+silently**. In parallel, Init 5 has two ready low-risk items (post-push raw-URL
+200-check; GitHub Pages HTML reports).
+
+**Needs from Juan:** nothing this run. A scan-timing change proposal is likely
+next run once the ignition-vs-scan-grid audit quantifies the miss.
+
+---
+
 ### 2026-07-14 — Init 6: PM-only-gapper entry pilot is NEGATIVE (problem a closed); Init 5 AH/PM volume blank fixed in chart.py
 
 **Evaluated:** Prior step (2026-07-13: design a log-only hypothetical-entry
