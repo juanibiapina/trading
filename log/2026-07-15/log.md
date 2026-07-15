@@ -84,3 +84,25 @@
 
 **No entries (observation-only scan).** Re-evaluate CPHI/NTRP at 23:00 with full catalyst search; both need a 2nd AH-scan confirmation to satisfy the entry gate.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Entry scan (learning-phase: entries now permitted at 23:00+ CET).** 5 scanner hits; TGHL is new this scan. SIP verified through 16:45 ET (~15 min lag).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TGHL | [TV](https://www.tradingview.com/chart/?symbol=TGHL) | $0.81 | +23.2% | +49.8% | $1.22 | +84.5% | 13.3M | 9.6M | 1.4x | 12.7M | IT Services |
+| CPHI | [TV](https://www.tradingview.com/chart/?symbol=CPHI) | $1.10 | +78.9% | +16.5% | $1.28 | +108.4% | 12.3M | 11.4M | 1.1x | 37.8M | Pharma: Major |
+| NTRP | [TV](https://www.tradingview.com/chart/?symbol=NTRP) | $2.04 | +1.5% | +14.7% | $2.34 | +16.4% | 3.4M | 448K | 7.7x | 745K | Packaged Software |
+| RBNE | [TV](https://www.tradingview.com/chart/?symbol=RBNE) | $5.27 | -10.0% | +10.2% | $5.81 | -0.8% | 680K | 180K | 3.8x | 562K | Marine Shipping |
+
+(ATPC +9.9% AH also hit; below tracking priority, Day -3.1%, Total% +6.5% — early-peak fade, skip.)
+
+**Evaluation (no entries this scan):**
+
+- **TGHL** — Strongest profile but blocked by the 2-AH-scan gate. SIP: flat ~$0.79-0.81 until 16:20 ET, then exploded $0.80→$1.15 on 2.38M sh / 6,326 trades. Peaked $1.38 at 16:35 ET, holding $1.21-1.25 at 16:45 (within ~12% of high). Volume massively real and accumulating (2-4M sh/bar, 6-13K trades/bar). Live book $1.18/$1.26 (16:59 ET) corroborates SIP — not a bad print. Float 12.7M, Total% +84.5% (below +150 ceiling). tradable=true. **Catalyst:** no same-day PR found (3 searches); only recent company news is a Nasdaq stockholders'-equity-deficiency / delisting notice (negative) plus an older MoU with the Government of Republika Srpska. No catalyst found. **Gate block:** first AH appearance — the spike started at 16:20 ET, after the 22:30 SIP read, so it was absent from the 22:00 and 22:30 scans. Fails the ≥2-AH-scan requirement. **Top watch for 23:30**: if it holds $1.15+ on sustained volume into its 2nd AH scan, it clears the gate and becomes an entry candidate (BUILD-and-hold, float <50M, Total% below ceiling; enter with no-catalyst concern noted).
+- **CPHI** — SPIKE→FADE, skip. SIP peaked $1.59 at 16:15 ET, faded steadily to $1.24-1.30 by 16:45 (~-20% off peak), volume declining 2.7M→531K/bar. AH% dropped 30%→16.5% across scans; Total% slipped 132.6%→108.4%. Early peak (16:15 ET) + declining across scans + fading volume + wide stale book (bid $1.41 / ask $3.40). Day +78.9% already banked in regular session. Cleared the 2-scan gate structurally but trajectory disqualifies it.
+- **NTRP** — SPIKE→FADE collapsed below close, skip. SIP spiked to $2.71 at 16:10 ET (very early), faded to $2.15 by 16:45; live book $1.92/$1.95 at 16:59 ET — now BELOW its $2.04 close (scanner's $2.34 is stale feed-lag). -29% off peak. Cleared the 2-scan gate structurally but collapsed.
+- **RBNE** — Dead-cat bounce, skip. Day -10% (down regular session), AH bounce peaked early and Total% only -0.8% (still below regular close). Down-day bounce, no reclaim.
+
+**No entries.** The two gate-clearing candidates (CPHI, NTRP) are both SPIKE→FADE; the one clean BUILD-and-hold (TGHL) has not cleared the 2-AH-scan gate (fresh 16:20 ET spike). SPIKE→FADE-only among eligible names → skip per the SPIKE→FADE-only-night rule. TGHL carried forward as the top watch for the 23:30 scan.
+
