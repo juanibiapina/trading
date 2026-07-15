@@ -65,3 +65,22 @@
 
 **No candidates found.** Scanner returned 0 hits at AH open (16:00 ET). Observation-only scan (learning-phase rule: no entries before 23:00 CET). None of the 21:30 regular-session watch names (JTAI, ASPD, CPHI, MRAI, SOBR, KUST) reappeared above threshold as AH opened — consistent with their faded regular-session volume. Re-check at 22:30/23:00 for any AH carry.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Observation-only (learning-phase rule: no entries before 23:00 CET).** 5 scanner hits; 3 clear the >10% AH threshold. All three confirmed as real AH movers on SIP (thousands of trades/bar, heavy volume). Trajectory read from SIP through 4:15 PM ET (~15 min lag).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CPHI | [TV](https://www.tradingview.com/chart/?symbol=CPHI) | $1.10 | +78.9% | +30.0% | $1.43 | +132.6% | 4.2M | 10.5M | 0.4x | 37.8M | Pharma: Major |
+| NTRP | [TV](https://www.tradingview.com/chart/?symbol=NTRP) | $2.04 | +1.5% | +16.2% | $2.37 | +17.9% | 999K | 154K | 6.5x | 745K | Packaged Software |
+| RBNE | [TV](https://www.tradingview.com/chart/?symbol=RBNE) | $5.27 | -10.0% | +12.3% | $5.92 | +1.1% | 576K | 165K | 3.5x | 562K | Marine Shipping |
+
+(ATPC +7.6% and RAYA +5.8% below the 10% AH threshold — not tracked.)
+
+**Trajectory notes (prep for 23:00 entry scan):**
+- **CPHI** — BUILD. SIP vwap $1.03→$1.50 across 4 bars, volume rising (334K→2.7M/bar), high $1.59. Real accumulation. Concerns: +78.9% already banked in regular session (AH adds only +30% on top), Total% +132.6% approaching the +150% ceiling, wide AH book (bid $1.50 / ask $3.40 — ask stale far above SIP high $1.59). tradable=true. Second appearance (was +87% in 21:30 regular scan). Needs catalyst workup + 2-AH-scan gate check at 23:00.
+- **NTRP** — Fresh AH spike (Day only +1.5%), low extension +17.9%, float 745K, VRatio 6.5x, tight book ($2.40/$2.43). Peaked $2.71 at 4:10 PM, fading to $2.27 by 4:15 — early-peak-fade watch. First AH appearance; needs a 2nd AH scan to clear the gate. tradable=true.
+- **RBNE** — Dead-cat pattern: Day -10% (down regular session), AH bounce peaked $7.23 at 4:05 PM, now fading to $6.15, Total% only +1.1% (still below regular close). Early peak + fade + down-day bounce = skip candidate. tradable=true.
+
+**No entries (observation-only scan).** Re-evaluate CPHI/NTRP at 23:00 with full catalyst search; both need a 2nd AH-scan confirmation to satisfy the entry gate.
+
