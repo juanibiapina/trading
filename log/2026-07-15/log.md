@@ -137,3 +137,29 @@
 - **RBNE** — dead-cat (Day -10%), AH +5.9% (below threshold), Total% -4.7% (below close). Skip.
 - **ATPC** — fails 2-AH-scan >10% gate (23:00 was +9.9%, below threshold). SIP: late peak $3.01 at 16:55 ET but volume collapsing (1685 trades at peak → 85 last bar), wide stale book ($2.19/$2.89). Fading thin. Skip.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**Entry scan.** 7 scanner hits. No new entry candidates. TGHL (already held) is building strongly. ATPC now clears the 2-AH-scan gate but trajectory disqualifies. SIP verified through 17:45 ET (~15 min lag).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TGHL | [TV](https://www.tradingview.com/chart/?symbol=TGHL) | $0.81 | +23.2% | +95.2% | $1.59 | +140.4% | 28.6M | 11.2M | 2.5x | 12.7M | IT Services |
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $0.53 | -0.0% | +9.6% | $0.58 | +9.6% | 3.4M | 12.0M | 0.3x | 6.2M | Medical Specialties |
+| JTAI | [TV](https://www.tradingview.com/chart/?symbol=JTAI) | $3.14 | +580.1% | +21.7% | $3.82 | +727.7% | 3.0M | 6.0M | 0.5x | 1.2M | Airlines |
+| VTAK | [TV](https://www.tradingview.com/chart/?symbol=VTAK) | $0.58 | +3.6% | +7.1% | $0.62 | +11.0% | 806K | 30.2M | 0.0x | 2.6M | Medical Specialties |
+| RBNE | [TV](https://www.tradingview.com/chart/?symbol=RBNE) | $5.27 | -10.0% | +7.7% | $5.68 | -3.1% | 715K | 185K | 3.9x | 562K | Marine Shipping |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.52 | -3.1% | +13.1% | $2.85 | +9.6% | 476K | 91K | 5.2x | 475K | Pharmaceuticals: Other |
+| ERNA | [TV](https://www.tradingview.com/chart/?symbol=ERNA) | $6.73 | +11.1% | +5.3% | $7.09 | +17.0% | 119K | 2.6M | 0.0x | 679K | Pharmaceuticals: Major |
+
+**Evaluation (no new entries this scan):**
+
+- **TGHL (HELD)** — thesis confirming. SIP/Yahoo AH shows a clean BUILD: after the 16:20-16:35 ET spike it held $1.15-1.25, then broke to **new AH highs $1.55-1.56 at 17:40-18:00 ET** (+135.9% peak). Position now 79 sh @ $1.34, marked $1.49 (+11.2%). No add (one entry per candidate per night). Grade None → exit at first premarket opportunity (handled by position-evaluation premarket).
+- **ATPC** — clears the 2-AH-scan >10% gate for the first time (23:30 +11.9%, 00:00 +13.1%), float 475K (ideal), Total% +9.6% (far below ceiling), Day -3.1% (not dead-cat). **But trajectory disqualifies: faded opening spike, not BUILD.** Yahoo/SIP show a single first-bar spike to $3.08 at 16:05 ET (+18.4%), then an immediate collapse to a choppy $2.7-3.0 base that never reclaimed the high across 2 hours. Descending intraday peaks ($3.08→$3.01→$3.00→$2.99), spiky/fading volume (push bars then collapse to 44-92 trades/bar), and a wide stale quote book (bid $2.19 / ask $2.89, frozen @16:00 ET). The rising scanner AH% (7.6→9.9→11.9→13.1) is the base drifting up within the choppy range, not a build toward the high. SPIKE→FADE character (0/10+ for PM continuation) → skip on trajectory. tradable=true.
+- **ERNA** — new, but AH +5.3% (below 10% threshold), Total% +17.0%, and quote shows **ask $0.00 x0 (no AH book)**. Skip: below threshold + illiquid (no AH book).
+- **GCTK** — VRatio 0.3x (no real AH volume), Total% +9.6% (below threshold); already traded/exited today. Skip.
+- **JTAI** — Total% +727.7% (Day +580% banked in regular session), far above +150 ceiling; AH VRatio 0.5x (thin). Skip: extension ceiling + thin AH.
+- **VTAK** — AH +7.1% (below threshold), VRatio 0.0x; already exited today. Skip.
+- **RBNE** — dead-cat (Day -10%), AH +7.7% (below threshold), Total% -3.1% (below close). Skip.
+
+**No new entries.** Only gate-clearing new name (ATPC) is a faded opening spike; all other hits are below threshold, over the extension ceiling, dead-cat, or already traded. TGHL remains the sole open position and is building toward its AH high — thesis intact.
+
