@@ -163,3 +163,31 @@
 
 **No new entries.** Only gate-clearing new name (ATPC) is a faded opening spike; all other hits are below threshold, over the extension ceiling, dead-cat, or already traded. TGHL remains the sole open position and is building toward its AH high — thesis intact.
 
+## Scan 00:30 CET (6:30 PM ET) — FINAL SCAN
+
+**Entry scan + final feed-lag cross-check.** 7 scanner hits. No new entries. TGHL (held) still building. ATPC clears the 2-AH-scan gate on AH% but trajectory disqualifies (confirmed SPIKE→FADE on SIP).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TGHL | [TV](https://www.tradingview.com/chart/?symbol=TGHL) | $0.81 | +23.2% | +91.5% | $1.56 | +135.9% | 36.0M | 12.0M | 3.0x | 12.7M | IT Services |
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $0.53 | -0.0% | +7.7% | $0.57 | +7.6% | 3.5M | 12.1M | 0.3x | 6.2M | Medical Specialties |
+| JTAI | [TV](https://www.tradingview.com/chart/?symbol=JTAI) | $3.14 | +580.1% | +9.9% | $3.45 | +647.7% | 3.5M | 6.1M | 0.6x | 1.2M | Airlines |
+| RBNE | [TV](https://www.tradingview.com/chart/?symbol=RBNE) | $5.27 | -10.0% | +5.3% | $5.55 | -5.2% | 720K | 186K | 3.9x | 562K | Marine Shipping |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $2.52 | -3.1% | +16.3% | $2.93 | +12.7% | 511K | 95K | 5.4x | 475K | Pharmaceuticals: Other |
+| ILLR | [TV](https://www.tradingview.com/chart/?symbol=ILLR) | $1.28 | -44.6% | +6.3% | $1.36 | -41.1% | 261K | 1.9M | 0.1x | 17.9M | Packaged Software |
+| ERNA | [TV](https://www.tradingview.com/chart/?symbol=ERNA) | $6.73 | +11.1% | +6.0% | $7.13 | +17.7% | 133K | 2.6M | 0.1x | 679K | Pharmaceuticals: Major |
+
+**Evaluation (no new entries):**
+
+- **TGHL (HELD)** — thesis holding. Position 79 sh @ $1.34, marked $1.44 (+7.5%). Scanner AH +91.5% ($1.56), SIP peak $1.55-1.56 at 17:40-18:00 ET. No add (one entry per candidate per night). Grade None → premarket exit (position-evaluation handles).
+- **ATPC** — clears the 2-AH-scan >10% gate (23:30 +11.9%, 00:00 +13.1%, 00:30 +16.3%), float 475K (ideal), Total% +12.7% (far below ceiling), Day -3.1% (not dead-cat). **But SIP confirms SPIKE→FADE → skip.** Bars: spike to $3.18 at 16:10 ET (very early peak), immediate collapse to a choppy $2.66-3.01 base, descending peaks ($3.18→$3.01→$3.00), thinning volume (49K→6.3K sh/bar), never reclaimed the high across ~1.5 hrs. Rising scanner AH% is the base drifting inside the choppy range, not a build. Book stale ($2.19/$2.89 frozen 16:00 ET). SPIKE→FADE is 0/10+ for PM continuation — trajectory dominates the ideal float. Skip.
+- **ILLR** — new. Day -44.6% (massive down day), AH +6.3% (below threshold), Total% -41.1% (deep below close). SIP thin (34-56 trades/bar, ~5K sh). Dead-cat + below threshold + thin. Skip.
+- **JTAI** — Total% +647.7% (Day +580% banked in regular session), far above +150 ceiling. Real AH volume (SIP $3.92, 3088 trades/bar) but extension ceiling disqualifies. Skip.
+- **ERNA** — AH +6.0% (below threshold), VRatio 0.1x, illiquid. Skip.
+- **GCTK** — AH +7.7% (below threshold), VRatio 0.3x (no real AH volume), already traded/exited today. Skip.
+- **RBNE** — dead-cat (Day -10%), AH +5.3% (below threshold), Total% -5.2% (below close). Skip.
+
+**Final feed-lag cross-check (per last-scan rule):** cross-checked tracked names against SIP. No under-reported real mover being dropped. CPHI faded to $1.14-1.19 (~+4-8% AH, below threshold — correctly dropped from scan). JTAI real volume but over the extension ceiling. ILLR dead-cat/thin. The one real BUILD mover (TGHL) is already held and correctly reported. No rescue needed.
+
+**Night summary:** 8 scans (21:30–00:30 CET). One entry: **TGHL** (79 sh @ $1.33962, BUILD-and-hold, Grade None, no catalyst). TGHL closed the night +7.5% and building toward its AH high — thesis intact into premarket. All other candidates were SPIKE→FADE (ATPC, CPHI, NTRP), over the extension ceiling (JTAI), dead-cat (RBNE, ILLR), or below threshold/illiquid (GCTK, VTAK, ERNA). Premarket exit for TGHL handled by position-evaluation.
+
