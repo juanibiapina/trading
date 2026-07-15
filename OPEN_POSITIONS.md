@@ -8,8 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|--------|------------|----------------|----------|-------|
-
-**No open positions.** (GCTK and LVLU both sold 2026-07-15 14:30 CET pulse; see Closed Positions.)
+| TGHL | $1.33962 | 2026-07-15 23:36 CET | 79 | None | 625d905a | BUILD-and-hold, cleared 2-AH-scan gate. No catalyst (broad-market move). Grade None → exit first PM opportunity |
 
 ## Position Rules
 
