@@ -5,6 +5,14 @@
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
+## Scan 22:00 CET (4:00 PM ET) — AFTERHOURS open
+
+Scanner returned 0 hits. AH just opened; observation-only scan (learning phase blocks entries before 23:00 CET).
+
+No candidates found.
+
+**Decision:** No entries. First AH scan of the night, no movers detected. Re-scan at 22:30/23:00 CET.
+
 ## Scan 21:30 CET (3:30 PM ET) — REGULAR session
 
 AH not open yet (opens 16:00 ET / 22:00 CET). Regular-session caution: no entries, watch only pending AH confirmation. Scanner returned 55 regular-session hits; notable low-float movers below.
