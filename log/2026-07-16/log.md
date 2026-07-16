@@ -5,6 +5,25 @@
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
+## Scan 22:30 CET (4:30 PM ET) — AFTERHOURS
+
+Scanner returned 4 hits. Observation-only scan (learning phase blocks entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $1.76 | +6.0% | +18.1% | $2.08 | +25.2% | 1.4M | 260K | 5.2x | 892K | Specialty Telecommunications |
+| GLXG | [TV](https://www.tradingview.com/chart/?symbol=GLXG) | $1.07 | -14.4% | +31.8% | $1.41 | +12.8% | 527K | 120K | 4.4x | 1.7M | Miscellaneous Commercial Services |
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $4.20 | +66.7% | +8.3% | $4.55 | +80.6% | 1.3M | 4.1M | 0.3x | 475K | Pharmaceuticals: Other |
+| CRDF | [TV](https://www.tradingview.com/chart/?symbol=CRDF) | $0.87 | -1.7% | +5.2% | $0.92 | +3.5% | 344K | 2.3M | 0.2x | 62.5M | Medical Specialties |
+
+**Observations (no entries — before 23:00 CET gate):**
+- **PMAX** (new): first AH appearance, AH +18.1% above the 10% gate, float 892K, VRatio 5.2x, low extension (+25% total). BUILD watch — track for the 23:00 scan. Needs a 2nd AH scan >10% to clear the entry gate.
+- **GLXG** (new): AH +31.8% but Day% -14.4%, right at the dead-cat threshold. AH price $1.41 sits above regular close $1.07 (reclaim), so watch for dead-cat-override behavior. Float 1.7M. Track.
+- **ATPC** (carried from 21:30 regular scan): AH only +8.3%, below the 10% gate. VRatio 0.3x = volume fading, not building into AH. Watch only.
+- **CRDF** (new): AH +5.2% below the 10% gate, float 62.5M (high), VRatio 0.2x. Not a candidate.
+
+**Decision:** No entries. Observation-only scan (before 23:00 CET). PMAX and GLXG are the names to watch; both need a 2nd AH scan >10% to qualify. Re-scan at 23:00 CET.
+
 ## Scan 22:00 CET (4:00 PM ET) — AFTERHOURS open
 
 Scanner returned 0 hits. AH just opened; observation-only scan (learning phase blocks entries before 23:00 CET).
