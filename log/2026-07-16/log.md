@@ -1,5 +1,25 @@
 # 2026-07-16
 
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+
+## Scan 21:30 CET (3:30 PM ET) — REGULAR session
+
+AH not open yet (opens 16:00 ET / 22:00 CET). Regular-session caution: no entries, watch only pending AH confirmation. Scanner returned 55 regular-session hits; notable low-float movers below.
+
+| Ticker | Chart | Price | Chg% | Float | MCap | IRVol | VChg% | Industry | Note |
+|--------|-------|-------|------|-------|------|-------|-------|----------|------|
+| ATPC | [TV](https://www.tradingview.com/chart/?symbol=ATPC) | $4.12 | +63.5% | 475K | 4.1M | 1588x | -99.3% | Pharma: Other | Vol fading (5mVol 500) |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $3.80 | +78.4% | 0 | 38.0M | 242x | -99.9% | Oilfield Svc | Vol fading |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $2.72 | +30.8% | 1.2M | 4.9M | 54x | -99.3% | Env Svc | Prior winner name; vol fading |
+| TGHL | [TV](https://www.tradingview.com/chart/?symbol=TGHL) | $1.49 | +82.9% | 12.7M | 37.7M | 28x | -99.9% | IT Svc | Already traded+sold today (-18.6%) |
+| CLIK | [TV](https://www.tradingview.com/chart/?symbol=CLIK) | $1.77 | +19.7% | 724K | 5.8M | 122x | -86.1% | Personnel Svc | Vol fading |
+| CRNG | [TV](https://www.tradingview.com/chart/?symbol=CRNG) | $2.00 | +263.6% | 0 | 35.3M | 1.5x | +485% | REIT | Low rel-vol |
+
+**Decision:** No entries. This is a pre-AH regular-session scan; per the regular-session caution rule, candidates are watch-only pending AH confirmation (22:00+ CET). Most notable movers show VChg -99% (regular-session volume already fading, not building into AH). Learning-phase policy also blocks entries before the 23:00 CET scan. Re-scan at 22:00 CET when AH opens.
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
