@@ -5,6 +5,33 @@
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
+## Scan 23:30 CET (5:30 PM ET) — AFTERHOURS (entry-eligible)
+
+Scanner returned 6 hits. BIYA now clears the 2-AH-scan gate; GCTK is a fresh late-BUILD name.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $0.50 | -5.5% | +41.4% | $0.71 | +33.7% | 8.1M | 13.3M | 0.6x | 6.2M | Medical Specialties |
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $1.76 | +6.0% | +13.8% | $2.00 | +20.6% | 5.8M | 805K | 7.2x | 892K | Specialty Telecommunications |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $3.04 | -8.4% | +37.5% | $4.18 | +25.9% | 3.1M | 1.5M | 2.1x | 2.7M | Personnel Services |
+| GLXG | [TV](https://www.tradingview.com/chart/?symbol=GLXG) | $1.07 | -14.4% | +18.7% | $1.27 | +1.6% | 1.7M | 257K | 6.6x | 1.7M | Miscellaneous Commercial Services |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $1.08 | -32.1% | +6.5% | $1.15 | -27.7% | 744K | 243K | 3.1x | 4.4M | Miscellaneous Commercial Services |
+| STXS | [TV](https://www.tradingview.com/chart/?symbol=STXS) | $1.65 | +1.9% | +13.9% | $1.88 | +16.0% | 619K | 1.0M | 0.6x | 80.4M | Medical Specialties |
+
+**Gate evaluation (all times ET; SIP bars from 16:00 ET / 20:00Z):**
+- **BIYA** — **QUALIFIES on all gates. ENTERED (order working, see below).** 2 AH scans >10% (23:00 +40.8%, 23:30 +37.5%); float 2.7M (ideal <10M); Day -8.4% (above -15%); Total from close to entry ask +48% (below 150% ceiling). SIP confirms real liquidity: spiked 16:25 ET, peaked $4.68 at 16:35 ET, then **HOLDING** $4.18–$4.52 for 40+ min, now $4.35 (-7% off high, within the 20% band). 500K–846K sh/bar, 6–11K trades/bar. Two-sided fillable book (bid $4.46/ask $4.51 x100). tradable=true. **Trajectory: HOLD near AH high** (not SPIKE→FADE) — early 16:35 peak does not disqualify a name holding within 20% of its high (per hold-vs-fade rule). Catalyst: **none found** (4 searches). 1-for-10 reverse split effective Jul 13 (3 days ago, not today's driver); crypto/BNB "Ark Plan" narrative + April institutional equity deal (dilution history). Low-float China microcap momentum. No fresh same-day earnings/PR/8-K. Entered with **no-catalyst concern noted**, Grade None.
+- **GCTK** — **Strong late-BUILD, but only 1 AH scan >10% — cannot qualify yet (needs 2nd AH scan).** Dead ($0.48–0.50) from 16:00–16:50 ET, then **exploded 16:55 ET** ($0.49→$0.71) on 1.95M sh/3462 trades, accelerating: 17:05 ET 3.0M sh $0.72, latest bar 17:15 ET makes a **new high $0.76** (close $0.74) on 2.2M sh. Genuine late build, real volume, float 6.2M, Day -5.5%. This is the strongest trajectory of the night but appears for the first time at 23:30 (fresh name, no prior AH footprint) — the feed-lag rescue path only recovers already-tracked names, and the 2-AH-scan entry gate is not met. Quote stale (@16:00 ET book $0.42/$0.57). **Strong watch for the 00:00 CET scan** — if it holds >10% AH it clears the gate and becomes a prime BUILD entry.
+- **PMAX** — QUALIFIES on gates (3 AH scans) but **SPIKE→FADE confirmed.** Peaked $2.36 at 16:25 ET, now $1.93 (SIP), -18% off high, volume collapsed (1.18M→87K sh/bar). Slight scanner uptick to $2.00 was noise. No catalyst. Skip (SPIKE→FADE 0/10+ for PM continuation).
+- **GLXG** — Total +1.6%, AH price $1.27 faded below prior scans, Day -14.4%, choppy/faded from early peak. Dilution/shelf risk (Galaxy Payroll). Skip.
+- **VCIG** — Day -32.1%, Total -27.7% (AH below regular close). Textbook dead-cat. Skip.
+- **STXS** — float 80.4M, VRatio 0.6x. Not a candidate.
+
+**Decision: ENTER BIYA (qualifies on all gates, HOLD trajectory). Order submitted, unfilled at scan time.**
+- BUY 22 BIYA @ limit $4.55 ext (id 2c02d728) — QTY = floor($100/$4.51 ask) = 22.
+- **Unfilled after ~2 min working.** Alpaca's AH quote feed is frozen at 20:55Z (16:55 ET) and the paper engine isn't matching despite the limit being marketable (limit $4.55 > last $4.35 > ask $4.51). This is a broker-side feed-lag, not a rejection. Order left **working** (day order, expires tonight; can only fill at ≤$4.55). No position exists yet, so not added to OPEN_POSITIONS.md — the premarket position-evaluation pulse will pick it up via `broker.js positions` if it fills tonight.
+- No override flags: BIYA is not Day% ≤-15% (no dead-cat-override) nor Total% >150% (no ceiling-override).
+- **GCTK is the name to watch at 00:00 CET** — strongest BUILD of the night, needs its 2nd AH scan >10% to clear the entry gate.
+
 ## Scan 23:00 CET (5:00 PM ET) — AFTERHOURS (entry-eligible)
 
 Scanner returned 5 hits. First entry-eligible scan of the night (learning-phase gate opens at 23:00 CET).
