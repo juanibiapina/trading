@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|--------|------------|----------------|----------|-------|
-| TGHL | $1.33962 | 2026-07-15 23:36 CET | 79 | None | 625d905a | BUILD-and-hold, cleared 2-AH-scan gate. No catalyst (broad-market move). Grade None → exit first PM opportunity |
+| _(none)_ | | | | | | |
 
 ## Position Rules
 
@@ -76,4 +76,5 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 | VTAK | $0.72 | $0.80 | +$10.00 | +11.1% | 1 | None (squeeze setup, no fresh catalyst) | Grade None — exit at first PM opportunity at any profit. PM spiked $1.27 (+76%) at 08:05 UTC on 6M sh, then faded to ~$0.85. Sold into the fade at 10:30 CET pulse. SELL 125 @ limit $0.80 ext (id 3652f341) filled 2026-07-15. Real fill $0.80. |
 | XCUR | $2.40 | $2.00 | -$16.40 | -16.7% | 1 | None (distressed biotech, Nasdaq deadline July 20) | Grade None — exit at first PM opportunity + below -10% hard stop. PM traded $1.96-2.26, faded to ~$1.98. Sold first PM pulse. SELL 41 @ limit $1.92 ext (id 9c193da3) filled 2026-07-15. Real fill $2.00. |
 | LVLU | $11.03 | $8.12 | -$26.19 | -26.4% | 2 | B (strategic-alternatives review, special committee) | Grade B — day-2 time limit reached AND below -15% hard stop ($9.38). Entered 07-13 23:01 CET. Held near AH high overnight but never re-rated above entry; faded to $8.00-8.10 PM (thin, 11 trades/bar). Canceled stale $8.40 order, repriced. SELL 9 @ limit $7.85 ext (id 2cdf7fc6) filled 2026-07-15 14:30 CET. Real fill $8.12. |
+| TGHL | $1.33962 | $1.09 | -$19.72 | -18.6% | 1 | None (BUILD-and-hold, broad-market move, no catalyst) | Grade None — exit first PM opportunity + below -10% hard stop. Entered 07-15 23:36 CET. PM 07-16 opened $1.15 then faded: 5Min bars $1.33H→$1.08C on 5.6M sh (SIP vwap $1.07-1.20, liquid). Sold first PM pulse into the fade. SELL 79 @ limit $1.04 ext (id e56b50df) filled @ $1.09. Real fill $1.09. |
 | GCTK | $0.8743 | $0.546 | -$33.16 | -37.6% | 2 | A (completed reverse merger with Lōkahi Therapeutics) | Grade A hard stop hit (-25% = $0.6525). Entered 07-14 00:30 CET. Strong AH BUILD to $0.99, but PM collapsed steadily $0.95→$0.55 on day 2 (SIP vwap $0.56, liquid). Reverse-merger structure (dilution/control-change risk flagged at entry) behaved like a dilution event, not an AIIO/UGRO-style runner. SELL 101 @ limit $0.53 ext (id 86275106) filled 2026-07-15 14:30 CET. Real fill $0.546. |
