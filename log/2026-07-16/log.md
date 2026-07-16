@@ -5,6 +5,27 @@
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
+## Scan 23:00 CET (5:00 PM ET) — AFTERHOURS (entry-eligible)
+
+Scanner returned 5 hits. First entry-eligible scan of the night (learning-phase gate opens at 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $1.76 | +6.0% | +13.1% | $1.99 | +19.9% | 5.1M | 721K | 7.1x | 892K | Specialty Telecommunications |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $3.04 | -8.4% | +40.8% | $4.28 | +28.9% | 1.5M | 1.3M | 1.2x | 2.7M | Personnel Services |
+| GLXG | [TV](https://www.tradingview.com/chart/?symbol=GLXG) | $1.07 | -14.4% | +22.4% | $1.31 | +4.8% | 1.2M | 199K | 6.1x | 1.7M | Miscellaneous Commercial Services |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $1.08 | -32.1% | +13.0% | $1.22 | -23.3% | 684K | 237K | 2.9x | 4.4M | Miscellaneous Commercial Services |
+| STXS | [TV](https://www.tradingview.com/chart/?symbol=STXS) | $1.65 | +1.9% | +10.9% | $1.83 | +13.0% | 364K | 1.0M | 0.4x | 80.4M | Medical Specialties |
+
+**Gate evaluation (all times ET; SIP bars from 16:00 ET / 20:00Z):**
+- **PMAX** — QUALIFIES on gates (2 AH scans >10%: 22:30 +18.1%, 23:00 +13.1%; float 892K; Day +6.0%; Total +19.9% low extension). SIP confirms real liquidity (millions of sh, thousands of trades/bar). **Trajectory: SPIKE→FADE.** Peaked $2.36 at 16:25 ET, now $1.96 (quote bid $1.93/ask $1.96), -17% off high, volume fading (1.18M→215K/bar). Peaked before 17:30 ET and declining. Catalyst: **none found** (4 searches — no earnings/PR/8-K).
+- **GLXG** — QUALIFIES on gates (2 AH scans >10%: 22:30 +31.8%, 23:00 +22.4%; float 1.7M; Day -14.4%, just above the -15% dead-cat line). SIP: peaked $1.58 at 16:10 ET, collapsed -23% to $1.21, choppy rebuild to $1.43 (16:45), now $1.31 on quote (-17% off high). **Trajectory: early peak + choppy/faded**, not a clean build. Catalyst: **none fresh** — low-float momentum/pump name (Galaxy Payroll Group) with shelf-registration/dilution history (same mechanic as its June 11 +238% surge). Dilution risk.
+- **BIYA** — new, only 1 AH scan >10% (+40.8%). Cannot qualify (needs 2nd AH scan >10%). VRatio 1.2x (vol barely above avg). SIP shows real trades (peak $4.68 at 16:35 ET) but early. Watch for a 2nd scan.
+- **VCIG** — Day -32.1%, Total -23.3% (AH price below regular close). Textbook dead-cat bounce. Skip.
+- **STXS** — float 80.4M (high), VRatio 0.4x (vol fading). Not a candidate.
+
+**Decision: No entries. SPIKE→FADE-only night.** Both qualifying candidates (PMAX, GLXG) peaked in the first ~25 min of AH (16:25 / 16:10 ET), both before 17:30 ET, and are now ~17% off their highs and fading/choppy — neither is making new highs or holding near its AH high. Neither has a catalyst; GLXG carries dilution/shelf risk. Per the SPIKE→FADE-only-night rule, skip all rather than enter the least-bad option (SPIKE→FADE is 0/10+ for PM continuation regardless of float or extension). PMAX and GLXG stay on watch — if either builds a genuine second leg (new AH high after 17:30 ET) at a later scan, re-evaluate. No override flags: neither is Day% ≤-15% (no dead-cat-override) nor Total% >+150% (no ceiling-override).
+
 ## Scan 22:30 CET (4:30 PM ET) — AFTERHOURS
 
 Scanner returned 4 hits. Observation-only scan (learning phase blocks entries before 23:00 CET).
