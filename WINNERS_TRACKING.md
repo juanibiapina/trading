@@ -6,8 +6,9 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-07-13 | VMAR | None (low-float 670K squeeze; wks-old 06/17 reverse split) | $1.85 AH (+45.6% @19:20 ET) | $3.35 PM SIP (+163.8% @04:00 ET) | $1.41 | Day 2 - faded to $1.41 from $3.35 PM peak; **DETECTED + ENTERED @ $1.57**, sold $2.22 (+41%) |
-| 2026-07-15 | KUST | Unverified (news-driven AH volume spike 18:25 ET; 577K float) | $1.34 AH SIP (+38% @19:50 ET) | $1.95 PM SIP (+101.7% @04:10 ET) | $1.79 | 🆕 Day 1 - AH build → PM continuation to fresh high; **NOT detected (feed-lag at 00:30 last scan)**, unenterable (single scan) |
+| 2026-07-13 | VMAR | None (low-float 670K squeeze; wks-old 06/17 reverse split) | $1.85 AH (+45.6% @19:20 ET) | $3.35 PM SIP (+163.8% @04:00 ET) | $1.32 | Day 3 - continued fade to $1.32 from $3.35 PM peak; **DETECTED + ENTERED @ $1.57**, sold $2.22 (+41%) |
+| 2026-07-15 | KUST | Unverified (news-driven AH volume spike 18:25 ET; 577K float) | $1.34 AH SIP (+38% @19:50 ET) | $1.95 PM SIP (+101.7% @04:10 ET) | $1.01 | Day 2 - faded to $1.01 from $1.95 PM peak; **NOT detected (feed-lag at 00:30 last scan)**, unenterable (single scan) |
+| 2026-07-15 | ATPC | None (ultra-low 475K float squeeze, no PR) | $3.87 AH SIP (+49% @19:20 ET tail) | $4.90 PM SIP (+88.5% @04:00 ET, 1.5M sh) | $3.86 | 🆕 Day 1 - AH-fade → PM re-explosion; **DETECTED (5 scans) but SKIPPED on fade rule** (sub-3M false negative 4/5) |
 
 ## Historical Winners (with multi-day outcome)
 

@@ -191,3 +191,124 @@
 
 **Night summary:** 8 scans (21:30–00:30 CET). One entry: **TGHL** (79 sh @ $1.33962, BUILD-and-hold, Grade None, no catalyst). TGHL closed the night +7.5% and building toward its AH high — thesis intact into premarket. All other candidates were SPIKE→FADE (ATPC, CPHI, NTRP), over the extension ceiling (JTAI), dead-cat (RBNE, ILLR), or below threshold/illiquid (GCTK, VTAK, ERNA). Premarket exit for TGHL handled by position-evaluation.
 
+
+---
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**ATPC** — Agape ATP Corporation (Pharmaceuticals: Other)
+- Catalyst: **None found** (evening scans ran 3+ searches, no same-day PR). Ultra-low-float squeeze pattern.
+- Previous Close: $2.60
+- AH last night: built quietly to +10% through the scanned window, then surged late — SIP AH peak **$3.87** at 19:20 ET / 01:20 CET (285K sh, 4,194 trades) — after the 00:30 CET final scan.
+- Premarket now: SIP PM peak **$4.90** at 04:00 ET (1.53M sh, 24,179 trades), currently ~$3.86 (+48% from close)
+- Hypothetical P&L (gate-clear AH entry $2.85 → PM peak $4.90): **+72%** | (from close: +88.5%)
+- Float: **475K** (ultra-low) | Market Cap: $2.5M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — ATPC appeared in **5 evening scans** (22:30, 23:00, 23:30, 00:00, 00:30) and cleared the 2-AH-scan >10% gate at 00:00 (AH +13.1%, float 475K, Total% only +9.6%, Day -3.1% not dead-cat).
+- Why we didn't act: **skipped on the SPIKE→FADE trajectory rule.** Through the scanned window (to 18:30 ET) SIP showed a faded opening spike ($3.08 at 16:05 ET) then a choppy $2.7-3.0 base with descending peaks and thinning volume — genuine spike→fade character; rising scanner AH% was the base drifting up, not a build toward the high. The evening read was correct *for the scanned window*.
+- What changed after the last scan: the decisive surge to the AH peak $3.87 fired at **19:20 ET (01:20 CET), ~50 min after the final scan**, then extended to the PM peak $4.90 on 1.5M shares at PM open.
+- Scanner gap: this is a **fade-rule false negative** — a sub-3M-float AH-fader that re-exploded. The fix under test is a **sub-3M-float PM-open re-check** (re-check sub-3M faders at PM open before writing them off), not a blanket relaxation of the fade rule. See Notes: this case brings the sub-3M fade-false-negative tally to **4 of 5**, reaching the ≥4/5 trigger to propose the exception.
+
+### Baseline Tracking
+
+- Days tracked: **49** (was 48 + 1)
+- Winners detected by scanner: **42/47 (89.4%)** — ATPC added (detected, appeared in 5 scans; skipped on fade rule, not a detection miss).
+- Winner selected for paper trade: **23/47 (48.9%)** — ATPC not entered (fade-rule skip). We entered TGHL, which faded.
+- Target: >80% detection
+- Status: **BASELINE MET** (detection 89.4%). Bottleneck is now the entry/selection rules, not detection — the fade rule skipped a detected +72% winner.
+
+### Retrospective Scan Results
+- Live premarket scan (04:20 ET): 6 hits — ATPC +56.7% (top, VRatio 3.6, float 475K), DXST +48.9% (VRatio 0.5), TGHL +36.3%, VTAK +10.4%, EHGO +18.7%, JTAI +8.3%.
+- Forced AH scan: 0 hits (expected overnight — TradingView postmarket fields return stale/zero next morning).
+- AH reconstruction (SIP bars, authoritative): ATPC late-tail surge to $3.87 (19:20 ET) → PM peak $4.90; JTAI AH peak $4.36 (17:15 ET, 834K sh) → faded to $3.57 PM.
+- **Yahoo under-reported both peaks:** ATPC AH high Yahoo $3.65 vs SIP $3.87; ATPC PM high Yahoo $3.96 vs SIP $4.90. SIP peaks used.
+
+### Open Position P&L (Alpaca)
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| TGHL | $1.3396 | +84.5% | None | 23:36 CET | $1.11 (PM) | ~04:20 ET | open | −$19.72 | −18.6% | 🔴 Holding (fading) |
+
+TGHL entered last night as a BUILD-and-hold (Grade None). AH peak $1.59, now ~$1.09 in PM — faded below entry. **Not managed here** (exits handled by position-evaluation 10:30/14:30 CET). Alpaca `current_price` $1.09 is consistent with the live PM scan ($1.11) — not stale.
+
+**Total Realized P&L (Alpaca fills only): none this pulse** (TGHL still open). Account equity $99,906.55.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30 - 00:30 CET). Full coverage — entry window intact.
+- Candidates found: 11 unique tickers across the night (JTAI, ASPD, CPHI, MRAI, SOBR, KUST, NTRP, RBNE, TGHL, GCTK, VTAK, ATPC, ILLR, ERNA).
+- Retrospective match: today's winner (ATPC) was in-scan (5 appearances). Detection worked; the fade rule blocked the trade.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| ATPC | +16% at last scan → +49% AH tail | Skipped on SPIKE→FADE rule; decisive surge fired 19:20 ET after final scan | Yes — hypo +72% (AH $2.85 → PM $4.90) |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| ATPC | $3.87 (SIP) | 19:20 ET (tail) | Spike→fade (scanned) → re-exploded | $4.90 peak / $3.86 | +27% then back | +88.5% peak | **PM EXCEEDED AH — winner** |
+| JTAI | $4.36 (SIP) | 17:15 ET | Spike→fade | $3.57 peak / $3.42 | −18% | +14% peak | PM fell short of AH peak |
+| TGHL | $1.59 | ~18:00 ET | Build → faded PM | $1.09 | −31% | +35% peak | PM fell short (our entry, −18.6%) |
+| CPHI | $1.59 | 16:15 ET | Spike→fade | faded <close | — | below close | Correctly skipped |
+| NTRP | $2.71 | 16:10 ET | Spike→fade (collapsed <close) | faded <close | — | below close | Correctly skipped |
+
+**AH-peak-vs-PM-peak:** ATPC PM peak $4.90 > AH peak $3.87 (real continuation). JTAI and TGHL both peaked in AH and faded into PM (AH was the better exit). No >250%-from-close extreme runner this session.
+
+### Notes
+
+**🔴 FADE-RULE SUB-3M TALLY REACHES 4/5 — trigger hit.** ATPC (float **475K**) is a sub-3M-float AH-fader, skipped on the SPIKE→FADE rule, that re-exploded (scanned-window peak ~$3.18 → AH-tail $3.87 → PM peak $4.90). This is the **4th of 5** sub-3M faders to blow past:
+- LNKS 1.5M — blew past ✓
+- RPGL 1.1M — blew past ✓
+- CRE — blew past ✓
+- IOTR 644K — fell short ✗
+- **ATPC 475K — blew past ✓ (new)**
+- Standing: **4 of 5 sub-3M faders re-exploded.** This reaches the ≥4/5 trigger. **Proposal for the daily email:** add a **sub-3M-float PM-open re-check exception** to the SPIKE→FADE skip — re-check sub-3M-float faders at PM open before writing them off, keeping higher-float faders (LIQT 24.2M, TGE 44.2M negative controls) skipped. Catalyst bucket: ATPC is a **no-catalyst** fader (no strong catalyst needed to rescue it — low float alone carried it).
+
+**Late-AH-tail context (not a detection miss):** ATPC's defining surge fired at 19:20 ET / 01:20 CET, ~50 min after the 00:30 CET final scan, in the unscanned 18:30-20:00 ET tail. But ATPC was already surfaced in the scan at +16% and skipped on trajectory, so this is primarily a fade-rule false negative, not a coverage/tail detection gap. Hypo AH-tail entry ~$3.30 → PM peak $4.90 = +48%.
+
+**PM-only gapper (biggest raw PM mover):** ATPC is the morning's biggest raw PM mover (+52% from close in PM) and is an **AH→PM continuation** (detectable — moved >10% in AH), NOT a PM-only gapper. Secondary: **DXST** (+48.9% PM) IS a PM-only gapper — SIP shows it flat in AH (8 trades, $2.05-2.08), move began only at 04:00 ET ($2.28→$3.85 on 1.3M sh). Holdable (sustained across 2+ PM bars on real volume). Structurally undetectable by the AH scanner; not counted against baseline.
+
+**Coverage:** 7 of 7 evening scans ran. No coverage failure.
+
+**Broader read:** detection is solidly above the 80% baseline (89.4%). The recurring cost is now the entry rules — specifically the fade rule skipping detected sub-3M-float winners (ATPC today). This is the "Refine" phase concern flagged in Day Trading.md.
+
+### Price Charts
+
+```
+
+========================================================================
+ ATPC - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $2.60
+2-Day Range: $2.51 - $4.90
+Current: $3.82 (+46.9% from prev close)
+Peak: $4.90 (+88.5%) at 07-16 08:00 ET
+
+Chart (oldest → newest):
+$   3.96 │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                        █                   
+         │                                                  ██     █  
+         │                                               █ █  ███ █ ██
+         │                                         ██████ █      █    
+$   2.51 │████████████████████████████████████████                    
+         └────────────────────────────────────────────────────────────
+
+Session Timeline (last 24h):
+------------------------------------------------------------
+  [OVN] 07-15 20:30 ET: $   2.72 (  +4.6%)  Vol:           
+  [OVN] 07-15 20:35 ET: $   2.70 (  +3.9%)  Vol:           
+  [OVN] 07-15 20:40 ET: $   2.80 (  +7.7%)  Vol:           
+```
