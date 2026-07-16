@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | |
+| BIYA | $4.55 | 22 | 2026-07-16 23:46 CET | None | 2c02d728 | Low-float China microcap (Personnel Services), float 2.7M. Qualified all gates (2 AH scans >10%, Day -8.4%, Total +48% <150%), HOLD trajectory near AH high. No catalyst found (4 searches). 1-for-10 reverse split Jul 13 + crypto/BNB narrative (not fresh). Grade None — exit at first PM opportunity. Order submitted 23:30, filled 23:46 @ $4.55. |
 
 ## Position Rules
 

@@ -4,6 +4,36 @@
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| BIYA | $4.55 | 23:46 CET (5:46 PM ET) | 22 | 2c02d728 | Qualified all gates (2 AH scans >10%, float 2.7M, Day -8.4%, Total +48% <150%), HOLD trajectory. Grade None (no catalyst). Order submitted 23:30, filled 23:46. |
+
+## Scan 00:00 CET (6:00 PM ET) — AFTERHOURS (entry-eligible)
+
+Scanner returned 9 hits. BIYA (already held) building further; GCTK now clears the 2-AH-scan gate but has rolled over; CJMB is a fresh late-BUILD name.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $0.50 | -5.5% | +29.8% | $0.65 | +22.7% | 16.4M | 14.1M | 1.2x | 6.2M | Medical Specialties |
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $1.76 | +6.0% | +11.4% | $1.96 | +18.1% | 6.2M | 859K | 7.3x | 892K | Specialty Telecommunications |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $3.04 | -8.4% | +53.6% | $4.67 | +40.7% | 4.0M | 1.6M | 2.5x | 2.7M | Personnel Services |
+| CJMB | [TV](https://www.tradingview.com/chart/?symbol=CJMB) | $0.86 | +16.5% | +26.6% | $1.09 | +47.5% | 2.0M | 459K | 4.4x | 0 | Air Freight/Couriers |
+| GLXG | [TV](https://www.tradingview.com/chart/?symbol=GLXG) | $1.07 | -14.4% | +19.6% | $1.28 | +2.4% | 1.9M | 279K | 6.8x | 1.7M | Miscellaneous Commercial Services |
+| STXS | [TV](https://www.tradingview.com/chart/?symbol=STXS) | $1.65 | +1.9% | +15.2% | $1.90 | +17.3% | 882K | 1.1M | 0.8x | 80.4M | Medical Specialties |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $1.08 | -32.1% | +15.7% | $1.25 | -21.4% | 811K | 251K | 3.2x | 4.4M | Miscellaneous Commercial Services |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $2.99 | +43.8% | +6.0% | $3.17 | +52.4% | 485K | 2.5M | 0.2x | 1.2M | Environmental Services |
+| LBGJ | [TV](https://www.tradingview.com/chart/?symbol=LBGJ) | $2.19 | +19.7% | +16.4% | $2.55 | +39.3% | 85K | 723K | 0.1x | 3.0M | Home Furnishings |
+
+**Gate evaluation (all times ET; SIP bars from 16:00 ET / 20:00Z; quote feed stale @16:00 ET / 20:00Z — leaned on SIP per freshness guard):**
+- **BIYA** — **already entered at 23:30 (filled @ $4.55, 23:46 CET).** Still building: +53.6% AH ($4.67) vs +37.5% at 23:30. Position healthy, HOLD trajectory intact. One entry per candidate per night — no new action. Premarket position-eval will manage the exit. Grade None.
+- **GCTK** — **Clears the 2-AH-scan gate now (23:30 +41.4%, 00:00 +29.8%) but SKIP on trajectory (fade).** SIP: exploded 16:55 ET ($0.49→$0.71), peaked **$0.80 at 17:20 ET**, then rolled over — last 4 bars declining ($0.74C→$0.70→$0.66→$0.65C @17:40 ET) on falling volume (2.2M→630K sh/bar). Now $0.65, **-19% off high and at the edge of the 20% hold band**, AND AH% declined scan-over-scan (41.4%→29.8%). Per hold-vs-fade rule, an early peak (17:20 ET, before 18:30) becomes a disqualifier when the name is *also declining across scans* — GCTK is. Added context: GCTK was **traded 07-14 and dumped -37.6%** (reverse-merger catalyst that behaved like dilution); this is a **re-pump of an already-dumped name**, not a fresh catalyst build. No websearch tool available this pulse to re-check same-day news, but trajectory (fade) overrides catalyst regardless. Skip. Watch for a genuine rebuild (new AH high) at 00:30 CET.
+- **CJMB** — **Fresh late-BUILD, but only 1 AH scan >10% — cannot qualify (needs 2nd AH scan).** SIP: dead $0.84 until 17:30 ET, then exploded $0.79→$1.05, built to **$1.13 at 17:40 ET** (1.07M sh/5336 trades — real volume), latest bar 17:45 ET pulled to $0.98. Genuine late build with a post-17:30 peak (favorable timing), float unknown (scanner shows 0). First AH appearance at 00:00 — the feed-lag rescue path only recovers already-tracked names, and the 2-AH-scan entry gate is not met. **Strong watch for 00:30 CET** — if it holds >10% AH it clears the gate and becomes a prime late-BUILD entry.
+- **LBGJ** — new, 1 AH scan, **illiquid.** VRatio 0.1x; SIP flat $2.05–2.20 on hundreds of sh/bar for most of AH, then a thin 47K-sh spike to $2.78 at 17:40 ET (only 428 trades). Thin book, can't qualify (1 AH scan). Skip — illiquid ramp, watch only.
+- **PMAX** — QUALIFIES on gates but SPIKE→FADE confirmed (peaked $2.36 at 16:25 ET, faded). Skip.
+- **GLXG** — Total +2.4%, Day -14.4%, faded from early peak, dilution/shelf risk. Skip.
+- **VCIG** — Day -32.1%, Total -21.4% (AH below regular close). Dead-cat. Skip.
+- **STXS** — float 80.4M, VRatio 0.8x. Not a candidate.
+- **DXST** — AH +6.0% (below 10% gate), VRatio 0.2x (vol fading). Not entry-eligible this scan.
+
+**Decision: No NEW entries.** BIYA already held and building (no re-entry, one per candidate). GCTK cleared the gate but rolled over from its 17:20 ET peak (fade + re-pump of an already-dumped name) — skip. CJMB (strong late-BUILD) and LBGJ (thin) each have only 1 AH scan and cannot qualify yet. No override flags: GCTK is not Day% ≤-15% (no dead-cat-override) nor Total% >150% (no ceiling-override). **CJMB is the name to watch at 00:30 CET** — a post-17:30 late build that clears the gate if it holds >10% AH.
 
 ## Scan 23:30 CET (5:30 PM ET) — AFTERHOURS (entry-eligible)
 
