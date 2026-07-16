@@ -6,6 +6,31 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-16 — re: Trading Scanner Report - 2026-07-14
+
+**Juan said:** "LvLU is clearly terrible: no volume spike. The other two have
+volume spikes. I wonder if we can catch the first volume spike bar. That would
+be a great entry point."
+
+**Interpretation:** Two connected points. (1) Absence of a volume spike is a
+negative filter — LVLU faded with no AH volume surge, so a no-spike name should
+be downgraded or skipped, not held. (2) The *first volume spike bar* is the
+ideal entry trigger. This sharpens Init 1's finding: the volume-*lead*
+hypothesis was falsified (volume does not precede price), but ignition is a
+single-minute price+volume co-spike (IVF 16:53 ET). Juan is asking to enter
+*on* that first spike bar, not to front-run it — which is a live, tradeable
+reframe of Init 1, not the falsified version. The blocker is detection latency:
+our AH scans run on a fixed grid and the spike bar can fire between scans
+(KUST/GCTK feed-lag misses this same cycle).
+
+**Action:** Routed to Initiative 1 (reopened as a co-spike *entry-trigger* +
+no-spike *negative filter*, distinct from the falsified volume-lead rule) and
+Initiative 3 (detection timing — catching the spike bar needs tighter scan
+cadence around ignition). Notes added to both. No strategy change applied here
+(capture/route only). Feeds the next `strategy-advance` run.
+
+---
+
 ### 2026-07-10 — re: Trading Scanner Report - 2026-07-09
 
 **Juan said:** "The chart still has no volume in AH. If you have no data there,

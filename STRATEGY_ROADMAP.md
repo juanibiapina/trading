@@ -123,6 +123,18 @@ explosion with no tradeable AH precursor. Full write-up in `INIT1_VOLUME_LEAD.md
 which is Initiative 3, not a volume-lead entry rule. This initiative folds into
 Init 3 and is effectively closed.
 
+**Reopened angle (Juan, 2026-07-16 email feedback):** the volume *lead* is dead,
+but Juan proposes the *first volume spike bar* as the entry trigger ("that would
+be a great entry point") and no-spike as a negative filter ("LVLU is clearly
+terrible: no volume spike"). This is the co-spike entry, distinct from front-
+running: enter on the ignition bar, skip/downgrade names with no AH volume
+surge. Consistent with the IVF 16:53 ET single-minute ignition finding. Blocker
+is detection latency (spike fires between fixed scans, e.g. KUST/GCTK feed-lag
+misses on the 07-14 cycle) — so the tradeable form of this needs Init 3's
+tighter scan cadence. Next: (a) add a no-AH-volume-spike negative filter to the
+scanner grade, (b) prototype a spike-bar entry trigger once scan cadence can
+resolve the bar. Captured from FEEDBACK_LOG 2026-07-16.
+
 **Why it is plausible:** the scanner already computes VRatio (AH volume vs avg)
 and IRVol (intraday relative volume). The winners (LNAI, LPA) showed VRatio
 6-8x at entry. The hypothesis is that volume crosses a threshold *before* the
@@ -405,7 +417,9 @@ name flat and only catch it on a later scan once it is already +50-100% — the
 a missing signal. Next: audit each recent winner's ignition time (ET) vs our
 scan grid to quantify how often the AH scans fire before ignition, then propose
 a retimed/added AH observation scan (a trading-scan timing change -> propose to
-Juan for veto, don't apply silently).
+Juan for veto, don't apply silently). **Juan (2026-07-16) wants to enter on the
+first volume spike bar (Init 1 reopened angle); resolving that bar requires
+tighter scan cadence around ignition — this initiative is the enabler.**
 
 **Current schedule (cron, Europe/Berlin local time):**
 - Post-market scans: 21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 (7 scans)
