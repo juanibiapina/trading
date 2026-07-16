@@ -43,6 +43,25 @@ git commit -m "daily-email charts YYYY-MM-DD"
 git push
 ```
 
+**After push, verify each raw URL is live (HTTP 200) BEFORE sending.** Gmail's
+image proxy caches a 404 if it fetches the URL before the raw CDN has propagated
+the new commit (this is why RPGL didn't render on 07-09 while SUNE did). Poll
+each chart URL until it returns 200 (short retries), then send:
+
+```bash
+for url in <each raw.githubusercontent URL for this cycle>; do
+  for i in $(seq 1 10); do
+    code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+    [ "$code" = "200" ] && break
+    sleep 3
+  done
+  echo "$code  $url"
+done
+```
+
+If any URL is still not 200 after the retries, drop that one image from the email
+(omit its `<img>`) rather than shipping a broken inline image.
+
 Raw URL format (verified 200 on the public repo):
 
 ```

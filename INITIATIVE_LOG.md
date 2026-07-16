@@ -9,6 +9,55 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-16 — Init 3: ignition-vs-grid audit done (grid too coarse, not mis-phased) — AH-cadence change proposed to Juan; Init 5 render-race 200-check shipped
+
+**Evaluated:** Prior step (2026-07-15: advance Init 3 with the timing audit —
+find each recent winner's ignition minute from 1-min SIP bars and tabulate
+against the AH scan grid to quantify how often scans fire before vs after
+ignition) — **worked; produced a decisive, actionable table.**
+
+**Step taken (research / Init 3):** Built `scripts/ignition-timing.js` (log-only,
+no orders): for a ticker + AH-evening date it pulls real Alpaca SIP **1-min**
+bars for the AH session, finds the ignition bar (first bar ≥ +15% vs the daily
+close *and* carrying a volume co-spike: ≥20 trades and ≥5× running median
+trades), then maps that minute onto the current AH scan grid (15:30–18:30 ET /
+21:30–00:30 CET). Ran it on 10 AH winners; wrote up `INIT3_IGNITION_TIMING.md`.
+
+**Step taken (parallel / Init 5):** Added a post-push raw-URL **HTTP-200 poll**
+to `prompts/daily-email.md` — after committing/pushing charts, poll each
+`raw.githubusercontent` URL until 200 (short retries) before sending, and drop
+any image still not live. Closes the 07-09 Gmail render race (RPGL didn't show
+while SUNE did because the proxy cached a 404 before the CDN propagated).
+
+**Result (Init 3):** **The grid is too coarse, not mis-phased** — the earlier
+"our 16:15 ET scan runs before IVF's 16:53 ignition" framing was too narrow. 9
+of 10 winners ignite *inside* the grid window, but the 30-min spacing means the
+first scan sees the move **7–29 min after ignition (median ~+18m)**, already
+partway up. Two gaps: (1) **AH-open cluster** — 6 of 10 ignite 16:08–16:53 ET
+and wait up to +22m for the 16:30/17:00 scan (XCUR 16:08, ATPC 16:09, EDHL
+16:12, TGHL 16:21, VTAK 16:47, IVF 16:53); (2) **tail past the 18:30 ET grid
+end** — MSW ignited 19:01 ET and the grid never sees it live (GMM 18:05 / KUST
+18:25 sit at the edge). **Proposed to Juan (touches trading-scan timing — veto,
+don't apply silently):** (A) add 22:15 + 22:45 CET (16:15/16:45 ET) observation
+scans to 15-min-space the open hour (halves catch-lag on the dominant cluster;
+no new entry window, entry still banned before 17:00 ET); (B) add 01:00/01:30
+CET tail scans (Juan pre-authorized, but tail count MSW=1 is below the 3–4
+trigger, so held). (A) is the enabler for Juan's 07-16 "catch the first volume
+spike bar" ask — its blocker is exactly this detection latency.
+
+**Hypothesis / next step:** If Juan doesn't veto (A), wire the two AH-open
+observation scans (16:15/16:45 ET) — a schedule change, applied only after the
+veto window. If he vetoes or wants a different cadence, adjust. Either way, the
+tradeable form of the co-spike entry (Init 1 reopened angle) then needs a
+spike-bar detection rule in the scan output (log-only first). In parallel, the
+last Init 5 follow-on is GitHub Pages HTML reports.
+
+**Needs from Juan:** **veto window on proposal (A)** — add 22:15 + 22:45 CET
+observation scans (log/detect only, no new entry window). Silence = wire it next
+run. Evidence in `INIT3_IGNITION_TIMING.md`.
+
+---
+
 ### 2026-07-15 — Init 1: volume-lead hypothesis FALSIFIED (ignition is a single-minute co-spike); roadmap re-ranked, Init 3 promoted
 
 **Evaluated:** Prior step (2026-07-14: Init 6 problem-(a) PM-gapper entry pilot,

@@ -407,19 +407,24 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** In progress — **promoted to the top research lever (2026-07-15).**
-The daily **`strategy-advance` pulse** (2026-06-23) was the first deliverable.
-Init 1's 1-min backtest (`INIT1_VOLUME_LEAD.md`) gives this initiative concrete
-evidence: winners ignite in a single minute (IVF 16:53 ET) and our AH scan at
-~22:15 CET / **16:15 ET runs ~38 min *before* that ignition**, so we see the
-name flat and only catch it on a later scan once it is already +50-100% — the
-"we catch late" problem is a **scan-timing / monitoring-frequency** problem, not
-a missing signal. Next: audit each recent winner's ignition time (ET) vs our
-scan grid to quantify how often the AH scans fire before ignition, then propose
-a retimed/added AH observation scan (a trading-scan timing change -> propose to
-Juan for veto, don't apply silently). **Juan (2026-07-16) wants to enter on the
-first volume spike bar (Init 1 reopened angle); resolving that bar requires
-tighter scan cadence around ignition — this initiative is the enabler.**
+**Status:** In progress — **top research lever; ignition-vs-grid audit DONE
+(2026-07-16), schedule change proposed to Juan.** The daily **`strategy-advance`
+pulse** (2026-06-23) was the first deliverable. Built
+`scripts/ignition-timing.js` (log-only) and ran it on 10 AH winners' 1-min SIP
+bars (`INIT3_IGNITION_TIMING.md`). **Key finding: the grid is too coarse, not
+mis-phased.** 9 of 10 winners ignite *inside* the grid window, but the 30-min
+spacing means the first scan sees the move **7–29 min after ignition (median
+~+18m)**, already partway up. Two gaps: (1) the **AH-open cluster** — 6 of 10
+ignite 16:08–16:53 ET and wait up to +22m for the 16:30/17:00 scan; (2) a
+**tail** past the 18:30 ET grid end — MSW ignited 19:01 ET and the grid never
+sees it live. **Proposed to Juan (touches trading-scan timing — veto, don't
+apply silently):** (A) add 22:15 + 22:45 CET (16:15/16:45 ET) *observation*
+scans to 15-min-space the open hour (halves catch-lag on the dominant cluster);
+(B) add 01:00/01:30 CET (19:00/19:30 ET) tail scans (Juan pre-authorized; tail
+count now MSW=1, below the 3–4 trigger). Entry is still banned before 17:00 ET,
+so (A) scans catch+log the ignition to feed a faster 17:00 ET decision —
+exactly the enabler for Juan's 2026-07-16 "catch the first volume spike bar"
+ask, whose blocker is this detection latency.
 
 **Current schedule (cron, Europe/Berlin local time):**
 - Post-market scans: 21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 (7 scans)
@@ -672,8 +677,14 @@ tracker).
 - [x] Initiative 2: Alpaca keys are live (Juan removed the `unset`, 2026-06-23);
       verified against `/v2/account`. Nothing blocking. Optional: set
       `ALPACA_PAPER_TRADE=1` explicitly.
-- [ ] Initiative 3: confirm whether to trim/retime the scan schedule once the
-      audit proposes a plan.
+- [ ] Initiative 3: **VETO window on a proposed AH cadence change** (2026-07-16,
+      from `INIT3_IGNITION_TIMING.md`). (A) add 22:15 + 22:45 CET (16:15/16:45
+      ET) *observation* scans to 15-min-space the AH-open hour — 6 of 10 winners
+      ignite 16:08–16:53 ET and currently wait up to +22m for a scan; +2
+      rounds/day, no new entry window (entry still banned before 17:00 ET). (B)
+      add 01:00/01:30 CET (19:00/19:30 ET) tail scans (already pre-authorized;
+      tail count MSW=1, below the 3–4 trigger, so held). Not applied — say the
+      word to veto (A) before the next strategy-advance run wires it.
 - [x] Initiative 6 (problem b): the **partial-hold pilot ask is WITHDRAWN**
       (2026-07-13). `scripts/trailing-sim.js` simulated the trailing-stop hold
       on all 14 closed round-trips' real regular-session 5-min SIP paths; every
@@ -696,6 +707,10 @@ tracker).
       backfills extended-hours volume from Alpaca SIP (Yahoo returns vol=0
       there); verified on MIMI (170 bars filled). Closes Juan's escalated
       07-10 ask ("the chart still has no volume in AH"). No Juan action needed.
+- [x] Initiative 5: **daily-email render race fixed** (2026-07-16). Added a
+      post-push raw-URL HTTP-200 poll to `prompts/daily-email.md` before sending
+      (drops any image still not live), closing the 07-09 RPGL-didn't-render
+      race. GitHub Pages HTML reports remain the last open Init 5 follow-on.
 - [x] Initiative 6 (problem a): the **holdable PM-only gappers carry no long
       edge** (2026-07-14). `scripts/pm-gapper-sim.js` shows all realistic
       entry×exit combos lose (-8 to -13%/trade); no live-pulse entry rule is
