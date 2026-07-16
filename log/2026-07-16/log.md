@@ -5,6 +5,38 @@
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | BIYA | $4.55 | 23:46 CET (5:46 PM ET) | 22 | 2c02d728 | Qualified all gates (2 AH scans >10%, float 2.7M, Day -8.4%, Total +48% <150%), HOLD trajectory. Grade None (no catalyst). Order submitted 23:30, filled 23:46. |
+| CJMB | $1.01 | 00:30 CET (6:30 PM ET) | 95 | 49b582bf | Qualified all gates (2 AH scans >10%: 00:00 +26.6%, 00:30 +19.5%; Day +16.5%; Total +39.2% <150%), late-BUILD post-17:30 peak, holding within 20% of high. Grade B (Jul 16 ASU partnership PR). Filled @ $1.01. |
+
+## Scan 00:30 CET (6:30 PM ET) — AFTERHOURS (entry-eligible, FINAL SCAN)
+
+Scanner returned 9 hits. CJMB now clears the 2-AH-scan gate as a late-BUILD with a fresh same-day catalyst — **ENTERED.** GCTK cleared the gate but remains an early-peak fade / re-pump. LBGJ now has 2 AH scans but is a thin illiquid ramp. SIP feed stale ~45 min (last bar 17:45 ET vs 18:30 ET scan) — freshness guard applied, leaned on scanner + SIP-up-to-17:45.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $0.50 | -5.5% | +35.7% | $0.68 | +28.2% | 19.5M | 14.5M | 1.3x | 6.2M | Medical Specialties |
+| JSPR | [TV](https://www.tradingview.com/chart/?symbol=JSPR) | $0.77 | +11.8% | +7.2% | $0.83 | +20.0% | 9.1M | 1.9M | 4.8x | 25.2M | Biotechnology |
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $1.76 | +6.0% | +12.5% | $1.98 | +19.3% | 6.5M | 886K | 7.3x | 892K | Specialty Telecommunications |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $3.04 | -8.4% | +48.0% | $4.50 | +35.5% | 4.5M | 1.7M | 2.7x | 2.7M | Personnel Services |
+| CJMB | [TV](https://www.tradingview.com/chart/?symbol=CJMB) | $0.86 | +16.5% | +19.5% | $1.03 | +39.2% | 3.4M | 607K | 5.6x | 0 | Air Freight/Couriers |
+| GLXG | [TV](https://www.tradingview.com/chart/?symbol=GLXG) | $1.07 | -14.4% | +19.6% | $1.28 | +2.4% | 1.9M | 285K | 6.8x | 1.7M | Miscellaneous Commercial Services |
+| STXS | [TV](https://www.tradingview.com/chart/?symbol=STXS) | $1.65 | +1.9% | +12.7% | $1.86 | +14.8% | 1.0M | 1.1M | 0.9x | 80.4M | Medical Specialties |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $1.08 | -32.1% | +16.7% | $1.26 | -20.8% | 877K | 258K | 3.4x | 4.4M | Miscellaneous Commercial Services |
+| LBGJ | [TV](https://www.tradingview.com/chart/?symbol=LBGJ) | $2.19 | +19.7% | +24.2% | $2.72 | +48.6% | 451K | 769K | 0.6x | 3.0M | Home Furnishings |
+
+**Gate evaluation (all times ET; SIP bars from 16:00 ET / 20:00Z; quote feed frozen @16:00 ET / 20:00Z — leaned on SIP + scanner per freshness guard):**
+- **CJMB** — **QUALIFIES on all gates. ENTERED (filled @ $1.01).** 2 AH scans >10% (00:00 +26.6%, 00:30 +19.5%); Day +16.5% (well above -15%); Total +39.2% (below 150% ceiling); float unknown (scanner 0, not a filter), MCap $4.9M. SIP confirms real late-BUILD: dead $0.79-0.86 until 17:30 ET, then exploded $0.79→$1.05, peaked **$1.13 at 17:40 ET** (post-17:30, favorable timing) on 1.07M sh / 5336 trades; last SIP bar 17:45 ET $0.98; scanner at 18:30 shows $1.03 (fresher than SIP, above the last bar, within 20% of the $1.13 high). ~2.7M sh across the surge, thousands of trades/bar — real accumulation, not a stale VRatio. Two-sided fillable book (bid $0.72 / ask $0.97 x100; timestamp stale @16:00 ET = frozen-feed artifact, not $0 x0). tradable=true. **Trajectory: late-BUILD holding near AH high.** Catalyst: **same-day Jul 16 GlobeNewswire PR** — strategic partnership with Alabama State University to advance US pharmaceutical manufacturing and supply-chain resilience (integrated pharma manufacturing ecosystem at the Atlas Complex). Solid partnership news → **Grade B** (hold up to 2 days, stop -15%). BUY 95 CJMB @ limit $1.10 ext (id 49b582bf) → filled @ $1.01. QTY sized ~$100 on real price. Added to OPEN_POSITIONS.md.
+- **BIYA** — **already held (filled @ $4.55, 23:46 CET).** Still building: +48.0% AH ($4.50) vs +37.5% at entry; position +8.7% at scan time. One entry per candidate per night — no re-entry. Premarket position-eval manages the exit. Grade None.
+- **GCTK** — **Clears the 2-AH-scan gate (23:30 +41.4%, 00:00 +29.8%, 00:30 +35.7%) but SKIP on trajectory (early-peak fade + re-pump).** SIP: peaked **$0.80 at 17:20 ET** (before 18:30), then declined $0.74→$0.70→$0.66→$0.65 (last bar 17:40 ET) on collapsing volume (2.2M→628K sh/bar). Scanner at 18:30 $0.68 — slight tick up but still -15-19% off the high, AH% choppy (41.4→29.8→35.7), not a clean build to new highs. Early peak becomes a disqualifier when the name is also declining across scans — GCTK is. Added: GCTK was **traded 07-14 and dumped -37.6%** (reverse-merger that behaved like dilution); this is a re-pump of an already-dumped name, not a fresh catalyst build. Skip.
+- **LBGJ** — **2 AH scans now (00:00 +16.4%, 00:30 +24.2%) but SKIP: illiquid ramp.** VRatio 0.6x (below avg vol); SIP flat $2.05-2.20 on hundreds of sh/bar most of AH, then a thin spike to $2.78 at 17:40 ET (only 47K sh / 428 trades). Wide two-sided book (bid $1.81 / ask $2.51) = thin. Real accumulation absent. Skip — illiquid ramp.
+- **PMAX** — QUALIFIES on gates but SPIKE→FADE confirmed (peaked $2.36 at 16:25 ET, faded, now $1.98). Skip.
+- **GLXG** — Total +2.4%, Day -14.4%, faded from early peak, dilution/shelf risk. Skip.
+- **VCIG** — Day -32.1%, Total -20.8% (AH below regular close). Dead-cat. Skip.
+- **STXS** — float 80.4M, VRatio 0.9x. Not a candidate.
+- **JSPR** — new, AH +7.2% (below the 10% gate), float 25.2M, biotech. Not entry-eligible.
+
+**Final-scan feed-lag cross-check:** All tracked names (BIYA, GCTK, PMAX, GLXG, VCIG, STXS, LBGJ, CJMB) appeared in the fresh 18:30 ET scan — no under-reported/omitted names to rescue via SIP. JSPR is a new sub-gate name.
+
+**Decision: ENTER CJMB (qualifies on all gates, late-BUILD, Grade B ASU partnership catalyst). Filled @ $1.01.** BIYA already held and building (no re-entry). GCTK cleared the gate but is an early-peak fade / re-pump — skip. LBGJ thin/illiquid — skip. No override flags on any skipped name (none is Day% ≤-15% with a reclaim, none exceeds +150% Total%). Night ends with 2 open positions: BIYA (Grade None) and CJMB (Grade B). Premarket position-evaluation manages both exits.
 
 ## Scan 00:00 CET (6:00 PM ET) — AFTERHOURS (entry-eligible)
 

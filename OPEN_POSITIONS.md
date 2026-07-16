@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|--------|------------|----------------|----------|-------|
 | BIYA | $4.55 | 22 | 2026-07-16 23:46 CET | None | 2c02d728 | Low-float China microcap (Personnel Services), float 2.7M. Qualified all gates (2 AH scans >10%, Day -8.4%, Total +48% <150%), HOLD trajectory near AH high. No catalyst found (4 searches). 1-for-10 reverse split Jul 13 + crypto/BNB narrative (not fresh). Grade None — exit at first PM opportunity. Order submitted 23:30, filled 23:46 @ $4.55. |
+| CJMB | $1.01 | 95 | 2026-07-16 00:30 CET | B | 49b582bf | Callan JMB (Air Freight/Couriers, healthcare cold-chain logistics), float unknown/low, MCap $4.9M. Qualified all gates (2 AH scans >10%: 00:00 +26.6%, 00:30 +19.5%; Day +16.5%; Total +39.2% <150%), late-BUILD post-17:30 peak ($1.13 at 17:40 ET), holding ~$1.00-1.03 within 20% of high. Real SIP volume (~2.7M sh across surge, 5336 trades/peak bar). Catalyst: same-day Jul 16 GlobeNewswire PR — strategic partnership with Alabama State University for US pharma manufacturing / supply-chain resilience. Grade B — hold up to 2 days, stop -15% from entry. |
 
 ## Position Rules
 
