@@ -270,6 +270,13 @@ def fmt_number(n):
     return str(n)
 
 
+def fmt_float(n):
+    """Format float shares; 0 means the data source has no value (unknown), not a literal zero float."""
+    if not n:
+        return "n/a"
+    return fmt_number(n)
+
+
 def print_results(results, session, previous_tickers=None):
     """Print results in a formatted table."""
     et = datetime.now(ET)
@@ -307,7 +314,7 @@ def print_results(results, session, previous_tickers=None):
                 f"{fmt_number(r['avg_vol_5m']):>8} "
                 f"{r['intraday_rvol']:>7.1f} "
                 f"{r['vol_change_pct']:>+7.1f} "
-                f"{fmt_number(r['float']):>8} "
+                f"{fmt_float(r['float']):>8} "
                 f"{fmt_number(r['market_cap']):>8} "
                 f"{r['industry']:<25}"
                 f"{is_new}"
@@ -342,7 +349,7 @@ def print_results(results, session, previous_tickers=None):
                 f"{fmt_number(r['ext_volume']):>8} "
                 f"{fmt_number(r['avg_vol_daily']):>8} "
                 f"{r['vol_ratio']:>7.1f} "
-                f"{fmt_number(r['float']):>8} "
+                f"{fmt_float(r['float']):>8} "
                 f"{fmt_number(r['market_cap']):>8} "
                 f"{r['industry']:<25}"
                 f"{is_new}"
