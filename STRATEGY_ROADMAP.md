@@ -674,6 +674,19 @@ tracker).
 
 ## Open asks for Juan (consolidated)
 
+- [x] **Standing directive (2026-07-16): apply, don't ask.** Juan: "apply
+      stuff, don't ask confirmation." Stop posing "Decision For You / Want me to
+      apply it?" questions in the daily email for qualifying, evidence-backed
+      changes — apply them (via the owning pulse: `strategy-advance` for
+      `Day Trading.md` entry rules, `scanner-improvement` for scanner/process)
+      and report what was done. Keep Juan-veto windows only for genuinely risky
+      or ambiguous changes. First application: the sub-3M-float PM-open re-check
+      exception is now handed to `strategy-advance` to apply, not re-asked.
+- [x] **Winner bar tightened (2026-07-16).** Juan (recurring): the email
+      headlined a weak +72%/+88.5%, low-volume name (ATPC) as "winner" — the bar
+      is **>100% on high, accumulating SIP volume**; below that, report "no real
+      winner today." Applied to `prompts/morning-evaluation.md`.
+
 - [x] Initiative 2: Alpaca keys are live (Juan removed the `unset`, 2026-06-23);
       verified against `/v2/account`. Nothing blocking. Optional: set
       `ALPACA_PAPER_TRADE=1` explicitly.

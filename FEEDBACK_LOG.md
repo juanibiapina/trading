@@ -6,6 +6,35 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-16 — re: Trading Scanner Report - 2026-07-15
+
+**Juan said:** "The claimed winner in the email barely went up, almost no
+volume. Again, we're looking for more than 100% and high volume. Also apply
+stuff, don't ask confirmation."
+
+**Interpretation:** Two points. (1) The "winner" bar is wrong. ATPC was
+headlined as the winner at +72%/+88.5% on thin volume — that is not a winner.
+The target Juan cares about is a real explosion: **>100% move on high volume**.
+A weak, low-volume mover should not be crowned winner; if nothing clears the
+bar, say "no real winner today." The "Again" signals this is a repeat note.
+(2) Standing autonomy directive: **apply qualifying changes and report, do not
+pose "Want me to apply it?" questions.** The 07-16 email's "Decision For You"
+(sub-3M-float PM-open re-check exception, tally trigger reached) is exactly the
+kind of thing to apply rather than ask about.
+
+**Action:**
+- Winner bar: edited `prompts/morning-evaluation.md` so "today's winner" must
+  clear **>100% (targeting) and high, accumulating SIP volume**; a sub-100% or
+  low-volume name is logged as "no real winner today," not crowned. Recurring
+  point, low-risk process tweak — applied now. Flagged for the next
+  scanner-improvement run to propagate to the email framing.
+- Apply-don't-ask: recorded as a **standing directive** in
+  `STRATEGY_ROADMAP.md` open-asks. Rewired `morning-evaluation.md` so the
+  sub-3M-float exception is **handed to `strategy-advance` to apply and report**
+  rather than re-proposed to Juan each morning. The live `Day Trading.md` entry-
+  rule edit itself is routed to the `strategy-advance` pulse (its scope), not
+  made in this feedback pulse.
+
 ### 2026-07-16 — re: Trading Scanner Report - 2026-07-14
 
 **Juan said:** "LvLU is clearly terrible: no volume spike. The other two have
