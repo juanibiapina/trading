@@ -9,6 +9,59 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-17 — Init 3: AH-open observation scans WIRED; sub-3M fade-exception (b) validated → CRE was a bad print, trigger drops to 3/5 (live flip held)
+
+**Evaluated:** Prior step (2026-07-16: propose AH cadence change (A) — add 22:15
++ 22:45 CET observation scans — with a Juan veto window, "silence = wire it next
+run") — **veto window passed with no objection; wired.** Both new scans fire
+before the 23:00 CET entry ban, so they are observation/log-only (no new entry
+window), which the strategy-advance rules allow applying directly.
+
+**Step taken (pilot / Init 3):** Added crons `trading-post-market-2215` (`15 22
+* * 1-4`) and `trading-post-market-2245` (`45 22 * * 1-4`) to `scheduler.json`,
+both pointing at `post-market-scan.md`. JSON re-validated (24 jobs). The AH-open
+hour is now 15-min-spaced (22:00/22:15/22:30/22:45/23:00 CET), halving catch-lag
+on the dominant 16:08–16:53 ET ignition cluster. Updated `STRATEGY_ROADMAP.md`
+Init 3 status + schedule + Open-asks.
+
+**Step taken (parallel / Init 1 — validate the sub-3M fade exception the
+morning-eval handed off):** The 07-16 morning eval said the ≥4/5 sub-3M-float
+PM-open re-check trigger was "REACHED" and handed the live `Day Trading.md`
+entry-rule flip to this pulse. Before flipping a live rule I pulled real Alpaca
+SIP 5-min bars for each sub-3M fader's PM session to measure the **(b) realistic
+PM-open re-entry** economics (the number the proposed rule actually earns):
+- **LNKS** (1.5M, Jun 18 PM): real SIP peak **$4.98** on 2.9M sh/bar, 32k
+  trades. (b) first-bar VWAP $2.97 → $4.98 = **+68%**. Genuine liquid re-explode.
+- **RPGL** (1.1M, Jul 9 PM): peak **$3.05** *in the first PM bar*, then fades.
+  (b) first-bar VWAP $2.76 → $3.05 = **+11%**, thin and hard to catch.
+- **ATPC** (475K): (b) **+22%** (already on file).
+- **CRE** (1.1M, Jun 18 PM): real SIP peak **$4.04**, *below* its AH peak $4.65
+  — CRE **faded further, did NOT re-explode**. The tally's "PM peak $5.99 +90%"
+  is a **Yahoo bad print**.
+
+**Result:** **CRE was a false member of the trigger** (bad print). Removing it,
+the sub-3M count is **3 of 5 blew past** (LNKS, RPGL, ATPC), CRE + IOTR fell
+short — the ≥4/5 trigger is **NOT met**. So the live-flip handoff was **premature
+and is withdrawn this cycle** (corrected in `prompts/morning-evaluation.md`). But
+the exception is **not a mirage**: the (b) economics on the genuine cases are
+positive (LNKS +68%, ATPC +22%; RPGL +11% thin). It needs **one more clean,
+SIP-verified sub-3M blow-past to reach ≥4/5**, then strategy-advance applies it
+(sized to the realistic (b), not the optimistic (a)). The prospective (a)/(b)
+recording already added to the morning eval collects that live.
+
+**Hypothesis / next step:** (Init 3) add a log-only **spike-bar detection
+column** to the scan output so the now-tighter AH-open grid actually surfaces the
+ignition bar (Juan's "catch the first volume spike bar" ask) — the scans are in
+place; the detection signal is the missing piece. (Init 1) watch for the 4th
+clean sub-3M PM-open re-explosion on SIP-verified peaks; flip the live exception
+when the count reaches ≥4/5. Guard morning-eval tally figures against Yahoo bad
+prints — CRE shows a single bad print can fabricate a trigger.
+
+**Needs from Juan:** nothing blocking. The two AH-open observation scans are
+wired (retroactive veto still fine). No live entry-rule change was made.
+
+---
+
 ### 2026-07-16 — Init 3: ignition-vs-grid audit done (grid too coarse, not mis-phased) — AH-cadence change proposed to Juan; Init 5 render-race 200-check shipped
 
 **Evaluated:** Prior step (2026-07-15: advance Init 3 with the timing audit —

@@ -407,8 +407,16 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** In progress — **top research lever; ignition-vs-grid audit DONE
-(2026-07-16), schedule change proposed to Juan.** The daily **`strategy-advance`
+**Status:** In progress — **AH-open observation scans WIRED (2026-07-17).**
+Proposal (A) was applied: added crons `trading-post-market-2215` and
+`trading-post-market-2245` (16:15/16:45 ET, Mon–Thu) to `scheduler.json`. Both
+fire *before* the 23:00 CET entry ban, so they are log/observation-only (no new
+entry window) — fine to apply directly. The AH-open hour is now 15-min-spaced:
+22:00, 22:15, 22:30, 22:45, 23:00 CET, halving catch-lag on the dominant
+16:08–16:53 ET ignition cluster. Next: add a spike-bar detection column to the
+scan output (log-only) so the tighter grid actually surfaces the ignition bar
+(Juan's "catch the first volume spike bar" ask). (B) tail scans still held
+(MSW=1, below 3–4 trigger). The daily **`strategy-advance`
 pulse** (2026-06-23) was the first deliverable. Built
 `scripts/ignition-timing.js` (log-only) and ran it on 10 AH winners' 1-min SIP
 bars (`INIT3_IGNITION_TIMING.md`). **Key finding: the grid is too coarse, not
@@ -427,7 +435,7 @@ exactly the enabler for Juan's 2026-07-16 "catch the first volume spike bar"
 ask, whose blocker is this detection latency.
 
 **Current schedule (cron, Europe/Berlin local time):**
-- Post-market scans: 21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 (7 scans)
+- Post-market scans: 21:30, 22:00, **22:15**, 22:30, **22:45**, 23:00, 23:30, 00:00, 00:30 (9 scans; 22:15/22:45 added 2026-07-17, observation-only)
 - Morning eval: 10:20 | Position evals: 10:30, 14:30
 - Daily email: 11:30 | Scanner improvement: 14:20 | Process review: 14:40
 
@@ -690,14 +698,13 @@ tracker).
 - [x] Initiative 2: Alpaca keys are live (Juan removed the `unset`, 2026-06-23);
       verified against `/v2/account`. Nothing blocking. Optional: set
       `ALPACA_PAPER_TRADE=1` explicitly.
-- [ ] Initiative 3: **VETO window on a proposed AH cadence change** (2026-07-16,
-      from `INIT3_IGNITION_TIMING.md`). (A) add 22:15 + 22:45 CET (16:15/16:45
-      ET) *observation* scans to 15-min-space the AH-open hour — 6 of 10 winners
-      ignite 16:08–16:53 ET and currently wait up to +22m for a scan; +2
-      rounds/day, no new entry window (entry still banned before 17:00 ET). (B)
-      add 01:00/01:30 CET (19:00/19:30 ET) tail scans (already pre-authorized;
-      tail count MSW=1, below the 3–4 trigger, so held). Not applied — say the
-      word to veto (A) before the next strategy-advance run wires it.
+- [x] Initiative 3: **AH cadence change (A) WIRED (2026-07-17).** The 07-16
+      veto window passed with no objection, so the two *observation-only* AH-open
+      scans (22:15 + 22:45 CET / 16:15/16:45 ET, Mon–Thu) were added to
+      `scheduler.json` — both fire before the 23:00 CET entry ban (no new entry
+      window), so they qualify as log-only pulses applied directly. Retroactive
+      veto still fine: say the word to remove them. (B) 01:00/01:30 CET tail
+      scans remain held (MSW=1, below the 3–4 trigger).
 - [x] Initiative 6 (problem b): the **partial-hold pilot ask is WITHDRAWN**
       (2026-07-13). `scripts/trailing-sim.js` simulated the trailing-stop hold
       on all 14 closed round-trips' real regular-session 5-min SIP paths; every
