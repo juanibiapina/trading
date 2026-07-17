@@ -177,3 +177,79 @@ No open positions. Alpaca `positions` returns empty; `OPEN_POSITIONS.md` already
 
 **Actions taken:**
 - None.
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**CJMB** — Air Freight/Couriers (Callan JMB Inc.)
+- Catalyst: Jul 16 GlobeNewswire PR — strategic partnership with Alabama State University to advance US pharmaceutical manufacturing / supply-chain resilience (**Grade B**)
+- Previous Close: $0.74
+- AH last night: SIP peak **$1.36 (+83.8%)** at 19:20 ET (01:20 CET); at the 18:30 ET final scan it was ~$1.03 (+39%)
+- Premarket now: **$1.50 (+102.9%)**, still climbing
+- PM peak: **$1.58 (+113.5%)** at 04:00 ET on 2.6M sh / 18,052 trades (SIP; Yahoo showed $1.48, under-reported — use SIP)
+- Hypothetical P&L (AH entry $1.01 → PM peak $1.58): **+56.4%**
+- Float: unknown (scanner 0) | Market Cap: $4.9M
+- **Winner bar: CLEARED** — >100% on high, accumulating SIP volume (AH built on 300K–1M+ sh/bar, thousands of trades; PM open exploded on 2.6M sh)
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES — and we ENTERED it.**
+- Dead $0.79–0.86 until 17:30 ET (23:30 CET), then a genuine late-BUILD: first AH scan appearance at 00:00 CET (+26.6%), qualified the 2-AH-scan gate at 00:30 CET (+19.5%), post-17:30 peak on real accumulating volume, Grade B same-day partnership catalyst. **Entered @ $1.01** (00:30 CET final scan). Position now +44.6%.
+- The decisive AH continuation ($1.03 → $1.36) fired after the 18:30 ET final scan, but the stock was already detected and entered at that scan — not a late-AH-tail miss.
+- Scanner gap: **none.** This is the target outcome — detected, qualified, and selected the actual winner.
+
+### Baseline Tracking
+
+- Days tracked: **50** (was 49 + 1)
+- Winners detected by scanner: **43/48 (89.6%)** — CJMB added (detected across 00:00 + 00:30 CET scans)
+- Winner selected for paper trade: **24/48 (50.0%)** — CJMB entered @ $1.01; we traded the right stock
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+PM scan (04:20 ET) top hits: CJMB +62.6% (ref $0.86; +102.9% from $0.74 close), BIYA +35.9%, PMAX +23.9%, VCIG +16.6%, GLXG +12.1%, STXS +9.7%. CJMB is the only name clearing the winner bar. All PM movers were in last night's evening scans — no undetected winner.
+
+### Open Position P&L (Alpaca)
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| CJMB | $1.01 | +39.2% | B — ASU pharma partnership | 00:30 CET | $1.58 | 04:00 ET | open | +$42.75 | +44.6% | 🟢 Open, winning |
+| BIYA | $4.55 | +48.0% | None | 23:46 CET | $4.42 | 04:05 ET | open | −$4.6%* | −4.6%* | 🔴 Open, faded |
+
+\* **Quote-freshness flag:** Alpaca `positions` shows BIYA current $4.08 / −10.3%, but SIP PM bars have BIYA building — $4.34 close / $4.42 high at 04:05 ET (472K+429K sh, 8.3K+7.7K trades). Live P&L ≈ −4.6% against $4.34, not −10.3%. Exit is owned by position-evaluation (10:30 CET), not this pulse.
+
+**No realized P&L yet — both positions open.** Exits handled by position-evaluation.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) — full coverage, entry window captured
+- Candidates found: ~11 unique tickers across the night (GCTK, PMAX, BIYA, CJMB, GLXG, VCIG, STXS, LBGJ, JSPR, DXST, ATPC/CRDF regular)
+- Retrospective matches: every PM mover was in the evening scans
+
+### Missed Opportunities
+
+No significant missed opportunities. The morning winner (CJMB) was detected and entered.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| CJMB | $1.36 (SIP) | 19:20 ET | late-BUILD | $1.50 (+102.9%) | −5% | +102.9% | 🚀 WINNER — PM **exceeded** AH peak, continuation confirmed |
+| BIYA | $5.19 (SIP) | 18:30 ET | Build→hold→fade | $4.34 | −16.4% | +30.7% | Faded — PM peak $4.42 **fell short** of AH peak (flag; AH was better exit) |
+| GCTK | $0.80 (SIP) | 17:20 ET | spike→fade | $0.53 (+5.0%) | −34% | +5.0% | Faded (correctly skipped on fade rule) |
+| PMAX | $2.36 (SIP) | 16:25 ET | spike→fade | $2.18 (+23.9%) | −7.6% | +23.9% | Faded — PM held +24% but < AH peak (correctly skipped) |
+| GLXG | ~$1.41 | 18:30 ET (22:30 CET) | spike→fade/choppy | $1.20 (+12.1%) | −15% | +12.1% | Faded (correctly skipped) |
+
+**AH-peak-vs-PM-peak:** CJMB's AH peak (+83.8%, moderate runner) was **exceeded** in PM (+113.5%) — supports the "moderate AH runners continue, extreme (>250%) AH runners fade" hypothesis. BIYA (+56.3% AH) fell short in PM — a moderate runner that still faded (no catalyst, reverse-split name).
+
+### Notes
+
+- **Clean detection + selection night.** CJMB detected, qualified all gates, entered @ $1.01, now +44.6% and still above +100%. This is the target outcome the baseline hunts for.
+- **Reverse-split-squeeze fade tally (add BIYA):** BIYA — 1-for-10 reverse split effective Jul 13 (**this-week**), no fresh catalyst (Grade None), float 2.7M, entered $4.55 → PM peak $4.42 = **−2.9%** (current −4.6% to −10.3%), **faded**. AH peak $5.19 was the better exit. Consistent with the hypothesis that fresh-reverse-split names with no operational catalyst fade. Running tally: ELPW (faded), YYGH (faded), EDHL (mild continue, months-old), DCX (flat), **BIYA (faded, this-week)**.
+- **Sub-3M-float fade negative controls (correct skips):** PMAX (892K float) peaked 16:25 ET spike→fade, PM $2.18 < AH peak $2.36 — did not re-explode. GLXG (1.7M float) faded, PM $1.20 below AH peak — did not re-explode. Both correctly skipped; both are negative data points for the sub-3M PM-open re-check exception (spike→fade sub-3M names that peak in the first AH minutes do NOT re-ramp). No sub-3M AH-fader re-exploded in PM this session; standing sub-3M count stays 4 of 5.
+- **PM-only gapper watch:** biggest raw PM mover = CJMB (+102.9%), classified as **AH→PM continuation** (moved +39% in AH, detectable), not a PM-only gapper. No PM-only-gapper blind spot today.
+- **Late-AH-tail watch:** CJMB's continuation fired after the 18:30 ET final scan, but the name was already detected and entered at that scan — not counted as a tail miss.
+- **Broker-block tally:** none this session (both CJMB and BIYA filled).
+- **Ceiling-override / dead-cat-override watch:** none flagged last night; no outcomes to record.
+- **Fade-rule false negatives:** none — PMAX, GLXG, GCTK all faded as the rule predicted (none re-exploded in PM).
