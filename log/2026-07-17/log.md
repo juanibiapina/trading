@@ -14,3 +14,16 @@
 **Notes:**
 - PM window ~04:30 ET at pulse time. Both names liquid on SIP (BIYA 198K sh/bar, CJMB 2.6M sh first bar).
 - BIYA quote endpoint returned stale (yesterday close); used SIP 5Min bars + Alpaca current_price for exit level.
+
+## Position Evaluation — 14:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| CJMB | $1.01 | $1.21 | +19.8% | $1.58 (+56%) | 1 | B | SELL | Trail stop $1.34 hit. Faded steadily from PM peak toward open. Filled $1.21. |
+
+**Actions taken:**
+- SELL 95 CJMB @ limit $1.18 ext (id 30aff93a) → filled @ $1.21. Final P&L +$19.00 (+19.8%). Moved to Closed Positions.
+
+**Notes:**
+- CJMB peaked $1.58 (+56%) at PM open (08:00Z), then faded monotonically: $1.58→$1.40→$1.30→$1.22 by 12:15Z. Liquid throughout (bid $1.21 x500). Trail stop from 10:30 pulse ($1.34) breached; Grade B trail rule executed. Classic PM-peak-then-fade pattern; captured most of the run above entry.
+- No open positions after this pulse.
