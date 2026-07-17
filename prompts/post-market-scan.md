@@ -68,6 +68,16 @@ Do NOT use raw `curl` to Yahoo Finance (it fails without the User-Agent header t
 
 Read the existing log to see which tickers were already found in previous scans today.
 
+**Spike-bar instrumentation (log-only, no decision impact):** For each candidate with AH change >10%, run the spike-bar detector and record its one-line verdict in the scan notes. This is instrumentation for Initiatives 1+3 (Juan's "catch the first volume spike bar" ask): it flags whether the first price+volume co-spike (ignition) bar has fired yet, as-of this scan minute. Do NOT gate entries on it yet — just log it so the now-15-min-spaced AH-open grid (22:00-23:00 CET) accumulates ignition-bar timing on live candidates.
+
+```bash
+# AH-eve date = the US trading date (LOG_DIR date). --now = current ET minute (HH:MM).
+node scripts/spike-bar.js SYM:YYYY-MM-DD --now HH:MM
+```
+
+Record the output verbatim, e.g. `SPIKE 16:53ET +19% $1.48 72 trades / 25k sh` or `NO-SPIKE flat/faded`. A NO-SPIKE reading on a name that TradingView shows as a big mover is a data point (thin/bad print or no real ignition) — note it, but it is not yet a skip rule.
+
+
 For each **new** candidate (not in prior scans), evaluate against the entry criteria from the trading plan:
 - Any sector — do NOT skip stocks for being outside biotech/pharma. The "non-biotech 0/6" observation in Day Trading.md is a hypothesis under investigation, not a filter. Note the sector for pattern tracking.
 - Float < 10M ideal

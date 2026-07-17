@@ -407,16 +407,25 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** In progress — **AH-open observation scans WIRED (2026-07-17).**
+**Status:** In progress — **AH-open scans wired (2026-07-17) + spike-bar
+detector built & wired as a log-only scan column (2026-07-17, 2nd step).**
 Proposal (A) was applied: added crons `trading-post-market-2215` and
 `trading-post-market-2245` (16:15/16:45 ET, Mon–Thu) to `scheduler.json`. Both
 fire *before* the 23:00 CET entry ban, so they are log/observation-only (no new
 entry window) — fine to apply directly. The AH-open hour is now 15-min-spaced:
 22:00, 22:15, 22:30, 22:45, 23:00 CET, halving catch-lag on the dominant
-16:08–16:53 ET ignition cluster. Next: add a spike-bar detection column to the
-scan output (log-only) so the tighter grid actually surfaces the ignition bar
-(Juan's "catch the first volume spike bar" ask). (B) tail scans still held
-(MSW=1, below 3–4 trigger). The daily **`strategy-advance`
+16:08–16:53 ET ignition cluster. **Spike-bar detector now built:**
+`scripts/spike-bar.js` (log-only, no orders) is the live counterpart of
+`ignition-timing.js` — for a candidate + AH-eve date + `--now HH:MM` ET cutoff it
+reports whether the first price+volume co-spike (ignition) bar has fired yet
+(`SPIKE 16:53ET +19% $1.48 72 trades / 25k sh`) or not (`NO-SPIKE flat/faded`),
+directly answering Juan's "catch the first volume spike bar" ask. Verified
+consistent with the audit on IVF (16:53), TGHL (16:21), XCUR (16:08), and reads
+NO-SPIKE on LVLU (Juan's "no volume spike" example) and on IVF as-of 16:30 (pre-
+ignition). Wired into `prompts/post-market-scan.md` as a **log-only column** (run
+per >10% candidate, record the verdict; no entry gate yet) so the tighter grid
+accumulates live ignition-bar timing. (B) tail scans still held (MSW=1, below
+3–4 trigger). The daily **`strategy-advance`
 pulse** (2026-06-23) was the first deliverable. Built
 `scripts/ignition-timing.js` (log-only) and ran it on 10 AH winners' 1-min SIP
 bars (`INIT3_IGNITION_TIMING.md`). **Key finding: the grid is too coarse, not

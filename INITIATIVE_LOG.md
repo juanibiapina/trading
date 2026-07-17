@@ -9,6 +9,52 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-17 (2nd step) — Init 3/1: log-only spike-bar detector built + wired as a scan column (Juan's "catch the first volume spike bar")
+
+**Evaluated:** Prior step (2026-07-17 1st run: wire the 22:15/22:45 CET AH-open
+observation scans; withdraw the premature sub-3M live-flip after CRE was found to
+be a Yahoo bad print) — **worked; the scans are in `scheduler.json` and the
+sub-3M trigger correctly sits at 3/5.** The just-wired scans have not fired yet
+(next AH session), so their catch-lag improvement is **insufficient data** to
+judge — evaluate after the next AH cycle. The stated next step (add a log-only
+spike-bar detection column so the tighter grid surfaces the ignition bar) was
+actionable and verifiable now, so this run took it.
+
+**Step taken (instrument / Init 3 + Init 1):** Built `scripts/spike-bar.js`
+(log-only, no orders) — the live counterpart of `ignition-timing.js`. For a
+`SYM:YYYY-MM-DD` (AH-eve) + optional `--now HH:MM` ET cutoff it pulls real Alpaca
+SIP 1-min AH bars and reports whether the first price+volume **co-spike**
+(ignition) bar has fired as-of that scan minute (same detector as the audit tool:
+high ≥ +15% vs the regular-session close AND trades ≥ 20 and ≥ 5× the running
+median trades). Output is one line: `SPIKE 16:53ET +19% $1.48 72 trades / 25k sh`
+or `NO-SPIKE flat/faded`. Wired it into `prompts/post-market-scan.md` as a
+**log-only column** (run per >10% AH candidate, record the verdict; explicitly
+NOT an entry gate yet).
+
+**Result:** Verified consistent with the validated `ignition-timing.js` audit on
+every test: IVF 16:53ET +19%, TGHL 16:21ET +40%, XCUR 16:08ET +41%. The negative
+filter also reads correctly — **LVLU** (Juan's "clearly terrible: no volume
+spike" example) returns **NO-SPIKE**, and IVF as-of 16:30 ET (before its 16:53
+ignition) returns NO-SPIKE, flipping to SPIKE as-of 17:00 ET. So the tool cleanly
+separates real igniters from no-spike names and is time-aware (won't fabricate an
+ignition the scan couldn't yet have seen). This is the missing detection signal
+for Juan's 2026-07-16 "catch the first volume spike bar" ask; the 15-min AH-open
+grid + this column will now accumulate live ignition-bar timing.
+
+**Hypothesis / next step:** Next AH session, confirm the 22:15/22:45 scans fire
+and the spike-bar column populates on live candidates (evaluate the wired scans'
+catch-lag then). Once ~1–2 weeks of live SPIKE/NO-SPIKE readings accumulate,
+test two things: (1) does NO-SPIKE reliably precede a fade (a candidate skip
+filter, per Juan), and (2) does the SPIKE bar price make a viable entry vs our
+current late entry — which would justify proposing a spike-bar entry trigger
+(touches live trading → propose to Juan). Keep the column log-only until then.
+
+**Needs from Juan:** nothing. The AH-open scan-timing change (proposal A) was the
+prior run's veto item and is now applied (no objection); this step is log-only
+instrumentation.
+
+---
+
 ### 2026-07-17 — Init 3: AH-open observation scans WIRED; sub-3M fade-exception (b) validated → CRE was a bad print, trigger drops to 3/5 (live flip held)
 
 **Evaluated:** Prior step (2026-07-16: propose AH cadence change (A) — add 22:15
