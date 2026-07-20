@@ -691,14 +691,20 @@ tracker).
 
 ## Open asks for Juan (consolidated)
 
-- [x] **Standing directive (2026-07-16): apply, don't ask.** Juan: "apply
-      stuff, don't ask confirmation." Stop posing "Decision For You / Want me to
-      apply it?" questions in the daily email for qualifying, evidence-backed
-      changes — apply them (via the owning pulse: `strategy-advance` for
-      `Day Trading.md` entry rules, `scanner-improvement` for scanner/process)
-      and report what was done. Keep Juan-veto windows only for genuinely risky
-      or ambiguous changes. First application: the sub-3M-float PM-open re-check
-      exception is now handed to `strategy-advance` to apply, not re-asked.
+- [x] **Standing directive (2026-07-16, reinforced 2026-07-17): apply, don't
+      ask.** Juan: "apply stuff, don't ask confirmation" / "don't wait for my
+      approval." Stop posing "Decision For You / Needs You / Want me to apply
+      it?" questions in the daily email for qualifying, evidence-backed changes —
+      apply them (via the owning pulse: `strategy-advance` for `Day Trading.md`
+      entry rules, `scanner-improvement` for scanner/process) and report what was
+      done, with a **retroactive** veto only. The 07-17 reply closes the
+      "live-entry rule = yours to approve" carve-out: **even live-entry rules are
+      applied autonomously and reported, not pre-approved.** Reserve email asks
+      for decisions the agent cannot execute (infra, broker, funding). Guard
+      wired into `prompts/daily-email.md` (2026-07-17). The sub-3M-float PM-open
+      re-check exception is held **on evidence, not approval** — SIP-corrected
+      count is 3/5 (below the ≥4/5 trigger); `strategy-advance` applies it when
+      it next reaches 4/5, without asking.
 - [x] **Winner bar tightened (2026-07-16).** Juan (recurring): the email
       headlined a weak +72%/+88.5%, low-volume name (ATPC) as "winner" — the bar
       is **>100% on high, accumulating SIP volume**; below that, report "no real

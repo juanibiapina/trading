@@ -6,6 +6,35 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-17 — re: Trading Scanner Report - 2026-07-16
+
+**Juan said:** "Beautiful winner. Good job. Improvement: don't wait for my
+approval."
+
+**Interpretation:** Reinforcement and sharpening of the 07-16 "apply, don't ask"
+directive. The 07-16 email still ran a **"Needs You"** block asking Juan to
+approve the sub-3M-float PM-open re-check exception, on the reasoning that "it is
+a live-entry rule, so it is yours to approve." Juan is closing that carve-out:
+**do not gate changes on his pre-approval, live-entry rules included.** The model
+should apply qualifying, evidence-backed changes via the owning pulse and report
+them, with only a *retroactive* veto window — no "may I?" asks in the email.
+Praise on the CJMB winner (+113% PM) confirms the detection/selection loop is on
+target; the only ask is process autonomy.
+
+**Action:**
+- Added a guard to `prompts/daily-email.md`: the email must **not** emit
+  "Needs You / Decision For You / yours to approve" pre-approval asks for
+  strategy or entry-rule changes — those are applied by their owning pulse
+  (`strategy-advance`) and *reported* (retroactive veto only). Reserve email
+  asks for genuine infra/broker decisions the agent cannot execute itself.
+- Updated `STRATEGY_ROADMAP.md` open-asks: the sub-3M-float exception is held
+  **on evidence, not approval** — the SIP-corrected count is **3 of 5** (below
+  the ≥4/5 trigger), so `strategy-advance` applies it autonomously when it next
+  reaches 4/5, no Juan approval sought. The 07-17 email's "Needs You" framing on
+  this item was a process regression, now guarded against.
+- No live `Day Trading.md` entry-rule edit here (evidence trigger not met; and
+  entry-rule scope belongs to `strategy-advance`, not this pulse).
+
 ### 2026-07-16 — re: Trading Scanner Report - 2026-07-15
 
 **Juan said:** "The claimed winner in the email barely went up, almost no

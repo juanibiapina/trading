@@ -130,3 +130,12 @@ AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;
 - Sender is `zero@inboxkit.cc`. Invite a reply for feedback (it feeds the
   `check-email-replies` pulse). If `STRATEGY_ROADMAP.md` has open asks for Juan,
   surface them briefly in the email.
+- **Do not gate changes on Juan's pre-approval** (standing directive, 2026-07-16
+  reinforced 2026-07-17: "apply, don't ask" / "don't wait for my approval").
+  Never emit "Needs You / Decision For You / yours to approve" blocks for
+  strategy or entry-rule changes, *including live-entry rules* — those are
+  applied by their owning pulse (`strategy-advance` for `Day Trading.md` rules,
+  `scanner-improvement` for scanner/process) and **reported** here for a
+  *retroactive* veto only ("wired X; say the word to revert"). Reserve email
+  asks strictly for decisions the agent cannot execute itself (infra, broker
+  coverage, funding).
