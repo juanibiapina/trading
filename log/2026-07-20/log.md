@@ -181,6 +181,47 @@ Scanner run at 18:00:13 ET: **6 hits**.
 
 **Entry taken:** PAPL (Grade B, BUILD, filled $1.10). ADVB is the strongest fresh mover but gate-unmet (1st AH scan) — carry to the 00:30 final scan for a possible 2nd confirmation (mind the +150% ceiling). HIHO position stands (entered 23:00), now fading.
 
+## Scan 00:30 CET (6:30 PM ET) — AH, ENTRY-ELIGIBLE (final scheduled scan)
+
+Scanner run at 18:30:14 ET: **10 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HIHO | [TV](https://www.tradingview.com/chart/?symbol=HIHO) | $0.93 | +19.7% | +50.6% | $1.40 | +80.2% | 25.1M | 2.8M | 8.9x | 2.8M | Misc Manufacturing |
+| PAPL | [TV](https://www.tradingview.com/chart/?symbol=PAPL) | $0.88 | -3.6% | +12.1% | $0.98 | +8.1% | 5.4M | 640K | 8.5x | n/a | Finance/Rental/Leasing |
+| ADVB | [TV](https://www.tradingview.com/chart/?symbol=ADVB) | $8.90 | +76.9% | +27.2% | $11.32 | +125.0% | 3.7M | 5.3M | 0.7x | 561K | Biotechnology |
+| RDGT | [TV](https://www.tradingview.com/chart/?symbol=RDGT) | $1.58 | +12.1% | +24.7% | $1.97 | +39.7% | 2.7M | 1.1M | 2.5x | 884K | Medical Distributors |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.03 | -4.1% | +21.5% | $3.68 | +16.5% | 2.0M | 8.0M | 0.3x | 596K | Pharmaceuticals |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.51 | -7.3% | +8.0% | $0.55 | +0.1% | 570K | 186K | 3.1x | 3.0M | Air Freight/Couriers |
+| IVVD | [TV](https://www.tradingview.com/chart/?symbol=IVVD) | $0.69 | -7.7% | +6.3% | $0.73 | -1.8% | 131K | 3.5M | 0.0x | 262.9M | Biotechnology |
+| CPHI | [TV](https://www.tradingview.com/chart/?symbol=CPHI) | $0.91 | -17.3% | +6.6% | $0.97 | -11.8% | 117K | 13.0M | 0.0x | 37.8M | Pharmaceuticals |
+| CJMB | [TV](https://www.tradingview.com/chart/?symbol=CJMB) | $1.21 | -0.8% | +7.4% | $1.30 | +6.6% | 103K | 6.6M | 0.0x | n/a | Air Freight/Couriers |
+| GORO | [TV](https://www.tradingview.com/chart/?symbol=GORO) | $1.00 | +7.8% | +216.8% | $3.16 | +241.5% | 40K | 8.1M | 0.0x | 160.0M | Precious Metals |
+
+### Spike-bar instrumentation (log-only, AH >10%)
+
+- `HIHO 2026-07-20 SPIKE 16:04ET +16% $1.08 373 trades / 190k sh (first co-spike bar) (as-of 18:30ET)`
+- `PAPL 2026-07-20 SPIKE 17:09ET +20% $1.06 244 trades / 61k sh (first co-spike bar) (as-of 18:30ET)`
+- `ADVB 2026-07-20 SPIKE 17:32ET +17% $10.40 2030 trades / 136k sh (first co-spike bar) (as-of 18:30ET)`
+- `RDGT 2026-07-20 SPIKE 18:00ET +17% $1.85 857 trades / 151k sh (first co-spike bar) (as-of 18:30ET)`
+- `GORO 2026-07-20 NO-SPIKE peak +6% @17:02ET (no bar cleared +15% on a volume co-spike) (as-of 18:30ET)`
+
+### Final-scan feed-lag cross-check (SIP truth on tracked names)
+
+The TradingView postmarket feed **under-reported ADVB** at this final scan: it showed ADVB flat/stale at $11.32 (+27.2%), but fresh SIP bars run to 18:15 ET showing a **new AH high $13.01** (387K sh / 6105 trades) and Yahoo `--ah-history` confirms $12.91 at 18:30 ET. SIP is truth: ADVB is a live, volume-backed BUILD making new highs late, not the fading $11.32 the scanner printed. Real level ~$12.9-13.05.
+
+### Evaluation
+
+- **ADVB — feed-lag-rescued BUILD, but SKIP on extension ceiling.** Gate now met (2nd AH scan: 00:00 +38.8%, 00:30 rescued to real ~+156%). `tradable=true`, micro-float 561K, Day% +76.9%, genuine SIP accumulation (bars to $13.01 @18:15 ET, 6-17k trades/bar, hundreds-of-K sh). Trajectory is BUILD/hold making new AH highs after 17:00 ET (high $13.05 @18:15 ET, holding $12.91 @18:30 ET, within 20%). **Catalyst = terminated its equity purchase (equity-line) agreement** today — removes a dilution overhang, roughly Grade B/C, up ~50% intraday on it. **BUT the true entry level is ~$12.91-13.05 = +156-158% from the $5.03 base (SIP truth), over the +150% extension ceiling.** The TradingView-printed +125% was stale/understated; the real move is over-ceiling. Extended entries leave no margin for overnight fade (data: ANY +155%→-21%, ATPC +154%→-14%). **Skip the live entry on the ceiling.** **CEILING-OVERRIDE WATCH (data collection):** made AH high after 17:00 ET ✓, holding within 20% across ≥2 AH scans ✓; VRatio fails the >5x condition (scanner 0.7x) but that is an artifact of ADVB's huge 5.3M avg daily volume — real AH accumulation is 3.7M+ sh with tens of thousands of trades. Two of three strict conditions met; recording a **hypothetical entry ~$12.91 at 00:30 CET** (VRatio-metric caveat noted) to collect the BUILD-vs-extension case.
+- **RDGT** — NEW name, **1st AH scan appearance at the final scan** → 2-AH-scan gate can never be met tonight. `tradable=true`, micro-float 884K, SPIKE fired late (18:00 ET, 151k sh / 857 trades — real), AH high $2.07, Total% +39.7%. Genuine late build but no second confirmation possible. **No entry (gate unmet).** Morning-eval watch name.
+- **HIHO** — already ENTERED at 23:00 ($1.50, 59 sh). No re-entry. Position now **$1.36, -9.3%**. AH still accumulating (25.1M total AH vol, VRatio 8.9x) but faded off the 16:35 ET high ($1.69). Premarket exit handled by position-evaluation.
+- **PAPL** — already ENTERED at 00:00 ($1.10, 80 sh). No re-entry. Position **$1.09, -0.9%** (roughly flat). AH +12.1%, still above threshold, VRatio 8.5x. Premarket exit handled by position-evaluation.
+- **SHPH** — untradable (carried, `tradable=false`). AH +21.5% but no fillable book. Qualified-but-untradable broker-block. No further workup.
+- **GORO** — carried skip: NO-SPIKE (peak +6%), `tradable=false`, AH +216.8% on only 40K AH vol vs 160M float = bad print / illiquid ramp. Cannot fill.
+- **SLGB / IVVD / CPHI / CJMB** — all AH <10% (below threshold). Not candidates. CPHI/IVVD also Day%-negative with 0.0x VRatio (vol fading).
+
+**No new entry this final scan.** Both positions stand (HIHO, PAPL). ADVB was rescued from the feed-lag as a genuine live BUILD but skipped on the +150% extension ceiling (real level +156-158%); logged as CEILING-OVERRIDE WATCH with a hypothetical entry for data collection. RDGT is a real late micro-float mover but 1st-AH-appearance at the final scan (gate can't be met). Night complete.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
