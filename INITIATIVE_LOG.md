@@ -9,6 +9,51 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-20 — Init 3: spike-bar detector validated out-of-sample; new late-BUILD detection gap surfaced (CJMB winner ignited in the coarse late window)
+
+**Evaluated:** Prior step (2026-07-17 2nd: build + wire the log-only spike-bar
+column; then next AH session confirm the 22:15/22:45 scans fire and the column
+populates) — **insufficient data to evaluate live yet.** No post-market scan has
+run since 07-17: the new 22:15/22:45 crons are Mon–Thu (`1-4`) and were added on
+Fri 07-17, so their first fire is tonight (Mon 07-20). No log dir exists for
+07-18/07-20. Confirmed the crons are in `scheduler.json` (22:15/22:45 present,
+Mon–Thu). Live catch-lag evaluation carries to the next run.
+
+**Step taken (pilot / Init 3 + Init 1):** Rather than idle until tonight's data,
+strengthened the pilot's evidence base **out-of-sample**: ran `scripts/spike-bar.js`
+on 3 AH names from the 07-16 session that were NOT in the original 10-name
+ignition audit (BIYA, GCTK, CJMB — including CJMB, the name we actually entered
+and won +19.8% on). Appended the results + the new-grid lag mapping to
+`INIT3_IGNITION_TIMING.md`.
+
+**Result:** Three findings. (1) **Detector generalizes 3/3** — SPIKE fired at a
+minute consistent with each daily-log narrative (BIYA building from open →
+16:28ET; GCTK early pump → 16:57ET; CJMB "dead until 17:30 then exploded" →
+17:33ET). No false negatives on real movers. (2) **GCTK is a SPIKE→fade**
+(ignited 16:57 +30%, then declined, correctly skipped): the first co-spike bar
+marks ignition, **not** a buy — continuation/BUILD gating stays required before
+any spike-bar entry trigger. (3) **New gap — the 17:00–18:30 ET late window is
+still 30-min-coarse and it caught our actual traded winner late.** CJMB ignited
+17:33 ET but the first scan to see it was 18:00 (+27 min lag) and we didn't enter
+until the 18:30 final scan. The 07-17 densification only covers the open hour
+(16:15/16:45), so late-BUILD igniters remain undercaught. The 3 fresh cases also
+didn't fall in the new open-hour scans' benefit sub-windows (16:00–16:14 /
+16:31–16:44), so those scans' payoff still awaits a live igniter there.
+
+**Hypothesis / next step:** (1) After tonight's AH session, evaluate the wired
+22:15/22:45 scans' live catch-lag and confirm the spike-bar column populated on
+real candidates. (2) Track a **late-BUILD tally** (17:00–18:30 ET igniters);
+CJMB = 1. If it reaches 2–3, propose densifying the late window (add 23:45 +
+00:15 CET = 17:45 + 18:15 ET) — a trading-scan timing change, so propose to Juan
+for veto, don't apply silently. (3) Once ~1–2 weeks of live SPIKE/NO-SPIKE
+readings accumulate, test whether NO-SPIKE reliably precedes a fade (skip filter)
+and whether the SPIKE-bar price beats our current late entry (entry-trigger
+proposal). Keep the column log-only until then.
+
+**Needs from Juan:** nothing. Out-of-sample validation is log-only; no schedule
+or live-rule change made this run.
+
+
 ### 2026-07-17 (2nd step) — Init 3/1: log-only spike-bar detector built + wired as a scan column (Juan's "catch the first volume spike bar")
 
 **Evaluated:** Prior step (2026-07-17 1st run: wire the 22:15/22:45 CET AH-open

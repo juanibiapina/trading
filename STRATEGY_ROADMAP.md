@@ -407,8 +407,20 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** In progress — **AH-open scans wired (2026-07-17) + spike-bar
-detector built & wired as a log-only scan column (2026-07-17, 2nd step).**
+**Status:** In progress — **spike-bar detector out-of-sample validated
+(2026-07-20); a new late-BUILD detection gap surfaced.** Ran `spike-bar.js` on 3
+fresh 07-16 AH names not in the original batch: it fired SPIKE 3/3 at minutes
+matching the daily-log narratives (BIYA 16:28, GCTK 16:57, CJMB 17:33), GCTK was
+a correct **SPIKE→fade** skip (spike bar ≠ entry green light; continuation gating
+still needed), and — key finding — **CJMB, the name we actually traded and won
++19.8% on, ignited at 17:33 ET in the still-coarse 17:00–18:30 ET late window and
+waited +27 min for the 18:00 scan.** The 07-17 densification only covers the open
+hour (16:15/16:45), so late-BUILD igniters remain undercaught. **Watch:** if 2–3
+late-BUILD winners accumulate in 17:00–18:30 ET, propose 15-min spacing there too
+(23:45 + 00:15 CET = 17:45 + 18:15 ET); late-BUILD tally = 1 (CJMB). Details in
+`INIT3_IGNITION_TIMING.md` (out-of-sample section). **Prior: AH-open scans wired
+(2026-07-17) + spike-bar detector built & wired as a log-only scan column
+(2026-07-17, 2nd step).**
 Proposal (A) was applied: added crons `trading-post-market-2215` and
 `trading-post-market-2245` (16:15/16:45 ET, Mon–Thu) to `scheduler.json`. Both
 fire *before* the 23:00 CET entry ban, so they are log/observation-only (no new

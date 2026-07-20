@@ -74,3 +74,45 @@ would be *observation* scans (catch + log the ignition) feeding a faster entry
 decision at 17:00 ET, not new entry windows — consistent with Juan's 2026-07-16
 "catch the first volume spike bar" ask, whose blocker is exactly this detection
 latency.
+
+## Out-of-sample validation (2026-07-20) — 3 fresh AH names, new 15-min grid
+
+After the 2026-07-17 cadence change the AH-open hour is 15-min spaced. New grid
+(ET): **15:30, 16:00, 16:15, 16:30, 16:45, 17:00, 17:30, 18:00, 18:30** (the
+16:15/16:45 scans = 22:15/22:45 CET are new). Ran `scripts/spike-bar.js` (same
+co-spike detector) on 3 AH names from the 07-16 session that were **not** in the
+original batch, to test (a) that the detector generalizes and (b) whether the new
+scans reduce catch-lag.
+
+| sym  | AH-eve date | ignition ET | ign % | trades/sh   | first scan ≥ ign | lag  | outcome                          |
+|------|-------------|-------------|-------|-------------|------------------|------|----------------------------------|
+| BIYA | 2026-07-16  | 16:28       | +17%  | 85 / 12k    | 16:30            | +2m  | held/built (+48% AH), entered     |
+| GCTK | 2026-07-16  | 16:57       | +30%  | 730 / 603k  | 17:00            | +3m  | **SPIKE→faded**, skipped (correct) |
+| CJMB | 2026-07-16  | 17:33       | +22%  | 262 / 79k   | 18:00            | +27m | late-BUILD, **our traded winner** (+19.8%) |
+
+**Findings:**
+
+1. **Detector generalizes (3/3).** Every fresh AH mover fired SPIKE at a minute
+   consistent with the daily-log narrative (BIYA building from the open → 16:28;
+   GCTK early pump → 16:57; CJMB "dead until 17:30 then exploded" → 17:33). No
+   false negatives on real movers.
+
+2. **GCTK is a SPIKE-then-fade** (ignited 16:57 +30%, then declined and was
+   correctly skipped). Confirms the spike bar alone is **not** an entry green
+   light — continuation/BUILD gating is still required. Tempers the eventual
+   entry-trigger design: "first co-spike bar" marks ignition, not a buy.
+
+3. **New open-hour scans didn't help these 3** — but not a negative result. The
+   16:15/16:45 scans benefit igniters landing in 16:00–16:14 and 16:31–16:44;
+   these three ignited at 16:28 / 16:57 / 17:33, just after existing scan points.
+   Benefit awaits a live igniter in the new sub-windows (first real test is the
+   next AH sessions, now that the scans are wired).
+
+4. **NEW gap — the late window (17:00–18:30 ET) is still coarse, and it caught
+   the actual traded winner late.** CJMB (the name we entered and won +19.8% on)
+   ignited at 17:33 ET and waited **+27 min** for the 18:00 scan; we didn't enter
+   until the 18:30 final scan. This is the first case of a **late-BUILD igniter**
+   (17:00–18:30 ET) undercaught by the current 30-min late spacing — the
+   densification so far only covers the open hour. **Watch:** if 2–3 late-BUILD
+   winners accumulate in the 17:00–18:30 ET window, propose 15-min spacing there
+   too (add 23:45 + 00:15 CET = 17:45 + 18:15 ET). Late-BUILD tally: CJMB = 1.
