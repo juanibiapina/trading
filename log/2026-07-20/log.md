@@ -36,6 +36,32 @@ SIP cross-check on tracked watch names (feed-lag rescue): only **ADVB** shows re
 
 Per learning-phase rule, no entries before 23:00 CET regardless. Next scans at 22:30 / 23:00+ CET decide entries.
 
+## Scan 22:30 CET (4:30 PM ET) — AH, observation only
+
+Scanner run at 16:30:16 ET: **4 hits**. AH feed now populated.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HIHO | [TV](https://www.tradingview.com/chart/?symbol=HIHO) | $0.93 | +19.7% | +49.5% | $1.39 | +78.9% | 6.1M | 751K | 8.1x | 2.8M | Misc Manufacturing |
+| GBR | [TV](https://www.tradingview.com/chart/?symbol=GBR) | $0.68 | +6.7% | +6.3% | $0.72 | +13.4% | 600K | 131K | 4.6x | 4.7M | Real Estate Dev |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.03 | -4.1% | +24.4% | $3.77 | +19.3% | 553K | 7.8M | 0.1x | 596K | Pharmaceuticals |
+| GORO | [TV](https://www.tradingview.com/chart/?symbol=GORO) | $1.00 | +7.8% | +218.8% | $3.18 | +243.6% | 13K | 8.1M | 0.0x | 160.0M | Precious Metals |
+
+### Spike-bar instrumentation (log-only, AH >10%)
+
+- `HIHO 2026-07-20 SPIKE 16:04ET +16% $1.08 373 trades / 190k sh (first co-spike bar) (as-of 16:30ET)`
+- `SHPH 2026-07-20 SPIKE 16:04ET +22% $3.69 550 trades / 50k sh (first co-spike bar) (as-of 16:30ET)`
+- `GORO 2026-07-20 NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 16:30ET)`
+
+### Evaluation
+
+- **HIHO** — LEAD CANDIDATE. `tradable=true`. Real BUILD confirmed on SIP: bars 195K → 3.26M → 3.48M → 1.43M sh, thousands of trades/bar, VWAP climbing $1.02 → $1.37. Two-sided book (bid $1.47 x100 / ask $1.50 x100) — real fillable liquidity. Quote ~$1.48 (~+61% vs close), building. Float 2.8M, VRatio 8.1x, Total% +79% (well under +150% ceiling). **Catalyst = Grade B:** reported Q1 FY2027 earnings today (Mon Jul 20) — net sales ~$2.0M **+29.2% YoY**, gross profit +58.4% to $835K, margin +800bps to 42%, return to net-income growth (net-sales turnaround after a weak FY2026). Only gap: this is HIHO's first AH scan appearance — the 2-AH-scan gate is not yet met. **No entry now (22:30, observation-only + gate unmet). Prime entry candidate for 23:00 if it holds/builds.**
+- **GBR** — AH +6.3%, below the 10% threshold. Not a candidate.
+- **SHPH** — `tradable=false` (matches the recurring broker-block on this name). Qualified-but-untradable; no further workup. Carry as untradable on later scans.
+- **GORO** — NO-SPIKE (flat/faded) + `tradable=false` + AH +218.8% on only 13K AH vol against a 160M float. Classic **bad print / illiquid ramp** — no real accumulation, cannot fill. Skip.
+
+Per learning-phase rule, no entries before 23:00 CET. Next scan at 23:00 CET decides entries — HIHO leads pending its second AH confirmation.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
