@@ -149,8 +149,41 @@ Scanner run at 17:30:10 ET: **7 hits**.
 
 **No new entry this scan.** HIHO position stands (entered 23:00). PAPL is the only fresh AH >10% mover but is gate-unmet (1st AH scan) — carry to 00:00/00:30 for a possible 2nd confirmation. Next scans at 00:00 / 00:30 CET.
 
+## Scan 00:00 CET (6:00 PM ET) — AH, ENTRY-ELIGIBLE
+
+Scanner run at 18:00:13 ET: **6 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HIHO | [TV](https://www.tradingview.com/chart/?symbol=HIHO) | $0.93 | +19.7% | +37.7% | $1.28 | +64.8% | 23.8M | 2.7M | 8.9x | 2.8M | Misc Manufacturing |
+| PAPL | [TV](https://www.tradingview.com/chart/?symbol=PAPL) | $0.88 | -3.6% | +39.0% | $1.22 | +34.1% | 3.8M | 471K | 8.2x | n/a | Finance/Rental/Leasing |
+| ADVB | [TV](https://www.tradingview.com/chart/?symbol=ADVB) | $8.90 | +76.9% | +38.8% | $12.35 | +145.5% | 2.2M | 5.1M | 0.4x | 561K | Biotechnology |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.03 | -4.1% | +23.8% | $3.75 | +18.7% | 2.0M | 8.0M | 0.2x | 596K | Pharmaceuticals |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $0.61 | -33.5% | +7.0% | $0.65 | -28.8% | 841K | 4.5M | 0.2x | 5.5M | Misc Commercial Svcs |
+| GORO | [TV](https://www.tradingview.com/chart/?symbol=GORO) | $1.00 | +7.8% | +212.8% | $3.12 | +237.2% | 39K | 8.1M | 0.0x | 160.0M | Precious Metals |
+
+### Spike-bar instrumentation (log-only, AH >10%)
+
+- `HIHO 2026-07-20 SPIKE 16:04ET +16% $1.08 373 trades / 190k sh (first co-spike bar) (as-of 18:00ET)`
+- `PAPL 2026-07-20 SPIKE 17:09ET +20% $1.06 244 trades / 61k sh (first co-spike bar) (as-of 18:00ET)`
+- `ADVB 2026-07-20 SPIKE 17:32ET +17% $10.40 2030 trades / 136k sh (first co-spike bar) (as-of 18:00ET)`
+- `SHPH 2026-07-20 SPIKE 16:04ET +22% $3.69 550 trades / 50k sh (first co-spike bar) (as-of 18:00ET)`
+- `GORO 2026-07-20 NO-SPIKE peak +6% @17:02ET (no bar cleared +15% on a volume co-spike) (as-of 18:00ET)`
+
+### Evaluation
+
+- **PAPL — ENTERED.** Gate now met: **2nd AH scan appearance** (23:30 +15.1%, 00:00 +39.0%) — clears the 2-AH-scan >10% gate. `tradable=true`, Day% -3.6% (well above -15%), Total% +34.1% (far under +150% ceiling), VRatio 8.2x. Real SIP accumulation, not a print: AH built after 17:20 ET — bars 121K → 192K → 68K → 818K → 964K → 787K → 678K → 683K → 675K sh, thousands of trades/bar, VWAP $0.98 → $1.27, AH high ~$1.33 at 17:35 ET (peaked *after* 17:30 — BUILD, not early-fade). Current ~$1.10-1.22 within 20% of high. **Quote was frozen/stale** (`ask $0.00 x0` @ 16:00 ET, not updating across 3 pulls) — per freshness guard this is a staleness artifact, not an empty book (SIP shows 2475 trades in the 17:45 ET bar = live fillable market). Confirmed by the fill. **Catalyst = Grade B:** Pineapple Financial (mortgage brokerage/tech, Canada) reported Q3 FY2026 earnings today (Mon Jul 20) — the AH driver; market reacted +39%. **Entered:** BUY 80 @ limit $1.28 ext (id 4e6d2779), **filled @ $1.10** (well below limit, real market fill). ~$88 deployed.
+- **HIHO** — already ENTERED at 23:00 ($1.50, 59 sh). No re-entry. Trajectory note: AH now +37.7% ($1.28) vs peak +67.8% ($1.56) at 23:00 — **fading further off the 16:35 ET AH high ($1.69)**; position now -15.3% (~$1.27). AH volume still accumulating (23.8M total). Premarket exit handled by position-evaluation.
+- **ADVB** — strong BUILD but **1st AH scan appearance** (the 21:30 CET showing was regular session, which does not count toward the 2-AH-scan gate) → **gate UNMET, no entry this scan.** `tradable=true`. Real SIP surge: bars climbing $8.99 → $10.77 → $11.40 at 17:30-17:35 ET (409K/527K sh, 6787/9143 trades) — genuine accumulation making new highs late. Micro-float 561K, Day% +76.9%. **Concern:** Total% +145.5% is near the +150% extension ceiling — if it keeps building it may exceed it. **Watch — needs a 2nd AH confirmation at 00:30 to become entry-eligible; watch the ceiling.**
+- **SHPH** — untradable (carried, `tradable=false`). AH +23.8% but no fillable book. Qualified-but-untradable broker-block. No further workup.
+- **VCIG** — AH +7.0% below threshold; Day% -33.5% (dead-cat territory), Total% -28.8% still deep below close. Not a candidate.
+- **GORO** — carried skip: NO-SPIKE (peak +6%), `tradable=false`, AH +212.8% on only 39K AH vol vs 160M float = bad print / illiquid ramp. Cannot fill.
+
+**Entry taken:** PAPL (Grade B, BUILD, filled $1.10). ADVB is the strongest fresh mover but gate-unmet (1st AH scan) — carry to the 00:30 final scan for a possible 2nd confirmation (mind the +150% ceiling). HIHO position stands (entered 23:00), now fading.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | HIHO | $1.50 | 2026-07-20 23:01 CET | 59 | ddf2e698 | Grade B (Q1 FY2027 earnings +29.2% YoY sales). Low-float 2.8M AH BUILD, 3rd AH scan, real SIP accumulation, Total% +100.8% under ceiling. |
+| PAPL | $1.10 | 2026-07-21 00:01 CET | 80 | 4e6d2779 | Grade B (Pineapple Financial Q3 FY2026 earnings). AH BUILD, 2nd AH scan (+15.1%→+39.0%), real SIP accumulation, Total% +34.1% under ceiling, peaked 17:35 ET. |
