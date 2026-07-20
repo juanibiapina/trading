@@ -22,6 +22,12 @@ This scan ran before AH open (16:00 ET / 22:00 CET). No paper trades — regular
 - **Session context:** 57 hits but the field is dominated by thin sub-$1 names and packaged-software microcaps with negative IRVol (volume fading). No standout BUILD-into-close candidate.
 - **Next step:** AH scans at 22:00 / 22:30 / 23:00+ CET decide entries. Per learning-phase rule, no entries before 23:00 CET regardless.
 
+## Scan 22:00 CET (4:00 PM ET) — AH open, observation only
+
+Scanner run at 16:00:16 ET (first minute of AH): **0 hits**. The postmarket feed has not populated yet at the open. No candidates with AH data.
+
+Per learning-phase rule, no entries before 23:00 CET regardless. Watch names carried from the 21:30 regular-session scan (ADVB, GLVT, SINC, CRNG, NTRX, ZYBT, NATM) all showed thin/fading late-session volume — none confirmed in AH yet. Next scans at 22:30 / 23:00+ CET decide entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
