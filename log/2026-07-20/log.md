@@ -116,6 +116,39 @@ Scanner run at 17:00:15 ET: **4 hits**.
 
 **Entry taken:** HIHO (Grade B, BUILD, float 2.8M, filled $1.50). This is the last entry-eligible scan of the night per schedule; final feed-lag cross-check on tracked names (SHPH untradable, GORO bad-print, HXHX gate-unmet, GBR/SLGB sub-threshold) surfaced no additional rescue candidate.
 
+## Scan 23:30 CET (5:30 PM ET) — AH, ENTRY-ELIGIBLE
+
+Scanner run at 17:30:10 ET: **7 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HIHO | [TV](https://www.tradingview.com/chart/?symbol=HIHO) | $0.93 | +19.7% | +43.1% | $1.33 | +71.2% | 22.1M | 2.5M | 8.9x | 2.8M | Misc Manufacturing |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.03 | -4.1% | +20.8% | $3.66 | +15.8% | 1.8M | 7.9M | 0.2x | 596K | Pharmaceuticals |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $0.61 | -33.5% | +5.7% | $0.65 | -29.7% | 741K | 4.5M | 0.2x | 5.5M | Misc Commercial Svcs |
+| LASE | [TV](https://www.tradingview.com/chart/?symbol=LASE) | $1.09 | +17.8% | +5.5% | $1.15 | +24.3% | 408K | 2.8M | 0.1x | 32.6M | Electronic Equipment |
+| PAPL | [TV](https://www.tradingview.com/chart/?symbol=PAPL) | $0.88 | -3.6% | +15.1% | $1.01 | +11.0% | 291K | 71K | 4.1x | n/a | Finance/Rental/Leasing |
+| CPHI | [TV](https://www.tradingview.com/chart/?symbol=CPHI) | $0.91 | -17.3% | +7.7% | $0.98 | -10.9% | 84K | 13.0M | 0.0x | 37.8M | Pharmaceuticals |
+| GORO | [TV](https://www.tradingview.com/chart/?symbol=GORO) | $1.00 | +7.8% | +221.8% | $3.21 | +246.9% | 33K | 8.1M | 0.0x | 160.0M | Precious Metals |
+
+### Spike-bar instrumentation (log-only, AH >10%)
+
+- `HIHO 2026-07-20 SPIKE 16:04ET +16% $1.08 373 trades / 190k sh (first co-spike bar) (as-of 17:30ET)`
+- `SHPH 2026-07-20 SPIKE 16:04ET +22% $3.69 550 trades / 50k sh (first co-spike bar) (as-of 17:30ET)`
+- `PAPL 2026-07-20 SPIKE 17:09ET +20% $1.06 244 trades / 61k sh (first co-spike bar) (as-of 17:30ET)`
+- `GORO 2026-07-20 NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 17:30ET)`
+
+### Evaluation
+
+- **HIHO** — already ENTERED at 23:00 ($1.50, 59 sh, id ddf2e698). No re-entry (one entry per candidate per night). Trajectory note: AH now +43.1% ($1.33) vs +67.8% ($1.56) at 23:00 — **fading off the 16:35 ET AH high ($1.69)**. Book bid $1.28 x1300 / ask $1.69 x200 (quote stale ~17:00 ET). Position held; premarket exit handled by position-evaluation. AH volume still accumulating (22.1M total AH vol, VRatio 8.9x).
+- **PAPL** — NEW name, **1st AH scan appearance** — the 2-AH-scan >10% gate is unmet, so **no entry this scan** regardless. `tradable=true`. SPIKE fired late (17:09 ET) with real SIP accumulation: bars 5.5K → 121K → 192K → 68K sh, 434/988/323 trades — genuine, building. **Catalyst = earnings:** Pineapple Financial (mortgage brokerage/tech, Canada) reported Q3 FY2026 results today (Mon Jul 20, pre-scheduled) — the AH driver. Grade B pending the actual beat/miss detail (consensus was a loss of ~$0.41 EPS). Float n/a (very small; MCap ~$23M). Quote showed `ask $0.00 x0` but the timestamp was stale (16:00 ET) while SIP shows a live book — not a bad-print reject, staleness artifact. **Watch — needs a 2nd AH confirmation at 00:00/00:30 to become entry-eligible.**
+- **SHPH** — untradable (carried, `tradable=false`). AH +20.8% but no fillable book. Qualified-but-untradable broker-block. No further workup.
+- **VCIG** — AH +5.7% below threshold; Day% -33.5% (dead-cat territory), Total% -29.7% still deep below close. Not a candidate.
+- **LASE** — AH +5.5% below threshold. Not a candidate.
+- **CPHI** — AH +7.7% below threshold; Day% -17.3%. Not a candidate.
+- **GORO** — carried skip: NO-SPIKE, `tradable=false`, AH +221.8% on only 33K AH vol vs 160M float = bad print / illiquid ramp. Cannot fill.
+
+**No new entry this scan.** HIHO position stands (entered 23:00). PAPL is the only fresh AH >10% mover but is gate-unmet (1st AH scan) — carry to 00:00/00:30 for a possible 2nd confirmation. Next scans at 00:00 / 00:30 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
