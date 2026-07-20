@@ -28,6 +28,14 @@ Scanner run at 16:00:16 ET (first minute of AH): **0 hits**. The postmarket feed
 
 Per learning-phase rule, no entries before 23:00 CET regardless. Watch names carried from the 21:30 regular-session scan (ADVB, GLVT, SINC, CRNG, NTRX, ZYBT, NATM) all showed thin/fading late-session volume — none confirmed in AH yet. Next scans at 22:30 / 23:00+ CET decide entries.
 
+## Scan 22:15 CET (4:15 PM ET) — AH, observation only
+
+Scanner run at 16:15:16 ET: **0 hits**. The postmarket feed still has not populated a screener field 15 min into AH.
+
+SIP cross-check on tracked watch names (feed-lag rescue): only **ADVB** shows real AH volume — first AH bar (16:00-16:05 ET) 280K sh / 3221 trades, VWAP $8.74, but **fading** from the $9.03 close (bar closed $8.37, well below VWAP). CRNG, NTRX, SINC, NATM: no AH bars yet (no AH trades). No confirmation of any watch name building into AH.
+
+Per learning-phase rule, no entries before 23:00 CET regardless. Next scans at 22:30 / 23:00+ CET decide entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
