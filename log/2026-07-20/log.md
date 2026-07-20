@@ -90,7 +90,34 @@ Scanner run at 16:45:20 ET: **5 hits**.
 
 Per learning-phase rule, no entries before 23:00 CET. Next scan at 23:00 CET decides entries — **HIHO leads, gate met, pending it holds the build.**
 
+## Scan 23:00 CET (5:00 PM ET) — AH, ENTRY-ELIGIBLE
+
+Scanner run at 17:00:15 ET: **4 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HIHO | [TV](https://www.tradingview.com/chart/?symbol=HIHO) | $0.93 | +19.7% | +67.8% | $1.56 | +100.8% | 17.2M | 2.0M | 8.7x | 2.8M | Misc Manufacturing |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.03 | -4.1% | +18.5% | $3.59 | +13.6% | 1.5M | 7.9M | 0.2x | 596K | Pharmaceuticals |
+| HXHX | [TV](https://www.tradingview.com/chart/?symbol=HXHX) | $0.53 | -7.1% | +11.4% | $0.59 | +3.5% | 68K | 48K | 1.4x | 4.0M | Trucking |
+| GORO | [TV](https://www.tradingview.com/chart/?symbol=GORO) | $1.00 | +7.8% | +240.9% | $3.40 | +267.4% | 17K | 8.1M | 0.0x | 160.0M | Precious Metals |
+
+### Spike-bar instrumentation (log-only, AH >10%)
+
+- `HIHO 2026-07-20 SPIKE 16:04ET +16% $1.08 373 trades / 190k sh (first co-spike bar) (as-of 17:00ET)`
+- `SHPH 2026-07-20 SPIKE 16:04ET +22% $3.69 550 trades / 50k sh (first co-spike bar) (as-of 17:00ET)`
+- `GORO 2026-07-20 NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 17:00ET)`
+
+### Evaluation
+
+- **HIHO — ENTERED.** Clears every gate. Gate met (3rd AH scan: 22:30 +49.5%, 22:45 +59.2%, 23:00 +67.8% — rising each scan). Float 2.8M (<10M ideal), VRatio 8.7x, Total% +100.8% (under +150% ceiling), Day% +19.7% (well above -15%). `tradable=true`. Real SIP accumulation, not a print: bars 195K → 3.26M → 3.48M → 1.43M → 2.98M → 1.44M → 2.14M → 2.59M → 1.64M → 1.48M sh, thousands of trades/bar, VWAP climbing $1.02 → $1.61, AH high $1.69 at 16:35 ET. Trajectory is BUILD/hold making new highs late (16:35), not SPIKE→FADE; current ~$1.52 within 20% of the $1.69 high. Two-sided fillable book (bid $1.28 x1300 / ask $1.69 x200). **Catalyst Grade B:** Q1 FY2027 earnings today (Mon Jul 20) — net sales ~$2.0M **+29.2% YoY**, gross profit +58.4% to $835K, margin +800bps to 42%, return to net-income growth. **Entered:** BUY 59 @ limit $1.72 ext (id ddf2e698), **filled @ $1.50** (below ask, better fill). ~$88.50 deployed.
+- **SHPH** — untradable (carried, `tradable=false`). AH +18.5% but no fillable book; qualified-but-untradable broker-block. No further workup (carried from 22:30/22:45). Morning-eval tally: qualified-but-untradable.
+- **HXHX** — new name, AH +11.4% but **1st AH scan appearance** (2-AH-scan gate unmet), Total% +3.5%, VRatio 1.4x. Not an entry this scan; would need a second AH confirmation. `tradable=true`. Watch only.
+- **GORO** — carried skip: NO-SPIKE, `tradable=false`, AH +240.9% on only 17K AH vol vs 160M float = bad print / illiquid ramp. Cannot fill.
+
+**Entry taken:** HIHO (Grade B, BUILD, float 2.8M, filled $1.50). This is the last entry-eligible scan of the night per schedule; final feed-lag cross-check on tracked names (SHPH untradable, GORO bad-print, HXHX gate-unmet, GBR/SLGB sub-threshold) surfaced no additional rescue candidate.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| HIHO | $1.50 | 2026-07-20 23:01 CET | 59 | ddf2e698 | Grade B (Q1 FY2027 earnings +29.2% YoY sales). Low-float 2.8M AH BUILD, 3rd AH scan, real SIP accumulation, Total% +100.8% under ceiling. |

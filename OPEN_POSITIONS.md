@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | No open positions. |
+| HIHO | $1.50 | 59 | 2026-07-20 23:01 CET | B (Q1 FY2027 earnings: net sales +29.2% YoY, gross profit +58.4%, margin +800bps) | ddf2e698-5152-443a-9d85-5fe90d95483c | Low-float (2.8M) AH BUILD on same-day earnings. 3rd AH scan appearance (+49.5%→+59.2%→+67.8%), real SIP accumulation (M sh/bar, thousands of trades), VWAP climbing $1.02→$1.61. Total% +100.8% (under 150% ceiling), Day% +19.7%. Filled @ $1.50. |
 
 ## Position Rules
 
