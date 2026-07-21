@@ -8,8 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|--------|------------|----------------|----------|-------|
-| HIHO | $1.50 | 59 | 2026-07-20 23:01 CET | B (Q1 FY2027 earnings: net sales +29.2% YoY, gross profit +58.4%, margin +800bps) | ddf2e698-5152-443a-9d85-5fe90d95483c | Low-float (2.8M) AH BUILD on same-day earnings. Peak $1.89 (+26%, SIP PM 04:00 ET). Current live SIP ~$1.59 (+6%). 10:30 CET eval: HOLD, day 1 of 2, peak under +30% trail threshold, above -15% hard stop ($1.28). Filled @ $1.50. |
-| PAPL | $1.10 | 80 | 2026-07-21 00:01 CET | B (Pineapple Financial Q3 FY2026 earnings) | 4e6d2779-742f-44cc-957c-4b6d7d4ddb74 | AH BUILD on same-day earnings. Peak $1.33 (+21%, OVN post-entry). Current live SIP ~$1.06 (-3.6%). 10:30 CET eval: HOLD, day 1 of 2, peak under +30% trail threshold, above -15% hard stop ($0.94). Alpaca quote frozen/stale; SIP live. BUY limit $1.28 filled @ $1.10. |
+| _(none)_ | | | | | | Flat as of 2026-07-21 14:30 CET pulse. |
 
 ## Position Rules
 
@@ -61,7 +60,8 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
-| GANX | $2.39 | $1.97 | -$17.22 | -17.6% | 1 | B (Phase 1b Parkinson's data) | Hard stop hit. Held overnight; PM faded from $2.17 to $1.97, below -15% stop ($2.03). Sold per Grade B hard-stop rule. Real fill $1.97. Peak $2.59 (AH 06-29). |
+| HIHO | $1.50 | $1.26 | -$14.16 | -16.0% | 2 | B (Q1 FY2027 earnings: net sales +29.2% YoY, gross profit +58.4%, margin +800bps) | Grade B — day-2 time limit reached AND at -15% hard stop ($1.28). Entered 07-20 23:01 CET. SIP PM 07-21 opened $1.89 (peak, +26%) then faded steadily; live Alpaca quote bid $1.21 x1000 at pulse. Sold on time limit + hard stop. SELL 59 @ limit $1.18 ext (id f879332a) filled @ $1.26. Real fill $1.26. |
+| PAPL | $1.10 | $0.84 | -$20.80 | -23.6% | 1 | B (Pineapple Financial Q3 FY2026 earnings) | Grade B — below -15% hard stop ($0.94). Entered 07-21 00:01 CET. Peak $1.33 (+21%, OVN). SIP PM 07-21 opened $1.28 then faded steadily to $0.80-0.85 on real volume (341K/153K/180K sh bars). Alpaca quote stale; SIP liquid. Sold per hard-stop rule. SELL 80 @ limit $0.79 ext (id 9ca4f305) filled @ $0.84. Real fill $0.84. |
 | IVF | $1.58 | $2.00 | +$25.20 | +26.6% | 1 | None (Grade None) | Low-float AH build, no fresh catalyst. Sold premarket per Grade None rule (exit at any profit). PM ran to $2.59 peak (+64% from entry); exited at $2.00. |
 | CTNT | $2.05 | $1.90 | -$7.20 | -7.3% | 1 | None (Grade None) | Low-float squeeze, no catalyst. Sold first premarket opportunity per Grade None rule. AH peaked $2.21; faded to $1.94 PM. Exited at $1.90 (real fill). |
 | ALZN | $1.31 | $1.29 | -$1.46 | -1.5% | 1 | None (Grade None) | No catalyst (earnings due 7/19; no same-day PR). Sold first PM opportunity per Grade None rule. OVN peak $1.45 (+10.7%); faded overnight. SELL 73 @ $1.29 ext (id f7da27e2) filled 2026-07-01 08:33 UTC. Real fill $1.29. |

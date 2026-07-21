@@ -109,3 +109,18 @@ AH: spike to $1.69 (16:35 ET) → hold ~$1.28-1.40 overnight → PM re-explosion
 **Actions taken:**
 - None. Both HOLD. No trail stops set (both peaks under +30% Grade B trail threshold). No hard stops hit. No time limit reached (Grade B allows 2 days; both are day 1).
 - Next evaluation 14:30 CET pulse.
+
+## Position Evaluation — 14:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Peak % | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|--------|------|-------|----------|--------|
+| HIHO | $1.50 | $1.26 (fill) | -16.0% | $1.89 | +26% | 2 | B | SELL | Day-2 time limit reached AND at -15% hard stop ($1.28). SIP PM opened $1.89 then faded; live bid $1.21 x1000 |
+| PAPL | $1.10 | $0.84 (fill) | -23.6% | $1.33 | +21% | 1 | B | SELL | Below -15% hard stop ($0.94). SIP PM faded $1.28→$0.83 on real volume |
+
+**Data note:** HIHO Alpaca quote fresh at pulse (bid $1.21 x1000, ask $1.27 x1000). PAPL Alpaca quote stale (yesterday 20:00Z, `ask $0.00 x0`) but SIP 5Min bars showed real PM liquidity (341K/153K/180K sh recent bars) at $0.80-0.85 — used SIP for exit price. Both fills came in above limit.
+
+**Actions taken:**
+- **SELL HIHO** 59 @ limit $1.18 ext (id f879332a) → filled @ **$1.26**. P&L **-$14.16 (-16.0%)**. Grade B day-2 time limit + hard stop.
+- **SELL PAPL** 80 @ limit $0.79 ext (id 9ca4f305) → filled @ **$0.84**. P&L **-$20.80 (-23.6%)**. Grade B below -15% hard stop.
+- Both moved to Closed Positions in OPEN_POSITIONS.md. **Flat — no open positions.**
+- Combined realized P&L this pulse: **-$34.96**.
