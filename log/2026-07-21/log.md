@@ -256,3 +256,42 @@ Names with AH >10%: **AEHL** (+76.6%, new), **KUST** (+37.4%), **DFNS** (+12.8%)
 - **AEHL — GATE-BLOCKED (carry).** First AH scan appearance at 23:00 → the 2-AH-scan gate can never be met via a single scan; not entry-eligible tonight regardless of trajectory. Strong new mover (VRatio 3.0x, 4.4M real AH sh) but already spike→fading off its $1.38 peak, no catalyst. Carry to 23:30 — if it re-ramps and re-appears >10%, re-evaluate (gate would then be met). Log for the morning retrospective as the night's deepest-volume AH mover.
 
 **Night verdict:** No candidate clears all live-entry gates at 23:00. The only clean-BUILD/holding name (KUST) is dead-cat-blocked (override watch, hypothetical only). DFNS and AEHL are SPIKE→FADE. Consistent with the SPIKE→FADE-leaning picture flagged since 22:45 — every AH mover tonight ignited at/near the bell (16:10–16:36 ET) and is fading. **No live paper entry.** Carry AEHL, KUST, DFNS to 23:30/00:00; watch AEHL for a gate-meeting re-appearance and KUST for override-watch PM follow-through.
+
+## Scan 23:30 CET (5:30 PM ET) — AH — ENTRY-ELIGIBLE
+
+`scan.py --all` (17:30:16 ET): **10 hits.** Names with AH >10%: **AEHL** (+50.3%), **NVVE** (+29.4%, new), **KUST** (+20.7%), **SNTG** (+13.4%). CPHI/DFNS/MIMI/CRMT/LVWR/LEXX all below the 10% AH bar.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $0.65 | -3.6% | +50.3% | $0.97 | +44.8% | 12.8M | 2.4M | 5.4x | 15.6M | Building Products |
+| NVVE | [TV](https://www.tradingview.com/chart/?symbol=NVVE) | $7.07 | -12.4% | +29.4% | $9.15 | +13.4% | 578K | 7.0M | 0.1x | 416K | Electrical Products |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $0.96 | -24.3% | +20.7% | $1.16 | -8.7% | 2.4M | 10.0M | 0.2x | 577K | Misc Commercial Services |
+| SNTG | [TV](https://www.tradingview.com/chart/?symbol=SNTG) | $2.09 | -0.9% | +13.4% | $2.37 | +12.3% | 128K | 24K | 5.3x | 1.1M | Finance/Rental/Leasing |
+
+**Spike-bar instrumentation (log-only, as-of 17:30 ET):**
+- AEHL — `SPIKE 16:36ET +31% $0.85 87 trades / 39k sh` (unchanged from 23:00)
+- NVVE — `SPIKE 16:45ET +32% $9.30 268 trades / 45k sh` (first co-spike bar)
+- KUST — `SPIKE 16:32ET +34% $1.29 466 trades / 97k sh` (unchanged from 23:00)
+- SNTG — `SPIKE 16:07ET +29% $2.70 56 trades / 6k sh` (early ignition, thin 6k sh)
+
+**Tradability:** AEHL / NVVE / KUST / SNTG all `tradable=true`.
+
+**SIP verification (last bars 21:15Z / 17:15 ET — fresh, ~15-min lag relative to the 17:30 scan):**
+- **AEHL** — real ignition 16:40 ET (20:40Z) **4.09M sh / 18,050 trades** exploding to H $1.38, then a clean **fade**: $1.14→$0.99→$1.01→$0.99→$0.91→$0.92→$0.97→$0.94 (C 21:15Z). Now **32% off the $1.38 AH high** — a fade, not a hold. Quote fresh bid $0.96 / ask $1.02. Real volume (VRatio 5.4x confirmed) but SPIKE→FADE.
+- **NVVE** — real late ignition 16:45 ET (20:45Z) 210K sh / 3247 trades to H $9.92, built to H $10.45 (16:55 ET), holding: recent bars $9.18→$9.75 (C 21:15Z), vwap $9.68. Now **6.7% off the $10.45 AH high — HOLDING within 20%**, on real volume (110K–270K sh/bar, thousands of trades). Post-1:18-reverse-split micro-float (~524K shares). Quote stale (bid $6.02 / ask $8.25 @ 20:00Z) but SIP shows real fresh two-sided liquidity through 21:15Z. **BUILD-and-hold.**
+- **KUST** — ignition 16:30, peaked H $1.40 (16:35), faded to C $1.14 (21:15Z), **18% off high**. AH% now **falling** (23:00 +37.4% → 23:30 +20.7%). Quote fresh, two-sided $1.22/$1.24.
+- **SNTG** — early ignition 16:07 ET ($2.70), faded to $2.11, choppy $2.20–2.46, now C $2.26 (21:15Z), **16% off high**. Recent bars thinning to ~1000 sh / <20 trades — volume fading hard despite VRatio 5.3x (absolute AH vol only 128K).
+
+**Catalyst search:**
+- **NVVE** (Nuvve Holding, EV/V2G) — **no same-day (Jul 21) catalyst found.** Context: 1-for-18 reverse split effective Jul 6 (share count → ~524K), 10-Q filed Jul 15, Q2 earnings not due until Aug 6. Post-reverse-split micro-float pump with repeated volatility halts; momentum/low-float move, no news catalyst.
+- **AEHL** — no same-day catalyst (carried from 23:00; known volatile China small-cap pump).
+- **KUST** — no same-day catalyst (carried from 23:00).
+
+### Decisions — NO LIVE ENTRY
+
+- **AEHL — SKIP: SPIKE→FADE (gate met).** The 2-AH-scan gate is now met (23:00 +76.6%, 23:30 +50.3%), but AH% is declining and the price is **32% off its $1.38 AH high** (peaked 16:40 ET, before 17:30). SPIKE→FADE is 0/10+ for PM continuation; no catalyst. A >20%-off-high collapse is a fade, not a hold. Skip.
+- **NVVE — GATE-BLOCKED (carry, strong).** First AH scan appearance at 23:30 → the 2-AH-scan gate can never be met via a single scan; not entry-eligible tonight. But it is the night's one genuine **BUILD-and-hold**: holding within 6.7% of its $10.45 AH high on real accumulating volume, micro-float ~524K, Day% -12.4% (above -15%, not dead-cat), Total% +13.4% (well under the +150% ceiling). No catalyst (post-reverse-split momentum). **Carry to 00:00 — if it re-appears >10%, the gate is met and it becomes the strongest live candidate of the night.**
+- **KUST — DEAD-CAT SKIP (override watch weakening).** Day% -24.3% (≤ -15%) → dead-cat filter blocks live entry. Prior 23:00 override-watch condition (AH% *rising* across scans while reclaiming above close) has **broken**: AH% is now *falling* (37.4% → 20.7%) and it's 18% off its high — no longer building. Hypothetical override entry from 23:00 (~$1.24) continues for the dataset, but it is now fading, not building. Skip.
+- **SNTG — SKIP: gate not met + fading.** First scan >10% at 23:30 (was +5.3%, +9.7% earlier — below bar), so the 2-AH-scan gate is not met. Early peak (16:07 ET), 16% off high, volume thinning to ~1000 sh/bar. Skip.
+
+**Night verdict:** No candidate clears all live-entry gates at 23:30. The two gate-met names are both blocked on trajectory/filter: AEHL is SPIKE→FADE (32% off high, no catalyst), KUST is a fading dead-cat. The one genuine BUILD-and-hold (NVVE) is a first-appearance name the 2-AH-scan gate structurally blocks. **No live paper entry.** Carry NVVE (primary), AEHL, KUST to 00:00 — watch NVVE for a gate-meeting re-appearance >10%.
