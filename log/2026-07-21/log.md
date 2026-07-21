@@ -336,3 +336,45 @@ Names with AH >10%: **AEHL** (+76.6%, new), **KUST** (+37.4%), **DFNS** (+12.8%)
 - **NTCL / IPW — SKIP:** NTCL 6K AH vol (thin), Day -18.5% dead-cat, Total +1.5%, first appearance. IPW first appearance at 00:00 (+10.8%), 54K vol — 2-AH-scan gate not met.
 
 **Night verdict:** No candidate clears all live-entry gates with a hold/build trajectory. NVVE — the one BUILD-and-hold at 23:30 and the sole gate-met name with float/Day%/ceiling all clean — **turned to fade at 00:00** (early 16:55 peak, declining across scans, volume death). Every AH mover tonight ignited at/near the bell (16:07–16:55 ET) and is fading — a **SPIKE→FADE-only** picture. Per the SPIKE→FADE-only-night rule (0/10+ PM continuation), **no live paper entry.** Carry NVVE, AEHL, KUST, SNTG to the final 00:30 scan; run the final-scan feed-lag cross-check there.
+
+## Scan 00:30 CET (6:30 PM ET) — AH — ENTRY-ELIGIBLE — FINAL SCAN
+
+`scan.py --all` (18:30:17 ET): **13 hits.** Names with AH >10%: **AEHL** (+37.9%), **CPHI** (+55.6%, over-ceiling), **NVVE** (+24.5%), **KUST** (+17.6%, dead-cat), **MIMI** (+11.1%), **SNTG** (+10.5%).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $0.65 | -3.6% | +37.9% | $0.89 | +32.9% | 17.9M | 2.9M | 6.1x | 15.6M | Building Products |
+| CPHI | [TV](https://www.tradingview.com/chart/?symbol=CPHI) | $8.10 | +790.1% | +55.6% | $12.60 | +1284.6% | 5.6M | 22.0M | 0.3x | 37.8M | Pharmaceuticals: Major |
+| NVVE | [TV](https://www.tradingview.com/chart/?symbol=NVVE) | $7.07 | -12.4% | +24.5% | $8.80 | +9.1% | 826K | 7.0M | 0.1x | 416K | Electrical Products |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $0.96 | -24.3% | +17.6% | $1.13 | -11.0% | 2.6M | 10.0M | 0.3x | 577K | Misc Commercial Services |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $2.16 | +1.4% | +11.1% | $2.40 | +12.7% | 466K | 5.5M | 0.1x | 4.7M | Misc Commercial Services |
+| SNTG | [TV](https://www.tradingview.com/chart/?symbol=SNTG) | $2.09 | -0.9% | +10.5% | $2.31 | +9.5% | 140K | 26K | 5.4x | 1.1M | Finance/Rental/Leasing |
+
+**Spike-bar instrumentation (log-only, as-of 18:30 ET):**
+- AEHL — `SPIKE 16:36ET +31% $0.85 87 trades / 39k sh` (unchanged)
+- NVVE — `SPIKE 16:45ET +32% $9.30 268 trades / 45k sh` (unchanged)
+- KUST — `SPIKE 16:32ET +34% $1.29 466 trades / 97k sh` (unchanged)
+- SNTG — `SPIKE 16:07ET +29% $2.70 56 trades / 6k sh` (unchanged; thin 6k-sh ignition)
+
+**Final-scan feed-lag cross-check (SIP bars through 21:55Z / 17:55 ET — fresh, ~35-min behind the 18:30 scan; TradingView and SIP agree, no under-reporting rescue triggered):**
+- **AEHL** — post-ignition ($1.38 peak 16:40 ET) SIP faded and is chopping $0.89–1.11, last bars C $0.89 (21:55Z) on 340K sh. **~35% off the AH high** — SPIKE→FADE confirmed on fresh SIP. Real volume (VRatio 6.1x) but no hold.
+- **NVVE** — peak $10.45 (16:55 ET), SIP now C $8.62 (21:55Z), **~17.5% off high**, volume collapsed (peak 269K sh/bar → last bars 10K–21K sh, ~190–300 trades). Declining across all three gate scans (29.4% → 22.8% → 24.5% is noisy but SIP price trend is down). SPIKE→FADE / early-peak-also-fading.
+- **KUST** — dead-cat (Day -24.3%), AH% falling across scans (37.4% → 20.7% → 16.7% → 17.6%), SIP $1.10–1.16 on thin 5K–40K sh/bar. Still above its $0.96 close but no longer building. Dead-cat blocked.
+- **SNTG** — dead: SIP 2–2062 sh/bar, 2–41 trades. Early 16:07 peak, volume dead. Absolute AH vol only 140K despite VRatio 5.4x.
+- **CPHI** — Total% +1284.6% (extreme runner far over +150% ceiling), not a candidate.
+- **MIMI** — 466K AH vol, Total +12.7%, faded since 22:30 (+21.3% → +11.1%). Not a hold.
+
+**No tracked name is under-reported by TradingView while surging on SIP.** Every pipeline name (AEHL, NVVE, KUST, SNTG, MIMI, DFNS, DUO, VIVK, CPHI) is confirmed fading/dead on fresh SIP. No data-source rescue this night.
+
+### Decisions — NO LIVE ENTRY
+
+- **AEHL — SKIP: SPIKE→FADE.** Gate met, ~35% off $1.38 high, no catalyst. 0/10+.
+- **NVVE — SKIP: early-peak-also-fading.** Gate met but peaked 16:55 ET (early), ~17.5% off high, volume collapsed, declining SIP trend. No catalyst. Early-peak-also-fading is 0/6+.
+- **KUST — SKIP: fading dead-cat.** Day -24.3%, override-watch broke (AH% falling 4 scans running). Hypothetical override entry from 23:00 (~$1.24) continues for the dataset only.
+- **SNTG — SKIP: SPIKE→FADE + dead volume.** Early 16:07 peak, 2–2062 sh/bar. Thin, faded.
+- **CPHI — not a candidate:** +1284.6% Total%, extreme runner over ceiling.
+- **MIMI — SKIP: faded since 22:30, not a hold.**
+
+**Night verdict — SPIKE→FADE-ONLY NIGHT, NO ENTRY.** Every AH mover tonight ignited at/near the bell (16:07–16:55 ET) and faded by 17:30. The one BUILD-and-hold candidate (NVVE) turned to fade at 00:00 and stayed faded at 00:30. No candidate holds within ~20% of its AH high on sustained volume. Per the SPIKE→FADE-only-night skip rule (0/10+ PM continuation), **no live paper entry.** A skip here avoids a predictable loss, not lost data.
+
+**Note for morning eval / email:** clean SPIKE→FADE-only night — no entry is the correct call. The night's deepest-volume mover (AEHL, VRatio 6.1x, 17.9M AH sh) was a real spike→fade off $1.38; the one genuine BUILD-and-hold (NVVE) was a first-appearance-at-23:30 name the 2-AH-scan gate structurally delayed, and it rolled over before the gate could clear on a holding trajectory. No detection gap; the scanner surfaced every mover.
