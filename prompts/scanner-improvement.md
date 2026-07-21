@@ -25,7 +25,7 @@ This runs daily after the morning evaluation. The goal is continuous, data-drive
 
 - `Day Trading.md` (trading plan — user-maintained)
 - `AGENTS.md` (agent instructions)
-- `scheduler.json` (schedule — managed separately)
+- `scheduler.json` (schedule — managed separately; lives at `/home/juan/workspace/juanibiapina/agent/apps/bot/.local/share/agent/scheduler.json`, outside this repo)
 - This file (`prompts/scanner-improvement.md`)
 - Core trading rules (position sizing, learning phase parameters)
 

@@ -51,6 +51,9 @@ they are always in scope to raise.
   Initiative 3. BUT any change to the timing of an existing **trading scan or
   evaluation** pulse must be *proposed in the run report for Juan to veto*, not
   silently applied. Adding a new log-only pulse is fine to apply directly.
+  The live schedule lives in
+  `/home/juan/workspace/juanibiapina/agent/apps/bot/.local/share/agent/scheduler.json`
+  (outside this repo). Read it there directly instead of hunting for it.
 
 ## What You Must NOT Change
 
