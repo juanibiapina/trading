@@ -295,3 +295,44 @@ Names with AH >10%: **AEHL** (+76.6%, new), **KUST** (+37.4%), **DFNS** (+12.8%)
 - **SNTG — SKIP: gate not met + fading.** First scan >10% at 23:30 (was +5.3%, +9.7% earlier — below bar), so the 2-AH-scan gate is not met. Early peak (16:07 ET), 16% off high, volume thinning to ~1000 sh/bar. Skip.
 
 **Night verdict:** No candidate clears all live-entry gates at 23:30. The two gate-met names are both blocked on trajectory/filter: AEHL is SPIKE→FADE (32% off high, no catalyst), KUST is a fading dead-cat. The one genuine BUILD-and-hold (NVVE) is a first-appearance name the 2-AH-scan gate structurally blocks. **No live paper entry.** Carry NVVE (primary), AEHL, KUST to 00:00 — watch NVVE for a gate-meeting re-appearance >10%.
+
+## Scan 00:00 CET (6:00 PM ET) — AH — ENTRY-ELIGIBLE
+
+`scan.py --all` (18:00:18 ET): **13 hits.** Names with AH >10%: **AEHL** (+53.2%), **NVVE** (+22.8%), **KUST** (+16.7%), **CPHI** (+14.8%, over-ceiling), **SNTG** (+12.0%), **IPW** (+10.8%, new), **NTCL** (+24.6%, thin/dead-cat).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $0.65 | -3.6% | +53.2% | $0.99 | +47.6% | 16.6M | 2.8M | 6.0x | 15.6M | Building Products |
+| NVVE | [TV](https://www.tradingview.com/chart/?symbol=NVVE) | $7.07 | -12.4% | +22.8% | $8.68 | +7.6% | 774K | 7.0M | 0.1x | 416K | Electrical Products |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $0.96 | -24.3% | +16.7% | $1.12 | -11.7% | 2.5M | 10.0M | 0.3x | 577K | Misc Commercial Services |
+| SNTG | [TV](https://www.tradingview.com/chart/?symbol=SNTG) | $2.09 | -0.9% | +12.0% | $2.34 | +10.9% | 133K | 25K | 5.3x | 1.1M | Finance/Rental/Leasing |
+| CPHI | [TV](https://www.tradingview.com/chart/?symbol=CPHI) | $8.10 | +790.1% | +14.8% | $9.30 | +922.0% | 3.8M | 21.7M | 0.2x | 37.8M | Pharmaceuticals: Major |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $0.90 | +0.1% | +10.8% | $1.00 | +10.9% | 54K | 1.9M | 0.0x | 1.6M | Internet Retail |
+| NTCL | [TV](https://www.tradingview.com/chart/?symbol=NTCL) | $3.21 | -18.5% | +24.6% | $4.00 | +1.5% | 6K | 56K | 0.1x | 755K | Packaged Software |
+
+**Spike-bar instrumentation (log-only, as-of 18:00 ET):**
+- AEHL — `SPIKE 16:36ET +31% $0.85 87 trades / 39k sh` (unchanged)
+- NVVE — `SPIKE 16:45ET +32% $9.30 268 trades / 45k sh` (unchanged)
+- KUST — `SPIKE 16:32ET +34% $1.29 466 trades / 97k sh` (unchanged)
+- SNTG — `SPIKE 16:07ET +29% $2.70 56 trades / 6k sh` (unchanged; thin 6k-sh ignition)
+
+**Tradability:** NVVE `tradable=true`. AEHL/KUST carried tradable=true.
+
+**SIP verification (last bars 21:45Z / 17:45 ET — fresh, ~15-min lag relative to the 18:00 scan):**
+- **NVVE** — ignition 16:45 ET (210K sh / 3247 trades) → peak **H $10.45 at 16:55 ET (very early)** → then a 30-min roll-over: recovery to $10.02 (17:15) **failed**, then $9.75 → $9.06 → $9.04 → $9.33 → $8.77 → $8.71 → **$8.80 (C 21:45Z)**. Now **15.8% off the $10.45 high** and actively declining. Volume **thinning hard**: peak bars 269K/189K sh → last bars 19K/21K sh. Quote stale/wide (bid $6.02 / ask $8.25 @ 20:00Z). Real ignition volume, but the trajectory has **turned to fade**.
+- **SNTG** — thinning to ~1000–2000 sh/bar (12–22 trades), choppy $2.26–2.38, early 16:07 ET peak. Absolute AH vol only 133K despite VRatio 5.3x. Volume dying.
+- **AEHL** — carried SPIKE→FADE (32%+ off its $1.38 AH high), no catalyst.
+- **KUST** — carried fading dead-cat (Day -24.3%, AH% falling 37.4%→20.7%→16.7% across scans).
+
+**Catalyst search:** NVVE — no same-day catalyst (carried from 23:30: post-1:18-reverse-split micro-float momentum, Q2 earnings due Aug 6, not tonight). AEHL/KUST/SNTG — no same-day catalyst (carried).
+
+### Decisions — NO LIVE ENTRY
+
+- **NVVE — SKIP: early-peak now fading (gate met but trajectory turned).** The 2-AH-scan gate is now MET (23:30 +29.4%, 00:00 +22.8%), and it was the night's one BUILD-and-hold at 23:30 (6.7% off high). But at 00:00 the profile has **rolled over**: peaked **16:55 ET (early, near the bell)**, AH% **declining across both scans** (29.4% → 22.8%), SIP price fading $9.75 → $8.80 over the last 30 min on **collapsing volume** (269K → 19K sh/bar), now 15.8% off high. Per the rule, an early peak becomes a disqualifier when the stock is *also* declining across scans — early-peak-also-fading names are 0/6+ for PM continuation. No catalyst. The within-20%-of-high floor is technically met but the active downtrend + cross-scan fade + volume death make this a SPIKE→FADE, not a hold. Skip.
+- **AEHL — SKIP: SPIKE→FADE (carried).** Gate met, 32%+ off $1.38 high, declining, no catalyst. 0/10+.
+- **KUST — SKIP: fading dead-cat (carried).** Day -24.3%, override-watch broke (AH% now falling 3 scans running). Hypothetical override entry from 23:00 (~$1.24) continues for the dataset only.
+- **SNTG — SKIP: SPIKE→FADE + dying volume.** Gate technically met (23:30 +13.4%, 00:00 +12.0%) but early 16:07 ET peak, volume thinning to ~1–2K sh/bar. Thin, faded.
+- **CPHI — not a candidate:** Total% +922% (far over +150% ceiling), extreme intraday runner giving back AH.
+- **NTCL / IPW — SKIP:** NTCL 6K AH vol (thin), Day -18.5% dead-cat, Total +1.5%, first appearance. IPW first appearance at 00:00 (+10.8%), 54K vol — 2-AH-scan gate not met.
+
+**Night verdict:** No candidate clears all live-entry gates with a hold/build trajectory. NVVE — the one BUILD-and-hold at 23:30 and the sole gate-met name with float/Day%/ceiling all clean — **turned to fade at 00:00** (early 16:55 peak, declining across scans, volume death). Every AH mover tonight ignited at/near the bell (16:07–16:55 ET) and is fading — a **SPIKE→FADE-only** picture. Per the SPIKE→FADE-only-night rule (0/10+ PM continuation), **no live paper entry.** Carry NVVE, AEHL, KUST, SNTG to the final 00:30 scan; run the final-scan feed-lag cross-check there.
