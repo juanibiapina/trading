@@ -157,3 +157,9 @@ Notable low-float / big intraday movers to watch into AH:
 `scan.py --all` (16:00:10 ET): **0 hits.** AH just opened at the scan minute — TradingView `postmarket_volume`/`postmarket_change` fields are empty at the bell, the expected first-scan blank. No candidates surfaced.
 
 Observation-only scan (learning phase: no entries before 23:00 CET). None of the 21:30 regular-session watch names (VIVK, MLEC, SLGB, KIDZ) re-appeared in the AH feed yet — too early; re-check at 22:30. No entries.
+
+## Scan 22:15 CET (4:15 PM ET) — AH
+
+`scan.py --all` (16:15:10 ET): **0 hits.** No candidates. AH feed still empty 15 min after the bell — TradingView `postmarket_volume`/`postmarket_change` fields not yet populated for movers.
+
+Observation-only scan (learning phase: no entries before 23:00 CET). Watch names from 21:30 (VIVK, MLEC, SLGB, KIDZ) still not surfacing in the AH feed. No candidates >10% AH → no spike-bar instrumentation to run this scan. No entries.
