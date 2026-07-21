@@ -407,18 +407,30 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** In progress — **spike-bar detector out-of-sample validated
-(2026-07-20); a new late-BUILD detection gap surfaced.** Ran `spike-bar.js` on 3
-fresh 07-16 AH names not in the original batch: it fired SPIKE 3/3 at minutes
-matching the daily-log narratives (BIYA 16:28, GCTK 16:57, CJMB 17:33), GCTK was
-a correct **SPIKE→fade** skip (spike bar ≠ entry green light; continuation gating
-still needed), and — key finding — **CJMB, the name we actually traded and won
-+19.8% on, ignited at 17:33 ET in the still-coarse 17:00–18:30 ET late window and
-waited +27 min for the 18:00 scan.** The 07-17 densification only covers the open
-hour (16:15/16:45), so late-BUILD igniters remain undercaught. **Watch:** if 2–3
-late-BUILD winners accumulate in 17:00–18:30 ET, propose 15-min spacing there too
-(23:45 + 00:15 CET = 17:45 + 18:15 ET); late-BUILD tally = 1 (CJMB). Details in
-`INIT3_IGNITION_TIMING.md` (out-of-sample section). **Prior: AH-open scans wired
+**Status:** In progress — **spike-bar column live-validated on the first wired AH
+session (2026-07-20); two decision-relevant findings + a proposal to Juan.** On
+Mon 07-20 the wired 22:15/22:45 CET scans and the spike-bar column fired live for
+the first time (`log/2026-07-20/log.md`). **(1) Column validated end-to-end** on 6
+real names: HIHO/SHPH SPIKE 16:04, PAPL SPIKE 17:09, ADVB SPIKE 17:32, RDGT SPIKE
+18:00, and **GORO NO-SPIKE = correct skip** (AH +240% on 17K sh / 160M float = bad
+print). But SPIKE ≠ winner (PAPL, ADVB fired SPIKE then faded) — continuation
+gating still required. **(2) The screener feed is BLIND before ~16:30 ET:** the
+22:00/22:15 scans returned **0 screener hits** (TradingView postmarket field
+doesn't populate until ~16:30 ET), so the open-hour densification adds nothing via
+the screener — only the SIP cross-check (feed-lag rescue) reached the early window
+and flagged ADVB at 22:15. HIHO ignited 16:04 but the screener didn't surface it
+until 22:30 (~26 min lag); cost no entry (entry banned before 23:00 CET). Next
+step: make the 22:00/22:15 scans run the SIP spike-bar check on the regular-session
+watch list by default (the screener won't help there). **(3) Late-window (17:00–
+18:30 ET) densification case strengthened → PROPOSED to Juan:** RDGT ignited 18:00
+ET but first appeared at the 18:30 final scan (2-AH-scan gate un-meetable) and ran
+to PM +47%; an 18:15 ET scan (00:15 CET) would have made it entry-eligible. Joins
+CJMB (07-16, traded winner +19.8%, caught +27m late). Late-window support tally =
+**2** (low end of the 2–3 trigger). **Proposal (C): add 23:45 + 00:15 CET (17:45 +
+18:15 ET) entry-eligible scans to 15-min-space the late window** — these change
+live entry behavior (after the 23:00 ban), so **Juan veto window; not applied.**
+Details in `INIT3_IGNITION_TIMING.md` (first-live-session section). **Prior:
+out-of-sample detector validation (2026-07-20 3 names); AH-open scans wired
 (2026-07-17) + spike-bar detector built & wired as a log-only scan column
 (2026-07-17, 2nd step).**
 Proposal (A) was applied: added crons `trading-post-market-2215` and
@@ -476,6 +488,10 @@ ask, whose blocker is this detection latency.
 
 **Needs from Juan:** approval of any schedule change before applying (the agent
 can edit its own crons but should confirm timing changes here first).
+- **Veto window (2026-07-21) — proposal (C):** add 23:45 + 00:15 CET (17:45 +
+  18:15 ET) *entry-eligible* scans to 15-min-space the late window. Evidence:
+  CJMB + RDGT under-caught by the 30-min late spacing. Silence = wire a future
+  run; say the word to veto.
 - **Pre-authorized (2026-06-24):** Juan approved adding the 1-2 late
   post-market scans (~01:00/01:30 CET) that the late-AH-tail tracker is building
   a case for ("apply the scheduler changes if you need to"). Apply when the
@@ -732,6 +748,16 @@ tracker).
       window), so they qualify as log-only pulses applied directly. Retroactive
       veto still fine: say the word to remove them. (B) 01:00/01:30 CET tail
       scans remain held (MSW=1, below the 3–4 trigger).
+- [ ] Initiative 3: **PROPOSAL (C) — veto window (2026-07-21).** Add
+      **23:45 + 00:15 CET (17:45 + 18:15 ET)** post-market scans to 15-min-space
+      the *late* AH window (17:00–18:30 ET), mirroring the open-hour densification.
+      These are **entry-eligible** (after the 23:00 CET ban), so they change live
+      entry behavior → proposed, not applied. Evidence: two late-window movers the
+      current 30-min spacing under-caught — CJMB (07-16, traded winner +19.8%,
+      caught +27m late) and RDGT (07-20, ignited 18:00 ET, gate-blocked at the
+      18:30 final scan, ran to PM +47%; an 18:15 scan would have made it
+      entry-eligible). Silence = wire it a future run once the tally is firm;
+      say the word to veto. Details in `INIT3_IGNITION_TIMING.md`.
 - [x] Initiative 6 (problem b): the **partial-hold pilot ask is WITHDRAWN**
       (2026-07-13). `scripts/trailing-sim.js` simulated the trailing-stop hold
       on all 14 closed round-trips' real regular-session 5-min SIP paths; every

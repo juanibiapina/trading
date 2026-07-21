@@ -9,6 +9,61 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-21 — Init 3: first live wired-scan session — spike-bar column validated end-to-end; screener blind before 16:30 ET; late-window densification proposed (C)
+
+**Evaluated:** Prior step (2026-07-20: after the 07-20 AH session, evaluate the
+wired 22:15/22:45 scans' live catch-lag and confirm the spike-bar column
+populated on real candidates) — **worked, with two decision-relevant findings.**
+The 07-20 AH session ran (`log/2026-07-20/log.md`). **The spike-bar column
+populated live on 6 real names** (HIHO/SHPH SPIKE 16:04, PAPL SPIKE 17:09, ADVB
+SPIKE 17:32, RDGT SPIKE 18:00, GORO NO-SPIKE) — validated end-to-end in the cron
+and reproduces on replay. **GORO NO-SPIKE was a correct skip** (AH +240% on 17K
+sh / 160M float = bad print). But SPIKE ≠ winner: PAPL and ADVB fired SPIKE then
+faded, so the column marks ignition, not outcome — continuation gating stays
+required. **On catch-lag:** the 22:00/22:15 scans returned **0 screener hits** —
+the TradingView postmarket field doesn't populate until ~16:30 ET, so the
+open-hour densification adds nothing via the *screener*; only the SIP cross-check
+reached the early window (rescued ADVB at 22:15). HIHO ignited 16:04 but wasn't
+surfaced by the screener until 22:30 (~26 min lag; cost no entry — entry banned
+before 23:00 CET).
+
+**Step taken (pilot / Init 3):** Wrote up the first live wired-scan session in
+`INIT3_IGNITION_TIMING.md` (new "First live out-of-sample AH session" section):
+the 6-name column-validation table, the screener-blind-before-16:30-ET finding,
+and a strengthened late-window densification case. Verified `spike-bar.js`
+reproduces (`HIHO:2026-07-20 --now 17:00` → SPIKE 16:04; `GORO:2026-07-20` →
+NO-SPIKE). Updated the roadmap Init 3 status, Needs-from-Juan, and consolidated
+open-asks with proposal (C).
+
+**Result:** Two carry-forward findings and one Juan proposal. (1) The spike-bar
+instrument is live-validated (6/6 names, correct NO-SPIKE skip). (2) The open-hour
+densification is defeated by the screener's ~16:30 ET population lag — the
+next step is to run the SIP spike-bar check on the regular-session watch list in
+the 22:00/22:15 scans, since the screener is empty there. (3) **Late-window
+densification proposal (C):** RDGT (07-20, ignited 18:00 ET, first-seen at the
+18:30 final scan so the 2-AH-scan gate was un-meetable, ran to PM +47%) joins
+CJMB (07-16 traded winner +19.8%, caught +27m late) — an 18:15 ET scan (00:15
+CET) would have made RDGT entry-eligible. Late-window support tally = 2 (low end
+of the 2–3 trigger). Proposed adding 23:45 + 00:15 CET (17:45 + 18:15 ET)
+entry-eligible scans; since these change live entry behavior, **Juan veto window,
+not applied**.
+
+**Hypothesis / next step:** (a) After the next 1–2 AH sessions, if proposal (C)
+draws no veto, wire the 23:45/00:15 CET late-window scans. (b) Prototype the
+SIP-spike-bar check on the regular-session watch list inside the 22:00/22:15
+scans (the screener is blind <16:30 ET, so SIP is the only path to shrink open-
+window catch-lag) — log-only first. (c) Keep accumulating SPIKE/NO-SPIKE
+readings toward the two live tests: does NO-SPIKE reliably precede a fade (skip
+filter), and does the SPIKE-bar price beat our current late entry (this session:
+HIHO SPIKE $1.08 vs our $1.50 entry = 39% cheaper, but HIHO faded to a -16% exit,
+so entry-price gain ≠ trade win — need more cases).
+
+**Needs from Juan:** **veto window on proposal (C)** — add 23:45 + 00:15 CET
+(17:45 + 18:15 ET) entry-eligible late-window scans. Silence = wire a future run
+once the tally firms; say the word to veto. Nothing else blocking.
+
+---
+
 ### 2026-07-20 — Init 3: spike-bar detector validated out-of-sample; new late-BUILD detection gap surfaced (CJMB winner ignited in the coarse late window)
 
 **Evaluated:** Prior step (2026-07-17 2nd: build + wire the log-only spike-bar

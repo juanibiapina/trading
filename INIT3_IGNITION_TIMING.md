@@ -116,3 +116,67 @@ scans reduce catch-lag.
    densification so far only covers the open hour. **Watch:** if 2–3 late-BUILD
    winners accumulate in the 17:00–18:30 ET window, propose 15-min spacing there
    too (add 23:45 + 00:15 CET = 17:45 + 18:15 ET). Late-BUILD tally: CJMB = 1.
+
+---
+
+## First live out-of-sample AH session (2026-07-20, the wired scans firing)
+
+The 22:15/22:45 CET (16:15/16:45 ET) observation scans fired live for the first
+time on the Mon 07-20 AH session (they are Mon–Thu). The spike-bar column also
+ran live in every entry-eligible scan. Three findings, from `log/2026-07-20/log.md`.
+
+### 1. Spike-bar column validated live end-to-end (6 names)
+
+The log-only column populated on every AH >10% candidate across the 22:30–00:30
+CET scans, with verdicts consistent with the SIP price path:
+
+| sym  | verdict   | ignition ET | ign detail                    | outcome (morning eval)              |
+|------|-----------|-------------|-------------------------------|-------------------------------------|
+| HIHO | SPIKE     | 16:04       | +16% $1.08 373 tr / 190k sh   | winner, entered $1.50; PM peak $1.89 |
+| SHPH | SPIKE     | 16:04       | +22% $3.69 550 tr / 50k sh    | untradable (broker-block)            |
+| PAPL | SPIKE     | 17:09       | +20% $1.06 244 tr / 61k sh    | entered $1.10; faded, exit $0.84     |
+| ADVB | SPIKE     | 17:32       | +17% $10.40 2030 tr / 136k sh | skipped on ceiling; PM faded -16%    |
+| RDGT | SPIKE     | 18:00       | +17% $1.85 857 tr / 151k sh   | gate-blocked (1st AH at final scan)  |
+| GORO | NO-SPIKE  | —           | peak +6%, no co-spike bar     | **correctly skipped** (bad print)    |
+
+The detector runs in the cron environment and reproduces on replay
+(`node scripts/spike-bar.js HIHO:2026-07-20 --now 17:00` → SPIKE 16:04;
+`GORO:2026-07-20` → NO-SPIKE). **GORO NO-SPIKE = correct skip** (AH +240% on 17K
+sh vs a 160M float = bad print). But **SPIKE ≠ winner**: PAPL and ADVB both fired
+SPIKE and then faded — so the column confirms *ignition*, not *outcome*.
+Continuation/BUILD gating stays required before any spike-bar entry trigger.
+
+### 2. The screener feed is BLIND before ~16:30 ET — the 22:00/22:15 densification
+adds nothing via the screener; only the SIP cross-check reaches the open window
+
+The 22:00 (16:00 ET) and 22:15 (16:15 ET) scans both returned **0 screener
+hits**: the TradingView postmarket field does not populate until ~16:30 ET. So
+15-min-spacing the *open* hour with **screener** scans cannot catch the dominant
+16:08–16:53 ET ignition cluster — the screener is empty there. What *did* reach
+the early window was the **SIP cross-check** (feed-lag rescue) already in
+`post-market-scan.md`: at 22:15 it pulled real SIP bars on the carried watch
+names and flagged ADVB's live AH volume while the screener showed nothing.
+HIHO ignited 16:04 ET but the screener didn't surface it until the 22:30 scan
+(16:30 ET) — a ~26 min screener lag. Entry is banned before 23:00 CET, so this
+cost no entry (HIHO had 3 populated AH scans before the 23:00 entry), but it
+means the open-hour densification's value comes from the **SIP path, not the
+screener**. Implication for a future step: to actually shrink open-window
+catch-lag, the 22:00/22:15 scans should run the SIP spike-bar check on the
+regular-session watch list by default (the screener won't help there).
+
+### 3. Late-window (17:00–18:30 ET) densification case strengthened — RDGT joins CJMB
+
+RDGT ignited **18:00 ET** (SPIKE, 151k sh / 857 trades, real micro-float 884K
+build) but **first appeared at the 00:30 CET / 18:30 ET final scan**, so the
+2-AH-scan gate can never be met and it was structurally un-enterable. RDGT then
+continued to a **PM peak $2.33 (+47%)**. An **18:15 ET scan (00:15 CET) would
+have surfaced RDGT at 18:15 AND 18:30 = gate met → entry-eligible at 18:30.** This
+is the same late-window gap CJMB exposed (07-16: ignited 17:33, caught +27m late).
+
+**Late-window support tally now 2:** CJMB (07-16, traded winner +19.8%, caught
+late) and RDGT (07-20, PM +47%, gate-blocked, an 18:15 scan rescues it). This
+reaches the low end of the "2–3 cases" trigger for proposing 15-min spacing in
+the 17:00–18:30 ET window (add 23:45 + 00:15 CET = 17:45 + 18:15 ET). These are
+*entry-eligible* scan points (after the 23:00 CET ban), so unlike the open-hour
+observation scans they change live entry behavior → **propose to Juan for veto,
+do not apply silently.**
