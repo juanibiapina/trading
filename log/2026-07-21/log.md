@@ -215,3 +215,44 @@ Carry DUO, VIVK, MIMI to the 23:00 scan for the 2-AH-scan gate + full catalyst w
 - **DFNS** — 88M float (high), $8.00→$7.25 fading after a 16:24 ET peak. VRatio 0.2x.
 
 **Assessment:** No entries (observation-only pre-23:00). Every AH mover tonight ignited at the bell (16:10–16:24 ET) and is fading by 16:30 — a **SPIKE→FADE-only** picture so far. DUO and VIVK, the two deepest-volume ignitions, already round-tripped to near-flat and dropped out of the feed. If this pattern holds into the 23:00 entry scan, the SPIKE→FADE-only-night skip rule applies (0/10+ for PM continuation). Carry MIMI, DFNS, CPHI, KUST to 23:00; re-check DUO/VIVK for any re-ramp. No candidate currently shows a BUILD-and-hold profile.
+
+## Scan 23:00 CET (5:00 PM ET) — AH — ENTRY-ELIGIBLE
+
+`scan.py --all` (17:00:16 ET): **7 hits.** First entry-eligible scan of the night.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $0.65 | -3.6% | +76.6% | $1.14 | +70.1% | 4.4M | 1.5M | 3.0x | 15.6M | Building Products |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $0.96 | -24.3% | +37.4% | $1.32 | +3.9% | 1.9M | 9.9M | 0.2x | 577K | Misc Commercial Services |
+| DFNS | [TV](https://www.tradingview.com/chart/?symbol=DFNS) | $6.57 | +54.2% | +12.8% | $7.41 | +74.0% | 638K | 2.6M | 0.2x | 88.0M | Advertising/Marketing Services |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $2.16 | +1.4% | +5.1% | $2.27 | +6.6% | 412K | 5.5M | 0.1x | 4.7M | Misc Commercial Services |
+| EZRA | [TV](https://www.tradingview.com/chart/?symbol=EZRA) | $2.29 | +1.8% | +6.1% | $2.43 | +8.0% | 156K | 74K | 2.1x | 483K | Insurance Brokers/Services |
+| SNTG | [TV](https://www.tradingview.com/chart/?symbol=SNTG) | $2.09 | -0.9% | +9.7% | $2.29 | +8.7% | 86K | 19K | 4.6x | 1.1M | Finance/Rental/Leasing |
+| LEXX | [TV](https://www.tradingview.com/chart/?symbol=LEXX) | $0.55 | -7.7% | +8.3% | $0.60 | -0.0% | 51K | 101K | 0.5x | 24.1M | Pharmaceuticals: Major |
+
+Names with AH >10%: **AEHL** (+76.6%, new), **KUST** (+37.4%), **DFNS** (+12.8%). MIMI/EZRA/SNTG/LEXX all below the 10% AH bar (MIMI faded from +21.3% at 22:30 to +5.1% now — dead).
+
+**Spike-bar instrumentation (log-only, as-of 17:00 ET):**
+- AEHL — `SPIKE 16:36ET +31% $0.85 87 trades / 39k sh` (first co-spike bar; late ignition)
+- KUST — `SPIKE 16:32ET +34% $1.29 466 trades / 97k sh` (first co-spike bar)
+- DFNS — `SPIKE 16:24ET +16% $7.59 332 trades / 34k sh` (first co-spike bar; unchanged from 22:45)
+
+**Tradability:** AEHL / KUST / DFNS all `tradable=true`.
+
+**SIP verification (last bars 16:45 ET / 20:45Z, ~15-min free-tier lag — fresh relative to the 17:00 ET scan):**
+- **AEHL** — real late ignition: 20:35Z (16:35 ET) 676K sh / 2687 trades, then 20:40Z (16:40 ET) **4.09M sh / 18,050 trades** exploding to H $1.38, already faded to C $0.99 by 16:45 (2.88M sh). Quote fresh $0.96/$1.02. Real volume (VRatio 3.0x confirmed) but **spike→fade off the $1.38 peak**. **First AH scan appearance → 2-AH-scan gate blocks entry tonight.**
+- **KUST** — real ignition 16:30 ET building 399K → 846K → 700K sh across 16:30–16:40, peaked H $1.40 at 16:35, holding C $1.23 at 16:45 (12% off high). Quote fresh, real two-sided book $1.22/$1.24. AH% rising across scans (22:45 +10.3% → 23:00 +37.4%).
+- **DFNS** — peaked H $8.30 at 16:25 ET (399K sh / 5610 trades), faded to C $7.32 by 16:45. Quote stale (ts 20:00Z, wide $5.52/$7.54). Clear **spike→fade**.
+
+**Catalyst search:**
+- **AEHL** (Antelope Enterprise, China small-cap) — recent news: H1 FY2026 results Jul 6, FY-end change Jul 9, $95K share buyback Jul 17. **No same-day (Jul 21) catalyst found** after budget. Known volatile pump name; fell 3 days into today then AH-spiked.
+- **KUST** (Kustom Entertainment, micro-cap $720K mcap / 577K float) — **no same-day catalyst found**. Down-day (-24.3%) micro-float AH ramp.
+- **DFNS** — no fresh same-day catalyst surfaced; high-float (88M) intraday runner giving back.
+
+### Decisions — NO LIVE ENTRY
+
+- **DFNS — SKIP: SPIKE→FADE.** Peaked 16:24–16:25 ET (before 17:30), declining across scans (+21.8% → +12.8%). High float 88M, no catalyst. SPIKE→FADE is 0/10+ for PM continuation.
+- **KUST — DEAD-CAT-OVERRIDE WATCH (skip live, hypothetical recorded).** Day% -24.3% (≤ -15%) puts it in dead-cat territory → live entry skipped per the dead-cat filter. BUT it is *reclaiming above its regular close* ($1.23–1.32 AH vs $0.96 close) with AH% *rising* across ≥2 AH scans (22:45 +10.3% → 23:00 +37.4%) — not behaving like a genuine dead-cat bounce (which stays below the regular close). Micro-float 577K, real ignition volume, real book. Per the dead-cat-override data-collection rule: **hypothetical entry ~$1.24 @ 23:00 CET (17:00 ET), Total% +3.9%.** No catalyst. Track PM continuation for the override dataset.
+- **AEHL — GATE-BLOCKED (carry).** First AH scan appearance at 23:00 → the 2-AH-scan gate can never be met via a single scan; not entry-eligible tonight regardless of trajectory. Strong new mover (VRatio 3.0x, 4.4M real AH sh) but already spike→fading off its $1.38 peak, no catalyst. Carry to 23:30 — if it re-ramps and re-appears >10%, re-evaluate (gate would then be met). Log for the morning retrospective as the night's deepest-volume AH mover.
+
+**Night verdict:** No candidate clears all live-entry gates at 23:00. The only clean-BUILD/holding name (KUST) is dead-cat-blocked (override watch, hypothetical only). DFNS and AEHL are SPIKE→FADE. Consistent with the SPIKE→FADE-leaning picture flagged since 22:45 — every AH mover tonight ignited at/near the bell (16:10–16:36 ET) and is fading. **No live paper entry.** Carry AEHL, KUST, DFNS to 23:30/00:00; watch AEHL for a gate-meeting re-appearance and KUST for override-watch PM follow-through.
