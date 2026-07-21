@@ -124,3 +124,30 @@ AH: spike to $1.69 (16:35 ET) → hold ~$1.28-1.40 overnight → PM re-explosion
 - **SELL PAPL** 80 @ limit $0.79 ext (id 9ca4f305) → filled @ **$0.84**. P&L **-$20.80 (-23.6%)**. Grade B below -15% hard stop.
 - Both moved to Closed Positions in OPEN_POSITIONS.md. **Flat — no open positions.**
 - Combined realized P&L this pulse: **-$34.96**.
+
+---
+
+# Post-Market Screening - 2026-07-21
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+
+## Scan 21:30 CET (3:30 PM ET) — REGULAR SESSION
+
+Regular-session scan, before AH opens (22:00 CET / 4:00 PM ET). **No entries** per regular-session caution rule. Candidates flagged Watch — pending AH confirmation. Only enter if a name reappears in an AH scan (22:00+ CET) with sustained momentum.
+
+Notable low-float / big intraday movers to watch into AH:
+
+| Ticker | Price | Chg% | Float | IRVol | VChg% | Industry | Note |
+|--------|-------|------|-------|-------|-------|----------|------|
+| VIVK | $3.00 | +73.7% | 405K | 211.3 | -68.3 | Chemicals: Specialty | Tiny float, big move; vol fading |
+| OMH | $0.79 | +216.5% | 22.2M | 2713.1 | -100.0 | Real Estate Dev | Huge % but vol collapsing |
+| SLGB | $0.97 | +90.7% | 3.0M | 1228.0 | -99.2 | Air Freight | Low float; vol fading hard |
+| MLEC | $9.20 | +39.4% | 200K | 43.3 | +202.6 | Misc Commercial Svcs | Micro-float, vol building |
+| DFNS | $6.56 | +54.0% | 88.0M | 56.1 | -49.6 | Advertising/Mktg | High float |
+| GREE | $2.88 | +35.2% | 10.7M | 37.9 | +189.5 | Packaged Software | Vol building |
+| KIDZ | $0.55 | +32.9% | 2.1M | 77.7 | -36.1 | Internet Software | Low float |
+
+**Watch — pending AH confirmation:** VIVK, MLEC, SLGB, KIDZ (lowest floats). No catalyst research or entries at regular-session scan; re-evaluate at 22:00+ CET AH scans.
