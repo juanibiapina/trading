@@ -96,3 +96,16 @@ AH: spike to $1.69 (16:35 ET) → hold ~$1.28-1.40 overnight → PM re-explosion
 
 - **Broker-block:** SHPH again `tradable=false` across all AH scans (qualified-but-untradable; the recurring low-float pharma broker-block). AH +18-24% but no fillable book. Adds to the cumulative tradability-gap dataset.
 </content>
+
+## Position Evaluation — 10:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Peak % | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|--------|------|-------|----------|--------|
+| HIHO | $1.50 | ~$1.59 (SIP) | +6% | $1.89 | +26% | 1 | B | HOLD | Day 1 of 2, catalyst intact, peak under +30% trail threshold, above -15% hard stop ($1.28) |
+| PAPL | $1.10 | ~$1.06 (SIP) | -3.6% | $1.33 | +21% | 1 | B | HOLD | Day 1 of 2, catalyst intact, peak under +30% trail threshold, above -15% hard stop ($0.94) |
+
+**Data note:** Alpaca quote feed stale (HIHO ts 20:59Z, PAPL ts 20:00Z = last night's close; PAPL book `ask $0.00 x0`). P&L based on live SIP 5Min bars (last bar 08:15Z / 04:15 ET). HIHO SIP last close $1.59 / vwap $1.62; PAPL SIP last close $1.06 / vwap $1.08. Early premarket (~04:30 ET) — thin so far.
+
+**Actions taken:**
+- None. Both HOLD. No trail stops set (both peaks under +30% Grade B trail threshold). No hard stops hit. No time limit reached (Grade B allows 2 days; both are day 1).
+- Next evaluation 14:30 CET pulse.
