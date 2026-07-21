@@ -1,0 +1,98 @@
+# Morning Evaluation - 2026-07-21
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**HIHO** — Miscellaneous Manufacturing (Highway Holdings Limited)
+- Catalyst: **Grade B** — Q1 FY2027 earnings (Mon Jul 20): net sales ~$2.0M **+29.2% YoY**, gross profit +58.4% to $835K, margin +800bps to 42%, return to net-income growth
+- Previous Close: $0.81
+- AH last night: **$1.69 (+108%)** at 16:35 ET (22:35 CET), SIP 2.6M sh / 12.5k trades that bar
+- Premarket now: **$1.66 (+105%)**, live SIP; **PM peak $1.89 (+133%)** at 04:00 ET
+- Hypothetical P&L (AH entry → PM peak): our fill $1.50 → $1.89 = **+26%**; early-AH ~$1.31 → $1.89 = **+44%**
+- Float: 2.8M | Market Cap: ~$4.3M
+- **SIP volume confirming the bar:** AH ramp bars 195K → 3.26M → 3.48M → 1.43M → 2.98M → 2.14M → 2.59M sh (thousands of trades/bar); PM re-explosion 4.9M sh / 30,638 trades in the 04:00 ET bar. Real, accumulating volume — clears the >100% winner bar decisively.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES — and DETECTED + ENTERED.**
+- HIHO appeared in **6 consecutive AH scans** (22:30 +49.5%, 22:45 +59.2%, 23:00 +67.8%, 23:30, 00:00, 00:30). Entered at the 23:00 CET entry-eligible scan **@ $1.50** (59 sh, id ddf2e698) once the 2-AH-scan gate was met, as a Grade B low-float (2.8M) BUILD with real SIP accumulation, Total% +100.8% under the +150% ceiling.
+- **This is the best-case outcome:** the scanner caught the winner AND we traded it. No gap.
+- Scanner gap: none for this name.
+
+**Note (sub-3M-float re-ramp hypothesis):** HIHO faded from its $1.69 AH high to ~$1.28 through the evening, then **re-exploded in PM to $1.89** — the classic sub-3M-float (2.8M) fade→re-explode shape. This is *not* a fade-rule false negative (we entered before the fade, never skipped it), but it corroborates the hypothesis that sub-3M-float AH-faders re-ramp in PM. It also shows PM peak ($1.89) exceeded AH peak ($1.69): a continuation, not the extreme-runner AH-fade pattern (HIHO stayed under +250% AH).
+
+### Baseline Tracking
+
+Prior baseline (2026-07-16 log): 50 days, 43/48 detected, 24/48 selected. **Tracking gap:** logs 07-17 through 07-20 carry no `Days tracked:` line (morning evals on the 07-17 Fri and 07-20 Mon trading days did not record baseline), so intervening sessions were not baseline-counted; the denominator understates true trading days. Incrementing by 1 for the 07-20 winner per the standard rule.
+
+- Days tracked: **51** (was 50 + 1)
+- Winners detected by scanner: **44/49 (89.8%)** — HIHO added (detected across 6 AH scans 22:30–00:30 CET)
+- Winner selected for paper trade: **25/49 (51.0%)** — HIHO entered @ $1.50; we traded the right stock
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+- Live PM scan (04:20 ET): 5 hits — HIHO +78.6% ($1.66), RDGT +43.0% ($2.26), SLGB +18.3%, PAPL +25.4%, LASE +11.9%. HIHO the clear standout.
+- Forced AH scan: 0 hits (postmarket TradingView field empty overnight — expected, per known limitation).
+- AH reconstruction (`--ah-history` + SIP bars) confirms HIHO as the night's only >100% mover on real accumulating volume.
+
+### Open Position P&L (Alpaca)
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| HIHO | $1.50 | +85.2% | B — Q1 earnings +29.2% YoY sales | 2026-07-20 23:01 CET | $1.89 (SIP) | 04:00 ET | open | — | +10.7% (live) | 🟢 Open, up |
+| PAPL | $1.10 | +25.0% | B — Pineapple Fin Q3 earnings | 2026-07-21 00:01 CET | $1.28 (SIP) | 04:00 ET | open | — | -2.7% (live) | 🔴 Open, down |
+
+**Quote-freshness note:** Alpaca `positions` reported HIHO $1.61 (+7.3%) and PAPL $1.06 (-3.6%), but both quotes are stale (HIHO ts 20:59Z / PAPL ts 20:00Z = last night's close; PAPL book shows `ask $0.00 x0`). Live SIP PM: HIHO last bar (08:05Z) closed **$1.66** → P&L **+10.7%**; PAPL last bar closed **$1.07** → P&L **-2.7%**. P&L reported against the live SIP prices, not the stale Alpaca figures. **Exits handled by position-evaluation (10:30 / 14:30 CET) — not here.**
+
+**Total Realized P&L (Alpaca fills only): €0.00** (both positions still open)
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET; plus extra 22:15 / 22:45 observation scans). Full coverage — entry window intact.
+- Candidates found: HIHO, PAPL, ADVB, RDGT, SHPH, GORO, GBR, SLGB, HXHX, CJMB, others
+- Retrospective matches: HIHO (winner) fully caught + entered; PAPL entered; ADVB / RDGT surfaced but gate/ceiling-blocked.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| RDGT | +24.7% AH | 1st AH scan appearance at the **final** 00:30 scan → 2-AH-scan gate can never be met; not a threshold miss | PM peak $2.33 (SIP, +47% from $1.58) at 04:00 ET on 1.9M sh — a real late micro-float mover the gate structurally blocks |
+
+No true detection miss: the winner was caught and traded.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| HIHO | $1.69 (+108%) | 16:35 ET | Spike→hold→PM re-explode | $1.66 (PM peak $1.89) | PM peak +12% vs AH peak | +105% | ✅ Winner, entered; **PM peak > AH peak (continuation)** |
+| ADVB | $13.05 (+159%) | 18:15 ET | Build (late) | $9.88 (PM peak $11.00) | **-16% below AH peak** | +96% | AH was the better exit; ceiling-skip validated |
+| PAPL | $1.33 (+51%) | 17:35 ET | Build→fade | $1.07 (PM peak $1.28) | -20% below AH peak | +22% | Entered $1.10; faded, roughly flat |
+| RDGT | $2.07 (+31%) | 18:00 ET | Late surge | $2.27 (PM peak $2.33) | PM peak +13% vs AH peak | +47% | Gate-blocked; PM continued |
+
+**AH-peak-vs-PM-peak check:** HIHO and RDGT continued higher into PM (PM peak > AH peak). ADVB (+159% AH, extended) and PAPL faded into PM (AH peak was the better exit). ADVB adds to the extreme-runner-fades dataset (though under the 250% threshold): a +159% AH runner peaked in AH ($13.05) and gave back to $11.00 PM.
+
+### Price Charts
+
+```
+HIHO — 2-Day Price Timeline
+Previous Close: $0.81 | 2-Day Range: $0.71 - $1.89
+Current: $1.57 (+93.8%) | Peak: $1.89 (+133.3%) at 07-21 04:00 ET
+AH: spike to $1.69 (16:35 ET) → hold ~$1.28-1.40 overnight → PM re-explosion to $1.89 (04:00 ET, 4.9M sh / 30.6k trades)
+```
+
+### Notes
+
+- **Full-coverage clean night, winner caught + traded.** HIHO is a textbook detected-and-entered winner: Grade B earnings catalyst, low float 2.8M, multi-scan AH BUILD, real SIP volume, entered under the +150% ceiling. Best-case scanner outcome. PM re-explosion (+133%) beat the AH peak — let-winners-run: PM peak $1.89 vs our $1.50 entry = +26% available; position-evaluation manages the exit.
+
+- **ADVB ceiling-override watch outcome (2026-07-20 → 21):** skipped at 00:30 CET only on the +150% ceiling (SIP-real ~+156-158%, TradingView-printed +125% was feed-lag). Hypothetical skipped entry ~$12.91 → **PM peak $11.00 = -15%**. ADVB **faded** into PM (AH peak $13.05 > PM peak $11.00). **Ceiling rule validated** — the extended entry would have lost. Running ceiling-override tally now leans toward keeping the ceiling.
+
+- **RDGT gate-structure note:** a real micro-float (884K) late mover — 1st AH appearance at the final 00:30 scan, PM continued to $2.33 (+47%). Same structural class as prior "late-at-final-scan" names the 2-AH-scan gate blocks; not a detection or threshold miss. Watch-only.
+
+- **Sub-3M-float fade→re-explode tally (corroborating, not a false negative):** HIHO 2.8M faded $1.69→$1.28 then PM $1.89. We entered it, so it does not increment the fade-rule false-negative count (still **sub-3M 3 of 5**, ≥4/5 trigger NOT met), but it's another sub-3M name that re-ramped in PM — consistent with the hypothesis.
+
+- **Baseline tracking gap:** no `Days tracked:` line in the 07-17 / 07-20 logs (morning evals those days didn't record baseline). Flag for Juan (email): the retrospective baseline was not maintained on 2 trading days; if morning-eval runs are being skipped or not committed, the detection denominator drifts. One-off vs recurring is unclear — worth a look at the scheduler for the morning-eval pulse.
+
+- **Broker-block:** SHPH again `tradable=false` across all AH scans (qualified-but-untradable; the recurring low-float pharma broker-block). AH +18-24% but no fillable book. Adds to the cumulative tradability-gap dataset.
+</content>

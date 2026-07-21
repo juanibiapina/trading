@@ -6,16 +6,17 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-07-17 | CJMB | B — Alabama State Univ pharma manufacturing partnership (Jul 16 PR) | $1.36 AH SIP (+83.8% @19:20 ET) | $1.58 PM SIP (+113.5% @04:00 ET, 2.6M sh) | $1.50 | 🆕 Day 1 - clean late-BUILD; **DETECTED + ENTERED @ $1.01** (00:30 CET), now +44.6% and above +100% |
-| 2026-07-13 | VMAR | None (low-float 670K squeeze; wks-old 06/17 reverse split) | $1.85 AH (+45.6% @19:20 ET) | $3.35 PM SIP (+163.8% @04:00 ET) | $1.31 | Day 4 - held ~$1.31 from $3.35 PM peak; **DETECTED + ENTERED @ $1.57**, sold $2.22 (+41%) |
-| 2026-07-15 | KUST | Unverified (news-driven AH volume spike 18:25 ET; 577K float) | $1.34 AH SIP (+38% @19:50 ET) | $1.95 PM SIP (+101.7% @04:10 ET) | $1.31 | Day 3 - recovered to $1.31 from $1.01; **NOT detected (feed-lag at 00:30 last scan)**, unenterable (single scan) |
-| 2026-07-15 | ATPC | None (ultra-low 475K float squeeze, no PR) | $3.87 AH SIP (+49% @19:20 ET tail) | $4.90 PM SIP (+88.5% @04:00 ET, 1.5M sh) | $2.52 | Day 2 - faded to $2.52 from $4.90 PM peak; **DETECTED (5 scans) but SKIPPED on fade rule** (sub-3M false negative 4/5) |
+| 2026-07-21 | HIHO | B — Q1 FY2027 earnings (net sales +29.2% YoY, margin +800bps) | $1.69 AH SIP (+108% @16:35 ET, 2.6M sh) | $1.89 PM SIP (+133% @04:00 ET, 4.9M sh/30.6k trades) | $1.66 | 🆕 Day 1 - **DETECTED + ENTERED @ $1.50** (23:00 CET); PM re-explosion beat AH peak; sub-3M float 2.8M |
+| 2026-07-17 | CJMB | B — Alabama State Univ pharma manufacturing partnership (Jul 16 PR) | $1.36 AH SIP (+83.8% @19:20 ET) | $1.58 PM SIP (+113.5% @04:00 ET, 2.6M sh) | $1.22 | Day 5 - faded to $1.22 from $1.58 PM peak; **DETECTED + ENTERED @ $1.01**, was +44.6% intraday |
 
 ## Historical Winners (with multi-day outcome)
 
 | Date | Ticker | Catalyst | AH Peak | PM Peak | Day 2 | Day 5 | Outcome |
 |------|--------|----------|---------|---------|-------|-------|---------|
 | 2026-07-10 | GMM | None (tiny-float 1.7M AI-metaverse squeeze) | $3.50 AH (+89%) | $4.07 PM (+120%) | $4.57 | $3.45 | 🚀 RUNNER to $4.57 day 4, fading to $3.45 day 5; NOT detected (late-AH-tail) |
+| 2026-07-13 | VMAR | None (low-float 670K squeeze; wks-old 06/17 reverse split) | $1.85 AH (+45.6%) | $3.35 PM (+163.8%) | — | $0.93 | Day 8: faded to $0.93 from $3.35 PM peak; DETECTED + ENTERED @ $1.57, sold $2.22 (+41%) |
+| 2026-07-15 | KUST | Unverified (news-driven AH vol spike; 577K float) | $1.34 AH (+38%) | $1.95 PM (+101.7%) | — | $1.15 | Day 6: faded to $1.15 from $1.95 PM peak; NOT detected (feed-lag at final scan) |
+| 2026-07-15 | ATPC | None (ultra-low 475K float squeeze, no PR) | $3.87 AH (+49%) | $4.90 PM (+88.5%) | — | $3.07 | Day 6: faded to $3.07 from $4.90 PM peak; DETECTED (5 scans) SKIPPED on fade rule (sub-3M false neg) |
 | 2026-03-17 | HIT | AWS partnership | $2.23 | $2.27 | — | — | Faded |
 | 2026-03-18 | SUNE | Q4 earnings beat | $1.74 | $1.76 | — | — | Faded |
 | 2026-03-19 | DRMA | Patent news | $1.56 | $1.59 | — | — | Faded |
