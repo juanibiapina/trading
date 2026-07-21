@@ -34,6 +34,7 @@ Apply this data hierarchy from the start of the pulse:
   grep -l "Days tracked:" log/2026-*/log.md | sort | tail -1 | xargs grep -E "Days tracked:|Winners detected"
   ```
   Save these values — you'll increment them in Step 5.
+  **Baseline-gap check:** the baseline chain assumes every trading-day morning eval records a `Days tracked:` line. Confirm the log holding the latest baseline is the immediately-preceding trading day; if any intervening trading-day logs (`log/YYYY-MM-DD/`) exist with **no** `Days tracked:` line, those retrospectives were skipped — list those dates as a **baseline gap** and surface it in Notes (a skipped retrospective means that night's winner was never diagnosed, so a detection miss could be hidden). Do **not** silently absorb the gap into a single +1.
 - If this is **pulse 1**, do **not** read `LOG_FILE` yet. Step 2 must happen first.
 - If this is **pulse 2 or 3**, read the existing log now so you can reuse pulse 1's winner, scanner diagnostic, and paper trades
 
@@ -177,7 +178,7 @@ Append a `## Morning Evaluation` section to the log.
 
 ### Baseline Tracking
 
-**Use the cumulative values from Step 1.** Increment "Days tracked" by 1. If today's winner was detectable, increment the detected count and add ticker to the list.
+**Use the cumulative values from Step 1.** Increment "Days tracked" by 1 **for the session being evaluated only** — do not back-fill skipped days (a day with no retrospective is not a counted sample, so its unknown detection status must not inflate or deflate the rate). If Step 1's baseline-gap check found un-evaluated trading days, record those dates here (and in Notes) so the smaller sample is visible rather than hidden. If today's winner was detectable, increment the detected count and add ticker to the list.
 
 - Days tracked: [previous + 1]
 - Winners detected by scanner: X/Y (**X%**) — [list of tickers]
