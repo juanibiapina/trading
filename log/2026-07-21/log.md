@@ -151,3 +151,9 @@ Notable low-float / big intraday movers to watch into AH:
 | KIDZ | $0.55 | +32.9% | 2.1M | 77.7 | -36.1 | Internet Software | Low float |
 
 **Watch — pending AH confirmation:** VIVK, MLEC, SLGB, KIDZ (lowest floats). No catalyst research or entries at regular-session scan; re-evaluate at 22:00+ CET AH scans.
+
+## Scan 22:00 CET (4:00 PM ET) — AH OPEN
+
+`scan.py --all` (16:00:10 ET): **0 hits.** AH just opened at the scan minute — TradingView `postmarket_volume`/`postmarket_change` fields are empty at the bell, the expected first-scan blank. No candidates surfaced.
+
+Observation-only scan (learning phase: no entries before 23:00 CET). None of the 21:30 regular-session watch names (VIVK, MLEC, SLGB, KIDZ) re-appeared in the AH feed yet — too early; re-check at 22:30. No entries.
