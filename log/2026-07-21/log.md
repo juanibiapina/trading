@@ -163,3 +163,29 @@ Observation-only scan (learning phase: no entries before 23:00 CET). None of the
 `scan.py --all` (16:15:10 ET): **0 hits.** No candidates. AH feed still empty 15 min after the bell — TradingView `postmarket_volume`/`postmarket_change` fields not yet populated for movers.
 
 Observation-only scan (learning phase: no entries before 23:00 CET). Watch names from 21:30 (VIVK, MLEC, SLGB, KIDZ) still not surfacing in the AH feed. No candidates >10% AH → no spike-bar instrumentation to run this scan. No entries.
+
+## Scan 22:30 CET (4:30 PM ET) — AH
+
+`scan.py --all` (16:30:11 ET): **4 hits.** AH feed populated — first real candidates of the night.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DUO | [TV](https://www.tradingview.com/chart/?symbol=DUO) | $0.57 | +5.6% | +47.0% | $0.84 | +55.3% | 1.3M | 164K | 8.1x | 38.5M | Internet Software/Services |
+| VIVK | [TV](https://www.tradingview.com/chart/?symbol=VIVK) | $2.58 | +49.1% | +18.6% | $3.06 | +76.9% | 1.0M | 14.8M | 0.1x | 405K | Chemicals: Specialty |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $2.16 | +1.4% | +21.3% | $2.62 | +23.0% | 130K | 5.4M | 0.0x | 4.7M | Misc Commercial Services |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $0.96 | -24.3% | +6.2% | $1.02 | -19.7% | 72K | 9.7M | 0.0x | 577K | Misc Commercial Services |
+
+**Spike-bar instrumentation (log-only, as-of 16:30 ET):**
+- DUO — `SPIKE 16:10ET +19% $0.68 105 trades / 37k sh` (first co-spike bar)
+- VIVK — `SPIKE 16:13ET +17% $3.02 1650 trades / 218k sh` (first co-spike bar)
+- MIMI — `SPIKE 16:11ET +33% $2.88 144 trades / 31k sh` (first co-spike bar)
+
+All three fired an ignition bar early in AH (16:10–16:13 ET). VIVK's ignition bar is by far the deepest (1650 trades / 218k sh) vs DUO (105 trades / 37k sh) and MIMI (144 trades / 31k sh).
+
+**Observation-only (learning phase: no entries before 23:00 CET). No catalyst research or entries this scan** — full workup deferred to the 23:00 entry-eligible scan. Notes for pattern tracking:
+- **DUO** — 38.5M float (high), but VRatio 8.1x is the only *real* AH-volume signal of the night (1.3M sh AH on 164K avg). AH +47%, Total +55.3% (under the +150% ceiling). New name (not on the 21:30 watch). First co-spike late (16:10 ET early). Internet Software.
+- **VIVK** — 405K micro-float, and it carried its regular-session pump (+49.1% Day, +73.7% intraday at 21:30) into AH (+18.6% AH → +76.9% Total). This is the first 21:30 watch name to reappear in AH. VRatio 0.1x is an artifact of the huge 14.8M avg vol (today's regular-session pump inflated the denominator), not thin AH — SIP spike-bar shows 218k sh on the ignition bar. **Total% +76.9% under ceiling.** Watch for BUILD vs fade into 23:00.
+- **MIMI** — 4.7M float, AH +21.3%, but AH vol only 130K (VRatio 0.0x) — thinnest of the three. Total% +23.0% (low extension). Watch.
+- **KUST** — Day -24.3% (dead-cat territory), AH only +6.2% (below the 10% bar), Total% still negative (-19.7%). Not a candidate; note it was a 07-14 feed-lag name but tonight it is a faded down-day, not a mover.
+
+Carry DUO, VIVK, MIMI to the 23:00 scan for the 2-AH-scan gate + full catalyst workup. All three need a second AH appearance at 23:00 before any entry is eligible.
