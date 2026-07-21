@@ -189,3 +189,29 @@ All three fired an ignition bar early in AH (16:10–16:13 ET). VIVK's ignition 
 - **KUST** — Day -24.3% (dead-cat territory), AH only +6.2% (below the 10% bar), Total% still negative (-19.7%). Not a candidate; note it was a 07-14 feed-lag name but tonight it is a faded down-day, not a mover.
 
 Carry DUO, VIVK, MIMI to the 23:00 scan for the 2-AH-scan gate + full catalyst workup. All three need a second AH appearance at 23:00 before any entry is eligible.
+
+## Scan 22:45 CET (4:45 PM ET) — AH
+
+`scan.py --all` (16:45:16 ET): **5 hits.** Observation-only (learning phase: no entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CPHI | [TV](https://www.tradingview.com/chart/?symbol=CPHI) | $8.10 | +790.1% | +6.9% | $8.66 | +851.6% | 2.2M | 21.4M | 0.1x | 37.8M | Pharmaceuticals: Major |
+| DFNS | [TV](https://www.tradingview.com/chart/?symbol=DFNS) | $6.57 | +54.2% | +21.8% | $8.00 | +87.8% | 394K | 2.5M | 0.2x | 88.0M | Advertising/Marketing Services |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $2.16 | +1.4% | +12.5% | $2.43 | +14.1% | 360K | 5.5M | 0.1x | 4.7M | Misc Commercial Services |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $0.96 | -24.3% | +10.3% | $1.06 | -16.5% | 102K | 9.8M | 0.0x | 577K | Misc Commercial Services |
+| SNTG | [TV](https://www.tradingview.com/chart/?symbol=SNTG) | $2.09 | -0.9% | +5.3% | $2.20 | +4.3% | 63K | 16K | 4.0x | 1.1M | Finance/Rental/Leasing |
+
+**Spike-bar instrumentation (log-only, as-of 16:45 ET):**
+- DFNS — `SPIKE 16:24ET +16% $7.59 332 trades / 34k sh` (first co-spike bar)
+- MIMI — `SPIKE 16:11ET +33% $2.88 144 trades / 31k sh` (first co-spike bar; unchanged from 22:30)
+- KUST — `NO-SPIKE peak +17% @16:25ET` (no bar cleared +15% on a volume co-spike)
+
+**SIP cross-check (free-tier capped at 16:30 ET / 20:30Z — ~15-min lag, expected):** The whole night so far is a **SPIKE→FADE** at the AH bell (all ignitions 16:10–16:24 ET, all now fading by 16:30):
+- **DUO** (dropped from 22:45 feed) — ignited 16:10 ET to $0.88 (1.39M sh / 4258 trades), then faded $0.85→$0.54→$0.56. Round-tripped to ~flat vs $0.57 close. Classic spike→fade; fell below threshold, out of feed.
+- **VIVK** (dropped from 22:45 feed) — ignited 16:10 ET to $3.11 (802K sh / 5526 trades), faded $3.05→$2.76→$2.63. Off its high, back near the $2.58 close. Spike→fade; out of feed.
+- **MIMI** — peaked $2.88 (16:11 ET), faded to $2.37 by 16:30. Still +12.5% AH but declining.
+- **CPHI** — Day +790% monster, AH $8.66→$7.95 fading; AH +6.9% is **below the 10% bar** and Total% +851.6% is far above the +150% ceiling. Not a candidate. 37.8M float. Note for pattern tracking (extreme intraday runner, AH giving back).
+- **DFNS** — 88M float (high), $8.00→$7.25 fading after a 16:24 ET peak. VRatio 0.2x.
+
+**Assessment:** No entries (observation-only pre-23:00). Every AH mover tonight ignited at the bell (16:10–16:24 ET) and is fading by 16:30 — a **SPIKE→FADE-only** picture so far. DUO and VIVK, the two deepest-volume ignitions, already round-tripped to near-flat and dropped out of the feed. If this pattern holds into the 23:00 entry scan, the SPIKE→FADE-only-night skip rule applies (0/10+ for PM continuation). Carry MIMI, DFNS, CPHI, KUST to 23:00; re-check DUO/VIVK for any re-ramp. No candidate currently shows a BUILD-and-hold profile.
