@@ -125,6 +125,22 @@ PM 07-22 04:00 ET: EXPLODES $3.39 → $7.91 on 1.3–1.85M sh/bar (24k–39k tra
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
+## Scan 22:15 CET (4:15 PM ET)
+
+**Bonus AH scan.** `scan.py --all` returned **0 hits** (16:15:11 ET) — but this is a **feed-lag artifact on the opening bar**. Ad-hoc SIP cross-check of the 21:30 watch names shows real AH accumulation already:
+
+| Ticker | RTH Close | 1st AH bar (16:00 ET) | AH Vol | Trades | AH H | Quote (book) | Spike-bar |
+|--------|-----------|-----------------------|--------|--------|------|--------------|-----------|
+| ZCMD | $4.07 | C $4.90 (+20%) | 1.28M sh | 15,483 | $5.58 | bid $3.69 / ask $4.95 x100 | **SPIKE 16:00ET +16% $4.98 1801tr/181k sh** |
+| PN | ~$8.57 | C $8.46 | 505K sh | 7,622 | $10.45 | bid $4.83 / **ask $0.00 x0** | NO-SPIKE peak +12% @16:00ET |
+| LABT | ~$3.17 | C $3.30 | 43.9K sh | 385 | $3.42 | bid $2.93 / ask $3.89 x100 | (thin, not run) |
+
+**Notes:**
+- **ZCMD** — real AH liquidity (1.28M sh / 15.5k trades on the first bar) AND a fillable two-sided book (ask $4.95 x100). Spike-bar detector fired an ignition (SPIKE 16:00ET). Strongest AH continuation candidate so far. Total move very extended (RTH already +176.9%, now +20% more in AH) — flag the **+150% extension ceiling** for the 23:00 entry decision. Watch trajectory across 22:30/23:00.
+- **PN** — real volume (505K sh) but the Alpaca book shows **ask $0.00 x0** = no fillable AH offer → illiquid (no AH book), would skip on the liquidity sanity check even if it qualifies. Also $57.7M cap, higher-float profile. Spike-bar: NO-SPIKE.
+- **LABT** — sub-1M float (956K) but AH volume thin (43.9K sh / 385 trades). Not accumulating yet.
+- The scanner's 0-hit is the known opening-bar feed lag; SIP is truth here. No entries (observation-only window before 23:00 CET). Re-check all three at 22:30/23:00 for hold-vs-fade before any entry.
+
 ## Scan 22:00 CET (4:00 PM ET)
 
 **First AH scan** — AH opens exactly at 16:00 ET, so this scan runs at the opening tick when little AH volume has accumulated. Scanner returned **0 hits** (`scan.py --all`, 16:00:12 ET). Observation-only window (learning phase: no entries before 23:00 CET).
