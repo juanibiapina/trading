@@ -127,6 +127,50 @@ PM 07-22 04:00 ET: EXPLODES $3.39 → $7.91 on 1.3–1.85M sh/bar (24k–39k tra
 | PLAG | $0.98 | 23:01 CET | 97 | 437b3f29 | Positive-day AH BUILD, 2 AH scans >10%, real SIP volume, Grade None (no catalyst found). |
 | DOMO | $3.92 | 23:32 CET | 25 | 32f667b6 | AH BUILD-and-hold, 2 AH scans >10%, **Grade A** ($400M asset sale to Progress Software), real SIP volume, low extension (+14.2%). |
 | AEHL | $0.69 | 00:01 CET | 136 | eda7aa5d | Recovering-day AH BUILD-and-hold (reclaimed above prior close), 2 AH scans >10%, real SIP volume (883k sh/bar), holding within 2% of peak, Grade None (recurring crypto-treasury pump, no fresh catalyst). |
+| LGCL | $1.58 | 00:30 CET | 58 | c15adf7f | Ideal-float (1.6M) AH BUILD-and-hold peaking late (18:15 ET), cleared 2-AH-scan gate (00:00 +57.6% → 00:30 +55.5%), Total +51% (under ceiling), VRatio 6.6x, real accelerating SIP volume (500-920k sh/bar), Grade None (no catalyst found, 5 searches). |
+
+## Scan 00:30 CET (6:30 PM ET)
+
+**Final AH scan** (last scheduled scan of the night). `scan.py --all` returned **9 hits** (18:30:14 ET): PLAG, ZYBT, LGCL, AEHL, DOMO, INM, STFS, NTCL, IVVD. Three positions already open tonight (PLAG $0.98, DOMO $3.92, AEHL $0.69). New entry this scan: **LGCL** (now clears the 2-AH-scan gate). New name: **NTCL**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.59 | +9.4% | +171.6% | $1.60 | +197.2% | 12.8M | 1.5M | 8.4x | 11.6M | Food: Specialty/Candy |
+| ZYBT | [TV](https://www.tradingview.com/chart/?symbol=ZYBT) | $1.38 | −51.6% | +17.4% | $1.62 | −43.1% | 5.7M | 21.4M | 0.3x | 7.7M | Biotechnology |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $0.95 | −2.9% | +55.5% | $1.48 | +51.0% | 5.4M | 818K | 6.6x | 1.6M | Personnel Services |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $0.56 | −13.8% | +26.3% | $0.70 | +9.0% | 4.5M | 9.7M | 0.5x | 15.6M | Building Products |
+| DOMO | [TV](https://www.tradingview.com/chart/?symbol=DOMO) | $3.15 | −8.4% | +23.5% | $3.89 | +13.1% | 1.6M | 1.2M | 1.3x | 36.9M | Packaged Software |
+| INM | [TV](https://www.tradingview.com/chart/?symbol=INM) | $1.66 | +7.8% | +5.4% | $1.75 | +13.6% | 473K | 5.2M | 0.1x | 2.5M | Pharmaceuticals: Major |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $3.79 | −49.8% | +42.5% | $5.40 | −28.5% | 288K | 154K | 1.9x | 1.1M | Advertising/Marketing Services |
+| NTCL | [TV](https://www.tradingview.com/chart/?symbol=NTCL) | $3.41 | +6.2% | +10.8% | $3.78 | +17.7% | 189K | 79K | 2.4x | 755K | Packaged Software |
+| IVVD | [TV](https://www.tradingview.com/chart/?symbol=IVVD) | $0.62 | −9.0% | +6.2% | $0.66 | −3.4% | 95K | 2.6M | 0.0x | 249.9M | Biotechnology |
+
+**Spike-bar instrumentation (AH >10% names, log-only):**
+- LGCL: `SPIKE 17:25ET +18% $1.12 192 trades / 5k sh` (first co-spike bar, carried)
+- NTCL: `SPIKE 16:34ET +26% $4.30 246 trades / 20k sh` (first co-spike bar)
+- PLAG: `SPIKE 16:18ET +20% $0.71 78 trades / 99k sh` (carried; now +171.6% AH / VRatio 8.4x)
+
+**SIP cross-check (LGCL/NTCL bars fresh to 18:15 ET / ~15 min lag):**
+
+| Ticker | AH trajectory (SIP + Yahoo) | Verdict |
+|--------|------------------------------|---------|
+| LGCL | Accelerating BUILD: 17:30 ET 604k sh/4249tr C $1.27 → 17:40 827k sh C $1.50 → 17:55 816k sh C $1.62 → 18:00 920k sh/5808tr C $1.70 → **new AH high $1.78 @18:15 ET (851k sh/4505tr)**. Yahoo: peaked $1.69 (+72.4%) at 18:15 ET, holding $1.56-1.65 (+64%) at 18:30 ET (within ~10% of peak). 2 AH scans >10% (00:00 +57.6% → 00:30 +55.5%), Day -2.9%, Total +51%, float 1.6M ideal, VRatio 6.6x. Broker quote frozen-stale 16:00 ET (artifact); SIP proves liquid fillable book. No catalyst (5 searches). **ENTER** | **ENTERED** |
+| NTCL | Yahoo building late ($4.01-4.05, +25% at 18:20-18:30 ET) BUT SIP volume thin: 500-9000 sh/bar, mostly <100 trades. First AH scan appearance → **fails 2-AH-scan gate**. AH only +10.8% scanner. Thin liquidity. **Skip: fails gate + thin** | Skip |
+| PLAG | (held from 23:01) now +171.6% AH / Total +197.2% on 12.8M AH vol, VRatio 8.4x | Held |
+| AEHL / DOMO | (held from 00:01 / 23:32) still tracking | Held |
+| ZYBT / STFS | Day −51.6% / −49.8% dead-cats, Total far below close, faded/bad print | Skip: dead-cat |
+| INM / IVVD | Below 10% AH gate (+5.4% / +6.2%) | Skip |
+
+**Final-scan feed-lag cross-check (tracked names):** SIP checked on the strongest earlier watch names not in the 00:30 feed — ZCMD ~$3.27 (below its $4.07 close, faded), PN ~$7.54 (faded from +112%), LABT ~$3.50 (+2.6%, below gate). None secretly surging above the 10% threshold → no feed-lag rescue needed. The 00:30 scan captured every real mover.
+
+**Evaluation:**
+- **LGCL — ENTERED.** Cleared all gates on its 2nd AH scan: 2 AH scans >10% (00:00 +57.6% → 00:30 +55.5%), Day -2.9% (above -15%, not dead-cat), Total +51% (well under +150 ceiling), float 1.6M (ideal <10M), VRatio 6.6x. SIP shows a textbook accelerating BUILD — 500k-920k sh/bar (3000-5800 trades each) from 17:30 ET, making a **new AH high $1.78 at 18:15 ET** (851k sh/4505tr), peaking LATE (>18:00 ET). Yahoo confirms a HOLD, not a fade: peaked $1.69 at 18:15, holding $1.56-1.65 (+64%) at 18:30, within ~10% of peak. Broker quote frozen-stale at 16:00 ET (same artifact as AEHL/DOMO tonight); SIP proves a liquid fillable book (hundreds of K sh/bar). Catalyst: 5 searches total (3 at 00:00 + 2 now) found **no same-day PR** (agentic-AI patent headline undated, 40:1 reverse split Oct 2025) → Grade None. Per learning-phase no-catalyst rule, entered with concern noted. **BUY 58 LGCL @ limit $1.72 ext (id c15adf7f) filled @ $1.58.** Grade None → exit first PM opportunity.
+- **NTCL — Skip.** First AH scan appearance → fails the 2-AH-scan gate. Yahoo shows a late build (+25% at 18:20-18:30 ET) but SIP volume is thin (500-9000 sh/bar, mostly <100 trades) — not real accumulation. Watch only.
+- **PLAG / AEHL / DOMO — held** (position management is premarket, not here). PLAG has run to +171.6% AH.
+- **ZYBT / STFS — Skip (carried):** dead-cat bounces, Total far below close.
+- **INM / IVVD — Skip:** below the 10% AH gate.
+
+**One new entry: LGCL @ $1.58 (Grade None).** Four positions now open tonight (PLAG, DOMO, AEHL, LGCL). Night complete — this was the final scheduled scan.
 
 ## Scan 00:00 CET (6:00 PM ET)
 
