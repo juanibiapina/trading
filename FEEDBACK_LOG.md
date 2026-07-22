@@ -6,6 +6,32 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-22 — re: Trading Scanner Report - 2026-07-20
+
+**Juan said:** "Awesome work! Can you add the enter and exit markers in the
+graphs?"
+
+**Interpretation:** Praise on the HIHO textbook night, plus one concrete
+review-surface ask: the daily-email charts (Initiative 5) show price + volume
+but not *where we actually traded*. Adding entry/exit markers lets Juan see fill
+placement against the AH->PM move at a glance (was the entry early/late vs the
+build, did the exit catch the PM peak). Small, log-only chart-rendering feature,
+not a strategy change.
+
+**Action:**
+- Applied now (self-contained, low-risk). Added `--entry` / `--exit` flags to
+  `scripts/chart.py`: each takes `PRICE` or `PRICE@YYYY-MM-DD HH:MM`
+  (exchange-local), draws a dashed price line + a triangle marker (entry blue/up,
+  exit magenta/down) pinned to the fill bar, with a labeled price and legend
+  swatch. Backward compatible (no flags = unchanged chart). Verified on HIHO
+  (entry $1.50 @ 07-20 16:05, exit $1.89 @ 07-21 08:10) — both markers render
+  cleanly over the AH->PM pattern.
+- Wired into `prompts/daily-email.md` step 2: the chart step now pulls real
+  Alpaca fills (`broker.js orders all`, `filled_avg_price` + fill time in ET)
+  and passes `--entry`/`--exit`; markers reflect actual trades only (omit for
+  detected-but-not-traded winners; entry-only for still-open positions).
+- Updated `STRATEGY_ROADMAP.md` Initiative 5 with the marker work.
+
 ### 2026-07-17 — re: Trading Scanner Report - 2026-07-16
 
 **Juan said:** "Beautiful winner. Good job. Improvement: don't wait for my

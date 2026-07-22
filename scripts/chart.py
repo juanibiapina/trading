@@ -8,10 +8,14 @@ the AH->PM pattern is visible at a glance.
 
 Usage:
     python3 scripts/chart.py TICKER [--interval 5m] [--range 2d] [--out PATH]
+                            [--entry PRICE[@YYYY-MM-DD HH:MM]]
+                            [--exit  PRICE[@YYYY-MM-DD HH:MM]]
 
 Examples:
     python3 scripts/chart.py ORIS --range 2d --out /tmp/ORIS.png
     python3 scripts/chart.py VTAK --interval 5m --range 2d
+    python3 scripts/chart.py HIHO --range 2d --entry "1.50@2026-07-20 16:05" \
+                             --exit "1.89@2026-07-21 08:10"
 """
 
 import argparse
@@ -30,6 +34,22 @@ VOL_FRAC = 0.24                          # bottom fraction for volume panel
 GREEN, RED = "#2e7d32", "#c62828"
 AH_FILL, PM_FILL = "#fff4e0", "#e8f0fe"  # post (amber), pre (blue) shading
 GRID = "#e6e6e6"
+ENTRY_COL, EXIT_COL = "#1565c0", "#ad1457"  # entry (blue), exit (magenta) markers
+
+
+def parse_marker(spec):
+    """Parse a '--entry'/'--exit' spec 'PRICE' or 'PRICE@YYYY-MM-DD HH:MM'.
+    Returns (price, datetime|None) or None."""
+    if not spec:
+        return None
+    spec = spec.strip()
+    when = None
+    if "@" in spec:
+        price_s, when_s = spec.split("@", 1)
+        when = dt.datetime.strptime(when_s.strip(), "%Y-%m-%d %H:%M")
+    else:
+        price_s = spec
+    return (float(price_s), when)
 
 
 def fetch(ticker, interval, rng, prepost):
@@ -102,7 +122,7 @@ def esc(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def build_svg(ticker, bars, meta):
+def build_svg(ticker, bars, meta, entry=None, exit=None):
     n = len(bars)
     if n == 0:
         return None
@@ -185,6 +205,42 @@ def build_svg(ticker, bars, meta):
         s.append(f'<line x1="{cx:.1f}" y1="{vol_bot}" x2="{cx:.1f}" y2="{vol_bot+4}" stroke="#999"/>')
         s.append(f'<text x="{cx:.1f}" y="{vol_bot+15:.1f}" font-size="9" fill="#666" text-anchor="middle">{lbl}</text>')
 
+    # entry / exit markers
+    def nearest_idx(when):
+        if when is None:
+            return None
+        return min(range(n), key=lambda i: abs((bars[i]["t"] - when).total_seconds()))
+
+    def draw_marker(m, col, label, up):
+        # dashed horizontal price line across the plot
+        price, when = m
+        yy = yp(price)
+        s.append(f'<line x1="{plot_l}" y1="{yy:.1f}" x2="{plot_r}" y2="{yy:.1f}" '
+                 f'stroke="{col}" stroke-width="1.2" stroke-dasharray="5,4" opacity="0.9"/>')
+        idx = nearest_idx(when)
+        cx = x(idx) if idx is not None else plot_r - 6
+        # triangle marker at the fill bar (up for entry, down for exit)
+        r = 6
+        if up:
+            tri = f"{cx:.1f},{yy-2:.1f} {cx-r:.1f},{yy-2-r*1.4:.1f} {cx+r:.1f},{yy-2-r*1.4:.1f}"
+        else:
+            tri = f"{cx:.1f},{yy+2:.1f} {cx-r:.1f},{yy+2+r*1.4:.1f} {cx+r:.1f},{yy+2+r*1.4:.1f}"
+        s.append(f'<polygon points="{tri}" fill="{col}"/>')
+        ly = yy - 2 - r * 1.4 - 4 if up else yy + 2 + r * 1.4 + 10
+        anchor = "middle"
+        tx = cx
+        if cx < plot_l + 40:
+            anchor, tx = "start", plot_l + 2
+        elif cx > plot_r - 40:
+            anchor, tx = "end", plot_r - 2
+        s.append(f'<text x="{tx:.1f}" y="{ly:.1f}" font-size="10" font-weight="bold" '
+                 f'fill="{col}" text-anchor="{anchor}">{label} ${price:.2f}</text>')
+
+    if entry:
+        draw_marker(entry, ENTRY_COL, "ENTRY", up=True)
+    if exit:
+        draw_marker(exit, EXIT_COL, "EXIT", up=False)
+
     # title + legend
     first, last = bars[0]["c"], bars[-1]["c"]
     chg = (last / bars[0]["o"] - 1) * 100
@@ -195,6 +251,12 @@ def build_svg(ticker, bars, meta):
     s.append(f'<text x="{plot_r-136}" y="35" font-size="9" fill="#666">premarket</text>')
     s.append('<rect x="%d" y="28" width="10" height="8" fill="%s"/>' % (plot_r-78, AH_FILL))
     s.append(f'<text x="{plot_r-64}" y="35" font-size="9" fill="#666">after-hrs</text>')
+    if entry:
+        s.append('<rect x="%d" y="28" width="10" height="8" fill="%s"/>' % (plot_r-232, ENTRY_COL))
+        s.append(f'<text x="{plot_r-218}" y="35" font-size="9" fill="#666">entry</text>')
+    if exit:
+        s.append('<rect x="%d" y="28" width="10" height="8" fill="%s"/>' % (plot_r-282, EXIT_COL))
+        s.append(f'<text x="{plot_r-268}" y="35" font-size="9" fill="#666">exit</text>')
 
     s.append('</svg>')
     return "\n".join(s)
@@ -207,7 +269,14 @@ def main():
     ap.add_argument("--range", dest="rng", default="2d")
     ap.add_argument("--no-prepost", action="store_true")
     ap.add_argument("--out", default=None)
+    ap.add_argument("--entry", default=None,
+                    help="entry marker: PRICE or 'PRICE@YYYY-MM-DD HH:MM' (exchange-local)")
+    ap.add_argument("--exit", default=None,
+                    help="exit marker: PRICE or 'PRICE@YYYY-MM-DD HH:MM' (exchange-local)")
     a = ap.parse_args()
+
+    entry = parse_marker(a.entry)
+    exit = parse_marker(a.exit)
 
     bars, meta = fetch(a.ticker, a.interval, a.rng, not a.no_prepost)
     if not bars:
@@ -217,7 +286,7 @@ def main():
         n = backfill_ext_volume(a.ticker.upper(), bars, meta)
         if n:
             print(f"backfilled {n} ext-hours volume bars from Alpaca SIP", file=sys.stderr)
-    svg = build_svg(a.ticker.upper(), bars, meta)
+    svg = build_svg(a.ticker.upper(), bars, meta, entry=entry, exit=exit)
 
     out = a.out or f"/tmp/{a.ticker.upper()}-chart.png"
     svg_path = out.rsplit(".", 1)[0] + ".svg"

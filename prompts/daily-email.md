@@ -29,6 +29,25 @@ Use the cycle date for the dir and the current time (CET) for `HHMM`. If
 `chart.py` fails for a ticker (no Yahoo data, etc.), skip that chart and still
 send the email -- charts are a review aid, not a blocker.
 
+**Mark entries/exits on the chart (Juan asked 2026-07-22).** When the ticker has
+a real Alpaca fill, add `--entry` / `--exit` so the chart shows where we
+actually traded. Get fills from `node scripts/broker.js orders all` (use
+`filled_avg_price` and the fill timestamp, converted to **exchange-local /
+ET**). Pass price alone, or `PRICE@YYYY-MM-DD HH:MM` to pin the marker to the
+fill bar:
+
+```bash
+# winner/position we entered and exited
+python3 scripts/chart.py HIHO --range 2d --out log/.../HIHO-HHMM.png \
+  --entry "1.50@2026-07-20 16:05" --exit "1.89@2026-07-21 08:10"
+# still-open position: entry only
+python3 scripts/chart.py PAPL --range 2d --out log/.../PAPL-HHMM.png \
+  --entry "1.10@2026-07-20 17:09"
+```
+
+Omit the flags when there is no real fill (e.g. a detected-but-not-traded
+winner) -- markers reflect actual trades, not hypotheticals.
+
 InboxKit has **no attachment API**, but the repo is **public** (2026-07-03), so
 charts are **inlined into the email body** via `raw.githubusercontent.com`
 image URLs. Gmail proxies remote https images, so `<img src>` renders inline.

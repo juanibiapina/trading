@@ -378,6 +378,21 @@ cosmetic — the regular-open volume bar can dwarf the ext-hours bars on the sha
 scale (follow-up, not blocking); (2) the post-push raw-URL 200-check for the
 daily-email render race; (3) GitHub Pages HTML reports for the richer surface.
 
+**Update (2026-07-22) — entry/exit markers WIRED into `chart.py` + the daily
+email.** Juan's reply to the 07-20 email: "Awesome work! Can you add the enter
+and exit markers in the graphs?" Added `--entry` / `--exit` flags to
+`scripts/chart.py` (each `PRICE` or `PRICE@YYYY-MM-DD HH:MM`, exchange-local):
+draws a dashed price line + a triangle marker (entry blue/up, exit magenta/down)
+pinned to the fill bar, labeled, with legend swatches; backward compatible.
+`prompts/daily-email.md` step 2 now pulls real Alpaca fills
+(`broker.js orders all`) and passes the flags so charts show where we actually
+traded (markers for real fills only — omit for detected-not-traded winners,
+entry-only for still-open positions). Verified on HIHO (entry $1.50 @ 07-20
+16:05 -> exit $1.89 @ 07-21 08:10). First live use: next daily-email run.
+Remaining Init 5 items unchanged: (1) minor cosmetic regular-open volume bar
+scale; (2) post-push raw-URL 200-check for the render race; (3) GitHub Pages
+HTML reports.
+
 **Prior recommended step (superseded above):** merge an extended-hours volume
 source into `chart.py` (Alpaca 5m bars first, TradingView fallback) so the
 post/pre volume panel is populated, then add the post-push raw-URL 200-check to
