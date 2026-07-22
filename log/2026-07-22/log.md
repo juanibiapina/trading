@@ -125,6 +125,48 @@ PM 07-22 04:00 ET: EXPLODES $3.39 → $7.91 on 1.3–1.85M sh/bar (24k–39k tra
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | PLAG | $0.98 | 23:01 CET | 97 | 437b3f29 | Positive-day AH BUILD, 2 AH scans >10%, real SIP volume, Grade None (no catalyst found). |
+| DOMO | $3.92 | 23:32 CET | 25 | 32f667b6 | AH BUILD-and-hold, 2 AH scans >10%, **Grade A** ($400M asset sale to Progress Software), real SIP volume, low extension (+14.2%). |
+
+## Scan 23:30 CET (5:30 PM ET)
+
+**AH scan — entry window open.** `scan.py --all` returned **8 hits** (17:30:10 ET): PLAG, ZYBT, AEHL, DOMO, LABT, INM, IVVD, STFS.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.59 | +9.4% | +32.1% | $0.78 | +44.5% | 6.6M | 870K | 7.6x | 11.6M | Food: Specialty/Candy |
+| ZYBT | [TV](https://www.tradingview.com/chart/?symbol=ZYBT) | $1.38 | −51.6% | +18.8% | $1.64 | −42.5% | 5.3M | 21.3M | 0.2x | 7.7M | Biotechnology |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $0.56 | −13.8% | +21.7% | $0.68 | +5.0% | 2.0M | 9.5M | 0.2x | 15.6M | Building Products |
+| DOMO | [TV](https://www.tradingview.com/chart/?symbol=DOMO) | $3.15 | −8.4% | +24.8% | $3.93 | +14.2% | 1.3M | 1.2M | 1.1x | 36.9M | Packaged Software |
+| LABT | [TV](https://www.tradingview.com/chart/?symbol=LABT) | $3.41 | +83.3% | +9.4% | $3.73 | +100.5% | 988K | 8.1M | 0.1x | 956K | Biotechnology |
+| INM | [TV](https://www.tradingview.com/chart/?symbol=INM) | $1.66 | +7.8% | +7.8% | $1.79 | +16.2% | 258K | 5.2M | 0.0x | 2.5M | Pharmaceuticals: Major |
+| IVVD | [TV](https://www.tradingview.com/chart/?symbol=IVVD) | $0.62 | −9.0% | +6.4% | $0.66 | −3.2% | 95K | 2.6M | 0.0x | 249.9M | Biotechnology |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $3.79 | −49.8% | +216.9% | $12.01 | +59.1% | 19K | 102K | 0.2x | 1.1M | Advertising/Marketing Services |
+
+**Spike-bar instrumentation (AH >10% names, log-only):**
+- DOMO: `SPIKE 16:45ET +32% $4.15 330 trades / 137k sh` (first co-spike bar)
+- AEHL: `SPIKE 17:00ET +21% $0.68 383 trades / 227k sh` (first co-spike bar)
+- ZYBT: `SPIKE 16:16ET +30% $1.80 724 trades / 135k sh` (first co-spike bar, carried)
+- PLAG: `SPIKE 16:18ET +20% $0.71 78 trades / 99k sh` (carried; now VRatio 7.6x on 6.6M AH vol)
+
+**SIP cross-check (bars fresh to 17:15 ET / ~15 min lag):**
+
+| Ticker | AH trajectory (SIP bars) | Live quote | Verdict |
+|--------|--------------------------|-----------|---------|
+| DOMO | Spike bar 16:45 ET H $4.15 439k sh/1857tr → **holds** $3.79→$3.83→$3.95→$3.92 across 5 bars (52k-315k sh/bar, hundreds of trades). Yahoo: peak $3.95 (+14.8%) @17:00 ET, now $3.88-3.92 | bid $3.82 / ask $3.91 x100 (fresh) | Real BUILD-and-hold within ~5% of peak. tradable=true. **ENTER** |
+| AEHL | Spike 17:00 ET +21% $0.68 (227k sh/383tr). **First AH scan appearance tonight** | ask $0.70 x100 (stale 20:05Z) | Fails 2-AH-scan gate; Total +5.0% (Day −13.8%, this-morning's PM fader); VRatio 0.2. **Watch — no entry** |
+| ZYBT | Peak $2.31 @16:15 ET → fading, current ~$1.64 | (carried) | Day −51.6% dead-cat + SPIKE→FADE, Total −42.5% (far below close). **Skip: dead-cat** |
+| STFS | Thin (472-2471 sh/bar, <52 trades). Scanner +216.9% is a bad print vs thin SIP | (carried) | **Skip: dead-cat + illiquid/bad print** |
+| LABT | AH +9.4% (below 10% gate), sub-1M float faded from 16:10 ET surge | (carried) | Below gate. **Skip** |
+| INM / IVVD | AH +7.8% / +6.4% (both below 10% gate) | — | Below gate. **Skip** |
+
+**Evaluation:**
+- **DOMO — ENTERED.** Cleared the 2-AH-scan >10% gate (23:00 +31.7% → 23:30 +24.8%), Day −8.4% (above −15%, not dead-cat), Total +14.2% (very low extension, big margin), float 36.9M (<50M). **Grade A catalyst** confirmed via search: Domo announced an agreement to **sell substantially all assets + certain liabilities to Progress Software for $400M** (Business Wire ~16:15 ET) — acquisition-class operational event. SIP shows real accumulation (16:45 ET bar 439k sh/1857tr; sustained 52k-315k sh/bar after) and a clean **BUILD-and-hold**: peaked $3.95 (+14.8%) at 17:00 ET and holding $3.88-3.92 (within ~5% of peak). Peaked before 18:30 ET but is *holding*, not fading (hold-vs-fade is primary; peak time secondary). Two-sided fillable book (bid $3.82/ask $3.91 x100). **BUY 25 DOMO @ limit $3.95 ext (id 32f667b6) filled @ $3.92.** Grade A → hold up to 5 days, trail stop −20% from peak.
+- **AEHL — Watch (no entry).** First AH scan appearance tonight → fails the 2-AH-scan gate. Recurring fader (was this-morning's PM retrospective fader, AH peak $1.38 > PM peak $1.14). Day −13.8%, Total only +5.0%, VRatio 0.2, stale quote. Re-check at 00:00 for a 2nd AH scan.
+- **PLAG — already held (23:00 entry).** Now scanner-confirmed with VRatio 7.6x on 6.6M AH vol (+32.1% AH). Position management handled by premarket position-evaluation.
+- **ZYBT / STFS — Skip (carried):** dead-cat bounces (Day −51.6% / −49.8%), Total far below close, no reclaim. STFS +216.9% scanner print is a bad print on thin SIP.
+- **LABT / INM / IVVD — Skip:** all below the 10% AH gate.
+
+**One new entry: DOMO @ $3.92 (Grade A).** PLAG position carried from 23:00.
 
 ## Scan 23:00 CET (5:00 PM ET)
 
