@@ -125,6 +125,39 @@ PM 07-22 04:00 ET: EXPLODES $3.39 → $7.91 on 1.3–1.85M sh/bar (24k–39k tra
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
+## Scan 22:45 CET (4:45 PM ET)
+
+**Bonus AH scan** — observation-only window (learning phase: no entries before 23:00 CET). `scan.py --all` returned **3 hits** (16:45:18 ET): ZYBT, PLAG, STFS. ZCMD/LABT again omitted by the TradingView feed — SIP cross-check is truth.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ZYBT | [TV](https://www.tradingview.com/chart/?symbol=ZYBT) | $1.38 | −51.6% | +52.2% | $2.10 | −26.3% | 3.4M | 21.1M | 0.2x | 7.7M | Biotechnology |
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.59 | +9.4% | +15.4% | $0.68 | +26.3% | 240K | 185K | 1.3x | 11.6M | Food: Specialty/Candy |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $3.79 | −49.8% | +22.2% | $4.63 | −38.7% | 3K | 98K | 0.0x | 1.1M | Advertising/Marketing Services |
+
+**Spike-bar instrumentation (AH >10% names, log-only):**
+- ZYBT: `SPIKE 16:16ET +30% $1.80 724 trades / 135k sh` (first co-spike bar)
+- PLAG: `SPIKE 16:18ET +20% $0.71 78 trades / 99k sh` (first co-spike bar)
+- STFS: `NO-SPIKE peak +30% @16:18ET` (no bar cleared +15% on a volume co-spike)
+
+**SIP cross-check (bars lag ~15 min to 16:30 ET):**
+
+| Ticker | Close | AH trajectory (SIP bars) | Live quote (fresh) | Verdict |
+|--------|-------|--------------------------|--------------------|---------|
+| ZYBT | $1.38 | Spike H $2.31 @16:15ET on 1.31M sh/6670tr → oscillating $1.80–$2.10, C $1.80 @16:30ET | bid $1.71 / ask $1.74 x100 (20:45Z) | Dead-cat + spike→fade; live ~+26%, off peak |
+| PLAG | $0.59 | H $0.71 @16:15ET (120k sh/116tr) → holding $0.63–$0.68, wick $0.80 @16:30ET | bid $0.53 / ask $0.74 x100 (stale 20:00Z) | Positive-day, real +15% AH, holding — best new candidate |
+| STFS | $3.79 | H $4.99 on 472–2471 sh/bar (<52 tr) — thin | bid $3.13 / ask $4.45 x100 (stale) | Dead-cat + illiquid/thin, NO-SPIKE |
+| ZCMD | $4.07 | Peak $5.58 @16:00ET (1.28M sh) → fading every bar, C $3.65 @16:30ET (below close) | — | SPIKE→FADE, extended (>180% total) |
+| LABT | $3.41 | Surge $3.87 @16:10ET (470k sh) → faded $3.41–$3.47 | — | Faded, below gate |
+
+**Evaluation (observation-only, no entries):**
+- **ZYBT** — Day **−51.6%** (crashed in regular session), bouncing in AH on real volume (1.31M sh spike bar). Total% still **−26.3%** (below prior-day close). SIP shows it spiked to $2.31 at the 16:15 ET open bar and is now **fading** (live $1.74, −25% off peak). The scanner's +9.4%→+52.2% jump across 22:30→22:45 is a **feed-lag artifact** (the 22:30 +9.4% was stale opening-bar data; the real spike already fired at 16:15). Not a genuine build — dead-cat spike→fade. **Skip.** Not flagged as dead-cat-override: the reclaim is fading off peak, not building across scans, and it never approaches the prior-day close.
+- **PLAG** — Positive-day mover (+9.4% RTH), real **+15.4%** AH on modest but genuine volume (120k sh spike bar, holding $0.63–0.68). SPIKE 16:18ET ignition. Total% +26.3% (well inside ceiling). Float 11.6M. First AH scan appearance above 10% — needs a 2nd AH scan >10% to clear the gate. **Best new candidate — watch 23:00 for hold-vs-fade.**
+- **STFS** — Day −49.8% dead-cat, AH volume 3K on <52 trades/bar (thin), NO-SPIKE. Illiquid + dead-cat. **Skip.**
+- **ZCMD / LABT / PN** — all faded from opening-bar spikes (ZCMD now below close, extended >180%; LABT faded to $3.41; PN illiquid `ask $0.00 x0`). No BUILD/hold. Skip carried forward.
+
+**No entries** (observation-only window before 23:00 CET). No candidate shows a clean BUILD-and-hold. PLAG is the only positive-day real-volume name holding gains — recheck at 23:00. ZYBT/STFS are dead-cat bounces; ZCMD/LABT faded.
+
 ## Scan 22:30 CET (4:30 PM ET)
 
 **AH scan** — observation-only window (learning phase: no entries before 23:00 CET). `scan.py --all` returned **3 hits** (16:30:15 ET). ZCMD (strongest 22:15 candidate) was again **omitted by the TradingView feed** — SIP cross-check below is truth.
