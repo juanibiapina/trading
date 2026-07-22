@@ -125,6 +125,20 @@ PM 07-22 04:00 ET: EXPLODES $3.39 → $7.91 on 1.3–1.85M sh/bar (24k–39k tra
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**First AH scan** — AH opens exactly at 16:00 ET, so this scan runs at the opening tick when little AH volume has accumulated. Scanner returned **0 hits** (`scan.py --all`, 16:00:12 ET). Observation-only window (learning phase: no entries before 23:00 CET).
+
+No AH candidates yet. Carrying the 21:30 regular-session watch names to check for AH confirmation at 22:30+:
+- **ZCMD** (+176.9% RTH, 1.1M float) — most extended; watch for hold vs fade into AH.
+- **PN** (+112.7%, 1.1M float, $57.7M cap) — utility, unusual for low-float spike.
+- **LABT** (+70.2%, 956K float biotech) — prime float profile.
+- **INLF** (+52.9%, 1.0M float) — recurring pump name, already faded once in this morning's PM retrospective; watch for fade.
+- **KSCP** (+45.7%, 15.2M float) — negative-control profile.
+- **KUST** (+40.5%, 577K float) — repeat pump name, deprioritized (faded to $1.01 last night).
+
+No entries this scan (first AH scan + observation-only window). Next scan 22:30 CET.
+
 ## Scan 21:30 CET (3:30 PM ET)
 
 **REGULAR session** — 30 min before AH open (16:00 ET / 22:00 CET). Per the regular-session caution rule, **no paper trades**. Candidates below are flagged **Watch — pending AH confirmation**; only enter if they reappear in an AH scan (22:00+ CET) with sustained momentum. Intraday spikers that don't carry into AH tend to fade.
