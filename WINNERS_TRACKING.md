@@ -6,8 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-07-21 | HIHO | B — Q1 FY2027 earnings (net sales +29.2% YoY, margin +800bps) | $1.69 AH SIP (+108% @16:35 ET, 2.6M sh) | $1.89 PM SIP (+133% @04:00 ET, 4.9M sh/30.6k trades) | $1.66 | 🆕 Day 1 - **DETECTED + ENTERED @ $1.50** (23:00 CET); PM re-explosion beat AH peak; sub-3M float 2.8M |
-| 2026-07-17 | CJMB | B — Alabama State Univ pharma manufacturing partnership (Jul 16 PR) | $1.36 AH SIP (+83.8% @19:20 ET) | $1.58 PM SIP (+113.5% @04:00 ET, 2.6M sh) | $1.22 | Day 5 - faded to $1.22 from $1.58 PM peak; **DETECTED + ENTERED @ $1.01**, was +44.6% intraday |
+| 2026-07-22 | SXTC | Unverified/None (China small-cap pharma PM squeeze; 32.2M float) | $7.91 PM SIP (+222.9% @04:05 ET, 1.85M sh/38.7k trades) | — | $5.69 | 🆕 Day 1 - **PM-ONLY GAPPER, HOLDABLE** (AH flat +16% on ~0 vol; explosion at PM open); NOT detected by AH scanner (structural, not counted vs baseline) |
+| 2026-07-21 | HIHO | B — Q1 FY2027 earnings (net sales +29.2% YoY, margin +800bps) | $1.69 AH SIP (+108% @16:35 ET, 2.6M sh) | $1.89 PM SIP (+133% @04:00 ET, 4.9M sh/30.6k trades) | $0.93 | Day 2 - crashed to $0.93; **DETECTED + ENTERED @ $1.50** sold $1.26 (−16%); no-catalyst grade-B pump unwinding; sub-3M float 2.8M |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -65,6 +65,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | 2026-07-07 | TDIC | None (repeat low-float gapper) | $5.37 AH (+49.6%) | $6.60 PM (+83.8%) | — | $3.68 | Faded to $3.68 from $6.60 PM peak; not traded (dead-cat), correct |
 | 2026-07-08 | IOTR | None (low-float 644K maritime-AI squeeze) | $4.65 AH (+75%) | $4.52 PM (+70.6%) | $3.54 | $3.30 | Faded to $3.30; not traded (SPIKE→FADE), correct |
 | 2026-07-09 | RPGL | Grade C (Nasdaq bid-compliance PR) | $2.69 AH (+49.4%) | $3.05 PM (+69.4%) | $1.78 | $2.13 | Faded to ~$2.13 from $3.05 PM peak; not traded (SPIKE→FADE); low-float fade-rule FN |
+| 2026-07-17 | CJMB | B — Alabama State Univ pharma manufacturing partnership | $1.36 AH (+83.8%) | $1.58 PM (+113.5%) | — | $1.21 | Day 5: faded to $1.21 from $1.58 PM peak; DETECTED + ENTERED @ $1.01, was +44.6% intraday |
 
 ## Patterns Observed
 
