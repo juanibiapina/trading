@@ -93,3 +93,14 @@ PM 07-22 04:00 ET: EXPLODES $3.39 → $7.91 on 1.3–1.85M sh/bar (24k–39k tra
 - **Coverage:** full 7/7 (no coverage failure to add to the tally).
 
 - **Active Watch check:** HIHO (entered $1.50, sold $1.26) crashed further to $0.93 day 2 — no-catalyst-grade-B pump fully unwinding. CJMB flat at $1.21 (day 5 → moved to Historical).
+
+## Position Evaluation — 10:30 CET
+
+**No open positions.** Alpaca `broker.js positions` returns none; `OPEN_POSITIONS.md` shows `_(none)_`. Source of truth and mirror agree — no reconciliation needed.
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| _(none)_ | | | | | | | — | Account flat |
+
+**Actions taken:**
+- None. Nothing to sell, no stops to update. Account flat since 07-21 14:30 CET pulse (HIHO, PAPL both closed).
