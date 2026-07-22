@@ -180,3 +180,50 @@ the 17:00–18:30 ET window (add 23:45 + 00:15 CET = 17:45 + 18:15 ET). These ar
 *entry-eligible* scan points (after the 23:00 CET ban), so unlike the open-hour
 observation scans they change live entry behavior → **propose to Juan for veto,
 do not apply silently.**
+
+---
+
+## Watch-list source test for the pre-16:30-ET open window (2026-07-22, strategy-advance)
+
+Finding 2 above showed the screener is **blind before ~16:30 ET**, so the only
+way to shrink open-window catch-lag is to run the SIP spike-bar check on a
+**pre-seeded watch list** at 22:00/22:15 CET. The open question that gates
+building that: **does a "regular-session day-movers" list actually contain the
+AH igniters we care about?** Fresh post-close-news igniters (earnings dropped at
+16:00 ET) may be flat in the regular session and absent from any day-movers list.
+
+Tested it directly from Alpaca daily bars (regular-session-only OHLC): for each
+recent AH igniter, computed the regular-session day% (prior close → that day's
+regular close, and → regular high) and checked it against scan.py's
+`MIN_DAY_CHANGE_REGULAR = 15` day-mover threshold.
+
+| Ticker | AH-eve | Prior C | Reg C | Reg C% | Reg H% | Day-mover (>15%)? | AH/PM outcome |
+|--------|--------|---------|-------|--------|--------|-------------------|----------------|
+| HIHO   | 07-20  | 0.78    | 0.93  | +19.2% | +20.5% | **YES**           | traded winner (+26% hypo; entered) |
+| ADVB   | 07-20  | 5.03    | 8.90  | +76.9% | +87.3% | **YES**           | SPIKE→fade (skipped) |
+| CJMB   | 07-16  | 0.74    | 0.86  | +16.2% | +24.3% | **YES**           | traded winner +19.8% |
+| RDGT   | 07-20  | 1.41    | 1.58  | +12.1% | +13.5% | no (borderline)   | PM +47%, gate-blocked |
+| AEHL   | 07-21  | 0.67    | 0.65  | −3.0%  | +14.9% | no (borderline)   | SPIKE→fade (skipped) |
+| PAPL   | 07-20  | 0.91    | 0.88  | −3.3%  | 0%     | **no**            | entered, faded −23.6% |
+| KUST   | 07-21  | 1.27    | 0.96  | −24.4% | 0%     | **no**            | fade/dead-cat (skipped) |
+
+**Result: 3 of 7 clear the day-mover threshold — but both traded WINNERS
+(HIHO, CJMB) are in the caught set, and the misses skew to faders/losers.** The
+names a regular-session day-movers pre-seed would **miss** (PAPL −23.6%, KUST
+dead-cat, AEHL fade; RDGT the one profitable miss) are dominated by names we
+either lost on or correctly skipped. The two AH→PM continuations we actually made
+money detecting were **already +16–19% in the regular session** before their AH
+ignition, so a 16:00 ET day-movers list surfaces them, letting the 22:00/22:15
+SIP spike-bar check catch the ignition bar 15–30 min ahead of the ~16:30 ET
+screener (HIHO ignited 16:04, screener surfaced it only at 22:30).
+
+**Design conclusion.** The regular-session day-movers list is a **useful but
+partial** early-watch source: it rescues the profitable subset (AH igniters that
+were already regular-session movers) and its blind spot (flat/down-regular
+post-close-news names) skews toward faders in this n=7 sample. It cannot help a
+genuinely flat-regular igniter like PAPL — those depend on the external ~16:30 ET
+screener population, which we can't beat. **Next step: wire scan.py's
+`--day-movers` regular list as the 22:00/22:15 CET watch source and run
+spike-bar.js on each (log-only), then measure over more sessions whether the
+"winners are already day-movers" pattern holds before proposing any entry use.**
+Small sample — treat the "both winners caught" as promising, not proven.

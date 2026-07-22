@@ -422,8 +422,32 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** In progress — **spike-bar column live-validated on the first wired AH
-session (2026-07-20); two decision-relevant findings + a proposal to Juan.** On
+**Status:** In progress — **watch-list source for the pre-16:30-ET open window
+tested (2026-07-22): a regular-session day-movers list catches both traded
+winners (HIHO, CJMB) and misses skew to faders — next step is to wire it as the
+22:00/22:15 SIP watch source.** **Prior: spike-bar column live-validated on the
+first wired AH session (2026-07-20); two decision-relevant findings + a proposal
+to Juan.**
+
+**Update (2026-07-22) — watch-list source test (pilot step b).** The 07-20
+finding that the screener is blind before ~16:30 ET means the only way to shrink
+open-window catch-lag is to run the SIP spike-bar check on a **pre-seeded watch
+list** at 22:00/22:15 CET. Tested the obvious source — scan.py's regular-session
+day-movers (`MIN_DAY_CHANGE_REGULAR=15`) — against 7 recent AH igniters using
+Alpaca daily (regular-session) bars: **3/7 clear the threshold, but both traded
+WINNERS (HIHO +19.2% reg, CJMB +16.2% reg) are caught and the misses skew to
+faders/losers (PAPL −23.6%, KUST dead-cat, AEHL fade).** The AH→PM continuations
+we make money on were already +16–19% in the regular session before their AH
+ignition, so a 16:00 ET day-movers list surfaces them and lets the SIP check
+catch the ignition bar 15–30 min ahead of the screener. It can't help a
+flat-regular post-close-news igniter (PAPL) — those depend on the external
+~16:30 ET screener population. Full table in `INIT3_IGNITION_TIMING.md`. **Next:
+wire scan.py `--day-movers` as the 22:00/22:15 watch source, run spike-bar.js on
+each (log-only), and measure whether the "winners are already day-movers"
+pattern holds over more sessions before any entry use.** The 07-21 session added
+no late-window igniter (winner SXTC was a PM-only gapper; AEHL/KUST faded and
+were correctly gate-blocked), so proposal (C)'s late-window tally holds at 2 — 
+held one more session. On
 Mon 07-20 the wired 22:15/22:45 CET scans and the spike-bar column fired live for
 the first time (`log/2026-07-20/log.md`). **(1) Column validated end-to-end** on 6
 real names: HIHO/SHPH SPIKE 16:04, PAPL SPIKE 17:09, ADVB SPIKE 17:32, RDGT SPIKE

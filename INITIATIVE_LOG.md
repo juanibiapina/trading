@@ -9,6 +9,56 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-22 — Init 3: watch-list source for the pre-16:30-ET open window tested — regular-session day-movers catches both traded winners, misses skew to faders
+
+**Evaluated:** Prior step (2026-07-21: after the next 1–2 AH sessions, if
+proposal (C) draws no veto, wire the late-window scans; keep accumulating
+SPIKE/NO-SPIKE) — **worked / no trigger to act yet.** The 07-21 AH session ran
+(evaluated in `log/2026-07-22/log.md`): the spike-bar column kept working (AEHL
+flagged SPIKE→FADE, correctly gate-blocked; KUST dead-cat), the winner **SXTC was
+a PM-only gapper** (+223% at PM open, no AH footprint — not an AH-detection
+sample), and **no late-window (17:00–18:30 ET) igniter appeared**, so proposal
+(C)'s late-window tally holds at 2 (CJMB, RDGT). One session passed with no veto,
+tally not firmed → **hold (C) one more session** (conservative; don't wire an
+entry-eligible schedule change on a soft tally).
+
+**Step taken (pilot / Init 3, step b):** Tested the open question that gates
+building the "SIP spike-bar on a pre-seeded watch list" mechanism (needed because
+the screener is blind before ~16:30 ET): **does a regular-session day-movers list
+actually contain the AH igniters we care about?** Pulled Alpaca daily
+(regular-session-only) bars for 7 recent AH igniters and computed each one's
+regular-session day% vs scan.py's `MIN_DAY_CHANGE_REGULAR=15` threshold. Wrote
+the census table + design conclusion into `INIT3_IGNITION_TIMING.md`.
+
+**Result:** **3 of 7 clear the day-mover threshold — but both traded WINNERS are
+in the caught set** (HIHO +19.2% reg close, CJMB +16.2% reg close), and the
+misses skew to faders/losers (PAPL −23.6%, KUST dead-cat, AEHL fade; RDGT the one
+profitable miss at +12% borderline). The AH→PM continuations we make money on
+were **already +16–19% in the regular session** before their AH ignition, so a
+16:00 ET day-movers list surfaces them and lets the 22:00/22:15 SIP spike-bar
+check catch the ignition bar 15–30 min ahead of the ~16:30 ET screener (HIHO
+ignited 16:04, screener surfaced it only at 22:30). The list's blind spot
+(flat/down-regular post-close-news names like PAPL) can't be beaten by SIP — no
+symbol to check until the screener populates at 16:30 ET. So the day-movers list
+is a **useful but partial** early-watch source, and its blind spot skews toward
+names we lose on or correctly skip (n=7, promising not proven).
+
+**Hypothesis / next step:** (a) Wire scan.py `--day-movers` (regular-session
+high-change list) as the 22:00/22:15 CET watch source and run `spike-bar.js` on
+each name **log-only**, so the tighter grid accumulates ignition-bar timing on
+day-movers before the screener wakes up. (b) Over more sessions, test whether the
+"AH→PM winners were already regular-session day-movers" pattern holds — if it
+does, an early SIP-caught day-mover ignition becomes a candidate entry signal (a
+future proposal). (c) Re-check proposal (C) after the next AH session: if a third
+late-window igniter appears or the window stays quiet with no veto, wire the
+23:45/00:15 CET late-window scans.
+
+**Needs from Juan:** nothing new. Proposal (C) veto window (add 23:45 + 00:15 CET
+entry-eligible late-window scans) stays open — silence = wire a future run once
+the tally firms; say the word to veto.
+
+---
+
 ### 2026-07-21 — Init 3: first live wired-scan session — spike-bar column validated end-to-end; screener blind before 16:30 ET; late-window densification proposed (C)
 
 **Evaluated:** Prior step (2026-07-20: after the 07-20 AH session, evaluate the
