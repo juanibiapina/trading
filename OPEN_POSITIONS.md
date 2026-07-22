@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | Flat as of 2026-07-21 14:30 CET pulse. |
+| PLAG | $0.98 | 97 | 2026-07-22 23:01 CET | None | 437b3f29 | Positive-day AH BUILD (Day +9.4%, AH 2 scans >10%: 22:45 +15.4% → 23:00 +44.3%). Real SIP volume: 16:45 ET bar 1.57M sh/6357 trades, H $1.26, VWAP $1.01; holding ignition VWAP. Fillable book bid $1.00/ask $1.03 x100. No same-day catalyst found (4 searches) — China food/methanol microcap, reverse-split/NYSE-listing history. Grade None → exit first PM opportunity. |
 
 ## Position Rules
 

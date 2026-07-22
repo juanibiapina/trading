@@ -124,6 +124,40 @@ PM 07-22 04:00 ET: EXPLODES $3.39 → $7.91 on 1.3–1.85M sh/bar (24k–39k tra
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| PLAG | $0.98 | 23:01 CET | 97 | 437b3f29 | Positive-day AH BUILD, 2 AH scans >10%, real SIP volume, Grade None (no catalyst found). |
+
+## Scan 23:00 CET (5:00 PM ET)
+
+**AH scan — entry window open** (learning phase: entries allowed at 23:00+ CET). `scan.py --all` returned **4 hits** (17:00:12 ET): ZYBT, PN, PLAG, DOMO.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ZYBT | [TV](https://www.tradingview.com/chart/?symbol=ZYBT) | $1.38 | −51.6% | +27.5% | $1.76 | −38.2% | 4.4M | 21.2M | 0.2x | 7.7M | Biotechnology |
+| PN | [TV](https://www.tradingview.com/chart/?symbol=PN) | $9.34 | +131.8% | +5.7% | $9.87 | +144.9% | 1.6M | 1.1M | 1.4x | 1.1M | Electric Utilities |
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.59 | +9.4% | +44.3% | $0.85 | +57.9% | 526K | 224K | 2.3x | 11.6M | Food: Specialty/Candy |
+| DOMO | [TV](https://www.tradingview.com/chart/?symbol=DOMO) | $3.15 | −8.4% | +31.7% | $4.15 | +20.6% | 112K | 1.0M | 0.1x | 36.9M | Packaged Software |
+
+**Spike-bar instrumentation (AH >10% names, log-only):**
+- PLAG: `SPIKE 16:18ET +20% $0.71 78 trades / 99k sh` (first co-spike bar)
+- ZYBT: `SPIKE 16:16ET +30% $1.80 724 trades / 135k sh` (first co-spike bar)
+- DOMO: `SPIKE 16:45ET +32% $4.15 330 trades / 137k sh` (first co-spike bar)
+
+**SIP cross-check (PLAG, fresh to 16:45 ET / ~6 min lag):**
+
+| Ticker | AH trajectory (SIP bars) | Live quote (fresh) | Verdict |
+|--------|--------------------------|--------------------|---------|
+| PLAG | Build $0.63→$0.70→$1.03 (16:40 ET, 275k sh/888tr) → **16:45 ET 1.57M sh / 6357 trades**, H $1.26, VWAP $1.01 | bid $1.00 / ask $1.03 x100 (20:51Z) | Real BUILD, accumulating, holding ignition VWAP — **ENTER** |
+| PN | Peak H $10.70 @16:35ET (415 sh Yahoo) → faded to $8.77, now quote $11.42 | bid $11.31 / ask $11.42 x100 | Total ~+183% vs $4.03 prev-prev close, blows past +150% ceiling; choppy RTH-driven (+131.8%), VRatio 1.4 (<5x, no ceiling-override). **Skip: extension ceiling** |
+| ZYBT | Peak $2.11 @16:25ET → fading, current $1.69–1.76 | (carried) | Day −51.6% dead-cat + SPIKE→FADE, Total −38.2% (far below close, no reclaim). **Skip: dead-cat** |
+| DOMO | Was −8.4% @16:00 ET, moved late: +10% @16:45 → +12% @17:00 (Yahoo); SIP spike-bar 16:45 ET 137k sh/330tr | tradable=true | First AH scan appearance only → **fails 2-AH-scan gate**; VRatio 0.1, float 36.9M. Likely earnings (real software co.). **Watch 23:30** |
+
+**Evaluation:**
+- **PLAG — ENTERED.** Positive day (+9.4% RTH), cleared the 2-AH-scan >10% gate (22:45 +15.4% → 23:00 +44.3%), Total +57.9% (well under ceiling), float 11.6M (<50M). SIP shows a genuine BUILD with heavy real accumulation (16:45 ET bar 1.57M sh / 6357 trades, H $1.26) and the price is holding the ignition-bar VWAP ($1.01) with a fillable two-sided book. Not a dead-cat (positive RTH day), not SPIKE→FADE (building volume, new highs into 16:45). Catalyst: structured search (4 queries) found **no same-day catalyst** — China food/methanol microcap with reverse-split + NYSE-listing-notice history. Per learning-phase no-catalyst rule, entered with concern noted (Grade None → exit first PM opportunity). **BUY 97 PLAG @ limit $1.06 ext (id 437b3f29) filled @ $0.98.** Real fill $0.98.
+- **PN — Skip: extension ceiling.** Now has a fillable book (quote $11.42, earlier scans were `ask $0.00 x0`), but total move ~+183% blows past the +150% ceiling; primarily an RTH mover (+131.8%), AH choppy (+5.7% scanner), VRatio 1.4 (<5x → no ceiling-override watch).
+- **ZYBT — Skip: dead-cat (carried).** Day −51.6%, bouncing in AH but Total −38.2% (never approaches close), peaked 16:25 ET and fading. No dead-cat-override (no reclaim above close).
+- **DOMO — Watch.** First AH scan appearance only → fails the 2-AH-scan gate. Late AH mover (moved at 16:45 ET), VRatio 0.1, float 36.9M. Real software co. — probable earnings. Re-check at 23:30 for a 2nd AH scan >10%.
+
+**One entry: PLAG @ $0.98 (Grade None).**
 
 ## Scan 22:45 CET (4:45 PM ET)
 
