@@ -115,3 +115,37 @@ PM 07-22 04:00 ET: EXPLODES $3.39 → $7.91 on 1.3–1.85M sh/bar (24k–39k tra
 
 **Actions taken:**
 - None. Nothing to sell, no stops to update. Account flat since 07-21 14:30 CET pulse (HIHO, PAPL both closed).
+
+---
+
+# Post-Market Screening - 2026-07-22
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+
+## Scan 21:30 CET (3:30 PM ET)
+
+**REGULAR session** — 30 min before AH open (16:00 ET / 22:00 CET). Per the regular-session caution rule, **no paper trades**. Candidates below are flagged **Watch — pending AH confirmation**; only enter if they reappear in an AH scan (22:00+ CET) with sustained momentum. Intraday spikers that don't carry into AH tend to fade.
+
+Noise filtered out (sub-1K 5-min volume prints: GLVT +793%, LXEIF +844%, APHD +213%, SKYC +160%, BGMSP +100%, VNOV +72.5%, GAMG +72.3%, PAVLF +60.4% — all <1K shares, not tradeable signals). Real-volume, lower-float watch candidates:
+
+| Ticker | Chart | Price | Day% | 5mVol | Avg5m | IRVol | Float | MCap | Industry |
+|--------|-------|-------|------|-------|-------|-------|-------|------|----------|
+| ZCMD | [TV](https://www.tradingview.com/chart/?symbol=ZCMD) | $4.07 | +176.9% | 136K | 302K | 163.5 | 1.1M | $1.7M | Misc Commercial Services |
+| PN | [TV](https://www.tradingview.com/chart/?symbol=PN) | $8.57 | +112.7% | 336K | 301K | 275.2 | 1.1M | $57.7M | Electric Utilities |
+| LABT | [TV](https://www.tradingview.com/chart/?symbol=LABT) | $3.17 | +70.2% | 55K | 125K | 292.6 | 956K | $5.5M | Biotechnology |
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $3.41 | +52.9% | 20K | 45K | 231.4 | 1.0M | $3.6M | Industrial Machinery |
+| KSCP | [TV](https://www.tradingview.com/chart/?symbol=KSCP) | $2.08 | +45.7% | 70K | 64K | 30.4 | 15.2M | $35.9M | Industrial Machinery |
+| NTRX | [TV](https://www.tradingview.com/chart/?symbol=NTRX) | $0.62 | +73.9% | 3K | 1K | 1.9 | 9.8M | $9.4M | Wholesale Distributors |
+| INM | [TV](https://www.tradingview.com/chart/?symbol=INM) | $1.70 | +10.1% | 19K | 30K | 777.7 | 2.5M | $5.6M | Pharmaceuticals: Major |
+
+**Watch notes:**
+- **ZCMD** — Biggest real-volume mover (+176.9%, 1.1M float, 136K/5min). Total move already extended; watch whether it holds into AH or fades. IRVol 163x = genuine unusual activity.
+- **PN** — +112.7% on 336K/5min, 1.1M float, but $57.7M cap (higher). Electric utility is an unusual sector for a low-float spike; catalyst check needed if it carries to AH.
+- **LABT** — Sub-1M float (956K) biotech +70.2%. Prime float profile; watch for AH continuation.
+- **INLF** — 1.0M float industrial +52.9%. Note: appeared as a fader in this morning's retrospective PM scan (+58% $3.53). Recurring pump name — watch for fade.
+- **KSCP** — +45.7%, higher float (15.2M). Negative-control profile.
+- **KUST** (+40.5%, 577K float) — carried from last night; was a dead-cat-override watch that faded to $1.01. Repeat pump name, deprioritized.
+- No entries this scan (regular session). Next scan 22:00 CET is the first AH scan.
