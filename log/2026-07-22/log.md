@@ -126,6 +126,50 @@ PM 07-22 04:00 ET: EXPLODES $3.39 → $7.91 on 1.3–1.85M sh/bar (24k–39k tra
 |--------|------------|------------|-----------------|----------|--------|
 | PLAG | $0.98 | 23:01 CET | 97 | 437b3f29 | Positive-day AH BUILD, 2 AH scans >10%, real SIP volume, Grade None (no catalyst found). |
 | DOMO | $3.92 | 23:32 CET | 25 | 32f667b6 | AH BUILD-and-hold, 2 AH scans >10%, **Grade A** ($400M asset sale to Progress Software), real SIP volume, low extension (+14.2%). |
+| AEHL | $0.69 | 00:01 CET | 136 | eda7aa5d | Recovering-day AH BUILD-and-hold (reclaimed above prior close), 2 AH scans >10%, real SIP volume (883k sh/bar), holding within 2% of peak, Grade None (recurring crypto-treasury pump, no fresh catalyst). |
+
+## Scan 00:00 CET (6:00 PM ET)
+
+**AH scan — entry window open** (second-to-last scan; 00:30 CET is final). `scan.py --all` returned **8 hits** (18:00:17 ET): PLAG, ZYBT, AEHL, LGCL, DOMO, INM, STFS, IVVD. Two positions already open tonight (PLAG $0.98, DOMO $3.92). New name: **LGCL**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.59 | +9.4% | +7.2% | $0.63 | +17.3% | 8.2M | 1.0M | 7.9x | 11.6M | Food: Specialty/Candy |
+| ZYBT | [TV](https://www.tradingview.com/chart/?symbol=ZYBT) | $1.38 | −51.6% | +23.9% | $1.71 | −40.0% | 5.6M | 21.4M | 0.3x | 7.7M | Biotechnology |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $0.56 | −13.8% | +28.4% | $0.71 | +10.7% | 3.9M | 9.7M | 0.4x | 15.6M | Building Products |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $0.95 | −2.9% | +57.6% | $1.50 | +53.0% | 1.8M | 397K | 4.6x | 1.6M | Personnel Services |
+| DOMO | [TV](https://www.tradingview.com/chart/?symbol=DOMO) | $3.15 | −8.4% | +23.5% | $3.89 | +13.1% | 1.5M | 1.2M | 1.3x | 36.9M | Packaged Software |
+| INM | [TV](https://www.tradingview.com/chart/?symbol=INM) | $1.66 | +7.8% | +8.4% | $1.80 | +16.9% | 446K | 5.2M | 0.1x | 2.5M | Pharmaceuticals: Major |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $3.79 | −49.8% | +66.8% | $6.32 | −16.3% | 184K | 137K | 1.3x | 1.1M | Advertising/Marketing Services |
+| IVVD | [TV](https://www.tradingview.com/chart/?symbol=IVVD) | $0.62 | −9.0% | +6.4% | $0.66 | −3.2% | 95K | 2.6M | 0.0x | 249.9M | Biotechnology |
+
+**Spike-bar instrumentation (AH >10% names, log-only):**
+- LGCL: `SPIKE 17:25ET +18% $1.12 192 trades / 5k sh` (first co-spike bar)
+- AEHL: `SPIKE 17:00ET +21% $0.68 383 trades / 227k sh` (first co-spike bar, carried)
+- ZYBT: `SPIKE 16:16ET +30% $1.80 724 trades / 135k sh` (carried)
+- DOMO: `SPIKE 16:45ET +32% $4.15 330 trades / 137k sh` (carried)
+- PLAG: `SPIKE 16:18ET +20% $0.71 78 trades / 99k sh` (carried)
+- STFS: `NO-SPIKE` (thin, bad print)
+
+**SIP cross-check (bars fresh to 17:45 ET / ~15 min lag; both broker quotes frozen-stale at 16:00-16:05 ET = broker artifact, lean on SIP + Yahoo per freshness guard):**
+
+| Ticker | AH trajectory (SIP bars + Yahoo) | Verdict |
+|--------|----------------------------------|---------|
+| LGCL | Ignition 17:25 ET H $1.20 (164k sh/1166tr) → **accelerating BUILD** 604k→514k→827k→791k sh/bar (3-5k trades each), C $1.27→$1.37→$1.50. Yahoo: making **new highs** $1.73 (+76.5%) at 18:02 ET, peaking late (>17:30). Float 1.6M ideal, Total +53-76% (under 150 ceiling), VRatio 4.6. **First AH-scan appearance → fails 2-AH-scan gate.** No catalyst found (3 searches; agentic-AI patent headline undated, 40:1 reverse split Oct 2025). **WATCH for 00:30 — strongest candidate; enter if it reappears >10%** | Watch (gate) |
+| AEHL | Spike 17:00 ET H $0.72 (883k sh/2186tr) → new high $0.78 @17:25 ET (755k sh) → **HOLDING** $0.70-0.73 through 18:01 ET (Yahoo), within 2% of $0.74 peak. AH% rising across scans (23:30 +21.7% → 00:00 +28.4%). Day −13.8% (>−15%), Total +10.7% (reclaimed above prior close, not dead-cat), float 15.6M. Real accumulating volume. Grade None (recurring crypto "Genius Plan"/BTC pump, no fresh PR). **ENTER** | **ENTERED** |
+| DOMO | (held from 23:32) still BUILD-and-hold, 2nd position tonight | Held |
+| PLAG | (held from 23:01) VRatio now 7.9x on 8.2M AH vol | Held |
+| ZYBT | Day −51.6% dead-cat, Total −40% (far below close), peaked 16:15 ET fading | Skip: dead-cat |
+| STFS | AH vol 184k on thin trades, scanner +66.8% is a bad print vs thin SIP, Day −49.8% | Skip: dead-cat + bad print |
+| INM / IVVD | Below 10% AH gate (+8.4% / +6.4%) | Skip |
+
+**Evaluation:**
+- **AEHL — ENTERED.** Cleared all gates: 2 AH scans >10% (23:30 +21.7% → 00:00 +28.4%, rising), Day −13.8% (above the −15% dead-cat threshold), Total +10.7% (**reclaimed above prior-day close** → not a dead-cat; low extension), float 15.6M (<50M). SIP shows real heavy accumulation (17:00 ET bar 883k sh/2186tr; 17:25 ET 755k sh/1832tr; 400-800k sh/bar). Yahoo confirms a genuine **HOLD**, not a fade: price holds $0.70-0.73 from 17:00 to 18:01 ET, within 2% of the $0.74 peak, AH% rising across scans → early peak (17:25 ET) is **not** disqualifying (hold-vs-fade is primary; not declining). Broker quote frozen-stale at 16:05 ET (artifact); SIP proves a liquid fillable book (name averages 9.7M vol/day). Catalyst: recurring "Genius Plan" crypto/BTC-treasury narrative from ~Jul 17, **no fresh same-day PR** → Grade None. **BUY 136 AEHL @ limit $0.78 ext (id eda7aa5d) filled @ $0.69.** Grade None → exit first PM opportunity.
+- **LGCL — Watch (fails 2-AH-scan gate).** Best-quality setup of the night (float 1.6M ideal, accelerating BUILD to new highs $1.73 at 18:02 ET, peaking late >17:30 ET, VRatio 4.6, Total under ceiling, real 600-800k sh/bar volume). But it is a **first AH-scan appearance** (ignition fired 17:25 ET, after the 23:30 scan) → cannot enter on 1 AH scan. No catalyst found (3 searches). **Strongest watch for the 00:30 final scan — enter if it reappears >10% (near-certain).**
+- **ZYBT / STFS — Skip (carried):** dead-cat bounces (Day −51.6% / −49.8%), Total far below close. STFS +66.8% scanner print is a bad print on thin SIP.
+- **INM / IVVD — Skip:** below the 10% AH gate.
+
+**One new entry: AEHL @ $0.69 (Grade None).** PLAG + DOMO carried. LGCL held for 00:30 (gate).
 
 ## Scan 23:30 CET (5:30 PM ET)
 
