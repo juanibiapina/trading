@@ -125,6 +125,33 @@ PM 07-22 04:00 ET: EXPLODES $3.39 → $7.91 on 1.3–1.85M sh/bar (24k–39k tra
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**AH scan** — observation-only window (learning phase: no entries before 23:00 CET). `scan.py --all` returned **3 hits** (16:30:15 ET). ZCMD (strongest 22:15 candidate) was again **omitted by the TradingView feed** — SIP cross-check below is truth.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CHAI | [TV](https://www.tradingview.com/chart/?symbol=CHAI) | $0.50 | +28.0% | +5.0% | $0.53 | +34.4% | 730K | 16.5M | 0.0x | 9.0M | Packaged Software |
+| LABT | [TV](https://www.tradingview.com/chart/?symbol=LABT) | $3.41 | +83.3% | +7.1% | $3.65 | +96.3% | 473K | 8.1M | 0.1x | 956K | Biotechnology |
+| ZYBT | [TV](https://www.tradingview.com/chart/?symbol=ZYBT) | $1.38 | −51.6% | +9.4% | $1.51 | −47.0% | 51K | 20.7M | 0.0x | 7.7M | Biotechnology |
+
+**SIP cross-check (tracked names, feed truth) — bars lag ~15 min to 16:15 ET:**
+
+| Ticker | Close | AH trajectory (SIP bars) | Current AH | Book (quote) | Spike-bar |
+|--------|-------|--------------------------|------------|--------------|-----------|
+| ZCMD | $4.07 | Peak H $5.58 (+37%) @16:00ET on 1.28M sh → faded $4.25→$3.95→$4.26 across bars | ~$4.26 (+4.7%) | bid $3.69 / ask $4.95 x100 | SPIKE 16:00ET +16% $4.98 1801tr/181k sh |
+| PN | ~$8.57 | Peak H $10.45 @16:00ET (505K sh) → faded to $8.29 | ~$8.29 | bid $4.83 / **ask $0.00 x0** | (NO-SPIKE) |
+| LABT | $3.41 | Real surge 16:10ET H $3.87 (470K sh/4276tr) → faded to $3.46 | ~$3.46 (+1.5%) | bid $2.93 / ask $3.89 x100 | NO-SPIKE peak +13% @16:11ET |
+
+**Evaluation (observation-only, no entries):**
+- **ZCMD** — Classic **SPIKE→FADE** from the opening bar: peaked +37% ($5.58) at 16:00 ET, faded every subsequent bar back toward close (~+5% AH now). Also extremely extended (RTH already +176.9%; total >180% blows past the +150% ceiling). Fillable book (ask $4.95 x100) but trajectory is fading, not building. **Would skip** on both SPIKE→FADE and ceiling even at 23:00. Watch for a base-build across 23:00/23:30 before any consideration.
+- **LABT** — Sub-1M float (956K) biotech, real volume surge at 16:10 ET but immediately faded from $3.87 to $3.46. AH only +7.1%, NO-SPIKE (peak +13%, never cleared +15% co-spike). Below the 2-AH-scan >10% gate. Watch.
+- **PN** — `ask $0.00 x0` = **no fillable AH book** → illiquid, would skip on liquidity sanity check regardless. Also fading and higher-cap ($57.7M). NO-SPIKE.
+- **CHAI** — Low AH change (+5%), NO-SPIKE, 9M float packaged software. Below gate.
+- **ZYBT** — Day **−51.6%** (crashed >15% in regular session), bouncing +9.4% in AH but total still **−47%** (far below close). Classic **dead-cat bounce** — skip. No dead-cat-override (reclaim requires building *above* close; ZYBT is nowhere near it).
+
+**No entries** (observation-only window before 23:00 CET). No candidate currently shows a BUILD/hold pattern — the strongest volume names (ZCMD, LABT, PN) all faded from opening-bar spikes. Re-check all at 23:00 CET for hold-vs-fade before any entry decision.
+
 ## Scan 22:15 CET (4:15 PM ET)
 
 **Bonus AH scan.** `scan.py --all` returned **0 hits** (16:15:11 ET) — but this is a **feed-lag artifact on the opening bar**. Ad-hoc SIP cross-check of the 21:30 watch names shows real AH accumulation already:
