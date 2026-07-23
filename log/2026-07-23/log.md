@@ -127,3 +127,12 @@ Entry: $1.58 @ 00:30 CET (18:30 ET) on 2nd AH scan → +48.7% live, +56.3% to PM
 - SELL PLAG 97 @ limit $0.83 ext (id 876ddb3a) → filled $0.86. P&L -$11.64 (-12.2%)
 - HOLD DOMO (Grade A, day 1)
 - Net realized this pulse: **+$11.76**. LGCL was the clean detect→select→continuation winner (+24%).
+
+## Position Evaluation — 14:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| DOMO | $3.92 | $4.19 | +6.9% | $4.50 (+14.8%) | 1 | A | HOLD | Day 1/5, catalyst intact, peak below +50% trail threshold, above -25% hard stop ($2.94) |
+
+**Actions taken:**
+- None. HOLD DOMO. SIP peak $4.50 at 11:55Z on 1.98M sh/bar (real accumulating volume), faded to $4.14 bid. No trail (peak +14.8% < +50%). Hard stop $2.94 intact.
