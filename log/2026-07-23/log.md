@@ -157,6 +157,12 @@ Real intraday movers (meaningful 5m volume; most other scan hits are sub-1K-shar
 
 **Decision:** No entries — regular-session watch scan. AH opens at 22:00 CET; the 22:00/22:30 scans are observation-only per learning-phase default (no entries before 23:00 CET). Re-evaluate DOMO/AEHL/TMDE/APUS/BATL for AH carry at the 22:00+ scans. Scanner otherwise returned 56 hits, but the remainder are sub-1K-share prints (IRVol inflated on stale regular-session volume), not fillable movers.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+AH open (16:00 ET). Scanner returned **0 hits** — the TradingView `postmarket_volume` feed is typically empty in the first minutes after AH open, so no AH movers registered yet. Observation-only scan regardless (no entries before 23:00 CET per learning-phase default).
+
+No candidates found. Watch names from the 21:30 regular-session scan (DOMO [open pos], AEHL, TMDE, APUS, BATL) not yet confirmed carrying into AH — re-check at 22:30/23:00 as the AH feed populates.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
