@@ -136,3 +136,28 @@ Entry: $1.58 @ 00:30 CET (18:30 ET) on 2nd AH scan → +48.7% live, +56.3% to PM
 
 **Actions taken:**
 - None. HOLD DOMO. SIP peak $4.50 at 11:55Z on 1.98M sh/bar (real accumulating volume), faded to $4.14 bid. No trail (peak +14.8% < +50%). Hard stop $2.94 intact.
+
+---
+
+# Post-Market Screening - 2026-07-23
+
+## Scan 21:30 CET (3:30 PM ET)
+
+Regular-session scan (15:30 ET), **before AH opens** (16:00 ET / 22:00 CET). Watch only — no entries per regular-session-caution rule. Only enter if a name reappears in a 22:00+ CET AH scan with sustained momentum.
+
+Real intraday movers (meaningful 5m volume; most other scan hits are sub-1K-share illiquid artifacts with stale IRVol):
+
+| Ticker | Chart | Price | Day% | 5mVol | IRVol | VChg% | Float | MCap | Industry | Note |
+|--------|-------|-------|------|-------|-------|-------|-------|------|----------|------|
+| DOMO | [TV](https://www.tradingview.com/chart/?symbol=DOMO) | $3.95 | +25.4% | 86K | 28.8 | +44.8 | 36.9M | 178.3M | Packaged Software | **Open position** (Grade A, $400M asset sale). Not re-entered (one entry/candidate). |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $0.68 | +22.1% | 169K | 23.9 | +244.8 | 15.6M | 12.3M | Building Products | Watch — pending AH. Low-float crypto-treasury pump, sold this AM $0.70. |
+| TMDE | [TV](https://www.tradingview.com/chart/?symbol=TMDE) | $1.05 | +22.6% | 16K | 8.7 | +231.1 | 16.5M | 24.8M | Wholesale Distributors | Watch — pending AH. |
+| APUS | [TV](https://www.tradingview.com/chart/?symbol=APUS) | $0.77 | +17.3% | 39K | 1.9 | +310.3 | 5.6M | 11.7M | Biotechnology | Watch — pending AH. Low float 5.6M. |
+| BATL | [TV](https://www.tradingview.com/chart/?symbol=BATL) | $1.80 | +16.1% | 187K | 1.8 | +50.4 | 18.0M | 39.6M | Oil & Gas Production | Watch — pending AH. |
+
+**Decision:** No entries — regular-session watch scan. AH opens at 22:00 CET; the 22:00/22:30 scans are observation-only per learning-phase default (no entries before 23:00 CET). Re-evaluate DOMO/AEHL/TMDE/APUS/BATL for AH carry at the 22:00+ scans. Scanner otherwise returned 56 hits, but the remainder are sub-1K-share prints (IRVol inflated on stale regular-session volume), not fillable movers.
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
