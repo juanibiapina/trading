@@ -357,10 +357,70 @@ AH ~2h in. Entry window open. Scanner returned **12 hits**.
 
 **Decision:** ENTERED JEM ($5.37, Grade D dilution concern noted) — only candidate clearing the 2-AH-scan gate this scan. ANY is the stronger trajectory (late BUILD, new highs) but fails the gate with only 1 >10% AH scan — track for the 00:30 final scan. PAVS/AKAN/DOMO held (one entry/candidate). Dead-cats (ZCMD, LVWR, HYFT) and sub-threshold names skipped.
 
+## Scan 00:30 CET (6:30 PM ET) — Final Scan
+
+AH ~2.5h in. Entry window open. **Final scheduled scan.** Scanner returned **11 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $1.76 | +8.3% | +35.4% | $2.39 | +46.6% | 2.7M | 646K | 4.1x | 6.0M | IT Services |
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $1.00 | -4.8% | +16.0% | $1.16 | +10.5% | 3.0M | 1.0M | 2.9x | 23.9M | Motor Vehicles |
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $5.91 | +52.3% | +16.8% | $6.90 | +77.8% | 2.0M | 1.9M | 1.0x | 857K | Pharmaceuticals: Other |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $8.07 | +0.1% | +16.9% | $9.43 | +17.0% | 119K | 39K | 3.1x | 541K | Agricultural Commodities/Milling |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $4.74 | +34.3% | +16.2% | $5.51 | +56.1% | 1.7M | 3.0M | 0.6x | n/a | Wholesale Distributors |
+| LVWR | [TV](https://www.tradingview.com/chart/?symbol=LVWR) | $0.77 | -15.3% | +16.3% | $0.90 | -1.5% | 60K | 983K | 0.1x | 10.2M | Recreational Products |
+| OCG | [TV](https://www.tradingview.com/chart/?symbol=OCG) | $1.61 | -3.6% | +11.2% | $1.79 | +7.2% | 804K | 158K | 5.1x | 1.9M | Specialty Stores |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $0.83 | -6.7% | +9.6% | $0.91 | +2.2% | 6.8M | 3.4M | 2.0x | 1.6M | Internet Retail |
+| ZCMD | [TV](https://www.tradingview.com/chart/?symbol=ZCMD) | $1.73 | -59.7% | +5.2% | $1.82 | -57.6% | 2.2M | 16.5M | 0.1x | 1.1M | Misc Commercial Services |
+| SKYQ | [TV](https://www.tradingview.com/chart/?symbol=SKYQ) | $5.64 | +36.6% | +6.6% | $6.01 | +45.5% | 730K | 10.6M | 0.1x | 3.8M | Integrated Oil |
+| INEO | [TV](https://www.tradingview.com/chart/?symbol=INEO) | $0.72 | +0.8% | +7.5% | $0.77 | +8.4% | 204K | 257K | 0.8x | 2.0M | Wholesale Distributors |
+
+**Spike-bar instrumentation (AH >10% names, log-only):**
+- `ANY 2026-07-23 SPIKE 16:35ET +19% $2.09 177 trades / 28k sh (first co-spike bar) (as-of 18:30ET)`
+- `UCAR 2026-07-23 SPIKE 16:15ET +23% $1.23 66 trades / 14k sh (first co-spike bar) (as-of 18:30ET)`
+- `OCG 2026-07-23 SPIKE 16:30ET +32% $2.13 623 trades / 92k sh (first co-spike bar) (as-of 18:30ET)`
+
+**ANY workup — ENTERED (Grade C, Cathedra Bitcoin acquisition narrative).**
+- **tradable=true** (NASDAQ). Quote bid $1.47 x100 / ask $2.07 x100 (stamped 20:00Z stale); SIP bars fresh through 21:40Z, Yahoo `--ah-history` fresh through 18:31 ET.
+- **2nd AH scan >10%** (00:00 +23.5% → 00:30 +35.4%): AH% rising across 2 AH scans → clears the 2-AH-scan gate. (Earlier scans 22:45 +7.1%, 23:30 +7.6% were sub-10%; the >10% surge is the late BUILD.)
+- **SIP AH volume (real, accelerating BUILD, new highs):** base $1.76–1.98 through 21:20Z → ignition 21:25Z 148k sh/1,170tr (H $2.25) → 21:30Z 171k/1,515tr → **21:35Z 267k sh/2,332tr (H $2.28, VWAP $2.20)** → 21:40Z 123k/909tr (C $2.17). VWAP $2.13–2.20 corroborates scanner AH. Genuine heavy liquid accumulation, **not a bad print.**
+- **Yahoo AH timeline (fresh through 18:31 ET) confirms late accelerating BUILD:** based $1.78–1.91 through 17:10 ET → 17:15 $1.99 (+22%) → 17:25 $2.15 (+32%) → 17:50 $2.32 (+42%) → 18:00 $2.48 (+52%) → **AH peak $2.52 (+55%) at 18:05 ET** → holding $2.30–2.40, $2.33 (+43%) at 18:31 ET (within ~8% of the $2.52 high). Peaked LATE (18:05 ET) and holding near high — textbook BUILD-and-hold, opposite of an early-peak fade.
+- **Catalyst — Grade C (Cathedra Bitcoin acquisition narrative / AI-infra momentum).** Sphere 3D Corp. Recently *completed* its all-stock acquisition of **Cathedra Bitcoin** (~2-3 days ago), creating a ~53 MW operating power platform + 100+ MW expansion pipeline + ~1.2 EH/s hash rate — an AI-infrastructure / data-center pivot. Fresh bullish analyst-style coverage 1 day ago ("ANY: The Next Question Is Not Power — It Is Proof"). 3 searches found **no fresh Jul 23-specific PR/8-K/earnings** — today's +52% regular + AH BUILD to +55% is momentum continuation on the few-days-old completed deal + AI-infra narrative. Graded **C** (real underlying deal but not a fresh same-day catalyst; narrative-driven) → exit premarket.
+- **Float 6.0M (ideal <10M). Day +8.3% (positive, not dead-cat). Entry Total% ~+30% from $1.76 (well under +150 ceiling).**
+- **Verdict: ENTER.** All gates cleared: 2 AH scans >10%, float <50M (ideal), Day% above -15%, BUILD-and-hold near AH high peaking late (18:05 ET), under ceiling, real heavy accumulating SIP volume, tradable. Multiple positions allowed (W24 2026). **BUY 41 ANY @ limit $2.45 ext (id 5538d150) → filled $2.29.**
+
+**UCAR workup — SKIP (SPIKE→FADE, early peak, volume drying up).**
+- **tradable=true** (NASDAQ). Quote bid $1.09 / ask $1.11 x100 (fresh 20:59Z). 2nd AH scan >10% (00:00 +13.0% → 00:30 +16.0%) — mechanically clears the gate, but trajectory disqualifies.
+- **SIP: early SPIKE→FADE.** Peak $1.32 at **16:15 ET (very early)** on 655k–878k sh/4,286–5,921tr → collapsed to $1.06–1.09 by 16:25 ET → based $1.08–1.16 for two hours with **volume drying to 8k–23k sh/bar** (21:35Z 8,963 sh, 21:40Z 11,995 sh). Current $1.15, ~13% below the $1.32 high. The slight AH% uptick (+13% → +16%) is a low-volume grind off a base far below the peak, not a fresh BUILD.
+- **Verdict: SKIP.** Early peak (16:15 ET, before 17:30) that faded, with volume collapsing — early-peak faders are 0/6+ for PM continuation. Float 23.9M (not ideal, >10M). Total +10.5%. The AH% rise is a volume-drying grind, not a hold near the high.
+
+**OCG workup — SKIP (1st AH scan, gate fail + early-peak fade).**
+- New at the final scan (1st AH scan >10%) → fails the 2-AH-scan gate; no future scan to confirm. Historical early-peak-fade loser (OCG 16:35 ET in the plan's 0/6+ early-peak list).
+- Yahoo confirms the fade: spike 16:30 ET $2.13 (+32%) → faded to **$1.70 (+1.8%) at 18:30 ET.** SPIKE→FADE, dying into the close of the scanned window. Skip on both gate-fail and trajectory.
+
+**Held positions (one entry/candidate — trajectory note only):**
+- **PAVS** +16.8% $6.90 — recovered off the 00:00 fade ($6.67 → $6.90) but still below its 23:00 entry AH high ($7.25). Alpaca $6.80 (-5.2%). Managed premarket.
+- **AKAN** +16.9% $9.43 — holding its base ($9.11–9.65 across scans). Alpaca $9.40 (-0.7%). Managed premarket.
+- **JEM** +16.2% $5.51 — holding above entry ($5.37). Alpaca $5.53 (+3.0%). Managed premarket.
+- **DOMO** (Grade A, day 1) — not in AH scan this pulse; Alpaca $4.00 (+2.0%).
+
+**Skips (dead-cats / sub-threshold):**
+- **ZCMD** — Day -59.7% dead-cat, confirmed dead (AH +5.2%, still ~$1.82 far below $1.73... i.e. -57.6% Total). Rolled over all night. Skip stands.
+- **LVWR** — Day -15.3%, Total -1.5% (AH bounce still below close). Thin/dead SIP (1–3 trades/bar, dried up). Dead-cat. Skip.
+- **SKYQ** — AH +6.6% (below 10%), thin (VRatio 0.1x). Not qualifying.
+- **IPW/INEO** — AH <10%. Not qualifying.
+
+**Final-scan feed-lag cross-check:** No tracked name is under-reported by TradingView tonight. The scanner surfaced the night's real mover (ANY +35.4%) correctly; SIP/Yahoo corroborate all levels. UCAR/LVWR/ZCMD/OCG confirmed faded or dead via SIP. No SIP-truth rescue needed.
+
+**Decision:** ENTERED **ANY** ($2.29, Grade C Cathedra Bitcoin acquisition narrative) — the night's clean late-BUILD winner-profile: ultra-clean 2-scan gate, float 6.0M ideal, peaking 18:05 ET and holding near high on real heavy volume, Total ~+30% (deep under ceiling). UCAR skipped (early SPIKE→FADE, drying volume). OCG skipped (gate-fail + fade). Dead-cats (ZCMD, LVWR) and sub-threshold names skipped. PAVS/AKAN/JEM/DOMO held (one entry/candidate).
+
+**Night summary — 4 paper entries:** PAVS ($7.17, C), AKAN ($9.47, None), JEM ($5.37, D), ANY ($2.29, C). Plus DOMO carried from 07-22 (Grade A, day 1). All exits handled by the premarket position-evaluation pulse.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| ANY | $2.29 | 2026-07-23 00:30 CET | 41 | 5538d150 | Grade C (Cathedra Bitcoin acquisition narrative / AI-infra momentum); float 6.0M ideal, Day +8.3%, 2 AH scans >10% (00:00/00:30), late accelerating BUILD peaking $2.52 at 18:05 ET holding within 8% of high, real heavy SIP volume (267k sh/2,332tr/bar), Total ~+30% under ceiling. Sphere 3D Corp. |
 | PAVS | $7.17 | 2026-07-23 23:00 CET | 13 | b7fd6a5e | Grade C anti-dilution; ultra-low float 857K, Day +52%, BUILD-and-hold near AH high, real heavy SIP volume (400k+ sh/bar), Total ~+85% under ceiling, 2 AH scans >10%. |
 | AKAN | $9.47 | 2026-07-23 23:00 CET | 10 | e21b6504 | Grade None (no catalyst); ultra-low float 541K, Day +0.1%, rising AH% across 2 scans, holding within 20% of AH high, Total ~+17.5% under ceiling. Cannabis micro-cap momentum, no-catalyst concern noted. |
 | JEM | $5.37 | 2026-07-23 00:00 CET | 17 | 68fd0c2b | Grade D dilution (concern noted); ultra-low float (MCap $3.0M), Day +34.3%, 2 AH scans >10% (23:30/00:00), holding within 20% of $6.84 AH high, real heavy SIP volume (420k sh/4,800tr per bar), Total ~+52% under ceiling. Active F-1 offering at $6.12 + share expansion → premarket exit. |
