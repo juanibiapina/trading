@@ -111,3 +111,19 @@ Entry: $1.58 @ 00:30 CET (18:30 ET) on 2nd AH scan → +48.7% live, +56.3% to PM
 - **Coverage:** full 9-scan night (7/7 scheduled + 2 bonus). No coverage failure to add to the tally.
 
 - **Active Watch check:** SXTC (day 1 winner, PM-only gapper) faded from $7.91 peak / $5.69 to **$2.68** — the holdable window closed by day 2 as expected for a no-catalyst PM squeeze. HIHO (entered $1.50, sold $1.26) at **$1.07** day 3, still unwinding.
+
+## Position Evaluation — 10:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| AEHL | $0.69 | $0.70 | +1.5% | $0.82 (OVN) | 1 | None | SELL | Exit at any profit; sold $0.70 |
+| LGCL | $1.58 | $1.96 | +24.1% | $2.47 (PM) | 1 | None | SELL | Exit at any profit; sold into fade $1.96 |
+| PLAG | $0.98 | $0.86 | -12.2% | $1.79 (OVN) | 1 | None | SELL | Below -10% hard stop; sold $0.86 |
+| DOMO | $3.92 | $3.82 | -2.5% | $4.20 (PM) | 1 | A | HOLD | Catalyst intact ($400M acquisition), day 1/5, within -25% stop ($2.94) |
+
+**Actions taken:**
+- SELL AEHL 136 @ limit $0.66 ext (id 48266080) → filled $0.70. P&L +$1.36 (+1.5%)
+- SELL LGCL 58 @ limit $1.82 ext (id d510e021) → filled $1.96. P&L +$22.04 (+24.1%)
+- SELL PLAG 97 @ limit $0.83 ext (id 876ddb3a) → filled $0.86. P&L -$11.64 (-12.2%)
+- HOLD DOMO (Grade A, day 1)
+- Net realized this pulse: **+$11.76**. LGCL was the clean detect→select→continuation winner (+24%).
