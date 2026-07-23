@@ -6,8 +6,9 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-07-22 | SXTC | Unverified/None (China small-cap pharma PM squeeze; 32.2M float) | $7.91 PM SIP (+222.9% @04:05 ET, 1.85M sh/38.7k trades) | — | $5.69 | 🆕 Day 1 - **PM-ONLY GAPPER, HOLDABLE** (AH flat +16% on ~0 vol; explosion at PM open); NOT detected by AH scanner (structural, not counted vs baseline) |
-| 2026-07-21 | HIHO | B — Q1 FY2027 earnings (net sales +29.2% YoY, margin +800bps) | $1.69 AH SIP (+108% @16:35 ET, 2.6M sh) | $1.89 PM SIP (+133% @04:00 ET, 4.9M sh/30.6k trades) | $0.93 | Day 2 - crashed to $0.93; **DETECTED + ENTERED @ $1.50** sold $1.26 (−16%); no-catalyst grade-B pump unwinding; sub-3M float 2.8M |
+| 2026-07-23 | LGCL | None (low-float 1.6M momentum squeeze; 40:1 reverse split Oct 2025, months-old) | $2.47 PM SIP (+160% @04:05 ET, 3.15M sh/27.2k trades) | — | $2.35 | 🆕 Day 1 - **AH→PM continuation, DETECTED + ENTERED @ $1.58** (2 AH scans); real AH BUILD 500k-920k sh/bar; position open, +48.7% live |
+| 2026-07-22 | SXTC | Unverified/None (China small-cap pharma PM squeeze; 32.2M float) | $7.91 PM SIP (+222.9% @04:05 ET, 1.85M sh/38.7k trades) | — | $2.68 | Day 2 - PM-only gapper faded from $5.69 to $2.68; holdable window closed; NOT detected by AH scanner (structural, not counted vs baseline) |
+| 2026-07-21 | HIHO | B — Q1 FY2027 earnings (net sales +29.2% YoY, margin +800bps) | $1.69 AH SIP (+108% @16:35 ET, 2.6M sh) | $1.89 PM SIP (+133% @04:00 ET, 4.9M sh/30.6k trades) | $1.07 | Day 3 - $1.07, still unwinding; **DETECTED + ENTERED @ $1.50** sold $1.26 (−16%); no-catalyst grade-B pump; sub-3M float 2.8M |
 
 ## Historical Winners (with multi-day outcome)
 
