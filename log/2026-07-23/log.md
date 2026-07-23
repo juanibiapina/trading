@@ -194,6 +194,37 @@ AH open ~30 min in. Scanner returned **1 hit: ZCMD**. Observation-only scan (no 
 
 **Decision:** No entries (observation-only 22:30 scan; ZCMD is a dead-cat bounce regardless). Re-evaluate ZCMD at 23:00+ for the override-watch condition. 21:30 watch names (AEHL, TMDE, APUS, BATL) did not register as AH movers this scan.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+AH ~45 min in. Scanner returned **5 hits**. Observation-only scan (no entries before 23:00 CET per learning-phase default).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $5.91 | +52.3% | +21.5% | $7.18 | +85.1% | 535K | 1.7M | 0.3x | 857K | Pharmaceuticals: Other |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $8.07 | +0.1% | +10.2% | $8.89 | +10.3% | 59K | 27K | 2.2x | 541K | Agricultural Commodities/Milling |
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $1.00 | -4.8% | +8.0% | $1.08 | +2.9% | 1.8M | 895K | 2.0x | 23.9M | Motor Vehicles |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $1.76 | +8.3% | +7.1% | $1.89 | +16.0% | 50K | 332K | 0.2x | 6.0M | IT Services |
+| ZCMD | [TV](https://www.tradingview.com/chart/?symbol=ZCMD) | $1.73 | -59.7% | +5.8% | $1.83 | -57.3% | 1.1M | 16.4M | 0.1x | 1.1M | Misc Commercial Services |
+
+**Spike-bar instrumentation (AH >10% names):**
+- `PAVS 2026-07-23 SPIKE 16:28ET +16% $6.85 1244 trades / 78k sh (first co-spike bar) (as-of 16:45ET)`
+- `AKAN 2026-07-23 SPIKE 16:09ET +29% $10.44 459 trades / 13k sh (first co-spike bar) (as-of 16:45ET)`
+
+**PAVS workup (strong candidate — track for 23:00 entry window):**
+- **tradable=true** (NASDAQ). Quote bid $5.13 / ask $6.84 x100 (stamped 20:00Z; SIP bars fresh through 20:30Z).
+- **SIP AH volume (real, accelerating BUILD):** 20:00Z 121k sh/1,172tr → 20:05Z 99k/1,351tr → 20:10Z 46k/985tr (brief dip) → **20:25Z 406k/5,764tr (H $7.78)** → **20:30Z 442k/7,130tr (H $7.55, C $7.42)**. VWAP $6.94–7.22 corroborates scanner AH $7.18. Genuine liquid AH move, accelerating on volume, not a bad print.
+- **Catalyst — Grade C (anti-dilution / momentum squeeze, no fresh same-day PR).** PAVS = Paranovus Entertainment Technology (AI-entertainment). Days ago (~Jul 20/21) it surged +65% PM after **terminating its Alliance Global Partners ATM share-sale agreement** (~5.9M shares sold under the deal) — removes dilution overhang. **1-for-100 reverse split announced Jun 25** (month-old, not this-week). Today +52% regular session on 9.99M sh (~11x post-split float). 4 searches found **no fresh Jul 23-specific PR/8-K/earnings** — today's move is low-float momentum continuation of the anti-dilution story.
+- **Float 857K (ultra-low, ideal). Day +52.3% (positive — NOT dead-cat). Total +85% (under +150 ceiling).**
+- **Reverse-split-recency:** month-old 1:100 split (not this-week) → per the recency hypothesis, month-old splits do not systematically fade. Not a gate.
+- **Verdict: strong BUILD candidate, but observation-only (before 23:00 CET).** This is PAVS's **1st AH scan** appearance. At the 23:00 scan it would be its 2nd AH scan → clears the 2-AH-scan gate if it holds. Textbook profile (ultra-low float, positive Day%, real accelerating SIP volume, under ceiling, ignition 16:28 ET building). Re-evaluate at 23:00 for live entry.
+
+**Other candidates:**
+- **AKAN** — Day +0.1% (flat regular session), AH +10.2% $8.89, float 541K but AH vol thin (59K sh, spike 16:09 ET only 459 trades/13k sh). Weak/illiquid AH move; entry at $8.89 → QTY ~11 sh. Low priority. Re-check at 23:00.
+- **UCAR/ANY** — AH change below 10% threshold; not qualifying candidates. Track only.
+- **ZCMD** — fading as predicted: 22:30 AH +16.8% $2.02 → now +5.8% $1.83. Dead-cat bounce (Day -59.7%) confirmed rolling over. Dead-cat-override watch **NOT triggered** (fading below the 22:30 print, not building above close). Skip stands.
+
+**Decision:** No entries (observation-only 22:45 scan). **PAVS is the lead candidate** for the 23:00 entry window — ultra-low float, positive Day%, real accelerating SIP BUILD, under ceiling. Re-evaluate PAVS (+AKAN) at 23:00 when the entry window opens and PAVS reaches its 2nd AH scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
