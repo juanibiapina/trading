@@ -163,6 +163,18 @@ AH open (16:00 ET). Scanner returned **0 hits** — the TradingView `postmarket_
 
 No candidates found. Watch names from the 21:30 regular-session scan (DOMO [open pos], AEHL, TMDE, APUS, BATL) not yet confirmed carrying into AH — re-check at 22:30/23:00 as the AH feed populates.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+AH just opened (16:15 ET). Scanner returned **0 hits** — TradingView `postmarket_volume` feed still empty/thin in the first 15 min after AH open. Observation-only scan (no entries before 23:00 CET per learning-phase default).
+
+Watch-name AH-book check (21:30 movers): quotes still stamped ~20:00Z (regular close) or thin:
+- **AEHL** bid $0.60 / ask $9.04 x500 — bad-print ask, no real two-sided book yet
+- **TMDE** bid $0.89 / ask $1.19 — stale 20:00Z, no AH activity
+- **APUS** bid $0.57 / ask $0.00 x0 — no fillable AH book
+- **BATL** bid $1.70 / ask $1.72 — freshest (20:13Z) but flat, no AH surge
+
+No candidates found. No name confirmed carrying into AH yet. Re-check at 22:30/23:00 as the AH feed populates and the entry window opens.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
