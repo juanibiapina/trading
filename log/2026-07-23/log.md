@@ -264,6 +264,47 @@ Both show a real ignition bar. PAVS's ignition (16:28 ET) precedes its main volu
 
 **Decision:** ENTERED PAVS ($7.17) and AKAN ($9.47). PAVS is the stronger name (BUILD-and-hold, real heavy SIP volume, Grade C); AKAN is a thinner ultra-low-float Grade-None momentum name that cleared the gates. Both under the +150 ceiling, both >10% AH across 2 scans. DOMO (open Grade A position) not re-entered (one entry per candidate). ZCMD dead-cat bounce (Day -59.7%) not re-checked as a candidate — confirmed rolling over at 22:45.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+AH ~1.5h in. Entry window open. Scanner returned **8 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $4.74 | +34.3% | +22.1% | $5.79 | +64.0% | 531K | 2.9M | 0.2x | n/a | Wholesale Distributors |
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $5.91 | +52.3% | +14.2% | $6.75 | +74.0% | 1.7M | 1.9M | 0.9x | 857K | Pharmaceuticals: Other |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $8.07 | +0.1% | +12.9% | $9.11 | +13.0% | 92K | 34K | 2.7x | 541K | Agricultural Commodities/Milling |
+| SPWR | [TV](https://www.tradingview.com/chart/?symbol=SPWR) | $0.50 | -14.3% | +10.0% | $0.55 | -5.7% | 78K | 2.6M | 0.0x | 97.6M | Engineering & Construction |
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $1.00 | -4.8% | +7.0% | $1.07 | +1.9% | 2.7M | 996K | 2.7x | 23.9M | Motor Vehicles |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $1.76 | +8.3% | +7.6% | $1.90 | +16.6% | 159K | 344K | 0.5x | 6.0M | IT Services |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $0.83 | -6.7% | +5.4% | $0.87 | -1.7% | 5.3M | 3.3M | 1.6x | 1.6M | Internet Retail |
+| MX | [TV](https://www.tradingview.com/chart/?symbol=MX) | $3.65 | +0.0% | +5.8% | $3.86 | +5.8% | 275K | 995K | 0.3x | 26.6M | Semiconductors |
+
+**Spike-bar instrumentation (AH >10% names, log-only):**
+- `JEM 2026-07-23 SPIKE 17:12ET +28% $6.09 2023 trades / 207k sh (first co-spike bar) (as-of 17:30ET)`
+- `PAVS 2026-07-23 SPIKE 16:28ET +16% $6.85 1244 trades / 78k sh (first co-spike bar) (as-of 17:30ET)`
+- `AKAN 2026-07-23 SPIKE 16:09ET +29% $10.44 459 trades / 13k sh (first co-spike bar) (as-of 17:30ET)`
+- `SPWR 2026-07-23 NO-SPIKE peak +10% @17:09ET (no bar cleared +15% on a volume co-spike) (as-of 17:30ET)`
+
+**JEM workup — new candidate, track for 00:00 (NOT a 2nd AH scan yet).**
+- **tradable=true** (NASDAQ). Quote bid $4.03 / ask $5.36 x100 (stamped 20:00Z stale); SIP bars fresh through 21:15Z.
+- **SIP AH volume (real, accelerating BUILD):** flat $4.57–4.77 through 20:50Z, then ignition — 20:55Z 72k sh/741tr (H $5.15) → 21:05Z 21k/321tr (C $5.20) → **21:10Z 420k sh/4,800tr (H $6.09, VWAP $5.75)** → 21:15Z 180k/2,664tr (C $5.58). VWAP $5.75 corroborates scanner AH $5.79. Genuine heavy liquid accumulation, **not a bad print** (contrast: the JEM Jun 30 case was a different session).
+- **Fresh ignition 17:12 ET (23:12 CET)** — fired between the 23:00 and 23:30 scans, so this is JEM's **1st AH scan appearance tonight.**
+- **Day +34.3% (positive, not dead-cat). Total +64% (under +150 ceiling). Float n/a (scanner), MCap $3.0M.**
+- **Verdict: strong BUILD profile but observation-only this scan** — fails the **2-AH-scan gate** (only 1 AH scan so far). Real accumulating SIP volume, fresh late ignition, positive Day%, under ceiling. **Track for 00:00** — if it reappears >10% AH on a 2nd scan and holds, it clears the gate for a live entry.
+
+**SPWR workup — SKIP.**
+- NO-SPIKE (peak only +10%, no bar cleared +15% on a volume co-spike). Day **-14.3%** (right at the -15% dead-cat edge), **Total -5.7%** — AH bounce is still *below* the regular close, classic dead-cat behavior. Thin AH vol (78K sh vs 2.6M avg, VRatio 0.0x). 1st AH scan only. Float 97.6M.
+- **Verdict: SKIP — dead-cat bounce (bounce below close), no ignition, thin volume.** Dead-cat-override watch not triggered (AH price below close, not reclaiming above it).
+
+**Open positions (already entered 23:00, one entry/candidate — no action, trajectory note only):**
+- **PAVS** +14.2% $6.75 — fading off the 23:00 AH high (+22.7% $7.25 → +14.2% $6.75). Alpaca P&L -5.2% (now $6.80). BUILD-and-hold thesis softening; position management is premarket's job.
+- **AKAN** +12.9% $9.11 — fading off 23:00 (+19.0% $9.60 → +12.9% $9.11). Alpaca P&L -1.6% (now $9.32).
+- **DOMO** (Grade A, day 1) — not in AH scan this pulse; Alpaca +2.3% ($4.01).
+
+**Other:** UCAR/ANY/IPW/MX all AH <10% — not qualifying candidates, track only.
+
+**Decision:** No new entries. JEM is the lead new candidate but needs a 2nd AH scan (00:00) to clear the gate — strong real-volume BUILD, re-evaluate at 00:00. SPWR skipped (dead-cat, no ignition). PAVS/AKAN already held (fading, managed premarket).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
