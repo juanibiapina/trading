@@ -6,6 +6,48 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-23 — re: Trading Scanner Report - 2026-07-22
+
+**Juan said:** "Can we make changes so that we can catch the winner of today?
+In the future, what would we need to do to catch something like that? Go ahead
+and make the changes. Don't ask for approvals." (re: SXTC, the +223% PM-only
+gapper the AH scanner could not see.)
+
+**Interpretation:** Juan wants the system to catch SXTC-class PM-only gappers,
+not just AH->PM movers, and is (again) removing the approval gate. Two facts
+reframe the ask:
+1. **We already detect these.** SXTC was caught twice at PM open — the morning
+   pulse's live PM scan hit it at 04:21 ET (+121% $5.93) and the `pm-open-scan`
+   pulse logged it at 05:00 ET. It is in `log/pm-open-scan.csv` (classified
+   *uninvestable*: single $7.91 wick 04:05, VWAP bled $6.75->$4.77 in 30min).
+   The AH scanner is structurally blind to PM-open gappers, but the PM scanners
+   see them. So the gap is **tradability + timing, not detection.**
+2. **Prior sim says buy-the-gap-and-hold loses.** Init 6 problem (a) closed
+   NEGATIVE on 2026-07-14 (n=4). Re-ran `pm-gapper-sim.js` now (n=7, adds SLGB
+   07-21 and INLF 07-22): entry at the 05:00 ET pulse time still loses
+   **-12.5%** (PM-last), but **early entry at 04:10 ET cuts it to -2.5%** and
+   lifts best-case RegHigh to +15% (from +2.5%). The one lever with signal is
+   **detecting/entering near the 04:00 ET ignition**, not an hour later — which
+   is Initiative 3 (faster ignition detection). SXTC itself was a single-bar
+   wick (uninvestable), so even perfect timing would not have made it clean; a
+   momentum-*continuation* trigger is needed to separate holdable gappers from
+   wicks.
+
+**Action:**
+- Ran the quick, low-risk step now: refreshed `scripts/pm-gapper-sim.js` (n=7).
+  New evidence (early 04:10 ET entry -2.5% vs 05:00 ET -12.5%) materially
+  changes the 07-14 "do not pursue" picture and reopens the initiative.
+- Routed to `STRATEGY_ROADMAP.md`: **re-opened Initiative 6 problem (a)** with
+  Juan's explicit mandate. Bumped it in the priority list from parked to an
+  active research/instrument lever, tied to Initiative 3. Concrete next step
+  (for `strategy-advance`): a **log-only hypothetical PM-only-gapper entry at
+  earliest detection (~04:10-04:21 ET)** gated on a **continuation confirmation**
+  (2+ consecutive holding bars, not the opening wick) to filter SXTC-type
+  spikes. No live orders and no `Day Trading.md` change made in this feedback
+  pulse — captured and routed per this pulse's mandate; the build/pilot is
+  `strategy-advance`'s to execute (autonomously, per Juan's standing
+  no-approval directive).
+
 ### 2026-07-22 — re: Trading Scanner Report - 2026-07-20
 
 **Juan said:** "Awesome work! Can you add the enter and exit markers in the

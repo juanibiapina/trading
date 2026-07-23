@@ -73,12 +73,19 @@ the ignition**, not a new signal.
    volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
    raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports
    (richer review surface). Juan-facing; clear as parallel low-risk items.
-4. **Initiative 6 - catch the extreme runners (+300-600%).** **No longer an
-   active pilot** (2026-07-15): both structured levers tested negative (problem a
-   PM-gapper long -8 to -13%/trade; problem b trailing-stop hold -3 to -5%/trade).
-   `pm-open-scan` stays cheap log-only accumulation. Only surviving thread is a
-   possible intraday momentum-continuation re-entry — parked pending a bigger
-   sample. Re-open only if the accumulating gapper data changes the picture.
+4. **Initiative 6 - catch the extreme runners (+300-600%).** **RE-OPENED
+   2026-07-23 on Juan's directive** (re: SXTC +223% PM-only gapper): "make
+   changes so we can catch the winner of today ... don't ask for approvals."
+   The accumulating gapper data now changes the picture the 07-15 close relied
+   on: refreshed `pm-gapper-sim.js` (n=7, adds SLGB/INLF) shows **early entry
+   at 04:10 ET loses only -2.5% vs -12.5% at the 05:00 ET pulse time** (RegHigh
+   best-case +15%). The surviving lever is timing — detect/enter near the 04:00
+   ET ignition (folds into Init 3) — plus a **continuation-confirmation** gate
+   (2+ holding bars) to skip SXTC-type opening wicks. Next: build a log-only
+   hypothetical PM-only-gapper entry at earliest detection (~04:10-04:21 ET,
+   using the morning live-PM-scan feed) with the continuation gate; no live
+   orders. Detection of these names is already solved (live PM scan + pm-open-
+   scan both caught SXTC at PM open); the open question is a tradable entry.
 5. **Initiative 1 - earlier volume-lead entries.** **Hypothesis falsified
    (2026-07-15):** volume does not lead price — ignition is a single-minute
    co-spike at both 5m and 1m resolution (`INIT1_VOLUME_LEAD.md`). No standalone
@@ -565,7 +572,32 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **Instrument — ACTIVE (2026-07-14).** **Update 2026-07-14 — the
+**Status:** **RE-OPENED — ACTIVE (2026-07-23, Juan directive).**
+
+**Update 2026-07-23 — Juan re-opened problem (a) after the SXTC +223% night.**
+Feedback (re: 07-22 email): "Can we make changes so that we can catch the winner
+of today? ... Go ahead and make the changes. Don't ask for approvals." Two facts
+reframe it: **(1) detection is already solved** — SXTC was caught at PM open by
+both the morning pulse's live PM scan (04:21 ET, +121% $5.93) and `pm-open-scan`
+(05:00 ET, logged uninvestable: single $7.91 wick 04:05, VWAP bled
+$6.75->$4.77). The AH scanner is structurally blind to PM-open gappers; the PM
+scanners are not. **(2) The 07-14 NEGATIVE close was on n=4; refreshed
+`pm-gapper-sim.js` (n=7, adds SLGB 07-21 +76.5%, INLF 07-22 +100.9%) shifts the
+picture on entry timing:** entry at the 05:00 ET pulse time still loses -12.5%
+(PM-last), but **early entry at 04:10 ET loses only -2.5%** (RegOpen -2.2%) and
+lifts best-case RegHigh from +2.5% to **+15.0%**. So the surviving edge is
+*timing* — hit the ignition near 04:00 ET, not an hour later (this folds into
+Initiative 3, faster ignition detection) — combined with a **continuation gate**
+(enter only on 2+ consecutive holding bars, not the opening wick) to exclude
+SXTC-type single-bar spikes. **Next step (owned by `strategy-advance`, applied
+autonomously per Juan's standing no-approval directive):** build a *log-only*
+hypothetical PM-only-gapper entry at earliest detection (~04:10-04:21 ET, using
+the morning live-PM-scan feed) with the continuation gate; measure hypothetical
+P&L before proposing any live pulse. No live orders and no `Day Trading.md`
+change from the feedback pulse that routed this. The prior negative levers below
+stand as recorded, but problem (a) is no longer closed.
+
+**Update 2026-07-14 — the
 PM-only-gapper hypothetical-entry pilot came back NEGATIVE; problem (a) is
 closed with no live-pulse proposal.** Built `scripts/pm-gapper-sim.js`
 (log-only): for the 5 holdable + no-AH-footprint gappers in `pm-open-scan.csv`
