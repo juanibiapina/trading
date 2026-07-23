@@ -225,7 +225,48 @@ AH ~45 min in. Scanner returned **5 hits**. Observation-only scan (no entries be
 
 **Decision:** No entries (observation-only 22:45 scan). **PAVS is the lead candidate** for the 23:00 entry window — ultra-low float, positive Day%, real accelerating SIP BUILD, under ceiling. Re-evaluate PAVS (+AKAN) at 23:00 when the entry window opens and PAVS reaches its 2nd AH scan.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+AH ~1h in. **Entry window open** (23:00 CET / 5:00 PM ET). Scanner returned **3 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $5.91 | +52.3% | +22.7% | $7.25 | +86.9% | 1.1M | 1.8M | 0.6x | 857K | Pharmaceuticals: Other |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $8.07 | +0.1% | +19.0% | $9.60 | +19.1% | 75K | 30K | 2.5x | 541K | Agricultural Commodities/Milling |
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $1.00 | -4.8% | +9.0% | $1.09 | +3.8% | 2.3M | 958K | 2.4x | 23.9M | Motor Vehicles |
+
+**Spike-bar instrumentation (AH >10% names, log-only):**
+- `PAVS 2026-07-23 SPIKE 16:28ET +16% $6.85 1244 trades / 78k sh (first co-spike bar) (as-of 17:00ET)`
+- `AKAN 2026-07-23 SPIKE 16:09ET +29% $10.44 459 trades / 13k sh (first co-spike bar) (as-of 17:00ET)`
+
+Both show a real ignition bar. PAVS's ignition (16:28 ET) precedes its main volume surge at 16:25–16:45 ET; AKAN's ignition (16:09 ET) is the early $10.44 spike bar.
+
+**PAVS workup — ENTERED.**
+- **tradable=true** (NASDAQ). Quote bid $5.13 / ask $6.84 x100 (stamped 20:00Z stale); SIP bars fresh through 20:45Z ($7.34 C).
+- **2nd AH scan** (22:45 +21.5% → 23:00 +22.7%): AH% rising across scans, clears the 2-AH-scan gate.
+- **SIP AH volume (real, accelerating BUILD, holding):** 20:25Z 406k sh/5,764tr (H $7.78) → 20:30Z 442k/7,130tr → 20:35Z 234k/4,151tr → 20:40Z 181k/3,502tr → 20:45Z 240k/4,174tr (C $7.34, H $7.48). VWAP $7.11–7.32 corroborates scanner AH $7.25. Genuine liquid accumulation, not a bad print.
+- **Trajectory: BUILD-and-hold.** Early dip ($6.42→$5.88, 20:00–20:20Z), then ignition 20:25Z to $7.78 peak, holding $7.17–7.42 through 20:45Z (within ~6% of AH high). Not fading.
+- **Catalyst — Grade C** (anti-dilution / momentum squeeze; carried from 22:45 workup). Paranovus terminated its A.G.P. ATM share-sale agreement ~Jul 20/21 (removes dilution overhang); 1-for-100 reverse split Jun 25 (month-old). No fresh Jul 23-specific PR/8-K/earnings in 4 searches → low-float continuation of the anti-dilution story.
+- **Float 857K (ultra-low, ideal). Day +52.3% (positive, not dead-cat). Entry Total% ~+85% (under +150 ceiling).**
+- **Verdict: ENTER.** All gates cleared: 2 AH scans >10%, float <50M, Day% above -15%, BUILD-and-hold near AH high, under ceiling. **BUY 13 PAVS @ limit $7.50 ext (id b7fd6a5e) → filled $7.17.**
+
+**AKAN workup — ENTERED.**
+- **tradable=true** (NASDAQ). Quote bid $6.92 / ask $9.56 x100 (stamped 20:00Z stale); SIP fresh through 20:45Z ($9.40 C).
+- **2nd AH scan** (22:45 +10.2% → 23:00 +19.0%): AH% rising across scans, clears the 2-AH-scan gate.
+- **SIP AH volume (real but thin):** ignition 20:05Z 16k sh/573tr (H $10.44) → 20:10Z 62k/1,680tr (fade, L $8.57, C $9.11) → base $8.80–9.00 on 3k–14k sh/bar → rebuild 20:40Z 26k/768tr (C $9.43), 20:45Z 12k/446tr (C $9.40). VWAP $8.77–9.47 corroborates scanner AH price. Fillable (573–768 trades on active bars, two-sided book ask $9.56 x100). Not a bad print, not a no-book illiquid ramp.
+- **Trajectory: early spike → fade → rebuild within 20% of high.** Peak $10.44 at 16:05 ET (early), faded to $8.57 (-18% off high), rebuilt to $9.40–9.60 (~10% off high, within the 20% "holding" band). AH% is *rising* across the 2 scans (+10.2% → +19.0%), so building live, not declining. Not a deep SKYQ-style >20% low-rebuild.
+- **Catalyst — Grade None.** 4 searches: no fresh Jul 23 PR/8-K/earnings. Reverse split 1-for-4.5 was Apr 13 (months old). Nasdaq equity-deficiency notice Jun 18 (compliance plan due Jul 31). Cannabis micro-cap low-float momentum, no fresh catalyst. Per no-catalyst handling: concern noted, not a skip.
+- **Float 541K (ultra-low, ideal). Day +0.1% (flat, not dead-cat). Entry Total% ~+17.5% (well under ceiling).**
+- **Verdict: ENTER (with no-catalyst concern noted).** Clears all gates: 2 AH scans >10%, float <50M, Day% above -15%, holding within 20% of AH high with rising AH%, under ceiling. Multiple positions allowed (W24 2026). **BUY 10 AKAN @ limit $9.70 ext (id e21b6504) → filled $9.47.**
+
+**Other:**
+- **UCAR** — AH +9.0% (below 10% threshold), Total +3.8%. Not a qualifying candidate. Track only.
+
+**Decision:** ENTERED PAVS ($7.17) and AKAN ($9.47). PAVS is the stronger name (BUILD-and-hold, real heavy SIP volume, Grade C); AKAN is a thinner ultra-low-float Grade-None momentum name that cleared the gates. Both under the +150 ceiling, both >10% AH across 2 scans. DOMO (open Grade A position) not re-entered (one entry per candidate). ZCMD dead-cat bounce (Day -59.7%) not re-checked as a candidate — confirmed rolling over at 22:45.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| PAVS | $7.17 | 2026-07-23 23:00 CET | 13 | b7fd6a5e | Grade C anti-dilution; ultra-low float 857K, Day +52%, BUILD-and-hold near AH high, real heavy SIP volume (400k+ sh/bar), Total ~+85% under ceiling, 2 AH scans >10%. |
+| AKAN | $9.47 | 2026-07-23 23:00 CET | 10 | e21b6504 | Grade None (no catalyst); ultra-low float 541K, Day +0.1%, rising AH% across 2 scans, holding within 20% of AH high, Total ~+17.5% under ceiling. Cannabis micro-cap momentum, no-catalyst concern noted. |
