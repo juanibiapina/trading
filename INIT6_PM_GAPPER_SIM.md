@@ -73,3 +73,73 @@ RegHigh dispersion widens materially.
 
 Re-run: `node scripts/pm-gapper-sim.js` (auto-loads the tracker) as more holdable
 PM-only gappers accumulate.
+
+---
+
+## Continuation-gate re-open (2026-07-23, Juan directive "catch the winner")
+
+Juan re-opened problem (a) after SXTC (+223% PM-only gapper). New test:
+`scripts/pm-gapper-continuation-sim.js` (log-only) — a **causal continuation
+gate** that enters only after price confirms it is holding, not on the opening
+wick, using bars available at decision time (no lookahead):
+
+- **Ignition bar R** = first PM bar (>=04:00 ET) with >= 3000 trades.
+- **Continuation** = bars R+1 and R+2 each close >= 80% of the running high, and
+  VWAP is non-declining R+1 -> R+2.
+- **Entry** = open of R+3 (2 confirmed holding bars). Else **skip** (wick/fade).
+
+Ran on all 18 PM-only gappers (footprint=none) in `pm-open-scan.csv`.
+
+### Result 1 — the gate separates wicks from holders
+
+| Gate | holdable | non-holdable |
+|------|----------|--------------|
+| ADMIT | 4 | 2 (both thin, small) |
+| REJECT | 5 | 7 |
+
+- **Rejected 7/7 wick-fades**, including every name that spiked one bar then bled:
+  SXTC (R+1 close 6.06 < 80% of 7.91 wick), LICN, ZCMD, UONEK, DXST. The
+  80%-of-high hold rule is the discriminator that the fixed-time sim lacked.
+- **5 holdable false-rejections** (SHPH, BJDX, EHGO, BJDX, SLGB) — mostly on the
+  VWAP-non-declining rule (SLGB +76.5% and EHGO +75% were rejected there). The
+  VWAP rule is doing most of the over-rejection; a candidate tuning knob.
+
+### Result 2 — admitted names LOSE on a hold, WIN on a peak-scalp
+
+Returns from the gated R+3 entry (n=6 admitted; 2 pending regular session):
+
+| Exit | mean | median |
+|------|------|--------|
+| **PMHigh (scalp the peak, reachable after entry)** | **+28.5%** | **+15.7%** |
+| PM-last (hold to 09:25 ET) | -9.2% | -11.1% |
+| RegOpen (sell 09:30 ET) | -9.1% | -11.1% |
+| RegHigh (best-case reg hold) | +10.4% | +11.0% |
+
+Per name PMHigh-after-entry: INLF **+96.0%** (entry $3.76 before the $7.37
+spike), WBUY +31.2%, EHGO +20.5%, MIMI +11.0%, SKYQ +9.6%, BJDX +2.9%. **Every
+admitted name reached a positive PM peak after entry.**
+
+### Interpretation — this reopens problem (a)
+
+The 07-14 close ("12/12 combos lose") was on a fixed-time entry held to a fixed
+exit. The continuation gate + peak-scalp reframes it:
+
+1. A causal gate **can** reject the SXTC-type wicks that sank the mean.
+2. The entry lands near the ramp base, so a positive peak is reachable on every
+   admitted name (+28.5% mean ceiling), even though holding still loses.
+
+The gate is **not** a hold rule; it is a **scalp** rule. PMHigh is an optimistic
+ceiling (perfect exit), and PM-last is the pessimistic floor (-9%); the truth is
+what a mechanical exit captures in between. **That is the number that decides a
+live proposal.**
+
+### Next step
+
+Simulate a **mechanical exit** on the admitted set — trailing stop (e.g. 8/12%),
+fixed N-bars-after-entry, or exit-on-first-lower-high — to measure how much of
+the +28.5% PMHigh ceiling is capturable vs the -9% hold floor. If a simple
+mechanical exit clears the spread and beats flat, that is the evidence to propose
+a live PM-gapper scalp pulse to Juan. Also worth testing: relaxing the
+VWAP-non-declining rule (it false-rejected SLGB/EHGO, two big holdables).
+
+Re-run: `node scripts/pm-gapper-continuation-sim.js` (auto-loads the tracker).

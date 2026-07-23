@@ -81,11 +81,15 @@ the ignition**, not a new signal.
    at 04:10 ET loses only -2.5% vs -12.5% at the 05:00 ET pulse time** (RegHigh
    best-case +15%). The surviving lever is timing — detect/enter near the 04:00
    ET ignition (folds into Init 3) — plus a **continuation-confirmation** gate
-   (2+ holding bars) to skip SXTC-type opening wicks. Next: build a log-only
-   hypothetical PM-only-gapper entry at earliest detection (~04:10-04:21 ET,
-   using the morning live-PM-scan feed) with the continuation gate; no live
-   orders. Detection of these names is already solved (live PM scan + pm-open-
-   scan both caught SXTC at PM open); the open question is a tradable entry.
+   (2+ holding bars) to skip SXTC-type opening wicks. **Gate now built + run
+   (2026-07-23, `pm-gapper-continuation-sim.js`):** it rejects 7/7 wick-fades and
+   every gate-admitted name reaches a positive PM peak after entry (mean +28.5%
+   PMHigh), though holding still loses (-9%) — so the lever is gated-entry +
+   peak-scalp. Detection is already solved (live PM scan + pm-open-scan both
+   caught SXTC at PM open); the open question is now a tradable **exit**. Next:
+   simulate a mechanical exit (trailing stop / N-bars / first-lower-high) to
+   measure the capturable slice of the +28.5% ceiling; that decides a live-pulse
+   proposal.
 5. **Initiative 1 - earlier volume-lead entries.** **Hypothesis falsified
    (2026-07-15):** volume does not lead price — ignition is a single-minute
    co-spike at both 5m and 1m resolution (`INIT1_VOLUME_LEAD.md`). No standalone
@@ -572,7 +576,31 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **RE-OPENED — ACTIVE (2026-07-23, Juan directive).**
+**Status:** **RE-OPENED — ACTIVE (2026-07-23, Juan directive). Continuation-gate
+sim built + run — reopens problem (a) positively: the gate rejects 7/7
+wick-fades and every gate-admitted name reaches a positive PM peak after entry
+(mean +28.5% / median +15.7% PMHigh), though a hold still loses (-9%). Lever is
+gated-entry + peak-scalp, not hold. Next: simulate a mechanical exit to measure
+capturable return.**
+
+**Update 2026-07-23 (2nd, strategy-advance) — continuation-gate sim.** Built
+`scripts/pm-gapper-continuation-sim.js` (log-only, no orders): a causal gate that
+enters only after price holds near the ignition high for 2 bars (R+1 and R+2 each
+close >= 80% of the running high, VWAP non-declining), entering at R+3, else
+skipping. Ran on all 18 PM-only gappers (footprint=none) in `pm-open-scan.csv`.
+**(1)** The gate **rejects 7/7 wick-fades** (SXTC, LICN, ZCMD, UONEK, DXST + 2
+thin) — the 80%-of-high hold rule is the discriminator the fixed-time sim lacked;
+5 holdables are false-rejected, mostly on the VWAP rule (SLGB +76.5%, EHGO +75%),
+a tuning knob. **(2)** On the 6 admitted names, holding to PM-last/RegOpen loses
+-9%, but the **PMHigh reachable after entry is positive on every one** (mean
++28.5%, median +15.7%: INLF +96%, WBUY +31%, EHGO +21%, MIMI +11%, SKYQ +10%,
+BJDX +3%). So the entry lands near the ramp base and a positive peak exists — the
+07-14 "12/12 lose" close was an artifact of fixed-time entry + hold-to-fixed-exit.
+The gate is a **scalp** rule, not a hold rule. Full write-up appended to
+`INIT6_PM_GAPPER_SIM.md`. **Next step: simulate a mechanical exit** (trailing
+stop / N-bars / first-lower-high) to measure how much of the +28.5% PMHigh
+ceiling is capturable vs the -9% hold floor — that number decides a live-pulse
+proposal to Juan. No live orders; no `Day Trading.md` change.
 
 **Update 2026-07-23 — Juan re-opened problem (a) after the SXTC +223% night.**
 Feedback (re: 07-22 email): "Can we make changes so that we can catch the winner

@@ -9,6 +9,54 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-23 — Init 6: continuation-gate sim reopens problem (a) positively — gate rejects 7/7 wick-fades, admitted names reach +28.5% PM peak (but hold still loses)
+
+**Evaluated:** Prior step (2026-07-22 Init 3: test whether a regular-session
+day-movers list contains the AH igniters, to justify a pre-16:30-ET SIP watch
+source) — **worked (n=7, promising not proven).** 3/7 cleared the day-mover
+threshold and both traded winners (HIHO, CJMB) were caught; misses skewed to
+faders. Not advanced further this run because Juan's 2026-07-23 directive
+("make changes so we can catch the winner of today ... don't ask for approvals")
+re-opened Init 6 problem (a) as the explicit top priority, so this run took the
+Init 6 step his feedback routed to `strategy-advance`.
+
+**Step taken (pilot-track / Init 6, per Juan's directive):** Built
+`scripts/pm-gapper-continuation-sim.js` (log-only, no orders) — the
+continuation-gated PM-only-gapper entry the 2026-07-23 feedback asked for. It is
+a **causal** gate (uses only bars available at decision time): ignition = first
+PM bar with >= 3000 trades; enter at R+3 only if R+1 and R+2 each close >= 80% of
+the running high and VWAP is non-declining; else skip. Ran it on all 18 PM-only
+gappers (footprint=none) in `pm-open-scan.csv`; added a PMHigh-after-entry
+(peak-scalp) exit column. Wrote up the result in `INIT6_PM_GAPPER_SIM.md`.
+
+**Result:** **The gate reopens problem (a) positively.** (1) It **rejects 7/7
+wick-fades** — SXTC (R+1 close 6.06 < 80% of its 7.91 wick), LICN, ZCMD, UONEK,
+DXST + 2 thin — the 80%-of-high hold rule is the discriminator the earlier
+fixed-time sim lacked. It false-rejects 5 holdables (SHPH, EHGO, SLGB +76.5%…),
+mostly on the VWAP rule (a tuning knob). (2) On the 6 admitted names, holding to
+PM-last/RegOpen still loses **-9%**, but the **PMHigh reachable after entry is
+positive on every one**: mean **+28.5%**, median +15.7% (INLF +96%, WBUY +31%,
+EHGO +21%, MIMI +11%, SKYQ +10%, BJDX +3%). So the gated entry lands near the
+ramp base and a positive peak exists — the 07-14 "12/12 combos lose" close was an
+artifact of fixed-time entry held to a fixed exit. **The gate is a scalp rule,
+not a hold rule.** No live orders; no `Day Trading.md` change.
+
+**Hypothesis / next step:** PMHigh (+28.5%) is the optimistic ceiling (perfect
+exit) and PM-last (-9%) the pessimistic floor; the truth is what a mechanical
+exit captures between them. **Next run: simulate a mechanical exit** on the
+admitted set — trailing stop (8/12%), fixed N-bars-after-entry, or
+exit-on-first-lower-high — to measure the capturable slice. If a simple exit
+clears the spread and beats flat, that is the evidence to propose a live
+PM-gapper scalp pulse to Juan (a live-trading change → propose, don't apply).
+Also test relaxing the VWAP-non-declining rule (it false-rejected SLGB/EHGO, two
+big holdables). Keep `pm-open-scan` accumulating gappers to grow n.
+
+**Needs from Juan:** nothing blocking (log-only research under his standing
+no-approval directive). A live PM-gapper scalp pulse would be proposed once the
+mechanical-exit sim shows a capturable edge — not yet.
+
+---
+
 ### 2026-07-22 — Init 3: watch-list source for the pre-16:30-ET open window tested — regular-session day-movers catches both traded winners, misses skew to faders
 
 **Evaluated:** Prior step (2026-07-21: after the next 1–2 AH sessions, if
