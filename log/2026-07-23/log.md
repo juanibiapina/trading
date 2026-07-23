@@ -175,6 +175,25 @@ Watch-name AH-book check (21:30 movers): quotes still stamped ~20:00Z (regular c
 
 No candidates found. No name confirmed carrying into AH yet. Re-check at 22:30/23:00 as the AH feed populates and the entry window opens.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+AH open ~30 min in. Scanner returned **1 hit: ZCMD**. Observation-only scan (no entries before 23:00 CET per learning-phase default).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ZCMD | [TV](https://www.tradingview.com/chart/?symbol=ZCMD) | $1.73 | -59.7% | +16.8% | $2.02 | -52.9% | 713K | 16.3M | 0.0x | 1.1M | Miscellaneous Commercial Services |
+
+**Spike-bar instrumentation:** `SPIKE 16:10ET +25% $2.16 1164 trades / 178k sh (first co-spike bar) (as-of 16:30ET)`. Real ignition bar fired.
+
+**ZCMD workup:**
+- **tradable=true** (NASDAQ). Real two-sided AH book: bid $1.98 x100 / ask $2.03 x100 @ 20:18Z (fresh).
+- **SIP AH volume (real, accumulating):** 20:00Z 42k sh/264tr → 20:05Z 134k/777tr → 20:10Z 648k/4,706tr (H $2.19) → 20:15Z 228k/1,983tr (C $1.92). VWAP $2.02–2.08 corroborates scanner AH price. Not a bad print — genuine liquid AH move.
+- **Catalyst — Grade D (dilution / crashed pump).** ZCMD ran $0.96 (Jun 29) → $4.18 close (Jul 22), a ~4x low-float pump on a 1:31 reverse split, a $5M best-efforts offering (closed Jun 1), and a July founder share issuance boosting control to 99.45%. **Today (Jul 23) it crashed -59.7%** ($4.18→$1.73). AH +16.8% bounce to ~$2.02 is a recovery off that crash.
+- **Verdict: SKIP — dead-cat bounce.** Day% -59.7% (far below the -15% dead-cat threshold); AH bounce off a crashed multi-day dilutive pump. Even outside the observation-only window this fails the entry gates. Grade D catalyst (dilution) reinforces the skip.
+- **Dead-cat-override watch: not yet triggered.** AH ~$2.02 is currently *above* the regular close ($1.73), which would qualify for the override watch — BUT (1) this is only ZCMD's 1st AH scan (override needs AH% rising across ≥2 AH scans), and (2) it is already fading off the $2.19 ignition high (20:15Z bar closed $1.92, below the first-scan $2.02). Not building. Re-check at 23:00 — if AH% is rising and it holds above $1.73 on a 2nd scan, flag DEAD-CAT-OVERRIDE WATCH and record a hypothetical entry.
+
+**Decision:** No entries (observation-only 22:30 scan; ZCMD is a dead-cat bounce regardless). Re-evaluate ZCMD at 23:00+ for the override-watch condition. 21:30 watch names (AEHL, TMDE, APUS, BATL) did not register as AH movers this scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
