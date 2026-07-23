@@ -305,9 +305,62 @@ AH ~1.5h in. Entry window open. Scanner returned **8 hits**.
 
 **Decision:** No new entries. JEM is the lead new candidate but needs a 2nd AH scan (00:00) to clear the gate — strong real-volume BUILD, re-evaluate at 00:00. SPWR skipped (dead-cat, no ignition). PAVS/AKAN already held (fading, managed premarket).
 
+## Scan 00:00 CET (6:00 PM ET)
+
+AH ~2h in. Entry window open. Scanner returned **12 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $4.74 | +34.3% | +22.0% | $5.78 | +63.8% | 1.5M | 3.0M | 0.5x | n/a | Wholesale Distributors |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $1.76 | +8.3% | +23.5% | $2.18 | +33.7% | 771K | 416K | 1.9x | 6.0M | IT Services |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $8.07 | +0.1% | +19.6% | $9.65 | +19.7% | 105K | 36K | 2.9x | 541K | Agricultural Commodities/Milling |
+| ZCMD | [TV](https://www.tradingview.com/chart/?symbol=ZCMD) | $1.73 | -59.7% | +13.9% | $1.97 | -54.1% | 1.9M | 16.5M | 0.1x | 1.1M | Misc Commercial Services |
+| UCAR | [TV](https://www.tradingview.com/chart/?symbol=UCAR) | $1.00 | -4.8% | +13.0% | $1.13 | +7.6% | 2.8M | 1.0M | 2.8x | 23.9M | Motor Vehicles |
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $5.91 | +52.3% | +12.9% | $6.67 | +71.9% | 1.9M | 1.9M | 1.0x | 857K | Pharmaceuticals: Other |
+| LVWR | [TV](https://www.tradingview.com/chart/?symbol=LVWR) | $0.77 | -15.3% | +10.4% | $0.85 | -6.5% | 60K | 983K | 0.1x | 10.2M | Recreational Products |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $0.83 | -6.7% | +9.7% | $0.91 | +2.3% | 6.5M | 3.4M | 1.9x | 1.6M | Internet Retail |
+| CJMB | [TV](https://www.tradingview.com/chart/?symbol=CJMB) | $2.35 | +39.9% | +7.8% | $2.53 | +50.8% | 602K | 10.2M | 0.1x | n/a | Air Freight/Couriers |
+| MX | [TV](https://www.tradingview.com/chart/?symbol=MX) | $3.65 | +0.0% | +5.5% | $3.85 | +5.5% | 288K | 997K | 0.3x | 26.6M | Semiconductors |
+| INEO | [TV](https://www.tradingview.com/chart/?symbol=INEO) | $0.72 | +0.8% | +5.7% | $0.76 | +6.6% | 110K | 246K | 0.4x | 2.0M | Wholesale Distributors |
+| HYFT | [TV](https://www.tradingview.com/chart/?symbol=HYFT) | $1.18 | -18.1% | +5.9% | $1.25 | -13.2% | 54K | 232K | 0.2x | 42.4M | Biotechnology |
+
+**Spike-bar instrumentation (AH >10% names, log-only):**
+- `JEM 2026-07-23 SPIKE 17:12ET +28% $6.09 2023 trades / 207k sh (first co-spike bar) (as-of 18:00ET)`
+- `ANY 2026-07-23 SPIKE 16:35ET +19% $2.09 177 trades / 28k sh (first co-spike bar) (as-of 18:00ET)`
+- `UCAR 2026-07-23 SPIKE 16:15ET +23% $1.23 66 trades / 14k sh (first co-spike bar) (as-of 18:00ET)`
+
+**JEM workup — ENTERED (Grade D dilution, concern noted).**
+- **tradable=true** (NASDAQ). Real two-sided book bid $4.03 x100 / ask $5.36 x100 (stamped 20:00Z stale); SIP bars fresh through 21:45Z. Not a zero-book illiquid ramp.
+- **2nd AH scan** (23:30 +22.1% → 00:00 +22.0%): held >10% across 2 AH scans → clears the 2-AH-scan gate.
+- **SIP AH volume (real, heavy, accumulating):** flat $4.57–4.77 through 20:50Z → ignition 20:55Z 72k sh/741tr → **21:10Z 420k sh/4,800tr (H $6.09, VWAP $5.75)** → 21:20Z 374k/5,134tr (H $6.83) → 21:25Z 234k/3,246tr → 21:30Z 203k/3,197tr (H $6.84) → fade 21:35Z 195k/3,024tr (C $5.63) → 21:40Z 100k/1,466tr (C $5.83) → 21:45Z 46k/899tr (C $5.57). VWAP $5.69–6.21 corroborates scanner AH $5.78. Genuine heavy liquid accumulation, **not a bad print**.
+- **Trajectory: BUILD → peak $6.84 at 17:30 ET → fade, stabilizing $5.57–5.83 (~15–18% off high, within the 20% "holding" band).** Lower highs each bar off the peak (6.84→6.21→5.85→5.83) = fading momentum, but AH% flat across the 2 scans (not declining) and price holding within the band. Peak 17:30 ET is before 18:30 but does not disqualify a candidate holding within the band (CHAI/MSW precedent).
+- **Catalyst — Grade D (dilution overhang, no fresh same-day PR).** 4 searches: no Jul 23-specific PR/8-K/earnings. Active dilution setup: F-1 for sale of up to 1M Class A shares + 4M warrants **at $6.12** (~1 week ago); 6-K authorized-share expansion 2.08M→50M shares (~2 days ago, Aug 5 EGM); 1-for-12 reverse split effective Jul 14 (~9 days ago); AI/blockchain/crypto board-exploration PR was Jul 1 (3 weeks old, stale). AH peak $6.84 pushed right through the $6.12 offering price then faded back below it — classic pump-into-offering. Grade D → premarket exit.
+- **Float MCap $3.0M (ultra-low). Day +34.3% (positive, not dead-cat). Entry Total% ~+52% from $3.53 (well under +150 ceiling).**
+- **Verdict: ENTER (Grade D dilution concern noted).** All mechanical gates cleared: 2 AH scans >10%, float <50M, Day% above -15%, holding within 20% of AH high, under ceiling, real heavy SIP volume. Dilution is a concern documented, not a skip (learning-phase default). **BUY 17 JEM @ limit $5.90 ext (id 68fd0c2b) → filled $5.37.**
+
+**ANY workup — track for 00:30 (fails 2-AH-scan gate: 1st >10% scan).**
+- **tradable=true** (NASDAQ). Sphere 3D Corp (IT services / bitcoin-adjacent). Quote bid $1.47 x100 / ask $2.07 x100 (stamped 20:00Z stale).
+- **1st AH scan >10%** this night (22:45 +7.1%, 23:30 +7.6%, both sub-10%; 00:00 +23.5% is the first >10%). Fails the 2-AH-scan gate → **cannot enter this scan.**
+- **SIP AH volume (real, accelerating BUILD, new highs):** base $1.88–1.98 through 21:20Z → ignition 21:25Z 148k sh/1,170tr (H $2.25) → 21:30Z 171k/1,515tr → **21:35Z 267k/2,332tr (H $2.28, C $2.22)** → 21:40Z 123k/909tr. Yahoo continues to $2.61 at 18:00 ET (new AH high). Highs stepping UP = holding/building near high, opposite of JEM's fade.
+- **Superior trajectory (late BUILD, new highs) but gated out.** Track for the 00:30 final scan — if it holds >10% AH it clears the 2-scan gate and its BUILD profile would make it a strong entry. Note: ANY is a historical early-peak-fade loser on prior dates (different setup then, Total +155%; today only +33.7% and building late).
+
+**Already-held positions (one entry/candidate — trajectory note only):**
+- **PAVS** +12.9% $6.67 — continuing to fade off the 23:00 AH high ($7.25 → $6.67). Alpaca P&L -6.3% ($6.72). Managed premarket.
+- **AKAN** +19.6% $9.65 — rebuilt back toward its AH high. Alpaca P&L +2.1% ($9.67). Managed premarket.
+- **DOMO** (Grade A, day 1) — not in AH scan this pulse; Alpaca +2.0% ($4.00).
+
+**Skips:**
+- **ZCMD** — Day -59.7% dead-cat bounce, confirmed rolling over (22:30 +16.8% → 00:00 +13.9%, still far below the $1.73 close). Skip stands.
+- **LVWR** — Day -15.3%, Total -6.5% (AH bounce still below close). Dead-cat bounce, thin AH vol (60K sh, VRatio 0.1x). Skip.
+- **UCAR** — 1st >10% AH scan (prior scans all sub-10%), Day -4.8%, Total +7.6%. Fails 2-scan gate. Track only.
+- **CJMB/IPW/MX/INEO/HYFT** — AH <10% (or dead-cat on HYFT Day -18.1%). Not qualifying candidates.
+
+**Decision:** ENTERED JEM ($5.37, Grade D dilution concern noted) — only candidate clearing the 2-AH-scan gate this scan. ANY is the stronger trajectory (late BUILD, new highs) but fails the gate with only 1 >10% AH scan — track for the 00:30 final scan. PAVS/AKAN/DOMO held (one entry/candidate). Dead-cats (ZCMD, LVWR, HYFT) and sub-threshold names skipped.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | PAVS | $7.17 | 2026-07-23 23:00 CET | 13 | b7fd6a5e | Grade C anti-dilution; ultra-low float 857K, Day +52%, BUILD-and-hold near AH high, real heavy SIP volume (400k+ sh/bar), Total ~+85% under ceiling, 2 AH scans >10%. |
 | AKAN | $9.47 | 2026-07-23 23:00 CET | 10 | e21b6504 | Grade None (no catalyst); ultra-low float 541K, Day +0.1%, rising AH% across 2 scans, holding within 20% of AH high, Total ~+17.5% under ceiling. Cannabis micro-cap momentum, no-catalyst concern noted. |
+| JEM | $5.37 | 2026-07-23 00:00 CET | 17 | 68fd0c2b | Grade D dilution (concern noted); ultra-low float (MCap $3.0M), Day +34.3%, 2 AH scans >10% (23:30/00:00), holding within 20% of $6.84 AH high, real heavy SIP volume (420k sh/4,800tr per bar), Total ~+52% under ceiling. Active F-1 offering at $6.12 + share expansion → premarket exit. |
