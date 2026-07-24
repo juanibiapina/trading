@@ -81,15 +81,17 @@ the ignition**, not a new signal.
    at 04:10 ET loses only -2.5% vs -12.5% at the 05:00 ET pulse time** (RegHigh
    best-case +15%). The surviving lever is timing — detect/enter near the 04:00
    ET ignition (folds into Init 3) — plus a **continuation-confirmation** gate
-   (2+ holding bars) to skip SXTC-type opening wicks. **Gate now built + run
-   (2026-07-23, `pm-gapper-continuation-sim.js`):** it rejects 7/7 wick-fades and
-   every gate-admitted name reaches a positive PM peak after entry (mean +28.5%
-   PMHigh), though holding still loses (-9%) — so the lever is gated-entry +
-   peak-scalp. Detection is already solved (live PM scan + pm-open-scan both
-   caught SXTC at PM open); the open question is now a tradable **exit**. Next:
-   simulate a mechanical exit (trailing stop / N-bars / first-lower-high) to
-   measure the capturable slice of the +28.5% ceiling; that decides a live-pulse
-   proposal.
+   (2+ holding bars) to skip SXTC-type opening wicks. **Gate built (2026-07-23) +
+   mechanical-exit sim run (2026-07-24, `pm-gapper-exit-sim.js`) — problem (a)
+   NEGATIVE at 5-min cadence:** the gate rejects most wicks but no causal exit
+   (trailing / N-bar / first-lower-high) turns the admitted set positive after the
+   ~1-3% spread (near-breakeven mean, negative median, 1-3/7 wins). The +31%
+   PMHigh ceiling is an INLF-driven outlier (median +11%) that prints *intrabar*,
+   uncapturable by a 5-min close-based exit. **No live PM-gapper scalp pulse
+   proposed.** Only untested angle is a 1-min exit (peak is intrabar), deferred
+   until the admitted sample grows to >= ~12 so it doesn't hinge on one INLF.
+   Detection is already solved (live PM scan + pm-open-scan caught SXTC at PM
+   open); problem (a) stays log-only accumulation.
 5. **Initiative 1 - earlier volume-lead entries.** **Hypothesis falsified
    (2026-07-15):** volume does not lead price — ignition is a single-minute
    co-spike at both 5m and 1m resolution (`INIT1_VOLUME_LEAD.md`). No standalone
@@ -576,12 +578,35 @@ requiring action (keys, decisions) will be listed in the email and here.
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
 
-**Status:** **RE-OPENED — ACTIVE (2026-07-23, Juan directive). Continuation-gate
-sim built + run — reopens problem (a) positively: the gate rejects 7/7
-wick-fades and every gate-admitted name reaches a positive PM peak after entry
-(mean +28.5% / median +15.7% PMHigh), though a hold still loses (-9%). Lever is
-gated-entry + peak-scalp, not hold. Next: simulate a mechanical exit to measure
-capturable return.**
+**Status:** **RE-OPENED — ACTIVE (2026-07-23, Juan directive). Mechanical-exit
+sim run (2026-07-24) — NEGATIVE at 5-min cadence: no causal exit converts the
+gate-admitted set to positive expectancy after spread.** The +31% PMHigh ceiling
+is an outlier mirage (INLF +96%; median only +11%) and prints *intrabar*, so a
+5-min close-based exit can't capture it. Every trailing-stop / N-bar /
+first-lower-high rule lands near-breakeven mean, negative median, 1-3/7 wins,
+below the ~1-3% spread. **No live PM-gapper scalp pulse proposed.** The gate is a
+good wick *filter* but not a tradable edge at this cadence; the only untested
+angle is a 1-min exit (the peak is intrabar), deferred until the admitted sample
+grows to >= ~12 so it doesn't hinge on one INLF. Problem (a) stays log-only
+accumulation. Next: keep `pm-open-scan` growing n; build the 1-min exit test at
+n>=12.
+
+**Update 2026-07-24 (strategy-advance) — mechanical-exit sim, problem (a)
+NEGATIVE at 5-min cadence.** Built `scripts/pm-gapper-exit-sim.js` (log-only):
+reuses the continuation gate for entry, then walks PM 5-min bars applying causal
+close-based exits (trailing 8/12/15/20%, N-bars 1/2/3, first-lower-high). On the
+now-n=7 admitted set: PMHigh ceiling mean +31.1% / **median only +11.0%** (INLF
++96% outlier), but every mechanical exit is near-breakeven mean, **negative
+median, 1-3/7 wins** (best mean N1 +8.8% is entirely INLF; median -1.1%). None
+clears the ~1-3% micro-cap PM spread or reliably beats the flat PM-last floor.
+Root cause: the peak prints *inside the entry bar* (INLF 08:15Z open $3.76 ->
+$7.19 high) so a 5-min close-based exit can't sell it. Also a gate false-positive
+(WLDS, classified uninvestable, admitted and loses on every exit). **Conclusion:
+do not propose a live PM-gapper scalp pulse; the gate filters wicks but yields no
+tradable edge at 5-min cadence.** Full write-up in `INIT6_PM_GAPPER_SIM.md`
+("Mechanical-exit sim 2026-07-24"). Next: keep accumulating gappers; build a
+1-min exit test only once the admitted set reaches ~12 (result currently hinges
+on one INLF). No live orders, no `Day Trading.md` change.
 
 **Update 2026-07-23 (2nd, strategy-advance) — continuation-gate sim.** Built
 `scripts/pm-gapper-continuation-sim.js` (log-only, no orders): a causal gate that

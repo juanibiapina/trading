@@ -143,3 +143,68 @@ a live PM-gapper scalp pulse to Juan. Also worth testing: relaxing the
 VWAP-non-declining rule (it false-rejected SLGB/EHGO, two big holdables).
 
 Re-run: `node scripts/pm-gapper-continuation-sim.js` (auto-loads the tracker).
+
+---
+
+## Mechanical-exit sim (2026-07-24) — the PMHigh ceiling is NOT capturable at 5-min cadence
+
+Built `scripts/pm-gapper-exit-sim.js` (log-only, no orders): reuses the exact
+continuation gate to fix the entry (R+3 open), then walks the premarket 5-min
+bars from entry applying **causal, close-based** mechanical exits (no lookahead):
+trailing stop 8/12/15/20%, N-bars hold (1/2/3), and first-lower-high. Benchmarks:
+PMHigh = perfect-exit ceiling, PM-last = hold-to-09:25 floor.
+
+Admitted set grew to **n=7** (WBUY, EHGO 07-23 added since the 07-23 gate run;
+both are PMHigh winners). Results:
+
+| Exit rule | mean | median | win rate |
+|-----------|------|--------|----------|
+| **PMHigh (perfect ceiling)** | +31.1% | +11.0% | 7/7 |
+| PM-last (hold-to-09:25 floor) | +0.6% | -9.4% | 3/7 |
+| trail 8% | -0.0% | -3.9% | 1/7 |
+| trail 12% | +0.3% | -3.9% | 2/7 |
+| trail 15% | -1.8% | -9.4% | 2/7 |
+| trail 20% | -8.8% | -11.2% | 2/7 |
+| N-bars = 1 | **+8.8%** | -1.1% | 3/7 |
+| N-bars = 2 | +6.1% | -1.7% | 2/7 |
+| N-bars = 3 | -1.3% | -3.9% | 2/7 |
+| first-lower-high | +4.5% | -2.9% | 1/7 |
+
+### Finding — NEGATIVE for a 5-min-cadence scalp; no live pulse justified
+
+1. **The ceiling is a mirage at 5-min resolution.** PMHigh mean +31.1% is
+   dominated by one outlier (INLF +96.0%); the **median PMHigh is only +11.0%**.
+   INLF's peak ($7.19) prints *inside the entry bar itself* (08:15Z: open $3.76 ->
+   $7.19 high, close $6.13). You cannot sell an intrabar spike with a rule that
+   only sees bar closes every 5 min.
+2. **Every mechanical exit lands near breakeven mean, negative median, 1-3/7
+   wins.** The single positive-looking mean (N1 +8.8%) is *entirely* INLF
+   (+83.5%); its median is -1.1%. Trailing stops all sit at ~0 or negative —
+   they give back the run from peak because these names round-trip the spike
+   within 1-2 bars.
+3. **None clears the spread.** A micro-cap PM round-trip costs ~1-3%
+   (buy@ask/sell@bid). Every rule's median is negative *before* spread, so after
+   spread the whole admitted set is a loser at 5-min cadence. No rule reliably
+   beats even the flat PM-last floor.
+4. **Gate false-positive:** WLDS (07-24, classified *uninvestable*) was admitted
+   and loses on every exit — the gate still lets some wick-fades through.
+
+### Conclusion & next step
+
+**Do not propose a live PM-gapper scalp pulse.** At 5-min cadence the
+continuation gate is a good *filter* (rejects most wicks) but there is no
+mechanical exit that converts the admitted set into positive expectancy after
+spread — the capturable slice of the PMHigh ceiling is eaten by intrabar fade.
+
+The one place a real edge could still hide is **exit cadence**: INLF shows the
+peak is intrabar, so the binding constraint is the 5-min bar, not the exit logic.
+The honest next test is a **1-min-bar exit** on the admitted set (finer trailing
+stop / limit-on-spike), which is the only thing that could capture the intrabar
+peak. But note (a) n=7 is tiny and outlier-dominated (drop INLF and every rule is
+flatly negative), and (b) a 1-min exit cadence means a per-second-ish monitoring
+pulse for a rare setup — high cost for thin evidence. **Conservative call: keep
+`pm-open-scan` accumulating gappers to grow n; only build the 1-min exit test
+once the admitted sample is larger (>= ~12) so the result does not hinge on one
+INLF.** Problem (a) stays log-only; no `Day Trading.md` change, no live pulse.
+
+Re-run: `node scripts/pm-gapper-exit-sim.js` (auto-loads the tracker).
