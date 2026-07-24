@@ -108,3 +108,22 @@ WLDS — prev close $2.23 (Jul 23, +50% regular) | Jul 22 close $1.48
 - **PM-only gapper tally: UNCHANGED.** Today's biggest raw PM mover (LVWR +171% SIP) is an **AH→PM continuation** (had an after-hours footprint), not a PM-only gapper. Standing holdable count stays 1 (SXTC) of 6.
 - **Active Watch check:** LGCL (day 1 winner, entered $1.58, sold $1.96) faded to **$0.95** — round-trip back to its pre-pump level, one-day pump as typical. SXTC (day 3, PM-only gapper) **$2.02**, still unwinding. HIHO (day 4, entered $1.50 sold $1.26) **$1.15**, still unwinding.
 </content>
+
+## Position Evaluation — 10:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| DOMO | $3.92 | $3.93 | +0.3% | $4.50 (+14.8%) | 2 | A | HOLD | Day 2/5, $400M acquisition intact. Peak below +50% trail threshold → no trail. Above -25% hard stop ($2.94). PM $3.91-3.94 liquid. |
+| JEM | $5.37 | $7.34 (fill) | +36.7% | $6.79 PM | 2 | D | SELL | Grade D → exit at any profit. Limit $5.35 filled @ $7.34 into a PM spike (08:15 ET H $6.79). |
+| PAVS | $7.17 | $5.58 (fill) | -22.2% | $7.34 AH | 1 | C | SELL | Below -10% hard stop + Grade C premarket exit. PM $5.66-5.85 thin. |
+| ANY | $2.29 | $2.03 (fill) | -11.4% | $2.52 AH | 2 | C | SELL | Below -10% hard stop + Grade C premarket exit. PM ~$2.04, liquid (285k sh first bar). |
+| AKAN | $9.47 | ~$9.95 PM | +5% | $11.10 PM | 1 | None | SELL (pending) | Grade None → exit at profit. SELL 10 @ limit $9.80 ext live (id f58787b9); paper fill engine uses sparse IEX feed for AKAN, order resting priced-to-fill below PM range ($9.93-10.07). |
+
+**Actions taken:**
+- SELL 17 JEM @ limit $5.35 ext (id 2fc57e92) → **filled @ $7.34**. P&L **+$33.49 (+36.7%)**. Grade D exit; limit filled into PM spike.
+- SELL 13 PAVS @ limit $5.55 ext (id 162792ff) → **filled @ $5.58**. P&L **-$20.67 (-22.2%)**. Grade C, below stop.
+- SELL 41 ANY @ limit $2.00 ext (id e0f134e7) → **filled @ $2.03**. P&L **-$10.66 (-11.4%)**. Grade C, below stop.
+- SELL 10 AKAN @ limit $9.80 ext (id f58787b9) → **live/pending** (sparse IEX fill feed). Grade None exit; order priced below PM trade range.
+- HOLD DOMO (Grade A, day 2/5, catalyst intact).
+
+**Net realized this pulse:** +$33.49 −$20.67 −$10.66 = **+$2.16** across 3 fills.
