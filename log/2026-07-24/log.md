@@ -127,3 +127,16 @@ WLDS — prev close $2.23 (Jul 23, +50% regular) | Jul 22 close $1.48
 - HOLD DOMO (Grade A, day 2/5, catalyst intact).
 
 **Net realized this pulse:** +$33.49 −$20.67 −$10.66 = **+$2.16** across 3 fills.
+
+## Position Evaluation — 14:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| DOMO | $3.92 | $4.02 | +2.6% | $4.50 (+14.8%) | 2 | A | HOLD | Day 2/5, $400M acquisition intact. Peak below +50% trail threshold → no trail. Above -25% hard stop ($2.94). PM holding $3.91-4.00. |
+| AKAN | $9.47 | $9.83 (fill) | +3.8% | $10.17 PM | 1 | None | SELL (filled) | Grade None → exit at profit. 10:30 limit $9.80 (id f58787b9) rested on sparse IEX paper feed and **filled @ $9.83** before this pulse. |
+
+**Actions taken:**
+- AKAN SELL 10 @ limit $9.80 ext (id f58787b9) → **filled @ $9.83**. P&L **+$3.60 (+3.8%)**. Grade None profit exit; reconciled to Closed Positions.
+- HOLD DOMO (Grade A, day 2/5, catalyst intact). Only open position.
+
+**Net realized this pulse:** +$3.60 (AKAN).
