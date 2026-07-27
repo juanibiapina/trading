@@ -227,3 +227,42 @@ screener population, which we can't beat. **Next step: wire scan.py's
 spike-bar.js on each (log-only), then measure over more sessions whether the
 "winners are already day-movers" pattern holds before proposing any entry use.**
 Small sample — treat the "both winners caught" as promising, not proven.
+
+### Census extension (2026-07-27, strategy-advance) — n=7 → n=9, and a clean counter-example
+
+Added the two AH→PM **continuers** from the 07-22/07-23 sessions (both bigger PM
+moves than anything in the original 7) to test whether the "winners are already
+regular-session day-movers" pattern holds. Regular-session-only OHLC from Alpaca
+daily bars; LGCL's regular-session volume cross-checked against its 5-min bars.
+
+| Ticker | AH-eve | Prior C | Reg C | Reg C% | Reg H% | Reg vol vs prior | Day-mover (>15%)? | AH/PM outcome |
+|--------|--------|---------|-------|--------|--------|------------------|-------------------|----------------|
+| JEM    | 07-23  | 3.53    | 4.74  | +34.3% | +58.4% | huge             | **YES**           | AH→PM continuer, PM +48% (winner) |
+| LGCL   | 07-22  | 0.98    | 0.95  | −3.1%  | +9.2%  | **78.6k ≈ prior 94k (flat)** | **no** | AH→PM continuer, **PM +114%** (biggest recent winner) |
+| PLAG   | 07-22  | 0.54    | 0.59  | +9.3%  | +20.4% | huge             | no (borderline)   | PM faded (uninvestable) |
+
+**Result: the pattern half-holds and gains a decisive counter-example.** JEM
+(+34.3% regular) confirms the "already a day-mover" path — caught, and a real
++48% PM winner. But **LGCL breaks the "both winners caught" claim**: it was
+**flat and low-volume in the regular session** (−3.1% close, +9.2% high, only
+78.6k regular-session shares vs ~94k the prior *full* day), then ignited entirely
+**post-close** (AH high $1.58 at 18:15 ET) and ran to **PM +114%** — the single
+biggest PM winner in this whole sample. A regular-session day-movers **or**
+relative-volume pre-seed misses it completely: there is no regular-session
+footprint to surface it. It is the same flat-regular class as PAPL, except LGCL
+proves that class contains some of the **biggest** PM winners, not just faders.
+
+**Refined design conclusion.** The day-movers watch source is worth wiring — it
+rescues the "already-moving" AH→PM continuers (HIHO, CJMB, JEM) and lets the
+22:00/22:15 SIP spike-bar check catch their ignition bar 15–30 min ahead of the
+~16:30 ET screener — but it is **structurally incomplete**: flat-regular
+post-close igniters (PAPL fader, **LGCL +114% winner**) have no regular-session
+signal (neither %change nor relative volume) and can only be reached through the
+external ~16:30 ET screener feeding the tighter AH scan grid. So the two detection
+paths are complementary, not substitutes: (1) day-movers watch source for
+already-moving names (pre-16:30 ET head start), (2) the 16:30 ET screener + 15-min
+AH grid for the flat-regular igniters. Wire the watch source as an *additive*
+log-only pre-seed, not a replacement for the screener. Running tally on the
+"winners are already day-movers" question: **3 caught (HIHO, CJMB, JEM) / 1 clear
+miss (LGCL, and the biggest winner at that)** — promising for the moving subset,
+but do not assume it catches the whole winner set.

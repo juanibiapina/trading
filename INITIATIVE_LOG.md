@@ -9,6 +9,71 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-27 — Init 3: day-movers watch-source census extended (LGCL counter-example); Init 6 exit-sim refresh still NEGATIVE at n=8; DOMO merger-arb grading fix proposed to Juan
+
+**Evaluated:** Prior step (2026-07-24 Init 6: build the 1-min exit test only once
+the gate-admitted sample reaches ~12; keep `pm-open-scan` accumulating) —
+**insufficient sample to advance, conclusion holds.** Re-ran
+`pm-gapper-exit-sim.js`: the holdable PM-only tally reached 11 and the
+continuation-gate admitted set grew from 7 to **n=8** (adds EHGO 07-23, a clean
+holdable that *held* +59% to PM-last, and BIYA 07-27 +16% held). Even with those,
+**every mechanical exit still has a negative median** (trail12 mean +2.4%/med
+−2.0%, N1 mean +7.5%/med −1.3%, 1stLH mean +3.8%/med −2.0%); wins stay
+INLF-outlier-driven and the gate still admits the uninvestable WLDS
+false-positive. Admitted 8 < the ~12 threshold, so the deferred 1-min exit test
+stands — the 07-24 "NEGATIVE at 5-min cadence" close is unchanged.
+
+**Step taken (pilot / Init 3):** Extended the day-movers watch-source census
+(the 07-22 n=7 test that gates wiring scan.py `--day-movers` as the 22:00/22:15
+CET pre-seed) with the two AH→PM continuers from the 07-22/07-23 sessions — both
+bigger PM moves than anything in the original 7. Pulled regular-session-only
+Alpaca daily bars for JEM/LGCL/PLAG, computed each one's regular-session day%,
+and cross-checked LGCL's regular-session volume against its 5-min bars. Wrote the
+extension into `INIT3_IGNITION_TIMING.md`.
+
+**Result:** The "winners are already regular-session day-movers" pattern
+**half-holds and gains a decisive counter-example.** JEM (+34.3% reg close, PM
++48% winner) confirms the caught path. But **LGCL breaks the "both winners
+caught" claim**: it was flat and low-volume in the regular session (−3.1% close,
++9.2% high, **78.6k reg-session sh ≈ prior day's 94k**), ignited entirely
+post-close (AH high $1.58 at 18:15 ET), and ran to **PM +114% — the biggest PM
+winner in the whole sample.** A regular-session day-movers *or* relative-volume
+pre-seed misses it completely (no regular footprint). Refined design: wire the
+day-movers list as an **additive log-only pre-seed** (rescues already-moving
+AH→PM continuers 15–30 min ahead of the 16:30 ET screener) but treat it as
+**structurally incomplete** — flat-regular post-close igniters (PAPL fader, LGCL
++114% winner) still depend on the 16:30 ET screener + the tight AH grid, so the
+two detection paths are complementary, not substitutes. Tally on the question:
+3 caught (HIHO, CJMB, JEM) / 1 clear miss (LGCL).
+
+**Step taken (route to Juan / catalyst grading):** Surfaced Juan's fresh 07-24
+DOMO feedback ("I have no idea why you're holding that") as a concrete proposal
+in the roadmap open-asks: **split the catalyst taxonomy so a definitive cash
+buyout / fixed-price merger agreement is graded None/exit-premarket, never
+Grade-A-hold.** An all-cash deal pins the price near deal value and kills the
+AH→PM momentum the strategy needs (DOMO sat dead $3.92→$3.71 for days). This
+edits the `Day Trading.md`/`OPEN_POSITIONS.md` holding-rules table — outside this
+pulse's write scope — so it is **proposed, not applied.** DOMO itself is already
+exit-flagged for the next premarket eval (still open at −5.4%; AH book ~30%
+spread, so exit waits for premarket).
+
+**Hypothesis / next step:** (Init 3) wire scan.py `--day-movers` as an additive
+22:00/22:15 CET watch source running `spike-bar.js` log-only, and keep the
+day-movers-vs-winner tally growing to see whether the "already-moving" subset is
+worth an eventual entry signal. Verify it live on the first AH session where a
+day-mover ignites in the pre-16:30-ET window. (Init 6) at admitted n≥12, build
+the 1-min-bar exit test (peak is intrabar); also consider tightening the gate so
+uninvestable wick names like WLDS aren't admitted. (Catalyst grading) if Juan
+doesn't veto, a future run applies the merger-arb taxonomy split once it has a
+write path (Juan edit or scanner-improvement scope).
+
+**Needs from Juan:** **one proposal** — approve (or veto) splitting cash
+buyouts/definitive mergers out of Grade-A-hold into None/exit-premarket
+(prevents holding dead merger-arb money like DOMO). Nothing else blocking; the
+Init 3 census and Init 6 refresh are log-only.
+
+---
+
 ### 2026-07-24 — Init 6: mechanical-exit sim — problem (a) NEGATIVE at 5-min cadence, no live PM-gapper scalp pulse justified
 
 **Evaluated:** Prior step (2026-07-23: simulate a mechanical exit on the

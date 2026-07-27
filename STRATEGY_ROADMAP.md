@@ -91,7 +91,13 @@ the ignition**, not a new signal.
    proposed.** Only untested angle is a 1-min exit (peak is intrabar), deferred
    until the admitted sample grows to >= ~12 so it doesn't hinge on one INLF.
    Detection is already solved (live PM scan + pm-open-scan caught SXTC at PM
-   open); problem (a) stays log-only accumulation.
+   open); problem (a) stays log-only accumulation. **Refresh 2026-07-27:** the
+   holdable PM-only tally reached 11 and the gate-admitted set grew to n=8 (adds
+   EHGO 07-23, a clean holdable that HELD +59% to PM-last, and BIYA 07-27 +16%).
+   Re-ran `pm-gapper-exit-sim.js` — **still NEGATIVE at 5-min** (every exit's
+   median negative: trail12 +2.4%/−2.0%, N1 +7.5%/−1.3%; wins INLF-outlier-driven;
+   gate still admits the uninvestable WLDS). Admitted 8 < the ~12 threshold, so
+   the 1-min exit test stays deferred; keep accumulating.
 5. **Initiative 1 - earlier volume-lead entries.** **Hypothesis falsified
    (2026-07-15):** volume does not lead price — ignition is a single-minute
    co-spike at both 5m and 1m resolution (`INIT1_VOLUME_LEAD.md`). No standalone
@@ -435,12 +441,17 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** In progress — **watch-list source for the pre-16:30-ET open window
-tested (2026-07-22): a regular-session day-movers list catches both traded
-winners (HIHO, CJMB) and misses skew to faders — next step is to wire it as the
-22:00/22:15 SIP watch source.** **Prior: spike-bar column live-validated on the
-first wired AH session (2026-07-20); two decision-relevant findings + a proposal
-to Juan.**
+**Status:** In progress — **watch-source census extended (2026-07-27, n=7→9):
+JEM (+34% reg) confirms the "already a day-mover" path (PM +48% winner, caught),
+but LGCL breaks the "both winners caught" claim — it was flat/low-volume in the
+regular session (−3.1% close, 78.6k reg-session sh) yet ran PM +114%, the biggest
+recent winner, with no regular-session footprint to pre-seed on. Conclusion: wire
+the day-movers list as an *additive* log-only pre-seed (rescues already-moving
+names 15–30 min ahead of the 16:30 ET screener) but it is structurally
+incomplete — flat-regular post-close igniters still need the screener + tight AH
+grid. Not a substitute.** **Prior: watch-list source tested (2026-07-22); spike-bar
+column live-validated on the first wired AH session (2026-07-20); two
+decision-relevant findings + a proposal to Juan.**
 
 **Update (2026-07-22) — watch-list source test (pilot step b).** The 07-20
 finding that the screener is blind before ~16:30 ET means the only way to shrink
@@ -843,6 +854,25 @@ tracker).
 
 ## Open asks for Juan (consolidated)
 
+- [ ] **PROPOSAL — split the catalyst taxonomy: cash buyouts / definitive
+      merger agreements are NOT Grade-A momentum holds (2026-07-27, from Juan's
+      07-24 DOMO feedback).** DOMO was graded A (Progress Software $400M all-cash
+      asset purchase) and held under the "Grade A → hold up to 5 days, trail
+      −20%" rule, but an all-cash deal **pins the price near the deal value and
+      kills the AH→PM overnight momentum the strategy depends on** — DOMO sat
+      dead ($3.92 entry → brief $4.50 → $3.71, −5.4%) for days. Juan: "I have no
+      idea why you're holding that." The Grade-A hold rule was built for
+      **operational/momentum** catalysts (BATL gas agreement, VIVS partnership)
+      that ignite overnight momentum, not for merger-arb. **Proposed change to
+      the `Day Trading.md` / `OPEN_POSITIONS.md` catalyst-grade table:** a
+      **definitive cash buyout / merger agreement at a fixed price** is graded
+      **None/exit-premarket** (skip at entry, or exit at the first premarket
+      opportunity), never Grade-A-hold. Only *rumored/competing-bid* M&A that can
+      still re-rate stays momentum-gradable. This edits live holding rules →
+      **proposed, not applied by this pulse.** DOMO itself is already exit-flagged
+      for the next premarket eval (currently still open at −5.4%; the AH book is a
+      ~30% spread, so exit waits for premarket). Silence on this proposal = a
+      future `strategy-advance` run applies the taxonomy split and reports it.
 - [x] **Standing directive (2026-07-16, reinforced 2026-07-17): apply, don't
       ask.** Juan: "apply stuff, don't ask confirmation" / "don't wait for my
       approval." Stop posing "Decision For You / Needs You / Want me to apply
