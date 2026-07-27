@@ -177,8 +177,45 @@ PFSA, WLDS, OTLK all below the +10% AH threshold — no workup. PFSA (-28.7%) an
 
 **Assessment:** No new entries. INLF (already held) is the only confirmed multi-scan AH mover; holding near entry on tapering-but-real volume. BIYA and BZFD both fail the 2-AH-scan gate (first AH scans >10%); BIYA is a fading regular-session runner near the ceiling, BZFD has a real catalyst (35% layoffs) but thin volume. Re-check BZFD at the 00:30 final scan for a possible 2nd AH scan.
 
+## Scan 00:30 CET (6:30 PM ET) — FINAL SCAN
+
+**Session: AFTERHOURS. Entry window open. Final scheduled scan.** Scanner returned **8 hits** at 18:30 ET. Above the +10% AH threshold: INLF (+25.6%, open position), BIYA (+17.0%), BZFD (+12.4%). BIYA and BZFD both now have 2 AH scans >10% — evaluated for entry. **1 new entry: BZFD.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $4.17 | +116.1% | +17.0% | $4.88 | +152.8% | 3.6M | 20.8M | 0.2x | 2.7M | Personnel Services |
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $3.28 | +2.8% | +25.6% | $4.12 | +29.2% | 2.8M | 5.8M | 0.5x | 1.0M | Industrial Machinery |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $3.18 | -9.9% | +9.7% | $3.49 | -1.1% | 1.6M | 7.0M | 0.2x | 2.0M | Electronic Equipment/Instruments |
+| OTLK | [TV](https://www.tradingview.com/chart/?symbol=OTLK) | $1.06 | -24.2% | +5.6% | $1.12 | -19.9% | 705K | 16.6M | 0.0x | 151.9M | Pharmaceuticals: Major |
+| BZFD | [TV](https://www.tradingview.com/chart/?symbol=BZFD) | $1.13 | +1.8% | +12.4% | $1.27 | +14.4% | 373K | 673K | 0.6x | 11.9M | Internet Software/Services |
+| BYRN | [TV](https://www.tradingview.com/chart/?symbol=BYRN) | $4.13 | +16.7% | +5.1% | $4.34 | +22.6% | 223K | 868K | 0.3x | 17.8M | Aerospace & Defense |
+| ANGI | [TV](https://www.tradingview.com/chart/?symbol=ANGI) | $5.93 | +7.2% | +8.1% | $6.41 | +15.9% | 65K | 516K | 0.1x | 28.6M | Internet Software/Services |
+| BRCC | [TV](https://www.tradingview.com/chart/?symbol=BRCC) | $0.99 | -8.3% | +5.0% | $1.04 | -3.7% | 56K | 628K | 0.1x | 103.1M | Food: Specialty/Candy |
+
+**Spike-bar instrumentation (log-only, AH Chg >10%):**
+- INLF: `SPIKE 16:09ET +28% $4.20 1411 trades / 95k sh (first co-spike bar)` — ignition bar fired (carried, confirmed 18:30 ET).
+- BIYA: `SPIKE 17:43ET +16% $4.84 878 trades / 76k sh (first co-spike bar)` — late ignition, regular-session runner.
+- BZFD: `SPIKE 17:41ET +20% $1.36 57 trades / 18k sh (first co-spike bar)` — thin ignition (57 trades / 18k sh).
+
+**BZFD (BuzzFeed, Internet Software/Services) — ENTERED:**
+- Clears the 2-AH-scan gate: 00:00 +13.3% → 00:30 +12.4% AH. Float 11.9M (<50M), Day +1.8% (not dead-cat), Total% +14.4% (well under 150% ceiling). Tradable=true.
+- **Trajectory: BUILD/HOLD.** SIP shows real accumulation building through the last hour: 21:20Z 22K sh/15 tr → 21:25Z 21K → 21:30Z 31K → 21:35Z 50K → 21:40Z 81K sh/273 tr → 21:45Z 40K/164 → 21:50Z 32K → 22:00Z 19K/127 tr. Price built $1.13→$1.37 peak @17:40 ET, holding $1.26-1.30 (within ~8% of AH high). VWAP $1.28-1.31 corroborates scanner AH price — not a bad print. Peak after 17:30 ET, holding not fading. (Quote endpoint stale at 16:00 ET on free tier; SIP bars are the live confirmation.)
+- **Catalyst: 35% workforce layoffs announced today** (cost-cut/restructuring after Byron Allen $120M majority-stake takeover). Market read it bullish. ~Grade **C** (weak news/restructuring). Q2 earnings Aug 4, not today.
+- **Entry: filled 76 sh @ $1.30** (limit $1.38 --ext, order abb707e6). Catalyst Grade **C** → exit in premarket.
+
+**BIYA (Baiya Intl., Personnel Services, China small-cap) — skip (extension ceiling):**
+- 2 AH scans >10% (00:00 +14.9% → 00:30 +17.0%), but **Total% +152.8% exceeds the +150 extension ceiling.** Ceiling-override watch requires VRatio >5x — BIYA is 0.2x, fails the override. No hypothetical entry recorded (fails override criteria).
+- Regular-session runner (+116% Day). SIP shows AH peak $4.70 @17:05 ET, fading to $4.37 (21:35Z). Fading spike off a huge intraday move — exactly the extended-entry profile the ceiling protects against (ANY +155%→-21%, ATPC +154%→-14%). Skip.
+
+**INLF (open position, entered 23:00 @ $4.12) — trajectory update:** SIP full night: peak $4.69 @16:55 ET (above entry), faded to $3.80-4.02 by 17:25 ET, rebuilt to $4.13-4.20 (21:30-21:35Z). Scanner AH $4.12 (+25.6%) at 18:30 ET matches — position ~flat to entry. Volume tapering off the peak (26K sh last bar vs 300K-500K at 16:25-16:55 ET) but still real. AH high printed after entry; holding near entry. Hold/sell belongs to the premarket position-evaluation pass; tracked here only.
+
+**Final-scan feed-lag cross-check:** Tracked names this night (INLF, WLDS, BIYA, BZFD) plus 21:30 watch names (ENTX, NTRX, GLVT, RBRS, SUIC, GFLT). The three real >10% AH movers (INLF, BIYA, BZFD) are all captured by the scanner at 18:30 ET on real accumulating SIP volume — no under-reported name to rescue. Below-threshold names (WLDS +9.7% SPIKE→FADE, OTLK -24.2% dead-cat, BYRN, ANGI, BRCC) show no SIP surge above threshold. No feed-lag rescue needed.
+
+**Assessment:** 1 new entry (BZFD — BUILD/hold, float 11.9M, real catalyst 35% layoffs Grade C, low extension +14.4%, building volume last hour). BIYA skipped on the +150% ceiling (VRatio 0.2x fails override). INLF (held) holding near entry on tapering-but-real volume. Two positions carried into premarket: INLF (Grade None) and BZFD (Grade C) — both exit in the premarket position-evaluation pass.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | INLF | $4.12 | 2026-07-27 23:00 CET | 22 | 76dc5a7d | BUILD/hold, float 1.0M, +35% Total (under ceiling), 3 AH scans >10%, real SIP volume. Catalyst: None (concern noted). |
+| BZFD | $1.30 | 2026-07-28 00:30 CET | 76 | abb707e6 | BUILD/hold, float 11.9M, +14.4% Total (low extension), 2 AH scans >10%, building SIP volume last hour. Catalyst: 35% layoffs (Grade C). |
