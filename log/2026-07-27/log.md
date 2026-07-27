@@ -144,6 +144,39 @@ PFSA, WLDS, OTLK all below the +10% AH threshold — no workup. PFSA (-28.7%) an
 
 **Assessment:** No new entries. INLF (already held) is the only real AH mover and it is fading off its post-entry high on still-real volume. WLDS remains a fading spike. Everything else is below threshold or a dead-cat bounce.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**Session: AFTERHOURS. Entry window open.** Scanner returned **7 hits** at 18:00 ET. Above the +10% AH threshold: INLF (+25.0%, open position), BIYA (+14.9%), BZFD (+13.3%, new). **No new entries this scan** — both new >10% names fail the 2-AH-scan gate.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $3.28 | +2.8% | +25.0% | $4.10 | +28.5% | 2.7M | 5.7M | 0.5x | 1.0M | Industrial Machinery |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $3.18 | -9.9% | +9.7% | $3.49 | -1.1% | 1.6M | 7.0M | 0.2x | 2.0M | Electronic Equipment/Instruments |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $4.17 | +116.1% | +14.9% | $4.79 | +148.2% | 1.2M | 20.5M | 0.1x | 2.7M | Personnel Services |
+| OTLK | [TV](https://www.tradingview.com/chart/?symbol=OTLK) | $1.06 | -24.2% | +7.0% | $1.14 | -18.9% | 622K | 16.6M | 0.0x | 151.9M | Pharmaceuticals: Major |
+| BZFD | [TV](https://www.tradingview.com/chart/?symbol=BZFD) | $1.13 | +1.8% | +13.3% | $1.28 | +15.3% | 246K | 659K | 0.4x | 11.9M | Internet Software/Services |
+| BYRN | [TV](https://www.tradingview.com/chart/?symbol=BYRN) | $4.13 | +16.7% | +6.0% | $4.38 | +23.7% | 214K | 867K | 0.2x | 17.8M | Aerospace & Defense |
+| BRCC | [TV](https://www.tradingview.com/chart/?symbol=BRCC) | $0.99 | -8.3% | +6.3% | $1.05 | -2.6% | 54K | 628K | 0.1x | 103.1M | Food: Specialty/Candy |
+
+**Spike-bar instrumentation (log-only, AH Chg >10%):**
+- INLF: `SPIKE 16:09ET +28% $4.20 1411 trades / 95k sh (first co-spike bar)` — ignition bar fired (carried, confirmed at 18:00 ET).
+- BIYA: `SPIKE 17:43ET +16% $4.84 878 trades / 76k sh (first co-spike bar)` — late ignition, but this is a regular-session runner (Day +116%).
+- BZFD: `SPIKE 17:41ET +20% $1.36 57 trades / 18k sh (first co-spike bar)` — ignition on thin trade count (57 trades / 18k sh).
+
+**INLF (open position, entered 23:00 @ $4.12) — trajectory update:** SIP full night: peak **$4.69 @16:55 ET** (above entry), faded to $3.80–4.02 by 17:25 ET, then rebuilt to $4.13–4.20 (21:30–21:35Z bars). Scanner AH $4.10 (+25.0%) at 18:00 ET matches. Volume tapering off the peak (26K sh last bar vs 300K–500K at 16:25–16:55 ET) but still real. Position now $4.00 (P&L −2.9%). AH high printed after entry; current price ~holding near entry. Hold/sell belongs to the premarket position-evaluation pass; tracked here only.
+
+**BIYA (Baiya Intl., Personnel Services, China small-cap) — skip (fails 2-AH-scan gate):** This is its **first AH scan above +10%** (was +6.2% AH at 23:30, below threshold). The +116% move was the **regular session**; AH is a fade off the $4.70 @17:05 ET peak down to $4.37 (21:35Z). Total% +148.2% sits right at the +150 extension ceiling. Regular-session runner fading in AH, no 2-AH-scan confirmation. Skip.
+
+**BZFD (BuzzFeed, Internet Software/Services) — skip (fails 2-AH-scan gate):**
+- Tradable=true. **First AH appearance** — fails the 2-AH-scan >10% gate (this is scan #1 above threshold).
+- **Catalyst found: 35% workforce layoffs announced today** (post Byron Allen $120M majority-stake takeover; restructuring/cost-cut, ~Grade C). Q2 earnings are Aug 4, not today.
+- SIP AH volume is **thin** — single-digit trades most bars (20:40–21:15Z: 3–6 trades/bar), only picking up in the last two bars (21:40Z 273 trades/81K sh, 21:45Z 164 trades/40K sh). Not sustained accumulation. Float 11.9M, Day +1.8% (not a dead-cat).
+- Verdict: skip tonight (fails 2-AH-scan gate, thin volume). Watch at 00:30 — if it holds >10% AH on building volume it becomes a 2nd-scan candidate.
+
+**Below-threshold names:** WLDS (+9.7% AH, SPIKE→FADE / NO-SPIKE carried, Total −1.1%), OTLK (−24.2% dead-cat), BYRN (+6.0%), BRCC (−8.3% dead-cat) — no workup.
+
+**Assessment:** No new entries. INLF (already held) is the only confirmed multi-scan AH mover; holding near entry on tapering-but-real volume. BIYA and BZFD both fail the 2-AH-scan gate (first AH scans >10%); BIYA is a fading regular-session runner near the ceiling, BZFD has a real catalyst (35% layoffs) but thin volume. Re-check BZFD at the 00:30 final scan for a possible 2nd AH scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
