@@ -6,6 +6,39 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-24 — re: Trading Scanner Report - 2026-07-24
+
+**Juan said:** "DOMO It's really bad. I have no idea why you're holding that. I
+don't get it." (re: the open DOMO position, Grade A, day 2/5, reported +1.9%.)
+
+**Interpretation:** DOMO is a **cash-buyout / merger-arb** name, not a momentum
+stock. Domo agreed to sell substantially all assets to Progress Software for
+$400M; once that price is set, the stock pins near the deal value and the
+overnight AH->PM momentum the whole strategy depends on evaporates. That is why
+DOMO sits flat/dead ($3.92 entry -> $4.50 brief peak -> back to $3.71, -5.4%)
+for days instead of running — there is nothing to run to. The Grade A "hold up
+to 5 days, trail -20%" rule was built for **operational/momentum catalysts**
+(BATL gas agreement, VIVS partnership) that ignite overnight momentum, NOT for a
+company being acquired for cash. Grading a cash buyout as Grade-A-hold mislabels
+merger-arb as momentum and holds dead money. Juan's confusion is the correct
+read: holding DOMO has no thesis under a momentum strategy.
+
+**Action:**
+1. **DOMO flagged for exit at the next premarket position-eval pulse** (Mon
+   07-27, 10:30 CET). Not exiting now: it is the AH session and the book is a
+   $3.17 x $4.23 spread (~30%) — selling into that bleeds far more than the
+   position is down. Premarket has tighter spreads. Flag added to the DOMO row
+   in `OPEN_POSITIONS.md`.
+2. **Routed to strategy-advance / catalyst grading:** split the catalyst taxonomy
+   so **cash buyouts / definitive merger-agreements are NOT graded as Grade-A
+   momentum holds.** A fixed cash deal price caps upside and kills momentum, so
+   these should be Grade None/exit-premarket (or skipped at entry), not held for
+   5 days. This edits the holding-rules table in `Day Trading.md` /
+   `OPEN_POSITIONS.md`, a strategy-level change → proposed here, not applied
+   unilaterally by this pulse.
+
+---
+
 ### 2026-07-23 — re: Trading Scanner Report - 2026-07-22
 
 **Juan said:** "Can we make changes so that we can catch the winner of today?
