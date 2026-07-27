@@ -20,6 +20,14 @@ Scanner returned 52 regular-session hits. Top low-float movers to watch into aft
 
 **Watch — pending AH confirmation.** Most strong movers show fading intraday volume (VChg negative). Names with rising volume into the close (NTRX +379%, GLVT +322%, RBRS +60%) are the ones most likely to carry momentum into AH. Re-evaluate all at the 22:00+ CET AH scans; enter only on sustained AH momentum (>10% AH change across 2 AH scans, per learning-phase gates).
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Session: AFTERHOURS** (AH just opened). Scanner returned **0 hits** at 16:00 ET. Observation-only scan (learning phase: no entries before 23:00 CET).
+
+No candidates found.
+
+**Watch-name AH cross-check** (21:30 movers via Yahoo `--ah-history`): none showing real accumulating AH prints at this minute. Yahoo returns stale prior-session dates (07-23/07-24) for SUIC, ENTX, NTRX, GLVT, RBRS, BIYA, GFLT — no fresh AH liquidity. The 21:30 leaders were volume-fading intraday spikes (VChg negative) that are not carrying into after-hours. Re-check at 22:30/23:00 in case any name builds real AH volume.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
