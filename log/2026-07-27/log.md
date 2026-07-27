@@ -94,7 +94,32 @@ BYRN and AUUD below the +10% AH threshold — no spike-bar / catalyst workup.
 
 **Assessment:** No entries (observation-only, before 23:00 CET). INLF is the standout — tiny float, real sustained AH volume, BUILD pattern, under the extension ceiling. It qualifies on all entry gates and should be entered at the 23:00 scan if the BUILD holds. WLDS remains a fading spike.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Session: AFTERHOURS. Entry window open** (learning phase: entries allowed at 23:00+ CET). Scanner returned **4 hits** at 17:00 ET. INLF is the only name above the +10% AH threshold.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $3.28 | +2.8% | +31.7% | $4.32 | +35.4% | 1.8M | 5.6M | 0.3x | 1.0M | Industrial Machinery |
+| PFSA | [TV](https://www.tradingview.com/chart/?symbol=PFSA) | $1.22 | -28.7% | +6.6% | $1.30 | -24.0% | 1.5M | 929K | 1.6x | 526K | Semiconductors |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $3.18 | -9.9% | +7.5% | $3.42 | -3.1% | 1.5M | 7.0M | 0.2x | 2.0M | Electronic Equipment/Instruments |
+| OTLK | [TV](https://www.tradingview.com/chart/?symbol=OTLK) | $1.06 | -24.2% | +6.1% | $1.13 | -19.6% | 366K | 16.6M | 0.0x | 151.9M | Pharmaceuticals: Major |
+
+**Spike-bar instrumentation (log-only, AH Chg >10%):**
+- INLF: `SPIKE 16:09ET +28% $4.20 1411 trades / 95k sh (first co-spike bar)` — ignition bar fired (carried, confirmed at 17:00 ET).
+
+PFSA, WLDS, OTLK all below the +10% AH threshold — no workup. PFSA (-28.7%) and OTLK (-24.2%) are dead-cat bounces off deep regular-session sell-offs; WLDS is the fading spike carried from prior scans (now +7.5% AH, below threshold).
+
+**INLF (INLIF Limited, industrial automation/robotics, China small-cap) — ENTERED:**
+- Clears all gates: 3rd AH scan >10% (22:30 +23.5% → 22:45 +35.4% → 23:00 +31.7%). Float 1.0M (tiny), Day +2.8% (not dead-cat), Total% +35% (well under 150% ceiling). Tradable=true.
+- **Trajectory: BUILD/HOLD.** SIP AH accumulation real and sustained across every bar through 16:45 ET (last SIP bar 142K sh / 1835 trades; earlier bars 180K–497K sh). VWAP climbed $3.76→$4.42, corroborates scanner AH price — not a bad print. Peaked $4.65 @16:25 ET, holding $4.20-4.35 (within ~6% of AH high) — a hold, not a fade. Peak before 18:30 ET but stock is holding, not declining, so peak-time is not a disqualifier (hold-vs-fade dominates).
+- **Catalyst: none found** (structured search at 22:30 — latest news Oct-Nov 2025 + Jun 2026, nothing same-day). No-catalyst concern documented; not a skip in learning phase. No-catalyst winners span the float range (LNKS 633K, OCG 1.9M).
+- **Entry: filled 22 sh @ $4.12** (limit $4.50 --ext, order 76dc5a7d). Book quote stale at 16:00 ET ($3.82 ask); SIP bars are the live confirmation. Catalyst Grade **None** → exit at first premarket opportunity.
+
+**Assessment:** One entry (INLF). Genuine BUILD on real accumulating low-float AH volume, tiny 1.0M float, under the extension ceiling. No catalyst is the one concern. PFSA/OTLK are dead-cat bounces (skip); WLDS is a fading spike (below threshold).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| INLF | $4.12 | 2026-07-27 23:00 CET | 22 | 76dc5a7d | BUILD/hold, float 1.0M, +35% Total (under ceiling), 3 AH scans >10%, real SIP volume. Catalyst: None (concern noted). |
