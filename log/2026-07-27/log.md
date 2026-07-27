@@ -118,6 +118,32 @@ PFSA, WLDS, OTLK all below the +10% AH threshold — no workup. PFSA (-28.7%) an
 
 **Assessment:** One entry (INLF). Genuine BUILD on real accumulating low-float AH volume, tiny 1.0M float, under the extension ceiling. No catalyst is the one concern. PFSA/OTLK are dead-cat bounces (skip); WLDS is a fading spike (below threshold).
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**Session: AFTERHOURS. Entry window open.** Scanner returned **7 hits** at 17:30 ET. Only INLF (+17.4% AH) and WLDS (+11.3% AH) clear the +10% AH threshold. INLF is already an open position (entered 23:00); WLDS is a confirmed skip. **No new entries this scan.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $3.28 | +2.8% | +17.4% | $3.85 | +20.7% | 2.5M | 5.7M | 0.4x | 1.0M | Industrial Machinery |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $3.18 | -9.9% | +11.3% | $3.54 | +0.3% | 1.6M | 7.0M | 0.2x | 2.0M | Electronic Equipment/Instruments |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $4.17 | +116.1% | +6.2% | $4.43 | +129.5% | 865K | 20.4M | 0.0x | 2.7M | Personnel Services |
+| OTLK | [TV](https://www.tradingview.com/chart/?symbol=OTLK) | $1.06 | -24.2% | +8.0% | $1.15 | -18.1% | 535K | 16.6M | 0.0x | 151.9M | Pharmaceuticals: Major |
+| JZXN | [TV](https://www.tradingview.com/chart/?symbol=JZXN) | $1.35 | +13.4% | +5.9% | $1.43 | +20.2% | 220K | 5.5M | 0.0x | 1.4M | Specialty Stores |
+| BYRN | [TV](https://www.tradingview.com/chart/?symbol=BYRN) | $4.13 | +16.7% | +6.1% | $4.38 | +23.7% | 201K | 866K | 0.2x | 17.8M | Aerospace & Defense |
+| BRCC | [TV](https://www.tradingview.com/chart/?symbol=BRCC) | $0.99 | -8.3% | +5.0% | $1.04 | -3.7% | 54K | 628K | 0.1x | 103.1M | Food: Specialty/Candy |
+
+**Spike-bar instrumentation (log-only, AH Chg >10%):**
+- INLF: `SPIKE 16:09ET +28% $4.20 1411 trades / 95k sh (first co-spike bar)` — ignition bar fired (carried, confirmed at 17:30 ET).
+- WLDS: `NO-SPIKE peak +37% @16:10ET (no bar cleared +15% on a volume co-spike)` — no genuine ignition (carried, confirmed at 17:30 ET).
+
+**INLF (open position, entered 23:00 @ $4.12) — trajectory update:** SIP shows a new AH high **$4.69 @16:55 ET** (above the $4.12 entry), then a fade to $3.80–4.02 by 17:15 ET. Scanner AH $3.85 (+17.4%) at 17:30 ET matches the fade. Volume still real and accumulating (16:50Z 320K sh/3717 tr, tapering to 17:15Z 87K sh/1057 tr). Position remains up ~+17% off close on genuine low-float volume; the AH high printed *after* entry. Fade is off the peak, not a collapse — still holding well above close. Hold/sell decision belongs to the premarket position-evaluation pass; noted here for trajectory tracking only.
+
+**WLDS:** SPIKE→FADE / NO-SPIKE confirmed again. Day −9.9%, Total% +0.3% (barely above prior close), fading. Not a candidate. Skip.
+
+**Below-threshold names:** BIYA (+129.5% Total but only +6.2% AH — regular-session mover gone flat in AH), OTLK (−24.2% dead-cat), JZXN, BYRN, BRCC all under +10% AH — no workup.
+
+**Assessment:** No new entries. INLF (already held) is the only real AH mover and it is fading off its post-entry high on still-real volume. WLDS remains a fading spike. Everything else is below threshold or a dead-cat bounce.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
