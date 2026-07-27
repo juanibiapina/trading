@@ -67,6 +67,33 @@ No qualifying AH candidates. Re-check at 22:30/23:00.
 
 **Assessment:** INLF is the one name worth watching into the 23:00 entry window (BUILD, tiny float, real volume). WLDS is a fading spike. No entries this scan (observation-only). Re-check both at 23:00; INLF needs a 2nd AH scan >10% to clear the gate.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+**Session: AFTERHOURS.** Scanner returned **4 hits** at 16:45 ET. Observation-only scan (learning phase: no entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $3.28 | +2.8% | +35.4% | $4.44 | +39.2% | 1.3M | 5.6M | 0.2x | 1.0M | Industrial Machinery |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $3.18 | -9.9% | +11.6% | $3.55 | +0.6% | 1.4M | 7.0M | 0.2x | 2.0M | Electronic Equip/Instruments |
+| BYRN | [TV](https://www.tradingview.com/chart/?symbol=BYRN) | $4.13 | +16.7% | +6.5% | $4.40 | +24.3% | 132K | 858K | 0.2x | 17.8M | Aerospace & Defense |
+| AUUD | [TV](https://www.tradingview.com/chart/?symbol=AUUD) | $1.07 | +0.0% | +6.5% | $1.14 | +6.5% | 95K | 240K | 0.4x | 4.8M | Packaged Software |
+
+**Spike-bar instrumentation (log-only, AH Chg >10%):**
+- INLF: `SPIKE 16:09ET +28% $4.20 1411 trades / 95k sh (first co-spike bar)` — ignition bar fired (carried from 22:30).
+- WLDS: `NO-SPIKE peak +37% @16:10ET (no bar cleared +15% on a volume co-spike)` — no genuine ignition (carried).
+
+BYRN and AUUD below the +10% AH threshold — no spike-bar / catalyst workup.
+
+**INLF (INLIF Limited, industrial automation/robotics, China small-cap) — now clears the 2-AH-scan gate:**
+- 2nd AH scan >10% (22:30 +23.5% → 22:45 +35.4%). Float 1.0M, Day +2.8% (not dead-cat), Total% +39% (well under 150% ceiling).
+- **Trajectory: BUILD, still climbing.** SIP AH accumulation sustained and rising across every bar: 20:05Z 180K sh/2249 tr → 20:10Z 436K/5685 → 20:15Z 445K/6158 → 20:20Z 215K/2555 → 20:25Z 497K/7136 → 20:30Z 337K/4457. VWAP climbing $3.76→$4.42, corroborates scanner AH price. Price near AH high ($4.65), holding within 20%. Real low-float volume, not a bad print. (Quote endpoint stale at 16:00 ET on free tier; SIP bars are the live confirmation.)
+- Catalyst: none found (searched at 22:30 — latest news Oct-Nov 2025 + Jun 2026, nothing same-day). No-catalyst concern noted; not a skip during learning phase.
+- Verdict: **prime entry candidate for the 23:00 scan** — genuine BUILD on real accumulating low-float AH volume, clears all gates except the pre-23:00 timing hold.
+
+**WLDS:** SPIKE→FADE confirmed (carried from 22:30). Day -9.9%, Total% +0.6% (barely above prior close), NO-SPIKE, fading volume. Not a candidate.
+
+**Assessment:** No entries (observation-only, before 23:00 CET). INLF is the standout — tiny float, real sustained AH volume, BUILD pattern, under the extension ceiling. It qualifies on all entry gates and should be entered at the 23:00 scan if the BUILD holds. WLDS remains a fading spike.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
