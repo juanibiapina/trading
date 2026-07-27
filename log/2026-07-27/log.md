@@ -28,6 +28,17 @@ No candidates found.
 
 **Watch-name AH cross-check** (21:30 movers via Yahoo `--ah-history`): none showing real accumulating AH prints at this minute. Yahoo returns stale prior-session dates (07-23/07-24) for SUIC, ENTX, NTRX, GLVT, RBRS, BIYA, GFLT — no fresh AH liquidity. The 21:30 leaders were volume-fading intraday spikes (VChg negative) that are not carrying into after-hours. Re-check at 22:30/23:00 in case any name builds real AH volume.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+**Session: AFTERHOURS.** Scanner returned **0 hits** at 16:15 ET. Observation-only scan (learning phase: no entries before 23:00 CET).
+
+Watch-name AH cross-check (21:30 movers via Yahoo `--ah-history` + SIP):
+
+- **ENTX** (Entera Bio, Pharma: Major) — the one name with real fresh AH liquidity. AH holding $3.93–4.00 across 16:00–16:15 ET; SIP first bar 511K sh / 2,353 trades / VWAP $3.95; real two-sided book (bid $3.89 x100 / ask $3.96 x100). **But the +85.9% move happened in the regular session** (21:30 scan had it at $3.81). AH is only ~+3% above the $3.81 regular close, not a fresh AH spike. Scanner missed it because MCap $187.8M exceeds the <$100M cap. Float 39.9M. Does not meet the AH-change >10% gate (AH move off regular close is ~+3%). Regular-session mover holding flat in AH — track at 23:00 to see if it builds; per regular-session caution, intraday spikes that go flat in AH tend to fade.
+- NTRX, GLVT, RBRS, SUIC — Yahoo still returns stale prior-session dates (07-23/07-24), no fresh AH liquidity. The 21:30 intraday leaders are not carrying into after-hours.
+
+No qualifying AH candidates. Re-check at 22:30/23:00.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
