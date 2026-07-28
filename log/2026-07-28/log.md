@@ -270,6 +270,157 @@ into the close, 10x float turnover), then **RYOJ** (new, extreme relative volume
 needs a real book), then LHSW and SGLY subject to the liquidity check. Entries
 open at 23:00 CET and require >10% AH across two AH scans.
 
+## Scan 22:15 CET (4:15 PM ET) — AH open +15 min, observation only
+
+**No entries this pulse.** Learning-phase rule bars entries before 23:00 CET, and
+the main AH screener is still blind. But unlike 22:00, the verification stack now
+works, so this pulse produces the night's first real after-hours data.
+
+### Main AH screener
+
+```
+AFTER-HOURS Scan: 2026-07-28 16:15:16 ET  |  0 hits
+```
+
+Still zero. TradingView's `postmarket_*` fields remain empty 15 minutes after the
+close — `AH Chg +0.0% / AH Vol 0 / VRatio 0.0` across every name. Consistent with
+the ~16:30 ET fill-in observed on prior nights.
+
+### Day-movers pre-seed (log-only)
+
+`scripts/scan.py --day-movers --session afterhours` — 16 hits. Instrumentation
+(Initiative 3), not a candidate source. Spike-bar verdicts as-of 16:15 ET.
+
+| Ticker | Chart | Close | Day% | Float | AvgVol | Industry | Spike-bar verdict |
+|--------|-------|-------|------|-------|--------|----------|-------------------|
+| EGG  | [TV](https://www.tradingview.com/chart/?symbol=EGG)  | $3.88 | +89.3% | 8.3M | 2.1M | Misc Commercial Services | `NO-SPIKE peak +3% @16:00ET` |
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $5.24 | +59.8% | 1.0M | 9.0M | Industrial Machinery | `NO-SPIKE flat/faded (peak <= base)` |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $6.43 | +54.2% | 2.7M | 23.9M | Personnel Services | `NO-SPIKE peak +1% @16:00ET` |
+| CNET | [TV](https://www.tradingview.com/chart/?symbol=CNET) | $1.43 | +43.0% | 3.0M | 989K | Advertising/Marketing | `NO-SPIKE peak +1% @16:00ET` |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $4.93 | +29.7% | 2.3M | 52K | Medical/Nursing Services | `NO-SPIKE peak +2% @16:00ET` |
+| APUS | [TV](https://www.tradingview.com/chart/?symbol=APUS) | $8.00 | +27.2% | n/a | 15K | Biotechnology | `NO-SPIKE flat/faded (peak <= base)` |
+| AMSS | [TV](https://www.tradingview.com/chart/?symbol=AMSS) | $1.07 | +24.8% | 3.5M | 805K | Food Distributors | not run |
+| **DCX** | [TV](https://www.tradingview.com/chart/?symbol=DCX) | $0.91 | +24.3% | 2.1M | 65K | Motor Vehicles | not run (**new**) |
+| PSQH | [TV](https://www.tradingview.com/chart/?symbol=PSQH) | $3.75 | +21.6% | 2.7M | 201K | Financial Conglomerates | not run |
+| LHSW | [TV](https://www.tradingview.com/chart/?symbol=LHSW) | $2.77 | +19.7% | 1.0M | 198K | Computer Processing Hardware | not run |
+| PCSA | [TV](https://www.tradingview.com/chart/?symbol=PCSA) | $3.08 | +18.9% | 2.3M | 82K | Pharmaceuticals: Major | not run |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $3.60 | +18.4% | 1.1M | 395K | Advertising/Marketing | not run |
+| WBUY | [TV](https://www.tradingview.com/chart/?symbol=WBUY) | $0.90 | +18.4% | 2.5M | 18.4M | Food Retail | not run |
+| **ONMD** | [TV](https://www.tradingview.com/chart/?symbol=ONMD) | $0.72 | +18.4% | 16.4M | 840K | Packaged Software | not run (**new**) |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $3.71 | +16.7% | 2.0M | 7.8M | Electronic Equipment | not run |
+| FIRY | [TV](https://www.tradingview.com/chart/?symbol=FIRY) | $9.75 | +16.6% | 8.1M | 2.2M | Data Processing Services | not run |
+
+Churn vs the 22:00 pre-seed: **DCX** and **ONMD** entered; NOMA, SGLY, ANY and
+RPGL dropped out. Note the day% figures keep drifting because the pre-seed reads
+the last print, which in AH is a post-close trade — EGG shows $3.88 here vs $4.02
+at 22:00, i.e. it gave back part of the close.
+
+### Spike-bar detector: first usable readings of the night
+
+The 22:00 pulse recorded the detector as unavailable (403 on the blocked recent
+SIP window). At 16:15 ET it works — the free-tier block had rolled far enough
+forward to expose the 16:00 ET bar. **Practical availability is ~16:15 ET, not
+16:20+.** Every name returns NO-SPIKE with peaks of +1% to +3%: no after-hours
+ignition anywhere in the first 15 minutes. INLF and APUS read `flat/faded (peak
+<= base)`, meaning they are trading *below* their 16:00 base.
+
+### SIP after-hours bars — 16:00-16:05 ET (the only bar served yet)
+
+`broker.js bars SYM --tf 5Min --start 2026-07-28T20:00:00Z`
+
+| Ticker | O → C | High | Vol | Trades | VWAP | Read |
+|--------|-------|------|-----|--------|------|------|
+| BIYA | $6.44 → $6.21 | $6.79 | 244,658 | 2,186 | $6.44 | Real liquidity, **faded inside the bar** (-3.6%) |
+| INLF | $5.30 → $5.04 | $5.30 | 77,065 | 712 | $5.13 | Opened at the high, sold off |
+| ONMD | $0.70 → $0.71 | $0.72 | 59,147 | 79 | $0.71 | Big size / 79 trades = block prints, not retail flow |
+| EGG  | $3.81 → $4.00 | $4.02 | 35,136 | 289 | $3.92 | **Only name closing the bar up** (+5.0%) |
+| CNET | $1.40 → $1.26 | $1.42 | 28,613 | 127 | $1.32 | -10% inside the bar |
+| DCX  | $0.90 → $0.86 | $0.98 | 22,631 | 98 | $0.90 | Thin, choppy |
+| RYOJ | $4.99 → $4.86 | $5.08 | 4,752 | 155 | $4.99 | Very thin despite the +29.7% day |
+
+BIYA has by far the best real AH liquidity (2,186 trades in five minutes), which
+matters because it was the 21:30 Tier-1 pick on shape. But the direction is
+wrong: it opened AH at $6.44, printed $6.79, and closed the bar at $6.21. First-bar
+fade, not first-bar ignition.
+
+### Books at 16:15 ET
+
+| Ticker | Bid | Ask | Quote time | Read |
+|--------|-----|-----|-----------|------|
+| **EGG** | $4.15 x100 | $4.44 x100 | **20:13:57Z** | **Fresh** and only ~7% wide — the tightest, most current book of the night |
+| BIYA | $5.59 x100 | $7.30 x100 | 20:00:00Z | Stale close snapshot |
+| RYOJ | $4.21 x100 | $5.85 x100 | 20:00:00Z | Stale |
+| APUS | $6.57 x100 | $9.12 x100 | 20:00:00Z | Stale |
+| FIRY | $8.49 x100 | $11.27 x100 | 20:00:00Z | Stale |
+| DCX | $0.72 x100 | $1.07 x100 | 20:00:00Z | Stale, 49% wide |
+| ONMD | $0.59 x100 | $0.82 x100 | 20:00:00Z | Stale, 39% wide |
+| **INLF** | $4.49 x100 | **$0.00 x0** | 20:00:02Z | **One-sided — no offer** |
+| **CNET** | $1.21 x100 | **$0.00 x0** | 20:00:01Z | **One-sided — no offer** |
+| **LHSW** | $2.32 x100 | **$0.00 x0** | 20:00:05Z | **One-sided, 2nd consecutive scan** |
+
+**LHSW is now a carried skip.** It showed no offer at 22:00 and still shows none
+at 22:15. Under the illiquid-ramp rule (TII precedent) a one-sided book means any
+VRatio it eventually prints is a stale regular-session artifact. It was Tier 1 on
+shape at 21:30 (HOD at 15:00 ET, -1.2% off) and is being disqualified purely on
+liquidity — worth noting as a shape-vs-fillability divergence. INLF and CNET join
+it as no-offer books for now.
+
+### Catalyst work
+
+- **BIYA** — re-ran the structured search now that the 16:00-16:05 PR window has
+  passed. **Still nothing same-day.** Most recent GlobeNewswire item is the
+  1-for-10 reverse-split record date (2026-07-08); prior item is a Sept 2025
+  corporate release. Confirms **Grade None**. The +54% on ~10x float turnover is a
+  low-float squeeze, and the reverse split from 26.99M → 2.70M shares three weeks
+  ago is the mechanical reason the float is small enough to squeeze.
+- **EGG** — no same-day catalyst (1 search; first attempt hit HTTP 429, retried on
+  tavily). **Grade None.** But the daily history reframes the name entirely —
+  see below.
+
+### EGG is a multi-day bounce, not a fresh mover
+
+Yahoo daily bars, last 10 sessions:
+
+| Date | Open | High | Low | Close | Volume |
+|------|------|------|-----|-------|--------|
+| ...07-20 → 07-23 | ~$7.2 | ~$7.5 | ~$6.9 | $7.09-7.49 | 6K-122K |
+| 2026-07-24 | $6.96 | $9.09 | $6.15 | $6.40 | 161K |
+| 2026-07-27 | $5.20 | $5.59 | **$2.05** | **$2.05** | 535K |
+| 2026-07-28 | $2.04 | $7.26 | $2.31 | $3.81 | **19.56M** |
+
+EGG collapsed **-68% yesterday** ($6.40 → $2.05) and today's headline +89.3% is a
+bounce off that crash, not new momentum. It also spiked to $7.26 at 10:15 ET and
+gave back 46% of it during the session. The dead-cat filter keys on *same-day*
+Day% ≤ -15%, so EGG's +89% does not trip it — but the multi-day structure is
+exactly the pattern the filter exists to avoid, one session displaced. Flagging
+this as a **filter-scope observation**: the dead-cat rule's same-day window misses
+next-day bounces off a crash. Not proposing a rule change on one case; recording it
+so the morning eval can check whether EGG follows through or dies in PM.
+
+Its one genuinely attractive feature is the book: a fresh, 7%-wide two-sided quote
+at 16:14 ET while everything else is stale or one-sided. Good fillability on a bad
+setup.
+
+### Read going into 22:30
+
+Nothing qualifies and nothing is close. The night's shape so far:
+
+- **No after-hours ignition exists yet.** Every spike-bar reads NO-SPIKE, the best
+  AH price action is EGG's +5% inside one 5-minute bar, and the two highest-day%
+  names (BIYA, INLF) both faded inside their first AH bar.
+- **The 21:30 Tier-1 thesis is not confirming.** BIYA had the liquidity but sold
+  off from the AH open; LHSW is disqualified on a missing offer; SGLY dropped out
+  of the pre-seed entirely.
+- Everything on the board is currently a **Grade None** regular-session carryover.
+  Under the entry rules a candidate still needs >10% *after-hours* change across
+  two AH scans, and the AH change counter has not started for any name.
+
+Watch order for 22:30, when the TradingView postmarket fields should populate:
+**BIYA** (does the first-bar fade continue or base?), **EGG** (best book, worst
+structure — needs to reclaim toward $4.44+ on real trades to be interesting),
+**RYOJ** (extreme relative volume but only 4.7K AH shares so far). DCX and ONMD
+get first spike-bar and catalyst reads at 22:30 if they hold their day%.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
