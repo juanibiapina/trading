@@ -1012,8 +1012,263 @@ spike, below gate), YIBO (SPIKE→FADE confirmed, below gate).
   that more directly than a second screener appearance thirty minutes later. No
   action taken; flagging for a decision.
 
+## Scan 00:00 CET (6:00 PM ET) — **entry: ONMD**, catalyst found
+
+**One entry this pulse.** ONMD cleared the two-AH-scan gate, and the catalyst
+search that came up empty at 23:30 now returns a **$11.5M+ commercial agreement**
+dated today. It is the first graded catalyst of the night and the strongest
+setup: the stock is making new after-hours highs at 17:46 ET on 80K-270K shares
+per minute. A **third ignition cluster** also fired (YHC 17:31 ET, STFS 17:41 ET),
+with STFS going near-vertical as this scan runs.
+
+### Main AH screener
+
+```
+AFTER-HOURS Scan: 2026-07-28 18:00:10 ET  |  11 hits
+```
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $2.75 | -1.4% | +50.9% | $4.15 | +48.7% | **7.3M** | 1.9M | 3.8x | 502K | Medical Specialties |
+| **ONMD** | [TV](https://www.tradingview.com/chart/?symbol=ONMD) | $0.71 | +17.0% | **+27.6%** | $0.90 | +49.3% | 5.0M | 1.4M | 3.7x | 16.4M | Packaged Software |
+| YIBO | [TV](https://www.tradingview.com/chart/?symbol=YIBO) | $1.15 | -2.5% | +5.2% | $1.21 | +2.5% | 1.6M | 207K | 7.5x | 2.1M | Electronics/Appliances |
+| EGG | [TV](https://www.tradingview.com/chart/?symbol=EGG) | $3.81 | +85.9% | +12.6% | $4.29 | +109.3% | 947K | 2.2M | 0.4x | 8.3M | Misc Commercial Services |
+| GMM | [TV](https://www.tradingview.com/chart/?symbol=GMM) | $2.47 | -8.5% | +28.4% | $3.17 | +17.4% | 705K | 3.0M | 0.2x | 1.7M | Packaged Software |
+| **STFS** | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $3.63 | +19.4% | **+44.6%** | $5.25 | +72.7% | 238K | 427K | 0.6x | 1.1M | Advertising/Marketing (**new above gate**) |
+| **YHC** | [TV](https://www.tradingview.com/chart/?symbol=YHC) | $1.39 | -14.7% | +11.5% | $1.55 | -4.9% | 133K | 276K | 0.5x | 1.1M | Advertising/Marketing (**new**) |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $3.05 | +3.0% | +20.0% | $3.66 | +23.6% | 94K | 36K | 2.6x | 2.7M | IT Services |
+| MGRX | [TV](https://www.tradingview.com/chart/?symbol=MGRX) | $0.56 | +2.4% | +7.8% | $0.60 | +10.4% | 68K | 552K | 0.1x | 14.6M | Pharmaceuticals: Major |
+| SBNYL | [TV](https://www.tradingview.com/chart/?symbol=SBNYL) | $1.20 | +0.0% | +45.8% | $1.75 | +45.8% | 30K | 11K | 2.7x | 59.6M | Regional Banks |
+| MB | [TV](https://www.tradingview.com/chart/?symbol=MB) | $3.67 | -7.1% | +23.4% | $4.53 | +14.6% | 100 | 5K | 0.0x | 4.7M | Restaurants |
+
+Above the 10% AH gate: AMIX (open position), ONMD, EGG, GMM, STFS, YHC, IOTR, MB
+(no book), SBNYL (untradable). YIBO has fully died at +5.2%.
+
+### Spike-bar verdicts (instrumentation, verbatim, as-of 18:00 ET)
+
+```
+ONMD 2026-07-28  SPIKE  16:59ET  +20%  $0.85  161 trades / 52k sh  (first co-spike bar)
+GMM  2026-07-28  SPIKE  16:59ET  +38%  $3.41  675 trades / 82k sh  (first co-spike bar)
+AMIX 2026-07-28  SPIKE  16:03ET  +24%  $3.40  709 trades / 55k sh  (first co-spike bar)
+IOTR 2026-07-28  SPIKE  16:08ET  +29%  $3.93  170 trades / 21k sh  (first co-spike bar)
+YHC  2026-07-28  SPIKE  17:31ET  +22%  $1.70  137 trades / 14k sh  (first co-spike bar)
+STFS 2026-07-28  SPIKE  17:41ET  +24%  $4.50  219 trades / 29k sh  (first co-spike bar)
+```
+
+**A third ignition cluster: 17:31-17:41 ET.** The night now has three distinct
+windows — 16:03-16:08 (AMIX, YIBO, IOTR, EGG), 16:59 (ONMD, GMM), and 17:31-17:41
+(YHC, STFS). Ignitions are not confined to the AH open; two of the three clusters
+fired more than an hour after it, and the 16:59 cluster produced tonight's graded
+catalyst. This is the clearest single-night evidence yet that Initiative 3's
+AH-open window is a concentration, not a boundary.
+
+### SIP volume — ONMD is building a second leg to new highs
+
+`broker.js bars ONMD --tf 5Min --start 2026-07-28T20:00:00Z`
+
+| Bar (ET) | O → C | High | Vol | Trades | VWAP |
+|----------|-------|------|-----|--------|------|
+| 17:10 | $0.87 → $0.89 | $0.92 | 1,052,556 | 3,182 | $0.88 |
+| 17:15 | $0.89 → $0.84 | $0.92 | 850,386 | 2,417 | $0.87 |
+| 17:20 | $0.84 → $0.84 | $0.89 | 536,844 | 1,597 | $0.84 |
+| 17:25 | $0.84 → $0.81 | $0.85 | 205,754 | 557 | $0.82 |
+| 17:30 | $0.82 → $0.86 | $0.86 | 326,262 | 1,062 | $0.85 |
+| 17:35 | $0.86 → $0.93 | **$0.95** | 846,334 | 2,704 | $0.91 |
+| 17:40 | $0.93 → $0.92 | $0.95 | 742,483 | 2,334 | $0.93 |
+
+1Min tape into the scan minute:
+
+| Min (ET) | O → C | High | Vol | Trades |
+|----------|-------|------|-----|--------|
+| 17:39 | $0.91 → $0.93 | **$0.95** | 270,199 | 860 |
+| 17:42 | $0.92 → $0.94 | $0.95 | 205,981 | 520 |
+| 17:44 | $0.92 → $0.92 | $0.92 | 110,728 | 416 |
+| 17:46 | $0.92 → $0.91 | $0.92 | 107,135 | 301 |
+
+The 17:20-17:25 pullback (volume 1.05M → 206K, price $0.92 → $0.81) looked like the
+start of a fade at the 23:30 read. Instead it was a base: volume re-expanded 4x
+into 17:35 and price took out the old $0.92 high at $0.95. That is a
+higher-low/higher-high structure on rising participation, the textbook BUILD.
+~5M AH shares against a 1.4M average daily volume.
+
+**STFS — live vertical ignition, blocked by the two-scan gate:**
+
+| Min (ET) | O → C | High | Vol | Trades |
+|----------|-------|------|-----|--------|
+| 17:40 | $3.96 → $3.97 | $3.97 | 3,514 | 27 |
+| 17:41 | $3.97 → $4.46 | $4.50 | 29,413 | 219 |
+| 17:42 | $4.53 → $4.90 | $4.93 | 53,133 | 523 |
+| 17:43 | $4.84 → $5.07 | $5.17 | 89,087 | 935 |
+| 17:44 | $5.04 → $5.23 | $5.46 | 81,878 | 1,113 |
+| 17:45 | $5.33 → $5.09 | $5.38 | 49,476 | 719 |
+| 17:46 | $5.09 → $5.52 | **$5.77** | 79,750 | **1,197** |
+
+From a dead $3.40 base (15-70 shares/min all evening) to $5.77 in six minutes on
+1,197 trades in the final minute. Real, accelerating, and the scanner's $5.25 is
+already stale versus the $5.77 tape.
+
+**GMM — second wave, then fading again:** 98K → 119K → 51K → 40K sh (17:30 → 17:45)
+on 1,416 → 1,718 → 625 → 461 trades. Rallied $2.90 → $3.42, back to $3.06. Still
+-16% off the $3.64 peak set at 17:00 ET.
+
+**IOTR — thin ramp, not a move:** the +20% AH headline is built on 309-2,900 shares
+per 5-min bar at 4-16 trades. The price walked $3.20 → $3.70 on essentially no
+participation.
+
+**YHC — spike and fade inside 15 minutes:** 98,724 sh / 733 trades in the 17:30 bar
+(peak $1.76), then 45K → 4.5K → 26K on 327 → 66 → 103 trades, price back to $1.48.
+
+### Books at 18:00 ET
+
+| Ticker | Bid | Ask | Quote time | Read |
+|--------|-----|-----|-----------|------|
+| ONMD | $0.59 x100 | $0.82 x100 | 20:00:00Z | Two-sided but a 2-hour-old close snapshot — **stale, not contradicting** |
+| IOTR | $2.58 x100 | $3.65 x100 | 20:00:00Z | Stale close snapshot, 41% wide |
+| YHC | $1.19 x100 | $1.62 x100 | 20:00:00Z | Stale, 36% wide |
+| **GMM** | $2.08 x100 | **$0.00 x0** | 20:00:02Z | **One-sided — no offer** (2nd consecutive scan) |
+| **STFS** | $3.09 x100 | **$0.00 x0** | 20:00:04Z | **One-sided — no offer** |
+
+**Freshness guard on ONMD (USDE precedent).** The paper quote is frozen at the
+20:00:00Z close while SIP shows 107,135 shares on 301 trades in the 17:46 minute at
+$0.91. The gap is staleness in Alpaca's IEX paper feed, not a bad print — SIP is
+current to within ~14 minutes of the scan and corroborates every level. Entry
+priced off the SIP tape.
+
+### ONMD — entered
+
+**OneMedNet Corporation** (NASDAQ, Minneapolis), regulatory-grade real-world
+healthcare data; its iRWD platform is built on Palantir Foundry and went fully
+operational in April 2026 with 80M patient journeys.
+
+**Catalyst (found this pulse, Grade B):** *"OneMedNet Secures $11.5+ Million
+Agreement to Supply Regulatory-Grade Real-World Data for Foundational AI Model
+Development"* — GlobeNewswire, 2026-07-28. The company entered an agreement to
+supply its multi-modal imaging iRWD data for training a foundational AI model.
+
+Three points on the grade:
+1. It is a **contract win**, which the grading table maps to **B** (hold up to 2
+   days, stop -15%). Graded B.
+2. On magnitude it borders A: $11.5M+ against FY2025 bookings of **$2.79M** is
+   roughly 4x the company's entire annual bookings in one deal. Recorded as a
+   B-that-argues-for-A rather than upgraded, since the table's A tier is reserved
+   for acquisitions and major partnerships.
+3. **The PR timing explains the ignition.** The release is timestamped ~16:55 ET
+   and the spike-bar detector puts the first co-spike bar at **16:59 ET**. This is
+   a rare clean case of catalyst → ignition with a four-minute lag, and it is why
+   the 23:00 and earlier searches found nothing: the news did not exist yet.
+
+Every gate, checked:
+
+| Gate | Value | Pass |
+|------|-------|------|
+| AH >10% across ≥2 AH scans | +25.5% (23:30) → +27.6% (00:00) | yes |
+| Float | 16.4M | recorded (not a filter) |
+| Day% above -15% | +17.0% | yes |
+| Entry extension < +150% | fill $0.94 vs $0.71 close = **+32%** (scan Total% +49.3%) | yes, comfortably |
+| Trajectory | **BUILD at new AH highs** — $0.95 at 17:39 ET after basing at $0.81 | yes |
+| Real AH liquidity | ~5M AH sh vs 1.4M avg vol; 2,334-3,182 trades per 5-min bar | yes |
+| SIP corroborates price | SIP $0.91-0.95 vs scanner $0.90 — scanner understates | yes |
+| Two-sided book | $0.59 / $0.82 x100, stale but two-sided; SIP proves fillable flow | yes |
+| Tradable | `tradable=true` NASDAQ | yes |
+| Catalyst | **$11.5M+ AI data agreement, same-day** | **Grade B** |
+
+**Order:** `buy ONMD 108 --limit 0.98 --ext` → id `d40549db`, **filled @ $0.94**,
+$101.52 committed. No stale-book artifact this time — the fill landed inside the
+live SIP range ($0.91-0.95), unlike the AMIX fill at 23:00.
+
+Hold strategy: Grade B → **hold up to 2 days, stop -15% from entry** ($0.80).
+Premarket evaluation owns the exit.
+
+### STFS — skip this pulse (gate), primary watch for 00:30
+
+The most violent move of the night and the only name igniting *as the scan runs*.
+Not entered, for two independent reasons:
+
+1. **First AH scan above the gate.** It was absent from the 22:30/22:45/23:00/23:30
+   screeners (it sat at $3.36-3.60 on 15-70 shares/min for ninety minutes). The
+   two-AH-scan rule makes 00:30 CET its earliest legal entry.
+2. **No offer in the book** (`ask $0.00 x0`). Under the illiquid-ramp rule that is
+   a skip on its own — though here it is more likely paper-feed staleness than a
+   genuinely empty book, given 1,197 real trades in the last minute.
+
+Catalyst: **nothing same-day found** (2 searches). What surfaced instead is
+concerning — a **$2.6M Class B share subscription on 07-22** and a CFO purchase of
+those same 2,000,000 Class B shares at $1.30. A recent equity raise plus a history
+of volatility halts (07-10, 07-16) and an EGM to revise share allotment (07-13)
+means the dilution machinery on this name is active. If a same-day release appears
+by 00:30 and it is a financing, that is **Grade D** and the entry is off regardless
+of the tape. Total% is also already +72.7% and climbing fast; at $5.77 it is
++59% *in after-hours alone*, so extension needs re-checking at 00:30.
+
+### Other skips
+
+- **GMM** — carried skip, now on two grounds it has failed twice: `ask $0.00 x0`
+  for a second consecutive scan (automatic skip, TII precedent), and the shape is a
+  double-fade (peak $3.64 at 17:00, second wave to $3.42, back to $3.06). Its most
+  recent filing is an F-3 shelf. Cleared the two-scan gate on paper (+19.8% →
+  +28.4%) and is being skipped purely on liquidity and trajectory.
+- **IOTR** — **skip: illiquid ramp.** +20% AH built on 4-16 trades per 5-min bar.
+  The 94K AH volume against a 36K average is the stale-VRatio artifact pattern; the
+  book is a 41%-wide close snapshot. Nothing fillable here.
+- **YHC** — **skip: SPIKE→FADE, first scan.** Ignited 17:31 ET, peaked $1.76 within
+  five minutes, and volume collapsed 98K → 4.5K by 17:40. Also Day% -14.7%, a
+  hair inside the dead-cat threshold, with Total% still **negative** (-4.9%) — the
+  AH pop has not reclaimed the previous close. Blocked by the two-scan gate anyway.
+- **EGG** — +12.6% AH, its second scan above the gate, so the gate is cleared. Still
+  skipped: Total% **+109.3%** is the highest extension on the board, the multi-day
+  dead-cat structure stands (-68% on 07-27, $6.40 → $2.05), and AH volume is 0.4x
+  its average against a 2.2M avg daily volume. Grinding higher on no participation.
+- **YIBO** — dead at +5.2% AH, below gate. The 23:00 SPIKE→FADE skip is confirmed.
+- **MGRX** (+7.8%) — below gate.
+- **MB** (+23.4%, 100 shares, quote timestamped 2026-07-22) and **SBNYL**
+  (`tradable=false`) — carried skips, no workup re-run.
+
+### AMIX — open position, no action (position management is the PM pulse's call)
+
+For the record: AMIX has stabilised rather than continued fading. After the
+$4.96 high (16:20 ET) and the drop to $3.89, it has spent the last hour oscillating
+$3.95-4.46 with the 17:35 bar closing $4.12 on 96,676 sh / 1,121 trades. That is
+**-17% off the AH high**, still inside the 20% hold band, on genuine two-way
+volume (7.3M AH shares vs 1.9M avg). Marked +0.5%... in fact -0.5% at $4.00 on the
+artifact fill of $4.02; against the notional live entry of ~$4.65 flagged at 23:00
+it is roughly **-14%**.
+
+### Read going into 00:30 (final scheduled scan)
+
+1. **STFS** is the entry candidate if it clears its second gate scan — subject to a
+   fresh look at extension (it may blow through +150% Total% at this rate), the
+   book, and one more catalyst search. A financing find kills it.
+2. **ONMD** needs no action; watch that the second leg does not reverse before the
+   close of the session.
+3. Run the final-scan feed-lag cross-check on every tracked name (AMIX, ONMD, STFS,
+   GMM, YHC, EGG, IOTR, YIBO) against SIP before finalising.
+4. A **fourth ignition cluster** is plausible given three have fired. Read 00:30 as
+   a fresh-ignition hunt, not only a follow-up.
+
+### For the daily email
+
+- **Two positions open.** AMIX (entered 23:00, Grade None, -14% against its real
+  market entry) and **ONMD** (entered 00:00 @ $0.94, **Grade B**).
+- ONMD is the best trade the process has produced in a while: a real same-day
+  catalyst ($11.5M+ AI-data agreement, ~4x the company's annual bookings), the
+  ignition bar firing four minutes after the press release, entry at a new
+  after-hours high on genuine accumulation, and a fill inside the live market
+  rather than an artifact. Grade B means holding up to 2 days.
+- **Answered by tonight's tape:** the question raised at 23:30 about the
+  two-AH-scan gate. Waiting the extra 30 minutes on ONMD cost nothing — it was
+  $0.89 then and filled at $0.94 now, about 5% worse — but it **bought the
+  catalyst**, which did not exist at 23:30. That is an argument for keeping the
+  gate as-is rather than replacing it with same-scan SIP confirmation. Still worth
+  a decision from Juan, but the evidence now cuts toward the current rule.
+- **Question for Juan:** ONMD's $11.5M agreement is roughly 4x the company's entire
+  FY2025 bookings. The grading table calls a contract win Grade B (2-day hold), but
+  a deal that size relative to the business arguably re-rates the company the way
+  Grade A is meant to capture. Should catalyst grade account for deal size relative
+  to company size, rather than only deal type? Graded B for now.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| ONMD | $0.94 | 2026-07-29 00:00 CET | 108 ($101.52) | d40549db | **First graded catalyst of the night:** $11.5M+ agreement to supply iRWD real-world data for foundational AI model training (GlobeNewswire 07-28, ~16:55 ET), ~4x FY2025 bookings — Grade **B**, hold up to 2 days, stop $0.80. Ignition bar 16:59 ET, four minutes after the PR. Entered at a new AH high $0.95 after basing at $0.81 on re-expanding volume (846K sh / 2,704 trades in the 17:35 bar; ~5M AH sh vs 1.4M avg). Day% +17.0%, entry extension +32% vs the $0.71 close. Fill landed inside the live SIP range — no stale-book artifact. |
 | AMIX | $4.02 | 2026-07-28 23:00 CET | 21 ($84.42) | ce3a2383 | Float 502K, Day% -1.4% (no dead-cat), AH BUILD +73% holding -4% off its $4.96 high, 5.4M AH sh vs 1.7M avg vol on 4K-14K trades/bar, entry extension only +46% vs the $2.75 close. Grade **None** (6 searches, no same-day catalyst) → exit at first PM opportunity. Fill is a stale-paper-book artifact ~15% below the live $4.65 market. |
