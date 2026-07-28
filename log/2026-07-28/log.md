@@ -156,6 +156,120 @@ enough that an `ask $0.00 x0` book is a live risk. Everything in Tier 3 needs
 a fresh AH ignition to come back into consideration; a continued grind lower
 is disqualifying.
 
+## Scan 22:00 CET (4:00 PM ET) — AH open, observation only
+
+**No entries this pulse.** Two reasons, both structural rather than judgment
+calls: (1) the learning-phase rule bars entries before 23:00 CET, and (2) at
+exactly 16:00 ET there is no after-hours data of any kind yet.
+
+### Main AH screener
+
+```
+AFTER-HOURS Scan: 2026-07-28 16:00:16 ET  |  0 hits
+```
+
+Expected. TradingView's `postmarket_*` fields stay empty until ~16:30 ET, so the
+main screener is blind for the first half hour after the close.
+
+### Day-movers pre-seed (log-only)
+
+`scripts/scan.py --day-movers --session afterhours` — 18 hits, day% >= 15,
+listed exchanges. Instrumentation only (Initiative 3), not a candidate source.
+
+| Ticker | Chart | Close | Day% | Float | AvgVol | Industry | Spike-bar verdict |
+|--------|-------|-------|------|-------|--------|----------|-------------------|
+| EGG  | [TV](https://www.tradingview.com/chart/?symbol=EGG)  | $4.02 | +96.1% | 8.3M | 2.1M | Misc Commercial Services | no data |
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $4.95 | +50.9% | 1.0M | 8.9M | Industrial Machinery | no data |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $6.26 | +50.1% | 2.7M | 23.8M | Personnel Services | no data |
+| CNET | [TV](https://www.tradingview.com/chart/?symbol=CNET) | $1.39 | +39.0% | 3.0M | 980K | Advertising/Marketing | no data |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $5.11 | +34.5% | 2.3M | 45K | Medical/Nursing Services | no data |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $3.83 | +26.0% | 1.1M | 390K | Advertising/Marketing | no data |
+| APUS | [TV](https://www.tradingview.com/chart/?symbol=APUS) | $7.67 | +21.9% | n/a | 14K | Biotechnology | no data |
+| AMSS | [TV](https://www.tradingview.com/chart/?symbol=AMSS) | $1.04 | +21.9% | 3.5M | 792K | Food Distributors | no data |
+| LHSW | [TV](https://www.tradingview.com/chart/?symbol=LHSW) | $2.79 | +20.6% | 1.0M | 197K | Computer Processing Hardware | no data |
+| PSQH | [TV](https://www.tradingview.com/chart/?symbol=PSQH) | $3.70 | +20.3% | 2.7M | 197K | Financial Conglomerates | no data |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $3.79 | +19.2% | 2.0M | 7.8M | Electronic Equipment | no data |
+| WBUY | [TV](https://www.tradingview.com/chart/?symbol=WBUY) | $0.89 | +17.1% | 2.5M | 18.4M | Food Retail | no data |
+| NOMA | [TV](https://www.tradingview.com/chart/?symbol=NOMA) | $3.40 | +16.4% | 5.6M | 7K | Movies/Entertainment | no data |
+| SGLY | [TV](https://www.tradingview.com/chart/?symbol=SGLY) | $4.66 | +16.2% | n/a | 55K | Air Freight/Couriers | no data |
+| PCSA | [TV](https://www.tradingview.com/chart/?symbol=PCSA) | $3.00 | +15.8% | 2.3M | 78K | Pharmaceuticals: Major | no data |
+| FIRY | [TV](https://www.tradingview.com/chart/?symbol=FIRY) | $9.67 | +15.7% | 8.1M | 2.2M | Data Processing Services | no data |
+| ANY  | [TV](https://www.tradingview.com/chart/?symbol=ANY)  | $2.25 | +15.6% | 6.0M | 1.5M | IT Services | no data |
+| RPGL | [TV](https://www.tradingview.com/chart/?symbol=RPGL) | $1.95 | +15.4% | 1.1M | 128K | IT Services | no data |
+
+New vs the 21:30 regular-session list: **RYOJ** (+34.5%, 2.3M float, avg vol only
+45K — a 100x+ relative-volume day), **APUS**, **PCSA**, **FIRY**, **RPGL**. EGG,
+INLF and BIYA all closed higher than their 15:30 marks, so the closing half hour
+was bought rather than sold.
+
+### Spike-bar detector unavailable at this hour (tooling note)
+
+`node scripts/spike-bar.js SYM:2026-07-28 --now 16:00` returned ERROR for all ten
+names tested. Root cause is not the script:
+
+```
+node scripts/broker.js bars BIYA --tf 1Min --start 2026-07-28T20:00:00Z --feed sip
+→ ERROR: 403 Forbidden: subscription does not permit querying recent SIP data
+```
+
+The free tier blocks the most recent ~15 minutes of SIP, and at 16:00 ET the
+entire after-hours window *is* that blocked period. The IEX fallback returns
+`no bars` because nothing has printed yet. Yahoo `--ah-history` still serves
+**2026-07-27** data, not today's.
+
+`spike-bar.js` hard-codes `--feed sip` and surfaces the 403 as a generic
+`ERROR Command failed`, which hides the cause. Two takeaways for the toolchain:
+the detector cannot produce a reading before roughly 16:20 ET regardless of the
+name, and its error message should distinguish "403 blocked window" from "no
+ignition". Filed as an observation, not fixed in this pulse.
+
+### Books at the close
+
+`broker.js quote` at 20:00:00Z — first-second-of-AH spreads, all provisional:
+
+| Ticker | Bid | Ask | Read |
+|--------|-----|-----|------|
+| BIYA | $5.59 x100 | $7.30 x100 | Two-sided but 27% wide |
+| SGLY | $3.62 x100 | $5.68 x100 | Two-sided, very wide |
+| RYOJ | $4.21 x100 | $5.85 x100 | Two-sided, very wide |
+| APUS | $6.57 x100 | $9.12 x100 | Two-sided, very wide |
+| FIRY | $8.49 x100 | $11.27 x100 | Two-sided, very wide |
+| LHSW | $2.32 x100 | **$0.00 x0** | **One-sided — no offer.** Watch for the AH-liquidity skip. |
+
+LHSW was Tier 1 on shape at 21:30 (HOD at 15:00 ET, -1.2% off it) but its 197K
+day volume was already the concern, and the missing offer at the close is the
+first confirmation. If the book is still one-sided at 22:30/23:00 it is an
+automatic skip under the illiquid-ramp rule (TII precedent), no matter what
+VRatio prints.
+
+### Tradability (checked early, carried forward)
+
+`tradable=true` for all new names: RYOJ, APUS, PCSA, FIRY, RPGL, NOMA, WBUY,
+AMSS. Combined with the 21:30 checks (EGG, BIYA, INLF, STFS, LHSW, POLA, CNET,
+WLDS, SGLY), every name in tonight's pipeline is broker-eligible. No blocks to
+carry.
+
+### Catalyst prep (partial, re-run at 22:30)
+
+- **RYOJ** — no same-day news found (2 searches; first hit rate-limited, retried
+  on tavily). Most recent item is a shareholder letter on 2025 highlights, not
+  dated today. The tell is the volume: 45K average against a +34.5% day. Provisional **None**.
+- **APUS** — no same-day release surfaced; latest items are an Inscobee
+  settlement and a University of Oregon program collaboration, neither dated
+  today. Provisional **None**.
+- **BIYA** — carried from 21:30: no catalyst, 1-for-10 reverse split 2026-07-10
+  explains the 2.7M float, older BNB-treasury narrative. Provisional **None**.
+
+Post-close PRs typically land 16:00-16:05 ET and become searchable 15-30 minutes
+later, so all three get a fresh structured search at 22:30.
+
+### Plan for 22:30
+
+Watch order, unchanged from 21:30 with one addition: **BIYA** (best BUILD shape
+into the close, 10x float turnover), then **RYOJ** (new, extreme relative volume,
+needs a real book), then LHSW and SGLY subject to the liquidity check. Entries
+open at 23:00 CET and require >10% AH across two AH scans.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
