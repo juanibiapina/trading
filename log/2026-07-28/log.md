@@ -804,6 +804,214 @@ gate, LHSW was disqualified on a two-scan one-sided book, SGLY dropped out
 entirely. The watch list contributed zero candidates; the screener contributed all
 of them.
 
+## Scan 23:30 CET (5:30 PM ET) — no new entry (two-AH-scan gate)
+
+**No new entries this pulse.** A second, distinct ignition cluster fired at
+**16:59 ET** — ninety minutes after the AH-open cluster — producing two fresh
+names (ONMD, GMM). ONMD is the strongest BUILD of the night on live tape and is
+making new after-hours highs as this scan runs, but it appears in the AH screener
+above 10% for the **first time** here. The two-AH-scan gate makes 00:00 CET its
+earliest legal entry. AMIX (entered 23:00) is unchanged in position terms;
+hold/sell is the premarket pulse's call.
+
+### Main AH screener
+
+```
+AFTER-HOURS Scan: 2026-07-28 17:30:15 ET  |  12 hits
+```
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $2.75 | -1.4% | +46.9% | $4.04 | +44.8% | **7.0M** | 1.9M | 3.7x | 502K | Medical Specialties |
+| **ONMD** | [TV](https://www.tradingview.com/chart/?symbol=ONMD) | $0.71 | +17.0% | **+25.5%** | $0.89 | +46.9% | 1.8M | 1.0M | 1.7x | 16.4M | Packaged Software (**new**) |
+| YIBO | [TV](https://www.tradingview.com/chart/?symbol=YIBO) | $1.15 | -2.5% | +7.8% | $1.24 | +5.1% | 1.5M | 201K | 7.5x | 2.1M | Electronics/Appliances |
+| EGG | [TV](https://www.tradingview.com/chart/?symbol=EGG) | $3.81 | +85.9% | +12.5% | $4.28 | +109.0% | 801K | 2.2M | 0.4x | 8.3M | Misc Commercial Services |
+| **GMM** | [TV](https://www.tradingview.com/chart/?symbol=GMM) | $2.47 | -8.5% | +19.8% | $2.96 | +9.6% | 466K | 3.0M | 0.2x | 1.7M | Packaged Software (**new**) |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $2.24 | -0.9% | +5.8% | $2.37 | +4.9% | 116K | 2.6M | 0.0x | 1.2M | Environmental Services |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $3.05 | +3.0% | +5.9% | $3.23 | +9.1% | 89K | 35K | 2.6x | 2.7M | IT Services |
+| MGRX | [TV](https://www.tradingview.com/chart/?symbol=MGRX) | $0.56 | +2.4% | +7.8% | $0.60 | +10.4% | 68K | 552K | 0.1x | 14.6M | Pharmaceuticals: Major |
+| NNOX | [TV](https://www.tradingview.com/chart/?symbol=NNOX) | $0.88 | -0.9% | +6.0% | $0.93 | +5.0% | 62K | 1.1M | 0.1x | 64.1M | Medical Specialties |
+| APUS | [TV](https://www.tradingview.com/chart/?symbol=APUS) | $8.00 | +27.2% | +5.8% | $8.46 | +34.5% | 54K | 22K | 2.5x | n/a | Biotechnology |
+| SBNYL | [TV](https://www.tradingview.com/chart/?symbol=SBNYL) | $1.20 | +0.0% | +45.8% | $1.75 | +45.8% | 30K | 11K | 2.7x | 59.6M | Regional Banks |
+| MB | [TV](https://www.tradingview.com/chart/?symbol=MB) | $3.67 | -7.1% | +23.4% | $4.53 | +14.6% | 100 | 5K | 0.0x | 4.7M | Restaurants |
+
+Above the 10% AH gate: AMIX (open position), ONMD, EGG, GMM, MB (no book), SBNYL
+(untradable). YIBO fell out at +7.8%; IOTR, MGRX, APUS, DXST, NNOX all below gate.
+
+### Spike-bar verdicts (instrumentation, verbatim, as-of 17:30 ET)
+
+```
+ONMD 2026-07-28  SPIKE  16:59ET  +20%  $0.85  161 trades / 52k sh  (first co-spike bar)
+GMM  2026-07-28  SPIKE  16:59ET  +38%  $3.41  675 trades / 82k sh  (first co-spike bar)
+AMIX 2026-07-28  SPIKE  16:03ET  +24%  $3.40  709 trades / 55k sh  (first co-spike bar)
+EGG  2026-07-28  SPIKE  16:06ET  +18%  $4.50  582 trades / 49k sh  (first co-spike bar)
+```
+
+**The night has two ignition clusters, not one.** The Initiative-3 hypothesis
+centres on the 16:03-16:08 ET AH-open cluster, and that fired on schedule (AMIX,
+YIBO, IOTR, EGG). But ONMD and GMM both ignited at **16:59 ET** — the same minute,
+90 minutes later, in two unrelated names. A single-window watch would have missed
+both. Recording it as an Initiative-3 data point: the AH-open cluster is where
+ignitions concentrate, not where they exclusively occur, and the second cluster
+produced the better-shaped candidate.
+
+### SIP volume — ONMD is the night's cleanest accumulation
+
+`broker.js bars ONMD --tf 5Min --start 2026-07-28T20:00:00Z`
+
+| Bar (ET) | O → C | High | Vol | Trades | VWAP |
+|----------|-------|------|-----|--------|------|
+| 16:40 | $0.69 → $0.69 | $0.69 | 1,343 | 6 | $0.69 |
+| 16:50 | $0.72 → $0.73 | $0.73 | 10,091 | 24 | $0.72 |
+| 16:55 | $0.73 → $0.78 | $0.85 | 94,193 | 294 | $0.78 |
+| 17:00 | $0.79 → $0.76 | $0.80 | 80,522 | 307 | $0.78 |
+| 17:05 | $0.79 → $0.85 | $0.89 | 501,243 | 1,235 | $0.85 |
+| 17:10 | $0.87 → $0.89 | **$0.92** | **1,052,556** | **3,182** | $0.88 |
+| 17:15 | $0.89 → $0.84 | $0.92 | 850,386 | 2,417 | $0.87 |
+
+1Min tape through 17:16 ET, which is where the scan sits:
+
+| Min (ET) | O → C | High | Vol | Trades |
+|----------|-------|------|-----|--------|
+| 17:12 | $0.89 → $0.91 | $0.91 | 329,723 | 878 |
+| 17:13 | $0.91 → $0.89 | $0.92 | 248,854 | 888 |
+| 17:14 | $0.89 → $0.89 | $0.91 | 165,208 | 617 |
+| 17:15 | $0.89 → $0.90 | $0.91 | 150,221 | 465 |
+| 17:16 | $0.90 → $0.91 | **$0.92** | 212,771 | 541 |
+
+The stock is at its after-hours high *right now*, printing 150K-330K shares per
+minute on 465-888 trades per minute. The scanner's $0.89 AH price understates the
+tape ($0.91). This is real, two-sided, accumulating flow — not a stale-VRatio
+artifact, and the 1.7x VRatio badly undersells it (1.8M+ AH shares against a 1.0M
+average daily volume, and rising every bar).
+
+**GMM — SPIKE→FADE, textbook:**
+
+| Bar (ET) | O → C | High | Vol | Trades |
+|----------|-------|------|-----|--------|
+| 16:55 | $2.73 → $3.29 | $3.41 | 83,513 | 677 |
+| 17:00 | $3.29 → $3.27 | **$3.64** | 309,007 | 3,280 |
+| 17:05 | $3.28 → $3.00 | $3.28 | 154,574 | 1,723 |
+| 17:10 | $3.00 → $2.98 | $3.04 | 44,754 | 462 |
+| 17:15 | $2.96 → $2.98 | $3.04 | 21,909 | 232 |
+
+Peak $3.64 at 17:00 ET, then three consecutive bars of collapsing volume (down 93%
+from the peak bar, trades down 93%) with price -18% off the high. Same ignition
+minute as ONMD, opposite outcome fifteen minutes later.
+
+**EGG — grinding but thin:** 11.7K / 14.2K / 11.5K / 7.9K / 17.3K / 16.7K / 13.2K
+sh per bar on 106-184 trades, price $4.02 → $4.29. Genuinely rising, but at ~1%
+of the volume ONMD is doing, against a 2.2M average daily volume (VRatio 0.4x).
+
+**YIBO — dead:** 30K → 11.9K → 6.5K → 10.8K sh on 147 → 70 → 60 → 86 trades.
+Confirms the 23:00 skip.
+
+### Books at 17:30 ET
+
+| Ticker | Bid | Ask | Quote time | Read |
+|--------|-----|-----|-----------|------|
+| ONMD | $0.59 x100 | $0.82 x100 | 20:00:00Z | Two-sided but **90 min stale** (close snapshot); re-pulled once, unchanged |
+| AMIX | $3.94 x100 | $4.00 x100 | 20:14:12Z | Two-sided, stale (unchanged since 22:30) |
+| GMM | $2.08 x100 | **$0.00 x0** | 20:00:02Z | **One-sided — no offer** |
+
+**Freshness guard on ONMD.** The Alpaca quote is a 20:00:00Z close snapshot while
+SIP has the stock at $0.91 on 541 trades in the last minute. Per the USDE Jul 1
+precedent this is **staleness, not contradiction** — the divergence is not a
+bad-print signal, and SIP through 17:16 ET fully corroborates the scanner. The
+paper book being stuck at a $0.82 ask is the same mechanic that produced the AMIX
+fill artifact at 23:00; noting it now so an 00:00 entry is read correctly.
+
+### Candidate evaluation
+
+**ONMD — lead candidate, NOT entry-eligible this scan.** OneMedNet Corporation
+(NASDAQ), real-world healthcare data platform built on Palantir Foundry.
+
+| Gate | Value | Pass |
+|------|-------|------|
+| AH >10% across ≥2 AH scans | **first AH scan >10%** (absent from the 22:30/22:45/23:00 screener) | **NO — blocks entry** |
+| Float | 16.4M | recorded (not a filter) |
+| Day% above -15% | +17.0% | yes |
+| Entry extension < +150% | Total% +46.9% | yes, comfortable |
+| Trajectory | **BUILD, at its AH high**, new high $0.92 at 17:16 ET | yes |
+| Real AH liquidity | 1.05M sh / 3,182 trades in the 17:10 bar, rising every bar | yes |
+| SIP corroborates price | SIP $0.91 vs scanner $0.89 — scanner understates | yes |
+| Tradable | `tradable=true` NASDAQ | yes |
+| Catalyst | **none found same-day** (3 searches; one 429 retried on tavily) | Grade None |
+
+Catalyst detail: the OneMedNet newsflow is dense but stale — Risorius EEG/PSG data
+licensing (Feb 24), ViuHealth autoimmune partnership (Feb 26), record 2025 bookings
+$2.79M (Feb 12), FDA 510(k) support (Jan 22). Nothing dated 07-28 on GlobeNewswire,
+the company news archive, or StockTitan. Provisional **Grade None**.
+
+The name clears every gate except the one that matters procedurally: it needs a
+second after-hours screener appearance above 10%. Its ignition fired at 16:59 ET,
+one minute *before* the 23:00 scan ran, which is why it was invisible then. Under
+the rules the earliest legal entry is **00:00 CET**. Re-run the catalyst search
+then — the 16:59 ignition is late enough that a PR, if one exists, becomes
+searchable around 17:30-18:00 ET.
+
+**GMM — skip on two independent grounds.** (1) SPIKE→FADE: peaked $3.64 at 17:00
+ET, -18% off the high with volume down 93% across three bars. The 0/10+ bucket.
+(2) No offer in the book (`ask $0.00 x0`). Background note from the catalyst
+search: the most recent GMM filing is an **F-3 shelf registration**, which is
+dilution machinery — if a same-day catalyst does surface it is more likely to be
+Grade D than anything else. No entry under any later scan unless the shape
+completely reverses.
+
+**EGG — skip, carried.** Reached +12.5% AH (its first scan above the gate), and
+the last seven SIP bars do grind upward $4.02 → $4.29. But: Total% **+109%** is the
+highest extension on the board, the multi-day dead-cat structure documented at
+22:15 stands (-68% on 07-27, $6.40 → $2.05), and AH volume is 13-17K sh/bar against
+a 2.2M average daily volume (VRatio 0.4x) — the flow is not there. Needs a second
+gate-clearing scan anyway.
+
+**AMIX — open position, no action this pulse.** Position management belongs to the
+premarket evaluation. For the record, the tape has turned since the 23:00 entry:
+AH high $4.96 (16:20 ET), then $4.86 (16:40 ET), and it has since oscillated
+$3.89-4.46 with the last bars at $4.04-4.14 — roughly **-16% off the AH high**, at
+the edge of the 20% hold band. Volume remains real (119K-412K sh, 1,415-4,512
+trades per 5-min bar; 7.0M AH shares total against 1.9M average daily volume) so
+this is distribution into genuine liquidity rather than a book evaporating.
+Marked P&L is +4.6% on the artifact fill of $4.02; against the notional live entry
+of ~$4.65 flagged at 23:00 it is roughly **-11%**.
+
+**Carried skips, no workup re-run:** SBNYL (untradable, `tradable=false`), MB (no
+AH book, 100 shares on one print, quote timestamped 2026-07-22), IOTR (spent
+spike, below gate), YIBO (SPIKE→FADE confirmed, below gate).
+
+### Plan for 00:00 CET
+
+1. **ONMD** is the entry candidate. If it holds >10% AH in the 00:00 screener it
+   clears the two-scan gate. Enter only if SIP still shows accumulation and price
+   is at or within ~20% of its AH high; size ~$100 at a limit above the live SIP
+   market, and expect the stale paper book to fill somewhere below it.
+2. Re-run the ONMD catalyst search. A financing or offering flips it to Grade D
+   and cancels the entry.
+3. EGG needs a second >10% scan *and* a volume expansion to be worth revisiting;
+   the extension alone (+109%) makes it marginal.
+4. GMM, MB, SBNYL, IOTR, YIBO stay skipped.
+5. Watch for a **third ignition cluster**. Two have fired tonight (16:03-16:08 and
+   16:59); the 00:00 and 00:30 scans should be read as fresh-ignition hunts rather
+   than only as follow-ups on existing names.
+
+### For the daily email
+
+- **AMIX** (the only open position) has faded from its $4.96 after-hours high to
+  ~$4.10, about 16% off, though on real volume rather than an empty book. It shows
+  +4.6% in the account only because the paper fill at $4.02 came from a stale book
+  roughly 15% below the live market — on a live account this trade would currently
+  be down about 11%. Grade None, so the plan is to exit at the first premarket
+  opportunity regardless.
+- **ONMD** was the best-shaped candidate of the night and was blocked purely by the
+  two-scan confirmation rule, because its ignition fired at 16:59 ET, one minute
+  after the 23:00 scan. This is the second time the gate has cost a look at a
+  late-igniting name. **Question for Juan:** should the two-AH-scan gate be
+  satisfiable by *two consecutive 15-minute SIP confirmations* on the same scan,
+  rather than requiring two separate screener pulses? The intent of the rule is to
+  filter one-print artifacts, and SIP accumulation across consecutive bars proves
+  that more directly than a second screener appearance thirty minutes later. No
+  action taken; flagging for a decision.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
