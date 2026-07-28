@@ -92,7 +92,10 @@ date,ticker,pm_gap_pct,ah_footprint,pm_high,pm_high_time_et,ramp_start_et,peak_v
 - `peak_vol_per_bar` / `peak_trades_per_bar` = the busiest 5-min bar's `vol` /
   `trades` during the ramp
 - `catalyst` = one-line catalyst if quickly found (optional; do not spend more
-  than 1-2 searches — this is a log-only observation pulse), else `-`
+  than 1-2 searches — this is a log-only observation pulse), else `-`.
+  Search syntax: `timeout 60 websearch search "TICKER news July 27 2026" -n 5`
+  (the `search` subcommand is required; bare `websearch "query"` errors out, and
+  on HTTP 429 retry once with `-p tavily`)
 - `notes` = short price-path description (e.g. "held $1.00-1.10 across 6 bars")
 
 **Do not submit any Alpaca order. Do not touch `OPEN_POSITIONS.md`.** This pulse

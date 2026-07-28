@@ -113,6 +113,12 @@ Verify anything you build actually runs before logging it.
 - Update the active initiative's **Status** and add a dated progress note in
   `STRATEGY_ROADMAP.md`. Refresh the consolidated "Open asks for Juan" if an
   ask opened or closed.
+- **Roadmap edits keep missing their `oldText`** (three consecutive runs: 07-23,
+  07-24, 07-27 — each cost a failed edit plus a grep and a re-read). The slip is
+  always the *second* edit to `STRATEGY_ROADMAP.md` in a run, drafted from the
+  stale pre-edit read. So: batch every roadmap change into **one** edit call, and
+  anchor `oldText` on a **single short unique line** (grep it first with
+  `rg -n "anchor text" STRATEGY_ROADMAP.md`) instead of a multi-line block.
 - Prepend an entry to `INITIATIVE_LOG.md`:
 
 ```markdown

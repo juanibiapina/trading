@@ -86,6 +86,15 @@ For each **new** candidate (not in prior scans), evaluate against the entry crit
   2. **Press releases**: search GlobeNewswire, PRNewswire, or BusinessWire for same-day releases (search "[TICKER] press release" or "[company name] announcement"). PRs often drop at exactly 4:00-4:05 PM ET and may not appear in general news searches immediately.
   3. **SEC filings**: check for 8-K filings (material events) on the same day.
   4. If none of the above finds a catalyst, note "no catalyst found" — see "No-catalyst handling" below.
+  **Search tool — exact invocation (do not go hunting for it):** the CLI is `websearch` and it needs a subcommand:
+
+  ```bash
+  timeout 60 websearch search "TICKER earnings July 27 2026" -n 5
+  timeout 60 websearch search "company name press release" -p tavily   # retry provider
+  ```
+
+  Bare `websearch "query"` (no `search`) fails with `error: unknown command` — that mistake plus the follow-up `which websearch` / `websearch --help` / `mcpli` probing burned ~60 tool calls in July alone. There is no `ddgr`. `mcpli glean` is Contentful-internal knowledge and takes JSON args — it is not a web search. On `Error: HTTP 429: Too Many Requests` the default provider's rate limit is momentarily hit: retry the same query once with `-p tavily`, then count it against the budget and move on.
+
   **Search budget:** Steps 1-3 should take at most 4 websearch calls per ticker. If no catalyst is found after 4 searches, stop and record "no catalyst found." Do not try additional search providers, alternative query phrasings, or `websearch extract` on financial sites (Finviz, Benzinga, MarketBeat return JS errors). More searches rarely uncover what 4 targeted searches missed.
 - Volume not fading, first day of unusual activity
 - Note sector and characteristics for pattern tracking (observations in Day Trading.md are NOT skip criteria)

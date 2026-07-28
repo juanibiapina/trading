@@ -81,6 +81,8 @@ the email must not present a weak name as a winner.
 
 This is "today's winner." Document it with: sector, catalyst, float, AH entry price, current PM price, hypothetical P&L, and the SIP volume that confirms it cleared the bar.
 
+For the catalyst lookup use `timeout 60 websearch search "TICKER news July 27 2026" -n 5` — the `search` subcommand is required (bare `websearch "query"` errors with `unknown command`), and on `HTTP 429: Too Many Requests` retry once with `-p tavily` before giving up. Cap it at 2-3 searches; an unverified catalyst is recorded as Grade None, not chased.
+
 **Then** go back and read last night's log. Was this stock on our radar? This is the scanner diagnostic.
 
 ### Price Timeline Data
