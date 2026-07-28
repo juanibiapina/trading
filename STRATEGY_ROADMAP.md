@@ -441,7 +441,23 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** In progress — **watch-source census extended (2026-07-27, n=7→9):
+**Status:** In progress — **day-movers pre-seed WIRED (2026-07-28, log-only).**
+Executed the 07-27 next step: added `--day-movers` to `scripts/scan.py` (the
+day% filter now works in *any* session — during after-hours the `change` column
+still carries the regular-session day% — sorted by day%, and restricted to
+NASDAQ/NYSE/AMEX because a pure day%-sorted list came back **39 of 50 OTC**,
+untradable on Alpaca and crowding real names out of the 50-row window). Wired it
+into `prompts/post-market-scan.md` as an **early-window pre-seed for the 22:00
+and 22:15 CET scans only**: run the watch list, run `spike-bar.js` per name, log
+the verdict. No entries, no gates, additive to the screener. Verified live:
+`scan.py --day-movers --session afterhours` returns 26 listed hits (was 50 with
+39 OTC), the default regular/AH scan paths are unchanged, and `spike-bar.js
+BIYA:2026-07-27 --now 17:00` / `CNET:2026-07-27` return clean NO-SPIKE verdicts.
+This closes the 07-20 finding that the screener is blind before ~16:30 ET (the
+22:00/22:15 scans returned 0 hits), while the 07-27 LGCL counter-example keeps it
+labelled structurally incomplete: flat-regular post-close igniters have no
+regular-session footprint and still depend on the 16:30 ET screener + tight AH
+grid. **Prior: watch-source census extended (2026-07-27, n=7→9):
 JEM (+34% reg) confirms the "already a day-mover" path (PM +48% winner, caught),
 but LGCL breaks the "both winners caught" claim — it was flat/low-volume in the
 regular session (−3.1% close, 78.6k reg-session sh) yet ran PM +114%, the biggest
@@ -854,7 +870,20 @@ tracker).
 
 ## Open asks for Juan (consolidated)
 
-- [ ] **PROPOSAL — split the catalyst taxonomy: cash buyouts / definitive
+- [x] **APPLIED 2026-07-28 — catalyst taxonomy split (merger-arb ≠ Grade A).**
+      The 07-27 proposal drew no veto and DOMO has since **closed at -9.4%**
+      (held the full 5-day Grade-A window, peak +14.8%, pinned $3.5-4.5 all
+      week), so the split was applied under Juan's standing "apply, don't ask"
+      directive: a **definitive fixed-price cash buyout / asset purchase /
+      merger agreement is graded D (exit at first premarket opportunity)**, never
+      Grade-A-hold; rumored / competing-bid / unfixed-ratio M&A stays
+      momentum-gradable. Written into the grading table in
+      `prompts/post-market-scan.md`, the Grade-A rules in
+      `prompts/position-evaluation.md` (re-grade an open position to D if its
+      catalyst is a fixed-price cash deal), and the holding-rules table in
+      `OPEN_POSITIONS.md`. `Day Trading.md` needed no edit (it holds no grade
+      table). Retroactive veto is fine: say the word and it reverts.
+      **Original proposal (2026-07-27):** split the catalyst taxonomy: cash buyouts / definitive
       merger agreements are NOT Grade-A momentum holds (2026-07-27, from Juan's
       07-24 DOMO feedback).** DOMO was graded A (Progress Software $400M all-cash
       asset purchase) and held under the "Grade A → hold up to 5 days, trail

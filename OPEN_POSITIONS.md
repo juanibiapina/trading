@@ -23,7 +23,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 ### Holding Rules (based on catalyst grade)
 | Grade | Description | Hold Strategy |
 |-------|-------------|---------------|
-| **A** | Major operational catalyst (acquisition, breakthrough deal) | Hold up to 5 days, trail stop at -20% from peak |
+| **A** | Major operational catalyst (breakthrough deal, major partnership, transformative contract). **Excludes definitive fixed-price cash buyouts / merger agreements** — a set deal price pins the stock and kills AH→PM momentum, so grade those **D** (DOMO: held 5 days, -9.4%). Rumored / competing-bid / unfixed-ratio M&A can still re-rate. | Hold up to 5 days, trail stop at -20% from peak |
 | **B** | Solid catalyst (earnings beat, FDA milestone) | Hold up to 2 days, stop at -15% from entry |
 | **C** | Weak catalyst (analyst upgrade, financing) | Exit in premarket, stop at -10% |
 | **D/None** | No catalyst or dilution | Exit at first premarket opportunity |

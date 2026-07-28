@@ -27,6 +27,29 @@ Apply this data hierarchy from the start of the pulse:
 python3 scripts/scan.py --all
 ```
 
+**Early-window day-movers pre-seed (log-only, 22:00 and 22:15 CET scans only).**
+Before ~16:30 ET the TradingView `postmarket_*` fields are still empty, so the
+main AH scan returns 0 hits at 22:00/22:15 CET and the AH-open ignition cluster
+(16:08–16:53 ET) goes unwatched until 22:30. On those two scans only, also run
+the regular-session day-movers watch list and check each name for an ignition
+bar:
+
+```bash
+python3 scripts/scan.py --day-movers --session afterhours     # listed exchanges only, day% >= 15
+node scripts/spike-bar.js SYM:YYYY-MM-DD --now HH:MM          # per watch name (ET minute)
+```
+
+Record the hits under a `Day-movers pre-seed (log-only)` bullet in the scan
+section: ticker, Day%, and the spike-bar verdict. **This is instrumentation, not
+a candidate source** — no entries, no gates, and it does not replace the main
+screener. Basis (Initiative 3, `INIT3_IGNITION_TIMING.md`): the AH→PM winners we
+actually traded (HIHO +19.2%, CJMB +16.2%, JEM +34.3% regular-session day%) were
+already regular-session day-movers before their AH ignition, so this list can see
+them 15–30 min ahead of the screener. It is **structurally incomplete** — LGCL
+(PM +114%, the biggest recent winner) was flat and low-volume in the regular
+session and only ignited post-close, so it has no regular-session footprint to
+pre-seed on. Additive path, never a substitute for the screener.
+
 ### 3. Update Log
 
 - If `LOG_FILE` doesn't exist, create it with the header:
@@ -133,6 +156,18 @@ node scripts/broker.js orders all        # confirm fill, read filled_avg_price
 | **C** | Weak news | Financing, analyst upgrade, minor PR | Exit in premarket |
 | **D** | Dilution | Stock offering, warrant exercise | Exit immediately |
 | **None** | No catalyst found | Unknown driver | Exit at first opportunity |
+
+**Merger-arb exclusion from Grade A (2026-07-28).** A **definitive, fixed-price
+cash acquisition / asset-purchase / merger agreement** is **not** a Grade A
+momentum catalyst — grade it **D (exit at first premarket opportunity)**. Once a
+cash deal price is set, the stock pins near deal value and the overnight AH→PM
+momentum the strategy depends on cannot happen. Only M&A that can still re-rate
+(rumor, unsolicited/competing bid, stock-for-stock with an unfixed ratio, deal
+break/renegotiation) stays momentum-gradable on its own merits. Basis: DOMO
+(Progress Software $400M all-cash asset purchase) was graded A, held the full
+5-day window, peaked +14.8% and closed **-9.4%**, sitting in a $3.5-4.5 band all
+week — dead money in the hold slot (Juan, 2026-07-24: "I have no idea why you're
+holding that").
 
 **Also add the position to `OPEN_POSITIONS.md`** with the real fill price, shares, and catalyst grade. Only record positions that actually filled on Alpaca.
 

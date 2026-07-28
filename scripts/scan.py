@@ -38,6 +38,7 @@ MIN_5M_VOLUME = 5000         # Absolute minimum volume per 5m bar
 
 # Regular session supplementary filter (catch day movers winding down at end of day)
 MIN_DAY_CHANGE_REGULAR = 15  # Minimum day% change for supplementary scan
+LISTED_EXCHANGES = ["NASDAQ", "NYSE", "AMEX"]  # day-movers watch list: skip OTC (not Alpaca-tradable)
 
 # Premarket filters
 MIN_PM_VOLUME = 50_000       # Minimum premarket volume
@@ -120,7 +121,11 @@ def build_filters(session, biotech_only=False, day_movers=False, high_change=Fal
     Args:
         session: Current trading session
         biotech_only: Restrict to Health Technology sector
-        day_movers: Use day% change filter instead of RVOL (regular session)
+        day_movers: Use day% change filter instead of the session's volume/RVOL
+            filters. Works in any session: during after-hours the `change` column
+            still carries the regular-session day%, so this is the AH-open
+            pre-seed watch list (Initiative 3) for the window before ~16:30 ET
+            when the postmarket screener fields are still empty.
         high_change: Use high AH change filter without volume requirement (afterhours)
     """
     filters = [
@@ -128,14 +133,21 @@ def build_filters(session, biotech_only=False, day_movers=False, high_change=Fal
         {"left": "close", "operation": "in_range", "right": [MIN_PRICE, MAX_PRICE]},
     ]
 
+    if day_movers:
+        filters.append({"left": "change", "operation": "greater", "right": MIN_DAY_CHANGE_REGULAR})
+        # OTC names dominate a pure day%-sorted list (39 of 50 on 2026-07-28) and
+        # are not tradable on Alpaca, so they crowd real candidates out of the
+        # 50-row window. Restrict the watch list to the listed exchanges.
+        filters.append({"left": "exchange", "operation": "in_range", "right": LISTED_EXCHANGES})
+        if biotech_only:
+            filters.append({"left": "sector", "operation": "equal", "right": SECTOR})
+        return filters
+
     if session == "regular":
-        if day_movers:
-            filters.append({"left": "change", "operation": "greater", "right": MIN_DAY_CHANGE_REGULAR})
-        else:
-            filters.extend([
-                {"left": "relative_volume_intraday|5", "operation": "greater", "right": MIN_INTRADAY_RVOL},
-                {"left": "volume|5", "operation": "greater", "right": MIN_5M_VOLUME},
-            ])
+        filters.extend([
+            {"left": "relative_volume_intraday|5", "operation": "greater", "right": MIN_INTRADAY_RVOL},
+            {"left": "volume|5", "operation": "greater", "right": MIN_5M_VOLUME},
+        ])
     elif session == "premarket":
         filters.extend([
             {"left": "premarket_volume", "operation": "greater", "right": MIN_PM_VOLUME},
@@ -157,8 +169,10 @@ def build_filters(session, biotech_only=False, day_movers=False, high_change=Fal
     return filters
 
 
-def get_sort_field(session):
+def get_sort_field(session, day_movers=False):
     """Return the sort field for the current session."""
+    if day_movers:
+        return "change"
     if session == "regular":
         return "relative_volume_intraday|5"
     elif session == "premarket":
@@ -183,7 +197,7 @@ def scan(session, biotech_only=False, day_movers=False, high_change=False):
     payload = {
         "columns": columns,
         "filter": build_filters(session, biotech_only, day_movers, high_change),
-        "sort": {"sortBy": get_sort_field(session), "sortOrder": "desc"},
+        "sort": {"sortBy": get_sort_field(session, day_movers), "sortOrder": "desc"},
         "markets": ["america"],
         "symbols": {"query": {"types": ["stock"]}},
         "options": {"lang": "en"},
@@ -433,6 +447,10 @@ def main():
                         help="Restrict to Health Technology sector only")
     parser.add_argument("--session", choices=["premarket", "regular", "afterhours"],
                         help="Force a specific session (default: auto-detect)")
+    parser.add_argument("--day-movers", action="store_true",
+                        help="Regular-session day%% movers only (>=%d%%). Log-only AH-open "
+                             "pre-seed watch list for the pre-16:30 ET window where the "
+                             "postmarket screener fields are still empty." % MIN_DAY_CHANGE_REGULAR)
     args = parser.parse_args()
 
     biotech_only = args.biotech
@@ -446,6 +464,11 @@ def main():
             sys.exit(0)
 
     print(f"Session: {session.upper()}")
+
+    if args.day_movers:
+        results = scan(session, biotech_only, day_movers=True)
+        print_results(results, session)
+        return
 
     if args.watch:
         watch(args.watch, session, biotech_only)

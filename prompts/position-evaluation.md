@@ -54,6 +54,13 @@ Calculate for each position:
 For each position, evaluate based on catalyst grade:
 
 #### Grade A (Major operational catalyst)
+- **Not Grade A: definitive fixed-price cash buyouts / merger agreements.** A
+  set cash deal price pins the stock and kills AH→PM momentum. Re-grade such a
+  position **D** and exit at the first premarket opportunity, regardless of the
+  grade recorded at entry. (Basis: DOMO, Progress Software $400M all-cash asset
+  purchase — held 5 days, closed -9.4%, never moved out of a $3.5-4.5 band.)
+  Rumored / competing-bid / unfixed-ratio M&A can still re-rate and stays
+  gradable on its merits.
 - **Hold up to 5 days**
 - **Trail stop:** If peak P&L > +50%, set stop at peak - 20%
 - **Hard stop:** -25% from entry

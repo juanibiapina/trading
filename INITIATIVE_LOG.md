@@ -9,6 +9,70 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-28 — Init 3: day-movers pre-seed WIRED (log-only); catalyst taxonomy split APPLIED (merger-arb ≠ Grade A)
+
+**Evaluated:** Prior step (2026-07-27 Init 3: wire `scan.py --day-movers` as an
+additive 22:00/22:15 CET watch source running `spike-bar.js` log-only) —
+**executed today, and the build surfaced one thing the census missed.** The
+census assumed the day-movers list was usable as-is; it is not. Run against the
+whole market sorted by day%, the filter returns **39 of 50 rows on OTC**
+(EDEYF +42400%, GRWC +1017%, dead tickers on 150-1,200 share average volume) —
+untradable on Alpaca and enough to push every real NASDAQ name out of the 50-row
+window. So the census's "3 of 7 clear the threshold" understated the practical
+problem: without an exchange filter the list is mostly noise.
+
+**Step taken (pilot / Init 3):** Added `--day-movers` to `scripts/scan.py`. The
+day% filter used to be reachable only in the regular-session code path; it now
+short-circuits `build_filters` in **any** session (during after-hours the
+`change` column still carries the regular-session day%), sorts by `change`, and
+restricts to `NASDAQ/NYSE/AMEX`. Wired it into `prompts/post-market-scan.md` as
+an **early-window pre-seed for the 22:00 and 22:15 CET scans only**: run the
+watch list, run `spike-bar.js` on each name, log ticker / Day% / verdict under a
+`Day-movers pre-seed (log-only)` bullet. Explicitly instrumentation — no entries,
+no gates, additive to the screener, with the LGCL counter-example written into
+the prompt so no future run mistakes it for a replacement.
+
+**Result:** Verified end to end. `scan.py --day-movers --session afterhours`
+returns **26 listed hits** (down from 50 with 39 OTC); the default regular and
+after-hours scan paths are unchanged (regular still merges its day-movers
+supplement, now OTC-free); `spike-bar.js BIYA:2026-07-27 --now 17:00` and
+`CNET:2026-07-27 --now 18:30` both return clean NO-SPIKE verdicts, so the
+per-name leg works. This gives the 22:00/22:15 CET scans something to watch in
+the window where the TradingView `postmarket_*` fields are still empty (0 hits
+before ~16:30 ET) and the 16:08-16:53 ET ignition cluster is live.
+
+**Step taken (parallel / catalyst grading):** Applied the 07-27 merger-arb
+proposal. It drew no veto and DOMO has since **closed at -9.4%** — it held the
+full 5-day Grade-A window, peaked +14.8%, and never left a $3.5-4.5 band, which
+is exactly what a fixed cash deal price does. Under Juan's standing "apply,
+don't ask" directive: a **definitive fixed-price cash buyout / asset purchase /
+merger agreement is graded D (exit at first premarket opportunity)**, never
+Grade-A-hold; rumored / competing-bid / unfixed-ratio M&A can still re-rate and
+stays momentum-gradable. Written into the grading table in
+`prompts/post-market-scan.md`, the Grade-A rules in
+`prompts/position-evaluation.md` (re-grade an open position to D if its catalyst
+is a fixed-price cash deal, regardless of the entry grade), and the holding-rules
+table in `OPEN_POSITIONS.md`. `Day Trading.md` was not touched — it holds no
+grade table.
+
+**Hypothesis / next step:** (Init 3) the pre-seed should produce its first live
+rows tonight; the hypothesis to check on the next run is whether any day-mover
+shows a `SPIKE` verdict at 22:00/22:15 CET **before** the same name reaches the
+22:30+ screener — that lag, if it appears, is the measured value of the pre-seed
+and the input to any eventual entry use. Keep the caught/missed tally growing
+(currently 3 caught: HIHO, CJMB, JEM / 1 miss: LGCL). (Init 6) unchanged: at
+gate-admitted n>=12 build the 1-min-bar exit test. (Catalyst grading) watch the
+next merger-arb candidate get graded D at entry instead of A.
+
+**Needs from Juan:** nothing blocking. Two applied changes he can veto
+retroactively: the merger-arb grading split, and the OTC exclusion on the
+day-movers watch list (which also drops OTC names from the 21:30 CET regular
+scan's supplementary merge — they were never tradable on Alpaca). No pulse
+schedule change proposed this run; Init 3 proposal (C) (23:45 + 00:15 CET
+entry-eligible scans) still sits in its veto window, unapplied.
+
+---
+
 ### 2026-07-27 — Init 3: day-movers watch-source census extended (LGCL counter-example); Init 6 exit-sim refresh still NEGATIVE at n=8; DOMO merger-arb grading fix proposed to Juan
 
 **Evaluated:** Prior step (2026-07-24 Init 6: build the 1-min exit test only once
