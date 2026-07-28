@@ -592,8 +592,220 @@ entries anyway — no conflict. Plan for 23:00:
    allowed as of W24 2026); enter it too if it clears every gate on its own.
 4. IOTR, EGG, GIPR, SBNYL stay skipped unless something structurally changes.
 
+## Scan 22:45 CET (4:45 PM ET) — observation only
+
+**No entries this pulse** (learning-phase rule: entries open at 23:00 CET). AMIX
+cleared its second consecutive AH scan above 10%, which satisfies the two-AH-scan
+gate and makes it entry-eligible at 23:00.
+
+### Main AH screener
+
+```
+AFTER-HOURS Scan: 2026-07-28 16:45:21 ET  |  5 hits
+```
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| **AMIX** | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $2.75 | -1.4% | **+61.8%** | $4.45 | +59.5% | 3.8M | 1.5M | 2.5x | **502K** | Medical Specialties |
+| YIBO | [TV](https://www.tradingview.com/chart/?symbol=YIBO) | $1.15 | -2.5% | +15.7% | $1.33 | +12.7% | 1.1M | 159K | **7.1x** | 2.1M | Electronics/Appliances |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $3.05 | +3.0% | +10.2% | $3.36 | +13.5% | 83K | 34K | 2.5x | 2.7M | IT Services |
+| SBNYL | [TV](https://www.tradingview.com/chart/?symbol=SBNYL) | $1.20 | +0.0% | +45.8% | $1.75 | +45.8% | 30K | 11K | 2.7x | 59.6M | Regional Banks |
+| **MB** | [TV](https://www.tradingview.com/chart/?symbol=MB) | $3.67 | -7.1% | +23.4% | $4.53 | +14.6% | **100** | 5K | 0.0x | 4.7M | Restaurants (**new**) |
+
+EGG dropped out of the screener between 22:30 and 22:45 — its AH fade continued.
+
+### Spike-bar verdicts (instrumentation, verbatim, as-of 16:45 ET)
+
+```
+AMIX 2026-07-28  SPIKE  16:03ET  +24%  $3.40  709 trades / 55k sh  (first co-spike bar)
+YIBO 2026-07-28  SPIKE  16:06ET  +25%  $1.44  170 trades / 25k sh  (first co-spike bar)
+IOTR 2026-07-28  SPIKE  16:08ET  +29%  $3.93  170 trades / 21k sh  (first co-spike bar)
+MB   2026-07-28: NO prior-close (daily bar missing)
+```
+
+Unchanged from 22:30 — the detector reports the *first* co-spike bar, so these are
+the same 16:03-16:08 ET ignitions. No new ignition fired between 16:30 and 16:45.
+
+### SIP volume — the three names diverge cleanly
+
+`broker.js bars SYM --tf 5Min --start 2026-07-28T20:00:00Z`
+
+**AMIX — still accumulating heavily:**
+
+| Bar (ET) | O → C | High | Vol | Trades | VWAP |
+|----------|-------|------|-----|--------|------|
+| 16:15 | $4.20 → $4.60 | $4.85 | 1,219,927 | 13,972 | $4.57 |
+| 16:20 | $4.61 → $4.61 | **$4.96** | 1,076,488 | 11,877 | $4.54 |
+| 16:25 | $4.59 → $4.45 | $4.61 | 566,946 | 6,163 | $4.39 |
+| 16:30 | $4.45 → $4.25 | $4.72 | 737,571 | 8,295 | $4.48 |
+
+AH high $4.96 set at 16:20 ET; price oscillating $4.18-4.72 since, i.e. **-10% off
+the high, inside the 20% hold band**. Roughly 4.8M AH shares against a 1.5M average
+daily volume, on tens of thousands of real trades. Not a stale-VRatio artifact.
+
+**YIBO — volume collapsing:** 466K → 377K → 94K sh (16:20 → 16:30) on 3,285 → 2,443
+→ 631 trades. Peak $1.56 at 16:20 ET, now $1.32. Real book but the flow is draining.
+
+**IOTR — dead:** 14K → 9.6K → 1.0K → 1.1K sh per bar, 12-18 trades. The ignition is
+fully spent.
+
+**MB — one print:** a single 100-share trade at $4.53 in the 16:20 bar. The +23.4%
+AH change is that one print.
+
+### Books at 16:45 ET
+
+| Ticker | Bid | Ask | Quote time | Read |
+|--------|-----|-----|-----------|------|
+| YIBO | $1.28 x100 | $1.30 x100 | **20:41:34Z** | Fresh, tight, genuinely two-sided |
+| AMIX | $3.94 x100 | $4.00 x100 | 20:14:12Z | Two-sided but **stale** — SIP has it at $4.45 |
+| IOTR | $2.58 x100 | $3.65 x100 | 20:00:00Z | Stale close snapshot, 41% wide |
+| MB | $3.78 x100 | **$0.00 x0** | **2026-07-22**T18:23Z | Six days stale, no offer |
+
+**Freshness guard applied to AMIX:** the quote timestamp (20:14Z) is 30 minutes
+behind the scan and 45 minutes behind the SIP tape, so the "quote $4.00 vs scanner
+$4.45" gap is staleness, not a bad print. SIP bars through 16:35 ET corroborate
+$4.18-4.96 on 8K+ trades per bar. This is the USDE Jul 1 case and it is explicitly
+not a bad-print rejection.
+
+### Evaluation
+
+- **AMIX** — second consecutive AH scan >10% (+52.7% → +61.8%). Two-AH-scan gate
+  cleared. Catalyst search re-run (2 more searches, 6 total): still **nothing
+  same-day**. Most recent items are Jul 24 preclinical renal-nerve-sensing results
+  and the Jul 13 warrant inducement / patent grant. Grade **None**. Entry-eligible
+  at 23:00.
+- **YIBO** — AH% went +22.6% → +15.7% while per-bar volume fell 93% from its peak
+  bar. Peaked 16:20 ET and declining = **SPIKE→FADE shape**. No catalyst found.
+  Downgraded from "secondary candidate" to likely skip; re-check at 23:00.
+- **IOTR** — carried skip, confirmed. Volume down to ~1K sh/bar.
+- **MB** — **skip: no AH book.** 100 shares on one trade, `ask $0.00 x0`, quote
+  timestamp six days old. Textbook stale-VRatio / illiquid ramp (TII precedent).
+  `tradable=true` but there is nothing to trade against.
+- **SBNYL** — untradable (carried from 22:30). No workup re-run.
+
+## Scan 23:00 CET (5:00 PM ET) — **entry: AMIX**
+
+Entries are open. One position taken.
+
+### Main AH screener
+
+```
+AFTER-HOURS Scan: 2026-07-28 17:00 ET  |  8 hits
+```
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| **AMIX** | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $2.75 | -1.4% | **+73.1%** | $4.76 | +70.6% | **5.4M** | 1.7M | 3.2x | **502K** | Medical Specialties |
+| YIBO | [TV](https://www.tradingview.com/chart/?symbol=YIBO) | $1.15 | -2.5% | +15.7% | $1.33 | +12.7% | 1.3M | 181K | 7.3x | 2.1M | Electronics/Appliances |
+| EGG | [TV](https://www.tradingview.com/chart/?symbol=EGG) | $3.81 | +85.9% | +6.8% | $4.07 | +98.5% | 740K | 2.2M | 0.3x | 8.3M | Misc Commercial Services |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $6.44 | +54.4% | +6.8% | $6.88 | +65.0% | 735K | 24.0M | 0.0x | 2.7M | Personnel Services |
+| IOTR | [TV](https://www.tradingview.com/chart/?symbol=IOTR) | $3.05 | +3.0% | +8.2% | $3.30 | +11.5% | 85K | 34K | 2.5x | 2.7M | IT Services |
+| MGRX | [TV](https://www.tradingview.com/chart/?symbol=MGRX) | $0.56 | +2.4% | +7.9% | $0.60 | +10.5% | 67K | 552K | 0.1x | 14.6M | Pharmaceuticals: Major |
+| SBNYL | [TV](https://www.tradingview.com/chart/?symbol=SBNYL) | $1.20 | +0.0% | +45.8% | $1.75 | +45.8% | 30K | 11K | 2.7x | 59.6M | Regional Banks |
+| MB | [TV](https://www.tradingview.com/chart/?symbol=MB) | $3.67 | -7.1% | +23.4% | $4.53 | +14.6% | 100 | 5K | 0.0x | 4.7M | Restaurants |
+
+EGG and BIYA reappeared but both below the 10% AH gate (+6.8% each). MGRX is new
+and also below gate. Only AMIX and YIBO clear it.
+
+### AMIX — entered
+
+**Autonomix Medical** (NASDAQ, The Woodlands TX), development-stage medical device
+company, catheter-based neural sensing and RF ablation for nerve-mediated pain.
+
+Every gate, checked:
+
+| Gate | Value | Pass |
+|------|-------|------|
+| AH >10% across ≥2 AH scans | +52.7% (22:30) → +61.8% (22:45) → +73.1% (23:00) | yes, 3 scans |
+| Float | **502K** | yes (smallest float in months of scans) |
+| Day% above -15% | -1.4% | yes — and no dead-cat exposure, the entire move is post-close |
+| Entry extension < +150% | fill $4.02 vs $2.75 close = **+46.2%** | yes, comfortably |
+| Trajectory | BUILD/HOLD — AH high $4.96 (16:20 ET), retested $4.86 (16:40 ET), currently $4.76 = **-4% off the high** | yes |
+| Real AH liquidity | 5.4M AH sh vs 1.7M avg vol, 4K-14K trades per 5-min bar | yes |
+| SIP corroborates price | SIP H $4.96 / vwap $4.39-4.69 matches the scanner's $4.76 | yes |
+| Tradable | `tradable=true` NASDAQ | yes |
+| Catalyst | **none found** (6 searches across 22:30 + 22:45) | concern, not a skip |
+
+SIP tape at entry time:
+
+| Bar (ET) | O → C | High | Vol | Trades | VWAP |
+|----------|-------|------|-----|--------|------|
+| 16:35 | $4.24 → $4.39 | $4.52 | 365,500 | 4,110 | $4.40 |
+| 16:40 | $4.39 → $4.76 | $4.86 | 932,534 | 9,889 | $4.69 |
+| 16:45 | $4.76 → $4.18 | $4.76 | 538,345 | 5,757 | $4.39 |
+| 16:45 (1Min) | $4.76 → $4.56 | $4.76 | 101,315 | 1,237 | $4.63 |
+
+An hour into after-hours the name is still printing half a million to a million
+shares per five minutes. It has now traded roughly 3.5x its average *daily* volume
+since the close, in a 502K float. Price is chopping in a $4.18-4.96 band rather
+than trending down — this is a hold near the high, not a fade.
+
+**Order:** `buy AMIX 21 --limit 4.85 --ext` → id `ce3a2383`, **filled @ $4.02**.
+
+**Fill artifact worth flagging.** The limit was set at $4.85 to clear the live SIP
+market (~$4.56-4.76), but Alpaca's paper book filled against its stale $4.00 ask
+from 20:14Z. The realized entry of **$4.02** is therefore about 15% below where the
+stock was actually trading at 17:00 ET. This is a paper-feed artifact, not a real
+edge — a live account would have paid ~$4.65. Any P&L on this trade should be read
+against a notional $4.65 entry, and the morning eval should note it rather than
+counting the extra 15 points as strategy performance. (The same stale-IEX-book
+mechanic has produced *worse* fills on exits before; it cuts both ways.)
+
+**Catalyst: Grade None.** Six structured searches across two pulses found no
+same-day release. The nearest items are Jul 24 (positive preclinical renal-nerve
+sensing study) and Jul 13 (warrant inducement + patent grant), both stale. Grade
+None means **exit at the first premarket opportunity at any profit**.
+
+**Standing concern:** the Jul 13 warrant inducement is a recent dilution overhang.
+If an offering or financing surfaces overnight, the thesis is dead and the exit
+should be immediate rather than opportunistic.
+
+### YIBO — skipped: SPIKE→FADE
+
+Cleared the two-AH-scan gate on paper (+22.6% → +15.7% → +15.7%) and has the best
+book on the board (fresh 20:59Z quote, $1.23 x100 / $1.26 x100, 2.4% spread) plus
+the highest VRatio (7.3x). Skipped anyway on trajectory, which the rules say
+dominates:
+
+| Bar (ET) | Close | Vol | Trades |
+|----------|-------|-----|--------|
+| 16:20 | $1.47 | 466,306 | 3,285 |
+| 16:25 | $1.33 | 377,575 | 2,443 |
+| 16:30 | $1.32 | 94,460 | 631 |
+| 16:35 | $1.27 | 66,271 | 485 |
+| 16:40 | $1.33 | 50,938 | 299 |
+| 16:45 | $1.30 | 32,372 | 265 |
+
+Peak $1.56 at 16:20 ET, then six consecutive bars of declining volume — down 93%
+from the peak bar, trades down 92%. Price is only -15% off the high, so it is
+technically inside the 20% band, but the hold-vs-fade test is about whether flow
+is still arriving, and here it has stopped. Early peak (16:20 ET, well before the
+18:30 benchmark) plus draining volume is the SPIKE→FADE profile that is 0/10+ for
+premarket continuation. No catalyst found either.
+
+### Other skips
+
+- **EGG** (+6.8% AH) and **BIYA** (+6.8% AH) — below the 10% gate. Both were 21:30
+  watch names; both spent their move in the regular session. EGG additionally
+  carries the multi-day dead-cat structure documented at 22:15 (-68% on 07-27).
+- **IOTR** (+8.2%) — fell below the gate as well; volume ~1K sh/bar. Spent spike.
+- **MGRX** (+7.9%) — below gate, VRatio 0.1x.
+- **MB** (+23.4%) — no AH book. 100 shares on a single print; quote `ask $0.00 x0`
+  timestamped 2026-07-22. Stale-VRatio artifact.
+- **SBNYL** (+45.8%) — untradable (carried from 22:30, no workup re-run).
+
+### Night summary so far
+
+The pre-seed instrumentation was again structurally blind to the actual winner
+shape: AMIX, YIBO and IOTR all have flat regular-session tape (Day% -1.4%, -2.5%,
++3.0%) and only ignited after the close, in the 16:03-16:08 ET cluster Initiative 3
+predicts. Every 21:30 Tier-1 pick (BIYA, LHSW, SGLY) failed — BIYA faded below the
+gate, LHSW was disqualified on a two-scan one-sided book, SGLY dropped out
+entirely. The watch list contributed zero candidates; the screener contributed all
+of them.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-| _(none)_ | | | | | Watch-only pulses. Entries open at 23:00 CET; **AMIX** is the lead candidate (float 502K, BUILD, +67% AH on 3.2M accumulating shares), **YIBO** second. |
+| AMIX | $4.02 | 2026-07-28 23:00 CET | 21 ($84.42) | ce3a2383 | Float 502K, Day% -1.4% (no dead-cat), AH BUILD +73% holding -4% off its $4.96 high, 5.4M AH sh vs 1.7M avg vol on 4K-14K trades/bar, entry extension only +46% vs the $2.75 close. Grade **None** (6 searches, no same-day catalyst) → exit at first PM opportunity. Fill is a stale-paper-book artifact ~15% below the live $4.65 market. |

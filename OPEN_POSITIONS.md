@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | Flat as of 2026-07-28 14:30 CET. |
+| AMIX | $4.02 | 21 | 2026-07-28 23:00 CET | None | ce3a2383 | Autonomix Medical, dev-stage medical device (nerve-targeted ablation). Float **502K**. Post-close ignition 16:03 ET; AH high $4.96 @16:20 ET, held -4% off it at entry on 5.4M AH sh vs 1.7M avg vol. Day% -1.4% (no dead-cat), entry extension +46% vs $2.75 close. Grade **None** → exit at first PM opportunity at any profit. **Fill artifact:** limit $4.85 filled @ $4.02 against Alpaca's stale 20:14Z paper book; live SIP market was ~$4.65. Read P&L against a notional $4.65 entry. **Concern:** Jul 13 warrant inducement = recent dilution overhang; exit immediately if a financing surfaces. |
 
 ## Position Rules
 
