@@ -32,10 +32,15 @@ const { execFileSync } = require("child_process");
 const path = require("path");
 const BROKER = path.join(__dirname, "broker.js");
 
-function bars(sym, tf, startISO, limit, feed = "sip") {
+function bars(sym, tf, startISO, limit, feed = null) {
+  // Do NOT pass --feed by default. broker.js defaults to SIP and, when --feed is
+  // omitted, auto-falls back to IEX on the free-tier "recent SIP data" 403 (the
+  // last ~15 min, which at 16:00 ET is the entire AH window). Passing --feed sip
+  // explicitly suppresses that fallback and surfaces an opaque "Command failed".
+  const feedArgs = feed ? ["--feed", feed] : [];
   const out = execFileSync(
     "node",
-    [BROKER, "bars", sym, "--tf", tf, "--start", startISO, "--limit", String(limit), "--feed", feed],
+    [BROKER, "bars", sym, "--tf", tf, "--start", startISO, "--limit", String(limit), ...feedArgs],
     { encoding: "utf8" }
   );
   const rows = [];
