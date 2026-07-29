@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | No open positions. |
+| BOOM | $6.72 | 14 | 2026-07-30 00:31 CET | B | 7ee5dc6d-913c-4fca-90e8-0d4f5d5959ec | DMC Global Q2 earnings; late AH high and hold near $6.72 |
 
 ## Position Rules
 

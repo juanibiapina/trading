@@ -202,7 +202,42 @@ No candidates found.
 - BOOM: Grade B Q2 earnings catalyst. **Wait:** multiple scans above +10%, low extension, and a strong hold near the AH high clear the trajectory gates, but the mandatory real-time two-sided-book check remains stale and cannot confirm fillability. Recheck at 00:30 CET.
 - AMIX, ONCO, and NAUT are below +10% AH and do not qualify for entry. No paper orders were submitted and no positions were added to `OPEN_POSITIONS.md`.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DCX | [TV](https://www.tradingview.com/chart/?symbol=DCX) | $1.08 | +19.7% | +24.1% | $1.34 | +48.6% | 8.6M | 1.0M | 8.2x | 2.1M | Motor Vehicles |
+| NUWE | [TV](https://www.tradingview.com/chart/?symbol=NUWE) | $1.89 | -2.1% | +75.6% | $3.32 | +72.0% | 7.8M | 1.1M | 7.1x | 363K | Medical Specialties |
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $4.57 | +66.2% | +8.5% | $4.96 | +80.4% | 1.4M | 9.0M | 0.2x | 502K | Medical Specialties |
+| ONCO | [TV](https://www.tradingview.com/chart/?symbol=ONCO) | $0.75 | -9.7% | +8.4% | $0.81 | -2.2% | 875K | 361K | 2.4x | 3.7M | Pharmaceuticals: Major |
+| ONMD | [TV](https://www.tradingview.com/chart/?symbol=ONMD) | $0.64 | -9.4% | +5.4% | $0.68 | -4.5% | 704K | 4.4M | 0.2x | 16.4M | Packaged Software |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $2.42 | -1.4% | +9.3% | $2.64 | +7.8% | 479K | 87K | 5.5x | 1.1M | Commercial Printing/Forms |
+| SXTP | [TV](https://www.tradingview.com/chart/?symbol=SXTP) | $1.49 | -0.7% | +12.1% | $1.67 | +11.3% | 423K | 84K | 5.0x | 2.6M | Biotechnology |
+| GWAV | [TV](https://www.tradingview.com/chart/?symbol=GWAV) | $3.06 | +23.1% | +8.8% | $3.33 | +34.0% | 244K | 499K | 0.5x | 805K | Miscellaneous Commercial Services |
+| BOOM | [TV](https://www.tradingview.com/chart/?symbol=BOOM) | $5.42 | -0.7% | +23.1% | $6.67 | +22.2% | 176K | 188K | 0.9x | 18.0M | Oilfield Services/Equipment |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $2.78 | -0.4% | +7.6% | $2.99 | +7.2% | 93K | 568K | 0.2x | 596K | Pharmaceuticals: Major |
+| NAUT | [TV](https://www.tradingview.com/chart/?symbol=NAUT) | $1.04 | -13.3% | +6.7% | $1.11 | -7.5% | 84K | 804K | 0.1x | 63.4M | Biotechnology |
+
+**Instrumentation and verification:**
+- DCX: `DCX 2026-07-29  SPIKE  16:03ET  +22%  $1.32  712 trades / 104k sh  (first co-spike bar) (as-of 18:30ET)`. TradingView volume increased to 8.6M. Yahoo was $1.42 at 18:30 ET, within 11% of the $1.59 SIP high, but the broker quote stayed frozen at 17:00 ET with an unusable $0.05 x100 / $1.40 x2500 book.
+- NUWE: `NUWE 2026-07-29  SPIKE  16:28ET  +16%  $2.20  190 trades / 16k sh  (first co-spike bar) (as-of 18:30ET)`. SIP confirms the move on million-share bars and 10K-15K trades per bar through 17:35 ET. Yahoo was $3.28 at 18:30 ET, 19% below the $4.07 high. The quote remained frozen at 16:00 ET with `ask $0.00 x0`.
+- SXTP: `SXTP 2026-07-29  SPIKE  16:13ET  +16%  $1.73  99 trades / 38k sh  (first co-spike bar) (as-of 18:30ET)`. Yahoo was $1.63 at 18:29 ET, only +8.7% from the regular close. The scanner's +12.1% reading was stale; its quote was also frozen at 16:00 ET.
+- BOOM: `BOOM 2026-07-29  SPIKE  16:09ET  +26%  $6.82  180 trades / 6k sh  (first co-spike bar) (as-of 18:30ET)`. Yahoo made a late $6.72 high and held $6.71 at 18:30 ET. SIP confirms continuous real AH trading and a stable $6.50-$6.60 base through its lagged 17:35 ET bar. A $6.75 limit order filled at $6.72, confirming current fillability.
+
+**Final-scan feed-lag cross-check:**
+- Cross-checked all prior AH candidates and the 21:30 regular-session watch list. NCRA, SPRC, STFS, GMM, MWYN, BXBL, VIVK, CTXR, and ROC were not above +10% versus their regular-session closes. SYBX remained untradable (carried).
+- GWAV was under-reported by TradingView. Yahoo showed $3.40 at 18:30 ET, +11.1% versus the $3.06 regular close, and lagged SIP confirms the 17:30 ignition on 43.7K shares and 729 trades. Treat this as its second threshold scan. No entry: the only broker quote was over two hours stale with a $3.32 / $4.20 spread, so a current fillable price could not be confirmed.
+
+**Catalysts and decisions:**
+- BOOM: Grade B Q2 earnings catalyst. Multiple scans above +10%, Total% +22.2%, late high, and a hold within 2% of that high cleared the sustained-momentum and trajectory gates. **BUY:** 14 shares filled at $6.72 on Alpaca paper, order `7ee5dc6d-913c-4fca-90e8-0d4f5d5959ec`.
+- NUWE: Grade None; repeated structured searches found no July 29 catalyst. **Skip:** genuine volume-backed move and multiple qualifying scans, but the mandatory book check still showed no ask. It also declined steadily from $4.07 to $3.28 after 17:40 ET.
+- DCX: Grade C non-binding Whales AI MOU. **Skip:** the price recovered near its high, but the broker book remained unusable and stale.
+- SXTP: Grade None. **Skip:** fresh Yahoo data was below +10%, and the move did not sustain the threshold across two scans.
+- GWAV: Grade B Q1 10-Q catalyst. **Skip:** final feed-lag rescue met the two-scan threshold, but the stale $0.88-wide broker spread did not establish a current fillable book.
+- AMIX, ONCO, ONMD, CRE, SHPH, and NAUT were below +10% AH. SHPH remains untradable (carried). No other orders were submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| BOOM | $6.72 | 00:31 CET | 14 | 7ee5dc6d-913c-4fca-90e8-0d4f5d5959ec | Grade B Q2 earnings; sustained +10% across scans, late high, holding within 2% of AH high, real SIP volume |
