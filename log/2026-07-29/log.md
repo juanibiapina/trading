@@ -87,6 +87,31 @@ No candidates found.
 - SXTP: Alpaca tradable. **Watch only:** AH change is below +10%, with no sustained momentum gate yet.
 - No paper orders submitted. DCX and CRE need to sustain above +10% in another AH scan before they can qualify for entry.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DCX | [TV](https://www.tradingview.com/chart/?symbol=DCX) | $1.08 | +19.7% | +40.7% | $1.52 | +68.5% | 4.7M | 614K | 7.6x | 2.1M | Motor Vehicles |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $2.42 | -1.4% | +15.9% | $2.80 | +14.3% | 394K | 76K | 5.2x | 1.1M | Commercial Printing/Forms |
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $4.57 | +66.2% | +5.7% | $4.83 | +75.6% | 166K | 8.9M | 0.0x | 502K | Medical Specialties |
+| BOOM | [TV](https://www.tradingview.com/chart/?symbol=BOOM) | $5.42 | -0.7% | +19.0% | $6.45 | +18.1% | 72K | 177K | 0.4x | 18.0M | Oilfield Services/Equipment |
+| NUWE | [TV](https://www.tradingview.com/chart/?symbol=NUWE) | $1.89 | -2.1% | +10.6% | $2.09 | +8.3% | 52K | 115K | 0.5x | 363K | Medical Specialties |
+
+**Instrumentation and verification:**
+- DCX: `SPIKE  16:03ET  +22%  $1.32  712 trades / 104k sh  (first co-spike bar) (as-of 16:45ET)`. SIP remains highly liquid through 16:30 ET, but the live 16:45 ET book was $1.25 x100 / $1.27 x100 and Yahoo was $1.26, well below the scanner's stale $1.52. It peaked at $1.59 and has now faded about 21% from that high. AH volume rose from 1.8M to 4.7M, but trajectory changed from BUILD to SPIKE→FADE.
+- CRE: `SPIKE  16:06ET  +16%  $2.80  26 trades / 4k sh  (first co-spike bar) (as-of 16:45ET)`. SIP confirms the early $3.50 high followed by lower closes to $2.71 and volume collapse from 264K to 12K shares per bar. Yahoo was $2.73 at 16:45 ET. The quote remained stale at 16:00 ET. Clear SPIKE→FADE.
+- BOOM: `SPIKE  16:09ET  +26%  $6.82  180 trades / 6k sh  (first co-spike bar) (as-of 16:45ET)`. SIP confirms real but modest trading, mostly 8K-28K shares and 42-378 trades per bar. It peaked at $6.82 near 16:09 ET and drifted to about $6.25-$6.30 by 16:45 ET. The quote was stale at 16:14 ET, so current fillability is not confirmed.
+- NUWE: `SPIKE  16:28ET  +16%  $2.20  190 trades / 16k sh  (first co-spike bar) (as-of 16:45ET)`. TradingView under-reported the move: Yahoo showed a steady build to $2.63 at 16:45 ET (+36% from its $1.93 prior close), while lagged SIP reached $2.19 with volume and trades increasing into 16:30 ET. The quote was stale at 16:00 ET with no ask, so this is unconfirmed-but-live rather than an illiquidity rejection.
+- AMIX: SIP and Yahoo show a late build from $4.48 to $5.25, but the scanner AH change remained below +10%. Its 0.0x VRatio reflects the very high regular-session average volume, not absence of AH trades.
+
+**Catalysts and decisions:**
+- DCX: same non-binding Whales AI MOU and potential $20M investment, provisional Grade C. Alpaca tradable. **Watch only:** it has two scanner appearances above +10%, but entries are prohibited before 23:00 CET and fresh price data now shows a deep fade.
+- CRE: repeated four-call structured search found no same-day earnings, PR, or material filing. Alpaca tradable. **Skip for now:** two AH scans above +10%, but it peaked early and is fading on collapsing volume. No order before 23:00 CET in any case.
+- AMIX: Alpaca tradable. **Watch only:** first main AH scan and scanner AH change below +10%, so it does not clear the sustained-momentum gate.
+- BOOM: DMC Global scheduled Q2 results after today's close, with the call at 17:00 ET; the move coincided with the scheduled release, but the exact results were not yet indexed. Provisional Grade B earnings catalyst. Alpaca tradable. **Watch only:** first qualifying AH scan, modest VRatio, early peak, and entries are prohibited before 23:00 CET.
+- NUWE: no same-day catalyst found within the four-call budget; the latest identified company news was July 27 preliminary Q2 revenue growth of 14%. Grade None. Alpaca tradable. **Watch only:** first qualifying AH scan, scanner/SIP feed lag, and no fresh two-sided broker book yet. No-catalyst status is a concern, not a gate.
+- No paper orders submitted. At 23:00 CET, recheck whether DCX and CRE are holding within 20% of their highs, and whether BOOM or NUWE sustain above +10% in a second AH scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
