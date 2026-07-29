@@ -162,6 +162,7 @@ def get_pm_history(ticker):
         "ticker": ticker,
         "date": latest_date,
         "previous_close": previous_close,
+        "regular_close": meta.get("regularMarketPrice"),
         "bars": latest_bars,
         "pm_high": max(b["price"] for b in latest_bars) if latest_bars else None,
         "pm_low": min(b["price"] for b in latest_bars) if latest_bars else None,
@@ -213,6 +214,11 @@ def main():
             if prev > 0:
                 pm_chg = ((info['pm_high'] - prev) / prev) * 100
                 print(f"PM Peak Change: {pm_chg:+.1f}%")
+            reg = info.get("regular_close") or 0
+            if reg > 0 and prev > 0 and abs(reg - prev) / prev > 0.15:
+                reg_chg = ((info['pm_high'] - reg) / reg) * 100
+                print(f"ANCHOR WARNING: Prev Close ${prev:.2f} diverges from last regular close ${reg:.2f} "
+                      f"(ran hard last regular session). PM Peak Change from regular close: {reg_chg:+.1f}%")
             print(f"{'-' * 60}")
             print(f"  {'Time':<8} {'Price':>8} {'Vol':>8} {'Chg%':>8}")
             for bar in info["bars"]:
@@ -247,6 +253,11 @@ def main():
             if prev > 0:
                 ah_chg = ((info['ah_high'] - prev) / prev) * 100
                 print(f"AH Peak Change: {ah_chg:+.1f}%")
+            reg = info.get("regular_close") or 0
+            if reg > 0 and prev > 0 and abs(reg - prev) / prev > 0.15:
+                reg_chg = ((info['ah_high'] - reg) / reg) * 100
+                print(f"ANCHOR WARNING: Prev Close ${prev:.2f} diverges from last regular close ${reg:.2f} "
+                      f"(ran hard last regular session). AH Peak Change from regular close: {reg_chg:+.1f}%")
             print(f"{'-' * 60}")
             print(f"  {'Time':<8} {'Price':>8} {'Vol':>8} {'Chg%':>8}")
             for bar in info["bars"]:
