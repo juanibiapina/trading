@@ -1272,3 +1272,137 @@ it is roughly **-14%**.
 |--------|------------|------------|-----------------|----------|--------|
 | ONMD | $0.94 | 2026-07-29 00:00 CET | 108 ($101.52) | d40549db | **First graded catalyst of the night:** $11.5M+ agreement to supply iRWD real-world data for foundational AI model training (GlobeNewswire 07-28, ~16:55 ET), ~4x FY2025 bookings — Grade **B**, hold up to 2 days, stop $0.80. Ignition bar 16:59 ET, four minutes after the PR. Entered at a new AH high $0.95 after basing at $0.81 on re-expanding volume (846K sh / 2,704 trades in the 17:35 bar; ~5M AH sh vs 1.4M avg). Day% +17.0%, entry extension +32% vs the $0.71 close. Fill landed inside the live SIP range — no stale-book artifact. |
 | AMIX | $4.02 | 2026-07-28 23:00 CET | 21 ($84.42) | ce3a2383 | Float 502K, Day% -1.4% (no dead-cat), AH BUILD +73% holding -4% off its $4.96 high, 5.4M AH sh vs 1.7M avg vol on 4K-14K trades/bar, entry extension only +46% vs the $2.75 close. Grade **None** (6 searches, no same-day catalyst) → exit at first PM opportunity. Fill is a stale-paper-book artifact ~15% below the live $4.65 market. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**No real winner today.** Nothing cleared the >100% bar in the tradeable AH→PM
+window. The morning's biggest *headline* mover, **EGG +170% PM**, is a Yahoo
+anchoring artifact: EGG's "previous close" of $2.05 is **two closes ago**. EGG
+already ran **+96% during the 07-28 regular session** (Day% +96.1%, regular close
+~$4.02, off a −68% dead-cat the prior day). Measured from the actual regular
+close, EGG's AH→PM continuation was only **AH SIP $4.95 (+23%) → PM SIP $5.64
+(+40%)** — a modest bounce-continuation, not a >100% explosion.
+
+**Biggest genuine AH→PM mover (below the winner bar): AMIX** — Medical Specialties
+- Catalyst: **Grade None** (6 searches, no same-day PR; a July 28 TipRanks cash/share-count housekeeping update, 971K shares out / $5.1M cash — dilution-adjacent, not a fresh operational catalyst). Post-reverse-split (1-for-21, Jun 23) ultra-low-float squeeze.
+- Previous Close: $2.79 | Day%: −1.4% (flat regular session — clean base, not a dead-cat)
+- AH last night: SIP high **$4.96 (+77.8%)** at 16:20 ET on huge accumulating volume (811K → 1.01M → 1.22M → 1.08M sh/bar, 8.8k–14k trades/bar)
+- Premarket now: SIP high **$5.29 (+89.6%)** at 08:00 ET on 839K sh / 14,227 trades (Yahoo under-reported this peak at $4.82)
+- Hypothetical P&L (AH entry → PM peak): from our $4.02 fill → $5.29 = **+31.6%**; from close $2.79 → $5.29 = +89.6%
+- Float: 502K | Market Cap: ~$4M
+
+AMIX's PM SIP peak (+89.6%) is a real, liquid, volume-backed continuation on a
+flat-base low-float name — **but +89.6% is below the >100% winner bar** (per the
+Jul 14/16 winner-bar rule, a sub-100% move is not crowned as the winner). We
+**detected and entered** it, so it is the correct diagnostic subject.
+
+**Scanner Diagnostic (AMIX):**
+- Detectable at screening time? **YES**
+- We entered AMIX live at 23:00 CET @ $4.02. It was caught in-window with real
+  accumulating SIP volume from the 16:00 ET ignition. Detected + selected. No
+  scanner gap — this is the strategy working as intended (holding the biggest
+  genuine mover).
+- Scanner gap: none for AMIX.
+
+**Broker-block tracking:** No broker blocks this session — all pipeline names
+returned `tradable=true`. Standing tally unchanged.
+
+### Baseline Tracking
+
+- Days tracked: **56** (was 55 + 1)
+- Winners detected by scanner: **46/52 (88.5%)** — AMIX (biggest genuine mover) detected + entered; added to the detected list.
+- Winner selected for paper trade: **27/52 (51.9%)** — AMIX entered @ $4.02.
+- Target: >80% detection
+- Status: **BASELINE MET** (88.5%)
+- **Baseline gap:** none new. The prior baseline line lives in 07-27 (the immediately-preceding trading day), so the chain is intact. The two historic un-counted days (07-17, 07-20) remain carried, not re-absorbed.
+
+### Retrospective Scan Results
+
+Live PM scan (04:20 ET) — 5 hits: AMIX +75.3% (PM $4.82 Yahoo / $5.29 SIP peak),
+GMM +46.2%, ONMD +22.2%, EGG +22.8% (from the $3.81 AH-print artifact; +40% from
+the real $4.02 regular close), BATL +9.4%. AH SIP reconstruction confirmed AMIX
+as the only clean flat-base >75% AH→PM continuation on heavy volume; EGG was a
+dead-cat bounce-continuation; GMM and YIBO faded as the evening scans predicted.
+
+### Open Position P&L (Alpaca)
+
+**Quote-freshness note:** the `broker.js quote` endpoint returned stale 20:00 ET
+books for both names (AMIX @20:14Z, ONMD @20:00Z = last night's regular close).
+The `positions` `current_price` however aligns with live PM (AMIX ~$4.50, ONMD
+~$0.84), so the P&L below is reported against the live PM level, not the stale book.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| AMIX | $4.02 | +46.2% | None | 23:00 CET | $5.29 (SIP) | 08:00 ET | open | — | +11.9% (live ~$4.50) | 🟢 Open, up |
+| ONMD | $0.94 | +56.7% | B — $11.5M iRWD AI-data deal | 00:00 CET | $0.87 | 04:00 ET | open | — | −10.6% (live ~$0.84) | 🔴 Open, down |
+
+Exits handled by position-evaluation.md (10:30/14:30 CET), not here. No realized fills this session.
+**Total Realized P&L (Alpaca fills only): €0.00**
+
+### Scanner Effectiveness
+
+- Evening scans ran: **6 of 7** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00 CET; plus bonus observation scans 22:15 & 22:45). **The 00:30 CET (18:30 ET) final scan did not run** → the 18:30–20:00 ET tail was uncaptured live.
+- Candidates found: ~15 unique tickers across the night (EGG, BIYA, INLF, CNET, AMIX, ONMD, GMM, YIBO, IOTR, EGG, MGRX, etc.)
+- Retrospective matches: AMIX (entered), ONMD (entered), EGG/GMM/YIBO (tracked, skipped) — all top movers were on the radar.
+
+### Missed Opportunities
+
+No significant missed opportunities. Every top AH→PM mover was surfaced by the evening scans. EGG/GMM/YIBO were tracked and correctly skipped on dead-cat/fade structure.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| AMIX | $4.96 (SIP) | 16:20 ET | Build | ~$4.50 (PM peak $5.29) | −9% off PM peak | +61% | **PM > AH (continuation)** — entered |
+| EGG | $4.95 (SIP) | 19:45 ET | Dead-cat build | ~$4.93 (PM peak $5.64) | −13% off PM peak | +140% from $2.05 / +40% from $4.02 close | PM slightly > AH; skipped (dead-cat) — correct, thin AH vol |
+| GMM | $3.64 | 17:00 ET | Spike→fade | $3.64 (PM peak $3.73) | −2% | +35% | Faded then PM ≈ AH; skipped — correct |
+| ONMD | $0.95 | 17:35 ET | Build | ~$0.84 (PM peak $0.87) | −3% | +40% | Faded below entry; entered @ $0.94 (Grade B) |
+
+**AH-peak-vs-PM-peak check:** AMIX PM SIP $5.29 > AH SIP $4.96 (continuation — the
+name we wanted). EGG PM $5.64 > AH $4.95 by +14% but the whole move sits on top of
+a −68% dead-cat, so the incremental from the regular close was small. No
+extreme-runner (>250% from close) AH→PM fade case today.
+
+### Fade-rule / override / gapper tallies (this session)
+
+- **Fade-rule false-negatives (sub-3M trigger, standing 3 of 6):** no new sub-3M AH-fader re-explosion today. EGG re-exceeded its AH peak in PM (+14%) but is **8.3M float = higher-float negative control** (does not count toward the ≥4/5 sub-3M trigger). GMM/YIBO/IOTR faded as skipped and did not re-explode. Trigger still **not met**.
+- **PM-only gapper (standing holdable 1 of 6):** today's biggest raw PM mover, EGG, is an **AH→PM continuation** (moved >10% in AH), not a PM-only gapper — no new gapper case.
+- **Late-AH-tail surge:** none. AMIX's decisive AH surge was 16:00–16:20 ET (in-window). EGG's late build (19:45 ET) fell in the unscanned tail but EGG was already tracked/skipped, and it was not the winner — no new true-tail case.
+- **In-window feed-lag miss (standing 3, ≥3 escalation REACHED):** no new case this session — AMIX was caught in real time. The standing recommendation (independent whole-universe AH gainers cross-check at the final scan) remains routed to the daily email.
+- **Price-floor exclusion (standing 3, all 2026-07-28, 0 holdable):** the standard PM scan surfaced no new sub-$0.50 in-window AH movers this session; standing count unchanged.
+- **Reverse-split-squeeze fade:** **AMIX added** — 1-for-21, ~5 weeks old (Jun 23, weeks/months-old bucket), float 502K, Grade None, entered $4.02 → PM peak $5.29 = **+31.6% continue**. Recency split now: this-week 3/3 fade; weeks/months-old **3 non-fade (EDHL, LGCL, AMIX) / 1 fade (PAVS)**. AMIX reinforces "older splits don't systematically fade." The this-week bucket (3/3 fade) still needs one more case to resolve.
+
+### Notes
+
+- **Coverage failure — 2026-07-28: 6 of 7 evening scans ran** (00:30 CET / 18:30 ET final scan missing). Running coverage-failure tally: this is the notable one this cycle. It did **not** cost a detection (AMIX entered in-window; EGG's tail build was already tracked and correctly skipped). Not counted against the detection baseline. If a second coverage failure lands within ~10 sessions, flag scheduler/bridge reliability for Juan.
+- **EGG anchoring caution (recurring):** Yahoo's `--ah-history`/`--pm-history` "prev close" anchored EGG to $2.05 (two closes ago), inflating a +40%-from-regular-close bounce into a "+170%" headline. When a name ran hard *during* the regular session (high Day%), verify the AH/PM change against the **regular close**, not Yahoo's prev-close field, before crowning a winner.
+- **AMIX is the clean signal of the night:** flat regular-session base, low float 502K, heavy accumulating SIP volume, PM continuation to +89.6% — detected and entered. The only knock is Grade None (no catalyst), so per plan it's a first-PM-opportunity exit. It fell just short of the +100% winner bar.
+
+### Price Charts
+
+```
+
+========================================================================
+ AMIX - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $2.79
+2-Day Range: $2.33 - $5.29
+Current: $4.52 (+62.0% from prev close)
+Peak: $5.29 (+89.6%) at 07-29 08:00 ET
+
+Chart (oldest → newest):
+$   4.82 │                                                            
+         │                                                  █         
+         │                                                █           
+         │                                               █ █  █   █   
+         │                                                   █ ███  ██
+         │                                                         █  
+         │                                                            
+         │                                                            
+         │                                              █             
+         │                               █  ████████████              
+         │████████          █  █    █████ ██                          
+```
