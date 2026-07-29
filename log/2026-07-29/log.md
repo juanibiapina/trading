@@ -143,6 +143,36 @@ No candidates found.
 - ONMD and SXTP remain below +10% AH. No workup or entry.
 - No paper orders submitted. No positions were added to `OPEN_POSITIONS.md`.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DCX | [TV](https://www.tradingview.com/chart/?symbol=DCX) | $1.08 | +19.7% | +19.4% | $1.29 | +43.0% | 7.1M | 884K | 8.0x | 2.1M | Motor Vehicles |
+| NUWE | [TV](https://www.tradingview.com/chart/?symbol=NUWE) | $1.89 | -2.1% | +110.1% | $3.97 | +105.7% | 3.6M | 569K | 6.3x | 363K | Medical Specialties |
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $4.57 | +66.2% | +5.7% | $4.83 | +75.6% | 1.2M | 9.0M | 0.1x | 502K | Medical Specialties |
+| ONCO | [TV](https://www.tradingview.com/chart/?symbol=ONCO) | $0.75 | -9.7% | +14.3% | $0.86 | +3.2% | 665K | 339K | 2.0x | 3.7M | Pharmaceuticals: Major |
+| ONMD | [TV](https://www.tradingview.com/chart/?symbol=ONMD) | $0.64 | -9.4% | +7.4% | $0.69 | -2.7% | 348K | 4.4M | 0.1x | 16.4M | Packaged Software |
+| BOOM | [TV](https://www.tradingview.com/chart/?symbol=BOOM) | $5.42 | -0.7% | +20.7% | $6.54 | +19.8% | 146K | 185K | 0.8x | 18.0M | Oilfield Services/Equipment |
+| SXTP | [TV](https://www.tradingview.com/chart/?symbol=SXTP) | $1.49 | -0.7% | +12.8% | $1.68 | +12.0% | 140K | 52K | 2.7x | 2.6M | Biotechnology |
+
+**Instrumentation and verification:**
+- DCX: `DCX 2026-07-29  SPIKE  16:03ET  +22%  $1.32  712 trades / 104k sh  (first co-spike bar) (as-of 17:30ET)`. Scanner AH volume increased to 7.1M. Fresh SIP/Yahoo show a rebound from $1.27 to $1.38-$1.43 at 17:15-17:30 ET, within 13% of the $1.59 high, but two quote pulls remained stuck at 17:00 ET with a non-viable $0.05 x100 / $1.40 x2500 book.
+- NUWE: `NUWE 2026-07-29  SPIKE  16:28ET  +16%  $2.20  190 trades / 16k sh  (first co-spike bar) (as-of 17:30ET)`. SIP confirms the surge is real: the 17:05 and 17:10 ET bars traded 1.12M and 1.35M shares on 10.6K and 15.0K trades. Yahoo held $3.46 at 17:30 after a $3.97 high, within 13% of the high. Two quote pulls remained stale at 16:00 ET with `ask $0.00 x0`.
+- ONCO: `ONCO 2026-07-29  SPIKE  17:03ET  +40%  $1.05  311 trades / 98k sh  (first co-spike bar) (as-of 17:30ET)`. SIP confirms a real 293K-share ignition bar, but volume fell to 50K shares by 17:15 ET and Yahoo shows a fade from $0.98 at 17:00 to $0.83 at 17:30. The quote was stale at 16:00 ET with no ask.
+- BOOM: `BOOM 2026-07-29  SPIKE  16:09ET  +26%  $6.82  180 trades / 6k sh  (first co-spike bar) (as-of 17:30ET)`. SIP and Yahoo show a recovery and hold at $6.54-$6.60 through 17:30 ET, within 4% of the $6.82 high. Real AH volume continues across bars, though it remains modest. Two quote pulls stayed stale at 16:14 ET, so current fillability is unconfirmed.
+- SXTP: `SXTP 2026-07-29  SPIKE  16:13ET  +16%  $1.73  99 trades / 38k sh  (first co-spike bar) (as-of 17:30ET)`. SIP shows thin but continuous trading and Yahoo shows a gradual build to $1.72 at 17:30 ET, near its $1.73 high. The quote remained stale at 16:00 ET.
+- AMIX faded from its $5.45 AH high to $4.90 and its scanner AH change dropped below +10%. CRE dropped out of the scan; Yahoo was $2.45 at 17:29 ET after the early $3.00 spike, confirming the prior SPIKE→FADE call.
+
+**Catalysts and decisions:**
+- DCX: same Grade C non-binding Whales AI MOU. **Skip:** it has sustained momentum and rebounded near its high, but the broker book remains unusable. No fillable two-sided market means no order.
+- NUWE: the repeat search found no July 29 earnings, PR, or 8-K. July 27 preliminary Q2 revenue growth remains the newest material release. Grade None. **Wait:** genuine BUILD, multiple scans above +10%, and Total% below the ceiling, but the zero-ask quote is stale and cannot confirm a fillable book. The freshness guard makes this unconfirmed-but-live, not a bad-print rejection.
+- AMIX: below +10% AH and only one prior scan above +10%. **Watch:** no sustained two-scan gate at the current threshold.
+- ONCO: Alpaca tradable. No same-day earnings, PR, or 8-K found within the four-call budget. Grade None. **Skip for now:** first qualifying scan, immediate SPIKE→FADE, and no fillable ask.
+- BOOM: Grade B Q2 earnings catalyst. **Wait:** multiple scans above +10%, Total% +19.8%, and holding near the high, but the broker quote is over an hour stale. A second pull did not refresh, so fillability is unconfirmed and no order was sent.
+- SXTP: no same-day earnings, PR, or 8-K found within the four-call budget; the newest surfaced 8-K was one week old. Grade None. **Watch:** first scan above +10%, so it does not meet the two-scan gate.
+- ONMD remains below +10% AH. No workup or entry.
+- No paper orders submitted. No positions were added to `OPEN_POSITIONS.md`.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
