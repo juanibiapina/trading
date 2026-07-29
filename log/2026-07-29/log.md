@@ -112,6 +112,37 @@ No candidates found.
 - NUWE: no same-day catalyst found within the four-call budget; the latest identified company news was July 27 preliminary Q2 revenue growth of 14%. Grade None. Alpaca tradable. **Watch only:** first qualifying AH scan, scanner/SIP feed lag, and no fresh two-sided broker book yet. No-catalyst status is a concern, not a gate.
 - No paper orders submitted. At 23:00 CET, recheck whether DCX and CRE are holding within 20% of their highs, and whether BOOM or NUWE sustain above +10% in a second AH scan.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DCX | [TV](https://www.tradingview.com/chart/?symbol=DCX) | $1.08 | +19.7% | +23.1% | $1.33 | +47.5% | 6.2M | 785K | 7.9x | 2.1M | Motor Vehicles |
+| NUWE | [TV](https://www.tradingview.com/chart/?symbol=NUWE) | $1.89 | -2.1% | +35.4% | $2.56 | +32.6% | 594K | 185K | 3.2x | 363K | Medical Specialties |
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $4.57 | +66.2% | +14.1% | $5.21 | +89.6% | 486K | 8.9M | 0.1x | 502K | Medical Specialties |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $2.42 | -1.4% | +13.9% | $2.75 | +12.2% | 429K | 81K | 5.3x | 1.1M | Commercial Printing/Forms |
+| ONMD | [TV](https://www.tradingview.com/chart/?symbol=ONMD) | $0.64 | -9.4% | +7.3% | $0.69 | -2.7% | 164K | 4.4M | 0.0x | 16.4M | Packaged Software |
+| SXTP | [TV](https://www.tradingview.com/chart/?symbol=SXTP) | $1.49 | -0.7% | +8.7% | $1.62 | +8.0% | 113K | 49K | 2.3x | 2.6M | Biotechnology |
+| BOOM | [TV](https://www.tradingview.com/chart/?symbol=BOOM) | $5.42 | -0.7% | +13.5% | $6.15 | +12.6% | 99K | 179K | 0.6x | 18.0M | Oilfield Services/Equipment |
+| ASBP | [TV](https://www.tradingview.com/chart/?symbol=ASBP) | $5.61 | -22.6% | +20.3% | $6.75 | -6.8% | 3K | 64K | 0.0x | 1.2M | Pharmaceuticals: Other |
+
+**Instrumentation and verification:**
+- DCX: `DCX 2026-07-29  SPIKE  16:03ET  +22%  $1.32  712 trades / 104k sh  (first co-spike bar) (as-of 17:00ET)`. Scanner AH volume rose from 4.7M to 6.2M, but fresh price history shows the stock peaked at $1.59 at 16:25 ET, dropped to $1.28, and was only $1.35 at 17:00 ET. The fresh book was $0.05 x100 / $1.40 x2500, which is not a usable two-sided market.
+- NUWE: `NUWE 2026-07-29  SPIKE  16:28ET  +16%  $2.20  190 trades / 16k sh  (first co-spike bar) (as-of 17:00ET)`. SIP confirms a real BUILD, accelerating from 34K shares and 391 trades at 16:25 ET to 553K shares and 6,747 trades at 16:40 ET, then 411K shares and 4,576 trades at 16:45 ET. Yahoo reached $2.75 at 16:45 and held $2.56 at 17:00. The broker quote remained stale at 16:00 ET with `ask $0.00 x0` after a re-pull, so the move is unconfirmed-but-live rather than rejected as a bad print.
+- AMIX: `AMIX 2026-07-29  SPIKE  16:41ET  +17%  $5.36  714 trades / 65k sh  (first co-spike bar) (as-of 17:00ET)`. SIP shows a real late BUILD to $5.50, with volume increasing to 270K shares and 2,686 trades in the 16:45 ET bar. Yahoo held $5.25 at 17:00 ET. The quote remained stale at 16:00 ET.
+- CRE: `CRE 2026-07-29  SPIKE  16:06ET  +16%  $2.80  26 trades / 4k sh  (first co-spike bar) (as-of 17:00ET)`. Fresh price history contradicts the stale scanner level: CRE faded from its early $3.50 SIP high to $2.59 at 17:00 ET, with volume collapsing to 7K shares and 69 trades in the latest SIP bar. Clear SPIKE→FADE.
+- BOOM: `BOOM 2026-07-29  SPIKE  16:09ET  +26%  $6.82  180 trades / 6k sh  (first co-spike bar) (as-of 17:00ET)`. SIP shows modest but real volume and an early $6.82 high. Yahoo shows the stock recovered from $6.23 at 16:40 to $6.61 at 16:50-17:00, within 3% of the high. The book remained stale at 16:14 ET after a re-pull, so current fillability could not be confirmed.
+- ASBP: `ASBP 2026-07-29  NO-SPIKE  peak +20% @16:44ET  (no bar cleared +15% on a volume co-spike) (as-of 17:00ET)`. SIP contains only 3K AH shares and 16 trades across four isolated bars. Yahoo's $6.40 high remained below the $7.25 previous close. The quote was stale with no ask. This is a thin dead-cat bounce, not a volume-backed reclaim.
+
+**Catalysts and decisions:**
+- DCX: same-day non-binding Whales AI MOU and possible $20M investment, Grade C. **Skip:** two scans above +10%, but it peaked early, is fading, and the fresh book has a non-viable $0.05 bid.
+- NUWE: repeat structured search found no July 29 earnings, PR, or 8-K. The newest releases were July 28 Wisconsin Aquadex installations and July 27 preliminary Q2 revenue growth. Grade None. **Wait:** two scans above +10% and a genuine BUILD, but the stale zero-ask quote fails the required real-time fillability check. Recheck at the next scan.
+- AMIX: no same-day earnings, PR, or 8-K found; July 23-24 patent and preclinical-study releases are the newest company news. Grade None. **Watch:** strong late BUILD, but this is its first scan above +10%, so it does not yet meet the two-scan gate. Scanner VRatio is low because regular-session volume was 68M shares; SIP confirms real AH trading.
+- CRE: repeat structured search again found no same-day catalyst. Grade None. **Skip:** although it has three scans above +10%, fresh data shows an early SPIKE→FADE on collapsing volume.
+- BOOM: DMC Global reported Q2 sales of $157.0M, net income attributable to DMC of $0.5M or $0.10 per diluted share, and adjusted EBITDA attributable to DMC of $10.7M at 16:05 ET. Grade B earnings catalyst. **Wait:** two scans above +10% and holding near its AH high after a late recovery, but the quote is 45 minutes stale and current fillability is not confirmed. Recheck at the next scan.
+- ASBP: no same-day earnings, PR, or 8-K found within the search budget; the latest 8-K was July 20. **Skip:** Day -22.6%, still below the previous close, only about 3K AH shares, and no fillable ask. It does not qualify for DEAD-CAT-OVERRIDE WATCH because it has not reclaimed the previous close.
+- ONMD and SXTP remain below +10% AH. No workup or entry.
+- No paper orders submitted. No positions were added to `OPEN_POSITIONS.md`.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
