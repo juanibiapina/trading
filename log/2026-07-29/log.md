@@ -68,6 +68,25 @@ No candidates found.
 - **Day-movers pre-seed (log-only):** NCRA +120.3%: `NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; AMIX +66.2%: `NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; SPRC +60.2%: `NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; STFS +33.5%: `NO-SPIKE peak +2% @16:00ET (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; MWYN +31.8%: `NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; DCX +26.4%: `NO-SPIKE peak +5% @16:00ET (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; SKYQ +23.2%: `NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; VIVK +22.7%: `NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; GWAV +21.1%: `NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; BXBL +19.0%: `NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; GMM +18.2%: `NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; BATL +17.2%: `NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`; YHC +15.8%: `NO-SPIKE peak +1% @16:00ET (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`.
 - Observation only. TradingView post-market fields still returned no main-screener hits. The pre-seed is instrumentation only and produced no candidates or entry decisions. No paper trades entered.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DCX | [TV](https://www.tradingview.com/chart/?symbol=DCX) | $1.08 | +19.7% | +31.5% | $1.42 | +57.4% | 1.8M | 285K | 6.3x | 2.1M | Motor Vehicles |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $2.42 | -1.4% | +20.9% | $2.92 | +19.2% | 277K | 60K | 4.7x | 1.1M | Commercial Printing/Forms |
+| SXTP | [TV](https://www.tradingview.com/chart/?symbol=SXTP) | $1.49 | -0.7% | +8.7% | $1.62 | +8.0% | 61K | 42K | 1.5x | 2.6M | Biotechnology |
+
+**Instrumentation and verification:**
+- DCX: `SPIKE  16:03ET  +22%  $1.32  712 trades / 104k sh  (first co-spike bar) (as-of 16:30ET)`. SIP confirms a real BUILD from $1.20 to $1.42 through 16:10 ET, with 425K-1.03M shares and 2.7K-5.8K trades per bar. The 16:30 ET book was fresh and two-sided at $1.50 x100 / $1.52 x100. Yahoo showed a $1.52 AH high at 16:25 ET, consistent with continued building.
+- CRE: `SPIKE  16:06ET  +16%  $2.80  26 trades / 4k sh  (first co-spike bar) (as-of 16:30ET)`. SIP confirms a real spike, including 117K-264K shares and 1.6K-4.0K trades per bar, but the move peaked early at $3.50 and faded to $2.84 by 16:15 ET. Yahoo likewise faded from $3.00 at 16:05 to $2.80 at 16:30. The broker quote was stale at 16:00 ET, so the scanner's current $2.92 reading is unconfirmed rather than rejected.
+- SXTP: below the +10% workup threshold. SIP confirms choppy, thinner trading and a fade to $1.49 by 16:15 ET; the broker quote was stale at 16:00 ET.
+
+**Catalysts and decisions:**
+- DCX: same-day PR announces a non-binding MOU with Whales AI for an AI/STEM robotics education platform and a potential $20M investment. Weak/non-binding catalyst, provisionally Grade C. Alpaca tradable. **Watch only:** first qualifying AH scan and entries are prohibited before 23:00 CET.
+- CRE: no same-day earnings or company catalyst found within the four-call search budget; search results only surfaced older company releases and an unrelated LSE ticker's earnings. Alpaca tradable. **Watch only:** first qualifying AH scan, current trajectory is SPIKE→FADE, and entries are prohibited before 23:00 CET.
+- SXTP: Alpaca tradable. **Watch only:** AH change is below +10%, with no sustained momentum gate yet.
+- No paper orders submitted. DCX and CRE need to sustain above +10% in another AH scan before they can qualify for entry.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
