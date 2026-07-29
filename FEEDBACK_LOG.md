@@ -6,6 +6,30 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-28 — re: Trading Scanner Report - 2026-07-28
+
+**Juan said:** "WHY ARE YOU NOT SELLING DOMO I DON'T GET IT" (re: the DOMO row
+in the 07-28 email reporting a sell resting at $3.48 with a dead premarket book,
+"fills at the open if not before.")
+
+**Interpretation:** Repeat of the 07-24 DOMO frustration. Juan wants the dead
+merger-arb position gone, not sat on with a resting order that isn't filling.
+The book on DOMO was genuinely dead in premarket (mispriced merger-arb pinned
+near the $4.34 deal value with no momentum), so the resting sell hadn't filled
+when he replied. The underlying cause — grading a fixed-price cash buyout as a
+Grade-A momentum hold — was already identified 07-24 and the taxonomy fix was
+**APPLIED 2026-07-28** (merger-arb/cash buyout = Grade D, exit at first
+premarket opportunity).
+
+**Action:** No new position action needed — DOMO **already closed** at $3.55
+(entry $3.92, -$9.25 / -9.4%), filled at the 07-28 open after the resting sell
+didn't fill in the thin premarket book. Root-cause fix (catalyst-taxonomy split,
+STRATEGY_ROADMAP.md line ~873) is already applied, so future cash-buyout names
+grade D and exit immediately instead of being held for days. The lingering
+frustration reinforces a process gap: when a resting exit sits in a dead book,
+it should be flagged/escalated rather than left silently unfilled — noted for
+the next scanner/process-improvement run.
+
 ### 2026-07-24 — re: Trading Scanner Report - 2026-07-24
 
 **Juan said:** "DOMO It's really bad. I have no idea why you're holding that. I
