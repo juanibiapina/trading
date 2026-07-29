@@ -9,6 +9,52 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-29 — Init 3: day-movers pre-seed evaluated (first live night) — zero entry-lead
+
+**Evaluated:** Prior step (2026-07-28 Init 3: wire `scan.py --day-movers` as an
+additive 22:00/22:15 CET pre-seed; check whether any day-mover SPIKEs before the
+same name hits the 22:30+ screener) — **ran live 07-28 and produced zero lead.**
+Of the four real AH ignitions that fired at the 22:30 CET screener (AMIX 16:03 ET,
+YIBO 16:06, IOTR 16:08, EGG 16:06), **only EGG was on the day-movers watch list,
+and it was the worst behaving (faded).** AMIX/YIBO/IOTR had no regular-session
+footprint (Day% −1.4/−2.5/+3.0%) — pure post-close ignitions the pre-seed is
+structurally blind to. AMIX went on to be paper-entered 07-28 AH and ran to **PM
++63% (07-29 winner)**, caught by the screener+spike-bar path, invisible to the
+pre-seed. (The 07-28 spike-bar 403 tooling note was already fixed by the process
+review pulse, commit 467c854 — not re-done here.)
+
+**Step taken (pilot / Init 3):** Ran the extended winner census the roadmap
+calls for — pulled AH-eve regular-session Day% (Alpaca daily bars vs prior close)
+for the six most recent ah-detected *holdable* PM winners and scored each against
+the pre-seed's ≥15% reach. Appended the table + first-night write-up to
+`INIT3_IGNITION_TIMING.md`.
+
+**Result:** **Only 2 of 6 recent winners (STFS +19.4%, BIYA +116.1% reg) are
+reachable by the day-movers pre-seed;** the other 4 — AMIX (−1.4%), GMM (−8.5%),
+INLF (+2.8%), POLA (+1.4%) — ignite post-close with no regular footprint. Across
+the combined census the split is ~even (5 reg-day-movers / 5 post-close
+ignitions), but the biggest/cleanest winners (AMIX +63% paper win, LGCL +114%)
+both fall in the pre-seed's blind class. Decisive conclusion: **the pre-seed
+gives no actionable entry-lead** — it surfaces ~half of winners, and even those
+are already on the 16:30 ET (22:30 CET) screener a full 30 min before the 23:00
+CET entry window opens. Its only theoretical edge is a name it flags at
+22:00–22:15 that the 22:30 screener misses; that did not occur night 1.
+
+**Hypothesis / next step:** Keep the pre-seed as cheap log-only for 1–2 more
+nights and watch for the one thing that would justify it — an early-window
+(22:00–22:15 CET) day-mover that SPIKEs and that the 22:30 screener does *not*
+surface. If nights 2–3 also show no such name, trim the pre-seed instruction from
+`post-market-scan.md` to save scan-time effort (an Init-3 cost cut, not a schedule
+or trading-rule change). (Init 6) unchanged: build the 1-min-bar exit test once
+the gate-admitted set reaches ~12 (at n=8). (Catalyst grading) watch the next
+merger-arb candidate grade D at entry.
+
+**Needs from Juan:** nothing blocking. No pulse-schedule change proposed this run;
+Init 3 proposal (C) (23:45 + 00:15 CET entry-eligible scans) still sits unapplied
+in its veto window.
+
+---
+
 ### 2026-07-28 — Init 3: day-movers pre-seed WIRED (log-only); catalyst taxonomy split APPLIED (merger-arb ≠ Grade A)
 
 **Evaluated:** Prior step (2026-07-27 Init 3: wire `scan.py --day-movers` as an

@@ -441,7 +441,7 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** In progress — **day-movers pre-seed WIRED (2026-07-28, log-only).**
+**Status:** In progress — **day-movers pre-seed EVALUATED n=1 → zero lead (2026-07-29).** First live night (07-28) the pre-seed predicted **0 of 4** real AH ignitions (AMIX/YIBO/IOTR/EGG): only EGG was on the watch list and it faded, while AMIX (paper-entered → PM +63% winner 07-29), YIBO, IOTR were pure post-close ignitions with no regular-session footprint. Extended winner census (6 recent ah-detected holdable PM winners) confirms **only 2/6 (STFS, BIYA) are reachable** by a day-movers pre-seed; the other 4 (incl. the biggest, AMIX −1.4% reg) ignite post-close and are blind to it. Decisive: the pre-seed gives **no actionable entry-lead** — it surfaces ~half of winners, and even those are already on the 16:30 ET screener (22:30 CET) a full 30 min before the 23:00 CET entry window opens, so its only edge would be a 22:00–22:15 name the 22:30 screener misses, which did not happen. Kept cheap log-only for 1–2 more nights to confirm zero-lead; if nights 2–3 repeat, trim the pre-seed instruction (Init-3 cost cut, no schedule/rule change). Details appended to `INIT3_IGNITION_TIMING.md`. **Prior: day-movers pre-seed WIRED (2026-07-28, log-only).**
 Executed the 07-27 next step: added `--day-movers` to `scripts/scan.py` (the
 day% filter now works in *any* session — during after-hours the `change` column
 still carries the regular-session day% — sorted by day%, and restricted to

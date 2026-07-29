@@ -266,3 +266,50 @@ log-only pre-seed, not a replacement for the screener. Running tally on the
 "winners are already day-movers" question: **3 caught (HIHO, CJMB, JEM) / 1 clear
 miss (LGCL, and the biggest winner at that)** — promising for the moving subset,
 but do not assume it catches the whole winner set.
+
+---
+
+## Day-movers pre-seed — first live night (2026-07-28) + extended winner census (2026-07-29)
+
+The pre-seed went live in the 21:30/22:00/22:15 CET scans on 2026-07-28. The
+hypothesis for this run: does any day-mover show a `SPIKE` verdict in the early
+window **before** the same name reaches the 22:30+ screener (measured lead-time)?
+
+**First-night result: zero lead. The pre-seed predicted 0 of 4 real ignitions.**
+At 22:30 CET (16:30 ET) the screener populated and the spike-bar detector fired
+real ignition bars on **four** names — AMIX (16:03 ET), YIBO (16:06), IOTR
+(16:08), EGG (16:06). Of those, **only EGG was on the day-movers watch list, and
+it was the worst-behaving one** (faded on collapsing volume). AMIX, YIBO and IOTR
+had no regular-session footprint (Day% −1.4%, −2.5%, +3.0%) — pure post-close
+ignitions, the LGCL-shaped class the pre-seed is structurally blind to. AMIX went
+on to be paper-entered 07-28 AH and ran to **PM +63% (07-29 winner)** — caught by
+the screener+spike-bar path, invisible to the pre-seed.
+
+**Extended winner census (6 recent ah-detected holdable PM winners).** Regular-
+session Day% on the AH-eve (Alpaca daily bars, vs prior close):
+
+| Ticker | PM date | AH-eve | reg Day% | >=15% (pre-seed reach) | PM result |
+|--------|---------|--------|----------|------------------------|-----------|
+| AMIX   | 07-29   | 07-28  | −1.4%    | **MISS**               | PM +63% (paper-entered winner) |
+| STFS   | 07-29   | 07-28  | +19.4%   | HIT                    | PM +44% holdable |
+| GMM    | 07-29   | 07-28  | −8.5%    | **MISS**               | PM +42% holdable |
+| INLF   | 07-28   | 07-27  | +2.8%    | **MISS**               | PM +49% holdable |
+| POLA   | 07-28   | 07-27  | +1.4%    | **MISS**               | PM +37% holdable |
+| BIYA   | 07-28   | 07-27  | +116.1%  | HIT                    | PM +30% holdable |
+
+**Only 2 of 6 recent winners are reachable by the day-movers pre-seed** (STFS,
+BIYA); the other 4 — including the biggest, AMIX — ignite post-close with no
+regular-session footprint. Combined with the prior census the split is ~even
+(reg day-movers: HIHO, CJMB, JEM, STFS, BIYA = 5; post-close ignitions: LGCL,
+AMIX, GMM, INLF, POLA = 5), but the cleanest/biggest winners (AMIX +63% paper
+win, LGCL +114%) are both in the pre-seed's blind class.
+
+**Decisive conclusion — the pre-seed provides no actionable entry-lead.** Two
+independent reasons: (1) it surfaces only ~half of AH→PM winners; (2) even for
+those, the 16:30 ET screener already carries them at 22:30 CET, a full 30 min
+before entries are allowed at 23:00 CET — so the pre-seed's only theoretical edge
+is a name it flags in the 22:00–22:15 window that the 22:30 screener misses, which
+did **not** happen on night 1. It stays cheap log-only for a couple more nights to
+confirm the zero-lead across sessions; if night 2–3 also show no early-window
+name that the screener misses, trim the pre-seed instruction to save scan-time
+effort (an Init-3 cost-reduction, not a schedule or trading-rule change).
