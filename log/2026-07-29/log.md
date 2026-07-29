@@ -173,6 +173,35 @@ No candidates found.
 - ONMD remains below +10% AH. No workup or entry.
 - No paper orders submitted. No positions were added to `OPEN_POSITIONS.md`.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DCX | [TV](https://www.tradingview.com/chart/?symbol=DCX) | $1.08 | +19.7% | +35.2% | $1.46 | +61.9% | 8.2M | 1.0M | 8.2x | 2.1M | Motor Vehicles |
+| NUWE | [TV](https://www.tradingview.com/chart/?symbol=NUWE) | $1.89 | -2.1% | +111.7% | $4.00 | +107.3% | 6.5M | 943K | 6.9x | 363K | Medical Specialties |
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $4.57 | +66.2% | +8.3% | $4.95 | +80.0% | 1.3M | 9.0M | 0.1x | 502K | Medical Specialties |
+| ONCO | [TV](https://www.tradingview.com/chart/?symbol=ONCO) | $0.75 | -9.7% | +9.7% | $0.82 | -1.0% | 837K | 357K | 2.3x | 3.7M | Pharmaceuticals: Major |
+| ONMD | [TV](https://www.tradingview.com/chart/?symbol=ONMD) | $0.64 | -9.4% | +13.6% | $0.73 | +2.9% | 623K | 4.4M | 0.1x | 16.4M | Packaged Software |
+| GWAV | [TV](https://www.tradingview.com/chart/?symbol=GWAV) | $3.06 | +23.1% | +12.7% | $3.45 | +38.8% | 223K | 497K | 0.4x | 805K | Miscellaneous Commercial Services |
+| BOOM | [TV](https://www.tradingview.com/chart/?symbol=BOOM) | $5.42 | -0.7% | +19.9% | $6.50 | +19.0% | 169K | 188K | 0.9x | 18.0M | Oilfield Services/Equipment |
+| NAUT | [TV](https://www.tradingview.com/chart/?symbol=NAUT) | $1.04 | -13.3% | +6.7% | $1.11 | -7.5% | 84K | 804K | 0.1x | 63.4M | Biotechnology |
+
+**Instrumentation and verification:**
+- DCX: `DCX 2026-07-29  SPIKE  16:03ET  +22%  $1.32  712 trades / 104k sh  (first co-spike bar) (as-of 18:00ET)`. Scanner volume rose to 8.2M. Yahoo was $1.33 at 18:00 ET, below the stale $1.46 scanner price but within 16% of the $1.59 high. SIP stopped at 17:35 ET and the quote remained stuck at 17:00 ET with an unusable $0.05 x100 / $1.40 x2500 book.
+- NUWE: `NUWE 2026-07-29  SPIKE  16:28ET  +16%  $2.20  190 trades / 16k sh  (first co-spike bar) (as-of 18:00ET)`. The real surge continued to a $4.09 SIP high on million-share, 10K-15K-trade bars. Yahoo was $3.40 at 18:00 ET, 16% below its $4.07 high and below the lagged scanner price. SIP stopped at 17:35 ET and the quote remained stuck at 16:00 ET with `ask $0.00 x0`.
+- ONMD: `ONMD 2026-07-29  SPIKE  17:33ET  +16%  $0.74  63 trades / 14k sh  (first co-spike bar) (as-of 18:00ET)`. SIP confirms a brief $0.78 spike on 148K shares at 17:30 ET, followed by a drop to $0.70. Yahoo was $0.70 at 18:00 ET, only -2.0% versus the prior close, contradicting the scanner's stale +13.6% reading. The quote was stale with no ask.
+- GWAV: `GWAV 2026-07-29  SPIKE  16:17ET  +16%  $3.55  239 trades / 27k sh  (first co-spike bar) (as-of 18:00ET)`. SIP shows two real spikes, first to $3.75 at 16:15 ET and then to $3.76 at 17:30 ET, but modest volume of 44K and 19K shares in the latest available bars. Yahoo was $3.47 at 18:00 ET, within 8% of the high and consistent with the scanner. The broker quote was stale at 16:18 ET, so current fillability is unconfirmed.
+- BOOM: `BOOM 2026-07-29  SPIKE  16:09ET  +26%  $6.82  180 trades / 6k sh  (first co-spike bar) (as-of 18:00ET)`. Yahoo held $6.55 at 18:00 ET, within 4% of the high and consistent with the scanner. SIP confirms continuous but modest trading and a stable $6.50-$6.60 base; its latest bar was 25 minutes stale. The last broker book remained the stale 16:14 ET $6.22 x100 / $6.43 x100 quote.
+- AMIX held around $5.04 but its scanner AH change stayed below +10%. ONCO faded to $0.84 after its $0.98 spike and also fell below +10%. NAUT remained below the workup threshold.
+
+**Catalysts and decisions:**
+- DCX: same Grade C non-binding Whales AI MOU. **Skip:** sustained scanner momentum and a late rebound do not overcome the unusable, stale one-sided book. No fillable two-sided market was confirmed.
+- NUWE: the repeat structured search again found no July 29 earnings, PR, or 8-K. July 28 Aquadex installations and July 27 preliminary Q2 revenue growth remain the newest releases. Grade None. **Wait:** genuine high-volume BUILD-and-hold and Total% below the ceiling, but the stale zero-ask quote still cannot confirm a fillable book. The source is stale rather than evidence of a bad print.
+- ONMD: no July 29 earnings, PR, or 8-K found. The July 28 $11.5M+ AI-training data agreement is the prior-day catalyst. **Skip:** this is its first scanner appearance above +10%, fresh Yahoo data shows the spike already faded below the threshold, and there is no fillable ask.
+- GWAV: a July 29 Form 10-Q reported that Q1 revenue doubled and the quarterly loss narrowed. Grade B earnings catalyst. Alpaca tradable. **Watch:** first main AH scan above +10%, so it has not met the two-scan gate; volume is real but modest and the quote is stale.
+- BOOM: Grade B Q2 earnings catalyst. **Wait:** multiple scans above +10%, low extension, and a strong hold near the AH high clear the trajectory gates, but the mandatory real-time two-sided-book check remains stale and cannot confirm fillability. Recheck at 00:30 CET.
+- AMIX, ONCO, and NAUT are below +10% AH and do not qualify for entry. No paper orders were submitted and no positions were added to `OPEN_POSITIONS.md`.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
