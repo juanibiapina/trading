@@ -84,6 +84,14 @@
 - BOOM is already an open position. This entry scan does not manage or add to it.
 - No paper trades entered.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found.
+
+**Decision notes:**
+- The first after-hours scan returned no matches at 16:00 ET.
+- No candidate has after-hours confirmation. No paper trades entered before the 23:00 CET entry window.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
