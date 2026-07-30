@@ -100,6 +100,21 @@ No candidates found.
 - The scanner returned no after-hours matches.
 - No candidate has after-hours confirmation. No paper trades entered before the 23:00 CET entry window.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CIIT | [TV](https://www.tradingview.com/chart/?symbol=CIIT) | $3.45 | -2.0% | +9.0% | $3.76 | +6.8% | 176K | 135K | 1.3x | 671K | Air Freight/Couriers |
+| CTM | [TV](https://www.tradingview.com/chart/?symbol=CTM) | $0.71 | +7.3% | +8.1% | $0.77 | +16.0% | 98K | 1.2M | 0.1x | 83.3M | Chemicals: Major Diversified |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.55 | +0.8% | +14.0% | $0.63 | +14.8% | 72K | 19.8M | 0.0x | 3.0M | Air Freight/Couriers |
+
+**Decision notes:**
+- No entries before the 23:00 CET learning-phase entry window. This is the first AH appearance for all three names, so none meets the two-AH-scan gate.
+- CIIT: Watch. Alpaca tradable. Yahoo showed an early +15.3% peak at 16:05 ET followed by a steady fade to +7.1% at 16:30 ET. Scanner VRatio was 1.3x.
+- CTM: Watch. Alpaca tradable. Yahoo showed a +16.0% peak at 16:10 ET followed by a fade to +9.8% at 16:28 ET. Float 83.3M, scanner VRatio 0.1x.
+- SLGB: Watch with concern. Alpaca tradable. Scanner showed +14.0%, but Yahoo's timeline had already faded from +23.5% at 16:20 ET to +4.0% at 16:30 ET. Structured earnings, press-release, and SEC searches found no same-day catalyst within the four-call budget. `SPIKE 16:14ET +16% $0.64 64 trades / 29k sh`. Scanner VRatio rounded to 0.0x, so sustained real AH liquidity still needs confirmation if it reappears at entry time.
+- No paper trades entered.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
