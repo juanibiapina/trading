@@ -92,6 +92,14 @@ No candidates found.
 - The first after-hours scan returned no matches at 16:00 ET.
 - No candidate has after-hours confirmation. No paper trades entered before the 23:00 CET entry window.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+No candidates found.
+
+**Decision notes:**
+- The scanner returned no after-hours matches.
+- No candidate has after-hours confirmation. No paper trades entered before the 23:00 CET entry window.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
