@@ -115,6 +115,31 @@ No candidates found.
 - SLGB: Watch with concern. Alpaca tradable. Scanner showed +14.0%, but Yahoo's timeline had already faded from +23.5% at 16:20 ET to +4.0% at 16:30 ET. Structured earnings, press-release, and SEC searches found no same-day catalyst within the four-call budget. `SPIKE 16:14ET +16% $0.64 64 trades / 29k sh`. Scanner VRatio rounded to 0.0x, so sustained real AH liquidity still needs confirmation if it reappears at entry time.
 - No paper trades entered.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CYCU | [TV](https://www.tradingview.com/chart/?symbol=CYCU) | $1.61 | +495.9% | +80.7% | $2.91 | +977.0% | 24.6M | 62.1M | 0.4x | 10.6M | Information Technology Services |
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $0.78 | +173.7% | +7.7% | $0.84 | +194.7% | 12.8M | 38.9M | 0.3x | 6.3M | Medical Specialties |
+| SLGB | [TV](https://www.tradingview.com/chart/?symbol=SLGB) | $0.55 | +0.8% | +6.9% | $0.59 | +7.7% | 2.3M | 20.0M | 0.1x | 3.0M | Air Freight/Couriers |
+| CIIT | [TV](https://www.tradingview.com/chart/?symbol=CIIT) | $3.45 | -2.0% | +9.6% | $3.78 | +7.4% | 212K | 140K | 1.5x | 671K | Air Freight/Couriers |
+| CTM | [TV](https://www.tradingview.com/chart/?symbol=CTM) | $0.71 | +7.3% | +5.1% | $0.75 | +12.8% | 147K | 1.2M | 0.1x | 83.3M | Chemicals: Major Diversified |
+| VSME | [TV](https://www.tradingview.com/chart/?symbol=VSME) | $1.30 | +6.6% | +12.3% | $1.46 | +19.7% | 120K | 196K | 0.6x | 2.6M | Advertising/Marketing Services |
+| EZRA | [TV](https://www.tradingview.com/chart/?symbol=EZRA) | $1.98 | +10.3% | +5.8% | $2.09 | +16.8% | 60K | 155K | 0.4x | 483K | Insurance Brokers/Services |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $3.61 | -38.1% | +8.0% | $3.90 | -33.1% | 60K | 24.1M | 0.0x | 2.7M | Personnel Services |
+
+**Decision notes:**
+- No entries before the 23:00 CET learning-phase entry window. CYCU, GCTK, VSME, EZRA, and BIYA made their first AH appearance, so none meets the two-AH-scan gate. All five are Alpaca-tradable.
+- CYCU: Watch only. The move is real: SIP bars show 1.0M-8.5M shares and 3,255-35,304 trades per five-minute bar through 16:30 ET, with a $3.00 high corroborating the scanner. It built from $1.50 at 16:20 ET to $2.91 at 16:25, then held around $2.45-$2.53. Total extension is +977%, far above the +150% ceiling. The structured four-call search found no same-day earnings, press release, or 8-K; a July 29 8-K said the Halo/havenX merger would likely miss its July 31 closing target. `CYCU 2026-07-30  SPIKE  16:00ET  +20%  $1.94  5656 trades / 1804k sh  (first co-spike bar) (as-of 16:45ET)`.
+- VSME: Watch with no catalyst found. Yahoo showed a volatile recovery from -8.2% at 16:15 ET to +18.9% at 16:25-16:35, easing to +14.8% at 16:45. SIP corroborated the move, but volume was modest and uneven at 5.5K-60.4K shares and 36-952 trades per bar. `VSME 2026-07-30  SPIKE  16:06ET  +15%  $1.50  309 trades / 10k sh  (first co-spike bar) (as-of 16:45ET)`.
+- GCTK: Watch. The scanner showed only +7.7% AH, while Yahoo showed a $0.92 high and $0.83 at 16:45, about +6% from the $0.78 regular close. This is its first AH scan and remains below the +10% scanner threshold.
+- SLGB: Fading. Scanner AH change fell from +14.0% to +6.9%; Yahoo showed the early $0.68 peak had fully faded to $0.55 by 16:40-16:45. No sustained >10% setup.
+- CIIT: Fading/flat. Scanner AH change edged from +9.0% to +9.6%, but Yahoo remained below its 16:05 peak and showed $3.76 at 16:45. Still below +10%.
+- CTM: Fading on weak volume. Scanner AH change fell from +8.1% to +5.1%, with only 0.1x VRatio. Yahoo showed a partial recovery to $0.74, still below the early $0.77 high.
+- EZRA: Skip trajectory. Yahoo showed an early $2.06 high followed by a drop to $1.80, only +0.6% from its prior close at 16:45.
+- BIYA: Skip dead-cat bounce. Day change was -38.1%, and the AH price remained well below the regular-session close. It does not qualify for the dead-cat-override watch.
+- No paper trades entered.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
