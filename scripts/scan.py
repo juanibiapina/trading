@@ -448,7 +448,7 @@ def main():
     parser.add_argument("--session", choices=["premarket", "regular", "afterhours"],
                         help="Force a specific session (default: auto-detect)")
     parser.add_argument("--day-movers", action="store_true",
-                        help="Regular-session day%% movers only (>=%d%%). Log-only AH-open "
+                        help="Regular-session day%%%% movers only (>=%d%%%%). Log-only AH-open "
                              "pre-seed watch list for the pre-16:30 ET window where the "
                              "postmarket screener fields are still empty." % MIN_DAY_CHANGE_REGULAR)
     args = parser.parse_args()
