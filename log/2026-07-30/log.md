@@ -140,6 +140,28 @@ No candidates found.
 - BIYA: Skip dead-cat bounce. Day change was -38.1%, and the AH price remained well below the regular-session close. It does not qualify for the dead-cat-override watch.
 - No paper trades entered.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CYCU | [TV](https://www.tradingview.com/chart/?symbol=CYCU) | $1.61 | +495.9% | +57.7% | $2.54 | +839.9% | 35.9M | 63.3M | 0.6x | 10.6M | Information Technology Services |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $1.18 | +9.3% | +25.4% | $1.48 | +37.0% | 1.3M | 6.6M | 0.2x | 577K | Miscellaneous Commercial Services |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $3.61 | -38.1% | +29.9% | $4.69 | -19.6% | 294K | 24.1M | 0.0x | 2.7M | Personnel Services |
+| CIIT | [TV](https://www.tradingview.com/chart/?symbol=CIIT) | $3.45 | -2.0% | +9.0% | $3.76 | +6.8% | 225K | 142K | 1.6x | 671K | Air Freight/Couriers |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $2.05 | -15.6% | +7.8% | $2.21 | -9.1% | 177K | 14.7M | 0.0x | n/a | Oilfield Services/Equipment |
+| CTM | [TV](https://www.tradingview.com/chart/?symbol=CTM) | $0.71 | +7.3% | +5.3% | $0.75 | +13.0% | 168K | 1.2M | 0.1x | 83.3M | Chemicals: Major Diversified |
+| VSME | [TV](https://www.tradingview.com/chart/?symbol=VSME) | $1.30 | +6.6% | +7.8% | $1.40 | +14.8% | 167K | 202K | 0.8x | 2.6M | Advertising/Marketing Services |
+
+**Decision notes:**
+- CYCU: Skip entry extension ceiling. It sustained more than +10% AH across the 22:45 and 23:00 scans, and SIP confirmed real volume with 1.7M-8.5M shares and 7,529-35,304 trades per five-minute bar through 16:45 ET. It held about 15% below its $3.00 AH high, but the +839.9% total extension is far above the +150% ceiling. The high occurred around 16:30 ET and VRatio was 0.6x, so it does not qualify for CEILING-OVERRIDE WATCH. The live book was bid $2.31 x1500 / ask $2.65 x700 at 16:59:59 ET. No same-day catalyst was found in the prior structured search. `CYCU 2026-07-30  SPIKE  16:00ET  +20%  $1.94  5656 trades / 1804k sh  (first co-spike bar) (as-of 17:00ET)`.
+- KUST: Watch, first AH scan. It began building at 16:30 ET, reached $1.59 at 16:50, and remained near the high at $1.48-$1.50. SIP confirmed the move with 186K-1.04M shares and 693-6,151 trades per bar from 16:30-16:45. The live book was bid $1.46 x100 / ask $1.48 x100 at 16:59:56 ET. Alpaca tradable. The structured search found no same-day earnings, press release, announcement, or 8-K; the latest relevant news was a July 27 amendment to its Cycurion divestiture. It cannot enter until a second AH scan above +10%. `KUST 2026-07-30  SPIKE  16:39ET  +23%  $1.45  487 trades / 79k sh  (first co-spike bar) (as-of 17:00ET)`.
+- BIYA: Skip dead-cat filter; **DEAD-CAT-OVERRIDE WATCH**. Day change was -38.1%, but scanner AH change rose from +8.0% at 22:45 to +29.9% at 23:00 and reclaimed above the $3.61 regular close. Hypothetical entry: $4.69 at 23:00 CET. SIP confirmed a real surge through 16:45 ET, including 69K-169K shares and 838-1,395 trades per bar, but Yahoo showed a fade from $4.76 at 16:45 to $4.14 at 17:00. The real-time quote was stale at 16:00 ET and therefore was not used to reject the move. No same-day earnings, press release, announcement, or filing was found within the four-search budget; the latest filing was the July 8 reverse-split report. `BIYA 2026-07-30  SPIKE  16:37ET  +26%  $4.55  254 trades / 43k sh  (first co-spike bar) (as-of 17:00ET)`.
+- CIIT: Skip below threshold and fading. Scanner AH change stayed near +9%, while Yahoo showed the 16:05 $4.06 peak fade to $3.64 at 17:00.
+- STAK: Skip below threshold and dead-cat profile. Day change was -15.6%, AH change was only +7.8%, and it remained below the prior close. Alpaca tradable.
+- CTM: Skip below threshold. Scanner AH change fell from +8.1% at 22:30 to +5.3%, with 0.1x VRatio.
+- VSME: Skip no sustained momentum. Scanner AH change fell from +12.3% at 22:45 to +7.8%; Yahoo showed a steady decline from $1.45 at 16:35 to $1.31 at 17:00.
+- No Alpaca orders submitted and no paper trades entered.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
