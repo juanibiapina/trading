@@ -198,6 +198,29 @@ No candidates found.
 - SEER: Watch below threshold. This was its first AH scanner appearance, Alpaca reported it tradable, and Yahoo showed a late build to $2.22 at 18:00 ET. AH change was only +6.8%, so it does not meet the >10% gate and no catalyst workup or entry was warranted.
 - No Alpaca orders submitted and no paper trades entered.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CYCU | [TV](https://www.tradingview.com/chart/?symbol=CYCU) | $1.61 | +495.9% | +25.5% | $2.02 | +647.6% | 59.0M | 65.8M | 0.9x | 10.6M | Information Technology Services |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $1.18 | +9.3% | +32.2% | $1.56 | +44.4% | 9.5M | 7.5M | 1.3x | 577K | Miscellaneous Commercial Services |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $3.61 | -38.1% | +13.2% | $4.09 | -29.9% | 655K | 24.1M | 0.0x | 2.7M | Personnel Services |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $2.05 | -15.6% | +10.2% | $2.26 | -7.0% | 479K | 14.7M | 0.0x | n/a | Oilfield Services/Equipment |
+| WALD | [TV](https://www.tradingview.com/chart/?symbol=WALD) | $1.71 | +5.2% | +5.3% | $1.80 | +10.8% | 238K | 372K | 0.6x | 52.6M | Household/Personal Care |
+| SEER | [TV](https://www.tradingview.com/chart/?symbol=SEER) | $2.06 | -1.0% | +7.8% | $2.22 | +6.7% | 178K | 1.4M | 0.1x | 37.1M | Biotechnology |
+| JFB | [TV](https://www.tradingview.com/chart/?symbol=JFB) | $3.63 | +10.3% | +6.1% | $3.85 | +17.0% | 91K | 233K | 0.4x | 10.4M | Engineering & Construction |
+| NTCL | [TV](https://www.tradingview.com/chart/?symbol=NTCL) | $2.90 | -7.9% | +8.6% | $3.15 | +0.0% | 55K | 71K | 0.8x | 755K | Packaged Software |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.69 | -26.2% | +8.6% | $0.75 | -19.8% | 51K | 354K | 0.1x | n/a | Real Estate Investment Trusts |
+
+**Decision notes:**
+- KUST: No entry because the fillable-book check remained stale. It sustained more than +10% AH across four scans and stayed within 13% of its $1.79 AH high. Yahoo showed $1.57 at 18:30 ET, and the scanner showed 9.5M AH shares with VRatio rising to 1.3x. SIP confirmed real accumulation through 17:35 ET, but two later checks still returned the 16:59:56 ET quote (bid $1.46 x100 / ask $1.48 x100). A 90-minute-old book cannot confirm current fillable liquidity or safe sizing. The repeated four-call catalyst search found no same-day earnings, press release, announcement, or 8-K; the latest item remains the July 27 Cycurion divestiture amendment. `KUST 2026-07-30  SPIKE  16:39ET  +23%  $1.45  487 trades / 79k sh  (first co-spike bar) (as-of 18:30ET)`.
+- CYCU: Skip entry extension ceiling and deep fade. Total extension remained +647.6%, and the current price was about 33% below the $3.00 AH high. The Grade B $54.6M contract catalyst and real heavy SIP volume do not override either gate. It does not qualify for CEILING-OVERRIDE WATCH because its high was around 16:30 ET and VRatio was only 0.9x. `CYCU 2026-07-30  SPIKE  16:00ET  +20%  $1.94  5656 trades / 1804k sh  (first co-spike bar) (as-of 18:30ET)`.
+- BIYA: Skip dead-cat filter and fade. AH change fell from +29.9% at 23:00 to +13.2%, and Yahoo showed $4.05 at 18:29 ET, about 21% below the $5.10 SIP high. Keep the 23:00 **DEAD-CAT-OVERRIDE WATCH** hypothetical entry for review; the reclaim continued to weaken. `BIYA 2026-07-30  SPIKE  16:37ET  +26%  $4.55  254 trades / 43k sh  (first co-spike bar) (as-of 18:30ET)`.
+- STAK: Skip dead-cat filter. Day change remained below the -15% gate, AH change eased from +10.7% to +10.2%, and Yahoo showed a decline from $2.39 at 17:50 ET to $2.19 at 18:30. Keep the 00:00 **DEAD-CAT-OVERRIDE WATCH** hypothetical entry for review. `STAK 2026-07-30  SPIKE  17:03ET  +16%  $2.37  125 trades / 11k sh  (first co-spike bar) (as-of 18:30ET)`.
+- WALD, SEER, JFB, NTCL, and WHLR: Skip below the +10% AH gate. WHLR also had a dead-cat profile.
+- Final-scan pipeline cross-check: Yahoo histories were checked for all prior AH candidates and all 21:30 regular-session watch names. Most apparent gains were regular-session moves, not gains from the regular close. SLGB was the only omitted prior AH name back above +10%, at $0.61 (+11.3%) at 18:30 ET. It was not rescued for entry because SIP stopped at 17:35 ET after the first spike had faded to $0.55, and Alpaca still returned the 16:00 ET quote (bid $0.47 x100 / ask $0.65 x100). The late Yahoo rebuild therefore lacked fresh SIP volume and a current fillable-book check. The repeated structured search found no same-day catalyst. `SLGB 2026-07-30  SPIKE  16:14ET  +16%  $0.64  64 trades / 29k sh  (first co-spike bar) (as-of 18:30ET)`.
+- No Alpaca orders submitted and no paper trades entered.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
