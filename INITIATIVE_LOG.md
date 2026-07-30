@@ -9,6 +9,50 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-30: Init 3 pre-seed retired after second zero-lead night; Init 5 volume scale fixed
+
+**Evaluated:** Prior Init 3 step (keep the day-movers pre-seed for 1–2 more
+nights and look for an early SPIKE that the 22:30 screener misses): **didn't
+work.** Night 2 repeated zero actionable lead: all pre-seed names were NO-SPIKE
+at 22:15 CET; the 22:30 screener then found DCX/CRE/SXTP without an early flag,
+and the real winner NUWE (+147% PM peak from close) was outside the pre-seed.
+DCX was on the list, but its live 16:15 SIP check missed the ignition that replay
+later placed at 16:03, showing bar-arrival lag rather than a watch-source edge.
+Across two nights the pre-seed surfaced no useful name before the main screener.
+
+**Step taken:** **Pilot / Init 3:** retired the pre-seed instrumentation block
+from `prompts/post-market-scan.md`; this cuts dozens of low-value SIP calls from
+each 22:00/22:15 run while preserving `scan.py --day-movers` for research and
+the regular scan. This is the best money-fast pilot step because the experiment
+showed no entry-price edge and consumed scan time that can move to the 5-minute
+confirmation test. **Parallel / Init 5:** changed `scripts/chart.py` to cap only
+strong volume outliers at the nonzero-bar p95, label the display cap and true
+maximum, and mark clipped bars. This directly fixes Juan's ONMD review problem:
+one regular-open print no longer flattens the AH/PM bars used to judge entries.
+
+**Result:** No schedule, entry rule, or live trading logic changed. The retired
+instrument had zero measured benefit over two live sessions. `chart.py` passes
+`py_compile` and rendered ONMD with **232 Alpaca SIP extended-hours bars
+backfilled**, a **0.5M display cap**, and the honest **14.0M true maximum**
+visible; clipped bars carry triangle markers. Initiative 3 remains the highest
+expected dollars/time lever because catching ignition on a second/third 5-minute
+bar could improve entry by tens of percent, while the pre-seed could not reach
+post-close igniters or beat the 22:30 screener.
+
+**Hypothesis / next step:** Build a log-only replay over recent AH-open winners
+and fades (including AMIX, NUWE, DCX, CRE) that enters hypothetically after the
+second and third confirmed 5-minute price-plus-volume bar. Compare entry price,
+PM return, false positives, and added pulse rounds against the current 15-minute
+observation grid before proposing any trading-scan schedule change. Also check
+the next daily email chart for whether the p95 cap makes AH volume readable
+without hiding true outliers.
+
+**Needs from Juan:** nothing. No new schedule proposal. Existing proposal (C),
+the 23:45 + 00:15 CET entry-eligible scans, remains unapplied and available for
+veto through the daily email.
+
+---
+
 ### 2026-07-29 — Init 3: day-movers pre-seed evaluated (first live night) — zero entry-lead
 
 **Evaluated:** Prior step (2026-07-28 Init 3: wire `scan.py --day-movers` as an

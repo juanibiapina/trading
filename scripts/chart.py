@@ -21,6 +21,7 @@ Examples:
 import argparse
 import datetime as dt
 import json
+import math
 import shutil
 import subprocess
 import sys
@@ -136,7 +137,12 @@ def build_svg(ticker, bars, meta, entry=None, exit=None):
     pad = (hi - lo) * 0.06 or hi * 0.02
     lo -= pad
     hi += pad
-    vmax = max(b["v"] for b in bars) or 1
+    volumes = sorted(b["v"] for b in bars if b["v"] > 0)
+    vmax = volumes[-1] if volumes else 1
+    # A single regular-open print can otherwise flatten the AH/PM bars Juan
+    # needs to judge. Cap only strong outliers and label the true maximum.
+    p95 = volumes[max(0, math.ceil(len(volumes) * 0.95) - 1)] if volumes else 1
+    vscale = p95 if vmax > p95 * 1.5 else vmax
 
     step = pw / n
     bw = max(1.2, step * 0.62)
@@ -148,7 +154,7 @@ def build_svg(ticker, bars, meta, entry=None, exit=None):
         return px_top + (hi - p) / (hi - lo) * (px_bot - px_top)
 
     def yv(v):
-        return vol_bot - (v / vmax) * (vol_bot - vol_top)
+        return vol_bot - (min(v, vscale) / vscale) * (vol_bot - vol_top)
 
     s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
          f'viewBox="0 0 {W} {H}" font-family="Arial,Helvetica,sans-serif">']
@@ -185,12 +191,18 @@ def build_svg(ticker, bars, meta, entry=None, exit=None):
         y0, y1 = yp(b["o"]), yp(b["c"])
         top, ht = min(y0, y1), max(1.0, abs(y1 - y0))
         s.append(f'<rect x="{cx-bw/2:.1f}" y="{top:.1f}" width="{bw:.1f}" height="{ht:.1f}" fill="{col}"/>')
-        # volume
+        # volume. A triangle marks bars whose true value exceeds the labeled cap.
         s.append(f'<rect x="{cx-bw/2:.1f}" y="{yv(b["v"]):.1f}" width="{bw:.1f}" height="{vol_bot-yv(b["v"]):.1f}" fill="{col}" opacity="0.55"/>')
+        if b["v"] > vscale:
+            s.append(f'<polygon points="{cx:.1f},{vol_top+1:.1f} {cx-3:.1f},{vol_top+6:.1f} {cx+3:.1f},{vol_top+6:.1f}" fill="{col}"/>')
 
-    # volume panel border + max label
+    # volume panel border + honest scale label
     s.append(f'<line x1="{plot_l}" y1="{vol_bot}" x2="{plot_r}" y2="{vol_bot}" stroke="#ccc"/>')
-    s.append(f'<text x="{plot_l-6}" y="{vol_top+8}" font-size="9" fill="#999" text-anchor="end">{vmax/1e6:.1f}M</text>')
+    if vscale < vmax:
+        vol_label = f"cap {vscale/1e6:.1f}M; max {vmax/1e6:.1f}M"
+    else:
+        vol_label = f"{vmax/1e6:.1f}M"
+    s.append(f'<text x="{plot_l+4}" y="{vol_top+9}" font-size="9" fill="#555" text-anchor="start">{vol_label}</text>')
 
     # time axis labels (~6 ticks, day boundaries get a date)
     ticks = max(1, n // 6)

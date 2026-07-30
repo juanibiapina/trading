@@ -27,29 +27,6 @@ Apply this data hierarchy from the start of the pulse:
 python3 scripts/scan.py --all
 ```
 
-**Early-window day-movers pre-seed (log-only, 22:00 and 22:15 CET scans only).**
-Before ~16:30 ET the TradingView `postmarket_*` fields are still empty, so the
-main AH scan returns 0 hits at 22:00/22:15 CET and the AH-open ignition cluster
-(16:08–16:53 ET) goes unwatched until 22:30. On those two scans only, also run
-the regular-session day-movers watch list and check each name for an ignition
-bar:
-
-```bash
-python3 scripts/scan.py --day-movers --session afterhours     # listed exchanges only, day% >= 15
-node scripts/spike-bar.js SYM:YYYY-MM-DD --now HH:MM          # per watch name (ET minute)
-```
-
-Record the hits under a `Day-movers pre-seed (log-only)` bullet in the scan
-section: ticker, Day%, and the spike-bar verdict. **This is instrumentation, not
-a candidate source** — no entries, no gates, and it does not replace the main
-screener. Basis (Initiative 3, `INIT3_IGNITION_TIMING.md`): the AH→PM winners we
-actually traded (HIHO +19.2%, CJMB +16.2%, JEM +34.3% regular-session day%) were
-already regular-session day-movers before their AH ignition, so this list can see
-them 15–30 min ahead of the screener. It is **structurally incomplete** — LGCL
-(PM +114%, the biggest recent winner) was flat and low-volume in the regular
-session and only ignited post-close, so it has no regular-session footprint to
-pre-seed on. Additive path, never a substitute for the screener.
-
 ### 3. Update Log
 
 - If `LOG_FILE` doesn't exist, create it with the header:

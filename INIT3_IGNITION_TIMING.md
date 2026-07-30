@@ -313,3 +313,26 @@ did **not** happen on night 1. It stays cheap log-only for a couple more nights 
 confirm the zero-lead across sessions; if night 2–3 also show no early-window
 name that the screener misses, trim the pre-seed instruction to save scan-time
 effort (an Init-3 cost-reduction, not a schedule or trading-rule change).
+
+### Second live night and retirement (2026-07-30)
+
+The 2026-07-29 AH session repeated the zero-lead result. At 22:15 CET every
+pre-seed name was `NO-SPIKE`. The 22:30 main screener then found DCX, CRE, and
+SXTP; none had been flagged early. DCX was present in the pre-seed but its live
+16:15 ET SIP check still read `NO-SPIKE`, while the later replay located its
+ignition at 16:03 ET. That is a bar-arrival lag, so more pre-seed symbols would
+not have fixed it. The night's real winner, NUWE (+147% PM peak from close), had
+no pre-seed signal and first surfaced through the main screener at 22:45 CET.
+
+**Decision: retire the pre-seed after two live nights with zero actionable
+lead.** It reached only part of the winner universe, never surfaced a useful
+name before the 22:30 screener, and added up to dozens of SIP calls to each early
+scan. Removed the instrumentation block from `prompts/post-market-scan.md`; the
+`scan.py --day-movers` option remains available for research and the regular
+21:30 scan. No schedule, entry rule, or live trading logic changed.
+
+The next Init 3 test follows Juan's 2026-07-29 feedback: replay recent AH-open
+ignitions on a 5-minute grid and measure a second/third-bar price-plus-volume
+confirmation against the current 15-minute observation cadence. AMIX alone is
+not enough to justify more live scans; the replay must compare entry-price gain,
+false positives, and pulse cost across winners and fades.
