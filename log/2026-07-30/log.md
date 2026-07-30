@@ -162,6 +162,24 @@ No candidates found.
 - VSME: Skip no sustained momentum. Scanner AH change fell from +12.3% at 22:45 to +7.8%; Yahoo showed a steady decline from $1.45 at 16:35 to $1.31 at 17:00.
 - No Alpaca orders submitted and no paper trades entered.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CYCU | [TV](https://www.tradingview.com/chart/?symbol=CYCU) | $1.61 | +495.9% | +48.4% | $2.39 | +784.5% | 46.2M | 64.5M | 0.7x | 10.6M | Information Technology Services |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $1.18 | +9.3% | +34.7% | $1.59 | +47.2% | 6.6M | 7.2M | 0.9x | 577K | Miscellaneous Commercial Services |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $3.61 | -38.1% | +15.5% | $4.17 | -28.5% | 567K | 24.1M | 0.0x | 2.7M | Personnel Services |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $2.05 | -15.6% | +7.8% | $2.21 | -9.1% | 326K | 14.7M | 0.0x | n/a | Oilfield Services/Equipment |
+| DGNX | [TV](https://www.tradingview.com/chart/?symbol=DGNX) | $1.80 | +16.1% | +9.0% | $1.96 | +26.5% | 147K | 1.4M | 0.1x | 16.7M | Packaged Software |
+
+**Decision notes:**
+- KUST: Qualified trajectory, entry deferred because the fillable-book check was stale. It sustained more than +10% AH across the 23:00 and 23:30 scans and held near its high: Yahoo showed $1.60 at 17:30 ET, about 11% below the fresh SIP $1.79 high. SIP confirmed real accumulation through 17:15 ET, with 397K-1.65M shares and 2,469-9,639 trades per five-minute bar from 17:00-17:15. The Alpaca quote remained stuck at 16:59:56 ET after a re-pull (bid $1.46 x100 / ask $1.48 x100), so it could not confirm the current two-sided book or support safe sizing. Wait for the next scan rather than submit against a 30-minute-old ask. Prior structured search found no same-day catalyst, which is a concern rather than a skip. `KUST 2026-07-30  SPIKE  16:39ET  +23%  $1.45  487 trades / 79k sh  (first co-spike bar) (as-of 17:30ET)`.
+- CYCU: Skip entry extension ceiling and worsening trajectory. Total extension remained +784.5%, while Yahoo showed a decline from the $3.00 SIP high to $2.19 at 17:30 ET, about 27% off the high. SIP still showed real heavy trading through 17:15 ET, but the move no longer met the within-20%-of-high hold test. Its 0.7x VRatio and 16:30 ET high also fail the CEILING-OVERRIDE WATCH conditions. `CYCU 2026-07-30  SPIKE  16:00ET  +20%  $1.94  5656 trades / 1804k sh  (first co-spike bar) (as-of 17:30ET)`.
+- BIYA: Skip dead-cat filter. It remained above its $3.61 regular close, but AH change fell from +29.9% to +15.5%; Yahoo showed a steady fade from $4.76 at 16:45 ET to $4.06 at 17:30 ET. Keep the 23:00 **DEAD-CAT-OVERRIDE WATCH** hypothetical entry for data collection, but the reclaim is now weakening. SIP showed declining volume and trades through 17:15 ET, and the quote was stale at 16:00 ET. `BIYA 2026-07-30  SPIKE  16:37ET  +26%  $4.55  254 trades / 43k sh  (first co-spike bar) (as-of 17:30ET)`.
+- STAK: Skip below threshold and dead-cat profile. Day change was -15.6%, AH change remained +7.8%, and the price stayed below the prior close.
+- DGNX: Watch, first AH scan and below threshold. Scanner AH change was +9.0%; Yahoo showed a $1.97 peak at 17:10 ET followed by a fade to $1.83 at 17:30 ET.
+- No Alpaca orders submitted and no paper trades entered.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
