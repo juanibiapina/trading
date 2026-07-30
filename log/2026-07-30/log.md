@@ -180,6 +180,24 @@ No candidates found.
 - DGNX: Watch, first AH scan and below threshold. Scanner AH change was +9.0%; Yahoo showed a $1.97 peak at 17:10 ET followed by a fade to $1.83 at 17:30 ET.
 - No Alpaca orders submitted and no paper trades entered.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CYCU | [TV](https://www.tradingview.com/chart/?symbol=CYCU) | $1.61 | +495.9% | +33.5% | $2.15 | +695.7% | 54.8M | 65.4M | 0.8x | 10.6M | Information Technology Services |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $1.18 | +9.3% | +33.2% | $1.57 | +45.5% | 7.8M | 7.3M | 1.1x | 577K | Miscellaneous Commercial Services |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $3.61 | -38.1% | +13.6% | $4.10 | -29.7% | 636K | 24.1M | 0.0x | 2.7M | Personnel Services |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $2.05 | -15.6% | +10.7% | $2.27 | -6.6% | 418K | 14.7M | 0.0x | n/a | Oilfield Services/Equipment |
+| SEER | [TV](https://www.tradingview.com/chart/?symbol=SEER) | $2.06 | -1.0% | +6.8% | $2.20 | +5.8% | 144K | 1.4M | 0.1x | 37.1M | Biotechnology |
+
+**Decision notes:**
+- KUST: Qualified BUILD-and-hold setup, but entry deferred because the fillable-book check remained stale. It sustained more than +10% AH across the 23:00, 23:30, and 00:00 scans. Yahoo showed $1.67 at 18:00 ET, about 7% below the $1.79 AH high, while SIP confirmed real accumulation through 17:35 ET. The scanner reported 7.8M AH shares and a 1.1x VRatio. Two quote pulls still returned the 16:59:56 ET book (bid $1.46 x100 / ask $1.48 x100), now one hour stale, so there was no current two-sided book for safe sizing. The repeated structured search found no same-day earnings, press release, announcement, or 8-K. No catalyst remains a concern, not a skip. `KUST 2026-07-30  SPIKE  16:39ET  +23%  $1.45  487 trades / 79k sh  (first co-spike bar) (as-of 18:00ET)`.
+- CYCU: Skip entry extension ceiling and fade. Yahoo showed $2.18 at 18:00 ET, about 27% below the $3.00 SIP high, and total extension remained +695.7%. The repeated search found a same-day GlobeNewswire release for a $54.6M, 10-year state HHS modernization contract through a top-five consulting partner, a Grade B contract catalyst. The real catalyst does not override the extension ceiling or the more-than-20%-off-high fade. The 16:30 ET high and 0.8x VRatio also fail the CEILING-OVERRIDE WATCH conditions. `CYCU 2026-07-30  SPIKE  16:00ET  +20%  $1.94  5656 trades / 1804k sh  (first co-spike bar) (as-of 18:00ET)`.
+- BIYA: Skip dead-cat filter and fading trajectory. AH change fell from +29.9% at 23:00 to +15.5% at 23:30 and +13.6% now. Yahoo showed $4.07 at 18:00 ET, about 20% below the $5.10 SIP high, while SIP volume had dropped from 169K shares on the surge bar to 2K by 17:35 ET. Keep the 23:00 **DEAD-CAT-OVERRIDE WATCH** hypothetical entry for data collection, but the reclaim continued to weaken. The repeated structured search found no same-day earnings, press release, announcement, or filing. `BIYA 2026-07-30  SPIKE  16:37ET  +26%  $4.55  254 trades / 43k sh  (first co-spike bar) (as-of 18:00ET)`.
+- STAK: Skip dead-cat filter; **DEAD-CAT-OVERRIDE WATCH**. Day change was -15.6%, but AH change held at +7.8% in the 23:00 and 23:30 scans, then rose to +10.7% and reclaimed above the $2.05 regular close. Hypothetical entry: $2.27 at 00:00 CET. SIP confirmed the move, though liquidity was modest at 7K-59K shares and 86-418 trades per bar. Same-day H1 FY2026 results showed revenue up 13.4% to $19.2M, but net income fell from $2.0M to $1.8M and EPS fell from $0.20 to $0.14, a mixed Grade B earnings catalyst. The stock is also on the backside of its July 24 blowoff move. `STAK 2026-07-30  SPIKE  17:03ET  +16%  $2.37  125 trades / 11k sh  (first co-spike bar) (as-of 18:00ET)`.
+- SEER: Watch below threshold. This was its first AH scanner appearance, Alpaca reported it tradable, and Yahoo showed a late build to $2.22 at 18:00 ET. AH change was only +6.8%, so it does not meet the >10% gate and no catalyst workup or entry was warranted.
+- No Alpaca orders submitted and no paper trades entered.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
