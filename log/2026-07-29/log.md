@@ -241,3 +241,117 @@ No candidates found.
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | BOOM | $6.72 | 00:31 CET | 14 | 7ee5dc6d-913c-4fca-90e8-0d4f5d5959ec | Grade B Q2 earnings; sustained +10% across scans, late high, holding within 2% of AH high, real SIP volume |
+
+## Morning Evaluation - 10:20 CET
+
+### Today's Winner
+
+**NUWE** - Medical Specialties
+- Catalyst: **Grade None**. No July 29 company news was verified. The latest known items were July 28 Aquadex installations in Wisconsin and July 27 preliminary Q2 revenue growth of 14%; the morning search returned no relevant NUWE result.
+- Previous Close: **$1.89**
+- AH last night: SIP high **$4.10 (+116.9%)** at 17:40 ET / 23:40 CET. The move was real and liquid: peak ignition bars traded 1.12M-1.35M shares and 10.6K-15.0K trades per five minutes.
+- Premarket now: **~$4.18 (+121.2%)**; SIP PM high **$4.67 (+147.1%)** at 04:00 ET on 1.04M shares and 17,456 trades. Yahoo under-reported the real high at $4.35.
+- Hypothetical P&L (realistic 17:00 ET AH entry $2.56 → SIP PM peak $4.67): **+82.4%**
+- Float: **363K** | Market Cap: **~$689K**
+
+NUWE clears the winner bar: its SIP-backed high exceeded +100% from the regular close on heavy, accumulating volume and it held above +100% into premarket.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- NUWE first surfaced at 22:45 CET at a stale TradingView $2.09 (+10.6% AH), while Yahoo and SIP already showed a real build near $2.63-$2.75 on 411K-553K shares and 4.6K-6.7K trades per bar. By 23:00 CET it was the cleanest BUILD candidate, then reached +110% on the 23:30 scan.
+- We did not enter because Alpaca's book stayed frozen at the 16:00 ET close with `ask $0.00 x0`. This was not a detection or selection-rule miss. The mandatory fillability guard prevented an untradeable paper order.
+- Scanner gap: none for detection. The execution-data gap is stale extended-hours quotes; the standing independent AH data-source verification recommendation remains appropriate, but a price/volume threshold change would not help.
+
+**Broker-block tracking:** No `tradable=false` qualifier this session. NUWE was Alpaca-tradable but lacked a fresh fillable book, so it does not enter the broker-block tally.
+
+### Baseline Tracking
+
+- Days tracked: **57** (was 56 + 1)
+- Winners detected by scanner: **47/53 (88.7%)**: NUWE added
+- Winner selected for paper trade: **27/53 (50.9%)**: BOOM was entered; NUWE was detected but could not pass the live-book check
+- Target: >80% detection
+- Status: **BASELINE MET**
+- **Baseline gap:** none new. The prior baseline is 2026-07-28, the immediately preceding US trading day. Historic uncounted 2026-07-17 and 2026-07-20 gaps remain visible and were not back-filled.
+
+### Retrospective Scan Results
+
+The 04:20 ET whole-market PM scan returned NUWE +129.2%, DCX +53.2%, GVH +35.1%, CAST +17.5%, and DGNX +14.5%. SIP reconstruction established NUWE as the only real >100% AH→PM explosion. DCX also produced a liquid PM-open high of $1.85, but only +71.3% from its actual $1.08 regular close. GVH was a small late-tail move; DGNX and CAST began their gains in PM or from regular-session anchor effects.
+
+### Open Position P&L (Alpaca)
+
+Alpaca holds one real position. Its `positions` price of $6.50 and the quote `$6.22 / $6.43 @ 2026-07-29T20:14Z` are stale. Yahoo's live PM timeline was ~$6.40 at 04:20 ET; SIP confirmed a $6.59 PM high at 04:00 ET and $6.55 at 04:05 ET. The live-mark P&L below uses $6.40. No hold/sell action was taken here.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| BOOM | $6.72 | +24.0% | B: Q2 earnings | 00:31 CET | $6.59 (SIP) | 04:00 ET | open | -$4.48 live | -4.8% live | Open; position evaluation handles exit |
+
+**Total Realized P&L (Alpaca fills only): $0.00**
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET), plus 22:15 and 22:45 observation scans
+- Candidates found: **12 unique AH tickers**
+- Retrospective matches: **2/5 PM scan names** (NUWE and DCX). The three non-matches were weak PM-only or late-tail names, not meaningful winner misses.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| GVH | −10% at final scan; +22% by 19:55 ET | Move began in the unscanned AH tail and remained below winner scale | No meaningful AH→PM edge; PM peak only $1.23 |
+| DGNX | +5.3% at final scan | Below +10% during the full scanned window; move began at PM open | No AH setup; PM peak +18.7% |
+| CAST | ~+2% from actual $1.20 regular close | Below threshold all evening; Yahoo's two-day anchor makes the headline misleading | No significant AH edge |
+
+No significant detection miss. NUWE, the real winner, was caught.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| NUWE | $4.10 SIP | 17:40 ET | Build → hold → late rebuild | ~$4.18; PM peak $4.67 | −10.5% from PM peak | +121% | **PM exceeded AH; winner detected, no fillable book** |
+| DCX | $1.59 SIP | 16:25 ET | Spike→fade→recover/hold | ~$1.46; PM peak $1.85 | −21.1% from PM peak | +35.2% vs $1.08 close | PM exceeded AH on 1.08M shares at open; skipped on unusable book |
+| CRE | $3.50 SIP | 16:05 ET | Spike→fade | ~$2.66 thin | −24.0% from AH peak | +9.9% vs $2.42 close | **PM fell short of AH; fade skip correct** |
+| SXTP | $1.84 SIP | 17:25 ET | Choppy spike→fade | ~$1.47; PM peak $1.63 | −20.1% from AH peak | −1.3% | **PM fell short of AH; threshold loss correct** |
+| BOOM | $6.82 SIP | 16:05 ET | Spike→hold / late high | ~$6.40; PM peak $6.59 | −6.2% from AH peak | +18.1% | **PM fell short of AH; AH was the better exit** |
+
+**AH-peak-vs-PM-peak check:** NUWE and DCX exceeded their AH peaks in PM. CRE, SXTP, and BOOM did not. No >250%-from-close extreme-runner case occurred.
+
+### Notes
+
+- **Coverage:** all 7 scheduled scans ran. No new coverage-failure row. The prior 2026-07-28 6/7 failure remains the latest incident.
+- **Ceiling/dead-cat overrides:** no `CEILING-OVERRIDE WATCH` or `DEAD-CAT-OVERRIDE WATCH` was logged last night.
+- **Fade-rule false-negative tracking:** CRE (float 1.1M, Grade None) adds a new sub-3M negative control. AH SIP peak $3.50; PM SIP peak $2.66, below AH. (a) first-sighting ~$2.92 → $2.66 = **−8.9%**; (b) PM-open VWAP $2.46 → $2.66 = **+8.1%**, but the peak had only 160 shares / 3 trades and was not a plausible exit. Standing sub-3M tally becomes **3 of 7 re-exploded** (LNKS, RPGL, ATPC yes; the prior CRE cycle, IOTR, WLDS, and today's separate CRE cycle fell short). The ≥4/5 trigger remains not met. No strong-catalyst fader was skipped.
+- **PM-only gapper:** the morning's biggest raw mover was NUWE, an **AH→PM continuation**, not a PM-only gapper. Standing PM-only holdable tally remains **1 clear of 6**.
+- **Late-AH-tail surge:** none for the winner. NUWE's decisive move began before 18:30 ET and was already +69.9% at the final scan. GVH moved in the tail but was only a +23% minor mover, not a winner-scale case.
+- **In-window feed-lag misses:** none new; NUWE was surfaced. Standing count remains **3**, with the ≥3 escalation reached. Route the recommendation for an independent whole-universe AH gainers cross-check at the final scan to the daily email as a data-reliability decision.
+- **Price-floor exclusions:** no new sub-$0.50 case surfaced in the broad PM scan. Standing count remains **3 total, 0 holdable**, all from 2026-07-28.
+- **Reverse-split squeezes:** no new verified reverse-split case. Recency split remains this-week **3/3 faded**; weeks/months-old **3 non-fade / 1 fade**.
+- **Selection diagnosis:** the scanner found the correct stock. The lost opportunity came from stale/no-ask broker market data, while the selected BOOM setup produced only a modest PM fade. This supports separating detection quality from execution-feed availability.
+
+### Price Charts
+
+Generated with `python3 scripts/price-timeline.py NUWE DCX BOOM`:
+
+```text
+NUWE  2-day range $1.85-$4.69 | current $4.19 | peak $4.69 at 04:00 ET
+$4.35 |                                                  █     █
+      |                                             ███ █  ████
+$1.85 |████████████████████████████████████████████
+      +------------------------------------------------------------>
+AH: $2.19 at 16:30 → $4.07 at 17:40 → $3.59 at 19:55
+PM: $4.35 at 04:00 → $4.19 at 04:20 (SIP high $4.67)
+
+DCX   2-day range $0.77-$1.85 | current $1.46 | peak $1.85 at 04:00 ET
+$1.65 |                                    █                 █
+      |                              █████████████████████████ ███
+$0.77 |██████████████████████████████
+      +------------------------------------------------------------>
+AH: $1.52 at 16:25 → $1.27 at 17:00 → $1.43 at 19:55
+PM: SIP $1.85 high at 04:00 → $1.46 at 04:20
+
+BOOM  2-day range $5.29-$6.97 | current $6.40 | peak $6.97 near AH open
+$6.72 |███  ██                                              ██████
+      |   ██  ██████
+$5.29 |             ████████████████████████████████████████
+      +------------------------------------------------------------>
+AH: held mainly $6.50-$6.72; PM: $6.50 at 04:00 → $6.40 at 04:20
+```
