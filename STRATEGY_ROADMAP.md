@@ -154,6 +154,15 @@ tighter scan cadence. Next: (a) add a no-AH-volume-spike negative filter to the
 scanner grade, (b) prototype a spike-bar entry trigger once scan cadence can
 resolve the bar. Captured from FEEDBACK_LOG 2026-07-16.
 
+**Feedback update (2026-07-29):** Juan rejected the ONMD buy because "there
+isn't enough volume." The scan recorded 5M AH shares / 3.7x average volume, but
+the chart showed modest AH bars beside a 5.9M regular-open bar. Treat this as a
+selection and presentation check, not proof for an immediate threshold: test
+whether the no-spike negative filter would reject ONMD on per-bar volume,
+trades, and accumulation, and fix Initiative 5's shared volume scale so the
+review chart does not distort the comparison. Catalyst size must not rescue a
+name whose real volume profile fails the eventual gate.
+
 **Why it is plausible:** the scanner already computes VRatio (AH volume vs avg)
 and IRVol (intraday relative volume). The winners (LNAI, LPA) showed VRatio
 6-8x at entry. The hypothesis is that volume crosses a threshold *before* the
@@ -412,6 +421,13 @@ Remaining Init 5 items unchanged: (1) minor cosmetic regular-open volume bar
 scale; (2) post-push raw-URL 200-check for the render race; (3) GitHub Pages
 HTML reports.
 
+**Feedback update (2026-07-29):** Juan read ONMD's chart as "not enough volume."
+The AH tape logged 5M shares / 3.7x average, but the shared volume axis was set
+by a 5.9M regular-open bar, visually compressing the AH bars. The volume-scale
+item is no longer only cosmetic because it affects Juan's entry review. Next
+chart pass should use a session-aware scale or clipped/log scale while labeling
+true values, so AH accumulation can be judged without inflating it.
+
 **Prior recommended step (superseded above):** merge an extended-hours volume
 source into `chart.py` (Alpaca 5m bars first, TradingView fallback) so the
 post/pre volume panel is populated, then add the post-push raw-URL 200-check to
@@ -441,7 +457,18 @@ adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
 constantly.
 
-**Status:** In progress — **day-movers pre-seed EVALUATED n=1 → zero lead (2026-07-29).** First live night (07-28) the pre-seed predicted **0 of 4** real AH ignitions (AMIX/YIBO/IOTR/EGG): only EGG was on the watch list and it faded, while AMIX (paper-entered → PM +63% winner 07-29), YIBO, IOTR were pure post-close ignitions with no regular-session footprint. Extended winner census (6 recent ah-detected holdable PM winners) confirms **only 2/6 (STFS, BIYA) are reachable** by a day-movers pre-seed; the other 4 (incl. the biggest, AMIX −1.4% reg) ignite post-close and are blind to it. Decisive: the pre-seed gives **no actionable entry-lead** — it surfaces ~half of winners, and even those are already on the 16:30 ET screener (22:30 CET) a full 30 min before the 23:00 CET entry window opens, so its only edge would be a 22:00–22:15 name the 22:30 screener misses, which did not happen. Kept cheap log-only for 1–2 more nights to confirm zero-lead; if nights 2–3 repeat, trim the pre-seed instruction (Init-3 cost cut, no schedule/rule change). Details appended to `INIT3_IGNITION_TIMING.md`. **Prior: day-movers pre-seed WIRED (2026-07-28, log-only).**
+**Status:** In progress — **day-movers pre-seed EVALUATED n=1 → zero lead (2026-07-29).** First live night (07-28) the pre-seed predicted **0 of 4** real AH ignitions (AMIX/YIBO/IOTR/EGG): only EGG was on the watch list and it faded, while AMIX (paper-entered → PM +63% winner 07-29), YIBO, IOTR were pure post-close ignitions with no regular-session footprint. Extended winner census (6 recent ah-detected holdable PM winners) confirms **only 2/6 (STFS, BIYA) are reachable** by a day-movers pre-seed; the other 4 (incl. the biggest, AMIX −1.4% reg) ignite post-close and are blind to it. Decisive: the pre-seed gives **no actionable entry-lead** — it surfaces ~half of winners, and even those are already on the 16:30 ET screener (22:30 CET) a full 30 min before the 23:00 CET entry window opens, so its only edge would be a 22:00–22:15 name the 22:30 screener misses, which did not happen. Kept cheap log-only for 1–2 more nights to confirm zero-lead; if nights 2–3 repeat, trim the pre-seed instruction (Init-3 cost cut, no schedule/rule change). Details appended to `INIT3_IGNITION_TIMING.md`.
+
+**Feedback update (2026-07-29):** Juan asked whether AMIX could have been bought
+on its second or third 5m volume bar and suggested more 5-minute pulses at the
+start of AH. AMIX ignited at 16:03 ET, but the whole-market screener did not
+surface it until 16:30 ET, after much of the move. Next research step: replay
+recent AH-open ignitions using a 5-minute grid and a second/third-bar
+price-plus-volume confirmation, then compare entry price, false positives, and
+pulse cost against the current 15-minute grid. Keep this log-only until the
+replay shows an edge; do not change the live entry schedule from one example.
+
+**Prior: day-movers pre-seed WIRED (2026-07-28, log-only).**
 Executed the 07-27 next step: added `--day-movers` to `scripts/scan.py` (the
 day% filter now works in *any* session — during after-hours the `change` column
 still carries the regular-session day% — sorted by day%, and restricted to

@@ -6,6 +6,28 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-29 — re: Trading Scanner Report - 2026-07-28
+
+**Juan said:** "I don't see a reason to have bought ONMD. there isn't enough
+volume. Could we have bought AMID earlier? The second or thrid volume bars are
+enough to buy. Maybe we need more 5 minutes pulses in the beginning of the the
+AH timeframe." ("AMID" appears to mean AMIX.)
+
+**Interpretation:** Two changes to investigate. First, ONMD's catalyst and BUILD
+shape should not outweigh an unconvincing volume profile. The log measured 5M AH
+shares and 3.7x average daily volume, but the email chart made the AH bars look
+small beside the 5.9M regular-session opening bar. The selection rule and chart
+scale both need review so a weak-looking volume setup is not bought on catalyst
+alone. Second, AMIX's 16:03 ET ignition was visible by its second or third 5m
+bar, but whole-market discovery did not surface it until 16:30 ET. Juan prefers
+entry near those first confirmed bars rather than after the move is mature.
+
+**Action:** Routed the ONMD point to Initiative 1's no-volume negative filter and
+Initiative 5's volume-scale follow-up. Routed the AMIX point to Initiative 3:
+test 5-minute AH-open observation pulses and a second/third-bar confirmation
+against the current 15-minute grid before changing the entry schedule. No live
+rule or schedule change made in this feedback pulse.
+
 ### 2026-07-28 — re: Trading Scanner Report - 2026-07-28
 
 **Juan said:** "WHY ARE YOU NOT SELLING DOMO I DON'T GET IT" (re: the DOMO row
