@@ -21,9 +21,12 @@ Apply this data hierarchy from the start of the pulse:
 ```bash
 date
 git stash && git pull --ff-only && git stash pop 2>/dev/null || true
+TODAY=$(date +%F)
+mkdir -p "log/$TODAY"
+touch "log/$TODAY/log.md"
 ```
 
-Get current positions from Alpaca (source of truth), then cross-check `OPEN_POSITIONS.md`:
+Create today's log before trying to read or search it. Get current positions from Alpaca (source of truth), then cross-check `OPEN_POSITIONS.md`:
 
 ```bash
 node scripts/broker.js account

@@ -1,9 +1,9 @@
 date,ticker,pm_gap_pct,ah_footprint,pm_high,pm_high_time_et,ramp_start_et,peak_vol_per_bar,peak_trades_per_bar,classification,catalyst,notes
-2026-07-07,SUGP,+14.2,unknown,1.16,07:25,07:00,5794480,18384,holdable,-,pipeline-verification row; ramped 07:00 ET on 3.4-5.8M sh/bar, held $1.00-1.10 across 6+ bars
+2026-07-07,SUGP,+14.2,unknown,1.16,07:25,07:00,5794480,18384,holdable,-,"pipeline-verification row; ramped 07:00 ET on 3.4-5.8M sh/bar, held $1.00-1.10 across 6+ bars"
 2026-07-08,IOTR,+62.7,ah-detected,4.57,04:20,04:00,1119454,16172,holdable,-,ah-detected AH->PM continuation (AH peak $4.65 16:35 ET); held $4.1-4.5 within 20pct across 10 bars on 150K-1.1M sh/bar
-2026-07-08,DCX,+36.3,ah-detected,1.63,04:00,04:00,2535021,12521,holdable,-,ah-detected (paper-traded 07-07, now exited); peaked $1.63 04:00-04:10 then held $1.38-1.48 above gap-mid on real vol, slow bleed
+2026-07-08,DCX,+36.3,ah-detected,1.63,04:00,04:00,2535021,12521,holdable,-,"ah-detected (paper-traded 07-07, now exited); peaked $1.63 04:00-04:10 then held $1.38-1.48 above gap-mid on real vol, slow bleed"
 2026-07-08,BATL,+18.3,ah-detected,2.16,04:40,04:00,1946664,10731,holdable,-,ah-detected; BUILD - dipped $1.82 then rebuilt to new PM high $2.16 04:40 ET on 850K sh/bar
-2026-07-08,SHPH,+13.8,none,4.34,04:20,04:00,159016,2231,holdable,DOGE mining platform acquisition (crypto pivot),PM-only gapper (no AH footprint); held $3.65-4.13 within 20pct of $4.34 high across 6+ bars on moderate 11-159K sh/bar, thinning mid-window
+2026-07-08,SHPH,+13.8,none,4.34,04:20,04:00,159016,2231,holdable,DOGE mining platform acquisition (crypto pivot),"PM-only gapper (no AH footprint); held $3.65-4.13 within 20pct of $4.34 high across 6+ bars on moderate 11-159K sh/bar, thinning mid-window"
 2026-07-09,RPGL,+47.7,ah-detected,3.05,04:00,04:00,1613519,18012,holdable,Grade C Nasdaq bid-compliance PR,ah-detected AH->PM continuation (AH peak $2.69 +49% 17:05 ET); held $2.60-3.05 within 20pct of $3.05 high across 10 bars on 214K-1.6M sh/bar slow bleed
 2026-07-09,BJDX,+14.9,none,1.95,04:05,04:00,1247022,8032,holdable,-,PM-only gapper (absent from AH scan tables); peaked $1.95 04:05 then held $1.55-1.80 near gap-mid across 5+ bars on 85K-1.24M sh/bar real vol; corrects last night 04:20 Yahoo VRatio-0 thin misread; fading/marginal
 2026-07-09,SUNE,+15.6,ah-detected,2.72,04:00,04:00,484970,4508,holdable,-,ah-detected (AH peak $2.85 +35% 17:00 ET; our prior paper position exited); held $2.40-2.57 within 20pct of $2.72 across 10 bars on 20-485K sh/bar rebuild
