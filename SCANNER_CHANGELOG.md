@@ -42,6 +42,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **Verification freshness guard (no false bad-print on stale data)** — before rejecting a *strong* scanner signal (high VRatio + large AH% + built across ≥2 AH scans) as a bad print, confirm the SIP bars/quote are actually fresh (last bar/quote timestamp near the scan time). If the verification source is stale (e.g. last SIP bar 16:44 ET while scanning at 18:30 ET), a "scanner price >> SIP high" divergence is a staleness artifact, not a bad print — re-pull once, else treat the scanner reading as unconfirmed-but-live (do not skip as bad print), lean on the real-time book, prefer waiting for the next scan. Also treat a discontinuous AH% jump between consecutive scans (e.g. −8% → +214% in one step) as a feed-lag artifact to re-verify. (Basis: USDE Jul 1, real +180% AH winner detected at 00:00/00:30 CET but wrongly skipped — TradingView lagged ~30 min and SIP/quote returned stale 16:44 ET data, firing a false bad-print call.)
 - **Final-scan feed-lag cross-check (pipeline names)** — at the last scheduled scan (00:30 CET / 18:30 ET) the TradingView postmarket feed intermittently under-reports or drops a name that is a live AH mover. Before finalizing that scan, cross-check every already-tracked candidate (any name seen in ≥1 prior AH scan near/above threshold, plus the 21:30 regular-session watch) against SIP bars / Yahoo `--ah-history`; if TradingView under-reports a name that SIP shows above the 10% threshold on real accumulating volume, treat the SIP reading as truth and evaluate it for entry (2-AH-scan gate + all other rules still apply) rather than dropping it on the stale TradingView figure. Recovers pipeline names only (a brand-new omitted name with no prior footprint stays a morning-eval feed-lag note). Basis: GCTK Jul 14 (rescued ad-hoc, entered 00:30), KUST Jul 14 (omitted +34%/812K sh at last scan), BTCT Jun 29–30 (already +67.6% at 18:30 ET while the 00:30 feed showed it flat).
 - **AH-liquidity sanity check before entry** — confirm `broker.js quote` shows a real two-sided after-hours book (non-zero ask price with size, non-zero bid) before sizing an order; an `ask $0.00 x0`/zero-size book means the TradingView `AH Vol`/`VRatio` is stale regular-session volume, not real AH liquidity — skip as illiquid (basis: TII Jun 26 VRatio 4.9x but `ask $0.00 x0`; recurring NEXR zero-AH-volume ramp pattern)
+- **Stale-book execution-block tracker:** morning eval separately tallies `tradable=true` candidates that cleared all scanner and entry gates but were not entered solely because Alpaca's quote stayed stale through the final scan. Each case records quote age, SIP liquidity, qualified price, PM peak, and hypothetical P&L. Standing count 2, both profitable detected winners (NUWE +82.4%, KUST +45.9%). This measures the cost of the execution-data gap without weakening the live-book safety gate; the repeated feed issue routes to the daily email.
 - **Broker-block handling** — `tradable=false` on Alpaca does not change intraday, so the entry flow checks `broker.js tradable` early (before the SIP/catalyst workup) and carries a flagged-untradable candidate forward across later scans as "untradable (carried)" without re-running the full workup (recurring case: SHPH, blocked across all 5 entry scans on both Jun 25 and Jul 13). Each qualified-but-untradable name is logged once as a broker-block, and the morning eval keeps a running broker-block tally (hypothetical AH-entry→PM-peak P&L per case) to quantify the cumulative selection-rate cost of the Alpaca tradability gap — the dataset for the user's broker-coverage decision (a broker-block is neither a detection miss nor a selection miss)
 - **No paper trades before 23:00 CET** — 22:00 and 22:30 scans are observation only
 - **AH change >10% in at least 2 after-hours scans** (regular session appearances don't count)
@@ -68,6 +69,22 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-07-31 — Track Stale-Book Execution Blocks Separately
+
+**Context:** The scanner detected the correct winner on both Jul 29→30 and Jul 30→31, but no order was placed because Alpaca's extended-hours quote stayed stale through the last eligible scan. NUWE had million-share SIP bars and later offered +82.4% from its qualified price to PM peak; KUST had 397K–1.65M shares per SIP bar and later offered +45.9%. Detection worked, while the live-book safety gate could not verify current fillability. The issue has now repeated on two consecutive detected winners.
+
+**Evaluation of previous changes:**
+- 2026-07-30 sub-3M fade seed and trigger arithmetic: **Helped.** The Jul 30→31 eval started from 3/7, added VSME as a negative case, reported 3/8, and did not route or apply the PM-open exception.
+- 2026-07-30 scanner help fix: **Helped.** `python3 scripts/scan.py --help` now exits successfully and prints the day-movers help text.
+- 2026-07-29 Yahoo previous-close anchoring warning: **No new case.** The Jul 30→31 eval identified CYCU's prior-day anchor effect, but its scanner and SIP analysis used the $1.61 regular close; no tool regression was reported.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — Added a stale-book execution-block tracker, separate from `tradable=false` broker blocks. Seeded it with NUWE and KUST and required quote age, SIP liquidity, qualified price, PM peak, hypothetical P&L, and a running count. The live-book safety gate remains unchanged.
+   - Why: two consecutive correctly detected winners were not entered solely because Alpaca's quote feed froze while SIP showed heavy real trading. Without a standing tally, the execution-data cost appears only in each day's narrative and cannot be measured over time.
+   - Hypothesis: I expect the next `tradable=true` qualifier blocked solely by a stale quote to be logged against the two-case seed with its quote age and hypothetical cost, and the daily email to carry the cumulative execution-feed issue. Measurable: the next case advances the count from 2, includes the required quote, SIP, price, peak, and P&L evidence, and does not get mislabeled as a scanner miss or `tradable=false` broker block.
+
+**Updated process:** Morning evaluation now keeps a stale-book execution-block tally (2 cases, both profitable detected winners) and routes the repeated paper quote-feed problem to the daily email. No scanner parameter or live entry gate changed.
+
 ### 2026-07-30 — Keep the Sub-3M Fade Tracker Current and Fix Its Trigger Arithmetic
 
 **Context:** Jul 29→30 had full 7/7 coverage and detected the winner NUWE. The scanner surfaced NUWE from 22:45 CET and tracked its real BUILD to +110%; no threshold or detection change is warranted. The morning eval added a new sub-3M fade-rule negative case: CRE (float 1.1M) peaked at SIP $3.50 in AH, then reached only $2.66 in PM. Its PM-open-to-peak gain was +8.1%, but the peak had only 160 shares / 3 trades and was not a plausible exit. The log advanced the tally to 3 of 7, while the prompt still said 3 of 6 and incorrectly claimed one positive case would reach the ≥4/5 trigger.
@@ -86,6 +103,8 @@ _(entries are prepended — newest first)_
    - Hypothesis: `python3 scripts/scan.py --help` exits 0 and displays `Regular-session day% movers only (>=15%)`; normal scan behavior and parameters remain unchanged.
 
 **Updated process:** Fade-rule false-negative seed is current at 3 of 7; promotion requires the overall SIP-verified sub-3M sample to reach at least 80%. Scanner help is usable again. No scanner parameter or live entry gate changed.
+
+**Evaluation (2026-07-31):** Helped. The morning eval started from the seven-case seed, added VSME as a negative, reported 3/8, and kept the exception inactive. `python3 scripts/scan.py --help` exits 0 and prints the day-movers help text.
 
 ### 2026-07-29 — Auto-Flag the Yahoo Prev-Close Anchoring Artifact in check-prices.py (EGG)
 
