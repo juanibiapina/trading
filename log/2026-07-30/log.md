@@ -225,3 +225,110 @@ No candidates found.
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+
+## Morning Evaluation - 10:23 CET
+
+### Today's Winner
+
+**KUST** - Consumer services / live entertainment
+- Catalyst: **Grade C**. A July 30 Schedule 13D/A disclosed Ryan Todd Martin's controlling ownership. This is an ownership filing, not a fresh operational catalyst.
+- Previous daily close: **$1.08**; July 30 regular close: **$1.18**
+- AH last night: SIP high **$1.87** at 19:25 ET, with the build already at $1.48 (+25.4% AH, +37.0% total) when first scanned at 23:00 CET. The 16:50-17:05 ET bars traded 526K-1.65M shares and 3.5K-9.6K trades each.
+- Premarket now: **~$1.88**; SIP PM high **$2.32** at 04:00 ET on 2.37M shares and 19,273 trades. That is **+96.6% from the regular close and +114.8% from the previous daily close**.
+- Hypothetical P&L (qualified AH price $1.59 -> SIP PM peak $2.32): **+45.9%**
+- Float: **577K** | Market Cap: **~$740K**
+
+KUST clears the winner bar on total move: the SIP-backed PM high exceeded +100% from the previous daily close on heavy, accumulating volume. It also gave the best realistic AH-entry-to-PM return. REPL was the morning's bigger raw mover, but its gain fired after 19:20 ET and its PM peak was below the first AH-tail VWAP.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- KUST appeared at 23:00 CET, then sustained the threshold through 23:30, 00:00, and 00:30. SIP showed a real BUILD with millions of shares and thousands of trades per bar.
+- We did not enter because Alpaca's quote stayed frozen at 16:59:56 ET. The mandatory fillable-book check could not confirm a current ask, despite the SIP tape showing real liquidity.
+- Scanner gap: **none for detection**. The lost trade came from stale execution-market-data verification. A threshold change would not help.
+
+**Broker-block tracking:** No `tradable=false` qualifier. KUST was Alpaca-tradable, so this does not enter the broker-block tally.
+
+### Baseline Tracking
+
+- Days tracked: **58** (was 57 + 1)
+- Winners detected by scanner: **48/56 (85.7%)**: KUST detected; MGRX and SBEV add two price-floor detection misses under the explicit price-floor rule
+- Winner selected for paper trade: **27/56 (48.2%)**: KUST qualified but was not entered because the book check was stale; MGRX and SBEV were outside the scanner universe
+- Target: >80% detection
+- Status: **BASELINE MET**
+- **Baseline gap:** no new gap. The latest baseline was 2026-07-29, the immediately preceding US trading day. Historic uncounted gaps on 2026-07-17 and 2026-07-20 remain unfilled.
+
+### Retrospective Scan Results
+
+The standard 04:20 ET PM scan returned KUST and CYCU. An uncapped whole-market TradingView pass returned 17 names and exposed three material names hidden by the normal universe caps: REPL +120%, MGRX +91%, and SBEV +43% at scan time. SIP reconstruction found:
+
+- **KUST:** clean in-window AH BUILD and PM continuation; detected.
+- **REPL:** real +149.5% AH-tail explosion after 19:20 ET on 371K shares / 2,378 trades in the first SIP bar. PM SIP high $12.28, below the $12.76 first-tail-bar VWAP. True-tail and over the $300M market-cap cap.
+- **MGRX:** real sub-$0.50 in-window surge to $0.95, then PM SIP high $0.69. Excluded by the $0.50 price floor.
+- **SBEV:** real sub-$0.50 in-window surge to $0.69, then PM SIP high $0.59. Excluded by the $0.50 price floor.
+- **CYCU:** heavy in-window trading, but it peaked at $3.00 in AH and only reached $2.57 in PM. The prior-day $0.27 anchor makes its headline gain misleading after a $1.61 regular close.
+
+### Open Position P&L (Alpaca)
+
+Alpaca has one real open position. Its `positions` mark of $5.98 matches the available PM SIP print. The quote endpoint is stale at 20:00 ET with no ask, so it is not used. No position-management action was taken here.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| BOOM | $6.72 | +24.0% | B: Q2 earnings | 00:31 CET | $5.98 SIP | 04:00 ET | open | -$10.36 | -11.0% | Open; position evaluation handles decisions |
+
+**Total Realized P&L (Alpaca fills only): $0.00**
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET), plus 22:15 and 22:45 observation scans
+- Candidates found: **16 unique AH tickers**
+- Retrospective matches: **2 of 5 material in-window/tail movers** (KUST and CYCU caught; REPL true-tail/market-cap exclusion; MGRX and SBEV price-floor exclusions)
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| REPL | +149.5%, first print 19:20 ET | True-tail surge after the last scan; also above the $300M market-cap cap | No continuation edge from first-tail-bar VWAP $12.76 to PM peak $12.28: **-3.8%** |
+| MGRX | +227.6% from $0.29 regular close at AH peak | `MIN_PRICE=$0.50` excludes the symbol because the regular close was $0.29 | First liquid AH VWAP ~$0.51 to PM peak $0.69: **+35.3%**, but wide stale spread and rapid fade made it uninvestable |
+| SBEV | +115.6% from $0.32 regular close at AH peak | `MIN_PRICE=$0.50` excludes the symbol because the regular close was $0.32 | Ignition VWAP ~$0.48 to PM peak $0.59: **+22.9%**, but no current ask and a fast PM fade made it uninvestable |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| KUST | $1.87 SIP | 19:25 ET | Build -> hold -> late build | ~$1.88; PM peak $2.32 | -19.0% from PM peak | +59.3% from $1.18 regular close | **PM exceeded AH; detected winner** |
+| CYCU | $3.00 SIP | 16:30 ET | Spike -> fade -> partial rebuild | ~$2.35; PM peak $2.57 | -21.7% from AH peak | +46.0% from $1.61 regular close | **PM fell short; AH was better** |
+| BIYA | $5.10 SIP | ~16:45 ET | Spike -> fade | ~$4.05; PM peak $4.25 | -20.6% from AH peak | +12.2% from $3.61 regular close | **PM fell short; dead-cat skip correct** |
+| STAK | $2.39 SIP | 17:50 ET | Build -> fade | ~$2.19; PM peak $2.32 | -8.4% from AH peak | +6.8% from $2.05 regular close | **PM fell short; dead-cat skip correct** |
+
+No >250%-from-regular-close extreme runner continued into a higher PM peak. CYCU's extreme total headline came from its prior regular-session run; its AH peak remained the better exit.
+
+### Notes
+
+- **Coverage:** all 7 scheduled scans ran. No new coverage failure.
+- **Dead-cat override outcomes:** BIYA hypothetical $4.69 -> PM peak $4.25 = **-9.4%**. STAK hypothetical $2.27 -> PM peak $2.32 = **+2.2%**. Neither supports relaxing the dead-cat gate. No ceiling-override watch was logged.
+- **Fade-rule tracking:** VSME (float 2.6M, Grade None) adds a sub-3M negative. AH SIP peak $1.54 exceeded PM SIP peak $1.36. (a) first-sighting $1.46 -> $1.36 = **-6.8%**; (b) PM-open VWAP $1.34 -> $1.36 = **+1.5%** on only 466 shares / 13 trades. Standing sub-3M re-explosion tally becomes **3 of 8**, farther from the >=80% trigger. CYCU is also a strong-catalyst fader: Grade B contract, first sighting $2.91 -> PM peak $2.57 = **-11.7%**. Strong catalysts still have not rescued a fading trajectory.
+- **PM-only gapper:** REPL was the morning's biggest raw PM mover, but it is an **AH-tail -> PM continuation**, not PM-only. The standing PM-only holdable tally remains **1 clear of 6**.
+- **Late-AH-tail surge:** REPL is **true-tail**. It had no AH print at the 18:30 ET final scan; the FDA advisory-panel vote triggered the first SIP bar at 19:20 ET. First-bar VWAP $12.76 -> PM peak $12.28 = **-3.8%**. Using the latest maintained seed (ORIS, POLA), true-tail count reaches **3**. Route a late-scan scheduling review to the daily email, while noting REPL also exceeded the $300M cap and would need a broader-universe observation pass.
+- **In-window feed-lag misses:** none new. Standing count remains **3**, so the independent whole-universe AH gainers cross-check recommendation stays routed to the daily email.
+- **Price-floor exclusions:** MGRX and SBEV add two cases. MGRX: regular close $0.29, real in-window SIP peak $0.95 on 2.5M-4.8M shares / 5.2K-10.2K trades per bar, PM peak $0.69, hypothetical +35.3%, `tradable=true`, **uninvestable** due dead-cat profile, stale 32% spread, and rapid fade. SBEV: regular close $0.32, real in-window SIP build to $0.69 on 1.0M-2.3M shares / 1.7K-5.2K trades per bar, PM peak $0.59, hypothetical +22.9%, `tradable=true`, **uninvestable** due no live ask and PM fade. Standing count: **5 total across 2 nights, 0 holdable**. The 3-night holdable threshold is not met.
+- **Reverse-split squeeze:** BIYA's separate July 30 cycle, now about three weeks after its 1-for-10 split, faded from the $4.69 dead-cat-watch price to a $4.25 PM peak (**-9.4%**), float 2.7M, Grade None. The older-split bucket becomes mixed at **2 non-fades / 2 fades**; the this-week bucket remains **3/3 faded**.
+- **Selection diagnosis:** KUST was the right detected stock. The stale Alpaca book blocked execution even though SIP showed ample real trading. Scanner detection worked; execution-data freshness did not.
+- **Daily email routing:** carry two decisions: independent final-scan whole-universe AH verification remains due at 3 feed-lag misses; true-tail count now reaches 3, so review adding 01:00/01:30 CET observation scans. REPL shows that any tail pass also needs a log-only view beyond the $300M cap.
+
+### Price Charts
+
+Generated with `python3 scripts/price-timeline.py REPL KUST CYCU MGRX`:
+
+```text
+REPL  $5.35 regular base -> $13.50 AH-tail peak (19:20 ET)
+      -> $12.28 SIP PM peak -> ~$11.47 current
+
+KUST  $1.08 previous close -> $1.87 SIP AH peak (19:25 ET)
+      -> $2.32 SIP PM peak (04:00 ET) -> ~$1.88 current
+
+CYCU  $0.27 previous close -> $1.61 regular close -> $3.00 SIP AH peak
+      -> $2.57 SIP PM peak -> ~$2.35 current
+
+MGRX  $0.55 previous close -> $0.29 regular close -> $0.95 SIP AH peak
+      -> $0.69 SIP PM peak -> ~$0.55 current
+```
