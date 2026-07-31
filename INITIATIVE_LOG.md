@@ -9,6 +9,46 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-07-31 — Initiative 3: five-minute confirmation replay
+
+**Evaluated:** The 2026-07-30 Init 3 retirement **worked**: all seven scheduled
+AH scans plus both observation scans ran on 07-30 without the discarded pre-seed
+calls, and the daily cycle remained intact. The parallel Init 5 p95 volume-scale
+change also **worked** on its first live email charts: KUST's AH/PM volume bars
+are readable despite a 2.4M outlier, with the 0.8M display cap and true maximum
+label visible; BOOM's smaller bars are also visible. Init 6 remains
+**insufficient data**: the refreshed exit sim has n=10 admitted PM-only gappers,
+below the n>=12 trigger for the deferred one-minute test.
+
+**Step taken:** **Research / Init 3:** built
+`scripts/ah-5m-confirmation-replay.js` and replayed Juan's second/third 5-minute
+price-plus-volume confirmation on 10 recent AH-open cases. This was the top
+money-fast step because a causal volume gate that rejects fades while preserving
+explosive continuations can improve selection expectancy on every AH cycle.
+The gate compares each bar with that ticker's immediately preceding volume,
+uses BOOM as a named negative control, enters hypothetically at the next 5-minute
+open, and compares the result with the current legal scan grid. Added the full
+result to `INIT3_IGNITION_TIMING.md`. No orders, entry rule, or schedule changed.
+
+**Result:** The third-bar gate admitted **3/3 winners (AMIX, NUWE, KUST) and 0/6
+fades**, rejected BOOM as Juan expected, and produced a +30.0% mean next-PM-open
+return in the admitted set. The second-bar version caught 2/3 winners but falsely
+admitted ONMD. Crucially, the third-bar entries were **6.1% worse than the first
+currently legal grid price on average**, so the replay supports a selection
+filter, not more 5-minute trading pulses. The sample is hand-labelled and small,
+returns omit spread, and discovery is assumed, so this is evidence to instrument,
+not promote. `node --check` and the full live-data replay both pass.
+
+**Hypothesis / next step:** Add the third-bar local-volume verdict as a log-only
+scanner column and collect out-of-sample candidates. It should continue to reject
+BOOM-shaped modest-volume spikes and fades while retaining high-volume winners;
+only propose an entry gate if live results preserve that separation. Do not add
+5-minute pulses from this replay. Init 6 waits for admitted n>=12.
+
+**Needs from Juan:** nothing. No trading-pulse schedule change is proposed.
+
+---
+
 ### 2026-07-30: Init 3 pre-seed retired after second zero-lead night; Init 5 volume scale fixed
 
 **Evaluated:** Prior Init 3 step (keep the day-movers pre-seed for 1–2 more

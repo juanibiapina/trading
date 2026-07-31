@@ -336,3 +336,37 @@ ignitions on a 5-minute grid and measure a second/third-bar price-plus-volume
 confirmation against the current 15-minute observation cadence. AMIX alone is
 not enough to justify more live scans; the replay must compare entry-price gain,
 false positives, and pulse cost across winners and fades.
+
+## Five-minute second/third-bar replay (2026-07-31)
+
+Built `scripts/ah-5m-confirmation-replay.js` (log-only, no orders) and ran it on
+10 recent AH-open cases: three winners (AMIX, NUWE, KUST), one moderate
+continuation (DCX), and six fades/non-winners (CRE, BOOM, ONMD, YIBO, IOTR,
+EGG). The causal ignition gate requires a green new-high 5-minute close at least
+10% above the regular close, at least 20 trades, and volume at least 2x the
+median of up to three immediately preceding active bars. Confirmation must hold
+every intervening close within 80% of the running high and finish with close and
+volume at least as high as the ignition bar. Entry is the next bar's open.
+
+| Rule | Admitted | Winners caught | Fade false positives | Mean PM-open return | Mean entry-price edge vs current legal grid |
+|------|----------|----------------|----------------------|---------------------|---------------------------------------------|
+| Second bar | 3/10 | 2/3 | 1/6 (ONMD) | +13.6% | **-4.6%** |
+| Third bar | 3/10 | **3/3** | **0/6** | **+30.0%** | **-6.1%** |
+
+The local-volume gate behaves as Juan expected on the named control: **BOOM is
+rejected** because its opening price spike did not come with a volume increase
+versus its own preceding bar, and its later volume increase did not make a new
+AH high. CRE, IOTR, and DCX also fail to produce a qualifying local-volume
+new-high ignition. YIBO and EGG ignite but fail continuation. ONMD is the second-
+bar rule's only fade false positive; waiting for the third bar rejects it. The
+third-bar rule admits AMIX at $4.61, NUWE at $2.40, and KUST at $1.54; their
+next-morning SIP-open returns are -9.5%, +65.8%, and +33.8% respectively.
+
+**Decision:** the third-bar local-volume gate is a promising **selection**
+signal, but this replay does **not** justify adding 5-minute trading pulses. On
+these cases, waiting for confirmation buys 6.1% worse on average than the first
+currently legal scheduled-grid price; the gain comes from rejecting fades, not
+from cadence. The sample is small and hand-labelled, PM-open returns omit spread,
+and the replay assumes the ticker is already discoverable. Next step: add the
+third-bar verdict as a log-only scanner column and collect out-of-sample results
+before considering an entry gate or schedule change.

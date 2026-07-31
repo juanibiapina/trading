@@ -460,6 +460,8 @@ the daily-email pulse.
 
 ## Initiative 3 — Adaptive scheduling of pulses
 
+**Latest status (2026-07-31): Research replay complete; no 5-minute pulse change justified.** Built and ran `scripts/ah-5m-confirmation-replay.js` on 10 recent AH-open cases. The local-volume third-bar gate caught **3/3 winners and 0/6 fades**, including rejecting Juan's BOOM negative control; mean next-PM-open return was +30.0%. But confirmation entered **6.1% worse than the first currently legal grid price** on average, so the evidence supports a selection filter, not denser trading pulses. The second-bar version caught only 2/3 winners and admitted ONMD, a fade. Next: add the third-bar local-volume verdict as a log-only scanner column and collect out-of-sample results before any entry-gate or schedule proposal. Full table and caveats are in `INIT3_IGNITION_TIMING.md`. Parallel checks: the first live p95-scaled KUST/BOOM email charts make AH volume readable and label the true max (Init 5 worked); Init 6's admitted PM-gapper sample is n=10, still below the n>=12 trigger for its deferred 1-minute exit test.
+
 **Idea (Juan):** The fixed schedule may have pulses at the wrong moments. Allow
 adapting how often and when we scan/evaluate — space some out, simplify or add
 others, adapt to market conditions and time zones. Keep cost in mind; don't run
