@@ -6,6 +6,23 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-31 — re: Trading Scanner Report - 2026-07-29
+
+**Juan said:** "BOOM is not a good one. You can see how, before there's a spike
+in price, the volume is roughly the same. We don't see a spike in volume. We
+want to enter when there is a spike in volume. The increase in volume for this
+stock is not enough to justify an entry."
+
+**Interpretation:** BOOM confirms that absolute AH volume is not enough. The
+entry signal needs a clear increase from the ticker's own immediately preceding
+volume baseline, aligned with the price ignition. BOOM's modest volume increase
+did not clear that bar and should not have qualified.
+
+**Action:** Routed to Initiative 1's no-spike negative filter and Initiative 3's
+5-minute ignition replay. The replay should measure local per-bar volume change
+against prior bars and test whether that gate rejects BOOM without losing real
+winners. No entry rule changed from this single example.
+
 ### 2026-07-29 — re: Trading Scanner Report - 2026-07-28
 
 **Juan said:** "I don't see a reason to have bought ONMD. there isn't enough

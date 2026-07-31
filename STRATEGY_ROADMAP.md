@@ -154,6 +154,14 @@ tighter scan cadence. Next: (a) add a no-AH-volume-spike negative filter to the
 scanner grade, (b) prototype a spike-bar entry trigger once scan cadence can
 resolve the bar. Captured from FEEDBACK_LOG 2026-07-16.
 
+**Feedback update (2026-07-31):** Juan also rejected BOOM because its volume
+before the price spike stayed roughly flat and the later increase was too small
+to justify entry. This sharpens the proposed gate: measure each ignition bar's
+volume jump against that ticker's immediately preceding bars, not only absolute
+AH shares or volume versus average daily volume. Add BOOM as a negative control
+to Initiative 3's 5-minute replay and test whether a local volume-change gate
+rejects it without excluding real winners.
+
 **Feedback update (2026-07-29):** Juan rejected the ONMD buy because "there
 isn't enough volume." The scan recorded 5M AH shares / 3.7x average volume, but
 the chart showed modest AH bars beside a 5.9M regular-open bar. Treat this as a
