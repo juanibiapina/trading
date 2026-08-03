@@ -35,6 +35,10 @@ Regular-session scan only. Watch pending AH confirmation. No paper trades permit
 
 Evaluation: all names are regular-session movers only. Reassess only if they reappear with sustained after-hours momentum; no catalyst or broker workup is due before 4:00 PM ET.
 
+## Scan 22:00 CEST (4:00 PM ET)
+
+No candidates found.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
