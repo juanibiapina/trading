@@ -96,6 +96,24 @@ Evaluation:
 - GNPX fell below the 10% AH threshold after its prior 16:25 surge. Yahoo shows $4.90 at 16:59 after peaking at $6.12; it remains a fading regular-session crash bounce. No entry.
 - IPW, BRCC, and USDE remain below the >10% AH threshold. No entry workup.
 
+## Scan 23:30 CEST (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| JELD | [TV](https://www.tradingview.com/chart/?symbol=JELD) | $1.44 | +1.4% | +15.3% | $1.66 | +16.9% | 1.2M | 1.3M | 0.9x | 82.5M | Forest Products |
+| CYCU | [TV](https://www.tradingview.com/chart/?symbol=CYCU) | $0.92 | +3.0% | +6.6% | $0.97 | +9.8% | 824K | 88.2M | 0.0x | 10.6M | Information Technology Services |
+| GNPX | [TV](https://www.tradingview.com/chart/?symbol=GNPX) | $4.75 | -20.7% | +5.3% | $5.00 | -16.5% | 407K | 296K | 1.4x | 503K | Pharmaceuticals: Major |
+| BRCC | [TV](https://www.tradingview.com/chart/?symbol=BRCC) | $1.05 | +1.9% | +10.5% | $1.16 | +12.6% | 83K | 765K | 0.1x | 103.1M | Food: Specialty/Candy |
+
+Evaluation:
+- JELD is in its second qualifying AH scan and remains within 12% of its $1.90 AH high, but SIP volume faded from 536,531 shares / 2,852 trades at 16:35 ET to 25,618 / 95 at 17:15 ET. The SIP activity is real through 17:15 ET, but the broker quote is stale at 16:38 ET ($1.79 x100 bid / $1.80 x100 ask), while the current scanner price is $1.66. The earnings release was scheduled for after the close, but no actual Q2 release or same-day 8-K appeared in the structured search; provisional Catalyst Grade: B. Decision: Watch, no paper order. The stale quote prevents a current fillable-price check and volume is fading; recheck next scan.
+- JELD 2026-08-03  SPIKE  16:32ET  +25%  $1.80  114 trades / 27k sh  (first co-spike bar) (as-of 17:30ET)
+- JELD 2026-08-03  CONFIRM-3  YES ignition 16:30ET 6.7x; confirmed 16:40ET $1.76 as-of 17:30ET
+- BRCC is newly above the threshold. Its scheduled Q2 earnings release is the likely catalyst, but results and a same-day filing were not available in the structured search; provisional Catalyst Grade: B. SIP shows thin, irregular AH prints, and the broker quote has no ask ($0.00 x0, timestamp 16:00 ET). This is an illiquid no-AH-book signal, not fillable liquidity. It is also only in its first qualifying AH scan. Skip, no paper order.
+- BRCC 2026-08-03  NO-SPIKE  peak +11% @17:09ET  (no bar cleared +15% on a volume co-spike) (as-of 17:30ET)
+- BRCC 2026-08-03  CONFIRM-3  NO no local-volume new-high ignition as-of 17:30ET
+- CYCU and GNPX are below the >10% AH threshold. No entry workup. GNPX remains a regular-session crash bounce.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
