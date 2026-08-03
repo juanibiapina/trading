@@ -6,6 +6,20 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-07-31 — re: Trading Scanner Report - 2026-07-30
+
+**Juan said:** "FUCKING SELL BOOM OMG"
+
+**Interpretation:** Juan wants BOOM closed now. This reinforces his earlier
+assessment that BOOM's weak local volume increase did not justify entry; the
+Grade B two-day hold should not override an explicit exit directive.
+
+**Action:** Submitted an Alpaca extended-hours sell for all 14 BOOM shares at a
+$5.33 limit (order `356db1ba-477b-4daa-99c5-31178d2c4298`). The order is
+accepted and queued for the 04:00 ET premarket open because the reply was
+processed at 03:00 ET. Routed the repeated BOOM rejection to Initiative 1's
+local-volume gate; no additional strategy change made.
+
 ### 2026-07-31 — re: Trading Scanner Report - 2026-07-29
 
 **Juan said:** "BOOM is not a good one. You can see how, before there's a spike

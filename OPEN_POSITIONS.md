@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| BOOM | $6.72 | $6.12 | $6.82 | 14 | 2026-07-30 00:31 CET | B | 7ee5dc6d-913c-4fca-90e8-0d4f5d5959ec | DMC Global Q2 earnings; day 1 of 2; -8.9%; SIP-verified AH peak +1.5%; hard stop $5.71; no trail; 14:30 CET book stale/thin (bid $5.32 x100, ask $0.00 x0); latest SIP trade $6.12 |
+| BOOM | $6.72 | $6.12 | $6.82 | 14 | 2026-07-30 00:31 CET | B | 7ee5dc6d-913c-4fca-90e8-0d4f5d5959ec | DMC Global Q2 earnings; day 1 of 2; -8.9%; SIP-verified AH peak +1.5%; hard stop $5.71; no trail; 14:30 CET book stale/thin (bid $5.32 x100, ask $0.00 x0); latest SIP trade $6.12; Juan ordered immediate exit; SELL 14 @ limit $5.33 ext (id 356db1ba) accepted 2026-08-03 03:00 ET and queued for the 04:00 ET premarket open |
 
 ## Position Rules
 
