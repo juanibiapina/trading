@@ -9,6 +9,18 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-08-03 — Initiative 3: third-bar confirmation instrumented
+
+**Evaluated:** The 2026-07-31 replay **worked** as research: its third-bar local-volume gate admitted all 3 labelled winners and no 6 labelled fades, while showing that denser five-minute trading scans would pay 6.1% worse entries on average. There has been no new AH session since the replay, so live out-of-sample evidence remains insufficient. Init 6 also remains insufficient at n=10 admitted PM-only gappers, below its n>=12 one-minute-exit trigger.
+
+**Step taken:** Added `scripts/ah-5m-confirmation.js` and wired it into `prompts/post-market-scan.md` as a log-only `CONFIRM-3` scanner column for every >10% AH candidate. The tool applies the replay's local-volume ignition and third-bar hold test, returning YES, NO, or PENDING. The prompt prohibits it from affecting entries, skips, grades, rankings, or schedules.
+
+**Result:** `node --check` passed. A historical run reproduced YES for AMIX, NUWE, and KUST, and NO for ONMD and BOOM. This is the highest expected dollars-per-time step because it turns the only recent gate that separated winners from fades into an out-of-sample measurement without risking paper capital or adding scan cost.
+
+**Hypothesis / next step:** Live `CONFIRM-3` rows should keep rejecting BOOM/ONMD-shaped fades while retaining high-volume AH continuations. Record each candidate's next-PM outcome, then test the separation after a meaningful out-of-sample sample before proposing an entry gate. Do not add five-minute pulses from the current evidence.
+
+**Needs from Juan:** nothing.
+
 ### 2026-07-31 — Initiative 3: five-minute confirmation replay
 
 **Evaluated:** The 2026-07-30 Init 3 retirement **worked**: all seven scheduled

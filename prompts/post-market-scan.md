@@ -77,6 +77,14 @@ node scripts/spike-bar.js SYM:YYYY-MM-DD --now HH:MM
 
 Record the output verbatim, e.g. `SPIKE 16:53ET +19% $1.48 72 trades / 25k sh` or `NO-SPIKE flat/faded`. A NO-SPIKE reading on a name that TradingView shows as a big mover is a data point (thin/bad print or no real ignition) — note it, but it is not yet a skip rule.
 
+**Third-bar confirmation instrumentation (log-only, no decision impact):** For the same candidates, record the local-volume third-bar verdict. This is the next evidence step from the 2026-07-31 replay: it caught all three labelled winners and rejected all six fades, but has no out-of-sample evidence yet. Do NOT use `YES`, `NO`, or `PENDING` to enter, skip, grade, or rank a trade.
+
+```bash
+node scripts/ah-5m-confirmation.js SYM:YYYY-MM-DD --now HH:MM
+```
+
+Record the one-line `CONFIRM-3` result verbatim in the scan notes. `PENDING` is expected until the third five-minute bar has closed.
+
 
 For each **new** candidate (not in prior scans), evaluate against the entry criteria from the trading plan:
 - Any sector — do NOT skip stocks for being outside biotech/pharma. The "non-biotech 0/6" observation in Day Trading.md is a hypothesis under investigation, not a filter. Note the sector for pattern tracking.
