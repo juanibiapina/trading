@@ -43,6 +43,20 @@ No candidates found.
 
 No candidates found.
 
+## Scan 22:30 CEST (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ABTS | [TV](https://www.tradingview.com/chart/?symbol=ABTS) | $1.03 | +1.0% | +35.8% | $1.40 | +37.3% | 2.0M | 250K | 7.8x | 2.1M | Data Processing Services |
+
+Evaluation:
+- New AH candidate. `tradable=true`; real two-sided book at 16:30 ET: $1.14 x100 bid / $1.17 x100 ask.
+- SIP confirms real activity, not a stale-volume/bad-print signal: 16:05 ET 1.36M shares / 8,721 trades (high $1.73), 16:10 976K / 5,960, 16:15 713K / 3,528. The fresh quote and Yahoo timeline show a sharp fade to about $1.16-$1.17, well below the $1.73 AH high; scanner's $1.40 is lagged.
+- SPIKE  16:05ET  +17%  $1.21  132 trades / 5k sh  (first co-spike bar) (as-of 16:30ET)
+- CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET
+- Catalyst Grade: None. Four targeted earnings, press-release, and SEC searches found no same-day company catalyst, earnings release, or material filing.
+- Decision: Watch only. This is its first qualifying AH scan and the 23:00 CET entry window has not opened; its current trajectory is SPIKE->FADE, about 33% below the AH high. No paper order.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
