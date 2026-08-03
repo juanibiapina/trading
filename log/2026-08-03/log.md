@@ -57,6 +57,24 @@ Evaluation:
 - Catalyst Grade: None. Four targeted earnings, press-release, and SEC searches found no same-day company catalyst, earnings release, or material filing.
 - Decision: Watch only. This is its first qualifying AH scan and the 23:00 CET entry window has not opened; its current trajectory is SPIKE->FADE, about 33% below the AH high. No paper order.
 
+## Scan 22:45 CEST (4:45 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ABTS | [TV](https://www.tradingview.com/chart/?symbol=ABTS) | $1.03 | +1.0% | +11.6% | $1.15 | +12.8% | 3.0M | 360K | 8.3x | 2.1M | Data Processing Services |
+| GNPX | [TV](https://www.tradingview.com/chart/?symbol=GNPX) | $4.75 | -20.7% | +30.9% | $6.22 | +3.8% | 96K | 255K | 0.4x | 503K | Pharmaceuticals: Major |
+| BRCC | [TV](https://www.tradingview.com/chart/?symbol=BRCC) | $1.05 | +1.9% | +5.7% | $1.11 | +7.8% | 74K | 763K | 0.1x | 103.1M | Food: Specialty/Candy |
+| USDE | [TV](https://www.tradingview.com/chart/?symbol=USDE) | $1.72 | +9.6% | +8.1% | $1.86 | +18.5% | 64K | 628K | 0.1x | 19.3M | Packaged Software |
+
+Evaluation:
+- ABTS remains the prior candidate, but faded further. Fresh SIP activity is real through 16:30 ET, then the Yahoo timeline and fresh 16:45 ET book put it near $1.10-$1.11, 36% below the $1.73 AH high. Scanner $1.15 is lagged. Two-sided book is fillable, but this is SPIKE->FADE. Repeated targeted earnings, press-release, and SEC searches still found no same-day catalyst. Catalyst Grade: None. Watch only, no paper order before 23:00 CET.
+- SPIKE  16:05ET  +17%  $1.21  132 trades / 5k sh  (first co-spike bar) (as-of 16:45ET)
+- CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET
+- GNPX is new and `tradable=true`. Same-day catalyst found: Genprex announced a collaboration with Roche Diagnostics to validate NSCLC trial-selection biomarkers; a same-day 8-K is indexed. Catalyst Grade: B. SIP confirms a real 16:25-16:30 surge (159K then 220K shares; 2,085 then 3,228 trades), but its last bar is 16:30 ET and the quote is stale at 16:00 ET. Yahoo shows it faded from $6.12 at 16:25 to $5.11 at 16:45, so the scanner's $6.22 is not a current fillable level. Regular Day% is -20.7%; although it reclaimed the $4.75 regular close, it has only one AH scan and is fading. Skip live entry as dead-cat bounce for now; not a DEAD-CAT-OVERRIDE WATCH because it is not building across two AH scans. No paper order before 23:00 CET.
+- SPIKE  16:26ET  +19%  $5.66  92 trades / 8k sh  (first co-spike bar) (as-of 16:45ET)
+- CONFIRM-3  PENDING ignition 16:25ET; waiting for third bar as-of 16:45ET
+- BRCC and USDE remain below the >10% AH threshold. No entry workup.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
