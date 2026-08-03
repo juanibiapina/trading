@@ -75,6 +75,27 @@ Evaluation:
 - CONFIRM-3  PENDING ignition 16:25ET; waiting for third bar as-of 16:45ET
 - BRCC and USDE remain below the >10% AH threshold. No entry workup.
 
+## Scan 23:00 CEST (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ABTS | [TV](https://www.tradingview.com/chart/?symbol=ABTS) | $1.03 | +1.0% | +10.6% | $1.14 | +11.8% | 3.2M | 387K | 8.3x | 2.1M | Data Processing Services |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $0.53 | +5.0% | +5.1% | $0.56 | +10.3% | 988K | 3.8M | 0.3x | 1.8M | Internet Retail |
+| JELD | [TV](https://www.tradingview.com/chart/?symbol=JELD) | $1.44 | +1.4% | +20.8% | $1.74 | +22.5% | 815K | 1.3M | 0.6x | 82.5M | Forest Products |
+| GNPX | [TV](https://www.tradingview.com/chart/?symbol=GNPX) | $4.75 | -20.7% | +8.4% | $5.15 | -14.0% | 379K | 292K | 1.3x | 503K | Pharmaceuticals: Major |
+| BRCC | [TV](https://www.tradingview.com/chart/?symbol=BRCC) | $1.05 | +1.9% | +9.5% | $1.15 | +11.7% | 77K | 763K | 0.1x | 103.1M | Food: Specialty/Candy |
+| USDE | [TV](https://www.tradingview.com/chart/?symbol=USDE) | $1.72 | +9.6% | +8.1% | $1.86 | +18.5% | 64K | 628K | 0.1x | 19.3M | Packaged Software |
+
+Evaluation:
+- ABTS remains tradable with a live two-sided book at 17:00 ET ($1.08 x100 bid / $1.11 x100 ask). Fresh SIP bars through 16:45 ET confirm real activity, but volume has fallen from 1.36M shares / 8,721 trades at 16:05 to 83K / 450 at 16:45. Its $1.13 Yahoo price at 17:00 is 35% below the $1.73 AH high: SPIKE->FADE, not a hold. Four repeated earnings, press-release, SEC, and news searches found no same-day catalyst. Catalyst Grade: None. Skip: qualified across multiple AH scans but fading deeply from its early peak.
+- SPIKE  16:05ET  +17%  $1.21  132 trades / 5k sh  (first co-spike bar) (as-of 17:00ET)
+- CONFIRM-3  NO no local-volume new-high ignition as-of 17:00ET
+- JELD is new and `tradable=true`. It has a two-sided book ($1.79 x100 bid / $1.80 x100 ask), though the 16:38 ET quote is stale. SIP corroborates a real 16:30-16:45 surge: 129K, 537K, 202K, then 134K shares with 485, 2,852, 1,077, then 879 trades; Yahoo shows $1.70 at 17:00, near the $1.78 AH high. Four structured searches found JELD-WEN had scheduled Q2 earnings for release after today's close, but did not surface the actual release or a same-day 8-K. Earnings is the likely catalyst; provisional Grade B pending the release. Decision: Watch. This is its first scanner-qualified AH scan, so it fails the two-AH-scan gate; no paper order.
+- SPIKE  16:32ET  +25%  $1.80  114 trades / 27k sh  (first co-spike bar) (as-of 17:00ET)
+- CONFIRM-3  YES ignition 16:30ET 6.7x; confirmed 16:40ET $1.76 as-of 17:00ET
+- GNPX fell below the 10% AH threshold after its prior 16:25 surge. Yahoo shows $4.90 at 16:59 after peaking at $6.12; it remains a fading regular-session crash bounce. No entry.
+- IPW, BRCC, and USDE remain below the >10% AH threshold. No entry workup.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
