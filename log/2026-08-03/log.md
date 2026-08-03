@@ -39,6 +39,10 @@ Evaluation: all names are regular-session movers only. Reassess only if they rea
 
 No candidates found.
 
+## Scan 22:15 CEST (4:15 PM ET)
+
+No candidates found.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
