@@ -114,6 +114,40 @@ Evaluation:
 - BRCC 2026-08-03  CONFIRM-3  NO no local-volume new-high ignition as-of 17:30ET
 - CYCU and GNPX are below the >10% AH threshold. No entry workup. GNPX remains a regular-session crash bounce.
 
+## Scan 00:00 CEST (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $0.53 | +5.0% | +20.3% | $0.64 | +26.3% | 1.5M | 3.9M | 0.4x | 1.8M | Internet Retail |
+| CYCU | [TV](https://www.tradingview.com/chart/?symbol=CYCU) | $0.92 | +3.0% | +9.3% | $1.00 | +12.6% | 1.4M | 88.2M | 0.0x | 10.6M | Information Technology Services |
+| JELD | [TV](https://www.tradingview.com/chart/?symbol=JELD) | $1.44 | +1.4% | +17.4% | $1.69 | +19.0% | 1.3M | 1.3M | 1.0x | 82.5M | Forest Products |
+| UPC | [TV](https://www.tradingview.com/chart/?symbol=UPC) | $6.48 | +105.1% | +6.0% | $6.87 | +117.4% | 453K | 4.0M | 0.1x | 326K | Pharmaceuticals: Major |
+| GNPX | [TV](https://www.tradingview.com/chart/?symbol=GNPX) | $4.75 | -20.7% | +6.1% | $5.04 | -15.9% | 412K | 297K | 1.4x | 503K | Pharmaceuticals: Major |
+| IVVD | [TV](https://www.tradingview.com/chart/?symbol=IVVD) | $0.55 | +3.1% | +5.1% | $0.58 | +8.4% | 203K | 3.3M | 0.1x | 249.9M | Biotechnology |
+| MWYN | [TV](https://www.tradingview.com/chart/?symbol=MWYN) | $0.67 | -11.1% | +12.8% | $0.76 | +0.2% | 145K | 410K | 0.4x | 14.2M | Home Improvement Chains |
+| BRCC | [TV](https://www.tradingview.com/chart/?symbol=BRCC) | $1.05 | +1.9% | +10.5% | $1.16 | +12.6% | 83K | 765K | 0.1x | 103.1M | Food: Specialty/Candy |
+| BHR | [TV](https://www.tradingview.com/chart/?symbol=BHR) | $2.16 | -4.8% | +5.6% | $2.28 | +0.5% | 57K | 425K | 0.1x | 51.4M | Real Estate Investment Trusts |
+| CSAI | [TV](https://www.tradingview.com/chart/?symbol=CSAI) | $3.69 | -36.4% | +8.4% | $4.00 | -31.0% | 53K | 85K | 0.6x | n/a | Packaged Software |
+| CVGI | [TV](https://www.tradingview.com/chart/?symbol=CVGI) | $4.59 | +1.3% | +10.9% | $5.09 | +12.4% | 51K | 382K | 0.1x | 23.3M | Trucks/Construction/Farm Machinery |
+
+Evaluation:
+- IPW is new above the AH threshold and `tradable=true`. SIP validates a real 16:20-16:35 ET surge, peaking at $0.64 on 440K shares / 1,357 trades, but it faded to $0.58 on the latest 17:35 bar. The $0.58 x400 ask is a live two-sided book but timestamped 16:27 ET, stale against this scan. Four structured earnings, PR, SEC, and news searches found no same-day catalyst; Catalyst Grade: None. This is its first qualifying AH scan, so it fails the two-scan gate. Watch, no paper order.
+- IPW 2026-08-03  SPIKE  16:22ET  +15%  $0.61  145 trades / 38k sh  (first co-spike bar) (as-of 18:00ET)
+- IPW 2026-08-03  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 18:00ET
+- JELD remains tradable and is in a third qualifying AH scan. SIP confirms its earnings-driven surge and a $1.69-$1.72 base from 17:00-17:45 ET, within 11% of the $1.90 peak. However, volume collapsed from 536K shares / 2,852 trades at 16:35 to 1,176 shares / 9 trades at 17:45, and the $1.79 x100 bid / $1.80 x100 ask is timestamped 16:38 ET, not a current fillable-book check. Q2 earnings were scheduled after close but the actual release and same-day 8-K remained unavailable; provisional Catalyst Grade: B. Skip: fading volume and stale book fail the entry gates.
+- JELD 2026-08-03  SPIKE  16:32ET  +25%  $1.80  114 trades / 27k sh  (first co-spike bar) (as-of 18:00ET)
+- JELD 2026-08-03  CONFIRM-3  YES ignition 16:30ET 6.7x; confirmed 16:40ET $1.76 as-of 18:00ET
+- MWYN is new above threshold and `tradable=true`, but SIP shows only 100 shares / one trade at $0.76 at 17:40 followed by 15.5K shares across five trades at 17:45; its quote is stale at 16:00 ET with a very wide $0.56 x100 bid / $0.78 x100 ask. The scanner's move is unconfirmed by sustained real liquidity. Four structured searches found no same-day earnings, PR, or 8-K; Catalyst Grade: None. Skip: thin, irregular AH prints and no fresh fillable book.
+- MWYN 2026-08-03  NO-SPIKE  peak +13% @17:43ET  (no bar cleared +15% on a volume co-spike) (as-of 18:00ET)
+- MWYN 2026-08-03  CONFIRM-3  NO no local-volume new-high ignition as-of 18:00ET
+- BRCC remains tradable but has no fillable AH book: $0.00 x0 ask at 16:00 ET. SIP activity remains thin and irregular, with no sustained volume. Its scheduled earnings release remains the only identified driver; provisional Catalyst Grade: B. Skip: illiquid (no AH book).
+- BRCC 2026-08-03  NO-SPIKE  peak +12% @17:18ET  (no bar cleared +15% on a volume co-spike) (as-of 18:00ET)
+- BRCC 2026-08-03  CONFIRM-3  NO no local-volume new-high ignition as-of 18:00ET
+- CVGI is new and `tradable=true`. It is scheduled to report Q2 earnings after the close, but the actual results, PR, and same-day 8-K were unavailable after four structured searches; provisional Catalyst Grade: B. SIP has only scattered bars, at most 4.3K shares / 23 trades, and its $3.89 x100 bid / $5.23 x100 ask is stale at 16:00 ET and extremely wide. Skip: thin AH liquidity and no fresh fillable book; it also has only one qualifying AH scan.
+- CVGI 2026-08-03  NO-SPIKE  peak +18% @16:40ET  (no bar cleared +15% on a volume co-spike) (as-of 18:00ET)
+- CVGI 2026-08-03  CONFIRM-3  NO no local-volume new-high ignition as-of 18:00ET
+- CYCU, UPC, GNPX, IVVD, BHR, and CSAI are below the 10% AH threshold. GNPX remains below the threshold after its earlier regular-session crash bounce.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
