@@ -148,6 +148,39 @@ Evaluation:
 - CVGI 2026-08-03  CONFIRM-3  NO no local-volume new-high ignition as-of 18:00ET
 - CYCU, UPC, GNPX, IVVD, BHR, and CSAI are below the 10% AH threshold. GNPX remains below the threshold after its earlier regular-session crash bounce.
 
+## Scan 00:30 CEST (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $0.53 | +5.0% | +52.3% | $0.81 | +59.9% | 12.9M | 5.1M | 2.5x | 1.8M | Internet Retail |
+| CYCU | [TV](https://www.tradingview.com/chart/?symbol=CYCU) | $0.92 | +3.0% | +8.9% | $1.00 | +12.2% | 2.6M | 88.4M | 0.0x | 10.6M | Information Technology Services |
+| JELD | [TV](https://www.tradingview.com/chart/?symbol=JELD) | $1.44 | +1.4% | +15.3% | $1.66 | +16.9% | 1.4M | 1.4M | 1.0x | 82.5M | Forest Products |
+| IVVD | [TV](https://www.tradingview.com/chart/?symbol=IVVD) | $0.55 | +3.1% | +5.1% | $0.58 | +8.4% | 205K | 3.3M | 0.1x | 249.9M | Biotechnology |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $2.26 | -1.3% | +6.2% | $2.40 | +4.8% | 105K | 84K | 1.3x | 1.2M | Environmental Services |
+| BRCC | [TV](https://www.tradingview.com/chart/?symbol=BRCC) | $1.05 | +1.9% | +10.5% | $1.16 | +12.7% | 84K | 765K | 0.1x | 103.1M | Food: Specialty/Candy |
+| CSAI | [TV](https://www.tradingview.com/chart/?symbol=CSAI) | $3.69 | -36.4% | +14.1% | $4.21 | -27.4% | 58K | 85K | 0.7x | n/a | Packaged Software |
+| BHR | [TV](https://www.tradingview.com/chart/?symbol=BHR) | $2.16 | -4.8% | +5.6% | $2.28 | +0.5% | 57K | 425K | 0.1x | 51.4M | Real Estate Investment Trusts |
+| CVGI | [TV](https://www.tradingview.com/chart/?symbol=CVGI) | $4.59 | +1.3% | +11.1% | $5.10 | +12.6% | 52K | 382K | 0.1x | 23.3M | Trucks/Construction/Farm Machinery |
+
+Evaluation:
+- Final pipeline cross-check used fresh SIP where available. No prior pipeline name was rescued above threshold: ABTS closed near $1.08 after its $1.73 early spike; GNPX was $5.04 versus its $6.25 peak; MWYN was thin and irregular. All remain skips.
+- IPW's scanner $0.81 is stale. Yahoo's timeline shows a $0.90 high at 18:05 ET but $0.58 at 18:30, corroborating the earlier SIP $0.58 close at 17:35 and a sharp SPIKE->FADE. The $0.57 x400/$0.58 x400 book is stale from 16:27 ET. Catalyst Grade: None from the prior four-search workup. Skip: faded 36% from its AH high and no fresh book or accumulating current volume.
+- IPW 2026-08-03  SPIKE  16:22ET  +15%  $0.61  145 trades / 38k sh  (first co-spike bar) (as-of 18:30ET)
+- IPW 2026-08-03  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 18:30ET
+- JELD remains at about $1.68, within 12% of its $1.90 high, but SIP volume fell to 10,654 shares / 38 trades at 17:55 ET and its $1.79 x100/$1.80 x100 quote remains stale from 16:38 ET. It has three qualifying scans and likely earnings catalyst (provisional Grade B), but lacks sustained current volume and a fresh fillable-book check. Skip.
+- JELD 2026-08-03  SPIKE  16:32ET  +25%  $1.80  114 trades / 27k sh  (first co-spike bar) (as-of 18:30ET)
+- JELD 2026-08-03  CONFIRM-3  YES ignition 16:30ET 6.7x; confirmed 16:40ET $1.76 as-of 18:30ET
+- BRCC remains illiquid: $0.00 x0 ask and only isolated SIP prints. Skip: no AH book.
+- BRCC 2026-08-03  NO-SPIKE  peak +12% @17:18ET  (no bar cleared +15% on a volume co-spike) (as-of 18:30ET)
+- BRCC 2026-08-03  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET
+- CSAI is new above threshold. Four structured earnings, press-release, SEC, and announcement searches found no same-day catalyst; Catalyst Grade: None. SIP shows a 16:45 spike to $4.65 on 42K shares / 895 trades, then fade; Yahoo's latest $4.05 at 18:24 ET is below the scanner's stale $4.21. Its quote has a $0.00 x0 ask. Skip: illiquid, no AH book. DEAD-CAT-OVERRIDE WATCH: Day -36.4%, reclaimed its $3.69 regular close and scanner AH% rose across the 00:00 and 00:30 scans; hypothetical entry $4.05 at 00:30 CEST, no live order.
+- CSAI 2026-08-03  SPIKE  16:45ET  +22%  $4.51  52 trades / 6k sh  (first co-spike bar) (as-of 18:30ET)
+- CSAI 2026-08-03  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET
+- CVGI remains thin despite a $5.10 timeline price: latest SIP consists of 879 shares / two trades at 18:10 ET, and the $3.89 x100/$5.23 x100 quote is stale from 16:00 ET. Prior workup found only scheduled earnings (provisional Grade B). Skip: thin AH liquidity and no fresh fillable book.
+- CVGI 2026-08-03  NO-SPIKE  peak +18% @16:40ET  (no bar cleared +15% on a volume co-spike) (as-of 18:30ET)
+- CVGI 2026-08-03  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET
+- CYCU, IVVD, DXST, and BHR remain below the >10% AH threshold. No entries. No Alpaca paper orders submitted or filled.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
