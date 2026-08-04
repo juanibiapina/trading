@@ -208,7 +208,7 @@ RAIN clears the winner bar: it exceeded +100% from the regular close on sustaine
 ### Baseline Tracking
 
 - Days tracked: **59** (was 58 + 1)
-- Winners detected by scanner: **49/57 (86.0%)** — RAIN is an in-window feed-lag detection miss.
+- Winners detected by scanner: **48/57 (84.2%)** — RAIN is an in-window feed-lag detection miss.
 - Winner selected for paper trade: **27/57 (47.4%)** — RAIN was never surfaced, so it could not be selected.
 - Target: >80% detection
 - Status: **BASELINE MET**
