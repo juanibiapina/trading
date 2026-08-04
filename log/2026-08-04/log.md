@@ -76,6 +76,14 @@ No candidates found.
 
 Evaluation: Scanner returned no after-hours matches at 16:15:08 ET. No paper orders submitted.
 
+## Scan 22:30 CEST (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $3.18 | -14.7% | +11.9% | $3.56 | -4.6% | 234K | 9.3M | 0.0x | 1.0M | Industrial Machinery |
+
+**INLF:** New AH candidate. Industrial automation/robotics China small-cap; 1.0M float. Structured catalyst search: no earnings, same-day press release, or same-day 8-K found after four targeted searches. SIP confirms real early AH activity through 16:15 ET: 216K shares / 2,613 trades at 16:05 and 391K / 5,623 at 16:15, with $4.55 high and $4.24 VWAP. Yahoo timeline shows a $4.62 peak at 16:20 followed by a pullback; the scanner's $3.56 is below that peak. Quote is stale (timestamp 16:00 ET) and has bid $2.72 x100 but ask $0.00 x0, so there is no confirmed fillable AH book. `SPIKE  16:06ET  +18%  $3.74  317 trades / 35k sh  (first co-spike bar) (as-of 16:30ET)`. `CONFIRM-3  YES ignition 16:05ET 110.8x; confirmed 16:15ET $4.50 as-of 16:30ET`. Watch only: this is the first qualifying AH scan and the 22:30 learning-phase pulse cannot enter. Recheck at 23:00 for a sustained >10% second scan, fresh book, and hold versus fade.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
