@@ -9,6 +9,18 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-08-04 — Initiative 3: first live third-bar outcomes; Initiative 6 sample refresh
+
+**Evaluated:** The 2026-08-03 instrumentation step **worked mechanically**: every eligible 08-03 AH candidate received a `CONFIRM-3` verdict, and the 08-04 morning evaluation supplied next-PM outcomes. Evidence is still insufficient to judge the gate: the sole YES (JELD) reached only $1.71 versus its $1.76 confirmed close (-2.8%); three of four recorded NO rows failed outright (ABTS -9.5%, BRCC flat, CSAI -3.0%), while IPW rose +24.1% but remained below its ~$0.90 AH peak. The prior replay result does not yet generalize from this n=5 live sample.
+
+**Step taken:** **Pilot / Initiative 3:** appended the first out-of-sample verdict-to-next-PM table to `INIT3_IGNITION_TIMING.md` and updated the roadmap. **Parallel research / Initiative 6:** re-ran the continuation-gate and causal mechanical-exit simulations after the 08-04 VGAS row.
+
+**Result:** Initiative 3 remains the highest expected dollars-per-time lever because a real selection filter could improve every AH trade without new pulses, but no gate or cadence change is justified. Initiative 6 advanced cheaply in parallel: VGAS raised its admitted set from n=10 to **n=11**, still below the n>=12 one-minute-exit trigger; 5-minute exits remain negative after the 1-3% spread (best trail12 mean -0.2%, median -2.5%). `node --check scripts/ah-5m-confirmation.js` and the live JELD/IPW replay passed.
+
+**Hypothesis / next step:** Collect distinct `CONFIRM-3` candidates and their next-PM outcomes until the live sample can test whether YES rejects fades or finds continuations. Do not change entry logic or scan timing. For Initiative 6, accumulate one more admitted PM-only gapper, then run the deferred 1-minute exit test.
+
+**Needs from Juan:** nothing.
+
 ### 2026-08-03 — Initiative 3: third-bar confirmation instrumented
 
 **Evaluated:** The 2026-07-31 replay **worked** as research: its third-bar local-volume gate admitted all 3 labelled winners and no 6 labelled fades, while showing that denser five-minute trading scans would pay 6.1% worse entries on average. There has been no new AH session since the replay, so live out-of-sample evidence remains insufficient. Init 6 also remains insufficient at n=10 admitted PM-only gappers, below its n>=12 one-minute-exit trigger.

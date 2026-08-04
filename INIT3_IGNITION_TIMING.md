@@ -370,3 +370,22 @@ from cadence. The sample is small and hand-labelled, PM-open returns omit spread
 and the replay assumes the ticker is already discoverable. Next step: add the
 third-bar verdict as a log-only scanner column and collect out-of-sample results
 before considering an entry gate or schedule change.
+
+## First live third-bar outcomes (2026-08-03 AH -> 2026-08-04 PM)
+
+The first instrumented AH session produced one `YES` and four `NO` candidates
+with a recorded next-PM outcome. These are observations, not an entry test: no
+orders, grades, rankings, or schedules used the verdict.
+
+| Ticker | CONFIRM-3 | Reference price | Next-PM high | Return | Outcome |
+|--------|-----------|-----------------|--------------|--------|---------|
+| JELD | YES, confirmed 16:40 ET | $1.76 confirmed close | $1.71 | -2.8% | PM fell short; stale-book / volume-fade skip was prudent |
+| ABTS | NO | ~$1.16 first sighting | $1.05 | -9.5% | early spike-fade |
+| IPW | NO | ~$0.58 latest liquid AH level | $0.72 | +24.1% | bounced in PM but remained below ~$0.90 AH peak |
+| BRCC | NO | $1.15 | $1.15 | 0.0% | thin, no AH book |
+| CSAI | NO | $4.05 hypothetical watch | $3.93 | -3.0% | thin dead-cat override watch |
+
+**Reading:** the one live `YES` did not continue, while three of four recorded
+`NO` rows failed outright. IPW is a non-winner exception, not a clean false
+negative: its PM bounce stayed below its AH peak. The sample is far too small to
+change selection or cadence. Keep collecting distinct candidate outcomes.
