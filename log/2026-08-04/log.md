@@ -64,6 +64,12 @@ Regular-session scan, before after-hours opens. All names are watch-only pending
 
 Evaluation: Watch, pending AH confirmation. No AH change, extended-hours volume, book, SIP, catalyst, spike-bar, or third-bar checks apply before 16:00 ET.
 
+## Scan 22:00 CEST (4:00 PM ET)
+
+No candidates found.
+
+Evaluation: Scanner returned no after-hours matches at 16:00:10 ET. No paper orders submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
