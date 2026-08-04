@@ -8,7 +8,6 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| BOOM | $6.72 | $6.12 | $6.82 | 14 | 2026-07-30 00:31 CET | B | 7ee5dc6d-913c-4fca-90e8-0d4f5d5959ec | DMC Global Q2 earnings; day 1 of 2; -8.9%; SIP-verified AH peak +1.5%; hard stop $5.71; no trail; 14:30 CET book stale/thin (bid $5.32 x100, ask $0.00 x0); latest SIP trade $6.12; Juan ordered immediate exit; SELL 14 @ limit $5.33 ext (id 356db1ba) accepted 2026-08-03 03:00 ET and queued for the 04:00 ET premarket open |
 
 ## Position Rules
 
@@ -60,6 +59,7 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| BOOM | $6.72 | $6.20 | -$7.28 | -7.7% | 5 | B (DMC Global Q2 earnings) | Grade B. Queued SELL 14 @ limit $5.33 ext (id 356db1ba) filled @ $6.20 before the 2026-08-04 10:30 CET pulse. Real fill $6.20. |
 | ONMD | $0.94 | $0.79 | -$16.20 | -16.0% | 1 | B (OneMedNet $11.5M+ iRWD data agreement for AI model training, GlobeNewswire 07-28 ~16:55 ET) | Grade B — below -15% hard stop ($0.799). Entered 07-29 00:00 CET at AH high $0.94 (+49% vs $0.71 close). PM 07-29 faded from $0.97 open to $0.79-0.85 on real SIP volume (1.1M/1.26M sh first bars, vwap $0.81-0.88, liquid). Peak +17% (OVN $1.10) never approached +30% trail. Sold at 14:30 CET pulse on hard stop. SELL 108 @ limit $0.77 ext (id 9f018805) filled @ $0.79. Real fill $0.79. Catalyst magnitude (4x FY2025 bookings) did not produce AH→PM follow-through. |
 | AMIX | $4.02 | $4.68 | +$13.86 | +16.4% | 1 | None (Autonomix Medical, dev-stage device; float 502K; no fresh catalyst, warrant-inducement dilution overhang) | Grade None — exit at first PM opportunity at any profit. Entered 07-28 23:00 CET. Spike-and-fade: PM 07-29 opened $5.29 peak (+31% from entry, 08:00Z, 14.2K trades) then faded to $4.44 by 08:15Z. Sold first PM pulse. SELL 21 @ limit $4.38 ext (id f91526f6) filled @ $4.68 (price improvement in liquid book). Real fill $4.68. Note: entry $4.02 was a stale-book fill artifact (live SIP ~$4.65 at entry); against notional $4.65 this was ~flat. |
 | DOMO | $3.92 | $3.55 | -$9.25 | -9.4% | 5 | A (mis-graded — Progress Software $400M all-cash asset purchase; merger-arb, not momentum) | Grade A held the full 5-day window, then exited on time limit + the 07-24 exit flag from Juan's feedback. Entered 07-22 23:32 CET. Peak $4.50 (+14.8%, SIP 07-23 11:55Z) never approached the +50% trail threshold; price stayed pinned in a $3.5-4.5 band all week, which is exactly what a cash-buyout name does — the deal price caps upside and kills the AH→PM momentum the strategy needs. **Lesson: all-cash acquisition/merger-arb targets are not Grade A momentum catalysts.** Grade them D or skip. SELL 25 @ limit $3.48 ext (id fadb7c40) submitted 08:30Z in a dead PM book, rested ~2.5h, filled @ $3.55 at 11:00Z (better than limit). Real fill $3.55. |
