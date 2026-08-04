@@ -98,6 +98,19 @@ Evaluation: Scanner returned no after-hours matches at 16:15:08 ET. No paper ord
 
 **JDZG:** New Miscellaneous Commercial Services candidate; 5.0M float. SIP shows only 21K shares / 225 trades at 16:25 and 31K / 483 at 16:30, far below a robust AH spike, despite a two-sided but stale $2.80 x100 / $3.99 x100 book. Catalyst search found no same-day earnings, PR, or 8-K; its known July 30 trading-resumption news follows a halt and prior registered-direct offering. `JDZG 2026-08-04  SPIKE  16:28ET  +23%  $3.98  70 trades / 12k sh  (first co-spike bar) (as-of 16:45ET)`. `JDZG 2026-08-04  CONFIRM-3  PENDING ignition 16:25ET; waiting for third bar as-of 16:45ET`. Watch only, then likely skip: Day% is -16.3%, making this a dead-cat candidate unless it reclaims above its regular close and builds across scans. No paper orders submitted before 23:00 CET.
 
+## Scan 23:00 CEST (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $3.18 | -14.7% | +33.0% | $4.23 | +13.4% | 2.0M | 9.6M | 0.2x | 1.0M | Industrial Machinery |
+| BJDX | [TV](https://www.tradingview.com/chart/?symbol=BJDX) | $1.00 | +6.1% | +18.8% | $1.19 | +26.1% | 1.1M | 448K | 2.4x | 936K | Medical Specialties |
+
+**INLF:** Seen at 22:30 and 22:45; scanner now shows $4.23 (+33.0% AH), building across three qualifying AH scans and above its $3.18 regular close. SIP confirms genuine accumulated volume through 16:45 ET, including 739K shares / 9,988 trades at 16:20, though that feed is 15 minutes behind the scan. The broker quote is stale at 16:00 ET and remains bid $2.72 x100 / ask $0.00 x0, so the absent book cannot be treated as a fresh bad-print or liquidity rejection. `INLF 2026-08-04  SPIKE  16:06ET  +18%  $3.74  317 trades / 35k sh  (first co-spike bar) (as-of 17:00ET)`. `INLF 2026-08-04  CONFIRM-3  YES ignition 16:05ET 110.8x; confirmed 16:15ET $4.50 as-of 17:00ET`. Day% is -14.7%, so the dead-cat rule does not apply; its AH recovery is building across three scans. No live paper order: wait for a current two-sided book rather than submit against stale quote data.
+
+**BJDX:** New Medical Specialties candidate; 936K float. It built from $1.18 at 16:35 to the $1.36 Yahoo AH high at 17:00 (+43.1% from its $0.95 previous close). SIP confirms a real, rising spike through 16:45 ET: 404K shares / 2,845 trades, then 956K / 7,018 and 1.32M / 7,968. Its $0.86 x100 bid / $1.17 x100 ask is two-sided but stale at 16:00 ET. Structured catalyst search found no same-day earnings, press release, or 8-K; recent PRs concern the SYMON-II trial, not today's move. `BJDX 2026-08-04  SPIKE  16:37ET  +16%  $1.16  262 trades / 51k sh  (first co-spike bar) (as-of 17:00ET)`. `BJDX 2026-08-04  CONFIRM-3  YES ignition 16:35ET 140.6x; confirmed 16:45ET $1.24 as-of 17:00ET`. Watch: this is its first qualifying AH scan, so it does not meet the two-AH-scan gate. Recheck at the next pulse; no paper order.
+
+No paper orders submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
