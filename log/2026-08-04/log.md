@@ -130,6 +130,27 @@ No paper orders submitted.
 
 No paper orders submitted.
 
+## Scan 00:00 CEST (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BJDX | [TV](https://www.tradingview.com/chart/?symbol=BJDX) | $1.00 | +6.1% | +36.1% | $1.36 | +44.4% | 11.8M | 1.6M | 7.3x | 936K | Medical Specialties |
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $3.18 | -14.7% | +17.0% | $3.72 | -0.3% | 2.6M | 9.6M | 0.3x | 1.0M | Industrial Machinery |
+| BANL | [TV](https://www.tradingview.com/chart/?symbol=BANL) | $4.55 | +0.4% | +9.9% | $5.00 | +10.4% | 674K | 145K | 4.7x | 407K | Air Freight/Couriers |
+| RAIN | [TV](https://www.tradingview.com/chart/?symbol=RAIN) | $1.16 | -26.6% | +6.0% | $1.23 | -22.2% | 303K | 2.7M | 0.1x | 60K | Financial Conglomerates |
+| ZJYL | [TV](https://www.tradingview.com/chart/?symbol=ZJYL) | $1.94 | +0.5% | +50.0% | $2.91 | +50.8% | 178K | 40K | 4.4x | 1.8M | Medical Specialties |
+| MWYN | [TV](https://www.tradingview.com/chart/?symbol=MWYN) | $0.68 | +1.3% | +5.9% | $0.72 | +7.3% | 128K | 508K | 0.3x | 14.2M | Home Improvement Chains |
+
+**BJDX:** Seen at 23:00 and 23:30. The scanner still reports $1.36, but fresh SIP through 17:45 ET and Yahoo's 18:00 timeline show a decline from the $1.45 peak at 17:30 to $1.26/$1.21. Volume also fell from 683K shares / 3,376 trades at 17:30 to 353K / 1,654 at 17:40, then 727K / 3,131 during the selloff at 17:45. This is an early SPIKE→FADE, not a hold. The current broker quote is stale at 16:00 ET ($0.86 x100 / $1.17 x100), so its divergence from the live data is a staleness artifact rather than a bad-print finding. No catalyst found in prior structured searches; Grade None. `BJDX 2026-08-04  SPIKE  16:37ET  +16%  $1.16  262 trades / 51k sh  (first co-spike bar) (as-of 18:00ET)`. `BJDX 2026-08-04  CONFIRM-3  YES ignition 16:35ET 140.6x; confirmed 16:45ET $1.24 as-of 18:00ET`. Skip: fading well below the AH high, regardless of the stale scanner reading.
+
+**INLF:** Seen since 22:30. Scanner improved from $3.80 to $3.72 but it remains below the $4.77 AH high, while SIP confirms continued low-volume deterioration through 17:35: 67K shares / 662 trades at 17:30, then 13K / 190 at 17:35. Yahoo shows $3.70 at 18:00. The $2.72 x100 bid / $0.00 x0 ask quote remains stale at 16:00 ET and has no fillable ask. No catalyst found in prior structured searches; Grade None. `INLF 2026-08-04  SPIKE  16:06ET  +18%  $3.74  317 trades / 35k sh  (first co-spike bar) (as-of 18:00ET)`. `INLF 2026-08-04  CONFIRM-3  YES ignition 16:05ET 110.8x; confirmed 16:15ET $4.50 as-of 18:00ET`. Skip: early SPIKE→FADE, no current two-sided book.
+
+**ZJYL:** New Medical Specialties candidate; 1.8M float. `tradable=false`, so it is broker-blocked and no SIP/catalyst workup is needed. Yahoo shows it built from $1.93 at 17:30 to a $3.48 high at 17:50 and held $3.43 at 18:00, but it cannot fill. `ZJYL 2026-08-04  SPIKE  17:41ET  +18%  $2.28  49 trades / 7k sh  (first co-spike bar) (as-of 18:00ET)`. `ZJYL 2026-08-04  CONFIRM-3  PENDING ignition 17:40ET; waiting for third bar as-of 18:00ET`. Skip: untradable broker block; carry as untradable if it remains in later scans.
+
+**BANL, RAIN, MWYN:** Below the +10% AH entry threshold. BANL remains untradable (carried); RAIN also fails the dead-cat threshold at Day -26.6%. No new entry evaluation.
+
+No paper orders submitted. No open Alpaca positions.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
