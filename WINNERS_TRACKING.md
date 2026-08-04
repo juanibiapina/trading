@@ -6,15 +6,16 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-07-31 | KUST | C: Jul 30 Schedule 13D/A controlling-owner disclosure | $2.32 PM SIP (+114.8% from prior daily close @04:00 ET, 2.37M sh/19.3k trades) | - | $1.88 | Day 1: real volume-backed winner. AH SIP peak $1.87 -> PM SIP $2.32. **DETECTED, NOT ENTERED** because Alpaca's book stayed stale. Float 577K |
-| 2026-07-30 | NUWE | None (Jul 27 preliminary Q2 revenue +14%; no same-day catalyst verified) | $4.67 PM SIP (+147.1% @04:00 ET, 1.04M sh/17.5k trades) | - | $1.89 | Day 2: no fresh PM follow-through print; latest reported close $1.89, well below the $4.67 day-1 peak. **DETECTED, NOT ENTERED** because Alpaca's extended-hours book stayed stale with no ask. Float 363K |
-| 2026-07-29 | AMIX | None (post-reverse-split 1-for-21 Jun 23 ultra-low-float squeeze; flat regular-session base) | $5.29 PM SIP (+89.6% @08:00 ET, 839K sh/14.2k trades) | - | $4.57 | Day 3: below the $5.29 PM peak after the first-PM-opportunity exit filled at $4.68 (+16.4%). **DETECTED + ENTERED @ $4.02.** Float 502K |
-| 2026-07-28 | CISS | D: $6.0M underwritten offering @ $0.52/unit (11.5M units + warrants) | $0.27 PM SIP (+164% @04:00 ET, 18.1M sh/25.9k trades) | - | $0.13 | Day 4: **mechanical winner only**: +164% off a -80% dilution-crash close. Sub-penny, ~40% spread, unwound to $0.16 within 25 min. **NOT detected: price-floor exclusion** ($0.1024 < $0.50 `MIN_PRICE`); counted as a baseline miss. Float 529K |
+| 2026-08-04 | RAIN | None (unverified low-float squeeze) | $4.60 PM SIP (+208.7% from $1.49 close @04:00 ET, 1.29M sh/21.7K trades) | - | $3.71 | Day 1: real volume-backed winner. AH SIP breakout $3.69 -> PM $4.60. **NOT DETECTED**: TradingView omitted it despite the 18:15 ET in-window surge. Float 60K |
+| 2026-07-31 | KUST | C: Jul 30 Schedule 13D/A controlling-owner disclosure | $2.32 PM SIP (+114.8% from prior daily close @04:00 ET, 2.37M sh/19.3k trades) | - | $1.39 | Day 4: below the day-1 peak; **DETECTED, NOT ENTERED** because Alpaca's book stayed stale. Float 577K |
 
 ## Historical Winners (with multi-day outcome)
 
 | Date | Ticker | Catalyst | AH Peak | PM Peak | Day 2 | Day 5 | Outcome |
 |------|--------|----------|---------|---------|-------|-------|---------|
+| 2026-07-30 | NUWE | None (Jul 27 preliminary Q2 revenue +14%) | $2.56 AH entry area | $4.67 PM SIP (+147.1%) | $1.89 | $1.55 | Day 5: no continuation after the $4.67 day-1 PM peak; **DETECTED, NOT ENTERED** because Alpaca's extended-hours book was stale/no ask. Float 363K |
+| 2026-07-29 | AMIX | None (post-1-for-21 reverse-split squeeze) | $4.02 entry | $5.29 PM SIP (+89.6%) | $4.57 | $3.61 | Day 6: faded below the $5.29 peak; **DETECTED + ENTERED @ $4.02**, first-PM exit $4.68 (+16.4%). Float 502K |
+| 2026-07-28 | CISS | D: $6.0M underwritten offering | $0.27 PM SIP (+164%) | $0.27 PM | $0.13 | $0.10 | Day 7: mechanical dilution-crash bounce fully faded; **NOT detected, price-floor exclusion**. Wide spread made it uninvestable. Float 529K |
 | 2026-07-24 | LVWR | A: Q2 earnings, revenue +55% | $1.46 AH | $2.09 PM (+171%) | $3.57 intraday | $1.95 | Day 6: multi-day runner peaked at $3.57 on day 2, then faded to $1.95; +153% from the $0.77 base. NOT detected (true late-AH-tail surge) |
 | 2026-07-23 | LGCL | None (low-float 1.6M momentum squeeze; 40:1 reverse split Oct 2025, months-old) | $2.47 PM (+160%) | $2.47 PM | — | $1.35 | Day 6: faded to $1.35 from $2.47 PM peak; DETECTED + ENTERED @ $1.58, sold $1.96 (+24%) — good exit above current price |
 | 2026-07-22 | SXTC | Unverified/None (China small-cap pharma PM squeeze; 32.2M float) | — | $7.91 PM (+222.9%) | — | $0.07 | Day 6: ⚠️ **CRASH −99%** from $7.91 PM peak (07-27: 340M sh at $0.06–0.08); PM-only gapper fully destroyed; NOT detected (structural, not counted vs baseline) |

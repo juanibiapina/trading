@@ -185,3 +185,89 @@ Evaluation:
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+
+## Morning Evaluation — 10:20 CEST
+
+### Today's Winner
+
+**RAIN** — Financial Conglomerates
+- Catalyst: No verified same-day catalyst after two targeted searches. **Grade None**.
+- Previous Close: $1.49
+- AH last night: $3.69 (+148.5%) at 18:15 ET / 00:15 CEST; SIP then recorded 796,773 shares / 12,946 trades in that bar and 1.48M / 26,084 at 18:20 ET.
+- Premarket now: $3.71 (+149.0%); PM SIP peak **$4.60** (+208.7%) at 04:00 ET on 1.29M shares / 21,692 trades. Yahoo's $4.05 PM high under-reported the real SIP peak.
+- Hypothetical P&L (first liquid AH breakout $3.69 -> PM peak $4.60): **+24.7%**.
+- Float: 60K | Market Cap: $15.9M
+
+RAIN clears the winner bar: it exceeded +100% from the regular close on sustained, accumulating SIP volume, not a thin print. Its AH peak was higher ($6.20 SIP at 18:25 ET), so the PM did not exceed the AH peak, but the AH-breakout-to-PM trade was real and profitable.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES, but not surfaced.** At the 00:15 CEST breakout it was $3.69 (+148.5%); by the 00:30 CEST final scan it was $5.00 (+235.6%).
+- The scheduled 00:30 scan ran but never listed RAIN. It was not a late-tail move: SIP shows the decisive, high-volume move started at 18:15 ET, inside the scanned window.
+- Scanner gap: TradingView postmarket feed-lag failure. Add an independent whole-universe AH-gainers cross-check at the final scan; changing a gain/volume threshold would not catch a name the feed omitted.
+
+### Baseline Tracking
+
+- Days tracked: **59** (was 58 + 1)
+- Winners detected by scanner: **49/57 (86.0%)** — RAIN is an in-window feed-lag detection miss.
+- Winner selected for paper trade: **27/57 (47.4%)** — RAIN was never surfaced, so it could not be selected.
+- Target: >80% detection
+- Status: **BASELINE MET**
+- **Baseline gap:** 2026-07-31 had a log but no morning baseline. It is the immediately preceding US trading day, so its unmeasured winner remains outside the sample and is not back-filled.
+
+### Retrospective Scan Results
+
+The live PM scan returned RAIN (+156.3% at $4.05) and DXST (+33.6% at $3.02). SIP establishes RAIN as the only real >100% AH-to-PM winner. DXST had a real AH ramp, but its $4.30 SIP AH high was only +87.8% from its $2.29 close and its PM high was $3.42 (+49.3%): not a winner.
+
+### Open Position P&L (Alpaca)
+
+No executed positions. `broker.js positions` returned no open Alpaca paper positions. No position action was taken.
+
+**Total Realized P&L (Alpaca fills only): $0.00**
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET), plus 22:15 and 22:45 observation scans.
+- Candidates found: **37 unique symbols**, including regular-session observation names; 10 names were AH-screen candidates.
+- Retrospective matches: **0/1 winner**. RAIN was a real, in-window feed-lag miss despite full coverage.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| RAIN | +148.5% at 18:15 ET; +235.6% at last scan | TradingView omitted a high-volume in-window mover from every AH scan | Yes: $3.69 breakout -> $4.60 PM SIP peak, **+24.7%** |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| RAIN | $6.20 SIP | 18:25 ET | Late surge -> fade -> hold | $3.71; PM peak $4.60 | -25.8% from AH peak | +149.0% | **PM fell short of AH, but real winner; feed-lag miss** |
+| ABTS | $1.73 SIP | 16:05 ET | Spike -> fade | $1.01; PM peak $1.05 | -39.3% | -1.9% | PM fell short; fade skip correct |
+| JELD | $1.90 SIP | 16:35 ET | Spike -> hold, volume faded | $1.65; PM peak $1.71 SIP | -10.0% | +16.2% | PM fell short; stale-book/volume skip remained prudent |
+| IPW | ~$0.90 AH | 18:05 ET | Spike -> fade | $0.52; PM peak $0.72 SIP | -20.0% | +2.0% | PM fell short; fade skip correct |
+| BRCC | $1.18 | 17:15 ET | Thin hold | $1.15; PM peak $1.15 SIP | -2.5% | +11.7% | PM fell short; no-AH-book skip correct |
+
+### Notes
+
+- **Coverage:** all 7 scheduled scans ran. No coverage failure. The baseline chain has a gap on **2026-07-31**; do not absorb it into this sample.
+- **Dead-cat override outcome:** CSAI, skipped at $4.05 at 00:30 CEST, reached only $3.93 in PM on 251 shares / 12 trades: **-3.0%**. It was not a plausible liquid continuation. Standing evidence does not support relaxing the dead-cat filter.
+- **Fade-rule outcomes:** ABTS (float 2.1M, Grade None) and IPW (1.8M, Grade None) both remained below their AH highs. They add two sub-3M negative controls: ABTS first sighting ~$1.16 -> PM $1.05 (-9.5%); IPW first sighting ~$0.58 -> PM $0.72 (+24.1%) but still below its ~$0.90 AH peak. The SIP-verified sub-3M re-explosion seed is now **3 blow-past / 10 cases**, further below the >=80% trigger. No exception.
+- **PM-only gapper:** RAIN was the morning's biggest raw PM mover, classified **AH->PM continuation**, not PM-only. PM-only holdable tally remains **1 clear of 6**.
+- **Late-AH-tail:** RAIN is not a tail case: it was already +235.6% at the 18:30 ET final-scan timestamp. No new true-tail or feed-lag-tail row.
+- **In-window feed-lag miss:** **RAIN added**: surge 18:15 ET; $5.00 at 18:30 ET; 0.80M/12.9K, 1.48M/26.1K, and 1.25M/23.2K shares/trades in the first three surge bars; $3.69 breakout -> $4.60 PM peak (+24.7%). Standing count: **4** (BTCT, KUST, WLDS, RAIN). The independent whole-universe final-scan AH verification recommendation remains routed to the daily email.
+- **Price-floor exclusions:** no new case. Standing **5 total across 2 nights, 0 holdable**.
+- **Reverse-split, ceiling-override, broker-block, and stale-book execution-block:** no new cases.
+- **Daily email routing:** the final-scan independent whole-universe AH verification is now supported by four real feed-lag misses. Also surface the 2026-07-31 baseline gap; no user action is taken in this unattended pulse.
+
+### Price Charts
+
+Generated with `python3 scripts/price-timeline.py RAIN DXST JELD`:
+
+```text
+RAIN  $1.49 previous close -> $3.69 first liquid AH breakout (18:15 ET)
+      -> $6.20 SIP AH peak (18:25 ET) -> $4.60 SIP PM peak (04:00 ET)
+      -> ~$3.71 at 04:20 ET. Volume-backed, but PM stayed below AH peak.
+DXST  $2.29 previous close -> $4.30 SIP AH peak (18:55 ET)
+      -> $3.42 SIP PM peak (04:00 ET): sub-100%, not a winner.
+JELD  $1.42 previous close -> $1.90 AH peak (16:35 ET)
+      -> $1.71 SIP PM peak: AH was the better exit.
+```
