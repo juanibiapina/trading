@@ -151,6 +151,31 @@ No paper orders submitted.
 
 No paper orders submitted. No open Alpaca positions.
 
+## Scan 00:30 CEST (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BJDX | [TV](https://www.tradingview.com/chart/?symbol=BJDX) | $1.00 | +6.1% | +22.0% | $1.22 | +29.4% | 13.7M | 1.8M | 7.5x | 936K | Medical Specialties |
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $3.18 | -14.7% | +15.1% | $3.66 | -1.9% | 2.7M | 9.6M | 0.3x | 1.0M | Industrial Machinery |
+| ZJYL | [TV](https://www.tradingview.com/chart/?symbol=ZJYL) | $1.94 | +0.5% | +62.9% | $3.16 | +63.7% | 2.6M | 358K | 7.2x | 1.8M | Medical Specialties |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $1.17 | +27.4% | +6.0% | $1.24 | +35.1% | 78K | 372K | 0.2x | 3.0M | Industrial Machinery |
+| JDZG | [TV](https://www.tradingview.com/chart/?symbol=JDZG) | $3.23 | -16.3% | +5.9% | $3.42 | -11.4% | 68K | 438K | 0.2x | 5.0M | Miscellaneous Commercial Services |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $2.63 | +21.2% | +9.9% | $2.89 | +33.2% | 64K | 146K | 0.4x | 6.8M | Motor Vehicles |
+| TRUG | [TV](https://www.tradingview.com/chart/?symbol=TRUG) | $0.83 | -4.5% | +11.2% | $0.92 | +6.2% | 61K | 212K | 0.3x | 1.0M | Packaged Software |
+| HCAI | [TV](https://www.tradingview.com/chart/?symbol=HCAI) | $4.76 | +6.0% | +6.1% | $5.05 | +12.5% | 51K | 44K | 1.2x | 270K | Industrial Machinery |
+
+**BJDX:** Final SIP and Yahoo cross-checks show $1.21 at 18:30 ET, after a $1.45 high at 17:30. It remains a real, liquid move but is declining across the late scans and has faded from its early peak. No same-day catalyst was found in prior structured searches; Grade None. `BJDX 2026-08-04  SPIKE  16:37ET  +16%  $1.16  262 trades / 51k sh  (first co-spike bar) (as-of 18:30ET)`. `BJDX 2026-08-04  CONFIRM-3  YES ignition 16:35ET 140.6x; confirmed 16:45ET $1.24 as-of 18:30ET`. Skip: early-peak SPIKE→FADE, despite still being within 20% of its high.
+
+**INLF:** Final SIP/Yahoo reading is $3.62 at 18:30 ET, well below the $4.77 16:25 high, with volume having dwindled from the initial spike. No catalyst found in prior structured searches; Grade None. `INLF 2026-08-04  SPIKE  16:06ET  +18%  $3.74  317 trades / 35k sh  (first co-spike bar) (as-of 18:30ET)`. `INLF 2026-08-04  CONFIRM-3  YES ignition 16:05ET 110.8x; confirmed 16:15ET $4.50 as-of 18:30ET`. Skip: early SPIKE→FADE; the scanner's $3.66 is not a renewed build.
+
+**ZJYL:** Untradable (carried from 00:00). SIP confirms real 17:40-17:55 volume-backed trading but the latest $3.00 is below its $3.72 high. `ZJYL 2026-08-04  SPIKE  17:41ET  +18%  $2.28  49 trades / 7k sh  (first co-spike bar) (as-of 18:30ET)`. `ZJYL 2026-08-04  CONFIRM-3  YES ignition 17:40ET 247.3x; confirmed 17:50ET $3.46 as-of 18:30ET`. Skip: broker block; no repeated workup.
+
+**TRUG:** New scanner match, but `tradable=true` did not alter the verification result. SIP and Yahoo show its latest price at $0.82, below the $0.87 regular close; the scanner's $0.92 is stale. It had only a brief 16:30 bar (27K shares / 481 trades), then faded. Structured searches found no same-day earnings, press release, or 8-K. Its broker quote is also stale (16:00 ET) and unusable at $0.70 x100 / $3.50 x1100. `TRUG 2026-08-04  NO-SPIKE  peak +11% @16:33ET  (no bar cleared +15% on a volume co-spike) (as-of 18:30ET)`. `TRUG 2026-08-04  CONFIRM-3  NO ignition 16:30ET failed third-bar hold/volume as-of 18:30ET`. Skip: stale VRatio/scanner signal, not a live >10% AH candidate.
+
+**Final feed-lag cross-check:** SIP-checked all prior AH candidates and every 21:30 regular-session watch name. No omitted or under-reported pipeline name had a current, volume-backed AH move above +10%: XOS was $2.89 (+9.9% AH by the scanner), while the remaining watch names were below threshold, stale, or thin. No SIP rescue entry applied.
+
+No paper orders submitted. No open Alpaca positions.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
