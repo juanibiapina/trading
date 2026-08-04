@@ -111,6 +111,25 @@ Evaluation: Scanner returned no after-hours matches at 16:15:08 ET. No paper ord
 
 No paper orders submitted.
 
+## Scan 23:30 CEST (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BJDX | [TV](https://www.tradingview.com/chart/?symbol=BJDX) | $1.00 | +6.1% | +38.0% | $1.38 | +46.5% | 7.9M | 1.2M | 6.6x | 936K | Medical Specialties |
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $3.18 | -14.7% | +19.5% | $3.80 | +1.9% | 2.5M | 9.6M | 0.3x | 1.0M | Industrial Machinery |
+| BANL | [TV](https://www.tradingview.com/chart/?symbol=BANL) | $4.55 | +0.4% | +20.3% | $5.47 | +20.8% | 398K | 99K | 4.0x | 407K | Air Freight/Couriers |
+| MWYN | [TV](https://www.tradingview.com/chart/?symbol=MWYN) | $0.68 | +1.3% | +5.9% | $0.72 | +7.3% | 102K | 505K | 0.2x | 14.2M | Home Improvement Chains |
+
+**BJDX:** Seen at 23:00; now $1.38 (+38.0% AH), its second qualifying AH scan and a continued build from $1.19. SIP confirms real sustained volume through 17:15 ET, including 1.89M shares / 8,679 trades at 17:00, 1.04M / 5,207 at 17:05, 957K / 4,301 at 17:10, and 1.02M / 4,121 at 17:15, with a $1.44 high corroborating the scanner price. `tradable=true`. Catalyst recheck found no same-day earnings, press release, or 8-K; the surfaced private-placement item is historic, so catalyst grade None. `BJDX 2026-08-04  SPIKE  16:37ET  +16%  $1.16  262 trades / 51k sh  (first co-spike bar) (as-of 17:30ET)`. `BJDX 2026-08-04  CONFIRM-3  YES ignition 16:35ET 140.6x; confirmed 16:45ET $1.24 as-of 17:30ET`. Skip this pulse: the only broker quote remains stale at 16:00 ET ($0.86 x100 / $1.17 x100), materially below the live SIP/scanner price. It is not a current fillable book, so no limit order was submitted against stale pricing. Recheck next scan.
+
+**INLF:** Seen since 22:30; scanner price fell from $4.23 to $3.80 and is now ~20% below its $4.77 AH high at 16:25 ET. Fresh-for-lag SIP bars through 17:15 show declining activity and price ($4.04 at 17:00, $4.02 at 17:05, $3.78 at 17:10, $3.74 at 17:15), confirming an early SPIKE→FADE rather than a hold. `tradable=true`. Catalyst recheck found no same-day earnings, PR, or 8-K. `INLF 2026-08-04  SPIKE  16:06ET  +18%  $3.74  317 trades / 35k sh  (first co-spike bar) (as-of 17:30ET)`. `INLF 2026-08-04  CONFIRM-3  YES ignition 16:05ET 110.8x; confirmed 16:15ET $4.50 as-of 17:30ET`. Skip: early-peak fade, plus the broker quote is still stale at 16:00 ET with ask $0.00 x0, so no fillable AH book.
+
+**BANL:** New Air Freight/Couriers candidate; 407K float. Same-day GlobeNewswire PR says it regained Nasdaq minimum-bid-price compliance, a weak Grade C catalyst. SIP validates a real 17:00 surge (63K shares / 943 trades), followed by 364K / 8,251 at 17:05, 239K / 6,285 at 17:10, and 170K / 4,099 at 17:15; however, it peaked at $6.30 at 17:05 and faded to $5.49 by 17:15. `tradable=false`, so it is broker-blocked and cannot fill; carry as untradable without repeating the workup. `BANL 2026-08-04  SPIKE  17:04ET  +24%  $5.66  356 trades / 19k sh  (first co-spike bar) (as-of 17:30ET)`. `BANL 2026-08-04  CONFIRM-3  YES ignition 17:00ET 292.3x; confirmed 17:10ET $5.68 as-of 17:30ET`. Skip: untradable and fading from the early AH peak.
+
+**MWYN:** Below the +10% AH threshold. Yahoo price timeline shows only a +9.0% AH high; no entry evaluation or instrumentation applies.
+
+No paper orders submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
