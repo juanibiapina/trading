@@ -69,6 +69,22 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-08-04 — Synchronize Morning-Evaluation Tracker Seeds
+
+**Context:** The Aug 3→4 retrospective found RAIN, a fourth in-window TradingView feed-lag miss despite 7/7 scan coverage. It also logged ABTS and IPW as sub-3M fade-rule negative controls, moving that sample from 3/8 to 3/10. The previous morning-evaluation prompt still seeded the feed-lag tracker at 3, the fade tracker at 3/7, and the price-floor tracker at 3, while logs had already reached 4, 3/10, and 5 respectively. Stale seeds make the next pulse understate repeated scanner failures or overstate an inactive fade exception.
+
+**Evaluation of previous changes:**
+- 2026-07-31 stale-book execution-block tracker: **Insufficient data.** Aug 3→4 had no candidate blocked solely by a stale quote. JELD also failed the current-volume criterion, so the tally correctly stayed at 2.
+- 2026-07-30 fade tracker arithmetic: **Helped initially, then drifted.** The Jul 30→31 evaluation began at 3/7 as required, but later negative controls advanced the log to 3/10 without updating the prompt seed. This change corrects that process drift; no fade rule changed.
+- 2026-07-28 price-floor tracker: **Working, no new holdable case.** The Aug 3 evaluation advanced the count to 5 across two nights and retained 0 holdable cases, so `MIN_PRICE` remains $0.50.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — Updated the fade, in-window feed-lag, and price-floor tracker seeds to their current logged counts and added RAIN plus the latest fade negatives.
+   - Why: Subsequent evaluations must start from the actual sample, not reconstruct it or make a dormant exception look closer than it is.
+   - Hypothesis: I expect the next morning evaluation to report 3/10 sub-3M fade cases, 4 in-window feed-lag misses, and 5 price-floor exclusions with 0 holdable cases. Measurable: it uses these counts without manual re-derivation, keeps the fade exception inactive, leaves `MIN_PRICE` at $0.50, and routes the feed-lag reliability issue only to the daily email.
+
+**Updated process:** Morning-evaluation tracker seeds now match the Aug 3→4 retrospective. No scanner thresholds, entry gates, or strategy rules changed.
+
 ### 2026-07-31 — Track Stale-Book Execution Blocks Separately
 
 **Context:** The scanner detected the correct winner on both Jul 29→30 and Jul 30→31, but no order was placed because Alpaca's extended-hours quote stayed stale through the last eligible scan. NUWE had million-share SIP bars and later offered +82.4% from its qualified price to PM peak; KUST had 397K–1.65M shares per SIP bar and later offered +45.9%. Detection worked, while the live-book safety gate could not verify current fillability. The issue has now repeated on two consecutive detected winners.
@@ -84,6 +100,8 @@ _(entries are prepended — newest first)_
    - Hypothesis: I expect the next `tradable=true` qualifier blocked solely by a stale quote to be logged against the two-case seed with its quote age and hypothetical cost, and the daily email to carry the cumulative execution-feed issue. Measurable: the next case advances the count from 2, includes the required quote, SIP, price, peak, and P&L evidence, and does not get mislabeled as a scanner miss or `tradable=false` broker block.
 
 **Updated process:** Morning evaluation now keeps a stale-book execution-block tally (2 cases, both profitable detected winners) and routes the repeated paper quote-feed problem to the daily email. No scanner parameter or live entry gate changed.
+
+**Evaluation (2026-08-04):** Insufficient data. Aug 3→4 produced no candidate that cleared every non-book entry gate and was blocked only by a stale quote. JELD also had fading SIP volume, so it was not a stale-book-only case; the tally correctly remained at 2.
 
 ### 2026-07-30 — Keep the Sub-3M Fade Tracker Current and Fix Its Trigger Arithmetic
 
