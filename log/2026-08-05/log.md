@@ -101,11 +101,43 @@ Scanner returned **6 AH hits**. Observation-only scan (learning-phase default: n
 
 No paper trades this scan (observation-only; CELZ flagged for entry at 23:00 CET pending a hold above threshold).
 
+## Scan 23:00 CET (5:00 PM ET)
+
+Scanner returned **8 AH hits**. Entry-eligible scan (learning-phase default: entries permitted at 23:00+ CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $0.67 | +1.9% | +30.9% | $0.88 | +33.4% | 23.8M | 2.7M | 8.7x | 4.7M | Medical Specialties |
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $1.01 | -9.8% | +14.9% | $1.16 | +3.6% | 1.6M | 272K | 6.0x | 4.4M | Specialty Stores |
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $4.91 | +0.2% | +21.2% | $5.95 | +21.4% | 799K | 2.2M | 0.4x | 856K | Pharmaceuticals: Other |
+| RECT | [TV](https://www.tradingview.com/chart/?symbol=RECT) | $1.28 | +4.5% | +21.1% | $1.55 | +26.5% | 291K | 49K | 5.9x | 2.5M | Wholesale Distributors |
+| LESL | [TV](https://www.tradingview.com/chart/?symbol=LESL) | $1.36 | +3.0% | +14.7% | $1.56 | +18.2% | 194K | 1.5M | 0.1x | 8.8M | Specialty Stores |
+| CNEY | [TV](https://www.tradingview.com/chart/?symbol=CNEY) | $0.64 | +3.8% | +5.1% | $0.67 | +9.1% | 175K | 232K | 0.8x | 7.6M | Electrical Products |
+| MYO | [TV](https://www.tradingview.com/chart/?symbol=MYO) | $1.06 | -1.9% | +10.4% | $1.17 | +8.3% | 93K | 287K | 0.3x | 35.2M | Medical Distributors |
+| OPRT | [TV](https://www.tradingview.com/chart/?symbol=OPRT) | $6.06 | +0.8% | +6.3% | $6.44 | +7.2% | 55K | 401K | 0.1x | 39.3M | Finance/Rental/Leasing |
+
+**Instrumentation (log-only, no decision impact):**
+- CELZ: `SPIKE 16:01ET +34% $0.90 1343 trades / 466k sh (first co-spike bar)` · `CONFIRM-3 NO no local-volume new-high ignition as-of 17:00ET`
+- PAVS: `SPIKE 16:20ET +32% $6.48 385 trades / 28k sh (first co-spike bar)` · `CONFIRM-3 NO ignition 16:20ET failed third-bar hold/volume as-of 17:00ET`
+- LESL: `SPIKE 16:27ET +17% $1.59 57 trades / 19k sh (first co-spike bar)` · `CONFIRM-3 NO ignition 16:25ET failed third-bar hold/volume as-of 17:00ET`
+- AZI: `SPIKE 16:30ET +24% $1.25 280 trades / 37k sh (first co-spike bar)` · `CONFIRM-3 NO ignition 16:30ET failed third-bar hold/volume as-of 17:00ET`
+- RECT: `SPIKE 16:35ET +37% $1.75 372 trades / 41k sh (first co-spike bar)` · `CONFIRM-3 YES ignition 16:25ET 32.0x; confirmed 16:35ET $1.45 as-of 17:00ET`
+- MYO: `SPIKE 16:43ET +23% $1.30 34 trades / 5k sh (first co-spike bar)` · `CONFIRM-3 PENDING ignition 16:40ET; waiting for third bar as-of 17:00ET`
+
+**CELZ — ENTERED.** Clears every entry gate. Now on its **3rd AH scan >10%** (22:30 +36%, 22:45 +34%, 23:00 +31%) → 2-AH-scan gate met. SIP bars real + liquid + BUILD/hold: 20:00Z 3.45M sh/10,537 tr (VWAP $0.90), peak H $1.06 at 20:05Z (4.86M/16,553 tr), dip to L $0.83 at 20:15–20:20Z, then **rebuilt** to touch $1.06 again at 20:35Z (3.31M sh/10,145 tr, VWAP $1.00), C $0.90 at 20:45Z. Current price within ~15% of AH high $1.06 → holding, not faded. Live quote 16:38 ET bid $1.00 / ask $1.02 x100 — fresh, two-sided, liquid. VWAP $0.88–1.00 corroborates scanner AH (no bad print). `tradable=true`. Float 4.7M (low). Day% +1.9% (not a dead-cat). Total% ~+33% (well under the 150% ceiling). **No same-day catalyst found** (3 searches: latest PR is Jun 30 warrant-exercise dilution; earnings Aug 10 post-market; nothing today). No-catalyst = concern noted, not a skip (learning phase). BUILD-and-hold on real volume → entered. **BUY 98 CELZ @ limit $1.05 ext (id 520c6223) filled @ $0.89** (price improvement below ask). Catalyst Grade **None** — exit at first premarket opportunity.
+- **PAVS** — 2nd AH scan >10% (22:45 +35%, 23:00 +21%) so it clears the 2-scan gate, but VRatio 0.4x (AH vol 799K vs 2.2M avg = below-average relative volume), spike 16:20ET already failed third-bar hold, quote stale/wide. SPIKE→FADE + thin relative volume. **Skip.**
+- **LESL** — 2nd AH scan >10% (22:45 +11%, 23:00 +14.7%), but VRatio 0.1x (AH 194K vs 1.5M avg = far below average), CONFIRM-3 NO, spike failed. Thin, not a real momentum book. **Skip.**
+- **AZI** — 1st AH scan (+14.9%), does not clear the 2-AH-scan gate yet. Day% -9.8%. VRatio 6.0x decent but spike failed third-bar hold. Watch for a 2nd AH appearance; no entry.
+- **RECT** — 1st AH scan (+21.1%), does not clear the 2-AH-scan gate yet. Notable: CONFIRM-3 **YES** (ignition 16:25ET 32x, confirmed 16:35ET). VRatio 5.9x, float 2.5M low. Watch for a 2nd AH appearance at 23:30/00:00 — would qualify for entry then if it holds >10%.
+- **CNEY / MYO / OPRT** — AH change ≤10.4%, VRatio <1x (below-average relative volume), thin trade counts. Below the momentum threshold. Skip.
+
+21:30 watch names (ZYBT, ASTC, INLF, BJDX, VRM, ABTS) remain below their regular close; SHPH carried untradable (`tradable=false` historically).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-| — | — | — | — | — | No entries (regular-session scan) |
+| CELZ | $0.89 | 2026-08-05 23:00 CET | 98 | 520c6223 | 3rd AH scan >10%, float 4.7M, real liquid SIP BUILD/hold, Total% +33% (under ceiling), Day% +1.9% (not dead-cat). Grade None (no catalyst). |
 
 ## Position Evaluation — 10:30 CEST
 

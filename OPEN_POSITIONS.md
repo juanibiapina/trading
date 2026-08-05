@@ -8,6 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
+| CELZ | $0.89 | $0.89 | $0.89 | 98 | 2026-08-05 23:00 CET | None | 520c6223 | Low-float 4.7M clinical-stage biotech. 3 AH scans >10% (22:30 +36% → 22:45 +34% → 23:00 +31%). Real liquid SIP (3-5M sh/bar, 10-16k trades). BUILD/hold within ~20% of AH high $1.06. Day% +1.9% (not dead-cat). Total% ~+33% (well under 150% ceiling). No same-day catalyst found (latest PR Jun 30 warrant exercise; earnings Aug 10). BUY 98 @ limit $1.05 ext filled @ $0.89. |
 
 ## Position Rules
 
