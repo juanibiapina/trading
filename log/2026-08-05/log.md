@@ -196,6 +196,39 @@ Scanner returned **9 AH hits**. Entry-eligible scan.
 
 No new paper trades this scan (CELZ + PAVS held; CLRO flagged for entry at 00:30 CET pending a 2nd AH appearance >10%).
 
+## Scan 00:30 CET (6:30 PM ET) — final scan
+
+Scanner returned **9 AH hits**. Entry-eligible scan (final scheduled scan of the night).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $0.67 | +1.9% | +46.5% | $0.98 | +49.2% | 35.3M | 4.0M | 8.9x | 4.7M | Medical Specialties |
+| CLRO | [TV](https://www.tradingview.com/chart/?symbol=CLRO) | $3.68 | -8.7% | +72.8% | $6.36 | +57.8% | 2.8M | 444K | 6.4x | 740K | Electronics/Appliances |
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $4.91 | +0.2% | +34.4% | $6.60 | +34.7% | 2.5M | 2.5M | 1.0x | 856K | Pharmaceuticals: Other |
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $1.01 | -9.8% | +12.9% | $1.14 | +1.8% | 2.1M | 321K | 6.4x | 4.4M | Specialty Stores |
+| HYFM | [TV](https://www.tradingview.com/chart/?symbol=HYFM) | $1.62 | -15.6% | +13.0% | $1.83 | -4.7% | 850K | 15.8M | 0.1x | 4.1M | Trucks/Construction/Farm Machinery |
+| LESL | [TV](https://www.tradingview.com/chart/?symbol=LESL) | $1.36 | +3.0% | +11.0% | $1.51 | +14.4% | 352K | 1.5M | 0.2x | 8.8M | Specialty Stores |
+| MYO | [TV](https://www.tradingview.com/chart/?symbol=MYO) | $1.06 | -1.9% | +9.4% | $1.16 | +7.4% | 181K | 297K | 0.6x | 35.2M | Medical Distributors |
+| NAUT | [TV](https://www.tradingview.com/chart/?symbol=NAUT) | $0.93 | -5.6% | +10.8% | $1.03 | +4.5% | 73K | 1.2M | 0.1x | 63.5M | Biotechnology |
+| EVGN | [TV](https://www.tradingview.com/chart/?symbol=EVGN) | $0.63 | -2.9% | +6.2% | $0.67 | +3.1% | 62K | 137K | 0.5x | 12.0M | Biotechnology |
+
+**Instrumentation (log-only, no decision impact):**
+- CLRO: `SPIKE 17:28ET +23% $4.51 313 trades / 37k sh (first co-spike bar)` · `CONFIRM-3 YES ignition 17:25ET 867.1x; confirmed 17:35ET $5.30 as-of 18:30ET`
+
+**CELZ — held (already entered 23:00).** Still on AH >10% (+46.5%, 6th scan). Position $0.99 vs $0.89 entry (+10.7%). Grade None — premarket exit handled by position-evaluation.
+
+**PAVS — held (already entered 23:30).** Still on AH >10% (+34.4%, 5th scan). Position $6.41 vs $6.61 entry (-3.0%). Grade None — premarket exit handled by position-evaluation.
+
+**CLRO — QUALIFIED, but NO FILL (broker no-fill).** Clears every entry gate on its **2nd AH scan >10%** (00:00 +56.5%, 00:30 +72.8%) → 2-AH-scan gate met. SIP bars fresh, real, liquid, and BUILDING to new highs: 21:25Z ignition (110K sh/989 tr H$5.50), sustained 200K–670K sh/bar through 22:15Z (18:15 ET, ~15 min behind scan), peak **H $6.76 at 22:05Z (18:05 ET)**, C $6.37 at 22:15Z. VWAP $6.0–6.4 corroborates scanner AH $6.36 (no bad print). CONFIRM-3 **YES** (ignition 17:25ET 867x, confirmed 17:35ET). Float 740K (ultra-low). Day% -8.7% (above -15%, not a dead-cat). Total% +57.8% (under the 150% ceiling). Late-building/late-peak (18:05 ET) → favorable BUILD profile. `tradable=true`. **No same-day catalyst found** (4 searches: only the July 2 stock-for-stock Cortigent reverse-merger, rebrand to CRGT — not fresh, and stock-for-stock so not a fixed-cash merger-arb exclusion; nothing same-day). No-catalyst = concern noted, not a skip. **Alpaca AH book would not fill:** quote stuck stale at 16:00 ET (bid $3.08/ask $4.50, 2.5h behind scan). Submitted BUY 15 CLRO limit $6.70 ext (id 2e5dadee) — sat `new`, no fill after ~50s; cancelled, re-submitted at limit $7.10 ext (id 9a420abd) — again no fill after ~50s; cancelled. Despite real SIP volume on the consolidated feed, Alpaca's own AH venue had no fillable ask. **No fill = no position.** Recorded as a qualified-but-unfillable broker no-fill for the morning-eval tally (a strong BUILD candidate the broker could not execute).
+- **AZI** — AH +12.9% but Total% only +1.8% (Day -9.8%, still barely above prev close). Never built above close across scans; recovering from a down day, not a new-momentum breakout. Skip.
+- **HYFM** — Day% -15.6% (dead-cat territory), Total% -4.7% (still below regular close, not reclaiming). VRatio 0.1x thin. Dead-cat bounce, no override. Skip.
+- **NAUT** — AH +10.8% but VRatio 0.1x (73K vs 1.2M avg = far below average), float 63.5M (high), Total% +4.5%. Thin, no real momentum book. Skip.
+- **LESL / MYO / EVGN** — AH ≤11%, VRatio ≤0.6x (below-average relative volume), thin trade counts. Below the momentum threshold. Skip.
+
+**Final-scan feed-lag cross-check (pipeline names):** RECT (CONFIRM-3 YES at 23:00) died — faded below its $1.28 close by 23:30, confirmed dead, not rescued. AZI covered above (below-momentum). No tracked name is under-reported by the TradingView feed relative to SIP this scan; the two real movers (CELZ, PAVS) are already held and CLRO is present in the feed (no-fill, not feed-lag). 21:30 watch names (ZYBT, ASTC, INLF, BJDX, VRM, ABTS) remain below their regular close; SHPH carried untradable (`tradable=false` historically).
+
+No new fills this scan — CELZ + PAVS held; CLRO qualified but the broker could not fill it.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
