@@ -1,3 +1,31 @@
+# Post-Market Screening - 2026-08-05
+
+## Scan 21:30 CET (3:30 PM ET)
+
+Regular-session scan (before AH open at 16:00 ET). No entries — regular-session caution rule. Watch candidates flagged for AH confirmation at 22:00+ CET.
+
+| Ticker | Chart | Price | Day% | Float | MCap | IRVol | Industry | Note |
+|--------|-------|-------|------|-------|------|-------|----------|------|
+| ZYBT | [TV](https://www.tradingview.com/chart/?symbol=ZYBT) | $2.72 | +112.5% | 7.7M | 38.0M | 57.1 | Biotechnology | Watch — pending AH confirmation |
+| INLF | [TV](https://www.tradingview.com/chart/?symbol=INLF) | $6.38 | +100.6% | 1.0M | 3.3M | 6.8 | Industrial Machinery | Watch — low float |
+| BJDX | [TV](https://www.tradingview.com/chart/?symbol=BJDX) | $1.41 | +40.5% | 936K | 1.5M | 299.3 | Medical Specialties | Watch — very low float |
+| VRM | [TV](https://www.tradingview.com/chart/?symbol=VRM) | $9.71 | +38.0% | 5.1M | 50.8M | 20.8 | Specialty Stores | Watch |
+| ASTC | [TV](https://www.tradingview.com/chart/?symbol=ASTC) | $9.23 | +27.5% | 1.7M | 18.5M | 67.4 | Aerospace & Defense | Watch — low float |
+| FLZH | [TV](https://www.tradingview.com/chart/?symbol=FLZH) | $1.49 | +25.8% | 48.0M | 79.5M | 67.7 | Movies/Entertainment | Watch — float high |
+| CSAI | [TV](https://www.tradingview.com/chart/?symbol=CSAI) | $5.00 | +26.9% | n/a | 4.2M | 3.0 | Packaged Software | Watch |
+| ABTS | [TV](https://www.tradingview.com/chart/?symbol=ABTS) | $1.46 | +15.9% | 2.1M | 4.3M | 10.7 | Data Processing | Watch — low float |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $4.37 | +19.6% | 596K | 2.8M | 2.6 | Pharma: Major | Watch — untradable on Alpaca (carried, tradable=false historically) |
+
+23 total hits. Others (SUJA, NCO, TYGO, KLTR, CTXR, USDE, PPCB, CDTG, ZTG, ANPA, NEOV, SMRT, CTOR) either negative-day, high float, or no clear low-float momentum profile — tracked but not on the AH watchlist.
+
+No paper trades this scan (regular session, entries only permitted at 23:00+ CET AH scans per learning-phase default).
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+| — | — | — | — | — | No entries (regular-session scan) |
+
 ## Position Evaluation — 10:30 CEST
 
 No open positions in Alpaca. `OPEN_POSITIONS.md` agrees with the broker state.
