@@ -160,6 +160,42 @@ Scanner returned **6 AH hits**. Entry-eligible scan.
 
 21:30 watch names (ZYBT, ASTC, INLF, BJDX, VRM, ABTS) remain below their regular close; SHPH carried untradable (`tradable=false` historically).
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Scanner returned **9 AH hits**. Entry-eligible scan.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $0.67 | +1.9% | +37.6% | $0.92 | +40.2% | 33.4M | 3.8M | 8.8x | 4.7M | Medical Specialties |
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $4.91 | +0.2% | +24.4% | $6.11 | +24.7% | 2.3M | 2.5M | 1.0x | 856K | Pharmaceuticals: Other |
+| CLRO | [TV](https://www.tradingview.com/chart/?symbol=CLRO) | $3.68 | -8.7% | +56.5% | $5.76 | +42.9% | 1.1M | 189K | 5.8x | 740K | Electronics/Appliances |
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $1.01 | -9.8% | +7.9% | $1.09 | -2.7% | 2.0M | 317K | 6.4x | 4.4M | Specialty Stores |
+| BJDX | [TV](https://www.tradingview.com/chart/?symbol=BJDX) | $1.24 | +24.0% | +5.7% | $1.31 | +31.0% | 1.3M | 11.6M | 0.1x | 936K | Medical Specialties |
+| HYFM | [TV](https://www.tradingview.com/chart/?symbol=HYFM) | $1.62 | -15.6% | +14.8% | $1.86 | -3.1% | 794K | 15.8M | 0.1x | 4.1M | Trucks/Construction/Farm Machinery |
+| VMAR | [TV](https://www.tradingview.com/chart/?symbol=VMAR) | $0.66 | +1.4% | +7.5% | $0.71 | +9.0% | 932K | 5.4M | 0.2x | 6.4M | Recreational Products |
+| LESL | [TV](https://www.tradingview.com/chart/?symbol=LESL) | $1.36 | +3.0% | +10.3% | $1.50 | +13.6% | 320K | 1.5M | 0.2x | 8.8M | Specialty Stores |
+| FGL | [TV](https://www.tradingview.com/chart/?symbol=FGL) | $0.83 | -3.2% | +10.5% | $0.92 | +7.0% | 135K | 1.1M | 0.1x | 854K | Engineering & Construction |
+
+**Instrumentation (log-only, no decision impact):**
+- CELZ: `SPIKE 16:01ET +34% $0.90 1343 trades / 466k sh (first co-spike bar)` · `CONFIRM-3 NO no local-volume new-high ignition as-of 18:00ET`
+- PAVS: `SPIKE 16:20ET +32% $6.48 385 trades / 28k sh (first co-spike bar)` · `CONFIRM-3 NO ignition 16:20ET failed third-bar hold/volume as-of 18:00ET`
+- CLRO: `SPIKE 17:28ET +23% $4.51 313 trades / 37k sh (first co-spike bar)` · `CONFIRM-3 YES ignition 17:25ET 867.1x; confirmed 17:35ET $5.30 as-of 18:00ET`
+
+**CELZ — held (already entered 23:00).** Still on AH >10% (+37.6%, 5th scan). Position $0.93 vs $0.89 entry (+5.0%). Grade None — premarket exit handled by position-evaluation.
+
+**PAVS — held (already entered 23:30).** Still on AH >10% (+24.4%, 4th scan). Position $6.61 vs $6.61 entry (flat). Grade None — premarket exit handled by position-evaluation.
+
+**CLRO — WATCH (1st AH scan, does not clear the 2-AH-scan gate).** Fresh late-igniting BUILD. SIP bars confirm real + liquid accumulation building into new highs: move started ~21:25Z (17:25 ET) 110K sh/989 tr H$5.50, 21:30Z 443K sh/6114 tr, 21:35Z 436K sh/6185 tr, 21:40Z 578K sh/9716 tr H$6.00, 21:45Z 457K sh/7431 tr C$5.85 H$6.15 — accumulating hard, making new highs late. CONFIRM-3 **YES** (ignition 17:25ET 867x, confirmed 17:35ET). Float 740K (ultra-low). Day% -8.7% (not a dead-cat, above -15%). Total% +42.9% (under the 150% ceiling). `tradable=true`. Alpaca quote stale at 16:00 ET (bid $3.08/ask $4.50, ~2h behind scan) — freshness guard: SIP is fresh (last bar 17:45 ET, ~15 min behind) and liquid, so this is a feed artifact, not a "no book." Late-building/late-peak (17:40 ET) profile is favorable. **Only its 1st AH scan >10%** — fails the 2-AH-scan gate. No entry this scan; **watch for the 00:30 CET final scan** — qualifies for entry then if it holds >10% AH (strong BUILD candidate).
+- **HYFM** — Day% -15.6% (dead-cat territory), AH +14.8% but Total% -3.1% (still below its regular close, not reclaiming). VRatio 0.1x thin. Dead-cat bounce, no override. Skip.
+- **AZI** — AH +7.9% (below threshold), Day% -9.8%. Skip.
+- **BJDX** — AH +5.7% (below threshold); a 21:30 regular-session watch name, faded in AH. Skip.
+- **LESL** — AH +10.3% but VRatio 0.2x (far below average), thin. Skip.
+- **FGL / VMAR** — AH ≤10.5%, VRatio ≤0.2x thin. Below threshold. Skip.
+
+21:30 watch names (ZYBT, ASTC, INLF, VRM, ABTS) remain below their regular close; SHPH carried untradable (`tradable=false` historically).
+
+No new paper trades this scan (CELZ + PAVS held; CLRO flagged for entry at 00:30 CET pending a 2nd AH appearance >10%).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
