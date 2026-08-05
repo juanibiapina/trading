@@ -53,6 +53,27 @@ No candidate is building in AH; all watch names are below their regular close. N
 
 No paper trades this scan (observation-only, entries permitted at 23:00+ CET).
 
+## Scan 22:30 CET (4:30 PM ET)
+
+Scanner returned **2 AH hits** as real post-market volume accumulated. Observation-only scan (learning-phase default: no entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $0.67 | +1.9% | +36.1% | $0.91 | +38.6% | 11.0M | 1.4M | 8.1x | 4.7M | Medical Specialties |
+| FRGT | [TV](https://www.tradingview.com/chart/?symbol=FRGT) | $3.42 | -1.4% | +31.6% | $4.50 | +29.7% | 180K | 48K | 3.7x | 563K | Financial Conglomerates |
+
+**Instrumentation (log-only, no decision impact):**
+- CELZ: `SPIKE 16:01ET +34% $0.90 1343 trades / 466k sh (first co-spike bar)` · `CONFIRM-3 NO no local-volume new-high ignition as-of 16:30ET`
+- FRGT: `SPIKE 16:08ET +24% $4.23 135 trades / 8k sh (first co-spike bar)` · `CONFIRM-3 NO no local-volume new-high ignition as-of 16:30ET`
+
+**CELZ** — real, liquid AH move. SIP bars accumulating hard: 20:00Z 3.45M sh / 10,537 tr, 20:05Z 4.86M sh / 16,553 tr (H $1.06), 20:10Z 3.47M sh / 11,819 tr, 20:15Z 2.06M sh / 6,458 tr. VWAP $0.89–0.96 corroborates the scanner AH price (no bad print). Book two-sided: bid $1.00 x100 / ask $1.03 x100. `tradable=true`. Float 4.7M (low). Clinical-stage biotech. Peaked ~$1.06 at 16:05 ET, now softening to $0.89 (16:15 close), trades-per-bar declining — early-peak, mild fade profile so far. **No catalyst found** (earnings Aug 10 post-market, latest PR January ADAPT data; nothing same-day). Track into 23:00 scan for build-vs-fade; qualifies on the 2-AH-scan gate only if it reappears >10% at 23:00+.
+
+**FRGT** — SPIKE→FADE + illiquid. SIP: spiked 20:05–20:10Z to H $4.99 (2,793 tr peak bar) then collapsed 20:15Z to L $2.80 / C $2.99. Quote `bid $2.68 / ask $0.00 x0` — no fillable AH ask (book pulled). Very low float 563K but no real two-sided liquidity and already round-tripping off the spike. **No catalyst found** (earnings Aug 17). Skip: illiquid (no AH book) + SPIKE→FADE.
+
+21:30 watch names (ZYBT, ASTC, INLF, BJDX, VRM, ABTS) remain below their regular-session close, none building — dropped from active AH watch. SHPH carried as untradable (`tradable=false` historically).
+
+No paper trades this scan (observation-only, entries permitted at 23:00+ CET).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
