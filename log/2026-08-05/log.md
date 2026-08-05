@@ -36,6 +36,23 @@ No spike-bar / confirmation instrumentation run — scanner produced no AH candi
 
 No paper trades this scan (observation-only, entries permitted at 23:00+ CET).
 
+## Scan 22:15 CET (4:15 PM ET)
+
+Scanner returned **0 hits** (early AH, `postmarket_volume` still thin). Observation-only scan (learning-phase default: no entries before 23:00 CET). Cross-checked the 21:30 watch names against live SIP bars + Alpaca AH books — all softening off their regular-session close, none building:
+
+| Ticker | Prev Close | AH (16:15 ET) | Book | Note |
+|--------|-----------|---------------|------|------|
+| ZYBT | $2.72 | $2.11 (VWAP $2.20, 306K sh / 1932 tr) | bid $2.23 / ask $0.00 x0 | Fading off close, ask pulled |
+| ASTC | $9.23 | $8.65 (VWAP $8.99, 21K sh / 136 tr) | bid $7.74 / ask $10.40 x100 | Softening, wide spread |
+| INLF | $6.38 | — | bid $5.30 / ask $0.00 x0 | No fillable ask |
+| BJDX | $1.41 | — | bid $1.25 / ask $1.27 x100 | Two-sided but faded below close |
+| VRM | $9.71 | — | bid $9.19 / ask $0.00 x0 | No fillable ask |
+| ABTS | $1.46 | — | bid $1.19 / ask $1.76 x100 | Faded below close |
+
+No candidate is building in AH; all watch names are below their regular close. No spike-bar / confirmation instrumentation run (no name above threshold). Re-scan at 22:30 / 23:00 CET.
+
+No paper trades this scan (observation-only, entries permitted at 23:00+ CET).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
