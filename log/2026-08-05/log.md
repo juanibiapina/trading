@@ -133,11 +133,39 @@ Scanner returned **8 AH hits**. Entry-eligible scan (learning-phase default: ent
 
 21:30 watch names (ZYBT, ASTC, INLF, BJDX, VRM, ABTS) remain below their regular close; SHPH carried untradable (`tradable=false` historically).
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Scanner returned **6 AH hits**. Entry-eligible scan.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $0.67 | +1.9% | +33.4% | $0.89 | +35.9% | 27.2M | 3.1M | 8.7x | 4.7M | Medical Specialties |
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $4.91 | +0.2% | +39.1% | $6.83 | +39.4% | 2.0M | 2.4M | 0.8x | 856K | Pharmaceuticals: Other |
+| AZI | [TV](https://www.tradingview.com/chart/?symbol=AZI) | $1.01 | -9.8% | +6.9% | $1.08 | -3.6% | 1.9M | 307K | 6.3x | 4.4M | Specialty Stores |
+| LESL | [TV](https://www.tradingview.com/chart/?symbol=LESL) | $1.36 | +3.0% | +16.8% | $1.59 | +20.3% | 287K | 1.5M | 0.2x | 8.8M | Specialty Stores |
+| MYO | [TV](https://www.tradingview.com/chart/?symbol=MYO) | $1.06 | -1.9% | +6.6% | $1.13 | +4.6% | 171K | 296K | 0.6x | 35.2M | Medical Distributors |
+| OPRT | [TV](https://www.tradingview.com/chart/?symbol=OPRT) | $6.06 | +0.8% | +6.3% | $6.44 | +7.2% | 66K | 402K | 0.2x | 39.3M | Finance/Rental/Leasing |
+
+**Instrumentation (log-only, no decision impact):**
+- CELZ: `SPIKE 16:01ET +34% $0.90 1343 trades / 466k sh (first co-spike bar)` · `CONFIRM-3 NO no local-volume new-high ignition as-of 17:30ET`
+- PAVS: `SPIKE 16:20ET +32% $6.48 385 trades / 28k sh (first co-spike bar)` · `CONFIRM-3 NO ignition 16:20ET failed third-bar hold/volume as-of 17:30ET`
+
+**CELZ — held (already entered 23:00).** Still on AH >10% (+33.4%, 4th scan). Position now $0.92 vs $0.89 entry (+3.3%). Grade None — premarket exit handled by position-evaluation.
+
+**PAVS — ENTERED.** Re-evaluated after prior scans skipped it on a thin VRatio reading. On its **3rd AH scan >10%** (22:45 +35.3%, 23:00 +21.2%, 23:30 +39.1%) → clears the 2-AH-scan gate. SIP bars are real + liquid, contradicting the scanner's lagging 0.8x VRatio: 20:20Z 366K sh/5779 tr (H $6.79), 20:25Z 370K sh/6791 tr (H $6.95), dip to $5.36 at 20:30Z, then **rebuilt to new AH high $7.55 at 20:45Z** (602K sh/9389 tr), holding $6.5–7.2 since; 21:15Z C $7.10 (159K sh/2470 tr). Total AH volume ~3.1M sh **exceeds** the 2.4M avg — the spike is genuinely liquid, not thin. VWAP $6.5–7.1 corroborates the scanner AH price (no bad print). Peaked 16:45 ET (after 16:30), holding within ~6% of AH high → BUILD-and-hold, not SPIKE→FADE. Float 856K (ultra-low). Day% +0.2% (not a dead-cat). Total% ~+45% (under the 150% ceiling). `tradable=true`. **Alpaca quote stuck stale at 16:00 ET** (bid $4.05/ask $5.70, 90 min behind the scan) — freshness guard applies: SIP is fresh (last bar 15 min behind) and liquid, so this is a feed artifact, not a "no book" / bad-print skip. **No same-day catalyst found** (4 searches: latest news is a Jun 15 non-binding LOI for Jabanero and a March registered direct offering; nothing today). No-catalyst = concern noted, not a skip (learning phase). **BUY 14 PAVS @ limit $7.30 ext (id 49c34e12) filled @ $6.61** (price improvement below the current level). Catalyst Grade **None** — exit at first premarket opportunity.
+- **RECT** — dropped off the scanner this pulse. Cross-checked SIP (had CONFIRM-3 YES at 23:00): spiked to H $1.75 at 20:35ET then **faded to $1.24 by 21:00ET, below its $1.28 close**, volume died (597 sh last bar). The ignition confirmation did not hold. **Skip: faded below close, dead.**
+- **AZI** — fell to +6.9% AH (below the 10% threshold), Day% -9.8%. Below threshold. Skip.
+- **LESL** — 3rd AH scan >10% (+16.8%) but VRatio 0.2x (AH 287K vs 1.5M avg = far below average), CONFIRM-3 NO. Thin, not a real momentum book. Skip.
+- **MYO / OPRT** — AH change <7%, VRatio <1x. Below threshold. Skip.
+
+21:30 watch names (ZYBT, ASTC, INLF, BJDX, VRM, ABTS) remain below their regular close; SHPH carried untradable (`tradable=false` historically).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | CELZ | $0.89 | 2026-08-05 23:00 CET | 98 | 520c6223 | 3rd AH scan >10%, float 4.7M, real liquid SIP BUILD/hold, Total% +33% (under ceiling), Day% +1.9% (not dead-cat). Grade None (no catalyst). |
+| PAVS | $6.61 | 2026-08-05 23:30 CET | 14 | 49c34e12 | 3rd AH scan >10%, float 856K, real liquid SIP BUILD/hold (rebuilt to new AH high $7.55 @16:45ET), Total% ~+45% (under ceiling), Day% +0.2% (not dead-cat). Grade None (no catalyst). |
 
 ## Position Evaluation — 10:30 CEST
 
