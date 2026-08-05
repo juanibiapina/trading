@@ -20,6 +20,22 @@ Regular-session scan (before AH open at 16:00 ET). No entries — regular-sessio
 
 No paper trades this scan (regular session, entries only permitted at 23:00+ CET AH scans per learning-phase default).
 
+## Scan 22:00 CET (4:00 PM ET)
+
+Scanner ran one minute into AH open (16:00 ET) — `postmarket_volume` hasn't accumulated yet, so the screener returned **0 hits**. Observation-only scan (learning-phase default: no entries before 23:00 CET). Cross-checked the 21:30 regular-session watch names against live Alpaca AH books:
+
+| Ticker | Prev Close | AH Book (16:00 ET) | Note |
+|--------|-----------|--------------------|------|
+| ZYBT | $2.72 | bid $2.01 / ask $2.67 x100 | Two-sided book, ask below close — early AH softness, watch |
+| ASTC | $9.23 | bid $7.74 / ask $10.40 x100 | Two-sided book (wide spread) |
+| INLF | $6.38 | bid $5.30 / ask $0.00 x0 | No AH ask (no fillable book) |
+| BJDX | $1.41 | bid $1.22 / ask $0.00 x0 | No AH ask (no fillable book) |
+| VRM | $9.71 | bid $9.19 / ask $0.00 x0 | No AH ask (no fillable book) |
+
+No spike-bar / confirmation instrumentation run — scanner produced no AH candidates above threshold this early. Re-scan at 22:30 CET once real AH volume accumulates.
+
+No paper trades this scan (observation-only, entries permitted at 23:00+ CET).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
