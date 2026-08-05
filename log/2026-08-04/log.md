@@ -180,3 +180,78 @@ No paper orders submitted. No open Alpaca positions.
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+
+## Morning Evaluation — 10:20 CEST
+
+### Today's Winner
+
+**No real winner today.** The broad PM scan found no AH→PM continuation above the required +100% bar on sustained SIP liquidity. The biggest genuine AH→PM mover was **ZJYL** (Medical Specialties): $1.93 previous close, a SIP-confirmed $3.72 AH peak (+92.7%; 922.6K shares/9,504 trades at 17:45 ET and 841.9K/10,323 at 17:50), then a $3.49 SIP PM peak at 04:00 ET. Its earnings report, with improved margins despite lower revenue, was the catalyst (Grade B). It fell short of the winner bar and was `tradable=false`.
+
+The biggest raw PM mover was **JLHL**: flat/down in AH, then a real $10.56 SIP high at 04:00 ET (+70.0% from $6.21 close) on 375.1K shares/11,141 trades. This was a PM-only gapper, not an AH-scanner miss; no fresh catalyst was verified (Grade None). It was liquid at the peak but immediately retraced below $8.82 in the next bar, so **uninvestable**.
+
+**Scanner Diagnostic (ZJYL baseline mover):**
+- Detectable at screening time? **YES.** It appeared at 00:00 and 00:30 CEST, $2.91 to $3.16 (+50.0% to +62.9% AH), with 2.6M scanner-reported AH volume and real SIP accumulation.
+- Why no entry: Alpaca reported `tradable=false`, a broker block rather than a selection failure. The trajectory also faded from the $3.72 SIP AH high before PM.
+- Scanner gap: none. This was detected; broker coverage was the execution constraint.
+
+### Baseline Tracking
+
+- Days tracked: **60** (was 59 + 1)
+- Winners detected by scanner: **48/57 (84.2%)** — no qualifying >100% real winner today; the sub-100% baseline mover, ZJYL, was detected.
+- Winner selected for paper trade: **27/57 (47.4%)** — no qualifying winner to select.
+- Target: >80% detection
+- Status: **BASELINE MET**
+- **Baseline gap:** 2026-07-31 had a log but no morning baseline. It remains outside the measured sample and was not back-filled.
+
+### Retrospective Scan Results
+
+- SIP corrected Yahoo's low peaks: BJDX $1.73 PM versus Yahoo $1.61; ZJYL $3.72 AH/$3.49 PM versus Yahoo $3.48/$3.03; INLF $5.05 PM versus Yahoo $4.87; JLHL $10.56 PM versus Yahoo $8.09.
+- **Caught:** BJDX, INLF, and ZJYL. BJDX and INLF were correctly skipped as early spike→fades. ZJYL was broker-blocked.
+- **PM-only:** JLHL, flat/down throughout AH and therefore structurally unavailable to the evening scanner.
+- No in-window feed-lag miss, price-floor exclusion, late-AH-tail surge, ceiling override, or dead-cat override was found.
+
+### Open Position P&L (Alpaca)
+
+No executed positions. Alpaca reports no open positions.
+
+**Total Realized P&L (Alpaca fills only): €0.00**
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled times (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST). The additional 22:15 and 22:45 checks were supplemental.
+- Candidates found: **12** unique tickers.
+- Retrospective matches: **3/3** AH movers (BJDX, INLF, ZJYL); JLHL was PM-only.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| JLHL | Flat/down, max +1.4% | PM-only gapper; no AH signal | No plausible AH entry |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| BJDX | $1.55 SIP | 18:45 ET | Spike→fade, then late rebuild | $1.59 at 04:05 ET | +11.6% | +81.1% at SIP PM peak $1.73 | PM peak exceeded AH; liquid re-explosion but still sub-100% |
+| ZJYL | $3.72 SIP | 17:50 ET | Spike→hold/fade | $2.88 at 04:05 ET | −6.2% | +80.8% at SIP PM peak $3.49 | AH was the better exit; broker-blocked |
+| INLF | $4.77 SIP | 16:25 ET | Spike→fade | $4.87 at 04:05 ET | +5.9% | +35.4% at SIP PM peak $5.05 | PM barely exceeded AH, but no sustained AH build |
+| BANL | $6.30 SIP | 17:05 ET | Spike→fade | $4.30 at 04:05 ET | −31.7% | +0.4% at SIP PM peak $4.55 | Correct fade skip; `tradable=false` |
+
+### Price Charts
+
+```text
+BJDX: $0.95 close; SIP PM peak $1.73 at 04:05 ET (+82.1%); current early PM $1.59.
+ZJYL: $1.93 close; SIP AH peak $3.72 at 17:50 ET (+92.7%); SIP PM peak $3.49.
+JLHL: $6.21 close; SIP PM peak $10.56 at 04:00 ET (+70.0%); PM-only, first-bar spike/retrace.
+```
+
+### Notes
+
+- **Fade-rule false-negative:** BJDX (Aug 4→5), float 936K, Grade None. AH peak $1.55 SIP faded to $1.18 by 18:30 ET, then PM peak $1.73 (+11.6% above AH peak). (a) first qualifying scan $1.19 → $1.73 = **+45.4%**; (b) PM-open $1.40 → $1.73 = **+23.6%**. It is the fourth SIP-verified sub-3M re-explosion, but the full sample is now **4/11**, still far below the ≥80% promotion trigger. The PM peak was liquid (2.31M shares/14.9K trades at 04:05), while the live Alpaca quote was stale from 16:00 ET and unusable.
+- **Correct fade controls:** INLF, float 1.0M, Grade None, AH $4.77 > PM $5.05 only marginally; BANL, float 407K, Grade C Nasdaq-compliance PR, AH $6.30 > PM $4.55. The strong-catalyst fader tally is unchanged: no evidence that catalyst overrides trajectory.
+- **PM-only gapper tally:** JLHL added, uninvestable. Standing clear holdable count remains **1 of 7** (SXTC only), not a cluster for an early-PM workflow.
+- **In-window feed-lag tally:** unchanged at **4**, above the escalation threshold. The daily email should continue to carry the recommendation for an independent whole-universe AH gainer cross-check at the final scan.
+- **Stale-book execution blocks:** unchanged at **2** detected winners (NUWE, KUST). BJDX had the same stale extended-hours quote condition but was already a fade-rule skip, so it is not added to that tally.
+- **Broker blocks:** ZJYL was detected in 2 scans and `tradable=false`; it did not clear the fade trajectory gate, so it is not added to the qualified broker-block tally. BANL was also untradable and faded.
+- **Price-floor exclusions:** unchanged at **5 across 2 nights, 0 holdable**. No floor change.
+- **Reverse-split tally:** unchanged. No reverse-split catalyst among tonight's candidates.
