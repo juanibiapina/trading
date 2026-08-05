@@ -9,6 +9,18 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-08-05 — Initiative 3: second live third-bar outcome set
+
+**Evaluated:** The 2026-08-04 first-live-outcome step **worked mechanically but remains insufficient for a decision**. The next AH session supplied five more out-of-sample rows. `CONFIRM-3 YES` INLF reached +12.2% to its next-PM SIP high and BJDX +43.5%, but BANL lost -19.9% and ZJYL was only +0.9%; `NO` TRUG was flat. Combined live YES n=5 has two meaningful excursions, one near-flat result, and two losses. Peak returns omit spread, INLF had no fillable AH ask, and BJDX had faded in AH, so this does not establish executable edge.
+
+**Step taken:** **Pilot / Initiative 3:** re-ran `ah-5m-confirmation.js` on all five 2026-08-04 AH candidates, pulled their 2026-08-05 SIP 5-minute PM bars, and appended the verdict-to-PM-outcome table to `INIT3_IGNITION_TIMING.md`.
+
+**Result:** The first live YES loss (JELD) was not representative, but the broader n=10 live sample is still too small and mixed to change selection or add five-minute pulses. `node scripts/ah-5m-confirmation.js INLF:2026-08-04 BJDX:2026-08-04 BANL:2026-08-04 ZJYL:2026-08-04 TRUG:2026-08-04` reproduced every recorded verdict. Initiative 3 remains the highest expected dollars-per-time lever because a validated selection gate would improve every AH trade without added pulse cost. Parallel Init 6 remains blocked at n=11 admitted PM-only gappers, one short of its deferred one-minute exit test; its 5-minute exits remain negative after spread.
+
+**Hypothesis / next step:** Collect more distinct live `CONFIRM-3` verdicts and next-PM outcomes. Do not change entry logic or scan timing unless the out-of-sample separation persists net of realistic fill and spread constraints. Run Initiative 6's one-minute exit test only when admitted n reaches 12.
+
+**Needs from Juan:** nothing.
+
 ### 2026-08-04 — Initiative 3: first live third-bar outcomes; Initiative 6 sample refresh
 
 **Evaluated:** The 2026-08-03 instrumentation step **worked mechanically**: every eligible 08-03 AH candidate received a `CONFIRM-3` verdict, and the 08-04 morning evaluation supplied next-PM outcomes. Evidence is still insufficient to judge the gate: the sole YES (JELD) reached only $1.71 versus its $1.76 confirmed close (-2.8%); three of four recorded NO rows failed outright (ABTS -9.5%, BRCC flat, CSAI -3.0%), while IPW rose +24.1% but remained below its ~$0.90 AH peak. The prior replay result does not yet generalize from this n=5 live sample.

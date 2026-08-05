@@ -389,3 +389,17 @@ orders, grades, rankings, or schedules used the verdict.
 `NO` rows failed outright. IPW is a non-winner exception, not a clean false
 negative: its PM bounce stayed below its AH peak. The sample is far too small to
 change selection or cadence. Keep collecting distinct candidate outcomes.
+
+## Second live third-bar outcomes (2026-08-04 AH -> 2026-08-05 PM)
+
+Re-ran the instrument against the final AH bars, then measured the next-PM SIP high from each verdict's confirmed close (or final liquid AH level for `NO`). These remain observations only: none was entered, and stale books / broker blocks still independently prevented several fills.
+
+| Ticker | CONFIRM-3 | Reference price | Next-PM SIP high | Return | Outcome |
+|--------|-----------|-----------------|------------------|--------|---------|
+| INLF | YES, confirmed 16:15 ET | $4.50 | $5.05 | +12.2% | PM opening pop, then faded; no fillable AH ask |
+| BJDX | YES, confirmed 16:45 ET | $1.24 | $1.78 | +43.5% | liquid PM re-explosion after the AH fade |
+| BANL | YES, confirmed 17:10 ET | $5.68 | $4.55 | -19.9% | fade; broker-blocked |
+| ZJYL | YES, confirmed 17:50 ET | $3.46 | $3.49 | +0.9% | flat before fading; broker-blocked |
+| TRUG | NO | $0.82 final liquid AH level | $0.82 | 0.0% | illiquid flatline |
+
+**Reading:** Across the two live sessions, `YES` is now 5 rows: two meaningful positive PM excursions (INLF +12.2%, BJDX +43.5%), one near-flat result (+0.9%), and two losses (JELD -2.8%, BANL -19.9%). `NO` is five rows: three outright failures, one flatline, and IPW's +24.1% bounce that remained below its AH peak. This is not a tradable sample: the positive `YES` rows include a stale/unfillable book (INLF) and a later fade pattern (BJDX), returns are peak ceilings rather than executable exits, and no spread is charged. It does show the first live `YES` was not representative, so keep the column log-only and collect more outcomes rather than change cadence or selection.
