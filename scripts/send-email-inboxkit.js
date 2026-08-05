@@ -36,7 +36,13 @@ function loadCreds() {
   return { key, email };
 }
 
+const usage = "Usage: send-email-inboxkit.js --to EMAIL --subject SUBJECT (--body HTML | --body-file FILE | --text PLAIN)";
 const args = process.argv.slice(2);
+if (args.includes("--help") || args.includes("-h")) {
+  console.log(usage);
+  process.exit(0);
+}
+
 let to = "", subject = "", body = "", bodyFile = "", text = "";
 for (let i = 0; i < args.length; i++) {
   switch (args[i]) {
@@ -52,7 +58,7 @@ for (let i = 0; i < args.length; i++) {
 }
 
 if (!to || !subject) {
-  console.error("Usage: send-email-inboxkit.js --to EMAIL --subject SUBJECT (--body HTML | --body-file FILE | --text PLAIN)");
+  console.error(usage);
   process.exit(1);
 }
 if (bodyFile) body = fs.readFileSync(bodyFile, "utf8");
