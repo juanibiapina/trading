@@ -74,6 +74,33 @@ Scanner returned **2 AH hits** as real post-market volume accumulated. Observati
 
 No paper trades this scan (observation-only, entries permitted at 23:00+ CET).
 
+## Scan 22:45 CET (4:45 PM ET)
+
+Scanner returned **6 AH hits**. Observation-only scan (learning-phase default: no entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $0.67 | +1.9% | +33.9% | $0.90 | +36.4% | 16.6M | 2.0M | 8.4x | 4.7M | Medical Specialties |
+| PAVS | [TV](https://www.tradingview.com/chart/?symbol=PAVS) | $4.91 | +0.2% | +35.3% | $6.64 | +35.6% | 490K | 2.2M | 0.2x | 856K | Pharmaceuticals: Other |
+| CNEY | [TV](https://www.tradingview.com/chart/?symbol=CNEY) | $0.64 | +3.8% | +10.1% | $0.70 | +14.3% | 127K | 227K | 0.6x | 7.6M | Electrical Products |
+| LESL | [TV](https://www.tradingview.com/chart/?symbol=LESL) | $1.36 | +3.0% | +11.0% | $1.51 | +14.4% | 100K | 1.4M | 0.1x | 8.8M | Specialty Stores |
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.26 | +5.0% | +8.7% | $1.37 | +14.2% | 63K | 446K | 0.1x | 1.3M | Misc Commercial Services |
+| OPRT | [TV](https://www.tradingview.com/chart/?symbol=OPRT) | $6.06 | +0.8% | +5.1% | $6.37 | +6.0% | 51K | 400K | 0.1x | 39.3M | Finance/Rental/Leasing |
+
+**Instrumentation (log-only, no decision impact):**
+- CELZ: `SPIKE 16:01ET +34% $0.90 1343 trades / 466k sh (first co-spike bar)` · `CONFIRM-3 NO no local-volume new-high ignition as-of 16:45ET`
+- PAVS: `SPIKE 16:20ET +32% $6.48 385 trades / 28k sh (first co-spike bar)` · `CONFIRM-3 NO ignition 16:20ET failed third-bar hold/volume as-of 16:45ET`
+- CNEY: `SPIKE 16:24ET +16% $0.74 174 trades / 54k sh (first co-spike bar)` · `CONFIRM-3 NO no local-volume new-high ignition as-of 16:45ET`
+- LESL: `SPIKE 16:27ET +17% $1.59 57 trades / 19k sh (first co-spike bar)` · `CONFIRM-3 PENDING ignition 16:25ET; waiting for third bar as-of 16:45ET`
+
+**CELZ** — lead candidate, real + liquid + BUILD/reclaim profile. Now in its **2nd AH scan >10%** (22:30 +36%, 22:45 +34%) → clears the 2-AH-scan gate. SIP bars sustained/rebuilding: 20:00Z 3.45M sh/10,537 tr (VWAP $0.90), 20:05Z peak H $1.06 (4.86M/16,553 tr), dip to L $0.86 at 20:20Z (−19% off high), then **rebuilt** 20:25Z→20:30Z C $0.98 (2.34M sh/7,625 tr) making a run at the high. Live quote 16:38 ET bid $1.00 / ask $1.02 x100 — fresh, two-sided, liquid (not stale). VWAP $0.88–0.96 corroborates scanner AH (no bad print). `tradable=true`. Float 4.7M (low). Day% +1.9% (not a dead-cat). Total% ~+49% at bid $1.00 — well under the 150% ceiling. **No catalyst found** (earnings Aug 10 post-market, latest PR January ADAPT data). No-catalyst = concern noted, not a skip. Holding within ~20% of AH high on real volume → BUILD pattern. **Qualifies for entry at the 23:00 CET scan** if it holds >10% AH.
+- PAVS — VRatio 0.2x (AH vol 490K vs 2.2M avg = thin), spike 16:20ET already failed third-bar hold, quote stale bid $4.05/ask $5.70 wide. SPIKE→FADE + thin relative volume. Skip.
+- CNEY / LESL / FCHL / OPRT — AH change ≤11%, VRatio <1x (below-average relative volume), thin trade counts. Below the momentum threshold. Skip.
+
+21:30 watch names remain below their regular close; SHPH carried untradable (`tradable=false` historically).
+
+No paper trades this scan (observation-only; CELZ flagged for entry at 23:00 CET pending a hold above threshold).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
