@@ -19,6 +19,28 @@ Regular-session scan (15:30 ET, before AH opens at 22:00 CET). Per regular-sessi
 - Thin/stale movers skipped from watch (CLRO +161.9%, CELZ +104.1%, AZI +52%, PN, PEPG, III — all show VChg near -99% = single-print/stale, no real sustained volume).
 - No spike-bar/confirmation instrumentation run — those apply to AH candidates with AH change >10%; AH session not yet open.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+Observation-only scan (AH just opened at 16:00 ET). Per learning-phase rule, no entries before 23:00 CET. `scan.py --all` returned **0 AH hits** — expected at the AH-open minute (TradingView postmarket feed lags the first few minutes). Cross-checked the four 21:30 regular-session watch names against the live Alpaca book:
+
+| Ticker | 21:30 Close | AH-open Bid | AH-open Ask | Book | Note |
+|--------|-------------|-------------|-------------|------|------|
+| XHLD | $2.07 | $2.38 x100 | $0.00 x0 | one-sided | Up ~+15% off regular close into AH, but **no ask/size** — illiquid AH book at open. Low float 7.8M. Watch for real two-sided book + accumulation at 22:30. |
+| BYAH | $3.05 | $2.72 x100 | $3.63 x100 | two-sided | Wide spread, sitting near regular close. Low float 4.2M. |
+| WLDS | $3.69 | $3.50 x100 | $4.79 x100 | two-sided | Very wide spread, below regular close. Float 1.7M. |
+| ALEC | $1.88 | $1.52 x100 | $1.87 x100 | two-sided | Below regular close (fading). Float 77.7M. |
+
+**Instrumentation (XHLD, only name >10% into AH so far):**
+- `SPIKE-BAR: XHLD 2026-08-06 NO-SPIKE no AH bars yet (as-of 16:00ET)`
+- `CONFIRM-3: XHLD 2026-08-06 PENDING no AH bars as-of 16:00ET`
+- SIP bars from 20:00Z: `no bars (feed=iex; AH/PM sparse)` — nothing accumulated at the open minute.
+
+**Notes:**
+- No entries (observation scan). Nothing has confirmed sustained AH momentum yet.
+- XHLD is the name to watch: biggest mover, low float, but needs a real fillable book and AH accumulation at 22:30/23:00 to qualify. Its regular-session Total% is already ~+160%, near the +150% ceiling — a ceiling concern if it carries.
+- ALEC and WLDS both trading *below* their regular closes into AH (fading). BYAH flat with a wide spread.
+- Next scan 22:30 CET should have real AH bars to run SIP volume confirmation and instrumentation.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
