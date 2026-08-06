@@ -257,3 +257,86 @@ No open positions in Alpaca. `OPEN_POSITIONS.md` agrees with the broker state.
 
 **Actions taken:**
 - No sells or stop updates.
+
+---
+
+## Morning Evaluation — 10:20 CEST
+
+### Today's Winner
+
+**CLRO** (ClearOne) — Electronics/Appliances (audio/AV conferencing)
+- Catalyst: **Grade None (same-day).** Backdrop is the July 2 stock-for-stock Cortigent reverse-merger (rebrand to CRGT); no fresh same-day PR found. Ultra-low-float momentum squeeze.
+- Previous Close (Aug 5 regular): **$3.68** (Aug 5 was a −8.7% red regular day on 8.5M sh)
+- AH last night: SIP peak **$8.07** (+119.3%) at 18:35 ET / 00:35 CET, on accumulating volume (400K–700K sh/bar, 5K–11K trades/bar)
+- Premarket now: **$7.07** (+92.1%) at 04:20 ET; **PM SIP peak $9.00** (+144.6%) at 04:00 ET open on 895K sh / 20,524 trades
+- Hypothetical P&L (qualified AH entry $6.70 → PM peak $9.00): **+34.3%**
+- Float: **740K** (ultra-low) | Market Cap: ~$9.8M
+
+Clears the winner bar: **>100% (both AH +119% and PM +145%) on high, accumulating SIP volume.** Real, liquid explosion — not a thin ramp or bad print.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- The scanner **caught it.** Move ignited 17:25 ET (21:25Z), within the scanned window. Flagged **WATCH** at 00:00 CET (1st AH scan >10%, +56.5%), then **QUALIFIED** at the 00:30 CET final scan on its 2nd AH scan >10% (+72.8%). CONFIRM-3 YES, float 740K, Day% −8.7% (not a dead-cat), Total% +57.8% (under ceiling), tradable=true.
+- **Why we didn't hold it: broker no-fill / stale-book execution block.** Alpaca's AH quote was stuck stale at 16:00 ET (bid $3.08/ask $4.50, 2.5h behind the scan). Orders at $6.70 and $7.10 ext both sat `new` with no fill despite real SIP volume on the consolidated feed. No fillable ask on Alpaca's own venue → no position.
+- Scanner gap: **none — this is not a detection or selection failure, it is an execution-data (stale extended-hours quote) failure.** Same class as NUWE (Jul 29→30) and KUST (Jul 30→31).
+
+### Baseline Tracking
+
+- Days tracked: **61** (was 60 + 1)
+- Winners detected by scanner: **49/58 (84.5%)** — CLRO detected (WATCH → QUALIFIED)
+- Winner selected for paper trade: **27/58 (46.6%)** — CLRO qualified but was a stale-book no-fill; per the execution-block rule this is not counted as a selection (numerator held), denominator +1
+- Target: >80% detection
+- Status: **BASELINE MET** (84.5% > 80%)
+
+### Retrospective Scan Results
+
+Live PM scan (04:20 ET) top hits: CLRO +92.1% ($7.07), CLRO the standout; PAVS +36.5% ($6.70), CELZ +25.6% ($0.84), AZI +11.4%, LIDR +9.5%. Biggest raw PM mover = **CLRO** (an AH→PM continuation, detectable — not a PM-only gapper). SIP reconstruction confirms CLRO AH ignition 17:25 ET → AH peak $8.07 (18:35 ET) → PM peak $9.00 (04:00 ET open). PAVS PM SIP peak $7.98; CELZ PM SIP peak $0.95.
+
+### Open Position P&L (Alpaca)
+
+Two positions carried from last night's entries (CELZ entered 23:00, PAVS entered 23:30). Standalone `quote` endpoint is stale (CELZ 16:38 ET, PAVS 16:00 ET) but the `positions` `current_price` is live and matches the PM SIP tape, so P&L below is reported against the live PM price. **This is a diagnostic — no exits here; position-evaluation.md (10:30 CET) manages hold/sell.**
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak (SIP) | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------------|-----------|------|-----|-------|--------|
+| CELZ | $0.89 | +33% | None | 23:00 CET | $0.95 | 04:00 ET | open | — | −2.9% | 🟡 Open (live $0.86) |
+| PAVS | $6.61 | +45% | None | 23:30 CET | $7.98 | 04:00 ET | open | — | +4.5% | 🟢 Open (live $6.91) |
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits yet)
+
+### Scanner Effectiveness
+
+- Evening scans ran: **9** (21:30, 22:00, 22:15, 22:30, 22:45, 23:00, 23:30, 00:00, 00:30 CET) — **all 7 scheduled scans ran + 2 bonus. Coverage: 7 of 7.** Entry window fully captured.
+- Candidates found: CELZ, PAVS, CLRO (all real, liquid movers surfaced); FRGT/RECT/HYFM/BJDX correctly skipped
+- Retrospective matches: 3/3 real movers detected (CELZ, PAVS, CLRO)
+
+### Missed Opportunities
+
+No significant missed opportunities. The three real AH→PM movers (CLRO, PAVS, CELZ) were all detected. CLRO was the only >100% winner and it was caught; the loss was execution (stale book), not detection.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak (SIP) | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------------|-----------|---------------|------------|-----------|-----------|---------|
+| CLRO | $8.07 | 18:35 ET | Build (late-igniting, +17% at 17:25 → +119% by 18:35) | $7.07 (PM peak $9.00) | −12% off PM peak | +92% (peak +145%) | PM peak > AH peak → continued |
+| PAVS | $7.55 | 16:45 ET | Build-and-hold | $6.91 (PM peak $7.98) | −13% off PM peak | +41% (peak +62.5%) | PM peak > AH peak → continued |
+| CELZ | $1.06 | 16:05 ET | Spike→hold/reclaim | $0.86 (PM peak $0.95) | −19% off PM peak | +17% | PM peak < AH peak (AH was better exit) |
+
+**AH-peak-vs-PM-peak check:** CLRO and PAVS both extended past their AH peaks into PM (continuation). CELZ's AH peak $1.06 exceeded its PM peak $0.95 — AH was the better exit for CELZ (early-peak name). No extreme-AH-runner (>250%) fade case today.
+
+### Notes
+
+- **Stale-book execution-block tracking:** CLRO (Aug 5→6) adds to the tally. Quote frozen at 16:00 ET (`bid $3.08/ask $4.50`) through the final scan; SIP bars were fresh, real, liquid (400K–700K sh/bar); qualified ~$6.70 → PM peak $9.00 = **+34.3%**. **Standing count: 3, all three detected winners, all profitable hypotheticals** (NUWE +82.4%, KUST +45.9%, CLRO +34.3%). This is the third night in ~8 sessions where a detected, qualifying winner was lost solely to a stale Alpaca extended-hours quote. Cumulative hypothetical cost is now material — **route the repeated stale extended-hours quote problem (3 lost winners) to Juan's daily email as a paper-data/execution-feed decision.** Keep the live-book safety gate unchanged here.
+- **Reverse-split tracking:** PAVS is a known reverse-split name (1-for-100, Jun 25, now ~6 weeks old / weeks-old bucket), though last night's entry thesis was momentum, not the split (catalyst noted None). Entered $6.61 → PM peak $7.98 = **+20.7%, continue** (PM peak above entry). Weeks/months-old bucket now 3 non-fade (EDHL, LGCL, PAVS-continue) vs earlier PAVS fade (Jul 23→24) — older-split bucket stays mixed. This-week-split bucket unchanged at 3/3 fade.
+- **Fade-rule false-negative tracking:** no new sub-3M AH-fader re-explosion today. FRGT (SPIKE→FADE, illiquid) and RECT (faded below close) both stayed dead into PM — fade rule correct. Standing sub-3M count unchanged at 4 of 11 (below the ≥80% trigger).
+- **In-window feed-lag miss tracking:** none today — CLRO was surfaced by the feed (no-fill, not feed-lag). Standing count unchanged at 4 (≥3 escalation trigger remains REACHED; AH-data-source-verification recommendation already routed).
+- **PM-only gapper / late-AH-tail / price-floor exclusion:** none today. Biggest PM mover (CLRO) was an in-window, detected AH→PM continuation.
+- **Coverage:** full 7/7. No coverage-failure tally entry.
+- **Baseline chain:** no gap — Aug 4 log (Days 60) is the immediately-preceding trading day; this eval is Aug 5 session → Days 61.
+
+### Price Charts
+
+```
+CLRO — 2-day, base $3.68 (Aug 5 regular close)
+AH ignition 17:25 ET → AH SIP peak $8.07 (+119%) 18:35 ET → PM SIP peak $9.00 (+145%) 04:00 ET → faded to $7.07 (+92%) by 04:20 ET
+Volume: 400K–700K sh/bar in AH, 895K sh/20.5K trades on the PM-open peak bar — real, accumulating, liquid.
+```

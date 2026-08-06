@@ -6,7 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-08-04 | RAIN | None (unverified low-float squeeze) | $4.60 PM SIP (+208.7% from $1.49 close @04:00 ET, 1.29M sh/21.7K trades) | - | $1.58 | Day 1: real volume-backed winner. AH SIP breakout $3.69 -> PM $4.60. **NOT DETECTED**: TradingView omitted it despite the 18:15 ET in-window surge. Float 60K |
+| 2026-08-05 | CLRO | None same-day (July 2 Cortigent reverse-merger backdrop) | $9.00 PM SIP (+144.6% from $3.68 close @04:00 ET, 895K sh/20.5K trades); AH SIP peak $8.07 (+119%) | - | $7.07 | Day 1: real volume-backed winner. **DETECTED** (WATCH→QUALIFIED) but **NOT ENTERED** — stale-book no-fill (Alpaca AH quote frozen 16:00 ET). Float 740K |
+| 2026-08-04 | RAIN | None (unverified low-float squeeze) | $4.60 PM SIP (+208.7% from $1.49 close @04:00 ET, 1.29M sh/21.7K trades) | - | $1.16 | Day 2: faded to $1.16 from $4.60 day-1 peak. AH SIP breakout $3.69 -> PM $4.60. **NOT DETECTED**: TradingView omitted it despite the 18:15 ET in-window surge. Float 60K |
 
 ## Historical Winners (with multi-day outcome)
 
