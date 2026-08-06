@@ -182,6 +182,57 @@ DSY SIP bars show real sustained accumulation building past the early spike: 16:
 
 **Order:** BUY 12 DSY @ limit $8.18 ext (id 5d6d5ed6) → **filled @ $7.10** (price improvement; book had lower fill). 12 sh × $7.10 = $85.20. Grade None. Added to OPEN_POSITIONS.md.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Entry-eligible scan. `scan.py --all` returned **14 AH hits**; above the +10% AH threshold: CELZ, DSY (held), FNKO, BYAH, SUGP, RCEL, GWH, VATE, PDSB. DSY already entered at 23:00 (managed separately). Focus: new AH names not previously >10% in an AH scan.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $1.15 | +71.9% | +22.6% | $1.41 | +110.8% | 8.0M | 31.3M | 0.3x | 4.7M | Medical Specialties |
+| DSY | [TV](https://www.tradingview.com/chart/?symbol=DSY) | $3.45 | +3.3% | +98.0% | $6.83 | +104.5% | 4.8M | 720K | 6.7x | 1.3M | Miscellaneous |
+| BYAH | [TV](https://www.tradingview.com/chart/?symbol=BYAH) | $3.22 | +21.9% | +27.4% | $4.10 | +55.3% | 608K | 1.7M | 0.4x | 4.2M | Household/Personal Care |
+| VATE | [TV](https://www.tradingview.com/chart/?symbol=VATE) | $7.41 | -2.0% | +48.2% | $10.98 | +45.2% | 36K | 97K | 0.4x | 5.1M | Engineering & Construction |
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $1.96 | +2.5% | +12.2% | $2.20 | +15.1% | 101K | 353K | 0.3x | 3.0M | Miscellaneous Commercial Services |
+| PDSB | [TV](https://www.tradingview.com/chart/?symbol=PDSB) | $0.75 | +2.8% | +20.5% | $0.90 | +23.8% | 6K | 217K | 0.0x | 55.0M | Pharmaceuticals: Major |
+| GWH | [TV](https://www.tradingview.com/chart/?symbol=GWH) | $0.68 | -7.4% | +12.6% | $0.76 | +4.3% | 66K | 461K | 0.1x | 25.0M | Electrical Products |
+
+Below-threshold / stale (log only): ENSC +8.0%, CLRO +6.7% (stale, VChg -99% type), FNKO +16.5% (float 40M, carried skip), RCEL +11.6% (carried thin skip), EXFY/MWYN/SENS single-digit.
+
+**Instrumentation (AH change >10%, log-only):**
+- `SPIKE-BAR: BYAH 2026-08-06 SPIKE 16:59ET +15% $3.71 123 trades / 14k sh (first co-spike bar) (as-of 17:30ET)`
+- `CONFIRM-3: BYAH 2026-08-06 YES ignition 16:55ET 5.6x; confirmed 17:05ET $4.07 as-of 17:30ET`
+- `SPIKE-BAR: VATE 2026-08-06 SPIKE 17:05ET +52% $11.30 144 trades / 3k sh (first co-spike bar) (as-of 17:30ET)`
+- `CONFIRM-3: VATE 2026-08-06 NO ignition 17:00ET failed third-bar hold/volume as-of 17:30ET`
+- `SPIKE-BAR: SUGP 2026-08-06 NO-SPIKE peak +12% @17:15ET (no bar cleared +15% on a volume co-spike) (as-of 17:30ET)`
+- `CONFIRM-3: SUGP 2026-08-06 NO no local-volume new-high ignition as-of 17:30ET`
+- `SPIKE-BAR: GWH 2026-08-06 NO-SPIKE peak +13% @17:11ET (no bar cleared +15% on a volume co-spike) (as-of 17:30ET)`
+- `CONFIRM-3: GWH 2026-08-06 NO ignition 17:00ET failed third-bar hold/volume as-of 17:30ET`
+- `SPIKE-BAR: PDSB 2026-08-06 NO-SPIKE peak +20% @17:09ET (no bar cleared +15% on a volume co-spike) (as-of 17:30ET)`
+- `CONFIRM-3: PDSB 2026-08-06 NO no local-volume new-high ignition as-of 17:30ET`
+- `SPIKE-BAR: CELZ 2026-08-06 SPIKE 16:40ET +17% $1.35 795 trades / 379k sh (first co-spike bar) (as-of 17:30ET)`
+- `CONFIRM-3: CELZ 2026-08-06 YES ignition 16:40ET 11.3x; confirmed 16:50ET $1.49 as-of 17:30ET`
+
+**SIP volume + book (new candidates, 20:00Z = 16:00 ET open):**
+
+| Ticker | AH bars (vwap/trades/vol) | Quote (bid / ask) | Book | Verdict |
+|--------|--------------------------|-------------------|------|---------|
+| BYAH | grind $3.27-3.48 to 16:50, then **ignition 17:00 $4.17/6,643/379K (H $4.60)**, 17:05 $4.15/4,536/197K, 17:10 $3.99/1,623/80K, 17:15 $3.95/1,118/78K (C $3.85) | $2.72 x100 / $3.63 x100 (stale 16:00) | two-sided (stale) | **Real late ignition** 17:00 ET on 379K sh / 6,643 trades; peaked $4.60, holding $3.85-4.18 (within ~15% of high). Quote stale-stamped 16:00 — book unconfirmed live. |
+| VATE | sparse: 17:00 $10.09/153/10K, 17:05 $10.67/373/11K, 17:10 $10.99/241/16K, 17:15 $10.77/238/18K (peak $11.30) | $6.03 x100 / $8.48 x100 (stale 16:00) | thin/stale | Ignition 17:00 but **thin** (150-18K sh/bar, 8-373 trades). confirm-3 NO. |
+| SUGP | grind $1.87-2.19, peak 16:45 $2.14, holding $2.10-2.18 | $1.63 x100 / $2.41 x100 (stale 16:00) | thin | NO-SPIKE, thin (6-327 trades/bar). Modest grind. |
+
+**Catalyst search (BYAH):** Park Ha Biological Technology (renamed; ticker BYAH). Catalyst = **1-for-8 reverse stock split effective today Aug 6, 2026**. Also a securities class action was filed (Robbins LLP) and this is the **same low-float name that ran parabolic Jun 8** ($1.20→$6.49→faded to $1.05 over 3 days — classic backside). Reverse split is a structural/dilution-adjacent catalyst, not operational → **Grade C/D**, with a documented pump-and-fade history.
+
+**Decision: NO NEW ENTRIES this scan.**
+- **BYAH** — strongest new mover: low float 4.2M, real **late ignition at 17:00 ET** (379K sh / 6,643 trades), confirm-3 **YES**, holding within ~15% of its $4.60 high, Total% +55.3% (well under +150% ceiling), tradable=true. **But it appears above +10% AH for the FIRST time this scan** — at 22:00-23:00 it was flat/single-digit near close; the ignition only fired at 17:00 ET. **Fails the 2-AH-scan gate** (needs >10% AH in ≥2 AH scans). Catalyst is a reverse split (Grade C/D) on a known parabolic pump-and-fade ticker. **Strong watch for the 00:00 CET scan**: if it holds >10% AH there it clears the 2-scan gate — but weigh the weak catalyst + backside history before entering. Quote is stale-stamped 16:00; confirm a live two-sided book at 00:00 before sizing.
+- **VATE** — ignition 17:00 but thin (8-373 trades/bar), confirm-3 NO, first AH scan >10% (fails gate). Watch, low conviction.
+- **SUGP** — NO-SPIKE, thin grind, first AH scan >10% (fails gate). Skip.
+- **PDSB** — NO-SPIKE, float 55M, AH vol 6K (near-zero real volume). Skip: thin + high float.
+- **GWH** — NO-SPIKE, Total% only +4.3% (barely above close), float 25M. Skip.
+- **CELZ** — Day +71.9% regular-session mover, confirm-3 YES but VRatio 0.1 (AH vol << avg), and it was already **traded and exited earlier today** (10:30 pulse). Don't re-enter same ticker. Skip.
+- **FNKO / RCEL** — carried skips (high float 40M / thin 22-80 trades/bar).
+
+DSY (entered 23:00 @ $7.10) remains the only open position; per scanner at 23:30 it's +98% AH / $6.83 (faded from the ~$8 entry-scan quote toward its scanner AH price). Position management handled in premarket eval.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
