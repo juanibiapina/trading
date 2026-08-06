@@ -102,6 +102,48 @@ Below-threshold hits (log only): RDGT-tier ignored — FNKO +7.0% (float 40M), C
 - **RCEL** — thin (22-80 trades/bar), wide stale book, float 23.9M. Weak; leaning skip.
 - Both DSY and RDGT spiked at 16:03 ET (very early). Early-peak-then-fade is 0/6+ for PM continuation — the 23:00 decision hinges on whether either is holding/building vs still fading. DSY's ~$7 quote rebuild is the thing to confirm at 23:00.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+Observation-only scan (~45 min into AH; before 23:00 CET → no entries). `scan.py --all` returned **9 AH hits**; five above the +10% AH threshold: DSY, FNKO, RCEL, ZYBT, RDGT.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DSY | [TV](https://www.tradingview.com/chart/?symbol=DSY) | $3.45 | +3.3% | +89.6% | $6.54 | +95.8% | 2.6M | 400K | 6.5x | 1.3M | Miscellaneous |
+| FNKO | [TV](https://www.tradingview.com/chart/?symbol=FNKO) | $5.28 | -6.2% | +18.4% | $6.25 | +11.0% | 879K | 1.3M | 0.7x | 40.0M | Recreational Products |
+| RCEL | [TV](https://www.tradingview.com/chart/?symbol=RCEL) | $4.75 | +6.3% | +17.4% | $5.58 | +24.8% | 64K | 135K | 0.5x | 23.9M | Medical Specialties |
+| ZYBT | [TV](https://www.tradingview.com/chart/?symbol=ZYBT) | $2.09 | -11.4% | +15.3% | $2.41 | +2.1% | 180K | 7.9M | 0.0x | 7.7M | Biotechnology |
+| RDGT | [TV](https://www.tradingview.com/chart/?symbol=RDGT) | $0.79 | +10.7% | +10.7% | $0.87 | +22.5% | 7.4M | 1.1M | 6.9x | 1.4M | Medical Distributors |
+
+**Instrumentation (AH change >10%):**
+- `SPIKE-BAR: DSY 2026-08-06 SPIKE 16:03ET +20% $4.14 32 trades / 3k sh (first co-spike bar) (as-of 16:45ET)`
+- `CONFIRM-3: DSY 2026-08-06 NO ignition 16:05ET failed third-bar hold/volume as-of 16:45ET`
+- `SPIKE-BAR: RDGT 2026-08-06 SPIKE 16:03ET +35% $1.07 783 trades / 186k sh (first co-spike bar) (as-of 16:45ET)`
+- `CONFIRM-3: RDGT 2026-08-06 NO no local-volume new-high ignition as-of 16:45ET`
+- `SPIKE-BAR: FNKO 2026-08-06 SPIKE 16:23ET +24% $6.56 45 trades / 7k sh (first co-spike bar) (as-of 16:45ET)`
+- `CONFIRM-3: FNKO 2026-08-06 NO ignition 16:20ET failed third-bar hold/volume as-of 16:45ET`
+- `SPIKE-BAR: ZYBT 2026-08-06 SPIKE 16:29ET +17% $2.45 295 trades / 33k sh (first co-spike bar) (as-of 16:45ET)`
+- `CONFIRM-3: ZYBT 2026-08-06 NO no local-volume new-high ignition as-of 16:45ET`
+- `SPIKE-BAR: RCEL 2026-08-06 NO-SPIKE peak +19% @16:06ET (no bar cleared +15% on a volume co-spike) (as-of 16:45ET)`
+- `CONFIRM-3: RCEL 2026-08-06 NO no local-volume new-high ignition as-of 16:45ET`
+
+**SIP volume + book (20:00Z = 16:00 ET open):**
+
+| Ticker | AH bars (vwap/trades/vol) | Quote (bid / ask) | Book | Verdict |
+|--------|--------------------------|-------------------|------|---------|
+| DSY | 20:05 $5.83/14,184/802K, 20:10 $6.21/12,868/811K, 20:15 $5.45/7,712/469K, **20:20 $6.32/13,092/925K (H $7.25, new high)**, 20:25 $6.83/12,329/753K, 20:30 $6.53/6,352/330K | $7.90 x100 / $8.13 x100 | two-sided liquid | **BUILD/reclaim** — faded to $5.15 by 16:15 then made a NEW AH high $7.25 at 16:20 on 925K sh, held $6.5-7 through 16:30, quote now ~$8. Real sustained accumulation. |
+| RDGT | 20:05 $1.05/12,291/2.87M, 20:10 $1.00/6,814/1.73M, 20:15 $1.05/7,571/1.73M, 20:20 $0.94/3,639/781K, 20:25 $0.91/1,196/278K, 20:30 $0.85/1,536/319K | $0.81 x3000 / $0.88 x500 | two-sided | **SPIKE→FADE** — peaked $1.20 at 16:05, steady decline to $0.85-0.88, volume/trades fading each bar. |
+| FNKO | 20:20 $6.44/391/136K, 20:25 $6.52/338/31K, 20:30 $6.23/252/19K | $6.07 x100 / $6.45 x100 | two-sided | Late ignition 16:20 to $6.88 then fade to $6.23; float 40M (high), volume thin post-spike. Weak. |
+| ZYBT | 20:20 $2.23/346/45K, 20:25 $2.32/489/62K, 20:30 $2.24/416/55K | $1.76 x100 / $2.39 x100 (stale 16:00) | wide/thin | Slow grind $2.05→$2.38, VRatio 0.0 (AH vol << avg). Modest, thin book. |
+
+**Notes:**
+- No entries (observation scan, pre-23:00 CET).
+- **DSY** — the standout. Low float 1.3M, VRatio 6.5x, real two-sided liquid book (bid $7.90 x100 / ask $8.13 x100). Critically, it is **not** a spike→fade: after the early 16:03 spike faded to $5.15, it made a **new AH high $7.25 at 16:20 ET** on 925K sh / 13k trades and held $6.5-7 through 16:30, with the quote now ~$8. This is a BUILD/reclaim profile that keeps making new highs into the entry window. No catalyst found (searched at 22:30). At quote ~$8 the extension is ~+130% off close $3.45 — under the +150% ceiling but rising; if it pushes past +150% by 23:00 it becomes a CEILING-OVERRIDE WATCH candidate (post-17:00 high, holding within 20%, VRatio >5x all hold). **Primary entry candidate for the 23:00 scan** if the book stays two-sided and it holds/builds.
+- **RDGT** — SPIKE→FADE (peaked $1.20 16:05, now $0.85-0.88 below AH ref, volume fading). Earnings catalyst is weak (net loss). Early-peak fade is 0/6+ for PM continuation. Leaning skip.
+- **FNKO** — float 40M, thin post-spike volume, late spike-fade. Weak.
+- **ZYBT** — VRatio 0.0, slow grind, thin/wide book, Day -11.4%. Weak.
+- **RCEL** — NO-SPIKE, thin. Weak.
+- Next scan 23:00 CET is the first entry-eligible scan. DSY needs to (1) keep a two-sided fillable book and (2) hold/build near its AH high; RDGT/FNKO/ZYBT/RCEL currently all fail trajectory or liquidity.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
