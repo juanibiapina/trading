@@ -9,6 +9,18 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-08-06 — Initiative 3: third live third-bar outcome set
+
+**Evaluated:** The 2026-08-05 second-set step **worked mechanically** but the gate remains **insufficient/now weakening**. The 08-05 AH -> 08-06 PM session added a third out-of-sample set and, for the first time, the gate's separation clearly **broke down**: `CONFIRM-3 YES` CLRO ran +147.7% to its next-PM high but Alpaca had no fillable AH ask (uninvestable), the other `YES` RECT died (-6.2%), and both `CONFIRM-3 NO` names had the day's largest PM excursions (PAVS +83.1%, CELZ +53.9%). The gate would have rejected the two biggest movers.
+
+**Step taken:** **Pilot / Initiative 3:** re-ran `ah-5m-confirmation.js` on the four labelled 08-05 AH candidates (RECT, CLRO, CELZ, PAVS), pulled their 08-06 SIP 5-minute PM highs (high-trade bars only, no bad prints), and appended the third verdict-to-PM-outcome table to `INIT3_IGNITION_TIMING.md`.
+
+**Result:** Combined live `YES` n=7 = +12.2, +43.5, +147.7, +0.9, -2.8, -6.2, -19.9 (mean +25.1% is CLRO-outlier-driven, median +0.9%); `NO` n=7 now holds two >50% PM runs. `node scripts/ah-5m-confirmation.js RECT:2026-08-05 CLRO:2026-08-05 CELZ:2026-08-05 PAVS:2026-08-05` reproduced every recorded verdict. **Emerging conclusion:** across three sessions the third-bar gate does not cleanly separate next-PM winners from fades; the recurring bottleneck is **execution, not selection** — the biggest edges were unfillable (CLRO no AH ask; INLF/BANL/ZJYL broker-blocked) or ran only after our early 10:30 CET exit (CELZ/PAVS). Init 6 stays blocked at n=11 admitted PM-only gappers (08-05 produced AH-open names, no new PM-only gapper), one short of the n>=12 one-minute-exit trigger.
+
+**Hypothesis / next step:** Stop treating the selection gate as the primary lever. Next run should quantify the **fill/exit-timing gap**: how much of the CONFIRM-3 YES + qualified edge is lost to unfillable AH asks vs premature PM exits. Build a log-only tally of qualified/YES names that (a) had no fillable Alpaca AH ask and (b) spiked in PM after our exit pulse. If the gap is large, that reframes Initiative 3 toward execution/exit-timing rather than scan cadence. Keep CONFIRM-3 log-only. Run Init 6's one-minute exit test only when admitted n reaches 12.
+
+**Needs from Juan:** nothing blocking. **Flag for awareness:** repeated real edges (CLRO +148%, INLF, BANL, ZJYL) are unfillable in Alpaca's after-hours book — the paper broker's AH liquidity, not our selection, is now the main thing capping captured P&L. Raising in the daily email as a strategic constraint to weigh (e.g. entering a portion at PM open instead of AH, or a different broker for live).
+
 ### 2026-08-05 — Initiative 3: second live third-bar outcome set
 
 **Evaluated:** The 2026-08-04 first-live-outcome step **worked mechanically but remains insufficient for a decision**. The next AH session supplied five more out-of-sample rows. `CONFIRM-3 YES` INLF reached +12.2% to its next-PM SIP high and BJDX +43.5%, but BANL lost -19.9% and ZJYL was only +0.9%; `NO` TRUG was flat. Combined live YES n=5 has two meaningful excursions, one near-flat result, and two losses. Peak returns omit spread, INLF had no fillable AH ask, and BJDX had faded in AH, so this does not establish executable edge.

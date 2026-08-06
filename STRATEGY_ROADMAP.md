@@ -69,6 +69,18 @@ the ignition**, not a new signal.
    volume+price co-spike fast), which is exactly this initiative. Next: audit
    which scans fire before vs after the typical ignition window; propose a
    retimed/added AH observation scan (schedule changes -> propose to Juan).
+   **Update 2026-08-06 (third live CONFIRM-3 set, 08-05 AH -> 08-06 PM):** the
+   log-only third-bar gate's separation **broke down** out-of-sample. One `YES`
+   was a monster (CLRO +147.7% to next-PM high) but Alpaca had no fillable AH
+   ask; the other `YES` (RECT) died; and both `NO` names (PAVS +83.1%, CELZ
+   +53.9%) had the day's largest PM excursions — the gate would have rejected
+   them. Combined live `YES` n=7 mean +25.1% is CLRO-outlier-driven (median
+   +0.9%); `NO` n=7 now holds two >50% runs. Emerging read: the selection-gate
+   hypothesis is weakening while **execution (unfillable AH books, early exits
+   before the PM spike) is the larger money-fast lever** — CLRO/INLF/BANL/ZJYL
+   edges were unfillable or broker-blocked, and CELZ/PAVS ran only after our
+   10:30 CET exit. Keep the column log-only; next runs pivot toward measuring
+   the fill/exit-timing gap rather than adding scan cadence.
 3. **Initiative 5 - better data + review surface (graphs, sources).** AH/PM
    volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
    raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports

@@ -403,3 +403,32 @@ Re-ran the instrument against the final AH bars, then measured the next-PM SIP h
 | TRUG | NO | $0.82 final liquid AH level | $0.82 | 0.0% | illiquid flatline |
 
 **Reading:** Across the two live sessions, `YES` is now 5 rows: two meaningful positive PM excursions (INLF +12.2%, BJDX +43.5%), one near-flat result (+0.9%), and two losses (JELD -2.8%, BANL -19.9%). `NO` is five rows: three outright failures, one flatline, and IPW's +24.1% bounce that remained below its AH peak. This is not a tradable sample: the positive `YES` rows include a stale/unfillable book (INLF) and a later fade pattern (BJDX), returns are peak ceilings rather than executable exits, and no spread is charged. It does show the first live `YES` was not representative, so keep the column log-only and collect more outcomes rather than change cadence or selection.
+
+## Third live third-bar outcomes (2026-08-05 AH -> 2026-08-06 PM)
+
+Re-ran the instrument on the 08-05 AH candidates and measured each verdict's
+next-PM SIP high (04:00-09:30 ET window, high-trade bars only). `YES` reference
+is the confirmed close; `NO` reference is the actionable AH fill/level. Still
+observations only: CLRO could not be filled (no AH ask), and CELZ/PAVS were held
+from 08-05 and exited early at the 10:30 CET pulse, before their PM spikes.
+
+| Ticker | CONFIRM-3 | Reference price | Next-PM SIP high | Return | Outcome |
+|--------|-----------|-----------------|------------------|--------|---------|
+| CLRO | YES, confirmed 17:35 ET | $5.30 | $13.13 | +147.7% | huge PM re-explosion; **Alpaca had no fillable AH ask** |
+| RECT | YES, confirmed 16:35 ET | $1.45 | $1.36 | -6.2% | faded below close in AH, never recovered |
+| CELZ | NO | $0.89 AH fill | $1.37 | +53.9% | held from 08-05, PM spike at 14:00 CET after our 10:30 exit |
+| PAVS | NO | $6.61 AH fill | $12.10 | +83.1% | held from 08-05, PM spike at 12:55 CET after our 10:30 exit |
+
+**Reading:** this is the first live session where the gate's separation clearly
+**breaks down**. One `YES` was a monster (CLRO +147.7%) but unfillable; the other
+`YES` (RECT) died. Both `NO` names (PAVS +83.1%, CELZ +53.9%) had large next-PM
+excursions — the gate would have *rejected* the day's two biggest PM movers as a
+selection filter. Combined live `YES` (n=7) is now +12.2, +43.5, +147.7, +0.9,
+-2.8, -6.2, -19.9 (mean +25.1% but CLRO-outlier-driven, median +0.9%); `NO`
+(n=7) now includes two >50% PM runs. **Emerging conclusion:** across three
+out-of-sample sessions the third-bar gate does *not* cleanly separate next-PM
+winners from fades, and the recurring bottleneck is **execution, not selection** —
+the biggest edges (CLRO, INLF, BANL, ZJYL) were unfillable or broker-blocked, and
+CELZ/PAVS ran only after we had already exited. Keep the column log-only; the
+selection-gate hypothesis is weakening while the fill/exit-timing problem looks
+like the larger money-fast lever.
