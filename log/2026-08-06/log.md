@@ -144,12 +144,49 @@ Observation-only scan (~45 min into AH; before 23:00 CET → no entries). `scan.
 - **RCEL** — NO-SPIKE, thin. Weak.
 - Next scan 23:00 CET is the first entry-eligible scan. DSY needs to (1) keep a two-sided fillable book and (2) hold/build near its AH high; RDGT/FNKO/ZYBT/RCEL currently all fail trajectory or liquidity.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+First entry-eligible scan. `scan.py --all` returned **8 AH hits**; four above the +10% AH threshold: DSY, CELZ, FNKO, RCEL. RDGT dropped below (+7.4%).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DSY | [TV](https://www.tradingview.com/chart/?symbol=DSY) | $3.45 | +3.3% | +112.8% | $7.34 | +119.8% | 3.8M | 571K | 6.6x | 1.3M | Miscellaneous |
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $1.15 | +71.9% | +17.4% | $1.35 | +101.9% | 3.0M | 30.8M | 0.1x | 4.7M | Medical Specialties |
+| FNKO | [TV](https://www.tradingview.com/chart/?symbol=FNKO) | $5.28 | -6.2% | +17.4% | $6.20 | +10.1% | 898K | 1.3M | 0.7x | 40.0M | Recreational Products |
+| RCEL | [TV](https://www.tradingview.com/chart/?symbol=RCEL) | $4.75 | +6.3% | +11.8% | $5.31 | +18.8% | 71K | 136K | 0.5x | 23.9M | Medical Specialties |
+
+**Instrumentation (DSY, primary candidate):**
+- `SPIKE-BAR: DSY 2026-08-06 SPIKE 16:03ET +20% $4.14 32 trades / 3k sh (first co-spike bar) (as-of 17:00ET)`
+- `CONFIRM-3: DSY 2026-08-06 NO ignition 16:05ET failed third-bar hold/volume as-of 17:00ET`
+
+**SIP volume + book (DSY, 20:00Z = 16:00 ET open):**
+
+DSY SIP bars show real sustained accumulation building past the early spike: 16:05 $5.83/14,184/802K, 16:10 $6.21/12,868/811K, 16:15 faded to $5.15, then **new highs**: 16:20 $6.32/13,092/925K (H $7.25), 16:25 $6.83/12,329/753K, 16:35 $7.27/11,194/725K (H $7.95), 16:40 $7.69/10,672/679K (H $8.21), 16:45 $7.34/6,098/384K (C $7.50). Quote: **bid $7.90 x100 / ask $8.13 x100 @ 20:40:38Z** — real two-sided liquid book, fresh (stamped 16:40 ET, ~5 min before scan).
+
+**Catalyst search (DSY):** Big Tree Cloud Holdings. No same-day catalyst found (searched earnings + PR across 3 queries incl. tavily). FY2024 financials are stale. **No catalyst found** → Grade None.
+
+**Decision: ENTER DSY.** Clears all gates:
+- Float 1.3M (ideal <10M), VRatio 6.6x (>5x)
+- AH >10% in **3 AH scans** (22:30 +80.3%, 22:45 +89.6%, 23:00 +112.8%) — 2-scan gate met
+- Day% +3.3% (well above -15%, not a dead-cat)
+- Total% +119.8% at scanner price / ~+136% at ask $8.13 — **under +150% ceiling**
+- **BUILD/reclaim trajectory**: faded early spike to $5.15 then made repeated new AH highs ($7.25→$7.95→$8.21) into the entry window, holding within 20% of high. Not a spike→fade.
+- Real fresh two-sided liquid book, tradable=true
+- No catalyst (concern noted per no-catalyst handling — enter, Grade None, exit at first PM opportunity)
+
+**Other candidates (skipped):**
+- **CELZ** — Day +71.9% is a **regular-session** mover; AH +17.4% appears for the first time in AH this scan (not in 22:30/22:45 AH scans) → **fails 2-AH-scan gate**. VRatio 0.1 (AH vol 3M << 30.8M avg). Also traded/exited earlier today. Skip.
+- **FNKO** — float 40M (high), VRatio 0.7 (AH vol below avg), late spike→fade, Total% only +10.1%. Skip: weak/thin, high float.
+- **RCEL** — thin (22-80 trades/bar), NO-SPIKE, float 23.9M, VRatio 0.5, fading (17.4%→11.8%). Skip: thin liquidity + fade.
+- **RDGT** — dropped to +7.4% AH (below threshold), SPIKE→FADE from 16:05. Skip.
+
+**Order:** BUY 12 DSY @ limit $8.18 ext (id 5d6d5ed6) → **filled @ $7.10** (price improvement; book had lower fill). 12 sh × $7.10 = $85.20. Grade None. Added to OPEN_POSITIONS.md.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-
-_No entries — regular-session scan, AH not yet open._
+| DSY | $7.10 | 2026-08-06 23:00 CET | 12 | 5d6d5ed6 | Float 1.3M, VRatio 6.6x, AH BUILD/reclaim making new highs, 3 AH scans >10%, under +150% ceiling. No catalyst (Grade None). |
 
 ## Position Evaluation — 10:30 CET
 

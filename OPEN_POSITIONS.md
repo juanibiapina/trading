@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | | | All positions closed 2026-08-06 10:30 CET pulse. |
+| DSY | $7.10 | $7.10 | $8.21 (AH) | 12 | 2026-08-06 23:00 CET | None | 5d6d5ed6 | Big Tree Cloud Holdings, float 1.3M. AH BUILD/reclaim, VRatio 6.6x. No same-day catalyst found. Exit at first PM opportunity. |
 
 ## Position Rules
 
