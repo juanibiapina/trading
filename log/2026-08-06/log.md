@@ -41,6 +41,27 @@ Observation-only scan (AH just opened at 16:00 ET). Per learning-phase rule, no 
 - ALEC and WLDS both trading *below* their regular closes into AH (fading). BYAH flat with a wide spread.
 - Next scan 22:30 CET should have real AH bars to run SIP volume confirmation and instrumentation.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+Observation-only scan (~15 min into AH; before 23:00 CET → no entries). `scan.py --all` returned **0 AH hits**. Cross-checked tracked pipeline names against live book + first SIP AH bar (20:00Z = 16:00 ET):
+
+| Ticker | 21:30 Close | AH Bid | AH Ask | 1st AH Bar (VWAP / trades / vol) | AH vs Close | Note |
+|--------|-------------|--------|--------|----------------------------------|-------------|------|
+| XHLD | $2.07 | $2.38 x100 | $0.00 x0 | $2.25 / 13,561 / 2.27M | ~+9% | Real volume but **still no ask/size** — illiquid AH book. |
+| BYAH | $3.05 | $2.72 x100 | $3.63 x100 | $3.19 / 101 / 12K | ~+5% | Thin, flat near close. |
+| WLDS | $3.69 | $3.50 x100 | $4.79 x100 | $3.98 / 280 / 31K | ~flat | Thin, wide spread. |
+| ALEC | $1.88 | $1.52 x100 | $1.87 x100 | $1.83 / 77 / 87K | below close | Fading. |
+
+**Instrumentation (XHLD, only name near/above 10% into AH):**
+- `SPIKE-BAR: XHLD 2026-08-06 NO-SPIKE peak +3% @16:00ET (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`
+- `CONFIRM-3: XHLD 2026-08-06 NO no local-volume new-high ignition as-of 16:15ET`
+
+**Notes:**
+- No entries (observation scan, pre-23:00 CET).
+- **XHLD** — its +159.6% was the **regular session**; into AH it's only ~+3% off the AH-open reference (NO-SPIKE). Real AH volume (2.27M / 13,561 trades in the first bar, likely close-auction rollover) but the book is still `ask $0.00 x0` — **illiquid (no fillable AH book)**, same one-sided pattern as 22:00. Regular-session Total% ~+160% is also above the +150% ceiling. Not entry-viable unless a real two-sided book + fresh AH accumulation appears at 23:00.
+- BYAH / WLDS thin (101 / 280 trades). ALEC fading below its close.
+- Quotes all stale-stamped 16:00 ET and only the 16:00 SIP bar is available (~15 min free-tier lag); next scan (23:00 CET) should have real AH bars to confirm accumulation and — if XHLD develops a fillable book — evaluate for entry.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
