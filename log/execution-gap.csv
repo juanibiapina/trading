@@ -1,0 +1,18 @@
+# Execution-gap tally (Initiative 3 pivot: execution vs selection).
+# Log-only. Rows are CONFIRM-3 YES verdicts plus names we actually held.
+# fill_status: filled | unfillable_ah (no AH ask) | broker_blocked | not_filled_fade | held_exited_early | not_entered
+# captured_pct: P&L we actually realized (0 if never filled)
+# available_pct: next-PM SIP peak return vs the reference entry level
+# cause: fill | exit_timing | blocked_saved | selection | none
+# gap_pct: money-fast loss = max(available - captured, 0) when available>0 and we did not capture it
+date,ticker,confirm3,fill_status,captured_pct,available_pct,cause,gap_pct
+2026-08-04,JELD,YES,not_entered,0,-2.8,none,0
+2026-08-05,INLF,YES,unfillable_ah,0,12.2,fill,12.2
+2026-08-05,BJDX,YES,not_filled_fade,0,43.5,fill,43.5
+2026-08-05,BANL,YES,broker_blocked,0,-19.9,blocked_saved,0
+2026-08-05,ZJYL,YES,broker_blocked,0,0.9,blocked_saved,0
+2026-08-06,CLRO,YES,unfillable_ah,0,147.7,fill,147.7
+2026-08-06,RECT,YES,not_filled_fade,0,-6.2,none,0
+2026-08-06,CELZ,NO,held_exited_early,0,53.9,exit_timing,53.9
+2026-08-06,PAVS,NO,held_exited_early,0,83.1,exit_timing,83.1
+2026-08-07,DSY,NO,filled,-11.3,-2.0,selection,0

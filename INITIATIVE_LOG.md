@@ -9,6 +9,18 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-08-07 — Initiative 3: execution-gap tally (pivot to execution)
+
+**Evaluated:** The 2026-08-06 step **worked** and its hypothesis is confirmed. It predicted the fill/exit-timing gap would be the larger money-fast lever; quantifying it today bears that out. Added the fourth live outcome set first (08-06 AH -> 08-07 PM): only DSY qualified (CONFIRM-3 **NO**, entered at $7.10 on other grounds), and it faded — PM peak $6.96 below entry, a clean entry-price loss, not a selection or exit-timing miss. `node scripts/ah-5m-confirmation.js` still reproduces recorded verdicts.
+
+**Step taken:** **Pilot / Initiative 3 (execution pivot):** built `scripts/execution-gap.js` + `log/execution-gap.csv` — a log-only tally of the 10 CONFIRM-3 YES / held rows across four live sessions, classifying each by where the detected PM upside was lost (fill / exit_timing / blocked_saved / selection / none). Appended the fourth outcome table and the tally writeup to `INIT3_IGNITION_TIMING.md`. No orders, entry rule, grade, or schedule changed.
+
+**Result:** **340.4% of detected next-PM upside was lost, none of it to selection.** Two buckets dominate: **fill gap 203.4%** (CLRO +147.7, BJDX +43.5, INLF +12.2 — real winners with no fillable Alpaca AH ask; 55.7% even excluding the CLRO outlier) and **exit-timing gap 137.0%** (CELZ +53.9, PAVS +83.1 — held names whose PM spikes fired ~06:55/08:00 ET, after our 10:30 CET / 04:30 ET exit but still inside premarket). The fill gap is Initiative 2 (feed/broker), root-caused and awaiting Juan's fix call. The exit-timing gap is self-inflicted and fixable in our own process. This confirms Init 3's original selection-gate hypothesis is **not** the money-fast lever — execution is. `node --check` and the tally run pass.
+
+**Hypothesis / next step:** The exit-timing slice is the largest gap fixable without Juan or a broker change. Next run: instrument the intra-premarket exit path (log-only) — for each held name, record the full premarket SIP trajectory and the best premarket exit vs our actual 10:30 CET exit, to size the gap out-of-sample. Only after several rows show a persistent gap should an exit-pulse retiming be **proposed to Juan** (trading-pulse change, not applied unilaterally). Keep CONFIRM-3 log-only; stop treating it as a promotion candidate.
+
+**Needs from Juan:** nothing blocking today. **Two flags routed to the daily email:** (1) the 203.4% fill gap needs the Initiative 2 broker/feed decision (pay Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills); (2) the 10:30 CET single exit pulse looks too early for multi-day holds — CELZ/PAVS ran >50% in *later* premarket after we had exited. A later or second premarket exit check is a candidate change, to be proposed once instrumented.
+
 ### 2026-08-06 — Initiative 3: third live third-bar outcome set
 
 **Evaluated:** The 2026-08-05 second-set step **worked mechanically** but the gate remains **insufficient/now weakening**. The 08-05 AH -> 08-06 PM session added a third out-of-sample set and, for the first time, the gate's separation clearly **broke down**: `CONFIRM-3 YES` CLRO ran +147.7% to its next-PM high but Alpaca had no fillable AH ask (uninvestable), the other `YES` RECT died (-6.2%), and both `CONFIRM-3 NO` names had the day's largest PM excursions (PAVS +83.1%, CELZ +53.9%). The gate would have rejected the two biggest movers.

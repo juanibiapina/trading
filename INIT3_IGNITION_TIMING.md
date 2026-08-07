@@ -432,3 +432,61 @@ the biggest edges (CLRO, INLF, BANL, ZJYL) were unfillable or broker-blocked, an
 CELZ/PAVS ran only after we had already exited. Keep the column log-only; the
 selection-gate hypothesis is weakening while the fill/exit-timing problem looks
 like the larger money-fast lever.
+
+## Fourth live third-bar outcomes (2026-08-06 AH -> 2026-08-07 PM)
+
+Only one AH name qualified and was entered: DSY (CONFIRM-3 **NO**, entered at
+23:00 CET @ $7.10 on other grounds — strongest low-float mover). RDGT and RCEL
+were both `NO` and not entered.
+
+| Ticker | CONFIRM-3 | Reference price | Next-PM SIP high | Return | Outcome |
+|--------|-----------|-----------------|------------------|--------|---------|
+| DSY | NO | $7.10 entry (extended, +102% from close) | $6.96 | -2.0% (peak below entry) | Entered near AH top; PM never reclaimed. Gate `NO` matched the fade. |
+
+**Reading:** DSY is a rare case where the `NO` verdict aligned with the outcome
+(faded), but selection did not drive the loss — the loss was **entry price**
+(entered at +102%, after the +134% AH peak). No exit-timing gap: the PM peak was
+already below entry, so no later exit would have saved it.
+
+## Execution-gap tally (2026-08-07) — the pivot to execution
+
+Following the 08-06 conclusion that the third-bar gate does not cleanly separate
+next-PM winners from fades, this quantifies where the detected AH->PM edge is
+actually lost. Built `scripts/execution-gap.js` over `log/execution-gap.csv`
+(10 CONFIRM-3 YES / held rows across four live sessions). Log-only; no orders.
+
+`node scripts/execution-gap.js`:
+
+| Cause | n | Lost PM upside | Names |
+|-------|---|----------------|-------|
+| fill (unfillable AH / AH fade) | 3 | **203.4%** | INLF +12.2, BJDX +43.5, CLRO +147.7 |
+| exit_timing (held, exited before PM spike) | 2 | **137.0%** | CELZ +53.9, PAVS +83.1 |
+| blocked_saved (broker block avoided a loss) | 2 | 0.0% | BANL, ZJYL |
+| selection (filled, gate decided) | 1 | 0.0% | DSY |
+| none (avoided small loss / genuine fade) | 2 | 0.0% | JELD, RECT |
+
+**Total lost PM upside across the qualified set: 340.4%.** None of it is a
+selection failure. Two buckets dominate:
+
+1. **Fill gap 203.4% (CLRO alone +147.7%)** — real PM winners we detected and
+   the gate marked YES, but Alpaca's free IEX paper book had no fillable AH ask
+   or the AH quote faded. This is **Initiative 2** (feed/broker), already root-
+   caused (`INIT2_ALPACA_FILL_ROOTCAUSE.md`) and **awaiting Juan's fix call**.
+   Even excluding the CLRO outlier the fill gap is 55.7%.
+2. **Exit-timing gap 137.0%** — CELZ (+53.9%) and PAVS (+83.1%) were **held**
+   from the prior AH session, so no fill or broker problem: our 10:30 CET
+   (04:30 ET) position-evaluation exit fired *before* their PM spikes at
+   12:55 CET (~06:55 ET) and 14:00 CET (~08:00 ET). Both spikes were still
+   **inside the premarket window** (before 15:30 CET / 09:30 ET open), so a
+   later premarket exit check would have captured them without violating the
+   "exit before open" rule. This is **self-inflicted and fixable in our own
+   process** (exit-pulse timing), not a broker constraint.
+
+**Conclusion:** the selection gate (Init 3's original hypothesis) is not the
+money-fast lever — execution is. The largest fixable-without-Juan slice is the
+**exit-timing gap**: our single early-premarket exit pulse (10:30 CET) is
+leaving large late-premarket spikes on the table on multi-day holds. Next step
+is to instrument the intra-premarket exit path (log-only): for each held name,
+record the full premarket SIP trajectory and the best premarket exit vs our
+10:30 CET exit, to size the gap out-of-sample before proposing any exit-pulse
+timing change (which, as a trading-pulse change, would go to Juan).

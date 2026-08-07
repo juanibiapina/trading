@@ -91,6 +91,19 @@ the ignition**, not a new signal.
    edges were unfillable or broker-blocked, and CELZ/PAVS ran only after our
    10:30 CET exit. Keep the column log-only; next runs pivot toward measuring
    the fill/exit-timing gap rather than adding scan cadence.
+   **Update 2026-08-07 (execution-gap tally):** built `scripts/execution-gap.js`
+   over 10 CONFIRM-3 YES/held rows (4 live sessions). **340.4% of detected PM
+   upside was lost, none of it to selection.** Two buckets dominate: **fill gap
+   203.4%** (CLRO +147.7, BJDX +43.5, INLF +12.2 — real winners with no fillable
+   Alpaca AH ask; Initiative 2, awaiting Juan) and **exit-timing gap 137.0%**
+   (CELZ +53.9, PAVS +83.1 — held names whose PM spikes fired at ~06:55/08:00 ET,
+   *after* our 10:30 CET / 04:30 ET exit but still inside premarket). The
+   exit-timing slice is self-inflicted and fixable in our own process. Init 3's
+   original selection-gate hypothesis is confirmed **not** the money-fast lever;
+   the lever is execution. Next: instrument the intra-premarket exit path
+   (log-only) to size the exit-timing gap out-of-sample before proposing any
+   exit-pulse retiming (a trading-pulse change -> Juan). **Flag for Juan:** the
+   10:30 CET single exit pulse looks too early for multi-day holds.
 3. **Initiative 5 - better data + review surface (graphs, sources).** AH/PM
    volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
    raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports
