@@ -6,6 +6,28 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-08-06 — re: Trading Scanner Report - 2026-08-05
+
+**Juan said:** "Research the alpaca problem, determine the root cause."
+
+**Interpretation:** The email flagged that Alpaca's stale extended-hours book
+has cost 3 detected, qualifying winners in ~8 sessions (NUWE, KUST, CLRO) and
+asked for a broker/data decision. Juan wants the root cause pinned down before
+picking a fix.
+
+**Action:** Researched and confirmed the root cause empirically (quote queries
+at 03:00 ET). The paper account is on the **free IEX-only data plan**; Alpaca
+simulates paper fills against the subscribed feed. IEX goes one-sided/stale at
+the 16:00 ET close (`ap=0`) for micro-float names, so buy limits have no AH ask
+to cross and never fill, while real AH volume prints on other venues and only
+shows on SIP (what `broker.js bars` pulls) — hence "real SIP volume, no fill."
+It is a data-feed mismatch, not a `broker.js` bug. Wrote
+`INIT2_ALPACA_FILL_ROOTCAUSE.md` with three fix options (pay for SIP ~$99/mo,
+switch to IBKR paper, or score on modeled SIP fills for free) and routed the
+decision into Initiative 2. **Awaiting Juan's call on which fix.**
+
+---
+
 ### 2026-07-31 — re: Trading Scanner Report - 2026-07-30
 
 **Juan said:** "FUCKING SELL BOOM OMG"

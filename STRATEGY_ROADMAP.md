@@ -61,6 +61,16 @@ the ignition**, not a new signal.
    cycle (2026-06-25).** Real Alpaca paper fills now drive entries/exits via
    `broker.js`. Only step 5 (flip to live real money, tiny size) remains, gated
    on a proven edge + Juan. **No pilot active.**
+   **Update 2026-08-07 (Juan directive "research the alpaca problem"):** root
+   cause of the recurring AH no-fill found and confirmed empirically — the paper
+   account is on the **free IEX-only data plan**, and Alpaca simulates paper
+   fills against the subscribed feed. IEX goes one-sided/stale at the 16:00 ET
+   close (`ap=0`) for micro-float names, so there is no AH ask to cross and buy
+   limits never fill; the real AH volume prints on other venues and only shows
+   on SIP (which we pull for bars, hence "real SIP volume, no fill"). Feed
+   mismatch, not a `broker.js` bug. Fix options: (1) pay for Alpaca SIP (~$99/mo),
+   (2) switch to IBKR paper, (3) score on modeled SIP fills (free). Full writeup:
+   `INIT2_ALPACA_FILL_ROOTCAUSE.md`. **Needs Juan's call on which path.**
 2. **Initiative 3 - adaptive scheduling / faster ignition detection.** Promoted
    to the top research lever (2026-07-15). Init 1's 1-min backtest shows winners
    ignite in a single minute (IVF 16:53 ET) that our ~22:15 CET / 16:15 ET AH
