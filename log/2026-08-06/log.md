@@ -345,3 +345,234 @@ No open positions. Alpaca `positions` empty; equity $99,887.56, cash $99,887.56.
 
 **Actions taken:**
 - None. Flat book.
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**DSY** — Big Tree Cloud Holdings (Miscellaneous / consumer)
+- Catalyst: **None** — no same-day PR found (searched StockTitan/Benzinga/earnings). Prior news stale: Nasdaq bid-price compliance (Mar 2026), 1-for-20 reverse split (Feb 2026, ~6 months old), July board reshuffle. Grade None.
+- Previous Close: $3.51
+- AH last night: SIP peak **$8.21 (+134%)** at 16:40 ET on 679–925K sh/bar and 10–14K trades/bar. Held ~+80% all evening. (Yahoo showed $7.69; SIP peak higher, as usual on low-float names.)
+- Premarket now: ~$5.5–5.9 (+57–68%); PM SIP peak **$6.96 (+98%)** in the 04:00 ET bar on 549K sh / 14,382 trades.
+- Hypothetical P&L (AH screening entry ~$5.30 @16:15 ET → PM peak $6.96): **~+31%**. Best actual exit was the AH peak $8.21 (see AH-vs-PM note).
+- Float: 1.3M | Market Cap: $28.5M
+- Clears the winner bar: **>100% on heavy accumulating SIP volume** (multi-bar 700–900K sh / 12–14K trades).
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- It ignited at 16:03–16:05 ET (22:05 CET), right at the start of AH. By the 22:15 observation scan it was already +80% AH ($6.22) with VRatio 5.6x on a 1.3M float and a real two-sided book. The scanner flagged it every scan and named it primary candidate.
+- **We acted on it: ENTERED DSY @ $7.10 at 23:00 CET** (12 sh, first entry-eligible scan), after it reclaimed to a new AH high ~$8 with a fresh two-sided book. This is the winner AND we selected it.
+- Scanner gap: none for detection. The issue was **entry price** — we entered at $7.10 after the +134% AH peak; PM never reclaimed above entry (PM peak $6.96 < $7.10). Extreme-AH-runner-fades-into-PM pattern (see AH-vs-PM check): the AH peak was the better exit.
+
+### Baseline Tracking
+
+- Days tracked: **62** (was 61 + 1)
+- Winners detected by scanner: **50/59 (84.7%)** — DSY detected (flagged every scan, entered)
+- Winner selected for paper trade: **28/59 (47.5%)** — DSY entered @ $7.10; we traded the right stock
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+- Live PM scan (`scan.py --all --session premarket`, 04:20 ET): 5 hits — DSY +55%, AQB +40%, DSY the standout low-float mover.
+- AH reconstruction (SIP): DSY ignited 16:03 ET, SIP peak $8.21 (+134%) @16:40 ET on accumulating 700–900K sh/bar.
+- Secondary: **AQB** (AquaBounty, close $0.99) — flat until **18:30 ET** then exploded $1.24→$1.98 on 559K→1.67M sh/bar / 4–12K trades/bar, SIP peak $2.12 (+114%) @18:50 ET; PM only +50%. Not the winner; classified as a **late-AH-tail surge (true-tail)** — decisive volume-backed move fired at/after the 00:30 CET (18:30 ET) last scan, so not a detection-threshold miss. Book now dead (`ask $0.00 x0`).
+
+### Open Position P&L (Alpaca)
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| DSY | $7.10 | +102.3% | None | 23:00 CET | $6.96 (SIP) | 04:00 ET | — (open) | ~−€14 | ~−17% | 🔴 Open, underwater |
+
+Entry $7.10 vs prev close $3.51 = **Entry Total% +102%** (entered very extended, after the +134% AH peak). PM peak $6.96 stayed **below** entry, so no profitable PM exit window existed. Alpaca `positions` reports current_price $5.92 / −16.6%; the quote timestamp is stale (16:40 ET last night) but the value matches the real PM level (~$5.5–5.9), so ~−17% is roughly accurate. **Exit decision handled by position-evaluation.md (10:30/14:30), not here.**
+
+**Total Realized P&L (Alpaca fills only): €0.00** (position still open).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **9** (21:30, 22:00, 22:15, 22:30, 22:45, 23:00, 23:30, 00:00, 00:30 CET) — all 7 scheduled + 2 extra. **Full coverage (7 of 7).**
+- Candidates found: DSY (primary, entered), plus AH movers CELZ, FNKO, RCEL, RDGT, BYAH, SUGP, VATE, PDSB, CLRO, GWH, ZYBT, SAGT.
+- Retrospective match: DSY caught and entered.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| AQB | +114% AH peak | Late-AH-tail surge — decisive volume fired at 18:30 ET (last scan); under threshold on real volume before then | AH-tail entry ~$1.30 → PM peak $1.49 ≈ +15%; thin, AH peak $2.12 was better exit |
+
+No in-window detection failures. AQB is a structural late-tail case, not counted against baseline.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| DSY | $8.21 (+134%) | 16:40 ET | Spike→reclaim→BUILD (new highs to 16:40) then slow fade | ~$5.7 (+62%) | −31% | +62% | AH peak was the exit; faded into PM |
+| AQB | $2.12 (+114%) | 18:50 ET | Late surge (ignited 18:30 ET) | ~$1.45 (+47%) | −32% | +47% | AH peak was the exit; faded into PM |
+
+**AH-peak-vs-PM-peak check:** Both DSY (AH +134% > PM +98%) and AQB (AH +114% > PM +47%) peaked in after-hours and faded into premarket. DSY is a new data point for the extreme-AH-runner hypothesis: it ran to +134% AH, above the ~+130% zone where runners tend to top out in AH. This directly cost us — we entered at $7.10 near the top and PM never reclaimed it. Adds weight to taking partial profit in late AH on extreme (>+130%) runners rather than holding for PM.
+
+### Notes
+
+- **Winner detected AND traded — baseline met (84.7%).** DSY is a clean detection success: flagged from the first scan, correctly named primary candidate, entered at the first eligible scan. The loss is an **entry-price / exit-timing** problem, not a scanner problem.
+- **Extension-at-entry flag:** DSY entry $7.10 was +102% from close — very extended, entered after the AH peak. The +150% ceiling did not block it (extension was ~+102–130% at entry) but the fade shows the risk of entering an extreme runner near its AH top. Recurring theme with the AH-peak-vs-PM-peak fades.
+- **Reverse-split-squeeze fade tracking:** DSY, 1-for-20, **~6 months old (Feb 2026, weeks/months bucket)**, float 1.3M, Grade None, entered $7.10 → PM peak $6.96 = −2% / open −17% = **faded** (AH peak $8.21 was the better exit). The split is old and likely not the operative driver, but logged for completeness. Weeks/months-old bucket now: EDHL continue, LGCL continue, PAVS Aug continue, PAVS Jul fade, **DSY fade** = 3 continue / 2 fade — the earlier "months-old splits don't fade" read continues to weaken. This-week bucket unchanged (3/3 fade).
+- **Late-AH-tail surge tally (true-tail):** + AQB (Aug 6→7, ignited 18:30 ET / 00:30 CET last-scan timestamp, SIP peak $2.12 @18:50 ET, hypo AH-tail entry ~$1.30 → PM peak $1.49 ≈ +15%). Distinct from ORIS (true-tail) and BTCT (feed-lag). Still no recurring true-tail cluster of *winners* (AQB is a secondary mover that faded into PM).
+- **Coverage:** full (9 scans, all 7 scheduled). No coverage-failure tally entry.
+- **No baseline gap:** Aug 5 session (evaluated morning Aug 6) is the immediately-preceding tracked trading day; Aug 6 is consecutive.
+- **Multi-day watch:** CLRO (Aug 5 winner) faded to $3.76 from $9.00 day-1 PM peak; RAIN (Aug 4) at $1.26. Both still in active watch (<5 days).
+
+### Price Charts
+
+```
+
+========================================================================
+ DSY - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $3.51
+2-Day Range: $3.30 - $8.21
+Current: $5.89 (+67.8% from prev close)
+Peak: $8.21 (+133.9%) at 08-06 20:40 ET
+
+Chart (oldest → newest):
+$   7.69 │                 █                                          
+         │                   █                                        
+         │              █   █ ██   █                                  
+         │               ██     ███  █                      ██        
+         │           █              █ ████   ████████   ████  ██████  
+         │            █                    ██        ███              
+         │                                █                         ██
+         │             █                                              
+         │          █                                                 
+         │                                                            
+         │                                                            
+$   3.30 │██████████                                                  
+         └────────────────────────────────────────────────────────────
+
+Session Timeline (last 24h):
+------------------------------------------------------------
+  [OVN] 08-06 20:30 ET: $   6.69 ( +90.6%)  Vol:           
+  [OVN] 08-06 20:35 ET: $   7.69 (+119.1%)  Vol:           
+  [OVN] 08-06 20:40 ET: $   7.20 (+105.1%)  Vol:           
+  [OVN] 08-06 20:45 ET: $   7.50 (+113.7%)  Vol:           
+  [OVN] 08-06 20:50 ET: $   6.90 ( +96.6%)  Vol:           
+  [OVN] 08-06 20:55 ET: $   7.11 (+102.6%)  Vol:           
+  [OVN] 08-06 21:00 ET: $   6.85 ( +95.2%)  Vol:           
+  [OVN] 08-06 21:05 ET: $   6.71 ( +91.2%)  Vol:           
+  [OVN] 08-06 21:10 ET: $   6.76 ( +92.6%)  Vol:           
+  [OVN] 08-06 21:15 ET: $   6.97 ( +98.6%)  Vol:           
+  [OVN] 08-06 21:20 ET: $   6.41 ( +82.6%)  Vol:           
+  [OVN] 08-06 21:25 ET: $   6.63 ( +88.9%)  Vol:           
+  [OVN] 08-06 21:30 ET: $   6.35 ( +80.9%)  Vol:           
+  [OVN] 08-06 21:35 ET: $   6.20 ( +76.6%)  Vol:           
+  [OVN] 08-06 21:40 ET: $   6.25 ( +78.1%)  Vol:           
+  [OVN] 08-06 21:45 ET: $   6.10 ( +73.8%)  Vol:           
+  [OVN] 08-06 21:50 ET: $   5.67 ( +61.5%)  Vol:           
+  [OVN] 08-06 21:55 ET: $   5.92 ( +68.7%)  Vol:           
+  [OVN] 08-06 22:00 ET: $   5.95 ( +69.5%)  Vol:           
+  [OVN] 08-06 22:05 ET: $   6.25 ( +78.1%)  Vol:           
+  [OVN] 08-06 22:10 ET: $   6.28 ( +78.9%)  Vol:           
+  [OVN] 08-06 22:15 ET: $   6.48 ( +84.6%)  Vol:           
+  [OVN] 08-06 22:20 ET: $   6.36 ( +81.2%)  Vol:           
+  [OVN] 08-06 22:25 ET: $   6.26 ( +78.3%)  Vol:           
+  [OVN] 08-06 22:30 ET: $   6.23 ( +77.5%)  Vol:           
+  [OVN] 08-06 22:35 ET: $   6.21 ( +76.9%)  Vol:           
+  [OVN] 08-06 22:40 ET: $   6.13 ( +74.6%)  Vol:           
+  [OVN] 08-06 22:45 ET: $   5.90 ( +68.1%)  Vol:           
+  [OVN] 08-06 22:50 ET: $   5.98 ( +70.4%)  Vol:           
+  [OVN] 08-06 22:55 ET: $   6.08 ( +73.2%)  Vol:           
+  [OVN] 08-06 23:00 ET: $   6.15 ( +75.2%)  Vol:           
+  [OVN] 08-06 23:05 ET: $   6.34 ( +80.6%)  Vol:           
+  [OVN] 08-06 23:10 ET: $   6.30 ( +79.5%)  Vol:           
+  [OVN] 08-06 23:15 ET: $   6.33 ( +80.3%)  Vol:           
+  [OVN] 08-06 23:20 ET: $   6.67 ( +90.0%)  Vol:           
+  [OVN] 08-06 23:25 ET: $   6.57 ( +87.2%)  Vol:           
+  [OVN] 08-06 23:30 ET: $   6.42 ( +82.9%)  Vol:           
+  [OVN] 08-06 23:35 ET: $   6.45 ( +83.8%)  Vol:           
+  [OVN] 08-06 23:40 ET: $   6.33 ( +80.3%)  Vol:           
+  [OVN] 08-06 23:45 ET: $   6.38 ( +81.7%)  Vol:           
+  [OVN] 08-06 23:50 ET: $   6.38 ( +81.7%)  Vol:           
+  [OVN] 08-06 23:55 ET: $   6.47 ( +84.3%)  Vol:           
+  [PM] 08-07 08:00 ET: $   5.49 ( +56.4%)  Vol:           
+  [PM] 08-07 08:05 ET: $   5.65 ( +61.0%)  Vol:           
+  [PM] 08-07 08:10 ET: $   6.13 ( +74.6%)  Vol:           
+  [PM] 08-07 08:15 ET: $   6.02 ( +71.5%)  Vol:           
+  [PM] 08-07 08:20 ET: $   5.94 ( +69.2%)  Vol:           
+  [PM] 08-07 08:23 ET: $   5.89 ( +67.8%)  Vol:           
+
+========================================================================
+ AQB - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $0.99
+2-Day Range: $0.99 - $2.12
+Current: $1.40 (+41.4% from prev close)
+Peak: $2.12 (+114.2%) at 08-06 22:50 ET
+
+Chart (oldest → newest):
+$   1.98 │                                                            
+         │                                                           █
+         │                                                         ██ 
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │               █      █████████                         █   
+         │        ███████ █ ████         █████████████      ██████    
+$   0.99 │████████         █                          ██████          
+         └────────────────────────────────────────────────────────────
+
+Session Timeline (last 24h):
+------------------------------------------------------------
+  [OVN] 08-06 20:05 ET: $   1.07 (  +8.1%)  Vol:           
+  [OVN] 08-06 20:10 ET: $   1.08 (  +9.1%)  Vol:           
+  [OVN] 08-06 20:15 ET: $   1.08 (  +9.1%)  Vol:           
+  [OVN] 08-06 20:20 ET: $   1.07 (  +8.1%)  Vol:           
+  [OVN] 08-06 20:25 ET: $   1.05 (  +6.1%)  Vol:           
+  [OVN] 08-06 20:30 ET: $   1.07 (  +8.1%)  Vol:           
+  [OVN] 08-06 20:35 ET: $   1.06 (  +7.1%)  Vol:           
+  [OVN] 08-06 20:45 ET: $   1.06 (  +7.1%)  Vol:           
+  [OVN] 08-06 21:00 ET: $   1.07 (  +7.6%)  Vol:           
+  [OVN] 08-06 21:05 ET: $   1.08 (  +9.1%)  Vol:           
+  [OVN] 08-06 21:10 ET: $   1.08 (  +9.2%)  Vol:           
+  [OVN] 08-06 21:15 ET: $   1.17 ( +18.1%)  Vol:           
+  [OVN] 08-06 21:20 ET: $   1.15 ( +15.9%)  Vol:           
+  [OVN] 08-06 21:30 ET: $   1.13 ( +14.2%)  Vol:           
+  [OVN] 08-06 21:35 ET: $   1.15 ( +16.2%)  Vol:           
+  [OVN] 08-06 21:40 ET: $   1.14 ( +15.2%)  Vol:           
+  [OVN] 08-06 21:50 ET: $   1.14 ( +15.2%)  Vol:           
+  [OVN] 08-06 21:55 ET: $   1.13 ( +14.2%)  Vol:           
+  [OVN] 08-06 22:00 ET: $   1.08 (  +9.3%)  Vol:           
+  [OVN] 08-06 22:05 ET: $   1.13 ( +14.2%)  Vol:           
+  [OVN] 08-06 22:10 ET: $   1.14 ( +15.2%)  Vol:           
+  [OVN] 08-06 22:15 ET: $   1.19 ( +20.2%)  Vol:           
+  [OVN] 08-06 22:20 ET: $   1.23 ( +23.8%)  Vol:           
+  [OVN] 08-06 22:25 ET: $   1.24 ( +25.3%)  Vol:           
+  [OVN] 08-06 22:30 ET: $   1.80 ( +81.9%)  Vol:           
+  [OVN] 08-06 22:35 ET: $   1.94 ( +96.0%)  Vol:           
+  [OVN] 08-06 22:40 ET: $   1.85 ( +86.9%)  Vol:           
+  [OVN] 08-06 22:45 ET: $   1.93 ( +95.0%)  Vol:           
+  [OVN] 08-06 22:50 ET: $   1.91 ( +92.9%)  Vol:           
+  [OVN] 08-06 22:55 ET: $   1.94 ( +96.0%)  Vol:           
+  [OVN] 08-06 23:00 ET: $   1.89 ( +91.0%)  Vol:           
+  [OVN] 08-06 23:05 ET: $   1.90 ( +91.8%)  Vol:           
+  [OVN] 08-06 23:10 ET: $   1.98 (+100.0%)  Vol:           
+  [OVN] 08-06 23:15 ET: $   1.95 ( +97.0%)  Vol:           
+  [OVN] 08-06 23:20 ET: $   1.89 ( +90.9%)  Vol:           
+  [OVN] 08-06 23:25 ET: $   1.75 ( +76.8%)  Vol:           
+  [OVN] 08-06 23:30 ET: $   1.67 ( +68.7%)  Vol:           
+  [OVN] 08-06 23:35 ET: $   1.55 ( +56.6%)  Vol:           
+  [OVN] 08-06 23:40 ET: $   1.60 ( +61.7%)  Vol:           
+  [OVN] 08-06 23:45 ET: $   1.57 ( +58.6%)  Vol:           
+  [OVN] 08-06 23:50 ET: $   1.62 ( +63.7%)  Vol:           
+  [OVN] 08-06 23:55 ET: $   1.58 ( +59.6%)  Vol:           
+  [PM] 08-07 08:00 ET: $   1.49 ( +50.5%)  Vol:           
+  [PM] 08-07 08:05 ET: $   1.40 ( +41.5%)  Vol:           
+  [PM] 08-07 08:10 ET: $   1.39 ( +40.4%)  Vol:           
+  [PM] 08-07 08:15 ET: $   1.44 ( +45.4%)  Vol:           
+  [PM] 08-07 08:20 ET: $   1.41 ( +42.4%)  Vol:           
+  [PM] 08-07 08:23 ET: $   1.40 ( +41.4%)  Vol:           
+```
