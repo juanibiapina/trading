@@ -69,6 +69,24 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-08-07 — Sync Reverse-Split and AH-Peak-vs-PM-Peak Tracker Seeds (DSY, AQB)
+
+**Context:** The Aug 6→7 night entered DSY (Grade None, 1.3M float) at $7.10 after it ran to a +134% AH SIP peak ($8.21). PM never reclaimed entry (PM peak $6.96, +98%) and the position closed −11.3%. Detection was clean (flagged every scan, entered at the first eligible scan, baseline 50/59 = 84.7% MET) — the loss was entry price near an extreme AH top. The Aug 6→7 morning eval advanced two morning-evaluation trackers past the prompt's seeds by hand: (1) it logged DSY as a weeks/months-old reverse-split fade, moving that bucket from 3/4 to 3 continue / 2 fade, and (2) its AH-peak-vs-PM-peak check surfaced DSY (+134% AH > PM) and AQB (+114% AH > PM) as a new **lower ~+130% threshold** cluster of AH-peak-better runners, while the prompt tracker still seeded only MSW (Jun 9) at the >250% threshold. Stale seeds force the next eval to re-derive both by hand and understate the emerging extreme-runner-fade signal.
+
+**Evaluation of previous changes:**
+- 2026-08-06 reverse-split seed (2/3 → 3/4): **Helped.** The Aug 6→7 eval started from the 3/4 weeks/months seed, scored DSY against it, and correctly advanced to 3 continue / 2 fade — the seed was used, not reconstructed.
+- 2026-08-06 stale-book seed (2 → 3): **Insufficient data / no regression.** Aug 6→7 had no stale-book execution block (DSY was entered and filled). The count correctly stayed at 3; no case to score.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — Reverse-split-squeeze fade tracker: added DSY (Aug 6→7, 1-for-20, ~6mo old, faded) and updated the recency split from weeks/months-old 3/4 non-fade to **3/5 non-fade (3 continue / 2 fade)**.
+   - Why: the next eval must start from the actual logged sample so the older-split recency read is not re-derived stale (the softening "months-old splits don't fade" signal now sits at 3 continue / 2 fade).
+   - Hypothesis: the next reverse-split name is scored against the 3/5 weeks/months seed and appended with its recency bucket, no live gate changes. Measurable: the next report states 3/5 (or its advanced value) before any new case and changes no entry gate.
+2. **prompts/morning-evaluation.md** — AH-peak-vs-PM-peak check: added DSY (+134% AH > +98% PM, real entry loss) and AQB (+114% AH > +47% PM) and extended the tested hypothesis from the single >250% MSW data point to a **lower ~+130% threshold** cluster (runners topping in the ~+130%+ zone fade into PM; the AH peak is the better exit).
+   - Why: the Aug 6→7 eval hand-derived this lower-threshold read and it directly cost a real entry (DSY entered near its AH top). Codifying it keeps the extreme-runner-fade signal accumulating in the tracker instead of being reconstructed each morning.
+   - Hypothesis: the next AH-peak-better runner is logged against the DSY/AQB/MSW seed with its AH% and PM% and the ~+130%+ read is re-stated, not re-derived. Measurable: the next such case is appended to the tally; no scanner threshold or entry gate changes (data collection only).
+
+**Updated process:** Reverse-split weeks/months-old bucket seed is 3/5 non-fade; AH-peak-vs-PM-peak tracker now seeds MSW + DSY + AQB with a ~+130%+ extreme-runner-fade read. No scanner thresholds, entry gates, or strategy rules changed.
+
 ### 2026-08-06 — Sync Stale-Book and Reverse-Split Tracker Seeds
 
 **Context:** The Aug 5→6 retrospective (CLRO night) advanced two morning-evaluation trackers past the prompt's seeds. CLRO was a detected, qualifying +34.3% winner lost solely to a stale Alpaca extended-hours quote — the third stale-book execution block (after NUWE, KUST), so the retrospective logged the standing count at 3 while the prompt still seeded 2. The same night, PAVS (a known 1-for-100 reverse-split name, now ~6 weeks old) was entered on momentum and continued to a +20.7% PM peak — a second PAVS reverse-split outcome (the first, Jul 23→24, faded −18.4%), which the prompt's reverse-split seed did not carry. Stale seeds make the next pulse understate the execution-data cost and misstate the reverse-split recency split.
