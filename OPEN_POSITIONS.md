@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| DSY | $7.10 | $7.10 | $8.21 (AH) | 12 | 2026-08-06 23:00 CET | None | 5d6d5ed6 | Big Tree Cloud Holdings, float 1.3M. AH BUILD/reclaim, VRatio 6.6x. No same-day catalyst found. Exit at first PM opportunity. |
+| _(none)_ | | | | | | | | |
 
 ## Position Rules
 
@@ -60,6 +60,7 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| DSY | $7.10 | $6.30 | -$9.60 | -11.3% | 1 | None (Big Tree Cloud Holdings, float 1.3M; AH BUILD/reclaim VRatio 6.6x; no same-day catalyst) | Grade None — exit at first PM opportunity + below -10% hard stop. Entered 08-06 23:00 CET at AH high (AH peak $8.21). PM 08-07 opened $6.47, spiked $6.96 first bar (549K sh, 14,382 trades — still -2% vs entry, never above entry) then faded to $5.46 and settled ~$6.02 on liquid SIP volume (vwap $6.24→$5.97). Stale Alpaca quote (bid $7.90 from prior close) ignored; used SIP level. SELL 12 @ limit $5.90 ext (id c310cb1a) filled @ $6.30 (price improvement). Real fill $6.30. |
 | CELZ | $0.89 | $0.83 | -$5.88 | -6.7% | 1 | None (low-float 4.7M clinical-stage biotech, no same-day catalyst) | Grade None — exit at first PM opportunity. Entered 2026-08-05 23:00 CET at AH BUILD (3 scans >10%, AH high $1.06). PM 08-06 opened $0.87, spiked $0.95 first bar (1.4M sh, 6754 trades) then faded to $0.79-0.84 on real liquid SIP volume (vwap $0.80-0.87). Sold first PM pulse. SELL 98 @ limit $0.80 ext (id 9af1c889) filled @ $0.83. Real fill $0.83. |
 | PAVS | $6.61 | $6.65 | +$0.56 | +0.6% | 1 | None (ultra-low-float 856K AI-entertainment, Paranovus; no same-day catalyst) | Grade None — exit at first PM opportunity at any profit. Entered 2026-08-05 23:30 CET at AH BUILD (AH high $7.55). PM 08-06 opened $6.94, spiked $7.98 first bar then chopped $6.66-7.40 on real liquid SIP volume (11,528 trades/bar). First $6.80 limit didn't fill (book faded); repriced $6.50. SELL 14 @ limit $6.50 ext (id 5c8473a1) filled @ $6.65. Real fill $6.65. |
 | BOOM | $6.72 | $6.20 | -$7.28 | -7.7% | 5 | B (DMC Global Q2 earnings) | Grade B. Queued SELL 14 @ limit $5.33 ext (id 356db1ba) filled @ $6.20 before the 2026-08-04 10:30 CET pulse. Real fill $6.20. |
