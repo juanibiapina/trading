@@ -497,7 +497,9 @@ the daily-email pulse.
 
 ## Initiative 3 — Adaptive scheduling of pulses
 
-**Latest status (2026-08-05): Second live third-bar outcome set recorded; no 5-minute pulse change justified.** The 2026-08-04 AH session adds five out-of-sample rows: `CONFIRM-3 YES` INLF (+12.2% PM-high from $4.50 confirmation), BJDX (+43.5% from $1.24), BANL (-19.9%), and ZJYL (+0.9%); `NO` TRUG was flat. Combined live `YES` is now n=5: two meaningful PM excursions, one flat result, and two losses. This is not a tradable edge: the positive results are peak ceilings with no spread, INLF had no fillable AH ask, and BJDX had already faded in AH. `CONFIRM-3` remains log-only and cannot affect entry, grading, ranking, or schedules; collect more distinct outcomes. Full table and caveats are in `INIT3_IGNITION_TIMING.md`. Parallel check: Init 6's continuation-gate sample remains n=11, still one short of the n>=12 trigger for its deferred one-minute exit test; the refreshed 5-minute exits remain negative after spread.
+**Latest status (2026-08-10): Exit-timing gap sized from real SIP bars — +146.2% left in premarket after our single 04:31 ET exit; exit-pulse retiming PROPOSED to Juan.** Built `scripts/premarket-exit-gap.js` + `log/premarket-exit-gap.csv` (log-only). For each held name it pulls SIP 5-min bars, finds the highest premarket HIGH *strictly after* our actual exit fill, and **caps the window at 09:30 ET (13:30Z)** so it never counts regular-session prices we are barred from holding into. Both held names from the execution-gap tally show a large, liquid, *premarket* spike hours after our 10:30 CET (04:31 ET) exit: **PAVS** exit $6.65 -> PM peak **$12.10 at 06:55 ET (+82.0%)**; **CELZ** exit $0.834 -> PM peak **$1.37 at 08:00 ET (+64.3%)**, the $1.37 bar on 6.9M sh / 17,237 trades (VWAP $1.29 — genuine, not a bad print). Summed premarket exit-timing gap = **+146.2%** over 2 names, measured from our actual exit and capped at the open. This corroborates the 08-07 tally (which used entry references and reached over the open) and pins the fixable-in-our-own-process slice at ~+146% across two sessions. **Flag/proposal for Juan (trading-pulse change — proposed, not applied):** the single 10:30 CET exit pulse is far too early for these overnight-AH holds; premarket peaks fired 06:55–08:00 ET (12:55–14:00 CET). Candidate: add a second premarket position-eval pulse around 12:00–14:00 CET (06:00–08:00 ET) so Grade-None holds can catch the later premarket peak instead of exiting at the 04:31 ET floor. Needs Juan's veto before wiring (it changes live exit timing). Next run: seed 1–2 more held names as they occur to confirm the gap persists out-of-sample before/after any pulse change. `CONFIRM-3` stays log-only.
+
+**Prior status (2026-08-05): Second live third-bar outcome set recorded; no 5-minute pulse change justified.** The 2026-08-04 AH session adds five out-of-sample rows: `CONFIRM-3 YES` INLF (+12.2% PM-high from $4.50 confirmation), BJDX (+43.5% from $1.24), BANL (-19.9%), and ZJYL (+0.9%); `NO` TRUG was flat. Combined live `YES` is now n=5: two meaningful PM excursions, one flat result, and two losses. This is not a tradable edge: the positive results are peak ceilings with no spread, INLF had no fillable AH ask, and BJDX had already faded in AH. `CONFIRM-3` remains log-only and cannot affect entry, grading, ranking, or schedules; collect more distinct outcomes. Full table and caveats are in `INIT3_IGNITION_TIMING.md`. Parallel check: Init 6's continuation-gate sample remains n=11, still one short of the n>=12 trigger for its deferred one-minute exit test; the refreshed 5-minute exits remain negative after spread.
 
 **Idea (Juan):** The fixed schedule may have pulses at the wrong moments. Allow
 adapting how often and when we scan/evaluate — space some out, simplify or add
@@ -1017,6 +1019,19 @@ tracker).
       18:30 final scan, ran to PM +47%; an 18:15 scan would have made it
       entry-eligible). Silence = wire it a future run once the tally is firm;
       say the word to veto. Details in `INIT3_IGNITION_TIMING.md`.
+- [ ] Initiative 3 (execution pivot): **PROPOSAL — add a second premarket
+      exit-eval pulse (~12:00–14:00 CET / 06:00–08:00 ET).** Our single 10:30 CET
+      (04:31 ET) position-eval sells Grade-None overnight holds at the premarket
+      *floor*, but the real premarket peaks fire hours later, still before the
+      09:30 ET open. `scripts/premarket-exit-gap.js` (log-only) measured this from
+      real SIP bars, capped at 09:30 ET: **PAVS** exit $6.65 -> PM peak $12.10 at
+      06:55 ET (**+82.0%**); **CELZ** exit $0.834 -> PM peak $1.37 at 08:00 ET
+      (**+64.3%**, on 6.9M sh / 17k trades — genuine). Summed premarket
+      exit-timing gap = **+146.2%** over 2 held names, all self-inflicted (no
+      broker/feed dependency). This changes live exit timing → **proposed, not
+      applied.** Veto window; a future run seeds 1–2 more held names to confirm
+      the gap persists before wiring. Details in the Initiative 3 status +
+      `log/premarket-exit-gap.csv`.
 - [x] Initiative 6 (problem b): the **partial-hold pilot ask is WITHDRAWN**
       (2026-07-13). `scripts/trailing-sim.js` simulated the trailing-stop hold
       on all 14 closed round-trips' real regular-session 5-min SIP paths; every

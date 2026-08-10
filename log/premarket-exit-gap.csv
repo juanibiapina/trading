@@ -1,0 +1,8 @@
+# Premarket exit-timing gap seed (Initiative 3 execution pivot, 2026-08-10).
+# Log-only. Held names whose PM spike fired after our 10:30 CET (04:30 ET) exit
+# but still inside premarket. exitZ = actual SIP fill time (UTC) from broker.js.
+# gap is computed live from SIP bars, CAPPED at 09:30 ET (13:30Z) — never counts
+# regular-session prices, since our rules forbid holding into the open.
+date,ticker,entry,exit,exitZ,note
+2026-08-06,PAVS,6.61,6.65,2026-08-06T08:31:29Z,held 08-05 AH -> exited 04:31 ET at breakeven
+2026-08-06,CELZ,0.89,0.8339,2026-08-06T08:31:01Z,held 08-05 AH -> exited 04:31 ET at a loss
