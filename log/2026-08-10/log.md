@@ -64,6 +64,33 @@ Cross-checked the strongest low-float 21:30 watch names in the live AH book:
 
 **Action:** No entries (observation scan, before 23:00 CET). Re-scan at 23:00 CET. At 23:00+, evaluate names that have cleared >10% AH across ≥2 AH scans (GENK and WAFU are first appearances this scan — need a second AH appearance to satisfy the 2-scan gate). Run structured catalyst search on GENK/WAFU at 23:00.
 
+## Scan 22:45 CET (4:45 PM ET) — OBSERVATION ONLY
+
+`scan.py --all` returned **5 hits**. Learning-phase rule: no entries before 23:00 CET.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WAFU | [TV](https://www.tradingview.com/chart/?symbol=WAFU) | $1.45 | +0.7% | +40.7% | $2.04 | +41.7% | 6.9M | 2.0M | 3.4x | 3.0M | Misc Commercial Services |
+| GENK | [TV](https://www.tradingview.com/chart/?symbol=GENK) | $1.82 | -7.1% | +37.9% | $2.51 | +28.1% | 3.2M | 415K | 7.7x | 4.8M | Restaurants |
+| FF | [TV](https://www.tradingview.com/chart/?symbol=FF) | $5.16 | +1.4% | +17.8% | $6.08 | +19.4% | 416K | 353K | 1.2x | 26.1M | Chemicals: Specialty |
+| PLBY | [TV](https://www.tradingview.com/chart/?symbol=PLBY) | $1.18 | -3.3% | +15.8% | $1.37 | +12.0% | 247K | 674K | 0.4x | 56.2M | Specialty Stores |
+| BZAI | [TV](https://www.tradingview.com/chart/?symbol=BZAI) | $1.03 | -6.4% | +5.8% | $1.09 | -0.9% | 159K | 3.0M | 0.1x | 122.0M | Semiconductors |
+
+**Instrumentation (log-only, no decision impact):**
+- WAFU: `SPIKE 16:00ET +45% $2.10 936 trades / 218k sh (first co-spike bar)` | `CONFIRM-3 NO no local-volume new-high ignition as-of 16:45ET`
+- GENK: `SPIKE 16:05ET +59% $2.89 274 trades / 33k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:05ET 680.2x; confirmed 16:15ET $2.55 as-of 16:45ET`
+- FF: `SPIKE 16:19ET +38% $7.10 1029 trades / 102k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:15ET failed third-bar hold/volume as-of 16:45ET`
+- PLBY: `SPIKE 16:09ET +23% $1.45 76 trades / 38k sh (first co-spike bar)` | `CONFIRM-3 NO no local-volume new-high ignition as-of 16:45ET`
+
+**Trajectory notes:**
+- WAFU: second AH appearance (was +37.9% at 22:30, now +40.7%) — holding/slight build near AH high. Low float (3.0M), VRatio 3.4x, MCap $6.4M. Satisfies the 2-AH-scan >10% gate. Peaked at the 16:00 bell (early). No catalyst checked yet — search at 23:00.
+- GENK: second AH appearance (was +39.6% at 22:30, now +37.9%) — holding. Low float (4.8M), VRatio up to 7.7x, MCap $60M, but Day% -7.1%. Peaked 16:05 (early). Satisfies 2-AH-scan gate. Search catalyst at 23:00.
+- FF: **first AH appearance** (+17.8%). Higher float (26.1M), MCap $226M, VRatio 1.2x. Spiked 16:19, CONFIRM-3 failed third-bar hold. Needs a second AH appearance to satisfy the 2-scan gate.
+- PLBY: second AH appearance (was +14.4%, now +15.8%) — holding. High float (56.2M), VRatio 0.4x (AH vol below avg) = weak signal.
+- BZAI: +5.8% AH, below 10% threshold-of-interest.
+
+**Action:** No entries (observation scan, before 23:00 CET). At the 23:00 scan, evaluate names clearing >10% AH across ≥2 AH scans — WAFU, GENK, PLBY qualify on the 2-scan gate; run structured catalyst search on WAFU and GENK (both low-float, real VRatio). Both peaked early (16:00–16:05) — watch whether they hold or fade into 23:00.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
