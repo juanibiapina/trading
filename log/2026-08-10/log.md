@@ -165,9 +165,41 @@ Cross-checked the strongest low-float 21:30 watch names in the live AH book:
 
 **Action:** No new entries. Both new low-float names (HWH, MTEN) fail the 2-AH-scan gate; HWH is also fading. MTEN is a genuine BUILD to watch next scan. WAFU/FF holds unchanged (managed in premarket).
 
+## Scan 00:00 CET (6:00 PM ET) — ENTRIES ALLOWED
+
+`scan.py --all` returned **14 hits**. WAFU and FF already held (entered 23:00; managed in premarket). This scan finds new entries only. MTEN (watched at 23:30) is now on its 2nd AH appearance and building.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WAFU | [TV](https://www.tradingview.com/chart/?symbol=WAFU) | $1.45 | +0.7% | +42.8% | $2.07 | +43.8% | 14.1M | 2.9M | 4.9x | 3.0M | Misc Commercial Services |
+| GENK | [TV](https://www.tradingview.com/chart/?symbol=GENK) | $1.82 | -7.1% | +21.4% | $2.21 | +12.8% | 5.5M | 704K | 7.9x | 4.8M | Restaurants |
+| MTEN | [TV](https://www.tradingview.com/chart/?symbol=MTEN) | $1.08 | +22.6% | +37.0% | $1.48 | +68.0% | 4.9M | 4.1M | 1.2x | 6.1M | Industrial Machinery |
+| MGIH | [TV](https://www.tradingview.com/chart/?symbol=MGIH) | $1.74 | +14.1% | +15.5% | $2.01 | +31.8% | 1.8M | 307K | 6.0x | 1.2M | Containers/Packaging |
+| JWEL | [TV](https://www.tradingview.com/chart/?symbol=JWEL) | $4.00 | +158.1% | +6.2% | $4.25 | +174.2% | 1.5M | 8.5M | 0.2x | 1.8M | Medical Distributors |
+| PLBY | [TV](https://www.tradingview.com/chart/?symbol=PLBY) | $1.18 | -3.3% | +27.1% | $1.50 | +22.9% | 1.2M | 774K | 1.5x | 56.2M | Specialty Stores |
+| HUDI | [TV](https://www.tradingview.com/chart/?symbol=HUDI) | $0.93 | +28.0% | +9.2% | $1.01 | +39.8% | 917K | 6.5M | 0.1x | 4.2M | Steel |
+| FF | [TV](https://www.tradingview.com/chart/?symbol=FF) | $5.16 | +1.4% | +22.3% | $6.31 | +24.0% | 849K | 407K | 2.1x | 26.1M | Chemicals: Specialty |
+
+(Other hits below 10% AH threshold or high-float: LRHC, ZJYL, DH, BZAI, ARQ, GMEX.)
+
+**Instrumentation (log-only, no decision impact):**
+- MTEN: `SPIKE 17:03ET +16% $1.25 231 trades / 52k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 17:00ET 8.8x; confirmed 17:10ET $1.35 as-of 18:00ET`
+
+**MTEN — ENTERED.** Float 6.1M (<10M ideal), Day +22.6% (>-15%, not a dead-cat — positive day). AH BUILD across 2 AH scans (23:30 +27.8% → 00:00 +37.0%), satisfies the 2-AH-scan >10% gate. Total% +68% (well under 150 ceiling). `tradable=true`, two-sided book (bid $1.00 x1000, ask $1.40 x200). SIP confirms a real, accumulating spike: ignition 17:00 ET, 248k→696k→731k→579k→954k→964k sh/bar with 1-5K trades/bar, VWAP building $1.28→$1.58. Peak $1.72 at 17:25 ET, now ~$1.52 (within 20% of AH high = holding, not fading). Catalyst search (4 searches) found **no same-day catalyst** — the registered direct offerings surfaced are June 2026, not today. Grade None, entered with concern noted (learning-phase no-catalyst policy). Filled **64 sh @ $1.39** (id 168e9926). Added to OPEN_POSITIONS.md.
+
+**Prior-candidate updates:**
+- GENK → SKIP (unchanged). SPIKE→FADE thesis intact: peaked 16:05 ET ($2.89), now +21.4% AH ($2.21), continuing to decay off peak. Early-peak-fading names are 0/6+ for PM continuation; trajectory dominates the Grade B earnings catalyst.
+- JWEL → SKIP. +158% Day% is a regular-session move; AH +6.2% is below the 10% AH threshold-of-interest. VRatio 0.2x (AH vol far below avg).
+- HUDI → SKIP. AH +9.2%, below 10% threshold; +28% Day% is regular-session driven, VRatio 0.1x.
+- MGIH → SKIP. AH +15.5% but float 1.2M with VRatio 6.0x; only 1 AH scan >10% (was +6.9%/+6.3% earlier, below threshold) — fails the 2-AH-scan gate. Watch only.
+- PLBY → SKIP (unchanged). Float 56.2M exceeds the <50M gate.
+
+**Action:** Entered MTEN. WAFU/FF holds unchanged (managed in premarket).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | WAFU | $1.94 | 23:00 CET | 43 | bc9a1a64 | Float 3.0M, AH BUILD 3 scans, real 1-2M sh/bar vol. Grade None (no catalyst). |
 | FF | $6.28 | 23:00 CET | 16 | fe355da6 | Float 26.1M, AH BUILD 2 scans, Q2 earnings today. Grade B. |
+| MTEN | $1.39 | 00:00 CET | 64 | 168e9926 | Float 6.1M, Day +22.6%, AH BUILD 2 scans (+27.8%→+37.0%), real SIP 248k→964k sh/bar. Grade None (no catalyst). |
