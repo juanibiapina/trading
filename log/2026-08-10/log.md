@@ -131,6 +131,40 @@ Cross-checked the strongest low-float 21:30 watch names in the live AH book:
 
 **Action:** Entered WAFU and FF. Both added to OPEN_POSITIONS.md. Position management (hold/sell) handled in premarket.
 
+## Scan 23:30 CET (5:30 PM ET) — ENTRIES ALLOWED
+
+`scan.py --all` returned **9 hits**. WAFU and FF already held (entered 23:00; position management handled in premarket). This scan finds new entries only.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WAFU | [TV](https://www.tradingview.com/chart/?symbol=WAFU) | $1.45 | +0.7% | +42.1% | $2.06 | +43.0% | 12.9M | 2.7M | 4.7x | 3.0M | Misc Commercial Services |
+| GENK | [TV](https://www.tradingview.com/chart/?symbol=GENK) | $1.82 | -7.1% | +18.1% | $2.15 | +9.7% | 5.4M | 684K | 7.8x | 4.8M | Restaurants |
+| HWH | [TV](https://www.tradingview.com/chart/?symbol=HWH) | $1.44 | -3.4% | +13.9% | $1.64 | +10.1% | 3.6M | 498K | 7.3x | 1.5M | Financial Conglomerates |
+| MTEN | [TV](https://www.tradingview.com/chart/?symbol=MTEN) | $1.08 | +22.6% | +27.8% | $1.38 | +56.6% | 1.6M | 3.8M | 0.4x | 6.1M | Industrial Machinery |
+| MGIH | [TV](https://www.tradingview.com/chart/?symbol=MGIH) | $1.74 | +14.1% | +6.3% | $1.85 | +21.3% | 1.3M | 245K | 5.3x | 1.2M | Containers/Packaging |
+| PLBY | [TV](https://www.tradingview.com/chart/?symbol=PLBY) | $1.18 | -3.3% | +26.3% | $1.49 | +22.1% | 1.0M | 760K | 1.4x | 56.2M | Specialty Stores |
+| FF | [TV](https://www.tradingview.com/chart/?symbol=FF) | $5.16 | +1.4% | +20.8% | $6.23 | +22.5% | 808K | 403K | 2.0x | 26.1M | Chemicals: Specialty |
+| BAOS | [TV](https://www.tradingview.com/chart/?symbol=BAOS) | $0.71 | +8.6% | +7.5% | $0.76 | +16.7% | 286K | 1.2M | 0.2x | 1.0M | Advertising/Marketing |
+| DH | [TV](https://www.tradingview.com/chart/?symbol=DH) | $0.70 | -2.1% | +5.3% | $0.74 | +3.1% | 215K | 202K | 1.1x | 29.7M | Packaged Software |
+
+**Instrumentation (log-only, no decision impact):**
+- HWH: `SPIKE 16:50ET +38% $1.99 160 trades / 28k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:50ET failed third-bar hold/volume as-of 17:30ET`
+- MTEN: `SPIKE 17:03ET +16% $1.25 231 trades / 52k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 17:00ET 8.8x; confirmed 17:10ET $1.35 as-of 17:30ET`
+- PLBY: `SPIKE 16:09ET +23% $1.45 76 trades / 38k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:50ET failed third-bar hold/volume as-of 17:30ET`
+- GENK: `SPIKE 16:05ET +59% $2.89 274 trades / 33k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:05ET 680.2x; confirmed 16:15ET $2.55 as-of 17:30ET`
+
+**New candidates this scan (HWH, MTEN, BAOS):**
+- **HWH → SKIP (fails 2-scan gate + SPIKE→FADE).** First AH appearance, float 1.5M, VRatio 7.3x, `tradable=true`, book two-sided $2.24/$2.28. SIP shows a real, huge ignition at 16:50 ET ($2.49 high, 1.4M sh / 13.6k trades) but it is **fading hard** across every bar since: VWAP $2.20→$2.17→$2.06→$1.92→$1.73→$1.59, last bar 17:15 ET $1.56. Classic SPIKE→FADE (peaked 16:50, declining). Fails the 2-AH-scan gate anyway (first appearance). No same-day catalyst found (Q1 going-concern + $10M equity/warrant shelf noted). No entry.
+- **MTEN → SKIP (fails 2-scan gate), WATCH next scan.** First AH appearance, float 6.1M, Day +22.6% (big regular-session run), Total% +56.6%. Scanner VRatio 0.4x but real AH volume **is** accumulating: SIP VWAP building $1.28→$1.30→$1.37→$1.38 with 248k→696k→731k→579k sh/bar, ignition 17:00 ET, CONFIRM-3 YES. `tradable=true`, book $1.00/$1.40 (wide). Genuine BUILD but only 1 AH scan so far — fails the 2-AH-scan >10% gate. No same-day catalyst found. **Watch: if it holds >10% AH into the next scan it satisfies the gate and becomes entry-eligible.**
+- **BAOS → SKIP.** AH +7.5%, below the 10% threshold-of-interest.
+
+**Prior-candidate updates:**
+- GENK: still fading (AH +31.3% at 23:00 → +18.1% now), volume decaying. SPIKE→FADE thesis intact. Still skip.
+- PLBY: AH ticked up to +26.3% but float 56.2M exceeds the <50M gate. Skip.
+- MGIH/DH: below 10% AH threshold.
+
+**Action:** No new entries. Both new low-float names (HWH, MTEN) fail the 2-AH-scan gate; HWH is also fading. MTEN is a genuine BUILD to watch next scan. WAFU/FF holds unchanged (managed in premarket).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
