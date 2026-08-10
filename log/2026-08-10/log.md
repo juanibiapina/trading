@@ -34,6 +34,12 @@ Cross-checked the strongest low-float 21:30 watch names in the live AH book:
 
 **Action:** No candidates found. No entries (observation scan + 0 hits). Re-scan at 22:30 / 23:00 CET; catalysts and AH volume often build 15-30 min after the bell.
 
+## Scan 22:15 CET (4:15 PM ET) — OBSERVATION ONLY
+
+`scan.py --all` returned **0 hits** — 15 min into AH, still no name clearing threshold on accumulated AH volume. Learning-phase rule: no entries before 23:00 CET anyway.
+
+**Action:** No candidates found. No entries. Re-scan at 22:30 / 23:00 CET; AH volume and catalysts often build 15-30 min after the bell.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
