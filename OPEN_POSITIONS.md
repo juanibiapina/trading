@@ -8,7 +8,8 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | | | |
+| WAFU | $1.94 | | | 43 | 2026-08-10 23:00 CET | None | bc9a1a64 | Wah Fu Education, float 3.0M. AH BUILD across 3 scans (+37.9%→+40.7%→+49.0%), real SIP vol 1-2M sh/bar (7-13K trades/bar), VWAP $1.82→$2.21. No same-day catalyst found. Entered with concern noted. |
+| FF | $6.28 | | | 16 | 2026-08-10 23:00 CET | B | fe355da6 | FutureFuel, float 26.1M. Q2 2026 earnings released after close today (Grade B). AH BUILD across 2 scans (+17.8%→+22.1%), new highs $6.45, real SIP vol 70-290K sh/bar. |
 
 ## Position Rules
 

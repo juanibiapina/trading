@@ -91,7 +91,49 @@ Cross-checked the strongest low-float 21:30 watch names in the live AH book:
 
 **Action:** No entries (observation scan, before 23:00 CET). At the 23:00 scan, evaluate names clearing >10% AH across ≥2 AH scans — WAFU, GENK, PLBY qualify on the 2-scan gate; run structured catalyst search on WAFU and GENK (both low-float, real VRatio). Both peaked early (16:00–16:05) — watch whether they hold or fade into 23:00.
 
+## Scan 23:00 CET (5:00 PM ET) — ENTRIES ALLOWED
+
+`scan.py --all` returned **6 hits**. First entry-eligible scan of the night (learning-phase rule: no entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WAFU | [TV](https://www.tradingview.com/chart/?symbol=WAFU) | $1.45 | +0.7% | +49.0% | $2.16 | +50.0% | 10.3M | 2.4M | 4.2x | 3.0M | Misc Commercial Services |
+| GENK | [TV](https://www.tradingview.com/chart/?symbol=GENK) | $1.82 | -7.1% | +31.3% | $2.39 | +21.9% | 4.6M | 598K | 7.7x | 4.8M | Restaurants |
+| FF | [TV](https://www.tradingview.com/chart/?symbol=FF) | $5.16 | +1.4% | +22.1% | $6.30 | +23.8% | 657K | 385K | 1.7x | 26.1M | Chemicals: Specialty |
+| PLBY | [TV](https://www.tradingview.com/chart/?symbol=PLBY) | $1.18 | -3.3% | +16.1% | $1.37 | +12.3% | 317K | 682K | 0.5x | 56.2M | Specialty Stores |
+| ZJYL | [TV](https://www.tradingview.com/chart/?symbol=ZJYL) | $2.92 | +35.8% | +5.1% | $3.07 | +42.8% | 223K | 4.1M | 0.1x | 1.8M | Medical Specialties |
+| DH | [TV](https://www.tradingview.com/chart/?symbol=DH) | $0.70 | -2.1% | +24.7% | $0.87 | +22.1% | 50K | 182K | 0.3x | 29.7M | Packaged Software |
+
+**Instrumentation (log-only, no decision impact):**
+- WAFU: `SPIKE 16:00ET +45% $2.10 936 trades / 218k sh (first co-spike bar)` | `CONFIRM-3 NO no local-volume new-high ignition as-of 17:00ET`
+- GENK: `SPIKE 16:05ET +59% $2.89 274 trades / 33k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:05ET 680.2x; confirmed 16:15ET $2.55 as-of 17:00ET`
+- FF: `SPIKE 16:19ET +38% $7.10 1029 trades / 102k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:15ET failed third-bar hold/volume as-of 17:00ET`
+- PLBY: `SPIKE 16:09ET +23% $1.45 76 trades / 38k sh (first co-spike bar)` | `CONFIRM-3 NO no local-volume new-high ignition as-of 17:00ET`
+- DH: `SPIKE 16:43ET +26% $0.88 89 trades / 14k sh (first co-spike bar)` | `CONFIRM-3 PENDING ignition 16:40ET; waiting for third bar as-of 17:00ET`
+
+**SIP volume confirmation (real, accumulating):**
+- WAFU: 1-2M sh/bar, 6-13K trades/bar, VWAP climbing $1.82→$2.21 — real, building, corroborates AH price. Book $2.25/$2.29 x100.
+- GENK: 400K-1.3M sh/bar early, but **fading** last bars (883K→290K→140K sh), price $2.89→$2.38. Real but decaying.
+- FF: 70-290K sh/bar, hundreds-1K trades, price building to $6.45. Real. Book $6.19/$6.24.
+
+**Catalyst search:**
+- WAFU: no same-day news found (4 searches). No catalyst → Grade None, enter with concern noted (learning phase).
+- GENK: Q2 2026 earnings released after close today (5:00 PM ET call). Grade B.
+- FF: Q2 2026 earnings released after close today. Grade B.
+
+**Entry evaluation:**
+- **WAFU → ENTERED.** Float 3.0M, Day +0.7%, AH BUILD across 3 scans (37.9%→40.7%→49.0%), making new highs, real 1-2M sh/bar volume. Total% +50% (under 150 ceiling). All gates clear. No catalyst (concern noted). Filled 43 sh @ **$1.94** (id bc9a1a64). Grade None.
+- **FF → ENTERED.** Float 26.1M (<50M), Day +1.4%, AH BUILD across 2 scans (17.8%→22.1%), new highs $6.45, Q2 earnings catalyst. Total% +23.8%. All gates clear. Filled 16 sh @ **$6.28** (id fe355da6). Grade B.
+- **GENK → SKIP.** Float 4.8M and Grade B earnings, but trajectory is early-peak-fade: peaked 16:05 ET ($2.89), declined across all 3 AH scans (39.6%→37.9%→31.3%), volume decaying (1.3M→140K sh/bar). Early-peak-fading names are 0/6+ for PM continuation; trajectory dominates catalyst. Hypothetical no-entry.
+- **PLBY → SKIP.** Float 56.2M exceeds the <50M gate; VRatio 0.4x (AH vol below avg) = weak signal.
+- **ZJYL → SKIP.** AH +5.1%, below 10% threshold-of-interest (Total% is regular-session driven, +35.8% Day%).
+- **DH → SKIP.** Only 1 AH appearance (fails 2-scan gate); quote stale 16:00 ET, `ask $0.00 x0` = illiquid, no AH book.
+
+**Action:** Entered WAFU and FF. Both added to OPEN_POSITIONS.md. Position management (hold/sell) handled in premarket.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| WAFU | $1.94 | 23:00 CET | 43 | bc9a1a64 | Float 3.0M, AH BUILD 3 scans, real 1-2M sh/bar vol. Grade None (no catalyst). |
+| FF | $6.28 | 23:00 CET | 16 | fe355da6 | Float 26.1M, AH BUILD 2 scans, Q2 earnings today. Grade B. |
