@@ -40,6 +40,30 @@ Cross-checked the strongest low-float 21:30 watch names in the live AH book:
 
 **Action:** No candidates found. No entries. Re-scan at 22:30 / 23:00 CET; AH volume and catalysts often build 15-30 min after the bell.
 
+## Scan 22:30 CET (4:30 PM ET) — OBSERVATION ONLY
+
+`scan.py --all` returned **4 hits**. First names to clear threshold on accumulated AH volume. Learning-phase rule: no entries before 23:00 CET.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WAFU | [TV](https://www.tradingview.com/chart/?symbol=WAFU) | $1.45 | +0.7% | +37.9% | $2.00 | +38.9% | 4.8M | 1.8M | 2.7x | 3.0M | Misc Commercial Services |
+| GENK | [TV](https://www.tradingview.com/chart/?symbol=GENK) | $1.82 | -7.1% | +39.6% | $2.54 | +29.6% | 772K | 121K | 6.4x | 4.8M | Restaurants |
+| MGIH | [TV](https://www.tradingview.com/chart/?symbol=MGIH) | $1.74 | +14.1% | +6.9% | $1.86 | +22.0% | 149K | 114K | 1.3x | 1.2M | Containers/Packaging |
+| PLBY | [TV](https://www.tradingview.com/chart/?symbol=PLBY) | $1.18 | -3.3% | +14.4% | $1.35 | +10.6% | 129K | 663K | 0.2x | 56.2M | Specialty Stores |
+
+**Instrumentation (log-only, no decision impact):**
+- WAFU: `SPIKE 16:00ET +45% $2.10 936 trades / 218k sh (first co-spike bar)` | `CONFIRM-3 NO no local-volume new-high ignition as-of 16:30ET`
+- GENK: `SPIKE 16:05ET +59% $2.89 274 trades / 33k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:05ET 680.2x; confirmed 16:15ET $2.55 as-of 16:30ET`
+- PLBY: `SPIKE 16:09ET +23% $1.45 76 trades / 38k sh (first co-spike bar)` | `CONFIRM-3 NO no local-volume new-high ignition as-of 16:30ET`
+
+**Trajectory notes:**
+- WAFU: spiked to $2.10 (+45%) at the 16:00 bell, now $2.00 (+37.9%) — early spike fading off peak. Low float (3.0M), no catalyst checked yet.
+- GENK: spiked to $2.89 (+59%) at 16:05, now $2.54 (+39.6%) — early spike, off peak. Low float (4.8M), MCap $60M. CONFIRM-3 YES but that is log-only.
+- MGIH: +6.9% AH, below 10% threshold-of-interest.
+- PLBY: high float (56.2M), VRatio 0.2x (AH vol below avg), weak signal.
+
+**Action:** No entries (observation scan, before 23:00 CET). Re-scan at 23:00 CET. At 23:00+, evaluate names that have cleared >10% AH across ≥2 AH scans (GENK and WAFU are first appearances this scan — need a second AH appearance to satisfy the 2-scan gate). Run structured catalyst search on GENK/WAFU at 23:00.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
