@@ -20,6 +20,20 @@ Many other hits (SCKT +402%, THH +105%, XHLD +46%, AUUD +46%, HUDI +42.6%, ARTW 
 
 **Action:** No entries (regular session). Re-scan at 22:00+ CET once AH opens to see which names carry momentum into after-hours.
 
+## Scan 22:00 CET (4:00 PM ET) — OBSERVATION ONLY
+
+Scanner ran right at AH open (16:00 ET). `scan.py --all` returned **0 hits** — no names cleared threshold yet (AH volume hasn't accumulated one minute after the bell). Learning-phase rule: 22:00 scan is observation-only regardless, no entries before 23:00 CET.
+
+Cross-checked the strongest low-float 21:30 watch names in the live AH book:
+
+| Ticker | Bid | Ask | Note |
+|--------|-----|-----|------|
+| JWEL | $4.12 x100 | $0.00 x0 | One-sided, no AH offer |
+| ZJYL | $2.51 x100 | $3.40 x100 | Two-sided but thin |
+| DETX | $2.94 x100 | $0.00 x0 | One-sided, no AH offer |
+
+**Action:** No candidates found. No entries (observation scan + 0 hits). Re-scan at 22:30 / 23:00 CET; catalysts and AH volume often build 15-30 min after the bell.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
