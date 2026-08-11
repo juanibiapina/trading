@@ -1,4 +1,25 @@
 
+## Scan 21:30 CET (3:30 PM ET)
+
+**Session: REGULAR** (AH opens 22:00 CET / 4:00 PM ET). Watch-only — no entries before AH confirmation.
+
+Top regular-session movers (pending AH confirmation):
+
+| Ticker | Chart | Price | Chg% | IRVol | Float | MCap | Industry |
+|--------|-------|-------|------|-------|-------|------|----------|
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $5.00 | +783.9% | 696x | 11.6M | $8.1M | Food: Specialty/Candy |
+| WXM | [TV](https://www.tradingview.com/chart/?symbol=WXM) | $8.84 | +120.9% | 405x | 577K | $4.5M | Wholesale Distributors |
+| MSGY | [TV](https://www.tradingview.com/chart/?symbol=MSGY) | $3.59 | +55.0% | 242x | 6.5M | $39.2M | Engineering & Construction |
+| STIM | [TV](https://www.tradingview.com/chart/?symbol=STIM) | $3.10 | +43.1% | 22x | 24.0M | $216.1M | Medical Specialties |
+| FF | [TV](https://www.tradingview.com/chart/?symbol=FF) | $6.39 | +23.8% | 15x | 26.1M | $280.3M | Chemicals: Specialty (open position, Grade B) |
+| DOMH | [TV](https://www.tradingview.com/chart/?symbol=DOMH) | $3.22 | +14.2% | 15x | 9.1M | $72.8M | Investment Banks/Brokers |
+
+**Notes:**
+- Scan ran at 15:30 ET (regular session), so all volume/change figures are intraday, not after-hours. AH liquidity and continuation unknown until the 22:00+ CET scans.
+- PLAG (+783%), WXM (+120%), MSGY (+55%) are the standout small-float movers to watch for AH follow-through. Spike-bar / confirmation instrumentation and catalyst searches deferred to AH scans (spike detector keys off AH bars).
+- FF is the existing Grade-B open position (Q2 earnings), managed by premarket position-evaluation, not re-entered here.
+- No paper trades entered — regular-session caution rule. Re-evaluate at 22:00 CET (AH open).
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
