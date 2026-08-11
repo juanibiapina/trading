@@ -113,3 +113,39 @@ Pipeline cross-check (21:30 watch names) via SIP AH bars + quote (quotes lag ~15
 - DRMA is the cleanest BUILD (rising each bar, tightest spread, smallest float, CONFIRM-3 YES). GTEC holding after a sharp spike on the heaviest volume. SINT spiked then holding near peak.
 - No entries — observation-only per learning phase (pre-23:00 CET). All three need a 2nd AH scan appearance at 23:00+ CET to clear the entry gate. Re-scan and evaluate for entry at 23:00 CET.
 - Prior pipeline names (PLAG, WXM, MSGY) all faded below close in AH (see 22:15 scan) — dropped.
+
+## Scan 22:45 CET (4:45 PM ET)
+
+**Session: AFTERHOURS.** `scan.py --all` ran at 16:45 ET — **7 hits**. Observation-only (pre-23:00 CET, learning phase). Candidates with AH change >10%: DRMA, CIGL, OWLT (SINT dropped to +9%, GTEC dropped off scanner).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.08 | -3.6% | +34.3% | $1.45 | +29.5% | 4.7M | 608K | 7.8x | 2.7M | Pharmaceuticals: Major |
+| CIGL | [TV](https://www.tradingview.com/chart/?symbol=CIGL) | $0.60 | +32.5% | +33.7% | $0.80 | +77.1% | 2.1M | 17.5M | 0.1x | 35.0M | Misc Commercial Services |
+| OWLT | [TV](https://www.tradingview.com/chart/?symbol=OWLT) | $5.44 | +0.4% | +20.4% | $6.55 | +20.8% | 79K | 136K | 0.6x | 15.7M | Electronics/Appliances |
+| SINT | [TV](https://www.tradingview.com/chart/?symbol=SINT) | $1.77 | +4.1% | +9.0% | $1.93 | +13.4% | 2.5M | 311K | 7.9x | 5.3M | Medical Specialties |
+| SMRT | [TV](https://www.tradingview.com/chart/?symbol=SMRT) | $1.41 | +3.7% | +5.9% | $1.49 | +9.8% | 104K | 1.8M | 0.1x | 175.0M | Computer Communications |
+| EPOW | [TV](https://www.tradingview.com/chart/?symbol=EPOW) | $0.56 | +0.9% | +7.2% | $0.59 | +8.1% | 103K | 495K | 0.2x | 38.1M | Packaged Software |
+| SND | [TV](https://www.tradingview.com/chart/?symbol=SND) | $4.65 | +1.3% | +7.5% | $5.00 | +8.9% | 90K | 302K | 0.3x | 30.2M | Construction Materials |
+
+**Instrumentation (log-only, no decision impact):**
+- DRMA `SPIKE 16:09ET +16% $1.25 97 trades / 22k sh` · `CONFIRM-3 YES ignition 16:05ET 215.0x; confirmed 16:15ET $1.46 as-of 16:45ET`
+- CIGL `SPIKE 16:27ET +30% $0.78 1624 trades / 558k sh` · `CONFIRM-3 PENDING ignition 16:25ET; waiting for third bar as-of 16:45ET`
+- OWLT `SPIKE 16:10ET +21% $6.60 68 trades / 9k sh` · `CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 16:45ET`
+- SINT `SPIKE 16:06ET +29% $2.29 48 trades / 8k sh` · `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 16:45ET`
+- GTEC `SPIKE 16:00ET +16% $0.64 79 trades / 14k sh` · `CONFIRM-3 NO no local-volume new-high ignition as-of 16:45ET`
+
+**SIP AH bars (20:00-20:30Z / 16:00-16:30 ET, ~15 min behind scan) + book:**
+| Ticker | Trajectory | AH Vol/bar | Book (quote) | Read |
+|--------|-----------|------------|--------------|------|
+| DRMA | $1.08→$1.56, **rising each bar** (H $1.59) | 1.4-2.0M sh, 8-10k trades | **fresh** bid $1.63 / ask $1.67 (20:45Z) | Clean BUILD, tightest fresh book, smallest float 2.7M, CONFIRM-3 YES. Lead candidate. |
+| CIGL | Reg +32.5% mover; AH spike 16:25 to $0.87 then C $0.70 | 2.0-2.7M sh late bars | stale bid $0.48 / ask $0.68 (20:00Z) | Late AH spike already fading off $0.87 high; large float 35M, MCap $135M. SPIKE→FADE forming. |
+| OWLT | $5.44→$6.84, holding $6.5-6.8 | thin 5-36k sh, 100-500 trades | stale ask $6.67 (20:00Z) | Building/holding but **thin** AH volume; float 15.7M. |
+| SINT | Spiked $2.48 @16:05, faded to $1.92-1.98 | 0.2-1.0M sh | stale bid $1.47 / ask $2.08 | -20%+ off AH high. SPIKE→FADE. |
+| GTEC | Peaked $0.78 @16:10, collapsed to $0.56 | 1.1-3.1M sh, fading | fresh bid $0.55 / ask $0.64 | -27% off AH high. Fading hard. SPIKE→FADE. |
+
+**Notes:**
+- **DRMA is the clear lead:** only name showing a clean BUILD (rising every SIP bar $1.08→$1.56), heavy accumulating volume, a fresh tight two-sided book, smallest float (2.7M), and CONFIRM-3 YES. 2nd AH-scan appearance (22:30 +18.5% → 22:45 +34.3%, building). Total% ~+53% at quote $1.65 — under the +150% ceiling. Pharmaceuticals sector (no catalyst searched yet — will run at 23:00).
+- SINT and GTEC (last scan's BUILD-and-hold candidates) both rolled into SPIKE→FADE — faded 20-27% off their AH highs. Dropped from lead consideration.
+- CIGL is a regular-session runner (+32.5% day) that spiked late in AH and is already fading; stale quote, 35M float. OWLT holding but thin. SMRT/EPOW/SND below the 10% AH threshold.
+- **No paper trades — observation-only per learning phase (pre-23:00 CET).** DRMA has now cleared the 2-AH-scan gate (22:30 + 22:45, both >10%, both building) and is the entry candidate for the 23:00 CET scan pending catalyst search and a still-live BUILD read. Re-scan and evaluate for entry at 23:00 CET.
