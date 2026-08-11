@@ -64,3 +64,22 @@ Pipeline cross-check (21:30 regular-session watch names) via SIP/quote:
 **Actions taken:**
 - None. FF held. Alpaca (source of truth) and OPEN_POSITIONS.md reconciled — FF only open position.
 - Quote bid $6.19 was stale (yesterday 20:40Z); confirmed live PM ~$6.15-6.23 via SIP 5Min bars.
+
+## Scan 22:15 CET (4:15 PM ET)
+
+**Session: AFTERHOURS.** `scan.py --all` ran at 16:15 ET — **0 hits**. Observation-only (pre-23:00 CET).
+
+Pipeline cross-check (21:30 watch names) via SIP AH bars + quote (quotes lag ~15 min on free tier):
+
+| Ticker | Reg Close | AH C (SIP) | AH% | AH Vol / trades | Book (quote) | Read |
+|--------|-----------|------------|-----|-----------------|--------------|------|
+| PLAG | $5.00 | $4.30 | -14% | 2.0M / 22,106 | bid $6.65 / **ask $0.00 x0** | Spiked then faded ($6.03→$4.30 in first AH bar); no fillable ask. Skip. |
+| WXM | $8.84 | $7.64 | -13.6% | 63K / 931 | bid $6.68 / ask $9.12 | Fading below close, two-sided but stale quote. No AH momentum. |
+| MSGY | $3.59 | $3.46 | -3.6% | 31K / 212 | bid $2.99 / ask $3.98 | Flat-to-down, thin AH. No momentum. |
+| STIM | $3.10 | — | — | — | **ask $0.00 x0** | No fillable AH book. |
+| DOMH | $3.22 | — | — | — | **ask $0.00 x0** | No fillable AH book. |
+
+**Notes:**
+- Real AH volume now printing (first 5Min bar). Every pipeline name is FADING in AH (negative AH% vs regular close) — none reaches the +10% AH threshold. PLAG's huge +783% regular spike is unwinding (first AH bar $6.03→$4.30) with no fillable ask, classic illiquid spike→fade.
+- No candidate with AH change >10%, so no spike-bar / third-bar-confirmation instrumentation this scan.
+- No paper trades — observation-only (pre-23:00 CET) and no qualifying candidate. Re-scan at 22:30 / 23:00 CET.
