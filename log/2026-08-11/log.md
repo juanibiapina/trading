@@ -83,3 +83,33 @@ Pipeline cross-check (21:30 watch names) via SIP AH bars + quote (quotes lag ~15
 - Real AH volume now printing (first 5Min bar). Every pipeline name is FADING in AH (negative AH% vs regular close) — none reaches the +10% AH threshold. PLAG's huge +783% regular spike is unwinding (first AH bar $6.03→$4.30) with no fillable ask, classic illiquid spike→fade.
 - No candidate with AH change >10%, so no spike-bar / third-bar-confirmation instrumentation this scan.
 - No paper trades — observation-only (pre-23:00 CET) and no qualifying candidate. Re-scan at 22:30 / 23:00 CET.
+
+## Scan 22:30 CET (4:30 PM ET)
+
+**Session: AFTERHOURS.** `scan.py --all` ran at 16:30 ET — **4 hits**. Observation-only (pre-23:00 CET, learning phase). First scan with real AH candidates tonight.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GTEC | [TV](https://www.tradingview.com/chart/?symbol=GTEC) | $0.55 | +2.7% | +28.3% | $0.71 | +31.8% | 7.2M | 836K | 8.6x | 14.1M | Industrial Machinery |
+| SINT | [TV](https://www.tradingview.com/chart/?symbol=SINT) | $1.77 | +4.1% | +35.0% | $2.39 | +40.6% | 1.2M | 177K | 6.8x | 5.3M | Medical Specialties |
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.08 | -3.6% | +18.5% | $1.28 | +14.3% | 379K | 118K | 3.2x | 2.7M | Pharmaceuticals: Major |
+| SND | [TV](https://www.tradingview.com/chart/?symbol=SND) | $4.65 | +1.3% | +9.7% | $5.10 | +11.1% | 87K | 302K | 0.3x | 30.2M | Construction Materials |
+
+**Instrumentation (log-only, no decision impact):**
+- GTEC `SPIKE 16:00ET +16% $0.64 79 trades / 14k sh` · `CONFIRM-3 NO no local-volume new-high ignition as-of 16:30ET`
+- SINT `SPIKE 16:06ET +29% $2.29 48 trades / 8k sh` · `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET`
+- DRMA `SPIKE 16:09ET +16% $1.25 97 trades / 22k sh` · `CONFIRM-3 YES ignition 16:05ET 215.0x; confirmed 16:15ET $1.46 as-of 16:30ET`
+
+**SIP AH bars (20:00-20:20Z) + book:**
+| Ticker | Trajectory | AH Vol/bar | Book (quote) | Read |
+|--------|-----------|------------|--------------|------|
+| GTEC | $0.55→$0.78 high (20:10), holding $0.69-0.71 | 1.7-3.2M sh, 5.5-11k trades | bid $0.55 / ask $0.72 x500 | Real heavy volume, BUILD-and-hold. Small- cap $14.7M, float 14.1M. Fillable book. |
+| SINT | $1.80→$2.48 high (20:05), now $2.20-2.33 | 0.5-1.0M sh, 4.4-7.4k trades | bid $1.47 / ask $2.08 x100 | Real volume, spiked then holding near peak. Float 5.3M. Wide spread. |
+| DRMA | $1.08→$1.52 high, rising each bar | 35k→1.4M sh, up to 8k trades | bid $1.42 / ask $1.44 x100 | Clean BUILD, tight ask spread, smallest float 2.7M. CONFIRM-3 YES. |
+| SND | — | — | **ask $0.00 x0** | No fillable AH book; +9.7% below threshold. Skip. |
+
+**Notes:**
+- Three real, volume-backed AH candidates (GTEC, SINT, DRMA) — first live movers of the night. All accumulating on real SIP trades (not stale VRatio / bad prints); DRMA and GTEC show tight two-sided books, SINT wider.
+- DRMA is the cleanest BUILD (rising each bar, tightest spread, smallest float, CONFIRM-3 YES). GTEC holding after a sharp spike on the heaviest volume. SINT spiked then holding near peak.
+- No entries — observation-only per learning phase (pre-23:00 CET). All three need a 2nd AH scan appearance at 23:00+ CET to clear the entry gate. Re-scan and evaluate for entry at 23:00 CET.
+- Prior pipeline names (PLAG, WXM, MSGY) all faded below close in AH (see 22:15 scan) — dropped.
