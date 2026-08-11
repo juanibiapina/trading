@@ -6,14 +6,15 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-08-06 | DSY | None same-day (1-for-20 reverse split Feb 2026, ~6mo old) | $8.21 AH SIP (+134% @16:40 ET, 679–925K sh/10–14K trades) → $6.96 PM SIP (+98%) | - | ~$5.7 | Day 1: real volume-backed winner. **DETECTED + ENTERED @ $7.10** (23:00 CET, too extended — after AH peak); PM never reclaimed entry, open ~−17%. AH peak was the exit. Float 1.3M |
-| 2026-08-05 | CLRO | None same-day (July 2 Cortigent reverse-merger backdrop) | $9.00 PM SIP (+144.6% from $3.68 close @04:00 ET, 895K sh/20.5K trades); AH SIP peak $8.07 (+119%) | - | $7.07 | Day 2: faded to $3.76 from $9.00 day-1 PM peak. **DETECTED** (WATCH→QUALIFIED) but **NOT ENTERED** — stale-book no-fill (Alpaca AH quote frozen 16:00 ET). Float 740K |
-| 2026-08-04 | RAIN | None (unverified low-float squeeze) | $4.60 PM SIP (+208.7% from $1.49 close @04:00 ET, 1.29M sh/21.7K trades) | - | $1.26 | Day 3: ~$1.26, faded from $4.60 day-1 peak. AH SIP breakout $3.69 -> PM $4.60. **NOT DETECTED**: TradingView omitted it despite the 18:15 ET in-window surge. Float 60K |
+| 2026-08-11 | NCRA | None (unverified; digital-asset/BTC-treasury pivot narrative) | $4.21 PM SIP (+113.7% from $1.97 close @04:00 ET, 1.83M sh/23.5K trades); AH dead flat | - | ~$3.0 | Day 1: **PM-only gapper** (no AH footprint), NOT detectable — not counted vs baseline. Peak was a single-bar spike; realistic exit ~+83% VWAP first bar only. Float 474K |
+| 2026-08-06 | DSY | None same-day (1-for-20 reverse split Feb 2026, ~6mo old) | $8.21 AH SIP (+134% @16:40 ET, 679–925K sh/10–14K trades) → $6.96 PM SIP (+98%) | - | $4.60 | Day 5: faded to $4.60 from $6.96 day-1 PM peak. **DETECTED + ENTERED @ $7.10** (too extended, after AH peak); exited −11.3%. AH peak was the exit. Float 1.3M |
 
 ## Historical Winners (with multi-day outcome)
 
 | Date | Ticker | Catalyst | AH Peak | PM Peak | Day 2 | Day 5 | Outcome |
 |------|--------|----------|---------|---------|-------|-------|---------|
+| 2026-08-05 | CLRO | None same-day (July 2 Cortigent reverse-merger backdrop) | $8.07 AH SIP (+119%) | $9.00 PM SIP (+144.6% from $3.68 close, 895K sh/20.5K trades) | $3.76 | $10.17 | Day 6: recovered to $10.17 (above day-1 peak). **DETECTED** (WATCH→QUALIFIED) but **NOT ENTERED** — stale-book no-fill (Alpaca AH quote frozen 16:00 ET). Float 740K |
+| 2026-08-04 | RAIN | None (unverified low-float squeeze) | $3.69 AH SIP breakout | $4.60 PM SIP (+208.7% from $1.49 close, 1.29M sh/21.7K trades) | $1.26 | $1.18 | Day 7: faded to $1.18 from $4.60 day-1 peak. **NOT DETECTED**: TradingView omitted it despite the 18:15 ET in-window surge (feed-lag miss). Float 60K |
 | 2026-07-31 | KUST | C: Jul 30 Schedule 13D/A controlling-owner disclosure | $1.59 AH qualified area | $2.32 PM SIP (+114.8% from prior daily close) | $1.39 | $1.45 | Day 5: below the $2.32 day-1 peak; **DETECTED, NOT ENTERED** because Alpaca's extended-hours book was stale. Float 577K |
 | 2026-07-30 | NUWE | None (Jul 27 preliminary Q2 revenue +14%) | $2.56 AH entry area | $4.67 PM SIP (+147.1%) | $1.89 | $1.55 | Day 5: no continuation after the $4.67 day-1 PM peak; **DETECTED, NOT ENTERED** because Alpaca's extended-hours book was stale/no ask. Float 363K |
 | 2026-07-29 | AMIX | None (post-1-for-21 reverse-split squeeze) | $4.02 entry | $5.29 PM SIP (+89.6%) | $4.57 | $3.61 | Day 6: faded below the $5.29 peak; **DETECTED + ENTERED @ $4.02**, first-PM exit $4.68 (+16.4%). Float 502K |

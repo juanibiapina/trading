@@ -236,3 +236,88 @@ Cross-checked the strongest low-float 21:30 watch names in the live AH book:
 | FF | $6.28 | 23:00 CET | 16 | fe355da6 | Float 26.1M, AH BUILD 2 scans, Q2 earnings today. Grade B. |
 | MTEN | $1.39 | 00:00 CET | 64 | 168e9926 | Float 6.1M, Day +22.6%, AH BUILD 2 scans (+27.8%→+37.0%), real SIP 248k→964k sh/bar. Grade None (no catalyst). |
 | MGIH | $2.12 | 00:30 CET | 47 | 36a4135a | Float 1.2M, Day +14.1%, AH >10% 2 scans (+15.5%→+14.4%), SIP rebuild to $2.00-2.10 near AH high $2.13, VRatio 6.2x. Grade None (no catalyst). |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**NCRA** — Nocera, Inc. (aquaculture → digital-asset pivot)
+- Catalyst: **None (unverified)** — no confirmed same-day PR. Background narrative is a digital-asset/BTC-treasury pivot (Dec 2025 $2M BTC allocation, "Nocera Holdings" tech/AI/data-center restructuring, DIVG venture platform). No fresh Aug 11 headline found. Grade None.
+- Previous Close: $1.97
+- AH last night: **dead flat** — SIP AH was near-zero volume (3–570 sh/bar), price pinned $2.00–2.05 (+2–4%). No AH footprint.
+- Premarket now: fired at 04:00 ET PM open — SIP peak **$4.19–4.21 (+113%)** in the 04:00–04:05 ET bar on **1.83M sh / 23,489 trades**; second bar H $3.89 on 1.40M sh / 18,185 trades. Already fading (close $3.22 by 04:10 ET).
+- Hypothetical P&L: peak +113%; realistic first-bar VWAP $3.61 = **+83%** (liquid exit around +80%, the >100% wick did not hold ≥2 bars).
+- Float: 474K | Market Cap: $3.2M
+
+**Scanner Diagnostic:**
+- Detectable at screening time (~22:15 CET)? **NO**
+- Why: NCRA was a **PM-only gapper**. It was completely flat in after-hours (SIP volume 3–570 sh/bar, price $2.00–2.05, +2–4%), far below the 10% AH threshold and with no volume. The entire move began at 04:00 ET PM open, hours after the last evening scan (00:30 CET / 18:30 ET). Structurally undetectable by the AH scanner.
+- Scanner gap: none actionable — this is the known PM-only-gapper blind spot, not a scanner failure. Not counted against detection baseline.
+
+**Investability (PM-only gapper):** borderline. The +113% peak was a **single-bar spike** ($4.21 wick, 04:00–04:05 ET) that faded to +63% within 10 min. But the first bar traded 1.83M sh at VWAP $3.61 (+83%), so a liquid exit around +80% was available for one bar. Label: **spike — holdable only ~+80% VWAP first bar, >100% peak was a single-bar wick.** Not a clean holdable case.
+
+### Baseline Tracking
+
+- Days tracked: **63** (was 62 + 1)
+- Winners detected by scanner: **50/59 (84.7%)** — unchanged. NCRA is a PM-only gapper (structurally undetectable), excluded from the detection ratio per the rules, not counted as a miss.
+- Winner selected for paper trade: **28/59 (47.5%)** — unchanged. Winner was undetectable, so no selection opportunity.
+- Target: >80% detection
+- Status: **BASELINE MET** (84.7%)
+- **Baseline gap:** Fri Aug 7 evening scanner did NOT run (no `post-market scan` commits Aug 7; log/2026-08-07 has only position evals). The Aug 7 AH session was therefore never diagnosed — its Monday-morning (Aug 10) retrospective was skipped. Recorded as a **coverage failure**, not a detection miss (no scan opportunity existed).
+
+### Retrospective Scan Results
+
+- Live PM scan (04:21 ET): 4 hits — NCRA +81.4% (peak +113% SIP), WAFU +41.4%, MTEN +28.7%, MGIH +9.2%.
+- AH reconstruction (SIP): WAFU real AH BUILD (peak $2.44 +69% @21:55Z, held $2.15–2.40 all evening on 1–2M sh/bar). NCRA flat AH (see above). MTEN/MGIH modest AH movers we entered.
+- NCRA (the >100% winner) had **no AH footprint** — PM-only.
+
+### Open Position P&L (Alpaca)
+
+Positions still open at 10:20 (position-evaluation at 10:30/14:30 handles exits). Real Alpaca fills only.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak (SIP) | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------------|-----------|------|-----|-------|--------|
+| WAFU | $1.94 | +34.7% | None | 23:00 CET | $2.60 (+80.6%) | 04:00 ET | open | — | ~+5.7%* | 🟢 Open |
+| FF   | $6.28 | +21.7% | B — Q2 earnings | 23:00 CET | $6.21 (+20.3%) | 04:00 ET | open | -1.12 | -1.1% | 🟡 Open |
+| MTEN | $1.39 | +28.7% | None | 00:00 CET | ~$1.39 | 04:00 ET | open | -3.18 | -3.6% | 🔴 Open |
+| MGIH | $2.12 | +21.8% | None | 00:30 CET | ~$1.90 | 04:00 ET | open | -6.11 | -6.1% | 🔴 Open |
+
+*WAFU: Alpaca mark ($2.22, +14.4%) is **stale** — quote timestamped 2026-08-10T20:41 ET (last night AH). Live PM SIP is ~$2.00–2.12 (opened $2.31 → faded to $1.99). Real P&L vs live PM ~$2.05 = **+5.7%**, not +14.4%. Peak $2.60 was the 04:00 ET first bar; already faded.
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits yet; positions open pending 10:30 eval).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **9 of 7 scheduled** (21:30 + 4 observation scans 22:00–22:45 + 4 entry scans 23:00/23:30/00:00/00:30 CET). Full entry-window coverage.
+- Candidates found: ~19 unique tickers; 4 entered (WAFU, FF, MTEN, MGIH).
+- Retrospective matches: WAFU/MTEN/MGIH all caught + entered. Winner NCRA not caught (PM-only, undetectable).
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| NCRA | flat (+2–4%, no vol) | PM-only gapper — move fired at 04:00 ET, no AH footprint | Yes hypothetically (+83% VWAP first bar) but single-bar spike, not counted as a miss |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak (SIP) | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------------|-----------|---------------|------------|-----------|------------|---------|
+| WAFU | $2.44 (+69%) | 21:55Z (17:55 ET) | Build | ~$2.05 (+42%) | -16% | +42% | PM first-bar $2.60 (+80.6%) **exceeded** AH peak → continuation, then faded |
+| MTEN | ~$1.48 (+37%) | ~00:00 CET | Build | ~$1.39 (+29%) | -6% | +29% | Faded modestly into PM |
+| MGIH | ~$2.13 (+22%) | ~00:30 CET | Spike→hold | ~$1.90 (+9%) | -11% | +9% | Faded into PM, AH peak better exit |
+
+**AH-peak-vs-PM-peak:** WAFU PM peak $2.60 (+80.6%) exceeded AH peak $2.44 (+69%) — continuation, not a fade (no fade-rule case). MGIH AH peak was the better exit (PM below AH). None cleared the ~+130% extreme-runner threshold.
+
+### Notes
+
+- **Winner NCRA is a PM-only gapper** (7th tracked). Standing PM-only-gapper **holdable count: 1 clear (SXTC) of 7** — NCRA labeled spike/borderline (holdable ~+80% first bar only, >100% peak was a single-bar wick). Not a cluster; early-PM-scan workflow decision stays with Juan, not triggered.
+- **Coverage-failure / baseline-gap tally:** Fri Aug 7 evening scanner did not run at all → Aug 7 AH session never diagnosed (skipped Monday retrospective). First coverage failure since the founding Jun 18–19 case. One-off for now; watch for recurrence (≥2 within ~10 sessions → flag scheduler/bridge reliability to Juan via email).
+- Fade-rule, late-AH-tail, in-window feed-lag, price-floor, reverse-split, broker-block, stale-book tallies: no new qualifying cases tonight (NCRA is PM-only; WAFU continued rather than faded). Standing counts unchanged: in-window feed-lag misses = 4 (escalation trigger REACHED — AH-data-source cross-check already routed to email); stale-book execution-blocks = 3; price-floor exclusions = 5 (0 holdable).
+- **Email item:** surface the Aug 7 coverage failure (scanner didn't run Friday, retrospective skipped) so Juan is aware the baseline chain has a one-night gap.
+
+### Price Charts
+
+**NCRA** (winner, PM-only gapper) — prev close $1.97, 2-day range $1.94–$4.21, peak $4.21 (+113.7%) @ 08-11 04:00 ET:
+- AH (16:00–20:00 ET): flat $1.99–2.12, near-zero volume (no footprint)
+- PM open 04:00 ET: $2.37 → spike $4.21 on 1.83M sh/23.5K trades → faded to $3.22 by 04:10 ET
+- Classic PM-only spike: the entire move is a single 04:00 ET bar.
