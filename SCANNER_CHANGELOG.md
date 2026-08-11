@@ -69,6 +69,21 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-08-11 — Retire the Duplicate PM-Only-Gapper Hand-Count; Defer to pm-open-scan.csv
+
+**Context:** The Aug 10→11 winner was NCRA (+113% PM), a PM-only gapper (flat AH, undetectable) — the 7th tracked by the morning-eval PM-only-gapper note. That note has read "**1 clear (SXTC) of 6–7 holdable — not a cluster**" for weeks, using it to argue the early-PM blind spot has low cost and no escalation is due. But a separate, newer, dedicated pulse (`pm-open-scan.md`) has been logging every morning's gappers to `log/pm-open-scan.csv` with the same holdable/uninvestable classification since Jul 7, and that authoritative file already holds **20 holdable PM-only gappers** (SXTC, INLF +100.9%, UPC +147.2%, DKI +98.3%, ZJYL +109.3%, WXM +64.2%, ELPW +40.9%, …). The two trackers diverged completely: the morning eval maintained a stale hand-count (1) that contradicted the source of truth (20) and re-classified the same gappers by hand every morning. The holdable-cluster threshold (≥3–4) the morning note gates escalation on was passed long ago; the note never noticed because it counted its own undercount.
+
+**Evaluation of previous changes:**
+- 2026-08-07 AH-peak-vs-PM-peak seed (MSW + DSY + AQB, ~+130%+ read): **Helped.** The Aug 10→11 eval ran the check, scored WAFU (PM peak +80.6% > AH +69% = continuation, no fade case) and MGIH (AH peak better exit) against it, and stated "None cleared the ~+130% extreme-runner threshold" — used the seed, did not re-derive it.
+- 2026-08-07 reverse-split seed (3/5 non-fade): **Insufficient data.** Aug 10→11 had no reverse-split entry; the bucket correctly stayed at 3/5, nothing to score.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — PM-only gapper tracking: removed the separate stale hand-count ("1 of 6 holdable") and made the morning eval **defer to `log/pm-open-scan.csv`** (maintained by the `pm-open-scan.md` pulse, which runs ~04:00–05:00 ET before this eval and owns the Initiative-6 escalation). The eval now classifies the biggest raw mover, confirms a PM-only gapper was captured in the CSV, and reads the holdable count from that file (`awk` one-liner) instead of re-deriving it. Notes the cluster threshold is already exceeded, so the standing action is routing the holdable-cluster to Juan's daily email.
+   - Why: two parallel trackers of the same thing had diverged 1 vs 20; the hand-count understated the blind spot by 20x and duplicated the pm-open pulse's per-morning classification work. Single source of truth removes the drift and the redundant effort.
+   - Hypothesis: the next PM-only-gapper morning eval reads the holdable count from `pm-open-scan.csv` (≥20 and rising), does not restate "1 of 6," and routes the holdable cluster to the daily email. Measurable: the next eval cites the CSV-derived count, not a hand-maintained one, and no scanner parameter or entry gate changes.
+
+**Updated process:** Morning-eval PM-only-gapper holdable tally now defers to `log/pm-open-scan.csv` (authoritative, currently 20 holdable); the standing "1 of 6" hand-count is retired. No scanner thresholds, entry gates, or strategy rules changed.
+
 ### 2026-08-07 — Sync Reverse-Split and AH-Peak-vs-PM-Peak Tracker Seeds (DSY, AQB)
 
 **Context:** The Aug 6→7 night entered DSY (Grade None, 1.3M float) at $7.10 after it ran to a +134% AH SIP peak ($8.21). PM never reclaimed entry (PM peak $6.96, +98%) and the position closed −11.3%. Detection was clean (flagged every scan, entered at the first eligible scan, baseline 50/59 = 84.7% MET) — the loss was entry price near an extreme AH top. The Aug 6→7 morning eval advanced two morning-evaluation trackers past the prompt's seeds by hand: (1) it logged DSY as a weeks/months-old reverse-split fade, moving that bucket from 3/4 to 3 continue / 2 fade, and (2) its AH-peak-vs-PM-peak check surfaced DSY (+134% AH > PM) and AQB (+114% AH > PM) as a new **lower ~+130% threshold** cluster of AH-peak-better runners, while the prompt tracker still seeded only MSW (Jun 9) at the >250% threshold. Stale seeds force the next eval to re-derive both by hand and understate the emerging extreme-runner-fade signal.
