@@ -283,3 +283,52 @@ Pipeline cross-check (21:30 watch names) via SIP AH bars + quote (quotes lag ~15
 - Open positions now: DRMA (Grade B, from 23:00, building to new AH high $1.75), BOXL, BAOS (both Grade None), plus FF (Grade B, day 1). Grade None names exit at first PM opportunity; premarket position-evaluation handles exits.
 - BAOS and BOXL had faded/no-book reads at 23:30 but both firmed into 00:00: BAOS rebuilt to near-high, BOXL held within 14% of high on heavy volume. The stale zero-book quotes were confirmed as freshness artifacts by real filled orders (price improvement on both).
 - No feed-lag rescue needed — all tracked pipeline names accounted for; PLAG/WXM/MSGY faded out earlier and stayed dead.
+
+## Scan 00:30 CET (6:30 PM ET)
+
+**Session: AFTERHOURS.** `scan.py --all` ran at 18:30 ET — **12 hits**. **Last scheduled scan of the night** (final-scan feed-lag cross-check applied). Candidates with AH change >10%: DRMA (position), BOXL (position), BAOS (position), XHLD, PETZ, OFAL, SND, NOMA.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.08 | -3.6% | +54.3% | $1.67 | +48.7% | 18.3M | 2.1M | 8.7x | 2.7M | Pharmaceuticals: Major |
+| BAOS | [TV](https://www.tradingview.com/chart/?symbol=BAOS) | $0.73 | +3.2% | +30.2% | $0.95 | +34.3% | 10.8M | 2.4M | 4.5x | 1.0M | Advertising/Marketing Services |
+| BOXL | [TV](https://www.tradingview.com/chart/?symbol=BOXL) | $2.93 | -1.3% | +51.9% | $4.45 | +49.8% | 2.7M | 430K | 6.2x | 564K | Computer Peripherals |
+| XHLD | [TV](https://www.tradingview.com/chart/?symbol=XHLD) | $3.57 | +14.8% | +15.7% | $4.13 | +32.8% | 761K | 14.6M | 0.1x | 7.8M | Misc Commercial Services |
+| PETZ | [TV](https://www.tradingview.com/chart/?symbol=PETZ) | $1.54 | -8.9% | +12.3% | $1.73 | +2.4% | 374K | 101K | 3.7x | 6.8M | Food: Specialty/Candy |
+| OFAL | [TV](https://www.tradingview.com/chart/?symbol=OFAL) | $0.71 | -10.5% | +12.1% | $0.80 | +0.3% | 359K | 1.2M | 0.3x | n/a | Engineering & Construction |
+| SND | [TV](https://www.tradingview.com/chart/?symbol=SND) | $4.65 | +1.3% | +10.8% | $5.15 | +12.2% | 94K | 303K | 0.3x | 30.2M | Construction Materials |
+| NOMA | [TV](https://www.tradingview.com/chart/?symbol=NOMA) | $2.73 | -13.3% | +20.9% | $3.30 | +4.8% | 2K | 7K | 0.3x | 5.6M | Movies/Entertainment |
+
+**Instrumentation (log-only, no decision impact):**
+- XHLD `SPIKE 17:32ET +22% $4.34 843 trades / 71k sh` · `CONFIRM-3 NO ignition 17:25ET failed third-bar hold/volume as-of 18:30ET`
+- PETZ `SPIKE 16:56ET +17% $1.80 24 trades / 4k sh` · `CONFIRM-3 NO ignition 17:00ET failed third-bar hold/volume as-of 18:30ET`
+- OFAL `SPIKE 16:52ET +20% $0.85 149 trades / 68k sh` · `CONFIRM-3 NO ignition 16:50ET failed third-bar hold/volume as-of 18:30ET`
+- SND `NO-SPIKE peak +11% @16:41ET` · `CONFIRM-3 NO no local-volume new-high ignition as-of 18:30ET`
+- NOMA `NO-SPIKE peak +34% @16:54ET` · `CONFIRM-3 NO no local-volume new-high ignition as-of 18:30ET`
+
+**SIP AH bars + book (final-scan cross-check):**
+| Ticker | Trajectory (SIP) | AH Vol/bar | Book (quote) | Read |
+|--------|-----------|------------|--------------|------|
+| DRMA | Held/building, AH high $1.75, quote $1.50/$1.51 | sustained 1-2M sh | **fresh** bid $1.50 / ask $1.51 (20:59Z) | Position from 23:00, still holding within 20% of high. Not re-entered. |
+| BAOS | Rebuilt near AH high $1.03; quote bid $0.98 | 0.9-2.2M sh | bid $0.98 / ask $3.20 (bad-print ask) | Position from 00:00. Not re-entered. |
+| BOXL | Ignited 17:10 ET → $4.77 high, holding; scanner AH $4.45 | 100-680K sh | stale ask $0.00 @20:00Z (predates ignition) | Position from 00:00. Not re-entered. |
+| XHLD | Spike 17:25 ET → $4.34 high @17:30, faded to $3.77 (17:35 ET) | 133K/200K spike bars, then thinning | bid $3.02 / ask $4.04 (stale 20:00Z) | 2nd AH scan (00:00 +19.6% → 00:30 +15.7%, fading both), peaked 17:30 ET then declining, CONFIRM-3 NO. SPIKE→FADE. Skip. |
+| PETZ | Spike 17:00 ET → $2.25 high, faded hard to $1.72-1.74 (18:15 ET) | 88K-224K spike then <30K | bid $1.16 / ask $1.87 | -23% off AH high, Day -8.9%, CONFIRM-3 NO. SPIKE→FADE. Skip. |
+| OFAL | Spike 16:50 ET → $0.85 high, faded to $0.77 base (18:00 ET) | 138K spike then thinning | bid $0.57 / ask $0.82 | Total% +0.3% (at/below prior close), Day -10.5%, faded off high, CONFIRM-3 NO. Skip. |
+| SND | NO-SPIKE, peak +11% @16:41, thin | 5-94K sh | **ask $0.00 x0** | No fillable book, NO-SPIKE. Skip. |
+| NOMA | 2K AH vol total, illiquid | 2K sh | bid $2.31 / ask $3.72 | Illiquid (7 trades), Day -13.3% dead-cat. Skip (carried). |
+
+**Paper trades:**
+- **No new entries.** All three qualifying AH movers tonight (DRMA, BAOS, BOXL) are already open positions and are not re-entered (one entry per candidate per night).
+- **XHLD — Skip:** SPIKE→FADE (peaked $4.34 @17:30 ET, faded to $3.77), fading across both AH scans (00:00 +19.6% → 00:30 +15.7%), CONFIRM-3 NO. Early-peak fade, 0/x for PM continuation.
+- **PETZ — Skip:** SPIKE→FADE (-23% off $2.25 high), Day -8.9%, thin trailing volume, CONFIRM-3 NO.
+- **OFAL — Skip:** Total% +0.3% (at/below prior close), Day -10.5%, faded off $0.85 high, CONFIRM-3 NO.
+- **SND — Skip:** NO-SPIKE, no fillable AH book (ask $0.00 x0).
+- **NOMA — Skip (carried):** illiquid (2K AH vol / 7 trades), Day -13.3% dead-cat.
+
+**Final-scan feed-lag cross-check:** All tracked pipeline names accounted for. No name under-reported by TradingView while surging on SIP — XHLD is the only new regular-session runner and SIP confirms it faded (spike→fade), not an under-reported live surge. Earlier pipeline names (PLAG, WXM, MSGY, SINT, GTEC, CIGL) faded out in prior scans and stayed dead. No SIP-truth rescue needed.
+
+**Notes:**
+- No new entries at the final scan. Three positions entered earlier tonight remain: DRMA (Grade B, 23:00), BOXL + BAOS (Grade None, 00:00), plus FF (Grade B, day 1).
+- Current paper P&L (Alpaca): BAOS +56.4%, DRMA +6.6%, BOXL +5.2%, FF +1.4% — all green at last mark. Premarket position-evaluation handles exits (Grade None names exit at first PM opportunity; DRMA/FF Grade B hold up to 2 days).
+- Night summary: DRMA/BAOS/BOXL were the clean BUILD + real-SIP-volume candidates that cleared all gates; the rest of the field (XHLD, PETZ, OFAL, SND, NOMA, SINT, GTEC, CIGL, PLAG, WXM, MSGY) was SPIKE→FADE, thin, illiquid, or dead-cat.
