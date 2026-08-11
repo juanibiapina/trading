@@ -6,3 +6,6 @@
 date,ticker,entry,exit,exitZ,note
 2026-08-06,PAVS,6.61,6.65,2026-08-06T08:31:29Z,held 08-05 AH -> exited 04:31 ET at breakeven
 2026-08-06,CELZ,0.89,0.8339,2026-08-06T08:31:01Z,held 08-05 AH -> exited 04:31 ET at a loss
+2026-08-11,WAFU,1.94,2.10,2026-08-11T08:31:15Z,Grade None exit 04:31 ET +8.2%; PM peak $2.30 05:05 ET then faded to PM-last $1.65
+2026-08-11,MTEN,1.39,1.35,2026-08-11T08:31:15Z,Grade None exit 04:31 ET; PM peak $1.45 05:40 ET; PM-last $1.31
+2026-08-11,MGIH,2.12,2.02,2026-08-11T08:31:17Z,Grade None exit 04:31 ET; genuine liquid PM spike to $2.70 07:30 ET (2.9M sh 23.7k trades) then crash to $1.61 next bar
