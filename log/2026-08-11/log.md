@@ -190,3 +190,43 @@ Pipeline cross-check (21:30 watch names) via SIP AH bars + quote (quotes lag ~15
 **Notes:**
 - One entry tonight: DRMA (Grade B, clean BUILD, smallest float, real volume). This is the textbook detect→select→BUILD profile the strategy targets. Set premarket exit for Grade B (hold up to 2 days, -15% stop $1.29, trail at -15% from peak if +30% reached).
 - Prior BUILD candidates SINT and GTEC both rolled to SPIKE→FADE; DRMA is the only one that kept building into the entry scan.
+
+## Scan 23:30 CET (5:30 PM ET)
+
+**Session: AFTERHOURS.** `scan.py --all` ran at 17:30 ET — **12 hits**. Entry-eligible window. Candidates with AH change >10%: DRMA (held), BAOS, BOXL, PRSO, OFAL, NOMA, WAFU(+21% total but AH +5.7%).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.08 | -3.6% | +41.7% | $1.53 | +36.6% | 13.8M | 1.6M | 8.6x | 2.7M | Pharmaceuticals: Major |
+| BAOS | [TV](https://www.tradingview.com/chart/?symbol=BAOS) | $0.73 | +3.2% | +26.2% | $0.92 | +30.1% | 6.3M | 1.9M | 3.2x | 1.0M | Advertising/Marketing Services |
+| BOXL | [TV](https://www.tradingview.com/chart/?symbol=BOXL) | $2.93 | -1.3% | +32.9% | $3.90 | +31.1% | 96K | 45K | 2.1x | 564K | Computer Peripherals |
+| PRSO | [TV](https://www.tradingview.com/chart/?symbol=PRSO) | $0.72 | +1.1% | +13.7% | $0.82 | +15.0% | 154K | 329K | 0.5x | 14.8M | Semiconductors |
+| NOMA | [TV](https://www.tradingview.com/chart/?symbol=NOMA) | $2.73 | -13.3% | +20.9% | $3.30 | +4.8% | 2K | 7K | 0.3x | 5.6M | Movies/Entertainment |
+| OFAL | [TV](https://www.tradingview.com/chart/?symbol=OFAL) | $0.71 | -10.5% | +10.8% | $0.79 | -0.9% | 288K | 1.2M | 0.2x | n/a | Engineering & Construction |
+
+**Instrumentation (log-only, no decision impact):**
+- DRMA `SPIKE 16:09ET +16% $1.25 97 trades / 22k sh` · `CONFIRM-3 YES ignition 16:05ET 215.0x; confirmed 16:15ET $1.46 as-of 17:30ET`
+- BAOS `SPIKE 16:51ET +22% $0.89 229 trades / 169k sh` · `CONFIRM-3 YES ignition 16:50ET 1060.5x; confirmed 17:00ET $0.90 as-of 17:30ET`
+- BOXL `SPIKE 17:13ET +26% $3.69 185 trades / 35k sh` · `CONFIRM-3 PENDING ignition 17:10ET; waiting for third bar as-of 17:30ET`
+- PRSO `SPIKE 16:54ET +15% $0.83 45 trades / 21k sh` · `CONFIRM-3 NO ignition 16:50ET failed third-bar hold/volume as-of 17:30ET`
+- NOMA `NO-SPIKE peak +34% @16:54ET` · `CONFIRM-3 NO no local-volume new-high ignition as-of 17:30ET`
+
+**SIP AH bars (20:00-21:15Z / 16:00-17:15 ET) + book:**
+| Ticker | Trajectory | AH Vol/bar | Book (quote) | Read |
+|--------|-----------|------------|--------------|------|
+| DRMA | Held ~$1.53 vs $1.72 AH high | sustained | (held position) | Still building/holding, within 20% of high. Position from 23:00, not re-entered. |
+| BAOS | $0.73→$1.03H (20:55Z), faded to $0.80 (21:15Z, L $0.77) | 0.9-2.2M sh, 2.6-7.8k trades | bid $0.98 / ask $3.20 (bad-print ask) | Real heavy volume but -20% off AH high = SPIKE→FADE forming. Tiny 1.0M float. 1st AH scan. |
+| BOXL | $2.93→$4.25H (21:10Z), holding $3.9-3.95 | 123k-527k sh, 1.6-8.6k trades | **ask $0.00 x0** (stale) | Late emerge (17:10 ET), small 564K float, real volume, holding. No fillable book. 1st AH scan. |
+| PRSO | Peaked $0.83, faded | thin 21k sh | bid $0.72 / ask $1.04 | CONFIRM-3 NO. 1st AH scan. |
+| NOMA | Spiked, only 2K AH vol | 2K sh total | bid $2.31 / ask $3.72 | Illiquid (7 trades), Day -13.3% dead-cat, NO-SPIKE. Skip. |
+| OFAL | Total% -0.9% (below close) | thin | bid $0.57 / ask $0.82 | Below regular close, Day -10.5%. Not a real AH mover. Skip. |
+
+**Paper trade:**
+- **No new entries.** DRMA already entered at 23:00 (one entry per candidate/night); holding at +41.7% AH ($1.53), above entry $1.52.
+- **BAOS, BOXL, PRSO, NOMA, OFAL — Skip (1st AH-scan appearance, fail 2-AH-scan gate).** All are first-time hits this scan; the gate requires AH >10% across ≥2 after-hours scans. None qualify yet.
+  - BAOS (float 1.0M, CONFIRM-3 YES, real volume) and BOXL (float 564K, late build, real volume) are the two worth tracking — both small-float with genuine SIP accumulation. BAOS is already fading -20% off its AH high (SPIKE→FADE forming); BOXL just spiked at 17:10 ET with no fillable book yet. Re-evaluate both at 00:00 CET if they hold >10% AH for a 2nd scan.
+  - PRSO CONFIRM-3 NO / thin. NOMA illiquid + dead-cat (Day -13.3%). OFAL below regular close.
+
+**Notes:**
+- One position tonight remains DRMA (entered 23:00, Grade B). No qualifying new entry this scan — all new >10% movers are first appearances.
+- BAOS and BOXL are the names to watch for a 2nd-scan confirmation at 00:00 CET; both tiny float with real volume, but BAOS is fading and BOXL has no fillable AH book.
