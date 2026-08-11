@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| FF | $6.28 | $6.07 | $6.45 | 16 | 2026-08-10 23:00 CET | B | fe355da6 | FutureFuel, float 26.1M. Q2 2026 earnings released after close today (Grade B). AH BUILD across 2 scans (+17.8%→+22.1%), new highs $6.45, real SIP vol 70-290K sh/bar. Day 1, -3.3%, above -15% stop ($5.34). HOLD. |
+| FF | $6.28 | $6.20 | $6.45 | 16 | 2026-08-10 23:00 CET | B | fe355da6 | FutureFuel, float 26.1M. Q2 2026 earnings released after close (Grade B). AH BUILD across 2 scans (+17.8%→+22.1%), new highs $6.45, real SIP vol 70-290K sh/bar. Day 1, -1.3%, above -15% stop ($5.34). PM 08-11 flat $6.04-6.30 (today PM high +0.3%), VWAP ~$6.13, thin — no momentum. Peak +2.7% never hit +30% trail. HOLD. |
 
 ## Position Rules
 
