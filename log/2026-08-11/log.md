@@ -230,3 +230,56 @@ Pipeline cross-check (21:30 watch names) via SIP AH bars + quote (quotes lag ~15
 **Notes:**
 - One position tonight remains DRMA (entered 23:00, Grade B). No qualifying new entry this scan — all new >10% movers are first appearances.
 - BAOS and BOXL are the names to watch for a 2nd-scan confirmation at 00:00 CET; both tiny float with real volume, but BAOS is fading and BOXL has no fillable AH book.
+
+## Scan 00:00 CET (6:00 PM ET)
+
+**Session: AFTERHOURS.** `scan.py --all` ran at 18:00 ET — **13 hits**. Entry-eligible window. Candidates with AH change >10%: DRMA (position), BOXL, BAOS (both 2nd AH scan), XHLD, PETZ, PRSO, OWLT, NOMA. **Final scheduled scan of the night.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.08 | -3.6% | +53.7% | $1.66 | +48.2% | 16.3M | 1.9M | 8.6x | 2.7M | Pharmaceuticals: Major |
+| BAOS | [TV](https://www.tradingview.com/chart/?symbol=BAOS) | $0.73 | +3.2% | +18.2% | $0.86 | +21.9% | 8.5M | 2.2M | 3.9x | 1.0M | Advertising/Marketing Services |
+| BOXL | [TV](https://www.tradingview.com/chart/?symbol=BOXL) | $2.93 | -1.3% | +34.8% | $3.95 | +33.0% | 2.1M | 339K | 6.1x | 564K | Computer Peripherals |
+| XHLD | [TV](https://www.tradingview.com/chart/?symbol=XHLD) | $3.57 | +14.8% | +19.6% | $4.27 | +37.3% | 520K | 14.5M | 0.0x | 7.8M | Misc Commercial Services |
+| PETZ | [TV](https://www.tradingview.com/chart/?symbol=PETZ) | $1.54 | -8.9% | +16.9% | $1.80 | +6.5% | 372K | 101K | 3.7x | 6.8M | Food: Specialty/Candy |
+| PRSO | [TV](https://www.tradingview.com/chart/?symbol=PRSO) | $0.72 | +1.1% | +11.4% | $0.80 | +12.7% | 176K | 331K | 0.5x | 14.8M | Semiconductors |
+| OWLT | [TV](https://www.tradingview.com/chart/?symbol=OWLT) | $5.44 | +0.4% | +10.3% | $6.00 | +10.7% | 197K | 150K | 1.3x | 15.7M | Electronics/Appliances |
+| NOMA | [TV](https://www.tradingview.com/chart/?symbol=NOMA) | $2.73 | -13.3% | +20.9% | $3.30 | +4.8% | 2K | 7K | 0.3x | 5.6M | Movies/Entertainment |
+
+**Instrumentation (log-only, no decision impact):**
+- BOXL `SPIKE 17:13ET +26% $3.69 185 trades / 35k sh` · `CONFIRM-3 YES ignition 17:10ET 191.4x; confirmed 17:20ET $4.10 as-of 18:00ET`
+- BAOS `SPIKE 16:51ET +22% $0.89 229 trades / 169k sh` · `CONFIRM-3 YES ignition 16:50ET 1060.5x; confirmed 17:00ET $0.90 as-of 18:00ET`
+- PRSO `SPIKE 16:54ET +15% $0.83 45 trades / 21k sh` · `CONFIRM-3 NO ignition 16:50ET failed third-bar hold/volume as-of 18:00ET`
+- XHLD `SPIKE 17:32ET +22% $4.34 843 trades / 71k sh` · `CONFIRM-3 NO ignition 17:25ET failed third-bar hold/volume as-of 18:00ET`
+- PETZ `SPIKE 16:56ET +17% $1.80 24 trades / 4k sh` · `CONFIRM-3 NO ignition 17:00ET failed third-bar hold/volume as-of 18:00ET`
+
+**SIP AH bars (20:00-21:45Z / 16:00-17:45 ET, ~15 min behind scan) + book:**
+| Ticker | Trajectory | AH Vol/bar | Book (quote) | Read |
+|--------|-----------|------------|--------------|------|
+| DRMA | Held/rebuilt to $1.75H (21:35Z) vs $1.72 prior high | 200K-1M sh, sustained | (held position) | Still building/holding, new AH high. Position from 23:00, not re-entered. |
+| BOXL | Ignited 17:10 ET → $4.77H @17:30 ET, holding $4.11 (17:45 ET) | 100-680K sh, 1.5-11k trades | stale ask $0.00 @16:00Z (predates 17:10 ignition = freshness artifact) | Real heavy volume BUILD, holding within 14% of high, tiny 564K float, CONFIRM-3 YES. **ENTRY.** |
+| BAOS | Peaked $1.03 @17:00 ET, faded to $0.79, rebuilt to $0.98 near-high (17:45 ET) | 200K-2.2M sh, up to 7.8k trades | stale bid $0.98/ask $3.20 @16:59Z | V-recovery to within 5% of high on 1.1M-sh bar, tiny 1.0M float, CONFIRM-3 YES. **ENTRY.** |
+| PRSO | Peaked $0.83, thin, now $0.79 | mostly <30K sh/bar | bid $0.72/ask $1.04 | CONFIRM-3 NO, fails volume-accumulation gate. Skip. |
+| XHLD | Reg +14.8% mover; AH spike 17:25 to $4.34 then faded $3.77 | 130-200K sh spike bars | bid $3.02/ask $4.04 | 1st AH scan (fails 2-scan gate), CONFIRM-3 NO, fading off spike. Skip. |
+| PETZ | Thin spike (24 trades/4k sh) | tiny | bid $1.16/ask $1.87 | 1st AH scan, thin, Day -8.9%, CONFIRM-3 NO. Skip. |
+| OWLT | Thin/fading (carried) | thin 5-38K sh | stale | Earnings mover but thin non-accumulating vol, fails volume gate all night. Skip (carried). |
+| NOMA | 2K AH vol total | illiquid | — | Illiquid + Day -13.3% dead-cat. Skip (carried). |
+
+**Catalyst searches:**
+- **BOXL:** structured search found no confirmed same-day catalyst. Q2 2026 earnings fall in the report window (analysts expected the quarter) but a same-day release was not confirmed; the 17:10 ET ignition on heavy volume is consistent with a delayed earnings/PR drop. Recorded as **no catalyst found → Grade None** (enter-with-concern, learning phase).
+- **BAOS:** structured search (Yahoo/StockTitan/GlobeNewswire/Nasdaq PR) found no same-day catalyst. **No catalyst found → Grade None.**
+
+**Paper trades (2 entries):**
+- **BOXL — BUY 24 @ limit $4.30 ext → filled @ $4.01** (order id 4f304cb5). Grade None. QTY = floor($100/$4.11)=24. Entry Total% +36.9% (under 150 ceiling). Clears all gates: float 564K (<50M), AH >10% across 2 AH scans (23:30 +32.9% → 00:00 +34.8%), Day% -1.3% (above -15%, not dead-cat), holding within 14% of $4.77 AH high, real accumulating SIP volume (100-680K sh/bar, up to 11k trades), CONFIRM-3 YES, real (not bad print — SIP corroborates). Stale ask $0.00 @16:00Z was a freshness artifact (predates the 17:10 ET ignition) — order filled with price improvement, confirming real liquidity. Added to OPEN_POSITIONS.md.
+- **BAOS — BUY 102 @ limit $1.03 ext → filled @ $0.90** (order id 4a36133c). Grade None. QTY = floor($100/$0.98)=102. Entry Total% +23.3% (under ceiling). Clears all gates: float 1.0M, AH >10% across 2 AH scans (23:30 +26.2% → 00:00 +18.2%), Day% +3.2%, V-recovery to within 5% of $1.03 AH high on a 1.1M-sh bar, real accumulating SIP volume, CONFIRM-3 YES. Filled with price improvement (real liquidity). Added to OPEN_POSITIONS.md.
+- **PRSO — Skip:** CONFIRM-3 NO, thin AH volume (<30K sh/bar), fails volume-accumulation gate.
+- **XHLD — Skip:** 1st AH scan (fails 2-scan gate), CONFIRM-3 NO, fading off 17:25 ET spike.
+- **PETZ — Skip:** 1st AH scan, thin (24 trades), Day -8.9%, CONFIRM-3 NO.
+- **OWLT — Skip (carried):** thin non-accumulating AH volume all night, fails SIP volume gate.
+- **NOMA — Skip (carried):** illiquid (2K AH vol), Day -13.3% dead-cat.
+
+**Notes:**
+- Two entries tonight at the final scan: BOXL and BAOS (both Grade None, ultra-low float, real accumulating SIP volume, CONFIRM-3 YES, both cleared the 2-AH-scan gate at 00:00). Multiple-positions policy (W24) applied — both qualifying candidates entered independently.
+- Open positions now: DRMA (Grade B, from 23:00, building to new AH high $1.75), BOXL, BAOS (both Grade None), plus FF (Grade B, day 1). Grade None names exit at first PM opportunity; premarket position-evaluation handles exits.
+- BAOS and BOXL had faded/no-book reads at 23:30 but both firmed into 00:00: BAOS rebuilt to near-high, BOXL held within 14% of high on heavy volume. The stale zero-book quotes were confirmed as freshness artifacts by real filled orders (price improvement on both).
+- No feed-lag rescue needed — all tracked pipeline names accounted for; PLAG/WXM/MSGY faded out earlier and stayed dead.
