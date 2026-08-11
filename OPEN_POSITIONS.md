@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
 | FF | $6.28 | $6.20 | $6.45 | 16 | 2026-08-10 23:00 CET | B | fe355da6 | FutureFuel, float 26.1M. Q2 2026 earnings released after close (Grade B). AH BUILD across 2 scans (+17.8%→+22.1%), new highs $6.45, real SIP vol 70-290K sh/bar. Day 1, -1.3%, above -15% stop ($5.34). PM 08-11 flat $6.04-6.30 (today PM high +0.3%), VWAP ~$6.13, thin — no momentum. Peak +2.7% never hit +30% trail. HOLD. |
+| DRMA | $1.52 | $1.52 | $1.72 | 66 | 2026-08-11 23:00 CET | B | 66c1614c | Dermata Therapeutics, float 2.7M (smallest). Q2 earnings + first commercial product launch date announced today (Tome Foundational Treatment, Aug 25) — GlobeNewswire/PR 08-11 after close (Grade B). Clean AH BUILD across 3 scans (+18.5%→+34.3%→+49.0%), rising every SIP bar $1.08→$1.72H, heavy accumulating vol 1-2M sh/bar, 8-12k trades/bar; fresh tight book bid $1.50/ask $1.51. CONFIRM-3 YES (ignition 16:05ET 215x). Entry Total% +40.7%, under 150 ceiling. Day 1, -15% stop $1.29. |
 
 ## Position Rules
 

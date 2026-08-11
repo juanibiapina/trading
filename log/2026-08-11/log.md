@@ -149,3 +149,44 @@ Pipeline cross-check (21:30 watch names) via SIP AH bars + quote (quotes lag ~15
 - SINT and GTEC (last scan's BUILD-and-hold candidates) both rolled into SPIKE→FADE — faded 20-27% off their AH highs. Dropped from lead consideration.
 - CIGL is a regular-session runner (+32.5% day) that spiked late in AH and is already fading; stale quote, 35M float. OWLT holding but thin. SMRT/EPOW/SND below the 10% AH threshold.
 - **No paper trades — observation-only per learning phase (pre-23:00 CET).** DRMA has now cleared the 2-AH-scan gate (22:30 + 22:45, both >10%, both building) and is the entry candidate for the 23:00 CET scan pending catalyst search and a still-live BUILD read. Re-scan and evaluate for entry at 23:00 CET.
+
+## Scan 23:00 CET (5:00 PM ET)
+
+**Session: AFTERHOURS.** `scan.py --all` ran at 17:00 ET — **5 hits**. **First entry-eligible scan** (23:00 CET+, learning phase). Candidates with AH change >10%: DRMA, OWLT, SND, GTEC.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.08 | -3.6% | +49.0% | $1.61 | +43.7% | 9.9M | 1.2M | 8.4x | 2.7M | Pharmaceuticals: Major |
+| OWLT | [TV](https://www.tradingview.com/chart/?symbol=OWLT) | $5.44 | +0.4% | +21.2% | $6.59 | +21.6% | 135K | 143K | 0.9x | 15.7M | Electronics/Appliances |
+| GTEC | [TV](https://www.tradingview.com/chart/?symbol=GTEC) | $0.55 | +2.7% | +10.1% | $0.61 | +13.0% | 11.7M | 1.3M | 8.9x | 14.1M | Industrial Machinery |
+| SND | [TV](https://www.tradingview.com/chart/?symbol=SND) | $4.65 | +1.3% | +10.8% | $5.15 | +12.2% | 93K | 302K | 0.3x | 30.2M | Construction Materials |
+| LENZ | [TV](https://www.tradingview.com/chart/?symbol=LENZ) | $5.21 | -2.8% | +8.2% | $5.64 | +5.1% | 82K | 685K | 0.1x | 27.4M | Pharmaceuticals: Major |
+
+**Instrumentation (log-only, no decision impact):**
+- DRMA `SPIKE 16:09ET +16% $1.25 97 trades / 22k sh` · `CONFIRM-3 YES ignition 16:05ET 215.0x; confirmed 16:15ET $1.46 as-of 17:00ET`
+- GTEC `SPIKE 16:00ET +16% $0.64 79 trades / 14k sh` · `CONFIRM-3 NO no local-volume new-high ignition as-of 17:00ET`
+- OWLT `SPIKE 16:10ET +21% $6.60 68 trades / 9k sh` · `CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 17:00ET`
+- SND `NO-SPIKE peak +11% @16:41ET` · `CONFIRM-3 NO no local-volume new-high ignition as-of 17:00ET`
+
+**SIP AH bars (20:00-20:45Z / 16:00-16:45 ET) + book:**
+| Ticker | Trajectory | AH Vol/bar | Book (quote) | Read |
+|--------|-----------|------------|--------------|------|
+| DRMA | $1.08→$1.72H (20:35Z), holding $1.60 | 1.1-2.3M sh, 6-12k trades | **fresh** bid $1.50 / ask $1.51 (20:59Z) | Clean BUILD, tight fresh book, smallest float 2.7M, VWAP rose $1.08→$1.64, CONFIRM-3 YES. **ENTRY.** |
+| OWLT | $5.44→$6.84H (20:30Z), holding $6.5-6.6 | thin 5-38k sh, 86-525 trades, **fading** | stale bid $4.73 / ask $6.67 (20:00Z) | Earnings mover but AH vol thin + fading, VRatio 0.9x (below avg), CONFIRM-3 NO. Fails SIP volume-accumulation gate. Skip. |
+| GTEC | Peaked $0.78 @16:10, rebuilt to ~$0.61 | 1-3M sh, choppy | fresh bid $0.55 / ask $0.64 | -22% off AH high, rebuild base >20% below high = faded spike (SKYQ rule). Skip. |
+| SND | Peak +11% @16:41, thin | 5-90k sh | ask $0.00 x0 earlier | NO-SPIKE, only 1 AH scan >10% (fails 2-scan gate). Skip. |
+
+**Catalyst searches:**
+- **DRMA:** Q2 2026 earnings + corporate update released after close 08-11; announced launch date of first commercial product (Tome Foundational Treatment, expected Aug 25, 2026). GlobeNewswire/PR-Inside 08-11. **Grade B** (concrete operational/product-launch milestone + earnings).
+- **OWLT:** Q2 2026 earnings released after close 08-11 (confirmed). Earnings catalyst present but candidate fails the AH-volume-accumulation gate (thin/fading, VRatio 0.9x) — not entered.
+
+**Paper trade:**
+- **DRMA — BUY 66 @ limit $1.54 ext → filled @ $1.52** (order id 66c1614c). Grade B. QTY = floor($100/$1.51)=66. Entry Total% +40.7% (under 150 ceiling). Rationale: only candidate clearing all gates — float 2.7M (<50M), AH >10% across 3 AH scans (22:30 +18.5% → 22:45 +34.3% → 23:00 +49%, building), Day% -3.6% (above -15%, not a dead-cat: never crashed), clean BUILD holding within 20% of $1.72 AH high, heavy accumulating SIP volume (1-2M sh/bar, 8-12k trades), fresh tight two-sided book, real (not bad print — SIP high $1.72 corroborates), CONFIRM-3 YES, catalyst Grade B. Added to OPEN_POSITIONS.md.
+- **OWLT — Skip:** earnings catalyst but thin, non-accumulating AH volume (5-38k sh/bar, fading 36k→8k, VRatio 0.9x below average). Fails SIP volume-accumulation confirmation.
+- **GTEC — Skip:** faded spike (rebuild base >20% below AH high, SKYQ rule), CONFIRM-3 NO.
+- **SND — Skip:** NO-SPIKE, only 1 AH scan >10% (fails 2-AH-scan gate).
+- **LENZ — Skip:** +8.2% AH, below 10% threshold.
+
+**Notes:**
+- One entry tonight: DRMA (Grade B, clean BUILD, smallest float, real volume). This is the textbook detect→select→BUILD profile the strategy targets. Set premarket exit for Grade B (hold up to 2 days, -15% stop $1.29, trail at -15% from peak if +30% reached).
+- Prior BUILD candidates SINT and GTEC both rolled to SPIKE→FADE; DRMA is the only one that kept building into the entry scan.
