@@ -20,6 +20,23 @@ Top regular-session movers (pending AH confirmation):
 - FF is the existing Grade-B open position (Q2 earnings), managed by premarket position-evaluation, not re-entered here.
 - No paper trades entered — regular-session caution rule. Re-evaluate at 22:00 CET (AH open).
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Session: AFTERHOURS.** `scan.py --all` ran at 16:00:14 ET (AH open) — **0 hits**. Postmarket volume has not accumulated yet at the open, so VRatio-based discovery returns nothing this early. Observation-only scan per learning phase (no entries before 23:00 CET).
+
+Pipeline cross-check (21:30 regular-session watch names) via SIP/quote:
+
+| Ticker | AH Book (quote) | SIP AH bars | Read |
+|--------|-----------------|-------------|------|
+| PLAG | bid $6.65 x1000 / **ask $0.00 x0** | none yet | No fillable ask; +783% regular spike, AH liquidity unconfirmed |
+| WXM | bid $6.68 / ask $9.12 x100 | none yet | Two-sided but no AH prints yet |
+| MSGY | bid $2.99 / ask $3.98 x100 | none yet | Two-sided but no AH prints yet |
+
+**Notes:**
+- No AH 5Min bars available for any pipeline name yet (feed sparse at the open). Nothing to instrument (no candidate with confirmed AH change >10%).
+- PLAG shows `ask $0.00 x0` — no fillable book right now; watch whether a real two-sided AH market forms.
+- No paper trades — observation-only (pre-23:00 CET) and scanner has no AH candidates. Re-scan at 22:30 / 23:00 CET.
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
