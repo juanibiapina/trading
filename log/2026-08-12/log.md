@@ -1,3 +1,27 @@
+# Post-Market Screening - 2026-08-12
+
+## Scan 21:30 CET (3:30 PM ET)
+
+**Regular session — before AH open (16:00 ET / 22:00 CET). No entries; candidates flagged Watch pending AH confirmation** (per regular-session caution: intraday spikes that don't carry into AH tend to fade).
+
+Notable intraday movers with real volume (most scanner hits show huge negative VChg% = fading, tiny 5mVol = stale prints):
+
+| Ticker | Chart | Price | Chg% | 5mVol | IRVol | Float | MCap | Industry | Note |
+|--------|-------|-------|------|-------|-------|-------|------|----------|------|
+| DOGZ | [TV](https://www.tradingview.com/chart/?symbol=DOGZ) | $1.30 | +40.3% | 13K | 1243.9 | 4.3M | 18.9M | Consumer Sundries | Watch — VChg -10% (fading) |
+| BANL | [TV](https://www.tradingview.com/chart/?symbol=BANL) | $5.40 | +30.6% | 16K | 82.4 | 407K | 11.4M | Air Freight/Couriers | Watch — low float 407K, VChg +92.6% |
+| GRWG | [TV](https://www.tradingview.com/chart/?symbol=GRWG) | $1.84 | +23.6% | 16K | 14.7 | 54.7M | 110.6M | Wholesale Dist | Watch — high float |
+| DRMA | [TV](https://www.tradingview.com/chart/?symbol=DRMA) | $1.33 | +23.1% | 16K | 103.7 | 2.7M | 5.3M | Pharma | Already traded today, position closed -19.1% |
+| BCG | [TV](https://www.tradingview.com/chart/?symbol=BCG) | $1.50 | +15.1% | 5K | 16.3 | 3.6M | 25.3M | Investment Managers | Watch |
+
+Remaining hits (BOXL, RMCF, OFAL, BQ, CHOW, XHLD, etc.) show VChg% near -100% with sub-1K 5mVol = stale/regular-session artifacts, not live spikes. BAOS and BOXL were traded and closed this morning (see Position Evaluation).
+
+**No paper trades this scan** — regular session, AH not yet open. Real AH screening begins at the 22:00 CET scan.
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
 
 ## Position Evaluation — 10:30 CET
 
