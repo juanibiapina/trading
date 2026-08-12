@@ -22,6 +22,10 @@ Remaining hits (BOXL, RMCF, OFAL, BQ, CHOW, XHLD, etc.) show VChg% near -100% wi
 
 No candidates found. Scanner returned 0 AH hits at AH open (16:00 ET). None of the 21:30 regular-session watch names (DOGZ, BANL, GRWG, BCG) carried into the AH feed above threshold at this scan. Nothing to evaluate; no entries (learning-phase default holds entries until the 23:00 CET scan regardless).
 
+## Scan 22:15 CET (4:15 PM ET)
+
+No candidates found. Scanner returned 0 AH hits 15 min into the after-hours session. None of the 21:30 regular-session watch names (DOGZ, BANL, GRWG, BCG) surfaced in the AH feed above threshold. Nothing to evaluate; no entries (learning-phase default holds entries until the 23:00 CET scan regardless).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
