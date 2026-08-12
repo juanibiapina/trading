@@ -166,6 +166,38 @@ Sub-threshold (AH <10%, not evaluated): FGI +9.1%, LGCL +5.6% (faded further), R
 
 **No new entries this scan.** GXAI position held from 23:00. OFAL clears the momentum gate but has no fillable Alpaca AH book (skip, recorded). No other candidate clears both the 2-AH-scan gate and a fillable-book check.
 
+## Scan 00:30 CET (6:30 PM ET) — final scheduled scan
+
+11 hits. GXAI still leading (open position). BIVI now on its 2nd AH scan >10% (clears the 2-AH-scan gate); HXHX appears for the first time.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GXAI | [TV](https://www.tradingview.com/chart/?symbol=GXAI) | $0.87 | -1.7% | +59.7% | $1.39 | +57.0% | 27.0M | 3.2M | 8.5x | 10.5M | Packaged Software |
+| BIVI | [TV](https://www.tradingview.com/chart/?symbol=BIVI) | $1.56 | +22.8% | +29.5% | $2.02 | +59.1% | 4.9M | 14.1M | 0.3x | 7.2M | Biotechnology |
+| HXHX | [TV](https://www.tradingview.com/chart/?symbol=HXHX) | $0.54 | +11.8% | +43.4% | $0.78 | +60.3% | 2.2M | 4.2M | 0.5x | 4.0M | Trucking |
+| OFAL | [TV](https://www.tradingview.com/chart/?symbol=OFAL) | $1.36 | +90.7% | +14.0% | $1.55 | +117.3% | 3.8M | 16.4M | 0.2x | n/a | Engineering & Construction |
+| CURI | [TV](https://www.tradingview.com/chart/?symbol=CURI) | $2.80 | +0.0% | +22.5% | $3.43 | +22.5% | 1.6M | 445K | 3.5x | 40.2M | Movies/Entertainment |
+
+Sub-threshold (AH <10%, not evaluated): USIO +9.7%, CYCU +10.7% (VRatio 0.0 — no real AH vol), FGI +9.9%, BBLG -22.6% (dead-cat), RNXT +8.0%, CDIO +6.5%.
+
+**Instrumentation (log-only, no decision impact):**
+- GXAI: `SPIKE 16:10ET +26% $1.10 475 trades / 161k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:10ET 1883.7x; confirmed 16:20ET $1.33`
+- BIVI: `SPIKE 17:39ET +21% $1.89 840 trades / 212k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 17:35ET failed third-bar hold/volume`
+- HXHX: `SPIKE 18:08ET +19% $0.64 307 trades / 134k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 18:05ET 370.7x; confirmed 18:15ET $0.71`
+
+**Final-scan feed-lag cross-check:** pulled BIVI SIP directly (below) — scanner is reporting all tracked movers on real levels, no under-reporting. GXAI remains the live leader on the feed.
+
+**GXAI (open position) — HOLD, no new entry** (one entry per candidate per night). Entered 23:00 @ $1.42, Grade C. Still the scan leader at AH +59.7% on 27.0M AH vol / VRatio 8.5x. Position management handled by premarket eval, out of scope here.
+
+**Skips:**
+- **BIVI — skip: no fillable book** (qualified-but-no-fillable-book, recorded for morning eval). Momentum gates now pass: 2nd AH scan >10% (00:00 +21.2%, 00:30 +29.5%), Day% +22.8% (positive, not a dead-cat), Total% +59.1% (under the 150 ceiling), float 7.2M. SIP is real & accumulating on a genuine re-ignition — early spike to $1.62 (16:20 ET) → hour-long fade to a $1.32-1.40 base → fresh **new high** $1.89 at 17:35 ET on 519k sh / 1804 trades (last SIP bar). Not stale/bad-print (scanner $2.02 vs SIP high $1.89 is a ~55-min free-tier lag, not a bad print). **But the Alpaca book is frozen at bid $1.36 x100 / ask $2.50 x1000 @16:59 ET across two re-pulls** — the $2.50 ask sits 25-33% above the $1.89-2.02 traded price. No clean fillable two-sided book: a limit near $2.00 sits unfilled behind the $2.50 offer, and lifting the ask would buy ~33% above where it trades. Per the AH-liquidity sanity check, skip. CONFIRM-3 NO. No same-day catalyst found (4 searches — all results 2021-2023; BioVie is a clinical-stage Alzheimer's/liver neuro biopharma, driver unknown).
+- **HXHX — skip: fails 2-AH-scan gate + no book.** First AH-scan appearance this scan (ignition 18:05 ET, late) → cannot clear the 2-AH-scan gate. `quote bid $0.45 x100 / ask $0.00 x0` @16:00 ET (stale) — no fillable ask. Day +11.8%, float 4.0M, VRatio 0.5x, CONFIRM-3 YES. Watch only; not enterable.
+- **CYCU — skip: no real book / VRatio 0.0.** `quote bid $0.53 / ask $20.00 x100` — absurd ask, no fillable market. VRatio 0.0 = no real AH volume behind the +10.7% print.
+- **OFAL — skip: illiquid (no AH book), carried.** Day +90.7%, Total% +117.3%, but book has been `ask $0.00 x0` all night. Low-float day-trader runner, no same-day company catalyst. Same as prior scans.
+- **CURI — skip: illiquid (no AH book), carried.** AH +22.5%, VRatio 3.5x but `ask $0.00 x0` all night; float 40.2M. Same as prior scans.
+
+**No new entries this scan.** GXAI position held from 23:00. BIVI clears the momentum gates but has no fillable Alpaca AH book (skip, recorded for morning-eval tally). This concludes tonight's scheduled scans: **1 entry (GXAI @ $1.42), 1 qualified-but-no-fillable-book (BIVI), plus OFAL carried no-book.**
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
