@@ -136,6 +136,36 @@ Sub-threshold (AH <10%, not evaluated): GCDT +7.3%, RNXT +8.9%.
 
 **No new entries this scan.** GXAI position held from 23:00. OFAL/USIO watch for the 00:00 CET scan (need 2nd AH scan + fillable book).
 
+## Scan 00:00 CET (6:00 PM ET)
+
+7 hits. GXAI still leading (open position). OFAL now on its 2nd AH scan >10%; BIVI appears for the first time.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GXAI | [TV](https://www.tradingview.com/chart/?symbol=GXAI) | $0.87 | -1.7% | +62.0% | $1.41 | +59.2% | 25.3M | 3.0M | 8.4x | 10.5M | Packaged Software |
+| BIVI | [TV](https://www.tradingview.com/chart/?symbol=BIVI) | $1.56 | +22.8% | +21.2% | $1.89 | +48.8% | 1.9M | 13.8M | 0.1x | 7.2M | Biotechnology |
+| CURI | [TV](https://www.tradingview.com/chart/?symbol=CURI) | $2.80 | +0.0% | +20.4% | $3.37 | +20.4% | 1.5M | 437K | 3.4x | 40.2M | Movies/Entertainment |
+| OFAL | [TV](https://www.tradingview.com/chart/?symbol=OFAL) | $1.36 | +90.7% | +16.2% | $1.58 | +121.5% | 3.4M | 16.3M | 0.2x | n/a | Engineering & Construction |
+| FGI | [TV](https://www.tradingview.com/chart/?symbol=FGI) | $4.73 | +4.0% | +9.1% | $5.16 | +13.4% | 753K | 119K | 6.3x | 522K | Building Products |
+
+Sub-threshold (AH <10%, not evaluated): FGI +9.1%, LGCL +5.6% (faded further), RNXT +7.1%.
+
+**Instrumentation (log-only, no decision impact):**
+- GXAI: `SPIKE 16:10ET +26% $1.10 475 trades / 161k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:10ET 1883.7x; confirmed 16:20ET $1.33`
+- OFAL: `SPIKE 16:58ET +22% $1.66 952 trades / 257k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:55ET 11.0x; confirmed 17:05ET $1.66`
+- BIVI: `SPIKE 17:39ET +21% $1.89 840 trades / 212k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 17:35ET failed third-bar hold/volume`
+- CURI: `SPIKE 16:21ET +25% $3.50 221 trades / 32k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:20ET failed third-bar hold/volume`
+
+**GXAI (open position) — HOLD, no new entry** (one entry per candidate per night). Entered 23:00 @ $1.42, Grade C. Still leading the scan at AH +62.0%. Position management handled by premarket eval, out of scope here.
+
+**Skips:**
+- **OFAL — skip: illiquid (no AH book).** Momentum gates now pass — 2nd AH scan >10% (23:30 +17.6%, 00:00 +16.2%), Total% +121.5% under the 150 ceiling, Day% +90.7% (a real intraday runner, not a dead-cat), CONFIRM-3 YES, and SIP is real & accumulating (ignition 16:55 ET, holding $1.55-1.70 across bars, VWAP $1.57→$1.63 corroborates the scanner AH price, last bar 17:35 ET). **But the Alpaca book has no fillable ask:** `quote bid $1.15 x100 / ask $0.00 x0`, frozen at 16:00 ET across two re-pulls — no live two-sided AH book to lift. Per the AH-liquidity sanity check, skip as illiquid; a limit buy would sit unfilled with no offer. Record as **qualified-but-no-fillable-book** for the morning-eval tally (still no same-day company catalyst; recent PRs are the Jul 27 1-for-10 reverse split and May 21 domestic-issuer status — low-float day-trader runner).
+- **BIVI — skip: fails 2-AH-scan gate + no confirmable book.** First AH-scan appearance this scan (ignition 17:35 ET, late) → cannot clear the 2-AH-scan gate. CONFIRM-3 NO (third-bar hold failed). `quote bid $1.36 x100 / ask $2.50 x1000` @16:59 ET — the $2.50 ask sits far above the $1.89 AH price (wide/thin offer), not a clean fillable book. Watch for a 2nd AH scan; Day +22.8%, float 7.2M, Biotech.
+- **CURI — skip: illiquid (no AH book), carried.** AH +20.4%, VRatio 3.4x but book has been `ask $0.00 x0` all night; CONFIRM-3 NO, float 40.2M. Same as prior scans.
+- **FGI — sub-threshold (AH +9.1%).** Not evaluated; low float 522K, VRatio 6.3x — note for later scan if it pushes >10%.
+
+**No new entries this scan.** GXAI position held from 23:00. OFAL clears the momentum gate but has no fillable Alpaca AH book (skip, recorded). No other candidate clears both the 2-AH-scan gate and a fillable-book check.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
