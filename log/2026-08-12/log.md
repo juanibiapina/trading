@@ -18,6 +18,10 @@ Remaining hits (BOXL, RMCF, OFAL, BQ, CHOW, XHLD, etc.) show VChg% near -100% wi
 
 **No paper trades this scan** — regular session, AH not yet open. Real AH screening begins at the 22:00 CET scan.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found. Scanner returned 0 AH hits at AH open (16:00 ET). None of the 21:30 regular-session watch names (DOGZ, BANL, GRWG, BCG) carried into the AH feed above threshold at this scan. Nothing to evaluate; no entries (learning-phase default holds entries until the 23:00 CET scan regardless).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
