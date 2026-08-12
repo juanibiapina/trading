@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| DRMA | $1.52 | $1.43 | $1.75 | 66 | 2026-08-11 23:00 CET | B | 66c1614c | Dermata Therapeutics, float 2.7M (smallest). Q2 earnings + first commercial product launch date announced today (Tome Foundational Treatment, Aug 25) — GlobeNewswire/PR 08-11 after close (Grade B). Clean AH BUILD across 3 scans (+18.5%→+34.3%→+49.0%), rising every SIP bar $1.08→$1.72H, heavy accumulating vol 1-2M sh/bar, 8-12k trades/bar. Day 1, -5.9%, above -15% stop ($1.29). PM 08-12 $1.40-1.59, VWAP $1.45; peak +4.6% never hit +30% trail. HOLD. |
+| _(none)_ | | | | | | | | No open positions. |
 
 ## Position Rules
 
@@ -60,6 +60,7 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| DRMA | $1.52 | $1.23 | -$19.14 | -19.1% | 1 | B (Dermata Therapeutics Q2 earnings + first commercial product launch date, Tome Foundational Treatment Aug 25; GlobeNewswire 08-11 after close; float 2.7M) | Grade B — below -15% hard stop ($1.29). Entered 08-11 23:00 CET. Clean AH BUILD 3 scans (+18.5%→+34.3%→+49.0%), OVN/PM peak $1.59 (+4.6%, never approached +30% trail). PM 08-12 faded monotonically from $1.59 open to $1.35 (SIP vwap $1.48→$1.35, liquid 90K-950K sh/bar). Live bid $1.21 x100 at 14:30 CET pulse. Sold on hard stop. SELL 66 @ limit $1.18 ext (id fcf9ca9f) filled @ $1.23 (price improvement). Real fill $1.23. Solid catalyst but no AH→PM follow-through. |
 | BAOS | $0.90 | $2.24 | +$136.68 | +148.9% | 1 | None (Baosheng Media, China online-marketing microcap, float 1.0M; no same-day catalyst) | Grade None — exit at first PM opportunity at any profit. Entered 08-12 00:00 CET. PM 08-12 opened liquid ($1.70, 2.6M sh/20,862 trades first bar), ran to $2.19H, holding ~$2.07 (SIP vwap $2.01-2.06). Sold first PM pulse. SELL 102 @ limit $1.98 ext (id 40fe100d) filled @ $2.24 (price improvement). Real fill $2.24. Rare Grade-None overnight runner — exit-at-any-profit rule captured +149%. |
 | BOXL | $4.01 | $5.83 | +$43.68 | +45.4% | 1 | None (Boxlight, K-12 edtech, float 564K ultra-low; no confirmed same-day catalyst) | Grade None — exit at first PM opportunity at any profit. Entered 08-12 00:00 CET. PM 08-12 opened $4.35 (1.2M sh/22,015 trades first bar), ran to $6.50H, holding ~$5.89-6.09 (SIP vwap $6.03-6.09). Sold first PM pulse. SELL 24 @ limit $5.75 ext (id 742fee8e) filled @ $5.83 (price improvement). Real fill $5.83. |
 | FF | $6.28 | $6.20 | -$1.28 | -1.3% | 2 | B (FutureFuel Q2 2026 earnings; float 26.1M) | Grade B — day-2 time limit reached. Entered 08-10 23:00 CET. AH BUILD 2 scans (+17.8%→+22.1%), new highs $6.45. Never re-rated: flat $6.04-6.30 both PM sessions, peak +2.7% never hit +30% trail. PM 08-12 very thin (225 sh/2 trades). Sold on time limit. SELL 16 @ limit $6.00 ext (id f2d3ab05) filled @ $6.20 (price improvement). Real fill $6.20. |

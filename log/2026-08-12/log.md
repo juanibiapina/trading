@@ -15,3 +15,13 @@
 - HOLD DRMA (Grade B, day 1, within risk)
 - **Pulse net realized: +$179.08.** BAOS Grade-None exit captured a rare +149% overnight runner.
 
+
+## Position Evaluation — 14:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| DRMA | $1.52 | $1.23 | -19.1% | $1.59 (PM) | 1 | B | SELL | Below -15% Grade B hard stop ($1.29). PM faded monotonically $1.59→$1.35; live bid $1.21 x100. Filled $1.23 (price improvement). |
+
+**Actions taken:**
+- SELL 66 DRMA @ limit $1.18 ext (id fcf9ca9f) filled @ $1.23 → -$19.14 (-19.1%)
+- No open positions remain.
