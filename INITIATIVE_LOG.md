@@ -9,6 +9,18 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-08-12 — Initiative 3: exit-timing gap holds a third session (n=8)
+
+**Evaluated:** The 2026-08-11 step **worked and its hypothesis held again.** It confirmed the exit-timing gap out-of-sample (5/5 held names with a positive post-exit premarket peak) and set this run to keep seeding held names. Today's 08-12 10:30 CET position eval sold three held names (BAOS Grade-None +148.9%, BOXL Grade-None +45.4%, FF Grade-B day-2) at the 04:31 ET exit — three fresh seeds.
+
+**Step taken:** **Pilot / Initiative 3 (execution pivot):** pulled the three exit fills from `broker.js orders all --json` (all filled ~08:30:5xZ = 04:31 ET), ran `premarket-exit-gap.js` on each, and appended all three to `log/premarket-exit-gap.csv`. Log-only, no orders.
+
+**Result:** **BAOS** exit $2.24 -> PM peak $2.51 at 04:35 ET (+12.1%) then crashed to PM-last $1.16 (-48%); **BOXL** $5.83 -> $6.80 at 05:05 ET (+16.6%) then faded to $4.52 (-22%); **FF** $6.20 -> $6.43 at 06:30 ET (+3.7%), held to PM-last $6.25 (+0.8%). New three-name gap +32.4%; running tally **+229.2% over 8 held names**, all 8 with a positive premarket peak after our 04:31 ET exit. **Nuance sharpens:** these three peaked EARLY (04:35–06:30 ET) and BAOS/BOXL then dumped hard to PM-last, so the +229.2% is a peak ceiling needing a peak-seeking exit, not hold-to-PM-last. The accumulated sample is now bimodal: early peakers (BAOS 04:35, BOXL 05:05, WAFU 05:05, MTEN 05:40 ET) vs later peakers (FF 06:30, PAVS 06:55, MGIH 07:30, CELZ 08:00 ET).
+
+**Hypothesis / next step:** The exit-timing gap is robust (8/8 positive across three sessions), so the second-premarket-exit-pulse proposal stands. But the bimodal peak distribution means a single fixed second pulse misses one cluster; a ~06:00–07:00 ET (12:00–13:00 CET) time captures the larger/later spikes (FF, PAVS, MGIH, CELZ) at the cost of the four early ones. Next run: keep seeding; once (if) the second pulse is approved, sweep the accumulated sample for the single time that captures the most total gap. Keep `CONFIRM-3` and this instrument log-only. Init 6 unchanged (waits for admitted PM-only-gapper n>=12 before the deferred 1-minute exit test; 08-11/08-12 logged new holdable PM-only gappers — ELPW, DOGZ, WXM, HUDI — but the admitted-set recount is deferred to a dedicated run).
+
+**Needs from Juan:** **one proposal (unchanged, evidence now +229.2% over 8 held names)** — add a second premarket position-eval pulse (~12:00–14:00 CET / 06:00–08:00 ET), ideally ~06:00–07:00 ET to catch the larger/later premarket peaks, so held names can catch the peak rather than selling at the 04:31 ET floor. Veto window; not applied. Also still open from 08-07: the Initiative 2 broker/feed decision for the ~203% fill gap (Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills).
+
 ### 2026-08-11 — Initiative 3: premarket exit-timing gap confirmed out-of-sample
 
 **Evaluated:** The 2026-08-10 step **worked and its hypothesis held out-of-sample.** It sized the exit-timing gap at +146.2% over PAVS/CELZ and set this run to seed 1–2 more held names to confirm persistence. The 08-11 10:30 CET position eval sold three Grade-None held names (WAFU, MTEN, MGIH) at the 04:31 ET exit — ideal fresh seeds. All three show a positive premarket peak *after* our exit, so the gap is not a two-name artifact.
