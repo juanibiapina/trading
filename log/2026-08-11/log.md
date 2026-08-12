@@ -332,3 +332,96 @@ Pipeline cross-check (21:30 watch names) via SIP AH bars + quote (quotes lag ~15
 - No new entries at the final scan. Three positions entered earlier tonight remain: DRMA (Grade B, 23:00), BOXL + BAOS (Grade None, 00:00), plus FF (Grade B, day 1).
 - Current paper P&L (Alpaca): BAOS +56.4%, DRMA +6.6%, BOXL +5.2%, FF +1.4% — all green at last mark. Premarket position-evaluation handles exits (Grade None names exit at first PM opportunity; DRMA/FF Grade B hold up to 2 days).
 - Night summary: DRMA/BAOS/BOXL were the clean BUILD + real-SIP-volume candidates that cleared all gates; the rest of the field (XHLD, PETZ, OFAL, SND, NOMA, SINT, GTEC, CIGL, PLAG, WXM, MSGY) was SPIKE→FADE, thin, illiquid, or dead-cat.
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**BAOS** — Baosheng Media Group (China online-marketing ADR)
+- Catalyst: Blockchain/crypto business pivot — "Hires Project Lead and Purchases 1,000 Mining Machines to start blockchain & cryptocurrency business" (8-11 6-K) + a share subscription agreement (financing). Classic low-float China-ADR crypto-pivot pump. **Grade D** (financing/dilution + narrative pivot, no organic operational catalyst).
+- Previous Close: $0.73 (Yahoo $0.71)
+- AH last night: SIP peak **$1.97** (+170%) at 23:40 CET (19:40 ET), on 1.6M sh / 5,715 trades in the peak bar — heavy accumulating SIP volume all evening (0.9-2.7M sh/bar, 3-11k trades)
+- Premarket now: ~$2.07 (+184%); SIP PM peak **$2.18** at 08:05Z (04:05 ET) on 1.7M sh / 12,513 trades, Yahoo peak $2.19 @ 08:15 ET
+- Hypothetical P&L (AH entry → PM peak): entered $0.90 → PM peak $2.19 = **+143%** (real fill, see position table)
+- Float: 1.0M | Market Cap: $1.1M
+- **Clears the winner bar:** >100% (peaked ~+200%) on high, accumulating SIP volume (20,862 trades in the first PM bar). Real explosion, not a thin ramp.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- At the nominal 22:15 CET screen (16:15 ET) BAOS was flat — the move ignited at 16:50 ET (22:50 CET) with a 901K-sh bar. It surfaced on the 17:30 ET scan (1st AH scan, +26.2%) and the 18:00 ET final scan (2nd AH scan, +18.2%), cleared the 2-AH-scan gate, and **we entered it at $0.90 at the 00:00 CET final scan** (Grade None, ultra-low 1.0M float, real accumulating SIP volume, CONFIRM-3 YES).
+- Scanner gap: none. This is a textbook detect→select→run. The scanner caught it and we hold it at +123%. The only nuance: at 23:30 CET BAOS briefly read SPIKE→FADE (-20% off its AH high) and was correctly deferred; it firmed into the 00:00 scan and qualified. The 2-AH-scan gate delayed entry from ~$1.03 to $0.90 (better price via the fade), no cost.
+
+### Baseline Tracking
+
+- Days tracked: **64** (was 63 + 1)
+- Winners detected by scanner: **51/60 (85.0%)** — BAOS detected and added.
+- Winner selected for paper trade: **29/60 (48.3%)** — BAOS entered @ $0.90. Right stock traded.
+- Target: >80% detection
+- Status: **BASELINE MET** (85.0%)
+
+No baseline gap: prior baseline log (08-10, Days tracked 63) is the immediately-preceding trading day.
+
+### Retrospective Scan Results
+
+- Live PM scan (`scan.py --all --session premarket`, 04:20 ET): 4 hits — BAOS +183.8%, BOXL +88.4%, DRMA +32.4%, MXCT +14.5%. BAOS and BOXL are last night's entries continuing; DRMA is last night's Grade-B entry, faded.
+- AH reconstruction (`check-prices.py --ah-history` + SIP bars) confirms BAOS built cleanly through the AH on heavy accumulating volume, PM SIP peak $2.18 exceeds the AH SIP peak $1.97 → genuine continuation.
+
+### Open Position P&L (Alpaca)
+
+Real Alpaca fills. Alpaca per-symbol `quote` timestamps are stale (20:59 ET prior close); positions `current_price` read live PM and match the SIP/PM tape, so P&L is reported against those live marks. FF's mark ($6.28 = entry, bid $6.07) looks stale — flagged.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| BAOS | $0.90 | +23.3% | D — crypto pivot + financing | 00:00 CET | $2.19 | 04:15 ET | open | +€113.21 | +123.3% | ✅ Open win |
+| BOXL | $4.01 | +36.9% | None | 00:00 CET | $5.99 | 04:00 ET | open | +€42.48 | +44.1% | ✅ Open win |
+| DRMA | $1.52 | +40.7% | B — earnings + product launch | 23:00 CET | $1.59 | 04:00 ET | open | −€4.69 | −4.7% | 🔻 Open (faded) |
+| FF | $6.28 | — | B — Q2 earnings | prior day | $6.45 | — | open | +€0.00 | +0.0%* | ⏸ Open (day 2, mark stale) |
+
+*FF mark likely stale (prior 20:59 ET close). Exits handled by position-evaluation (10:30 / 14:30 CET), not here.
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits this pulse).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) — plus 2 extra (22:15, 22:45). Full coverage.
+- Candidates found: DRMA, BAOS, BOXL cleared all gates and were entered; wide field of SPIKE→FADE/thin/dead-cat names skipped.
+- Retrospective matches: winner (BAOS) and both other real movers (BOXL, DRMA) all caught. 3/3.
+
+### Missed Opportunities
+
+No significant missed opportunities. The three real volume-backed AH movers (BAOS, BOXL, DRMA) were all detected and entered.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| BAOS | $1.97 (+170%) | 19:40 ET | Build | $2.07 | +5% | +184% | PM > AH — continuation ✅ |
+| BOXL | $4.77 (+63%) | 17:10 ET | Spike→hold→build | $5.52 | +16% | +88% | PM > AH — continuation ✅ |
+| DRMA | $1.75 (+62%) | 21:35 ET | Build | $1.45 | −17% | +32% | PM < AH — AH was better exit ⚠️ |
+
+**AH-peak-vs-PM-peak check:** BAOS and BOXL both extended in PM above their AH peaks (continuation). DRMA topped in AH ($1.75) and PM fell short ($1.59), so the AH was the better exit — but DRMA never hit an extreme (+62% AH), so it's outside the ~+130%+ fade cluster (MSW/DSY/AQB). No new extreme-runner fade data point.
+
+### Notes
+
+- **Clean detect→select→run night.** All three volume-backed AH movers were caught and entered; the winner (BAOS) is a +123% open position. No scanner miss, no feed-lag miss, no broker block, no stale-book block. Nothing to escalate on detection this pulse.
+- **PM-only gapper tracking:** morning's biggest raw PM mover is BAOS (+184%), an **AH→PM continuation** (moved >10% AH, scanner-detectable) — NOT a PM-only gapper. No new gapper case. `log/pm-open-scan.csv` holdable count stands at 20 (cluster already exceeds the ≥3-4 threshold; Initiative-6 early-PM pilot remains routed to Juan's email, not applied here).
+- **Reverse-split tracking:** no entry tonight has a reverse-split catalyst (DRMA earnings, BOXL none, BAOS crypto-pivot/financing). No new case. This-week-split bucket stays 3/3 fade; awaiting the next this-week reverse split to resolve the recency signal.
+- **Standing escalation tallies unchanged:** in-window feed-lag misses 4 (≥3 trigger REACHED — AH-data-source cross-check still routed to Juan's email); price-floor exclusions 5 across 2 nights, 0 holdable; stale-book execution-blocks 3. No additions this pulse.
+- **Grade-vs-outcome note:** the +123% winner (BAOS) is Grade D and the +44% BOXL is Grade None, while the Grade-B DRMA faded −5%. Consistent with the learning-phase finding that trajectory/float/real-volume, not catalyst grade, drive PM follow-through on these ultra-low-float names.
+
+### Price Charts
+
+```
+BAOS — Previous Close $0.71 | 2-Day Range $0.62-$2.19 | Current $2.07 (+193%)
+Peak $2.19 (+210%) at 08-12 08:15 ET
+AH build: 16:50 ET ignition $0.89 → 19:40 ET SIP peak $1.97 → PM 04:15 ET peak $2.19
+Trajectory: clean multi-hour BUILD, PM extended above AH peak (continuation).
+
+BOXL — Previous Close $2.93 | Current $5.52 (+88%)
+AH: 17:10 ET ignition → $4.77 high, held → PM SIP peak $5.99 (+104%) at 04:00 ET (1.24M sh/22k trades)
+Trajectory: spike→hold→PM continuation above AH peak.
+
+DRMA — Previous Close $1.08 | Current $1.45 (+32%)
+AH: BUILD $1.08→$1.75 high (21:35 ET) → PM SIP high $1.59, faded to $1.45
+Trajectory: AH BUILD topped, PM fell short of AH peak (AH was better exit).
+```
