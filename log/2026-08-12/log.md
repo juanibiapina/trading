@@ -78,10 +78,42 @@ Sub-threshold / skipped: BBLG +5.5% AH but Day -27.6% (dead-cat, sub-threshold a
 
 **No entries this scan** — 22:45 CET is before the 23:00 learning-phase entry gate; observation only. GXAI now clears the 2-AH-scan gate (22:30 + 22:45), Total% +53.5% (well under the 150% ceiling), Day% -1.7%, float 10.5M, real book, Grade-C catalyst. **Primed to enter at the 23:00 CET scan** if it holds/builds. Re-verify book and price then.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+Entry gate scan. 6 hits; GXAI is the clear BUILD leader across three AH scans.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GXAI | [TV](https://www.tradingview.com/chart/?symbol=GXAI) | $0.87 | -1.7% | +66.6% | $1.45 | +63.7% | 15.8M | 2.0M | 8.0x | 10.5M | Packaged Software |
+| CURI | [TV](https://www.tradingview.com/chart/?symbol=CURI) | $2.80 | +0.0% | +25.9% | $3.52 | +25.9% | 808K | 358K | 2.3x | 40.2M | Movies/Entertainment |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $1.42 | +2.2% | +13.5% | $1.61 | +15.9% | 5.5M | 883K | 6.2x | 1.6M | Personnel Services |
+| PRHI | [TV](https://www.tradingview.com/chart/?symbol=PRHI) | $4.16 | -9.4% | +38.9% | $5.78 | +25.9% | 1K | 5K | 0.3x | 2.5M | Property/Casualty Insurance |
+
+Sub-threshold (AH <10%, not evaluated): GCDT +5.1%, RNXT +8.9%.
+
+**Instrumentation (log-only, no decision impact):**
+- GXAI: `SPIKE 16:10ET +26% $1.10 475 trades / 161k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:10ET 1883.7x; confirmed 16:20ET $1.33`
+- CURI: `SPIKE 16:21ET +25% $3.50 221 trades / 32k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:20ET failed third-bar hold/volume`
+- LGCL: `SPIKE 16:05ET +23% $1.75 750 trades / 82k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume`
+
+**GXAI — ENTER.** Clears every gate:
+- 2-AH-scan gate: 3 AH scans >10% (22:30 +28.7%, 22:45 +56.1%, 23:00 +66.6%) — textbook BUILD.
+- SIP volume real & accumulating (not stale/bad-print): 20:10Z 1.74M sh/6796 tr → 20:15Z 3.02M/11812 → 20:20Z 2.27M/10011 → 20:25Z 3.35M/13953 → 20:30Z 2.74M/12134 → 20:35Z 2.32M/9144 → 20:40Z 1.56M/7161 → 20:45Z 1.40M/6150. VWAP climbed $1.08→$1.46, corroborates scanner AH price. High $1.53 (20:35Z). Last two bars pulled back C$1.44→$1.38 (~10% off high, within 20% = holding, not a fade). Last SIP bar 16:45 ET vs 17:00 scan = ~15 min free-tier lag, expected.
+- Live book: **bid $1.37 x200 / ask $1.56 x300** (quote @16:59 ET, fresh) — real two-sided AH liquidity. `tradable=true`.
+- Day% -1.7%, float 10.5M, Total% +63.7% (well under 150 ceiling), CONFIRM-3 YES.
+- Catalyst: same-day GlobeNewswire PR ~16:10 ET (matches ignition) — revenue/advertising-efficiency operational update. **Grade C** (weak operational PR). No-catalyst-quality concern is moot; enter on BUILD + real book.
+- **Entered:** BUY 64 GXAI @ limit $1.59 ext (id c99e8f14) **filled @ $1.42** (price improvement).
+
+**Skips:**
+- **CURI — skip: illiquid (no AH book).** `quote` shows `ask $0.00 x0` (timestamped 16:00 ET, stale) — no fillable AH book behind the +25.9% scanner print. VRatio 2.3x, float 40.2M, CONFIRM-3 NO. Not enterable.
+- **LGCL — skip: SPIKE→FADE.** Peaked $2.17 @20:10Z early, now $1.61 (~26% off high, >20% = fade, not hold). AH% +42.3%→+14.1%→+13.5% across scans. CONFIRM-3 NO. Early-peak fade, 0/10+ for PM continuation.
+- **PRHI — skip: thin/illiquid.** AH Vol 1K, AvgVol 5K, VRatio 0.3x — the +38.9% is a stale/thin print, not real AH liquidity. Day -9.4%.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| GXAI | $1.42 | 23:00 CET (17:00 ET) | 64 | c99e8f14 | AH BUILD 3 scans (+28.7→+56.1→+66.6%), real SIP vol (M sh/K trades/bar), real book, CONFIRM-3 YES, Grade C PR, Total% +63.7% under ceiling, float 10.5M |
 
 ## Position Evaluation — 10:30 CET
 

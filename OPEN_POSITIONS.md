@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | | | No open positions. |
+| GXAI | $1.42 | $1.42 | $1.53 (AH) | 64 | 2026-08-12 23:00 CET | C | c99e8f14 | Gaxos.ai, AI/gaming, float 10.5M. AH BUILD 3 scans (+28.7→+56.1→+66.6%), real SIP vol (1.5-3.4M sh/bar), real book, CONFIRM-3 YES. Same-day GlobeNewswire PR ~16:10 ET (revenue/ad-efficiency operational update) = Grade C. BUY 64 @ limit $1.59 ext filled @ $1.42. Grade C: exit in premarket, stop -10% ($1.28). |
 
 ## Position Rules
 
