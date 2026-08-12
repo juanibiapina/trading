@@ -53,6 +53,31 @@ Sub-threshold hits (AH <10%, not evaluated): RKDA +5.7%, LESL +9.8%, LNAI +8.5%,
 
 **Trajectory watch for 23:00:** LGCL peaked early (20:10Z) and is fading off its high ($2.17→$1.93, ~11% off) but still holding within 20%; CONFIRM-3 NO. GXAI still building toward its high on rising volume with a real PR catalyst. Re-evaluate both at 23:00 CET against the 2-AH-scan gate (each has only 1 AH scan so far), extension ceiling, and hold-vs-fade.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+5 hits. GXAI now the clear leader, building hard across two AH scans; LGCL fading off its high.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GXAI | [TV](https://www.tradingview.com/chart/?symbol=GXAI) | $0.87 | -1.7% | +56.1% | $1.36 | +53.5% | 9.6M | 1.3M | 7.2x | 10.5M | Packaged Software |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $1.42 | +2.2% | +14.1% | $1.62 | +16.6% | 4.6M | 782K | 5.9x | 1.6M | Personnel Services |
+| CURI | [TV](https://www.tradingview.com/chart/?symbol=CURI) | $2.80 | +0.0% | +14.3% | $3.20 | +14.3% | 236K | 290K | 0.8x | 40.2M | Movies/Entertainment |
+
+Sub-threshold / skipped: BBLG +5.5% AH but Day -27.6% (dead-cat, sub-threshold anyway); RNXT +6.2% AH.
+
+**Instrumentation (log-only, no decision impact):**
+- GXAI: `SPIKE 16:10ET +26% $1.10 475 trades / 161k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:10ET 1883.7x; confirmed 16:20ET $1.33`
+- LGCL: `SPIKE 16:05ET +23% $1.75 750 trades / 82k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume`
+- CURI: `SPIKE 16:21ET +25% $3.50 221 trades / 32k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:20ET failed third-bar hold/volume`
+
+**SIP volume (GXAI real, accumulating, not stale/bad-print):** 20:10Z 1.74M sh/6796 tr, 20:15Z 3.02M sh/11812 tr, 20:20Z 2.27M sh/10011 tr, 20:25Z 3.35M sh/13953 tr, 20:30Z 2.74M sh/12134 tr. VWAP climbing $1.08→$1.19→$1.27→$1.39→$1.43, corroborates scanner AH price. High $1.49. Live book: **bid $1.44 x300 / ask $1.46 x300** (real two-sided AH liquidity). `tradable=true`.
+
+**Catalyst (GXAI):** same-day GlobeNewswire PR Aug 12 2026 ~16:10 ET (matches ignition bar) — "Revenue growth significantly outpaces advertising expense growth as revenue generated per advertising dollar improves." Business/metrics efficiency update, not acquisition/FDA/contract. **Grade C** (weak operational PR).
+
+**Trajectory:** GXAI = textbook BUILD — up +28.7%→+56.1% across two AH scans, price making new highs on rising SIP volume, CONFIRM-3 YES, real book, live PR. LGCL = SPIKE→FADE (peaked $2.17 @20:10Z, now $1.62, ~25% off high, CONFIRM-3 NO) — disqualified as a fade. CURI = VRatio 0.8x (AH vol below avg), CONFIRM-3 NO — not a real spike.
+
+**No entries this scan** — 22:45 CET is before the 23:00 learning-phase entry gate; observation only. GXAI now clears the 2-AH-scan gate (22:30 + 22:45), Total% +53.5% (well under the 150% ceiling), Day% -1.7%, float 10.5M, real book, Grade-C catalyst. **Primed to enter at the 23:00 CET scan** if it holds/builds. Re-verify book and price then.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
