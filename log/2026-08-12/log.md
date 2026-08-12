@@ -109,6 +109,33 @@ Sub-threshold (AH <10%, not evaluated): GCDT +5.1%, RNXT +8.9%.
 - **LGCL — skip: SPIKE→FADE.** Peaked $2.17 @20:10Z early, now $1.61 (~26% off high, >20% = fade, not hold). AH% +42.3%→+14.1%→+13.5% across scans. CONFIRM-3 NO. Early-peak fade, 0/10+ for PM continuation.
 - **PRHI — skip: thin/illiquid.** AH Vol 1K, AvgVol 5K, VRatio 0.3x — the +38.9% is a stale/thin print, not real AH liquidity. Day -9.4%.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+6 hits. GXAI still leading and building; two new >10% AH names (OFAL, USIO) appear for the first time this scan.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GXAI | [TV](https://www.tradingview.com/chart/?symbol=GXAI) | $0.87 | -1.7% | +70.1% | $1.48 | +67.2% | 21.2M | 2.6M | 8.3x | 10.5M | Packaged Software |
+| OFAL | [TV](https://www.tradingview.com/chart/?symbol=OFAL) | $0.73 | +90.7% | +17.6% | $1.60 | +124.3% | 2.9M | 16.3M | 0.2x | n/a | Engineering & Construction |
+| USIO | [TV](https://www.tradingview.com/chart/?symbol=USIO) | $2.38 | +6.7% | +18.9% | $2.83 | +26.9% | 770K | 404K | 1.9x | 19.0M | Finance/Rental/Leasing |
+| CURI | [TV](https://www.tradingview.com/chart/?symbol=CURI) | $2.80 | +0.0% | +14.6% | $3.21 | +14.6% | 1.3M | 420K | 3.2x | 40.2M | Movies/Entertainment |
+
+Sub-threshold (AH <10%, not evaluated): GCDT +7.3%, RNXT +8.9%.
+
+**Instrumentation (log-only, no decision impact):**
+- GXAI: `SPIKE 16:10ET +26% $1.10 475 trades / 161k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:10ET 1883.7x; confirmed 16:20ET $1.33`
+- OFAL: `SPIKE 16:58ET +22% $1.66 952 trades / 257k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:55ET 11.0x; confirmed 17:05ET $1.66`
+- USIO: `SPIKE 17:07ET +24% $2.94 142 trades / 26k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 17:05ET failed third-bar hold/volume`
+
+**GXAI (open position) — HOLD, no new entry** (one entry per candidate per night). Entered 23:00 @ $1.42. Still BUILD: AH +66.6%→+70.1%, SIP last bars 21:10Z 1.30M sh/4848 tr, 21:15Z 1.86M sh/7891 tr, VWAP back to $1.53, high $1.58 — making new highs on rising volume. Live book bid $1.37 x200 / ask $1.56 x300 (quote @16:59 ET). Position now $1.43, +0.7%. Position management handled by premarket eval.
+
+**Skips / watches (both new names fail the 2-AH-scan gate — first AH-scan appearance this scan; not enterable regardless):**
+- **OFAL — watch (real surge, but 1 AH scan + no confirmable book).** Real accumulating SIP: 20:55Z 550K sh/2304 tr, 21:00Z 445K/2023, 21:05Z 678K/3007, 21:10Z 211K/1335 — genuine late-starting AH ignition (16:55 ET, after the 23:00 scan), VWAP $1.57→$1.67, CONFIRM-3 YES. Not stale/bad-print. But: (1) first AH-scan appearance → fails 2-AH-scan gate; (2) `quote ask $0.00 x0` timestamped 16:00 ET (stale) — no confirmable live two-sided book; (3) Day% +90.7% (intraday +172% per StocksToTrade) with **no same-day company catalyst** (recent PRs: 1-for-10 reverse split Jul 27, domestic-issuer status May 21) — low-float day-trader momentum runner. Re-evaluate at 00:00 CET: needs a 2nd AH scan >10% + a fillable book.
+- **USIO — watch/skip.** AH +18.9% but CONFIRM-3 NO (ignition 17:05ET failed third-bar hold), VRatio 1.9x, `quote ask $0.00 x0` (stale 16:00 ET) — no confirmable book. First AH-scan appearance → fails 2-AH-scan gate. Not enterable.
+- **CURI — skip: illiquid (no AH book), carried.** AH +14.6%, VRatio 3.2x but book was `ask $0.00 x0` at 23:00; CONFIRM-3 NO, float 40.2M. Same as prior scans.
+
+**No new entries this scan.** GXAI position held from 23:00. OFAL/USIO watch for the 00:00 CET scan (need 2nd AH scan + fillable book).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
