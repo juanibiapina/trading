@@ -96,6 +96,38 @@ Scanner run at 16:30:13 ET: **6 hits**. First AH scan with real accumulation thi
 
 **Carry to 23:00:** MGRX, DARE, AKAN as entry candidates (each needs the 2-AH-scan gate — this is their 1st AH appearance, so they need to reappear at 23:00 with sustained AH% to qualify). Re-run catalyst search on AKAN at 23:00 (PR may surface).
 
+## Scan 22:45 CET (4:45 PM ET) — AH open
+
+Scanner run at 16:45:17 ET: **6 hits**. **Observation only** — learning-phase default blocks entries before the 23:00 CET scan. No paper trades.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MGRX | [TV](https://www.tradingview.com/chart/?symbol=MGRX) | $0.53 | +0.0% | +40.9% | $0.75 | +41.0% | 13.7M | 67.3M | 0.2x | 14.6M | Pharma: Major |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $5.01 | -7.1% | +58.3% | $7.93 | +47.1% | 1.8M | 337K | 5.3x | 541K | Agri Commodities/Milling |
+| DARE | [TV](https://www.tradingview.com/chart/?symbol=DARE) | $1.37 | -4.9% | +14.6% | $1.57 | +9.0% | 668K | 181K | 3.7x | 13.6M | Pharma: Major |
+| GRSD | [TV](https://www.tradingview.com/chart/?symbol=GRSD) | $1.91 | +1.1% | +16.2% | $2.22 | +17.5% | 80K | 267K | 0.3x | 20.5M | Advertising/Marketing |
+| BAOS | [TV](https://www.tradingview.com/chart/?symbol=BAOS) | $0.59 | -21.7% | +8.2% | $0.64 | -15.3% | 859K | 11.6M | 0.1x | 1.0M | Advertising/Marketing |
+| HUMA | [TV](https://www.tradingview.com/chart/?symbol=HUMA) | $0.55 | -17.3% | +5.7% | $0.58 | -12.6% | 268K | 6.4M | 0.0x | 248.9M | Biotechnology |
+
+**Instrumentation (log-only, no decision impact) — candidates >10% AH:**
+
+| Ticker | SPIKE-BAR | CONFIRM-3 |
+|--------|-----------|-----------|
+| MGRX | SPIKE 16:05ET +36% $0.72 1020 trades / 820k sh | NO ignition 16:05ET failed third-bar hold/volume as-of 16:45ET |
+| AKAN | SPIKE 16:05ET +19% $5.94 146 trades / 12k sh | YES ignition 16:05ET 43.3x; confirmed 16:15ET $7.98 as-of 16:45ET |
+| DARE | SPIKE 16:07ET +24% $1.70 83 trades / 31k sh | YES ignition 16:05ET 268.7x; confirmed 16:15ET $1.69 as-of 16:45ET |
+| GRSD | SPIKE 16:20ET +23% $2.35 44 trades / 3k sh | NO no local-volume new-high ignition as-of 16:45ET |
+
+**Catalyst notes:**
+- **GRSD** (new, +16.2% AH, +17.5% total, float 20.5M): Q2 2026 earnings released after market close today (Aug 13) + conference call — earnings catalyst (Grade B type). But thin AH book (spike bar 3k sh / 44 trades), CONFIRM-3 NO. 1st AH appearance, needs 23:00 reappearance for the 2-AH-scan gate.
+- **MGRX** (+40.9%, holding near +41% from 22:30's +44.2%): business combination with Nuclea Energy + Nasdaq bid-price extension. Re-rateable reverse-merger, momentum-gradable. Day% flat, not dead-cat. 2nd AH appearance — gate now met. But CONFIRM-3 stays NO (16:05 ignition failed third-bar hold).
+- **AKAN** (+58.3%, holding from 22:30's +57.9%, VRatio up to 5.3x): still **no catalyst found** (only reverse-split/Nasdaq-deficiency history). Micro float 541K, thin book (spike bar 12k sh). Total% +47.1% elevated but under the 150% ceiling. 2nd AH appearance — gate met.
+- **DARE** (+14.6%, fading from 22:30's +23.4%): Q2 earnings + update call at 4:30 PM ET today (Grade B type). Day% -4.9%, not dead-cat. 2nd AH appearance — gate met, but AH% is fading.
+
+**Dead-cat/other:** BAOS (Day -21.7%, Total -15.3%, already traded+sold today) and HUMA (Day -17.3%, Total -12.6%) both below regular close on a down day — dead-cat, skip.
+
+**Carry to 23:00:** MGRX, AKAN, DARE (all gate-met), GRSD (1st AH, needs reappearance). At 23:00 CET (5:00 PM ET) entries unlock — evaluate each against ceiling/dead-cat/trajectory/liquidity gates. Re-run AKAN catalyst search once more at 23:00. GXAI already traded+sold today (-9.9%) — do not re-enter.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
