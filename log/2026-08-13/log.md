@@ -45,6 +45,25 @@ Scanner run at 16:00:09 ET (right at AH open): **0 hits**. AH volume has not acc
 
 Carrying the 21:30 regular-session watch names (CURI, LNSR, PMA, LEXX, JUNS, OPRX) forward to cross-check at 22:30/23:00 for AH follow-through. GXAI already traded+sold today (-9.9%) — do not re-enter.
 
+## Scan 22:15 CET (4:15 PM ET) — AH open
+
+Scanner run at 16:15:10 ET: **0 hits**. VRatio/AH-volume gates still catch nothing 15 min into AH.
+
+**Observation only** — learning-phase default blocks entries before the 23:00 CET scan. No paper trades.
+
+**Watch-name AH cross-check (SIP 5Min, first bar 16:00-16:05 ET):** none of the 21:30 watch names is building in AH — all flat-to-down vs regular close, thin books:
+
+| Ticker | RegClose | AH 1st-bar C | Vol | Trades | Note |
+|--------|----------|--------------|-----|--------|------|
+| CURI | $3.87 | $3.94 | 120K | 167 | flat, most liquid but no build |
+| LNSR | $8.29 | $8.11 | 17K | 52 | fading |
+| PMA | $1.56 | $1.59 | 7K | 36 | flat, thin |
+| LEXX | $7.92 | $8.10 | 3K | 2 | illiquid |
+| JUNS | $5.85 | $5.87 | 1K | 18 | flat, micro |
+| OPRX | $8.78 | $8.78 | 17K | 12 | flat |
+
+No AH ignition on any candidate. Carry CURI, LNSR, PMA, LEXX, JUNS, OPRX forward to 22:30/23:00 for follow-through. GXAI already traded+sold today (-9.9%) — do not re-enter.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
