@@ -64,6 +64,38 @@ Scanner run at 16:15:10 ET: **0 hits**. VRatio/AH-volume gates still catch nothi
 
 No AH ignition on any candidate. Carry CURI, LNSR, PMA, LEXX, JUNS, OPRX forward to 22:30/23:00 for follow-through. GXAI already traded+sold today (-9.9%) — do not re-enter.
 
+## Scan 22:30 CET (4:30 PM ET) — AH open
+
+Scanner run at 16:30:13 ET: **6 hits**. First AH scan with real accumulation this evening (22:00/22:15 were 0 hits). **Observation only** — learning-phase default blocks entries before the 23:00 CET scan. No paper trades.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MGRX | [TV](https://www.tradingview.com/chart/?symbol=MGRX) | $0.53 | +0.0% | +44.2% | $0.77 | +44.3% | 7.8M | 66.7M | 0.1x | 14.6M | Pharma: Major |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $5.01 | -7.1% | +57.9% | $7.91 | +46.8% | 770K | 189K | 4.1x | 541K | Agri Commodities/Milling |
+| DARE | [TV](https://www.tradingview.com/chart/?symbol=DARE) | $1.37 | -4.9% | +23.4% | $1.69 | +17.4% | 298K | 140K | 2.1x | 13.6M | Pharma: Major |
+| HUMA | [TV](https://www.tradingview.com/chart/?symbol=HUMA) | $0.55 | -17.3% | +5.7% | $0.58 | -12.6% | 253K | 6.4M | 0.0x | 248.9M | Biotechnology |
+| BAOS | [TV](https://www.tradingview.com/chart/?symbol=BAOS) | $0.59 | -21.7% | +7.2% | $0.64 | -16.1% | 166K | 11.5M | 0.0x | 1.0M | Advertising/Marketing |
+| SRXH | [TV](https://www.tradingview.com/chart/?symbol=SRXH) | $1.83 | -0.5% | +6.6% | $1.95 | +6.1% | 92K | 1.1M | 0.1x | 19.1M | Packaged Software |
+
+**Instrumentation (log-only, no decision impact) — candidates >10% AH:**
+
+| Ticker | SPIKE-BAR | CONFIRM-3 |
+|--------|-----------|-----------|
+| MGRX | SPIKE 16:05ET +36% $0.72 1020 trades / 820k sh | NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET |
+| AKAN | SPIKE 16:05ET +19% $5.94 146 trades / 12k sh | YES ignition 16:05ET 43.3x; confirmed 16:15ET $7.98 as-of 16:30ET |
+| DARE | SPIKE 16:07ET +24% $1.70 83 trades / 31k sh | YES ignition 16:05ET 268.7x; confirmed 16:15ET $1.69 as-of 16:30ET |
+
+**Catalyst notes (>10% AH):**
+- **MGRX** (+44.2%, float 14.6M): business combination agreement with Nuclea Energy Inc + 180-day Nasdaq bid-price extension (PR Aug 4, 8-K). Reverse-merger driver. Real liquidity on the spike bar (820k sh / 1020 trades). Note VRatio 0.1x is misleading — AvgVol 66.7M is a huge sub-$1 churn base, but SIP confirms real AH accumulation. Reverse-merger/business-combination = re-rateable catalyst, momentum-gradable (not a fixed-price cash deal). Day% flat (+0.0%), not a dead-cat setup.
+- **DARE** (+23.4%, float 13.6M): Q2 2026 earnings + company update conference call at 4:30 PM ET today (Aug 13). Earnings/update catalyst (Grade B type). Day% -4.9%, not dead-cat. Clean ignition (CONFIRM-3 268.7x).
+- **AKAN** (+57.9%, float 541K micro): **no catalyst found** after search — only reverse-split history (1-for-4.5 Apr 2026), Nasdaq deficiency/negative-equity flags. Thin AH book (spike bar 12k sh / 146 trades). Total% +46.8% is elevated; micro-float + no catalyst + thin liquidity = watch closely for real fillable book at 23:00.
+
+**Dead-cat/other:** HUMA (Day -17.3%, Total -12.6%) and BAOS (Day -21.7%, Total -16.1%, already traded+sold today) are both below regular close on a down day — classic dead-cat territory, skip. SRXH +6.1% total below the 10% AH gate.
+
+**21:30 watch names** (CURI, LNSR, PMA, LEXX, JUNS, OPRX): none appeared in this 22:30 AH scan — all failed to build into after-hours (confirmed thin/flat at 22:15). Dropped from active watch. GXAI already traded+sold today (-9.9%) — do not re-enter.
+
+**Carry to 23:00:** MGRX, DARE, AKAN as entry candidates (each needs the 2-AH-scan gate — this is their 1st AH appearance, so they need to reappear at 23:00 with sustained AH% to qualify). Re-run catalyst search on AKAN at 23:00 (PR may surface).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
