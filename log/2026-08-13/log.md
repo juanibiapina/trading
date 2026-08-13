@@ -260,9 +260,59 @@ Scanner run at 18:00:10 ET: **19 hits**. Candidates >10% AH: MGRX, CAPR, AKAN, O
 
 **Final-scan feed-lag cross-check:** All tracked names (MGRX, AKAN, CAPR, DARE, GRSD, ONFO, DAAQ, TPCS) appear in the TradingView scan at correct AH levels this scan — no under-reported/dropped names requiring SIP rescue. ONFO's SIP level ($2.74) matches the TV AH figure ($2.72), confirming the feed is not lagging tonight.
 
+## Scan 00:30 CET (6:30 PM ET) — AH open, entries unlocked, **final scan**
+
+Scanner run at 18:30:14 ET: **17 hits**. Candidates >10% AH: MGRX, CAPR, AKAN, DARE (held), ONFO, OXBR, HUMA, GRSD (held), DAAQ, TPCS, EPOW.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MGRX | [TV](https://www.tradingview.com/chart/?symbol=MGRX) | $0.53 | +0.0% | +15.5% | $0.62 | +15.5% | 23.4M | 68.3M | 0.3x | 14.6M | Pharma: Major |
+| CAPR | [TV](https://www.tradingview.com/chart/?symbol=CAPR) | $4.21 | +0.5% | +67.0% | $7.03 | +67.8% | 9.5M | 5.1M | 1.9x | 52.3M | Pharma: Major |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $5.01 | -7.1% | +91.2% | $9.58 | +77.7% | 6.4M | 1.1M | 6.1x | 541K | Agri Commodities/Milling |
+| DARE | [TV](https://www.tradingview.com/chart/?symbol=DARE) | $1.37 | -4.9% | +34.3% | $1.84 | +27.8% | 4.1M | 568K | 7.2x | 13.6M | Pharma: Major |
+| ONFO | [TV](https://www.tradingview.com/chart/?symbol=ONFO) | $2.31 | -1.7% | +44.2% | $3.33 | +41.7% | 2.8M | 2.7M | 1.0x | n/a | Packaged Software |
+| OXBR | [TV](https://www.tradingview.com/chart/?symbol=OXBR) | $1.30 | +9.2% | +13.1% | $1.47 | +23.5% | 878K | 123K | 7.2x | 7.0M | Specialty Insurance |
+| DAAQ | [TV](https://www.tradingview.com/chart/?symbol=DAAQ) | $7.26 | -0.9% | +43.5% | $10.42 | +42.3% | 95K | 27K | 3.5x | 17.2M | Financial Conglomerates |
+| TPCS | [TV](https://www.tradingview.com/chart/?symbol=TPCS) | $4.84 | +0.4% | +17.8% | $5.70 | +18.3% | 87K | 36K | 2.4x | 9.0M | Industrial Machinery |
+| HUMA | [TV](https://www.tradingview.com/chart/?symbol=HUMA) | $0.55 | -17.3% | +11.1% | $0.61 | -8.1% | 356K | 6.5M | 0.1x | 248.9M | Biotechnology |
+| EPOW | [TV](https://www.tradingview.com/chart/?symbol=EPOW) | $0.55 | -1.2% | +10.2% | $0.61 | +8.9% | 73K | 576K | 0.1x | 38.1M | Packaged Software |
+
+**Instrumentation (log-only, no decision impact) — new/actionable candidates >10% AH:**
+
+| Ticker | SPIKE-BAR | CONFIRM-3 |
+|--------|-----------|-----------|
+| ONFO | SPIKE 17:06ET +16% $2.67 176 trades / 48k sh | NO ignition 17:05ET failed third-bar hold/volume as-of 18:30ET |
+| OXBR | SPIKE 16:04ET +35% $1.75 683 trades / 94k sh | NO no local-volume new-high ignition as-of 18:30ET |
+| EPOW | NO-SPIKE peak +27% @16:23ET (no bar cleared +15% on a volume co-spike) | NO no local-volume new-high ignition as-of 18:30ET |
+
+**Entry evaluation:**
+
+- **ONFO → ENTERED** (Grade B). The BUILD candidate blocked purely by no-fill at 00:00 finally filled. Cleared every gate: float n/a (not a filter), AH >10% across 23:30 (+16.0%) / 00:00 (+17.7%) / 00:30 (+44.2%) — 2-AH-scan gate met and still BUILDING (rising across scans), Day -1.7% (>-15%), Total% +41.7% (under 150% ceiling), not dead-cat. Catalyst: Q2 2026 earnings released today (Aug 13) — Grade B. SIP shows genuine heavy accumulation: peak bar 452K sh / 4,212 trades at 17:20 ET ($3.07 high), thousands of trades/bar through 17:35 ET. **Freshness guard:** SIP last bar 17:35 ET (~55 min behind the 18:30 ET scan) and the broker quote frozen at the 16:00 ET snapshot — the scanner's $3.33 (above the stale SIP $3.07 high) is a staleness artifact, not a bad print (strong VRatio + large AH% + built across ≥2 scans). tradable=true. **BUY 29 @ limit $3.35 ext (id d58b9949) filled @ $3.02.** Real fill $3.02 = $87.58 (live ask was $3.02, price improvement over the limit).
+
+- **CAPR → SKIP: float >50M (carried).** +67.0% AH, strong BUILD, real book, VRatio 1.9x. Float 52.3M exceeds the <50M gate — hard block. Recorded again as a float-gate skip on an otherwise-qualifying BUILD name (pattern tracking).
+
+- **AKAN → SKIP: untradable + no AH book (carried).** +91.2% AH, VRatio 6.1x, micro float 541K, but `tradable=false` and `ask $0.00 x0` confirmed across all prior scans. Untradable (carried) — not re-worked. Qualified-but-untradable broker-block for morning-eval tally.
+
+- **DAAQ → SKIP: NO-SPIKE + illiquid (carried).** +43.5% AH, 3rd appearance. NO-SPIKE, SPAC, illiquid wide book (bid/ask spread huge at 00:00), volume collapsed to single-digit trades/bar. Skip stands.
+
+- **TPCS → SKIP: illiquid (no AH book, carried).** +17.8% AH, float 9.0M, `ask $0.00 x0` at 00:00. Thin SIP. Illiquid skip stands.
+
+- **MGRX → SKIP: early-peak declining (carried).** +15.5% AH — continuing the monotonic fade from the 44.2% open peak (44.2 → 40.9 → 31.3 → 35.7 → 24.5 → 15.5). Peaked $0.80 @16:20 ET (early), volume fading. Trajectory disqualifier stands. CONFIRM-3 NO.
+
+- **OXBR → SKIP: 1st AH appearance (fails 2-scan gate).** +13.1% AH, float 7.0M (low). 1st AH scan appearance tonight — fails the 2-AH-scan gate. Ignition 16:04 ET but CONFIRM-3 NO. tradable=true, book present (ask $1.70). No entry this late with only one AH appearance.
+
+- **EPOW → SKIP: illiquid (no AH book) + 1st appearance.** +10.2% AH, `ask $0.00 x0` — no fillable book. NO-SPIKE. 1st AH appearance. Skip.
+
+- **DARE → HELD** (entered 23:00 @ $1.70). AH +34.3% ($1.84 scanner) — new AH high, strengthening. **GRSD → HELD** (entered 23:30 @ $2.17). AH +12.6% ($2.15). Position management handled in premarket by position-evaluation.
+
+- **Dead-cat/other:** HUMA (Day -17.3%, Total -8.1%) below regular close on a down day — dead-cat, skip.
+
+**Final-scan feed-lag cross-check (pipeline names):** All tracked names (MGRX, AKAN, CAPR, DARE, GRSD, ONFO, DAAQ, TPCS) appear in the TradingView scan at correct AH levels — none under-reported or dropped. ONFO's scanner figure ($3.33) runs above the stale SIP $3.07 high, but that is the freshness-guard staleness case (SIP ~55 min behind), not a dropped-name rescue. No SIP-truth override needed.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | DARE | $1.70 | 2026-08-13 23:00 CET | 58 | 1bd245a5 | Grade B — Q2 2026 earnings + company update call 4:30 PM ET. Float 13.6M, Day -4.9%. AH HOLD $1.65-1.66 (7% off $1.79 high) across 3 scans, CONFIRM-3 YES, Total% +14.8%. |
 | GRSD | $2.17 | 2026-08-13 23:30 CET | 45 | 7c234542 | Grade B — Q2 2026 earnings + conference call after close. Float 20.5M, Day +1.1%. AH >10% at 22:45/23:30 (2-scan gate), SIP rebuilt to $2.11 (10% off $2.35 high = hold), Total% +11.6%. |
+| ONFO | $3.02 | 2026-08-14 00:30 CET | 29 | d58b9949 | Grade B — Onfolio Q2 2026 earnings today. Float n/a, Day -1.7%. AH BUILD across 23:30/00:00/00:30 (+16→+18→+44%), SIP peak 452K sh/4,212 trades @17:20 ET. Blocked by no-fill at 00:00, filled 00:30 (limit $3.35, ask $3.02). Total% +41.7%. |

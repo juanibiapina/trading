@@ -10,6 +10,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
 | DARE | $1.70 | $1.70 | $1.79 (AH) | 58 | 2026-08-13 23:00 CET | B | 1bd245a5 | Daré Bioscience Q2 2026 earnings + company update call 4:30 PM ET today. Float 13.6M, Day -4.9%. AH held $1.65-1.66 (7% off $1.79 high) across 22:30/22:45/23:00, CONFIRM-3 YES. Total% +21%. |
 | GRSD | $2.17 | $2.17 | $2.35 (AH) | 45 | 2026-08-13 23:30 CET | B | 7c234542 | Q2 2026 earnings + conference call after close today. Float 20.5M, Day +1.1%. AH >10% at 22:45 (+16.2%) and 23:30 (+10.5%) — 2-scan gate met. SIP peaked $2.35 @16:20 ET, rebuilt to $2.11 (10% off high, within 20% = hold) on returning volume (42K/35K sh last bars). Total% +11.6%. |
+| ONFO | $3.02 | $3.02 | $3.07 (AH) | 29 | 2026-08-14 00:30 CET | B | d58b9949 | Onfolio Holdings Q2 2026 earnings released today (Aug 13). Float n/a. Day -1.7%. AH >10% across 23:30 (+16.0%) / 00:00 (+17.7%) / 00:30 (+44.2%) — 2-scan gate met, still BUILDING. SIP peak bar 452K sh / 4,212 trades @17:20 ET ($3.07 high), thousands of trades/bar. Blocked by no-fill at 00:00; filled at 00:30 (limit $3.35, live ask $3.02). Total% +41.7% (under 150% ceiling). SIP stale (last bar 17:35 ET); scanner $3.33 is a staleness artifact per freshness guard, not a bad print. |
 
 ## Position Rules
 
