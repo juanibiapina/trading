@@ -128,8 +128,47 @@ Scanner run at 16:45:17 ET: **6 hits**. **Observation only** — learning-phase 
 
 **Carry to 23:00:** MGRX, AKAN, DARE (all gate-met), GRSD (1st AH, needs reappearance). At 23:00 CET (5:00 PM ET) entries unlock — evaluate each against ceiling/dead-cat/trajectory/liquidity gates. Re-run AKAN catalyst search once more at 23:00. GXAI already traded+sold today (-9.9%) — do not re-enter.
 
+## Scan 23:00 CET (5:00 PM ET) — AH open, **entries unlock**
+
+Scanner run at 17:00:12 ET: **9 hits**. Entries unlock at this scan (learning-phase default). Candidates >10% AH: MGRX, AKAN, DARE, CAPR.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MGRX | [TV](https://www.tradingview.com/chart/?symbol=MGRX) | $0.53 | +0.0% | +31.3% | $0.70 | +31.4% | 16.5M | 67.6M | 0.2x | 14.6M | Pharma: Major |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $5.01 | -7.1% | +95.4% | $9.79 | +81.6% | 3.1M | 543K | 5.7x | 541K | Agri Commodities/Milling |
+| DFSC | [TV](https://www.tradingview.com/chart/?symbol=DFSC) | $2.31 | +86.3% | +6.5% | $2.46 | +98.4% | 2.4M | 11.2M | 0.2x | 2.7M | Misc Commercial Services |
+| BAOS | [TV](https://www.tradingview.com/chart/?symbol=BAOS) | $0.59 | -21.7% | +6.6% | $0.63 | -16.6% | 923K | 11.6M | 0.1x | 1.0M | Advertising/Marketing |
+| CAPR | [TV](https://www.tradingview.com/chart/?symbol=CAPR) | $4.21 | +0.5% | +16.2% | $4.89 | +16.7% | 810K | 4.0M | 0.2x | 52.3M | Pharma: Major |
+| DARE | [TV](https://www.tradingview.com/chart/?symbol=DARE) | $1.37 | -4.9% | +20.7% | $1.65 | +14.8% | 761K | 192K | 4.0x | 13.6M | Pharma: Major |
+| HUMA | [TV](https://www.tradingview.com/chart/?symbol=HUMA) | $0.55 | -17.3% | +6.7% | $0.59 | -11.7% | 288K | 6.5M | 0.0x | 248.9M | Biotechnology |
+| GRSD | [TV](https://www.tradingview.com/chart/?symbol=GRSD) | $1.91 | +1.1% | +5.8% | $2.02 | +6.9% | 109K | 270K | 0.4x | 20.5M | Advertising/Marketing |
+| SFHG | [TV](https://www.tradingview.com/chart/?symbol=SFHG) | $2.36 | -0.4% | +8.1% | $2.55 | +7.6% | 58K | 1.1M | 0.1x | 1.2M | Wholesale Distributors |
+
+**Instrumentation (log-only, no decision impact) — candidates >10% AH:**
+
+| Ticker | SPIKE-BAR | CONFIRM-3 |
+|--------|-----------|-----------|
+| MGRX | SPIKE 16:05ET +36% $0.72 1020 trades / 820k sh | NO ignition 16:05ET failed third-bar hold/volume as-of 17:00ET |
+| AKAN | SPIKE 16:05ET +19% $5.94 146 trades / 12k sh | YES ignition 16:05ET 43.3x; confirmed 16:15ET $7.98 as-of 17:00ET |
+| DARE | SPIKE 16:07ET +24% $1.70 83 trades / 31k sh | YES ignition 16:05ET 268.7x; confirmed 16:15ET $1.69 as-of 17:00ET |
+| CAPR | SPIKE 16:42ET +21% $5.09 936 trades / 135k sh | PENDING ignition 16:40ET; waiting for third bar as-of 17:00ET |
+
+**Entry evaluation:**
+
+- **DARE → ENTERED** (Grade B). Float 13.6M <50M ✓, AH >10% across 22:30/22:45/23:00 ✓, Day -4.9% (>-15%) ✓, Total% +14.8% (under 150% ceiling) ✓, not dead-cat. Catalyst: Q2 2026 earnings + company update call 4:30 PM ET today (Grade B). SIP bars show real accumulation (159K-243K sh/bar, 700-1000 trades early) and a HOLD: peaked $1.79 at 16:05 ET then flat $1.65-1.66 for the last 4 bars (7% off high, within 20% = holding, not fading). CONFIRM-3 YES. Per CHAI/MSW rule, hold-vs-fade dominates over the early-peak time. tradable=true. Alpaca quote stale (16:00 ET, bid $1.11/ask $1.57); used SIP level ~$1.66. **BUY 58 @ limit $1.72 ext (id 1bd245a5) filled @ $1.70.** Real fill $1.70 = $98.60.
+
+- **AKAN → SKIP: untradable + no AH book.** Biggest mover (+95.4% AH, VRatio 5.7x, micro float 541K) but `tradable=false` on Alpaca and `quote` shows `ask $0.00 x0` (no fillable book). Also no catalyst found across prior searches (only reverse-split/Nasdaq-deficiency history) and thin spike bar (12k sh). Qualified-but-untradable broker-block — recorded for morning-eval tally, not entered.
+
+- **MGRX → SKIP: early-peak + declining across scans.** Float 14.6M, Day flat, business-combination catalyst (re-rateable, momentum-gradable), real SIP liquidity (millions sh/bar). But trajectory disqualifies: peaked $0.80 at 16:20 ET (early, before 17:30) and TV AH% declined across all three AH scans (44.2% → 40.9% → 31.3%), SIP drifting $0.80 → $0.72 with volume fading hard (4.1M → 787K sh/bar). Per the trajectory rule, an early peak is a disqualifier when the stock is also declining across scans. CONFIRM-3 NO. Skip.
+
+- **CAPR → SKIP: float >50M + 1st AH appearance.** Float 52.3M exceeds the <50M gate, and this is its 1st AH appearance (fails the 2-AH-scan gate; ignition 16:42 ET, CONFIRM-3 PENDING). Fresh real book (bid $5.85/ask $5.93, 135k sh spike bar) but does not clear the gates. Carry as watch for later reappearance.
+
+- **DFSC → SKIP.** Total% +98.4% is a regular-session move (Day +86.3%); AH chg only +6.5%, under the 10% AH gate. Not an AH mover.
+
+- **Dead-cat/other:** HUMA (Day -17.3%, Total -11.7%) and BAOS (Day -21.7%, Total -16.6%, already traded+sold today) both below regular close on a down day — dead-cat, skip. GRSD (+5.8% AH) and SFHG (+8.1% AH) below the 10% AH gate.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-| _(none — regular-session scan, observation only)_ | | | | | |
+| DARE | $1.70 | 2026-08-13 23:00 CET | 58 | 1bd245a5 | Grade B — Q2 2026 earnings + company update call 4:30 PM ET. Float 13.6M, Day -4.9%. AH HOLD $1.65-1.66 (7% off $1.79 high) across 3 scans, CONFIRM-3 YES, Total% +14.8%. |

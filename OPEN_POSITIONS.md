@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| _none_ | | | | | | | | No open positions |
+| DARE | $1.70 | $1.70 | $1.79 (AH) | 58 | 2026-08-13 23:00 CET | B | 1bd245a5 | Daré Bioscience Q2 2026 earnings + company update call 4:30 PM ET today. Float 13.6M, Day -4.9%. AH held $1.65-1.66 (7% off $1.79 high) across 22:30/22:45/23:00, CONFIRM-3 YES. Total% +21%. |
 
 ## Position Rules
 
