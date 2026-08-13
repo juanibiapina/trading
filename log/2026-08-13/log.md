@@ -217,6 +217,49 @@ Scanner run at 17:30:15 ET: **15 hits**. Candidates >10% AH: MGRX, AKAN, CAPR, B
 
 - **Dead-cat/other:** BAOS (Day -21.7%, Total -12.5%, already traded+sold today) and HUMA (Day -17.3%) below regular close on a down day — dead-cat, skip. IVDA (+9.2% AH), DFSC (+6.9% AH, regular-session move) below the 10% AH gate.
 
+## Scan 00:00 CET (6:00 PM ET) — AH open, entries unlocked
+
+Scanner run at 18:00:10 ET: **19 hits**. Candidates >10% AH: MGRX, CAPR, AKAN, ONFO, DARE (held), GRSD (held), DAAQ, TPCS. DFSC/IVDA/DFSC are regular-session moves (AH chg under 10%).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MGRX | [TV](https://www.tradingview.com/chart/?symbol=MGRX) | $0.53 | +0.0% | +24.5% | $0.66 | +24.5% | 22.3M | 68.2M | 0.3x | 14.6M | Pharma: Major |
+| CAPR | [TV](https://www.tradingview.com/chart/?symbol=CAPR) | $4.21 | +0.5% | +60.6% | $6.76 | +61.3% | 8.6M | 4.9M | 1.7x | 52.3M | Pharma: Major |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $5.01 | -7.1% | +101.6% | $10.10 | +87.4% | 6.1M | 998K | 6.1x | 541K | Agri Commodities/Milling |
+| DARE | [TV](https://www.tradingview.com/chart/?symbol=DARE) | $1.37 | -4.9% | +21.9% | $1.67 | +16.0% | 920K | 210K | 4.4x | 13.6M | Pharma: Major |
+| ONFO | [TV](https://www.tradingview.com/chart/?symbol=ONFO) | $2.31 | -1.7% | +17.7% | $2.72 | +15.7% | 1.6M | 2.6M | 0.6x | n/a | Packaged Software |
+| DAAQ | [TV](https://www.tradingview.com/chart/?symbol=DAAQ) | $7.26 | -0.9% | +42.8% | $10.37 | +41.6% | 87K | 26K | 3.3x | 17.2M | Financial Conglomerates |
+| TPCS | [TV](https://www.tradingview.com/chart/?symbol=TPCS) | $4.84 | +0.4% | +19.8% | $5.80 | +20.3% | 75K | 34K | 2.2x | 9.0M | Industrial Machinery |
+| GRSD | [TV](https://www.tradingview.com/chart/?symbol=GRSD) | $1.91 | +1.1% | +14.1% | $2.18 | +15.3% | 217K | 281K | 0.8x | 20.5M | Advertising/Marketing |
+
+**Instrumentation (log-only, no decision impact) — new candidates >10% AH:**
+
+| Ticker | SPIKE-BAR | CONFIRM-3 |
+|--------|-----------|-----------|
+| DAAQ | NO-SPIKE peak +47% @17:09ET (no bar cleared +15% on volume co-spike) | NO no local-volume new-high ignition as-of 18:00ET |
+| TPCS | SPIKE 16:44ET +22% $5.90 55 trades / 7k sh | NO ignition 16:40ET failed third-bar hold/volume as-of 18:00ET |
+| ONFO | SPIKE 17:06ET +16% $2.67 176 trades / 48k sh | NO ignition 17:05ET failed third-bar hold/volume as-of 18:00ET |
+
+**Entry evaluation:**
+
+- **ONFO → QUALIFIED but NO FILL (no position).** Cleared every gate: float n/a (not a filter), AH >10% at 23:30 (+16.0%) and 00:00 (+17.7%) — 2-AH-scan gate met, Day -1.7% (>-15%), Total% +15.7% (well under 150% ceiling), not dead-cat. Catalyst: **Q2 2026 earnings released today (Aug 13)** — Grade B type. Genuine BUILD on heavy real SIP accumulation: peak bar 452K sh / 4,212 trades at 17:20 ET ($3.07 high), sustained hundreds of trades/bar into 17:45 ET, holding $2.74 (~11% off high = within 20% = hold, not fade). Per CHAI/MSW rule, hold-vs-fade dominates the early-peak time. tradable=true. **Three extended-hours limit attempts ($2.72 → $2.80 → $2.88, all above the SIP $2.74 level) sat `new` and never filled** across several minutes — thin live AH book with no seller at those prices (broker `quote` frozen at the 16:00 ET snapshot, so live ask hidden). Per the no-fill rule (no fill = no position), all orders canceled. Recorded as qualified-but-unfilled for the morning-eval tally — the best BUILD candidate of the night, blocked purely by AH illiquidity.
+
+- **DAAQ → SKIP: NO-SPIKE + volume collapsed + illiquid wide book.** +42.8% AH, float 17.2M, 2nd AH appearance (gate met). But NO-SPIKE (no bar cleared +15% on a volume co-spike), peaked $10.64 at 17:05 ET (early) and SIP volume collapsed to ~100-470 sh/bar (1-12 trades) by 17:45 ET — frozen, not a healthy hold. Book is illiquid with a huge spread (bid $6.02 / ask $9.38). SPAC (Financial Conglomerates). Skip.
+
+- **TPCS → SKIP: illiquid (no AH book).** +19.8% AH, float 9.0M (low), 2nd AH appearance (gate met). But `quote` shows `ask $0.00 x0` — no fillable book. Thin SIP (spike bar 7k sh / 55 trades, ~2-27 trades/bar late). Per the AH-liquidity sanity check, skip as illiquid.
+
+- **CAPR → SKIP: float >50M (carried).** +60.6% AH, strong BUILD (CONFIRM-3 YES earlier), real book. But float 52.3M exceeds the <50M gate — hard block. Recorded again as a float-gate skip on an otherwise-qualifying BUILD name.
+
+- **AKAN → SKIP: untradable + no AH book (carried).** +101.6% AH, VRatio 6.1x, micro float 541K, but `tradable=false` and `ask $0.00 x0` confirmed at 23:00. Untradable (carried) — not re-worked. Qualified-but-untradable broker-block for morning-eval tally.
+
+- **MGRX → SKIP: early-peak declining (carried).** +24.5% AH, continuing to fade from the 44.2% open peak (44.2 → 40.9 → 31.3 → 35.7 → 24.5 across scans). Peaked $0.80 @16:20 ET (early), volume fading. Trajectory disqualifier stands. CONFIRM-3 NO.
+
+- **DARE → HELD** (entered 23:00 @ $1.70, now ~$2.03-2.11, +19-24%). **GRSD → HELD** (entered 23:30 @ $2.17, now ~$2.19, +0.9%). Position management handled in premarket by position-evaluation.
+
+- **Dead-cat/other:** BAOS/HUMA below regular close on a down day — dead-cat, skip. DFSC (+10.4% AH but Day +86.3% regular-session move, Total +105.7%) and IVDA (+6.5% AH, Day +42.7% regular) are regular-session moves, not fresh AH ignitions.
+
+**Final-scan feed-lag cross-check:** All tracked names (MGRX, AKAN, CAPR, DARE, GRSD, ONFO, DAAQ, TPCS) appear in the TradingView scan at correct AH levels this scan — no under-reported/dropped names requiring SIP rescue. ONFO's SIP level ($2.74) matches the TV AH figure ($2.72), confirming the feed is not lagging tonight.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
