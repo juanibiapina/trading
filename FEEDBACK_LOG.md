@@ -6,6 +6,29 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-08-12 — re: Trading Scanner Report - 2026-08-11
+
+**Juan said:** "Great Job today. Keep monitoring BAOS to see if this is the
+type that goes higher."
+
+**Interpretation:** Approval of the clean BAOS detect→select→run night
+(entered $0.90, exited $2.24, +148.9%). BAOS is a Grade D low-float (1.0M) ADR
+pump on a crypto/blockchain pivot + share-subscription financing. Juan wants us
+to keep watching BAOS specifically to learn whether this *archetype*
+(low-float ADR + crypto pivot catalyst) continues running higher after our exit
+— i.e. is it a type that keeps climbing, worth holding longer or re-entering.
+
+**Action:** Logged as a monitoring instruction for the daily retrospective —
+track BAOS's post-exit trajectory (does it keep going higher?) and note whether
+similar low-float-ADR/crypto-pivot names recur and how they behave. This feeds
+the "Emerging Patterns" library in `Day Trading.md` and the premarket exit-gap
+study (BAOS already seeded there: peaked $2.51 at 04:35 ET then crashed to
+$1.16 PM-last, so the early data says it spiked then dumped, not a sustained
+climber). Keep collecting more BAOS-type samples before drawing a rule. No
+strategy change; captured and routed.
+
+---
+
 ### 2026-08-06 — re: Trading Scanner Report - 2026-08-05
 
 **Juan said:** "Research the alpaca problem, determine the root cause."
