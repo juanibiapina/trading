@@ -230,3 +230,86 @@ Sub-threshold (AH <10%, not evaluated): USIO +9.7%, CYCU +10.7% (VRatio 0.0 — 
 **Actions taken:**
 - SELL 66 DRMA @ limit $1.18 ext (id fcf9ca9f) filled @ $1.23 → -$19.14 (-19.1%)
 - No open positions remain.
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**No real winner today.** Nothing cleared the >100% winner bar on accumulating SIP volume. The biggest genuine movers:
+
+**GXAI** — Packaged Software / AI-gaming (biggest AH→PM continuation, detected + traded)
+- Catalyst: same-day GlobeNewswire PR ~16:10 ET — revenue/ad-efficiency operational update. **Grade C**
+- Previous Close: $0.89
+- AH last night: SIP peak **$1.58 (+77.5%)** at 17:15 ET (23:15 CET), on millions of sh/bar (20:15Z 3.02M sh/11.8k tr)
+- Premarket now: ~$1.29–1.37 (SIP PM high $1.53 = +72%), faded from AH peak
+- Hypothetical P&L (AH entry → PM peak): AH entry $1.42 → PM peak $1.53 = **+7.7%**; the AH peak $1.58 was the better exit
+- Float: 10.5M | Market Cap: $9.4M
+- **Sub-100%** → not a "winner," but the strongest AH→PM name and the one we entered.
+
+**FRGT** — Freight Technologies (biggest raw PM mover, PM-only gapper)
+- Previous Close: $2.57 | AH flat (SIP AH ~$2.50, few hundred sh/bar)
+- PM explosion at 04:00 ET: SIP PM high **$4.77 (+85.6%)** on 1.28M sh / 20,832 trades at 08:05Z — real, liquid
+- No verified fresh catalyst (strategic-alternatives story ongoing) → **Grade None**
+- Float 563K. **PM-only gapper** (AH flat, move began only at 04:00 ET) — structurally undetectable by the AH scanner, NOT a detection miss.
+
+**Scanner Diagnostic (GXAI):**
+- Detectable at screening time? **YES**
+- What it looked like: ignited 16:10 ET on the same-day PR, +28.7% AH at the 22:30 scan, built to +66.6% by 23:00 on 15.8M AH vol / VRatio 8.0x, real two-sided book. Textbook BUILD.
+- We acted: **entered 64 GXAI @ $1.42 at 23:00 CET.** Right stock traded.
+- Scanner gap: none. GXAI was caught and entered. It simply faded AH→PM (sub-100%, AH was the better exit).
+
+### Baseline Tracking
+
+- Days tracked: **65** (was 64 + 1)
+- Winners detected by scanner: **52/61 (85.2%)** — GXAI detected and added.
+- Winner selected for paper trade: **30/61 (49.2%)** — GXAI entered @ $1.42. Right stock traded.
+- Target: >80% detection
+- Status: **BASELINE MET** (85.2%)
+- Baseline chain: 08-10 (63) → 08-11 (64) → 08-12 (65). Sequential, no gap.
+
+### Retrospective Scan Results
+Live PM scan (04:20 ET): GXAI +58%, FRGT +66%, CURI +31%, CPHI +21%, FRGT the biggest raw mover.
+- GXAI AH SIP peak $1.58 (+77.5%) 17:15 ET → PM SIP $1.53 (+72%). AH→PM continuation, faded modestly.
+- FRGT PM-only gapper +85.6% (AH flat). OFAL/BIVI faded in PM (OFAL $1.59→$1.37; BIVI $1.83→$1.60).
+- No name >100%.
+
+### Open Position P&L (Alpaca)
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| GXAI | $1.42 | +59.6% | C — rev/ad-efficiency PR | 23:00 CET | $1.53 (SIP) | 04:00 ET | open | -€6.40 | -7.0% | Open |
+
+GXAI Alpaca `current_price` $1.32 is roughly live (SIP PM $1.29–1.37), so the −7% is real, not a stale figure. Exit is handled by position-evaluation (10:30 CET), not here.
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits this pulse)
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) + 2 bonus (22:15, 22:45) = 9 total. Full coverage.
+- Candidates found: GXAI, LGCL, CURI, OFAL, USIO, BIVI, HXHX, PRHI, FGI
+- Retrospective matches: GXAI (entered), LGCL, CURI, OFAL all surfaced. No in-window mover missed.
+
+### Missed Opportunities
+
+No significant missed opportunities. FRGT (+85.6%) was a PM-only gapper (AH flat) — structural blind spot, not a detection miss.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| GXAI | $1.58 (+77.5%) | 17:15 ET | Build→hold | $1.29–1.37 | −13% | +45–54% | AH peak > PM peak (AH better exit) |
+| LGCL | $2.17 (+52.8%) | 16:10 ET | Spike→fade | $1.36 | −37% | −4% | Faded further, correctly skipped |
+| CURI | $3.98 (+42%) | 19:55 ET | Build (late) | $3.68 | −8% | +31% | Held most of gain, no book |
+| OFAL | $1.60 (+124% total) | AH | Day-runner tail | $1.37 | −14% | +88% | Faded in PM, no book all night |
+
+**AH-peak-vs-PM-peak check:** GXAI AH peak (+77.5%) > PM peak (+72%) — AH was the marginally better exit, consistent with the fade-into-PM tendency (though below the ~+130% extreme zone). LGCL AH peak (+52.8%) >> PM peak (~0%) — clean fade, fade rule correct.
+
+### Notes
+
+- **Coverage:** 7 of 7 scheduled scans ran. No coverage failure.
+- **Fade-rule false-negative tracking:** LGCL (Aug 12→13, float **1.6M** sub-3M, Grade None, AH SIP peak $2.17 +52.8% @16:10 ET → PM SIP high $1.41 = **fell short**, PM well below AH peak). Correctly skipped. **Standing sub-3M count: 4 of 12** (LGCL added as fell-short). ≥4/5 (80%) trigger NOT met (33%). Hypothesis weakening further — do not wire the PM-open re-check exception.
+- **PM-only gapper tracking:** biggest raw PM mover = FRGT +85.6% (SIP), classified **PM-only gapper** (AH flat, move began 04:00 ET), liquid at PM open (1.28M sh/20.8k trades). Not found in `log/pm-open-scan.csv` yet — flag for the pm-open pulse. Holdable PM-only-gapper count in the csv = **21** (cluster threshold already exceeded; standing action: route to Juan's daily email as Initiative-6 early-PM pilot decision). PM-only gapper is not a detection miss.
+- **No ceiling-override or dead-cat-override watches** flagged last night.
+- **No in-window feed-lag miss, no price-floor exclusion, no late-AH-tail surge, no reverse-split entry** this session. OFAL (1-for-10 reverse split ~Jul 27, weeks-old, no fresh catalyst) surfaced but was skipped all night on no fillable book (not entered) — not added to the reverse-split-entry tally (tracks entered names).
+- **AH-fade pattern:** GXAI (the night's leader) topped in AH and faded into PM (+77.5% → +72%), the AH peak being the marginally better exit. Consistent with prior evidence that AH runners tend to peak before PM.
+
