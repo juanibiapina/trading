@@ -37,6 +37,14 @@ Top low-float movers (regular session):
 
 **Evaluation notes:** Regular-session scan (15:30 ET). No AH liquidity yet, so no entries per the regular-session caution rule. Many hits show faded intraday volume (VChg% negative). Re-scan at 22:00+ CET to confirm which names carry into after-hours with sustained momentum before any entry. Learning-phase default also blocks entries before the 23:00 CET scan.
 
+## Scan 22:00 CET (4:00 PM ET) — AH open
+
+Scanner run at 16:00:09 ET (right at AH open): **0 hits**. AH volume has not accumulated yet this early, so VRatio/AH-volume gates catch nothing — expected at the AH-open scan.
+
+**Observation only** — learning-phase default blocks entries before the 23:00 CET scan. No paper trades.
+
+Carrying the 21:30 regular-session watch names (CURI, LNSR, PMA, LEXX, JUNS, OPRX) forward to cross-check at 22:30/23:00 for AH follow-through. GXAI already traded+sold today (-9.9%) — do not re-enter.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
