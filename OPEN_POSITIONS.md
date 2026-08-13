@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
 | DARE | $1.70 | $1.70 | $1.79 (AH) | 58 | 2026-08-13 23:00 CET | B | 1bd245a5 | Daré Bioscience Q2 2026 earnings + company update call 4:30 PM ET today. Float 13.6M, Day -4.9%. AH held $1.65-1.66 (7% off $1.79 high) across 22:30/22:45/23:00, CONFIRM-3 YES. Total% +21%. |
+| GRSD | $2.17 | $2.17 | $2.35 (AH) | 45 | 2026-08-13 23:30 CET | B | 7c234542 | Q2 2026 earnings + conference call after close today. Float 20.5M, Day +1.1%. AH >10% at 22:45 (+16.2%) and 23:30 (+10.5%) — 2-scan gate met. SIP peaked $2.35 @16:20 ET, rebuilt to $2.11 (10% off high, within 20% = hold) on returning volume (42K/35K sh last bars). Total% +11.6%. |
 
 ## Position Rules
 
