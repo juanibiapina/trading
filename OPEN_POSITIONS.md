@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| GXAI | $1.42 | $1.42 | $1.53 (AH) | 64 | 2026-08-12 23:00 CET | C | c99e8f14 | Gaxos.ai, AI/gaming, float 10.5M. AH BUILD 3 scans (+28.7→+56.1→+66.6%), real SIP vol (1.5-3.4M sh/bar), real book, CONFIRM-3 YES. Same-day GlobeNewswire PR ~16:10 ET (revenue/ad-efficiency operational update) = Grade C. BUY 64 @ limit $1.59 ext filled @ $1.42. Grade C: exit in premarket, stop -10% ($1.28). |
+| _none_ | | | | | | | | No open positions |
 
 ## Position Rules
 
@@ -60,6 +60,7 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| GXAI | $1.42 | $1.28 | -$8.96 | -9.9% | 1 | C (Gaxos.ai, AI/gaming, float 10.5M; same-day GlobeNewswire PR ~16:10 ET, revenue/ad-efficiency operational update) | Grade C — exit in first PM pulse + at -10% stop. Entered 08-12 23:00 CET on AH BUILD 3 scans (+28.7→+56.1→+66.6%), AH peak $1.53. PM 08-13 opened liquid ($1.45, 4.1M sh/23,929 trades first bar), faded from $1.53 peak to ~$1.30 (SIP vwap $1.30-1.33, liquid 800K+ sh/bar). Alpaca quote stale (prior close); used SIP level. SELL 64 @ limit $1.27 ext (id ae927a22) filled @ $1.28 (price improvement). Real fill $1.28. AH BUILD did not produce PM follow-through. |
 | DRMA | $1.52 | $1.23 | -$19.14 | -19.1% | 1 | B (Dermata Therapeutics Q2 earnings + first commercial product launch date, Tome Foundational Treatment Aug 25; GlobeNewswire 08-11 after close; float 2.7M) | Grade B — below -15% hard stop ($1.29). Entered 08-11 23:00 CET. Clean AH BUILD 3 scans (+18.5%→+34.3%→+49.0%), OVN/PM peak $1.59 (+4.6%, never approached +30% trail). PM 08-12 faded monotonically from $1.59 open to $1.35 (SIP vwap $1.48→$1.35, liquid 90K-950K sh/bar). Live bid $1.21 x100 at 14:30 CET pulse. Sold on hard stop. SELL 66 @ limit $1.18 ext (id fcf9ca9f) filled @ $1.23 (price improvement). Real fill $1.23. Solid catalyst but no AH→PM follow-through. |
 | BAOS | $0.90 | $2.24 | +$136.68 | +148.9% | 1 | None (Baosheng Media, China online-marketing microcap, float 1.0M; no same-day catalyst) | Grade None — exit at first PM opportunity at any profit. Entered 08-12 00:00 CET. PM 08-12 opened liquid ($1.70, 2.6M sh/20,862 trades first bar), ran to $2.19H, holding ~$2.07 (SIP vwap $2.01-2.06). Sold first PM pulse. SELL 102 @ limit $1.98 ext (id 40fe100d) filled @ $2.24 (price improvement). Real fill $2.24. Rare Grade-None overnight runner — exit-at-any-profit rule captured +149%. |
 | BOXL | $4.01 | $5.83 | +$43.68 | +45.4% | 1 | None (Boxlight, K-12 edtech, float 564K ultra-low; no confirmed same-day catalyst) | Grade None — exit at first PM opportunity at any profit. Entered 08-12 00:00 CET. PM 08-12 opened $4.35 (1.2M sh/22,015 trades first bar), ran to $6.50H, holding ~$5.89-6.09 (SIP vwap $6.03-6.09). Sold first PM pulse. SELL 24 @ limit $5.75 ext (id 742fee8e) filled @ $5.83 (price improvement). Real fill $5.83. |
