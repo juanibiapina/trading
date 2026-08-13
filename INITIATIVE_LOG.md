@@ -9,6 +9,18 @@ today, and sets the hypothesis/next step for the following run.
 
 ---
 
+### 2026-08-13 — Initiative 3: peak-ceiling gap is mostly UNCAPTURABLE by a fixed second pulse
+
+**Evaluated:** The 2026-08-12 step **worked** (9th seed GXAI is again a positive post-exit premarket peak, so the peak ceiling holds 9/9) **but its core hypothesis — "add a second premarket exit pulse to capture the gap" — is now substantially weakened by today's own analysis.** The prior runs reported a growing peak-ceiling tally (+229% over 8) as if a second pulse would capture it. That conflates the *perfect intrabar peak* with what a *fixed second decision time* actually gets.
+
+**Step taken:** **Pilot / Initiative 3 (execution pivot):** (1) seeded GXAI (Grade C, sold at the 08-13 04:30 ET exit) into `premarket-exit-gap.js`; (2) built `scripts/premarket-exit-pulse-sweep.js` (log-only) to measure the *realistic capturable* gain — the bar-close price at each candidate fixed second-pulse time (05:00–09:00 ET) vs our actual 04:30 ET exit, summed across all 9 seeded names. Verified the GXAI peak bar is genuine (1.8M sh / 7.5k trades, not a bad print). No orders, no schedule change.
+
+**Result:** GXAI exit $1.28 -> PM peak $1.56 at 05:35 ET (+21.9%) then faded to PM-last $1.33 (+3.9%); 9/9 seeds positive at the peak (peak-ceiling tally +251.1%). **The sweep is the decisive finding: the best fixed second-pulse time (06:00 ET / 12:00 CET) captures only +25.0% total across 9 names (~+2.8%/name), dominated by one outlier (PAVS +25.4%); without PAVS it is ~0.** Every other time is worse (05:00 ET -4.3%, 05:30 ET +1.1%, 07:00 ET +13.6%, 08:00 ET +10.7%). The early peakers (BAOS -21% by 06:00, BOXL, GXAI, WAFU) dump before any reasonable second pulse fires, so a hold-to-a-fixed-later-time rule gives back nearly all of the peak. The +251% is a **peak ceiling, not a capturable edge.**
+
+**Hypothesis / next step:** A blind second exit pulse is **not** supported — it would not reliably beat the 04:30 ET exit net of the fade. Capturing the gap needs a *peak-seeking* mechanism (a resting sell-limit above entry, or a trailing stop set at entry) that sells early spikes into strength, not a second fixed decision time. Next run: simulate a resting limit / trailing-stop exit set at entry over the 9 seeded names (log-only) to size what a peak-seeking rule actually captures vs the 04:30 ET exit, before proposing anything to Juan. Keep `CONFIRM-3` and both instruments log-only. Init 6 still waits for admitted PM-only-gapper n>=12 before the deferred 1-minute exit test.
+
+**Needs from Juan:** **softened proposal (evidence changed the ask):** the earlier "add a second premarket exit pulse" is weakened by the sweep; the better-evidenced candidate is a **peak-seeking premarket exit** (resting limit / trailing stop above entry) so early spikes sell into strength. Still to be proposed once the peak-seeking sim quantifies the capture — not applied. Also still open from 08-07: the Initiative 2 broker/feed decision for the ~203% fill gap (Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills).
+
 ### 2026-08-12 — Initiative 3: exit-timing gap holds a third session (n=8)
 
 **Evaluated:** The 2026-08-11 step **worked and its hypothesis held again.** It confirmed the exit-timing gap out-of-sample (5/5 held names with a positive post-exit premarket peak) and set this run to keep seeding held names. Today's 08-12 10:30 CET position eval sold three held names (BAOS Grade-None +148.9%, BOXL Grade-None +45.4%, FF Grade-B day-2) at the 04:31 ET exit — three fresh seeds.
