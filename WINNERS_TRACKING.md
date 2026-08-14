@@ -6,8 +6,9 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-08-12 | BAOS | D — crypto/blockchain pivot (1,000 mining machines) + share subscription financing | $2.19 PM SIP (+210% from $0.71 close @04:15 ET, 1.7M sh/12.5K trades); AH SIP peak $1.97 (+170%) | - | $0.73 | Day 2: faded to $0.73 from $2.19 day-1 peak. **DETECTED + ENTERED @ $0.90**, exited $2.24 (+148.9%) — captured the runner. Float 1.0M |
-| 2026-08-11 | NCRA | None (unverified; digital-asset/BTC-treasury pivot narrative) | $4.21 PM SIP (+113.7% from $1.97 close @04:00 ET, 1.83M sh/23.5K trades); AH dead flat | - | $2.45 | Day 3: faded to $2.45. **PM-only gapper** (no AH footprint), NOT detectable — not counted vs baseline. Peak was a single-bar spike; realistic exit ~+83% VWAP first bar only. Float 474K |
+| 2026-08-13 | AKAN | A — operational (200 km fiber network complete, recurring-revenue billing, Aug 13 PR) | $11.74 PM SIP (+117.8% from $5.39 close @04:00 ET, 908K sh/29K trades); AH SIP peak $11.63 (+116%) build-and-hold | - | $10.24 | Day 1: **DETECTED all scans but NOT ENTERED — broker-block** (`tradable=false` + `ask $0.00 x0`). Winner cleared >100% on heavy volume. Float 541K micro |
+| 2026-08-12 | BAOS | D — crypto/blockchain pivot (1,000 mining machines) + share subscription financing | $2.19 PM SIP (+210% from $0.71 close @04:15 ET, 1.7M sh/12.5K trades); AH SIP peak $1.97 (+170%) | - | $0.76 | Day 2: faded to $0.73 from $2.19 day-1 peak. **DETECTED + ENTERED @ $0.90**, exited $2.24 (+148.9%) — captured the runner. Float 1.0M |
+| 2026-08-11 | NCRA | None (unverified; digital-asset/BTC-treasury pivot narrative) | $4.21 PM SIP (+113.7% from $1.97 close @04:00 ET, 1.83M sh/23.5K trades); AH dead flat | - | $2.34 | Day 3: faded to $2.45. **PM-only gapper** (no AH footprint), NOT detectable — not counted vs baseline. Peak was a single-bar spike; realistic exit ~+83% VWAP first bar only. Float 474K |
 
 _2026-08-13: **no real winner** (nothing >100% on accumulating volume). GXAI detected + entered @ $1.42 (AH +77.5% SIP peak, faded to +72% PM, sub-100%); FRGT PM-only gapper +85.6%. See log/2026-08-12 Morning Evaluation._
 

@@ -316,3 +316,92 @@ Scanner run at 18:30:14 ET: **17 hits**. Candidates >10% AH: MGRX, CAPR, AKAN, D
 | DARE | $1.70 | 2026-08-13 23:00 CET | 58 | 1bd245a5 | Grade B — Q2 2026 earnings + company update call 4:30 PM ET. Float 13.6M, Day -4.9%. AH HOLD $1.65-1.66 (7% off $1.79 high) across 3 scans, CONFIRM-3 YES, Total% +14.8%. |
 | GRSD | $2.17 | 2026-08-13 23:30 CET | 45 | 7c234542 | Grade B — Q2 2026 earnings + conference call after close. Float 20.5M, Day +1.1%. AH >10% at 22:45/23:30 (2-scan gate), SIP rebuilt to $2.11 (10% off $2.35 high = hold), Total% +11.6%. |
 | ONFO | $3.02 | 2026-08-14 00:30 CET | 29 | d58b9949 | Grade B — Onfolio Q2 2026 earnings today. Float n/a, Day -1.7%. AH BUILD across 23:30/00:00/00:30 (+16→+18→+44%), SIP peak 452K sh/4,212 trades @17:20 ET. Blocked by no-fill at 00:00, filled 00:30 (limit $3.35, ask $3.02). Total% +41.7%. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**AKAN** — Agricultural Commodities/Milling (Akanda Corp.)
+- Catalyst: **Grade A operational** — Aug 13 PR "First Towers & Fiber Increases Recurring Revenue with Completion of 200 KM Fiber Network"; first 100 km accepted by a network provider, entered billing, lease cash flow expected Aug/Sep 2026. (Evening searches missed this — logged as "no catalyst found"; PR surfaced ~12h ago.)
+- Previous Close: $5.39
+- AH last night: SIP peak $11.63 (+115.8%) at 16:50 ET (Yahoo $11.33 +110.2%); built to peak in first 50 min, then held $9.50–10.50 all AH
+- Premarket now: $10.24 (+90%), SIP PM peak $11.74 (+117.8%) at 04:00 ET on 908K sh / 29K trades
+- Hypothetical P&L (AH first-confirm $7.98 @16:15 ET → PM peak $11.74): +47.1% — **untradable (no fillable book), hypothetical only**
+- Float: 541K micro | Market Cap: $3.9M
+- SIP volume confirms bar: AH bars 480K–900K sh, 8K–18K trades each; cleared >100% on heavy accumulating volume
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — surfaced from AH open (16:05 ET spike +19%, confirmed 16:15 ET $7.98), appeared in all 9 evening scans, gate met by 22:30.
+- Why we didn't act: **broker-block**, not a scanner miss. Alpaca `tradable=false` and `quote` = `ask $0.00 x0` (no fillable book) at every scan from 23:00 on. Skipped correctly (can't fill).
+- Scanner gap: none — detection worked cleanly. The miss was catalyst discovery (Grade A operational PR not found in live searches) and broker tradability.
+
+**Broker-block tracking:** AKAN (Aug 13, qualified all AH scans from 22:30, Grade A operational, hypo AH-confirm $7.98 → PM peak $11.74 = +47.1%; `tradable=false` + `ask $0.00 x0`). Ultra-low-float (541K) micro on Alpaca. Adds to the SHPH-led broker-block tally (SHPH Jun 25, SHPH Jul 13). Not counted against detection or selection baseline.
+
+### Baseline Tracking
+
+- Days tracked: **66** (was 65 + 1)
+- Winners detected by scanner: **53/62 (85.5%)** — AKAN detected and added.
+- Winner selected for paper trade: **30/61 (49.2%)** — AKAN broker-blocked (`tradable=false`), not a selection opportunity; denominator not incremented per broker-block rule.
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+- Live PM scan (04:20 ET): 7 hits. AKAN +104% ($10.22), SXTC +69.7%, CAPR +61.5%, ONFO +45.9%, ONFO, MGRX +5%, DARE +13.1%, CAST +19.6%.
+- AKAN AH reconstruction: prev close $5.39 → AH peak $11.63 SIP (16:50 ET) → held $9.50–10.50 → PM $11.74 peak. BUILD-and-hold, clean detectable winner.
+- SXTC = PM-only gapper (AH only +10.6%, PM +69.7%) — see PM-only tracking.
+
+### Open Position P&L (Alpaca)
+
+**Quote-freshness guard applied:** all Alpaca quotes stamped 2026-08-13T20:00 ET (prior regular close) — `current_price` is stale for ext-hours-active names. P&L reported against live SIP PM prices, not the stale Alpaca figure. These are context only; exits handled by position-evaluation.md.
+
+| Ticker | Entry | Live PM | Stale Alpaca | Live P&L | Note |
+|--------|-------|---------|--------------|----------|------|
+| DARE | $1.70 | ~$1.57 | $1.52 (−10.4%) | **−7.6%** | PM +13% off close but below entry; AH HOLD faded |
+| GRSD | $2.17 | $2.09 | $2.09 (−3.7%) | **−3.7%** | thin PM (68 trades/bar), flat |
+| ONFO | $3.02 | $3.37 | $3.10 (+2.6%) | **+11.6%** | running — SIP PM peak $3.88 (+28.5%) on 932K sh; stale Alpaca badly understates |
+
+No new Alpaca fills this session (winner AKAN untradable). Realized P&L: none this session.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled (21:30–00:30 CET), plus 22:15 & 22:45 extras = 9 total scan sections. Full entry-window coverage.
+- Candidates found: MGRX, AKAN, CAPR, DARE, GRSD, ONFO, DAAQ, TPCS, BAOS, OXBR, HUMA, EPOW.
+- Retrospective match: winner AKAN caught in all scans. No detection miss.
+
+### Missed Opportunities
+
+No detection miss. AKAN detected; skip was broker tradability, not scanner. SXTC PM-only gapper (structurally undetectable by AH scanner).
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| AKAN | $11.63 (+116%) | 16:50 ET | Build→hold | $10.24 (+90%) | −12% | +90% | Winner (broker-blocked); PM peak $11.74 slightly exceeded AH |
+| CAPR | $7.03 (+67%) | ~17:00 ET | Build | $6.80 (+61.5%) | −3% | +61.5% | Held near AH, mild fade |
+| ONFO | $3.44 (+44%) | 17:20 ET | Build | $3.37 (+45.9%) | +13% | +45.9% | Continued/built into PM, SIP peak $3.88 |
+| MGRX | $0.72 (+36%) | 16:05 ET | Spike→fade | $0.56 (+5%) | −22% | +5% | Faded hard into PM |
+| DARE | $1.79 | ~16:xx | Spike→hold→fade | $1.57 (+13%) | −12% | +13% | Faded, below entry |
+| GRSD | $2.35 | ~AH | Spike→fade | $2.09 | −11% | −5% | Faded |
+| DAAQ | $10.42 (+43%) | 17:09 ET | Build (no ignition) | n/a (<threshold) | — | — | Faded out of PM hits |
+| TPCS | $5.90 (+22%) | 16:44 ET | Spike→fade | n/a | — | — | Faded |
+
+**AH-peak-vs-PM-peak check:** AKAN PM peak $11.74 (+117.8%) marginally *exceeded* AH SIP peak $11.63 (+115.8%) — an extreme (>+130%-adjacent, ~+116%) runner that **continued** into PM, a negative-control-style case for the fade hypothesis, though just under the +130% zone. ONFO PM peak (+28.5%) > AH peak (+44% total from close... PM $3.88 > AH $3.44) continued. MGRX/DARE/GRSD faded (AH better exit).
+
+### Notes
+- **Coverage:** 7 of 7 evening scans ran. No coverage failure.
+- **Baseline gap:** none. Aug 13 is the immediately-preceding trading day; Aug 12 log held the prior baseline. Chain intact.
+- **Broker-block tally:** AKAN added (Grade A operational, hypo +47.1%, `tradable=false` + `ask $0.00 x0`). Ultra-low-float micro (541K). Cumulative broker-block cost keeps growing on ultra-low-float names (SHPH x2, now AKAN) — dataset for Juan's broker-coverage decision. Not counted against baseline/selection.
+- **Catalyst-discovery gap (surface to email):** AKAN had a real **Grade A** operational catalyst (200 km fiber network completion, recurring revenue billing) that live evening searches labeled "no catalyst found." The PR was public Aug 13. This is the second-order miss — detection worked, but catalyst grading was wrong, which would have raised conviction had it been tradable.
+- **Fade-rule false-negative:** no AH-fader re-explosion this session. Standing sub-3M count unchanged at **4 of 12** (trigger ≥4/5 NOT met).
+- **In-window feed-lag miss:** none — final-scan cross-check confirmed all tracked names at correct SIP levels. Standing count **4** (trigger reached; AH-data-source-verification recommendation already routed to email).
+- **PM-only gapper:** SXTC (Aug 13→14, close $3.30 → PM +69.7% $5.60, AH only +10.6%). Biggest raw PM mover after AKAN. AH→PM continuation for AKAN was the true winner; SXTC is a PM-only gapper — confirm classification in log/pm-open-scan.csv. Not a detection miss.
+- **No** late-AH-tail surge, price-floor exclusion, reverse-split entry, dead-cat/ceiling override, or stale-book execution-block this session.
+- **Position note (context only):** ONFO running (+11.6% live, PM peak +28.5%) while Alpaca reported stale +2.6% — flagged for the 10:30 position-evaluation pulse.
+
+### Price Charts
+
+```
+AKAN — prev close $5.39 | peak $11.73 (+117.6%) at 08-14 08:00 ET
+Build to $11.33 at AH open (16:50 ET), held $9.50–10.50 all AH, PM open $10.24 → $11.74 peak.
+BUILD-and-hold pattern; heavy accumulating SIP volume (480K–900K sh/bar). Untradable (no book).
+```
