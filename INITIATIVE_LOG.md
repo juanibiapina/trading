@@ -7,6 +7,18 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-08-14 — Initiative 3: peak-seeking exit sim — resting +10% sell-limit is the winning mechanism
+
+**Evaluated:** The 2026-08-13 step **worked and its hypothesis is now answered.** It concluded a *fixed* second exit pulse captures little of the +251% peak ceiling (best time +25.0% total, one-outlier-driven) and pointed to a peak-seeking mechanism instead. Today's sim confirms that read: a peak-seeking rule roughly doubles the capture of the best fixed pulse and is far more robust.
+
+**Step taken:** **Pilot / Initiative 3 (execution pivot):** built `scripts/peak-seeking-exit-sim.js` (log-only, no orders). For each of the 9 seeded held names it walks the real premarket SIP 5-min path strictly after our 04:30 ET exit (capped 09:30 ET / 13:30Z) and simulates two peak-seeking exits set at the exit decision: a resting sell-limit at exit*(1+L%) for L in {5,10,15,20,30}, and a trailing stop at {8,12,15,20}% from the running high. Baseline = our actual 04:30 exit price; positive = beats selling at 04:30. `node --check` passes and the tool runs.
+
+**Result:** **Resting sell-limit is the winner: +10% above exit captures +55.1% total / +6.1% per name, positive on 8 of 9 (only MGIH -1.0).** Other limits: +5% -> +34.8%, +15% -> +39.7%, +20% -> +20.2%. The +10% edge is robust, not outlier-driven (+45.1% over 8 even excluding PAVS). Trailing stops are worse and whipsaw (best +25.8% at 20% width, negative on BAOS/BOXL/MGIH). The +10% limit beats higher limits because early peakers (BAOS +12% then -48%, BOXL +16% then -22%) spike then crash: a modest resting limit fills into the first spike and locks it before the dump, while a +15-20% limit never fills on those and falls to a deeply negative PM-last (BAOS -25.5%). Decisive contrast: the resting +10% sell-limit (+55.1%, 8/9 positive) beats both the fixed second pulse (+25.0%, one-outlier-driven) and every trailing stop.
+
+**Hypothesis / next step:** A resting sell-limit ~+10% above the exit price, set at the 04:30 ET exit decision (GTC through premarket, cancel 09:30 ET) with the 04:30 market exit as fallback, captures a robust ~+6%/name of the premarket peak that a plain 04:30 exit leaves behind. This is now a firm proposal to Juan (changes live exit behavior -> proposed, not applied; routed to the daily email + roadmap open-asks). Next run: seed 1-2 more held names as they exit and re-run the sim to confirm the +10%-limit edge holds out-of-sample before any wiring. Keep `CONFIRM-3` and both instruments log-only. Init 6 still waits for admitted PM-only-gapper n>=12 before the deferred 1-minute exit test.
+
+**Needs from Juan:** **firmed proposal (was softened 08-13):** replace the plain 04:30 ET market exit for Grade-None/held overnight names with a resting +10% sell-limit (GTC premarket, cancel 09:30 ET), keeping the 04:30 market exit as fallback. Evidence: +55.1% total / +6.1%/name over 9 seeds, positive on 8/9. Veto window; not applied. Also still open from 08-07: the Initiative 2 broker/feed decision for the ~203% fill gap (Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills).
+
 ---
 
 ### 2026-08-13 — Initiative 3: peak-ceiling gap is mostly UNCAPTURABLE by a fixed second pulse
