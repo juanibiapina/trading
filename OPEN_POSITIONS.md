@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| DARE | $1.70 | $1.58 | $1.79 (AH) | 58 | 2026-08-13 23:00 CET | B | 1bd245a5 | Daré Bioscience Q2 2026 earnings + company update call. Float 13.6M. 08-14 14:30 CET: bid $1.56 x100, SIP settled $1.47-1.54 all AM. P&L -7.1%, above -15% stop ($1.445). Peak +5.3%, no trail. Day 1. HOLD. |
+| DARE | $1.70 | $1.58 | $1.79 (AH) | 58 | 2026-08-13 23:00 CET | B | 1bd245a5 | Daré Bioscience Q2 2026 earnings + company update call. Float 13.6M. 08-14 14:30 CET: bid $1.56 x100, SIP settled $1.47-1.54 all AM. P&L -7.1%, above -15% stop ($1.445). Peak +5.3%, no trail. Day 1. HOLD. **Juan feedback 08-14: "DARE should probably have left already" — re-check exit next position-evaluation (stalled Grade B, no PM follow-through).** |
 | GRSD | $2.17 | $2.13 | $2.35 (AH) | 45 | 2026-08-13 23:30 CET | B | 7c234542 | Q2 2026 earnings + conference call. Float 20.5M. 08-14 14:30 CET: SIP near-dead book $2.09-2.15 (1-4 trades/bar); Alpaca ask $2.31 stale/wide. P&L -1.7%, above -15% stop ($1.845). Peak +8.3%, no trail. Day 1. HOLD. |
 | ONFO | $3.02 | $2.67 | $3.88 (PM 08-14) | 29 | 2026-08-14 00:30 CET | B | d58b9949 | Onfolio Holdings Q2 2026 earnings (Aug 13). 08-14 PM spiked $3.88H @08:05Z (932K sh/10,950 trades, real/liquid) = peak +28.5%, dumped to $3.00 by 08:15Z, faded to $2.67. 14:30 CET: bid $2.60 x100. P&L -11.6%, above -15% hard stop ($2.567). Peak +28.5% just under +30% trail; no trigger fired. Day 1. HOLD (flag: spike-and-fade near hard stop — sell next pulse if bid < $2.567). |
 

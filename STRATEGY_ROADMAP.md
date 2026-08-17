@@ -104,6 +104,16 @@ the ignition**, not a new signal.
    (log-only) to size the exit-timing gap out-of-sample before proposing any
    exit-pulse retiming (a trading-pulse change -> Juan). **Flag for Juan:** the
    10:30 CET single exit pulse looks too early for multi-day holds.
+   **Update 2026-08-14 (Juan feedback, 08-13 cycle):** two fresh live points
+   reinforce this initiative and the ignition gate. (1) **ONFO** was entered at
+   00:30 (18:30 ET) only after it had already built +44.2% and printed its
+   spike — a textbook late/chase entry; Juan: "ONFO entered too late." (2)
+   **GRSD** was entered on the 2-AH-scan gate with CONFIRM-3 **NO** and a thin
+   3k-sh/44-trade spike bar; Juan: "absolutely a NOGO ... no volume spike."
+   Both say the CONFIRM-3 volume-spike ignition should be a **hard entry gate**,
+   not a log-only column, and that entry must be near the ignition, not after
+   +40%. Routed as a scanner-improvement candidate (see `FEEDBACK_LOG.md`
+   2026-08-14).
 3. **Initiative 5 - better data + review surface (graphs, sources).** AH/PM
    volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
    raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports

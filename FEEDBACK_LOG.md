@@ -6,6 +6,47 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-08-14 — re: Trading Scanner Report - 2026-08-13
+
+**Juan said:** "GRSD is absolutely a NOGO. there was no volume spike. ONFO
+entered too late. DARE should probably have left already, but you can double
+check."
+
+**Interpretation:** Three separate execution points, all entry/exit-timing, not
+detection.
+
+1. **GRSD = NOGO, no volume spike.** GRSD was entered (23:30, $2.17) on the
+   2-AH-scan gate alone. The log itself flagged CONFIRM-3 **NO** ("no
+   local-volume new-high ignition") and a thin book (spike bar 3k sh / 44
+   trades). Juan confirms: with no volume-spike ignition it should never have
+   been entered. The 2-AH-scan gate is not sufficient — a confirmed
+   volume-spike ignition (CONFIRM-3 YES) should be a hard entry gate, not an
+   observation-only column.
+2. **ONFO entered too late.** ONFO was entered at 00:30 (18:30 ET, $3.02) only
+   after it had already built +44.2% across scans and printed its $3.07/$3.88
+   spike — we chased the move post-ignition. This is the Initiative 3
+   late-entry problem: we see the name flat pre-ignition, then enter once it is
+   already extended.
+3. **DARE exit.** Currently HELD Day 1 (entry $1.70, ~-7%, peak only +5.3%).
+   Catalyst produced no PM follow-through; PM volume collapsed (233K to 9K
+   sh/bar). Juan thinks it should have exited already; wants a double-check.
+
+**Action:**
+- **GRSD (scanner/process, biggest lever):** logged as a scanner-improvement
+  candidate — promote the CONFIRM-3 volume-spike ignition from a log-only
+  column to a **hard entry gate** (no ignition = no entry), and treat a thin
+  ignition bar (single-digit-k shares / <~50 trades) as a disqualifier. Routes
+  to the next scanner-improvement run; does not touch strategy unilaterally.
+- **ONFO (Initiative 3):** added as a fresh live example of the late-entry
+  problem to the Init 3 notes — reinforces "enter near the ignition, not after
+  the name is already +40%."
+- **DARE (position-evaluation):** flagged for the next premarket
+  position-evaluation to re-check the exit call on a stalled Grade B (peak
+  +5.3%, no follow-through, dead PM book). Not selling here — capture and
+  route.
+
+---
+
 ### 2026-08-12 — re: Trading Scanner Report - 2026-08-11
 
 **Juan said:** "Great Job today. Keep monitoring BAOS to see if this is the
