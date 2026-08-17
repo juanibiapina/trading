@@ -143,6 +143,26 @@ the ignition**, not a new signal.
    median negative: trail12 +2.4%/−2.0%, N1 +7.5%/−1.3%; wins INLF-outlier-driven;
    gate still admits the uninvestable WLDS). Admitted 8 < the ~12 threshold, so
    the 1-min exit test stays deferred; keep accumulating.
+   **Update 2026-08-17 — deferred 1-min exit test RUN (admitted set reached
+   n=12, FRGT 08-13 added) and it is the first POSITIVE Init 6 result.** Built
+   `scripts/pm-gapper-exit-sim-1min.js` (log-only): reuses the exact 5-min
+   continuation gate to fix entry, then walks 1-MINUTE SIP bars applying
+   close-based trailing stops AND resting sell-limits at entry*(1+L%) that fill
+   intrabar. **A resting +10% sell-limit (lim10) captures mean +4.0% / median
+   +10.0%, positive 9 of 12** — decisively beating every 5-min exit and every
+   1-min trailing stop (all negative median), and clearing the ~1-3% spread. It
+   fills intrabar 7/12; the only 3 losers are the non-holdable thin/uninvestable
+   admits (WLDS -23%, BJDX -9%, EHGO-2 -3%), so on the 7 holdable admits lim10 is
+   positive on all (~+9.8% mean). Higher limits (lim30/50) have higher mean but
+   lower fill rate and are INLF-outlier-driven; lim10 is the robust choice. The
+   5-min sim was negative only because the peak prints intrabar — a 1-min resting
+   limit catches it. **This converges with Init 3's independent peak-seeking
+   finding (a resting +10% sell-limit was also the winner there, +6.1%/name).**
+   Two separate studies now point at the same mechanism. Still log-only, no live
+   PM-gapper scalp pulse proposed alone; folds into the Init 3 peak-seeking-exit
+   proposal to Juan (resting +10% sell-limit). Next: keep growing the admitted
+   set; consider tightening the gate to stop admitting the thin/uninvestable
+   names (WLDS/BJDX) that drag the mean.
 5. **Initiative 1 - earlier volume-lead entries.** **Hypothesis falsified
    (2026-07-15):** volume does not lead price — ignition is a single-minute
    co-spike at both 5m and 1m resolution (`INIT1_VOLUME_LEAD.md`). No standalone
