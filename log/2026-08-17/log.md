@@ -197,6 +197,53 @@ AH open +120 min. Second-to-last scan. Scanner returned **13 hits**.
 
 **Night status:** 2 entries tonight (XOS 23:30, SGLY 00:00). SGLY is the ultra-low-float second-BUILD-leg name; XOS the Grade-B contract BUILD. Final scan 00:30 CET to cross-check WFF 2nd AH scan and any feed-lag pipeline names.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+AH open +150 min. **Final scheduled scan.** Scanner returned **15 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XOS  | [TV](https://www.tradingview.com/chart/?symbol=XOS)  | $2.09 | -0.2% | +87.1% | $3.91 | +86.6% | 19.9M | 2.8M | 7.1x | 6.9M | Motor Vehicles |
+| AUUD | [TV](https://www.tradingview.com/chart/?symbol=AUUD) | $0.97 | -4.9% | +20.6% | $1.17 | +14.7% | 9.4M | 15.3M | 0.6x | 4.8M | Packaged Software |
+| IVF  | [TV](https://www.tradingview.com/chart/?symbol=IVF)  | $1.53 | +57.5% | +14.1% | $1.75 | +79.6% | 4.8M | 12.0M | 0.4x | 2.1M | Medical/Nursing Services |
+| WFF  | [TV](https://www.tradingview.com/chart/?symbol=WFF)  | $2.02 | +40.3% | +11.9% | $2.26 | +56.9% | 4.2M | 12.3M | 0.3x | 13.3M | Textiles |
+| IPST | [TV](https://www.tradingview.com/chart/?symbol=IPST) | $7.39 | +235.9% | +9.2% | $8.07 | +266.8% | 2.5M | 10.5M | 0.2x | 679K | Beverages: Alcoholic |
+| TRUG | [TV](https://www.tradingview.com/chart/?symbol=TRUG) | $1.54 | +58.8% | +5.8% | $1.63 | +68.1% | 1.5M | 6.9M | 0.2x | 1.0M | Packaged Software |
+| SGLY | [TV](https://www.tradingview.com/chart/?symbol=SGLY) | $4.49 | -8.7% | +56.3% | $7.02 | +42.7% | 1.1M | 285K | 3.8x | 897K | Air Freight/Couriers |
+| EJH  | [TV](https://www.tradingview.com/chart/?symbol=EJH)  | $1.45 | -16.7% | +16.6% | $1.69 | -2.9% | 328K | 65K | 5.1x | 2.5M | Other Consumer Services |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $4.21 | +7.9% | +16.9% | $4.92 | +26.2% | 234K | 1.0M | 0.2x | 1.1M | Advertising/Marketing Services |
+| CHRS | [TV](https://www.tradingview.com/chart/?symbol=CHRS) | $1.15 | -4.2% | +8.7% | $1.25 | +4.2% | 178K | 1.3M | 0.1x | 115.4M | Pharmaceuticals: Major |
+| VSME | [TV](https://www.tradingview.com/chart/?symbol=VSME) | $1.21 | -6.9% | +6.6% | $1.29 | -0.8% | 175K | 81K | 2.2x | 2.6M | Advertising/Marketing Services |
+| GNPX | [TV](https://www.tradingview.com/chart/?symbol=GNPX) | $4.47 | +3.6% | +9.5% | $4.90 | +13.4% | 145K | 171K | 0.8x | 503K | Pharmaceuticals: Major |
+| DFSC | [TV](https://www.tradingview.com/chart/?symbol=DFSC) | $2.16 | -28.0% | +13.4% | $2.45 | -18.4% | 98K | 15.1M | 0.0x | 2.7M | Miscellaneous Commercial Services |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $2.80 | +34.0% | +6.4% | $2.98 | +42.6% | 66K | 1.2M | 0.1x | 3.0M | Industrial Machinery |
+| LFMD | [TV](https://www.tradingview.com/chart/?symbol=LFMD) | $3.32 | -3.8% | +5.7% | $3.51 | +1.7% | 61K | 1.5M | 0.0x | 39.3M | Medical/Nursing Services |
+
+**Instrumentation (log-only, no decision impact):**
+- XOS:  `SPIKE 16:30ET +38% $2.89 827 trades / 126k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:30ET 709.1x; confirmed 16:40ET $2.73`
+- SGLY: `SPIKE 17:05ET +54% $6.92 182 trades / 14k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 17:05ET failed third-bar hold/volume`
+- WFF:  `SPIKE 17:19ET +22% $2.47 2037 trades / 291k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 17:15ET failed third-bar hold/volume`
+- STFS: `SPIKE 17:54ET +18% $4.98 135 trades / 20k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 17:50ET failed third-bar hold/volume`
+- IVF:  `SPIKE 17:11ET +25% $1.91 617 trades / 141k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 17:00ET 3.9x; confirmed 17:10ET $2.11`
+- AUUD: `SPIKE 16:06ET +21% $1.17 2301 trades / 460k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume`
+- EJH:  `SPIKE 16:57ET +41% $2.04 155 trades / 13k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:55ET failed third-bar hold/volume`
+- DFSC: `NO-SPIKE peak +13% @18:14ET (no bar cleared +15% on a volume co-spike)` | `CONFIRM-3 NO no local-volume new-high ignition`
+
+**Decision: NO NEW ENTRIES. XOS + SGLY entries stand (2 positions tonight).**
+
+- **WFF** — meets 2-AH-scan gate (00:00 +23.3% → 00:30 +11.9%) but confirmed **SPIKE→FADE**. SIP: ignition 17:15 ET $2.05→$2.47 (563k sh/3724 trades), peaked $2.48 at 17:20 ET, then declining every bar — $2.31→$2.28→$2.30→$2.33 base. AH Chg falling across scans (+23.3%→+11.9%), price $2.49→$2.26. Peaked before 17:30 ET and declining across scans = 0/10+ PM-continuation profile. CONFIRM-3 NO, float 13.3M (>10M ideal), `tradable=true` but book thin (`bid $1.94 x100 / ask $1.97 x100`, quote stale 20:59Z). Trajectory dominates catalyst — **skip** without burning searches (early-peak-fading = 0/7 regardless of catalyst). **Skip: SPIKE→FADE.**
+- **STFS** — fresh late ignition 17:50-17:55 ET (SIP $4.40→$4.98→$5.57H on 41k→165k sh/2389 trades), genuine BUILD leg, float 1.1M — but **first AH appearance this scan, only 1 AH scan >10%**, fails the 2-AH-scan gate. No prior footprint (not a feed-lag rescue case). Final scan, no later scan to confirm 2nd AH cross. **Skip: fails 2-AH gate.**
+- **AUUD** — SPIKE→FADE all night (+29.9%→+22.7%→+19.6%→+12.4%→+20.6% dead-cat wiggle off fade), peaked $1.30 @16:10 ET, CONFIRM-3 NO. **Skip.**
+- **IVF** — SPIKE→FADE: peaked $2.11-2.21 @17:10-17:15 ET, faded to ~$1.75. CONFIRM-3 YES but early-peak declining = 0/10+ profile. **Skip.**
+- **EJH** — Day% -16.7% dead-cat zone, AH $1.69 still above $1.45 close but Total% -2.9% (below prior close basis), thin (328K vol, 13k-sh spike/155 trades), CONFIRM-3 NO. Faded from +41.4% peak (23:30) — not building. **Skip: dead-cat + thin + fade.**
+- **DFSC** — Day% -28.0% dead-cat, Total% -18.4% (still below close), NO-SPIKE. **Skip: dead-cat.**
+- **IPST** — Total% +266.8%, far above +150% ceiling, VRatio 0.2x illiquid. **Skip: ceiling.**
+- **TRUG** (+5.8% AH), **CHRS** (+8.7%), **VSME** (+6.6%), **GNPX** (+9.5% thin), **CDTG** (+6.4%), **LFMD** (+5.7%) — below 10% AH threshold, do not qualify.
+
+**Final-scan feed-lag cross-check:** WFF cross-checked against SIP (confirms fade, not under-reported). STFS is a brand-new name with no prior AH footprint — cannot be rescued (morning-eval note if it runs PM). All other tracked names (IVF, AUUD, EJH, IPST, TRUG, GNPX, HWH) match their skip profiles on SIP; no TradingView under-report to rescue. No pipeline name recovered.
+
+**Night close:** 2 entries tonight — **XOS** (23:30, Grade B USAF contract, BUILD) and **SGLY** (00:00, Grade None ultra-low-float second-BUILD leg). Positions confirmed on Alpaca (XOS 21 sh @ $4.54, SGLY 14 sh @ $7.01). Both fading at final scan (XOS now $4.10 SIP, SGLY $6.29) — hold/sell decisions handled premarket by position-evaluation.md, not here.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
