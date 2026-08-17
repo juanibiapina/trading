@@ -108,8 +108,51 @@ AH open +60 min. First entry-eligible scan (learning phase). Scanner returned **
 
 **Night status:** SPIKE→FADE / below-threshold on all gate-meeting names. The one genuine BUILD (XOS) is one AH scan short of the gate. Hold for 23:30 to confirm XOS 2nd AH scan.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+AH open +90 min. Scanner returned **11 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XOS  | [TV](https://www.tradingview.com/chart/?symbol=XOS)  | $2.09 | -0.2% | +67.9% | $3.51 | +67.5% | 10.0M | 1.6M | 6.1x | 6.9M | Motor Vehicles |
+| AUUD | [TV](https://www.tradingview.com/chart/?symbol=AUUD) | $0.97 | -4.9% | +12.4% | $1.09 | +6.9% | 8.5M | 15.2M | 0.6x | 4.8M | Packaged Software |
+| IVF  | [TV](https://www.tradingview.com/chart/?symbol=IVF)  | $1.53 | +57.5% | +37.3% | $2.10 | +116.1% | 2.4M | 11.7M | 0.2x | 2.1M | Medical/Nursing Services |
+| IPST | [TV](https://www.tradingview.com/chart/?symbol=IPST) | $7.39 | +235.9% | +5.5% | $7.80 | +254.5% | 2.1M | 10.4M | 0.2x | 679K | Beverages: Alcoholic |
+| HWH  | [TV](https://www.tradingview.com/chart/?symbol=HWH)  | $1.91 | +5.5% | +18.7% | $2.27 | +25.3% | 194K | 719K | 0.3x | 7.7M | Financial Conglomerates |
+| EJH  | [TV](https://www.tradingview.com/chart/?symbol=EJH)  | $1.45 | -16.7% | +41.4% | $2.05 | +17.8% | 172K | 44K | 3.9x | 2.5M | Other Consumer Services |
+| VSME | [TV](https://www.tradingview.com/chart/?symbol=VSME) | $1.21 | -6.9% | +5.8% | $1.28 | -1.5% | 161K | 79K | 2.0x | 2.6M | Advertising/Marketing Services |
+| SGLY | [TV](https://www.tradingview.com/chart/?symbol=SGLY) | $4.49 | -8.7% | +11.8% | $5.02 | +2.0% | 137K | 135K | 1.0x | 897K | Air Freight/Couriers |
+| GNPX | [TV](https://www.tradingview.com/chart/?symbol=GNPX) | $4.47 | +3.6% | +12.8% | $5.05 | +16.9% | 102K | 166K | 0.6x | 503K | Pharmaceuticals: Major |
+| BRCC | [TV](https://www.tradingview.com/chart/?symbol=BRCC) | $0.82 | -4.0% | +6.5% | $0.87 | +2.3% | 83K | 1.6M | 0.1x | 105.5M | Food: Specialty/Candy |
+| LFMD | [TV](https://www.tradingview.com/chart/?symbol=LFMD) | $3.32 | -3.8% | +5.7% | $3.51 | +1.7% | 61K | 1.5M | 0.0x | 39.3M | Medical/Nursing Services |
+
+**Instrumentation (log-only, no decision impact):**
+- XOS:  `SPIKE 16:30ET +38% $2.89 827 trades / 126k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:30ET 709.1x; confirmed 16:40ET $2.73`
+- IVF:  `SPIKE 17:11ET +25% $1.91 617 trades / 141k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 17:00ET 3.9x; confirmed 17:10ET $2.11`
+- EJH:  `SPIKE 16:57ET +41% $2.04 155 trades / 13k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:55ET failed third-bar hold/volume`
+- HWH:  `SPIKE 17:12ET +25% $2.39 123 trades / 34k sh (first co-spike bar)` | `CONFIRM-3 PENDING ignition 17:10ET; waiting for third bar`
+- GNPX: `SPIKE 17:11ET +26% $5.63 108 trades / 7k sh (first co-spike bar)` | `CONFIRM-3 NO no local-volume new-high ignition`
+- AUUD: `SPIKE 16:06ET +21% $1.17 2301 trades / 460k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume`
+
+**Decision: ENTERED XOS.**
+
+- **XOS — ENTERED. 21 sh @ $4.54** (order b6972d5c). All gates clear:
+  - **Gate met:** 2 AH scans >10% (23:00 +30.6% → 23:30 +67.9%). Strong BUILD.
+  - **SIP confirms real accumulation (not bad print):** ignition 16:30 ET $2.10→$2.89 (745k sh/5638 trades), built every bar — 608k, 825k, 1.59M, 1.77M, 2.5M, 1.83M sh — to $4.05H @17:00 ET; VWAP tracks $2.48→$3.77, corroborates scanner AH price. Still making new highs at entry ($4.05→$4.32→$4.65, Yahoo AH high $4.72).
+  - **Catalyst (Grade B):** "Xos Secures U.S. Air Force Contract to Deliver Deployable Mobile Charging, Marking Defense Market Entry" (GlobeNewswire, Aug 17 ~16:45 ET). Contract win + new defense market = solid news, Grade B (hold up to 2 days).
+  - Float 6.9M (<10M), Day% -0.2 (flat, not dead-cat), Total% +117% at fill (under +150% ceiling), VRatio 6.1x, CONFIRM-3 YES, `tradable=true`.
+  - **Fill note:** free-tier SIP/quote lagged ~30-45 min (quote frozen 16:47 ET $2.83) while XOS ran to ~$4.6 real-time. Bumped limit through $3.70→$3.95→$4.35→$4.85; filled @ $4.54 (Yahoo AH confirmed live price $4.05→$4.65 in the SIP-blocked window). Entry is a genuine new-high chase within the ceiling, not a stale-book artifact.
+- **IVF** — Day +57.5% regular mover, now +37.3% AH (was +6.5% at 23:00). Only **1 AH scan >10%** — fails 2-AH-scan gate. CONFIRM-3 YES, float 2.1M, Total% +116% under ceiling. **Watch** — qualifies at 00:00 if it holds >10% AH (2nd scan).
+- **EJH** — Day% -16.7% (≤ -15% dead-cat zone), AH $2.05 reclaims above $1.45 close = **DEAD-CAT-OVERRIDE WATCH** (hypothetical entry $2.05 @ 23:30 CET). Still skip live: thin (172K AH vol, 13k-sh spike/155 trades), CONFIRM-3 NO, first AH appearance (1 scan). Records the dead-cat-override case per rule.
+- **HWH** — +18.7% AH but thin (194K AH vol, VRatio 0.3x), 1st AH scan, CONFIRM-3 PENDING. **Skip** (gate + thin).
+- **GNPX** — +12.8% AH, tiny float 503K but thin (102K AH vol, VRatio 0.6x, 7k-sh spike), 1st AH scan, CONFIRM-3 NO. **Skip** (gate + thin).
+- **AUUD** — confirmed SPIKE→FADE, AH fading every scan (+29.9%→+22.7%→+19.6%→+12.4%), CONFIRM-3 NO. **Skip.**
+- **IPST** — Total% +254.5%, far above +150% ceiling, VRatio 0.2x illiquid. **Skip.**
+- **SGLY** (+11.8% AH but Total% +2.0%, thin), **VSME/BRCC/LFMD** (<10% AH) — do not qualify.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| XOS | $4.54 | 2026-08-17 23:30 CET | 21 | b6972d5c | BUILD 2 AH scans (+30.6%→+67.9%), USAF deployable-charging contract (Grade B), float 6.9M, real SIP accumulation to $4.05H, Total% +117% under ceiling |
 </content>
