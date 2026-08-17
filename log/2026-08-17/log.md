@@ -32,6 +32,15 @@ AH open (16:00 ET). Scanner returned **0 hits** — postmarket feed empty this m
 - None of the 21:30 regular-session watch names (IPST, OSRH, CYBHF, IVF, TRUG, SLE) crossed into AH scan yet. Watch for real AH accumulation at 22:30/23:00 scans.
 - 21:30 watch names carried the thin/fading profile (VChg% near -100%, 5mVol 100-250 sh) into the close — need real fillable AH book before any entry.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+AH open +15 min. Scanner returned **0 hits**. No candidates.
+
+**Notes:**
+- Observation-only scan (learning phase: no entries before 23:00 CET / 5:00 PM ET).
+- 21:30 watch names have AH books but are fading, not building: IVF $1.46 (was $1.62 close), TRUG $1.55 (was $1.59), IPST bid $7.16/ask $8.00 wide illiquid spread, OSRH $0.56 (was $0.71). SLE ask $0.00 x0 — no AH offer.
+- None crossing the AH scan threshold. No real AH accumulation on any watch name. Continue watching 22:30/23:00 scans.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
