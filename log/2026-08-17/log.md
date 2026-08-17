@@ -41,6 +41,25 @@ AH open +15 min. Scanner returned **0 hits**. No candidates.
 - 21:30 watch names have AH books but are fading, not building: IVF $1.46 (was $1.62 close), TRUG $1.55 (was $1.59), IPST bid $7.16/ask $8.00 wide illiquid spread, OSRH $0.56 (was $0.71). SLE ask $0.00 x0 — no AH offer.
 - None crossing the AH scan threshold. No real AH accumulation on any watch name. Continue watching 22:30/23:00 scans.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+AH open +30 min. Scanner returned **2 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AUUD | [TV](https://www.tradingview.com/chart/?symbol=AUUD) | $0.97 | -4.9% | +29.9% | $1.26 | +23.5% | 4.4M | 14.7M | 0.3x | 4.8M | Packaged Software |
+| JFB | [TV](https://www.tradingview.com/chart/?symbol=JFB) | $4.20 | -8.7% | +10.2% | $4.63 | +0.7% | 174K | 457K | 0.4x | 4.0M | Engineering & Construction |
+
+**Instrumentation (log-only, no decision impact):**
+- AUUD: `SPIKE 16:06ET +21% $1.17 2301 trades / 460k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume`
+- JFB: `NO-SPIKE peak +14% @16:09ET (no bar cleared +15% on a volume co-spike)` | `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume`
+
+**Notes:**
+- Observation-only scan (learning phase: **no entries before 23:00 CET / 5:00 PM ET**). No paper trades this scan.
+- **AUUD** — real AH accumulation confirmed on SIP: 487k→2.5M→1.9M→1.2M sh/bar, 1853→12536→8755→5189 trades. Not a stale/bad print. VWAP $1.05→$1.18→$1.25→$1.21 corroborates scanner AH price. But **early-peak fade profile**: ignition bar 16:06 ET, high $1.30 at 20:10Z bar, now fading to $1.19 (20:15Z). Float 4.8M good, Day% -4.9 (not dead-cat). First appearance this night — needs 2 AH scans to qualify anyway. Watch 23:00 for build-vs-fade.
+- **JFB** — thin: 12k→103k→91k→39k sh/bar, fading. Total% only +0.7% (barely above close). NO-SPIKE, no ignition. Low priority.
+- No catalyst search run yet (observation scan). Will run structured search at 23:00 if candidates persist >10% AH.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
