@@ -80,6 +80,34 @@ AH open +45 min. Scanner returned **3 hits**.
 - **JFB** — AH Chg +5.7%, Total% -3.5% (below close from prior close). Thin, fading. Low priority.
 - Catalyst searches deferred to 23:00 entry scan per workflow (observation scan).
 
+## Scan 23:00 CET (5:00 PM ET)
+
+AH open +60 min. First entry-eligible scan (learning phase). Scanner returned **7 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XOS  | [TV](https://www.tradingview.com/chart/?symbol=XOS)  | $2.09 | -0.2% | +30.6% | $2.73 | +30.3% | 1.9M | 703K | 2.7x | 6.9M | Motor Vehicles |
+| AUUD | [TV](https://www.tradingview.com/chart/?symbol=AUUD) | $0.97 | -4.9% | +19.6% | $1.16 | +13.7% | 7.6M | 15.1M | 0.5x | 4.8M | Packaged Software |
+| IPST | [TV](https://www.tradingview.com/chart/?symbol=IPST) | $7.39 | +235.9% | +15.4% | $8.53 | +287.7% | 1.4M | 10.3M | 0.1x | 679K | Beverages: Alcoholic |
+| TRUG | [TV](https://www.tradingview.com/chart/?symbol=TRUG) | $1.54 | +58.8% | +7.8% | $1.66 | +71.2% | 1.1M | 6.8M | 0.2x | 1.0M | Packaged Software |
+| IVF  | [TV](https://www.tradingview.com/chart/?symbol=IVF)  | $1.53 | +57.5% | +6.5% | $1.63 | +67.8% | 971K | 11.5M | 0.1x | 2.1M | Medical/Nursing Services |
+| VSME | [TV](https://www.tradingview.com/chart/?symbol=VSME) | $1.21 | -6.9% | +9.7% | $1.33 | +2.1% | 59K | 68K | 0.9x | 2.6M | Advertising/Marketing Services |
+| DFSC | [TV](https://www.tradingview.com/chart/?symbol=DFSC) | $2.16 | -28.0% | +5.1% | $2.27 | -24.3% | 53K | 15.1M | 0.0x | 2.7M | Miscellaneous Commercial Services |
+
+**Instrumentation (log-only, no decision impact):**
+- XOS:  `SPIKE 16:30ET +38% $2.89 827 trades / 126k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:30ET 709.1x; confirmed 16:40ET $2.73`
+- AUUD: `SPIKE 16:06ET +21% $1.17 2301 trades / 460k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume`
+- IPST: `NO-SPIKE peak +19% @16:44ET (no bar cleared +15% on a volume co-spike)` | `CONFIRM-3 PENDING ignition 16:40ET; waiting for third bar`
+
+**Decision: NO ENTRIES this scan.**
+
+- **XOS** — strongest BUILD profile of the night, but blocked by the 2-AH-scan gate. First AH appearance this scan (did not show in 22:00/22:15/22:30/22:45 scans; ignition 16:30 ET = 22:30 CET, feed caught it a scan later). Only 1 AH scan >10% so far — fails the "AH >10% in ≥2 AH scans" gate. Everything else lines up: SIP shows real accelerating accumulation ($2.40→$3.08 close, 745k→608k→825k→1.59M sh/bar, 5638→10199 trades), CONFIRM-3 YES (confirmed 16:40 ET), ignition 16:30 ET, Day% -0.2 (flat, not dead-cat), float 6.9M (<10M), Total% +30% (well under 150% ceiling), `tradable=true`, real two-sided book (`bid $2.80 x100 / ask $2.83 x100`). **Strong watch — enter at 23:30 if it holds >10% AH (2nd AH scan).** Catalyst: no Aug 17 catalyst found in 3 targeted searches (earnings were Aug 13; XOS has prior history of product-news AH spikes — Jun +200% PM on "deployable power plant" offering, Jun $3M Hub order). No-catalyst is a concern to note, not a skip.
+- **AUUD** — meets 2-AH-scan gate (>10% AH at 22:30/22:45/23:00) but confirmed **SPIKE→FADE**: peaked $1.30 at 16:10 ET, AH Chg falling every scan (+29.9%→+22.7%→+19.6%), volume declining bar-over-bar, CONFIRM-3 NO. Peaked before 17:30 ET and declining = 0/10+ PM-continuation profile. **Skip.**
+- **IPST** — Total% +287.7%, far above the +150% extension ceiling. VRatio 0.1, NO-SPIKE, thin illiquid book (flagged wide bid/ask at 21:30). Fails ceiling-override (needs VRatio >5x + hold within 20% of high after 17:00 ET). **Skip on ceiling + no real AH liquidity.**
+- **TRUG** (+7.8% AH), **IVF** (+6.5%), **VSME** (+9.7%), **DFSC** (Day -28% dead-cat, +5.1% AH) — all below the 10% AH threshold, do not qualify.
+
+**Night status:** SPIKE→FADE / below-threshold on all gate-meeting names. The one genuine BUILD (XOS) is one AH scan short of the gate. Hold for 23:30 to confirm XOS 2nd AH scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
