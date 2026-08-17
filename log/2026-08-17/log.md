@@ -60,6 +60,26 @@ AH open +30 min. Scanner returned **2 hits**.
 - **JFB** — thin: 12k→103k→91k→39k sh/bar, fading. Total% only +0.7% (barely above close). NO-SPIKE, no ignition. Low priority.
 - No catalyst search run yet (observation scan). Will run structured search at 23:00 if candidates persist >10% AH.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+AH open +45 min. Scanner returned **3 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AUUD | [TV](https://www.tradingview.com/chart/?symbol=AUUD) | $0.97 | -4.9% | +22.7% | $1.19 | +16.7% | 6.6M | 15.0M | 0.4x | 4.8M | Packaged Software |
+| TRUG | [TV](https://www.tradingview.com/chart/?symbol=TRUG) | $1.54 | +58.8% | +8.4% | $1.67 | +72.3% | 841K | 6.8M | 0.1x | 1.0M | Packaged Software |
+| JFB | [TV](https://www.tradingview.com/chart/?symbol=JFB) | $4.20 | -8.7% | +5.7% | $4.44 | -3.5% | 235K | 464K | 0.5x | 4.0M | Engineering & Construction |
+
+**Instrumentation (log-only, no decision impact):**
+- AUUD: `SPIKE 16:06ET +21% $1.17 2301 trades / 460k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume`
+
+**Notes:**
+- Observation-only scan (learning phase: **no entries before 23:00 CET / 5:00 PM ET**). No paper trades this scan.
+- **AUUD** — 2nd AH scan >10% AH, but confirmed **SPIKE→FADE**: SIP peaked $1.30 at 16:10 ET, now fading. Volume declining every bar since ignition: 2.5M→1.9M→1.2M→745k→467k→427k sh; price $1.25→$1.21→$1.19→$1.17→$1.20→$1.17. Real accumulation (not a bad print) but momentum rolling over. Quote `ask $1.17 x200` — fillable book. Float 4.8M good, Day% -4.9 (not dead-cat). Peaked before 17:30 ET and declining = 0/10+ PM-continuation profile. Watch 23:00 but leaning skip.
+- **TRUG** — low-float (1.0M) regular-session mover (+58.8% day) building further in AH. Ignition 16:20 ET (+$0.20 on 497k sh/1598 trades), now holding $1.66–1.69 (BUILD/hold, not fade). But AH Chg only +8.4% — **below 10% AH threshold**, doesn't qualify yet. First AH scan (21:30 was regular session, doesn't count). Total% +72.3% under ceiling. Watch 23:00: if AH Chg crosses 10% and holds, it's a BUILD candidate worth entry evaluation.
+- **JFB** — AH Chg +5.7%, Total% -3.5% (below close from prior close). Thin, fading. Low priority.
+- Catalyst searches deferred to 23:00 entry scan per workflow (observation scan).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
