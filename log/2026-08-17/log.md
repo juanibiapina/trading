@@ -23,6 +23,15 @@ Regular session (AH not open until 22:00 CET / 16:00 ET). **No entries** — wat
 - CYBHF only name with positive VChg% (+17.2%) but 21.3M float and it's an OTC foreign ticker (F suffix) — likely not Alpaca-tradable.
 - Watch for these to reappear in 22:00+ CET AH scans with sustained momentum before any entry consideration.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+AH open (16:00 ET). Scanner returned **0 hits** — postmarket feed empty this minute (typical right at the open). No candidates.
+
+**Notes:**
+- Observation-only scan (learning phase: no entries before 23:00 CET / 5:00 PM ET).
+- None of the 21:30 regular-session watch names (IPST, OSRH, CYBHF, IVF, TRUG, SLE) crossed into AH scan yet. Watch for real AH accumulation at 22:30/23:00 scans.
+- 21:30 watch names carried the thin/fading profile (VChg% near -100%, 5mVol 100-250 sh) into the close — need real fillable AH book before any entry.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
