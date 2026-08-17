@@ -150,9 +150,57 @@ AH open +90 min. Scanner returned **11 hits**.
 - **IPST** — Total% +254.5%, far above +150% ceiling, VRatio 0.2x illiquid. **Skip.**
 - **SGLY** (+11.8% AH but Total% +2.0%, thin), **VSME/BRCC/LFMD** (<10% AH) — do not qualify.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+AH open +120 min. Second-to-last scan. Scanner returned **13 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XOS  | [TV](https://www.tradingview.com/chart/?symbol=XOS)  | $2.09 | -0.2% | +92.1% | $4.02 | +91.7% | 17.6M | 2.5M | 6.9x | 6.9M | Motor Vehicles |
+| AUUD | [TV](https://www.tradingview.com/chart/?symbol=AUUD) | $0.97 | -4.9% | +20.6% | $1.17 | +14.7% | 8.9M | 15.2M | 0.6x | 4.8M | Packaged Software |
+| IVF  | [TV](https://www.tradingview.com/chart/?symbol=IVF)  | $1.53 | +57.5% | +13.7% | $1.74 | +79.1% | 4.4M | 11.9M | 0.4x | 2.1M | Medical/Nursing Services |
+| WFF  | [TV](https://www.tradingview.com/chart/?symbol=WFF)  | $2.02 | +40.3% | +23.3% | $2.49 | +72.9% | 3.7M | 12.3M | 0.3x | 13.3M | Textiles |
+| IPST | [TV](https://www.tradingview.com/chart/?symbol=IPST) | $7.39 | +235.9% | +10.1% | $8.14 | +269.8% | 2.4M | 10.4M | 0.2x | 679K | Beverages: Alcoholic |
+| TRUG | [TV](https://www.tradingview.com/chart/?symbol=TRUG) | $1.54 | +58.8% | +7.8% | $1.66 | +71.2% | 1.5M | 6.9M | 0.2x | 1.0M | Packaged Software |
+| HWH  | [TV](https://www.tradingview.com/chart/?symbol=HWH)  | $1.91 | +5.5% | +6.8% | $2.04 | +12.7% | 441K | 749K | 0.6x | 7.7M | Financial Conglomerates |
+| EJH  | [TV](https://www.tradingview.com/chart/?symbol=EJH)  | $1.45 | -16.7% | +11.0% | $1.61 | -7.5% | 311K | 63K | 5.0x | 2.5M | Other Consumer Services |
+| SGLY | [TV](https://www.tradingview.com/chart/?symbol=SGLY) | $4.49 | -8.7% | +49.0% | $6.69 | +36.0% | 293K | 161K | 1.8x | 897K | Air Freight/Couriers |
+| GNPX | [TV](https://www.tradingview.com/chart/?symbol=GNPX) | $4.47 | +3.6% | +11.7% | $5.00 | +15.7% | 130K | 170K | 0.8x | 503K | Pharmaceuticals: Major |
+| DFSC | [TV](https://www.tradingview.com/chart/?symbol=DFSC) | $2.16 | -28.0% | +7.7% | $2.33 | -22.4% | 82K | 15.1M | 0.0x | 2.7M | Miscellaneous Commercial Services |
+| LFMD | [TV](https://www.tradingview.com/chart/?symbol=LFMD) | $3.32 | -3.8% | +5.7% | $3.51 | +1.7% | 61K | 1.5M | 0.0x | 39.3M | Medical/Nursing Services |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $2.80 | +34.0% | +7.1% | $3.00 | +43.5% | 56K | 1.2M | 0.0x | 3.0M | Industrial Machinery |
+
+**Instrumentation (log-only, no decision impact):**
+- XOS:  `SPIKE 16:30ET +38% $2.89 827 trades / 126k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 16:30ET 709.1x; confirmed 16:40ET $2.73`
+- SGLY: `SPIKE 17:05ET +54% $6.92 182 trades / 14k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 17:05ET failed third-bar hold/volume`
+- IVF:  `SPIKE 17:11ET +25% $1.91 617 trades / 141k sh (first co-spike bar)` | `CONFIRM-3 YES ignition 17:00ET 3.9x; confirmed 17:10ET $2.11`
+- WFF:  `SPIKE 17:19ET +22% $2.47 2037 trades / 291k sh (first co-spike bar)` | `CONFIRM-3 NO ignition 17:15ET failed third-bar hold/volume`
+- GNPX: `SPIKE 17:11ET +26% $5.63 108 trades / 7k sh (first co-spike bar)` | `CONFIRM-3 NO no local-volume new-high ignition`
+
+**Decision: ENTERED SGLY.**
+
+- **SGLY — ENTERED. 14 sh @ $7.01** (order a69bbf72). All gates clear:
+  - **Gate met:** 2 AH scans >10% (23:30 +11.8% → 00:00 +49.0%). Strong BUILD.
+  - **SIP confirms real accumulation (not bad print):** first spike leg 17:05 ET $7.00H faded to ~$5, then a genuine **second BUILD leg** 17:30-17:45 ET on accelerating volume: $5.80→$6.33→$6.69→$7.26 close, 19k→94k→115k→**416k sh/8479 trades** last full bar. VWAP $5.66→$7.37 corroborates scanner AH price.
+  - **BUILD/hold profile:** Yahoo AH shows peak $7.25 @17:45 ET, holding $6.80-7.25 into 18:01 ($7.06) — within 20% of high, not fading.
+  - Float **897K** (ultra-low, ideal), Day% -8.7 (not dead-cat, > -15%), Total% +56% at fill (under +150% ceiling), tradable=true.
+  - **Catalyst: None found** (2 searches: only reverse split Jul 27, class-action settlement Jul 1, Nasdaq bid-price compliance May — nothing Aug 17). No-catalyst = concern noted, not a skip (learning phase; ultra-low-float squeeze setup). **Grade None → exit at first PM opportunity.**
+  - **Fill note:** free-tier Alpaca quote frozen at 16:00 ET (`ask $0.00 x0` @ 20:00:02Z, ~2h stale) — staleness artifact, NOT a no-book; SIP bars (8479 trades/416k sh last bar) + Yahoo ($7.06 live) confirm real liquidity. Limit $7.25, filled @ $7.01 (price improvement at live level).
+- **XOS** — already entered 23:30 @ $4.54 (no re-entry). Now +92.1% AH; SIP peaked $4.78 @17:30 ET, fading $4.69→$4.48→$4.02→$4.15. Position management handled premarket (position-evaluation.md), not here.
+- **IVF** — 2nd AH scan >10% (23:30 +37.3% → 00:00 +13.7%) meets gate, CONFIRM-3 YES, float 2.1M — but confirmed **SPIKE→FADE**: SIP/Yahoo peaked $2.11-2.21 @17:10-17:15 ET, fading every bar since to ~$1.66-1.82. Peaked before 17:30 ET and declining = 0/10+ PM-continuation profile. **Skip.**
+- **GNPX** — 2 AH scans >10% (23:30 +12.8% → 00:00 +11.7%), float 503K — but thin SPIKE→FADE: SIP peaked $5.63 @17:10 ET, faded to ~$5.00 on 41-168 trades/bar (7k-sh spike). CONFIRM-3 NO. **Skip (thin + fade).**
+- **WFF** — Day +40.3% regular mover, +23.3% AH, 1st AH scan (fails 2-AH gate). Ignition 17:19 ET, CONFIRM-3 NO. Float 13.3M (>10M). **Watch** — qualifies at 00:30 only if it holds >10% AH (2nd scan).
+- **AUUD** — confirmed SPIKE→FADE all night (+29.9%→+22.7%→+19.6%→+12.4%→+20.6% dead-cat bounce off fade), CONFIRM-3 NO. **Skip.**
+- **IPST** — Total% +269.8%, far above +150% ceiling, VRatio 0.2x illiquid. **Skip.**
+- **EJH** — Day% -16.7% dead-cat, +11.0% AH (faded from +41.4% at 23:30, now below reclaim), thin (311K vol). **Skip.**
+- **TRUG** (+7.8% AH), **HWH** (+6.8%, fading from +18.7%), **DFSC** (Day -28% dead-cat), **LFMD** (+5.7%), **CDTG** (+7.1%) — below 10% AH threshold, do not qualify.
+
+**Night status:** 2 entries tonight (XOS 23:30, SGLY 00:00). SGLY is the ultra-low-float second-BUILD-leg name; XOS the Grade-B contract BUILD. Final scan 00:30 CET to cross-check WFF 2nd AH scan and any feed-lag pipeline names.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | XOS | $4.54 | 2026-08-17 23:30 CET | 21 | b6972d5c | BUILD 2 AH scans (+30.6%→+67.9%), USAF deployable-charging contract (Grade B), float 6.9M, real SIP accumulation to $4.05H, Total% +117% under ceiling |
+| SGLY | $7.01 | 2026-08-18 00:00 CET | 14 | a69bbf72 | BUILD 2 AH scans (+11.8%→+49.0%), second BUILD leg to $7.26 on 416k sh/8479 trades, ultra-low float 897K, Day -8.7 (not dead-cat), Total% +56% under ceiling. No catalyst (Grade None) |
 </content>
