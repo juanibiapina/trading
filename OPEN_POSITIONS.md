@@ -8,7 +8,8 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | | | All positions closed 2026-08-18 10:30 CET pulse. |
+| TNON | $8.69 | $8.94 | $9.67 | 11 | 2026-08-18 23:00 CET | None | ca88a01e | Ultra-low float 551K. AH BUILD to $9.67 peak (16:30 ET) on heavy SIP accumulation (600K–1.08M sh/bar, 10–16k trades), holding ~$8.94 (within ~12% of high). 2-AH-scan gate met (22:30 +73.4%, 22:45 +91.3%). Total% +59.4% at fill (under +150% ceiling). No fresh catalyst (earnings were Aug 13, 5 days prior) — enter with concern noted. Exit at first PM opportunity. |
+| MSS | $1.90 | $1.85 | $2.07 | 55 | 2026-08-18 23:00 CET | None | 649ac871 | Ultra-low float 551K. AH choppy BUILD/hold to $2.07 peak (16:35 ET) on real SIP volume (1.3M sh/10k trades peak bar), holding ~$1.87. 2-AH-scan gate met (22:45 +15.3%, 23:00 +22.8% AH). Total% +21.0% at fill. No confirmed same-day catalyst — Q2 results PR + "Worldcoin treasury initiative" narrative (date unconfirmed), analyst PT cut 4.5→3.25 (7/31). Enter with concern noted. Exit at first PM opportunity; note treasury angle for PM eval. |
 
 ## Position Rules
 

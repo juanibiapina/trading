@@ -102,12 +102,54 @@ No paper trades (learning-phase observation window, both fail 2-AH-scan gate).
 
 No paper trades (learning-phase observation window; entries begin at 23:00 CET / 5:00 PM ET).
 
+## Scan 23:00 CET (5:00 PM ET) — AH open, ENTRIES LIVE
+
+`scan.py --all`: **5 hits.** TNON (3rd AH scan) and MSS (2nd AH scan) both clear the 2-AH-scan gate. First entry-eligible scan of the night.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CAST | [TV](https://www.tradingview.com/chart/?symbol=CAST) | $2.10 | +144.2% | +18.1% | $2.48 | +188.4% | 6.9M | 14.6M | 0.5x | 19.7M | Internet Software/Services |
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $5.45 | +10.8% | +59.6% | $8.70 | +76.8% | 4.7M | 792K | 6.0x | 551K | Medical/Nursing Services |
+| MSS | [TV](https://www.tradingview.com/chart/?symbol=MSS) | $1.57 | +7.5% | +22.8% | $1.93 | +32.1% | 3.9M | 725K | 5.4x | 551K | Food Retail |
+| BRNX | [TV](https://www.tradingview.com/chart/?symbol=BRNX) | $2.65 | -13.1% | +5.9% | $2.81 | -8.0% | 124K | 789K | 0.2x | 684K | Engineering & Construction |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $2.50 | -10.1% | +6.8% | $2.67 | -4.0% | 112K | 38K | 2.9x | 1.1M | Commercial Printing/Forms |
+
+**Instrumentation (log-only, no decision impact):**
+- TNON: `SPIKE 16:01ET +28% $7.00 1787 trades / 137k sh` · `CONFIRM-3 NO no local-volume new-high ignition as-of 17:00ET`
+- MSS: `SPIKE 16:01ET +20% $1.89 474 trades / 84k sh` · `CONFIRM-3 NO no local-volume new-high ignition as-of 17:00ET`
+
+**SIP 5-min bars (real AH volume, last bar 16:45 ET):**
+
+| Ticker | Bar C path (16:00→16:45 ET) | Vol/bar | Trades/bar | Read |
+|--------|------------------------------|---------|------------|------|
+| TNON | $7.03→$7.60→$8.51→$8.58→$9.25→$9.41→$9.67→$8.85→$8.70→$8.94 | 368K–1.08M | 6.1k–16.7k | genuine BUILD to $9.67 peak (16:30 ET), mild pullback, holding ~$8.94 (within ~12% of high) |
+| MSS | $1.82→$1.58→$1.57→$1.81→$1.80→$1.81→$1.95→$1.91→$1.91→$1.87 | 116K–1.34M | 431–10.3k | choppy BUILD/hold, new high $2.07 (16:35 ET, 1.3M sh bar), holding ~$1.87 |
+
+**Catalyst search:**
+- **TNON** — earnings were Aug 13 (5 days ago, EPS -$12.35 miss); no press release or 8-K for today's Aug 18 AH spike found (2 searches). **No fresh catalyst** → enter with concern noted (learning-phase policy).
+- **MSS** — no confirmed same-day catalyst. Found Q2/6-month results PR + "Worldcoin treasury initiative" narrative (date unconfirmed) and an analyst PT cut 4.5→3.25 (7/31). **No confirmed catalyst** → enter with concern noted; flag treasury angle for PM eval.
+
+**Evaluation & decisions:**
+- **TNON — ENTER.** 2-AH-scan gate met (22:30 +73.4%, 22:45 +91.3%). Ultra-low float 551K (ideal). Total% +76.8% under +150% ceiling. Day% +10.8% (>-15%). SIP confirms real accumulating BUILD; peak 16:30 ET is before 18:30 but the name is *holding within ~12% of its AH high*, not fading (CHAI/MSW precedent). No fresh catalyst = concern noted. **Alpaca quote stale** (`bid $4.55 / ask $0.00 x0 @ 16:00:03 ET`, not updating vs 17:00 scan) — freshness guard: SIP is fresh and shows a real 500K–1M sh/bar book, so this is a staleness artifact, NOT an illiquid/bad-print skip. Order filled, confirming a real book existed.
+- **MSS — ENTER.** 2-AH-scan gate met (22:45 +15.3% AH, 23:00 +22.8% AH). Ultra-low float 551K. Total% +32.1% under ceiling. Day% +7.5%. SIP confirms real BUILD/hold (new high $2.07, 1.3M sh peak bar), holding ~$1.87. No confirmed catalyst = concern noted.
+- **CAST — SKIP.** Only NOW shows >10% AH (first AH scan; flat ~$2.15 at 22:00/22:15) → fails 2-AH-scan gate. Also Total% +188.4% exceeds +150% extension ceiling, and VRatio 0.5x (AH Vol 6.9M < AvgVol 14.6M) shows no unusual AH accumulation. Float 19.7M > 10M ideal. Multiple skips.
+- **BRNX — SKIP (carried).** Day% -13.1% dead-cat, thin (VRatio 0.2x), Total% -8.0%.
+- **CRE — SKIP.** AH Chg +6.8% below the 10% threshold; Day% -10.1%, Total% -4.0%.
+
+**Chase-cap instrumentation:**
+- TNON: qualifying scan (22:45) $9.41 / +91.3%; fill $8.69 / +59.4%; chase gap -31.9pts — filled **below** qualifying price, no chase into fade zone.
+- MSS: qualifying scan (23:00) $1.93 / +32.1%; fill $1.90 / +21.0%; filled below qualifying, no chase.
+
+**Order execution notes:**
+- TNON: `buy 11 @ limit $9.20 --ext` → filled @ **$8.69** (id ca88a01e). QTY = floor(100/8.94)=11.
+- MSS: first `buy 55 @ limit $1.85 --ext` rested unfilled ~25s against a displayed $1.81 ask (thin/stale book); cancelled, re-submitted `buy 55 @ limit $1.92 --ext` → filled @ **$1.90** (id 649ac871). Old order cancelled cleanly, no double position (verified `positions`).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-
-_No entries — regular-session watch scan only._
+| TNON | $8.69 | 23:00 CET | 11 | ca88a01e | 551K float, 2-AH-scan gate, AH BUILD to $9.67 holding, Total +59.4%, no fresh catalyst (Grade None) |
+| MSS | $1.90 | 23:00 CET | 55 | 649ac871 | 551K float, 2-AH-scan gate, AH BUILD to $2.07 holding, Total +21.0%, no confirmed catalyst (Grade None) |
 
 ## Position Evaluation — 10:30 CET
 
