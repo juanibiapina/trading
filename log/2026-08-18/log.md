@@ -25,6 +25,23 @@ The $10 flat Financial Conglomerates (ACGC, SHOT, MUZE, VII) show extreme IRVol 
 
 No paper trades.
 
+## Scan 22:15 CET (4:15 PM ET) — AH open, observation only
+
+`scan.py --all`: **0 hits.** First AH 5-min bar (16:00–16:05 ET) just closed; whole-market screen still shows no candidates above threshold.
+
+SIP cross-check of 21:30 regular-session watch names (first AH bar):
+
+| Ticker | Reg Close | AH C (16:05 ET) | AH move | Vol/bar | Trades | Read |
+|--------|-----------|-----------------|---------|---------|--------|------|
+| XOS | $4.37 | $4.30 | ~flat | 303K | 1527 | flat, no AH build |
+| CAST | $2.13 | $2.15 | ~flat | 1.0M | 4437 | flat |
+| CDTG | $5.36 | $3.10 | −42% | 222K | 1386 | collapsing in AH |
+| SLE | $5.24 | $4.94 | −6% | 1.0M | 9245 | fading off close |
+
+No watch name is building into AH — all flat or fading on the first bar. Nothing to confirm. Observation-only window regardless (learning phase: no entries before 23:00 CET). Re-check at 22:30/23:00 for any name that starts building.
+
+No paper trades.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
