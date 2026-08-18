@@ -17,6 +17,14 @@ Regular session (AH opens 16:00 ET / 22:00 CET). No paper trades per regular-ses
 
 The $10 flat Financial Conglomerates (ACGC, SHOT, MUZE, VII) show extreme IRVol at ~0% change — SPAC/auction artifacts, not momentum. Skipped.
 
+## Scan 22:00 CET (4:00 PM ET) — AH open, observation only
+
+`scan.py --all`: **0 hits.** AH session just opened (16:00 ET exact); postmarket volume not yet accumulated. No candidates from whole-market screen.
+
+21:30 regular-session watch names have not reappeared in an AH scan yet — none crossed into the AH screen at open. Nothing to confirm this scan. Observation-only window regardless (learning phase: no entries before 23:00 CET). Re-check watch names (XOS, CAST, CDTG, AIXC, SLE, EJH) at 22:30/23:00 for AH carry-over.
+
+No paper trades.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
