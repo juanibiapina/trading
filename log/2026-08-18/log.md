@@ -21,3 +21,7 @@
 **Notes / for daily email:**
 - Rough pulse: 5/5 losers. Two Grade B names (DARE, GRSD) were held well past the 2-day time limit — DARE bled from -7% to -51% while stalled. Time-limit exits must fire on schedule, not wait for a crash.
 - XOS had a genuine catalyst (USAF contract) + real AH BUILD to +117% yet still gave zero PM follow-through and dumped at open. Reinforces: AH BUILD alone (even with catalyst) does not predict PM continuation.
+
+## Position Evaluation — 14:30 CET
+
+No open positions (Alpaca source of truth confirms flat). All 5 positions closed at the 10:30 CET pulse. OPEN_POSITIONS.md agrees. No action.
