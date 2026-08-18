@@ -224,6 +224,52 @@ No new paper trades this scan. Two positions carried (TNON, MSS).
 
 No new paper trades this scan. Two positions carried (TNON, MSS). TGL is the watch for 00:30.
 
+## Scan 00:30 CET (6:30 PM ET) — AH open, ENTRIES LIVE (final scan)
+
+`scan.py --all`: **8 hits.** Final scheduled scan. TNON + MSS already held (no re-entry). TGL reappears (2nd AH scan) so it clears the 2-AH-scan gate, but has faded off its peak. No new qualifier.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CAST | [TV](https://www.tradingview.com/chart/?symbol=CAST) | $2.10 | +144.2% | +23.8% | $2.60 | +202.4% | 16.3M | 15.7M | 1.0x | 19.7M | Internet Software/Services |
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $5.45 | +10.8% | +65.1% | $9.00 | +82.9% | 6.9M | 1.1M | 6.2x | 551K | Medical/Nursing Services |
+| MSS | [TV](https://www.tradingview.com/chart/?symbol=MSS) | $1.57 | +7.5% | +19.1% | $1.87 | +28.1% | 5.5M | 902K | 6.1x | 551K | Food Retail |
+| TGL | [TV](https://www.tradingview.com/chart/?symbol=TGL) | $2.67 | -6.3% | +25.8% | $3.36 | +17.9% | 3.3M | 468K | 7.0x | 1.8M | Miscellaneous Commercial Services |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $4.44 | +112.4% | +5.6% | $4.69 | +124.4% | 3.0M | 14.1M | 0.2x | 6.9M | Motor Vehicles |
+| KIDZ | [TV](https://www.tradingview.com/chart/?symbol=KIDZ) | $4.72 | +16.0% | +5.9% | $5.00 | +22.9% | 444K | 268K | 1.7x | 859K | Internet Software/Services |
+| EJH | [TV](https://www.tradingview.com/chart/?symbol=EJH) | $2.06 | +42.1% | +5.8% | $2.18 | +50.3% | 277K | 2.1M | 0.1x | 2.5M | Other Consumer Services |
+| BRNX | [TV](https://www.tradingview.com/chart/?symbol=BRNX) | $2.65 | -13.1% | +8.3% | $2.87 | -5.9% | 159K | 794K | 0.2x | 684K | Engineering & Construction |
+
+**Instrumentation (log-only, no decision impact):**
+- TGL: `SPIKE 17:21ET +18% $3.15 34 trades / 13k sh` · `CONFIRM-3 NO no local-volume new-high ignition as-of 18:30ET`
+- TNON: `SPIKE 16:01ET +28% $7.00 1787 trades / 137k sh`
+- MSS: `SPIKE 16:01ET +20% $1.89 474 trades / 84k sh`
+
+**TGL SIP 5-min bars (real AH volume, last bar 18:15 ET):**
+
+| Bar C path (17:20→18:15 ET) | Vol/bar | Trades/bar | Read |
+|-----------------------------|---------|------------|------|
+| $3.48→$3.84→$3.79→$3.76→$4.16→$4.08→$3.79→$3.60→$3.38→$3.47→$3.37→$3.40 | 76K–658K | 927–8.8k | peaked $4.33 (17:45 ET), now $3.40 ≈21% off high; volume collapsing 604K→76K/bar = SPIKE→FADE |
+
+**Final-scan feed-lag cross-check (pipeline names vs SIP):**
+- TNON — SIP holding $8.95 (17:35 ET), no under-report. Held.
+- MSS — SIP holding $1.74–1.80 (17:35 ET), no under-report. Held.
+- HKIT — SIP dead ($3.00, 29–31 trades/bar, 1.7K–3.4K sh), confirmed fade. No rescue.
+- No tracked name is under-reported by TradingView while SIP shows a real volume-backed surge above threshold. No feed-lag rescue triggered.
+
+**Evaluation & decisions (final scan):**
+- **TNON — HELD (no re-entry).** Position from 23:00 ($8.69, 11 sh). SIP holding ~$8.95 (still building, AH +65.1%). Broker mark $8.17 (-6.0%) reflects a stale/wide AH quote; SIP is the truth. One entry per candidate per night.
+- **MSS — HELD (no re-entry).** Position from 23:00 ($1.90, 55 sh). SIP holding ~$1.74–1.80. Broker mark $1.88 (-1.1%). One entry per candidate per night.
+- **TGL — SKIP.** Clears the 2-AH-scan gate now (00:00 +46.0%, 00:30 +17.9%) and past 00:00 CET, but it has **faded**: peaked $4.33 (17:45 ET), now $3.40 ≈21% off high with volume collapsing (604K→76K/bar, 7003→927 trades). Fails the "holding within ~20% of high" rule; SPIKE→FADE off peak for 45 min. CONFIRM-3 NO. Not a hold — skip.
+- **CAST — SKIP.** Total% +202.4% exceeds +150% ceiling; VRatio 1.0x (AH Vol ≈ AvgVol) = no unusual accumulation; float 19.7M. Ceiling-override watch fails (needs VRatio >5x).
+- **XOS — SKIP.** AH Chg +5.6% below the 10% threshold; VRatio 0.2x; already ran intraday (Day +112%) and was sold this AM. No fresh AH build.
+- **KIDZ — SKIP.** AH +5.9% below threshold; VRatio 1.7x thin.
+- **EJH — SKIP.** AH +5.8% below threshold; VRatio 0.1x thin.
+- **BRNX — SKIP (carried).** Day% -13.1% dead-cat, VRatio 0.2x thin, Total% -5.9%.
+
+No new paper trades. Night ends with two positions carried (TNON, MSS). No SPIKE→FADE-only "least bad" entry forced; TGL correctly skipped as a faded spike.
+
+**Night summary for morning eval:** TNON + MSS entered at 23:00 (both 551K float, real AH BUILD, no confirmed catalyst = Grade None). Both held near their AH highs on SIP through the final scan. TGL was the strongest late candidate (1.8M float, VRatio 7.0x, genuine BUILD with heavy accumulation) but peaked 17:45 ET and faded before it cleared the 2-scan gate at an entry-eligible time — a timing miss (gate met only as it started fading). No catalyst confirmed on any candidate tonight.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
