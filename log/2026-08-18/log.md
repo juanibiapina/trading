@@ -184,6 +184,46 @@ No paper trades (learning-phase observation window; entries begin at 23:00 CET /
 
 No new paper trades this scan. Two positions carried (TNON, MSS).
 
+## Scan 00:00 CET (6:00 PM ET) — AH open, ENTRIES LIVE
+
+`scan.py --all`: **8 hits.** TNON + MSS already held (no re-entry). TGL new and strong; KIDZ new; CAST/EJH/BRNX/CRE carried skips.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CAST | [TV](https://www.tradingview.com/chart/?symbol=CAST) | $2.10 | +144.2% | +17.6% | $2.47 | +187.3% | 13.3M | 15.3M | 0.9x | 19.7M | Internet Software/Services |
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $5.45 | +10.8% | +61.1% | $8.78 | +78.5% | 6.6M | 1.1M | 6.2x | 551K | Medical/Nursing Services |
+| MSS | [TV](https://www.tradingview.com/chart/?symbol=MSS) | $1.57 | +7.5% | +9.6% | $1.72 | +17.8% | 5.2M | 872K | 6.0x | 551K | Food Retail |
+| TGL | [TV](https://www.tradingview.com/chart/?symbol=TGL) | $2.67 | -6.3% | +55.8% | $4.16 | +46.0% | 1.9M | 285K | 6.7x | 1.8M | Miscellaneous Commercial Services |
+| EJH | [TV](https://www.tradingview.com/chart/?symbol=EJH) | $2.06 | +42.1% | +6.8% | $2.20 | +51.7% | 230K | 2.1M | 0.1x | 2.5M | Other Consumer Services |
+| BRNX | [TV](https://www.tradingview.com/chart/?symbol=BRNX) | $2.65 | -13.1% | +9.4% | $2.90 | -4.9% | 151K | 793K | 0.2x | 684K | Engineering & Construction |
+| KIDZ | [TV](https://www.tradingview.com/chart/?symbol=KIDZ) | $4.72 | +16.0% | +10.8% | $5.23 | +28.5% | 139K | 223K | 0.6x | 859K | Internet Software/Services |
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $2.50 | -10.1% | +5.2% | $2.63 | -5.4% | 122K | 39K | 3.1x | 1.1M | Commercial Printing/Forms |
+
+**Instrumentation (log-only, no decision impact):**
+- TGL: `SPIKE 17:21ET +18% $3.15 34 trades / 13k sh` · `CONFIRM-3 NO no local-volume new-high ignition as-of 18:00ET`
+- KIDZ: `NO-SPIKE peak +14% @17:32ET (no bar cleared +15% on a volume co-spike)` · `CONFIRM-3 NO`
+
+**TGL SIP 5-min bars (real AH volume, last bar 17:45 ET):**
+
+| Bar C path (17:20→17:45 ET) | Vol/bar | Trades/bar | Read |
+|-----------------------------|---------|------------|------|
+| $3.48→$3.84→$3.79→$3.76→$4.16→$4.08 | 313K–658K | 3.9k–8.8k | genuine BUILD, heavy accumulation, late ignition 17:20 ET; peak $4.33 (17:45 ET), holding $4.08 ≈6% off high |
+
+**Catalyst search:**
+- **TGL** (Treasure Global, SE Asia fintech/digital-asset) — no same-day Aug 18 press release or 8-K found (2 searches); only older 2026 revenue-outlook hype PRs. **No confirmed catalyst.**
+
+**Evaluation & decisions:**
+- **TNON — HELD (no re-entry).** Position open from 23:00 ($8.69, 11 sh), now $8.80 (+1.3%). Still building (AH +61.1%). One entry per candidate per night.
+- **MSS — HELD (no re-entry).** Position open from 23:00 ($1.90, 55 sh), now $1.72/$1.75 (-7.9%). AH faded to +9.6%; position management handled premarket.
+- **TGL — SKIP (strong watch).** **First AH-scan appearance tonight** (absent 22:00–23:30) → fails the 2-AH-scan gate; cannot enter this scan. Otherwise strong: 1.8M float, VRatio 6.7x, Total% +46.0% under ceiling, Day% -6.3% (not dead-cat), SIP confirms genuine BUILD with heavy accumulation (300K–658K sh/bar, ignition 17:20 ET = late peak, holding within ~6% of $4.33 high). No confirmed catalyst. `tradable=true`; quote `ask $0.00 x0 @ 16:00 ET` is stale (SIP fresh to 17:45 ET) — staleness artifact, not a bad-print skip. **Primary watch for the 00:30 final scan** — if it reappears >10% AH it clears the 2-scan gate and, past 00:00 CET, becomes entry-eligible.
+- **KIDZ — SKIP.** VRatio 0.6x (139K AH vol < 223K avg = no unusual accumulation), NO-SPIKE, first AH-scan appearance. Thin.
+- **CAST — SKIP.** Total% +187.3% exceeds +150% ceiling; VRatio 0.9x (AH Vol < AvgVol) = no accumulation; float 19.7M. Ceiling-override watch fails (needs VRatio >5x).
+- **EJH — SKIP.** AH +6.8% below the 10% threshold; VRatio 0.1x thin.
+- **BRNX — SKIP (carried).** Day% -13.1% dead-cat, VRatio 0.2x thin, Total% -4.9%.
+- **CRE — SKIP.** AH +5.2% below threshold; Day% -10.1%.
+
+No new paper trades this scan. Two positions carried (TNON, MSS). TGL is the watch for 00:30.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
