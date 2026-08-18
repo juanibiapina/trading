@@ -144,6 +144,46 @@ No paper trades (learning-phase observation window; entries begin at 23:00 CET /
 - TNON: `buy 11 @ limit $9.20 --ext` → filled @ **$8.69** (id ca88a01e). QTY = floor(100/8.94)=11.
 - MSS: first `buy 55 @ limit $1.85 --ext` rested unfilled ~25s against a displayed $1.81 ask (thin/stale book); cancelled, re-submitted `buy 55 @ limit $1.92 --ext` → filled @ **$1.90** (id 649ac871). Old order cancelled cleanly, no double position (verified `positions`).
 
+## Scan 23:30 CET (5:30 PM ET) — AH open, ENTRIES LIVE
+
+`scan.py --all`: **8 hits.** TNON + MSS already held (no re-entry per one-entry-per-candidate rule). HKIT and EJH new to AH screen; CAST 2nd AH appearance.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CAST | [TV](https://www.tradingview.com/chart/?symbol=CAST) | $2.10 | +144.2% | +14.3% | $2.40 | +179.1% | 11.8M | 15.1M | 0.8x | 19.7M | Internet Software/Services |
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $5.45 | +10.8% | +78.2% | $9.71 | +97.4% | 6.0M | 962K | 6.2x | 551K | Medical/Nursing Services |
+| MSS | [TV](https://www.tradingview.com/chart/?symbol=MSS) | $1.57 | +7.5% | +15.3% | $1.81 | +24.0% | 4.8M | 826K | 5.8x | 551K | Food Retail |
+| HKIT | [TV](https://www.tradingview.com/chart/?symbol=HKIT) | $3.05 | +0.7% | +23.0% | $3.75 | +23.8% | 855K | 279K | 3.1x | 729K | Packaged Software |
+| WFF | [TV](https://www.tradingview.com/chart/?symbol=WFF) | $2.22 | +9.9% | +9.2% | $2.42 | +20.0% | 357K | 15.0M | 0.0x | 13.3M | Textiles |
+| EJH | [TV](https://www.tradingview.com/chart/?symbol=EJH) | $2.06 | +42.1% | +10.2% | $2.27 | +56.6% | 180K | 2.1M | 0.1x | 2.5M | Other Consumer Services |
+| BRNX | [TV](https://www.tradingview.com/chart/?symbol=BRNX) | $2.65 | -13.1% | +11.3% | $2.95 | -3.3% | 131K | 790K | 0.2x | 684K | Engineering & Construction |
+| ATOM | [TV](https://www.tradingview.com/chart/?symbol=ATOM) | $4.92 | -9.2% | +5.7% | $5.20 | -4.1% | 57K | 514K | 0.1x | 36.8M | Misc Commercial Services |
+
+**Instrumentation (log-only, no decision impact):**
+- TNON: `SPIKE 16:01ET +28% $7.00 1787 trades / 137k sh` · `CONFIRM-3 NO no local-volume new-high ignition as-of 17:30ET`
+- MSS: `SPIKE 16:01ET +20% $1.89 474 trades / 84k sh` · `CONFIRM-3 NO no local-volume new-high ignition as-of 17:30ET`
+- HKIT: `SPIKE 16:49ET +23% $3.74 85 trades / 8k sh` · `CONFIRM-3 NO ignition 16:45ET failed third-bar hold/volume as-of 17:30ET`
+- CAST: `SPIKE 16:39ET +19% $2.49 2949 trades / 577k sh` · `CONFIRM-3 NO ignition 16:35ET failed third-bar hold/volume as-of 17:30ET`
+- EJH: `NO-SPIKE peak +12% @17:10ET (no bar cleared +15% on a volume co-spike)` · `CONFIRM-3 NO`
+
+**HKIT SIP 5-min bars (real AH volume, last bar 17:15 ET):**
+
+| Bar C path (16:45→17:15 ET) | Vol/bar | Trades/bar | Read |
+|-----------------------------|---------|------------|------|
+| $3.74→$3.75→$3.25→$2.74→$4.00→$3.78→$3.21 | 15K–449K | 102–6.4k | real accumulating volume but whippy; peak $4.64 (17:10 ET), now $3.21 ≈31% off high = fade, not hold |
+
+**Evaluation & decisions (entries live, but no new qualifier):**
+- **TNON — HELD (no re-entry).** Position open from 23:00 ($8.69, 11 sh), now $8.80 (+1.3%). Still building (AH +78.2%). One entry per candidate per night.
+- **MSS — HELD (no re-entry).** Position open from 23:00 ($1.90, 55 sh), now $1.72 (-9.5%). Fading; position management handled premarket.
+- **HKIT — SKIP (watch).** First AH-scan appearance (flat/absent 22:00–23:00) → fails 2-AH-scan gate. SIP shows real volume but a whippy, non-BUILD path now ~31% off the $4.64 high (fade > 20% off high, not a CHAI-style hold). Live quote `ask $0.00 x0` = no fillable AH book right now. Re-check at 00:00 only if it rebuilds toward highs.
+- **CAST — SKIP.** 2nd AH appearance but Total% +179.1% exceeds +150% ceiling; VRatio 0.8x (AH Vol < AvgVol) = no unusual AH accumulation; float 19.7M > 10M; CONFIRM-3 NO / SPIKE→FADE. Ceiling-override watch not triggered (needs VRatio >5x — fails). Multiple skips.
+- **EJH — SKIP.** NO-SPIKE, VRatio 0.1x (180K AH vol vs 2.1M avg) = thin, first AH-scan appearance. Regular-session watch appearance doesn't count toward the gate.
+- **WFF — SKIP.** AH +9.2% below the 10% threshold; VRatio 0.0x; float 13.3M.
+- **ATOM — SKIP.** AH +5.7% below threshold; Day% -9.2%; float 36.8M.
+- **BRNX — SKIP (carried).** Day% -13.1% dead-cat, VRatio 0.2x thin, Total% -3.3%.
+
+No new paper trades this scan. Two positions carried (TNON, MSS).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
