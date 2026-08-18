@@ -68,6 +68,40 @@ No paper trades.
 
 No paper trades (learning-phase observation window, both fail 2-AH-scan gate).
 
+## Scan 22:45 CET (4:45 PM ET) — AH open, observation only
+
+`scan.py --all`: **4 hits.** TNON reappears (2nd AH scan) and keeps building; MSS new.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $5.45 | +10.8% | +72.7% | $9.41 | +91.3% | 3.7M | 640K | 5.7x | 551K | Medical/Nursing Services |
+| MSS | [TV](https://www.tradingview.com/chart/?symbol=MSS) | $1.57 | +7.5% | +15.3% | $1.81 | +24.0% | 2.0M | 500K | 4.0x | 551K | Food Retail |
+| QTRX | [TV](https://www.tradingview.com/chart/?symbol=QTRX) | $2.68 | -8.2% | +7.5% | $2.88 | -1.3% | 81K | 1.3M | 0.1x | 41.8M | Medical Specialties |
+| BRNX | [TV](https://www.tradingview.com/chart/?symbol=BRNX) | $2.65 | -13.1% | +16.2% | $3.08 | +1.0% | 65K | 783K | 0.1x | 684K | Engineering & Construction |
+
+**Instrumentation (log-only, no decision impact):**
+- TNON: `SPIKE 16:01ET +28% $7.00 1787 trades / 137k sh` · `CONFIRM-3 NO no local-volume new-high ignition as-of 16:45ET`
+- MSS: `SPIKE 16:01ET +20% $1.89 474 trades / 84k sh` · `CONFIRM-3 NO`
+- BRNX: `SPIKE 16:25ET +20% $3.18 94 trades / 7k sh` · `CONFIRM-3 PENDING (ignition 16:25ET, waiting third bar)`
+
+**SIP 5-min bars (real AH volume):**
+
+| Ticker | Bar C path (16:00→16:30 ET) | Vol/bar | Trades/bar | Read |
+|--------|------------------------------|---------|------------|------|
+| TNON | $7.03→$7.60→$8.51→$8.58→$9.25→$9.41→$9.67 | 595K–1.08M | 9.7k–16.7k | genuine BUILD, strong accumulation, new highs |
+| MSS | $1.82→$1.58→$1.57→$1.81→$1.80→$1.81→$1.95 | 116K–638K | 431–3.4k | choppy BUILD/hold, real volume, new high $1.95 |
+| BRNX | $2.65→$2.89→$2.88→$2.96→$2.89 | 0.7K–84K | 1–905 | thin, Day −13% dead-cat, near-flat Total% |
+| QTRX | $2.68→$2.88→$2.70 | 1K–80K | 1–6 | near-zero AH trades, stale VRatio |
+
+**Evaluation (observation-only, no entries before 23:00 CET):**
+- **TNON** — now clears the **2-AH-scan gate** (22:30 +73.4%, 22:45 +91.3%). Tiny 551K float, Total% +91.3% under +150% ceiling, SIP confirms clean BUILD with heavy accumulating volume ($7.03→$9.67, 600K–1M sh/bar). Strongest candidate of the night. Peaked/building past 16:30 ET. **Primary entry target at 23:00** — run catalyst search then and verify live book.
+- **MSS** — real AH volume and a choppy hold/BUILD (new high $1.95), 551K float. **First AH scan appearance** — 2-AH-scan gate not met. Needs to reappear >10% AH at 23:00 to qualify.
+- **QTRX** — VRatio 0.1x, 1–6 trades/bar, no real AH liquidity. Skip (stale VRatio).
+- **BRNX** — Day% −13.1% dead-cat, thin book (mostly <2k sh/bar), Total% +1.0%. Skip (thin/dead-cat).
+- CNET (22:30 candidate) dropped out — SPIKE→FADE confirmed, no longer above threshold.
+
+No paper trades (learning-phase observation window; entries begin at 23:00 CET / 5:00 PM ET).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
