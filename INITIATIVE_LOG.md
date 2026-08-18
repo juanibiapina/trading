@@ -7,6 +7,20 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-08-18 — Initiative 3: +10% resting sell-limit edge holds out-of-sample (n=14)
+
+**Evaluated:** The 2026-08-17 step was **data-blocked** (Init 6 advanced instead; the Init 3 peak-seeking sim had no fresh held-name exit to seed since GXAI 08-13). Today unblocks it: the 08-18 04:31 ET position eval sold **five** held names (DARE, GRSD, ONFO, SGLY, XOS) — the first fresh seeds in five days. Re-running the sim with them **worked and the +10%-limit hypothesis held out-of-sample.**
+
+**Step taken:** **Pilot / Initiative 3 (execution pivot):** pulled the five exit fills from `broker.js orders all --json` (all filled 08:31Z = 04:31 ET), appended them to `scripts/peak-seeking-exit-sim.js` (n=9 -> n=14) and `log/premarket-exit-gap.csv` with verified PM-peak notes, and re-ran the sim. Log-only, no orders.
+
+**Result:** The resting **+10% sell-limit stays the winning rule at n=14: SUM +71.6% / mean +5.1%, positive on 10 of 14**, still beating every trailing stop (best trail12 +3.5% mean) and every other limit width (L5 +3.3, L15 +4.7, L20 +4.0). Out-of-sample the two same-day dumped-at-open names gave real *premarket* upside after our exit: **SGLY spiked $5.35 -> $9.83 at 04:50 ET (+83.7%)** and **XOS $3.48 -> $4.36 at 05:55 ET (+25.3%)**, both filling the +10% limit. The three multi-day-stalled Grade-B time-limit losers (DARE/GRSD/ONFO, exited far below entry on dead books) showed no premarket upside (peaks +0.5/+7.4/+0.9%) and correctly contributed ~0 or slightly negative — the +10% edge concentrates in names with a live book, and a resting limit is free optionality that only helps them. Peak-ceiling tally now +368.9% over 14. The finding survives the added dead-book losers, strengthening the firm proposal to Juan.
+
+**Hypothesis / next step:** A resting +10% sell-limit above the 04:30 ET exit price (GTC premarket, cancel 09:30 ET, market exit as fallback) captures a robust ~+5%/name of premarket peak that a plain 04:30 exit leaves behind, and is safe to apply to dead-book losers (contributes ~0). This is now well-evidenced (14 seeds, three converging studies incl. Init 6). Next run: keep seeding held names as they exit; confirm time-limit-stalled losers keep contributing ~0. Keep `CONFIRM-3` and both instruments log-only.
+
+**Needs from Juan:** two open asks unchanged. (1) The firm peak-seeking-exit proposal (replace the plain 04:30 ET market exit for held names with a resting +10% sell-limit, GTC premarket, cancel 09:30 ET) — now backed by n=14 out-of-sample + two converging Init 6/Init 3 studies; veto window, not applied. (2) Still open from 08-07: the Initiative 2 broker/feed decision for the ~203% fill gap (Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills).
+
+---
+
 ### 2026-08-17 — Initiative 6: deferred 1-min exit test RUN — resting +10% sell-limit is the first positive result, converges with Init 3
 
 **Evaluated:** The 2026-08-14 Init 3 step (pilot) is **data-blocked, not failed.** Its next step was to seed 1-2 more held names as they exit and re-run the peak-seeking sim, but no held name has exited since GXAI (08-13): the only broker sells since are GXAI, and DARE/GRSD/ONFO from the 08-14 cycle are **still open** (no morning eval ran over the weekend; today is Mon 08-17). So the peak-seeking sim gets no out-of-sample seed today — insufficient new data, hold the firm +10%-limit proposal to Juan unchanged. Advanced a ready low-risk parallel item instead.
