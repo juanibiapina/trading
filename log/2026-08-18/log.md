@@ -42,6 +42,32 @@ No watch name is building into AH — all flat or fading on the first bar. Nothi
 
 No paper trades.
 
+## Scan 22:30 CET (4:30 PM ET) — AH open, observation only
+
+`scan.py --all`: **2 hits.** First AH movers to cross the whole-market screen tonight.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $5.45 | +10.8% | +56.5% | $8.53 | +73.4% | 1.6M | 350K | 4.6x | 551K | Medical/Nursing Services |
+| CNET | [TV](https://www.tradingview.com/chart/?symbol=CNET) | $1.38 | +5.3% | +16.1% | $1.60 | +22.3% | 754K | 107K | 7.1x | 3.0M | Advertising/Marketing Services |
+
+**Instrumentation (log-only, no decision impact):**
+- TNON: `SPIKE 16:01ET +28% $7.00 1787 trades / 137k sh` · `CONFIRM-3 NO no local-volume new-high ignition as-of 16:30ET`
+- CNET: `NO-SPIKE peak +33% @16:09ET (no bar cleared +15% on volume co-spike)` · `CONFIRM-3 NO`
+
+**SIP 5-min bars (real AH volume):**
+
+| Ticker | Bar C path (16:00→16:15 ET) | Vol/bar | Trades/bar | Read |
+|--------|-----------------------------|---------|------------|------|
+| TNON | $7.03 → $7.60 → $8.51 → $8.58 | 595K–880K | 9.7k–15.8k | genuine BUILD, real accumulation |
+| CNET | $1.67 → $1.60 → $1.38 | 526K→248K | 4.1k→1.8k | SPIKE→FADE, volume fading |
+
+**Evaluation (observation-only, no entries before 23:00 CET):**
+- **TNON** — tiny 551K float, Total% +73.4% (under +150% ceiling), SIP confirms real accumulating AH volume and a clean BUILD ($7.03→$8.58). Strong watch. But this is its **first** AH scan appearance (0 hits at 22:00/22:15) — the 2-AH-scan gate is not met. Needs to reappear >10% AH at 23:00 to qualify. No catalyst search yet (defer to 23:00 if it holds).
+- **CNET** — SIP shows SPIKE→FADE (peaked $1.84 16:05 ET, now $1.38, volume halving each bar). Fails BUILD/hold. Watch only; likely skip.
+
+No paper trades (learning-phase observation window, both fail 2-AH-scan gate).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
