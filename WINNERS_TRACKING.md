@@ -6,9 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-08-13 | AKAN | A — operational (200 km fiber network complete, recurring-revenue billing, Aug 13 PR) | $11.74 PM SIP (+117.8% from $5.39 close @04:00 ET, 908K sh/29K trades); AH SIP peak $11.63 (+116%) build-and-hold | - | $10.24 | Day 1: **DETECTED all scans but NOT ENTERED — broker-block** (`tradable=false` + `ask $0.00 x0`). Winner cleared >100% on heavy volume. Float 541K micro |
-| 2026-08-12 | BAOS | D — crypto/blockchain pivot (1,000 mining machines) + share subscription financing | $2.19 PM SIP (+210% from $0.71 close @04:15 ET, 1.7M sh/12.5K trades); AH SIP peak $1.97 (+170%) | - | $0.76 | Day 2: faded to $0.73 from $2.19 day-1 peak. **DETECTED + ENTERED @ $0.90**, exited $2.24 (+148.9%) — captured the runner. Float 1.0M |
-| 2026-08-11 | NCRA | None (unverified; digital-asset/BTC-treasury pivot narrative) | $4.21 PM SIP (+113.7% from $1.97 close @04:00 ET, 1.83M sh/23.5K trades); AH dead flat | - | $2.34 | Day 3: faded to $2.45. **PM-only gapper** (no AH footprint), NOT detectable — not counted vs baseline. Peak was a single-bar spike; realistic exit ~+83% VWAP first bar only. Float 474K |
+| 2026-08-17 | XOS | B — U.S. Air Force deployable-charging contract (defense market entry, Aug 17 ~16:45 ET PR) | $4.78 AH SIP (+127.6% from $2.10 close @17:30 ET, 2.11M sh/19,955 trades); PM SIP peak $3.89 (+85.2%) @04:00 ET, faded | - | $3.49 | Day 1: **DETECTED + ENTERED @ $4.54** (23:30 CET). Chased near AH top; faded into PM (AH was the exit). Float 6.9M |
+| 2026-08-13 | AKAN | A — operational (200 km fiber network complete, recurring-revenue billing, Aug 13 PR) | $11.74 PM SIP (+117.8% from $5.39 close @04:00 ET, 908K sh/29K trades); AH SIP peak $11.63 (+116%) build-and-hold | - | $6.45 | Day 5: faded to $6.45 from $11.74 day-1 peak. **DETECTED all scans but NOT ENTERED — broker-block** (`tradable=false` + `ask $0.00 x0`). Float 541K micro |
 
 _2026-08-13: **no real winner** (nothing >100% on accumulating volume). GXAI detected + entered @ $1.42 (AH +77.5% SIP peak, faded to +72% PM, sub-100%); FRGT PM-only gapper +85.6%. See log/2026-08-12 Morning Evaluation._
 
@@ -16,6 +15,8 @@ _2026-08-13: **no real winner** (nothing >100% on accumulating volume). GXAI det
 
 | Date | Ticker | Catalyst | AH Peak | PM Peak | Day 2 | Day 5 | Outcome |
 |------|--------|----------|---------|---------|-------|-------|---------|
+| 2026-08-12 | BAOS | D — crypto/blockchain pivot (1,000 mining machines) + share subscription financing | $1.97 AH SIP (+170%) | $2.19 PM SIP (+210%) | $0.76 | $0.50 | Day 6: crashed to $0.50 from $2.19 day-1 peak. **DETECTED + ENTERED @ $0.90**, exited $2.24 (+148.9%) — captured the runner. Float 1.0M |
+| 2026-08-11 | NCRA | None (unverified; digital-asset/BTC-treasury pivot narrative) | AH dead flat | $4.21 PM SIP (+113.7%) | $2.34 | $2.31 | Day 7: faded to $2.31. **PM-only gapper** (no AH footprint), NOT detectable — not counted vs baseline. Realistic exit ~+83% first-bar VWAP only. Float 474K |
 | 2026-08-06 | DSY | None same-day (1-for-20 reverse split Feb 2026, ~6mo old) | $8.21 AH SIP (+134%) | $6.96 PM SIP (+98%) | — | $4.60 | Faded to $4.60 from $6.96 day-1 PM peak. DETECTED + ENTERED @ $7.10 (too extended, after AH peak); exited −11.3%. AH peak was the exit. Float 1.3M |
 | 2026-08-05 | CLRO | None same-day (July 2 Cortigent reverse-merger backdrop) | $8.07 AH SIP (+119%) | $9.00 PM SIP (+144.6% from $3.68 close, 895K sh/20.5K trades) | $3.76 | $10.17 | Day 6: recovered to $10.17 (above day-1 peak). **DETECTED** (WATCH→QUALIFIED) but **NOT ENTERED** — stale-book no-fill (Alpaca AH quote frozen 16:00 ET). Float 740K |
 | 2026-08-04 | RAIN | None (unverified low-float squeeze) | $3.69 AH SIP breakout | $4.60 PM SIP (+208.7% from $1.49 close, 1.29M sh/21.7K trades) | $1.26 | $1.18 | Day 7: faded to $1.18 from $4.60 day-1 peak. **NOT DETECTED**: TradingView omitted it despite the 18:15 ET in-window surge (feed-lag miss). Float 60K |

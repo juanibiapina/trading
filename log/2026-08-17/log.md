@@ -251,3 +251,94 @@ AH open +150 min. **Final scheduled scan.** Scanner returned **15 hits**.
 | XOS | $4.54 | 2026-08-17 23:30 CET | 21 | b6972d5c | BUILD 2 AH scans (+30.6%→+67.9%), USAF deployable-charging contract (Grade B), float 6.9M, real SIP accumulation to $4.05H, Total% +117% under ceiling |
 | SGLY | $7.01 | 2026-08-18 00:00 CET | 14 | a69bbf72 | BUILD 2 AH scans (+11.8%→+49.0%), second BUILD leg to $7.26 on 416k sh/8479 trades, ultra-low float 897K, Day -8.7 (not dead-cat), Total% +56% under ceiling. No catalyst (Grade None) |
 </content>
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**XOS** — Motor Vehicles (EV/charging)
+- Catalyst: "Xos Secures U.S. Air Force Contract to Deliver Deployable Mobile Charging, Marking Defense Market Entry" (GlobeNewswire, Aug 17 ~16:45 ET). Contract win + new defense market = **Grade B**.
+- Previous Close: $2.10
+- AH last night: SIP peak **$4.78 (+127.6%)** at 17:30 ET (21:30Z), on **2.11M sh / 19,955 trades** in the peak bar — real, accumulating liquidity (745K→1.59M→2.5M→2.1M sh/bar through the ramp)
+- Premarket now: $3.49 (+66.7%); SIP PM peak $3.89 (+85.2%) at 04:00 ET on 1.78M sh / 22,189 trades, fading since
+- Hypothetical P&L (early-AH entry $2.40 → AH peak $4.78): **+99%**; (early-AH $2.40 → PM peak $3.89): +62%
+- Float: 6.9M | Market Cap: ~$29.7M
+
+Clears the winner bar: **>100% (+127.6% AH) on high, accumulating SIP volume.** Real explosion, not a thin mover.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- We detected AND entered it. Ignition 16:30 ET (22:30 CET); feed surfaced it one scan later (23:00), qualified 2nd AH scan by 23:30. CONFIRM-3 YES, real SIP accumulation. **Entered 21 sh @ $4.54 at 23:30 CET** (order b6972d5c).
+- Scanner gap: none for detection. Execution note: free-tier SIP/quote lagged ~30-45 min while XOS ran; entry chased through a stale book to $4.54 — near the $4.78 AH top. The name faded into PM (see AH-peak-vs-PM-peak below), so the entry timing (chasing the extreme top) is the loss driver, not detection.
+
+### Baseline Tracking
+
+- Days tracked: **67** (was 66 + 1)
+- Winners detected by scanner: **54/63 (85.7%)** — XOS detected and added.
+- Winner selected for paper trade: **31/62 (50.0%)** — XOS entered @ $4.54.
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+**Baseline gap:** the 2026-08-14 (Fri) trading session was **never retrospectively evaluated** (log/2026-08-14/log.md has position evals but no Morning Evaluation / `Days tracked` line, and no evening scan sections). That night's winner was never diagnosed — a detection miss could be hidden. Not back-filled; denominator only +1 for the Aug 17 session. See Notes.
+
+### Retrospective Scan Results
+
+- Live PM scan (04:20 ET): XOS +69.8% $3.55, EJH +59.3% $2.31, WFF +25.7% $2.54, PFSA +86.8% $8.46 (bad print — see below), AUUD +6.2%.
+- AH reconstruction (SIP): XOS is the sole real >100% AH mover on liquid, accumulating volume. All other AH names faded (AUUD, WFF, IVF, GNPX) or are thin.
+- **PFSA excluded (Yahoo bad print):** Yahoo AH high $8.80 (+146.6%) is fictional — SIP AH high only ~$4.99 on tiny volume (few hundred to ~2.7K sh/bar, single-digit trades). Live book `bid $3.73 / ask $5.42` (wide). 132K float, uninvestable. Not the winner, not a real mover.
+
+### Open Position P&L (Alpaca)
+
+Live prices verified fresh against SIP PM bars (XOS position $3.50 ≈ live $3.49; SGLY $5.33 ≈ SIP $5.26). Hold/sell handled by position-evaluation.md, not here.
+
+| Ticker | Entry | Now (live) | P&L % | Note |
+|--------|-------|-----------|-------|------|
+| XOS | $4.54 | $3.49 | **-23.1%** | Last night's fill. Entered near AH top $4.78; faded into PM. |
+| SGLY | $7.01 | ~$5.26 | **-25.0%** | Last night's fill. Grade None ultra-low-float; PM peak $6.57 < entry. |
+| ONFO | $3.02 | $2.27 | -24.8% | Carryover (Aug 13 night), Day 2+. |
+| GRSD | $2.17 | $2.08 | -4.0% | Carryover, Day 2+. |
+| DARE | $1.70 | $0.83 | -51.2% | Carryover — large drop; verify freshness in position-eval. |
+
+No new fills executed by this prompt (retrospective only).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) + 2 extra (22:15, 22:45). Full entry-window coverage.
+- Candidates found: XOS, SGLY, AUUD, WFF, IVF, GNPX, EJH, and others.
+- Retrospective matches: winner XOS caught and entered.
+
+### Missed Opportunities
+
+No significant missed opportunities. The one real winner (XOS) was detected and entered. PFSA was a Yahoo bad print (thin, uninvestable), not a miss.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| XOS | $4.78 (+128%) | 17:30 ET | Build | $3.49 (+66.7%) | -27% | +66.7% | Faded into PM; AH was better exit |
+| SGLY | $7.26 (+62%) | ~17:30 ET | Build | ~$5.26 (+17%) | -28% | +17% | Faded; PM peak $6.57 < entry |
+| WFF | $2.49 (+73%) | 17:20 ET | Spike→fade | $2.54 (+25.7%) | +2% | +25.7% | Correctly skipped (fade), mild PM |
+| AUUD | $1.30 | 16:10 ET | Spike→fade | $1.03 (+6.2%) | -21% | +6.2% | Correctly skipped, faded |
+| IVF | $2.21 (+38%) | 17:10 ET | Spike→fade | flat | — | — | Correctly skipped, faded |
+| GNPX | $5.63 | 17:10 ET | Spike→fade | flat | — | — | Correctly skipped, faded |
+
+**AH-peak-vs-PM-peak check:** XOS AH peak +127.6% (SIP $4.78) **>** PM peak +85.2% (SIP $3.89) — AH was the better exit. Extreme AH runner (~+128%, in the ~+130% fade zone) that faded into PM. Adds to the fade tally. **Standing: 4 fade (MSW, DSY, AQB, XOS) / 1 continue (BAOS).** We entered XOS at $4.54 near the $4.78 top; PM never reclaimed it → a real entry loss, confirming: entering near an extreme AH top (>~+120% from close) risks a PM that never reclaims it.
+
+### Price Charts
+
+```
+XOS - 2-Day Price Timeline (5-min)
+Previous Close: $2.10 | 2-Day Range: $2.05 - $4.78
+Current: $3.49 (+66.7%) | Peak: $4.78 (+128.2%) at 08-17 21:30 ET
+AH ramp: 20:30 $2.40 → 20:55 $3.63 → 21:30 $4.78 (peak) → held ~$4.0 → PM open $3.88 → fading $3.49
+```
+
+### Notes
+
+- **XOS is a detected + selected winner** — clean detection (ignition caught within one scan of the 16:30 ET spike), clean 2-AH-scan BUILD, Grade B USAF contract, real 2M-sh/bar SIP accumulation. Detection pipeline worked. The loss came from execution (chased the stale book to $4.54 near the $4.78 top) + the extreme-runner fade, not from scanner failure.
+- **Baseline gap (2026-08-14 Fri):** no Morning Evaluation and no evening scans logged for that session. The Aug 14 winner was never diagnosed. Flag for the daily email: confirm whether the Friday-night scanner/scheduler ran at all (a possible coverage failure) so the gap can be classified rather than silently absorbed.
+- **AH-peak-vs-PM-peak fade tally: 4 fade / 1 continue** in the ~+130%+ zone. Fade bucket dominating — supports taking partial profit in late AH on extreme runners (>~+120% from close) rather than holding for PM. Data point, not yet a rule.
+- **Reverse-split-squeeze fade:** SGLY (Aug 17→18, reverse split Jul 27 ~3wk weeks-old bucket, float 897K, Grade None, entered $7.01 → PM peak $6.57 = **-6.3%, faded**; AH peak $7.26 was the better exit). Weeks/months-old bucket now **3 continue / 3 fade**; this-week bucket unchanged at 3/3 fade.
+- **Dead-cat-override watch:** EJH flagged last night (skipped hypo entry $2.05 @ 23:30 CET, Day% -16.7% reclaim above close, thin). PM follow-through: EJH +59.3% $2.31 → hypo $2.05 → ~$2.31 = **+12.7%** (thin, 707K PM vol on 2.5M float). Records the dead-cat-override case.
+- **PM-only gapper:** biggest raw PM mover today = PFSA +86.8%, but a Yahoo bad print (SIP AH ~$4.99, thin) — not a real gapper. Real biggest mover = XOS (+66.7%), an AH→PM continuation, detected. No investable PM-only gapper today. Holdable PM-only-gapper count (from log/pm-open-scan.csv): 25 — cluster threshold long exceeded; standing action (route Initiative-6 early-PM pilot to daily email) unchanged.
+- **In-window feed-lag miss tracking: standing count 4** (BTCT, KUST, WLDS, RAIN) — escalation trigger REACHED; AH-data-source-verification recommendation stands for the daily email. No new feed-lag miss tonight (XOS was caught).
