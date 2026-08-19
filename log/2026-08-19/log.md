@@ -31,6 +31,25 @@ No candidates found.
 
 ---
 
+## Scan 22:15 CET (4:15 PM ET)
+
+**Session: AFTERHOURS.** Scanner `--all` → 0 hits. Observation-only window (learning-phase: no entries before 23:00 CET).
+
+No candidates found.
+
+**Watch names cross-checked in SIP** (AH-start 20:00:00Z), all thin first-bar only, no accumulation:
+
+| Ticker | AH bar (16:00-05 ET) | Trades | Vol | Note |
+|--------|----------------------|--------|-----|------|
+| UUU | O$6.24 H$6.24 C$5.86 | 31 | 27K | faded off open, thin |
+| TGL | O$2.92 H$2.97 C$2.97 | 16 | 8K | thin |
+| PSIG | O$2.04 H$2.06 C$2.05 | 7 | 4K | thin |
+| SUGRF | no SIP bars | - | - | no AH liquidity |
+
+None building. Re-check at 22:30/23:00 for sustained AH momentum before any entry consideration.
+
+---
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
