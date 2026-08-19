@@ -156,12 +156,51 @@ None building. Re-check at 22:30/23:00 for sustained AH momentum before any entr
 
 ---
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**Session: AFTERHOURS.** Entry window open. 10 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BTCT | [TV](https://www.tradingview.com/chart/?symbol=BTCT) | $0.84 | +80.0% | +82.8% | $1.53 | +229.0% | 43.4M | 11.4M | 3.8x | 8.6M | Data Processing Services |
+| LOOP | [TV](https://www.tradingview.com/chart/?symbol=LOOP) | $0.62 | -1.9% | +127.3% | $1.41 | +122.9% | 17.3M | 1.9M | 9.0x | 25.6M | Chemicals: Specialty |
+| BIVI | [TV](https://www.tradingview.com/chart/?symbol=BIVI) | $1.34 | +38.9% | +7.5% | $1.44 | +49.3% | 7.8M | 20.4M | 0.4x | 7.2M | Biotechnology |
+| BEEM | [TV](https://www.tradingview.com/chart/?symbol=BEEM) | $1.21 | +5.2% | +20.7% | $1.46 | +27.0% | 6.3M | 1.1M | 5.9x | 21.2M | Electrical Products |
+| POLA | [TV](https://www.tradingview.com/chart/?symbol=POLA) | $1.59 | -7.6% | +19.5% | $1.90 | +10.5% | 5.4M | 833K | 6.4x | 3.0M | Electronic Equipment/Instruments |
+| FRTT | [TV](https://www.tradingview.com/chart/?symbol=FRTT) | $0.96 | -3.9% | +6.2% | $1.02 | +2.1% | 3.5M | 9.7M | 0.4x | n/a | Chemicals: Agricultural |
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $1.60 | +6.0% | +8.7% | $1.74 | +15.2% | 524K | 282K | 1.9x | 2.3M | Information Technology Services |
+| BTOG | [TV](https://www.tradingview.com/chart/?symbol=BTOG) | $0.86 | +10.5% | +6.8% | $0.92 | +17.9% | 382K | 473K | 0.8x | 4.1M | Food: Meat/Fish/Dairy |
+| RCON | [TV](https://www.tradingview.com/chart/?symbol=RCON) | $3.67 | +9.9% | +8.2% | $3.97 | +18.9% | 304K | 1.1M | 0.3x | 64.5M | Electronics Distributors |
+| RDAC | [TV](https://www.tradingview.com/chart/?symbol=RDAC) | $8.78 | +50.1% | +22.3% | $10.74 | +83.6% | 86K | 1.6M | 0.1x | 2.5M | Financial Conglomerates |
+
+**Instrumentation (log-only, no decision impact):**
+
+| Ticker | SPIKE-BAR | CONFIRM-3 |
+|--------|-----------|-----------|
+| LOOP | SPIKE 16:33ET +21% $0.75 23 trades / 44k sh | YES ignition 16:35ET 12.8x; confirmed 16:45ET $1.13 |
+| BTCT | NO-SPIKE peak +106% @17:09ET (no volume co-spike bar) | NO ignition 16:30ET failed third-bar hold/volume |
+| RDAC | SPIKE 17:14ET +22% $10.72 243 trades / 18k sh | PENDING ignition 17:10ET; waiting for third bar |
+
+**SIP cross-check (last bar 17:15 ET, ~15 min lag, fresh):**
+- **LOOP** (cleared 2-AH-scan gate: 23:00 +46.3%, 23:30 +127.3%) — **clean BUILD, ENTERED**. Real accumulation throughout: trades 94/1840/7119/16136/15368/10182/6201/4088/14128/8983, millions of sh per bar. VWAP built 0.70→0.75→0.90→1.08→1.19→1.26, brief pullback to 1.17, then fresh push 1.36→1.40 with H$1.47 @17:10-17:15. Currently holding at/near AH high (making new highs at last bars, not fading). Day -1.9% (not dead-cat), Total +122.9% (under +150% ceiling), float 25.6M (recorded, not a filter). SPIKE-BAR YES, CONFIRM-3 YES. Book real & fresh: bid $1.22 x300 ask $1.36 x700, tradable=true. Catalyst: 3 searches, no same-day catalyst (Loop Industries = PET recycling tech; earnings Jul 14; no fresh PR/8-K). **No catalyst → enter with concern noted, Grade None.**
+- **BTCT** (all scans) — Total **+229% far over +150% ceiling**. NO-SPIKE, peak +106% @17:09ET, choppy. VRatio 3.8x (<5x) → no ceiling-override. Book real (bid $1.26 ask $1.38). **Skip: entry extension ceiling.**
+- **BIVI** (carried) — faded further, AH% collapsed 35.4%→19.4%→7.5% across scans. Confirmed SPIKE→FADE. **Skip.**
+- **BEEM** (carried) — flat/dead at low base ($1.46), volume collapsed. **Skip: SPIKE→FADE.**
+- **POLA** (carried) — deep fade continues, +10.5% Total, Day -7.6%. **Skip: SPIKE→FADE.**
+- **RDAC** (NEW, 1st AH scan) — SPIKE 17:14ET, thin: last bar 56k sh / 1068 trades, prior bars near-zero (65-113 trades). VRatio 0.1x. First appearance, cannot clear 2-AH-scan gate; also thin. **Skip: thin / 1 AH scan.**
+- FRTT / MASK / BTOG / RCON: thin / low VRatio / first-appearance, not evaluated for entry.
+
+**Chase-cap check (log-only):** LOOP qualifying-scan Total% = +122.9% ($1.41 @23:30); fill $1.36/+119.4%. Fill Total% **below** qualifying — no chase, limit filled at/under the qualifying AH price. No chase-cap concern.
+
+**Decision: ENTER LOOP.** First clean BUILD to clear the 2-AH-scan gate tonight — real volume, holding at AH high, under ceiling, not dead-cat. No catalyst noted as a concern (learning-phase enter-with-concern default). All prior-scan gate names (BTCT over ceiling, BIVI/BEEM/POLA SPIKE→FADE) correctly skipped.
+
+---
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-
-_No entries this session (regular session, pre-AH)._
+| LOOP | $1.36 | 23:30 CET | 73 | c57ef90f | BUILD, cleared 2-AH-scan gate (+46.3%→+127.3%), real SIP vol (millions sh/bar), CONFIRM-3 YES, holding AH high, Total +119.4% under ceiling, Day -1.9%. Grade None (no same-day catalyst). |
 
 ---
 

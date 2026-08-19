@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | | | All positions closed 2026-08-19 10:30 CET pulse. |
+| LOOP | $1.36 | $1.36 | $1.47 | 73 | 2026-08-19 23:30 CET | None | c57ef90f | Loop Industries, PET recycling tech, float 25.6M. AH BUILD, cleared 2-AH-scan gate (+46.3%→+127.3%), CONFIRM-3 YES, real SIP vol, holding AH high $1.47. Total +119.4%. No same-day catalyst found (3 searches) — enter with concern. Grade None: exit first PM opportunity. |
 
 ## Position Rules
 
