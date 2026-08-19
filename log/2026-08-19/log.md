@@ -50,6 +50,38 @@ None building. Re-check at 22:30/23:00 for sustained AH momentum before any entr
 
 ---
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Session: AFTERHOURS.** Observation-only window (learning-phase: no entries before 23:00 CET). 6 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BTCT | [TV](https://www.tradingview.com/chart/?symbol=BTCT) | $0.84 | +80.0% | +30.3% | $1.09 | +134.5% | 13.2M | 8.2M | 1.6x | 8.6M | Data Processing Services |
+| BEEM | [TV](https://www.tradingview.com/chart/?symbol=BEEM) | $1.21 | +5.2% | +40.5% | $1.70 | +47.8% | 1.1M | 504K | 2.2x | 21.2M | Electrical Products |
+| RCON | [TV](https://www.tradingview.com/chart/?symbol=RCON) | $3.67 | +9.9% | +11.2% | $4.08 | +22.2% | 177K | 1.1M | 0.2x | 64.5M | Electronics Distributors |
+| FRTT | [TV](https://www.tradingview.com/chart/?symbol=FRTT) | $0.96 | -3.9% | +20.8% | $1.16 | +16.1% | 2.2M | 9.5M | 0.2x | n/a | Chemicals: Agricultural |
+| YHC | [TV](https://www.tradingview.com/chart/?symbol=YHC) | $1.80 | +4.7% | +15.0% | $2.07 | +20.3% | 68K | 116K | 0.6x | 1.3M | Advertising/Marketing |
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $1.21 | -33.1% | +7.4% | $1.30 | -28.2% | 196K | 5.6M | 0.0x | 2.8M | Wholesale Distributors |
+
+**Instrumentation (log-only, no decision impact):**
+
+| Ticker | SPIKE-BAR | CONFIRM-3 |
+|--------|-----------|-----------|
+| BTCT | NO-SPIKE peak +55% @16:06ET (no volume co-spike bar) | NO no local-volume new-high ignition as-of 16:30ET |
+| BEEM | SPIKE 16:13ET +31% $1.58 1350 trades / 263k sh | PENDING ignition 16:10ET; waiting for third bar |
+| FRTT | NO-SPIKE peak +30% @16:11ET | NO ignition 16:05ET failed third-bar hold/volume |
+| RCON | NO-SPIKE peak +14% @16:12ET | PENDING ignition 16:10ET; waiting for third bar |
+| YHC | SPIKE 16:14ET +17% $2.10 308 trades / 44k sh | PENDING ignition 16:10ET; waiting for third bar |
+
+**SIP cross-check (last bar 16:15 ET, ~15 min lag, fresh):**
+- **BTCT** — real accumulation: 14k/17k/10k/7k trades per bar, 5M/5.6M/3.2M/2.9M sh. But **SPIKE→FADE**: H$1.30 @16:05 → C$1.07 @16:15, peak 16:06ET. Day already +80%, Total +134.5% (near +150% ceiling). Book real (bid $1.01 ask $1.30 x100). Early-peak fade profile. Carried from 21:30 (was closing-print artifact then, now real AH move).
+- **BEEM** — real accumulation: ignition 16:10ET, 5844/10691 trades, 1.2M/2.1M sh. **BUILD/HOLD**: VWAP $1.62→$1.69, C$1.69 near H$1.77, holding at high through 16:15. Strongest BUILD name. Float 21.2M (recorded, not a filter). Quote stale (16:00 ts). Total +47.8%, well under ceiling.
+- Others (RCON, FRTT, YHC, EHGO): thin / low VRatio, not evaluated for entry.
+
+**Read into 23:00 scan:** BEEM is the live BUILD candidate to watch — needs to reappear at 23:00+ CET holding near high to clear the 2-AH-scan gate. BTCT spiking-then-fading despite real volume; watch whether it stabilizes or keeps declining. No entries this scan (pre-23:00 observation window).
+
+---
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
