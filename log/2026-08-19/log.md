@@ -21,6 +21,16 @@ Most other top-%% hits (ZSTK +197%, BTCT +169%, RDAC +69%, AZI, CDTG, SKK, MSS) 
 
 ---
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Session: AFTERHOURS.** Scanner ran at exactly 16:00 ET (AH open) — 0 hits. No accumulated AH volume yet at the bell, expected at the first scan. Observation-only window (learning-phase: no entries before 23:00 CET).
+
+No candidates found.
+
+**Watch names carried from 21:30 regular-session scan** (re-check for sustained AH momentum at 22:30/23:00+): UUU (float 1.5M), TGL (float 1.8M), SUGRF (float 851K), PSIG (float 8.6M). None reappeared in this AH scan yet.
+
+---
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
