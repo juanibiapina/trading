@@ -116,6 +116,46 @@ None building. Re-check at 22:30/23:00 for sustained AH momentum before any entr
 
 ---
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**Session: AFTERHOURS.** Entry window open (learning-phase: entries allowed at 23:00+ CET). 9 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BTCT | [TV](https://www.tradingview.com/chart/?symbol=BTCT) | $0.84 | +80.0% | +47.0% | $1.23 | +164.6% | 28.2M | 9.8M | 2.9x | 8.6M | Data Processing Services |
+| BIVI | [TV](https://www.tradingview.com/chart/?symbol=BIVI) | $1.34 | +38.9% | +19.4% | $1.60 | +65.9% | 6.6M | 20.3M | 0.3x | 7.2M | Biotechnology |
+| BEEM | [TV](https://www.tradingview.com/chart/?symbol=BEEM) | $1.21 | +5.2% | +20.7% | $1.46 | +27.0% | 5.5M | 987K | 5.6x | 21.2M | Electrical Products |
+| POLA | [TV](https://www.tradingview.com/chart/?symbol=POLA) | $1.59 | -7.6% | +20.8% | $1.92 | +11.6% | 4.6M | 745K | 6.2x | 3.0M | Electronic Equipment/Instruments |
+| LOOP | [TV](https://www.tradingview.com/chart/?symbol=LOOP) | $0.62 | -1.9% | +46.3% | $0.91 | +43.5% | 2.3M | 288K | 8.0x | 25.6M | Chemicals: Specialty |
+| FRTT | [TV](https://www.tradingview.com/chart/?symbol=FRTT) | $0.96 | -3.9% | +9.4% | $1.05 | +5.1% | 3.3M | 9.6M | 0.3x | n/a | Chemicals: Agricultural |
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $1.60 | +6.0% | +11.3% | $1.78 | +17.9% | 380K | 267K | 1.4x | 2.3M | Information Technology Services |
+| VRAX | [TV](https://www.tradingview.com/chart/?symbol=VRAX) | $3.18 | +15.2% | +8.5% | $3.45 | +25.0% | 157K | 1.8M | 0.1x | 792K | Financial Conglomerates |
+| BXBL | [TV](https://www.tradingview.com/chart/?symbol=BXBL) | $4.08 | +0.0% | +25.4% | $5.12 | +25.4% | 150K | 208K | 0.7x | 921K | Homebuilding |
+
+**Instrumentation (log-only, no decision impact):**
+
+| Ticker | SPIKE-BAR | CONFIRM-3 |
+|--------|-----------|-----------|
+| BTCT | NO-SPIKE peak +62% @16:42ET (no volume co-spike bar) | NO ignition 16:30ET failed third-bar hold/volume |
+| BIVI | SPIKE 16:23ET +17% $1.57 1179 trades / 333k sh | YES ignition 16:20ET 7.6x; confirmed 16:30ET $1.67 |
+| BEEM | SPIKE 16:13ET +31% $1.58 1350 trades / 263k sh | NO ignition 16:10ET failed third-bar hold/volume |
+| POLA | SPIKE 16:15ET +42% $2.26 609 trades / 103k sh | NO ignition 16:15ET failed third-bar hold/volume |
+| LOOP | SPIKE 16:33ET +21% $0.75 23 trades / 44k sh | YES ignition 16:35ET 12.8x; confirmed 16:45ET $1.13 |
+
+**SIP cross-check (last bar 16:45 ET, ~15 min lag, fresh):**
+- **BIVI** (cleared 2-AH-scan gate: 22:45 +35.4%, 23:00 +19.4%) — real accumulation earlier (peak bar 2.3M sh / 12164 trades @16:30) but now **SPIKE→FADE**: peaked $1.96 @16:30ET, VWAP decaying 1.82→1.68→1.61→1.53, trades collapsing 12164→4187→2157→1532. AH% declining across both qualifying scans (35.4%→19.4%). Peaked before 17:30 **and** declining across scans = SPIKE→FADE. Quote fresh & real (bid $1.55 ask $1.75 x1500), tradable=true. Catalyst: recent shelf/dilution filings (Aug 14 registration for Class A stock + warrants), no fresh same-day catalyst → Grade D/None. **Skip: SPIKE→FADE.**
+- **BEEM** (in all 3 AH scans) — **SPIKE→FADE stabilized at low base**: peaked $1.77 @16:15, faded to $1.44-1.50, trades collapsed 10691→565. Current $1.48 vs peak $1.77 = -16% but volume dead. Peaked before 17:30, declining. Quote stale (16:00 ts) but bars confirm ~$1.48. **Skip: SPIKE→FADE.**
+- **BTCT** (all scans) — Total **+164.6% over +150% ceiling**. Peak +62% @16:42ET (before 17:00), VRatio 2.9x (<5x) → no ceiling-override. Choppy fade, not a clean BUILD (VWAP $1.14-1.29, C$1.17 @16:45). **Skip: entry extension ceiling.**
+- **POLA** (22:45, 23:00) — deep **SPIKE→FADE**: peaked $2.60 @16:25, now $1.92 (-26% off peak). Day -7.6%. **Skip: SPIKE→FADE.**
+- **LOOP** (NEW, 1st AH scan) — strongest BUILD tonight: ignition 16:35, CONFIRM-3 YES, VWAP building 0.70→0.90→1.08, trades accumulating 94→1840→7119→16136 (3.6M sh last bar), still building at last bar (peak $1.20 @16:45). Day -1.9% (not dead-cat), Total +43.5% (under ceiling), float 25.6M. No catalyst found. **Only 1 AH scan — cannot clear 2-AH-scan gate yet.** Prime BUILD watch for 23:30.
+- FRTT / MASK / VRAX / BXBL: thin / low VRatio / first-appearance, not evaluated for entry.
+
+**Decision: SKIP ALL — no entries.** Every candidate that cleared the 2-AH-scan gate (BIVI, BEEM, BTCT, POLA) is SPIKE→FADE (peaked before 17:30 ET, now declining) or over the +150% ceiling. Per the SPIKE→FADE-only-night rule, skip rather than enter the least-bad option — SPIKE→FADE stocks are 0/10+ for PM continuation. The one genuine BUILD (LOOP) has only 1 AH scan and cannot clear the gate this scan. A skip here is avoiding a predictable loss, not lost data.
+
+**Read into 23:30 scan:** LOOP is the live BUILD candidate — if it reappears at 23:30 holding/building near its AH high, it clears the 2-AH-scan gate and becomes the entry candidate. Watch BIVI/BEEM/BTCT/POLA only for whether any reverses the fade into a fresh build (unlikely).
+
+---
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
