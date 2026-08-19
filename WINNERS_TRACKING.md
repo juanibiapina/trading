@@ -6,15 +6,14 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-08-17 | XOS | B — U.S. Air Force deployable-charging contract (defense market entry, Aug 17 ~16:45 ET PR) | $4.78 AH SIP (+127.6% from $2.10 close @17:30 ET, 2.11M sh/19,955 trades); PM SIP peak $3.89 (+85.2%) @04:00 ET, faded | - | $3.49 | Day 1: **DETECTED + ENTERED @ $4.54** (23:30 CET). Chased near AH top; faded into PM (AH was the exit). Float 6.9M |
-| 2026-08-13 | AKAN | A — operational (200 km fiber network complete, recurring-revenue billing, Aug 13 PR) | $11.74 PM SIP (+117.8% from $5.39 close @04:00 ET, 908K sh/29K trades); AH SIP peak $11.63 (+116%) build-and-hold | - | $6.45 | Day 5: faded to $6.45 from $11.74 day-1 peak. **DETECTED all scans but NOT ENTERED — broker-block** (`tradable=false` + `ask $0.00 x0`). Float 541K micro |
-
-_2026-08-13: **no real winner** (nothing >100% on accumulating volume). GXAI detected + entered @ $1.42 (AH +77.5% SIP peak, faded to +72% PM, sub-100%); FRGT PM-only gapper +85.6%. See log/2026-08-12 Morning Evaluation._
+| 2026-08-18 | TNON | None (low-float squeeze; no fresh Aug 18 PR; Q2 earnings Aug 13 miss) | $10.10 AH SIP (+105.3% from $4.92 @16:30 ET, 595K–1.08M sh/bar, 9.7K–16.7K trades); PM SIP peak $10.84 (+120.3%) @04:00 ET | - | $9.4 | Day 1: **DETECTED + ENTERED @ $8.69** (23:00 CET). Winner caught and traded; PM peak exceeded AH peak (+24.7% from fill at peak). Float 551K |
+| 2026-08-17 | XOS | B — U.S. Air Force deployable-charging contract (defense market entry, Aug 17 ~16:45 ET PR) | $4.78 AH SIP (+127.6% from $2.10 close @17:30 ET, 2.11M sh/19,955 trades); PM SIP peak $3.89 (+85.2%) @04:00 ET, faded | - | $2.09 | Day 2: faded to $2.09 (below the $2.10 base). **DETECTED + ENTERED @ $4.54** (23:30 CET). Chased near AH top; faded into PM (AH was the exit). Float 6.9M |
 
 ## Historical Winners (with multi-day outcome)
 
 | Date | Ticker | Catalyst | AH Peak | PM Peak | Day 2 | Day 5 | Outcome |
 |------|--------|----------|---------|---------|-------|-------|---------|
+| 2026-08-13 | AKAN | A — operational (200 km fiber network complete, recurring-revenue billing, Aug 13 PR) | $11.63 AH SIP (+116%) | $11.74 PM SIP (+117.8% from $5.39, 908K sh/29K trades) | — | $5.41 | Day 6: faded to $5.41 from $11.74 day-1 peak. **DETECTED all scans but NOT ENTERED — broker-block** (`tradable=false` + `ask $0.00 x0`). Float 541K |
 | 2026-08-12 | BAOS | D — crypto/blockchain pivot (1,000 mining machines) + share subscription financing | $1.97 AH SIP (+170%) | $2.19 PM SIP (+210%) | $0.76 | $0.50 | Day 6: crashed to $0.50 from $2.19 day-1 peak. **DETECTED + ENTERED @ $0.90**, exited $2.24 (+148.9%) — captured the runner. Float 1.0M |
 | 2026-08-11 | NCRA | None (unverified; digital-asset/BTC-treasury pivot narrative) | AH dead flat | $4.21 PM SIP (+113.7%) | $2.34 | $2.31 | Day 7: faded to $2.31. **PM-only gapper** (no AH footprint), NOT detectable — not counted vs baseline. Realistic exit ~+83% first-bar VWAP only. Float 474K |
 | 2026-08-06 | DSY | None same-day (1-for-20 reverse split Feb 2026, ~6mo old) | $8.21 AH SIP (+134%) | $6.96 PM SIP (+98%) | — | $4.60 | Faded to $4.60 from $6.96 day-1 PM peak. DETECTED + ENTERED @ $7.10 (too extended, after AH peak); exited −11.3%. AH peak was the exit. Float 1.3M |

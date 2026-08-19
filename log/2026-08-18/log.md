@@ -303,3 +303,130 @@ No new paper trades. Night ends with two positions carried (TNON, MSS). No SPIKE
 ## Position Evaluation — 14:30 CET
 
 No open positions (Alpaca source of truth confirms flat). All 5 positions closed at the 10:30 CET pulse. OPEN_POSITIONS.md agrees. No action.
+
+## Morning Evaluation — 10:20 CET (Pulse 1)
+
+### Today's Winner
+
+**TNON** — Tenon Medical (medical devices / spinal implants)
+- Catalyst: **None confirmed** (Grade None). Benzinga lists it only as an after-market mover (+70.3%); Q2 earnings were Aug 13 (EPS miss), no fresh Aug 18 PR/8-K found. Ultra-low-float squeeze.
+- Previous Close: $4.92 (Aug 15; ran +10.8% during Aug 18 regular to $5.45)
+- AH last night: SIP high **$10.10 (+105.3% from $4.92)** at 16:30 ET, on 595K–1.08M sh/bar and 9.7K–16.7K trades/bar — heavy real accumulation, clean BUILD
+- Premarket now: SIP peak **$10.84 (+120.3%)** in the first PM bar (04:00 ET, 465K sh / 15,236 trades); currently ~$9.4
+- Hypothetical P&L (AH first-sighting $7.03 → PM peak $10.84): **+54%**; (our fill $8.69 → PM peak): **+24.7%**
+- Float: 551K | Market Cap: ~$3.6M
+
+Clears the winner bar: >100% on high, accumulating SIP volume. Sole real winner today (MSS peaked +83%, under the bar).
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- Surfaced from the first AH scan (22:30 CET, +73.4% Total) and every scan after; cleared the 2-AH-scan gate at 22:45 (+91.3%). SIP confirmed a genuine BUILD with heavy accumulation.
+- **Detected AND selected** — entered at 23:00 CET @ $8.69 (11 sh). Ideal outcome: winner caught and traded.
+- Scanner gap: none. Scanner did its job on the night's biggest mover.
+
+### Baseline Tracking
+
+- Days tracked: **68** (was 67 + 1)
+- Winners detected by scanner: **55/64 (85.9%)** — TNON detected.
+- Winner selected for paper trade: **32/63 (50.8%)** — TNON entered @ $8.69.
+- Target: >80% detection
+- Status: **BASELINE MET** (85.9% > 80%)
+
+No baseline gap: Aug 17 (last baseline log) immediately precedes the evaluated Aug 18 session.
+
+### Retrospective Scan Results
+
+Live PM scan (04:20 ET) top hits: BIVI +88.7% ($1.82), TNON +71.7% ($9.36), MSS +64.3% ($2.58), CAST +18.6%, TWG +20.2%. TNON is the biggest genuine AH->PM continuation and matches last night's entered position. BIVI (7.2M float biotech) spiked from a mid-AH ignition (18:25 ET) and is a secondary mover, not a winner.
+
+### Open Position P&L (Alpaca)
+
+Both positions carried from last night, still open (exits handled by position-evaluation.md, not here). Alpaca quote endpoint is **stale** for both (TNON @16:00 ET `ask $0.00 x0`; MSS @16:59 ET) — P&L reported against **live SIP PM** price, not the stale book.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| TNON | $8.69 | +76.6% | None — low-float squeeze | 23:00 CET | $10.84 (SIP) | 04:00 ET | open | — | +8% (live ~$9.4) / +24.7% at PM peak | 🟢 Open |
+| MSS | $1.90 | +21.0% | None — low-float squeeze | 23:00 CET | $2.88 (SIP) | 04:05 ET | open | — | +28% (live ~$2.44) / +51.6% at PM peak | 🟢 Open |
+
+Alpaca-reported marks (lagging): TNON $9.62/+10.7%, MSS $2.14/+12.6%. Both understate vs live SIP. **No exits placed here.**
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits yet).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) plus 2 extra (22:15, 22:45). Full coverage of the entry window.
+- Candidates found: TNON, MSS, CAST, CNET, BRNX, HKIT, EJH, TGL, KIDZ, CRE
+- Retrospective matches: winner (TNON) + strong secondary (MSS) both detected and entered.
+
+### Missed Opportunities
+
+No significant missed opportunities. The night's biggest mover (TNON) was detected and entered; MSS likewise. TGL correctly skipped (faded, see follow-through).
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| TNON | $10.10 SIP (+105%) | 16:30 ET | Build | $10.84 PM peak / ~$9.4 | PM peak EXCEEDED AH peak | +120% peak | 🟢 Continued — PM peak above AH peak, entered |
+| MSS | $2.07 SIP | ~17:00 ET | Build/hold | $2.88 PM peak / ~$2.44 | PM peak EXCEEDED AH peak | +83% peak | 🟢 Continued — entered |
+| TGL | $4.33 SIP (+62%) | 17:45 ET | Spike->fade | $3.68 PM peak | PM below AH peak | +38% peak | 🔴 Faded — PM fell short of AH peak (skip correct) |
+| CAST | ~$5.9 (+179% Total) | early AH | Spike->fade | $2.49 (+18.6%) | far below AH peak | +18.6% | 🔴 Faded hard — ceiling+float skip correct |
+
+**AH-peak-vs-PM-peak:** TNON PM peak ($10.84) EXCEEDED its AH peak ($10.10) — a continuation, not an AH-top fade. TNON sat at ~+105% AH (below the ~+130% extreme-runner fade zone), so it does not test that hypothesis; logged as a continue case in the ~+105/120% band.
+
+### Notes
+
+- **Ideal night.** Scanner detected AND we entered the night's biggest genuine mover (TNON, +120% PM peak on heavy real SIP volume), plus a strong secondary (MSS). Baseline detection 85.9%, above the 80% target.
+- **Coverage:** 7/7 scheduled scans ran. No coverage failure.
+- **Fade-rule false-negative tally (sub-3M):** TGL (Aug 18->19, float 1.8M, Grade None, AH SIP peak $4.33 +62% @17:45 ET faded -> PM SIP peak $3.68, **fell short**, PM below AH peak). Correctly skipped. **Standing sub-3M count: 4 of 12** (unchanged blow-past count; TGL is another negative). Hypothesis continues weakening — the ≥4/5 (≥80%) trigger stays NOT met.
+- **PM-only gapper:** biggest raw PM mover today is TNON (+120%), an **AH->PM continuation** the scanner detected — not a PM-only gapper. No AH-scanner blind spot today. Holdable PM-only-gapper count in log/pm-open-scan.csv: **26** (cluster threshold long exceeded; the Initiative-6 early-PM pilot decision remains routed to Juan's email, not applied here).
+- **Late-AH-tail surge:** none. TNON surged at AH open (16:00 ET), not in the 18:30–20:00 ET tail.
+- **In-window feed-lag miss:** none new. TNON surfaced from its first AH scan. **Standing count: 4** — AH-data-source-verification recommendation remains routed to Juan's daily email (≥3 trigger still reached, no new evidence).
+- **Price-floor exclusion:** no sub-$0.50 in-window volume-backed mover reviewed today. **Standing count: 5 across 2 nights, 0 holdable** (unchanged).
+- **Reverse-split-squeeze fade:** no entered/skipped name tonight had a reverse-split catalyst. Tally unchanged (this-week splits 3/3 faded; older splits 3/5 non-fade).
+- **Broker-block:** none new.
+- **Stale-book execution-block:** TNON's Alpaca quote was stale (`ask $0.00 x0 @16:00 ET`) but the order filled at 23:00, so **not** a block — it is a fillable detected winner we entered. Standing count unchanged at 3.
+- **No-fillable-book skip / Float-gate skip / Chase-cap:** none new. TNON filled BELOW its qualifying price ($8.69 vs $9.41), no chase into the fade zone. Chase-cap standing count unchanged at 1.
+- **AH-peak-vs-PM-peak (extreme-runner ~+130% zone):** no new case in the >130% band. Standing 4 fade / 1 continue.
+
+### Price Charts
+
+```
+ TNON - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $4.92
+2-Day Range: $4.81 - $10.84
+Current: $9.54 (+93.9% from prev close)
+Peak: $10.84 (+120.3%) at 08-19 08:00 ET
+
+Chart (oldest → newest):
+$   9.93 │                                                            
+         │                                              █   █         
+         │                                             █   █  █       
+         │                                               ██  █ █████  
+         │                                            █             ██
+         │                                                            
+         │                                                            
+         │                                           █                
+         │                                                            
+         │                                                            
+--
+ MSS - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $1.46
+2-Day Range: $1.36 - $2.88
+Current: $2.25 (+54.1% from prev close)
+Peak: $2.88 (+97.3%) at 08-19 08:05 ET
+
+Chart (oldest → newest):
+$   2.44 │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                            
+         │                                                           █
+```
