@@ -114,6 +114,20 @@ the ignition**, not a new signal.
    not a log-only column, and that entry must be near the ignition, not after
    +40%. Routed as a scanner-improvement candidate (see `FEEDBACK_LOG.md`
    2026-08-14).
+   **Update 2026-08-18 (Juan feedback, 08-17 XOS cycle):** direct steer — "We
+   should have entered much earlier ... If necessary, also exit early. The
+   pattern is clear for winners: Gigant volume and rising price." XOS was a clean
+   detect but entered at $4.54 near the $4.78 AH top, after the run from $2.40.
+   This is entry latency, not detection, and Juan names the winner signature
+   (giant-volume + rising-price co-spike = CONFIRM-3). Reinforces two things
+   already scoped here: (1) the **cadence densification** (add 16:15 + 16:45 ET
+   AH scans, 22:15/22:45 CET) to cut the AH-open-cluster lag ~22m -> ~7m and
+   enter nearer ignition — a scheduler change, **propose to Juan**; (2) making
+   CONFIRM-3 a **hard entry gate** so we enter on the volume+price co-spike, not
+   after +40-100%. The "exit early" half folds into the intra-premarket
+   exit-timing gap already flagged above (AH peak, not PM, is the exit for
+   extreme runners). Next `strategy-advance` run: draft the scheduler-densify +
+   hard-gate proposal for Juan. See `FEEDBACK_LOG.md` 2026-08-18.
 3. **Initiative 5 - better data + review surface (graphs, sources).** AH/PM
    volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
    raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports

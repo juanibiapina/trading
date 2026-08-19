@@ -6,6 +6,34 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-08-18 — re: Trading Scanner Report - 2026-08-17
+
+**Juan said:** "We should have entered much earlier. Determine what needs to
+change so we enter earlier on those winners. If necessary, also exit early. The
+pattern is clear for winners: Gigant volume and rising price."
+
+**Interpretation:** Direct steer on the XOS cycle. XOS was a clean detect but we
+entered at $4.54, near the $4.78 AH top, after the move had already run from
+$2.40. The complaint is entry latency, not detection. Juan names the winner
+signature explicitly: **giant volume + rising price** (a volume+price co-spike),
+and authorises earlier exits too if that is what earlier entry requires. This is
+squarely Initiative 3 (faster ignition detection / cadence) plus the exit-timing
+lever, and it re-states the 08-14 point that the CONFIRM-3 volume-spike ignition
+should drive entry near ignition, not after +40-100%.
+
+**Action:** Routed to Initiative 3 in `STRATEGY_ROADMAP.md` (updated). The
+concrete, already-scoped lever is the Init 3 cadence densification: the ignition
+audit shows the AH-open cluster (16:08-16:53 ET, 6 of 10 winners) waits up to
++22 min for the 30-min grid, so adding 16:15 and 16:45 ET scans (22:15/22:45
+CET) cuts worst-case lag ~22m -> ~7m and enters nearer the ignition price. This
+is a scheduler change -> propose to Juan. Also reinforces making CONFIRM-3
+(giant-volume + rising-price co-spike) a hard entry gate rather than a log-only
+column. Exit-early half of the steer folds into the Init 3 intra-premarket
+exit-timing gap already flagged. No unilateral strategy change; captured and
+routed for the next `strategy-advance` run.
+
+---
+
 ### 2026-08-14 — re: Trading Scanner Report - 2026-08-13
 
 **Juan said:** "GRSD is absolutely a NOGO. there was no volume spike. ONFO
