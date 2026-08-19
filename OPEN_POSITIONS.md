@@ -8,7 +8,8 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| LOOP | $1.36 | $1.36 | $1.47 | 73 | 2026-08-19 23:30 CET | None | c57ef90f | Loop Industries, PET recycling tech, float 25.6M. AH BUILD, cleared 2-AH-scan gate (+46.3%→+127.3%), CONFIRM-3 YES, real SIP vol, holding AH high $1.47. Total +119.4%. No same-day catalyst found (3 searches) — enter with concern. Grade None: exit first PM opportunity. |
+| LOOP | $1.36 | $1.21 | $1.47 | 73 | 2026-08-19 23:30 CET | None | c57ef90f | Loop Industries, PET recycling tech, float 25.6M. AH BUILD, cleared 2-AH-scan gate (+46.3%→+127.3%), CONFIRM-3 YES, real SIP vol, holding AH high $1.47. Total +119.4%. No same-day catalyst found (3 searches) — enter with concern. Grade None: exit first PM opportunity. |
+| BTOG | $1.25 | $1.21 | $1.25 | 86 | 2026-08-19 00:30 CET | D | 8f2605e1 | Bit Origin, crypto/AI-infra microcap, float 4.1M. AH BUILD across 3 scans (AH% +6.8%→+20.7%→+26.5%), cleared 2-AH-scan gate. SPIKE-BAR YES 17:22ET, CONFIRM-3 YES. Real SIP vol (peak 1.08M sh/5248 trades @17:30ET), peaked $1.25 @17:30, dumped to $0.94, rebuilt to $1.08-1.21 base, now ~$1.12 (−10% off peak, holding within 20%). Day +10.5% (not dead-cat), Total +39.7% (well under ceiling). Catalyst: 1-for-5 reverse stock split announced today (effective Aug 21, GlobeNewswire) — structural/negative action → Grade D. Exit at first PM opportunity. |
 
 ## Position Rules
 

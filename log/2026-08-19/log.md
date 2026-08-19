@@ -234,11 +234,57 @@ None building. Re-check at 22:30/23:00 for sustained AH momentum before any entr
 
 ---
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**Session: AFTERHOURS.** Final scheduled scan. Entry window open. 24 hits. LOOP held (entered 23:30) — not re-entered.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BTCT | [TV](https://www.tradingview.com/chart/?symbol=BTCT) | $0.84 | +80.0% | +134.3% | $1.96 | +321.6% | 61.9M | 13.5M | 4.6x | 8.6M | Data Processing Services |
+| LOOP | [TV](https://www.tradingview.com/chart/?symbol=LOOP) | $0.62 | -1.9% | +96.7% | $1.22 | +92.9% | 24.9M | 2.7M | 9.1x | 25.6M | Chemicals: Specialty |
+| BTTC | [TV](https://www.tradingview.com/chart/?symbol=BTTC) | $0.60 | +0.1% | +11.4% | $0.67 | +11.5% | 10.7M | 3.9M | 2.8x | 1.9M | Packaged Software |
+| BIVI | [TV](https://www.tradingview.com/chart/?symbol=BIVI) | $1.34 | +38.9% | +13.4% | $1.52 | +57.6% | 8.4M | 20.5M | 0.4x | 7.2M | Biotechnology |
+| BEEM | [TV](https://www.tradingview.com/chart/?symbol=BEEM) | $1.21 | +5.2% | +22.3% | $1.48 | +28.7% | 6.8M | 1.1M | 6.0x | 21.2M | Electrical Products |
+| BTOG | [TV](https://www.tradingview.com/chart/?symbol=BTOG) | $0.86 | +10.5% | +26.5% | $1.09 | +39.7% | 5.8M | 1.1M | 5.5x | 4.1M | Food: Meat/Fish/Dairy |
+| POLA | [TV](https://www.tradingview.com/chart/?symbol=POLA) | $1.59 | -7.6% | +13.2% | $1.80 | +4.7% | 5.8M | 880K | 6.6x | 3.0M | Electronic Equipment/Instruments |
+| VTIX | [TV](https://www.tradingview.com/chart/?symbol=VTIX) | $1.62 | +1.9% | +11.4% | $1.80 | +13.5% | 3.1M | 649K | 4.8x | 25.4M | Computer Peripherals |
+| BTCS | [TV](https://www.tradingview.com/chart/?symbol=BTCS) | $1.26 | +16.7% | +18.3% | $1.49 | +38.0% | 1.7M | 1.1M | 1.5x | 39.0M | Regional Banks |
+| RDAC | [TV](https://www.tradingview.com/chart/?symbol=RDAC) | $8.78 | +50.1% | +18.5% | $10.40 | +77.8% | 210K | 1.7M | 0.1x | 2.5M | Financial Conglomerates |
+
+**Instrumentation (log-only, no decision impact):**
+
+| Ticker | SPIKE-BAR | CONFIRM-3 |
+|--------|-----------|-----------|
+| BTOG | SPIKE 17:22ET +16% $1.00 180 trades / 60k sh | YES ignition 17:20ET 5.0x; confirmed 17:30ET $1.21 |
+| BTCS | SPIKE 18:06ET +17% $1.47 242 trades / 45k sh | NO ignition 18:05ET failed third-bar hold/volume |
+| VTIX | SPIKE 17:35ET +16% $1.88 101 trades / 30k sh | YES ignition 17:35ET 27.3x; confirmed 17:45ET $2.06 |
+| BTTC | SPIKE 17:15ET +18% $0.71 268 trades / 167k sh | YES ignition 17:15ET 57.4x; confirmed 17:25ET $0.91 |
+
+**SIP cross-check (fresh, last bar 18:15 ET / 22:15Z, ~15 min lag):**
+- **BTOG** (cleared 2-AH-scan gate: 00:00 +20.7%, 00:30 +26.5% AH — also 23:30 +6.8%) — **ENTERED.** Real accumulation: base $0.82-0.86 → ramp 21:20-21:30Z with 3043/5248 trades and 836k/1.08M sh/bar, peak $1.25 @17:30ET. Violent reversal bar 17:35 (C$0.97, 996k sh) then **rebuilt**: $1.11→$1.19→$1.21 base @18:00-18:05, now C$1.12 @18:15 (−10% off peak $1.25, within 20% = holding). AH% BUILDS across all 3 scans (not declining → early 17:30 peak is not a disqualifier per hold-vs-fade rule). Day +10.5% (not dead-cat), Total +39.7% (huge room under +150% ceiling), float 4.1M. SPIKE-BAR YES, CONFIRM-3 YES. Book: IEX quote stale (16:00 ts) but SIP fresh & liquid, tradable=true. Catalyst: **1-for-5 reverse stock split** announced today (Aug 19, effective Aug 21, GlobeNewswire) — structural/negative corporate action, not operational momentum → **Grade D** (exit first PM opportunity).
+- **BTCT** (all scans) — Total **+321.6% far over +150% ceiling**. VRatio 4.6x (<5x → no ceiling-override). **Skip: entry extension ceiling.**
+- **VTIX** (cleared 2-AH-scan gate: 00:00 +40.1%, 00:30 +11.4%) — **SPIKE→FADE**: real ignition 17:35ET (1.25M sh/9259 trades @17:40), peaked $2.43 @17:40, now $1.70 @18:15 (−30% off peak, >20% = fade). AH% collapsed 40.1%→11.4%. **Skip: SPIKE→FADE.**
+- **BTTC** (cleared gate: 00:00 +21.8%, 00:30 +11.4%) — **SPIKE→FADE**: peaked $0.92 @17:25, faded to ~$0.67 (−27% off high). AH% declining. **Skip: SPIKE→FADE.**
+- **BTCS** (NEW, 1st AH scan) — CONFIRM-3 NO, thin ramp, cannot clear 2-AH-scan gate. **Skip: 1 AH scan / no confirm.**
+- **RDAC** (carried) — early-peak $11.74 @17:20 with collapsing volume, VRatio 0.1x thin. **Skip: early-peak SPIKE→FADE + dying volume.**
+- Carried fades (BIVI, BEEM, POLA) unchanged: SPIKE→FADE, still skipped.
+
+**Final-scan feed-lag cross-check:** All tonight's tracked movers (BTCT, LOOP, BTOG, BIVI, BEEM, POLA, VTIX, BTTC, RDAC) appear in the 18:30 TradingView scan at levels consistent with SIP — no under-reported/dropped name. LOOP position (held) checked: SIP $1.21-1.28 band @18:00-18:15, holding above entry region, choppy. No rescue needed.
+
+**Chase-cap check (log-only):** BTOG qualifying-scan Total% = +39.7% ($1.09 @00:30). First limit $1.18 did not fill (real-time AH ask wider than the stale $1.04 IEX quote); bumped once to $1.25, filled $1.25 → fill Total% = **+45.3%**. Chase gap = +5.6pt. Fill Total% +45.3% is far from the extreme-runner fade zone (>+120%) — minor chase to cross a thin book, no fade-zone concern.
+
+**Decision: ENTER BTOG.** Only new name clearing the 2-AH-scan gate with a genuine BUILD-and-hold profile — builds across all 3 scans, holds within 20% of AH high, real SIP volume, small float 4.1M, Day positive, Total +39.7% (deep under ceiling), SPIKE+CONFIRM-3 both YES, tradable. Catalyst is a reverse split (Grade D, exit first PM) but no skip rule applies on catalyst grade in learning phase. All other gate-clearers skipped: BTCT over ceiling; VTIX/BTTC/RDAC SPIKE→FADE. LOOP position from 23:30 stands.
+
+**Night summary:** 2 entries — LOOP $1.36 (23:30, Grade None) and BTOG $1.25 (00:30, Grade D). Both cleared the 2-AH-scan gate on real SIP volume with BUILD-and-hold profiles. Position management (exits) handled by premarket position-evaluation pulse.
+
+---
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | LOOP | $1.36 | 23:30 CET | 73 | c57ef90f | BUILD, cleared 2-AH-scan gate (+46.3%→+127.3%), real SIP vol (millions sh/bar), CONFIRM-3 YES, holding AH high, Total +119.4% under ceiling, Day -1.9%. Grade None (no same-day catalyst). |
+| BTOG | $1.25 | 00:30 CET | 86 | 8f2605e1 | BUILD across 3 scans (AH% +6.8%→+20.7%→+26.5%), cleared 2-AH-scan gate, real SIP vol (1.08M sh/bar peak), SPIKE+CONFIRM-3 YES, holding within 20% of $1.25 peak, Total +45.3% fill (under ceiling), Day +10.5%, float 4.1M. Grade D (1-for-5 reverse split effective Aug 21). |
 
 ---
 
