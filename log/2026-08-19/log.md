@@ -82,6 +82,40 @@ None building. Re-check at 22:30/23:00 for sustained AH momentum before any entr
 
 ---
 
+## Scan 22:45 CET (4:45 PM ET)
+
+**Session: AFTERHOURS.** Observation-only window (learning-phase: no entries before 23:00 CET). 6 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BTCT | [TV](https://www.tradingview.com/chart/?symbol=BTCT) | $0.84 | +80.0% | +32.7% | $1.11 | +138.8% | 19.3M | 8.9M | 2.2x | 8.6M | Data Processing Services |
+| BEEM | [TV](https://www.tradingview.com/chart/?symbol=BEEM) | $1.21 | +5.2% | +26.4% | $1.53 | +33.0% | 4.8M | 910K | 5.3x | 21.2M | Electrical Products |
+| BIVI | [TV](https://www.tradingview.com/chart/?symbol=BIVI) | $1.34 | +38.9% | +35.4% | $1.81 | +88.2% | 3.3M | 19.9M | 0.2x | 7.2M | Biotechnology |
+| POLA | [TV](https://www.tradingview.com/chart/?symbol=POLA) | $1.59 | -7.6% | +40.8% | $2.24 | +30.1% | 3.2M | 587K | 5.4x | 3.0M | Electronic Equipment/Instruments |
+| FRTT | [TV](https://www.tradingview.com/chart/?symbol=FRTT) | $0.96 | -3.9% | +10.4% | $1.06 | +6.0% | 3.2M | 9.6M | 0.3x | n/a | Chemicals: Agricultural |
+| RCON | [TV](https://www.tradingview.com/chart/?symbol=RCON) | $3.67 | +9.9% | +6.3% | $3.90 | +16.8% | 248K | 1.1M | 0.2x | 64.5M | Electronics Distributors |
+
+**Instrumentation (log-only, no decision impact):**
+
+| Ticker | SPIKE-BAR | CONFIRM-3 |
+|--------|-----------|-----------|
+| BTCT | NO-SPIKE peak +55% @16:06ET (no volume co-spike bar) | PENDING ignition 16:30ET; waiting for third bar |
+| BEEM | SPIKE 16:13ET +31% $1.58 1350 trades / 263k sh | NO ignition 16:10ET failed third-bar hold/volume |
+| BIVI | SPIKE 16:23ET +17% $1.57 1179 trades / 333k sh | YES ignition 16:20ET 7.6x; confirmed 16:30ET $1.67 |
+| FRTT | NO-SPIKE peak +30% @16:11ET | NO ignition 16:05ET failed third-bar hold/volume |
+| POLA | SPIKE 16:15ET +42% $2.26 609 trades / 103k sh | NO ignition 16:15ET failed third-bar hold/volume |
+
+**SIP cross-check (last bar 16:30 ET, ~15 min lag, fresh):**
+- **BIVI** (NEW) — real BUILD accumulation: trades 238/226/623/391/**4167/8390/12164**, VWAP $1.27→$1.31→$1.37→$1.37→$1.54→$1.72→$1.82. Ignition 16:20ET, CONFIRM-3 YES, peak $1.96 @16:30. Day +38.9% (positive, not dead-cat), Total +88.2% under ceiling. Float 7.2M. Book real (bid $1.20 ask $1.57 x100). **Strongest BUILD candidate.** First AH-scan appearance — needs to reappear at 23:00+ holding near high to clear the 2-AH-scan gate.
+- **BEEM** (carried, BUILD→FADE) — was strongest BUILD at 22:30, now **fading**: VWAP $1.69→$1.67→$1.58→$1.49, C$1.45 @16:30 off H$1.77 @16:15, trades collapsing 10691→6793→2189→2016. CONFIRM-3 flipped to NO. Lost BUILD status. Quote stale (16:00 ts).
+- **POLA** (NEW) — SPIKE→FADE: near-zero first bar (3 trades) then spike H$2.36 @16:15, peak $2.60 @16:25, now C$2.10 @16:30 fading. Float 3.0M, Total +30%. Book real (bid $2.02 ask $2.07). Early-peak fade, CONFIRM-3 NO.
+- **BTCT** (carried) — choppy, real volume (11398 trades last bar), bounced back C$1.32 @16:30 off the fade. Day already +80%, Total +138.8% near +150% ceiling. NO-SPIKE, not a clean BUILD.
+- FRTT, RCON: thin / low VRatio / no ignition, not evaluated for entry.
+
+**Read into 23:00 scan:** BIVI is now the live BUILD candidate (real volume, CONFIRM-3 YES, building) — but only 1 AH scan so far; needs reappearance at 23:00+ to clear the 2-AH-scan gate. BEEM has faded out of BUILD. BTCT near ceiling and choppy. No entries this scan (pre-23:00 observation window).
+
+---
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
