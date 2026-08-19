@@ -196,6 +196,44 @@ None building. Re-check at 22:30/23:00 for sustained AH momentum before any entr
 
 ---
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**Session: AFTERHOURS.** Entry window open. 19 hits. LOOP already held (entered 23:30, Grade None) — not re-entered.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BTCT | [TV](https://www.tradingview.com/chart/?symbol=BTCT) | $0.84 | +80.0% | +74.3% | $1.46 | +213.6% | 50.4M | 12.2M | 4.1x | 8.6M | Data Processing Services |
+| LOOP | [TV](https://www.tradingview.com/chart/?symbol=LOOP) | $0.62 | -1.9% | +98.2% | $1.23 | +94.4% | 22.5M | 2.5M | 9.1x | 25.6M | Chemicals: Specialty |
+| BTTC | [TV](https://www.tradingview.com/chart/?symbol=BTTC) | $0.60 | +0.1% | +21.8% | $0.73 | +22.0% | 8.5M | 3.6M | 2.3x | 1.9M | Packaged Software |
+| BIVI | [TV](https://www.tradingview.com/chart/?symbol=BIVI) | $1.34 | +38.9% | +11.2% | $1.49 | +54.5% | 8.1M | 20.4M | 0.4x | 7.2M | Biotechnology |
+| BEEM | [TV](https://www.tradingview.com/chart/?symbol=BEEM) | $1.21 | +5.2% | +14.9% | $1.39 | +20.9% | 6.5M | 1.1M | 6.0x | 21.2M | Electrical Products |
+| POLA | [TV](https://www.tradingview.com/chart/?symbol=POLA) | $1.59 | -7.6% | +11.3% | $1.77 | +2.9% | 5.7M | 868K | 6.5x | 3.0M | Electronic Equipment/Instruments |
+| BTOG | [TV](https://www.tradingview.com/chart/?symbol=BTOG) | $0.86 | +10.5% | +20.7% | $1.04 | +33.3% | 3.7M | 840K | 4.4x | 4.1M | Food: Meat/Fish/Dairy |
+| VTIX | [TV](https://www.tradingview.com/chart/?symbol=VTIX) | $1.62 | +1.9% | +40.1% | $2.27 | +42.8% | 1.2M | 426K | 2.7x | 25.4M | Computer Peripherals |
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $1.21 | -33.1% | +11.6% | $1.35 | -25.4% | 554K | 5.7M | 0.1x | 2.8M | Wholesale Distributors |
+| RDAC | [TV](https://www.tradingview.com/chart/?symbol=RDAC) | $8.78 | +50.1% | +24.1% | $10.90 | +86.3% | 186K | 1.6M | 0.1x | 2.5M | Financial Conglomerates |
+| CISS | [TV](https://www.tradingview.com/chart/?symbol=CISS) | $3.09 | +12.8% | +11.0% | $3.43 | +25.2% | 76K | 1.2M | 0.1x | 281K | Marine Shipping |
+
+**Instrumentation (log-only, no decision impact):**
+
+| Ticker | SPIKE-BAR | CONFIRM-3 |
+|--------|-----------|-----------|
+| BTTC | SPIKE 17:15ET +18% $0.71 268 trades / 167k sh | YES ignition 17:15ET 57.4x; confirmed 17:25ET $0.91 |
+| VTIX | SPIKE 17:35ET +16% $1.88 101 trades / 30k sh | YES ignition 17:35ET 27.3x; confirmed 17:45ET $2.06 |
+| RDAC | SPIKE 17:14ET +22% $10.72 243 trades / 18k sh | YES ignition 17:10ET 11.5x; confirmed 17:20ET $11.48 |
+| CISS | NO-SPIKE peak +12% @17:45ET | PENDING ignition 17:40ET; waiting for third bar |
+
+**SIP cross-check (last bar 17:45 ET, ~15 min lag, fresh). New candidates evaluated:**
+- **BTTC** (NEW, 1st AH scan) — real ignition 17:15ET (796k/1.67M/2.19M sh, 1957/4810/6504 trades) but **SPIKE→FADE**: peaked $0.92 @17:25ET, faded to C$0.69 @17:45 (-25% off high, >20% = fade). Float 1.9M, Day +0.1%, Total +22%. Book stale (16:00 ts). Only 1 AH scan — cannot clear 2-AH-scan gate. **Skip: SPIKE→FADE + 1 AH scan.**
+- **VTIX** (NEW, 1st AH scan) — ignition 17:35ET, real volume (1.25M sh/9259 trades @17:40), peaked $2.43 @17:40ET, now C$2.06 @17:45 (-15% off high, just started fading). Float 25.4M, Total +42.8% under ceiling. Only 1 AH scan — cannot clear 2-AH-scan gate. **Skip: 1 AH scan.**
+- **RDAC** (cleared 2-AH-scan gate: 23:30 +22.3%, 00:00 +24.1%) — peaked $11.74 @17:20ET (before 17:30), now fading C$10.66 @17:35 with **collapsing volume**: trades 1373→1009→396→223, sh 52k→40k→12k→6.5k. Early-peak + fading-volume profile (0/6+ PM continuation). VRatio 0.1x thin, $8.78 name, book stale/thin. Day +50.1%, Total +86.3% under ceiling, float 2.5M. **Skip: early-peak SPIKE→FADE + dying volume.**
+- **CISS** (NEW, 1st AH scan) — NO-SPIKE, thin (76K AH vol, VRatio 0.1x), CONFIRM-3 PENDING. **Skip: thin / no ignition / 1 AH scan.**
+- Carried fades (BIVI, BEEM, POLA) unchanged: SPIKE→FADE, still skipped. BTCT Total +213.6% far over +150% ceiling, VRatio 4.1x (<5x, no override). **Skip.**
+
+**Decision: SKIP ALL new candidates.** RDAC is the only new name clearing the 2-AH-scan gate but shows early-peak (17:20 ET) with collapsing volume and thin liquidity (VRatio 0.1x) — early-peak-fading profile is 0/6+ for PM continuation. BTTC/VTIX have real volume but only 1 AH scan (cannot clear gate). No BUILD-and-hold candidate qualifies. LOOP position from 23:30 stands. No new entries.
+
+---
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
