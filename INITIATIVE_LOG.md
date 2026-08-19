@@ -7,6 +7,20 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-08-19 — Initiative 3: +10% resting sell-limit edge strengthens out-of-sample (n=16)
+
+**Evaluated:** The 2026-08-18 step **worked and its hypothesis held again.** It set this run to keep seeding held names and confirm the +10%-limit edge out-of-sample. The 08-19 04:31 ET position eval sold two held names (MSS, TNON) — fresh seeds — and re-running the sim with them keeps the +10% limit as the winner and improves the aggregate (mean +5.1% -> +5.7%, positive 10/14 -> 13/16).
+
+**Step taken:** **Pilot / Initiative 3 (execution pivot):** pulled the two exit fills from `broker.js orders all --json` (MSS $2.20, TNON $9.74, both filled ~08:30:4xZ = 04:31 ET), measured each name's post-exit premarket peak from SIP 5-min bars (capped 09:30 ET), appended both to `scripts/peak-seeking-exit-sim.js` (n=14 -> n=16) and `log/premarket-exit-gap.csv`, and re-ran the sim. Log-only, no orders.
+
+**Result:** The resting **+10% sell-limit is again the best rule and strengthens: SUM +91.4% / mean +5.7%, positive on 13 of 16**, beating every trailing stop (best trail12 +3.1% mean) and every other limit width (L5 +3.4, L15 +4.9, L20 +3.2, L30 +3.5). Both new seeds are live-book Grade-None green exits and both fill the +10% limit: **MSS exit $2.20 -> premarket peak $2.44 at 04:45 ET (+10.9%)** then faded to PM-last $2.13; **TNON exit $9.74 -> $11.44 at 04:35 ET (+17.5%)** then faded to PM-last $9.50. The only three negatives at L10 are the dead-book/stalled names (MGIH -1.0, DARE -1.2, ONFO -3.5); every live-book name contributes positively, confirming the edge concentrates in names with a live premarket book while a resting limit stays free optionality on dead books (contributes ~0 or slightly negative). Peak-ceiling tally now +396.3% over 16.
+
+**Hypothesis / next step:** A resting +10% sell-limit above the 04:30 ET exit price (GTC premarket, cancel 09:30 ET, market exit fallback) captures a robust ~+5-6%/name that a plain 04:30 exit leaves behind, and is safe on dead-book losers (~0). Now well-evidenced: 16 out-of-sample seeds, positive 13/16, plus two converging studies (Init 3 overnight holds + Init 6 PM-only gappers). Next run: keep seeding held names as they exit; confirm dead-book losers keep contributing ~0. Keep `CONFIRM-3` and both instruments log-only.
+
+**Needs from Juan:** two open asks unchanged. (1) The firm peak-seeking-exit proposal (replace the plain 04:30 ET market exit for held names with a resting +10% sell-limit, GTC premarket, cancel 09:30 ET) — now backed by n=16 out-of-sample + two converging studies; veto window, not applied. (2) Still open from 08-07: the Initiative 2 broker/feed decision for the ~203% fill gap (Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills).
+
+---
+
 ### 2026-08-18 — Initiative 3: +10% resting sell-limit edge holds out-of-sample (n=14)
 
 **Evaluated:** The 2026-08-17 step was **data-blocked** (Init 6 advanced instead; the Init 3 peak-seeking sim had no fresh held-name exit to seed since GXAI 08-13). Today unblocks it: the 08-18 04:31 ET position eval sold **five** held names (DARE, GRSD, ONFO, SGLY, XOS) — the first fresh seeds in five days. Re-running the sim with them **worked and the +10%-limit hypothesis held out-of-sample.**
