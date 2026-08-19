@@ -12,3 +12,7 @@
 - Both Grade None; both green in PM; both liquid SIP. Exited per exit-at-any-profit rule.
 - Pulse net: +$28.05. No open positions remaining.
 - Note: Alpaca IEX quotes were stale (yesterday timestamps); used SIP 5Min bars for real PM levels.
+
+## Position Evaluation — 14:30 CET
+
+No open positions. All closed at 10:30 CET pulse (MSS +15.8%, TNON +12.1%). Alpaca `positions` empty; `OPEN_POSITIONS.md` matches. Nothing to evaluate.
