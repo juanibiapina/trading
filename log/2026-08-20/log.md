@@ -38,6 +38,27 @@ Feed-lag cross-check on prior watch names (SIP first AH bar 16:00-16:05 ET + quo
 
 No candidate above 10% AH threshold on real accumulating volume. Nothing to enter. Watch names carried to 23:00 scan.
 
+## Scan 22:30 CET (4:30 PM ET) — AH open, observation only
+
+Scanner 3 hits at 16:30 ET. Observation-only per learning-phase rule (no entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $2.77 | +1.6% | +30.8% | $3.63 | +33.0% | 1.5M | 814K | 1.8x | 595K | Misc Commercial Services |
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $2.27 | -4.6% | +9.3% | $2.48 | +4.2% | 423K | 128K | 3.3x | 2.5M | Misc Commercial Services |
+| LOOP | [TV](https://www.tradingview.com/chart/?symbol=LOOP) | $0.65 | +4.0% | +6.2% | $0.69 | +10.4% | 303K | 8.8M | 0.0x | 25.6M | Chemicals: Specialty |
+
+**SUGP** — only name above 10% AH threshold. Tiny float 595K (ideal). First AH scan appearance (needs 2 AH scans to gate).
+- SPIKE 16:00ET +22% $3.38 412 trades / 45k sh (first co-spike bar) (as-of 16:30ET)
+- CONFIRM-3 PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET
+- SIP bars real accumulation: 5006→5330→11365→6418 trades/bar, built $3.03→$3.66 high, last bar faded to $3.23 (16:15-20 ET). Real spike, not stale VRatio.
+- Quote bid $2.39 / ask $0.00 x0 @ 16:00 ET (stale first-tick). Re-check book at 23:00.
+- Carry to 23:00 scan for 2-AH-scan gate. Watch trajectory (slight fade off $3.66 high in last bar).
+
+**ISPC** (+9.3%) and **LOOP** (+6.2%) below 10% AH threshold — not candidates. LOOP float 25.6M, VRatio 0.0.
+
+No entries (observation-only scan). SUGP carried to 23:00.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
