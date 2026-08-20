@@ -1,3 +1,24 @@
+# Post-Market Screening - 2026-08-20
+
+## Scan 21:30 CET (3:30 PM ET) — REGULAR session, watch only
+
+AH not open yet (opens 22:00 CET / 16:00 ET). No entries this scan per regular-session caution rule. Candidates flagged Watch — pending AH confirmation. Names with near-zero 5mVol / VChg −100% (faded, dead) excluded from watch.
+
+| Ticker | Chart | Price | Day% | 5mVol | AvgVol | IRVol | VChg% | Float | MCap | Industry | Note |
+|--------|-------|-------|------|-------|--------|-------|-------|-------|------|----------|------|
+| USDE | [TV](https://www.tradingview.com/chart/?symbol=USDE) | $3.95 | +27.8% | 32K | 14K | 5.6 | +246% | 21.7M | 107.4M | Packaged Software | Watch — live vol, prior AH winner history |
+| BTMD | [TV](https://www.tradingview.com/chart/?symbol=BTMD) | $1.53 | +12.5% | 30K | 6K | 12.9 | +296% | 25.9M | 55.0M | Hospital/Nursing Mgmt | Watch — rising vol |
+| SUGRF | [TV](https://www.tradingview.com/chart/?symbol=SUGRF) | $9.47 | +14.4% | 15K | 3K | 11.8 | +271% | 4.6M | 219.0M | Wholesale Distributors | Watch — low float |
+| ARBB | [TV](https://www.tradingview.com/chart/?symbol=ARBB) | $4.83 | +20.4% | 2K | 6K | 39.0 | +207% | 1.2M | 8.5M | IT Services | Watch — low float, thin vol |
+| NXTT | [TV](https://www.tradingview.com/chart/?symbol=NXTT) | $7.90 | +19.0% | 5K | 16K | 46.4 | −27% | 1.5M | 11.6M | Packaged Software | Watch — low float, prior winner |
+
+Excluded (faded/thin, VChg −100% or sub-1K 5mVol at scan): BRLS, BTCT, INDP, MMA, BIVI, XOS, GNLN, IDAI, FRTT, RETO, JWEL, ACTU, CBAT, AIFC. CATO −19.7% (down day, not a spike). EWAV/ALPX/SHOT Financial Conglomerate noise.
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
