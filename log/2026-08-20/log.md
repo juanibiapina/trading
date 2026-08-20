@@ -121,11 +121,48 @@ Scanner 4 hits at 17:00 ET. First entry-eligible scan of the night (learning-pha
 
 Entered: ISPC. Skipped: SUGP (SPIKE→FADE), LGO (1 scan / thin), LOOP (<10%).
 
+## Scan 23:30 CET (5:30 PM ET) — AH open, ENTRIES ELIGIBLE
+
+Scanner 8 hits at 17:30 ET.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $2.77 | +1.6% | +18.9% | $3.30 | +20.9% | 4.2M | 1.1M | 3.6x | 595K | Misc Commercial Services |
+| BRLS | [TV](https://www.tradingview.com/chart/?symbol=BRLS) | $1.75 | +91.9% | +7.5% | $1.88 | +106.3% | 2.5M | 4.4M | 0.6x | 6.5M | IT Services |
+| LOOP | [TV](https://www.tradingview.com/chart/?symbol=LOOP) | $0.65 | +4.0% | +9.6% | $0.71 | +13.9% | 1.1M | 8.9M | 0.1x | 25.6M | Chemicals: Specialty |
+| LGO | [TV](https://www.tradingview.com/chart/?symbol=LGO) | $0.64 | -0.7% | +20.3% | $0.77 | +19.5% | 596K | 712K | 0.8x | 49.8M | Other Metals/Minerals |
+| PFSA | [TV](https://www.tradingview.com/chart/?symbol=PFSA) | $7.57 | -44.2% | +10.6% | $8.37 | -38.3% | 218K | 6.0M | 0.0x | n/a | Financial Conglomerates |
+| QTEX | [TV](https://www.tradingview.com/chart/?symbol=QTEX) | $0.85 | -24.0% | +11.0% | $0.94 | -15.7% | 185K | 4.5M | 0.0x | 38.0M | Medical Specialties |
+| LTRX | [TV](https://www.tradingview.com/chart/?symbol=LTRX) | $6.07 | +1.0% | +5.2% | $6.38 | +6.2% | 98K | 735K | 0.1x | 43.6M | Computer Peripherals |
+| BTOG | [TV](https://www.tradingview.com/chart/?symbol=BTOG) | $0.73 | -15.9% | +7.1% | $0.78 | -9.9% | 64K | 2.0M | 0.0x | 4.1M | Food: Meat/Fish/Dairy |
+
+**LGO — ENTERED.** New gate this scan: 2 AH scans >10% (23:00 +10.7%, 23:30 +20.3%, AH% BUILDING). Float 49.8M (<50M req), Day -0.7% (not dead-cat), Total% +19.5% (<150% ceiling).
+- SPIKE 16:40ET +22% $0.78 130 trades / 54k sh (as-of 17:30ET)
+- CONFIRM-3 NO ignition 16:40ET failed third-bar hold/volume as-of 17:30ET
+- SIP real accumulation, two volume surges making higher highs: 181k sh / 541 trades @ 16:40ET ($0.78), 140k sh / 511 trades @ 17:10ET ($0.80 session high). Current $0.71-0.77, within ~10% of high — BUILD/hold, not fade. Scanner VRatio 0.8 undercounts; SIP shows real volume.
+- Quote bid $0.55 x100 / ask $0.79 x100 (two-sided fillable book; timestamp stale 16:00ET but SIP fresh to 17:15ET corroborates ~$0.77 — not a bad print).
+- Catalyst: **none same-day** (Q2 earnings were ~1 week ago; no fresh PR/8-K today; move is vanadium sector-beta/momentum). **Grade None** — enter with concern noted per no-catalyst learning-phase rule; exit at first PM opportunity. Float not a filter.
+- tradable=true. BUY 126 @ limit $0.80 ext (id 41abd2d7) → **filled @ $0.73**.
+- **CHASE-CAP (reverse):** fill Total% +14.1% vs qualifying-scan Total% +19.5% — fill landed 5.4pts *below* qualifying, no chase. Low-extension entry, far from the >+120% fade zone.
+
+**SUGP — SKIP (SPIKE→FADE, carried).** Still fading: AH% 22:30 +30.8% → 22:45 +25.9% → 23:00 +19.7% → 23:30 +18.9%. Peaked $3.77 @ 16:20ET (before 18:30) and declining across scans = early-peak-fade disqualifier. SPIKE 16:00ET / CONFIRM-3 NO. 0/10+ pattern — skip regardless of 595K float.
+
+**PFSA** (+10.6% AH) — **SKIP dead-cat bounce.** Day -44.2% (crashed >15%), AH bounce still Total% -38.3% (far below regular close = genuine dead-cat, no override). Float n/a. SPIKE 16:57ET +28% / CONFIRM-3 NO. First AH scan anyway.
+
+**QTEX** (+11.0% AH) — **SKIP dead-cat bounce.** Day -24.0%, AH bounce Total% -15.7% (below close = genuine dead-cat). Float 38.0M. NO-SPIKE peak +15% @17:16ET / CONFIRM-3 PENDING. First AH scan anyway.
+
+**BRLS** (+7.5% AH) — below 10% AH threshold. Day +91.9% is a regular-session move, not an AH spike; AH leg only +7.5%. Not a candidate.
+
+**LOOP** (+9.6%), **LTRX** (+5.2%), **BTOG** (+7.1%) — all below 10% AH threshold. BTOG also Day -15.9% dead-cat. Not candidates.
+
+Entered: LGO (BUILD, Grade None, no-catalyst concern). Skipped: SUGP (SPIKE→FADE), PFSA + QTEX (dead-cat), BRLS/LOOP/LTRX/BTOG (<10% AH).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | ISPC | $2.32 | 23:00 CET (17:00 ET) | 32 | b9ae46b3 | Grade C — cancer research order PR (Aug 20); float 2.5M; 2 AH scans >10% BUILD; CONFIRM-3 YES; low-extension fill +2.2% |
+| LGO | $0.73 | 23:30 CET (17:30 ET) | 126 | 41abd2d7 | Grade None — no same-day catalyst (vanadium sector-beta); float 49.8M; 2 AH scans >10% BUILD (higher highs $0.78→$0.80 on 181k/140k sh SIP surges); low-extension fill +14.1% |
 
 ## Position Evaluation — 10:30 CET
 

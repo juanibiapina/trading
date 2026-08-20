@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
 | ISPC | $2.32 | $2.36 | $2.36 | 32 | 2026-08-20 17:00 ET | C | b9ae46b3 | Cancer research order PR (Aug 20, GlobeNewswire); float 2.5M; BUILD across scans, CONFIRM-3 YES; Grade C → exit premarket |
+| LGO | $0.73 | $0.73 | $0.73 | 126 | 2026-08-20 17:30 ET | None | 41abd2d7 | Largo Inc vanadium; float 49.8M; no same-day catalyst (Q2 earnings ~1wk ago); AH BUILD 2 scans >10% (higher highs $0.78→$0.80 on 181k/140k sh SIP surges); Grade None → exit first PM opportunity |
 
 ## Position Rules
 
