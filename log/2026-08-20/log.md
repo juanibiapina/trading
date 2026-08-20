@@ -25,6 +25,19 @@ Feed-lag cross-check on prior 21:30 watch names via SIP + quote:
 
 No candidate above 10% AH threshold on real accumulating volume this scan. Nothing to enter. Watch names carried to next scan.
 
+## Scan 22:15 CET (4:15 PM ET) — AH open, observation only
+
+Scanner 0 hits at 16:15:11 ET (postmarket feed empty). Observation-only per learning-phase rule (no entries before 23:00 CET).
+
+Feed-lag cross-check on prior watch names (SIP first AH bar 16:00-16:05 ET + quote; SIP lags ~15 min so only first bar visible):
+- USDE: AH bar C $3.98 vwap $3.99 (67 trades, 34K sh) — flat vs $3.95 regular close, no new surge. Quote bid $3.37 / ask $4.61 (wide). No ignition.
+- NXTT: AH bar C $7.80 vwap $7.86 (99 trades) — down vs $7.90 close. Quote bid $6.87 / ask $9.41 (wide). No surge.
+- BTMD: AH bar $1.48, only 4 trades — thin. No accumulation.
+- SUGRF: no Alpaca quote/bars (OTC foreign) — untradable, drop.
+- ARBB: AH bar C $4.70 vwap $5.10 (58 trades) — down vs $4.83. Quote ask $0.00 x0 — no fillable book (illiquid, no AH book). Skip.
+
+No candidate above 10% AH threshold on real accumulating volume. Nothing to enter. Watch names carried to 23:00 scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
