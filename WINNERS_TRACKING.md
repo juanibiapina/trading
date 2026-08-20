@@ -6,8 +6,9 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-08-18 | TNON | None (low-float squeeze; no fresh Aug 18 PR; Q2 earnings Aug 13 miss) | $10.10 AH SIP (+105.3% from $4.92 @16:30 ET, 595K–1.08M sh/bar, 9.7K–16.7K trades); PM SIP peak $10.84 (+120.3%) @04:00 ET | - | $9.4 | Day 1: **DETECTED + ENTERED @ $8.69** (23:00 CET). Winner caught and traded; PM peak exceeded AH peak (+24.7% from fill at peak). Float 551K |
-| 2026-08-17 | XOS | B — U.S. Air Force deployable-charging contract (defense market entry, Aug 17 ~16:45 ET PR) | $4.78 AH SIP (+127.6% from $2.10 close @17:30 ET, 2.11M sh/19,955 trades); PM SIP peak $3.89 (+85.2%) @04:00 ET, faded | - | $2.09 | Day 2: faded to $2.09 (below the $2.10 base). **DETECTED + ENTERED @ $4.54** (23:30 CET). Chased near AH top; faded into PM (AH was the exit). Float 6.9M |
+| 2026-08-19 | BTCT | B — Q2 earnings (Aug 19) + BTC-treasury theme | $2.14 AH SIP (+154.8% from $0.84 @18:20 ET, 2.4M sh/9.8K trades); PM SIP peak $2.07 (+146.4%) @04:00 ET, 4.9M sh/33.5K trades | - | $1.82 | Day 1: **DETECTED all 7 scans, NOT ENTERED — skipped on +150% ceiling** (Total ran +134%→+164%). Genuine fade→rebuild BUILD; ceiling-override hypo +68% ($1.23→$2.07). Float 8.6M |
+| 2026-08-18 | TNON | None (low-float squeeze; no fresh Aug 18 PR; Q2 earnings Aug 13 miss) | $10.10 AH SIP (+105.3% from $4.92 @16:30 ET, 595K–1.08M sh/bar, 9.7K–16.7K trades); PM SIP peak $10.84 (+120.3%) @04:00 ET | - | $5.45 | Day 3: **DETECTED + ENTERED @ $8.69** (23:00 CET). Winner caught and traded; PM peak exceeded AH peak (+24.7% from fill at peak). Now fading to $5.45. Float 551K |
+| 2026-08-17 | XOS | B — U.S. Air Force deployable-charging contract (defense market entry, Aug 17 ~16:45 ET PR) | $4.78 AH SIP (+127.6% from $2.10 close @17:30 ET, 2.11M sh/19,955 trades); PM SIP peak $3.89 (+85.2%) @04:00 ET, faded | - | $4.44 | Day 3: bounced to $4.44 (still below AH).  **DETECTED + ENTERED @ $4.54** (23:30 CET). Chased near AH top; faded into PM (AH was the exit). Float 6.9M |
 
 ## Historical Winners (with multi-day outcome)
 

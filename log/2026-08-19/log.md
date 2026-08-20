@@ -305,3 +305,172 @@ None building. Re-check at 22:30/23:00 for sustained AH momentum before any entr
 ## Position Evaluation — 14:30 CET
 
 No open positions. All closed at 10:30 CET pulse (MSS +15.8%, TNON +12.1%). Alpaca `positions` empty; `OPEN_POSITIONS.md` matches. Nothing to evaluate.
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**BTCT** (BTC Digital Ltd.) — Data Processing / crypto-treasury
+- Catalyst: **Q2 earnings released Aug 19** (TradingView earnings date) + BTC-treasury/Bitcoin theme. Grade **B** (earnings milestone).
+- Previous Close: **$0.84** (regular Aug 19 close). ⚠️ Yahoo anchors prev close at $0.46 — BTCT ran +82% in the regular Aug 19 session ($0.46→$0.84) *before* the AH move, so all Yahoo "% from close" figures are inflated. Use $0.84.
+- AH last night (SIP): peak **$2.14 @18:20 ET (22:20 CET)** = **+154.8%** from $0.84, vwap $2.03 on 2.4M sh / 9,801 trades. Massive accumulating volume all session (5.1M/5.7M/3.2M sh per bar early, 14k–17k trades/bar).
+- Premarket now (SIP): peak **$2.07 @04:00 ET** = **+146.4%**, on 4.9M sh / 33,481 trades (huge liquid PM). Last bar $1.82 @04:05 ET.
+- Hypothetical P&L (AH ceiling-skip entry $1.23 → PM peak $2.07): **+68.3%** (screening entry ~$1.10 → +88%).
+- Float: 8.6M | Market Cap: $8.0M
+- **Clears the winner bar:** >100% (AH +155%, PM +146%) on sustained, accumulating SIP volume. Real explosion.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — BTCT was in **all 7 evening scans** (21:30 through 00:30). At 22:15 CET it read Total +134.5% on real accumulation (14k trades/bar, 5M sh).
+- Why we didn't act: **skipped on the +150% extension ceiling** (Total ran +134.5%→+138.8%→+164.6% across scans) plus an early SPIKE→FADE label (peaked 16:06 ET, faded to $1.07 by 16:15). It then **rebuilt across the whole session** to a fresh AH high $2.14 @18:20 ET and continued to $2.07 PM.
+- Scanner gap: **none — detection worked.** The *entry rule* (ceiling + early-fade skip) blocked a genuine BUILD-and-hold runner. This is a **CEILING-OVERRIDE outcome**: the +150% ceiling skipped a name that ran +68% from the skip price into PM (see Notes).
+
+### Baseline Tracking
+
+- Days tracked: **69** (was 68 + 1)
+- Winners detected by scanner: **56/65 (86.2%)** — BTCT detected (all 7 scans).
+- Winner selected for paper trade: **32/64 (50.0%)** — BTCT NOT traded (skipped on +150% ceiling); we entered LOOP and BTOG instead.
+- Target: >80% detection
+- Status: **BASELINE MET** (86.2%)
+
+### Retrospective Scan Results
+
+Live PM scan (04:20 ET): BTCT +96.1% ($1.64), LOOP +85.4% ($1.15), BEEM +29.0%, BTTC +15.8%, EHGO +6.6%, BIVI +6.7%. SIP AH reconstruction confirms BTCT (peak $2.14/+155%, 2.4M sh/bar) and LOOP (peak $1.47/+133% @17:15 ET, 2M sh/bar) as the two real, volume-backed AH explosions. Both were detected and tracked all night.
+
+### Open Position P&L (Alpaca)
+
+Real Alpaca fills from last night (LOOP 23:30, BTOG 00:30). **Exits handled by position-evaluation.md (10:30/14:30 CET) — not here.**
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak (SIP) | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------------|-----------|------|-----|-------|--------|
+| LOOP | $1.36 | +119.4% | None | 23:30 CET | $1.44 | 04:00 ET | open | live | −18.4% | 🔻 Open, PM below entry |
+| BTOG | $1.25 | +45.3% | D — 1-for-5 reverse split | 00:30 CET | $0.96 | 04:00 ET | open | live | −41.6% | 🔻 Open, faded hard |
+
+- **LOOP**: Alpaca `current_price` $1.11 matches live SIP PM ($1.11–1.15, fresh). −18.4% is real. AH peak $1.47 was the better exit; PM opened $1.34 and faded below entry.
+- **BTOG**: Alpaca quote **stale** (`@16:00 ET`, bid $0.73/ask $1.04). Live SIP PM shows real trade $0.73 (464K sh first bar), so the −41.6% is roughly real, not a stale artifact. AH peak $2.14 was the far better exit; reverse-split (Grade D) faded as expected.
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits yet this pulse).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET; plus extra 22:15/22:45 observation scans). Full entry-window coverage.
+- Candidates found: BTCT, LOOP, BIVI, BEEM, POLA, BTOG, VTIX, BTTC, RDAC + regular-session watch (UUU, TGL, SUGRF, PSIG).
+- Retrospective matches: both real winners (BTCT, LOOP) caught.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+
+No detection misses. BTCT (the winner) was detected in all 7 scans; it was an *entry-rule* skip (ceiling), not a scanner miss.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak (SIP) | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------------|-----------|---------------|------------|-----------|-----------|---------|
+| BTCT | $2.14 (+155%) | 18:20 ET | Build (fade→rebuild) | $1.82 | −15% | +117% | AH peak > PM peak (marginal fade); still +117% |
+| LOOP | $1.47 (+133%) | 17:15 ET | Build→fade | $1.11 | −25% | +76% | AH peak was the exit; faded below entry |
+| BTOG | $2.14* AH | 17:30 ET | Build-and-hold→PM crash | $0.73 | −66% | −13% | AH peak far better exit; PM crashed |
+
+*BTOG intraday/AH SIP high per Robinhood/evening log; entered $1.25 well under peak, now crashed.
+
+**AH-peak-vs-PM-peak check:** BTCT AH peak +155% > PM peak +146% (>+130% zone, marginal fade — PM still early, only 2 bars). LOOP AH peak +133% > PM peak ~+130% (faded). Both are **>+130% extreme AH runners where the AH peak was the better exit**, extending the fade pattern. Adds 2 to the fade bucket (now MSW, DSY, AQB, XOS, +BTCT, +LOOP = 6 fade / 1 continue BAOS).
+
+### Notes
+
+- **CEILING-OVERRIDE outcome (strong data point):** BTCT was skipped only because Total ran over the +150% extension ceiling (+134%→+164% across scans), yet it was a genuine fade→rebuild BUILD that ran to **$2.14 AH / $2.07 PM**. Hypothetical ceiling-override entry $1.23 → PM peak $2.07 = **+68.3%**. Recurring evidence that the flat +150% ceiling skips real BUILD-and-hold runners — candidate for a conditional ceiling on accumulating-volume builds. Route to daily email.
+- **Reverse-split-squeeze fade:** BTOG (Aug 19→20, **1-for-5 reverse split effective Aug 21 = this-week/pending**, float 4.1M, Grade D, entered $1.25 → PM $0.73 = **−41.6%, faded**; AH peak $2.14 was the far better exit). **This-week reverse-split bucket now 4/4 faded** (ELPW, YYGH, BIYA, BTOG). Per the tracking rule, 4/4 **resolves the recency signal** → route a **recency-based conviction-downgrade recommendation** to Juan's daily email (this-week reverse splits with no fresh operational catalyst systematically fade). Do not apply as a live gate here.
+- **Fade-rule false-negative (sub-3M):** no sub-3M AH-fader re-exploded in PM tonight (POLA 3.0M SPIKE→FADE stayed down; BIVI 7.2M is the >3M negative control). **Standing sub-3M count: 4 of 13** — ≥80% trigger still NOT met.
+- **PM-only gapper:** biggest raw PM mover today is BTCT +96%, an **AH→PM continuation** the scanner detected — not a PM-only gapper, no blind spot today. Holdable PM-only-gapper count in `log/pm-open-scan.csv`: **29** (cluster threshold long exceeded; Initiative-6 early-PM pilot remains routed to Juan's email).
+- **Late-AH-tail surge:** none. BTCT's defining surge ($2.14) fired at 18:20 ET, inside the scanned window (before the 18:30 ET last scan).
+- **In-window feed-lag miss:** none new (BTCT surfaced from its first scan). **Standing count: 4** — AH-data-source-verification recommendation stays routed to Juan's daily email (≥3 trigger reached).
+- **Stale-book execution-block:** none new. **Standing count: 3.**
+- **No-fillable-book skip:** none new. Standing 2 (both faded).
+- **Float-gate skip:** none new. Standing 1 (CAPR ran).
+- **Chase-cap:** no new fade-zone chase (LOOP fill +119.4% not a chase; BTOG fill +45.3% minor). Standing 1 (XOS never reclaimed).
+- **Broker-block / price-floor:** none new.
+- **Baseline gap:** none — latest baseline (Aug 18, day 68) is the immediately-preceding trading day. (Aug 14 remains a historical uncounted gap, already absorbed in the Aug 13→17 chain.)
+
+### Price Charts
+
+```
+
+========================================================================
+ BTCT - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $0.46
+2-Day Range: $0.47 - $2.14
+Current: $1.81 (+289.2% from prev close)
+Peak: $2.14 (+360.3%) at 08-19 22:20 ET
+
+Chart (oldest → newest):
+$   2.07 │                                                            
+         │                                                       ████ 
+         │                                                      █    █
+         │                                                     █      
+         │                                                ██ █        
+         │                                                  █ █       
+         │                                     █       ██             
+         │                                    █ █   ███  █            
+         │                                       ██                   
+         │                                         █                  
+         │                         █    █   ██                        
+$   0.47 │█████████████████████████ ████ ███                          
+         └────────────────────────────────────────────────────────────
+
+Session Timeline (last 24h):
+------------------------------------------------------------
+  [OVN] 08-19 20:30 ET: $   1.32 (+183.9%)  Vol:           
+  [OVN] 08-19 20:35 ET: $   1.23 (+164.5%)  Vol:           
+  [OVN] 08-19 20:40 ET: $   1.23 (+164.6%)  Vol:           
+  [OVN] 08-19 20:45 ET: $   1.17 (+151.7%)  Vol:           
+  [OVN] 08-19 20:50 ET: $   1.18 (+153.8%)  Vol:           
+  [OVN] 08-19 20:55 ET: $   1.32 (+183.9%)  Vol:           
+  [OVN] 08-19 21:00 ET: $   1.57 (+237.7%)  Vol:           
+  [OVN] 08-19 21:05 ET: $   1.68 (+261.4%)  Vol:           
+  [OVN] 08-19 21:10 ET: $   1.53 (+229.1%)  Vol:           
+  [OVN] 08-19 21:15 ET: $   1.61 (+246.3%)  Vol:           
+  [OVN] 08-19 21:20 ET: $   1.47 (+216.2%)  Vol:           
+  [OVN] 08-19 21:25 ET: $   1.47 (+216.5%)  Vol:           
+  [OVN] 08-19 21:30 ET: $   1.55 (+233.4%)  Vol:           
+  [OVN] 08-19 21:35 ET: $   1.49 (+220.5%)  Vol:           
+  [OVN] 08-19 21:40 ET: $   1.46 (+214.0%)  Vol:           
+  [OVN] 08-19 21:45 ET: $   1.34 (+188.3%)  Vol:           
+  [OVN] 08-19 21:50 ET: $   1.67 (+259.2%)  Vol:           
+  [OVN] 08-19 21:55 ET: $   1.88 (+304.4%)  Vol:           
+  [OVN] 08-19 22:00 ET: $   1.87 (+302.2%)  Vol:           
+  [OVN] 08-19 22:05 ET: $   1.84 (+295.8%)  Vol:           
+  [OVN] 08-19 22:10 ET: $   1.96 (+320.5%)  Vol:           
+  [OVN] 08-19 22:15 ET: $   1.88 (+304.1%)  Vol:           
+  [OVN] 08-19 22:20 ET: $   2.07 (+345.3%)  Vol:           
+  [OVN] 08-19 22:25 ET: $   2.07 (+345.3%)  Vol:           
+  [OVN] 08-19 22:30 ET: $   1.96 (+321.6%)  Vol:           
+  [OVN] 08-19 22:35 ET: $   2.00 (+330.2%)  Vol:           
+  [OVN] 08-19 22:40 ET: $   2.00 (+329.9%)  Vol:           
+  [OVN] 08-19 22:45 ET: $   2.01 (+332.4%)  Vol:           
+  [OVN] 08-19 22:50 ET: $   1.91 (+310.8%)  Vol:           
+  [OVN] 08-19 22:55 ET: $   1.88 (+304.4%)  Vol:           
+  [OVN] 08-19 23:00 ET: $   1.86 (+300.1%)  Vol:           
+  [OVN] 08-19 23:05 ET: $   1.95 (+319.4%)  Vol:           
+  [OVN] 08-19 23:10 ET: $   1.93 (+315.1%)  Vol:           
+  [OVN] 08-19 23:15 ET: $   1.85 (+298.0%)  Vol:           
+  [OVN] 08-19 23:20 ET: $   1.87 (+302.2%)  Vol:           
+  [OVN] 08-19 23:25 ET: $   1.87 (+302.2%)  Vol:           
+  [OVN] 08-19 23:30 ET: $   1.74 (+274.2%)  Vol:           
+  [OVN] 08-19 23:35 ET: $   1.78 (+283.1%)  Vol:           
+  [OVN] 08-19 23:40 ET: $   1.76 (+278.6%)  Vol:           
+  [OVN] 08-19 23:45 ET: $   1.73 (+272.1%)  Vol:           
+  [OVN] 08-19 23:50 ET: $   1.72 (+270.0%)  Vol:           
+  [OVN] 08-19 23:55 ET: $   1.77 (+280.7%)  Vol:           
+  [PM] 08-20 08:00 ET: $   1.65 (+254.9%)  Vol:           
+  [PM] 08-20 08:05 ET: $   1.82 (+291.5%)  Vol:           
+  [PM] 08-20 08:10 ET: $   1.73 (+272.0%)  Vol:           
+  [PM] 08-20 08:15 ET: $   1.75 (+276.3%)  Vol:           
+  [PM] 08-20 08:20 ET: $   1.84 (+295.8%)  Vol:           
+  [PM] 08-20 08:24 ET: $   1.81 (+289.2%)  Vol:           
+
+========================================================================
+ LOOP - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+```
