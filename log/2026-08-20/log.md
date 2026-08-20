@@ -157,12 +157,46 @@ Scanner 8 hits at 17:30 ET.
 
 Entered: LGO (BUILD, Grade None, no-catalyst concern). Skipped: SUGP (SPIKE→FADE), PFSA + QTEX (dead-cat), BRLS/LOOP/LTRX/BTOG (<10% AH).
 
+## Scan 00:00 CET (6:00 PM ET) — AH open, ENTRIES ELIGIBLE
+
+Scanner 12 hits at 18:00 ET. Prior entries tonight: ISPC (23:00), LGO (23:30). Names above 10% AH threshold below; rest <10% AH or dead-cat.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $2.77 | +1.6% | +29.0% | $3.58 | +31.1% | 4.6M | 1.2M | 3.9x | 595K | Misc Commercial Services |
+| RDAC | [TV](https://www.tradingview.com/chart/?symbol=RDAC) | $6.65 | -24.3% | +68.4% | $11.20 | +27.6% | 115K | 1.7M | 0.1x | 2.5M | Financial Conglomerates |
+| PFSA | [TV](https://www.tradingview.com/chart/?symbol=PFSA) | $7.57 | -44.2% | +10.0% | $8.33 | -38.6% | 258K | 6.0M | 0.0x | n/a | Financial Conglomerates |
+| LGO | [TV](https://www.tradingview.com/chart/?symbol=LGO) | $0.64 | -0.7% | +12.2% | $0.72 | +11.4% | 714K | 725K | 1.0x | 49.8M | Other Metals/Minerals |
+
+**SUGP — ENTERED (trajectory re-read: HOLD, not SPIKE→FADE).** Gated across many scans; prior scans skipped it as SPIKE→FADE, but the full-night SIP picture is a shallow-dip base, not a collapse. SIP held $3.27–$3.63 all AH on steady heavy volume (500–2919 trades/bar, 50k–280k sh/bar); dipped to $3.27 low (16:35–17:15 ET) then recovered to $3.42–$3.58 base, last bar 17:35 ET C $3.42. AH high $3.77 (16:20 ET); current ~9% off high = holding within 20% (NOT the SKYQ deep-collapse pattern). Float 595K ideal, Day +1.6% (not dead-cat), Total% +31.1% (<150% ceiling), first day of unusual activity.
+- SPIKE 16:00ET +22% $3.38 412 trades / 45k sh (as-of 18:00ET)
+- CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 18:00ET
+- Catalyst: **none same-day** (next event Sept 1 contract revenue recognition). **Grade None** — enter with concern noted per no-catalyst learning-phase rule; exit at first PM opportunity.
+- Quote bid $2.39 / ask $0.00 x0 @ 16:00 ET — **stale first-tick** (timestamp 20:00:03Z = 16:00 ET vs 18:00 ET scan). SIP fresh to 17:35 ET shows heavy sustained liquidity (2919 trades/bar), so freshness guard blocks a false illiquid-no-AH-book skip; this is NOT the TII/NEXR no-volume pattern.
+- tradable=true. BUY 28 @ limit $3.55 ext (id abb46049) → **filled @ $3.37**.
+- **CHASE-CAP (reverse):** fill Total% +21.7% vs qualifying-scan Total% +31.1% — fill landed 9.4pts *below* qualifying, no chase. Low-extension entry, far from >+120% fade zone.
+
+**RDAC — SKIP (1 AH scan, multi-day squeeze) + DEAD-CAT-OVERRIDE WATCH.** First AH scan appearance tonight — cannot pass 2-AH-scan gate this scan. Day -24.3% (crashed >15% regular session) but AH +68.4% reclaims to Total +27.6% (above previous close ~$8.79) = reclaim negates the dead-cat "still falling" thesis → flag DEAD-CAT-OVERRIDE WATCH, record hypothetical. **But not first day of unusual volume:** Investing.com reports RDAC already squeezed +223% on Aug 18 ($18.91) — a multi-day low-float SPAC squeeze (Rising Dragon Acquisition Corp), described as "low-float squeeze rather than a specific fundamental development." No fundamental catalyst.
+- SPIKE 17:19ET +16% $8.15 250 trades / 9k sh (as-of 18:00ET)
+- CONFIRM-3 NO ignition 17:15ET failed third-bar hold/volume as-of 18:00ET
+- SIP real accumulation: 60147→102080→87172 sh/bar, 1230→2966→2668 trades, peaked $11.40 @17:40 ET, last bar 17:45 ET C $10.55 fading off high. Quote bid $5.51 / ask $7.98 x100 (two-sided book; timestamp stale 16:00 ET, SIP fresh to 17:45 ET).
+- **Hypothetical entry (watch):** $10.55 (SIP real-time 17:45 ET) / Total ~+20% at 00:00 CET. Carry to 00:30 — needs a 2nd AH scan >10% with AH% rising above close to trigger override-watch entry, but multi-day-squeeze/not-first-day concern stands.
+
+**PFSA — SKIP dead-cat bounce (2 AH scans, genuine).** Now 2 AH scans >10% (23:30 +10.6%, 00:00 +10.0%) so it clears the scan gate, but Day -44.2% and AH bounce Total% -38.6% stays *far below* regular close = genuine dead-cat, no reclaim, no override. Float n/a. SPIKE 16:57ET +28% $9.66 / CONFIRM-3 NO. Quote bid $6.48 / ask $8.86. Skip per dead-cat filter.
+
+**LGO** (+12.2% AH) — already entered this night (23:30 @ $0.73). Holding: position +2.8% at scan time. No re-entry (one entry per candidate per night).
+
+**Sub-10%-AH / not candidates:** LOOP +8.5%, BIVI +6.5% (Day +38.8% is regular-session), BTCS +6.9%, USDE +6.8% AH (Total +38.2% but AH leg <10%), QTEX +5.8% (dead-cat), BTOG +6.9% (dead-cat), TNON +5.1%, GOVX +6.7%.
+
+Entered: SUGP (HOLD re-read, Grade None, no-catalyst concern). Skipped: RDAC (1 scan / multi-day squeeze, override-watch), PFSA (dead-cat), sub-threshold names.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | ISPC | $2.32 | 23:00 CET (17:00 ET) | 32 | b9ae46b3 | Grade C — cancer research order PR (Aug 20); float 2.5M; 2 AH scans >10% BUILD; CONFIRM-3 YES; low-extension fill +2.2% |
 | LGO | $0.73 | 23:30 CET (17:30 ET) | 126 | 41abd2d7 | Grade None — no same-day catalyst (vanadium sector-beta); float 49.8M; 2 AH scans >10% BUILD (higher highs $0.78→$0.80 on 181k/140k sh SIP surges); low-extension fill +14.1% |
+| SUGP | $3.37 | 00:00 CET (18:00 ET) | 28 | abb46049 | Grade None — no same-day catalyst; float 595K ideal; HOLD re-read (SIP base $3.27–3.63 all night, ~9% off $3.77 high, heavy sustained vol); first-day; low-extension fill +21.7% |
 
 ## Position Evaluation — 10:30 CET
 
