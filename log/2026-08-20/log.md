@@ -91,10 +91,41 @@ Scanner 4 hits at 16:45 ET. Observation-only per learning-phase rule (no entries
 
 No entries (observation-only scan). SUGP (gated, top candidate) + ISPC (BUILD, needs 2nd scan) carried to 23:00.
 
+## Scan 23:00 CET (5:00 PM ET) — AH open, ENTRIES ELIGIBLE
+
+Scanner 4 hits at 17:00 ET. First entry-eligible scan of the night (learning-phase rule: no entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $2.77 | +1.6% | +19.7% | $3.32 | +21.6% | 3.6M | 1.1M | 3.3x | 595K | Misc Commercial Services |
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $2.27 | -4.6% | +24.7% | $2.83 | +18.9% | 3.4M | 523K | 6.6x | 2.5M | Misc Commercial Services |
+| LOOP | [TV](https://www.tradingview.com/chart/?symbol=LOOP) | $0.65 | +4.0% | +6.7% | $0.69 | +10.9% | 523K | 8.9M | 0.1x | 25.6M | Chemicals: Specialty |
+| LGO | [TV](https://www.tradingview.com/chart/?symbol=LGO) | $0.64 | -0.7% | +10.7% | $0.71 | +10.0% | 281K | 678K | 0.4x | 49.8M | Other Metals/Minerals |
+
+**ISPC — ENTERED.** Gated (22:45 +16.7%, 23:00 +24.7% — 2 AH scans >10%, AH% BUILDING). Float 2.5M, Day -4.6% (> -15%, not dead-cat), Total% +18.9% (< 150% ceiling).
+- SPIKE 16:02ET +15% $2.62 147 trades / 28k sh
+- CONFIRM-3 YES ignition 16:25ET 6.1x; confirmed 16:35ET $2.95 as-of 17:00ET
+- SIP BUILD: volume exploded 16:30ET (14,536 trades / 1.47M sh), peaked $3.14 (16:30ET), basing $2.77–2.95. Volume real and heavy.
+- Quote bid $3.02 / ask $3.07 @ 16:38ET (fillable two-sided book).
+- Catalyst: same-day GlobeNewswire (Aug 20, ~38 min pre-scan) "iSpecimen Completes Large-Scale International Cancer Research Order; Samples Shipped Within Three Weeks." Completed-order PR, promotional/retrospective — **Grade C** (weak PR, exit premarket). Earnings were 8/17 (not today). Prior dilution: $5M offering closed Aug 7.
+- tradable=true. BUY 32 @ limit $3.10 ext (id b9ae46b3) → **filled @ $2.32**.
+- **CHASE-CAP (reverse):** fill Total% +2.2% vs qualifying-scan Total% +18.9% — fill landed 16.7pts *below* qualifying price, not above. Real-time book had faded to near close ($2.27) while scanner/quote showed stale $2.83–$3.07. Low-extension entry, opposite of the extreme-runner fade zone. No chase.
+
+**SUGP — SKIP (SPIKE→FADE).** Gated on scans but disqualified on trajectory. AH% declining across 3 scans (22:30 +30.8% → 22:45 +25.9% → 23:00 +19.7%). Volume collapsing: 11365→6418→7230→5266→3229→1638→1017 trades/bar. Peaked $3.77 at 16:20ET (before 18:30) AND declining across scans = early-peak-fade disqualifier.
+- SPIKE 16:00ET +22% $3.38 412 trades / 45k sh
+- CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 17:00ET
+- Quote bid $2.39 / ask $0.00 x0 @ 16:00ET (stale, no fresh fillable book read; re-pull returned same stale tick). Skip reason is trajectory, not book.
+- Catalyst: none same-day (next event Sept 1 contract revenue recognition). Float 595K ideal but SPIKE→FADE 0/10+ for PM continuation — skip regardless.
+
+**LOOP** (+6.7%) and **LGO** (+10.7%) — LOOP below 10% threshold, float 25.6M, VRatio 0.1. LGO first AH scan only (needs 2), float 49.8M, VRatio 0.4 thin. Neither gated.
+
+Entered: ISPC. Skipped: SUGP (SPIKE→FADE), LGO (1 scan / thin), LOOP (<10%).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| ISPC | $2.32 | 23:00 CET (17:00 ET) | 32 | b9ae46b3 | Grade C — cancer research order PR (Aug 20); float 2.5M; 2 AH scans >10% BUILD; CONFIRM-3 YES; low-extension fill +2.2% |
 
 ## Position Evaluation — 10:30 CET
 

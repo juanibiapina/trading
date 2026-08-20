@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | | | No open positions |
+| ISPC | $2.32 | $2.36 | $2.36 | 32 | 2026-08-20 17:00 ET | C | b9ae46b3 | Cancer research order PR (Aug 20, GlobeNewswire); float 2.5M; BUILD across scans, CONFIRM-3 YES; Grade C → exit premarket |
 
 ## Position Rules
 
