@@ -59,6 +59,38 @@ Scanner 3 hits at 16:30 ET. Observation-only per learning-phase rule (no entries
 
 No entries (observation-only scan). SUGP carried to 23:00.
 
+## Scan 22:45 CET (4:45 PM ET) — AH open, observation only
+
+Scanner 4 hits at 16:45 ET. Observation-only per learning-phase rule (no entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $2.77 | +1.6% | +25.9% | $3.49 | +28.0% | 3.0M | 999K | 3.0x | 595K | Misc Commercial Services |
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $2.27 | -4.6% | +16.7% | $2.65 | +11.3% | 934K | 186K | 5.0x | 2.5M | Misc Commercial Services |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $4.71 | +1.9% | +12.5% | $5.30 | +14.7% | 277K | 123K | 2.3x | 2.3M | Medical/Nursing Services |
+| LOOP | [TV](https://www.tradingview.com/chart/?symbol=LOOP) | $0.65 | +4.0% | +8.5% | $0.70 | +12.8% | 435K | 8.8M | 0.0x | 25.6M | Chemicals: Specialty |
+
+**SUGP** — 2nd AH scan appearance above 10% (22:30 +30.8%, 22:45 +25.9%). Passes 2-AH-scan gate. Float 595K (ideal). Total% +28%, well under 150% ceiling.
+- SPIKE 16:00ET +22% $3.38 412 trades / 45k sh (as-of 16:45ET)
+- CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 16:45ET
+- SIP real accumulation: 5006→5330→11365→6418→7230→5266→3229 trades/bar, built $3.03→$3.77 peak (16:20 ET), now basing $3.31–3.48. Holding within ~10% of high — BUILD/hold, not fade.
+- Quote bid $2.39 / ask $0.00 x0 @ 16:00 ET (stale first-tick timestamp, not a real book read). Re-check book at 23:00.
+- Peaked 16:20 ET (before 18:30) but holding base — hold-vs-fade primary signal favors it. Carry to 23:00 as top candidate for entry.
+
+**ISPC** (+16.7%) — first AH scan above 10%. Float 2.5M. BUILD pattern: SIP last bar 16:30 ET exploded 14,536 trades / 1.47M sh, $3.14 high, C $3.06 — volume accelerating. Live quote bid $3.02 / ask $3.07 (tight, fillable book).
+- SPIKE 16:02ET +15% $2.62 147 trades / 28k sh
+- CONFIRM-3 PENDING ignition 16:25ET; waiting for third bar as-of 16:45ET
+- Only 1 AH scan so far — needs 2nd AH scan >10% to gate. Strong BUILD, carry to 23:00.
+
+**RYOJ** (+12.5%) — first AH scan above 10%. Float 2.3M. SPIKE→FADE: spiked $6.20 at 16:05 ET then faded to $4.81–5.00. Quote ask $0.00 x0 — illiquid, no fillable AH book.
+- SPIKE 16:09ET +32% $6.20 825 trades / 64k sh
+- CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 16:45ET
+- Early-peak fade + no AH book. Skip-leaning; carry as watch only.
+
+**LOOP** (+8.5%) below 10% AH threshold, float 25.6M, VRatio 0.0 — not a candidate.
+
+No entries (observation-only scan). SUGP (gated, top candidate) + ISPC (BUILD, needs 2nd scan) carried to 23:00.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
