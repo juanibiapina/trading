@@ -7,6 +7,20 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-08-20 — Initiative 3: +10% limit still best at n=18, but a dead-book faller (LOOP) exposes fallback downside
+
+**Evaluated:** The 2026-08-19 step **worked** — its next step was to keep seeding held names as they exit and confirm the +10%-limit edge. The 08-20 04:30 ET position eval sold two held names (BTOG, LOOP), giving fresh out-of-sample seeds. Re-running the sim keeps the +10% limit as the best rule, but the two seeds are dead-book losers and one (LOOP) **actively dumps**, which partly contradicts the prior run's "dead-book losers contribute ~0" claim.
+
+**Step taken:** **Pilot / Initiative 3 (execution pivot):** pulled the two exit fills from `broker.js orders all --json` (BTOG $0.76, LOOP $1.11, both filled 08:30:39Z = 04:30 ET), measured each name's post-exit premarket peak from SIP 5-min bars (capped 09:30 ET), appended both to `scripts/peak-seeking-exit-sim.js` (n=16 -> n=18) and `log/premarket-exit-gap.csv`, and re-ran the sim. Log-only, no orders.
+
+**Result:** The resting **+10% sell-limit is still the best rule at n=18: SUM +67.0% / mean +3.7%, positive on 13 of 18**, beating every trailing stop (best trail12 +2.1% mean) and every other limit width (L5 +1.7, L15 +3.0, L20 +1.5, L30 +1.7). But mean fell +5.7% -> +3.7% because the two new seeds have no premarket upside and one dumps hard: **BTOG** exit $0.76 -> PM peak only $0.7694 at 04:40 ET (+1.2%, thin 9.3k sh), lim10 unfilled, faded to PM-last $0.7305 (-3.9%); **LOOP** exit $1.11 -> PM peak $1.16 at 04:35 ET (+4.5%, 203k sh) then **dumped to PM-last $0.882**, lim10 unfilled, fallback -20.5%. The five L10 negatives are all dead-book/faded names (MGIH -1.0, DARE -1.2, ONFO -3.5, BTOG -3.9, LOOP -20.5). **New nuance:** the earlier "safe on dead books (~0)" read is only true for dead books that *stall*; a dead book that *dumps* into the open turns the unfilled-fallback into a real loss vs the plain 04:30 exit, because once you rest the limit you cannot retroactively sell at the 04:30 price. So the naive "04:30 market exit as fallback" wording understated the tail.
+
+**Hypothesis / next step:** The core edge holds (13/18 positive, +10% dominant, +3.7%/name), but pair the resting +10% sell-limit with a protective **stop at the 04:30 exit price (OCO)** so a faller (LOOP-type) market-outs near breakeven instead of dumping into the open. Next run: simulate the OCO-floor variant (limit +10% / stop at exit) over the 18 seeds to confirm it neutralises the fallers without hurting the live-book winners, then fold it into the proposal to Juan. Keep seeding held names; keep `CONFIRM-3` and both instruments log-only.
+
+**Needs from Juan:** two open asks unchanged, one refined. (1) The peak-seeking-exit proposal (replace the plain 04:30 ET market exit for held names with a resting +10% sell-limit, GTC premarket, cancel 09:30 ET) — now **refined to add an OCO stop at the exit price** after LOOP exposed dead-book-dump downside; still a veto-window proposal, not applied, pending the OCO-floor sim next run. (2) Still open from 08-07: the Initiative 2 broker/feed decision for the ~203% fill gap (Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills).
+
+---
+
 ### 2026-08-19 — Initiative 3: +10% resting sell-limit edge strengthens out-of-sample (n=16)
 
 **Evaluated:** The 2026-08-18 step **worked and its hypothesis held again.** It set this run to keep seeding held names and confirm the +10%-limit edge out-of-sample. The 08-19 04:31 ET position eval sold two held names (MSS, TNON) — fresh seeds — and re-running the sim with them keeps the +10% limit as the winner and improves the aggregate (mean +5.1% -> +5.7%, positive 10/14 -> 13/16).
