@@ -190,6 +190,49 @@ Scanner 12 hits at 18:00 ET. Prior entries tonight: ISPC (23:00), LGO (23:30). N
 
 Entered: SUGP (HOLD re-read, Grade None, no-catalyst concern). Skipped: RDAC (1 scan / multi-day squeeze, override-watch), PFSA (dead-cat), sub-threshold names.
 
+## Scan 00:30 CET (6:30 PM ET) — AH open, ENTRIES ELIGIBLE (final scheduled scan)
+
+Scanner 9 hits at 18:30 ET. Prior entries tonight: ISPC (23:00), LGO (23:30), SUGP (00:00). No new entries this scan — see below.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $2.77 | +1.6% | +22.5% | $3.40 | +24.5% | 4.9M | 1.2M | 4.0x | 595K | Misc Commercial Services |
+| LGO | [TV](https://www.tradingview.com/chart/?symbol=LGO) | $0.64 | -0.7% | +17.2% | $0.75 | +16.4% | 788K | 733K | 1.1x | 49.8M | Other Metals/Minerals |
+| USDE | [TV](https://www.tradingview.com/chart/?symbol=USDE) | $4.00 | +29.4% | +12.3% | $4.49 | +45.3% | 514K | 726K | 0.7x | 21.7M | Packaged Software |
+| RDAC | [TV](https://www.tradingview.com/chart/?symbol=RDAC) | $6.65 | -24.3% | +32.6% | $8.82 | +0.5% | 335K | 1.7M | 0.2x | 2.5M | Financial Conglomerates |
+| QTEX | [TV](https://www.tradingview.com/chart/?symbol=QTEX) | $0.85 | -24.0% | +9.6% | $0.93 | -16.7% | 288K | 4.5M | 0.1x | 38.0M | Medical Specialties |
+| NXTT | [TV](https://www.tradingview.com/chart/?symbol=NXTT) | $8.00 | +20.5% | +5.0% | $8.40 | +26.5% | 221K | 560K | 0.4x | 1.5M | Packaged Software |
+| GOVX | [TV](https://www.tradingview.com/chart/?symbol=GOVX) | $0.60 | +1.2% | +9.3% | $0.66 | +10.6% | 77K | 1.5M | 0.1x | 7.4M | Biotechnology |
+| SNSC | [TV](https://www.tradingview.com/chart/?symbol=SNSC) | $1.47 | +12.2% | +5.5% | $1.55 | +18.4% | 93K | 0 | 0.0x | n/a | Trucks/Constr Machinery |
+| LOOP | [TV](https://www.tradingview.com/chart/?symbol=LOOP) | $0.65 | +4.0% | +5.4% | $0.68 | +9.6% | 1.5M | 9.0M | 0.2x | 25.6M | Chemicals: Specialty |
+
+Positions at scan: ISPC 32 @ $2.32 now $1.93 (-16.8%), LGO 126 @ $0.73 now $0.74 (+2.1%), SUGP 28 @ $3.37 now $3.42 (+1.5%).
+
+**SUGP — already entered (00:00 @ $3.37). No re-entry** (one entry per candidate per night). Holding: +22.5% AH, position +1.5%.
+- SPIKE 16:00ET +22% $3.38 412 trades / 45k sh (as-of 18:30ET)
+- CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 18:30ET
+
+**LGO — already entered (23:30 @ $0.73). No re-entry.** Holding: +17.2% AH, position +2.1%.
+- SPIKE 16:40ET +22% $0.78 130 trades / 54k sh (as-of 18:30ET)
+- CONFIRM-3 NO ignition 16:40ET failed third-bar hold/volume as-of 18:30ET
+
+**USDE — SKIP (fails 2-AH-scan gate).** Tracked watch name since 21:30. This is its **first** AH scan with AH change >10% (+12.3%); prior AH scans were <10% (00:00 was +6.8% AH). Only 1 AH scan >10%, and this is the final scheduled scan — no 2nd AH scan possible tonight. Final-scan feed-lag rescue does not bypass the 2-AH-scan gate.
+- NO-SPIKE peak +13% @18:02ET / CONFIRM-3 NO as-of 18:30ET
+- SIP real BUILD (not a bad print): rose $3.98 (16:00ET) to $4.46 high @17:30ET, last bar 17:35ET C $4.32 on rising volume (250→190→315→479 trades). Corroborates scanner ~$4.49. Genuine mover but gate not met. Note for morning-eval: low-float packaged-software late builder, crossed +10% AH only in the last ~1h.
+- tradable=true. Quote bid $3.37 / ask $4.61 (stale 16:00ET tick).
+
+**RDAC — SKIP (SPIKE→FADE deep collapse + multi-day squeeze, override-watch closed).** 2nd AH scan now, but the DEAD-CAT-OVERRIDE WATCH reclaim thesis is **broken**: Total% collapsed +27.6% (00:00) → +0.5% now, back at previous close. SIP: peaked $11.40 @17:40ET, faded $10.55→$9.52→$8.93→$8.88 (last bar 18:15ET) = -22% off high (>20%, a fade not a hold). Multi-day low-float SPAC squeeze (Aug 18 +223%), no fundamental catalyst, not first day of unusual volume.
+- SPIKE 17:19ET +16% $8.15 250 trades / 9k sh / CONFIRM-3 NO as-of 18:30ET
+- Quote bid $5.51 / ask $7.98 (stale 16:00ET tick; SIP fresh to 18:15ET).
+
+**NXTT — SKIP (SPIKE→FADE, feed not under-reporting).** Low float 1.5M prior winner, so SIP cross-checked: spiked $9.90–$10.14 @17:15–17:20ET on heavy volume (48k/105k sh) then collapsed to $8.22 (last bar 17:35ET) = -19% off high, back near $8.00 close. Scanner AH +5.0% is correct, not under-reported. Only momentarily >10% AH in one bar. Skip.
+
+**Dead-cat / sub-threshold (not candidates):** QTEX -16.7% Total (Day -24.0% dead-cat, AH bounce below close). GOVX +9.3% AH (<10%, float 7.4M). SNSC +5.5% AH (<10%, AvgVol 0 / float n/a — untradable data). LOOP +5.4% AH (<10%, float 25.6M, VRatio 0.2).
+
+**Final-scan feed-lag cross-check:** tracked names (USDE, NXTT, RDAC, SUGP, LGO) all verified against SIP above — no name under-reported by the TradingView feed. USDE and RDAC are real movers but blocked by gate/trajectory rules, not by stale data.
+
+No new entries. Tonight's entries stand: ISPC, LGO, SUGP. Skipped: USDE (1 AH scan / gate), RDAC (SPIKE→FADE + multi-day squeeze), NXTT (SPIKE→FADE), QTEX (dead-cat), sub-threshold names.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
