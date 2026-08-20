@@ -14,6 +14,17 @@ AH not open yet (opens 22:00 CET / 16:00 ET). No entries this scan per regular-s
 
 Excluded (faded/thin, VChg −100% or sub-1K 5mVol at scan): BRLS, BTCT, INDP, MMA, BIVI, XOS, GNLN, IDAI, FRTT, RETO, JWEL, ACTU, CBAT, AIFC. CATO −19.7% (down day, not a spike). EWAV/ALPX/SHOT Financial Conglomerate noise.
 
+## Scan 22:00 CET (4:00 PM ET) — AH open, observation only
+
+Scanner 0 hits at 16:00:17 ET (right at AH open, postmarket feed empty). Observation-only scan per learning-phase rule (no entries before 23:00 CET).
+
+Feed-lag cross-check on prior 21:30 watch names via SIP + quote:
+- USDE: no SIP AH bars yet; quote bid $3.37 / ask $4.61 (wide, no surge). Live book, no ignition.
+- NXTT: no SIP AH bars yet; quote bid $6.87 / ask $9.41 (wide). No surge.
+- BTMD: no SIP AH bars yet; quote bid $1.24 / ask $1.78 (wide). No surge.
+
+No candidate above 10% AH threshold on real accumulating volume this scan. Nothing to enter. Watch names carried to next scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
