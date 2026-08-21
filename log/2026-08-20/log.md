@@ -260,3 +260,88 @@ No open positions (Alpaca source of truth). BTOG + LOOP already closed in 10:30 
 
 **Actions taken:**
 - None.
+
+## Morning Evaluation — 10:25 CET
+
+### Today's Winner
+
+**No real winner today.** Nothing cleared the >100% winner bar. Biggest genuine mover was **SUGP** (+52.7% PM peak on real accumulating SIP volume) — a moderate mover, not an explosion. Second was USDE (+31.7% from real regular close $4.00). Both were AH→PM continuations, detected by the scanner; neither is a "winner."
+
+**Biggest genuine mover — SUGP** — Misc Commercial Services
+- Catalyst: none same-day (next event Sept 1 contract revenue recognition). Grade None — low-float momentum.
+- Previous Close: $2.73
+- AH last night: $3.94 Yahoo / $3.77 SIP high (+44%) at ~19:30 CET / 16:20 ET
+- Premarket now: $4.17 (+52.7%) at 04:15 ET
+- Hypothetical P&L (AH entry → PM peak): ~$3.37 fill → $4.17 = +23.7% (we hold this)
+- Float: 595K | Market Cap: $4.5M
+- SIP volume: real accumulation — 429K sh / 8,279 trades in the 04:00 ET PM bar; AH ran 5,006→11,365 trades/bar. Liquid, but the move tops at +52.7%, under the +100% bar.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — SUGP appeared from the 22:30 scan (+30.8% AH, 1.5M sh, VRatio 1.8x) through all later scans.
+- We ENTERED SUGP @ $3.37 (00:00 CET) after a HOLD re-read (SIP base $3.27–3.63 all night, ~9% off high). It is running +21% in PM.
+- Scanner gap: none. The biggest genuine mover was caught and traded. No detection failure.
+
+### Baseline Tracking
+
+No real winner (nothing >100%), so the detection/selection ratios are unchanged; only Days tracked increments. No baseline gap (Aug 19 was the immediately-preceding tracked trading day).
+
+- Days tracked: **70** (was 69 + 1)
+- Winners detected by scanner: **56/65 (86.2%)** — unchanged (no >100% winner today)
+- Winner selected for paper trade: **32/64 (50.0%)** — unchanged
+- Target: >80% detection
+- Status: **BASELINE MET** (86.2%)
+
+### Retrospective Scan Results
+
+- Live PM scan (04:20 ET): 5 hits, max +20% (SUGP +20% mid-pullback, USDE +18%, SDEV +14.3%, STAK +11.8%, CYPH +7.6%). Quiet morning.
+- Forced AH scan (04:20 ET): 0 hits (postmarket feed empty overnight, expected).
+- AH reconstruction (Yahoo + SIP): SUGP AH peak $3.94/$3.77 (+44%), USDE +31.7% from real close. No >100% mover anywhere.
+
+### Open Position P&L (Alpaca)
+
+Three open positions from last night's entries. Alpaca quote timestamps were stale (16:00 ET), but `current_price` tracked the live PM levels (cross-checked vs SIP/Yahoo PM bars). Exits handled by position-evaluation.md (10:30 CET) — not here.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| SUGP | $3.37 | +23.4% | None — low-float momentum | 00:00 CET | $4.17 | 04:15 ET | open | — | +21% | 🟢 running |
+| ISPC | $2.32 | +2.2% | C — cancer research order PR | 23:00 CET | $1.88 | 04:00 ET | open | — | −24% | 🔴 underwater |
+| LGO  | $0.73 | +14.1% | None — vanadium sector-beta | 23:30 CET | $0.69 | 04:00 ET | open | — | −7% | 🔴 underwater |
+
+**PM Peak** verified vs SIP bars. SUGP live ~$4.08–4.17 (Yahoo + Alpaca current_price agree). ISPC $1.76 / LGO $0.68 match SIP PM closes. No realized P&L (all open).
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits this pulse)
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) + extra 22:15, 22:45. Full coverage of the entry window.
+- Candidates found: SUGP, ISPC, LGO, RDAC, USDE, NXTT, RYOJ, PFSA, QTEX, LOOP, BRLS, LTRX, BTOG, GOVX, SNSC.
+- Entries: ISPC, LGO, SUGP. Retrospective match: biggest genuine mover (SUGP) caught and traded.
+
+### Missed Opportunities
+
+No significant missed opportunities. No >100% mover existed; the biggest genuine mover (SUGP) was detected and entered.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| SUGP | $3.94 / $3.77 SIP (+44%) | 16:20 ET | Spike→hold (shallow base) | $4.17 (+52.7%) | +6% | +52.7% | Continued — PM exceeded AH (entered, running) |
+| ISPC | $3.14 SIP (+38%) | 16:30 ET | Build then fade | $1.76 | −44% | −22% | Faded hard — AH was the better exit |
+| LGO  | $0.80 SIP (+25%) | 17:10 ET | Build/hold | $0.68 | −15% | +5% | Faded — small |
+| RDAC | $11.40 SIP | 17:40 ET | Spike→fade (deep) | $7.53 | −34% | −14% | Faded hard — dead-cat-override skip validated |
+
+**AH-peak-vs-PM-peak check:** ISPC, LGO, RDAC all peaked in AH and faded into PM (AH was the better exit). SUGP is the exception — PM ($4.17) exceeded AH ($3.94), a genuine continuation. None reached the >~+130% extreme-runner zone, so no new entry to the extreme-fade tally.
+
+### Notes
+
+- **No real winner today** — quietest morning in a while; nothing >100%. SUGP (+52.7%) is the biggest genuine mover and we are holding it (+21%). USDE (+31.7% real) second. Baseline diagnostic ran on SUGP: detected + traded, no scanner gap.
+- **Scan coverage:** 7 of 7 ran. No coverage failure.
+- **Fade-rule false-negative tracking:** NXTT (float 1.5M sub-3M, Grade None, packaged software) skipped SPIKE→FADE at 00:30 — AH SIP peak $9.90 @17:15 ET faded to $8.22, **PM SIP peak $8.49, fell short of AH peak** → fade rule correct. Sub-3M standing count now **4 of 14** (adds NXTT as fell-short), still below the ≥80% trigger. Hypothesis keeps weakening. RYOJ also skipped (illiquid `ask $0.00 x0`, 1 AH scan) — not a qualifying fade case.
+- **Dead-cat-override watch:** RDAC flagged DEAD-CAT-OVERRIDE WATCH at 00:00 (Day −24.3%, AH reclaim to Total +27.6%), then **closed at 00:30** when the reclaim broke (Total collapsed to +0.5%). PM confirmed the skip: AH peak $11.40 → PM peak $7.53 (−34% off AH). Hypothetical override entry $10.55 → $7.53 = **−28.6%**. Skip validated, multi-day SPAC squeeze (Aug 18 +223%), no fundamental catalyst.
+- **PM-only gapper:** none notable — the morning's biggest raw mover (SUGP) is an AH→PM continuation (detectable). Holdable PM-only-gapper count in `log/pm-open-scan.csv` = **29** (well past the ≥3–4 cluster threshold; standing action: route the Initiative-6 early-PM hypothetical-entry pilot to the daily email).
+- **In-window feed-lag miss:** none new. Standing count **4**, ≥3 escalation trigger REACHED — route the AH-data-source-verification recommendation (independent whole-universe gainers cross-check at the final scan) to the daily email.
+- **Stale-book execution-block:** none new. Standing count **3**.
+- **No-fillable-book skip:** RYOJ and ARBB showed `ask $0.00 x0` but neither cleared the 2-AH-scan momentum gate, so neither is a qualifying no-fillable-book skip. Standing count **2** (both prior cases faded, skip validated).
+- **Broker-block / float-gate / chase-cap:** none new. All three fills landed *below* their qualifying-scan price (reverse chase-cap, no chase). LGO float 49.8M was under the 50M gate. Chase-cap count 1, float-gate count 1.
+- **Price-floor exclusion:** no sub-$0.50 in-window mover surfaced this quiet morning. Standing count **5, 0 holdable** — floor stays a cheap blind spot.
+- **DAILY EMAIL — standing items to route to Juan (non-interactive, questions to email only):** (1) In-window feed-lag miss trigger REACHED (4) — propose independent AH-data-source cross-check. (2) Holdable PM-only-gapper cluster (29 in pm-open-scan.csv) — Initiative-6 early-PM hypothetical-entry pilot decision. (3) This-week reverse-split fade signal RESOLVED (4/4) — recency-based conviction-downgrade recommendation for this-week reverse splits with no fresh catalyst. All are user decisions, not applied here.
