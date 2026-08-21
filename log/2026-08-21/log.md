@@ -14,3 +14,7 @@
 - **Net pulse P&L: +$0.68.** Flat, no open positions.
 
 Note: all Alpaca quotes were stale (prior-close 20:00Z); used SIP 5Min bars for real PM levels. SUGP was a rare Grade-None PM continuation runner — big price improvement filling into the rising liquid book.
+
+## Position Evaluation — 14:30 CET
+
+Flat. No open positions (Alpaca `positions` returns none; source of truth). All 3 positions (ISPC, LGO, SUGP) closed at the 10:30 CET pulse. `OPEN_POSITIONS.md` already reconciled. No decisions or actions.
