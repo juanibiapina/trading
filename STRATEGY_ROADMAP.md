@@ -128,6 +128,22 @@ the ignition**, not a new signal.
    exit-timing gap already flagged above (AH peak, not PM, is the exit for
    extreme runners). Next `strategy-advance` run: draft the scheduler-densify +
    hard-gate proposal for Juan. See `FEEDBACK_LOG.md` 2026-08-18.
+   **Update 2026-08-20 (Juan feedback, 08-19 BTCT cycle):** "BTCT you should
+   have entered MUCH earlier." BTCT was the winner, detected in all 7 scans, but
+   skipped on the flat +150% extension ceiling (ceiling-skip entry $1.23 -> PM
+   peak $2.07 = +68.3%). Third straight cycle (ONFO 08-14, XOS 08-18, BTCT 08-20)
+   where Juan flags late/missed entry on a detected winner — the money-fast lever
+   stays **entry timing + the ceiling gate**, not detection. BTCT is the
+   strongest case yet for the **volume-conditional +150% ceiling override** on
+   accumulating-volume BUILDs (already tracked log-only by the scanner pulse this
+   cycle): a flat ceiling skipped a real build-and-hold runner. Folds into the
+   same proposal-to-Juan: cadence densify + hard CONFIRM-3 entry gate + the
+   volume-conditional ceiling override. Separately, Juan rejected the two junk
+   entries this cycle (BTOG Grade-D reverse split -39%, LOOP Grade-None
+   no-catalyst -18%) — routed as a **selection-quality** scanner-improvement
+   candidate (hard skip for reverse-split / no-catalyst Grade-None BUILDs),
+   which also questions the enter-everything tail of the multiple-positions
+   policy. See `FEEDBACK_LOG.md` 2026-08-20.
 3. **Initiative 5 - better data + review surface (graphs, sources).** AH/PM
    volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
    raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports

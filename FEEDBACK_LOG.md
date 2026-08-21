@@ -6,6 +6,36 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-08-20 — re: Trading Scanner Report - 2026-08-19
+
+**Juan said:** "Btoc and loop are horrible. Do not enter trades like this. BTCT
+you should have entered MUCH earlier" (Btoc = BTOG typo).
+
+**Interpretation:** Two distinct steers on the Aug 19 AH → Aug 20 PM cycle.
+(1) **Selection reject:** BTOG (Grade D, 1-for-5 reverse split, -39.2%) and LOOP
+(Grade None, BUILD, no catalyst, -18.4%) were both junk entries — Juan wants us
+to stop entering names of this quality (reverse-split / no-catalyst Grade-D /
+Grade-None). Both were losers with no premarket upside; this is the selection
+gate, not detection. It pushes against the current "enter every qualifying
+candidate for data" multiple-positions policy: the low-grade tail is negative
+and Juan wants it filtered out. (2) **Entry latency:** BTCT was the real winner
+(detected in all 7 scans) but skipped on the flat +150% extension ceiling; the
+$1.23 ceiling-skip entry → $2.07 PM peak was +68.3%. Juan: enter "MUCH earlier."
+This restates the 08-17 XOS steer and directly backs the volume-conditional
++150% ceiling override the scanner already flagged log-only this cycle.
+
+**Action:** Routed to Initiative 3 in `STRATEGY_ROADMAP.md` (updated). BTCT is a
+strong confirming data point for the conditional +150%-ceiling override on
+accumulating-volume BUILDs (already tracked log-only by the scanner) plus the
+faster-ignition cadence densification — enter near ignition, not after the move.
+The BTOG/LOOP reject is a **selection-quality** point: flagged as a
+scanner-improvement candidate to add a hard skip for reverse-split (Grade D) and
+no-catalyst Grade-None BUILD names, and to revisit the enter-everything tail of
+the multiple-positions policy. No unilateral strategy change; captured and
+routed for the next `strategy-advance` run.
+
+---
+
 ### 2026-08-18 — re: Trading Scanner Report - 2026-08-17
 
 **Juan said:** "We should have entered much earlier. Determine what needs to
