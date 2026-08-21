@@ -22,3 +22,6 @@ date,ticker,entry,exit,exitZ,note
 2026-08-19,TNON,8.69,9.74,2026-08-19T08:30:46Z,Grade None green exit 04:31 ET +12.1%; PM peak $11.44 04:35 ET (+17.5%) then faded to PM-last $9.50; lim10 filled
 2026-08-20,BTOG,1.25,0.76,2026-08-20T08:30:39Z,Grade D exit 04:30 ET -39%; dead book, PM peak only $0.7694 04:40 ET (+1.2%, thin 9.3k sh); lim10 unfilled, faded to PM-last $0.7305
 2026-08-20,LOOP,1.36,1.11,2026-08-20T08:30:39Z,Grade None exit 04:30 ET -18%; PM peak $1.16 04:35 ET (+4.5%, 203k sh) then dumped to PM-last $0.882; lim10 unfilled
+2026-08-21,SUGP,?,4.27,2026-08-21T08:30:39Z,held exit 04:30 ET; dead book, PM peak only $4.33 05:20 ET (+1.4%, 424k sh); lim10 unfilled, dumped to PM-last $4.00 (-6.3%)
+2026-08-21,LGO,?,0.6701,2026-08-21T08:30:38Z,held exit 04:30 ET; PM peak $0.72 06:20 ET (+7.4%, thin 17k sh); lim10 unfilled, PM-last $0.71 (+6.0%)
+2026-08-21,ISPC,?,1.79,2026-08-21T08:30:37Z,held exit 04:30 ET; PM peak $1.90 04:40 ET (+6.1%); lim10 unfilled, dumped to PM-last $1.64 (-8.4%)

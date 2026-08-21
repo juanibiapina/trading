@@ -32,10 +32,18 @@ const names = [
   ["TNON","2026-08-19",9.74],
   ["BTOG","2026-08-20",0.76],
   ["LOOP","2026-08-20",1.11],
+  ["SUGP","2026-08-21",4.27],
+  ["LGO","2026-08-21",0.6701],
+  ["ISPC","2026-08-21",1.79],
 ];
 const CAP = "13:30:00Z"; // 09:30 ET
 const limits = [5,10,15,20,30]; // resting sell-limit % above exit
 const trails = [8,12,15,20];    // trailing-stop % from running high
+// OCO-floor variant (08-20 refinement after LOOP dumped): resting +10% sell-limit
+// PAIRED with a protective stop at floor F% below the exit price. A faller that
+// ticks down through the floor market-outs there instead of riding to PM-last.
+// floors: 0 = stop exactly at exit (breakeven), else F% below exit.
+const ocoFloors = [0, 5, 10, 15, 20]; // % below exit for the protective stop, limit fixed +10%
 
 function fetchBars(sym, date){
   const out = execFileSync("node",["scripts/broker.js","bars",sym,"--start",`${date}T08:30:00Z`,"--json"],{encoding:"utf8"});
@@ -65,15 +73,32 @@ function trailExit(bars, exit, T){
   return {px:last};
 }
 
+// OCO: resting +10% sell-limit AND protective stop at exit*(1-F/100). Causal, per
+// bar. Within a bar, check the stop first (pessimistic): if the low breaches the
+// floor, market-out at the floor; else if the high reaches the +10% target, fill
+// the limit. Else hold to cap, sell at last close.
+function ocoExit(bars, exit, F){
+  const target = exit*1.10;
+  const stop = exit*(1-F/100);
+  for(const b of bars){
+    if(b.l <= stop) return {px:stop, hit:"stop"};
+    if(b.h >= target) return {px:target, hit:"limit"};
+  }
+  const last = bars.length ? bars[bars.length-1].c : exit;
+  return {px:last, hit:"cap"};
+}
+
 const pct = (px,exit)=> (px-exit)/exit*100;
 const rows=[];
 const sumL = {}; limits.forEach(L=>sumL[L]=0);
 const sumT = {}; trails.forEach(T=>sumT[T]=0);
+const sumO = {}; ocoFloors.forEach(F=>sumO[F]=0);
 for(const [sym,date,exit] of names){
   const bars = fetchBars(sym,date);
   const row={sym};
   for(const L of limits){ const r=limitExit(bars,exit,L); const g=pct(r.px,exit); row["L"+L]=g; sumL[L]+=g; }
   for(const T of trails){ const r=trailExit(bars,exit,T); const g=pct(r.px,exit); row["T"+T]=g; sumT[T]+=g; }
+  for(const F of ocoFloors){ const r=ocoExit(bars,exit,F); const g=pct(r.px,exit); row["O"+F]=g; row["O"+F+"h"]=r.hit; sumO[F]+=g; }
   rows.push(row);
 }
 const n = names.length;
@@ -89,3 +114,21 @@ console.log("sym    "+trails.map(T=>("T"+T+"%").padStart(8)).join(""));
 for(const r of rows) console.log(r.sym.padEnd(6)+" "+trails.map(T=>f(r["T"+T]).padStart(8)).join(""));
 console.log("SUM   "+trails.map(T=>f(sumT[T]).padStart(8)).join(""));
 console.log("MEAN  "+trails.map(T=>f(sumT[T]/n).padStart(8)).join(""));
+console.log("");
+console.log("OCO: resting +10% sell-limit paired with protective stop F% below exit");
+console.log("(plain L10 shown for contrast; hit = which leg filled):");
+console.log("sym      L10   "+ocoFloors.map(F=>("O"+F+"%").padStart(8)+"  hit    ").join(""));
+for(const r of rows){
+  let line = r.sym.padEnd(6)+" "+f(r["L10"]).padStart(6)+"  ";
+  for(const F of ocoFloors){ line += f(r["O"+F]).padStart(8)+"  "+String(r["O"+F+"h"]).padEnd(6)+" "; }
+  console.log(line);
+}
+let sline = "SUM   "+f(sumL[10]).padStart(6)+"  ";
+for(const F of ocoFloors){ sline += f(sumO[F]).padStart(8)+"  "+"".padEnd(6)+" "; }
+console.log(sline);
+let mline = "MEAN  "+f(sumL[10]/n).padStart(6)+"  ";
+for(const F of ocoFloors){ mline += f(sumO[F]/n).padStart(8)+"  "+"".padEnd(6)+" "; }
+console.log(mline);
+const posL10 = rows.filter(r=>r["L10"]>0).length;
+console.log("");
+console.log("positive count: L10 "+posL10+"/"+n+"   "+ocoFloors.map(F=>"O"+F+" "+rows.filter(r=>r["O"+F]>0).length+"/"+n).join("   "));
