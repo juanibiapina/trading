@@ -18,6 +18,12 @@
 - BTCT 5mVol only 200 shares — momentum fading at close; likely stale. Recurring AH feed-lag name (Jun 29–30) — cross-check SIP at final scan.
 - No entries this scan (regular session). Re-evaluate at 22:00 CET when AH opens.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+Scanner ran at 16:00:17 ET, 17 seconds after AH open — no AH volume accumulated yet. **No candidates found.**
+
+Observation-only scan (before 23:00 CET, no entries per learning-phase rule). 21:30 watch names (DAIC, GIPR, XPON, PMI, LUCY, BTCT) not yet confirmed in AH; re-evaluate at 22:30/23:00 when AH volume builds.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
