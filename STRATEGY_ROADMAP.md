@@ -144,6 +144,14 @@ the ignition**, not a new signal.
    candidate (hard skip for reverse-split / no-catalyst Grade-None BUILDs),
    which also questions the enter-everything tail of the multiple-positions
    policy. See `FEEDBACK_LOG.md` 2026-08-20.
+   **APPROVED 2026-08-21 (Juan "Go ahead", re: 08-20 email):** three standing
+   items greenlit. (1) **AH data-source cross-check** — feed-lag miss trigger
+   reached 4 cases; add an independent whole-universe gainers cross-check at the
+   final AH scan so TradingView dropping live movers stops blinding us
+   (scanner-improvement to wire, log-first). (3) **Reverse-split conviction
+   downgrade** — this-week reverse splits with no fresh catalyst are 4/4 faded;
+   downgrade entry conviction / hard-skip that pattern, folding into the 08-20
+   selection-gate work. See `FEEDBACK_LOG.md` 2026-08-21.
 3. **Initiative 5 - better data + review surface (graphs, sources).** AH/PM
    volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
    raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports
@@ -193,6 +201,15 @@ the ignition**, not a new signal.
    proposal to Juan (resting +10% sell-limit). Next: keep growing the admitted
    set; consider tightening the gate to stop admitting the thin/uninvestable
    names (WLDS/BJDX) that drag the mean.
+   **APPROVED 2026-08-21 (Juan "Go ahead", re: 08-20 email) — early-PM
+   hypothetical-entry pilot GREENLIT.** The holdable PM-only-gapper cluster
+   reached 29 logged; Juan approved running the early-PM hypothetical-entry
+   pilot. This becomes the active pilot slot (pilots are serialized — confirm no
+   other live experiment is running before it starts). `strategy-advance` owns
+   execution: hypothetical entry near the ~04:00-04:21 ET ignition through the
+   continuation gate, paired with the lim10 resting-sell-limit exit both studies
+   converged on, measured log-only against the baseline before any live orders.
+   See `FEEDBACK_LOG.md` 2026-08-21.
 5. **Initiative 1 - earlier volume-lead entries.** **Hypothesis falsified
    (2026-07-15):** volume does not lead price — ignition is a single-minute
    co-spike at both 5m and 1m resolution (`INIT1_VOLUME_LEAD.md`). No standalone

@@ -6,6 +6,33 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-08-21 — re: Trading Scanner Report - 2026-08-20
+
+**Juan said:** "Go ahead." (Reply to the email's "A Few Decisions For You"
+block, which listed three standing items awaiting his call.)
+
+**Interpretation:** Blanket approval of all three proposed items:
+1. **AH data-source cross-check** — the in-window feed-lag miss trigger reached
+   4 cases; add an independent whole-universe gainers cross-check at the final
+   scan so TradingView dropping live movers no longer blinds us. (Initiative 3,
+   feed-lag / detection latency.)
+2. **Initiative-6 early-PM pilot** — the holdable PM-only-gapper cluster reached
+   29 logged; run the early-PM hypothetical-entry pilot. (Initiative 6.)
+3. **Reverse-split conviction downgrade** — this-week reverse splits with no
+   fresh catalyst are 4/4 faded; downgrade entry conviction on that pattern.
+   (Selection-quality; reinforces the 08-20 BTOG/LOOP reject and the hard-skip
+   candidate already tracked.)
+
+**Action:** Routed all three to their owning pulses as approved (no longer
+"awaiting Juan"). (1) marked approved under Initiative 3; (2) marked approved
+under Initiative 6 — the early-PM hypothetical-entry pilot is greenlit;
+(3) marked approved as a selection-quality change (reverse-split downgrade /
+hard-skip), folding into the 08-20 selection-gate work. This pulse captures and
+routes only; the `strategy-advance` and `scanner-improvement` pulses execute the
+approved changes.
+
+---
+
 ### 2026-08-20 — re: Trading Scanner Report - 2026-08-19
 
 **Juan said:** "Btoc and loop are horrible. Do not enter trades like this. BTCT
