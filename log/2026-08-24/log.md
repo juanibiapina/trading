@@ -24,6 +24,27 @@ Scanner ran at 16:00:17 ET, 17 seconds after AH open — no AH volume accumulate
 
 Observation-only scan (before 23:00 CET, no entries per learning-phase rule). 21:30 watch names (DAIC, GIPR, XPON, PMI, LUCY, BTCT) not yet confirmed in AH; re-evaluate at 22:30/23:00 when AH volume builds.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+Scanner: **No candidates found** (0 hits). Cross-checked 21:30 watch names against SIP AH bars (first bar 16:00 ET, SIP lags ~15min).
+
+| Ticker | AH Open | AH High | AH Close | AH Vol | Trades | Book (quote) | AH direction |
+|--------|---------|---------|----------|--------|--------|--------------|--------------|
+| GIPR | $0.75 | $0.98 | $0.95 | 7.56M | 17,543 | bid $0.78 x200 / ask $0.95 x200 | **building** (+27% off AH open) |
+| PMI | $5.13 | $5.21 | $4.92 | 167K | 1,339 | bid $4.53 / ask $6.02 (wide, stale) | flat/fade |
+| LUCY | $1.12 | $1.12 | $1.06 | 321K | 687 | bid $1.02 / ask $1.17 | flat/fade |
+| DAIC | $1.73 | $1.73 | $1.50 | 741K | 3,762 | — | fading hard |
+| XPON | $6.33 | $6.39 | $5.89 | 220K | 2,098 | — | fading |
+| BTCT | $1.76 | $1.80 | $1.74 | 180K | 734 | — | flat/fade |
+
+**Notes:**
+- Observation-only scan (before 23:00 CET, no entries per learning-phase rule).
+- **GIPR** is the only build: opened AH $0.75, ran to $0.98, holding $0.95 on real liquidity (7.56M sh / 17.5k trades, two-sided book). Float 1.6M, REIT. Watch into 22:30/23:00.
+  - `GIPR 2026-08-24 NO-SPIKE peak +13% @16:00ET` (no bar cleared +15% on volume co-spike, as-of 16:15ET)
+  - `GIPR 2026-08-24 CONFIRM-3 NO` no local-volume new-high ignition as-of 16:15ET
+- DAIC/XPON/BTCT fading off intraday highs in first AH bar. PMI/LUCY flat.
+- Only one AH 5-min bar available (SIP ~15min lag); re-evaluate at 23:00 CET when AH volume builds and entries open.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
