@@ -210,6 +210,27 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **PILOT STARTED 2026-08-24 (strategy-advance) — first comparison POSITIVE.**
+   Confirmed no other live experiment is running (Init 3 work is log-only sims,
+   no live orders; Init 2 has no pilot), so the serialized pilot slot is free.
+   Built `scripts/init6-pm-pilot.js` (log-only, no orders) + shadow ledger
+   `log/init6-pm-pilot.csv`: it runs the exact converged mechanism — 5-min
+   continuation-gate entry near the ~04:00-04:21 ET ignition (enter R+3 open)
+   plus the resting +10% sell-limit exit (PM-last fallback) — but restricts to
+   the **fillable holdable** footprint=none universe (the mixed 1-min sim admits
+   thin/uninvestable false-positives WLDS/SDEV/EHGO-2 we could never fill, which
+   drag the mean). On the 22 holdable PM-only gappers the gate enters 10 (skips
+   12 with no >=3000-trade ignition or failed hold). **Pilot result: SUM +61.7%
+   / mean +6.2% / median +10.0% / positive 9 of 10**, vs a hold-to-open PM-last
+   floor of -5.7% and a do-nothing baseline of 0% (current live cycle enters
+   none of these). Net of ~2% micro-cap PM spread the edge is ~+4.2%/name. The
+   one loser is BIVI -27.1% (real fade, never hit +10%, dumped to PM-last) — the
+   tail the resting limit cannot avoid. Entry times cluster 04:15-05:05 ET, near
+   the ignition as intended. Restricting to fillable names lifted the edge from
+   the mixed sim's +2.7% to +6.2%. Still log-only, no live orders. Next: seed new
+   holdable PM-only gappers as they log to grow the entered n out-of-sample, and
+   watch the BIVI-type fade-tail frequency before proposing any live PM-gapper
+   pulse to Juan.
 5. **Initiative 1 - earlier volume-lead entries.** **Hypothesis falsified
    (2026-07-15):** volume does not lead price — ignition is a single-minute
    co-spike at both 5m and 1m resolution (`INIT1_VOLUME_LEAD.md`). No standalone

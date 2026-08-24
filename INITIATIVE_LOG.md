@@ -7,6 +7,20 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-08-24 — Initiative 6: early-PM hypothetical-entry PILOT started — first comparison positive (+6.2%/name on fillable holdables)
+
+**Evaluated:** The 2026-08-21 Init 3 step **worked** (OCO sweep answered: breakeven stop whipsaws the edge, wide catastrophe-stop only marginal; plain +10% limit stays core at n=21). No fresh held-name exit today to seed the peak-seeking sim, so Init 3 has no new out-of-sample data this run. The bigger move: Juan greenlit the **Init 6 early-PM hypothetical-entry pilot** on 08-21 ("Go ahead"), which becomes the active serialized pilot slot — advance it.
+
+**Step taken:** **Pilot / Initiative 6 (greenlit).** Confirmed no other live experiment is running (Init 3 is log-only sims, no live orders; Init 2 has no pilot), so the serialized pilot slot is free. Built `scripts/init6-pm-pilot.js` (log-only, no orders) + shadow ledger `log/init6-pm-pilot.csv`. It runs the exact converged mechanism — 5-min continuation-gate entry near the ~04:00-04:21 ET ignition (enter R+3 open) plus the resting +10% sell-limit exit (PM-last fallback) — but restricts to the **fillable holdable** footprint=none universe, unlike the mixed `pm-gapper-exit-sim-1min.js` which admits thin/uninvestable false-positives (WLDS/SDEV/EHGO-2) that drag the mean. `node --check` passes; runs on all 22 holdable PM-only gappers.
+
+**Result:** The gate enters **10 of 22** holdable candidates (skips 12 with no >=3000-trade ignition or a failed hold). On the entered set: **SUM +61.7% / mean +6.2% / median +10.0% / positive 9 of 10**, versus a hold-to-open PM-last floor of **-5.7%** and a do-nothing baseline of **0%** (the current live cycle enters none of these PM-only gappers — the AH scanner is blind to them). Net of ~2% micro-cap PM spread the edge is ~+4.2%/name. Entry times cluster 04:15-05:05 ET, near the ignition as intended. The only loser is BIVI -27.1% (real fade, never reached +10%, dumped to PM-last) — the tail the resting limit cannot dodge. Restricting to fillable holdables lifted the edge from the mixed 1-min sim's +2.7% to +6.2%. Ledger written with all 10 entered rows.
+
+**Hypothesis / next step:** The early-PM continuation-gate + lim10 mechanism has a real positive edge (+6.2%/name, 9/10) over the do-nothing baseline on fillable PM-only gappers, but n=10 and the BIVI-type fade-tail is the risk to watch. Next run: seed new holdable PM-only gappers into the ledger as `pm-open-scan.csv` grows (re-run the pilot script, it is deterministic from the tracker), building the entered n out-of-sample; track the fade-tail frequency. Only propose a live PM-gapper entry pulse to Juan once the entered n is larger and the tail stays contained. Keep `CONFIRM-3` and all Init 6 sims log-only. Init 3 peak-seeking sim resumes seeding once a held name exits.
+
+**Needs from Juan:** two open asks unchanged (no new one). (1) The Init 3 peak-seeking-exit proposal — replace the plain 04:30 ET market exit for held names with a resting +10% sell-limit (GTC premarket, cancel 09:30 ET, plain market exit fallback; optional wide ~-15% catastrophe-stop). Evidence: +61.6% total / +2.9%/name over 21 seeds. Veto window, not applied. (2) Still open from 08-07: the Initiative 2 broker/feed decision for the ~203% fill gap (Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills). The Init 6 pilot itself stays log-only and needs nothing yet.
+
+---
+
 ### 2026-08-21 — Initiative 3: OCO-floor variant tested — breakeven stop is wrong, only a wide catastrophe-stop helps marginally
 
 **Evaluated:** The 2026-08-20 step **worked** — it scheduled the OCO-floor variant test and to keep seeding held names. The 08-21 04:30 ET position eval sold three held names (SUGP, LGO, ISPC), giving fresh out-of-sample seeds. Running the OCO sim answers the 08-20 hypothesis decisively — and **refutes** its proposed refinement (a breakeven stop at the exit price): the naive OCO makes things far worse, not better.
