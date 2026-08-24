@@ -174,6 +174,55 @@ Scanner: 8 hits. **Entries open.** No new entries this scan (all candidates fail
 
 **Note:** All quotes stamped 16:00 ET (~90 min stale at 17:30 scan); leaned on SIP bars (last bar 17:15ET, ~15min lag) for real levels. No new entries — no candidate clears both the 2-AH-scan gate and BUILD/hold trajectory. Next scan 00:00 CET; cross-check PMI/CIIT for a second AH appearance and watch AMIX for any re-build under ceiling.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Scanner: 12 hits. **Entries open.** No new entries this scan. WLDS held from 23:00 (faded to $2.74, -17%).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $1.73 | +306.1% | +140.5% | $4.16 | +876.5% | 12.4M | 9.9M | 1.3x | 1.3M | Miscellaneous |
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $5.37 | +1.9% | +107.8% | $11.16 | +111.8% | 8.2M | 1.5M | 5.5x | 946K | Medical Specialties |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $2.27 | -12.4% | +18.9% | $2.70 | +4.2% | 5.4M | 928K | 5.8x | 2.0M | Electronic Equipment/Instruments |
+| MCRP | [TV](https://www.tradingview.com/chart/?symbol=MCRP) | $1.16 | -6.5% | +14.7% | $1.33 | +7.3% | 4.8M | 835K | 5.8x | 10.3M | Industrial Machinery |
+| PMI | [TV](https://www.tradingview.com/chart/?symbol=PMI) | $5.13 | +59.8% | +11.1% | $5.70 | +77.6% | 2.9M | 3.6M | 0.8x | 1.3M | Medical Specialties |
+| BTCT | [TV](https://www.tradingview.com/chart/?symbol=BTCT) | $1.74 | +52.6% | +5.7% | $1.84 | +61.4% | 1.9M | 49.8M | 0.0x | 8.6M | Data Processing Services |
+| CIIT | [TV](https://www.tradingview.com/chart/?symbol=CIIT) | $3.37 | -3.7% | +6.8% | $3.60 | +2.9% | 1.8M | 305K | 5.8x | 733K | Air Freight/Couriers |
+| FFAI | [TV](https://www.tradingview.com/chart/?symbol=FFAI) | $3.01 | -5.9% | +15.0% | $3.46 | +8.1% | 1.1M | 1.1M | 0.9x | 3.8M | Motor Vehicles |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $3.82 | -6.6% | +14.7% | $4.38 | +7.1% | 630K | 132K | 4.8x | n/a | Wholesale Distributors |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $4.71 | -4.5% | +26.3% | $5.95 | +20.7% | 236K | 150K | 1.6x | 2.3M | Medical/Nursing Services |
+| VERI | [TV](https://www.tradingview.com/chart/?symbol=VERI) | $0.86 | -0.4% | +5.8% | $0.91 | +5.4% | 211K | 6.9M | 0.0x | 82.1M | Advertising/Marketing Services |
+| HVII | [TV](https://www.tradingview.com/chart/?symbol=HVII) | $6.97 | +9.2% | +11.9% | $7.80 | +22.2% | 131K | 226K | 0.6x | 19.2M | Financial Conglomerates |
+
+**Instrumentation (>10% AH names):**
+- `AMIX 2026-08-24 SPIKE 16:01ET +28% $6.89 928 trades / 46k sh (first co-spike bar) as-of 18:00ET`
+- `AMIX 2026-08-24 CONFIRM-3 NO ignition 16:40ET failed third-bar hold/volume as-of 18:00ET`
+- `PMI 2026-08-24 SPIKE 16:56ET +18% $6.07 1648 trades / 162k sh (first co-spike bar) as-of 18:00ET`
+- `PMI 2026-08-24 CONFIRM-3 NO ignition 16:55ET failed third-bar hold/volume as-of 18:00ET`
+- `FFAI 2026-08-24 SPIKE 17:26ET +24% $3.72 1116 trades / 134k sh (first co-spike bar) as-of 18:00ET`
+- `FFAI 2026-08-24 CONFIRM-3 NO ignition 17:25ET failed third-bar hold/volume as-of 18:00ET`
+- `HVII 2026-08-24 SPIKE 17:33ET +35% $9.40 380 trades / 12k sh (first co-spike bar) as-of 18:00ET`
+- `HVII 2026-08-24 CONFIRM-3 NO ignition 17:30ET failed third-bar hold/volume as-of 18:00ET`
+- `RYOJ 2026-08-24 SPIKE 16:08ET +31% $6.18 784 trades / 40k sh (first co-spike bar) as-of 18:00ET`
+- `RYOJ 2026-08-24 CONFIRM-3 NO no local-volume new-high ignition as-of 18:00ET`
+- `WLDS 2026-08-24 SPIKE 16:22ET +17% $2.65 44 trades / 4k sh (first co-spike bar) as-of 18:00ET`
+- `WLDS 2026-08-24 CONFIRM-3 YES ignition 16:20ET 127.1x; confirmed 16:30ET $3.02 as-of 18:00ET`
+
+**Entry decisions:**
+- **WLDS — held (entered 23:00 @ $3.30).** Faded: SIP AH high $3.90 @17:00ET, now $2.77 @17:35ET = **-29% off high**, VWAP $2.75. Position now $2.74, **-17.0%** (P&L -$15.68). One entry per candidate per night — not re-entered. Hold/sell handled in premarket by position-evaluation.
+- **AMIX — SKIP (faded spike, base far below high).** Total% dropped +200%→+112% (now under 150 ceiling) but this is a fade, not a build. SIP: AH high $16.41 @16:40ET, stabilized $10.80–$11.70 @17:20–17:35ET = **-30% off high** (>20%), volume declining 1.75M→156K sh/bar. Rebuild to a base >20% below AH high on a Grade-None name = faded spike (SKYQ rule). No same-day catalyst (Grade None/D dilution overhang). CONFIRM-3 NO. Skip.
+- **PMI — SKIP (SPIKE→FADE).** Second AH appearance (23:30 +18.1%, 00:00 +11.1%) clears the 2-scan gate, but fails trajectory. SIP: ignited 16:55ET $5.21→$7.50 peak @17:00ET, now $5.81 @17:35ET = **-22% off high** (>20%), volume collapsing 950K→909K→497K→290K→80K→37K sh/bar. VRatio 0.8x (AH vol below average = not a real unusual-volume spike). Day% +59.8% mostly regular session. Early peak (17:00ET) + fading = 0/6+ PM continuation. CONFIRM-3 NO. Skip.
+- **FFAI — SKIP (first AH scan, illiquid, low extension).** New name, **first AH appearance** (fails 2-AH-scan gate). SIP: flat $3.00 until 17:25ET then ignited $3.03→$3.88 peak (640K sh/6126 trades), fading $3.46 @17:45ET. Quote `ask $0.00 x0` = no fillable AH book at scan time (illiquid). VRatio 0.9x (below avg), Total% only +8.1%. Faraday Future — high-attention name, but fails the gate. Watch into 00:30 for a second AH scan.
+- **HVII — SKIP (first AH scan, SPIKE→FADE).** New name, **first AH appearance** (fails 2-AH-scan gate). SIP: ignited 17:30ET $7.02→$11.00 peak, faded $8.25 @17:45ET = **-25% off high**. Float 19.2M (high), VRatio 0.6x (below avg). Two-sided book (ask $9.11). Spike→fade + fails gate. Skip.
+- **RYOJ — carried skip (SPIKE→FADE, dead volume).** AH +26.3% but SIP peak $6.18 @16:05ET (early), faded, weak rebuild on dying volume. VRatio 1.6x. CONFIRM-3 NO. Early peak + fading = skip.
+- **DAIC — SKIP (extreme extension).** Total% +876.5% (Day% +306% regular + AH +140.5%) — far above +150 ceiling. Faded hard in first AH bars (22:15: fading hard). VRatio 1.3x. Skip.
+- **MCRP — carried skip (SPIKE→FADE).** Total% +7.3%, float 10.3M, CONFIRM-3 NO.
+- **JEM — carried skip.** Illiquid (earlier `ask $0.00 x0`), spike→fade, CONFIRM-3 NO, Total% +7.1%.
+- **BTCT — carried skip.** AH +5.7% below threshold, Total% +61.4% is regular-session Day%. VRatio 0.0x. Feed-lag name — SIP not surging in AH.
+- **CIIT — carried skip.** Round-tripped pump-dump, AH +6.8%, Total% +2.9%.
+- **VERI — below threshold.** AH +5.8%, VRatio 0.0x (stale regular-session vol on 82M float).
+
+**Note:** All quotes stamped 16:00 ET (~2h stale at 18:00 scan); leaned on SIP bars (last bar 17:35ET, ~25min lag) for real levels. No new entries — no candidate clears both the 2-AH-scan gate and BUILD/hold trajectory. Final scan 00:30 CET; run feed-lag cross-check on tracked names (FFAI/HVII 2nd AH scan, AMIX/PMI re-build).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
