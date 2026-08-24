@@ -223,6 +223,52 @@ Scanner: 12 hits. **Entries open.** No new entries this scan. WLDS held from 23:
 
 **Note:** All quotes stamped 16:00 ET (~2h stale at 18:00 scan); leaned on SIP bars (last bar 17:35ET, ~25min lag) for real levels. No new entries — no candidate clears both the 2-AH-scan gate and BUILD/hold trajectory. Final scan 00:30 CET; run feed-lag cross-check on tracked names (FFAI/HVII 2nd AH scan, AMIX/PMI re-build).
 
+## Scan 00:30 CET (6:30 PM ET)
+
+Scanner: 14 hits. **Final scheduled scan. Entries open.** No new entries. WLDS held from 23:00 (faded to $3.08, -6.7%). Feed-lag cross-check run on all tracked names — no under-reported AH mover.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $1.73 | +306.1% | +176.2% | $4.78 | +1021.6% | 16.6M | 10.4M | 1.6x | 1.3M | Miscellaneous |
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $5.37 | +1.9% | +116.6% | $11.63 | +120.7% | 8.6M | 1.6M | 5.5x | 946K | Medical Specialties |
+| LUCY | [TV](https://www.tradingview.com/chart/?symbol=LUCY) | $1.12 | +63.8% | +6.2% | $1.19 | +74.0% | 7.8M | 19.6M | 0.4x | 8.0M | Internet Retail |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $2.27 | -12.4% | +26.0% | $2.86 | +10.4% | 5.8M | 978K | 5.9x | 2.0M | Electronic Equipment/Instruments |
+| BTCT | [TV](https://www.tradingview.com/chart/?symbol=BTCT) | $1.74 | +52.6% | +12.6% | $1.96 | +71.9% | 5.3M | 50.1M | 0.1x | 8.6M | Data Processing Services |
+| MCRP | [TV](https://www.tradingview.com/chart/?symbol=MCRP) | $1.16 | -6.5% | +17.2% | $1.36 | +9.7% | 5.1M | 863K | 5.9x | 10.3M | Industrial Machinery |
+| PMI | [TV](https://www.tradingview.com/chart/?symbol=PMI) | $5.13 | +59.8% | +18.3% | $6.07 | +89.1% | 3.0M | 3.6M | 0.8x | 1.3M | Medical Specialties |
+| CIIT | [TV](https://www.tradingview.com/chart/?symbol=CIIT) | $3.37 | -3.7% | +17.5% | $3.96 | +13.1% | 1.9M | 322K | 5.9x | 733K | Air Freight/Couriers |
+| FFAI | [TV](https://www.tradingview.com/chart/?symbol=FFAI) | $3.01 | -5.9% | +6.6% | $3.21 | +0.3% | 1.3M | 1.2M | 1.1x | 3.8M | Motor Vehicles |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $3.82 | -6.6% | +16.4% | $4.45 | +8.7% | 647K | 134K | 4.8x | n/a | Wholesale Distributors |
+| TENX | [TV](https://www.tradingview.com/chart/?symbol=TENX) | $1.85 | +5.7% | +6.8% | $1.98 | +12.9% | 518K | 11.0M | 0.0x | 32.5M | Pharmaceuticals: Major |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $4.71 | -4.5% | +22.1% | $5.75 | +16.6% | 251K | 152K | 1.7x | 2.3M | Medical/Nursing Services |
+| VERI | [TV](https://www.tradingview.com/chart/?symbol=VERI) | $0.86 | -0.4% | +6.3% | $0.91 | +5.9% | 212K | 6.9M | 0.0x | 82.1M | Advertising/Marketing Services |
+| HVII | [TV](https://www.tradingview.com/chart/?symbol=HVII) | $6.97 | +9.2% | +16.9% | $8.15 | +27.6% | 170K | 232K | 0.7x | 19.2M | Financial Conglomerates |
+
+**Instrumentation (>10% AH names):**
+- `CIIT 2026-08-24 SPIKE 17:03ET +18% $3.98 195 trades / 22k sh (first co-spike bar) as-of 18:30ET`
+- `CIIT 2026-08-24 CONFIRM-3 NO ignition 17:00ET failed third-bar hold/volume as-of 18:30ET`
+- `HVII 2026-08-24 SPIKE 17:33ET +35% $9.40 380 trades / 12k sh (first co-spike bar) as-of 18:30ET`
+- `HVII 2026-08-24 CONFIRM-3 NO ignition 17:30ET failed third-bar hold/volume as-of 18:30ET`
+
+**Entry decisions:**
+- **WLDS — held (entered 23:00 @ $3.30).** Faded: SIP AH high $3.90 @17:00ET, now $2.77 @17:35ET = -29% off high, VWAP $2.75. Position $3.08, **-6.7%** (P&L -$6.16). One entry per candidate per night — not re-entered. Hold/sell handled in premarket by position-evaluation.
+- **CIIT — SKIP (illiquid, no AH book).** Cleared 2 AH scans >10% (23:30 +43.6%, 00:30 +17.5%) but quote `ask $0.00 x0` = no fillable AH book. SIP: earlier round-trip pump-dump 17:00-17:15ET ($3.40→$5.50→$3.37), then a smaller second pop 18:10ET ($3.75→$4.16, 106K sh) already fading $3.74 @18:15ET. CONFIRM-3 NO. Illiquid ramp — skip.
+- **HVII — SKIP (SPIKE→FADE, 2nd scan).** Cleared 2 AH scans >10% (00:00 +11.9%, 00:30 +16.9%). SIP: ignited 17:30ET $7.02→$11.00 peak, faded monotonically to $8.01 @18:15ET = **-27% off high** (>20%), volume collapsing 61K→114K→53K→...→3K sh/bar. VRatio 0.7x (below avg), float 19.2M (high). CONFIRM-3 NO. Early peak + fading = 0/6+ PM continuation. Skip.
+- **AMIX — SKIP (faded spike).** Total% +120.7% (under ceiling now) but SIP is a fade: AH high $16.41 @16:40ET, now stabilized $11.4 @17:35ET = -30% off high (>20%), volume 1.75M→156K sh/bar. Rebuild to base >20% below high on Grade-None name = faded spike (SKYQ rule). No same-day catalyst (Grade None/D dilution overhang). CONFIRM-3 NO. Skip.
+- **PMI — carried skip (SPIKE→FADE).** Early peak 17:00ET, faded >20% off high on collapsing volume, VRatio 0.8x.
+- **RYOJ — carried skip (SPIKE→FADE, dead volume).** Early peak 16:05ET, dying volume, VRatio 1.7x, CONFIRM-3 NO.
+- **DAIC — carried skip (extreme extension).** Total% +1021.6%, far above +150 ceiling, faded hard.
+- **MCRP — carried skip (SPIKE→FADE).** Total% +9.7%, float 10.3M, CONFIRM-3 NO.
+- **JEM — carried skip.** Illiquid (`ask $0.00 x0`), spike→fade, CONFIRM-3 NO, Total% +8.7%.
+- **FFAI — carried skip.** AH +6.6% below threshold, Total% +0.3%, illiquid earlier.
+- **BTCT — carried skip.** AH +12.6% but Total% +71.9% is regular-session Day%; VRatio 0.1x, feed-lag name, no real AH surge.
+- **TENX — below threshold (new name).** AH +6.8%, VRatio 0.0x (stale regular-session vol on 32.5M float). Not a real AH mover.
+- **LUCY / VERI — below threshold.** LUCY AH +6.2% (Total% is reg-session Day%), VERI AH +6.3% VRatio 0.0x.
+
+**Feed-lag cross-check (final scan):** All tracked names (21:30 watch + prior AH scans) present in this scan's TradingView feed and cross-checked against SIP. No name under-reported/dropped by TradingView while SIP showed a real above-threshold surge. No SIP rescue needed. New name TENX is stale regular-session volume (VRatio 0.0x), not a live AH mover.
+
+**Night summary:** 1 entry (WLDS @ $3.30, Grade None, BUILD/hold + CONFIRM-3 YES, cleared 2-scan gate under ceiling). AMIX was the night's biggest real BUILD (huge SIP volume, VWAP to $16.41) but blocked by the +150 ceiling at 23:00 (+200%) then faded — recorded as CEILING-OVERRIDE WATCH near-miss (AH high 16:40ET before 17:00, missed override criterion). All other names skipped on spike→fade, illiquid book, below-threshold AH, or extreme extension.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
