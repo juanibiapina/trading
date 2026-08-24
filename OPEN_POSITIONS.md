@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| (none) | | | | | | | | Flat — all positions closed 2026-08-21 10:30 CET |
+| WLDS | $3.30 | $3.30 | $3.58 | 28 | 2026-08-24 17:00 ET | None | 44a82f88 | Wearable Devices, Electronic Equipment; float 2.0M. AH BUILD/hold: ignited 16:20→$3.58 peak (16:30), rebuilt $3.41 (16:45), cleared 2-AH-scan gate, CONFIRM-3 YES. Total% +45.4%. No same-day catalyst. Exit first PM opportunity (Grade None). |
 
 ## Position Rules
 

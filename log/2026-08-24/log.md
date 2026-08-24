@@ -101,7 +101,38 @@ Scanner: 5 hits. **Observation-only** (22:45 < 23:00 CET — entries open at 23:
 - **RYOJ** — +6.8% AH, below 10% threshold.
 - Re-evaluate at 23:00 CET when entries open. **AMIX is the primary entry candidate** (cleared 2-scan gate, real BUILD, under ceiling); WLDS is a strong secondary pending its second AH scan.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+Scanner: 7 hits. **Entries open** (23:00 CET / 17:00 ET). **ENTERED WLDS.** AMIX skipped on ceiling.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $5.37 | +1.9% | +194.8% | $15.83 | +200.4% | 5.5M | 1.1M | 5.1x | 946K | Medical Specialties |
+| MCRP | [TV](https://www.tradingview.com/chart/?symbol=MCRP) | $1.16 | -6.5% | +17.0% | $1.36 | +9.5% | 3.6M | 700K | 5.1x | 10.3M | Industrial Machinery |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $2.27 | -12.4% | +20.3% | $2.73 | +5.4% | 1.9M | 494K | 3.8x | 2.0M | Electronic Equipment/Instruments |
+| BTCT | [TV](https://www.tradingview.com/chart/?symbol=BTCT) | $1.74 | +52.6% | +5.7% | $1.84 | +61.4% | 1.1M | 49.7M | 0.0x | 8.6M | Data Processing Services |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $3.82 | -6.6% | +13.9% | $4.35 | +6.4% | 557K | 122K | 4.6x | n/a | Wholesale Distributors |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $4.71 | -4.5% | +10.6% | $5.21 | +5.7% | 153K | 136K | 1.1x | 2.3M | Medical/Nursing Services |
+| VERI | [TV](https://www.tradingview.com/chart/?symbol=VERI) | $0.86 | -0.4% | +6.3% | $0.91 | +5.9% | 134K | 6.9M | 0.0x | 82.1M | Advertising/Marketing Services |
+
+**Instrumentation (>10% AH names):**
+- `AMIX 2026-08-24 SPIKE 16:01ET +28% $6.89 928 trades / 46k sh (first co-spike bar) as-of 17:00ET`
+- `AMIX 2026-08-24 CONFIRM-3 PENDING ignition 16:40ET; waiting for third bar as-of 17:00ET`
+- `WLDS 2026-08-24 SPIKE 16:22ET +17% $2.65 44 trades / 4k sh (first co-spike bar) as-of 17:00ET`
+- `WLDS 2026-08-24 CONFIRM-3 YES ignition 16:20ET 127.1x; confirmed 16:30ET $3.02 as-of 17:00ET`
+- `MCRP 2026-08-24 SPIKE 16:15ET +34% $1.55 413 trades / 109k sh (first co-spike bar) as-of 17:00ET`
+- `MCRP 2026-08-24 CONFIRM-3 NO ignition 16:15ET failed third-bar hold/volume as-of 17:00ET`
+
+**Entry decisions:**
+- **WLDS — ENTERED.** Cleared 2-AH-scan gate (22:45 +42.7%, 23:00 +20.3% scanner / SIP ~+50%). Float 2.0M (low), Day% -12.4% (not dead-cat). tradable=true. CONFIRM-3 YES (127.1x). SIP shows genuine hold: ignited 16:20→$3.58 peak (16:30), dipped $2.69 (16:40), **rebuilt to $3.41** (16:45, H $3.50, 836K sh / 7,827 trades) — current -5% off AH high, within 20%. Scanner AH price $2.73 is the **stale 16:00ET quote**; SIP is truth. Total% at SIP level ~+50%, **under 150 ceiling**. No same-day catalyst (searched 22:45) — Grade None, enter with concern per learning-phase no-catalyst rule. **Filled 28 @ $3.30** (limit $3.55 ext, id 44a82f88). Entry Total% ($3.30-$2.27)/$2.27 = **+45.4%** — no chase-cap concern (fill below SIP level, well under fade zone).
+- **AMIX — SKIP (ceiling).** Real, huge volume-backed BUILD confirmed by SIP: VWAP climbing $7.02→$8.51→$10.40→$11.69→$14.84→$15.33 on 543K→1.75M sh/bar, 9.4k→39k trades/bar. AH high $16.41 @16:40ET. But Total% now **+200.4% — above the +150 ceiling** (was +100% at 22:45; ran +100pts in 15min). Skip live entry per extension-ceiling rule. **CEILING-OVERRIDE WATCH (near-miss):** holding within 20% of AH high (last SIP $14.86, -9.4% off) + VRatio 5.1x, BUT AH high was 16:40ET (**before 17:00ET**), so misses the "AH high after 17:00" override criterion — record as data point only. Hypothetical entry: $15.83 @ 23:00 CET (+200% Total%). No same-day catalyst (Grade None/D dilution overhang). Recurring name (was traded+won 07-28→07-29 +16.4%).
+- **MCRP — SKIP (SPIKE→FADE).** Two AH scans >10% (22:45 +19.0%, 23:00 +17.0%) but classic spike→fade on dying volume: peaked $1.55 (16:15) then $1.50→$1.39→$1.38→$1.35→$1.37 on collapsing volume (941K→1.17M→800K→493K→262K→178K→151K sh/bar). CONFIRM-3 NO. Total% only +9.5%, float 10.3M. SPIKE→FADE is 0/10+ for PM continuation — skip.
+- **BTCT — SKIP.** Total% +61.4% is regular-session Day% (+52.6%); AH only +5.7%, below 10% threshold. VRatio 0.0x. Recurring feed-lag name — SIP not surging in AH. Not a real AH mover.
+- **JEM — carried skip.** Illiquid (earlier `ask $0.00 x0`), spike→fade, CONFIRM-3 NO. AH +13.9% but Total% only +6.4%.
+- **RYOJ / VERI — below threshold.** RYOJ AH +10.6% but Total% +5.7%, VRatio 1.1x. VERI AH +6.3%, VRatio 0.0x (stale regular-session vol on 82M float).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| WLDS | $3.30 | 2026-08-24 17:00 ET | 28 | 44a82f88 | Grade None. AH BUILD/hold, float 2.0M, cleared 2-AH-scan gate, CONFIRM-3 YES, Total% +45.4% (under ceiling). No same-day catalyst. |
