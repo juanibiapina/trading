@@ -71,6 +71,36 @@ Scanner: 4 hits. Observation-only scan (before 23:00 CET, no entries per learnin
 - RYOJ only +5.9% AH, below threshold.
 - Re-evaluate at 23:00 CET (entries open). AMIX is the name to work up.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+Scanner: 5 hits. **Observation-only** (22:45 < 23:00 CET — entries open at 23:00 / 17:00 ET per learning-phase rule). No entries this scan.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $5.37 | +1.9% | +96.5% | $10.55 | +100.2% | 3.4M | 722K | 4.8x | 946K | Medical Specialties |
+| MCRP | [TV](https://www.tradingview.com/chart/?symbol=MCRP) | $1.16 | -6.5% | +19.0% | $1.38 | +11.3% | 2.7M | 608K | 4.5x | 10.3M | Industrial Machinery |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $2.27 | -12.4% | +42.7% | $3.24 | +25.1% | 631K | 337K | 1.9x | 2.0M | Electronic Equipment/Instruments |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $3.82 | -6.6% | +15.2% | $4.40 | +7.6% | 497K | 113K | 4.4x | n/a | Wholesale Distributors |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $4.71 | -4.5% | +6.8% | $5.03 | +2.0% | 145K | 134K | 1.1x | 2.3M | Medical/Nursing Services |
+
+**Instrumentation (>10% AH names):**
+- `AMIX 2026-08-24 SPIKE 16:01ET +28% $6.89 928 trades / 46k sh (first co-spike bar) as-of 16:45ET`
+- `AMIX 2026-08-24 CONFIRM-3 NO no local-volume new-high ignition as-of 16:45ET`
+- `MCRP 2026-08-24 SPIKE 16:15ET +34% $1.55 413 trades / 109k sh (first co-spike bar) as-of 16:45ET`
+- `MCRP 2026-08-24 CONFIRM-3 NO ignition 16:15ET failed third-bar hold/volume as-of 16:45ET`
+- `WLDS 2026-08-24 SPIKE 16:22ET +17% $2.65 44 trades / 4k sh (first co-spike bar) as-of 16:45ET`
+- `WLDS 2026-08-24 CONFIRM-3 YES ignition 16:20ET 127.1x; confirmed 16:30ET $3.02 as-of 16:45ET`
+- `JEM 2026-08-24 SPIKE 16:09ET +51% $5.78 1785 trades / 85k sh (first co-spike bar) as-of 16:45ET`
+- `JEM 2026-08-24 CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 16:45ET`
+
+**Notes:**
+- **AMIX** — strongest BUILD. SIP bars accumulating on heavy real trades, VWAP climbing monotonically: $7.02 (543K sh/9.4k tr) → $8.00 (974K/18.6k) → $8.51 (867K/15.5k) → $9.42 (1.10M/19.4k) → $10.40 (1.13M/21.4k) → $10.74 (816K/15.3k) → $10.40 (544K/10.8k). Close C $10.66 @16:30ET. Total% ~+98%, **under 150 ceiling**. Cleared **2-AH-scan gate** (22:30 +62.9%, 22:45 +96.5%). Float 946K, Day% +1.9% (not a dead-cat). Quote stale (`ask $6.18 @16:00ET`, 45min behind) — lean on SIP. Catalyst search (2 calls): **no same-day catalyst found** — all AMIX news is prior-dated (warrant inducement Jul 14, patents Jul 24 / Aug 4, S-3 resale registration filed Jul 28). AH reverses an intraday decline; Benzinga attributes surge to "warrant registration details" but the filing predates today. Treat as **no catalyst / possible dilution overhang (Grade None/D)**. **Primed for entry at 23:00** if it holds/builds.
+- **WLDS** — late-igniting BUILD. Flat first four AH bars, then ignited 16:20–16:30ET: $2.60→$3.24→$3.02 close, volume ramping 63.7K→701K→1.02M sh, 634→6706→11324 trades/bar. CONFIRM-3 **YES** (127.1x, confirmed 16:30ET $3.02). AH peak $3.58 @16:30ET. Total% +25–58%, **under ceiling**. Float 2.0M, Day% -12.4% (not ≤ -15). Only **1 AH scan** so far — needs a second AH appearance (23:00) to clear the 2-scan gate. Quote stale (@16:00ET). Catalyst search (2 calls): **no same-day catalyst** — WLDS news all prior (offering closing Aug 3, patent Aug 11, white paper/reverse split Jul 24). Watch into 23:00.
+- **MCRP** — spike→fade. SPIKE 16:15ET then CONFIRM-3 failed third-bar hold. Total% only +11.3%, float 10.3M. Quote fresh + two-sided (`bid $1.36 / ask $1.39 @16:45ET`) but weak extension + failed confirm. Skip-shaping.
+- **JEM** — carried skip: illiquid (earlier `ask $0.00 x0`), spike→fade, CONFIRM-3 NO. Total% only +7.6%.
+- **RYOJ** — +6.8% AH, below 10% threshold.
+- Re-evaluate at 23:00 CET when entries open. **AMIX is the primary entry candidate** (cleared 2-scan gate, real BUILD, under ceiling); WLDS is a strong secondary pending its second AH scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
