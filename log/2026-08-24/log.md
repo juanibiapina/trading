@@ -131,6 +131,49 @@ Scanner: 7 hits. **Entries open** (23:00 CET / 17:00 ET). **ENTERED WLDS.** AMIX
 - **JEM — carried skip.** Illiquid (earlier `ask $0.00 x0`), spike→fade, CONFIRM-3 NO. AH +13.9% but Total% only +6.4%.
 - **RYOJ / VERI — below threshold.** RYOJ AH +10.6% but Total% +5.7%, VRatio 1.1x. VERI AH +6.3%, VRatio 0.0x (stale regular-session vol on 82M float).
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Scanner: 8 hits. **Entries open.** No new entries this scan (all candidates fail gates or trajectory). WLDS held from 23:00.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AMIX | [TV](https://www.tradingview.com/chart/?symbol=AMIX) | $5.37 | +1.9% | +129.0% | $12.30 | +133.3% | 7.3M | 1.4M | 5.3x | 946K | Medical Specialties |
+| LUCY | [TV](https://www.tradingview.com/chart/?symbol=LUCY) | $1.12 | +63.8% | +6.2% | $1.19 | +74.0% | 5.0M | 19.3M | 0.3x | 8.0M | Internet Retail |
+| WLDS | [TV](https://www.tradingview.com/chart/?symbol=WLDS) | $2.27 | -12.4% | +52.0% | $3.45 | +33.2% | 4.7M | 842K | 5.5x | 2.0M | Electronic Equipment/Instruments |
+| MCRP | [TV](https://www.tradingview.com/chart/?symbol=MCRP) | $1.16 | -6.5% | +14.7% | $1.33 | +7.3% | 4.4M | 793K | 5.6x | 10.3M | Industrial Machinery |
+| PMI | [TV](https://www.tradingview.com/chart/?symbol=PMI) | $5.13 | +59.8% | +18.1% | $6.06 | +88.8% | 2.5M | 3.5M | 0.7x | 1.3M | Medical Specialties |
+| CIIT | [TV](https://www.tradingview.com/chart/?symbol=CIIT) | $3.37 | -3.7% | +43.6% | $4.84 | +38.3% | 1.0M | 211K | 4.9x | 733K | Air Freight/Couriers |
+| JEM | [TV](https://www.tradingview.com/chart/?symbol=JEM) | $3.82 | -6.6% | +10.6% | $4.22 | +3.3% | 602K | 128K | 4.7x | n/a | Wholesale Distributors |
+| RYOJ | [TV](https://www.tradingview.com/chart/?symbol=RYOJ) | $4.71 | -4.5% | +15.9% | $5.46 | +10.8% | 213K | 146K | 1.5x | 2.3M | Medical/Nursing Services |
+
+**Instrumentation (>10% AH names):**
+- `AMIX 2026-08-24 SPIKE 16:01ET +28% $6.89 928 trades / 46k sh (first co-spike bar) as-of 17:30ET`
+- `AMIX 2026-08-24 CONFIRM-3 NO ignition 16:40ET failed third-bar hold/volume as-of 17:30ET`
+- `WLDS 2026-08-24 SPIKE 16:22ET +17% $2.65 44 trades / 4k sh (first co-spike bar) as-of 17:30ET`
+- `WLDS 2026-08-24 CONFIRM-3 YES ignition 16:20ET 127.1x; confirmed 16:30ET $3.02 as-of 17:30ET`
+- `MCRP 2026-08-24 SPIKE 16:15ET +34% $1.55 413 trades / 109k sh (first co-spike bar) as-of 17:30ET`
+- `MCRP 2026-08-24 CONFIRM-3 NO ignition 16:15ET failed third-bar hold/volume as-of 17:30ET`
+- `PMI 2026-08-24 SPIKE 16:56ET +18% $6.07 1648 trades / 162k sh (first co-spike bar) as-of 17:30ET`
+- `PMI 2026-08-24 CONFIRM-3 NO ignition 16:55ET failed third-bar hold/volume as-of 17:30ET`
+- `CIIT 2026-08-24 SPIKE 17:03ET +18% $3.98 195 trades / 22k sh (first co-spike bar) as-of 17:30ET`
+- `CIIT 2026-08-24 CONFIRM-3 NO ignition 17:00ET failed third-bar hold/volume as-of 17:30ET`
+- `JEM 2026-08-24 SPIKE 16:09ET +51% $5.78 1785 trades / 85k sh (first co-spike bar) as-of 17:30ET`
+- `JEM 2026-08-24 CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 17:30ET`
+- `RYOJ 2026-08-24 SPIKE 16:08ET +31% $6.18 784 trades / 40k sh (first co-spike bar) as-of 17:30ET`
+- `RYOJ 2026-08-24 CONFIRM-3 NO no local-volume new-high ignition as-of 17:30ET`
+
+**Entry decisions:**
+- **WLDS — held (entered 23:00 @ $3.30).** Building: scanner AH now +52.0% ($3.45), Total% +33.2%, VRatio 5.5x, AH Vol 4.7M. Confirms the entry thesis. One entry per candidate per night — not re-entered. (Hold/sell handled in premarket by position-evaluation.)
+- **AMIX — SKIP (faded).** Scanner Total% dropped +200%→+133% (now under 150 ceiling) but this is a fade, not a build. SIP: AH high $16.41 @16:40ET, now $11.24 @17:15ET = **-31% off high** (>20%), volume declining 1.75M→292K sh/bar. No same-day catalyst (Grade None/D dilution overhang). Was a ceiling skip at 23:00; now a faded-spike skip. Not a hold.
+- **RYOJ — SKIP (SPIKE→FADE, dead volume).** Cleared 2-AH-scan gate (23:00 +10.6%, 23:30 +15.9%) but fails trajectory: SIP peak $6.18 @16:05ET (early, before 17:00), faded to ~$4.90, weak rebuild to $5.60 @16:50 then drifting $5.30 on **dying volume** (last bar 285 sh / 9 trades). CONFIRM-3 NO. VRatio 1.5x (barely above average = not a real unusual-volume spike). Price holds within 20% of high only because the book is illiquid, not on momentum. Early peak + fading volume = 0/6+ for PM continuation. tradable=true. Skip.
+- **CIIT — SKIP (round-tripped, fails 2-scan gate).** New name, **first AH appearance** (1 scan — fails 2-AH-scan gate). SIP: ignited 17:00-17:05ET $3.40→$5.50 peak (796K sh/10.7k trades), then fully round-tripped back to $3.37 @17:15ET (**-39% off high**, last bar L$3.37 C$3.37) — illiquid pump-dump. Float 733K (very low). tradable=true; earlier quote `ask $0.00 x0` was stale 16:00ET. No same-day catalyst (reverse split Jul 24, $7M uplisting offering — dilution; Grade None/D). Watch into 00:00 but likely dead.
+- **PMI — SKIP (fails 2-scan gate, fading).** New AH mover but **first AH appearance** (1 scan — 21:30 was regular session, not in 22:30/22:45/23:00 AH scans). Day% +59.8% is mostly regular session. SIP: AH ignited 16:55ET $5.21→$7.50 peak @17:00, now $6.01 @17:15ET (**-20% off high**), volume 950K→80K sh/bar (fading). VRatio 0.7x (AH vol below average). Float 1.3M. No micro-cap catalyst found (search returned Philip Morris). Watch into 00:00 for a second AH scan.
+- **MCRP — carried skip (SPIKE→FADE).** Total% only +7.3%, float 10.3M, CONFIRM-3 NO.
+- **JEM — carried skip.** Illiquid (earlier `ask $0.00 x0`), spike→fade, CONFIRM-3 NO, Total% +3.3%.
+- **LUCY — below AH threshold.** AH only +6.2% (Total% +74.0% is regular-session Day% +63.8%). VRatio 0.3x.
+
+**Note:** All quotes stamped 16:00 ET (~90 min stale at 17:30 scan); leaned on SIP bars (last bar 17:15ET, ~15min lag) for real levels. No new entries — no candidate clears both the 2-AH-scan gate and BUILD/hold trajectory. Next scan 00:00 CET; cross-check PMI/CIIT for a second AH appearance and watch AMIX for any re-build under ceiling.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
