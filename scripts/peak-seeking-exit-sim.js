@@ -35,6 +35,7 @@ const names = [
   ["SUGP","2026-08-21",4.27],
   ["LGO","2026-08-21",0.6701],
   ["ISPC","2026-08-21",1.79],
+  ["WLDS","2026-08-25",2.66],
 ];
 const CAP = "13:30:00Z"; // 09:30 ET
 const limits = [5,10,15,20,30]; // resting sell-limit % above exit

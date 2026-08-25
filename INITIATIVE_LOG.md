@@ -7,6 +7,20 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-08-25 — Initiative 6 pilot re-run (gate rejects a wick gapper) + Initiative 3 sim seeded (WLDS, n=22)
+
+**Evaluated:** The 2026-08-24 Init 6 pilot step **worked** (first comparison positive, +6.2%/name, 9/10 on fillable holdables). Its next step was to seed new holdable PM-only gappers out-of-sample. One new candidate logged (WVVIP 08-25 +344%, footprint=none, holdable), so re-ran the pilot to test it.
+
+**Step taken:** **Pilot / Initiative 6 (active slot):** re-ran `scripts/init6-pm-pilot.js` (deterministic from `pm-open-scan.csv`, now 23 holdable footprint=none candidates). **Parallel low-risk / Initiative 3:** a held name (WLDS, bought 08-24 $3.30) exited today at the 08-25 04:30 ET pulse ($2.66, -19%) — a fresh out-of-sample seed. Pulled the exit fill from `broker.js`, measured the post-exit premarket SIP path, appended WLDS to `scripts/peak-seeking-exit-sim.js` (n=21 -> n=22) and `log/premarket-exit-gap.csv`, and re-ran the sim. Both are log-only, no orders.
+
+**Result:** **Init 6:** the continuation gate **skipped WVVIP** — its opening 5-min bar wicked to $13.51 then closed $7.06, so R+1/R+2 can't hold 80% of that wick high; the gate rejects wick-peaks by design. Entered set unchanged at n=10 (SUM +61.7% / mean +6.2% / 9/10). Caveat: WVVIP later rebuilt to an $11-12 plateau that a R+3 entry (~$7.00) would have filled +10% on, so this is a conservative *false-negative* worth watching (the gate's wick-high denominator penalises spike-then-rebuild names). No new entered row this run. **Init 3:** WLDS is another thin dead-book *staller* — post-exit PM peak only $2.85 04:40 ET (+7.1%, 186-696 trades/bar), the +10% limit ($2.93) never fills, PM-last ~$2.65 (-0.4%). Re-ran the sim: plain **+10% sell-limit stays the core rule at n=22, SUM +61.2% / mean +2.8%, positive 14/22** — WLDS's -0.4% is a negligible drag, conclusion unchanged. The extreme-dumper tail (LOOP -20.5) is still only 1 of the last 6 seeds, not growing, so the optional wide ~-15% catastrophe-stop stays optional, not required.
+
+**Hypothesis / next step:** Init 6 — keep seeding holdable PM-only gappers; watch the wick-then-rebuild gate false-negative frequency (WVVIP) and the BIVI-type fade-tail before proposing any live PM-gapper pulse. Init 3 — keep seeding held names as they exit; the +10%-limit edge is robust at n=22 and the dumper tail is not growing. Keep `CONFIRM-3` and all sims log-only.
+
+**Needs from Juan:** two open asks unchanged (no new one). (1) The Init 3 peak-seeking-exit proposal — replace the plain 04:30 ET market exit for held names with a resting +10% sell-limit (GTC premarket, cancel 09:30 ET, plain market exit fallback; optional wide ~-15% catastrophe-stop). Evidence: +61.2% total / +2.8%/name over 22 seeds, positive 14/22. Veto window, not applied. (2) Still open from 08-07: the Initiative 2 broker/feed decision for the ~203% fill gap (Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills).
+
+---
+
 ### 2026-08-24 — Initiative 6: early-PM hypothetical-entry PILOT started — first comparison positive (+6.2%/name on fillable holdables)
 
 **Evaluated:** The 2026-08-21 Init 3 step **worked** (OCO sweep answered: breakeven stop whipsaws the edge, wide catastrophe-stop only marginal; plain +10% limit stays core at n=21). No fresh held-name exit today to seed the peak-seeking sim, so Init 3 has no new out-of-sample data this run. The bigger move: Juan greenlit the **Init 6 early-PM hypothetical-entry pilot** on 08-21 ("Go ahead"), which becomes the active serialized pilot slot — advance it.
