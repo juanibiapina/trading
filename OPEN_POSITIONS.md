@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| WLDS | $3.30 | $3.30 | $3.58 | 28 | 2026-08-24 17:00 ET | None | 44a82f88 | Wearable Devices, Electronic Equipment; float 2.0M. AH BUILD/hold: ignited 16:20→$3.58 peak (16:30), rebuilt $3.41 (16:45), cleared 2-AH-scan gate, CONFIRM-3 YES. Total% +45.4%. No same-day catalyst. Exit first PM opportunity (Grade None). |
+| _(none)_ | | | | | | | | |
 
 ## Position Rules
 
@@ -60,6 +60,7 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| WLDS | $3.30 | $2.66 | -$17.92 | -19.4% | 1 | None (Wearable Devices, Electronic Equipment; float 2.0M; no same-day catalyst) | Grade None — exit first PM opportunity + far below -10% hard stop. Entered 08-24 17:00 ET on AH BUILD/hold (ignited 16:20→$3.58 peak, rebuilt $3.41, cleared 2-AH-scan gate, CONFIRM-3 YES, total +45.4%). OVN held $2.8-3.1. PM 08-25 opened liquid ($2.75 first bar, 175K sh/2490 trades, vwap $2.68) then chopped $2.57-2.86, settling ~$2.65 (vwap $2.65-2.70) on fading volume. Stale Alpaca quote (bid $1.95 from prior close) ignored; used SIP level. SELL 28 @ limit $2.58 ext (id 2eeb31ea) filled @ $2.66 (price improvement). Real fill $2.66. No-catalyst BUILD gave no PM follow-through. |
 | ISPC | $2.32 | $1.79 | -$16.96 | -22.8% | 1 | C (Interpace/ISPC cancer research order PR, Aug 20 GlobeNewswire; float 2.5M) | Grade C — exit first PM pulse + far below -10% hard stop. Entered 08-20 17:00 ET on AH BUILD, CONFIRM-3 YES. PM 08-21 opened $1.96 then dumped to $1.76-1.83 on thin SIP volume (205→49 trades/bar, vwap $1.67-1.90). Stale Alpaca quote (bid $3.02 from prior close) ignored; used SIP level. SELL 32 @ limit $1.70 ext (id faccd7bb) filled @ $1.79 (price improvement). Real fill $1.79. Weak catalyst gave no PM follow-through. |
 | LGO | $0.73 | $0.67 | -$7.56 | -8.2% | 1 | None (Largo Inc vanadium; float 49.8M; no same-day catalyst) | Grade None — exit first PM opportunity. Above -10% hard stop. Entered 08-20 17:30 ET on AH BUILD 2 scans >10%. PM 08-21 opened $0.70 then faded to $0.67-0.68 on collapsing SIP volume (135→6 trades/bar, vwap $0.68). Stale Alpaca quote ignored; used SIP level. SELL 126 @ limit $0.64 ext (id 264cd724) filled @ $0.67 (price improvement). Real fill $0.67. No-catalyst BUILD gave no PM follow-through. |
 | SUGP | $3.37 | $4.27 | +$25.20 | +26.7% | 1 | None (Misc Commercial Services, ultra-low float 595K; no same-day catalyst) | Grade None — exit at first PM opportunity at any profit. Entered 08-20 18:00 ET on AH heavy sustained volume. PM 08-21 ran hard on real liquid SIP volume: $3.35→$4.17 across bars, H $4.50, vwap $4.25, 16.7k trades/bar. Sold into the run first PM pulse. SELL 28 @ limit $4.05 ext (id 1aa4b145) filled @ $4.27 (big price improvement in rising liquid book). Real fill $4.27. Rare Grade-None PM continuation runner — exit-at-any-profit captured +26.7%. |
