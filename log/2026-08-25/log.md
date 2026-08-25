@@ -78,6 +78,39 @@ SIP cross-check on 21:30 watch names — **DAIC is a real AH mover the TradingVi
 - Other watch names (PMI, NCPL, AMIX, SWVL) all sitting below reg close in AH — spike-then-fade, no new momentum.
 - Re-evaluate at 22:30 / 23:00 CET.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**AH ~30 min in.** Scanner `--all`: 3 hits. Observation-only (learning-phase entry gate 23:00+ CET). No entries.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XPON | [TV](https://www.tradingview.com/chart/?symbol=XPON) | $5.27 | -15.0% | +41.0% | $7.43 | +19.8% | 2.3M | 10.5M | 0.2x | 891K | Electrical Products |
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.15 | -3.4% | +37.8% | $1.58 | +33.2% | 2.5M | 903K | 2.8x | 1.6M | Misc Commercial Services |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $0.57 | +124.3% | +9.3% | $0.63 | +145.2% | 7.9M | 50.4M | 0.2x | 4.4M | Misc Commercial Services |
+
+**Instrumentation (log-only, AH >10%):**
+- `XPON 2026-08-25 SPIKE 16:01ET +17% $6.19 1317 trades / 136k sh (first co-spike bar) as-of 16:30ET`
+- `XPON 2026-08-25 CONFIRM-3 NO no local-volume new-high ignition as-of 16:30ET`
+- `YYGH 2026-08-25 SPIKE 16:10ET +36% $1.56 1748 trades / 443k sh (first co-spike bar) as-of 16:30ET`
+- `YYGH 2026-08-25 CONFIRM-3 PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET`
+- `DAIC 2026-08-25 NO-SPIKE peak +12% @16:03ET (no bar cleared +15% on volume co-spike) as-of 16:30ET`
+- `DAIC 2026-08-25 CONFIRM-3 NO no local-volume new-high ignition as-of 16:30ET`
+
+**SIP verification (feed=sip, AH bars from 16:00 ET):**
+
+| Ticker | 16:00 vwap | 16:05 | 16:10 | 16:15 | Trajectory | Real-time book |
+|--------|-----------|-------|-------|-------|-----------|----------------|
+| XPON | $6.56 | $7.33 | $7.38 | $7.72 (C $7.91) | **BUILD** — rising vwap all 4 bars, 0.5–1.4M sh/bar, 7k–19k trades | quote stale 16:00ET, `ask $0.00 x0` (no live book yet) |
+| YYGH | $1.16 (7 tr) | — | $1.52 (2.8M sh) | $1.54 (C $1.49, off $1.65 high) | SPIKE 16:10 then slight fade, holding near | live book `bid $1.63 x100 / ask $1.66 x100` |
+| DAIC | $4.11 (H $4.36) | $4.07 | $3.72 | $3.69 (C $3.76) | **SPIKE→FADE** — peaked first bar, off ~13% | quote stale 16:00ET, `ask $0.00 x0` |
+
+**Notes:**
+- **XPON** = strongest candidate. Real, volume-backed BUILD (SIP vwap climbing $6.56→$7.72, >1M sh/bar). Tiny float 891K. SIP corroborates scanner $7.43 (SIP H $8.09). Day% -15.0% (right at the dead-cat threshold — regular session was a -15% drop; AH is reclaiming above the $5.27 close to $7.43, so this is a reclaim-above-close BUILD, not a below-close dead-cat bounce). Total% only +19.8% (well under the +150% ceiling). tradable=true. Blocker: real-time ask book stale/empty at this scan — recheck at 23:00 for a fillable ask. Needs 2nd AH scan to clear the 2-AH-scan gate; this is its first AH appearance.
+- **YYGH** = real mover, live two-sided book, float 1.6M, tradable=true. Spiked hard 16:10 (2.8M sh) then faded slightly, holding ~$1.5. First AH appearance — needs a 2nd AH scan. Watch for build-vs-fade at 23:00.
+- **DAIC** = the 21:30/22:15 watch name faded. Peaked first AH bar $4.36 then declined to $3.6–3.8. SPIKE→FADE, no fillable book. Drop unless it rebuilds.
+- **NCPL** = AH +9.3% (below 10% threshold); +124% move is regular-session, VRatio 0.2x (fading). Not a real AH mover. Skip.
+- Re-evaluate at 23:00 CET (entry gate). XPON leads on trajectory (BUILD) if it holds and shows a fillable book; needs its 2nd AH scan to clear the gate.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
