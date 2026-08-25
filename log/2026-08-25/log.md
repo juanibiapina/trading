@@ -111,6 +111,40 @@ SIP cross-check on 21:30 watch names — **DAIC is a real AH mover the TradingVi
 - **NCPL** = AH +9.3% (below 10% threshold); +124% move is regular-session, VRatio 0.2x (fading). Not a real AH mover. Skip.
 - Re-evaluate at 23:00 CET (entry gate). XPON leads on trajectory (BUILD) if it holds and shows a fillable book; needs its 2nd AH scan to clear the gate.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+**AH ~45 min in.** Scanner `--all`: 3 hits (XPON, YYGH carried; DDC new). Observation-only (learning-phase entry gate 23:00+ CET). No entries.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.15 | -3.4% | +42.2% | $1.64 | +37.4% | 6.3M | 1.3M | 4.8x | 1.6M | Misc Commercial Services |
+| XPON | [TV](https://www.tradingview.com/chart/?symbol=XPON) | $5.27 | -15.0% | +50.9% | $7.95 | +28.2% | 4.0M | 10.7M | 0.4x | 891K | Electrical Products |
+| DDC | [TV](https://www.tradingview.com/chart/?symbol=DDC) | $0.70 | +18.3% | +5.4% | $0.73 | +24.6% | 165K | 719K | 0.2x | 22.7M | Internet Software/Services |
+
+**Instrumentation (log-only, AH >10%):**
+- `XPON 2026-08-25 SPIKE 16:01ET +17% $6.19 1317 trades / 136k sh (first co-spike bar) as-of 16:45ET`
+- `XPON 2026-08-25 CONFIRM-3 NO no local-volume new-high ignition as-of 16:45ET`
+- `YYGH 2026-08-25 SPIKE 16:10ET +36% $1.56 1748 trades / 443k sh (first co-spike bar) as-of 16:45ET`
+- `YYGH 2026-08-25 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 16:45ET`
+
+**SIP verification (feed=sip, AH bars from 16:00 ET; lags ~15 min, last bar 16:30 ET):**
+
+| Ticker | vwap 16:00→16:30 | Trajectory | Real-time book |
+|--------|------------------|-----------|----------------|
+| XPON | $6.56 → $7.33 → $7.38 → $7.72 → $8.17 → $7.90 → $7.71 | **BUILD** — climbing, peak vwap $8.17 @16:20, slight pull to $7.71 @16:30; 0.3–1.4M sh/bar, 5k–20k trades | quote stale 16:00ET `bid $4.91 / ask $0.00 x0` (no live ask yet) |
+| YYGH | $1.16 → $1.52 → $1.54 → $1.54 → $1.61 → $1.55 | SPIKE 16:10 then **HOLD/BUILD** near high, 0.8–2.8M sh/bar | live fresh book 16:45ET `bid $1.76 / ask $1.78` (new high, building) |
+
+**Catalyst search:**
+- **XPON** — CATALYST FOUND: Aug 24 2026 GlobeNewswire — Expion360 renamed **Expion Energy**, entered a definitive agreement with "Potential for Additional $91.0M of Investments" and acquired an oil & gas exploration opportunity in Eastern Louisiana (first entry into oil & gas). Transformational pivot + large investment. Concern: "investment/financing" framing leans dilutive (Grade C/D risk) — resolve deal structure at 23:00 before grading. Catalyst dated yesterday; XPON has been a multi-day runner.
+- **YYGH** — no catalyst found (2 searches). Singapore staffing/services name spiking on momentum only. Note as no-catalyst.
+
+**Notes:**
+- **XPON** = strongest trajectory. Real volume-backed BUILD (SIP vwap $6.56→$8.17, >1M sh/bar). Tiny float 891K, tradable. **Extension caution:** scanner Total% +28.2% is measured off a ~$6.20 intraday base, but Yahoo shows true prior close **$3.43** — from there AH $7.95 = **~+132% Total**, near the +150% ceiling. Resolve which base at 23:00; if true extension is ~+132% on a BUILD-and-hold with VRatio... note VRatio only 0.4x (AvgVol 10.7M is inflated by today's 82M-share day). This is XPON's 2nd AH scan (22:30, 22:45) — clears the 2-AH-scan gate at 23:00 if it holds. Blocker: no live ask book at this scan (stale quote) — needs a fillable ask at entry.
+- **YYGH** = real mover, fresh live two-sided book building to $1.78 (above earlier $1.65 high), float 1.6M, tradable, VRatio 4.8x. No catalyst. 2nd AH scan — clears 2-AH-scan gate at 23:00 if it holds. Total% +37.4%, well under ceiling. BUILD/HOLD trajectory.
+- **DDC** = AH +5.4% (below 10% threshold), +18.3% is regular-session, VRatio 0.2x (fading), float 22.7M. Not a real AH mover. No catalyst search. Skip.
+- **DAIC/NCPL** dropped from scanner (faded). Not carried further.
+- Re-evaluate at 23:00 CET (entry gate). XPON and YYGH both lead on BUILD/HOLD trajectory; both need a live fillable book and the extension/catalyst checks resolved at entry.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
