@@ -8,7 +8,8 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | | | |
+| XPON | $7.41 | $7.38 | $8.62 | 13 | 2026-08-25 17:00 ET | C | b11db9d4 | Expion360→Expion Energy pivot: definitive agreement, "$91.0M potential additional investments" + oil & gas acquisition (GlobeNewswire 08-24). Financing/dilution lean = Grade C, exit premarket, stop -10%. SIP BUILD vwap $6.56→$8.17 peak 16:20 ET, >1M sh/bar, float 891K. Alpaca quote frozen 16:00 ET (`ask $0.00 x0`) but paper filled @ $7.41 on SIP level. |
+| YYGH | $1.61 | $1.58 | $1.87 | 62 | 2026-08-25 17:00 ET | None | 643382ed | YY Group Holding (Singapore staffing/services), float 1.6M, VRatio 5.8x. No catalyst found (2 searches) — concern noted. SIP SPIKE 16:10 then BUILD to $1.87 peak 16:40 ET, 0.8-2.8M sh/bar, fresh live book. Grade None, exit first PM opportunity, stop -10%. |
 
 ## Position Rules
 

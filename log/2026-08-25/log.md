@@ -145,9 +145,48 @@ SIP cross-check on 21:30 watch names — **DAIC is a real AH mover the TradingVi
 - **DAIC/NCPL** dropped from scanner (faded). Not carried further.
 - Re-evaluate at 23:00 CET (entry gate). XPON and YYGH both lead on BUILD/HOLD trajectory; both need a live fillable book and the extension/catalyst checks resolved at entry.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**AH ~1h in. ENTRY GATE (23:00+ CET).** Scanner `--all`: 4 hits (YYGH, XPON carried; DAIC/CDTG faded/below-threshold). **Entered XPON + YYGH** — both cleared the 2-AH-scan gate (22:30, 22:45) and all entry rules.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.15 | -3.4% | +53.0% | $1.76 | +47.9% | 10.4M | 1.8M | 5.8x | 1.6M | Misc Commercial Services |
+| XPON | [TV](https://www.tradingview.com/chart/?symbol=XPON) | $5.27 | -15.0% | +41.0% | $7.43 | +19.8% | 4.6M | 10.8M | 0.4x | 891K | Electrical Products |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $3.88 | +124.3% | +8.1% | $4.20 | +142.5% | 3.0M | 24.1M | 0.1x | 1.3M | Miscellaneous |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $0.98 | -16.2% | +9.2% | $1.07 | -8.5% | 156K | 11.3M | 0.0x | 3.0M | Industrial Machinery |
+
+**Instrumentation (log-only, AH >10%):**
+- `XPON 2026-08-25 SPIKE 16:01ET +17% $6.19 1317 trades / 136k sh (first co-spike bar) as-of 17:00ET`
+- `XPON 2026-08-25 CONFIRM-3 NO no local-volume new-high ignition as-of 17:00ET`
+- `YYGH 2026-08-25 SPIKE 16:10ET +36% $1.56 1748 trades / 443k sh (first co-spike bar) as-of 17:00ET`
+- `YYGH 2026-08-25 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 17:00ET`
+
+**SIP verification (feed=sip, AH bars from 16:00 ET; last bar 16:45):**
+
+| Ticker | vwap 16:00→16:45 | Trajectory | Real-time book |
+|--------|------------------|-----------|----------------|
+| XPON | $6.56→$7.33→$7.38→$7.72→$8.17→$7.90→$7.71→$7.35→$7.54→$7.89 | **BUILD/HOLD** — peak vwap $8.17 @16:20 (H $8.62), choppy hold $7.3-7.9, current ~$7.44 (-14% off high, within 20%). 0.2-1.4M sh/bar, 3k-20k trades | quote **frozen 16:00 ET** `bid $4.91 / ask $0.00 x0` (dead across all 5 scans) |
+| YYGH | $1.16→$1.52→$1.54→$1.54→$1.61→$1.55→$1.70→$1.80→$1.68 | SPIKE 16:10 then **BUILD** to $1.80 vwap peak @16:40 (H $1.87), shallow fade last 20min to $1.57 (-16% off high, within 20%). 0.8-2.8M sh/bar, 5k-16k trades | fresh live `bid $1.56 / ask $1.59` @16:59 ET |
+
+**Entry decisions (multiple positions, W24 rule — enter every qualifying candidate):**
+
+- **XPON — ENTERED.** Cleared 2-AH-scan gate (22:30, 22:45). Float 891K (<50M). Day% -15.0% (at threshold, but AH reclaims above the $5.27 close = reclaim-above-close BUILD, not below-close dead-cat). Real SIP-confirmed BUILD/HOLD, >1M sh/bar. Total% modest (+40.6% off $5.27 close / +19.5% off Yahoo prev close $6.20) — well under +150% ceiling. Catalyst: Expion360→Expion Energy pivot ("$91.0M potential additional investments" + oil & gas acquisition, GlobeNewswire 08-24) — financing/dilution lean = **Grade C**. Blocker resolved: Alpaca quote frozen 16:00 ET (`ask $0.00 x0` across all 5 scans) but the paper engine **filled anyway @ $7.41** against the real SIP level. BUY 13 @ limit $7.60 ext (id b11db9d4) filled @ **$7.41**.
+- **YYGH — ENTERED.** Cleared 2-AH-scan gate (22:30, 22:45). Float 1.6M (<50M). Day% -3.4%. VRatio 5.8x. Real SIP-confirmed SPIKE→BUILD to $1.87, fresh two-sided book. Total% +40.0% (fill) — well under ceiling. No catalyst found (2 searches) — **Grade None**, concern noted (learning-phase: no-catalyst enters). BUY 62 @ limit $1.62 ext (id 643382ed) filled @ **$1.61**.
+- **DAIC — skip.** Scanner AH +8.1% (below 10% threshold); the +142.5% is regular-session. Faded from first-bar $4.36 peak (SPIKE→FADE at 22:30), VRatio 0.1x. Not a real AH mover now.
+- **CDTG — skip.** AH +9.2% (below threshold), Total% -8.5% (below close), VRatio 0.0x. Not a mover.
+
+**CHASE-CAP:** neither fill chased into the fade zone. YYGH: qualifying 22:45 Total% +37.4% vs fill +40.0% (gap +2.6%). XPON: qualifying +28.2% vs fill +19.5-40.6% depending on base — both far under the +120% fade zone. No chase concern.
+
+**Notes:**
+- Both entries are BUILD/HOLD trajectories (not SPIKE→FADE-only night). XPON is the cleaner BUILD (genuine reclaim-above-close on >1M sh/bar); YYGH shallow-fading from peak but holding within 20%.
+- Both peaked before 18:30 ET (XPON 16:20, YYGH 16:40) — peak time is a secondary tiebreaker; hold-within-20% is the primary signal and both pass.
+- CONFIRM-3 read NO for both (log-only, no decision impact).
+- Position management (hold/sell) handled by premarket `position-evaluation` pulse. Both flagged for premarket exit (XPON Grade C, YYGH Grade None). Never hold through the day.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-
-No entries — regular-session scan, AH not open.
+| XPON | $7.41 | 2026-08-25 17:00 ET | 13 | b11db9d4 | Grade C — Expion Energy pivot ($91M investment + oil & gas acq). SIP BUILD/HOLD vwap $6.56→$8.17, float 891K, 2-AH-scan gate cleared. |
+| YYGH | $1.61 | 2026-08-25 17:00 ET | 62 | 643382ed | Grade None (no catalyst, concern noted). SIP SPIKE→BUILD to $1.87, float 1.6M, VRatio 5.8x, 2-AH-scan gate cleared. |
