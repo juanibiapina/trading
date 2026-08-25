@@ -184,6 +184,56 @@ SIP cross-check on 21:30 watch names — **DAIC is a real AH mover the TradingVi
 - CONFIRM-3 read NO for both (log-only, no decision impact).
 - Position management (hold/sell) handled by premarket `position-evaluation` pulse. Both flagged for premarket exit (XPON Grade C, YYGH Grade None). Never hold through the day.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**AH ~1.5h in.** Scanner `--all`: 8 hits. Holding XPON + YYGH (entered 23:00). No new entries — all new AH>10% names fail gates.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.15 | -3.4% | +45.2% | $1.67 | +40.3% | 13.8M | 2.2M | 6.3x | 1.6M | Misc Commercial Services |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $3.88 | +124.3% | +49.2% | $5.79 | +234.7% | 7.8M | 24.7M | 0.3x | 1.3M | Miscellaneous |
+| XPON | [TV](https://www.tradingview.com/chart/?symbol=XPON) | $5.27 | -15.0% | +35.5% | $7.14 | +15.2% | 5.5M | 10.9M | 0.5x | 891K | Electrical Products |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $0.98 | -16.2% | +20.4% | $1.18 | +0.9% | 1.8M | 11.5M | 0.2x | 3.0M | Industrial Machinery |
+| WVVIP | [TV](https://www.tradingview.com/chart/?symbol=WVVIP) | $3.33 | +25.7% | +40.3% | $4.67 | +76.3% | 478K | 810K | 0.6x | 4.0M | Beverages: Alcoholic |
+| SLQT | [TV](https://www.tradingview.com/chart/?symbol=SLQT) | $0.55 | -29.3% | +7.4% | $0.59 | -24.1% | 158K | 1.7M | 0.1x | 140.2M | Multi-Line Insurance |
+| ALEC | [TV](https://www.tradingview.com/chart/?symbol=ALEC) | $2.36 | +2.6% | +9.7% | $2.59 | +12.6% | 88K | 1.5M | 0.1x | 82.1M | Biotechnology |
+| SGLY | [TV](https://www.tradingview.com/chart/?symbol=SGLY) | $2.15 | -15.0% | +5.1% | $2.26 | -10.7% | 80K | 6.5M | 0.0x | 897K | Air Freight/Couriers |
+
+**Instrumentation (log-only, AH >10%):**
+- `XPON 2026-08-25 SPIKE 16:01ET +17% $6.19 1317 trades / 136k sh (first co-spike bar) as-of 17:30ET`
+- `XPON 2026-08-25 CONFIRM-3 NO no local-volume new-high ignition as-of 17:30ET`
+- `YYGH 2026-08-25 SPIKE 16:10ET +36% $1.56 1748 trades / 443k sh (first co-spike bar) as-of 17:30ET`
+- `YYGH 2026-08-25 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 17:30ET`
+- `DAIC 2026-08-25 SPIKE 16:33ET +15% $4.47 2257 trades / 258k sh (first co-spike bar) as-of 17:30ET`
+- `DAIC 2026-08-25 CONFIRM-3 NO ignition 16:55ET failed third-bar hold/volume as-of 17:30ET`
+- `WVVIP 2026-08-25 SPIKE 16:45ET +29% $4.30 325 trades / 21k sh (first co-spike bar) as-of 17:30ET`
+- `WVVIP 2026-08-25 CONFIRM-3 NO ignition 16:45ET failed third-bar hold/volume as-of 17:30ET`
+- `CDTG 2026-08-25 SPIKE 16:35ET +19% $1.17 162 trades / 29k sh (first co-spike bar) as-of 17:30ET`
+- `CDTG 2026-08-25 CONFIRM-3 NO ignition 16:50ET failed third-bar hold/volume as-of 17:30ET`
+
+**SIP verification (feed=sip, AH bars from 16:00 ET):**
+
+| Ticker | Trajectory | Real-time book |
+|--------|-----------|----------------|
+| WVVIP | **SPIKE→FADE** — flat $3.1 until 16:45 spike to H $6.88 (254k sh/4112 tr), then bleeding $6.07→$5.37→$4.58→$4.28 (16:15 vwap $4.42, ~-38% off high) | `bid $3.11 / ask $0.00 x0` — no fillable ask book |
+| DAIC | Real **second-leg BUILD** — vwap $4.1 base 16:30-16:50, then surge $4.59→$5.43→$5.51→$5.90 on 1-2.2M sh/bar, 10k-23k trades, H $6.49 @17:15 ET | `bid $3.31 / ask $0.00 x0` — no fillable ask book |
+
+**Entry decisions — no new entries:**
+
+- **WVVIP — SKIP.** Multiple fails: (1) SPIKE→FADE — peaked $6.88 @16:45 ET, now ~$4.28 (-38% off high, well outside 20% hold band); (2) no fillable ask book (`ask $0.00 x0`); (3) **Grade D** — it's a 5.3% perpetual preferred (WVVI 5.3 PERP), the "catalyst" is a $1.75M preferred stock offering (dilution/financing, PRNewswire Aug 4); (4) first AH scan — fails 2-AH-scan gate. Thin preferred-share ramp.
+- **DAIC — SKIP.** Total% +234.7% far above the +150% extension ceiling. Regular-session +124% mover. Ceiling-override watch requires VRatio >5x — scanner VRatio 0.3x (fails) — so no override flag despite the real SIP second-leg build (2M+ sh/bar into H $6.49 @17:15 ET made after 17:00 ET, holding within 20%). Also no fillable ask book (`ask $0.00 x0`). Note the real SIP second-leg for morning-eval, but extension + no book = skip.
+- **CDTG — SKIP.** AH +20.4% but Total% +0.9% (barely reclaims prior close), Day% -16.2% (below -15% dead-cat threshold), thin (162 trades/29k sh, VRatio 0.2x), first AH scan. Dead-cat range + thin.
+- **SLQT / SGLY** — AH <10% threshold (SLQT +7.4%, SGLY +5.1%), both below prior close (Total% negative). Skip.
+- **ALEC** — AH +9.7% (below 10%), float 82M, Total% +12.6%. Below threshold. Skip.
+
+**Held positions (management by premarket pulse, no action here):**
+- **XPON** 13 @ $7.41 → now $7.29 (-1.7%). Scanner AH +35.5% $7.14, holding near entry. Grade C.
+- **YYGH** 62 @ $1.61 → now $1.68 (+4.3%). Scanner AH +45.2% $1.67, VRatio 6.3x, building. Grade None.
+
+**Notes:**
+- No BUILD-and-hold candidate with a fillable book cleared the gates this scan. DAIC is the one real fresh second-leg build but is blocked by the extension ceiling (+234%) and has no fillable Alpaca book.
+- Both held positions still holding/building; premarket `position-evaluation` handles exits. Never hold through the day.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
