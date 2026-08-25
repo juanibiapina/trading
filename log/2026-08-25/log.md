@@ -283,6 +283,65 @@ SIP cross-check on 21:30 watch names — **DAIC is a real AH mover the TradingVi
 - No BUILD-and-hold candidate with a fillable book and 2-AH-scan history cleared the gates. All new AH>10% names are first-appearance SPIKE→FADEs.
 - Both held positions handled by premarket `position-evaluation`. YYGH the standout (+16.8%). Never hold through the day.
 
+## Scan 00:30 CET (6:30 PM ET) — FINAL SCAN
+
+**AH ~2.5h in. Last scheduled scan.** Scanner `--all`: 10 hits. Holding XPON + YYGH (entered 23:00). No new entries — both new AH>10% names (TRUG, CSAI) are first AH appearance (fail 2-AH-scan gate).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.15 | -3.4% | +82.6% | $2.10 | +76.4% | 21.1M | 3.0M | 7.0x | 1.6M | Misc Commercial Services |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $3.88 | +124.3% | +38.9% | $5.39 | +211.6% | 12.8M | 25.3M | 0.5x | 1.3M | Miscellaneous |
+| XPON | [TV](https://www.tradingview.com/chart/?symbol=XPON) | $5.27 | -15.0% | +30.9% | $6.90 | +11.3% | 5.9M | 10.9M | 0.5x | 891K | Electrical Products |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $0.98 | -16.2% | +12.2% | $1.10 | -6.0% | 2.6M | 11.6M | 0.2x | 3.0M | Industrial Machinery |
+| WVVIP | [TV](https://www.tradingview.com/chart/?symbol=WVVIP) | $3.33 | +25.7% | +27.3% | $4.24 | +60.0% | 620K | 834K | 0.7x | 4.0M | Beverages: Alcoholic |
+| TRUG | [TV](https://www.tradingview.com/chart/?symbol=TRUG) | $0.58 | -10.0% | +28.2% | $0.75 | +15.4% | 416K | 11.6M | 0.0x | 1.8M | Packaged Software |
+| MI | [TV](https://www.tradingview.com/chart/?symbol=MI) | $2.80 | -3.4% | +9.3% | $3.06 | +5.5% | 332K | 144K | 2.3x | 231K | Internet Software/Services |
+| SLQT | [TV](https://www.tradingview.com/chart/?symbol=SLQT) | $0.55 | -29.3% | +7.5% | $0.59 | -24.0% | 204K | 1.7M | 0.1x | 140.2M | Multi-Line Insurance |
+| ALEC | [TV](https://www.tradingview.com/chart/?symbol=ALEC) | $2.36 | +2.6% | +7.6% | $2.54 | +10.4% | 89K | 1.5M | 0.1x | 82.1M | Biotechnology |
+| CSAI | [TV](https://www.tradingview.com/chart/?symbol=CSAI) | $5.05 | -1.8% | +23.8% | $6.25 | +21.6% | 419 | 37K | 0.0x | 822K | Packaged Software |
+
+**Instrumentation (log-only, AH >10%):**
+- `XPON 2026-08-25 SPIKE 16:01ET +17% $6.19 1317 trades / 136k sh (first co-spike bar) as-of 18:30ET`
+- `XPON 2026-08-25 CONFIRM-3 NO no local-volume new-high ignition as-of 18:30ET`
+- `YYGH 2026-08-25 SPIKE 16:10ET +36% $1.56 1748 trades / 443k sh (first co-spike bar) as-of 18:30ET`
+- `YYGH 2026-08-25 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 18:30ET`
+- `DAIC 2026-08-25 SPIKE 16:33ET +15% $4.47 2257 trades / 258k sh (first co-spike bar) as-of 18:30ET`
+- `DAIC 2026-08-25 CONFIRM-3 NO ignition 16:55ET failed third-bar hold/volume as-of 18:30ET`
+- `WVVIP 2026-08-25 SPIKE 16:45ET +29% $4.30 325 trades / 21k sh (first co-spike bar) as-of 18:30ET`
+- `WVVIP 2026-08-25 CONFIRM-3 NO ignition 16:45ET failed third-bar hold/volume as-of 18:30ET`
+- `TRUG 2026-08-25 SPIKE 18:13ET +17% $0.68 81 trades / 22k sh (first co-spike bar) as-of 18:30ET`
+- `TRUG 2026-08-25 CONFIRM-3 YES ignition 18:00ET 143.7x; confirmed 18:10ET $0.75 as-of 18:30ET`
+- `CSAI 2026-08-25 NO-SPIKE peak +24% @18:09ET (no bar cleared +15% on a volume co-spike) as-of 18:30ET`
+- `CSAI 2026-08-25 CONFIRM-3 NO no local-volume new-high ignition as-of 18:30ET`
+
+**SIP verification (feed=sip, AH bars from 16:00 ET):**
+
+| Ticker | Trajectory | Real-time book |
+|--------|-----------|----------------|
+| TRUG | **Real late BUILD** — flat $0.57-0.58 until 18:00 ET, then ignition: 18:00 $0.61 vwap (96k sh/226 tr) → 18:05 $0.64 (68k) → 18:10 $0.69 (238k/829 tr) → 18:15 $0.75 vwap H $0.80 (806k sh/2661 trades). Fresh, accumulating on real trades | quote stale 16:00ET `bid $0.49 / ask $0.67 x100` |
+| CSAI | thin/no book — scanner AH vol only 419 sh total; NO-SPIKE | `bid $4.25 / ask $0.00 x0` — no fillable ask book |
+
+**Entry decisions — no new entries:**
+
+- **TRUG — SKIP (gate).** First AH appearance at the final scan — fails 2-AH-scan gate, no chance to confirm across a later scan. BUT this is a **real, volume-backed late ignition** (SIP: flat until 18:00 ET, then 806k sh / 2661 trades by 18:15 ET, vwap $0.61→$0.75, CONFIRM-3 YES 143.7x). Peak 18:13 ET is in the late-peak (>18:00 ET) follow-through zone. Total% only +15.4% (well under ceiling), float 1.8M, tradable=true. Day% -10.0% (above -15% dead-cat threshold). **Morning-eval data point:** a genuine late-building spike that appeared only at the final scan and was blocked solely by the 2-AH-scan gate — exactly the case the gate cannot catch when a name ignites after 18:00 ET. Track its PM follow-through.
+- **CSAI — SKIP.** NO-SPIKE (no volume co-spike bar). Scanner AH vol only 419 shares total = thin/bad print. No fillable ask book (`ask $0.00 x0`). First AH appearance. Skip as illiquid/bad print.
+- **DAIC — SKIP (carried).** Total% +211.6% far above +150% ceiling; VRatio 0.5x (fails >5x ceiling-override). No fillable ask book.
+- **WVVIP — SKIP (carried).** Grade D (preferred-share offering), SPIKE→FADE.
+- **CDTG — SKIP (carried).** Total% -6.0% (below prior close), Day% -16.2% (dead-cat range), thin.
+- **MI — SKIP (carried).** AH +9.3% (below 10% threshold now, faded from earlier spike). No fillable book.
+- **SLQT / ALEC / CSAI** — AH below threshold or thin. Skip.
+
+**Final feed-lag cross-check (pipeline names):** Tracked-tonight names cross-checked. YYGH, XPON, DAIC all present in the TradingView feed (no under-report). 21:30 watch names (PMI, NCPL, JEM, TNMG, AMIX, SWVL) all faded below regular close in earlier AH scans — no SIP surge to rescue. No feed-lag omission this scan. TRUG appeared fresh at this final scan (real late build) but has no prior AH footprint — undetectable earlier, morning-eval note only, not a real-time rescue.
+
+**Held positions (management by premarket pulse, no action here):**
+- **XPON** 13 @ $7.41 → now $6.57 (**-11.3%**). Scanner AH +30.9% $6.90 but Alpaca last $6.57 (book frozen `ask $0.00 x0`). Grade C. Flagged premarket exit.
+- **YYGH** 62 @ $1.61 → now $2.05 (**+27.4%**). Scanner AH +82.6% $2.10, VRatio 7.0x, **building strongly into the close of AH**. Grade None. Flagged premarket exit.
+
+**Notes:**
+- Night's final state: no SPIKE→FADE-only skip-all night — two BUILD/HOLD entries taken at 23:00 (XPON, YYGH). YYGH the clear winner (+27.4%, still building at final scan on 21M AH sh / VRatio 7.0x); XPON faded (-11.3%, Grade C dilution-lean catalyst).
+- TRUG is the night's notable late mover — real 18:00 ET ignition blocked by the 2-AH-scan gate at the final scan. Flagged for morning-eval to test whether late-final-scan real builds warrant a gate exception.
+- Both held positions handled by premarket `position-evaluation`. Never hold through the day.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
