@@ -234,6 +234,55 @@ SIP cross-check on 21:30 watch names — **DAIC is a real AH mover the TradingVi
 - No BUILD-and-hold candidate with a fillable book cleared the gates this scan. DAIC is the one real fresh second-leg build but is blocked by the extension ceiling (+234%) and has no fillable Alpaca book.
 - Both held positions still holding/building; premarket `position-evaluation` handles exits. Never hold through the day.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**AH ~2h in.** Scanner `--all`: 9 hits. Holding XPON + YYGH (entered 23:00). No new entries — new AH>10% names (MI, LBGJ) are first AH appearance (fail 2-AH-scan gate) and both SPIKE→FADE.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.15 | -3.4% | +44.3% | $1.66 | +39.5% | 15.2M | 2.3M | 6.5x | 1.6M | Misc Commercial Services |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $3.88 | +124.3% | +48.0% | $5.74 | +231.9% | 11.7M | 25.2M | 0.5x | 1.3M | Miscellaneous |
+| XPON | [TV](https://www.tradingview.com/chart/?symbol=XPON) | $5.27 | -15.0% | +42.3% | $7.50 | +21.0% | 5.7M | 10.9M | 0.5x | 891K | Electrical Products |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $0.98 | -16.2% | +18.4% | $1.16 | -0.9% | 2.4M | 11.6M | 0.2x | 3.0M | Industrial Machinery |
+| WVVIP | [TV](https://www.tradingview.com/chart/?symbol=WVVIP) | $3.33 | +25.7% | +41.4% | $4.71 | +77.7% | 576K | 827K | 0.7x | 4.0M | Beverages: Alcoholic |
+| MI | [TV](https://www.tradingview.com/chart/?symbol=MI) | $2.80 | -3.4% | +12.7% | $3.16 | +8.8% | 278K | 137K | 2.0x | 231K | Internet Software/Services |
+| LBGJ | [TV](https://www.tradingview.com/chart/?symbol=LBGJ) | $2.95 | +0.3% | +13.9% | $3.36 | +14.3% | 235K | 1.5M | 0.2x | 515K | Home Furnishings |
+| SLQT | [TV](https://www.tradingview.com/chart/?symbol=SLQT) | $0.55 | -29.3% | +5.8% | $0.58 | -25.3% | 175K | 1.7M | 0.1x | 140.2M | Multi-Line Insurance |
+| CELU | [TV](https://www.tradingview.com/chart/?symbol=CELU) | $0.80 | +3.4% | +6.1% | $0.85 | +9.7% | 89K | 145K | 0.6x | 16.1M | Misc Commercial Services |
+
+**Instrumentation (log-only, AH >10%):**
+- `MI 2026-08-25 SPIKE 17:18ET +32% $3.69 291 trades / 20k sh (first co-spike bar) as-of 18:00ET`
+- `MI 2026-08-25 CONFIRM-3 NO ignition 17:15ET failed third-bar hold/volume as-of 18:00ET`
+- `LBGJ 2026-08-25 SPIKE 17:37ET +22% $3.59 353 trades / 39k sh (first co-spike bar) as-of 18:00ET`
+- `LBGJ 2026-08-25 CONFIRM-3 NO ignition 17:35ET failed third-bar hold/volume as-of 18:00ET`
+- `XPON 2026-08-25 CONFIRM-3 NO no local-volume new-high ignition as-of 18:00ET`
+- `YYGH 2026-08-25 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 18:00ET`
+- `DAIC 2026-08-25 CONFIRM-3 NO ignition 16:55ET failed third-bar hold/volume as-of 18:00ET`
+
+**SIP verification (feed=sip, AH bars from 16:00 ET):**
+
+| Ticker | Trajectory | Real-time book |
+|--------|-----------|----------------|
+| MI | **SPIKE→FADE** — spiked 17:15 ET to H $3.69 (88k sh/901 tr), bleeding $3.41→$3.20→$3.18→$3.16→$3.11→$3.14 vwap (~-15% off high) | `bid $2.37 / ask $0.00 x0` — no fillable ask book |
+| LBGJ | **SPIKE→FADE** — flat until 17:35 ET spike to H $3.75 (154k sh/1648 tr), then $3.30→$3.13 (~-16% off high) | `bid $2.49 / ask $3.36 x100` — wide two-sided |
+
+**Entry decisions — no new entries:**
+
+- **MI — SKIP.** First AH appearance (fails 2-AH-scan gate). SPIKE→FADE (H $3.69 @17:15 ET, now $3.14, -15% off high). No fillable ask book (`ask $0.00 x0`). Tiny float 231K but no real fillable liquidity + fade. Catalyst search: nothing found (results are unrelated Nuvectra/Mineralys names).
+- **LBGJ — SKIP.** First AH appearance (fails 2-AH-scan gate). SPIKE→FADE (H $3.75 @17:35 ET, now $3.13, -16% off high). VRatio 0.2x (fading, not real AH accumulation). Chinese home-furnishings small-cap; single-bar spike then bleed.
+- **DAIC — SKIP (carried).** Total% +231.9% far above +150% ceiling; VRatio 0.5x (fails >5x ceiling-override). Regular-session +124% mover. No fillable ask book.
+- **WVVIP — SKIP (carried).** Grade D (preferred-share offering), SPIKE→FADE, no fillable ask book.
+- **CDTG — SKIP (carried).** Total% -0.9% (below prior close), Day% -16.2% (dead-cat range), thin.
+- **SLQT / CELU** — AH <10% threshold (SLQT +5.8%, SGLY... CELU +6.1%). Skip.
+
+**Held positions (management by premarket pulse, no action here):**
+- **XPON** 13 @ $7.41 → now $6.75 (**-8.9%**). Scanner AH +42.3% $7.50, but Alpaca last $6.75 (book `bid $4.91 / ask $0.00 x0`, frozen). Grade C. Flagged premarket exit.
+- **YYGH** 62 @ $1.61 → now $1.88 (**+16.8%**). Scanner AH +44.3% $1.66, VRatio 6.5x, fresh book `bid $1.56 / ask $1.59`, building. Grade None. Flagged premarket exit.
+
+**Notes:**
+- No BUILD-and-hold candidate with a fillable book and 2-AH-scan history cleared the gates. All new AH>10% names are first-appearance SPIKE→FADEs.
+- Both held positions handled by premarket `position-evaluation`. YYGH the standout (+16.8%). Never hold through the day.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
