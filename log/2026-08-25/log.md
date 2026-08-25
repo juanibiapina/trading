@@ -34,6 +34,25 @@ No open positions (Alpaca source of truth). WLDS closed at 10:30 pulse. OPEN_POS
 - Watchlist above = low-float (<10M) names with >45% intraday move. Re-evaluate at 22:00+ CET AH scans; enter only if a name reappears with sustained AH momentum (2+ AH scans) and clears all entry gates at 23:00+ CET.
 - Several names (NCPL, JEM, AMIX, SWVL) already showing fading intraday volume (VChg% negative or IRVol declining) — spike-then-fade risk into AH.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**AH just opened** (16:00 ET). Scanner `--all`: 0 hits. Observation-only scan (learning-phase entry gate is 23:00+ CET). No entries.
+
+Carry-forward check on 21:30 low-float watch names (AH quotes at 16:00 ET, seconds into session — thin/forming books):
+
+| Ticker | Reg Close | AH Bid | AH Ask | Note |
+|--------|-----------|--------|--------|------|
+| DAIC | $3.48 | $3.31 | $0.00 x0 | No AH ask/offer — no fillable book yet |
+| PMI | $9.91 | $8.25 | $10.90 | Wide spread, below reg close |
+| NCPL | $0.58 | $0.49 | $0.65 | Below close, thin |
+| TNMG | $0.61 | $0.48 | $0.65 | Below close, thin |
+| AMIX | $8.26 | $6.21 | $8.25 | Below close, wide |
+
+**Notes:**
+- Scanner returned no AH movers >threshold at open. Watch names sitting flat/below regular close, no AH momentum yet.
+- Instrumentation (spike-bar, third-bar confirmation) not run — no candidate cleared threshold and it's observation-only.
+- Re-evaluate at 22:30 / 23:00 CET. Entries only at 23:00+ with a candidate clearing all gates (float <50M, AH >10% in ≥2 AH scans, Day% > -15%).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
