@@ -274,3 +274,77 @@ Scanner: 14 hits. **Final scheduled scan. Entries open.** No new entries. WLDS h
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | WLDS | $3.30 | 2026-08-24 17:00 ET | 28 | 44a82f88 | Grade None. AH BUILD/hold, float 2.0M, cleared 2-AH-scan gate, CONFIRM-3 YES, Total% +45.4% (under ceiling). No same-day catalyst. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**DAIC** — CID HoldCo (Miscellaneous / IT)
+- Catalyst: **None** — Finviz "No clear catalyst identified for 196% surge"; up +547% on the day. Grade None.
+- Previous Close (Mon regular): $1.73 (Friday close $0.43 → ran +306% intraday Monday to $1.73)
+- AH last night: SIP peak **$6.26** @ 17:15 ET (23:15 CET), +262% from regular close, on **2.96M sh / 17,587 trades** in the ignition bar; sustained 2.66M / 1.48M / 1.35M sh/bar after
+- Premarket now: SIP peak **$4.02** @ 04:00 ET, +132% from regular close, on **1.52M sh / 20,070 trades**
+- Hypothetical P&L (AH ignition ~$4.20 → PM peak $4.02): ~-4% (**AH peak $6.26 was the better exit — faded into PM**)
+- Float: 1.3M | Market Cap: ~$0.84M
+- Winner bar: **CLEARS** — >100% on high (PM +132%, AH +262% from close) on heavy accumulating SIP volume (millions sh + thousands of trades per bar). Real explosion.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — in every scan from 21:30 CET onward (21:30 +437.6%, 23:30 +876.5%, 00:00 +1021.6%).
+- Why not traded: **extreme extension**. DAIC had already run +306% in the *regular* session before AH began; Total% hit +876% to +1021%, far above the +150 ceiling. Correctly skipped. Even ignoring the ceiling, AH→PM hold was ~flat-to-negative (AH peak $6.26 > PM peak $4.02).
+- Scanner gap: **none** — detection worked. This is a correct ceiling skip, not a miss.
+
+### Baseline Tracking
+
+- Days tracked: **71** (was 70 + 1) — **baseline gap: 2026-08-21 (Fri) AH session was never evaluated** (no `Days tracked` line in that log; Friday's winner was never diagnosed). Not back-filled.
+- Winners detected by scanner: **57/66 (86.4%)** — +DAIC (detected every scan)
+- Winner selected for paper trade: **32/65 (49.2%)** — DAIC not traded (extension ceiling, un-actionable); we traded WLDS
+- Target: >80% detection
+- Status: **BASELINE MET** (86.4%)
+
+### Retrospective Scan Results
+
+Premarket scan (04:21 ET, 5 hits): DAIC +104.6% ($1.73→$3.54 Yahoo / SIP $4.02), AMIX +64.4%, JEM +57.3%, BTCT +19.0%, WLDS +17.6%. DAIC is the clear winner — biggest raw PM mover AND an AH→PM continuation the scanner detected. No PM-only gapper today.
+
+### Open Position P&L (Alpaca)
+
+WLDS (real fill $3.30). Alpaca `positions` shows now $2.65 / -19.7%; the quote timestamp is stale (stamped 16:00 ET), but live PM SIP confirms a real loss — WLDS PM VWAP $2.68 (H $2.86 @04:00 ET, 175K sh). So the ~-19% is genuine, not a stale artifact. Exit decision belongs to position-evaluation.md (10:30 / 14:30 CET), not here.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| WLDS | $3.30 | +45.4% | None | 2026-08-24 17:00 ET | $2.86 (SIP) | 04:00 ET | open | — | -18.8% (live PM $2.68) | 🔴 Open, underwater |
+
+**Total Realized P&L (Alpaca fills only): €0.00** (WLDS still open)
+
+### Scanner Effectiveness
+
+- Evening scans ran: **9** (21:30, 22:00, 22:15, 22:30, 22:45, 23:00, 23:30, 00:00, 00:30 CET) — all 7 scheduled + 2 extra. **No coverage failure.**
+- Candidates found: DAIC, GIPR, XPON, PMI, LUCY, BTCT, AMIX, JEM, WLDS, MCRP, RYOJ, CIIT, HVII, FFAI, JEM
+- Retrospective matches: winner DAIC caught; AMIX caught; all top PM movers were in evening scans.
+
+### Missed Opportunities
+
+No significant missed opportunities. DAIC (winner) detected and correctly skipped on extension ceiling. No feed-lag miss, no PM-only gapper, no sub-$0.50 exclusion.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| DAIC | $6.26 (SIP) | 17:15 ET | Spike→hold (high) | $4.02 (SIP) | -36% | +132% | Faded into PM; AH better exit |
+| AMIX | $16.41 (SIP) | 16:40 ET | Build→fade | $10.70 (SIP) | -35% | +103% | Faded into PM; AH better exit |
+| WLDS | $3.58 (SIP) | 16:30 ET | Late-ignite BUILD | $2.86 (SIP) | -20% | +5% | Faded to entry-loss |
+
+**AH-peak-vs-PM-peak (extreme-runner fade tracker):** both DAIC (AH +262% > PM +132%) and AMIX (AH +211% > PM +103%) topped in the >~+130% zone and faded into PM — AH was the better exit for both. Standing tally now **8 fade (MSW, DSY, AQB, XOS, BTCT, LOOP, DAIC, AMIX) / 1 continue (BAOS)**. Fade bucket keeps dominating the extreme zone — reinforces taking partial profit in late AH on extreme runners rather than holding for PM.
+
+### Notes
+
+- **Baseline gap (2026-08-21):** the Aug 21 (Fri) log has no `Days tracked` line — Monday's morning retrospective (which would diagnose Friday's AH session) was skipped. Friday's winner was never checked. Recorded as a gap, not absorbed into a single +1. Single occurrence, likely transient.
+- **CEILING-OVERRIDE WATCH outcome — AMIX (from Aug 24 log):** skipped near-miss hypothetical entry ~$15.83 @ 23:00 CET (+200% Total%). PM SIP peak $10.70 = **-32.4%**. Ceiling skip **correct** — avoided a -32% loss. Adds to the dataset that the +150 ceiling protects capital on Grade-None extreme runners.
+- **PM-only gapper:** none today. Biggest raw PM mover (DAIC) is an AH→PM continuation the scanner detected. `log/pm-open-scan.csv` holdable count: 29 (holdable-cluster threshold already exceeded → Initiative-6 email decision, unchanged, not applied here).
+- **Fade-rule / feed-lag / late-tail / price-floor / broker-block / stale-book / no-fillable-book / float-gate / chase-cap / reverse-split trackers:** no new qualifying cases last night. Standing counts unchanged (in-window feed-lag misses: 4, trigger REACHED; stale-book execution-blocks: 3; no-fillable-book skips: 2; float-gate skips: 1; chase-cap: 1; sub-3M fade-re-explosion: 4/14).
+- WLDS (our entry) faded to an entry-loss (~-19%); AH late-ignite BUILD + CONFIRM-3 did not carry into PM. Exit handled by position-evaluation.md.
+
+### Price Charts
+
+**DAIC** (winner) — Prev regular close $1.73; 2-day range $0.41–$6.26. AH ignition 17:15 ET ($1.73→$6.26 on 2.96M sh/17.6K trades), held $3.7–4.7 through AH, PM open $4.02 then drifting to $3.38. AH peak > PM peak = faded into PM.
+**AMIX** — AH SIP peak $16.41 @16:40 ET (+211%), PM SIP peak $10.70 (+103%) — faded, AH was the exit.
+**WLDS** (our position) — AH late-ignite BUILD peak $3.58 @16:30 ET, PM $2.86 high → drifting $2.63 = entry-loss ~-19%.
