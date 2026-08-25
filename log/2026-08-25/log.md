@@ -53,6 +53,31 @@ Carry-forward check on 21:30 low-float watch names (AH quotes at 16:00 ET, secon
 - Instrumentation (spike-bar, third-bar confirmation) not run — no candidate cleared threshold and it's observation-only.
 - Re-evaluate at 22:30 / 23:00 CET. Entries only at 23:00+ with a candidate clearing all gates (float <50M, AH >10% in ≥2 AH scans, Day% > -15%).
 
+## Scan 22:15 CET (4:15 PM ET)
+
+**AH open ~15 min in.** Scanner `--all`: 0 hits (feed lag). Observation-only (entry gate 23:00+ CET). No entries.
+
+SIP cross-check on 21:30 watch names — **DAIC is a real AH mover the TradingView feed missed**:
+
+| Ticker | Reg Close | AH SIP C | AH% | AH Vol | Trades | AH Ask | Note |
+|--------|-----------|----------|-----|--------|--------|--------|------|
+| DAIC | $3.48 | $4.19 (H $4.36) | +20% | 745K | 6004 | $0.00 x0 | Real SIP build above close; but no fillable ask book yet |
+| PMI | $9.91 | $8.82 (vwap $9.18) | -11% | 244K | 3004 | $10.90 | Below close, fading |
+| NCPL | $0.58 | $0.52 | -10% | 1.8M | 2892 | $0.90 | Below close |
+| TNMG | $0.61 | ~$0.48–0.65 | flat | — | — | $0.65 | Stale quote, no build |
+| AMIX | $8.26 | — | — | — | — | $8.25 | Below close, wide |
+| SWVL | $2.19 | — | — | — | — | $2.49 | Flat |
+
+**Instrumentation (log-only, DAIC AH >10%):**
+- `DAIC 2026-08-25 NO-SPIKE flat/faded (peak <= base) (no bar cleared +15% on a volume co-spike) as-of 16:15ET`
+- `DAIC 2026-08-25 CONFIRM-3 NO no local-volume new-high ignition as-of 16:15ET`
+
+**Notes:**
+- DAIC building in AH on real SIP volume (745K sh / 6004 trades first bar, C $4.19 = +20% above reg close $3.48, Total% ~+142% from prior close). TradingView `--all` returned 0 — feed-lag omission. Flag for entry evaluation at 23:00+ CET (needs 2-AH-scan gate + fillable ask book; currently `ask $0.00 x0`, no fill possible).
+- DAIC Total% ~+142% sits near the +150% extension ceiling — watch entry extension at later scans.
+- Other watch names (PMI, NCPL, AMIX, SWVL) all sitting below reg close in AH — spike-then-fade, no new momentum.
+- Re-evaluate at 22:30 / 23:00 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
