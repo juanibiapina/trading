@@ -8,7 +8,8 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | Shares | Entry Time | Catalyst Grade | Order ID | Notes |
 |--------|-------|---------|------|--------|------------|----------------|----------|-------|
-| _(none)_ | | | | | | | | All positions closed 2026-08-26 10:30 CET pulse |
+| DAIC | $6.09 | $6.06 | $7.20 (AH) | 15 | 2026-08-26 23:00 CET | None | 4e6a9522 | CID HoldCo speculative multi-session squeeze, no catalyst; BUILD/hold within 20% of $7.20 AH high; float 1.3M. Exit first PM opportunity. |
+| WNW | $3.12 | $3.11 | $3.59 (AH) | 29 | 2026-08-26 23:00 CET | None | e7e0e239 | Meiwu Technology China retail, no catalyst; BUILD/hold near $3.59 AH high; float 26.2M. Exit first PM opportunity. |
 
 ## Position Rules
 

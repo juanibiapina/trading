@@ -106,3 +106,47 @@ Scanner run at 16:45:13 ET: **6 hits**.
 - **CRE** (21:30 watch, TradingView-underreported) — SIP volume decaying off the first-bar spike, not accelerating; still tracking via feed-lag cross-check.
 
 Re-evaluate DAIC, WNW, CRE at the 23:00 CET scan when the entry gate opens.
+
+## Scan 23:00 CET (5:00 PM ET) — AH (ENTRY GATE OPEN)
+
+Scanner run at 17:00:11 ET: **8 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $5.15 | +32.7% | +20.9% | $6.23 | +60.5% | 4.1M | 30.4M | 0.1 | 1.3M | Miscellaneous |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $2.48 | +0.4% | +32.7% | $3.29 | +33.2% | 3.0M | 407K | 7.3 | 26.2M | Internet Retail |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $3.60 | +2.3% | +12.2% | $4.04 | +14.8% | 952K | 16.8M | 0.1 | 7.0M | Motor Vehicles |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $1.80 | -4.3% | +11.7% | $2.01 | +6.9% | 561K | 174K | 3.2 | 5.8M | Misc Commercial Services |
+| LTRX | [TV](https://www.tradingview.com/chart/?symbol=LTRX) | $5.66 | -3.4% | +14.5% | $6.48 | +10.6% | 539K | 944K | 0.6 | 42.7M | Computer Peripherals |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $1.15 | +17.3% | +10.4% | $1.27 | +29.6% | 277K | 14.8M | 0.0 | 3.0M | Industrial Machinery |
+| LDI | [TV](https://www.tradingview.com/chart/?symbol=LDI) | $0.88 | -4.5% | +5.6% | $0.93 | +0.9% | 124K | 1.6M | 0.1 | 110.4M | Finance/Rental/Leasing |
+| TGL | [TV](https://www.tradingview.com/chart/?symbol=TGL) | $2.14 | +0.0% | +9.8% | $2.35 | +9.8% | 69K | 1.2M | 0.1 | 1.8M | Misc Commercial Services |
+
+**Instrumentation (log-only, no decision impact):**
+- DAIC — `SPIKE 16:09ET +17% $6.00 2611 trades / 362k sh (first co-spike bar)`; `CONFIRM-3 YES ignition 16:05ET 3.5x; confirmed 16:15ET $6.63`. Third AH-scan appearance (22:30/22:45/23:00) — 2-AH-scan gate met.
+- WNW — `SPIKE 16:16ET +15% $2.86 142 trades / 28k sh`; `CONFIRM-3 YES ignition 16:15ET 420.6x; confirmed 16:25ET $3.19`. Second AH-scan appearance (22:45/23:00) — 2-AH-scan gate met.
+
+**Trajectory (SIP 5Min bars):**
+- DAIC — peaked $7.20H @16:15ET (vwap $6.58), settled into a $6.0-6.3 base, latest bar (16:45ET) O $6.24 H $6.29 C $6.08 vwap $6.17 on 183k sh / 1,945 trades. Current ~$6.1 is within 20% of the $7.20 AH high = **holding, not faded**. Volume decaying off the peak bar (1.8M → 183k) but still real (thousands of trades/bar). Day% +32.7% (positive, not a dead-cat). Total% +60.5% under the +150% ceiling.
+- WNW — peaked $3.59H @16:30ET (vwap $3.43), holding $3.2-3.5, latest bar (16:45ET) H $3.52 C $3.21 vwap $3.35 on 804k sh / 8,377 trades. Within 20% of AH high = **holding/building**. Sustained real volume 600-800k sh/bar. Total% +33.2% under ceiling.
+
+**Catalyst re-search:**
+- DAIC — CID HoldCo Inc (Las Vegas). Timothy Sykes/Yahoo confirm speculative multi-session squeeze (sub-$1 → $6+ over sessions), "no immediate catalyst identified for the distressed microcap's move." **No catalyst found** (concern noted, not a skip per no-catalyst handling). Grade None.
+- WNW — Meiwu Technology (Xiamen China online/mobile retail). No same-day PR/8-K/earnings. **No catalyst found.** Grade None.
+
+**Broker (quotes frozen stale at 20:00Z — free-tier feed artifact, priced off SIP):**
+- DAIC — `tradable=true`. Quote frozen `bid $4.32 ask $0.00 x0 @20:00:02Z` (1hr stale); NOT illiquid — SIP shows a deep real book (183k-1.8M sh/bar, thousands of trades). Staleness artifact, not a no-AH-book skip.
+- WNW — `tradable=true`. Quote frozen `bid $2.10 ask $2.84 @20:00:00Z` (stale, ask below current trade).
+
+**Entries (both clear 2-AH-scan gate, BUILD/hold, Day% > -15%, Total% < 150%, tradable, real SIP liquidity):**
+- **DAIC** — BUY 15 @ limit $6.30 ext (id 4e6a9522) **filled @ $6.09**. Grade None. Chase-cap: qualifying AH $6.13-6.27 (+58-61.6%); fill $6.09 = Total% ~+57%, at/below qualifying, **no chase**, well under fade zone.
+- **WNW** — BUY 29 @ limit $3.40 ext (id e7e0e239) **filled @ $3.12**. Grade None. Chase-cap: qualifying AH $3.20 (+29.5%); fill $3.12 = Total% ~+26%, below qualifying, **no chase**.
+
+Both no-catalyst Grade None: exit at first premarket opportunity. Not entered: XOS (first AH appearance, gate not met — also the Aug-17 chase basis name), MIMI/CDTG/TGL (thin, AH<12% or CONFIRM-3 NO), LTRX (thin 146 trades, 42.7M float, CONFIRM-3 NO), LDI (AH<10%, 110M float).
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+| DAIC | $6.09 | 23:00 CET (17:00 ET) | 15 | 4e6a9522 | Grade None; 2-AH-scan gate (22:30/22:45/23:00), BUILD/hold within 20% of $7.20 AH high, low float 1.3M, CONFIRM-3 YES, Total +60% < ceiling; no catalyst (speculative squeeze) |
+| WNW | $3.12 | 23:00 CET (17:00 ET) | 29 | e7e0e239 | Grade None; 2-AH-scan gate (22:45/23:00), BUILD/hold near $3.59 AH high, real 600-800k sh/bar volume, CONFIRM-3 YES, Total +33% < ceiling; no catalyst |
