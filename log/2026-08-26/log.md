@@ -198,6 +198,38 @@ Scanner run at 18:00:14 ET: **9 hits**.
 
 **No new paper trades this scan.** No new candidate clears the entry gate (MIMI thin/CONFIRM-3 NO, SHPH untradable). DAIC + WNW remain the night's two entries. Final scan 00:30 CET.
 
+## Scan 00:30 CET (6:30 PM ET) — AH (FINAL SCAN)
+
+Scanner run at 18:30:12 ET: **11 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $2.48 | +0.4% | +69.4% | $4.20 | +70.0% | 8.1M | 1.0M | 7.8 | 26.2M | Internet Retail |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $5.15 | +32.7% | +12.3% | $5.78 | +49.0% | 5.6M | 30.6M | 0.2 | 1.3M | Miscellaneous |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $1.80 | -4.3% | +28.9% | $2.32 | +23.4% | 1.8M | 326K | 5.4 | 5.8M | Misc Commercial Services |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $3.60 | +2.3% | +7.8% | $3.88 | +10.2% | 1.4M | 16.9M | 0.1 | 7.0M | Motor Vehicles |
+| LTRX | [TV](https://www.tradingview.com/chart/?symbol=LTRX) | $5.66 | -3.4% | +11.9% | $6.33 | +8.1% | 630K | 955K | 0.7 | 42.7M | Computer Peripherals |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $2.80 | -1.4% | +9.3% | $3.06 | +7.7% | 534K | 2.3M | 0.2 | n/a | Misc Commercial Services |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $1.15 | +17.3% | +8.7% | $1.25 | +27.6% | 533K | 14.8M | 0.0 | 3.0M | Industrial Machinery |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.59 | +4.4% | +9.2% | $3.92 | +14.0% | 301K | 72K | 4.2 | 634K | Pharmaceuticals: Major |
+| LDI | [TV](https://www.tradingview.com/chart/?symbol=LDI) | $0.88 | -4.5% | +6.3% | $0.94 | +1.6% | 175K | 1.6M | 0.1 | 110.4M | Finance/Rental/Leasing |
+| AAME | [TV](https://www.tradingview.com/chart/?symbol=AAME) | $1.30 | +0.8% | +10.8% | $1.44 | +11.6% | 167K | 60K | 2.8 | 3.9M | Multi-Line Insurance |
+| DDC | [TV](https://www.tradingview.com/chart/?symbol=DDC) | $0.58 | -16.7% | +8.4% | $0.63 | -9.7% | 82K | 1.2M | 0.1 | 22.7M | Internet Software/Services |
+
+**Held positions (entered 23:00, managed in premarket by position-evaluation.md — not re-entered):**
+- WNW — position now $4.01 (+28.5% vs $3.12 fill). AH **building strongly** +69.4% ($4.20 scanner), up from +47.6% at 00:00. Real volume 8.1M AH, VRatio 7.8. Best trade of the night — the BUILD thesis played out.
+- DAIC — position now $5.74 (-5.7% vs $6.09 fill). AH faded to +12.3% from +20.9% at 23:00; Day% still +32.7%, holding a $5.7-5.8 base.
+
+**New-candidate evaluation (>10% AH names, gate open):**
+- **MIMI** — Skip: SPIKE→FADE. `SPIKE 16:08ET +17% $2.11 219 trades / 45k sh`; `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume`. SIP peaked $2.36 @20:05Z (16:05 ET, early), faded to a $1.94-2.14 base; latest bars $2.03/$1.98 on 4-33k sh/bar (25-306 trades), volume decayed off the 203k first-bar pop. Scanner $2.32 (+28.9%) reflects the early peak, not the current ~$2.03 (Total ~+13%). Peaked before 17:30 ET and declining = SPIKE→FADE (0/10+ for PM continuation). `tradable=true`, real two-sided book (bid $1.53 / ask $2.08) but no BUILD.
+- **AAME** — First AH appearance (0 hits in all prior scans), 2-AH-scan gate NOT met. Late ramp: SIP flat until 21:50Z (17:50 ET), popped $1.63 @21:55Z on 94k sh / 909 trades, faded to $1.47 by 22:15Z. Only +11.6% Total%, modest volume (~200k sh AH total). Not FINAL-SCAN-GATE-BLOCK material (small extension, fading, not CONFIRM-3 YES). Note for morning-eval.
+- LTRX/CDTG — Skip (carried): CONFIRM-3 NO, thin/single-bar, AH <12% Total%. SHPH — qualified-but-untradable broker-block (carried, `tradable=false`). XOS/VCIG/LDI/DDC — AH <11% or thin; DDC Day% -16.7% (below -15% dead-cat floor) and Total% -9.7% anyway.
+
+**Final-scan feed-lag cross-check (SIP) on pipeline names:**
+- **CRE** (21:30 watch, TradingView-underreported all night) — SIP holding a $6.40-6.50 base on real volume 12-40k sh/bar (185-523 trades), still up ~+136% on the day from its regular close. Held flat in AH rather than igniting a fresh spike; not a new AH mover above threshold. No entry — regular-session mover that consolidated, never triggered a second-leg AH ignition.
+
+**No new paper trades this scan.** DAIC + WNW remain the night's two entries. Night complete. Both no-catalyst Grade None — exit at first premarket opportunity (position-evaluation.md handles premarket).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
