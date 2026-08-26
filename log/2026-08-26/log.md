@@ -1,3 +1,20 @@
+## Scan 21:30 CET (3:30 PM ET) — REGULAR session watch
+
+Regular-session scan (before AH open). No entries per regular-session caution rule. Watch candidates flagged for AH confirmation at 22:00+ CET.
+
+| Ticker | Chart | Price | Chg% | Float | MCap | IRVol | Industry | Note |
+|--------|-------|-------|------|-------|------|-------|----------|------|
+| CRE | [TV](https://www.tradingview.com/chart/?symbol=CRE) | $6.07 | +136.2% | 1.1M | 5.2M | 2724.7 | Commercial Printing | Watch — low float, biggest mover |
+| WSHP | [TV](https://www.tradingview.com/chart/?symbol=WSHP) | $6.09 | +29.9% | 1.2M | 70.1M | 410.6 | Internet Software | Watch — low float |
+| VMAR | [TV](https://www.tradingview.com/chart/?symbol=VMAR) | $9.41 | +31.0% | 6.5M | 46.9M | 46.7 | Recreational Products | Watch |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $4.75 | +22.5% | 1.3M | 9.3M | 1.5 | Miscellaneous | Watch — low float, low IRVol |
+| EXYN | [TV](https://www.tradingview.com/chart/?symbol=EXYN) | $3.99 | +24.0% | 4.1M | 31.8M | 1.3 | Packaged Software | Watch |
+| RDGT | [TV](https://www.tradingview.com/chart/?symbol=RDGT) | $1.00 | +21.6% | 3.6M | 3.6M | 37.0 | Medical Distributors | Watch |
+
+**Already traded today (closed in 10:30 pulse, reappearing as regular movers):** YYGH +69.1% (1.6M float), XPON +69.7% (891K float). Do not re-enter same ticker same night.
+
+**No paper trades:** regular-session scan, AH not open. Re-evaluate watch names at 22:00+ CET AH scans; only enter if momentum carries into after-hours.
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
