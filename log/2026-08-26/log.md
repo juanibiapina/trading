@@ -171,6 +171,33 @@ Scanner run at 17:30:18 ET: **9 hits**.
 
 **No new paper trades this scan.** No new candidate clears the entry gate: LTRX/CDTG both CONFIRM-3 NO with fading/thin volume, XOS faded below threshold. DAIC + WNW remain the night's two entries. Next scan 00:00 CET.
 
+## Scan 00:00 CET (6:00 PM ET) — AH
+
+Scanner run at 18:00:14 ET: **9 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $2.48 | +0.4% | +47.6% | $3.66 | +48.2% | 6.3M | 823K | 7.6 | 26.2M | Internet Retail |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $5.15 | +32.7% | +13.4% | $5.84 | +50.5% | 5.4M | 30.6M | 0.2 | 1.3M | Miscellaneous |
+| MEDS | [TV](https://www.tradingview.com/chart/?symbol=MEDS) | $1.33 | -1.8% | +5.6% | $1.41 | +3.7% | 1.7M | 355K | 4.9 | 1.2M | Medical Distributors |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $3.60 | +2.3% | +6.1% | $3.82 | +8.5% | 1.3M | 16.8M | 0.1 | 7.0M | Motor Vehicles |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $1.80 | -4.3% | +15.0% | $2.07 | +10.1% | 720K | 193K | 3.7 | 5.8M | Misc Commercial Services |
+| LTRX | [TV](https://www.tradingview.com/chart/?symbol=LTRX) | $5.66 | -3.4% | +13.0% | $6.40 | +9.2% | 617K | 954K | 0.6 | 42.7M | Computer Peripherals |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $1.15 | +17.3% | +9.6% | $1.26 | +28.6% | 472K | 14.8M | 0.0 | 3.0M | Industrial Machinery |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.59 | +4.4% | +16.2% | $4.17 | +21.2% | 243K | 64K | 3.8 | 634K | Pharmaceuticals: Major |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $2.80 | -1.4% | +5.0% | $2.94 | +3.5% | 166K | 2.3M | 0.1 | n/a | Misc Commercial Services |
+
+**Held positions (entered 23:00, managed in premarket by position-evaluation.md — not re-entered):**
+- WNW — position now $3.88 (+24.4% vs $3.12 fill). AH **building** +47.6% ($3.66 scanner / $3.88 broker mark) up from +32.7% at 23:00/23:30. Real volume 6.3M AH. Best-behaving entry of the night.
+- DAIC — position now $5.77 (-5.3% vs $6.09 fill). AH faded to +13.4% from +20.9% at 23:00, but Day% still +32.7%, holding a $5.8 base.
+
+**New-candidate evaluation (>10% AH names, gate open):**
+- **MIMI** — Skip: thin chop, no accumulation. SIP bars drift $1.94–$2.14 on 4k–33k sh/bar (25–306 trades), latest 21:35Z $2.03 fading off $2.14. `SPIKE 16:08ET +17% $2.11 219 trades / 45k sh`; `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume`. Total% only +10.1%, Day% -4.3%. `tradable=true` but no real igniter — choppy thin book, not a BUILD.
+- **SHPH** — Qualified-but-untradable broker-block. AH cleared threshold (+16.2%, Total% +21.2%, 634K float) but `tradable=false` (carried, confirmed again). Cannot fill. Recorded for morning-eval broker-block tally; no workup rerun per carry rule.
+- LTRX — Skip (carried): single-bar spike, `CONFIRM-3 NO`, 42.7M float, AH +9.2% Total%. CDTG — Skip (carried): `CONFIRM-3 NO`, thin drift, AH <10% Total%. XOS/MEDS/VCIG — AH <10%, thin.
+
+**No new paper trades this scan.** No new candidate clears the entry gate (MIMI thin/CONFIRM-3 NO, SHPH untradable). DAIC + WNW remain the night's two entries. Final scan 00:30 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
