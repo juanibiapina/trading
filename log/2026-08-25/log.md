@@ -348,3 +348,85 @@ SIP cross-check on 21:30 watch names — **DAIC is a real AH mover the TradingVi
 |--------|------------|------------|-----------------|----------|--------|
 | XPON | $7.41 | 2026-08-25 17:00 ET | 13 | b11db9d4 | Grade C — Expion Energy pivot ($91M investment + oil & gas acq). SIP BUILD/HOLD vwap $6.56→$8.17, float 891K, 2-AH-scan gate cleared. |
 | YYGH | $1.61 | 2026-08-25 17:00 ET | 62 | 643382ed | Grade None (no catalyst, concern noted). SIP SPIKE→BUILD to $1.87, float 1.6M, VRatio 5.8x, 2-AH-scan gate cleared. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**WVVIP** — Willamette Valley Vineyards Series A Redeemable Preferred
+- Catalyst: **Grade D** — 5.3% perpetual redeemable preferred; the driver is a $1.75M preferred stock offering (dilution/financing, PRNewswire Aug 4). No fresh operational catalyst. Websearch surfaced no new Aug 25 PR.
+- Previous Close: $3.33 (regular close going into the AH session; the check-prices $2.65 is the Aug-22 2-day close)
+- AH last night: SIP peak **$6.88 @16:45 ET** (+107% from close) on 254K sh / 4,112 trades — real, volume-backed spike, then faded all evening to ~$4.15
+- Premarket now: SIP peak **$9.79 @04:00 ET** (+194% from close) on 597K sh / 13,764 trades in the first PM bar; held $8.26–8.34 at 04:15–04:20 ET (still above +210%)
+- Hypothetical P&L (AH first-sighting ~$3.60 breakout → PM peak $9.79): **+172%** — theoretical only; there was **no fillable AH ask book** (`ask $0.00 x0`) so this gain was not capturable
+- Float: 4.0M | Market Cap: ~$11M
+
+**Winner-bar check:** clears the bar — >100% (PM +194% from close) on high, accumulating SIP volume (597K sh / 13,764 trades first PM bar, 254K sh / 4,112 trades on the AH spike). A genuine explosion, not a thin ramp.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — WVVIP appeared in **every one of the 9 evening scans** (first flagged 22:15 CET SPIKE 16:45 ET, carried through the 00:30 final scan).
+- What it looked like at ~22:15 CET: +76% Total, $4.67, SPIKE→FADE off the $6.88 16:45-ET high (already ~-38% off high). Correctly **SKIPPED**, for good reasons: (1) SPIKE→FADE, well outside the 20% hold band; (2) no fillable ask book (`ask $0.00 x0`); (3) **Grade D** preferred-share dilution; (4) failed CONFIRM-3 (third-bar hold/volume). All four skip reasons were valid at the time.
+- Scanner gap: **none** — detection worked. This is a correct-skip, not a detection miss. The PM re-explosion (a faded AH preferred re-igniting on the offering) was not predictable from the fading, book-less AH tape.
+
+### Baseline Tracking
+
+Cumulative from 2026-08-24 (Days 71, detected 57/66, selected 32/65). WVVIP was **detected** (all scans) → increment detected. It had **no fillable book** → excluded from the selection denominator (per no-fillable-book policy: not a selection miss).
+
+- Days tracked: **72** (was 71 + 1)
+- Winners detected by scanner: **58/67 (86.6%)** — +WVVIP (detected all 9 scans)
+- Winner selected for paper trade: **32/65 (49.2%)** — unchanged (WVVIP excluded: no fillable AH book, correct skip)
+- **Baseline gap (carried):** 2026-08-21 (Fri) AH session was never evaluated (no `Days tracked` line). Not back-filled.
+- Target: >80% detection
+- Status: **BASELINE MET** (86.6% > 80%)
+
+### Retrospective Scan Results
+
+Live PM scan (04:20 ET): 6 hits — WVVIP +174.5% ($9.14), YYGH +61.8% ($1.86), SMTK +48.6%, TRUG +47.0%, DAIC +41.8% ($5.50), MTEN +10.8%. AH reconstruction (`check-prices --ah-history`) + SIP bars confirm WVVIP as the sole >100% real-volume mover. DAIC continues (multi-day runner crowned 2026-08-24): PM first bar $6.29 H on 1.49M sh / 27,105 trades = +62% from its $3.88 close — a strong continuation but under the >100% winner bar from a fresh close.
+
+### Open Position P&L (Alpaca)
+
+Two positions open from last night's entries (XPON, YYGH). **Exits are handled by position-evaluation.md at 10:30 CET — not here.** Alpaca `quote` endpoint returns stale books (frozen Aug 25 20:00/20:59 UTC), but Alpaca position `current_price` matches the live SIP PM tape, so P&L below is against live prices.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak (SIP) | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------------|-----------|------|-----|-------|--------|
+| XPON | $7.41 | +40.6% | C — Expion Energy pivot | 17:00 ET | $7.24 | 04:05 ET | open | — | **-12.3%** (live ~$6.45) | 🔴 Open, underwater |
+| YYGH | $1.61 | — | None | 17:00 ET | $2.13 | 04:00 ET | open | — | **+28.0%** (live ~$2.06) | 🟢 Open, in profit |
+
+**Total Realized P&L (Alpaca fills only): +€0.00** (nothing sold this pulse; WLDS was closed at the 10:30 pulse yesterday, -$17.92).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **9** (21:30, 22:00, 22:15, 22:30, 22:45, 23:00, 23:30, 00:00, 00:30 CET) — **7 of 7 scheduled scans ran** (plus 2 extra). Full entry-window coverage.
+- Candidates found: WVVIP, DAIC, XPON, YYGH, CDTG, DDC, and others across scans
+- Retrospective matches: WVVIP ✓, DAIC ✓, XPON ✓, YYGH ✓ — all caught
+
+### Missed Opportunities
+
+No significant missed opportunities. Today's winner (WVVIP) was detected in every scan and correctly skipped (Grade D, SPIKE→FADE, no fillable book).
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak (SIP) | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------------|-----------|---------------|------------|-----------|-----------|---------|
+| WVVIP | $6.88 (+107%) | 16:45 ET | **Spike→fade** | $9.79 PM SIP peak | +42% | +194% | Faded in AH, **re-exploded in PM** (float 4.0M, >3M) |
+| DAIC | $6.18 (+59% off $3.88) | 17:15 ET | Build | $6.29 PM SIP | +2% | +62% | Continued (multi-day runner, day 2) |
+| XPON | $8.17 area | AH | Build/hold | $7.24 | -11% | +40% | Faded into PM (entered, now underwater) |
+| YYGH | $1.87 | AH | Spike→build | $2.13 PM SIP | +14% | +61% | Continued into PM (entered, in profit) |
+
+**AH-peak-vs-PM-peak:** WVVIP PM peak ($9.79) exceeded its AH peak ($6.88) — a re-explosion, AH was NOT the better exit. DAIC PM ($6.29) ≈ AH ($6.18), marginal continue. No extreme-zone (>~+130% from close) fade case today: WVVIP AH peak was +107% from the $3.33 close (under the +130% zone); DAIC ~+59% from $3.88. Extreme-runner fade tally unchanged (8 fade / 1 continue).
+
+### Notes
+
+- **7 of 7 scans ran — no coverage failure.** Full entry-window coverage.
+- **Fade-rule false-negative:** WVVIP faded in AH ($6.88 @16:45 → $4.15) then re-exploded in PM ($9.79). **Float 4.0M is ABOVE the 3M threshold**, so it does NOT count toward the sub-3M re-explosion trigger. Standing sub-3M count unchanged: **4 of 14 (below the ≥80% trigger).** WVVIP is a >3M-float, Grade D preferred data point — higher-float faders can re-explode, but they are the negative control and do not move the float-conditional hypothesis.
+- **PM-only gapper:** morning's biggest raw mover = WVVIP (+194% SIP). It **had a real AH footprint** (spiked >100% in AH), so it is an **AH→PM continuation**, NOT a PM-only gapper. No PM-only gapper blind spot today.
+- **In-window feed-lag miss:** none — WVVIP was surfaced by every scan. Standing count unchanged: **4 (≥3 escalation trigger still REACHED — AH-data-source cross-check recommendation stands for the daily email).**
+- **Reverse-split tracker:** YYGH (entered) carries an old 30-for-1 reverse split (Jul 2025, months-old bucket), float 1.6M, Grade None; entered $1.61 → PM peak $2.13 = **+32%, continue**. Attribution to the split is weak (no fresh catalyst confirmed) — logged for completeness. This-week reverse-split bucket unchanged at **4/4 fade** (recency signal RESOLVED, downgrade recommendation stands for the daily email). Older-split bucket: now 4 continue / 2 fade with YYGH added.
+- **Quote-freshness:** Alpaca `quote` books stale (Aug 25 20:00 UTC) but position `current_price` matched live SIP PM — P&L reported against live prices, not stale figures.
+- **Stale-book execution-block:** none new (XPON filled despite a frozen quote). Standing count 3.
+- **Broker-block / price-floor / late-AH-tail:** none new this session.
+- **Winner is un-actionable by design:** WVVIP is a redeemable preferred with a dilutive offering and no fillable AH book — a correct skip, not a strategy failure. The detection baseline holds at 86.6%.
+
+### Price Charts
+
+WVVIP (winner): AH SIP spike to $6.88 @16:45 ET (254K sh/4,112 tr), faded all evening to ~$4.15, then PM re-explosion to $9.79 @04:00 ET (597K sh/13,764 tr), holding $8.2–8.3 at 04:20 ET. (Yahoo 2-day range shows a phantom $28.00 tick @09:45 ET — a bad print, ignore; real levels are SIP.)
