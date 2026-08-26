@@ -144,6 +144,33 @@ Scanner run at 17:00:11 ET: **8 hits**.
 
 Both no-catalyst Grade None: exit at first premarket opportunity. Not entered: XOS (first AH appearance, gate not met — also the Aug-17 chase basis name), MIMI/CDTG/TGL (thin, AH<12% or CONFIRM-3 NO), LTRX (thin 146 trades, 42.7M float, CONFIRM-3 NO), LDI (AH<10%, 110M float).
 
+## Scan 23:30 CET (5:30 PM ET) — AH
+
+Scanner run at 17:30:18 ET: **9 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $5.15 | +32.7% | +12.2% | $5.78 | +49.0% | 4.7M | 30.5M | 0.2 | 1.3M | Miscellaneous |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $2.48 | +0.4% | +32.7% | $3.29 | +33.2% | 4.7M | 616K | 7.6 | 26.2M | Internet Retail |
+| XOS | [TV](https://www.tradingview.com/chart/?symbol=XOS) | $3.60 | +2.3% | +5.8% | $3.81 | +8.2% | 1.2M | 16.8M | 0.1 | 7.0M | Motor Vehicles |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $1.80 | -4.3% | +8.3% | $1.95 | +3.7% | 659K | 186K | 3.6 | 5.8M | Misc Commercial Services |
+| LTRX | [TV](https://www.tradingview.com/chart/?symbol=LTRX) | $5.66 | -3.4% | +14.5% | $6.48 | +10.6% | 587K | 950K | 0.6 | 42.7M | Computer Peripherals |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $1.15 | +17.3% | +10.4% | $1.27 | +29.6% | 398K | 14.8M | 0.0 | 3.0M | Industrial Machinery |
+| WSHP | [TV](https://www.tradingview.com/chart/?symbol=WSHP) | $6.18 | +31.9% | +7.0% | $6.62 | +41.2% | 158K | 1.4M | 0.1 | 1.2M | Internet Software |
+| LDI | [TV](https://www.tradingview.com/chart/?symbol=LDI) | $0.88 | -4.5% | +6.6% | $0.94 | +1.8% | 148K | 1.6M | 0.1 | 110.4M | Finance/Rental/Leasing |
+| TGL | [TV](https://www.tradingview.com/chart/?symbol=TGL) | $2.14 | +0.0% | +5.1% | $2.25 | +5.1% | 91K | 1.2M | 0.1 | 1.8M | Misc Commercial Services |
+
+**Held positions (entered 23:00, managed in premarket by position-evaluation.md — not re-entered):**
+- DAIC — `SPIKE 16:09ET +17% $6.00 2611 trades / 362k sh`; `CONFIRM-3 YES ignition 16:05ET 3.5x; confirmed 16:15ET $6.63`. Position now $6.04 (-0.8% vs $6.09 fill). AH faded to +12.2% from +20.9% at 23:00 but Day% still +32.7%.
+- WNW — `SPIKE 16:16ET +15% $2.86 142 trades / 28k sh`; `CONFIRM-3 YES ignition 16:15ET 420.6x; confirmed 16:25ET $3.19`. Position now $3.24 (+3.8% vs $3.12 fill). AH holding +32.7%.
+
+**New-candidate evaluation (multi-scan >10% AH names, gate open):**
+- **LTRX** — Skip: single-bar spike. SIP shows one pop at 20:05Z (240,914 sh / 3,163 trades) then volume collapsed to a few thousand sh/bar (latest 21:15Z 3,180 sh / 45 trades). `NO-SPIKE→SPIKE 16:05ET` but `CONFIRM-3 NO failed third-bar hold/volume`, 42.7M float, AH only +10.6% Total%. One-bar pop, no accumulation.
+- **CDTG** — Skip: no ignition. `NO-SPIKE peak +13% @16:46ET`, `CONFIRM-3 NO no local-volume new-high ignition`. SIP is a thin $1.15→$1.27 drift (15-46k sh/bar, 50-190 trades), volume decaying (latest 5,033 sh / 48 trades). No co-spike, no real igniter.
+- XOS — Skip: AH faded to +5.8% (was +12.2% at 23:00), below threshold, single-appearance fade. MIMI/WSHP/LDI/TGL — AH <10%, thin.
+
+**No new paper trades this scan.** No new candidate clears the entry gate: LTRX/CDTG both CONFIRM-3 NO with fading/thin volume, XOS faded below threshold. DAIC + WNW remain the night's two entries. Next scan 00:00 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
