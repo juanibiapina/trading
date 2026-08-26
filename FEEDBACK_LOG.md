@@ -6,6 +6,41 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-08-25 — re: Trading Scanner Report - 2026-08-24
+
+**Juan said:** "update the process because DAIC should not have been traded:
+there's no volume spike. normal hours volume is the same as after hours, it was
+only a price spike. UPDATE PROCESS. WLDS seems to have been traded well. Good
+job."
+
+**Interpretation:** Two points.
+1. **DAIC** — a *price* spike with **no volume spike** (after-hours per-bar
+   volume ≈ normal-hours volume) must not be entered. Note: DAIC was in fact
+   *not* traded this cycle (correctly skipped on the +150% extension ceiling),
+   but Juan's steer is a general selection rule, not a correction of an actual
+   entry. He is reinforcing the CONFIRM-3 volume-spike requirement: absent a
+   real AH volume surge over the ticker's own preceding bars, a large % move is
+   a price-only spike and is a hard skip. Same signature Juan flagged on GRSD
+   ("absolutely a NOGO ... no volume spike", 08-14), BOOM (07-31), and ONMD
+   ("not enough volume", 07-29).
+2. **WLDS** — process approval despite the -19.4% loss. WLDS was a real
+   volume-backed AH BUILD that cleared CONFIRM-3 and the 2-scan gate; it faded
+   into premarket. Juan grades the *selection process* as correct even though
+   the trade lost — the volume-spike-backed BUILD is the pattern to keep.
+
+**Action:** Routed both.
+- Point 1 folds into the standing **CONFIRM-3 hard entry gate** work
+  (Initiative 3) and the **no-AH-volume-spike negative filter** (Initiative 1,
+  reopened angle): the gate must measure each ignition bar's volume jump against
+  the ticker's own immediately preceding bars, and hard-skip price-only spikes
+  where AH per-bar volume ≈ normal-hours volume. This is another live datapoint
+  (DAIC) reinforcing an already-scoped rule; no new initiative. Logged for the
+  next `scanner-improvement` run to encode as an explicit price-only-spike skip.
+- Point 2 is positive reinforcement of the current volume-backed-BUILD selection
+  path; no change needed. Recorded as a keep-doing signal.
+
+---
+
 ### 2026-08-21 — re: Trading Scanner Report - 2026-08-20
 
 **Juan said:** "Go ahead." (Reply to the email's "A Few Decisions For You"

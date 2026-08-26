@@ -301,6 +301,19 @@ tighter scan cadence. Next: (a) add a no-AH-volume-spike negative filter to the
 scanner grade, (b) prototype a spike-bar entry trigger once scan cadence can
 resolve the bar. Captured from FEEDBACK_LOG 2026-07-16.
 
+**Feedback update (2026-08-25):** Juan flagged DAIC (re: 08-24 email) — "no
+volume spike. normal hours volume is the same as after hours, it was only a
+price spike. UPDATE PROCESS." DAIC was not actually entered (skipped on the
++150% ceiling), so this is a general selection-rule steer, not an entry
+correction: a large % move with AH per-bar volume ≈ normal-hours volume is a
+price-only spike and a hard skip. Reinforces the per-bar volume-change gate
+already proposed here (measure the ignition bar's volume vs the ticker's own
+preceding bars, not only shares/avg-vol) and the CONFIRM-3 hard entry gate in
+Init 3. Same signature as GRSD (08-14), BOOM (07-31), ONMD (07-29). Juan also
+praised the WLDS trade ("traded well, good job") despite its -19.4% loss — the
+volume-backed AH BUILD selection is the pattern to keep even when a trade fades.
+Captured from FEEDBACK_LOG 2026-08-25.
+
 **Feedback update (2026-07-31):** Juan also rejected BOOM because its volume
 before the price spike stayed roughly flat and the later increase was too small
 to justify entry. His follow-up explicitly ordered the open BOOM position sold;
