@@ -74,3 +74,35 @@ Scanner run at 16:30:12 ET: **5 hits**.
 - CRE SIP bars: $6.45 → $6.25 → $6.35 → $6.61, vol 218k → 60k → 46k → 66k / 2,540 → 881 → 670 → 877 trades. Holding a ~$6.3–6.6 base near its regular close, real book. Still a live AH candidate but volume is decaying off the first-bar spike, not accelerating like DAIC.
 
 **No paper trades:** 22:30 scan is observation-only per learning-phase rule (no entries before 23:00 CET / 5:00 PM ET). DAIC is the standout — low float, real accelerating volume, CONFIRM-3 YES — but this is only its **first** AH-scan appearance (22:00 and 22:15 were 0 hits), so it has not yet met the 2-AH-scan gate. Re-evaluate DAIC and CRE at 23:00+ CET; both need a second AH-scan read plus catalyst/trajectory/ceiling checks. DAIC Total% +58% is well under the +150% extension ceiling.
+
+## Scan 22:45 CET (4:45 PM ET) — AH
+
+Scanner run at 16:45:13 ET: **6 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $5.15 | +32.7% | +21.7% | $6.27 | +61.6% | 3.5M | 30.4M | 0.1 | 1.3M | Miscellaneous |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $2.48 | +0.4% | +29.0% | $3.20 | +29.5% | 1.1M | 154K | 6.8 | 26.2M | Internet Retail |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $1.80 | -4.3% | +19.4% | $2.15 | +14.4% | 497K | 165K | 3.0 | 5.8M | Misc Commercial Services |
+| LTRX | [TV](https://www.tradingview.com/chart/?symbol=LTRX) | $5.66 | -3.4% | +13.8% | $6.44 | +9.9% | 455K | 934K | 0.5 | 42.7M | Computer Peripherals |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $1.15 | +17.3% | +10.4% | $1.27 | +29.6% | 207K | 14.8M | 0.0 | 3.0M | Industrial Machinery |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.59 | +4.4% | +9.6% | $3.94 | +14.4% | 111K | 47K | 2.3 | 634K | Pharmaceuticals: Major |
+
+**Instrumentation (log-only, no decision impact):**
+- DAIC — `SPIKE 16:09ET +17% $6.00 2611 trades / 362k sh (first co-spike bar)`; `CONFIRM-3 YES ignition 16:05ET 3.5x; confirmed 16:15ET $6.63`. Second AH-scan appearance (also hit at 22:30) — now meets the 2-AH-scan gate. Real accelerating low-float (1.3M) accumulation.
+- WNW — `SPIKE 16:16ET +15% $2.86 142 trades / 28k sh`; `CONFIRM-3 YES ignition 16:15ET 420.6x; confirmed 16:25ET $3.19`. SIP bars show a real, accelerating igniter: 151k → 565k → 624k → 1.17M sh across bars (1,368 → 5,758 → 6,886 → 13,788 trades), vwap $2.78 → $3.43. `tradable=true`. Float 26.2M (recorded, not a filter). **First** AH-scan appearance (0 hits at 22:00/22:15, absent 22:30) — only one live AH read, gate not met.
+- MIMI — `SPIKE 16:08ET +17% $2.11 219 trades / 45k sh`; `CONFIRM-3 NO failed third-bar hold/volume`. Thin.
+- LTRX — `SPIKE 16:05ET +20% $6.79 146 trades / 14k sh`; `CONFIRM-3 NO failed third-bar hold/volume`. Thin (146 trades), 42.7M float.
+- CDTG — `NO-SPIKE peak +10% @16:19ET`; `CONFIRM-3 NO no local-volume new-high ignition`.
+- SHPH — recurring `tradable=false` broker-block name (634K float), AH <10%; carry as likely-untradable if it clears threshold later.
+
+**Catalyst search:**
+- DAIC — CID HoldCo Inc. No same-day company catalyst found; low-float momentum squeeze (StocksToTrade/Timothy Sykes momentum-trader chatter, "strategic developments" vague, ran sub-$0.50 → $6+ over prior days). **No catalyst found.**
+- WNW — Meiwu Technology (China online food/skincare retail). No same-day PR/8-K/earnings found. **No catalyst found.**
+
+**No paper trades:** 22:45 scan is observation-only per learning-phase rule (no entries before 23:00 CET / 5:00 PM ET). Standouts for the 23:00 gate:
+- **DAIC** — clears the 2-AH-scan gate (22:30 + 22:45), Total% +61.6% well under the +150% ceiling, Day% +32.7% (above -15%), real accelerating volume, CONFIRM-3 YES, low float. No catalyst (concern noted, not a skip). Top entry candidate at 23:00 if it holds.
+- **WNW** — real volume-backed igniter but only one AH-scan read so far; needs a second AH appearance at 23:00 to clear the gate.
+- **CRE** (21:30 watch, TradingView-underreported) — SIP volume decaying off the first-bar spike, not accelerating; still tracking via feed-lag cross-check.
+
+Re-evaluate DAIC, WNW, CRE at the 23:00 CET scan when the entry gate opens.
