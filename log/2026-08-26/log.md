@@ -52,3 +52,25 @@ Scanner run at 16:15:16 ET: **0 hits**. No candidates above threshold on Trading
 - Other watch names (VMAR, DAIC, EXYN, RDGT): no scan hit, not cross-checked (lower priority, no low-float+volume profile).
 
 **No paper trades:** 22:15 scan is observation-only per learning-phase rule (no entries before 23:00 CET / 5:00 PM ET). CRE flagged to re-evaluate at 23:00+ scans — needs 2-AH-scan gate (22:00+ CET) plus catalyst/trajectory checks before any entry. CRE did not appear above threshold at 22:00, so it currently has only one live AH read.
+
+## Scan 22:30 CET (4:30 PM ET) — AH
+
+Scanner run at 16:30:12 ET: **5 hits**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $5.15 | +32.7% | +19.0% | $6.13 | +58.0% | 1.1M | 30.1M | 0.0 | 1.3M | Miscellaneous |
+| LTRX | [TV](https://www.tradingview.com/chart/?symbol=LTRX) | $5.66 | -3.4% | +13.4% | $6.42 | +9.6% | 356K | 922K | 0.4 | 42.7M | Computer Peripherals |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $1.80 | -4.3% | +8.9% | $1.96 | +4.3% | 320K | 146K | 2.2 | 5.8M | Misc Commercial Services |
+| CDTG | [TV](https://www.tradingview.com/chart/?symbol=CDTG) | $1.15 | +17.3% | +6.1% | $1.22 | +24.5% | 109K | 14.7M | 0.0 | 3.0M | Industrial Machinery |
+| SHPH | [TV](https://www.tradingview.com/chart/?symbol=SHPH) | $3.59 | +4.4% | +7.5% | $3.86 | +12.2% | 97K | 45K | 2.1 | 634K | Pharmaceuticals: Major |
+
+**Instrumentation (log-only, no decision impact):**
+- DAIC — `SPIKE 16:09ET +17% $6.00 2611 trades / 362k sh (first co-spike bar)`; `CONFIRM-3 YES ignition 16:05ET 3.5x; confirmed 16:15ET $6.63`. SIP bars show real, accelerating AH accumulation: 133k → 467k → 722k → 1.8M sh across the first four 5-min bars (977 → 3,535 → 5,791 → 18,346 trades), vwap $5.15 → $6.58. Genuine low-float (1.3M) igniter.
+- LTRX — `SPIKE 16:05ET +20% $6.79 146 trades / 14k sh`; `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume`. Thin (146 trades), 42.7M float. Not a real accumulating spike.
+- MIMI / CDTG / SHPH — AH change <10%, no instrumentation run. SHPH is the recurring `tradable=false` broker-block name (634K float); carry as likely-untradable if it clears threshold later.
+
+**Feed-lag cross-check (SIP) — CRE (21:30 watch name, under-reported by TradingView):**
+- CRE SIP bars: $6.45 → $6.25 → $6.35 → $6.61, vol 218k → 60k → 46k → 66k / 2,540 → 881 → 670 → 877 trades. Holding a ~$6.3–6.6 base near its regular close, real book. Still a live AH candidate but volume is decaying off the first-bar spike, not accelerating like DAIC.
+
+**No paper trades:** 22:30 scan is observation-only per learning-phase rule (no entries before 23:00 CET / 5:00 PM ET). DAIC is the standout — low float, real accelerating volume, CONFIRM-3 YES — but this is only its **first** AH-scan appearance (22:00 and 22:15 were 0 hits), so it has not yet met the 2-AH-scan gate. Re-evaluate DAIC and CRE at 23:00+ CET; both need a second AH-scan read plus catalyst/trajectory/ceiling checks. DAIC Total% +58% is well under the +150% extension ceiling.
