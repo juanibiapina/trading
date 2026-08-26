@@ -132,8 +132,20 @@ async function submit(side, flags, positional) {
 }
 
 async function cmdCancel(flags, positional) {
-  const id = positional[0];
+  let id = positional[0];
   if (!id) throw new Error("usage: cancel <id>");
+  // `orders` prints an 8-char id prefix; Alpaca's DELETE needs the full UUID.
+  // Passing the short prefix returns a confusing "422: order_id is missing".
+  // Resolve any non-UUID input against open orders by prefix so `cancel <short>`
+  // works with the id shown by `orders`.
+  const isFullUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id);
+  if (!isFullUuid) {
+    const open = await api(TRADING, "/v2/orders?status=open&limit=500&direction=desc");
+    const matches = open.filter((o) => o.id.startsWith(id.toLowerCase()));
+    if (matches.length === 0) throw new Error(`no open order matches id prefix '${id}'`);
+    if (matches.length > 1) throw new Error(`ambiguous id prefix '${id}' matches ${matches.length} open orders: ${matches.map((o) => o.id.slice(0, 8)).join(", ")}`);
+    id = matches[0].id;
+  }
   await api(TRADING, `/v2/orders/${id}`, { method: "DELETE" });
   console.log(`Canceled ${id}`);
 }
