@@ -41,3 +41,14 @@ None of the 21:30 regular-session watch names (CRE, WSHP, VMAR, DAIC, EXYN, RDGT
 ## Position Evaluation — 14:30 CET
 
 No open positions (Alpaca `positions` = none; `OPEN_POSITIONS.md` reconciled). YYGH + XPON both closed in the 10:30 pulse. Nothing to evaluate.
+
+## Scan 22:15 CET (4:15 PM ET) — AH
+
+Scanner run at 16:15:16 ET: **0 hits**. No candidates above threshold on TradingView feed.
+
+**Feed-lag cross-check (SIP) on 21:30 watch names:**
+- **CRE** — SIP first AH bar (20:00Z) O $6.77 H $6.81 L $6.14 C $6.45, vol 218,594 / 2,540 trades, vwap $6.60. Real AH accumulation, holding near its ~$6.07 regular close (still positive on the day at +136%). Under-reported by TradingView scan — tracking as live AH candidate. Low float 1.1M, biggest mover.
+- **WSHP** — SIP first AH bar vol 22,042 / 174 trades, C $6.24. Thin, not a real spike.
+- Other watch names (VMAR, DAIC, EXYN, RDGT): no scan hit, not cross-checked (lower priority, no low-float+volume profile).
+
+**No paper trades:** 22:15 scan is observation-only per learning-phase rule (no entries before 23:00 CET / 5:00 PM ET). CRE flagged to re-evaluate at 23:00+ scans — needs 2-AH-scan gate (22:00+ CET) plus catalyst/trajectory checks before any entry. CRE did not appear above threshold at 22:00, so it currently has only one live AH read.
