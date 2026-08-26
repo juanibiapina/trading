@@ -15,6 +15,14 @@ Regular-session scan (before AH open). No entries per regular-session caution ru
 
 **No paper trades:** regular-session scan, AH not open. Re-evaluate watch names at 22:00+ CET AH scans; only enter if momentum carries into after-hours.
 
+## Scan 22:00 CET (4:00 PM ET) — AH open
+
+Scanner run at 16:00:11 ET (AH just opened): **0 hits**. No candidates above threshold.
+
+None of the 21:30 regular-session watch names (CRE, WSHP, VMAR, DAIC, EXYN, RDGT) carried into after-hours above the scan threshold at AH open. First AH minute is thin; postmarket volume feeds are near-empty this early.
+
+**No paper trades:** 22:00 scan is observation-only per learning-phase rule (no entries before 23:00 CET / 5:00 PM ET). No candidates to instrument. Re-scan at 22:30 / 23:00.
+
 ## Position Evaluation — 10:30 CET
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
