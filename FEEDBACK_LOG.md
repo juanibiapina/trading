@@ -6,6 +6,38 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-08-26 — re: Trading Scanner Report - 2026-08-25
+
+**Juan said:** "again, *WVVIP is NOT GOOD.* *YYGH is the real winner.*"
+
+**Interpretation:** The email crowned **WVVIP** as "Today's Winner" (+194% PM,
+Grade D preferred, $1.75M dilution offering) even though it had **no fillable AH
+book** (`ask $0.00 x0`) — uncapturable, correctly skipped. Juan rejects framing
+an un-actionable phantom spike as the winner. The **real winner** is **YYGH**,
+the volume-backed name we actually traded to +25.5% (+$25.42). The existing
+winner bar (>100% on high volume, added 07-14/07-16 for ATPC) let WVVIP through
+because it did clear +100% on volume — but it was uncapturable. The "again"
+signals a repeat of that winner-bar note: a mover that is real on the tape but
+un-actionable in the book must not be crowned. Necessary but not sufficient: the
+winner must also be **capturable**.
+
+**Action:** Applied now (recurring point, low-risk framing tweak; standing
+apply-don't-ask directive).
+- Added an **"Actionable-winner refinement"** to `prompts/morning-evaluation.md`
+  winner-bar section: clearing >100% on volume is necessary but not sufficient;
+  the headline winner must be **capturable** (real fillable AH book). An
+  uncapturable move (`ask $0.00 x0`, illiquid tape, phantom/dilution spike we
+  correctly skipped) is not the winner — crown the best actionable mover
+  instead and note the bigger uncapturable spike separately as "detected &
+  correctly skipped, un-actionable."
+- Added an HTML comment gate to the "Today's Winner" block in
+  `prompts/daily-email.md` so the email crowns the captured/tradable mover, not
+  a phantom spike.
+- Flagged for the next `scanner-improvement` run to keep the email framing in
+  sync. No scanner threshold, entry gate, or strategy change — framing only.
+
+---
+
 ### 2026-08-25 — re: Trading Scanner Report - 2026-08-24
 
 **Juan said:** "update the process because DAIC should not have been traded:

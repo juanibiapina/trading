@@ -79,6 +79,21 @@ real winner today"** and say why — do **not** crown a weak, low-volume mover
 baseline diagnostic still runs on whatever the biggest genuine mover was, but
 the email must not present a weak name as a winner.
 
+**Actionable-winner refinement (Juan, recurring — 2026-08-26 WVVIP feedback):**
+clearing >100% on volume is necessary but **not sufficient** to be crowned "the
+winner." The headline winner must also be **capturable** — a name with a real
+fillable AH book we could actually have entered. An **uncapturable** move (no
+fillable book, `ask $0.00 x0`, illiquid AH tape, or otherwise un-actionable — a
+phantom/dilution spike we correctly skipped) is **not** the winner even at
++194%. When the biggest % mover is uncapturable, crown the best **actionable,
+capturable** mover instead — the volume-backed name we did (or realistically
+could have) traded — and note the bigger uncapturable spike separately as
+"detected & correctly skipped, un-actionable." (Basis: WVVIP Aug 25→26, Grade D
+preferred, +194% PM but `ask $0.00 x0` no fillable book — headlined as "Today's
+Winner" when the real captured winner was YYGH, actually traded +25.5%. Juan:
+"again, WVVIP is NOT GOOD. YYGH is the real winner." The "again" ties this to
+the 07-16 ATPC winner-bar note.)
+
 This is "today's winner." Document it with: sector, catalyst, float, AH entry price, current PM price, hypothetical P&L, and the SIP volume that confirms it cleared the bar.
 
 For the catalyst lookup use `timeout 60 websearch search "TICKER news July 27 2026" -n 5` — the `search` subcommand is required (bare `websearch "query"` errors with `unknown command`), and on `HTTP 429: Too Many Requests` retry once with `-p tavily` before giving up. Cap it at 2-3 searches; an unverified catalyst is recorded as Grade None, not chased.

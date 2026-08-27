@@ -116,6 +116,11 @@ node scripts/send-email-inboxkit.js \
 <p>[How many scans ran, unique tickers, notable movers]</p>
 
 <h3 style="color: #555;">Today&rsquo;s Winner</h3>
+<!-- Winner must be ACTIONABLE/capturable (real fillable AH book), not just the
+     biggest %. An uncapturable phantom/dilution spike (ask $0.00 x0, no fillable
+     book) is NOT the winner even at +194% — crown the best captured/tradable
+     mover and note the uncapturable spike separately as detected & skipped.
+     See morning-evaluation.md "Actionable-winner refinement" (WVVIP 08-26). -->
 <p><strong>[TICKER]</strong> ([sector]) &mdash; [catalyst]<br/>
 AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;">+X%</span> hypothetical)</p>
 <p>Scanner caught it? <strong style="color: #2e7d32;">YES</strong> or <strong style="color: #c62828;">NO</strong> &mdash; [brief reason if missed]</p>
