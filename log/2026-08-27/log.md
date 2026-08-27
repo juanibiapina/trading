@@ -40,6 +40,10 @@ Scanner ran at 16:00:11 ET — AH just opened, volume not yet accumulated. **0 h
 
 Observation-only scan (learning phase: no entries before 23:00 CET). Prior 21:30 watch names (WNW, FALFF, CELU, PPCB) did not cross AH threshold at open. Will re-check at 22:30/23:00 as AH volume builds.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+Scanner ran at 16:15:14 ET — **0 hits.** No candidates found. AH volume still accumulating early. Prior 21:30 watch names (WNW, FALFF, CELU, PPCB) still not crossing AH threshold. Observation-only (learning phase: no entries before 23:00 CET). Re-check at 22:30/23:00.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
