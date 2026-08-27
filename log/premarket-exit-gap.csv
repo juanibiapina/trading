@@ -28,3 +28,5 @@ date,ticker,entry,exit,exitZ,note
 2026-08-25,WLDS,3.30,2.66,2026-08-25T08:30:34Z,held (bought 08-24 $3.30) exit 04:30 ET -19%; thin dead book, PM peak only $2.85 04:40 ET (+7.1%, 186-696 tr/bar); lim10 ($2.93) unfilled, PM-last ~$2.65 (-0.4%)
 2026-08-26,XPON,?,6.42,2026-08-26T08:31:34Z,held exit 04:31 ET; live book, PM peak $7.15 05:10 ET (+11.4%, 145k sh/2827 tr) then faded; lim10 ($7.06) FILLS, PM-last ~$6.6 (+2.8%)
 2026-08-26,YYGH,?,2.02,2026-08-26T08:30:40Z,held exit 04:30 ET; live book, PM peak $2.61 07:00 ET (+29.2%) then faded; lim10 ($2.22) FILLS, PM-last ~$2.0 (-1.0%)
+2026-08-27,WNW,?,3.81,2026-08-27T08:30:51Z,held exit 04:30 ET; dead book, PM peak only $3.96 04:35 ET (+3.9%, 150k sh/1958 tr); lim10 ($4.19) unfilled, faded to PM-last $3.67 (-3.7%)
+2026-08-27,DAIC,?,5.81,2026-08-27T08:30:49Z,held exit 04:30 ET; thin dead book, PM peak only $5.95 06:05 ET (+2.4%, thin 18k sh/343 tr); lim10 ($6.39) unfilled, PM-last $5.88 (+1.2%)

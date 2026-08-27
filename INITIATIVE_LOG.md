@@ -7,6 +7,20 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-08-27 — Initiative 6 pilot: first admitted out-of-sample entry (MIMI) FADED, entered n=11, fade-tail now 2/11. Initiative 3 sim seeded (WNW, DAIC, n=26)
+
+**Evaluated:** The 2026-08-26 steps **worked.** Init 6's next step was to keep seeding holdable PM-only gappers and watch the wick-then-rebuild false-negative frequency; Init 3's was to keep seeding held-name exits (the +10%-limit edge robust at n=24). Both had fresh data today: one new holdable PM-only gapper (MIMI 08-27 +31%) and two held-name exits at the 08-27 04:30 ET pulse (WNW $3.81, DAIC $5.81).
+
+**Step taken:** **Pilot / Initiative 6 (active slot):** re-ran `init6-pm-pilot.js` (25 holdable candidates now). MIMI 08-27 was **admitted** by the continuation gate (not wick-skipped like WVVIP/RDIB) — entered $2.45 at 04:15 ET — the first admitted out-of-sample entry since the pilot started. **Parallel low-risk / Initiative 3:** today's 04:30 ET position eval sold two held names (WNW $3.81, DAIC $5.81). Measured each post-exit premarket SIP peak, appended both to `peak-seeking-exit-sim.js` (n=24 -> n=26) and `premarket-exit-gap.csv`, re-ran. All log-only, no orders.
+
+**Result:** **Init 6:** MIMI **faded** — never hit the +10% limit ($2.70), dumped to PM-last -14.3%. Entered set moves n=10 -> **n=11: SUM +47.4% / mean +4.3% / median +10.0% / positive 9/11**, vs a PM-last floor of -6.4% and a do-nothing baseline of 0%. Net of ~2% spread ~+2.3%/name. The **fade-tail is now 2 of 11 (BIVI -27.1%, MIMI -14.3%)** — the risk the resting limit cannot dodge; the first admitted out-of-sample entry being a loser is a warning to watch the ratio. Median still +10.0% (7/11 fill intrabar). **Init 3:** both new seeds are dead-book stallers with tiny post-exit premarket upside and the +10% limit unfilled — WNW $3.81 -> peak $3.96 04:35 ET (+3.9%, 150k sh), lim10 ($4.19) unfilled, PM-last $3.67 (-3.7%); DAIC $5.81 -> peak $5.95 06:05 ET (+2.4%, thin 18k sh/343 tr), lim10 ($6.39) unfilled, PM-last $5.88 (+1.2%). Re-ran the sim: plain **+10% sell-limit stays the best rule at n=26: SUM +78.7% / mean +3.0%, positive 17/26** (mean eased +3.4 -> +3.0 from the two dead-book seeds, one slightly positive one slightly negative — negligible drag, conclusion unchanged).
+
+**Hypothesis / next step:** Init 6 — the fade-tail (BIVI, MIMI) is the key threat; if it climbs toward ~1-in-4 the mean edge erodes below the ~2% spread and the pilot weakens. Keep seeding holdable PM-only gappers and track the fade-tail ratio before proposing any live PM-gapper pulse. Init 3 — keep seeding held-name exits; the +10%-limit edge is robust at n=26 (positive 17/26) and dead-book stallers keep contributing ~0. Keep `CONFIRM-3` and all sims log-only.
+
+**Needs from Juan:** two open asks unchanged (no new one). (1) The Init 3 peak-seeking-exit proposal — replace the plain 04:30 ET market exit for held names with a resting +10% sell-limit (GTC premarket, cancel 09:30 ET, plain market exit fallback; optional wide ~-15% catastrophe-stop). Evidence: +78.7% total / +3.0%/name over 26 seeds, positive 17/26. Veto window, not applied. (2) Still open from 08-07: the Initiative 2 broker/feed decision for the ~203% fill gap (Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills).
+
+---
+
 ### 2026-08-26 — Initiative 6 pilot: wick-then-rebuild false-negative recurred (RDIB); denominator fix tested and rejected. Initiative 3 sim seeded (XPON, YYGH, n=24)
 
 **Evaluated:** The 2026-08-25 Init 6 pilot step **worked** (re-ran deterministically; WVVIP correctly skipped as a wick-peak, entered set held at n=10). Its next step was to seed new holdable PM-only gappers and watch the wick-then-rebuild false-negative frequency. One new candidate logged (RDIB 08-26 +67%, footprint=none holdable) — and it recurs the exact WVVIP wick-then-rebuild pattern, so the 08-25 "revisit the denominator if it recurs" trigger is met.

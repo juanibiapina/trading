@@ -210,6 +210,22 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-08-27 (strategy-advance) — pilot entered a fresh out-of-sample
+   name (MIMI) and it FADED; the entered set is now n=11 with a second fade-tail
+   loser.** The tracker grew to 25 holdable footprint=none candidates (MIMI 08-27
+   +31% added, a PM-only gapper). Re-ran `init6-pm-pilot.js`: unlike WVVIP/RDIB
+   (both wick-skipped), MIMI was **admitted** by the continuation gate (entered
+   $2.45 at 04:15 ET) and then **faded** — never reached the +10% limit, dumped
+   to PM-last -14.3%. This is the first admitted out-of-sample entry since the
+   pilot started and it is a loser, so the entered set moves n=10 -> **n=11: SUM
+   +47.4% / mean +4.3% / median +10.0% / positive 9/11**, vs a PM-last floor of
+   -6.4% and a do-nothing baseline of 0%. Net of ~2% spread the edge is
+   ~+2.3%/name. **The fade-tail is now 2 of 11 (BIVI -27.1%, MIMI -14.3%)** — the
+   risk the resting limit cannot dodge, and worth watching as the key threat to
+   the edge. Median still +10.0% (7/11 fill the limit intrabar). Still log-only,
+   no orders. Next: keep seeding; if the fade-tail keeps growing toward ~1-in-4,
+   the mean edge erodes below the spread and the pilot weakens — track that ratio
+   before proposing any live PM-gapper pulse to Juan.
    **Update 2026-08-26 (strategy-advance) — pilot re-run + gate-denominator
    test; the wick-then-rebuild false-negative recurred (RDIB), entered n stays
    10.** The tracker grew to 24 holdable footprint=none candidates (RDIB 08-26
