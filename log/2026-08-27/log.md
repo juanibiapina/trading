@@ -69,6 +69,33 @@ Prior 21:30 watch names FALFF/PPCB did not carry into AH. WNW (day-2, sold +22.1
 
 **No entries** — observation-only scan. AEMD is the lead candidate for the 23:00 CET scan if it holds >10% AH and reappears.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+Scanner ran at 16:45:15 ET — **6 hits.** Observation-only (learning phase: no entries before 23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AEMD | [TV](https://www.tradingview.com/chart/?symbol=AEMD) | $2.17 | -4.8% | +34.1% | $2.91 | +27.6% | 4.9M | 638K | 7.6x | 695K | Medical Specialties |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $0.54 | +7.5% | +11.4% | $0.60 | +19.8% | 579K | 61.0M | 0.0x | 4.4M | Misc Commercial Services |
+| MI | [TV](https://www.tradingview.com/chart/?symbol=MI) | $2.85 | +4.0% | +20.7% | $3.44 | +25.5% | 477K | 227K | 2.1x | 231K | Internet Software/Services |
+| AAME | [TV](https://www.tradingview.com/chart/?symbol=AAME) | $1.57 | +20.8% | +5.1% | $1.65 | +26.9% | 234K | 252K | 0.9x | 3.9M | Multi-Line Insurance |
+| MODD | [TV](https://www.tradingview.com/chart/?symbol=MODD) | $3.61 | +9.1% | +6.6% | $3.85 | +16.3% | 222K | 530K | 0.4x | 7.6M | Medical Specialties |
+| ACET | [TV](https://www.tradingview.com/chart/?symbol=ACET) | $9.01 | +0.7% | +6.5% | $9.60 | +7.3% | 95K | 97K | 1.0x | 8.2M | Pharmaceuticals |
+
+**Candidates with AH change >10%: AEMD, NCPL, MI.**
+
+- **AEMD** — 2nd AH scan appearance (22:30 +33.6%, 22:45 +34.1%). Real volume-backed spike, SIP accumulating: 283K → 1.12M → 1.09M → 1.48M → 1.10M → 812K → 623K sh/bar, 3-12K trades/bar. SIP high $3.24 (20:15 bar), last bar 20:30 C $3.00 — fading modestly off peak but holding within 20% of high. Low float 695K (ideal). Day% -4.8% (fine). Total% +27.6% (well under +150% ceiling). Would clear 2-AH-scan gate at 23:00 if it holds >10%.
+  - `SPIKE 16:03ET +28% $2.77 1139 trades / 100k sh (first co-spike bar)`
+  - `CONFIRM-3 YES ignition 16:05ET 4.0x; confirmed 16:15ET $3.06`
+  - Catalyst: **no same-day catalyst found** (per 22:30 search). Grade None/D pending. Concern noted.
+- **NCPL** — first AH appearance tonight, AH +11.4%. SIP volume choppy: builds to 378K (20:20) then 1.22M sh (20:30) but price round-trips (C $0.57 ≈ open). Float 4.4M. `SPIKE 16:30ET +20% $0.65 703 trades / 379k sh`; `CONFIRM-3 NO no local-volume new-high ignition`. Needs a 2nd AH scan; watch.
+- **MI** — first AH appearance, AH +20.7%. Tiny float 231K. SIP spiked to $3.69 (20:25) then collapsed L $2.85, C $3.05 (20:30) — spike→fade forming. `SPIKE 16:19ET +15% $3.28 124 trades / 10k sh`; `CONFIRM-3 PENDING`. Watch.
+- **AAME / MODD / ACET** — AH change below 10% threshold. Skip.
+
+Prior 21:30 watch names (WNW day-2, FALFF, CELU, PPCB) not crossing AH threshold. CELU dropped off entirely.
+
+**No entries** — observation-only scan (before 23:00 CET). AEMD is lead for the 23:00 scan (would clear 2-AH-scan gate); NCPL and MI are watch. Prefer AEMD's BUILD-and-hold over MI's spike→fade if both qualify at 23:00.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
