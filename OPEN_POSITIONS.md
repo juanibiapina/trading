@@ -6,7 +6,9 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 ## Current Positions
 
-_No open positions._
+| Ticker | Entry | Shares | Order ID | Grade | Entered | Notes |
+|--------|-------|--------|----------|-------|---------|-------|
+| AEMD | $3.12 | 29 | 8d2f09b1 | None | 2026-08-27 23:00 CET | Aethlon Medical, Hemopurifier immunotherapeutic device, Medical Specialties. Ultra-low float 695K. No same-day catalyst found (4 searches: latest = Aug 13 Q1 earnings, July $4M dilutive follow-on @ $0.7101). Fresh day-1 AH igniter (not in WINNERS_TRACKING, Day% -4.8%). Clean AH BUILD-and-hold: cleared 2-AH-scan gate (22:30 +33.6% → 22:45 +34.1% → 23:00 +49.3%), SIP accumulating 1M+ sh/bar / 10K trades/bar, still building at entry (last SIP bar 20:45Z C $3.30 H $3.45 vwap $3.35). CONFIRM-3 YES. Total% +43.8% at fill (under +150% ceiling). Live book at entry (ask $3.38 x100). Grade None → exit first PM opportunity. |
 
 ## Position Rules
 

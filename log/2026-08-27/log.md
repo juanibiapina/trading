@@ -96,9 +96,35 @@ Prior 21:30 watch names (WNW day-2, FALFF, CELU, PPCB) not crossing AH threshold
 
 **No entries** — observation-only scan (before 23:00 CET). AEMD is lead for the 23:00 scan (would clear 2-AH-scan gate); NCPL and MI are watch. Prefer AEMD's BUILD-and-hold over MI's spike→fade if both qualify at 23:00.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+Scanner ran at 17:00:10 ET — **5 hits.** Entries allowed (learning phase: ≥23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AEMD | [TV](https://www.tradingview.com/chart/?symbol=AEMD) | $2.17 | -4.8% | +49.3% | $3.24 | +42.1% | 7.0M | 894K | 7.8x | 695K | Medical Specialties |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $0.54 | +7.5% | +10.2% | $0.59 | +18.5% | 2.0M | 61.1M | 0.0x | 4.4M | Misc Commercial Services |
+| INHD | [TV](https://www.tradingview.com/chart/?symbol=INHD) | $6.00 | -4.0% | +13.5% | $6.81 | +9.0% | 562K | 278K | 2.0x | 2.5M | Building Products |
+| MODD | [TV](https://www.tradingview.com/chart/?symbol=MODD) | $3.61 | +9.1% | +5.8% | $3.82 | +15.4% | 247K | 533K | 0.5x | 7.6M | Medical Specialties |
+| ACET | [TV](https://www.tradingview.com/chart/?symbol=ACET) | $9.01 | +0.7% | +5.9% | $9.54 | +6.6% | 103K | 98K | 1.1x | 8.2M | Pharmaceuticals |
+
+**Candidates with AH change >10%: AEMD, NCPL, INHD.**
+
+- **AEMD — ENTERED.** Cleared 2-AH-scan gate (22:30 +33.6% → 22:45 +34.1% → 23:00 +49.3%). Clean BUILD-and-hold: SIP dipped 20:25-20:30 then rebuilt to new highs 20:35-20:45 (last bar 20:45Z C $3.30 H $3.45 vwap $3.35, still building), currently at/near AH high — not a fade. SIP real & accumulating: 1M+ sh/bar, 10K trades/bar; SIP high $3.45/VWAP $3.35 corroborates scanner AH price. Live book (ask $3.38 x100, bid $3.31 x100 — AH-open freeze lifted). Low float 695K (ideal). Day% -4.8% (not dead-cat, above -15%). Total% +42.1% (under +150% ceiling). `tradable=true`.
+  - `SPIKE 16:03ET +28% $2.77 1139 trades / 100k sh (first co-spike bar)`
+  - `CONFIRM-3 YES ignition 16:05ET 4.0x; confirmed 16:15ET $3.06`
+  - Catalyst: **no same-day catalyst found** (4 searches total across scans). Latest events = Aug 13 Q1 earnings, July $4M dilutive follow-on @ $0.7101, undated Long COVID/Hemopurifier preclinical data. Grade None — concern noted, not a skip (learning phase).
+  - **MULTI-SESSION check:** fresh day-1 igniter — not in WINNERS_TRACKING, Day% -4.8% (pure AH ignition), no prior up-session run.
+  - **CHASE-CAP:** none — filled $3.12 (below ask), Entry Total% +43.8% vs qualifying +42.1% (chase gap +1.7pp). Well below fade zone.
+  - **Order:** BUY 29 AEMD @ limit $3.42 ext (id 8d2f09b1) filled @ **$3.12**. Grade None. Position size $90.48.
+- **NCPL — Skip: spike→fade / round-trip.** Cleared 2-AH-scan gate on the letter (22:45 +11.4% → 23:00 +10.2%) but declining and barely above threshold. SIP round-trips: spiked to $0.66 H at 20:30Z (16:30 ET) then faded back to $0.59 (C $0.59 ≈ open $0.54). `CONFIRM-3 NO no local-volume new-high ignition`. `SPIKE 16:30ET +20% $0.65 703 trades / 379k sh`. AvgVol 61M (huge, VRatio ~0 — not real AH unusual activity). Not a BUILD.
+- **INHD — Watch.** First AH appearance tonight (only 1 AH scan) — 2-AH-scan gate not met. Genuine igniter though: `SPIKE 16:27ET +32% $7.94 599 trades / 20k sh`, `CONFIRM-3 YES ignition 16:25ET 88.8x; confirmed 16:35ET $8.24`. Float 2.5M, Day% -4.0%, Total% +9.0%. Re-check at 23:30 for gate clearance.
+- **MODD / ACET** — AH change below 10% threshold. Skip.
+
+Prefer AEMD's BUILD-and-hold over NCPL's spike→fade (trajectory dominates). AEMD entered; NCPL skipped; INHD watch for 23:30.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-
-No paper trades — scan ran before AH open (regular-session caution). No entries.
+| AEMD | $3.12 | 2026-08-27 23:00 CET | 29 | 8d2f09b1 | Grade None. BUILD-and-hold, cleared 2-AH-scan gate, float 695K, CONFIRM-3 YES, Total% +43.8%. No same-day catalyst (concern noted). |
