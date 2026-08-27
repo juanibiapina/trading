@@ -236,3 +236,101 @@ Scanner run at 18:30:12 ET: **11 hits**.
 |--------|------------|------------|-----------------|----------|--------|
 | DAIC | $6.09 | 23:00 CET (17:00 ET) | 15 | 4e6a9522 | Grade None; 2-AH-scan gate (22:30/22:45/23:00), BUILD/hold within 20% of $7.20 AH high, low float 1.3M, CONFIRM-3 YES, Total +60% < ceiling; no catalyst (speculative squeeze) |
 | WNW | $3.12 | 23:00 CET (17:00 ET) | 29 | e7e0e239 | Grade None; 2-AH-scan gate (22:45/23:00), BUILD/hold near $3.59 AH high, real 600-800k sh/bar volume, CONFIRM-3 YES, Total +33% < ceiling; no catalyst |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**No real winner today.** Nothing cleared the >100% winner bar. Biggest genuine mover was **WNW (+84% PM SIP high)**, which the baseline diagnostic runs on. It is a real, liquid, volume-backed AH→PM continuation — just short of the explosion threshold.
+
+**WNW** — Internet Retail (Meiwu Technology, Xiamen China online food/skincare)
+- Catalyst: none found (checked; Grade None)
+- Previous Close: $2.47
+- AH SIP peak: $4.29 (+73.7%) @ 22:20Z / 18:20 ET, 377K sh / 5,113 trades — real accumulating volume across the AH session (151K→565K→624K→1.17M sh/bar early)
+- Premarket now: SIP high $4.55 (+84.2%) @ 08:00 ET on 1.42M sh / 24,708 trades; live ~$4.16
+- Hypothetical P&L (first qualifying AH scan $3.20 → PM peak $4.55): +42.2%
+- Float: 26.2M | Market Cap: $65.3M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES**
+- Detected across the AH scans (first read 22:30/22:45, cleared the 2-AH-scan gate at 23:00), CONFIRM-3 YES on accumulating SIP volume, `tradable=true`. **We entered it** — BUY 29 @ $3.12 (id e7e0e239), the best-behaving entry of the night (BUILD thesis played out, AH +73.7% peak). No scanner gap: detected and traded.
+
+**Broker-block tracking:** **SHPH** (Aug 26) — cleared the AH threshold at the 00:00/00:30 scans (+16.2%→+21.2% Total, 634K float) but `tradable=false` (recurring broker-block, confirmed again). Grade None. Hypo AH ~$3.86 → PM peak $3.90 = **+1%** (AH SIP peak $4.48 @16:05 ET = +25% was the real exit; faded into PM). Adds to the SHPH broker-block tally; not counted against detection/selection baseline.
+
+**Stale-book execution-block tracking:** No new case (DAIC + WNW both filled last night). **Standing count: 3.**
+
+**No-fillable-book skip tracking:** No new case. **Standing count: 2.**
+
+**Float-gate skip tracking:** No new case. **Standing count: 1.**
+
+**Final-scan gate-block tracking:** No new case. AAME appeared first at the final scan (late ramp, fading, CONFIRM-3 NO, only +11.6% Total) — not gate-block material. **Standing count: 1.**
+
+### Baseline Tracking
+
+- Days tracked: **73** (was 72 + 1)
+- Winners detected by scanner: **59/68 (86.8%)** — +WNW (detected all AH scans, entered)
+- Winner selected for paper trade: **33/66 (50.0%)** — +WNW (traded @ $3.12)
+- Target: >80% detection
+- Status: **BASELINE MET** (86.8%)
+
+No baseline gap: previous eval log/2026-08-25 (Aug 25→26 session), today evaluates Aug 26→27 — consecutive trading days.
+
+### Retrospective Scan Results
+
+- Live premarket scan (04:20 ET): 4 hits — WNW +59.3% (Yahoo)/+84.2% (SIP peak), MIMI +32.8%, USDE +5.7%, DAIC +5.8%.
+- Forced afterhours scan: 0 hits (TradingView postmarket feed near-empty, expected next-morning).
+- SIP reconstruction confirms WNW as the only real >70% AH→PM mover; nothing cleared +100%.
+
+### Open Position P&L (Alpaca)
+
+Two positions still open from last night (entered 23:00 CET), managed by position-evaluation.md at 10:30. **Not closed here.** Alpaca `current_price` is stale on both (quotes frozen @20:00 ET); P&L reported against live SIP PM price.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak (SIP) | Peak Time | Live PM | P&L % (live) | Status |
+|--------|-------|--------------|----------|------------|---------------|-----------|---------|--------------|--------|
+| WNW | $3.12 | +26.3% | None | 23:00 CET | $4.55 | 04:00 ET | ~$4.16 | **+33.3%** | 🟢 Open (Alpaca $3.94/+26.3% is stale, understated) |
+| DAIC | $6.09 | ~+57% | None | 23:00 CET | $7.20 (AH) | 16:15 ET | ~$5.47 | **−10.2%** | 🔴 Open (Alpaca $5.95/−2.3% is stale, overstated) |
+
+No realized P&L this pulse (both open).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET; plus extra 22:15/22:45). Full coverage, entry window covered.
+- Candidates found: WNW, DAIC (entered); MIMI, SHPH, LTRX, CDTG, XOS, AAME (skipped).
+- Retrospective matches: biggest mover WNW caught and traded.
+
+### Missed Opportunities
+
+No significant missed opportunities. No stock showed a >100% AH→PM pattern. WNW (biggest mover) was caught and traded.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak (SIP) | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------------|-----------|---------------|------------|-----------|------------|---------|
+| WNW | $4.29 (+73.7%) | 18:20 ET | Build | $4.16 | −3.0% | +68% | Held/continued — traded, best of night |
+| DAIC | $7.20 (+39.8%) | 16:15 ET | Spike→fade | $5.47 | −24% | +6.2% | Faded early; AH peak was the exit |
+| MIMI | $2.69 (+43.1%) | early AH | Spike→fade | $2.46 | −8.5% | +30.8% | PM < AH peak, fell short (skip correct) |
+| SHPH | $4.48 (+24.8%) | 16:05 ET | Spike→fade | $3.90 | −13% | +8.6% | PM < AH peak (broker-block anyway) |
+
+**AH-peak-vs-PM-peak:** WNW PM ($4.16 live / $4.55 SIP high) roughly matched its AH peak $4.29 — mild continuation, no extreme-runner fade signal (peak under +130% zone). DAIC/MIMI/SHPH all peaked in AH and faded into PM. No extreme-runner (>~+130%) case today; standing extreme-zone tally unchanged (8 fade / 1 continue).
+
+**Fade-rule false-negative tracking:** MIMI skipped SPIKE→FADE (AH peak $2.69 +43% → PM peak $2.46, PM below AH peak = **fell short, skip correct**). Float 5.8M (>3M = negative control, not a sub-3M case). Standing sub-3M count unchanged: **4 of 14, ≥80% trigger NOT met.**
+
+**Chase-cap:** Both fills entered at/below the qualifying-scan price (WNW $3.12 vs qualifying $3.20; DAIC $6.09 vs qualifying $6.13–6.27) — **no chase**. Standing count unchanged: 1.
+
+### Notes
+
+- **No real winner today** (winner-bar rule): biggest genuine mover WNW topped ~+84%, under the >100% bar. Diagnostic still ran on it — detected and traded, so a clean baseline sample, not a miss.
+- **Coverage:** 7/7 scans ran. No coverage failure.
+- **We traded the biggest mover.** WNW BUILD thesis played out (best entry of the night, +33% live). DAIC (a multi-day runner from Aug 24) faded from its early AH pop — the second entry is underwater ~−10% live.
+- **Stale Alpaca quotes again** on both open positions (frozen @20:00 ET) — reported P&L against live SIP. Recurring extended-hours quote-freshness problem; already routed to the daily email for a paper-data/execution-feed decision.
+- **SHPH broker-block** (`tradable=false`) recurred; low PM cost (+1%, faded). Cumulative SHPH tradability-gap dataset grows.
+- No PM-only gapper (biggest raw mover WNW was a detectable AH→PM continuation), no late-AH-tail, no in-window feed-lag miss, no price-floor exclusion, no reverse-split-squeeze, no new stale-book/float-gate/final-scan/no-fillable-book cases.
+
+### Price Charts
+
+```
+WNW  Prev Close $2.47 | Range $2.32–$4.55 | Peak $4.55 (+84.2%) @08-27 04:00 ET
+     AH build 16:15→18:20 ET to $4.29 peak, held $3.7–3.9 overnight, PM reopen $4.55 on 1.4M sh/24.7K trades.
+DAIC Prev Close $5.15 | AH pop to $7.20 (+39.8%) @16:15 ET on 1.8M sh, faded to $5.5–6.0 base, PM ~$5.47.
+MIMI Prev Close $1.88 | AH peak $2.69 (+43.1%) early, faded to $1.94–2.14 base, PM peak $2.46 (below AH).
+```
