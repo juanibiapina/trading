@@ -20,3 +20,23 @@ No open positions. Alpaca (`PA37U2Y192A7`) `positions` empty; `OPEN_POSITIONS.md
 
 **Actions taken:**
 - None (no open positions)
+
+## Scan 21:30 CET (3:30 PM ET)
+
+Regular session (15:30 ET, before AH open). No entries per regular-session-caution rule. Candidates below are **Watch — pending AH confirmation**; only entertained if they reappear in a 22:00+ CET AH scan with sustained momentum.
+
+| Ticker | Price | Chg% | IRVol | VChg% | Float | MCap | Industry | Note |
+|--------|-------|------|-------|-------|-------|------|----------|------|
+| WNW | $3.42 | +37.9% | 436.8 | +463.6 | 26.2M | 90.1M | Internet Retail | Prior AH winner today (entered $3.12, sold +22.1%); day-2 watch |
+| FALFF | $0.50 | +109.2% | 11.0 | +1590.8 | 181.7M | 106.9M | Precious Metals | OTC foreign, huge float — low priority |
+| CELU | $2.00 | +127.2% | 1610.3 | -100.0 | 16.1M | 25.5M | Misc Commercial Svcs | Volume faded into close (VChg -100%) |
+| PPCB | $2.27 | +112.2% | 3033.8 | -100.0 | 2.5M | 3.7M | Biotechnology | Low float, but end-of-day volume collapsed |
+
+Rest of 41 hits are near-flat financial-conglomerate/SPAC $9.99-$10.00 names or faded low-volume movers — not pattern candidates.
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+
+No paper trades — scan ran before AH open (regular-session caution). No entries.
