@@ -123,6 +123,31 @@ Scanner ran at 17:00:10 ET — **5 hits.** Entries allowed (learning phase: ≥2
 
 Prefer AEMD's BUILD-and-hold over NCPL's spike→fade (trajectory dominates). AEMD entered; NCPL skipped; INHD watch for 23:30.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Scanner ran at 18:00:13 ET — **6 hits.** Entries allowed (learning phase: ≥23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AEMD | [TV](https://www.tradingview.com/chart/?symbol=AEMD) | $2.17 | -4.8% | +47.5% | $3.20 | +40.4% | 11.3M | 1.4M | 8.0x | 695K | Medical Specialties |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $0.54 | +7.5% | +15.4% | $0.62 | +24.1% | 8.2M | 61.8M | 0.1x | 4.4M | Misc Commercial Services |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $1.29 | -28.3% | +7.8% | $1.39 | -22.8% | 491K | 5.5M | 0.1x | 5.8M | Misc Commercial Services |
+| BRNX | [TV](https://www.tradingview.com/chart/?symbol=BRNX) | $3.86 | -38.1% | +8.3% | $4.18 | -33.0% | 378K | 2.4M | 0.2x | 684K | Engineering & Construction |
+| MODD | [TV](https://www.tradingview.com/chart/?symbol=MODD) | $3.61 | +9.1% | +10.8% | $4.00 | +20.8% | 372K | 548K | 0.7x | 7.6M | Medical Specialties |
+| XHLD | [TV](https://www.tradingview.com/chart/?symbol=XHLD) | $8.28 | -3.2% | +8.8% | $9.01 | +5.4% | 369K | 1.8M | 0.2x | 10.4M | Misc Commercial Services |
+
+**Candidates with AH change >10%: AEMD, NCPL, MODD.**
+
+- **AEMD — already entered at 23:00 ($3.12, id 8d2f09b1).** One entry per candidate per night — no re-entry. Still holding: SIP $3.16–3.23 last bars (17:35 ET), live book ask $3.38 x100 / bid $3.31 x100. AH +47.5% / Total% +40.4% — building, not fading. Position intact.
+- **NCPL — Skip (repeat): spike→fade / round-trip, no real AH unusual activity.** AH +15.4% but AvgVol 61.8M / VRatio 0.1x = the AH vol is not unusual vs its base. SIP round-trips: peaked $0.72 (17:10 ET) fading to $0.63 (17:35 ET). Quote ask $0.61 x100 / bid $0.45 (wide spread). `SPIKE 16:30ET +20% $0.65`; `CONFIRM-3 NO ignition 17:10ET failed third-bar hold/volume`. No catalyst (prior searches). Skip.
+- **MODD — Watch (gate not met).** First AH scan >10% tonight (+10.8%; prior scans +6.6%, +5.8%) — only 1 qualifying AH scan, 2-AH-scan gate not met. Spike→fade with tiny volume: SIP peaked $4.28 (17:15 ET) fading to $4.00 (17:40 ET), 3–29K sh/bar, VRatio 0.7x — not a real igniter. `SPIKE 16:24ET +22% $4.39`; `CONFIRM-3 NO ignition 16:20ET failed third-bar hold/volume`. Catalyst: **no same-day catalyst found** (1 search — insulin-pump device co., latest news Aug 24 analyst "Sell", phased commercial launch late 2026). Watch for a 2nd AH scan >10% at 00:30.
+- **MIMI / BRNX — Skip: dead-cat.** Both crashed regular session (MIMI Day -28.3%, BRNX Day -38.1%) and bounce modestly in AH (AH +7.8% / +8.3%, both below 10% and both still well below regular close: Total% -22.8% / -33.0%). Recovering from sell-off, not new momentum. Skip.
+- **XHLD — Skip.** AH +8.8% below 10% threshold, VRatio 0.2x. Not an igniter.
+
+**Feed-lag cross-check (tracked pipeline):** INHD (23:00 watch, +13.5% AH) — SIP now shows fade: peaked ~$6.95 dropping to $6.19 (17:45 ET) ≈ +3% over close, below 10% threshold. TradingView correctly dropped it. No rescue. Prior watch names NCPL/MODD handled above.
+
+**No new entries** — NCPL/MODD spike→fade with no real AH accumulation, MIMI/BRNX dead-cat, INHD faded. AEMD position (entered 23:00) is the only trade tonight. One scheduled scan remains (00:30 CET / 18:30 ET).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
