@@ -148,8 +148,46 @@ Scanner ran at 18:00:13 ET — **6 hits.** Entries allowed (learning phase: ≥2
 
 **No new entries** — NCPL/MODD spike→fade with no real AH accumulation, MIMI/BRNX dead-cat, INHD faded. AEMD position (entered 23:00) is the only trade tonight. One scheduled scan remains (00:30 CET / 18:30 ET).
 
+## Scan 00:30 CET (6:30 PM ET) — final scheduled scan
+
+Scanner ran at 18:30:17 ET — **8 hits.** Entries allowed (learning phase: ≥23:00 CET).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AEMD | [TV](https://www.tradingview.com/chart/?symbol=AEMD) | $2.17 | -4.8% | +52.5% | $3.31 | +45.2% | 12.0M | 1.5M | 8.1x | 695K | Medical Specialties |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $0.54 | +7.5% | +7.0% | $0.58 | +15.1% | 8.8M | 61.8M | 0.1x | 4.4M | Misc Commercial Services |
+| RYET | [TV](https://www.tradingview.com/chart/?symbol=RYET) | $0.97 | +2.1% | +26.3% | $1.23 | +28.9% | 3.3M | 793K | 4.2x | 14.3M | Packaged Software |
+| INHD | [TV](https://www.tradingview.com/chart/?symbol=INHD) | $6.00 | -4.0% | +8.5% | $6.51 | +4.2% | 942K | 338K | 2.8x | 2.5M | Building Products |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $1.29 | -28.3% | +7.0% | $1.38 | -23.3% | 537K | 5.5M | 0.1x | 5.8M | Misc Commercial Services |
+| MODD | [TV](https://www.tradingview.com/chart/?symbol=MODD) | $3.61 | +9.1% | +17.5% | $4.24 | +28.1% | 391K | 550K | 0.7x | 7.6M | Medical Specialties |
+| AVAT | [TV](https://www.tradingview.com/chart/?symbol=AVAT) | $0.62 | +13.2% | +8.6% | $0.68 | +23.0% | 244K | 677K | 0.4x | 32.8M | Financial Conglomerates |
+| WVVIP | [TV](https://www.tradingview.com/chart/?symbol=WVVIP) | $3.43 | -17.3% | +11.1% | $3.81 | -8.2% | 97K | 1.2M | 0.1x | 4.0M | Beverages: Alcoholic |
+
+**Candidates with AH change >10%: AEMD (held), RYET, MODD, WVVIP.**
+
+- **MODD — ENTERED.** Cleared 2-AH-scan gate: crossed 10% at 00:00 (+10.8%) and higher at 00:30 (+17.5%) — a genuine late BUILD, AH% accelerated across the night (22:30 +6.6% → 23:00 +5.8% → 00:00 +10.8% → 00:30 +17.5%). SIP built through the afternoon: $3.80 (20:30Z) → peak $4.28 (~21:00-21:15Z / 17:00-17:15 ET) → $4.00 (21:40Z), real trades accumulating (113-328 trades/bar, 10-29K sh/bar). Current $4.00 vs peak $4.28 = -6.5% off high (holds within 20%, peak after 17:00 ET — not a spike→fade). Float 7.6M (<10M). Day% +9.1% (positive, not dead-cat). Total% +28.1% (well under +150% ceiling). `tradable=true`. Two-sided book (ask $4.31 x100 / bid $2.94 x100, frozen at 20:00Z AH-open artifact — non-zero size, real book).
+  - `SPIKE 16:24ET +22% $4.39 570 trades / 65k sh (first co-spike bar)`
+  - `CONFIRM-3 NO ignition 16:20ET failed third-bar hold/volume` (early ignition failed, stock rebuilt later in session)
+  - Catalyst: **no same-day catalyst found** (prior searches — Modular Medical insulin-pump device co., latest news Aug 24 analyst "Sell", phased commercial launch late 2026). Grade None — concern noted, not a skip (learning phase).
+  - **MULTI-SESSION check:** fresh day-1 igniter — not in WINNERS_TRACKING, Day% +9.1% (mild), AH ignition today.
+  - **CHASE-CAP:** none — filled $4.18 (below qualifying scanner AH $4.24 / +28.1%). Fill Entry Total% +15.8% vs qualifying +28.1% (negative chase gap). Well below fade zone.
+  - **Order:** BUY 23 MODD @ limit $4.20 ext (id 704312eb) filled @ **$4.18**. Grade None. Position size $96.14.
+- **RYET — FINAL-SCAN-GATE-BLOCK.** Genuine volume-backed late igniter, but first AH appearance at the final scan — blocked **solely** by the 2-AH-scan gate. Flat/thin all afternoon (1-4 trades/bar to 21:40Z) then EXPLODES at 21:45Z (17:45 ET): 509K sh/2,145 trades → 1.05M sh/6,450 trades → 812K sh/4,433 trades → 474K/450K/354K/345K sh/bar. Price $1.03 → $1.43 H, holding $1.19-1.36. `SPIKE 17:47ET +23% $1.19`; `CONFIRM-3 YES ignition 17:45ET 2036.9x; confirmed 17:55ET $1.27`. Float 14.3M, Day% +2.1% (above -15%), Total% +28.9% (under +150% ceiling), `tradable=true`, two-sided book. Catalyst: none same-day (Ruanyun Edai Technology — recent China Nasdaq IPO, Packaged Software; latest = 1H 2026 interim results ~2 weeks old). Grade None. Ignited 17:45 ET — too late for a 2nd AH scan before the 18:30 final scan. **Do NOT enter (gate stands).** Instrumentation for the morning-eval tracker.
+- **WVVIP — Skip: dead-cat / preferred stock.** AH +11.1% but Total% -8.2% (still below regular close), Day% -17.3% (crashed regular session). Willamette Valley Vineyards preferred — thin (AH Vol 97K, VRatio 0.1x). Recovering from sell-off below close, not new momentum. Skip.
+- **NCPL — Skip (repeat): faded below 10%.** AH now +7.0% (was +10.2% at 23:00, +15.4% at 00:00) — rolling over. AvgVol 61.8M / VRatio 0.1x = no real AH unusual activity. Spike→fade confirmed. Skip.
+- **INHD — Skip: faded.** AH +8.5%, below 10% (was +13.5% at 23:00). SIP faded off $6.95 peak. Gate never met. Skip.
+- **MIMI — Skip: dead-cat.** Day -28.3%, AH +7.0%, Total% -23.3% (deep below close). Recovering from crash. Skip.
+- **AVAT — Skip.** AH +8.6% below 10% threshold, float 32.8M, VRatio 0.4x. Not an igniter.
+
+**Feed-lag cross-check (tracked pipeline):** NCPL/INHD/MODD all handled above via SIP (INHD/NCPL faded, MODD rescued as real BUILD). No under-reported pipeline name found.
+
+**AEMD** — position from 23:00 ($3.12, id 8d2f09b1) still open, +3.2% (now $3.22, live book ask $3.38 x100). Still building (AH +52.5%). No re-entry (one per candidate per night).
+
+**Entries this scan: MODD.** Two positions open tonight (AEMD, MODD) — both fresh day-1 AH igniters, both Grade None BUILD-and-hold. Final scheduled scan complete.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | AEMD | $3.12 | 2026-08-27 23:00 CET | 29 | 8d2f09b1 | Grade None. BUILD-and-hold, cleared 2-AH-scan gate, float 695K, CONFIRM-3 YES, Total% +43.8%. No same-day catalyst (concern noted). |
+| MODD | $4.18 | 2026-08-27 00:30 CET | 23 | 704312eb | Grade None. Late BUILD, cleared 2-AH-scan gate (00:00 +10.8% → 00:30 +17.5%), float 7.6M, Total% +15.8%. No same-day catalyst (concern noted). |
