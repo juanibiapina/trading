@@ -152,6 +152,19 @@ the ignition**, not a new signal.
    downgrade** — this-week reverse splits with no fresh catalyst are 4/4 faded;
    downgrade entry conviction / hard-skip that pattern, folding into the 08-20
    selection-gate work. See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-08-27 (Juan feedback, 08-26 cycle):** "DAIC is not how we want
+   to enter, there's no AH volume spike." DAIC was entered on the 2-AH-scan gate
+   with the scanner logging CONFIRM-3 **YES** (AH-open bar 362k sh / 2611 trades,
+   +17%) and then faded -4.6%. Juan does **not** count that bar as a real
+   volume-spike ignition — it is a no-catalyst low-float squeeze already run
+   sub-$0.50 -> $6+ over prior days, not the "gigant volume + rising price"
+   signature. So the current CONFIRM-3 threshold admitted a name Juan rejects as
+   sub-spike. Fifth repeat of the hard-CONFIRM-3-gate point (ONFO/GRSD 08-14,
+   XOS 08-18, BTCT 08-20). New sub-point for the proposal to Juan: the gate must
+   not only be **hard** but also **tighten what magnitude counts as an
+   ignition**, since CONFIRM-3 YES fired on DAIC's thin AH-open bar. Routed to
+   `scanner-improvement` to re-check the CONFIRM-3 spike-size threshold. See
+   `FEEDBACK_LOG.md` 2026-08-27.
 3. **Initiative 5 - better data + review surface (graphs, sources).** AH/PM
    volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
    raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports

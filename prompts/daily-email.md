@@ -140,6 +140,16 @@ AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;
 <p>[Issues found and severity, or "No issues - all sessions ran clean."]</p>
 <p>[If any issues need user action, highlight them]</p>
 
+<h3 style="color: #555;">Feedback Acknowledged</h3>
+<!-- Juan asked (08-27) to see his feedback reflected back so he knows it landed.
+     Read the newest FEEDBACK_LOG.md entries (since the last email) and list each
+     one: what Juan said (short) + what changed/where it routed. If nothing new
+     since the last cycle, say "No new feedback since last report." Never omit
+     this section. -->
+<ul>
+<li><strong>[date] &mdash; "[short quote of Juan's point]"</strong>: [what changed / routed to Initiative X / logged].</li>
+</ul>
+
 <h3 style="color: #555;">Key Takeaway</h3>
 <p style="background: #e3f2fd; padding: 10px; border-radius: 4px; border-left: 4px solid #1976d2;">[One sentence: the single most important thing from this cycle]</p>
 </div>'

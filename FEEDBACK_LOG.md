@@ -6,6 +6,43 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-08-27 — re: Trading Scanner Report - 2026-08-26
+
+**Juan said:** "Are you even receiving and acting on my feedback? DAIC is not
+how we want to enter, there's no AH volume spike. Take this into consideration,
+update your goals, projects, whatever it is and acknowledge my feedbacks on
+future reports."
+
+**Interpretation:** Two threads.
+1. **DAIC entry was wrong — no AH volume spike.** The scanner logged DAIC as
+   CONFIRM-3 YES ("SPIKE 16:09ET +17% $6.00 2611 trades / 362k sh", first
+   co-spike bar) and entered it on the 2-AH-scan gate; it faded -4.6%. DAIC was
+   a no-catalyst low-float squeeze already run sub-$0.50 → $6+ over prior days.
+   Juan does not count DAIC's AH-open bar as a real volume-spike ignition — it
+   is not the "gigant volume + rising price" winner signature he keeps naming
+   (ONFO 08-14, GRSD 08-14, XOS 08-18, BTCT 08-20). So the scanner's current
+   CONFIRM-3 threshold admitted a name Juan considers sub-spike. This is the
+   **fifth** repeat of the same entry-quality point: CONFIRM-3 volume-spike
+   ignition must be a **hard entry gate**, and the volume magnitude that counts
+   as an ignition may need to be stricter than what admitted DAIC.
+2. **Acknowledge feedback in future reports.** Juan is not seeing his feedback
+   reflected back and is unsure it is being acted on. The daily email must show
+   what recent feedback was received and what changed because of it.
+
+**Action:**
+- **Applied now (process, low-risk):** added a **"Feedback Acknowledged"**
+  section to `prompts/daily-email.md` so every daily email lists the most recent
+  `FEEDBACK_LOG.md` entries and what each one changed/routed to. This closes the
+  visibility gap Juan flagged.
+- **Routed to Initiative 3** (`STRATEGY_ROADMAP.md`): DAIC added to the
+  recurring late/junk-entry evidence for the **hard CONFIRM-3 entry gate**, plus
+  a new sub-point — the CONFIRM-3 volume magnitude threshold admitted a name
+  Juan rejects as sub-spike, so the gate proposal to Juan should also tighten
+  what counts as an ignition (not just make it hard). Flagged for the next
+  `scanner-improvement` run to re-check the CONFIRM-3 spike-size threshold.
+
+---
+
 ### 2026-08-26 — re: Trading Scanner Report - 2026-08-25
 
 **Juan said:** "again, *WVVIP is NOT GOOD.* *YYGH is the real winner.*"
