@@ -191,3 +191,103 @@ Scanner ran at 18:30:17 ET — **8 hits.** Entries allowed (learning phase: ≥2
 |--------|------------|------------|-----------------|----------|--------|
 | AEMD | $3.12 | 2026-08-27 23:00 CET | 29 | 8d2f09b1 | Grade None. BUILD-and-hold, cleared 2-AH-scan gate, float 695K, CONFIRM-3 YES, Total% +43.8%. No same-day catalyst (concern noted). |
 | MODD | $4.18 | 2026-08-27 00:30 CET | 23 | 704312eb | Grade None. Late BUILD, cleared 2-AH-scan gate (00:00 +10.8% → 00:30 +17.5%), float 7.6M, Total% +15.8%. No same-day catalyst (concern noted). |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**No real AH→PM winner today.** No name cleared the >100% AH→PM winner bar on accumulating SIP volume.
+
+- **Biggest genuine AH→PM mover: AEMD** (Aethlon Medical, Medical Specialties) — real AH surge that continued into PM but topped at **+76% PM peak**, under the 100% bar. Detected AND entered last night (@ $3.12). Not crowned "winner" (sub-100%), but the baseline diagnostic runs on it.
+- **Biggest raw PM mover: WHLR** (Wheeler REIT) — **+155% PM SIP peak** ($1.12 close → $2.86) but a **PM-only gapper** (flat/down in after-hours ~$1.12–1.26, move fired only at 04:00 ET PM open). Structurally undetectable by the AH scanner — **not counted against the detection baseline.**
+
+**AEMD detail:**
+- Catalyst: **None** — no same-day PR found (clinical-stage Hemopurifier cancer trial; latest IR news 2 weeks old). Grade None.
+- Previous Close: $2.17
+- AH last night: SIP peak **$3.46 (+59.4%) @ ~17:05 ET** on accumulating volume (283K → 1.12M → 1.48M sh/bar, 10–12K trades/bar early)
+- Premarket now: SIP peak **$3.82 (+76.0%) @ 04:00 ET** on 1.40M sh / 20,091 trades; current ~$3.24
+- Hypothetical P&L (AH entry → PM peak): AH ~$2.90 → PM $3.82 = **+31.7%**; actual entry $3.12 → PM peak $3.82 = **+22.4%**
+- Float: 695K | Market Cap: ~$1.5M
+
+**WHLR detail:**
+- Catalyst: **None** — no fresh PR/8-K found (Aug 10 announcement is old). Grade None.
+- Previous Close: $1.12 (Yahoo $1.60 anchor is a stale multi-day figure; the actual last regular close was $1.12, −29.8% that session)
+- AH last night: flat/down, SIP $1.12–1.26 all evening (no >10% AH signal)
+- Premarket now: SIP peak **$2.86 (+155%) @ 08:05 ET** on 1.74M–2.48M sh/bar, 17K–22K trades/bar — real, holdable
+- Float: 772K | Market Cap: ~$4.9M
+
+**Scanner Diagnostic (AEMD):**
+- Detectable at screening time? **YES**
+- At ~22:15 CET it was a fresh AH igniter (+33.6% AH, VRatio 6.8x, SIP accumulating hard). Cleared the 2-AH-scan gate (22:30 +33.6% → 22:45 +34.1% → 23:00 +49.3%), BUILD-and-hold, low float 695K. **Entered @ $3.12 at 23:00 CET.** Clean detection and selection — nothing to fix.
+- Scanner gap: none for AEMD.
+
+**Scanner Diagnostic (WHLR):**
+- Detectable at screening time? **NO** — PM-only gapper. Flat in after-hours; the +155% move began only at 04:00 ET PM open on overnight interest. No AH footprint for the evening scanner to catch. Not a scanner failure, not counted vs baseline.
+
+### Baseline Tracking
+
+- Days tracked: **74** (was 73 + 1)
+- Winners detected by scanner: **60/69 (87.0%)** — +AEMD (biggest genuine AH→PM mover, detected all AH scans, entered)
+- Winner selected for paper trade: **34/67 (50.7%)** — +AEMD (traded @ $3.12)
+- Target: >80% detection
+- Status: **BASELINE MET** (87.0%)
+
+No baseline gap: previous eval log/2026-08-26 (Aug 26→27 session), today evaluates Aug 27→28 — consecutive trading days.
+
+### Retrospective Scan Results
+
+Live PM scan (04:20 ET) — 3 hits: **WHLR +131.2%** ($2.59, 2.0M PM vol, float 772K), **AEMD +49.8%** ($3.25, 550K vol, float 695K), **NCPL +10.5%** ($0.59).
+- WHLR = PM-only gapper (flat AH, exploded at PM open on 2.4M sh/bar / 22K trades) — undetectable AH, not counted vs baseline.
+- AEMD = real AH→PM continuation, detected + entered (biggest genuine AH→PM mover, +76% PM peak, under 100% bar).
+- NCPL = spike→fade round-trip, correctly skipped all night (VRatio ~0, AvgVol 61M, not real AH unusual activity).
+
+### Open Position P&L (Alpaca)
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| AEMD | $3.12 | +43.8% | None | 23:00 CET | $3.82 (SIP) | 04:00 ET | open | — | +3.8% live (~$3.24) | 🟢 Open, building |
+| MODD | $4.18 | +15.8% | None | 00:30 CET | $3.93 (SIP, thin) | 04:00 ET | open | — | −6.2% (~$3.92) | 🔴 Open, faded |
+
+**Quote-freshness note:** Alpaca reported AEMD $3.15 / +1.0% — slightly stale vs the live PM SIP ~$3.24 (+3.8%). AEMD PM peak $3.82 = +22.4% from entry. MODD PM is thin (5,708 sh first bar) at ~$3.92, below the $4.18 entry. No exits placed here — position-evaluation.md (10:30 CET) owns hold/sell.
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits yet)
+
+### Scanner Effectiveness
+
+- Evening scans ran: **6 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 00:00, 00:30 ran; **23:30 missing**; plus 2 bonus scans 22:15 & 22:45). Entry window (23:00–00:30 CET) fully covered — not a coverage failure.
+- Candidates found: AEMD (all scans), MODD, NCPL, INHD, MI, MIMI, BRNX, RYET, WVVIP, CELU, MODD
+- Retrospective matches: AEMD caught (entered); WHLR is a PM-only gapper (not an AH candidate).
+
+### Missed Opportunities
+
+No AH→PM detection miss. WHLR (+155% PM) was a PM-only gapper — structurally undetectable by the AH scanner, not a miss.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| AEMD | $3.46 (+59%) | 17:05 ET | Build | ~$3.24 (peak $3.82) | PM peak > AH peak | +49% | **Continued** — PM exceeded AH peak, entered @ $3.12 |
+| MODD | $4.28 (+18%) | 17:15 ET | Late Build | ~$3.92 | −8% | +8% | **Faded** — AH peak was the better exit; entered @ $4.18, PM below entry |
+| NCPL | ~$0.72 (+15%) | 17:10 ET | Spike→fade | $0.59 | −18% | +10% | **Faded** — correctly skipped all night |
+
+**AH-peak-vs-PM-peak check:** AEMD PM peak ($3.82) **exceeded** its AH peak ($3.46) — a continuation, not a fade; not in the extreme (>~+130%) zone. MODD PM ($3.93) **fell short** of its AH peak ($4.28) — AH was the better exit (thin PM). Neither is an extreme-zone case. Extreme-zone tally unchanged: **8 fade / 1 continue**.
+
+### Notes
+
+- **PM-only gapper tracking:** WHLR = today's biggest raw mover, **+155% PM SIP** ($1.12 → $2.86), classification **PM-only gapper**, investability **holdable** (2.48M/1.74M sh across the first two 5-min bars, 22K/17K trades, sustained above +140% across bars — genuine liquid window). Not yet in `log/pm-open-scan.csv` (the Aug 28 pm-open pulse had not logged it by 04:20 ET). Standing holdable PM-only-gapper count in `pm-open-scan.csv`: **32** — well past the ≥3–4 threshold. Standing action unchanged: the holdable-PM-only-gapper cluster routes to Juan's daily email as an Initiative-6 decision (early-PM hypothetical-entry pilot), not applied here. Not a scanner failure, not counted vs baseline.
+- **Multi-session-runner tracking:** both entries were **fresh first-day AH igniters** (AEMD Day% −4.8%, MODD Day% +9.1% — neither a prior-day runner). AEMD **ran** (PM peak +22.4% from entry); MODD **faded** (PM below entry, thin). Updated standing: **1 multi-session runner (1 faded: DAIC) / 3 first-day igniters (2 ran: WNW, AEMD; 1 faded: MODD).** Data collection only.
+- **Fade-rule / reverse-split / broker-block / stale-book / float-gate / final-scan trackers:** no new cases tonight. MODD faded post-entry but float 7.6M (above the 3M sub-float bucket) and was entered, not skipped — not a fade-rule case. Sub-3M fade-rule count unchanged at 4 of 14 (below the ≥80% trigger). No reverse-split names entered.
+- **In-window feed-lag miss** standing count unchanged at **4** (trigger REACHED — AH-data-source-verification recommendation stays routed to Juan's email). No new case tonight.
+- **Scanner health:** clean night — AEMD detected across every AH scan and entered at the right level; the one detection-relevant name that exploded (WHLR) is a PM-only gapper outside the AH scanner's reach. 6 of 7 scheduled scans ran (23:30 dropped, entry window intact).
+
+### Price Charts
+
+```
+AEMD  Prev Close $2.17 (Yahoo anchor $2.28) | 2-Day Range $2.18–$3.82
+      AH SIP peak $3.46 (+59.4%) @17:05 ET → PM SIP peak $3.82 (+76.0%) @04:00 ET | Current ~$3.24
+      Entered $3.12 → PM peak +22.4%. Continuation (PM > AH peak).
+
+WHLR  Prev Close $1.12 (Yahoo $1.60 anchor stale) | 2-Day Range $1.08–$2.86
+      AH flat $1.12–1.26 (no signal) → PM SIP peak $2.86 (+155%) @08:05 ET on 1.7–2.5M sh/bar
+      PM-only gapper, holdable. Undetectable AH — not counted vs baseline.
+```
