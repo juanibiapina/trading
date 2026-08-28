@@ -223,6 +223,21 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-08-28 (strategy-advance) — pilot admitted a fresh out-of-sample
+   name (WHLR) and it FILLED the +10% limit; entered set n=12, edge back up to
+   +5.4%/name.** The tracker grew to 27 holdable footprint=none candidates (WHLR
+   08-28 +128.6% and NA 08-28 +17.5% added). Re-ran `init6-pm-pilot.js`: **WHLR
+   was admitted** (entered $2.69 at 04:15 ET) and its early spike **filled the
+   resting +10% limit** ($2.96) before it dumped to PM-last -45.4% — exactly the
+   peak-seeking case the resting limit is built for. NA was skipped by the
+   continuation gate. Entered set moves n=11 -> **n=12: SUM +64.8% / mean +5.4% /
+   median +10.0% / positive 10/12**, vs a PM-last floor of -9.1% and a do-nothing
+   baseline of 0%. Net of ~2% spread ~+3.4%/name. The **fade-tail holds at 2/12
+   (BIVI -27.1%, MIMI -6.9% at lim10)** — not growing toward the ~1-in-4 that
+   would erode the edge, and the first admitted out-of-sample entry last run
+   (MIMI, faded) is now offset by a winning admitted entry (WHLR). Still log-only,
+   no orders. Next: keep seeding; track the fade-tail ratio before proposing any
+   live PM-gapper pulse.
    **Update 2026-08-27 (strategy-advance) — pilot entered a fresh out-of-sample
    name (MIMI) and it FADED; the entered set is now n=11 with a second fade-tail
    loser.** The tracker grew to 25 holdable footprint=none candidates (MIMI 08-27
@@ -1203,23 +1218,21 @@ tracker).
       04:30 ET market exit for Grade-None/held overnight names with a resting
       sell-limit ~+10% above the exit price (GTC through premarket, cancel at
       09:30 ET); keep the 04:30 market exit only as the fallback if unfilled.**
-      Evidence (updated 08-20, `scripts/peak-seeking-exit-sim.js`, log-only,
-      **n=18 out-of-sample seeds**): the resting +10% sell-limit stays the best
-      rule at **+67.0% total / +3.7% per name, positive on 13 of 18** vs selling
-      at 04:30, beating every trailing stop (best trail12 +2.1% mean) and every
-      other limit width. It wins because early peakers spike then crash, so a
-      modest resting limit fills into the first spike before the dump.
-      **Refinement (08-20):** the 08-20 seed LOOP (a dead book that *dumped* into
-      the open, -20.5% on the unfilled fallback) shows the "safe on dead books"
-      claim only holds for books that *stall*; a faller makes the unfilled
-      fallback a real loss vs the plain 04:30 exit. So the refined ask is the
-      resting +10% sell-limit **paired with a protective stop at the 04:30 exit
-      price (OCO)** — a name that fades back through the exit level market-outs
-      near breakeven instead of dumping to the open. Changes live exit behavior →
-      **proposed, not applied**. Next run simulates the OCO-floor variant over
-      the 18 seeds to confirm it neutralises fallers without hurting live-book
-      winners, before any wiring. Details in the Initiative 3 status +
-      `log/premarket-exit-gap.csv`.
+      Evidence (updated 08-28, `scripts/peak-seeking-exit-sim.js`, log-only,
+      **n=28 out-of-sample seeds**): the resting +10% sell-limit stays the best
+      robust rule at **+76.1% total / +2.7% per name, positive on 18 of 28** vs
+      selling at 04:30, beating every trailing stop and non-outlier-driven wider
+      limit. It wins because early peakers spike then crash, so a modest resting
+      limit fills into the first spike before the dump; today's WHLR-type
+      early-spike-then-dump pattern is the canonical case.
+      **OCO-stop question is answered (08-21):** the naive breakeven OCO stop is
+      **rejected** — it whipsaws nearly every winner (collapses to +1.0%/name,
+      positive only 3/28). Only a **wide ~-15% catastrophe-stop** helps at all,
+      and only marginally (it rescues the single LOOP-type dumper), so it stays
+      **optional, not required**. The clean ask is the plain resting +10%
+      sell-limit (GTC premarket, cancel 09:30 ET, plain 04:30 market exit as
+      fallback). Changes live exit behavior → **proposed, not applied**. Details
+      in the Initiative 3 status + `log/premarket-exit-gap.csv`.
 - [x] Initiative 6 (problem b): the **partial-hold pilot ask is WITHDRAWN**
       (2026-07-13). `scripts/trailing-sim.js` simulated the trailing-stop hold
       on all 14 closed round-trips' real regular-session 5-min SIP paths; every

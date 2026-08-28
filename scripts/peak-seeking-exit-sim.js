@@ -40,6 +40,8 @@ const names = [
   ["YYGH","2026-08-26",2.02],
   ["WNW","2026-08-27",3.81],
   ["DAIC","2026-08-27",5.81],
+  ["AEMD","2026-08-28",3.17],
+  ["MODD","2026-08-28",3.82],
 ];
 const CAP = "13:30:00Z"; // 09:30 ET
 const limits = [5,10,15,20,30]; // resting sell-limit % above exit
