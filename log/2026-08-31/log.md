@@ -72,6 +72,35 @@ Scanner returned 4 AH hits. First AH appearance for all four (none in 22:00/22:1
 
 **Status:** Observation only. LABT is the standout mover (heaviest volume, +58% Total, float 1.6M) but has no fillable ask book right now. WETO/PETZ show real volume with fillable books. YYGH is below its regular close (Day -14.8%, watch for dead-cat vs reclaim). No catalyst search yet — will run structured search at 23:00 for names still >10% AH that clear the 2-AH-scan gate. Re-check all at 23:00 CET.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+Scanner returned 6 AH hits. LABT, PETZ, WETO carry from 22:30 (2nd AH appearance). YYGH carries but AH% now +6.1% (below 10% threshold). PXS and SGLY new this scan. Observation only (pre-23:00 CET / learning-phase rule) — no entries.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LABT | [TV](https://www.tradingview.com/chart/?symbol=LABT) | $2.50 | +8.7% | +40.4% | $3.51 | +52.6% | 6.6M | 966K | 6.8x | 1.6M | Biotechnology |
+| PETZ | [TV](https://www.tradingview.com/chart/?symbol=PETZ) | $1.15 | -3.3% | +27.0% | $1.46 | +22.7% | 3.3M | 382K | 8.7x | 6.8M | Food: Specialty/Candy |
+| PXS | [TV](https://www.tradingview.com/chart/?symbol=PXS) | $5.36 | +0.0% | +23.3% | $6.61 | +23.3% | 134K | 57K | 2.4x | 4.1M | Marine Shipping |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $5.48 | -4.2% | +20.4% | $6.60 | +15.4% | 1.1M | 6.0M | 0.2x | 864K | Other Transportation |
+| SGLY | [TV](https://www.tradingview.com/chart/?symbol=SGLY) | $1.36 | -7.5% | +9.4% | $1.49 | +1.2% | 91K | 6.6M | 0.0x | 3.4M | Air Freight/Couriers |
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.32 | -14.8% | +6.1% | $1.40 | -9.7% | 1.1M | 12.9M | 0.1x | 1.6M | Misc Commercial Services |
+
+**Instrumentation (log-only, no decision impact):**
+- LABT: SPIKE 16:00ET +24% $3.10 1253 trades / 187k sh · CONFIRM-3 NO no local-volume new-high ignition
+- PETZ: SPIKE 16:06ET +35% $1.55 275 trades / 51k sh · CONFIRM-3 YES ignition 16:05ET 1426.9x, confirmed 16:15ET $1.60
+- WETO: NO-SPIKE peak +30% @16:16ET (no volume co-spike bar) · CONFIRM-3 NO
+- PXS: SPIKE 16:15ET +17% $6.28 64 trades / 17k sh · CONFIRM-3 PENDING ignition 16:25ET, waiting for third bar
+
+**SIP volume:**
+- PXS (new): real accumulating — 30K/19K/139K/165K sh per bar, 248/210/2101/2638 trades, vwap $5.43→$6.43 building through 16:30ET. Book present ask $6.39 x100. Float 4.1M, MCap 54.8M, Total% +23.3%.
+- LABT: 2nd AH appearance, heaviest volume of the night (VRatio 6.8x, +52.6% Total, float 1.6M). Earlier bars showed 1.5-2.0M sh, ask book was $0.00 x0 at 16:30 — recheck fillability at 23:00.
+- PETZ: 2nd AH appearance, building (AH% +15.7%→+27.0% across scans, VRatio 7.4x→8.7x), CONFIRM-3 YES. Float 6.8M.
+- WETO: 2nd AH appearance but NO-SPIKE / CONFIRM-3 NO, VRatio 0.2x (AH vol below avg). AH% +23.3%→+20.4% easing.
+- YYGH: fading below 10% threshold and still under regular close (Day -14.8%, Total -9.7%) — dead-cat profile, dropping off.
+- SGLY: Total% +1.2%, VRatio 0.0x — thin/stale, no accumulation.
+
+**Status:** Observation only. Best-formed movers into 23:00: **LABT** (heaviest real volume, float 1.6M, +52.6% Total — but confirm ask book is fillable), **PETZ** (BUILD across scans, CONFIRM-3 YES, VRatio 8.7x), **PXS** (real accumulation, book present, Total +23.3% under ceiling). LABT/PETZ have cleared the 2-AH-scan gate as of this scan. At 23:00 run structured catalyst search for LABT, PETZ, PXS and evaluate for entry per all gates. Skip WETO (VRatio 0.2x, NO-SPIKE), YYGH (dead-cat, sub-threshold), SGLY (thin).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
