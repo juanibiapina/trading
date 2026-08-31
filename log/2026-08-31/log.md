@@ -23,6 +23,18 @@ Regular session scan (before AH open 16:00 ET). No entries — regular-session c
 - **Likely stale/bad prints (ignore):** NXL +2976%, VBIO +2927%, VEEA +1660%, GCTK +1424%, ARTL +828%, TPET +784%, CALC +387% — all show near-zero IRVol and tiny 5mVol (100-5K sh) with negative VChg%, no real accumulation.
 - Financial Conglomerates cluster (UAC, SUMA, WLCO, VII, XCBE, GSRV, XSLL, PECE) all pinned near $9.9-10 with ~0% change — these are SPAC/trust NAV pins, not momentum.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found. Scanner returned 0 hits at AH open (16:00 ET) — AH volume has not built yet.
+
+**Watch-name status (21:30 carry-overs, AH just opened, no 5Min bars yet):**
+- AEHL: bid $5.60 / ask $7.39 (close $6.54) — wide AH spread, book present.
+- SST: bid $1.89 / **ask $0.00 x0** — no AH ask book.
+- YDDL: bid $1.94 / **ask $0.00 x0** — no AH ask book.
+- COOT: bid $0.51 / ask $0.68 (close $0.63) — book present, drifting below close.
+
+Observation only (pre-23:00 CET / learning-phase rule). No entries. Re-check at 22:30 as AH volume accumulates.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
