@@ -11,6 +11,8 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | LABT | $3.49 | 28 | 9afe3138 | None | 2026-08-31 23:00 CET | Lakewood-Amedex Biotherapeutics, biotech, float 1.6M. No fresh same-day catalyst. Heaviest real AH volume of night (1.5-2.0M sh/bar), holding within 7% of $3.78 high. Filled despite stale zero-ask Alpaca book (SIP volume real). Exit first PM opportunity. |
 | PETZ | $1.50 | 67 | 1ee83962 | None | 2026-08-31 23:00 CET | TDH Holdings, China micro-cap, float 6.8M. No catalyst. CONFIRM-3 YES, cleared 2-AH-scan gate. Concern: per-bar SIP volume declining, price 15% off $1.68 peak. Exit first PM opportunity. |
 | PXS | $6.26 | 15 | 74f62ca3 | B | 2026-08-31 23:00 CET | Pyxis Tankers, Marine Shipping, float 4.1M. Q2 2026 earnings $2.8M profit released after close. Real AH accumulation, holding within 8% of $6.72 high. Hold up to 2 days, stop -15% ($5.32). |
+| GPRO | $1.30 | 78 | 26d78803 | C | 2026-08-31 00:00 CET | GoPro, Electronics/Appliances, float 125M. Markiplier disclosed large stake / became largest shareholder (Benzinga 2:25 PM ET) — meme/large-holder event. Volume-backed AH BUILD making new highs, cleared 2-AH-scan gate. Resting 00:00 limit filled by 00:30. Exit premarket, stop -10% ($1.17). |
+| SSM | $4.50 | 20 | 51d6a78c | B | 2026-08-31 00:30 CET | Sono Group N.V., Motor Vehicles, float 1.0M. Non-binding LOI to combine with Sports One (pivot into pro sports franchise ownership) + investors buy 19.9% stake, GlobeNewswire today ~5:30 PM ET. Real heavy AH accumulation from 17:20ET, CONFIRM-3 YES, holding within ~10% of $5.20 peak. Hold up to 2 days, stop -15% ($3.83). |
 
 ## Position Rules
 

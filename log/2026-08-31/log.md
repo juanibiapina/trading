@@ -215,6 +215,50 @@ Scanner returned 9 AH hits. Entries allowed (23:00+ CET). Held from 23:00: LABT,
 - **SUNE** — Skip: AH +5.2% below the 10% threshold, VRatio 0.7x (below its own average).
 - **LABT / PETZ / PXS** — already held (entered 23:00); management is premarket, not this pulse.
 
+## Scan 00:30 CET (6:30 PM ET) — FINAL SCAN
+
+Scanner returned 9 AH hits. Entries allowed (23:00+ CET). Held from earlier: LABT, PETZ, PXS (entered 23:00), GPRO (00:00 resting limit **now filled**). **Entered SSM** — cleared the 2-AH-scan gate (00:00 +76.5%, 00:30 +69.8%), Grade B catalyst, all gates passed.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GPRO | [TV](https://www.tradingview.com/chart/?symbol=GPRO) | $0.88 | +46.1% | +39.2% | $1.22 | +103.4% | 75.8M | 24.9M | 3.0x | 125.1M | Electronics/Appliances |
+| LABT | [TV](https://www.tradingview.com/chart/?symbol=LABT) | $2.50 | +8.7% | +28.4% | $3.21 | +39.6% | 10.6M | 1.4M | 7.3x | 1.6M | Biotechnology |
+| PETZ | [TV](https://www.tradingview.com/chart/?symbol=PETZ) | $1.15 | -3.3% | +34.8% | $1.55 | +30.3% | 5.7M | 639K | 8.9x | 6.8M | Food: Specialty/Candy |
+| SSM | [TV](https://www.tradingview.com/chart/?symbol=SSM) | $2.68 | +0.4% | +69.8% | $4.55 | +70.4% | 3.6M | 520K | 6.9x | 1.0M | Motor Vehicles |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $5.48 | -4.2% | +15.3% | $6.32 | +10.4% | 1.7M | 6.1M | 0.3x | 864K | Other Transportation |
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.32 | -14.8% | +12.9% | $1.49 | -3.9% | 1.5M | 12.9M | 0.1x | 1.6M | Misc Commercial Services |
+| IHT | [TV](https://www.tradingview.com/chart/?symbol=IHT) | $1.28 | -1.5% | +10.9% | $1.42 | +9.2% | 559K | 101K | 5.5x | 977K | Real Estate Investment Trusts |
+| PXS | [TV](https://www.tradingview.com/chart/?symbol=PXS) | $5.36 | +0.0% | +14.0% | $6.11 | +14.0% | 433K | 100K | 4.3x | 4.1M | Marine Shipping |
+| SST | [TV](https://www.tradingview.com/chart/?symbol=SST) | $2.24 | +18.5% | +7.2% | $2.40 | +27.0% | 122K | 979K | 0.1x | 2.2M | Packaged Software |
+
+**Instrumentation (log-only, no decision impact):**
+- SSM: SPIKE 17:21ET +38% $3.71 48 trades / 5k sh · CONFIRM-3 YES ignition 17:20ET 786.3x, confirmed 17:30ET $4.87
+- IHT: SPIKE 17:42ET +32% $1.69 296 trades / 62k sh · CONFIRM-3 NO ignition 17:40ET failed third-bar hold/volume
+
+**SIP volume:**
+- SSM: real heavy accumulation from 17:20ET — 446K/913K/817K/426K/348K/597K/620K/192K/162K/105K/263K/355K sh per bar, 1.5k-12.5k trades, still accumulating on last two bars (263K/355K sh, 3.5k-4.9k trades, 18:10-18:15ET). Peaked $5.20 @17:45ET, holding $4.4-4.8 (last bar C $4.69, vwap $4.79, within ~10% of high). BUILD/hold, late peak after 17:00ET. Float 1.0M. `tradable=true`. Quote ask $3.09 x100 stale (16:00ET) but SIP confirms real trades $4.6-4.7.
+- IHT: ignited 17:40ET (198K sh/1200 trades), faded $1.69→$1.42 on thinning volume (last bars 32K/29K/22K sh). Quote **ask $0.00 x0** — no fillable AH book. CONFIRM-3 NO.
+
+**Catalyst:**
+- SSM: **B** — non-binding Letter of Intent to combine with Sports One (pivot into professional sports franchise ownership); investors buy 19.9% stake. GlobeNewswire, released today ~5:30 PM ET. Non-binding LOI / business combination that can still re-rate (not a fixed-price cash buyout) — momentum-gradable. Solid transformative news = Grade B, hold up to 2 days.
+
+**Entry (filled):**
+- **SSM** — 20 sh @ **$4.50** (order 51d6a78c). Float 1.0M, Day +0.4%, Total% at entry +67.9% (under +150% ceiling). Cleared 2-AH-scan gate (00:00 +76.5%, 00:30 +69.8%). Grade **B** (LOI combination + 19.9% stake) — hold up to 2 days, stop -15% ($3.83). Real heavy accumulation, CONFIRM-3 YES, holding within ~10% of $5.20 peak (late peak 17:45ET). Fresh day-1 AH igniter. Filled against real book despite stale $3.09 ask quote.
+
+**CHASE-CAP (instrumentation):**
+- SSM: qualifying scan $4.55/+70.4%, fill $4.50/+67.9% — fill landed BELOW qualifying price, no chase.
+
+**GPRO fill (from 00:00 resting order):** The 00:00 extended-hours limit (78 sh @ $1.30, order 26d78803) **filled** during the 00:00-00:30 window. Position now GPRO 78 @ $1.30, now $1.16 (-10.8%). Grade **C** (Markiplier large-stake meme event) — exit premarket. Added to Paper Trades + OPEN_POSITIONS.
+
+**Held positions (no action — management is premarket):** GPRO $1.16 (-10.8%), LABT $3.24 (-7.2%), PETZ $1.70 (+13.3%), PXS $6.05 (-3.3%).
+
+**Skips:**
+- IHT: **illiquid (no AH book, ask $0.00 x0)** + CONFIRM-3 NO faded off 17:40ET ignition. Cleared 2-AH-scan gate on paper (00:00 +13.3%, 00:30 +10.9%) but cannot fill. Float 977K. Skip: illiquid.
+- WETO: VRatio 0.3x (AH volume below its own average), NO-SPIKE, no unusual AH volume. Skip (carried).
+- YYGH: Total% -3.9% still below regular close, Day -14.8% dead-cat profile. Skip (carried).
+- SST: AH +7.2% below the 10% threshold (Total% +27.0% is regular-session Day%). VRatio 0.1x. Skip: sub-threshold AH / no accumulation.
+- LABT / PETZ / PXS / GPRO — already held.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
@@ -222,3 +266,5 @@ Scanner returned 9 AH hits. Entries allowed (23:00+ CET). Held from 23:00: LABT,
 | LABT | $3.49 | 23:00 CET | 28 | 9afe3138 | Grade None. Heaviest real AH volume of night, float 1.6M, holding within 7% of high. Filled despite stale zero-ask book. |
 | PETZ | $1.50 | 23:00 CET | 67 | 1ee83962 | Grade None. Float 6.8M, CONFIRM-3 YES, cleared 2-AH-scan gate. Concern: fading per-bar volume. |
 | PXS | $6.26 | 23:00 CET | 15 | 74f62ca3 | Grade B (Q2 earnings, $2.8M profit). Float 4.1M, real accumulation, holding within 8% of high. |
+| GPRO | $1.30 | 00:00 CET | 78 | 26d78803 | Grade C (Markiplier large-stake meme event). Float 125M, volume-backed BUILD making new highs. Resting 00:00 limit filled by 00:30. Exit premarket. |
+| SSM | $4.50 | 00:30 CET | 20 | 51d6a78c | Grade B (non-binding LOI to combine with Sports One + 19.9% stake buy). Float 1.0M, cleared 2-AH-scan gate, CONFIRM-3 YES, holding within ~10% of $5.20 peak. Hold up to 2 days. |
