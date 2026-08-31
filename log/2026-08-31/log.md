@@ -1,0 +1,29 @@
+# Post-Market Screening - 2026-08-31
+
+## Scan 21:30 CET (3:30 PM ET)
+
+Regular session scan (before AH open 16:00 ET). No entries — regular-session caution. Watch candidates for AH confirmation.
+
+| Ticker | Chart | Price | Chg% | 5mVol | IRVol | VChg% | Float | MCap | Industry |
+|--------|-------|-------|------|-------|-------|-------|-------|------|----------|
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $6.54 | +84.7% | 103K | 199.9 | +39.9% | 1.3M | 25.3M | Building Products |
+| COOT | [TV](https://www.tradingview.com/chart/?symbol=COOT) | $0.63 | +36.1% | 79K | 2814.6 | -14.4% | 24.8M | 29.2M | Financial Conglomerates |
+| YDDL | [TV](https://www.tradingview.com/chart/?symbol=YDDL) | $2.23 | +35.2% | 30K | 1040.2 | +8.6% | 8.5M | 121.1M | Environmental Services |
+| SST | [TV](https://www.tradingview.com/chart/?symbol=SST) | $2.40 | +27.0% | 36K | 106.3 | +68.3% | 2.2M | 25.2M | Packaged Software |
+| SQFT | [TV](https://www.tradingview.com/chart/?symbol=SQFT) | $1.84 | +21.9% | 25K | 2035.3 | +138.7% | 1.1M | 2.6M | Real Estate Investment Trusts |
+| DPRO | [TV](https://www.tradingview.com/chart/?symbol=DPRO) | $5.41 | +21.1% | 43K | 20.3 | -52.1% | 36.8M | 200.8M | Motor Vehicles |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $1.32 | +18.9% | 14K | 43.1 | -10.1% | 14.6M | 22.4M | Semiconductors |
+| WBUY | [TV](https://www.tradingview.com/chart/?symbol=WBUY) | $0.94 | +13.2% | 24K | 656.3 | +180.2% | 2.5M | 5.1M | Food Retail |
+| CVKD | [TV](https://www.tradingview.com/chart/?symbol=CVKD) | $1.78 | +15.6% | 16K | 650.0 | -53.6% | 3.2M | 6.4M | Biotechnology |
+| FALFF | [TV](https://www.tradingview.com/chart/?symbol=FALFF) | $0.50 | +109.2% | 17K | 11.0 | +1590.8% | 181.7M | 106.9M | Precious Metals |
+
+**Notes:**
+- Regular-session scan only. AH opens at 16:00 ET (22:00 CET). No paper entries until AH scans confirm sustained momentum.
+- **Watch — pending AH confirmation:** AEHL (+84.7%, float 1.3M, strong low-float mover), SST (+27%, float 2.2M), YDDL (+35.2%, float 8.5M), COOT (+36.1%). These are the best-formed low-float movers to track into after-hours.
+- **Likely stale/bad prints (ignore):** NXL +2976%, VBIO +2927%, VEEA +1660%, GCTK +1424%, ARTL +828%, TPET +784%, CALC +387% — all show near-zero IRVol and tiny 5mVol (100-5K sh) with negative VChg%, no real accumulation.
+- Financial Conglomerates cluster (UAC, SUMA, WLCO, VII, XCBE, GSRV, XSLL, PECE) all pinned near $9.9-10 with ~0% change — these are SPAC/trust NAV pins, not momentum.
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
