@@ -47,6 +47,31 @@ No candidates found. Scanner returned 0 hits.
 
 Observation only (pre-23:00 CET / learning-phase rule). No entries. None of the watch names is building above its regular close; all faded or lack a fillable ask book on the first AH bar. Re-check at 23:00 as AH volume accumulates.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+Scanner returned 4 AH hits. First AH appearance for all four (none in 22:00/22:15). Observation only (pre-23:00 CET / learning-phase rule) — no entries. All need a 2nd AH scan at 23:00+ to clear the 2-AH-scan gate.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| LABT | [TV](https://www.tradingview.com/chart/?symbol=LABT) | $2.50 | +8.7% | +45.6% | $3.64 | +58.3% | 4.4M | 698K | 6.3x | 1.6M | Biotechnology |
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.32 | -14.8% | +10.6% | $1.46 | -5.8% | 626K | 12.8M | 0.0x | 1.6M | Misc Commercial Services |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $5.48 | -4.2% | +23.3% | $6.75 | +18.1% | 548K | 5.9M | 0.1x | 864K | Other Transportation |
+| PETZ | [TV](https://www.tradingview.com/chart/?symbol=PETZ) | $1.15 | -3.3% | +15.7% | $1.33 | +11.8% | 494K | 67K | 7.4x | 6.8M | Food: Specialty/Candy |
+
+**Instrumentation (log-only, no decision impact):**
+- LABT: SPIKE 16:00ET +24% $3.10 1253 trades / 187k sh · CONFIRM-3 NO
+- YYGH: SPIKE 16:10ET +29% $1.70 807 trades / 165k sh · CONFIRM-3 PENDING
+- WETO: NO-SPIKE peak +28% @16:15ET (no volume co-spike bar) · CONFIRM-3 NO
+- PETZ: SPIKE 16:06ET +35% $1.55 275 trades / 51k sh · CONFIRM-3 YES ignition 16:05ET 1426.9x, confirmed 16:15ET $1.60
+
+**SIP volume (real, accumulating on all four):**
+- LABT: 1.5M/1.8M/2.0M/0.9M sh per bar, 9k-18k trades — heavy real accumulation, vwap $3.09→$3.55 building. **Quote ask $0.00 x0 (no fillable ask book) as-of 16:30ET**, bid $2.14. Biotech, float 1.6M.
+- YYGH: flat until 16:10, then 680K sh/4321 trades, 320K/1611 — real ignition. Book present ask $1.44. Day% -14.8% (near dead-cat territory), Total% still -5.8% (below close). Float 1.6M.
+- WETO: 441K/170K/144K/339K sh per bar, 2.4k-5.8k trades — real. Book present ask $6.70. Float 864K, Total% +18.1%.
+- PETZ: 310K/246K/768K sh per bar, 1.6k-4.2k trades — building. Book present ask $1.44. Float 6.8M, Total% +11.8%.
+
+**Status:** Observation only. LABT is the standout mover (heaviest volume, +58% Total, float 1.6M) but has no fillable ask book right now. WETO/PETZ show real volume with fillable books. YYGH is below its regular close (Day -14.8%, watch for dead-cat vs reclaim). No catalyst search yet — will run structured search at 23:00 for names still >10% AH that clear the 2-AH-scan gate. Re-check all at 23:00 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
