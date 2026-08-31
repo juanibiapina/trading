@@ -175,6 +175,46 @@ Scanner returned 6 AH hits. Entries allowed (23:00+ CET). Already holding LABT, 
 
 **Skips (carried):** WETO (VRatio 0.2x, NO-SPIKE, no unusual AH volume). YYGH (Total -9.0% below close, Day -14.8% dead-cat). PETZ/LABT/PXS already held.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Scanner returned 9 AH hits. Entries allowed (23:00+ CET). Held from 23:00: LABT, PETZ, PXS. **GPRO cleared the 2-AH-scan gate** (23:30 +33.5%, 00:00 +41.5%, both AH >10%) — submitted an extended-hours limit buy (resting, see below). SSM and IHT are new this scan (first AH appearance) — blocked by the 2-AH-scan gate.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GPRO | [TV](https://www.tradingview.com/chart/?symbol=GPRO) | $0.88 | +46.1% | +41.5% | $1.24 | +106.7% | 56.4M | 22.9M | 2.5x | 125.1M | Electronics/Appliances |
+| LABT | [TV](https://www.tradingview.com/chart/?symbol=LABT) | $2.50 | +8.7% | +30.8% | $3.27 | +42.2% | 10.3M | 1.4M | 7.3x | 1.6M | Biotechnology |
+| PETZ | [TV](https://www.tradingview.com/chart/?symbol=PETZ) | $1.15 | -3.3% | +27.0% | $1.46 | +22.7% | 5.3M | 604K | 8.9x | 6.8M | Food: Specialty/Candy |
+| SSM | [TV](https://www.tradingview.com/chart/?symbol=SSM) | $2.68 | +0.4% | +76.5% | $4.73 | +77.2% | 2.1M | 325K | 6.6x | 1.0M | Motor Vehicles |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $5.48 | -4.2% | +16.5% | $6.38 | +11.6% | 1.6M | 6.1M | 0.3x | 864K | Other Transportation |
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.32 | -14.8% | +6.8% | $1.41 | -9.0% | 1.4M | 12.9M | 0.1x | 1.6M | Misc Commercial Services |
+| PXS | [TV](https://www.tradingview.com/chart/?symbol=PXS) | $5.36 | +0.0% | +12.5% | $6.03 | +12.5% | 421K | 98K | 4.3x | 4.1M | Marine Shipping |
+| IHT | [TV](https://www.tradingview.com/chart/?symbol=IHT) | $1.28 | -1.5% | +13.3% | $1.45 | +11.5% | 174K | 55K | 3.1x | 977K | Real Estate Investment Trusts |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.31 | +6.9% | +5.2% | $2.43 | +12.5% | 58K | 89K | 0.7x | 5.4M | Engineering & Construction |
+
+**Instrumentation (log-only, no decision impact):**
+- GPRO: SPIKE 16:37ET +16% $1.02 1996 trades / 905k sh · CONFIRM-3 NO ignition 16:30ET failed third-bar hold/volume
+- SSM: SPIKE 17:21ET +38% $3.71 48 trades / 5k sh · CONFIRM-3 YES ignition 17:20ET 786.3x, confirmed 17:30ET $4.87
+- IHT: SPIKE 17:42ET +32% $1.69 296 trades / 62k sh · CONFIRM-3 PENDING ignition 17:40ET, waiting for third bar
+
+**SIP volume:**
+- GPRO: heavy real accumulation — 3.3M/2.1M/0.9M/0.9M/0.5M/0.8M/5.7M/4.6M/3.4M/4.4M/3.5M/2.1M/2.9M/3.7M/5.1M/3.8M/2.3M/1.7M/1.3M/3.7M sh per bar, 1.2k-9.4k trades. Building $0.84→$1.27, making new highs, last bar 17:35ET vwap $1.22 (fresh, ~25 min behind scan). Genuine volume-backed BUILD, peaked after 17:00ET. Book fillable `ask $1.04 x100` bid $1.03 (quote frozen 16:59ET but SIP confirms real trades ~$1.24-1.27). `tradable=true`.
+- SSM: real late ignition at 17:20ET — 446K/913K/817K/426K/348K/597K sh per bar, 4.8k-12.5k trades, building $2.86→$5.10, vwap $5.01 last bar (17:45ET). CONFIRM-3 YES 786x. Float 1.0M, Total% +77.2%. Book `ask $3.09 x100` (quote 16:00ET stale). `tradable=true`.
+- IHT: ignited 17:40ET, only 2 bars — 198K/106K sh, 1200/692 trades, faded $1.69→$1.36. Quote **ask $0.00 x0** (no fillable AH book). Float 977K.
+
+**Catalyst:**
+- GPRO: **C** — YouTube star Markiplier disclosed a large stake / became largest shareholder (Benzinga, 2:25 PM ET). Meme/large-holder news, drove +46% Day% in regular session; AH is continuation. Day-1 event. Grade C = exit premarket.
+
+**Entry (submitted, resting/unfilled):**
+- **GPRO** — cleared all entry gates: 2-AH-scan gate (23:30 +33.5%, 00:00 +41.5%), Total% +106.7% under +150% ceiling, Day% +46.1% above -15% (not dead-cat, built above close), `tradable=true`, fillable book, genuine volume-backed BUILD making new highs. Submitted 78 sh limit $1.30 --ext (order 26d78803). **Order rested unfilled for ~4 min** — the Alpaca paper AH feed is frozen at 16:59ET ($1.04 ask) and never ticked to cross the limit. Left resting (day/ext order, can fill on a later feed tick). **No fill = no position recorded** in OPEN_POSITIONS.md. If it fills before session close, grade C, exit premarket. Fresh day-1 AH igniter (not a multi-session runner; Markiplier news dropped today).
+
+**Skips / watches:**
+- **SSM** — **Skip: 2-AH-scan gate** (first AH appearance this scan; absent 22:00-23:30). Genuine late igniter: real SIP accumulation from 17:20ET, CONFIRM-3 YES, float 1.0M, VRatio 6.6x, Total% +77.2% under ceiling, `tradable=true`, fillable book. **Strong watch for 00:30** — if it holds >10% AH it clears the gate and becomes entry-eligible. (If 00:30 is the final scan and it clears every rule but the gate, it is a FINAL-SCAN-GATE-BLOCK case.)
+- **IHT** — **Skip: 2-AH-scan gate + illiquid (no AH book, ask $0.00 x0).** First AH appearance, faded off its 17:40ET ignition ($1.69→$1.36). Float 977K.
+- **WETO** — Skip (carried): VRatio 0.3x, no unusual AH volume, NO-SPIKE.
+- **YYGH** — Skip (carried): Total% -9.0% below regular close, Day -14.8% dead-cat profile, AH sub-threshold.
+- **SUNE** — Skip: AH +5.2% below the 10% threshold, VRatio 0.7x (below its own average).
+- **LABT / PETZ / PXS** — already held (entered 23:00); management is premarket, not this pulse.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
