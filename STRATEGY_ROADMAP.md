@@ -223,6 +223,24 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-08-31 (strategy-advance) — pilot admitted another fresh
+   out-of-sample name (WETO) that HELD positive without hitting the limit;
+   entered set n=13, edge steady +5.4%/name, fade-tail unchanged 2/13.** The
+   tracker grew to 31 holdable footprint=none candidates (four weekend-gap
+   PM-only gappers logged 08-31: AEHL +72.6%, YDDL +37.0%, WETO +26.6%, NCRA
+   +21.7%). Re-ran `init6-pm-pilot.js`: **WETO was admitted** (entered $7.00 at
+   04:15 ET), never reached the +10% limit ($7.70) but drifted up to PM-last
+   +4.9% — a small positive, not a fade. The other three 08-31 gappers (AEHL,
+   YDDL, NCRA) were skipped by the continuation gate (no qualifying
+   >=3000-trade ignition hold). Entered set moves n=12 -> **n=13: SUM +69.6% /
+   mean +5.4% / median +10.0% / positive 11/13**, vs a hold-to-open PM-last
+   floor of -8.1% and a do-nothing baseline of 0%. Net of ~2% spread ~+3.4%/name.
+   The **fade-tail holds at 2/13 (BIVI -27.1%, MIMI-2 -6.9%)** — not growing
+   toward the ~1-in-4 that would erode the edge; WETO adds a positive admit.
+   Still log-only, no orders. Init 3 had **no fresh seed** (no open positions
+   after the 08-28 eval, so no held-name exit to measure). Next: keep seeding
+   holdable PM-only gappers and track the fade-tail ratio before proposing any
+   live PM-gapper pulse.
    **Update 2026-08-28 (strategy-advance) — pilot admitted a fresh out-of-sample
    name (WHLR) and it FILLED the +10% limit; entered set n=12, edge back up to
    +5.4%/name.** The tracker grew to 27 holdable footprint=none candidates (WHLR

@@ -7,6 +7,20 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-08-31 — Initiative 6 pilot: WETO admitted out-of-sample and held positive, entered n=13 (+5.4%/name, fade-tail 2/13). Initiative 3 data-blocked (no open positions)
+
+**Evaluated:** The 2026-08-28 steps **worked.** Init 6's next step was to keep seeding holdable PM-only gappers and track the fade-tail ratio (2/12 after WHLR); Init 3's was to keep seeding held-name exits (+10%-limit edge robust at n=28). Init 6 had fresh data: four weekend-gap holdable PM-only gappers logged 08-31 (AEHL +72.6%, YDDL +37.0%, WETO +26.6%, NCRA +21.7%). Init 3 had none — `OPEN_POSITIONS.md` is flat since the 08-28 eval, so no held-name exit to measure.
+
+**Step taken:** **Pilot / Initiative 6 (active slot):** re-ran `init6-pm-pilot.js` (31 holdable candidates now). **WETO was admitted** by the continuation gate (entered $7.00 at 04:15 ET) — third admitted out-of-sample entry since the pilot started; AEHL, YDDL, NCRA were all skipped (no qualifying >=3000-trade ignition hold). Ledger `log/init6-pm-pilot.csv` updated to 13 entered rows. All log-only, no orders. **Init 3:** no fresh seed available (no open positions), so the peak-seeking sim is data-blocked this run — held at n=28, +10%-limit rule unchanged.
+
+**Result:** **Init 6:** WETO never reached the resting +10% limit ($7.70) but drifted up to PM-last +4.9% — a small positive admit, not a fade. Entered set moves n=12 -> **n=13: SUM +69.6% / mean +5.4% / median +10.0% / positive 11/13**, vs a PM-last hold-to-open floor of -8.1% and a do-nothing baseline of 0%. Net of ~2% spread ~+3.4%/name. The **fade-tail holds at 2/13 (BIVI -27.1%, MIMI-2 -6.9%)** — not growing toward the ~1-in-4 that erodes the edge; WETO adds to the positive side. WHLR's row recomputed to PM-last -46.1% (was -45.4%, trivial) but still filled the +10% limit. **Init 3:** unchanged at n=28 (data-blocked, no exit to seed).
+
+**Hypothesis / next step:** Init 6 — the fade-tail ratio (BIVI, MIMI-2) is the key threat; it held at 2/13 this run as WETO added a positive admit. Keep seeding holdable PM-only gappers and track the fade-tail ratio before proposing any live PM-gapper pulse. Init 3 — resume seeding held-name exits once a position is opened and exits; the +10%-limit edge is robust at n=28 (positive 18/28). Keep `CONFIRM-3` and all sims log-only.
+
+**Needs from Juan:** two open asks unchanged (no new one). (1) The Init 3 peak-seeking-exit proposal — replace the plain 04:30 ET market exit for held names with a resting +10% sell-limit (GTC premarket, cancel 09:30 ET, plain market exit fallback; optional wide ~-15% catastrophe-stop). Evidence: +76.1% total / +2.7%/name over 28 seeds, positive 18/28. Veto window, not applied. (2) Still open from 08-07: the Initiative 2 broker/feed decision for the ~203% fill gap (Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills).
+
+---
+
 ### 2026-08-28 — Initiative 6 pilot: WHLR admitted out-of-sample and FILLED the +10% limit, entered n=12 (+5.4%/name). Initiative 3 sim seeded (AEMD, MODD, n=28)
 
 **Evaluated:** The 2026-08-27 steps **worked.** Init 6's next step was to keep seeding holdable PM-only gappers and track the fade-tail ratio (2/11 after MIMI faded); Init 3's was to keep seeding held-name exits (+10%-limit edge robust at n=26). Both had fresh data today: two new holdable footprint=none PM-only gappers (WHLR 08-28 +128.6%, NA 08-28 +17.5%) and two held-name premarket exits (AEMD sold $3.17 at 04:31 ET, MODD sold $3.82 at 04:32 ET).
