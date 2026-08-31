@@ -145,6 +145,36 @@ Scanner returned 6 AH hits. Entries allowed (23:00+ CET). Four names cleared the
 - GPRO: AH +8.4% below the 10% threshold (despite Day +46.1%); float 125M large. Skip: sub-threshold AH.
 - YYGH: Total% -5.8% (still below regular close), Day -14.8% dead-cat profile, AH fading. Skip: dead-cat below close.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Scanner returned 6 AH hits. Entries allowed (23:00+ CET). Already holding LABT, PETZ, PXS (entered 23:00). **No new entries** — the only new above-threshold mover (GPRO) fails the 2-AH-scan gate (first AH scan above 10%).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GPRO | [TV](https://www.tradingview.com/chart/?symbol=GPRO) | $0.88 | +46.1% | +33.5% | $1.17 | +95.0% | 41.5M | 21.3M | 1.9x | 125.1M | Electronics/Appliances |
+| LABT | [TV](https://www.tradingview.com/chart/?symbol=LABT) | $2.50 | +8.7% | +30.0% | $3.25 | +41.3% | 9.7M | 1.3M | 7.2x | 1.6M | Biotechnology |
+| PETZ | [TV](https://www.tradingview.com/chart/?symbol=PETZ) | $1.15 | -3.3% | +20.9% | $1.39 | +16.8% | 5.0M | 570K | 8.8x | 6.8M | Food: Specialty/Candy |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $5.48 | -4.2% | +19.7% | $6.56 | +14.7% | 1.5M | 6.1M | 0.2x | 864K | Other Transportation |
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.32 | -14.8% | +6.8% | $1.41 | -9.0% | 1.3M | 12.9M | 0.1x | 1.6M | Misc Commercial Services |
+| PXS | [TV](https://www.tradingview.com/chart/?symbol=PXS) | $5.36 | +0.0% | +13.6% | $6.09 | +13.6% | 394K | 94K | 4.2x | 4.1M | Marine Shipping |
+
+**Instrumentation (log-only, no decision impact):**
+- GPRO: SPIKE 16:37ET +16% $1.02 1996 trades / 905k sh · CONFIRM-3 NO ignition 16:30ET failed third-bar hold/volume
+- LABT: SPIKE 16:00ET +24% $3.10 1253 trades / 187k sh · CONFIRM-3 NO no local-volume new-high ignition
+- PETZ: SPIKE 16:06ET +35% $1.55 275 trades / 51k sh · CONFIRM-3 YES ignition 16:05ET 1426.9x, confirmed 16:15ET $1.60
+- PXS: SPIKE 16:15ET +17% $6.28 64 trades / 17k sh · CONFIRM-3 NO ignition 16:25ET failed third-bar hold/volume
+- WETO: NO-SPIKE peak +30% @16:16ET (no volume co-spike bar) · CONFIRM-3 NO
+
+**GPRO (new above-threshold mover):**
+- SIP volume: heavy real accumulation — 5.7M/4.6M/3.4M/4.4M/3.5M/2.1M/2.9M/3.7M/5.1M/3.8M sh per bar, 4k-9k trades, price building $0.84→$1.18 across bars, peaked ~$1.21 @17:15ET, holding $1.17-1.18 (within ~3% of high). Genuine volume-backed BUILD.
+- Book: fillable — `ask $1.04 x100`, bid $1.03 x100. `tradable=true`.
+- Catalyst: **C** — YouTube star Markiplier disclosed a large stake / became largest shareholder (Benzinga, 2:25 PM ET). Meme/large-holder news, drove the +46% Day% in regular session; AH is continuation. Day-1 event.
+- **Skip: 2-AH-scan gate.** GPRO's first AH scan above the 10% threshold is this 23:30 scan (was +8.4% at 23:00, sub-threshold; absent at 22:00/22:15/22:30/22:45). Regular-session appearances don't count. Needs a 2nd AH scan >10% at 00:00+ to qualify. Float 125M (not a filter, learning phase). Total% +95% under ceiling. Strong watch for 00:00 — if it holds >10% AH it clears the gate and becomes entry-eligible.
+
+**Held positions (no action — management is premarket):** LABT $3.17 (-9.2%), PETZ $1.38 (-8.1%), PXS $6.11 (-2.4%).
+
+**Skips (carried):** WETO (VRatio 0.2x, NO-SPIKE, no unusual AH volume). YYGH (Total -9.0% below close, Day -14.8% dead-cat). PETZ/LABT/PXS already held.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
