@@ -101,7 +101,54 @@ Scanner returned 6 AH hits. LABT, PETZ, WETO carry from 22:30 (2nd AH appearance
 
 **Status:** Observation only. Best-formed movers into 23:00: **LABT** (heaviest real volume, float 1.6M, +52.6% Total — but confirm ask book is fillable), **PETZ** (BUILD across scans, CONFIRM-3 YES, VRatio 8.7x), **PXS** (real accumulation, book present, Total +23.3% under ceiling). LABT/PETZ have cleared the 2-AH-scan gate as of this scan. At 23:00 run structured catalyst search for LABT, PETZ, PXS and evaluate for entry per all gates. Skip WETO (VRatio 0.2x, NO-SPIKE), YYGH (dead-cat, sub-threshold), SGLY (thin).
 
+## Scan 23:00 CET (5:00 PM ET)
+
+Scanner returned 6 AH hits. Entries allowed (23:00+ CET). Four names cleared the 2-AH-scan gate: LABT, PETZ, WETO, PXS. **Entered LABT, PETZ, PXS** (all filled). Skipped WETO (no unusual AH volume), GPRO (AH <10%), YYGH (dead-cat below close).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GPRO | [TV](https://www.tradingview.com/chart/?symbol=GPRO) | $0.88 | +46.1% | +8.4% | $0.95 | +58.3% | 20.6M | 19.2M | 1.1x | 125.1M | Electronics/Appliances |
+| LABT | [TV](https://www.tradingview.com/chart/?symbol=LABT) | $2.50 | +8.7% | +43.0% | $3.57 | +55.4% | 8.2M | 1.2M | 7.1x | 1.6M | Biotechnology |
+| PETZ | [TV](https://www.tradingview.com/chart/?symbol=PETZ) | $1.15 | -3.3% | +19.1% | $1.37 | +15.2% | 4.1M | 465K | 8.8x | 6.8M | Food: Specialty/Candy |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $5.48 | -4.2% | +18.2% | $6.48 | +13.3% | 1.3M | 6.1M | 0.2x | 864K | Other Transportation |
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.32 | -14.8% | +10.6% | $1.46 | -5.8% | 1.2M | 12.9M | 0.1x | 1.6M | Misc Commercial Services |
+| PXS | [TV](https://www.tradingview.com/chart/?symbol=PXS) | $5.36 | +0.0% | +17.0% | $6.27 | +17.0% | 331K | 86K | 3.8x | 4.1M | Marine Shipping |
+
+**Instrumentation (log-only, no decision impact):**
+- LABT: SPIKE 16:00ET +24% $3.10 1253 trades / 187k sh · CONFIRM-3 NO no local-volume new-high ignition
+- PETZ: SPIKE 16:06ET +35% $1.55 275 trades / 51k sh · CONFIRM-3 YES ignition 16:05ET 1426.9x, confirmed 16:15ET $1.60
+- PXS: SPIKE 16:15ET +17% $6.28 64 trades / 17k sh · CONFIRM-3 NO ignition 16:25ET failed third-bar hold/volume
+- WETO: NO-SPIKE peak +30% @16:16ET (no bar cleared +15% on a volume co-spike) · CONFIRM-3 NO
+
+**SIP volume (real, accumulating on LABT/PETZ/PXS):**
+- LABT: 1.5M/1.8M/2.0M/0.9M/1.0M/0.7M sh per bar, 6k-18k trades — heaviest real accumulation of the night. Peaked $3.78 @16:10ET, holding $3.4-3.5 (vwap $3.51 last bar), within ~7% of high. **Alpaca quote ask $0.00 x0 (stale 16:00ET book)** but SIP confirms genuine trades at $3.4-3.5 — attempted limit buy and it FILLED. Float 1.6M. No fresh catalyst.
+- PETZ: 310K/246K/768K/1.35M/1.0M/447K/240K/156K/95K sh per bar — built to $1.68 @16:20ET then per-bar volume declining, price easing to $1.43 (~15% off high, within 20%). Book fresh ask $1.48. Float 6.8M. No catalyst.
+- PXS: 30K/19K/139K/165K/82K/43K/27K sh per bar, up to 2638 trades — real accumulation, peaked $6.72 @16:25ET, holding $6.2 (vwap $6.13 last bar, ~8% off high). Book ask $6.39. Float 4.1M. **Grade B catalyst: Q2 2026 earnings, $2.8M profit, released after close** (GlobeNewswire, StockTitan).
+
+**Catalyst search:**
+- PXS: **B** — Q2 2026 earnings, $2.8M net profit, ~87% of Q3 days contracted at ~$22,250/day TCE, $103M liquidity, low net leverage. Released after close today (GlobeNewswire).
+- LABT: **None** — no fresh same-day catalyst. Latest PR Jul 15 (preclinical Nu-3 data); a "B2i Digital Featured Company" promo 5 days ago. Nothing today. Big AH spike with no news.
+- PETZ: **None** — TDH Holdings, China micro-cap (real estate mgmt / pet). No same-day catalyst found (2 searches).
+
+**Entries (all filled):**
+- **LABT** — 28 sh @ **$3.49** (order 9afe3138). Float 1.6M, Day +8.7%, Total% at entry +39.6% (under +150% ceiling). Heaviest real AH volume of night, holding within 7% of high. Grade **None** (no catalyst) — exit first PM opportunity. Fill test succeeded despite stale zero-ask book (SIP volume real). Fresh day-1 AH igniter.
+- **PETZ** — 67 sh @ **$1.50** (order 1ee83962). Float 6.8M, Day -3.3%, Total% at entry +30.4% (under ceiling). CONFIRM-3 YES, cleared 2-AH-scan gate. Grade **None** — exit first PM opportunity. **Concern: per-bar SIP volume declining and price fading 15% off peak** (SPIKE→FADE-ish but within 20% hold band). Fresh day-1 AH igniter.
+- **PXS** — 15 sh @ **$6.26** (order 74f62ca3). Float 4.1M, Day +0.0%, Total% at entry +16.8% (under ceiling). Grade **B** (Q2 earnings, $2.8M profit) — hold up to 2 days, stop -15% from entry. Real accumulation, holding within 8% of high. Fresh day-1 AH igniter.
+
+**CHASE-CAP (instrumentation):**
+- PETZ: qualifying scan $1.37/+15.2% (23:00 scanner AH price), fill $1.50/+30.4% (real-time ask $1.48 vs lagging scanner price). Chase gap +15.2 pts. Well under the +120% fade zone — no chase-cap concern.
+- LABT: fill $3.49/+39.6% landed BELOW qualifying $3.57/+55.4% — no chase.
+- PXS: fill $6.26/+16.8% ≈ qualifying $6.27/+17.0% — no chase.
+
+**Skips:**
+- WETO: VRatio 0.2x (AH volume below its own average — not unusual activity), NO-SPIKE (no ignition bar), price fading +30%→+18%. Skip: no unusual AH volume / no ignition.
+- GPRO: AH +8.4% below the 10% threshold (despite Day +46.1%); float 125M large. Skip: sub-threshold AH.
+- YYGH: Total% -5.8% (still below regular close), Day -14.8% dead-cat profile, AH fading. Skip: dead-cat below close.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| LABT | $3.49 | 23:00 CET | 28 | 9afe3138 | Grade None. Heaviest real AH volume of night, float 1.6M, holding within 7% of high. Filled despite stale zero-ask book. |
+| PETZ | $1.50 | 23:00 CET | 67 | 1ee83962 | Grade None. Float 6.8M, CONFIRM-3 YES, cleared 2-AH-scan gate. Concern: fading per-bar volume. |
+| PXS | $6.26 | 23:00 CET | 15 | 74f62ca3 | Grade B (Q2 earnings, $2.8M profit). Float 4.1M, real accumulation, holding within 8% of high. |
