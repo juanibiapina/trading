@@ -705,6 +705,21 @@ constantly.
 
 **Prior result (2026-07-29):** First live night (07-28) the pre-seed predicted **0 of 4** real AH ignitions (AMIX/YIBO/IOTR/EGG): only EGG was on the watch list and it faded, while AMIX (paper-entered → PM +63% winner 07-29), YIBO, IOTR were pure post-close ignitions with no regular-session footprint. Extended winner census (6 recent ah-detected holdable PM winners) confirms **only 2/6 (STFS, BIYA) are reachable** by a day-movers pre-seed; the other 4 (incl. the biggest, AMIX −1.4% reg) ignite post-close and are blind to it. Decisive: the pre-seed gives **no actionable entry-lead** — it surfaces ~half of winners, and even those are already on the 16:30 ET screener (22:30 CET) a full 30 min before the 23:00 CET entry window opens, so its only edge would be a 22:00–22:15 name the 22:30 screener misses, which did not happen. Kept cheap log-only for 1–2 more nights to confirm zero-lead; if nights 2–3 repeat, trim the pre-seed instruction (Init-3 cost cut, no schedule/rule change). Details appended to `INIT3_IGNITION_TIMING.md`.
 
+**Feedback update (2026-08-28):** Juan on AEMD (that night's winner, AH entry
+$3.12 -> PM peak $3.82, +22.4%): *"Aemd could have been entered earlier. 2 or 3
+5m bars are enough. We may need to have more pulses?"* This is the **second
+live example** of the same entry-latency gap after AMIX (07-29): the current
+cadence enters winners several bars after ignition, and Juan reiterates that a
+2-3 bar volume+price co-spike is enough confirmation to enter, so denser early
+5-minute pulses should let us enter on the confirming bar instead of a later
+scan. Reinforces (does not change) the staged next step: the 5-minute-grid
+replay of AH-open ignitions measuring entry price / false positives / pulse
+cost vs the current grid, then the tighter-early-cadence proposal to Juan.
+`spike-bar.js` already fires on the first co-spike bar; the open question is the
+entry-timing tradeoff, kept log-only until the replay shows an edge. Pairs with
+the 08-27 DAIC feedback (stricter spike gate): combined target is enter fast on
+a real 2-3 bar ignition and only on that.
+
 **Feedback update (2026-07-29):** Juan asked whether AMIX could have been bought
 on its second or third 5m volume bar and suggested more 5-minute pulses at the
 start of AH. AMIX ignited at 16:03 ET, but the whole-market screener did not

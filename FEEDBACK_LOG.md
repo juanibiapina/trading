@@ -6,6 +6,40 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-08-28 — re: Trading Scanner Report - 2026-08-27
+
+**Juan said:** "Aemd could have been entered earlier. 2 or 3 5m bars are
+enough. We may need to have more pulses?"
+
+**Interpretation:** AEMD was the clean winner of the night (AH entry $3.12 ->
+PM peak $3.82, +22.4%) but the scanner entered it late relative to its
+ignition. Juan's point is an entry-timing/latency one: two or three 5-minute
+bars of a real volume+price co-spike are enough to confirm an ignition, so we
+should not wait as long to enter. The proposed lever is more frequent pulses
+early in the AH window so a name is re-checked every ~5 minutes and entered on
+the 2nd/3rd confirming bar instead of a later scan. This is a **repeat** of the
+2026-07-29 AMIX feedback ("could AMIX have been bought on its 2nd/3rd 5m volume
+bar, add more 5-minute pulses at the start of AH"). Two live examples now name
+the same gap: the current cadence catches winners several bars after ignition.
+
+**Interplay with the DAIC feedback:** the 2026-08-27 DAIC point pushes for a
+*stricter* volume-spike gate (fewer, cleaner entries); this AEMD point pushes
+for *faster* entry on names that do pass. Not in conflict — the shared target
+is "enter fast on a real 2-3 bar volume+price ignition, and only on that." Both
+route to Initiative 3.
+
+**Action:**
+- **Routed to Initiative 3** (`STRATEGY_ROADMAP.md`, adaptive scheduling /
+  faster ignition detection). Added AEMD as the second live example (after
+  AMIX) that the cadence enters winners late, and recorded Juan's "2-3 bars are
+  enough, add more pulses" as a repeated ask feeding the 5-minute-grid replay
+  and the tighter-early-cadence proposal already staged there. The existing
+  `spike-bar.js` detector already fires on the first co-spike bar; the open
+  question Init 3 is measuring is entry price / false-positive / pulse-cost
+  tradeoff of a denser 5-minute early grid before changing the live entry
+  schedule. Left log-only; no live schedule change made here (that needs Juan's
+  veto and is Initiative 3's job, not this capture pulse).
+
 ### 2026-08-27 — re: Trading Scanner Report - 2026-08-26
 
 **Juan said:** "Are you even receiving and acting on my feedback? DAIC is not
