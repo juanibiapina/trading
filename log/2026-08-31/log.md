@@ -35,6 +35,18 @@ No candidates found. Scanner returned 0 hits at AH open (16:00 ET) — AH volume
 
 Observation only (pre-23:00 CET / learning-phase rule). No entries. Re-check at 22:30 as AH volume accumulates.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+No candidates found. Scanner returned 0 hits.
+
+**Watch-name status (SIP first AH bar 16:00-16:05 ET, free-tier lags ~15 min):**
+- AEHL: first AH bar faded $6.49 → $6.14 (vwap $6.28), below close $6.54. 100K sh / 1,156 trades — real volume but printing under close, not building. Quote bid $5.60 / ask $7.39.
+- SST: **ask $0.00 x0** (no AH book). 16K sh / 42 trades — illiquid.
+- YDDL: **ask $0.00 x0** (no AH book). 59K sh / 263 trades — illiquid ramp.
+- COOT: drifting below close ($0.57 vwap $0.59 vs close $0.63). 127K sh / 228 trades — fading.
+
+Observation only (pre-23:00 CET / learning-phase rule). No entries. None of the watch names is building above its regular close; all faded or lack a fillable ask book on the first AH bar. Re-check at 23:00 as AH volume accumulates.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
