@@ -63,6 +63,20 @@ Watch-name AH cross-check (from 21:30 regular-session list):
 
 **Decision: no entries.** Observation-only. Re-evaluate at 22:30/23:00 if MIRA/BIAF sustain AH momentum on real accumulating volume.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+Scanner: **0 hits**. AH thin, no new candidates.
+
+Watch-name AH cross-check (SIP first bar 16:00–16:05 ET + book):
+
+| Ticker | AH Book | SIP 16:00 bar | Note |
+|--------|---------|---------------|------|
+| MIRA | bid $0.82 x500 / ask $0.97 x100 | C $0.82, vol 33k, 87 trades | Fading below $0.87 close, no build |
+| BIAF | bid $5.66 x100 / ask $0.00 x0 | C $6.58, vol 36k, 307 trades | Faded off day high, no fillable ask book |
+| FALFF | (OTC, untradable) | — | Skip: untradable |
+
+**Decision: no entries.** Both watch names fading in AH, not building. Scanner 0 hits. Observation-only anyway (learning phase, before 23:00 CET). Re-evaluate at 22:30/23:00 if MIRA/BIAF reverse and build on real accumulating volume.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
