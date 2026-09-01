@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Shares | Order ID | Grade | Entered | Notes |
 |--------|-------|--------|----------|-------|---------|-------|
 | PXS | $6.26 | 15 | 74f62ca3 | B | 2026-08-31 23:00 CET | Pyxis Tankers, Marine Shipping, float 4.1M. Q2 2026 earnings $2.8M profit released after close. Real AH accumulation, holding within 8% of $6.72 high. Hold up to 2 days, stop -15% ($5.32). Now $5.81 SIP (-7.2%), day 1, above stop. HOLD. |
+| KITT | $1.02 | 93 | 7f6437f1 | B | 2026-09-02 00:30 CET | Nauticus Robotics, Industrial Machinery (subsea ROV robotics), float 5.7M. Grade B — PR ~17:30 ET: both Comanche ROV systems concurrently deployed on commercial offshore projects, stronger Q3 offshore activity. Cleared 2-AH-scan gate (00:00 +38.1%, 00:30 +24.9% AH). Real SIP BUILD: ignition 17:30 ET on 1.69M sh/8938 tr bar, high $1.13 @17:45, dipped to $0.96 then rebuilt to $1.00-1.08 holding through 18:15 ET on heavy volume. CONFIRM-3 YES 176x. Total +22.5% (under ceiling), Day% -1.9% (not dead-cat). Hold up to 2 days, stop -15% ($0.867). |
 
 ## Position Rules
 

@@ -203,9 +203,45 @@ SPWH/WHLR/WALD/SDA all under +10% AH.
 
 **Decision: no entries.** FLYE is the only name clearing the 2-AH-scan gate but shows SPIKE→FADE (early 17:15 ET peak, declining across scans on decaying volume). KITT is the one real live BUILD but has only 1 AH scan >10% (ignited 17:30 ET). Re-evaluate KITT at the 00:30 final scan: a second >10% AH scan on sustained accumulating volume clears the gate and qualifies it (Total +35.5% under ceiling, Day -1.9% not dead-cat, float 5.7M, tradable). At 00:30 also cross-check for feed-lag under-reporting on FLYE/KITT/BIAF via SIP.
 
+## Scan 00:30 CET (6:30 PM ET) — final scan
+
+Scanner: **8 hits**. AH change >10%: KITT, MIRA, WHLR, UPC (BIAF +9.9% now under threshold).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| KITT | [TV](https://www.tradingview.com/chart/?symbol=KITT) | $0.80 | -1.9% | +24.9% | $0.99 | +22.5% | 7.3M | 1.1M | 7.0x | 5.7M | Industrial Machinery |
+| SPWH | [TV](https://www.tradingview.com/chart/?symbol=SPWH) | $1.20 | +0.8% | +7.5% | $1.29 | +8.4% | 2.6M | 542K | 4.9x | 35.6M | Specialty Stores |
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $6.59 | +44.5% | +9.9% | $7.24 | +58.8% | 1.9M | 4.7M | 0.4x | 573K | Medical Specialties |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.58 | -14.8% | +10.0% | $0.64 | -6.3% | 893K | 5.9M | 0.2x | 772K | Real Estate Investment Trusts |
+| MIRA | [TV](https://www.tradingview.com/chart/?symbol=MIRA) | $0.86 | +11.7% | +10.1% | $0.95 | +23.0% | 715K | 3.0M | 0.2x | 38.7M | Pharmaceuticals: Other |
+| UPC | [TV](https://www.tradingview.com/chart/?symbol=UPC) | $4.27 | -6.8% | +24.4% | $5.31 | +15.9% | 166K | 50K | 3.3x | 2.6M | Pharmaceuticals: Major |
+| WALD | [TV](https://www.tradingview.com/chart/?symbol=WALD) | $1.35 | -2.9% | +8.1% | $1.46 | +5.0% | 146K | 233K | 0.6x | 54.0M | Household/Personal Care |
+| SDA | [TV](https://www.tradingview.com/chart/?symbol=SDA) | $0.66 | -7.4% | +7.5% | $0.71 | -0.4% | 66K | 74K | 0.9x | 34.7M | Other Consumer Services |
+
+**Instrumentation (AH >10%):**
+- KITT — SPIKE 17:34ET +15% $0.92 183 trades / 50k sh. CONFIRM-3 YES ignition 17:30ET 176.2x; confirmed 17:40ET $1.10.
+- UPC — SPIKE 18:09ET +27% $5.42 75 trades / 30k sh. CONFIRM-3 YES ignition 18:05ET 236.0x; confirmed 18:15ET $5.28.
+- MIRA — no >15% co-spike bar; SIP faded to $0.86-0.87 (scanner $0.95 is stale/divergent).
+- WHLR — dead-cat (Day -14.8%, Total -6.3%, AH still below regular close); carried skip, no override.
+
+**KITT (ENTERED — clears 2-AH-scan gate, real BUILD, Grade B catalyst):**
+- 2-AH-scan gate: cleared. 00:00 +38.1% AH and 00:30 +24.9% AH = two AH scans >10%.
+- SIP real accumulation: ignition 17:30 ET, 17:40 **1.69M sh / 8938 tr** vwap $1.02, 17:45 **1.64M sh / 8653 tr** vwap $1.04, AH high $1.13 @17:45. Dipped to $0.96 @17:55 then **rebuilt** to $1.00-1.08 holding through 18:15 ET (822K / 964K / 844K / 312K sh per bar, 1.5k-3.9k trades/bar). Last SIP bar 18:15 ET C $1.03 vwap $1.02. BUILD-and-hold, not a fade — current price within ~10% of the $1.13 high on sustained heavy volume.
+- Trajectory: peak 17:45 ET (before 18:30) but **holding within ~10% of high and rebuilding** on real volume. Hold-vs-fade primary signal = hold. Not SPIKE→FADE.
+- Catalyst: **Grade B** — Nauticus Robotics PR ~17:30 ET (matches ignition): both Comanche ROV systems concurrently deployed on commercial offshore projects, "substantially stronger Q3 offshore activity." Operational/commercial news.
+- Total% +22.5% (under +150% ceiling). Day% -1.9% (not dead-cat). Float 5.7M. tradable=true. Fresh day-1 igniter (no WINNERS_TRACKING entry, pure AH ignition on today's PR — not a multi-session runner).
+- Quote frozen at 16:00 ET close (bid $0.69 / ask $0.91, timestamp 20:00:00Z) — stale snapshot, not a real fillable-book reading. Freshness guard: fresh SIP (18:15 ET) shows real accumulation, so no bad-print/illiquid skip; leaned on SIP + heavy trade counts as liquidity proof.
+- **CHASE-CAP note:** qualifying-scan AH $0.99 / +22.5% (00:30). Fill $1.02 / +27.5%. Chase gap +5.0% — well under the +120% fade zone, no concern.
+- **Entry:** BUY 93 KITT @ limit $1.07 ext (id 7f6437f1) filled **@ $1.02**. Position $94.86. Grade B — hold up to 2 days, stop -15% ($0.867).
+
+**FINAL-SCAN-GATE-BLOCK — UPC:** float 2.6M, catalyst **Grade D/uncertain** ($15M registered direct offering seen; no confirmed same-day momentum PR), ignition 18:05 ET, qualified final-scan AH $5.31 / Total% +15.9%. SIP evidence: 18:05 ET 30K sh/79 tr, 18:10 ET **206K sh / 2989 tr** vwap $5.46 H $5.88, 18:15 ET 126K sh / 2504 tr C $5.28. CONFIRM-3 YES 236x. Real volume-backed late igniter, first AH appearance at this final scan, Total under ceiling, Day% -6.8%, tradable=true. Blocked **solely** by the 2-AH-scan gate (ignited 18:05 ET, too late for a second AH scan). Not entered.
+
+**Pipeline feed-lag cross-check:** FLYE — SIP stops at 17:35 ET C $2.44 vwap $2.47, volume decayed (582K→341K→177K→105K→117K sh/bar) off the $2.69 @17:15 ET peak; dropped out of 00:30 scanner hits. Genuinely faded (SPIKE→FADE confirmed at 00:00), no feed-lag rescue. BIAF +9.9% AH, `ask $0.00 x0` (no fillable book), the +44.5% is regular-session — carried skip. WHLR dead-cat carried skip.
+
+**Decision: 1 entry (KITT).** KITT is the one real live BUILD tonight that also clears the 2-AH-scan gate: low float, fresh Grade-B operational catalyst matching the 17:30 ET ignition, real SIP accumulation rebuilding/holding within ~10% of its AH high, Total +22.5% under ceiling, tradable. UPC was a genuine late igniter blocked only by the gate (final-scan instrumentation). FLYE/BIAF/WHLR skipped (fade / no book / dead-cat).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-
-None this pulse (pre-AH regular session, watch only).
+| KITT | $1.02 | 2026-09-02 00:30 CET | 93 | 7f6437f1 | Grade B — Nauticus Robotics both Comanche ROVs deployed (stronger Q3 offshore). Cleared 2-AH-scan gate, real SIP BUILD-and-hold within ~10% of $1.13 high, CONFIRM-3 YES 176x, float 5.7M, Total +22.5%. Hold up to 2 days, stop -15% ($0.867). |
