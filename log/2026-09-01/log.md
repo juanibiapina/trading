@@ -97,6 +97,28 @@ Watch-name AH cross-check (MIRA/BIAF/FALFF): no longer in scanner hits, both fad
 
 **Decision: no entries.** Observation-only (learning phase, before 23:00 CET). SPWH/TSSI/SDA all under +10% AH. CALC is a thin bad-print spike (1K AH vol, 28 trades, quote frozen). Re-evaluate at 23:00 if any candidate sustains real accumulating volume.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+Scanner: **5 hits**. Only SPWH has AH change >10%.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SPWH | [TV](https://www.tradingview.com/chart/?symbol=SPWH) | $1.20 | +0.8% | +14.1% | $1.37 | +15.1% | 1.7M | 446K | 3.9x | 35.6M | Specialty Stores |
+| WALD | [TV](https://www.tradingview.com/chart/?symbol=WALD) | $1.35 | -2.9% | +8.1% | $1.46 | +5.0% | 127K | 231K | 0.5x | 54.0M | Household/Personal Care |
+| CDT | [TV](https://www.tradingview.com/chart/?symbol=CDT) | $1.48 | -11.9% | +9.5% | $1.62 | -3.6% | 86K | 178K | 0.5x | 674K | Pharmaceuticals: Major |
+| SDA | [TV](https://www.tradingview.com/chart/?symbol=SDA) | $0.66 | -7.4% | +7.5% | $0.71 | -0.4% | 66K | 74K | 0.9x | 34.7M | Other Consumer Services |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.58 | -14.8% | +6.2% | $0.62 | -9.5% | 171K | 5.8M | 0.0x | 772K | Real Estate Investment Trusts |
+
+**Instrumentation (SPWH, AH >10%):**
+- SPIKE 16:18ET +19% $1.43 516 trades / 273k sh (first co-spike bar)
+- CONFIRM-3 YES ignition 16:05ET 19.5x; confirmed 16:15ET $1.42
+- SIP real accumulation: 197K/196K/600K/439K/384K/281K sh per bar, 360–1739 trades/bar — genuine build. AH high $1.46 @16:15–16:20 ET, fading to C $1.26 by 16:30 ET (last SIP bar), vwap $1.32–1.39.
+- Quote frozen at 20:00:03Z (close): bid $1.02 x100 / ask $0.00 x0 — stale close snapshot, no real-time fillable ask in this pull.
+
+SPWH progression: +9.2% AH (22:30) → +14.1% AH (22:45), AH vol 388K → 1.7M. First AH scan clearing >10%; needs a second >10% AH scan for the 2-AH-scan gate. Float 35.6M (under 50M gate; float not a filter). Day% +0.8% (fresh, not a dead-cat). SIP shows it already fading off the $1.46 open-bar high toward $1.26.
+
+**Decision: no entries.** Observation-only (learning phase, before 23:00 CET). SPWH is the one real build but has only 1 AH scan >10% and is fading off its 16:15 high. WALD/CDT/SDA/WHLR all under +10% AH. Re-evaluate SPWH at 23:00: needs a second >10% AH scan and to hold within ~20% of its $1.46 high on accumulating volume.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
