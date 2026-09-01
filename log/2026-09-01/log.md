@@ -77,6 +77,26 @@ Watch-name AH cross-check (SIP first bar 16:00–16:05 ET + book):
 
 **Decision: no entries.** Both watch names fading in AH, not building. Scanner 0 hits. Observation-only anyway (learning phase, before 23:00 CET). Re-evaluate at 22:30/23:00 if MIRA/BIAF reverse and build on real accumulating volume.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+Scanner: **4 hits** (all new). Only CALC has AH change >10%.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SPWH | [TV](https://www.tradingview.com/chart/?symbol=SPWH) | $1.20 | +0.8% | +9.2% | $1.31 | +10.1% | 388K | 304K | 1.3x | 35.6M | Specialty Stores |
+| TSSI | [TV](https://www.tradingview.com/chart/?symbol=TSSI) | $7.86 | -0.1% | +5.1% | $8.26 | +5.0% | 89K | 782K | 0.1x | 25.7M | IT Services |
+| SDA | [TV](https://www.tradingview.com/chart/?symbol=SDA) | $0.66 | -7.4% | +7.5% | $0.71 | -0.4% | 66K | 74K | 0.9x | 34.7M | Other Consumer Services |
+| CALC | [TV](https://www.tradingview.com/chart/?symbol=CALC) | $2.00 | -6.5% | +23.3% | $2.47 | +15.2% | 1K | 122K | 0.0x | n/a | Biotechnology |
+
+**Instrumentation (CALC, AH >10%):**
+- SPIKE 16:14ET +26% $2.52 28 trades / 2k sh (first co-spike bar) — thin, not real accumulation
+- CONFIRM-3 NO (no local-volume new-high ignition)
+- Quote frozen at 20:00Z (close): bid $1.72 x100 / ask $2.48 x100 — wide spread, AH Vol only 1K / VRatio 0.0x = stale/thin, not a real spike
+
+Watch-name AH cross-check (MIRA/BIAF/FALFF): no longer in scanner hits, both faded in prior 22:15 scan.
+
+**Decision: no entries.** Observation-only (learning phase, before 23:00 CET). SPWH/TSSI/SDA all under +10% AH. CALC is a thin bad-print spike (1K AH vol, 28 trades, quote frozen). Re-evaluate at 23:00 if any candidate sustains real accumulating volume.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
