@@ -30,3 +30,28 @@ Net realized this pulse: -$15.85
 - HOLD PXS (Grade B, day 1, above stop)
 
 Net realized this pulse: -$14.80
+
+---
+
+# Post-Market Screening - 2026-09-01
+
+## Scan 21:30 CET (3:30 PM ET)
+
+Regular-session scan, before AH open (22:00 CET / 16:00 ET). No entries — watch only pending AH confirmation.
+
+| Ticker | Chart | Price | Chg% | IRVol | VChg% | Float | MCap | Industry | Note |
+|--------|-------|-------|------|-------|-------|-------|------|----------|------|
+| MIRA | [TV](https://www.tradingview.com/chart/?symbol=MIRA) | $0.87 | +12.5% | 775.6 | +60.3% | 38.7M | 36.4M | Pharma: Other | Watch — volume rising into close |
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $6.76 | +48.3% | 50.3 | +17.5% | 573K | 4.0M | Medical Specialties | Watch — low float, volume building |
+| FALFF | [TV](https://www.tradingview.com/chart/?symbol=FALFF) | $0.50 | +109.2% | 11.0 | +1590.8% | 181.7M | 106.9M | Precious Metals | Watch — OTC ticker, high float, likely untradable |
+
+Fading/low-conviction (VChg -99%, volume collapsing): FLYE +66%, SSM +56% (closed position today), PETZ +36% (closed), GPRO +35% (closed), RDAC, SWVL, LIDR, FBLG, CYAB, OLOX, GWAV. SPAC-like $9.90–9.99 financial conglomerates (UAC, WLCO, FTRA, XCBE, RFAM, PECE, ETSS) near-flat, ignore.
+
+**Decision: no entries.** Pre-AH regular session. Re-evaluate MIRA and BIAF if they carry into the 22:00+ CET after-hours scans with sustained momentum.
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+
+None this pulse (pre-AH regular session, watch only).
