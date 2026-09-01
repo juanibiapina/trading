@@ -85,6 +85,8 @@ node scripts/ah-5m-confirmation.js SYM:YYYY-MM-DD --now HH:MM
 
 Record the one-line `CONFIRM-3` result verbatim in the scan notes. `PENDING` is expected until the third five-minute bar has closed.
 
+**First-bar-open-spike instrumentation (log-only, no entry-behavior change):** When a candidate's AH high was printed in the first AH bar (16:00–16:15 ET) and its `CONFIRM-3` reads `NO` (no local-volume new-high ignition), tag it **FIRST-BAR-SPIKE** in the scan notes. The "holding within ~20% of the AH high" test treats such a name as a hold, but an open-bar print that never made a volume-backed new high afterward is a spike, not a build — it can bleed within 20% of that open high for hours and still fade overnight. Do NOT change the entry — this only records how often first-bar-open-spike + CONFIRM-3 NO entries fade, so the morning-eval AH-peak-vs-PM-peak follow-through can measure it. (Basis: LABT Aug 31→Sep 1, Grade None, peaked $3.78 @16:10 ET on the open bars, CONFIRM-3 NO every scan, held within ~7% at entry $3.49, faded −8.6% into PM.)
+
 
 For each **new** candidate (not in prior scans), evaluate against the entry criteria from the trading plan:
 - Any sector — do NOT skip stocks for being outside biotech/pharma. The "non-biotech 0/6" observation in Day Trading.md is a hypothesis under investigation, not a filter. Note the sector for pattern tracking.
