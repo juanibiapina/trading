@@ -146,6 +146,30 @@ Scanner: **5 hits**. Only WHLR has AH change >10%.
 
 Re-evaluate at 23:30/00:00: need a candidate with ≥2 AH scans >10% on real accumulating volume.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Scanner: **8 hits**. Only FLYE has AH change >10%.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| FLYE | [TV](https://www.tradingview.com/chart/?symbol=FLYE) | $2.20 | +61.8% | +19.5% | $2.63 | +93.4% | 3.2M | 8.0M | 0.4x | 1.6M | Motor Vehicles |
+| SPWH | [TV](https://www.tradingview.com/chart/?symbol=SPWH) | $1.20 | +0.8% | +5.8% | $1.27 | +6.7% | 2.5M | 529K | 4.8x | 35.6M | Specialty Stores |
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $6.59 | +44.5% | +5.9% | $6.98 | +53.1% | 852K | 4.6M | 0.2x | 573K | Medical Specialties |
+| WALD | [TV](https://www.tradingview.com/chart/?symbol=WALD) | $1.35 | -2.9% | +8.1% | $1.46 | +5.0% | 138K | 232K | 0.6x | 54.0M | Household/Personal Care |
+| TSSI | [TV](https://www.tradingview.com/chart/?symbol=TSSI) | $7.86 | -0.1% | +5.3% | $8.28 | +5.2% | 132K | 788K | 0.2x | 25.7M | IT Services |
+| YYGH | [TV](https://www.tradingview.com/chart/?symbol=YYGH) | $1.47 | +11.4% | +5.4% | $1.55 | +17.4% | 118K | 13.2M | 0.0x | 1.6M | Misc Commercial Services |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.38 | +3.0% | +6.3% | $2.53 | +9.5% | 101K | 110K | 0.9x | 5.4M | Engineering & Construction |
+| SDA | [TV](https://www.tradingview.com/chart/?symbol=SDA) | $0.66 | -7.4% | +7.5% | $0.71 | -0.4% | 66K | 74K | 0.9x | 34.7M | Other Consumer Services |
+
+**Instrumentation (FLYE, AH >10%):**
+- SPIKE 16:56ET +17% $2.57 1615 trades / 253k sh (first co-spike bar) — real accumulation
+- CONFIRM-3 NO (ignition 16:55ET failed third-bar hold/volume as-of 17:30ET) — log-only, no gate
+- SIP real accumulation and building: ignition 16:50 ET (176K sh/958 tr), 16:55 ET 932K sh / 6,203 tr vwap $2.52, then 678K / 528K / 553K / 582K sh per bar through 17:15 ET, 3,600–5,100 trades/bar. Rising, not fading. AH high $2.69 @17:15 ET, C $2.67, vwap $2.64. Genuine build.
+- tradable=true. Real-time quote: bid $2.55 x100 / ask $2.60 x100 — fillable two-sided book. SIP corroborates scanner AH $2.63; not a bad print.
+- Fresh day-1 igniter (no WINNERS_TRACKING entry; Day +61.8% off ~$1.36 close). Float 1.6M. AH ignited 16:50 ET, after the 23:00 scan — this is FLYE's **first** AH scan >10%.
+
+**Decision: no entries.** FLYE is the one real build tonight — low float, fillable book, tradable, accumulating SIP volume. Blocked **solely** by the 2-AH-scan gate: it ignited at 16:50 ET (after the 23:00 scan), so this 23:30 scan is its first AH scan >10%. Not the final scan (00:30 CET), so the FINAL-SCAN-GATE-BLOCK instrumentation does not apply yet. Other 7 hits all under +10% AH (SPWH faded to +5.8% off its earlier $1.46 high; BIAF AH only +5.9%, the +44.5% is regular session; rest single-digit AH). Re-evaluate FLYE at 00:00 CET: if it holds >10% AH on accumulating volume, it clears the 2-AH-scan gate and qualifies for entry (Total +93% is under the +150% ceiling, Day% positive so no dead-cat).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
