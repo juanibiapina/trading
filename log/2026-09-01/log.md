@@ -17,3 +17,16 @@
 - HOLD SSM (Grade B, day 1-2, above stop; PM spiked $4.77 then dumped to $3.76, recovered $3.96)
 
 Net realized this pulse: -$15.85
+
+## Position Evaluation — 14:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| PXS | $6.26 | $5.81 | -7.2% | $6.35 | 1 | B | HOLD | Above -15% stop ($5.32), day 1, Q2 earnings catalyst intact. Alpaca quote frozen 20:00Z prior close; used SIP. |
+| SSM | $4.50 | $3.87 | -16.4% | $4.77 | 1 | B | SELL | Below -15% hard stop ($3.825). Faded past stop, no PM follow-through. |
+
+**Actions taken:**
+- SELL 20 SSM @ $3.76 (id 8d293271), -$14.80 (-16.4%) — Grade B below -15% hard stop
+- HOLD PXS (Grade B, day 1, above stop)
+
+Net realized this pulse: -$14.80
