@@ -7,6 +7,20 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-09-01 — Initiative 6 pilot: no fresh admit (GYGY gate-skipped), WETO fill corrected to +10%; entered n=13 firms to +5.8%/name, fade-tail steady 2/13. Initiative 3 data-blocked (PXS open day 1)
+
+**Evaluated:** The 2026-08-31 steps **worked.** Init 6's next step was to keep seeding holdable PM-only gappers and track the fade-tail ratio (2/13); Init 3's was to resume seeding held-name exits once a position opens and exits. Init 6 had one fresh holdable footprint=none candidate (GYGY 09-01 +17.6%); Init 3 had none — PXS (entered 08-31 $6.26) is still open day 1, no exit to measure.
+
+**Step taken:** **Pilot / Initiative 6 (active slot):** re-ran `init6-pm-pilot.js` (32 holdable candidates now). **GYGY was skipped** by the continuation gate — its 04:00 ignition (13.4k trades) held near the high only 4 bars then faded below gap-mid, failing the R+1/R+2 80%-of-high hold. The other 09-01 holdables are ah-detected (GPRO, SSM, WETO, PETZ), outside the pilot's footprint=none PM-only-gapper universe. Ledger `log/init6-pm-pilot.csv` unchanged in row count (13). **Init 3:** no fresh seed available (PXS still open), so the peak-seeking sim is data-blocked this run — held at n=28. All log-only, no orders.
+
+**Result:** **Init 6:** no new entered row, but one existing row corrected. Last run WETO 08-31 was recorded PM-last +4.9% (1-min bars incomplete when the script ran early); with the full 08-31 1-min SIP history now available, WETO's early spike **filled the resting +10% limit ($7.70)** intrabar, reclassifying +4.9% -> +10.0%. Entered set stays **n=13** but SUM lifts +69.6% -> **+74.8% / mean +5.8% / median +10.0% / positive 11/13**, vs a PM-last floor of -8.2% and a do-nothing baseline of 0%. Net of ~2% spread ~+3.8%/name. The **fade-tail holds at 2/13 (BIVI -27.1%, MIMI-2 -6.9%) = 15%**, well under the ~25% that would erode the edge. **Init 3:** unchanged at n=28 (data-blocked, no exit to seed).
+
+**Hypothesis / next step:** Init 6 — the pilot edge is firming (n=13, 11/13 positive, +5.8%/name, tail contained at 15%) and converges with Init 3's independent +10%-limit result. With the tail under ~25% and two converging studies, the live PM-gapper pulse is nearing proposable; hold until n grows and the tail stays contained. Keep seeding holdable PM-only gappers. Init 3 — resume seeding held-name exits once PXS (or any position) exits; the +10%-limit edge is robust at n=28 (positive 18/28). Keep `CONFIRM-3` and all sims log-only.
+
+**Needs from Juan:** two open asks unchanged (no new one). (1) The Init 3 peak-seeking-exit proposal — replace the plain 04:30 ET market exit for held names with a resting +10% sell-limit (GTC premarket, cancel 09:30 ET, plain market exit fallback; optional wide ~-15% catastrophe-stop). Evidence: +76.1% total / +2.7%/name over 28 seeds, positive 18/28. Veto window, not applied. (2) Still open from 08-07: the Initiative 2 broker/feed decision for the ~203% fill gap (Alpaca SIP ~$99/mo, IBKR paper, or modeled SIP fills).
+
+---
+
 ### 2026-08-31 — Initiative 6 pilot: WETO admitted out-of-sample and held positive, entered n=13 (+5.4%/name, fade-tail 2/13). Initiative 3 data-blocked (no open positions)
 
 **Evaluated:** The 2026-08-28 steps **worked.** Init 6's next step was to keep seeding holdable PM-only gappers and track the fade-tail ratio (2/12 after WHLR); Init 3's was to keep seeding held-name exits (+10%-limit edge robust at n=28). Init 6 had fresh data: four weekend-gap holdable PM-only gappers logged 08-31 (AEHL +72.6%, YDDL +37.0%, WETO +26.6%, NCRA +21.7%). Init 3 had none — `OPEN_POSITIONS.md` is flat since the 08-28 eval, so no held-name exit to measure.

@@ -223,6 +223,29 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-09-01 (strategy-advance) — no fresh admit (GYGY gate-skipped),
+   but WETO's fill corrected to a +10% limit hit on fuller 1-min bars; entered
+   set holds n=13, edge firms to +5.8%/name, fade-tail steady 2/13.** One fresh
+   holdable footprint=none PM-only gapper logged 09-01 (GYGY +17.6%, 17K-float
+   squeeze) plus recurring/ah-detected names (GPRO, SSM, WETO, PETZ). Re-ran
+   `init6-pm-pilot.js` (32 candidates): **GYGY was skipped by the continuation
+   gate** — its 04:00 ignition (13.4k trades) held only 4 bars near the high then
+   faded below gap-mid, failing the R+1/R+2 80%-of-high hold. No new entered row.
+   The one change: last run WETO 08-31 was recorded PM-last +4.9% (bars
+   incomplete when run early); with the full 08-31 1-min SIP history now
+   available its early spike **filled the resting +10% limit ($7.70)** intrabar,
+   so it reclassifies +4.9% -> +10.0%. Entered set stays n=13 but SUM lifts
+   +69.6% -> **+74.8% / mean +5.8% / median +10.0% / positive 11/13**, vs a
+   PM-last hold-to-open floor of -8.2% and a do-nothing baseline of 0%. Net of
+   ~2% spread ~+3.8%/name. The **fade-tail holds at 2/13 (BIVI -27.1%, MIMI-2
+   -6.9%) = 15%**, still well under the ~25% that would erode the edge below the
+   spread. Init 3 had **no fresh seed** — PXS (entered 08-31 $6.26) is still open
+   day 1, no held-name exit to measure, so the peak-seeking sim is data-blocked
+   this run (held at n=28, +10%-limit rule unchanged). Still log-only, no orders.
+   Next: keep seeding holdable PM-only gappers and track the fade-tail ratio;
+   with n=13 / 11-13 positive / tail contained at 15% and two converging studies,
+   the live PM-gapper pulse is nearing proposable — hold until n grows and the
+   tail stays under ~25%.
    **Update 2026-08-31 (strategy-advance) — pilot admitted another fresh
    out-of-sample name (WETO) that HELD positive without hitting the limit;
    entered set n=13, edge steady +5.4%/name, fade-tail unchanged 2/13.** The
