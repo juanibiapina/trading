@@ -170,6 +170,39 @@ Scanner: **8 hits**. Only FLYE has AH change >10%.
 
 **Decision: no entries.** FLYE is the one real build tonight — low float, fillable book, tradable, accumulating SIP volume. Blocked **solely** by the 2-AH-scan gate: it ignited at 16:50 ET (after the 23:00 scan), so this 23:30 scan is its first AH scan >10%. Not the final scan (00:30 CET), so the FINAL-SCAN-GATE-BLOCK instrumentation does not apply yet. Other 7 hits all under +10% AH (SPWH faded to +5.8% off its earlier $1.46 high; BIAF AH only +5.9%, the +44.5% is regular session; rest single-digit AH). Re-evaluate FLYE at 00:00 CET: if it holds >10% AH on accumulating volume, it clears the 2-AH-scan gate and qualifies for entry (Total +93% is under the +150% ceiling, Day% positive so no dead-cat).
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Scanner: **8 hits**. AH change >10%: FLYE, KITT, BIAF, SUNE.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| FLYE | [TV](https://www.tradingview.com/chart/?symbol=FLYE) | $2.20 | +61.8% | +11.8% | $2.46 | +80.9% | 4.4M | 8.1M | 0.5x | 1.6M | Motor Vehicles |
+| KITT | [TV](https://www.tradingview.com/chart/?symbol=KITT) | $0.80 | -1.9% | +38.1% | $1.10 | +35.5% | 1.7M | 434K | 4.0x | 5.7M | Industrial Machinery |
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $6.59 | +44.5% | +15.3% | $7.60 | +66.7% | 1.6M | 4.7M | 0.3x | 573K | Medical Specialties |
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.38 | +3.0% | +11.3% | $2.65 | +14.7% | 253K | 127K | 2.0x | 5.4M | Engineering & Construction |
+| SPWH | [TV](https://www.tradingview.com/chart/?symbol=SPWH) | $1.20 | +0.8% | +7.5% | $1.29 | +8.4% | 2.6M | 537K | 4.8x | 35.6M | Specialty Stores |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.58 | -14.8% | +6.3% | $0.62 | -9.4% | 810K | 5.9M | 0.1x | 772K | Real Estate Investment Trusts |
+| WALD | [TV](https://www.tradingview.com/chart/?symbol=WALD) | $1.35 | -2.9% | +9.6% | $1.48 | +6.5% | 140K | 232K | 0.6x | 54.0M | Household/Personal Care |
+| SDA | [TV](https://www.tradingview.com/chart/?symbol=SDA) | $0.66 | -7.4% | +7.5% | $0.71 | -0.4% | 66K | 74K | 0.9x | 34.7M | Other Consumer Services |
+
+**Instrumentation (AH >10%):**
+- FLYE — SPIKE 16:56ET +17% $2.57 1615 trades / 253k sh. CONFIRM-3 NO (ignition 16:55ET failed third-bar hold/volume as-of 18:00ET).
+- KITT — SPIKE 17:34ET +15% $0.92 183 trades / 50k sh. CONFIRM-3 YES ignition 17:30ET 176.2x; confirmed 17:40ET $1.10.
+- BIAF — SPIKE 17:23ET +20% $7.90 1196 trades / 90k sh. CONFIRM-3 NO (ignition 16:30ET failed third-bar hold as-of 18:00ET).
+- SUNE — NO-SPIKE peak +15% @17:44ET (no bar cleared +15% on a volume co-spike). CONFIRM-3 PENDING (ignition 17:40ET).
+
+**FLYE (clears 2-AH-scan gate, skipped on trajectory):** 23:30 +19.5% AH and 00:00 +11.8% AH = two AH scans >10%, Total +80.9% under +150% ceiling, Day% +61.8% (no dead-cat), float 1.6M, tradable=true. But **SPIKE→FADE**: AH peaked $2.69 @17:15 ET (before 18:30), AH price declining across scans ($2.63 at 23:30 → $2.46 at 00:00), SIP volume decaying off the peak (582K @17:15 → 342K → 177K → 105K → 117K sh/bar), last SIP bar 17:35 ET C $2.44 vwap $2.47, CONFIRM-3 NO. Early peak + declining across scans + decaying volume is the trajectory disqualifier (SPIKE→FADE 0/10+). Catalyst: Q1 FY2027 earnings today — revenue fell 48%, loss widened to $3.9M (bad numbers, ran anyway); Grade None/C. **Skip: SPIKE→FADE trajectory despite clearing the mechanical gate.**
+
+**KITT (strong build, blocked by 2-AH-scan gate):** genuine late-igniting BUILD — ignition 17:30 ET, SIP 17:35 212K sh/1166 tr, 17:40 **1.69M sh / 8938 tr** vwap $1.02, 17:45 **1.64M sh / 8653 tr** vwap $1.04, AH high $1.13 @17:45, CONFIRM-3 YES 176x. Real accumulation, accelerating volume, low extension (Total +35.5%), Day -1.9% (not dead-cat), float 5.7M, tradable=true. Ignited 17:30 ET (after the 23:30 scan) — this is its **first** AH scan >10%. No same-day catalyst found (latest Nauticus PR Jul 16). Blocked **solely** by the 2-AH-scan gate. Not the final scan yet, so no FINAL-SCAN-GATE-BLOCK. **Skip: only 1 AH scan >10%. Re-evaluate at 00:30 — if it holds >10% AH it clears the gate and qualifies.**
+
+**BIAF:** first AH scan >10% (+15.3%); the +44.5% is regular-session. Quote `bid $5.66 x100 / ask $0.00 x0` — no fillable ask book. CONFIRM-3 NO. **Skip: illiquid (no AH book) + only 1 AH scan.**
+
+**SUNE:** first AH scan >10% (+11.3%), NO-SPIKE, quote `bid $2.01 / ask $2.80` wide vs $2.38 close. **Skip: 1 AH scan, no volume co-spike.**
+
+SPWH/WHLR/WALD/SDA all under +10% AH.
+
+**Decision: no entries.** FLYE is the only name clearing the 2-AH-scan gate but shows SPIKE→FADE (early 17:15 ET peak, declining across scans on decaying volume). KITT is the one real live BUILD but has only 1 AH scan >10% (ignited 17:30 ET). Re-evaluate KITT at the 00:30 final scan: a second >10% AH scan on sustained accumulating volume clears the gate and qualifies it (Total +35.5% under ceiling, Day -1.9% not dead-cat, float 5.7M, tradable). At 00:30 also cross-check for feed-lag under-reporting on FLYE/KITT/BIAF via SIP.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
