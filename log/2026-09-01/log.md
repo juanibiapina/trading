@@ -49,6 +49,20 @@ Fading/low-conviction (VChg -99%, volume collapsing): FLYE +66%, SSM +56% (close
 
 **Decision: no entries.** Pre-AH regular session. Re-evaluate MIRA and BIAF if they carry into the 22:00+ CET after-hours scans with sustained momentum.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+Scanner: **0 hits**. AH just opened (16:00 ET), volume not built yet. Observation-only scan (learning phase: no entries before 23:00 CET).
+
+Watch-name AH cross-check (from 21:30 regular-session list):
+
+| Ticker | AH Book | Note |
+|--------|---------|------|
+| MIRA | bid $0.85 x500 / ask $0.97 x100 | Two-sided book, tradable. No 5Min AH bar closed yet. |
+| BIAF | bid $5.66 x100 / ask $0.00 x0 | No fillable ask book. |
+| FALFF | no quote | OTC, untradable (as flagged 21:30). |
+
+**Decision: no entries.** Observation-only. Re-evaluate at 22:30/23:00 if MIRA/BIAF sustain AH momentum on real accumulating volume.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
