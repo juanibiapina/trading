@@ -268,3 +268,118 @@ Scanner returned 9 AH hits. Entries allowed (23:00+ CET). Held from earlier: LAB
 | PXS | $6.26 | 23:00 CET | 15 | 74f62ca3 | Grade B (Q2 earnings, $2.8M profit). Float 4.1M, real accumulation, holding within 8% of high. |
 | GPRO | $1.30 | 00:00 CET | 78 | 26d78803 | Grade C (Markiplier large-stake meme event). Float 125M, volume-backed BUILD making new highs. Resting 00:00 limit filled by 00:30. Exit premarket. |
 | SSM | $4.50 | 00:30 CET | 20 | 51d6a78c | Grade B (non-binding LOI to combine with Sports One + 19.9% stake buy). Float 1.0M, cleared 2-AH-scan gate, CONFIRM-3 YES, holding within ~10% of $5.20 peak. Hold up to 2 days. |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**No real winner today.** Nothing cleared the >100% bar from the capturable last regular close. The two biggest genuine movers were both detected and both entered:
+
+**GPRO** — Electronics/Appliances (GoPro), the biggest liquid mover
+- Catalyst: Markiplier large-stake meme event (Grade C)
+- Last regular close (capturable anchor): $0.88 — GPRO already ran $0.60→$0.88 (+47%) in the Aug 31 regular session, so Yahoo's "+178%" uses the stale $0.60 anchor
+- AH last night: SIP high $1.44 (+63.6% from $0.88) at 17:50 ET on 3–5M sh/bar, 5k–12k trades/bar — massively liquid
+- Premarket now: SIP high $1.67 (+90% from $0.88) at 04:00 ET on 7.4M sh / 26k trades in the first PM bar
+- Hypothetical P&L: AH-open entry ~$0.95 → PM peak $1.67 = +76%; our fill $1.30 → PM peak $1.67 = +28.5%
+- Float: 125.1M | Market Cap: $164M
+- **Verdict:** genuine, huge liquidity, capturable — but +90% from the real close is **under the >100% winner bar**. Not the low-float profile (125M float meme squeeze).
+
+**SSM** — Motor Vehicles (Sono Group), the biggest low-float mover
+- Catalyst: non-binding LOI to combine with Sports One + 19.9% stake buy (Grade B)
+- Previous close: $2.67
+- AH last night: SIP peak $5.20 (+94.8%) at 17:45 ET on 446K–913K sh/bar, 4.8k–12.5k trades/bar — real, accumulating
+- Premarket now: SIP high $4.77 (+79%) at 04:00 ET, then faded to $3.89–4.02 (+46%)
+- Hypothetical P&L: AH-open entry ~$3.93 → AH peak $5.20 = +32%; our fill $4.50 → PM peak $4.77 = +6% (AH peak was the better exit — faded into PM)
+- Float: 1.0M | Market Cap: $6.5M
+- **Verdict:** low-float profile, real volume, but +94.8% AH is **under the >100% bar** and it faded into PM.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — both GPRO and SSM were detected AND entered.
+- GPRO: appeared from 22:30 CET at +8.4% AH (sub-threshold; Day% +46% dominated), cleared the 2-AH-scan gate at 23:30 (+33.5%) / 00:00 (+41.5%), entered $1.30 at 00:00.
+- SSM: real late ignition at 17:20 ET (23:20 CET), first surfaced at the 00:00 scan (one scan late vs its 23:20 ignition — a ~30-min TradingView postmarket feed lag at the 23:30 scan), cleared the gate by 00:30, entered $4.50.
+- Scanner gap: none for detection. Both caught and traded. The only friction was SSM surfacing one scan late (feed lag, not a miss — it was still detected and entered).
+
+### Baseline Tracking
+
+- Days tracked: **75** (was 74 + 1; the Aug 28 Fri session had no evening scan session logged — weekend boundary — so it is not a counted sample, see Notes baseline-gap)
+- Winners detected by scanner: **61/70 (87.1%)** — +GPRO (biggest genuine AH→PM mover, detected all scans, entered)
+- Winner selected for paper trade: **35/68 (51.5%)** — +GPRO (traded @ $1.30); SSM also detected + traded
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+- Live PM scan (04:21 ET): 9 hits — GPRO +68.9%, GYGY +38.7% (PM-only gapper, float 17K), SSM +49.3%, PETZ +21.7%, WETO +26.3%, LABT +20.0%, YYGH +15.9%.
+- Forced AH scan: 0 hits (TradingView postmarket fields returned flat overnight, as usual — not a reliable retrospective source).
+- SIP reconstruction confirmed GPRO (mega-liquid, +90% real) and SSM (+94.8% AH, low float, faded) as the two biggest genuine movers. Neither cleared >100% from the capturable close.
+
+### Open Position P&L (Alpaca)
+
+All 5 positions still open (exits handled by position-evaluation.md at 10:30). **Alpaca `current_price` and quotes are stale** (quote timestamps 16:00–16:59 ET, ~12h old); P&L below is against **live PM SIP prices**, not the stale Alpaca figures.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Live PM | Unreal. P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|---------|---------------|--------|
+| GPRO | $1.30 | +47.7% (from $0.88) | C — Markiplier meme stake | 00:00 CET | $1.67 | 04:00 ET | ~$1.44 | +10.8% | 🟢 Open, up |
+| LABT | $3.49 | +39.6% | None | 23:00 CET | $3.19 | 04:05 ET | ~$3.06 | −12.3% | 🔴 Open, faded |
+| PETZ | $1.50 | +30.4% | None | 23:00 CET | $1.63 | 04:00 ET | ~$1.41 | −6.0% | 🔴 Open, faded |
+| PXS | $6.26 | +16.8% | B — Q2 earnings | 23:00 CET | $6.35 | 04:00 ET | ~$6.10 | −2.6% | 🟡 Open, flat |
+| SSM | $4.50 | +68.5% | B — LOI combination | 00:30 CET | $4.77 | 04:00 ET | ~$3.92 | −12.9% | 🔴 Open, faded |
+
+Alpaca stale figures for reference (do NOT treat as tradeable): GPRO $1.34/+3.1%, LABT $2.90/−16.9%, PETZ $1.38/−8.0%, PXS $5.75/−8.1%, SSM $3.92/−12.8%.
+
+**No realized P&L** — no exits yet (position-evaluation.md owns exits).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) + 2 extra (22:15, 22:45) = 9 total. Full coverage of the entry window.
+- Candidates found: LABT, PETZ, WETO, PXS, GPRO, SSM, YYGH, PXS, IHT, SGLY.
+- Retrospective matches: both biggest movers (GPRO, SSM) caught and traded.
+
+### Missed Opportunities
+
+No significant missed opportunities. The two biggest genuine movers were detected and entered. GYGY (+58% PM, float 17K) was a PM-only gapper — flat in AH (odd-lot prints only), ignited at 04:00 ET PM open on 1.9M sh — structurally undetectable by the AH scanner, not a miss.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| GPRO | $1.44 (+63.6%) | 17:50 ET | Build/hold | ~$1.44 | ~flat | +90% (peak) | PM peak $1.67 > AH peak = **continued** |
+| SSM | $5.20 (+94.8%) | 17:45 ET | Spike→hold | ~$3.92 | −25% | +46% | PM peak $4.77 < AH peak = **faded (AH better exit)** |
+| PETZ | $1.74 (+46%) | 18:35 ET | Spike→fade | ~$1.41 | −19% | +23% | PM peak $1.63 < AH peak = **faded (AH better exit)** |
+| WETO | ~$6.82 (+30%) | 19:15 ET | Spike→fade | ~$6.75 | −1% | +23% | slight fade |
+| LABT | ~$3.55 (+52.6%) | AH | Build | ~$3.06 | −14% | +8% | PM peak $3.19 < AH peak = **faded** |
+
+**AH-peak-vs-PM-peak:** SSM, PETZ, LABT all peaked in AH and faded into PM (AH was the better exit). GPRO continued (PM $1.67 > AH $1.44). None reached the extreme >~+130% zone from the real capturable close, so no new extreme-runner tally cases.
+
+### Notes
+
+**Baseline gap:** The Aug 28 (Fri) session log (`log/2026-08-28/log.md`) holds only position evaluations — no evening scan sections and no `Days tracked:` line. No evening scanning session ran Friday (weekend boundary; Friday-AH entries would hold through Sat/Sun). Not counted as a skipped retrospective miss, but recorded so the sample is visible. Latest prior baseline (74 days) lives in `log/2026-08-27/log.md`.
+
+**Multi-session-runner tracking:** All 5 entries were tagged fresh **first-day AH igniters**. Outcomes (PM peak vs entry): GPRO (Day +46.1%, Grade C, $1.30 → peak $1.67 = **+28.5%, ran**), PETZ (Day −3.3%, Grade None, $1.50 → peak $1.63 = **+8.7%, ran** then faded to −6%), SSM (Day +0.4%, Grade B, $4.50 → peak $4.77 = **+6%, marginal ran** then faded to −13%), PXS (Day 0.0%, Grade B, $6.26 → peak $6.35 = **+1.4%, flat**), LABT (Day +8.7%, Grade None, $3.49 → peak $3.19 = **−8.6%, faded**). Updated standing: **1 multi-session runner (1 faded: DAIC) / 8 first-day igniters** (ran: WNW, AEMD, GPRO, PETZ, SSM; flat: PXS; faded: MODD, LABT). First-day igniters continue to run more than fade; the hypothesis (first-day runs, multi-session fades) still holds directionally.
+
+**In-window feed-lag note (not a new miss):** SSM ignited 17:20 ET (23:20 CET) but first surfaced at the 00:00 scan, not the 23:30 scan — a ~30-min TradingView postmarket feed lag. It WAS surfaced and entered, so it does not count as a never-surfaced feed-lag miss. Standing in-window feed-lag count unchanged: **4** (trigger REACHED; AH-data-source cross-check recommendation already standing for the daily email).
+
+**PM-only gapper:** Biggest raw PM mover = GPRO (+90% from real close), an AH→PM continuation (detectable). GYGY (+58% PM, float 17K) was the night's PM-only gapper — flat AH, ignited 04:00 ET; the `pm-open-scan.md` pulse owns its holdable/uninvestable classification (current holdable PM-only count in `log/pm-open-scan.csv`: 38). Not a scanner failure.
+
+**Unchanged standing tallies (no new cases tonight):** stale-book execution-block **3**; no-fillable-book skip **2** (IHT `ask $0.00 x0` skipped but it faded on 2 bars / CONFIRM-3 NO — did not clear momentum gates, so not a tracked case); broker-block (`tradable=false`) unchanged (all entries `tradable=true`); float-gate skip **1** (GPRO float 125M was **entered**, not skipped — float is not a filter in learning phase); final-scan gate-block **1** (SSM cleared the gate and was entered, not blocked); chase-cap **1** (PETZ chase gap +15.2 pts, well under the +120% fade zone); reverse-split-squeeze — no reverse-split catalysts tonight; extreme AH-runner fade tally **8 fade / 1 continue** (no >~+130% real-anchor cases tonight); SPIKE→FADE re-explosion **4 of 14 sub-3M** (no qualifying fader tonight).
+
+### Price Charts
+
+```
+GPRO — 2-Day Timeline (prev close $0.60 Yahoo anchor; real last regular close $0.88)
+2-Day Range: $0.60 - $1.67 | Peak: $1.67 at 09-01 08:00 ET
+$1.50 │                                                         ██
+      │                                             ████████████  █
+      │                           ██████████████████
+$0.60 │███████████████████████████
+      AH build $0.84→$1.44 (17:50ET) on 3–5M sh/bar → PM peak $1.67 (04:00ET) on 7.4M sh
+      From real close $0.88: AH +64%, PM +90% (under the >100% bar)
+
+SSM — 2-Day Timeline (prev close $2.67)
+2-Day Range: $2.64 - $5.20 | Peak: $5.20 (+94.8%) at 08-31 17:45 ET
+$5.09 │                        █                       █
+      │                     █    █ ███ ███  ███████ ██ █  ██
+      │                   █                               █  █
+$2.64 │█  ████████████████                                █  ██ ██
+      AH spike→hold: peaked $5.20 @17:45ET, held $4.4–4.8, PM faded to $3.90 (AH better exit)
+```
