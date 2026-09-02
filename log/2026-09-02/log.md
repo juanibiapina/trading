@@ -219,6 +219,51 @@ Both TLYS and CHPT now clear the 2-AH-scan gate. TLYS is the standout (BUILD + G
 
 No entries this scan (no new candidate clears the 2-AH-scan gate with >10% AH). Final scheduled scan at 00:30 CET.
 
+## Scan 00:30 CET (6:30 PM ET) — FINAL SCAN
+
+10 hits. Final scheduled scan. TLYS, CHPT, UFG already entered (managed in premarket). Final-scan feed-lag cross-check on pipeline names revealed **GELS** as a real, volume-backed BUILD that had been skipped 3× on a weak "already ran regular session" reason — re-evaluated and **entered**.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GELS | [TV](https://www.tradingview.com/chart/?symbol=GELS) | $0.70 | +31.6% | +42.3% | $1.00 | +87.3% | 10.3M | 6.6M | 1.6x | n/a | Pharmaceuticals: Major |
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.56 | +3.8% | +17.4% | $0.66 | +21.8% | 9.6M | 1.7M | 5.8x | 9.8M | Wholesale Distributors |
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $3.81 | -3.8% | +35.4% | $5.16 | +30.3% | 3.1M | 545K | 5.7x | 22.2M | Apparel/Footwear Retail |
+| NYXH | [TV](https://www.tradingview.com/chart/?symbol=NYXH) | $1.51 | +1.3% | +33.1% | $2.01 | +34.9% | 1.5M | 284K | 5.2x | 81.3M | Medical Specialties |
+| NCT | [TV](https://www.tradingview.com/chart/?symbol=NCT) | $4.90 | -6.1% | +8.6% | $5.32 | +1.9% | 758K | 2.4M | 0.3x | 8.5M | Marine Shipping |
+| CHPT | [TV](https://www.tradingview.com/chart/?symbol=CHPT) | $5.19 | -2.1% | +17.7% | $6.11 | +15.3% | 660K | 479K | 1.4x | 22.7M | Electrical Products |
+| GYGY | [TV](https://www.tradingview.com/chart/?symbol=GYGY) | $1.73 | +25.4% | +5.8% | $1.83 | +32.6% | 325K | 7.9M | 0.0x | 17K | Packaged Software |
+| XTIA | [TV](https://www.tradingview.com/chart/?symbol=XTIA) | $0.95 | -17.4% | +6.3% | $1.01 | -12.2% | 131K | 950K | 0.1x | 38.4M | IT Services |
+| BRNX | [TV](https://www.tradingview.com/chart/?symbol=BRNX) | $3.16 | -10.2% | +10.4% | $3.49 | -0.9% | 81K | 3.1M | 0.0x | 684K | Engineering & Construction |
+| VIDA | [TV](https://www.tradingview.com/chart/?symbol=VIDA) | $2.56 | -0.4% | +6.6% | $2.73 | +6.2% | 55K | 98K | 0.6x | 5.4M | Packaged Software |
+
+**Positions (Alpaca, entered earlier tonight):**
+- TLYS 19 @ $5.15 → now $5.11 (-0.7%); AH +35.4%, VRatio 5.7x, holding/building.
+- CHPT 16 @ $6.21 → now $6.11 (-1.6%); AH +17.7%, holding ~$6.1.
+- UFG 147 @ $0.64 → now $0.68 (+5.6%); AH +17.4%, VRatio 5.8x, still holding its BUILD.
+
+**ENTERED — GELS (Grade None, no catalyst found):**
+- Gelteq Ltd (gel-based drug delivery, ASX/Nasdaq). Cleared the 2-AH-scan gate (23:30 +11.7% → 00:00 +37.2% → 00:30 +42.3% AH, all >10%). Skipped 3× earlier on "already ran regular session" — but that reasoning was weak: GELS is a fresh single-day mover (regular +31.6% then AH +42% same day), not a multi-session runner, and the AH leg is a real accelerating volume-backed BUILD, not the thin already-ran case (unlike BIAF).
+- Day% +31.6% positive (no dead-cat concern), Total% +87.3% (under +150% ceiling), float n/a (recorded, not a gate).
+- **Real, massive SIP accumulation.** Bars 16:55→17:35 ET: vol 757K→1.25M→510K→240K→1.03M→1.33M→712K→1.10M→1.07M sh/bar, 2094-4275 trades/bar, vwap $0.82→$1.00, new high $1.03 @17:30 ET. Late peak (after 17:00 ET), holding $0.99-1.02 within ~4% of high = hold/build, not fade.
+- SPIKE 16:58ET +24% $0.87 757 trades / 302k sh (real co-spike ignition). CONFIRM-3 **NO** ignition 16:55ET failed third-bar hold/volume (instrumentation only, not a gate).
+- tradable=true. Alpaca quote stale (`bid $0.58 ask $0.80 @16:00 ET` open minute, ask well below current SIP ~$1.00) — same stale-open-quote pattern as UFG; limit rested and filled against the real book.
+- **No same-day catalyst found** (2 searches): latest Gelteq PR Jun 12 2026, nothing dated Sept 2. Grade None, entered with concern noted (learning-phase rule).
+- **Fill: 95 @ $1.02** (limit $1.05 ext, id 40539152).
+- **CHASE-CAP:** qualifying gate-clear scan 00:00 AH $0.96/+80.5%; fill $1.02/+91.7%. Chase gap +11.2% (fill Total% − qualifying Total%). Under the +120% fade zone.
+- **MULTI-SESSION check:** fresh day-1 igniter (single-day regular+AH move, not in WINNERS_TRACKING).
+
+**Skipped:**
+- **UFG / TLYS / CHPT** — already entered (position management handled in premarket).
+- **NYXH** — cleared gate but confirmed thin-drift: SIP shows one 320K-sh spike bar @16:35 ET (vwap $1.76), then per-bar volume collapsed to 3K-73K sh (hundreds of trades). Holding ~$1.74 is thin drift after an early spike, not a build. Float 81.3M. SPIKE 16:33 ET, CONFIRM-3 NO. Skip.
+- **GELS's row is the only new qualifier;** the rest are carried skips:
+- **NCT** — VRatio 0.3x, AH +8.6%, thin/not accumulating. Skip.
+- **GYGY** — AH +5.8% (below 10% gate), Day% +25.4% already ran, VRatio 0.0x, float 17K. Skip.
+- **XTIA** — Day% -17.4% below the -15% floor, Total% negative. Skip.
+- **BRNX** — carried, VRatio 0.0x thin, no catalyst found. Skip.
+- **VIDA** — new, AH +6.6% (below 10% gate), VRatio 0.6x thin. Skip.
+
+No FINAL-SCAN-GATE-BLOCK this scan (no late igniter met every rule except the 2-AH-scan gate — GELS already had 3 AH appearances so the gate was satisfied).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
@@ -226,3 +271,4 @@ No entries this scan (no new candidate clears the 2-AH-scan gate with >10% AH). 
 | TLYS | $5.15 | 23:00 CET (5:00 PM ET) | 19 | 921abfa7 | Grade B earnings beat (comp +12.1%); BUILD 4 AH scans, VRatio 4.9x, CONFIRM-3 YES, cleared 2-AH-scan gate |
 | CHPT | $6.21 | 23:00 CET (5:00 PM ET) | 16 | 46d8ab1e | Grade B Q2 earnings; holding ~$6.1 within 3% of AH high, cleared 2-AH-scan gate |
 | UFG | $0.64 | 23:30 CET (5:30 PM ET) | 147 | 144bcf15 | Grade None (no catalyst); night's strongest BUILD, float 9.8M, VRatio 5.1x, CONFIRM-3 YES, cleared 2-AH-scan gate |
+| GELS | $1.02 | 00:30 CET (6:30 PM ET) | 95 | 40539152 | Grade None (no catalyst); real accelerating BUILD (757K-1.33M sh/bar, vwap $0.82→$1.00), new high $1.03 @17:30 ET, cleared 2-AH-scan gate, float n/a |
