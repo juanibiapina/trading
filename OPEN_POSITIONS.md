@@ -10,6 +10,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 |--------|-------|--------|----------|-------|---------|-------|
 | TLYS | $5.15 | 19 | 921abfa7 | B | 2026-09-02 23:00 CET | Tilly's Q2 FY2026 earnings beat (net income $8.4M, comp sales +12.1%, e-commerce +20.9%), Apparel Retail, float 22.2M. BUILD 4 AH scans, VRatio 4.9x, CONFIRM-3 YES. Fresh day-1 igniter. Hold up to 2 days, stop -15% ($4.38). |
 | CHPT | $6.21 | 16 | 46d8ab1e | B | 2026-09-02 23:00 CET | ChargePoint Q2 earnings, Electrical Products, float 22.7M. Held ~$6.1 within 3% of AH high, cleared 2-AH-scan gate, CONFIRM-3 NO (instrumentation). Fresh day-1 igniter. Hold up to 2 days, stop -15% ($5.28). |
+| UFG | $0.64 | 147 | 144bcf15 | None | 2026-09-02 23:30 CET | Uni-Fuels Holdings, marine fuel trader Singapore, Wholesale Distributors, float 9.8M (ideal <10M). Night's strongest BUILD: VRatio 5.1x, huge sustained real SIP volume (441K→1.83M sh/bar, to 6273 trades/bar), CONFIRM-3 YES ignition 16:40 ET. Cleared 2-AH-scan gate (23:00 +10.7% → 23:30 +26.7% AH). Holding within ~12% of $0.75 AH high after dip/recovery. Day% +3.8%, fresh day-1 igniter. **No same-day catalyst found** (Nasdaq bid-noncompliance July, Q1 May — nothing dated Sept 2). Grade None — exit first PM opportunity, stop -10% ($0.576). |
 
 ## Position Rules
 
