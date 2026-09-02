@@ -53,6 +53,29 @@ No candidates found. Scanner 0 hits at 16:15 ET (same as 22:00). Cross-checked 2
 
 None building in AH — all flat or fading off regular close, none igniting. No entries (observation-only before 23:00 CET, and no qualifying candidate). Re-check at 22:30/23:00 for late AH carry.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+Two hits — both fresh AH igniters on today's earnings. First AH appearance for each (need 2nd AH scan to clear the 2-scan gate). Observation-only (before 23:00 CET), no entries.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $3.81 | -3.8% | +24.7% | $4.75 | +19.9% | 336K | 202K | 1.7x | 22.2M | Apparel/Footwear Retail |
+| CHPT | [TV](https://www.tradingview.com/chart/?symbol=CHPT) | $5.19 | -2.1% | +17.5% | $6.10 | +15.1% | 172K | 420K | 0.4x | 22.7M | Electrical Products |
+
+**Catalysts (both earnings, Grade B):**
+- **TLYS** — Q2 fiscal 2026 earnings after close (scheduled Sept 2). Beat: net income $8.4M, comp sales +12.1%, e-commerce +20.9%. Earnings beat = Grade B.
+- **CHPT** — Q2 earnings reported after close Sept 2. Grade B (earnings report). Confirm beat/miss at next scan.
+
+**Instrumentation (log-only):**
+- TLYS: SPIKE 16:05ET +19% $4.55 58 trades / 6k sh. CONFIRM-3 YES ignition 16:05ET 12.4x; confirmed 16:15ET $5.05.
+- CHPT: SPIKE 16:11ET +19% $6.20 272 trades / 34k sh. CONFIRM-3 PENDING (waiting third bar).
+
+**SIP volume (real, accumulating):**
+- TLYS bars 16:00→16:15 ET: vol 6k→80k→334k→562k, trades 8→504→2764→6080, vwap $3.81→$4.96, C $5.05. Strong BUILD, still rising.
+- CHPT bars 16:00→16:15 ET: vol 80k→8k→108k→66k, trades 77→141→1179→626, vwap $5.19→$6.03, C $6.07. Ignition bar 16:10 ET, holding ~$6.
+
+Both under +150% ceiling, Day% above -15%, float 22M (recorded, not a gate). No entries (observation-only). Re-check at 23:00 CET for 2nd-scan confirmation and entry evaluation.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
