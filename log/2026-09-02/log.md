@@ -185,6 +185,40 @@ Both TLYS and CHPT now clear the 2-AH-scan gate. TLYS is the standout (BUILD + G
 - **MIMI / BIVI** — new, VRatio 0.0x thin, Day% negative. Skip.
 - **BRNX** — carried, VRatio 0.0x thin, no catalyst found. Skip.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+12 hits. No new qualifying candidates. TLYS, CHPT, UFG already entered (managed in premarket, not re-entered). All names with AH Chg >10% are already handled; new names this scan (GYGY, JLHL, LHAI) are below the 10% AH threshold and thin.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.56 | +3.8% | +18.1% | $0.66 | +22.5% | 8.7M | 1.6M | 5.6x | 9.8M | Wholesale Distributors |
+| GELS | [TV](https://www.tradingview.com/chart/?symbol=GELS) | $0.70 | +31.6% | +37.2% | $0.96 | +80.5% | 8.5M | 6.4M | 1.3x | n/a | Pharmaceuticals: Major |
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $3.81 | -3.8% | +33.9% | $5.10 | +28.8% | 3.0M | 530K | 5.6x | 22.2M | Apparel/Footwear Retail |
+| LHAI | [TV](https://www.tradingview.com/chart/?symbol=LHAI) | $1.10 | +34.0% | +5.5% | $1.16 | +41.3% | 1.9M | 9.3M | 0.2x | 9.7M | Packaged Software |
+| NCT | [TV](https://www.tradingview.com/chart/?symbol=NCT) | $4.90 | -6.1% | +6.5% | $5.22 | +0.0% | 738K | 2.4M | 0.3x | 8.5M | Marine Shipping |
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $9.75 | +48.0% | +7.0% | $10.43 | +58.3% | 704K | 9.3M | 0.1x | 573K | Medical Specialties |
+| CHPT | [TV](https://www.tradingview.com/chart/?symbol=CHPT) | $5.19 | -2.1% | +20.0% | $6.23 | +17.5% | 642K | 477K | 1.3x | 22.7M | Electrical Products |
+| NYXH | [TV](https://www.tradingview.com/chart/?symbol=NYXH) | $1.51 | +1.3% | +15.2% | $1.74 | +16.8% | 544K | 172K | 3.2x | 81.3M | Medical Specialties |
+| GYGY | [TV](https://www.tradingview.com/chart/?symbol=GYGY) | $1.73 | +25.4% | +5.8% | $1.83 | +32.6% | 294K | 7.9M | 0.0x | 17K | Packaged Software |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $0.64 | -10.2% | +7.7% | $0.69 | -3.3% | 91K | 6.2M | 0.0x | 3.7M | Misc Commercial Services |
+| BRNX | [TV](https://www.tradingview.com/chart/?symbol=BRNX) | $3.16 | -10.2% | +12.0% | $3.54 | +0.6% | 78K | 3.1M | 0.0x | 684K | Engineering & Construction |
+| JLHL | [TV](https://www.tradingview.com/chart/?symbol=JLHL) | $6.33 | +12.6% | +5.7% | $6.69 | +19.0% | 52K | 1.3M | 0.0x | 1.3M | Misc Commercial Services |
+
+**Positions (Alpaca, entered earlier tonight):**
+- TLYS 19 @ $5.15 → now $5.15 (+0.0%); AH +33.9%, VRatio 5.6x, still building.
+- CHPT 16 @ $6.21 → now $6.18 (-0.5%); AH +20.0%, holding ~$6.2.
+- UFG 147 @ $0.64 → now $0.68 (+5.7%); AH +18.1%, VRatio 5.6x, still the night's strongest BUILD.
+
+**New/other names — all skip:**
+- **GYGY** — AH Chg +5.8% (below 10% gate), Day% +25.4% already ran regular session, VRatio 0.0x thin, float 17K. Skip.
+- **JLHL** — AH Chg +5.7% (below 10% gate), VRatio 0.0x thin, AH Vol 52K. Skip.
+- **LHAI** — AH Chg +5.5% (below 10% gate), Day% +34% already ran regular, VRatio 0.2x thin. Skip.
+- **GELS** — Day% +31.6% already ran regular (not fresh AH ignition), VRatio 1.3x, Total% +80.5%, float n/a. Skip (carried).
+- **NYXH** — early-peak thin-drift + CONFIRM-3 NO, float 81.3M (carried skip).
+- **NCT / BIAF / MIMI / BRNX** — thin (VRatio ≤0.3x) / already-ran / no-catalyst (carried skips).
+
+No entries this scan (no new candidate clears the 2-AH-scan gate with >10% AH). Final scheduled scan at 00:30 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
