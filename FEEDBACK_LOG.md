@@ -6,6 +6,32 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-09-01 — re: Trading Scanner Report - 2026-08-31
+
+**Juan said:** "you have 1 month to go positive. if you don't, you'll need to
+start creating new projects and initiatives to change the strategy. including
+researching online for existing strategies focused on agents. make sure all
+current initiatives are running and moving fast."
+
+**Interpretation:** A hard deadline with a fallback plan. Cumulative paper
+equity sits at $99,850.80 (-$149.20 from the $100k start) after the 08-31 cycle,
+still net negative. Juan sets a ~1-month window (target ~2026-10-01) to turn the
+paper account net positive on the current AH->PM momentum strategy. If it does
+not turn positive by then, the mandate is to pivot: spin up new
+projects/initiatives, change the strategy, and research existing
+agent-focused trading strategies online. Until then the standing order is to
+run all current initiatives fast, no idling, no serialized queueing beyond the
+one live pilot.
+
+**Action:** Recorded a dated directive at the top of `STRATEGY_ROADMAP.md`
+(deadline ~2026-10-01, go-positive-or-pivot, keep all initiatives moving fast).
+This reinforces the 2026-07-08 parallelism steer and the North Star
+("make the most money, fast"). No strategy change made here; the deadline and
+the fallback (new initiatives + online research on agent strategies) are routed
+to the next `strategy-advance` run to sequence. Logged for review.
+
+---
+
 ### 2026-08-28 — re: Trading Scanner Report - 2026-08-27
 
 **Juan said:** "Aemd could have been entered earlier. 2 or 3 5m bars are

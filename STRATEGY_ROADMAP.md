@@ -5,6 +5,14 @@ low-risk way (instrument / paper / shadow), and only promoted to the live cycle
 once it has earned evidence. This file is the single source of truth for what we
 are working on, what is parked, and what needs Juan.
 
+**DEADLINE (2026-09-01, Juan directive):** the paper account has ~1 month to go
+**net positive** (target ~2026-10-01; equity was $99,850.80, -$149.20 at the
+08-31 cycle). If it is not positive by then, **pivot**: create new
+projects/initiatives to change the strategy and research existing
+agent-focused trading strategies online. Until then, keep **all** current
+initiatives running and moving fast. Reinforces the parallelism steer below and
+the North Star. See `FEEDBACK_LOG.md` 2026-09-01.
+
 **Parallelism (2026-07-08, Juan's steer "move faster"):** only the **pilot**
 stage is serialized (one live experiment at a time, so P&L stays attributable).
 Research, instrument (log-only), and build/delivery work carry no attribution
