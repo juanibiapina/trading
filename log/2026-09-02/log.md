@@ -38,6 +38,21 @@ Other movers (higher price / weaker profile): TRTI leads low-float list. No pape
 
 No candidates found. Scanner 0 hits at AH open (16:00 ET). SIP shows no AH bars yet for the 21:30 watch names (TRTI, LHSW, LHAI — `no bars`, feed sparse at the open minute). No entries (observation-only before 23:00 CET, and no qualifying candidate anyway). Re-check watch names at 22:30/23:00 for AH carry.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+No candidates found. Scanner 0 hits at 16:15 ET (same as 22:00). Cross-checked 21:30 watch names via SIP first AH bar (16:00-16:05 ET):
+
+| Ticker | AH C | vs Reg | AH Vol | Trades | Note |
+|--------|------|--------|--------|--------|------|
+| TRTI | — | — | 0 | 0 | no AH bars (no liquidity) |
+| LHSW | $3.75 | flat | 12.8K | 6 | flat, 6 trades — thin |
+| NCPL | $1.00 | −3% | 96.8K | 151 | fading off close |
+| SWVL | $4.90 | −6% | 16.2K | 164 | fading |
+| LHAI | $1.12 | flat | 150K | 234 | flat vs close |
+| GPRO | $1.64 | −5% | 1.87M | 2147 | fading, float 125M |
+
+None building in AH — all flat or fading off regular close, none igniting. No entries (observation-only before 23:00 CET, and no qualifying candidate). Re-check at 22:30/23:00 for late AH carry.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
