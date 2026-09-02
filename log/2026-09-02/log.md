@@ -102,8 +102,52 @@ Three hits. TLYS and CHPT carried from 22:30 (2nd AH scan — clears the 2-AH-sc
 
 Both TLYS and CHPT now clear the 2-AH-scan gate. TLYS is the standout (BUILD + Grade B earnings + rising VRatio); CHPT holding but CONFIRM-3 NO. BRNX thin/no-catalyst — skip regardless. No entries this scan (observation-only before 23:00 CET). Enter evaluation at 23:00 CET.
 
+## Scan 23:00 CET (5:00 PM ET) — ENTRY SCAN
+
+8 hits. Entries allowed (23:00+ CET). Two names clear the 2-AH-scan gate and all entry rules: **TLYS** and **CHPT** — both entered (multiple positions allowed, W24 2026).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $3.81 | -3.8% | +27.5% | $4.86 | +22.7% | 2.1M | 416K | 4.9x | 22.2M | Apparel/Footwear Retail |
+| CHPT | [TV](https://www.tradingview.com/chart/?symbol=CHPT) | $5.19 | -2.1% | +19.1% | $6.18 | +16.6% | 532K | 464K | 1.1x | 22.7M | Electrical Products |
+| NCT | [TV](https://www.tradingview.com/chart/?symbol=NCT) | $4.90 | -6.1% | +11.4% | $5.46 | +4.6% | 605K | 2.4M | 0.2x | 8.5M | Marine Shipping |
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.56 | +3.8% | +10.7% | $0.62 | +14.9% | 543K | 697K | 0.8x | 9.8M | Wholesale Distributors |
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $9.75 | +48.0% | +7.5% | $10.48 | +59.1% | 510K | 9.3M | 0.1x | 573K | Medical Specialties |
+| NYXH | [TV](https://www.tradingview.com/chart/?symbol=NYXH) | $1.51 | +1.3% | +11.2% | $1.68 | +12.7% | 358K | 149K | 2.4x | 81.3M | Medical Specialties |
+| XTIA | [TV](https://www.tradingview.com/chart/?symbol=XTIA) | $0.95 | -17.4% | +6.3% | $1.01 | -12.2% | 68K | 943K | 0.1x | 38.4M | IT Services |
+| BRNX | [TV](https://www.tradingview.com/chart/?symbol=BRNX) | $3.16 | -10.2% | +8.9% | $3.44 | -2.3% | 62K | 3.1M | 0.0x | 684K | Engineering & Construction |
+
+**ENTERED — TLYS (Grade B earnings beat):**
+- 4th AH appearance (22:30 +24.7%, 22:45 +35.9%, 23:00 +27.5% AH) — cleared 2-AH-scan gate.
+- Day% -3.8% (above -15%), Total% +22.7% (under +150% ceiling), float 22.2M (recorded).
+- BUILD confirmed. SIP 16:00→16:45 ET: vol 6k→80k→334k→562k→336k→483k→415k→159k→159k→286k, trades to 6080/bar, holding $4.8-5.2, vwap $4.96-5.10. Real, sustained accumulation.
+- SPIKE 16:05ET +19% $4.55 58 trades / 6k sh. CONFIRM-3 YES ignition 16:05ET 12.4x; confirmed 16:15ET $5.05.
+- tradable=true, fillable. Catalyst Grade B: Q2 FY2026 earnings beat (net income $8.4M, comp sales +12.1%, e-commerce +20.9%).
+- **Fill: 19 @ $5.15** (limit $5.15 ext, id 921abfa7).
+- **CHASE-CAP:** qualifying 23:00 AH $4.86/+22.7%; first limit $4.95 rested unfilled (Alpaca book stale @16:12 ET, SIP real ~$5.05-5.10); repriced $5.15, filled $5.15/+35.2%. Chase gap +12.5% (fill Total% − qualifying Total%). Well under the +120% fade zone.
+- **MULTI-SESSION check:** fresh day-1 igniter (Day% -3.8%, pure AH earnings pop, not in WINNERS_TRACKING).
+
+**ENTERED — CHPT (Grade B earnings):**
+- 3rd AH appearance (22:30 +17.5%, 22:45 +17.3%, 23:00 +19.1% AH) — cleared 2-AH-scan gate.
+- Day% -2.1% (above -15%), Total% +16.6% (under ceiling), float 22.7M (recorded).
+- Holding ~$6.1-6.2 within 3% of AH high $6.42 (hold, not fade). SIP 16:00→16:45 ET: real volume 80k/8k/108k/66k/137k/19k/118k/82k/19k/29k sh, vwap climbing $5.19→$6.17, C $6.20. Real, thinning into later bars but holding.
+- SPIKE 16:11ET +19% $6.20 272 trades / 34k sh. CONFIRM-3 **NO** ignition 16:10ET failed third-bar hold/volume (instrumentation only, not a gate).
+- tradable=true. Catalyst Grade B: Q2 earnings reported after close.
+- **Fill: 16 @ $6.21** (limit $6.30 ext, id 46d8ab1e).
+- **CHASE-CAP:** qualifying 23:00 AH $6.18/+16.6%; fill $6.21/+19.7%. Chase gap +3.1% (minimal).
+- **MULTI-SESSION check:** fresh day-1 igniter (Day% -2.1%, pure AH earnings pop, not in WINNERS_TRACKING).
+
+**Skipped:**
+- **NCT** — VRatio 0.2x, AH Vol 605K vs AvgVol 2.4M, thin/not accumulating. Skip.
+- **UFG** — first AH appearance, no 2nd AH scan yet (2-scan gate). Re-check 23:30/00:00.
+- **BIAF** — Day% +48% already ran regular session (not fresh first-day AH ignition), AH chg only +7.5%, VRatio 0.1x thin. Skip.
+- **NYXH** — first AH appearance (2-scan gate), float 81.3M. Re-check next scan.
+- **XTIA** — Day% -17.4% below the -15% floor, Total% negative. Skip.
+- **BRNX** — carried, thin (VRatio 0.0x), no catalyst found. Skip.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-| — | — | — | — | — | No entries — regular-session scan, AH not open |
+| TLYS | $5.15 | 23:00 CET (5:00 PM ET) | 19 | 921abfa7 | Grade B earnings beat (comp +12.1%); BUILD 4 AH scans, VRatio 4.9x, CONFIRM-3 YES, cleared 2-AH-scan gate |
+| CHPT | $6.21 | 23:00 CET (5:00 PM ET) | 16 | 46d8ab1e | Grade B Q2 earnings; holding ~$6.1 within 3% of AH high, cleared 2-AH-scan gate |
