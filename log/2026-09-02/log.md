@@ -76,6 +76,32 @@ Two hits — both fresh AH igniters on today's earnings. First AH appearance for
 
 Both under +150% ceiling, Day% above -15%, float 22M (recorded, not a gate). No entries (observation-only). Re-check at 23:00 CET for 2nd-scan confirmation and entry evaluation.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+Three hits. TLYS and CHPT carried from 22:30 (2nd AH scan — clears the 2-AH-scan gate). BRNX new (+13.9% AH), thin. Observation-only (before 23:00 CET), no entries.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TLYS | [TV](https://www.tradingview.com/chart/?symbol=TLYS) | $3.81 | -3.8% | +35.9% | $5.18 | +30.8% | 1.5M | 338K | 4.4x | 22.2M | Apparel/Footwear Retail |
+| CHPT | [TV](https://www.tradingview.com/chart/?symbol=CHPT) | $5.19 | -2.1% | +17.3% | $6.09 | +14.9% | 354K | 442K | 0.8x | 22.7M | Electrical Products |
+| BRNX | [TV](https://www.tradingview.com/chart/?symbol=BRNX) | $3.16 | -10.2% | +13.9% | $3.60 | +2.3% | 52K | 3.1M | 0.0x | 684K | Engineering & Construction |
+
+**Progress vs 22:30:**
+- **TLYS** — building: AH +24.7%→+35.9%, VRatio 1.7x→4.4x, AH Vol 336K→1.5M. Strong accumulation, real BUILD. Grade B (earnings beat: net income $8.4M, comp sales +12.1%).
+- **CHPT** — flat/holding: AH +17.5%→+17.3%, holding ~$6.1. Grade B (earnings).
+- **BRNX** — new, thin: VRatio 0.0x, AH Vol 52K vs AvgVol 3.1M. Was down -18.9% Sept 1. **No catalyst found** (BrenX Ltd, formerly Brenmiller Energy). NO-SPIKE, peak +16% @16:27ET.
+
+**Instrumentation (log-only):**
+- TLYS: SPIKE 16:05ET +19% $4.55 58 trades / 6k sh. CONFIRM-3 YES ignition 16:05ET 12.4x; confirmed 16:15ET $5.05.
+- CHPT: SPIKE 16:11ET +19% $6.20 272 trades / 34k sh. CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume.
+- BRNX: NO-SPIKE peak +16% @16:27ET. CONFIRM-3 PENDING (waiting third bar).
+
+**SIP volume:**
+- TLYS: accumulating strongly per 22:30 read (vol 6k→80k→334k→562k, trades to 6080), building.
+- BRNX bars 16:00→16:30 ET: vol 21k→16k→4k→5k→4k→13k→6k, trades 282→175→52→38→55→140→111. Thin, not accumulating. Quote `bid $2.72 ask $3.63` (stale open-minute). Thin drift, not a build.
+
+Both TLYS and CHPT now clear the 2-AH-scan gate. TLYS is the standout (BUILD + Grade B earnings + rising VRatio); CHPT holding but CONFIRM-3 NO. BRNX thin/no-catalyst — skip regardless. No entries this scan (observation-only before 23:00 CET). Enter evaluation at 23:00 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
