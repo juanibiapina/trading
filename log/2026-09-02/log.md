@@ -18,3 +18,24 @@ No open positions (Alpaca source of truth). Clean slate after 10:30 CET pulse (K
 
 **Actions taken:**
 - None
+
+## Scan 21:30 CET (3:30 PM ET)
+
+Regular session — AH opens 22:00 CET (16:00 ET). No entries this scan (regular-session caution). Candidates flagged Watch — pending AH confirmation. Only re-enter evaluation if they reappear in AH scans (22:00+ CET) with sustained momentum.
+
+| Ticker | Chart | Price | Day% | 5mVol | AvgVol | IRVol | Float | MCap | Industry | Note |
+|--------|-------|-------|------|-------|--------|-------|-------|------|----------|------|
+| TRTI | [TV](https://www.tradingview.com/chart/?symbol=TRTI) | $3.82 | +27.3% | 8K | 9K | 21.4 | 2.1M | 12.6M | Electric Utilities | Watch — low float |
+| LHSW | [TV](https://www.tradingview.com/chart/?symbol=LHSW) | $3.76 | +30.6% | 8K | 5K | 5.5 | 1.0M | 12.9M | Computer Processing Hardware | Watch — low float |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.03 | +30.1% | 33K | 50K | 0.5 | 4.4M | 8.1M | Misc Commercial Services | Watch — IRVol fading (0.5) |
+| SWVL | [TV](https://www.tradingview.com/chart/?symbol=SWVL) | $5.22 | +36.3% | 313 | 22K | 0.3 | 5.3M | 52.0M | Other Transportation | Watch — vol faded |
+| LHAI | [TV](https://www.tradingview.com/chart/?symbol=LHAI) | $1.09 | +32.8% | 100 | 156K | 434.2 | 9.7M | 18.0M | Packaged Software | Watch — vol faded intraday |
+| GPRO | [TV](https://www.tradingview.com/chart/?symbol=GPRO) | $1.72 | +39.9% | 1K | 4.6M | 4.0 | 125.1M | 164.0M | Electronics/Appliances | Watch — float 125M (high) |
+
+Other movers (higher price / weaker profile): TRTI leads low-float list. No paper trades — waiting for AH scans to confirm which names carry momentum past 16:00 ET. Most listed names already show fading intraday IRVol (5mVol below Avg5m), a caution sign for AH follow-through.
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+| — | — | — | — | — | No entries — regular-session scan, AH not open |
