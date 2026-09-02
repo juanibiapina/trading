@@ -6,8 +6,9 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-08-31 | GPRO | C — Markiplier large-stake meme event | $1.44 AH SIP (+63.6% from $0.88 @17:50 ET, 3–5M sh/bar, 5–12K trades); PM SIP high $1.67 (+90%) @04:00 ET, 7.4M sh/26K trades | — | ~$1.44 PM | Day 1: **DETECTED (22:30+ scans) + ENTERED @ $1.30** — biggest liquid mover but +90% from real close under the >100% winner bar (no real winner today). AH→PM continuation, mega-liquid. Float 125.1M (meme squeeze, not low-float profile) |
-| 2026-08-31 | SSM | B — non-binding LOI to combine with Sports One + 19.9% stake | $5.20 AH SIP (+94.8% from $2.67 @17:45 ET, 446–913K sh/bar, 4.8–12.5K trades); PM SIP high $4.77 (+79%) @04:00 ET | — | ~$3.90 PM | Day 1: **DETECTED (00:00 scan) + ENTERED @ $4.50** — low-float mover, under the >100% bar and faded into PM (AH peak was the exit). Float 1.0M |
+| 2026-09-01 | BIAF | None (unverified; +44.5% regular session, AH continuation) | $8.12 AH SIP (+78% from $4.56 @17:30 ET, 224K sh/3,980 trades); PM SIP high $6.84 (+50%) @04:00 ET | $6.59 | ~$6.84 PM | Day 1: **no real winner today** (nothing >100%). Biggest genuine AH→PM mover, **DETECTED (4 scans), correctly skipped** (AH >10% only once, `ask $0.00 x0` no fillable book). AH peak was the exit — faded to +3.8% from regular close. Float 573K |
+| 2026-08-31 | GPRO | C — Markiplier large-stake meme event | $1.44 AH SIP (+63.6% from $0.88 @17:50 ET, 3–5M sh/bar, 5–12K trades); PM SIP high $1.67 (+90%) @04:00 ET, 7.4M sh/26K trades | — | ~$0.88 | Day 2: faded to $0.88 (below $1.30 entry). **DETECTED (22:30+ scans) + ENTERED @ $1.30** — under the >100% winner bar. Float 125.1M |
+| 2026-08-31 | SSM | B — non-binding LOI to combine with Sports One + 19.9% stake | $5.20 AH SIP (+94.8% from $2.67 @17:45 ET, 446–913K sh/bar, 4.8–12.5K trades); PM SIP high $4.77 (+79%) @04:00 ET | — | ~$2.68 | Day 2: faded to $2.68 (well below $4.50 entry). **DETECTED (00:00 scan) + ENTERED @ $4.50** — under the >100% bar, AH peak was the exit. Float 1.0M |
 
 ## Historical Winners (with multi-day outcome)
 

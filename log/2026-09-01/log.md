@@ -245,3 +245,90 @@ Scanner: **8 hits**. AH change >10%: KITT, MIRA, WHLR, UPC (BIAF +9.9% now under
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | KITT | $1.02 | 2026-09-02 00:30 CET | 93 | 7f6437f1 | Grade B — Nauticus Robotics both Comanche ROVs deployed (stronger Q3 offshore). Cleared 2-AH-scan gate, real SIP BUILD-and-hold within ~10% of $1.13 high, CONFIRM-3 YES 176x, float 5.7M, Total +22.5%. Hold up to 2 days, stop -15% ($0.867). |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**No real winner today.** Nothing cleared the >100% winner bar. Every genuine after-hours mover last night (BIAF, FLYE, UPC, KITT) peaked in after-hours and faded into premarket — a clean fade night.
+
+Biggest genuine AH→PM mover (for the baseline diagnostic): **BIAF** — Medical Specialties.
+- Catalyst: unverified (the +44.5% was regular-session; AH was continuation). Grade None.
+- Previous Close: $4.56 | Last regular close: $6.59 (ran hard in the regular session — anchor divergence)
+- AH last night: SIP peak **$8.12** @17:30 ET (+78% from $4.56 / +23% from $6.59) on 224K sh/3,980 trades — real volume
+- Premarket now: SIP peak **$6.84** @04:00 ET (+50% from $4.56 / +3.8% from $6.59) on 49K sh/1,082 trades
+- Hypothetical AH→PM: AH peak $8.12 > PM peak $6.84 = **faded, AH was the exit**
+- Float: 573K | multi-session runner (regular-session move, AH continuation)
+
+Best still-running AH→PM continuation: **UPC** (Pharmaceuticals) — AH SIP peak $6.17 @18:35 ET (223K sh/4,852 tr) → PM SIP peak $5.94 @04:00 ET (257K sh/6,077 tr). From its $4.27 regular close, PM +39%. Still faded off the AH peak.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — BIAF appeared in the 23:00/23:30/00:00/00:30 scans; UPC/FLYE/KITT all surfaced too.
+- BIAF correctly skipped: AH cleared >10% only once (00:00 +15.3%), the +44.5% was regular-session, and quote showed `ask $0.00 x0` (no fillable book).
+- Scanner gap: none. Detection worked; this was a fade night with no >100% capturable winner. No scanner change indicated.
+
+### Baseline Tracking
+
+- Days tracked: **76** (was 75 + 1)
+- Winners detected by scanner: **62/71 (87.3%)** — +BIAF (biggest genuine AH→PM mover, detected 4 scans; no >100% winner cleared the bar tonight)
+- Winner selected for paper trade: **35/69 (50.7%)** — no >100% winner existed to capture; we entered KITT (detected, Grade B) which faded below entry
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+- Live PM scan (04:23 ET): 3 hits — UPC +25.3% ($5.35), VIVK +18.6% ($0.93), KITT +15.9% ($0.92). None >100%.
+- Forced AH scan: 0 hits (expected next-morning; TradingView postmarket fields empty).
+- AH→PM reconstruction (Yahoo timeline + SIP verification):
+  - BIAF: AH SIP $8.12 → PM SIP $6.84 (faded)
+  - UPC: AH SIP $6.17 → PM SIP $5.94 (faded slightly; SIP PM peak beats Yahoo's $5.50)
+  - FLYE: AH SIP ~$2.69 → PM $1.98 (faded hard; anchor-distorted, prev close $1.37 vs regular close $2.20)
+  - KITT: AH SIP $1.13 → PM SIP $0.99 (faded below $1.02 entry)
+  - MIRA: AH $0.98 → PM $0.86 (faded)
+
+### Open Position P&L (Alpaca)
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| KITT | $1.02 | +27.5% | B — Nauticus ROV deployment | 00:30 CET | $0.99 (SIP) | 04:00 ET | open | -€13.95 | -14.7% | 🔴 Below entry |
+| PXS  | $6.26 | — | B — prior entry (Aug 31→Sep 1) | 08-31 | — | — | open | -€3.00 | -3.2% | 🔴 Below entry |
+
+KITT quote is stale (`@2026-09-01T20:00:00Z`, the 16:00 ET close snapshot, bid $0.69/ask $0.91) — but SIP PM bars confirm KITT live at $0.86-0.87, so the ~-15% is a **real** loss, near its -15% stop ($0.867). Hold/sell handled by position-evaluation.md, not here. No new Alpaca fills overnight.
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits)
+
+### Scanner Effectiveness
+
+- Evening scans ran: **9** (21:30, 22:00, 22:15, 22:30, 22:45, 23:00, 23:30, 00:00, 00:30 CET) — all 7 scheduled + 2 extra. Full coverage, no coverage failure.
+- Candidates found (AH >10%, ≥1 scan): SPWH, FLYE, KITT, BIAF, SUNE, WHLR, MIRA, UPC
+- Retrospective matches: biggest movers all detected (BIAF, UPC, FLYE, KITT)
+
+### Missed Opportunities
+
+No significant missed opportunities. All genuine AH movers were detected; none cleared the >100% bar and all faded into PM.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| BIAF | $8.12 (SIP) | 17:30 ET | Spike→fade | $6.84 (SIP) | -15.8% | +50% (fr $4.56) | AH was the exit |
+| UPC  | $6.17 (SIP) | 18:35 ET | Build→hold | $5.94 (SIP) | -3.7% | +39% (fr $4.27) | AH slightly better exit |
+| FLYE | $2.69 (SIP) | 17:15 ET | Spike→fade | $1.98 | -26.4% | +44% (fr $1.37) | AH was the exit; anchor-distorted |
+| KITT | $1.13 (SIP) | 17:45 ET | Build→fade | $0.99 (SIP) | -12.4% | +22% (fr $0.81) | AH was the exit; below entry |
+| MIRA | $0.98 | 18:05 ET | Spike→fade | $0.86 | -12.2% | +12% (fr $0.77) | AH was the exit |
+
+**AH-peak-vs-PM-peak:** all five peaked in after-hours and faded into PM — AH was the better exit for every genuine mover. No name reached the ~+130% extreme-runner zone from its regular close, so no new extreme-runner-fade case. Standing extreme-zone tally unchanged: 8 fade / 1 continue.
+
+### Price Charts
+
+KITT (our position) 2-day: peak $1.13 (+39.3%) @09-01 21:45 ET, faded to $0.88 PM. Entry $1.02 never reclaimed in PM (SIP PM high $0.99).
+
+### Notes
+
+- **Fade night.** Every genuine AH mover peaked in after-hours and gave back gains into premarket. No >100% capturable winner. Detection was clean; nothing to fix in the scanner.
+- **Final-scan gate-block tracking:** +**UPC** (Aug→Sep 1→2, float 2.6M, Grade D, ignited 18:05 ET on 206K sh/2,989 tr, CONFIRM-3 YES 236x, qualified final-scan AH $5.31/+15.9% → PM SIP peak $5.94 = **+11.9%, ran modestly**). Standing count: **2 (TRUG, UPC), both ran** — the 2-AH-scan gate has now cost two late igniters. Continue routing the final-scan-ignition-exception question to the daily email; do not change the gate here.
+- **Fade-rule false-negative (sub-3M):** +**FLYE** (Sep 1→2, float 1.6M, Grade None, AH SIP peak $2.69 @17:15 ET → PM peak $1.98, **fell short**; anchor-distorted, already ran the regular session). Standing sub-3M count: **4 of 15** — well below the ≥80% trigger. Hypothesis keeps weakening. No rule change.
+- **Multi-session-runner outcome:** +**KITT** (Sep 1→2, day-1 fresh igniter, Day% -1.9%, Grade B, entered $1.02 → PM SIP peak $0.99 = **-3%, faded**). Standing: 1 multi-session runner (1 faded) / **9 first-day igniters (5 ran, 1 flat, 3 faded: MODD, LABT, KITT)**. Data collection only.
+- **PM-only gapper:** biggest raw PM mover = BIAF (+50% from prev close, SIP), an **AH→PM continuation** (moved >10% AH, detected) — **not** a PM-only gapper. No AH-scanner blind-spot cost today. `log/pm-open-scan.csv` holds the authoritative holdable count (39).
+- No new cases: broker-block, stale-book execution-block, no-fillable-book skip, float-gate skip, late-AH-tail surge, in-window feed-lag miss (standing 4, trigger REACHED — AH-data-source cross-check already routed to email), price-floor exclusion, reverse-split-squeeze, chase-cap.
+- **Baseline gap:** none. Prior baseline (Aug 31 session, Days 75) is the immediately preceding trading day.
