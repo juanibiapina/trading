@@ -32,3 +32,5 @@ date,ticker,entry,exit,exitZ,note
 2026-08-27,DAIC,?,5.81,2026-08-27T08:30:49Z,held exit 04:30 ET; thin dead book, PM peak only $5.95 06:05 ET (+2.4%, thin 18k sh/343 tr); lim10 ($6.39) unfilled, PM-last $5.88 (+1.2%)
 2026-08-28,AEMD,?,3.17,2026-08-28T08:31:00Z,held exit 04:31 ET; liquid but dead book, PM peak only $3.30 04:35 ET (+4.1%, 202k sh/1867 tr); lim10 ($3.49) unfilled, dumped to PM-last -6.0%
 2026-08-28,MODD,?,3.82,2026-08-28T08:32:02Z,held exit 04:32 ET; thin dead book, PM peak $4.19 07:25 ET (+9.7%, 10k sh/121 tr); lim10 ($4.20) unfilled by 1c, PM-last +3.4%
+2026-09-02,KITT,?,0.8702,2026-09-02T08:30:55Z,held exit 04:30 ET; dead book, PM peak only $0.91 06:10 ET (+4.6%, 322k sh/957 tr liquid); lim10 ($0.957) unfilled, PM-last $0.875 (+0.6%)
+2026-09-02,PXS,?,5.98,2026-09-02T08:30:56Z,held exit 04:30 ET; thin dead book, PM peak only $6.28 08:25 ET (+5.0%, 2-5 tr/bar); lim10 ($6.58) unfilled, PM-last $6.21 (+3.9%)

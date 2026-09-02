@@ -231,6 +231,30 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-09-02 (strategy-advance) — pilot admitted TWO fresh
+   out-of-sample names (JLHL filled the +10% limit, VIVK faded); entered set
+   jumps to n=15, edge holds +5.0%/name, fade-tail 3/15 (20%).** Two holdable
+   footprint=none PM-only gappers logged 09-02 (JLHL +21.2% late-ramp 04:30 ET
+   BUILD, VIVK +19.7% massive-volume plateau at gap-mid). Re-ran
+   `init6-pm-pilot.js` (34 candidates): **both admitted** by the continuation
+   gate. JLHL's early ramp **filled the resting +10% limit ($7.49)** intrabar =
+   a win at the exit rule; VIVK never reached its +10% limit and drifted to
+   PM-last -9.5% = a fade. Entered set moves n=13 -> **n=15: SUM +75.2% / mean
+   +5.0% / median +10.0% / positive 12/15**, vs a PM-last hold-to-open floor of
+   -7.5% and a do-nothing baseline of 0%. Net of ~2% spread ~+3.0%/name. The
+   **fade-tail grows to 3/15 (BIVI -27.1%, MIMI-2 -6.9%, VIVK -9.5%) = 20%** —
+   still under the ~25% that would erode the edge below the spread, but the ratio
+   is worth watching now that VIVK adds a third. Init 3 had **fresh seeds** this
+   run: KITT and PXS exited at the 09-02 04:30 ET pulse. Both are dead-book
+   stallers (KITT peak +4.6% at 06:10 ET on real vol, lim10 unfilled, PM-last
+   +0.6%; PXS thin 2-5 tr/bar, peak +5.0%, lim10 unfilled, PM-last +3.9%), both
+   contribute small positives. Re-ran `peak-seeking-exit-sim.js`: plain **+10%
+   sell-limit stays the best rule at n=30: SUM +84.2% / mean +2.8%, positive
+   20/30** (edge unchanged from n=28's +76.1/+2.7). Still log-only, no orders.
+   Next: keep seeding both sims; watch the Init 6 fade-tail ratio (now 20%) — if
+   it crosses ~25% the mean edge erodes below the spread. With n=15 / 12 positive
+   / two converging studies, the live PM-gapper pulse is nearing proposable; hold
+   until the tail confirms it stays contained.
    **Update 2026-09-01 (strategy-advance) — no fresh admit (GYGY gate-skipped),
    but WETO's fill corrected to a +10% limit hit on fuller 1-min bars; entered
    set holds n=13, edge firms to +5.8%/name, fade-tail steady 2/13.** One fresh
