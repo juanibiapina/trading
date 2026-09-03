@@ -45,6 +45,14 @@ REGULAR session — AH not open yet (opens 22:00 CET / 4:00 PM ET). No entries p
 
 Regular-session movers only. AH liquidity and real spike confirmation deferred to 22:00 CET scan. No paper trades at regular-session scan.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+Scanner 0 hits (AH open 16:00 ET, volume not built yet). Observation-only scan — no entries before 23:00 CET per learning phase.
+
+No candidates found.
+
+Carrying 21:30 watch names (MIMI, AEHL, GRI, CYCU, PECE) for AH confirmation at 22:30+ scans. None yet showing in AH scanner.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
