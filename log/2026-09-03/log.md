@@ -190,6 +190,36 @@ Below-threshold / prior-skip hits: GPRO +5.0%, GELS +7.9%, TWG +8.6%, WETO +7.4%
 - STKE — SKIP. First AH scan appearance, fails 2-AH-scan gate. Also very thin (VRatio 0.2x, single-digit trades most bars), float 30.0M.
 - No new entries. Both new names fail the 2-AH-scan gate on first appearance and are thin; neither is a real volume-backed BUILD.
 
+## Scan 00:30 CET (6:30 PM ET) — final scan
+
+Entries allowed. Final scheduled scan. Scanner 14 hits (AH >10% names evaluated):
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.65 | +7.3% | +22.3% | $0.79 | +31.3% | 13.4M | 5.5M | 2.4x | 11.6M | Food: Specialty/Candy |
+| GIPR | [TV](https://www.tradingview.com/chart/?symbol=GIPR) | $0.52 | +32.6% | +16.6% | $0.61 | +54.6% | 12.3M | 43.4M | 0.3x | 2.6M | Real Estate Investment Trusts |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $0.63 | -39.0% | +15.2% | $0.72 | -29.7% | 2.9M | 82.8M | 0.0x | 4.4M | Misc Commercial Services |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $3.67 | -1.9% | +14.4% | $4.20 | +12.3% | 1.4M | 487K | 3.0x | 541K | Agricultural Commodities |
+| CURV | [TV](https://www.tradingview.com/chart/?symbol=CURV) | $2.23 | -1.8% | +12.8% | $2.51 | +10.8% | 305K | 214K | 1.4x | 34.2M | Apparel/Footwear Retail |
+| MODD | [TV](https://www.tradingview.com/chart/?symbol=MODD) | $3.42 | -1.2% | +14.6% | $3.92 | +13.3% | 207K | 282K | 0.7x | 7.6M | Medical Specialties |
+
+(Below-threshold / carried hits: GPRO AH +5.0% / Day -17.8%, TWG +6.2%, WETO +6.5% / Day -18.1%, CNTB +7.3% (dead-cat, sub-threshold), EVTL +5.8%, INLF +9.5%, DAIC +5.4%, DBGI +8.5% / Day -18.8% — all skipped, AH <10% or Day <-15%.)
+
+**Instrumentation (log-only, no decision impact):**
+- MODD: SPIKE 17:04ET +15% $3.94 116 trades / 15k sh. CONFIRM-3 NO ignition 17:00ET failed third-bar hold/volume. SIP thin drift: peak bar 21:05Z (17:05ET) 53k sh / 238 trades, most bars 6-13k sh / 26-100 trades, VRatio 0.7x. Latest SIP bar 18:15ET (fresh). Price drifted $3.42→$3.95 but per-bar volume never accumulated (hundreds of trades / tens-of-K sh, not thousands / hundreds-of-K). Thin drift, not a build.
+- CURV: CONFIRM-3 NO no local-volume new-high ignition (carried). Thin drift, float 34.2M, peaked 16:15ET early.
+
+**Decisions:**
+- MODD — SKIP. Now clears the 2-AH-scan gate numerically (00:00 +11.7%, 00:30 +14.6%) but SIP per-bar volume is thin drift, not accumulation (peak 53k sh / 238 trades, most bars sub-13k sh). Rising Total% with thin per-bar SIP volume = thin drift, not a BUILD. CONFIRM-3 NO. Known fader (Aug 27→28 -8.6% as false "late BUILD"). Thin-drift skip.
+- CURV — SKIP. Clears 2-AH-scan gate numerically but thin drift, CONFIRM-3 NO, float 34.2M, early peak 16:15ET (carried skip).
+- AKAN — SKIP (untradable, carried). `tradable=false` broker-block, `ask $0.00 x0`. Qualified-but-untradable. CONFIRM-3 NO / choppy.
+- NCPL — SKIP. Dead-cat (Day -39.0%, Total -29.7% still below close).
+- No new entries. No fresh late igniter this final scan — every AH >10% name is a carried skip (untradable, thin drift, or dead-cat). No FINAL-SCAN-GATE-BLOCK case (no name clears all rules except the gate with real volume-backed late ignition). No feed-lag rescue (no pipeline name under-reported by TradingView with SIP above threshold on real accumulation).
+
+**Positions carried (mgmt is premarket, no action here):** PLAG 113 @ $0.74 now $0.82 (+11.3%), AH +22.3% / Total +31.3% still building. GIPR 151 @ $0.63 now $0.62 (-1.5%), AH +16.6% / Total +54.6% holding above threshold.
+
+Night summary: 2 entries (PLAG @ $0.74, GIPR @ $0.63), both Grade None real volume-backed AH BUILDs cleared the 2-AH-scan gate under the +150% ceiling. No entries at the final scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
