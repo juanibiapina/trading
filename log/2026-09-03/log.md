@@ -66,6 +66,27 @@ No candidates found.
 
 Carrying 21:30 watch names (MIMI, AEHL, GRI, CYCU, PECE) for AH confirmation at 22:30+ scans. None yet showing in AH scanner.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+Observation-only (before 23:00 CET per learning phase). Scanner 4 hits:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.65 | +7.3% | +15.5% | $0.74 | +24.0% | 1.8M | 4.3M | 0.4x | 11.6M | Food: Specialty/Candy |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $3.67 | -1.9% | +18.5% | $4.35 | +16.3% | 418K | 351K | 1.2x | 541K | Agricultural Commodities |
+| CNTB | [TV](https://www.tradingview.com/chart/?symbol=CNTB) | $1.93 | -30.1% | +12.4% | $2.17 | -21.4% | 120K | 1.2M | 0.1x | 17.0M | Pharma: Major |
+| CURV | [TV](https://www.tradingview.com/chart/?symbol=CURV) | $2.23 | -1.8% | +15.2% | $2.57 | +13.2% | 51K | 185K | 0.3x | 34.2M | Apparel/Footwear Retail |
+
+**Instrumentation (log-only, no decision impact):**
+- PLAG: SPIKE 16:11ET +23% $0.80 1241 trades / 446k sh. CONFIRM-3 YES ignition 16:05ET 3.9x, confirmed 16:15ET $0.79. SIP real build: 343k→1.53M→839k sh/bar, thousands of trades. Real accumulation.
+- AKAN: SPIKE 16:04ET +16% $4.27 570 trades / 40k sh. CONFIRM-3 PENDING. SIP real build: 256k→331k→358k sh/bar, 4.6-6k trades/bar. Float 541K very low. Strong candidate.
+- CNTB: SPIKE 16:12ET +16% $2.23 56 trades / 22k sh. CONFIRM-3 NO. Day -30.1% dead-cat, Total -21.4% still below close. Thin AH (36-169 trades/bar). Skip: dead-cat bounce.
+- CURV: SPIKE 16:14ET +15% $2.57 58 trades / 8k sh. CONFIRM-3 NO. Thin (8-636 trades/bar), Float 34.2M. Weak.
+
+No entries (observation-only scan). PLAG and AKAN both showing real volume-backed builds — track for 23:00 entry gate (need AH >10% in ≥2 AH scans). This is their first AH scan appearance. CNTB skip (dead-cat), CURV weak.
+
+Prior watch names (MIMI, AEHL, GRI, CYCU, PECE) not in scanner this scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
