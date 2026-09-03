@@ -87,6 +87,29 @@ No entries (observation-only scan). PLAG and AKAN both showing real volume-backe
 
 Prior watch names (MIMI, AEHL, GRI, CYCU, PECE) not in scanner this scan.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+Observation-only (before 23:00 CET per learning phase). Scanner 7 hits:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.65 | +7.3% | +19.4% | $0.77 | +28.1% | 4.7M | 4.6M | 1.0x | 11.6M | Food: Specialty/Candy |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $3.67 | -1.9% | +8.2% | $3.97 | +6.1% | 990K | 429K | 2.3x | 541K | Agricultural Commodities |
+| GELS | [TV](https://www.tradingview.com/chart/?symbol=GELS) | $0.89 | +27.6% | +15.3% | $1.03 | +47.2% | 628K | 13.9M | 0.0x | n/a | Pharma: Major |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $7.45 | +37.2% | +6.7% | $7.95 | +46.4% | 224K | 7.6M | 0.0x | 1.3M | Building Products |
+| CURV | [TV](https://www.tradingview.com/chart/?symbol=CURV) | $2.23 | -1.8% | +13.5% | $2.53 | +11.5% | 208K | 203K | 1.0x | 34.2M | Apparel/Footwear Retail |
+| CNTB | [TV](https://www.tradingview.com/chart/?symbol=CNTB) | $1.93 | -30.1% | +12.2% | $2.17 | -21.6% | 171K | 1.2M | 0.1x | 17.0M | Pharma: Major |
+| SMTK | [TV](https://www.tradingview.com/chart/?symbol=SMTK) | $2.38 | -5.9% | +11.8% | $2.66 | +5.1% | 137K | 884K | 0.2x | 435K | Semiconductors |
+
+**Instrumentation (log-only, no decision impact):**
+- PLAG: SPIKE 16:11ET +23% $0.80 1241 trades / 446k sh. CONFIRM-3 YES ignition 16:05ET 3.9x, confirmed 16:15ET $0.79. SIP strong build: 343k→1.53M→839k→1.47M→711k→1.35M sh/bar, thousands of trades, price $0.68→$0.84 making new highs at 16:30ET. Real accumulation. **2nd AH scan** (also in 22:30). Total +28%, under ceiling, Day% +7.3%, Float 11.6M. Clears build/hold. Track for 23:00 entry gate.
+- GELS: SPIKE 16:29ET +18% $1.05 1289 trades / 491k sh. CONFIRM-3 PENDING. SIP: one big bar 728k sh @16:25ET spike to $1.05, next bar 475k sh but faded C $0.96 off high. Fresh single-bar spike, early fade signal. Was a held position sold this AM -15.7%; now re-igniting. **1st AH scan today.**
+- SMTK: SPIKE 16:27ET +25% $2.97 367 trades / 32k sh. CONFIRM-3 PENDING. SIP: 202k sh @16:25ET spike to $2.99, next bar faded C $2.42 (-19% off high). SPIKE→FADE already. Float 435K. **1st AH scan.**
+- CURV: SPIKE 16:14ET +15% $2.57 58 trades / 8k sh. CONFIRM-3 NO. Thin (8-636 trades/bar), Float 34.2M. Weak (carried).
+- CNTB: SPIKE 16:12ET +16% $2.23 56 trades / 22k sh. CONFIRM-3 NO. Day -30.1%, Total -21.6% still below close. Thin AH. Skip: dead-cat bounce.
+
+AKAN dropped to +8.2% AH (below 10% threshold, was +18.5% at 22:30). AEHL +6.7% AH (below threshold). No entries (observation-only). PLAG is the clear volume-backed BUILD with 2 AH scans — primary 23:00 entry candidate if it holds. GELS/SMTK fresh single-bar spikes already fading; CNTB dead-cat; CURV weak.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
