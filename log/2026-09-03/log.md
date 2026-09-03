@@ -137,8 +137,40 @@ Entries now allowed (learning-phase 23:00+ gate). Scanner 6 hits:
 - AKAN — SKIP. Faded to +6.8% AH (was +18.5% at 22:30), fails gate.
 - CNTB — SKIP. Dead-cat bounce (Day -30.1%, Total still below close), thin AH.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Entries allowed. Scanner 13 hits (AH >10% subset evaluated):
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.65 | +7.3% | +12.0% | $0.72 | +20.2% | 11.7M | 5.3M | 2.2x | 11.6M | Food: Specialty/Candy |
+| GIPR | [TV](https://www.tradingview.com/chart/?symbol=GIPR) | $0.52 | +32.6% | +13.6% | $0.59 | +50.7% | 9.0M | 43.1M | 0.2x | 2.6M | Real Estate Investment Trusts |
+| GELS | [TV](https://www.tradingview.com/chart/?symbol=GELS) | $0.89 | +27.6% | +10.0% | $0.98 | +40.3% | 2.3M | 14.1M | 0.2x | n/a | Pharmaceuticals: Major |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $0.63 | -39.0% | +13.6% | $0.71 | -30.7% | 1.4M | 82.6M | 0.0x | 4.4M | Misc Commercial Services |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $3.67 | -1.9% | +10.9% | $4.07 | +8.8% | 1.2M | 456K | 2.7x | 541K | Agricultural Commodities |
+| CURV | [TV](https://www.tradingview.com/chart/?symbol=CURV) | $2.23 | -1.8% | +14.8% | $2.56 | +12.8% | 258K | 208K | 1.2x | 34.2M | Apparel/Footwear Retail |
+
+(Below-threshold hits: GPRO AH +6.5% / Day -17.8%, MIMI AH +5.4%, TWG +5.6%, CHPT +5.7% (held position), MODD +7.3%, INLF +6.2%, DBGI AH +7.7% / Day -18.8% — all skipped, AH <10% or Day <-15%.)
+
+**Instrumentation (log-only, no decision impact):**
+- GIPR: SPIKE 16:43ET +19% $0.62 748 trades / 360k sh. CONFIRM-3 YES ignition 16:40 ET 13.6x, confirmed 16:50 ET $0.64. SIP real accumulation: 100k→50k→39k→88k→679k→1.50M→908k→1.82M→1.32M→1.63M→486k→302k sh/bar, 1451-3706 trades/bar at peak, price $0.56→$0.67 peak 17:00 ET, now ~$0.62 (last SIP bar 17:15 ET, fresh). Real BUILD.
+- AKAN: SPIKE 16:04ET +16% $4.27 570 trades / 40k sh. CONFIRM-3 NO (ignition 16:10 ET failed third-bar hold/volume). SIP faded then last-bar bounce: 213k→163k→61k→38k→46k→26k→42k→16k→13k→8k→17k→87k sh/bar. Choppy spike-fade-bounce. Float 541K.
+- GELS: SPIKE 16:29ET +18% $1.05 1289 trades / 491k sh. CONFIRM-3 NO. SIP single-bar spike then fade: 728k@16:25 ET peak $1.05, faded to $0.91 (last bar). SPIKE→FADE, -13% off high.
+- CURV: CONFIRM-3 NO (carried). Thin drift, Float 34.2M.
+- NCPL: Day -39.0%, Total -30.7% below close — dead-cat. Skip.
+
+**Decisions:**
+- **GIPR — ENTER.** Clears every gate: 2-AH-scan gate (23:00 +12.2%, 23:30 +13.6%), Total +50.7% under +150% ceiling, Day +32.6% above -15% (up move, not dead-cat), float 2.6M ideal, tradable=true, real volume-backed BUILD (CONFIRM-3 YES, 679k-1.82M sh/bar, thousands of trades). Quote stale (ask $5.81 garbage @16:55 ET) but SIP proves a real fillable book (302k-1.82M sh/bar); freshness guard, lean on SIP. Catalyst search (2 queries): no fresh same-day catalyst — latest 8-K Apr 22 2026, no Sep PR. Grade None, enter with concern noted per no-catalyst rule. Fresh day-1 igniter (no prior WINNERS_TRACKING entry). BUY 151 @ limit $0.66 ext (id f84519c6) **filled @ $0.63** (price improvement). Fill Total% (0.63−0.392)/0.392 = +60.7% vs qualifying +50.7% — small chase gap +10pts, well below the +120% fade zone, no CHASE-CAP concern.
+- AKAN — SKIP (untradable). `tradable=false` broker-block (matches WINNERS_TRACKING 2026-08-13 note: DETECTED all scans but never entered, `tradable=false` + `ask $0.00 x0`). Numerically clears 2-AH-scan gate (22:30 +18.5%, 23:30 +10.9%) but can never fill. Recorded as qualified-but-untradable broker-block. Also CONFIRM-3 NO / choppy.
+- GELS — SKIP. SPIKE→FADE single-bar spike faded -13% off $1.05 high to $0.91, CONFIRM-3 NO, thin VRatio 0.2. Multi-session (was held position sold this AM -15.7%).
+- CURV — SKIP. Thin drift not a build, CONFIRM-3 NO, float 34.2M, peaked 16:15 ET early.
+- NCPL — SKIP. Dead-cat bounce (Day -39.0%, Total still below close).
+
+PLAG (prior entry) still holding: AH +12.0% above threshold, position now +1.2% ($0.74). No action (position mgmt is premarket).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | PLAG | $0.74 | 23:00 CET (5:00 PM ET) | 113 | 9797f825 | Grade None — real volume-backed AH BUILD, cleared 2-AH-scan gate, Total +41.5% under ceiling, no fresh catalyst (concern noted). |
+| GIPR | $0.63 | 23:30 CET (5:30 PM ET) | 151 | f84519c6 | Grade None — REIT, real volume-backed AH BUILD (679k-1.82M sh/bar), cleared 2-AH-scan gate, Total +50.7% under ceiling, float 2.6M, no fresh catalyst (concern noted). |
