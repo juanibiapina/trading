@@ -231,6 +231,32 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-09-03 (strategy-advance) — no fresh admit (GYGY gate-skipped),
+   VIVK's fade corrected to flat on fuller 1-min bars; entered set holds n=15,
+   edge firms to +5.7%/name, fade-tail back to 2/15 (13%).** One fresh holdable
+   footprint=none PM-only gapper logged 09-03 (GYGY +19.7%, recurring 17K
+   micro-float squeeze). Re-ran `init6-pm-pilot.js` (35 candidates): **GYGY was
+   skipped by the continuation gate** — its 04:00 spike faded below gap-mid then
+   re-ramped at 04:40 with a thin middle (10-66k sh, 101-498 tr bars 04:05-04:25),
+   failing the R+1/R+2 80%-of-high hold on real volume. No new entered row. The
+   one change: last run VIVK 09-02 was recorded PM-last -9.5% (1-min bars
+   incomplete when run early); on the full 09-02 1-min SIP history VIVK's exit
+   recomputes to flat (entry $1.05 = PM-last $1.05), reclassifying -9.5% -> 0.0%.
+   Entered set stays n=15 but SUM lifts +75.2% -> **+84.8% / mean +5.7% / median
+   +10.0% / positive 12/15**, vs a PM-last hold-to-open floor of -6.8% and a
+   do-nothing baseline of 0%. Net of ~2% spread ~+3.7%/name. The **fade-tail
+   drops back to 2/15 (BIVI -27.1%, MIMI-2 -6.9%) = 13%** as VIVK leaves the tail
+   — comfortably under the ~25% that would erode the edge below the spread. Init 3
+   had **fresh seeds** this run: UFG and GELS exited at the 09-03 04:31 ET pulse.
+   GELS is a live-book spike (exit $0.861 -> PM peak $0.977 05:15 ET, 873k sh/2606
+   tr, **fills the resting +10% limit $0.9471**); UFG is a thin dead-book staller
+   (exit $0.61 -> peak $0.6074 below exit, lim10 unfilled, PM-last -0.9%). Re-ran
+   `peak-seeking-exit-sim.js`: plain **+10% sell-limit stays the best rule at
+   n=32: SUM +95.0% / mean +3.0%, positive 21/32** (up from n=30's +84.2/+2.8;
+   GELS adds a +10 win, UFG a small drag). Still log-only, no orders. Next: keep
+   seeding both sims; the Init 6 fade-tail is contained at 13% and n=15 / 12
+   positive / two converging studies keep the live PM-gapper pulse near
+   proposable — hold until n grows and the tail stays under ~25%.
    **Update 2026-09-02 (strategy-advance) — pilot admitted TWO fresh
    out-of-sample names (JLHL filled the +10% limit, VIVK faded); entered set
    jumps to n=15, edge holds +5.0%/name, fade-tail 3/15 (20%).** Two holdable

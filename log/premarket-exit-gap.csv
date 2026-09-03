@@ -34,3 +34,5 @@ date,ticker,entry,exit,exitZ,note
 2026-08-28,MODD,?,3.82,2026-08-28T08:32:02Z,held exit 04:32 ET; thin dead book, PM peak $4.19 07:25 ET (+9.7%, 10k sh/121 tr); lim10 ($4.20) unfilled by 1c, PM-last +3.4%
 2026-09-02,KITT,?,0.8702,2026-09-02T08:30:55Z,held exit 04:30 ET; dead book, PM peak only $0.91 06:10 ET (+4.6%, 322k sh/957 tr liquid); lim10 ($0.957) unfilled, PM-last $0.875 (+0.6%)
 2026-09-02,PXS,?,5.98,2026-09-02T08:30:56Z,held exit 04:30 ET; thin dead book, PM peak only $6.28 08:25 ET (+5.0%, 2-5 tr/bar); lim10 ($6.58) unfilled, PM-last $6.21 (+3.9%)
+2026-09-03,UFG,?,0.61,2026-09-03T08:31:10Z,held exit 04:31 ET; thin dead book, PM peak only $0.6074 04:50 ET (below exit, 9 tr/bar); lim10 ($0.671) unfilled, PM-last $0.5959 (-2.3%)
+2026-09-03,GELS,?,0.861,2026-09-03T08:31:09Z,held exit 04:31 ET; live book, PM peak $0.977 05:15 ET (+13.5%, 873k sh/2606 tr real spike); lim10 ($0.9471) FILLS +10.0%, PM-last $0.86 (-0.1%)
