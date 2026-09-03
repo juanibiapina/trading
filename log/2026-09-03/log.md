@@ -110,9 +110,35 @@ Observation-only (before 23:00 CET per learning phase). Scanner 7 hits:
 
 AKAN dropped to +8.2% AH (below 10% threshold, was +18.5% at 22:30). AEHL +6.7% AH (below threshold). No entries (observation-only). PLAG is the clear volume-backed BUILD with 2 AH scans — primary 23:00 entry candidate if it holds. GELS/SMTK fresh single-bar spikes already fading; CNTB dead-cat; CURV weak.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+Entries now allowed (learning-phase 23:00+ gate). Scanner 6 hits:
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.65 | +7.3% | +31.8% | $0.85 | +41.5% | 8.3M | 5.0M | 1.7x | 11.6M | Food: Specialty/Candy |
+| GIPR | [TV](https://www.tradingview.com/chart/?symbol=GIPR) | $0.52 | +32.6% | +12.2% | $0.59 | +48.9% | 1.7M | 42.3M | 0.0x | 2.6M | Real Estate Investment Trusts |
+| GELS | [TV](https://www.tradingview.com/chart/?symbol=GELS) | $0.89 | +27.6% | +9.7% | $0.98 | +40.0% | 1.6M | 14.0M | 0.1x | n/a | Pharma: Major |
+| AKAN | [TV](https://www.tradingview.com/chart/?symbol=AKAN) | $3.67 | -1.9% | +6.8% | $3.92 | +4.8% | 1.1M | 444K | 2.5x | 541K | Agricultural Commodities |
+| CURV | [TV](https://www.tradingview.com/chart/?symbol=CURV) | $2.23 | -1.8% | +14.3% | $2.55 | +12.3% | 250K | 207K | 1.2x | 34.2M | Apparel/Footwear Retail |
+| CNTB | [TV](https://www.tradingview.com/chart/?symbol=CNTB) | $1.93 | -30.1% | +11.4% | $2.15 | -22.1% | 199K | 1.2M | 0.2x | 17.0M | Pharma: Major |
+
+**Instrumentation (log-only, no decision impact):**
+- PLAG: SPIKE 16:11ET +23% $0.80 1241 trades / 446k sh. CONFIRM-3 YES ignition 16:05ET 3.9x, confirmed 16:15ET $0.79. SIP real accumulation: 88k→343k→1.53M→839k→1.47M→711k→1.35M→1.28M→1.20M→954k sh/bar, thousands of trades, price built $0.65→$0.89 peak 16:35 ET, now ~$0.83. Latest SIP bar 16:45 ET (~15 min lag, fresh). **3rd AH scan** (22:30 +15.5%, 22:45 +19.4%, 23:00 +31.8%) — clears 2-AH-scan gate. Real BUILD.
+- GIPR: SPIKE 16:43ET +19% $0.62 748 trades / 360k sh. CONFIRM-3 PENDING. First AH scan today (Day +32.6% already ran regular session). Real 1st-bar volume but 1 AH scan only — does not clear 2-AH-scan gate yet. Watch next scan.
+- CURV: SPIKE 16:14ET +15% $2.57 58 trades / 8k sh. CONFIRM-3 NO. SIP thin and fading: 22k→18k→16k→98k→34k→42k→18k→21k→5k→3k sh/bar, peaked $2.68 @16:15 ET, now $2.53. Thin drift not a build. Float 34.2M.
+- CNTB: SPIKE 16:12ET +16% $2.23 56 trades / 22k sh. CONFIRM-3 NO. Day -30.1% dead-cat, Total -22.1% still below close. Thin AH.
+
+**Decisions:**
+- **PLAG — ENTER.** Clears every gate: 2-AH-scan gate (3 AH scans >10%), Total +41.5% under +150% ceiling, Day +7.3% above -15%, float 11.6M, tradable=true, real volume-backed BUILD (CONFIRM-3 YES, thousands of trades/bar). Quote showed `ask $0.00 x0` but timestamp 20:00:01Z (16:00 ET, 1h stale) — freshness guard: SIP proves a real fillable book (1.35M sh/bar), not a no-liquidity artifact. Catalyst search (3 queries): no fresh same-day catalyst — iFLYTEK contract 3 weeks old, TipRanks item Jul 16. Known speculative name (927% Aug 12 spike unwound -77% next day; this repo lost -12.2% on it 07-22). Grade None, enter with concern noted per no-catalyst learning-phase rule. Fresh day-1 AH igniter (Aug spike unwound weeks ago, not in WINNERS_TRACKING). BUY 113 @ limit $0.88 ext (id 9797f825) **filled @ $0.74** (price improvement). Fill Total% (0.74−0.65)/0.65 = +13.8%, below qualifying 22:45 Total% +28% — no chase, no CHASE-CAP concern.
+- CURV — SKIP. Clears 2-AH-scan gate numerically but SIP thin and fading (5k/3k sh last bars), peaked 16:15 ET early, CONFIRM-3 NO, float 34.2M. Thin drift + SPIKE→FADE.
+- GIPR — WATCH. First AH scan only, does not clear 2-AH-scan gate. Re-check next scan.
+- GELS — SKIP. AH +9.7% below 10% threshold this scan; only 1 AH scan >10% (22:45). Sold this AM -15.7%; re-igniting but fails gate.
+- AKAN — SKIP. Faded to +6.8% AH (was +18.5% at 22:30), fails gate.
+- CNTB — SKIP. Dead-cat bounce (Day -30.1%, Total still below close), thin AH.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-
-None this scan (regular session, no entries).
+| PLAG | $0.74 | 23:00 CET (5:00 PM ET) | 113 | 9797f825 | Grade None — real volume-backed AH BUILD, cleared 2-AH-scan gate, Total +41.5% under ceiling, no fresh catalyst (concern noted). |
