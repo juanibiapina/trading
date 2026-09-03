@@ -27,3 +27,27 @@ Prices: SIP premarket (09-03), Alpaca quotes stale at 09-02 close, Yahoo PM blan
 **Actions taken:**
 - None. Both Grade B positions within risk parameters, day 1 of 2-day hold, no stop or time-limit trigger.
 - OPEN_POSITIONS.md reconciled with Alpaca (2 positions match).
+
+# Post-Market Screening - 2026-09-03
+
+## Scan 21:30 CET (3:30 PM ET)
+
+REGULAR session — AH not open yet (opens 22:00 CET / 4:00 PM ET). No entries per regular-session caution. Watch names below pending AH confirmation; re-evaluate at 22:00+ scans.
+
+| Ticker | Price | Day% | IRVol | Float | MCap | Industry | Note |
+|--------|-------|------|-------|-------|------|----------|------|
+| MIMI | $0.97 | +51.3% | 17.1x | 3.7M | 14.3M | Misc Commercial Svcs | Watch — low float, big intraday move |
+| AEHL | $7.45 | +37.2% | 3.4x | 1.3M | 28.8M | Building Products | Watch — low float |
+| GRI | $2.47 | +23.4% | 22.8x | 2.2M | 5.4M | Biotechnology | Watch — low float + high IRVol |
+| CYCU | $3.75 | +23.8% | 1.6x | 3.0M | 12.1M | IT Services | Watch |
+| PECE | $9.99 | +0.1% | 14.5x | 5.9M | 84.3M | Financial Conglomerates | Watch — flat price, VChg high |
+| CHPT | $9.13 | +75.9% | 170x | 22.7M | 236M | Electrical Products | Held position (Grade B, day 1) — not a new entry |
+
+Regular-session movers only. AH liquidity and real spike confirmation deferred to 22:00 CET scan. No paper trades at regular-session scan.
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+
+None this scan (regular session, no entries).
