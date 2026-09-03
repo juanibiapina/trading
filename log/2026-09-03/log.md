@@ -14,3 +14,16 @@
 - HOLD TLYS and CHPT (Grade B, day 1, within risk params).
 
 Note: Alpaca quotes stale (all @20:00Z prior day). Used SIP 5Min bars for exit levels; both fills got price improvement over limit.
+
+## Position Evaluation — 14:30 CET
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| CHPT | $6.21 | $6.14 | -1.1% | $6.44 | 1 | B | HOLD | Day 1 of 2, well above -15% stop ($5.28), PM held $6.10-6.20 no new high |
+| TLYS | $5.15 | $4.92 | -4.5% | $5.28 | 1 | B | HOLD | Day 1 of 2, above -15% stop ($4.38), PM ranged $4.77-5.12 no new high |
+
+Prices: SIP premarket (09-03), Alpaca quotes stale at 09-02 close, Yahoo PM blank.
+
+**Actions taken:**
+- None. Both Grade B positions within risk parameters, day 1 of 2-day hold, no stop or time-limit trigger.
+- OPEN_POSITIONS.md reconciled with Alpaca (2 positions match).

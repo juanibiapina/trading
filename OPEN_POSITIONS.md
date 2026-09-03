@@ -8,8 +8,8 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Order ID | Grade | Entered | Notes |
 |--------|-------|--------|----------|-------|---------|-------|
-| TLYS | $5.15 | 19 | 921abfa7 | B | 2026-09-02 23:00 CET | Tilly's Q2 FY2026 earnings beat (net income $8.4M, comp sales +12.1%, e-commerce +20.9%), Apparel Retail, float 22.2M. BUILD 4 AH scans, VRatio 4.9x, CONFIRM-3 YES. Fresh day-1 igniter. Hold up to 2 days, stop -15% ($4.38). Peak $5.28 (+2.5%). 09-03 10:30 CET: $4.90 (-4.9%), day 1, HOLD. |
-| CHPT | $6.21 | 16 | 46d8ab1e | B | 2026-09-02 23:00 CET | ChargePoint Q2 earnings, Electrical Products, float 22.7M. Held ~$6.1 within 3% of AH high, cleared 2-AH-scan gate, CONFIRM-3 NO (instrumentation). Fresh day-1 igniter. Hold up to 2 days, stop -15% ($5.28). Peak $6.44 (+3.7%). 09-03 10:30 CET: $6.16 (-0.8%), day 1, HOLD. |
+| TLYS | $5.15 | 19 | 921abfa7 | B | 2026-09-02 23:00 CET | Tilly's Q2 FY2026 earnings beat (net income $8.4M, comp sales +12.1%, e-commerce +20.9%), Apparel Retail, float 22.2M. BUILD 4 AH scans, VRatio 4.9x, CONFIRM-3 YES. Fresh day-1 igniter. Hold up to 2 days, stop -15% ($4.38). Peak $5.28 (+2.5%). 09-03 14:30 CET: $4.92 SIP PM (-4.5%), day 1, HOLD. PM ranged $4.77-5.12, no new high. |
+| CHPT | $6.21 | 16 | 46d8ab1e | B | 2026-09-02 23:00 CET | ChargePoint Q2 earnings, Electrical Products, float 22.7M. Held ~$6.1 within 3% of AH high, cleared 2-AH-scan gate, CONFIRM-3 NO (instrumentation). Fresh day-1 igniter. Hold up to 2 days, stop -15% ($5.28). Peak $6.44 (+3.7%). 09-03 14:30 CET: $6.14 SIP PM (-1.1%), day 1, HOLD. PM held $6.10-6.20, no new high. |
 
 ## Position Rules
 
