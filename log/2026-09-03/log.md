@@ -168,6 +168,28 @@ Entries allowed. Scanner 13 hits (AH >10% subset evaluated):
 
 PLAG (prior entry) still holding: AH +12.0% above threshold, position now +1.2% ($0.74). No action (position mgmt is premarket).
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Entries allowed. Scanner 15 hits (AH >10% new names evaluated):
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MODD | [TV](https://www.tradingview.com/chart/?symbol=MODD) | $3.42 | -1.2% | +11.7% | $3.82 | +10.4% | 166K | 278K | 0.6x | 7.6M | Medical Specialties |
+| STKE | [TV](https://www.tradingview.com/chart/?symbol=STKE) | $1.29 | +10.3% | +12.4% | $1.45 | +23.9% | 54K | 300K | 0.2x | 30.0M | Financial Conglomerates |
+
+Positions carried: PLAG AH +14.7% $0.74 (Total +23.1%), GIPR AH +15.2% $0.60 (Total +52.8%) — both still above threshold, holding. Position mgmt is premarket.
+
+Below-threshold / prior-skip hits: GPRO +5.0%, GELS +7.9%, TWG +8.6%, WETO +7.4%, CURV +15.2%/thin-drift (carried skip), CNTB +8.8% (dead-cat, now sub-threshold), INLF +9.5%, DAIC +9.3%, DBGI +6.6%; NCPL +12.6% Day -39.0% Total -31.3% dead-cat; AKAN +10.9% untradable (carried).
+
+**Instrumentation (log-only, no decision impact):**
+- MODD: SPIKE 17:04ET +15% $3.94 116 trades / 15k sh. CONFIRM-3 NO (ignition 17:00ET failed third-bar hold/volume). SIP thin: peaked $4.14 @17:35ET, faded to $3.76, max bar 53k sh / 238 trades, most bars sub-10k. Thin drift, off peak. Float 7.6M. (Known thin-drift name — Aug 27→28 faded −8.6% as false "late BUILD".)
+- STKE: SPIKE 17:42ET +16% $1.50 22 trades / 3k sh. CONFIRM-3 NO (no local-volume new-high ignition). SIP very thin: peaked $1.50 @17:40ET, max bar 15k sh / 111 trades, most bars 1-8 trades. Thin. Float 30.0M.
+
+**Decisions:**
+- MODD — SKIP. First AH scan appearance, fails 2-AH-scan gate. Also thin (VRatio 0.6x, sub-10k most bars), CONFIRM-3 NO, already off peak.
+- STKE — SKIP. First AH scan appearance, fails 2-AH-scan gate. Also very thin (VRatio 0.2x, single-digit trades most bars), float 30.0M.
+- No new entries. Both new names fail the 2-AH-scan gate on first appearance and are thin; neither is a real volume-backed BUILD.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
