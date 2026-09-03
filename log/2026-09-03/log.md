@@ -49,6 +49,19 @@ Regular-session movers only. AH liquidity and real spike confirmation deferred t
 
 Scanner 0 hits (AH open 16:00 ET, volume not built yet). Observation-only scan — no entries before 23:00 CET per learning phase.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+Scanner 0 hits. Observation-only (before 23:00 CET). SIP cross-check on 21:30 watch names — none igniting in AH:
+
+| Ticker | Reg Close | AH 1st bar C | AH VWAP | Vol | Trades | Note |
+|--------|-----------|--------------|---------|-----|--------|------|
+| MIMI | $0.97 | $0.94 | $0.95 | 138k | 398 | Fading below close, no build |
+| AEHL | $7.45 | $7.38 | $7.41 | 36k | 304 | Flat, no build |
+| GRI | $2.47 | $2.25 | $2.28 | 3.7k | 9 | Thin, faded |
+| CYCU | $3.75 | $3.56 | $3.58 | 5.2k | 18 | Thin, faded |
+
+No AH ignition on any watch name. No entries. Re-check at 22:30/23:00.
+
 No candidates found.
 
 Carrying 21:30 watch names (MIMI, AEHL, GRI, CYCU, PECE) for AH confirmation at 22:30+ scans. None yet showing in AH scanner.
