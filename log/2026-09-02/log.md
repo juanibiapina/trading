@@ -272,3 +272,91 @@ No FINAL-SCAN-GATE-BLOCK this scan (no late igniter met every rule except the 2-
 | CHPT | $6.21 | 23:00 CET (5:00 PM ET) | 16 | 46d8ab1e | Grade B Q2 earnings; holding ~$6.1 within 3% of AH high, cleared 2-AH-scan gate |
 | UFG | $0.64 | 23:30 CET (5:30 PM ET) | 147 | 144bcf15 | Grade None (no catalyst); night's strongest BUILD, float 9.8M, VRatio 5.1x, CONFIRM-3 YES, cleared 2-AH-scan gate |
 | GELS | $1.02 | 00:30 CET (6:30 PM ET) | 95 | 40539152 | Grade None (no catalyst); real accelerating BUILD (757K-1.33M sh/bar, vwap $0.82→$1.00), new high $1.03 @17:30 ET, cleared 2-AH-scan gate, float n/a |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**No real winner today.** Nothing cleared the >100% single-session bar on accumulating SIP volume. This was a **fade night** — every genuine AH mover peaked in after-hours and gave back into premarket.
+
+Biggest genuine AH→PM mover (for the baseline diagnostic): **GELS** — Gelteq (gel-based drug delivery, Nasdaq).
+- Catalyst: **None found** (2 searches; latest Gelteq PR pre-dates Sept 2; the "cannabinoid preclinical bioavailability" note is weeks old, not a Sept 2 catalyst). Grade None.
+- Previous close (true regular close): **$0.70** (GELS ran +31.6% the Sept 2 regular session; the $0.54 Yahoo anchor is the pre-run close).
+- AH last night: SIP peak **$1.10 at 18:15 ET (22:15 CET)**, +57% from the $0.70 close. Massive real volume — 1.0-1.4M sh/bar, 4,000-4,500 trades/bar through 21:00-22:20Z.
+- Premarket now: **$0.85-0.97** (SIP high $0.97 first bar 04:00 ET), fading, PM below the AH peak.
+- Hypothetical AH→PM trade: peaked in AH, faded in PM — AH was the better exit. Off the stale $0.54 anchor the 2-day print reads +105.6%, but the fresh single-session AH leg is +57% and it did not hold.
+- Float: n/a (recorded) | Real, capturable (deep two-sided book, 1M+ sh/bar).
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — GELS surfaced in the 23:30 / 00:00 / 00:30 scans and was **entered** at 00:30 via the final-scan feed-lag cross-check (after 3 weak "already ran regular" skips). Detected + traded.
+- Scanner gap: none for detection. The night's only detection nuance was the repeated "already ran regular session" skip reason, which the final-scan cross-check correctly overrode. No change needed.
+
+### Baseline Tracking
+
+- Days tracked: **77** (was 76 + 1)
+- Winners detected by scanner: **63/72 (87.5%)** — +GELS (biggest genuine AH→PM mover, detected 3 scans + entered; no >100% winner cleared the bar tonight)
+- Winner selected for paper trade: **35/70 (50.0%)** — no >100% winner existed to capture; we entered TLYS/CHPT/UFG/GELS (all detected), all fade/flat in early PM
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+- Live PM scan (04:20 ET): 7 hits, max **TLYS +27.7%** ($4.86). No >100% mover anywhere.
+- Forced AH scan: 0 hits (TradingView postmarket feed stale overnight, as usual — secondary only).
+- AH reconstruction (`--ah-history` + SIP bars): GELS the biggest genuine volume-backed AH mover (SIP peak $1.10 +57% on 1M+ sh/bar); TLYS/CHPT/UFG/NYXH all real but smaller and all faded AH→PM.
+
+### Open Position P&L (Alpaca)
+
+Four positions open from last night, **managed by position-evaluation (10:30 / 14:30 CET), not closed here.** PM is young (opened 04:00 ET; ~20 min of tape). Reporting unrealized against live PM SIP, not the stale Alpaca quotes.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM (early) | From Entry | Note |
+|--------|-------|--------------|----------|------------|------------|------------|------|
+| TLYS | $5.15 | +35.2% | B — Q2 earnings beat (comp +12.1%) | 23:00 CET | ~$4.88 (peak $5.12) | −5.2% | AH peak $5.26 was the better exit |
+| CHPT | $6.21 | +19.7% | B — Q2 earnings | 23:00 CET | ~$6.18 (peak $6.20) | −0.5% | flat, holding +16% from close |
+| UFG | $0.64 | +14.3% | None | 23:30 CET | ~$0.60 (peak $0.67) | −6.3% | AH peak $0.75 was the better exit |
+| GELS | $1.02 | +45.7% | None | 00:30 CET | ~$0.87 (peak $0.97) | −14.7% | AH peak $1.10 was the better exit; Alpaca quote stale @20:00 ET (bid $0.58/ask $0.80) |
+
+**Quote-freshness:** GELS Alpaca `positions` current_price $0.83 sourced from a stale 20:00 ET quote; live PM SIP is $0.85-0.97, so real unrealized ≈ −14.7%, not a fresh figure. Reported against live PM.
+
+**Total Realized P&L (Alpaca fills only): none this pulse** (4 positions open, exits handled by position-evaluation).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) plus extra 22:15 and 22:45. Full coverage of the entry window.
+- Candidates found: ~11 unique tickers across the night (TLYS, CHPT, UFG, GELS, NYXH, NCT, BIAF, BRNX, XTIA, MIMI, BIVI, GYGY, JLHL, LHAI, VIDA).
+- Retrospective matches: the biggest genuine mover (GELS) and the biggest PM mover (TLYS) were both detected and entered.
+
+### Missed Opportunities
+
+No significant missed opportunities. No >100% winner existed; the biggest genuine mover was detected and traded.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| GELS | $1.10 | 18:15 ET | Build | ~$0.87 | −21% | +24% (real close) | Faded — AH better exit |
+| TLYS | $5.28 | 19:45 ET | Build | ~$4.88 | −8% | +28% | Faded — AH better exit |
+| UFG | $0.75 | 17:05 ET | Build→fade | ~$0.60 | −20% | +7% | Faded — AH better exit |
+| CHPT | $6.44 | 20:30 ET | Spike→hold | ~$6.18 | −4% | +16% | Held flat, mild fade |
+| NYXH | $2.08 | ~18:30 ET | Spike (thin-drift) | ~$1.78 | −14% | +18% | Faded — correctly skipped |
+
+**AH-peak-vs-PM-peak:** all five topped in after-hours; PM fell short of the AH peak in every case. Consistent fade night. None reached the ~+130% extreme zone, so no new extreme-runner tally case (standing 8 fade / 1 continue unchanged).
+
+### Notes
+
+- **Fade night (3rd in a row: 08-31 / 09-01 / 09-02).** Every genuine AH mover peaked in after-hours and gave back into premarket. No >100% capturable winner. Detection clean; scanner needs no change.
+- **GELS anchor distortion:** the +105.6% 2-day print is off the stale $0.54 close; the fresh single-session AH leg is +57% from the real $0.70 regular close, and it faded — not a >100% explosion. Logged as biggest genuine mover, not a winner.
+- **Multi-session-runner outcome:** +4 fresh day-1 igniters (early-PM, preliminary): **TLYS** (Grade B, entered $5.15 → PM ~$4.88 = flat/fade), **CHPT** (Grade B, entered $6.21 → PM $6.18 = flat), **UFG** (Grade None, entered $0.64 → PM peak $0.67 then $0.60 = faded), **GELS** (Grade None, entered $1.02 → PM $0.87 = faded). Standing: 1 multi-session runner (1 faded) / **13 first-day igniters (5 ran, 3 flat [PXS, TLYS, CHPT], 5 faded [MODD, LABT, KITT, UFG, GELS])**. Data collection only.
+- **PM-only gapper:** biggest raw PM mover = TLYS (+28% from close), an **AH→PM continuation** (moved +33% AH, detected + entered) — **not** a PM-only gapper. No AH-scanner blind-spot cost today. `log/pm-open-scan.csv` holds the authoritative holdable count (**41**); the Sept 3 pm-open pulse had not logged its row at eval time.
+- **Fade-rule false-negative (sub-3M):** none tonight. NYXH faded but float 81.3M (negative control, not counted). Standing sub-3M count: **4 of 15**, well below the ≥80% trigger.
+- **Final-scan gate-block:** none tonight (GELS had 3 AH appearances, gate satisfied). Standing **2 (TRUG, UPC), both ran** — question already routed to daily email.
+- **In-window feed-lag miss:** none new. Standing **4**, trigger REACHED — AH-data-source cross-check already routed to email.
+- No new cases: broker-block, stale-book execution-block, no-fillable-book skip, float-gate skip, late-AH-tail surge, price-floor exclusion, reverse-split-squeeze, chase-cap (TLYS fill chase gap +12.5%, GELS +11.2%, CHPT +3.1%, UFG −17.2% — none into the +120% fade zone).
+- **Baseline gap:** none. Prior baseline (Sept 1 session, Days 76) is the immediately preceding trading day.
+
+### Price Charts
+
+GELS (biggest genuine mover): 2-day range $0.53-$1.10, AH peak **$1.10 (+105.6% off stale $0.54 / +57% off real $0.70 close) at 22:15 CET**, now ~$0.85 fading.
+TLYS: range $3.81-$5.28, peak $5.28 (+33.3%) at 23:45 ET, now ~$4.82 fading.
+UFG: range $0.50-$0.90, peak $0.90 (+66.5% off stale anchor) at 21:05 ET, now ~$0.60 faded.
+CHPT: range $5.20-$6.44, peak $6.44 (+21.5%) at 20:30 ET, now ~$6.16 holding flat.
