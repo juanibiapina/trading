@@ -468,6 +468,20 @@ tighter scan cadence. Next: (a) add a no-AH-volume-spike negative filter to the
 scanner grade, (b) prototype a spike-bar entry trigger once scan cadence can
 resolve the bar. Captured from FEEDBACK_LOG 2026-07-16.
 
+**Feedback update (2026-09-03) — QUANTIFIED THRESHOLD:** Juan rejected GELS
+(and TLYS/CHPT/UFG) on the 09-02 email — "you are entering trades that do not
+have clear volume spikes. The volume when you enter must be spiking 10 to 20
+times more than what it was before ... when you entered GELS the volume was the
+same as the previous night, so you should not enter. We're looking for things
+that are starting to grow in volume." This puts a **hard number** on the
+per-bar volume-change gate that prior feedback (DAIC/BOOM/ONMD/GRSD) described
+only directionally: the entry bar's volume must be **10-20x the ticker's own
+immediately preceding volume**, not just elevated versus average daily volume.
+A big % move on flat/prior-night-level volume is a price-only spike and a hard
+skip. Routed to `scanner-improvement` to implement the 10-20x local-spike gate
+as a hard entry filter and add GELS as a negative control. See FEEDBACK_LOG
+2026-09-03.
+
 **Feedback update (2026-08-25):** Juan flagged DAIC (re: 08-24 email) — "no
 volume spike. normal hours volume is the same as after hours, it was only a
 price spike. UPDATE PROCESS." DAIC was not actually entered (skipped on the

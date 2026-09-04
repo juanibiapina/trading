@@ -6,6 +6,37 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-09-03 — re: Trading Scanner Report - 2026-09-02
+
+**Juan said:** "GELS and the two others should not have entered. You must
+change something about your entry criteria because you are entering trades that
+do not have clear volume spikes. The volume when you enter must be spiking 10 to
+20 times more than what it was before. I can see from the graphs that when you
+entered GELS, for example, the volume was the same as the previous night, so you
+should not enter. We're looking for things that are starting to grow in volume."
+
+**Interpretation:** A quantified entry gate. Juan sets a hard rule: the ignition
+bar's volume must be spiking **10-20x** the ticker's own preceding volume, not
+merely elevated versus average. GELS (and TLYS/CHPT/UFG) entered on AH volume
+that was flat versus the prior night, so no genuine ignition, a price move
+without a volume spike. This is the fifth-plus repeat of the per-bar
+volume-change gate theme (DAIC 08-24, GRSD 08-14, BOOM 07-31, ONMD 07-29), now
+with a concrete threshold: measure the entry bar's volume against that ticker's
+immediately preceding bars and require a 10-20x jump. "Starting to grow in
+volume" is the target profile, not names already at peak on flat volume.
+
+**Interpretation:** for the system, the entry filter must reject any candidate
+whose entry-bar volume does not clear the 10-20x local-spike threshold, even if
+% move, catalyst, or avg-volume ratio look attractive.
+
+**Action:** Updated `STRATEGY_ROADMAP.md` Initiative 1 with the quantified
+10-20x per-bar local-spike threshold (previously the gate was directional but
+unquantified). Routed to the next `scanner-improvement` run to implement the
+per-bar volume-change gate at 10-20x local prior volume as a hard entry filter
+and to add GELS as a negative control. No live rule change made here.
+
+---
+
 ### 2026-09-01 — re: Trading Scanner Report - 2026-08-31
 
 **Juan said:** "you have 1 month to go positive. if you don't, you'll need to
