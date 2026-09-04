@@ -231,6 +231,30 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-09-04 (strategy-advance) — pilot admitted a fresh
+   out-of-sample name (WETO-2) and it FADED; entered set n=16, edge eases to
+   +5.2%/name, fade-tail 3/16 (19%). Init 3 seeded four exits (PLAG limit-win),
+   n=36.** One fresh holdable footprint=none PM-only gapper logged 09-04 (WETO
+   +23.9%, recurring 864K-float name). Re-ran `init6-pm-pilot.js` (36
+   candidates): **WETO-2 was admitted** by the continuation gate (entered $3.95
+   at 04:20 ET) and **faded** — never reached the resting +10% limit ($4.35),
+   drifted to PM-last -1.8%. Entered set moves n=15 -> **n=16: SUM +83.0% / mean
+   +5.2% / median +10.0% / positive 12/16**, vs a PM-last hold-to-open floor of
+   -6.5% and a do-nothing baseline of 0%. Net of ~2% spread ~+3.2%/name. The
+   **fade-tail grows to 3/16 (BIVI -27.1%, MIMI-2 -6.9%, WETO-2 -1.8%) = 19%** —
+   under the ~25% that would erode the edge below the spread, but WETO-2 adds a
+   third and the ratio is worth watching (a recurring name that held +3.1% at
+   08-31 faded this time). Init 3 had **four fresh seeds** this run: PLAG, GIPR,
+   TLYS, CHPT all exited at the 09-04 04:31 ET pulse. **PLAG is a live-book spike**
+   (exit $0.8441 -> PM peak $0.94 05:45 ET, **fills the resting +10% limit
+   $0.9285**); TLYS/GIPR/CHPT are dead/stalled books (peaks +3.1/+2.3/below-exit,
+   lim10 unfilled). Re-ran `peak-seeking-exit-sim.js`: plain **+10% sell-limit
+   stays the best rule at n=36: SUM +104.0% / mean +2.9%, positive 23/36** (up
+   from n=32's +95.0/+3.0; PLAG adds a +10 win, the three dead books a small
+   drag). Still log-only, no orders. Next: keep seeding both sims; watch the
+   Init 6 fade-tail ratio (now 19%); with n=16 / 12 positive / two converging
+   studies the live PM-gapper pulse stays near proposable, hold until n grows
+   and the tail stays under ~25%.
    **Update 2026-09-03 (strategy-advance) — no fresh admit (GYGY gate-skipped),
    VIVK's fade corrected to flat on fuller 1-min bars; entered set holds n=15,
    edge firms to +5.7%/name, fade-tail back to 2/15 (13%).** One fresh holdable

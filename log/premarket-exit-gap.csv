@@ -36,3 +36,7 @@ date,ticker,entry,exit,exitZ,note
 2026-09-02,PXS,?,5.98,2026-09-02T08:30:56Z,held exit 04:30 ET; thin dead book, PM peak only $6.28 08:25 ET (+5.0%, 2-5 tr/bar); lim10 ($6.58) unfilled, PM-last $6.21 (+3.9%)
 2026-09-03,UFG,?,0.61,2026-09-03T08:31:10Z,held exit 04:31 ET; thin dead book, PM peak only $0.6074 04:50 ET (below exit, 9 tr/bar); lim10 ($0.671) unfilled, PM-last $0.5959 (-2.3%)
 2026-09-03,GELS,?,0.861,2026-09-03T08:31:09Z,held exit 04:31 ET; live book, PM peak $0.977 05:15 ET (+13.5%, 873k sh/2606 tr real spike); lim10 ($0.9471) FILLS +10.0%, PM-last $0.86 (-0.1%)
+2026-09-04,CHPT,?,9.32,2026-09-04T08:31:00Z,held exit 04:31 ET; dead book, PM peak $9.20 04:40 ET below exit; lim10 ($10.25) unfilled, PM-last $9.09 (-2.6%)
+2026-09-04,TLYS,?,4.20,2026-09-04T08:30:58Z,held exit 04:31 ET; stalled book, PM peak $4.33 07:15 ET (+3.1%); lim10 ($4.62) unfilled, PM-last $4.30 (+2.6%)
+2026-09-04,PLAG,?,0.8441,2026-09-04T08:31:00Z,held exit 04:31 ET; live book, PM peak $0.94 05:45 ET (+11.4%, real spike); lim10 ($0.9285) FILLS +10.0%, PM-last $0.8864 (+5.0%)
+2026-09-04,GIPR,?,0.4811,2026-09-04T08:30:58Z,held exit 04:31 ET; dead book, PM peak $0.4921 04:40 ET (+2.3%); lim10 ($0.5292) unfilled, PM-last $0.479 (-1.1%)
