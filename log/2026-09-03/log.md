@@ -226,3 +226,103 @@ Night summary: 2 entries (PLAG @ $0.74, GIPR @ $0.63), both Grade None real volu
 |--------|------------|------------|-----------------|----------|--------|
 | PLAG | $0.74 | 23:00 CET (5:00 PM ET) | 113 | 9797f825 | Grade None — real volume-backed AH BUILD, cleared 2-AH-scan gate, Total +41.5% under ceiling, no fresh catalyst (concern noted). |
 | GIPR | $0.63 | 23:30 CET (5:30 PM ET) | 151 | f84519c6 | Grade None — REIT, real volume-backed AH BUILD (679k-1.82M sh/bar), cleared 2-AH-scan gate, Total +50.7% under ceiling, float 2.6M, no fresh catalyst (concern noted). |
+
+## Morning Evaluation — 10:20 CET
+
+### Today's Winner
+
+**No real winner today.** No stock cleared the >100% winner bar on accumulating SIP volume. Biggest genuine AH→PM mover was **PLAG** — detected all night and entered.
+
+**PLAG** — Food: Specialty/Candy (Planet Green Holdings)
+- Catalyst: None fresh (search: iFLYTEK contract ~3 weeks old, no same-day PR). Grade None speculative name.
+- Previous Close: $0.60 (Yahoo) / $0.65 (scanner)
+- AH last night: SIP peak **$1.00 (+66.7%)** at 23:00Z (19:00 ET) on heavy volume (1.0–1.24M sh/bar, 2.9–3.3K trades/bar at 22:30–22:45Z)
+- Premarket now: SIP high **$0.94 (+56.7%)**, first PM bar 2.12M sh / 9,962 trades; now ~$0.85
+- Hypothetical P&L (AH entry $0.74 → PM peak $0.94): **+27%**
+- Float: 11.6M | Market Cap: $9.2M
+- Note: the $1.11 in `price-timeline.py` is a Yahoo bad print — SIP AH high $1.00, PM high $0.94.
+
+**Winner-bar check:** PLAG topped ~+66% AH / +57% PM — real, liquid, but **below the >100% bar**. Per the winner-bar rule this is "no real winner today," not a crowned winner. Baseline diagnostic still runs on PLAG as the biggest genuine mover.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — PLAG surfaced at the 22:30 scan (+15.5% AH), built across 22:45 (+19.4%), 23:00 (+31.8%), 23:30, 00:00, 00:30. CONFIRM-3 YES, real accumulation.
+- We acted: **ENTERED @ $0.74** at 23:00 CET (3 AH scans, cleared 2-AH-scan gate, under ceiling, tradable). Position now +15%.
+- Scanner gap: none. Detected and traded the biggest genuine mover.
+
+### Baseline Tracking
+
+- Days tracked: **78** (was 77 + 1)
+- Winners detected by scanner: **64/73 (87.7%)** — +PLAG (biggest genuine AH→PM mover, detected 3 scans + entered; no >100% winner cleared the bar tonight)
+- Winner selected for paper trade: **35/71 (49.3%)** — no >100% winner existed to capture; entered PLAG (ran +27% PM) + GIPR (faded below entry), both detected
+- Target: >80% detection
+- Status: **BASELINE MET** (87.7% > 80%)
+
+No baseline gap: latest prior baseline (77 days) lives in `log/2026-09-02/log.md`, the immediately-preceding trading day. Sep 3 is the session evaluated here.
+
+### Retrospective Scan Results
+
+- Live PM scan (04:20 ET): 4 hits — PLAG +33.9%, WETO +20.2%, AKAN +21.0%, TWG +13.1%. None near the >100% bar.
+- Forced AH scan: 0 hits (TradingView postmarket fields empty overnight, expected).
+- AH reconstruction (`--ah-history` + SIP bars): PLAG AH peak $1.00 (+66.7%), AKAN $4.51 (+20.6%), GIPR $0.62. No >100% AH runner.
+
+### Open Position P&L (Alpaca)
+
+Two entries last night (PLAG, GIPR) plus two carried Grade B day-2 holds (CHPT, TLYS). Exits are handled by `position-evaluation.md`, not here.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| PLAG | $0.74 | +13.8% | None — speculative, no fresh PR | 23:00 CET | $0.94 SIP | 04:00 ET | open | — | +15.2% | 🟢 Open, ran |
+| GIPR | $0.63 | +60.7% | None — REIT, no fresh PR | 23:30 CET | $0.60 SIP | 04:00 ET | open | — | -23.1% | 🔴 Open, faded |
+| CHPT | $6.21 | — | B — Q2 earnings | 09-02 | — | — | open | — | +49.6% | 🟢 Day-2 hold |
+| TLYS | $5.15 | — | B — earnings beat | 09-02 | — | — | open | — | -17.1% | 🔴 Day-2 hold |
+
+**Quote-freshness:** PLAG Alpaca $0.85 vs live PM SIP $0.85–0.94 (fresh, OK). GIPR Alpaca $0.48 vs PM SIP last $0.50 (fresh, OK). PLAG's raw `quote` shows `ask $0.00 x0 @20:00Z` (stale book artifact) but `positions` current_price tracks the live PM level. CHPT/TLYS are day-2 holds; verify their live levels at 10:30 position-eval.
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits this pulse).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) + 2 extra (22:15, 22:45). Full coverage, no coverage failure.
+- Candidates found: PLAG, AKAN, GIPR, GELS, CURV, CNTB, NCPL, MODD, STKE, SMTK.
+- Entries: PLAG @ $0.74, GIPR @ $0.63.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| AKAN | +20.6% AH, PM peak $4.77 (+27.5%) | Detected all scans but `tradable=false` broker-block (also CONFIRM-3 NO/choppy) | Yes — hypo AH $4.20 → PM $4.77 = +13.6% |
+
+No detection misses. AKAN was detected; the block is a broker limitation, not counted against the baseline.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| PLAG | $1.00 SIP | 19:00 ET | Build | $0.85 (PM high $0.94) | -6% | +31% (peak +45%) | Continued (entered, +15%) |
+| GIPR | $0.62 SIP | ~18:00 ET | Build | $0.48 (PM high $0.60) | -23% | -8% (peak +15%) | Faded (position -23%) |
+| AKAN | $4.51 | 16:10 ET | Spike→fade→bounce | $4.45 (PM high $4.77) | +6% | +27% | Continued — PM > AH (untradable) |
+| GELS | $1.05 SIP | 16:25 ET | Spike→fade | $0.83 (PM high $0.90) | -14% | +1% | Faded |
+| CURV | $2.57 | 16:15 ET | Thin drift | $2.49 (PM high $2.54) | -1% | +14% | Flat/thin |
+| MODD | $4.14 SIP | 17:35 ET | Thin drift | $3.67 (PM high $3.71) | -10% | +8% | Faded |
+
+**AH-peak-vs-PM-peak check:** PLAG AH $1.00 > PM $0.94 (AH marginally better exit); GELS/CURV/MODD/GIPR AH > PM (faded); AKAN AH $4.51 < PM $4.77 (PM continued). None in the extreme >~+130% zone, so the extreme-runner tally is unchanged: **8 fade (MSW, DSY, AQB, XOS, BTCT, LOOP, DAIC, AMIX) / 1 continue (BAOS)**.
+
+### Notes
+
+- **No real winner (winner-bar rule):** biggest genuine mover PLAG topped +66.7% AH / +56.7% PM — below the >100% bar. Detected and entered. Second night running with no >100% winner (Sep 1 BIAF, Sep 2 GELS also fell short).
+- **Broker-block tally (AKAN Sep 3 added):** AKAN qualified the 2-AH-scan gate numerically (22:30 +18.5%, 00:30 +14.4%) but `tradable=false` — the same chronic Alpaca block seen on AKAN Aug 13 (Grade A). Tonight Grade None, CONFIRM-3 NO/choppy (marginal qualifier), but it **ran in PM** (PM peak $4.77 > AH peak $4.51, +27.5% from close); hypo AH $4.20 → PM $4.77 = **+13.6%**. AKAN is repeatedly detected-but-unfillable on Alpaca. Prior: SHPH (Jun 25, Jul 13), AKAN (Aug 13). Cumulative tradability-gap cost keeps growing — route the broker-coverage question to the daily email. Not counted against detection baseline or selection rate.
+- **Multi-session-runner tally (PLAG, GIPR added):** both fresh **first-day igniters** (neither in WINNERS_TRACKING). PLAG (Day% +7.3%, Grade None, entered $0.74 → PM peak $0.94 = **+27%, ran**); GIPR (Day% +32.6% single-session, Grade None, entered $0.63 → PM peak $0.60 = **-5%, faded below entry**). Standing: **1 multi-session runner (1 faded: DAIC) / 15 first-day igniters (6 ran: WNW/AEMD/GPRO/PETZ/SSM/PLAG; 3 flat: PXS/TLYS/CHPT; 6 faded: MODD/LABT/KITT/UFG/GELS/GIPR).**
+- **PM-only gapper:** morning's biggest raw PM mover = PLAG (+56.7% SIP), an **AH→PM continuation** the scanner detected — not a PM-only gapper. No new gapper case. `log/pm-open-scan.csv` holdable count now **42** (authoritative; the old hand-count note was stale).
+- **Chase-cap:** PLAG fill Total% +13.8% (below qualifying +28%, no chase); GIPR fill +60.7% vs qualifying +50.7% (+10pt gap, well below the +120% fade zone). No new chase-cap case. Standing count: 1 (XOS).
+- **In-window feed-lag miss:** none tonight (PLAG/GIPR both detected). Standing count remains **4** — the ≥3 escalation trigger stays REACHED; route the AH-data-source-verification recommendation to the daily email.
+- **Final-scan gate-block:** none tonight (log: no late single-scan igniter with real volume). Standing count: 2 (TRUG, UPC).
+- **Stale-book execution-block:** none tonight (PLAG's stale `ask $0.00 x0` did not block entry — SIP proved fillable, filled @ $0.74). Standing count: 3.
+- **No-fillable-book / float-gate / price-floor / reverse-split / late-AH-tail:** no new cases tonight.
+
+### Price Charts
+
+**PLAG** (biggest genuine mover): prev close $0.60, AH SIP peak $1.00 (+66.7%) @19:00 ET, PM SIP high $0.94 (+56.7%) @04:00 ET on 2.12M sh/9,962 trades. BUILD through AH, held into PM. (`price-timeline.py` $1.11 print = Yahoo bad tick; SIP peak is $1.00.)
+
+**GIPR**: prev close $0.52, AH SIP built to $0.62, PM opened $0.60 then faded to $0.48–0.50 on collapsing volume. AH was the exit.
+
+**AKAN**: prev close $3.74, AH peak $4.51, PM SIP high $4.77 (+27.5%) on 394K sh/8,218 trades first bar — continued, but untradable on Alpaca.
