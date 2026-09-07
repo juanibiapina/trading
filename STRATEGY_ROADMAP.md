@@ -91,6 +91,26 @@ the ignition**, not a new signal.
    `strategy-advance` starts it in parallel with the active Init 6 pilot. No
    live broker switch applied yet — evaluate and propose. See FEEDBACK_LOG
    2026-09-04.
+   **Update 2026-09-04→09-07 (strategy-advance) — shortlist done, best fit
+   identified, blocked on an account.** Researched all four candidates from
+   primary sources and wrote `INIT2_BROKER_ALTERNATIVES.md`. Results:
+   **Trading 212 REJECTED** (API supports extended-hours *market* orders only,
+   no limit orders — our micro-cap AH strategy is limit-only). **Moomoo/Futu**
+   possible but EU-access doubtful (no EU retail entity; ETH paper needs a
+   US-margin account + OpenD gateway). **Webull OpenAPI = BACKUP** — EU
+   developer portal confirmed (`developer.webull.eu`), official Python SDK,
+   Jul-2026 API paper trading, native extended-hours; unconfirmed whether the EU
+   entity's paper API exposes US micro-cap AH symbols. **IBKR paper =
+   RECOMMENDED PRIMARY** — EU-regulated + the eventual live path, and its paper
+   fill engine simulates against the *real consolidated market data you
+   subscribe to* (shareable with paper), so a non-IEX-only US-equities data
+   subscription lets AH micro-float limits fill exactly where Alpaca's free IEX
+   feed cannot — the direct root-cause fix. The decisive fill test needs an
+   account, so it is **blocked on Juan** (open an IBKR paper account + enable a
+   US extended-hours consolidated data subscription + API access; or register at
+   developer.webull.eu and share App Key/Secret). Test protocol on AKAN/SHPH/
+   GIPR is written. No live broker switch until the fill test passes + Juan
+   signs off.
 2. **Initiative 3 - adaptive scheduling / faster ignition detection.** Promoted
    to the top research lever (2026-07-15). Init 1's 1-min backtest shows winners
    ignite in a single minute (IVF 16:53 ET) that our ~22:15 CET / 16:15 ET AH
@@ -1382,6 +1402,18 @@ tracker).
 - [x] Initiative 2: Alpaca keys are live (Juan removed the `unset`, 2026-06-23);
       verified against `/v2/account`. Nothing blocking. Optional: set
       `ALPACA_PAPER_TRADE=1` explicitly.
+- [ ] Initiative 2 (broker switch): **NEW ASK (2026-09-07)** — open an account so
+      the empirical AH-fill test can run. Research (`INIT2_BROKER_ALTERNATIVES.md`)
+      picks **IBKR paper as primary** (its fill engine simulates against real
+      *consolidated* market data you subscribe to, so AH micro-float limits fill
+      where Alpaca's free IEX feed cannot — the direct root-cause fix) and
+      **Webull OpenAPI EU as backup** (`developer.webull.eu`, lowest setup).
+      Trading 212 rejected (extended-hours market orders only). **To unblock:**
+      open an IBKR paper account + enable/share a US-equities data subscription
+      with extended-hours consolidated quotes + API access; OR register at
+      developer.webull.eu and share App Key/Secret. This *replaces* the old
+      08-07 "Alpaca SIP / IBKR / modeled fills" decision (Juan chose switch-broker
+      on 09-04). No live switch until the fill test on AKAN/SHPH/GIPR passes.
 - [x] Initiative 3: **AH cadence change (A) WIRED (2026-07-17).** The 07-16
       veto window passed with no objection, so the two *observation-only* AH-open
       scans (22:15 + 22:45 CET / 16:15/16:45 ET, Mon–Thu) were added to
