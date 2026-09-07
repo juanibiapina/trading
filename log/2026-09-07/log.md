@@ -53,6 +53,31 @@ Scanner returned 31 regular-session hits. Top movers by change % with unusual re
 
 **Decision:** No entries (observation-only scan). Re-scan at 22:30/23:00 CET. Primary watch: ISPC (fresh low-float high-VRatio igniter).
 
+## Scan 22:15 CET (4:15 PM ET)
+
+**Session: AFTERHOURS (nominal)** — but **US market CLOSED today for Labor Day (Sep 7)**. Broker clock: `is_open=false | next_open 2026-09-08T09:30`. All quotes stamp `2026-09-04T20:00Z` (Friday close). There is **no real after-hours session** today — every scanner "AH" hit is stale Friday regular-session `postmarket_volume`.
+
+Same 7 hits as 22:00 (identical numbers — stale feed):
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $1.54 | +0.0% | +29.2% | $1.99 | +29.2% | 5.6M | 770K | 7.3x | 2.5M | Misc Commercial Services |
+| ATER | [TV](https://www.tradingview.com/chart/?symbol=ATER) | $0.63 | +1.3% | +12.2% | $0.70 | +13.6% | 3.0M | 5.2M | 0.6x | 13.7M | Internet Retail |
+| BRNX | [TV](https://www.tradingview.com/chart/?symbol=BRNX) | $2.24 | -26.3% | +11.6% | $2.50 | -17.8% | 2.6M | 3.1M | 0.8x | 684K | Engineering & Construction |
+| ZTG | [TV](https://www.tradingview.com/chart/?symbol=ZTG) | $0.76 | +11.8% | +5.5% | $0.80 | +18.0% | 606K | 3.1M | 0.2x | n/a | Data Processing Services |
+| GNLX | [TV](https://www.tradingview.com/chart/?symbol=GNLX) | $2.44 | -3.2% | +7.9% | $2.63 | +4.5% | 92K | 351K | 0.3x | 38.8M | Pharmaceuticals: Major |
+| IPEX | [TV](https://www.tradingview.com/chart/?symbol=IPEX) | $7.75 | -29.0% | +25.2% | $9.70 | -11.2% | 78K | 46K | 1.7x | 2.8M | Financial Conglomerates |
+| SGLY | [TV](https://www.tradingview.com/chart/?symbol=SGLY) | $1.38 | -6.1% | +6.5% | $1.47 | +0.0% | 66K | 601K | 0.1x | 5.1M | Air Freight/Couriers |
+
+**Spike-bar / confirmation instrumentation (AH chg >10%: ISPC, ATER, BRNX, IPEX):** all `NO prior-close (daily bar missing)` / `CONFIRM-3 NO-DATA`. No SIP daily bar because there was no trading session today (holiday).
+
+**Verification (proof of holiday, not bad print):**
+- `broker.js clock` → `is_open=false`, `next_open 2026-09-08T09:30` (market never opened today).
+- `broker.js bars ISPC --start 2026-09-07T20:00:00Z` → `no bars (feed=sip)` (no session).
+- Quotes all stamped Friday: ISPC `@2026-09-04T20:00Z`, ATER `@2026-09-04`, IPEX `ask $0.00 x0 @2026-09-04`, BRNX `@2026-09-04`.
+
+**Decision: SKIP ALL — market holiday, no tradable AH session.** No fillable book exists (quotes are Friday's stale close). Entries are impossible regardless of scanner readings. The 7 "hits" are stale Friday `postmarket_volume` artifacts, not live movers. Nothing to instrument for entry tonight. Next real session opens 2026-09-08 09:30 ET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
