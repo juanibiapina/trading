@@ -90,6 +90,18 @@ Scanner returned the same 7 stale hits (identical numbers to 22:00/22:15 — Fri
 
 **Decision: SKIP ALL — market holiday, no tradable AH session.** Entries impossible regardless of scanner readings; every "AH" hit is stale Friday data. This is the 23:00 entry window's precondition (float <50M, AH >10% over ≥2 AH scans, Day% > -15%) being moot — there is no live AH tape to build on. Next real session opens 2026-09-08 09:30 ET; the next post-market entry opportunity is Tuesday evening (22:00+ CET on 2026-09-08).
 
+## Scan 22:45 CET (4:45 PM ET)
+
+**Session: AFTERHOURS (nominal)** — **US market CLOSED for Labor Day (Sep 7)**, unchanged from 22:00/22:15/22:30. Broker clock re-checked: `now 2026-09-07T16:45 ET | is_open=false | next_open 2026-09-08T09:30`. ISPC quote still stamped `2026-09-04T20:00Z` (Friday close). No real after-hours session today.
+
+Scanner returned the same 7 stale hits (identical numbers to prior scans — Friday `postmarket_volume` artifacts): ISPC, ATER, BRNX, ZTG, GNLX, IPEX, SGLY.
+
+**Verification:**
+- `broker.js clock` → `is_open=false`, `next_open 2026-09-08T09:30`.
+- `broker.js quote ISPC` → `bid $1.33 x100 ask $1.77 x100 @ 2026-09-04T20:00Z` (Friday stamp — no live book today).
+
+**Decision: SKIP ALL — market holiday, no tradable AH session.** Entries impossible regardless of scanner readings; every "AH" hit is stale Friday data. No live AH tape exists to satisfy the 23:00 entry window (float <50M, AH >10% over ≥2 AH scans, Day% > -15%). Next real session opens 2026-09-08 09:30 ET; next post-market entry opportunity is Tuesday evening (22:00+ CET on 2026-09-08).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
