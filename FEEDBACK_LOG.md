@@ -6,6 +6,43 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-09-04 — re: Trading Scanner Report - 2026-09-03
+
+**Juan said:** "GIPR is another violation of volume rule. Can you also research
+alternative providers besides alpaca? test them and find one that actually works
+for trading these stocks."
+
+**Interpretation:** Two points.
+
+1. **GIPR = another volume-rule violation.** GIPR was entered this cycle
+   ($0.63 -> $0.48, -23.8%) and faded on a weak volume build. Juan flags it as
+   yet another entry that lacks the 10-20x per-bar local volume spike he
+   mandated on 09-02 (re: GELS/TLYS/CHPT/UFG). This is the sixth-plus repeat of
+   the per-bar volume-change gate theme (GELS 09-02, DAIC 08-24, GRSD 08-14,
+   BOOM 07-31, ONMD 07-29). GIPR is the exact case the queued 10-20x hard gate
+   should block: it cleared the scan-count/CONFIRM gate but had no real
+   ignition, so it should not have been entered.
+
+2. **Research broker alternatives to Alpaca.** Direct directive: research
+   providers besides Alpaca, test them, and find one that actually works for
+   trading these micro-float AH/PM names. This answers the standing open
+   question on Initiative 2 (the free IEX-only feed means Alpaca paper buy
+   limits never fill in AH for micro-floats; chronic block on AKAN/SHPH). Juan
+   picks the "switch broker" path over paying for Alpaca SIP or modeled fills.
+
+**Action:**
+- GIPR: no new roadmap change needed — it is another negative control for the
+  already-queued 10-20x per-bar local-spike hard entry gate (Initiative 1,
+  routed 09-02 to the next `scanner-improvement` run). Added GIPR alongside GELS
+  as a negative control the gate must reject.
+- Broker research: routed to `STRATEGY_ROADMAP.md` Initiative 2 as an active
+  research directive (research + test alternative brokers: IBKR paper first,
+  then others with real AH/PM micro-float coverage). Research is non-serialized
+  low-risk work, so `strategy-advance` can start it in parallel. No live broker
+  switch made here; capture and route only.
+
+---
+
 ### 2026-09-03 — re: Trading Scanner Report - 2026-09-02
 
 **Juan said:** "GELS and the two others should not have entered. You must

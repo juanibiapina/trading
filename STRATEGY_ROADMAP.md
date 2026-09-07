@@ -79,6 +79,18 @@ the ignition**, not a new signal.
    mismatch, not a `broker.js` bug. Fix options: (1) pay for Alpaca SIP (~$99/mo),
    (2) switch to IBKR paper, (3) score on modeled SIP fills (free). Full writeup:
    `INIT2_ALPACA_FILL_ROOTCAUSE.md`. **Needs Juan's call on which path.**
+   **Update 2026-09-04 (Juan directive, re: 09-03 email "research alternative
+   providers besides alpaca; test them and find one that actually works for
+   trading these stocks"):** Juan picks the **switch-broker** path (option 2/
+   alternatives) over paying for Alpaca SIP or modeled fills. This is now an
+   **active research directive**: research brokers with real AH/PM micro-float
+   coverage (IBKR paper first, then Trading 212 / Webull / Moomoo / others),
+   test each on the exact chronic-block names (AKAN, SHPH, GIPR-class
+   sub-$1 micro-floats) to see which actually fills extended-hours limits, and
+   report the best fit. Research/test is non-serialized low-risk work, so
+   `strategy-advance` starts it in parallel with the active Init 6 pilot. No
+   live broker switch applied yet — evaluate and propose. See FEEDBACK_LOG
+   2026-09-04.
 2. **Initiative 3 - adaptive scheduling / faster ignition detection.** Promoted
    to the top research lever (2026-07-15). Init 1's 1-min backtest shows winners
    ignite in a single minute (IVF 16:53 ET) that our ~22:15 CET / 16:15 ET AH
@@ -506,6 +518,13 @@ skip. Routed to `scanner-improvement` to implement the 10-20x local-spike gate
 as a hard entry filter and add GELS as a negative control. See FEEDBACK_LOG
 2026-09-03.
 
+**Feedback update (2026-09-04) — GIPR added as a negative control:** Juan on
+the 09-03 email — "GIPR is another violation of volume rule." GIPR was entered
+($0.63 -> $0.48, -23.8%) on a weak volume build, cleared the scan-count/CONFIRM
+gate but had no real 10-20x per-bar ignition. Sixth-plus repeat of the theme.
+Add GIPR alongside GELS as a negative control the queued 10-20x local-spike
+hard gate must reject. See FEEDBACK_LOG 2026-09-04.
+
 **Feedback update (2026-08-25):** Juan flagged DAIC (re: 08-24 email) — "no
 volume spike. normal hours volume is the same as after hours, it was only a
 price spike. UPDATE PROCESS." DAIC was not actually entered (skipped on the
@@ -583,6 +602,20 @@ Account `PA37U2Y192A7` is flat at ~$99,998.41 (two validation round-trips paid
 ~$1.59 spread). The only remaining step is 5 (live real money, tiny size),
 gated on a proven edge and Juan's sign-off — not now. **The single pilot slot
 is now free for Initiative 5.**
+
+**Directive 2026-09-04 (Juan, re: 09-03 email) — research broker alternatives
+to Alpaca.** "Can you also research alternative providers besides alpaca? test
+them and find one that actually works for trading these stocks." Root cause of
+the chronic AH no-fill is the Alpaca free IEX-only feed (see the 08-07 update
+and `INIT2_ALPACA_FILL_ROOTCAUSE.md`); Juan chooses to switch brokers rather
+than pay for Alpaca SIP or score on modeled fills. Active research directive for
+`strategy-advance` (non-serialized, low-risk): (1) shortlist brokers with a
+paper/API and real extended-hours micro-float coverage — IBKR paper first, then
+Trading 212 / Webull / Moomoo / others; (2) test each on the exact names Alpaca
+blocks (AKAN, SHPH, and GIPR-class sub-$1 micro-floats) to confirm which
+actually fills extended-hours limit orders; (3) report the best fit and propose
+the switch. No live broker change applied here — evaluate and propose. See
+FEEDBACK_LOG 2026-09-04.
 
 **Prior pilot status (2026-06-24, superseded):** second ext-hours round-trip + shadow-fills ledger
 started. Repeated the VTAK shadow round-trip in premarket: BUY 86
