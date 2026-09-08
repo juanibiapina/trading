@@ -1,0 +1,112 @@
+# 2026-09-08 (Tuesday) — Post-Labor-Day session
+
+## Morning Evaluation — 10:20 CET
+
+### Context: no overnight after-hours session
+
+Monday **Sep 7 was Labor Day — US market closed**. There was no real after-hours
+session last night, so the AH→PM overnight pattern was structurally impossible.
+- The Sep 7 evening "scans" ran (9 sections logged) but saw only **stale Friday
+  `postmarket_volume`** — `broker.js clock` = `is_open=false`, all quotes stamped
+  `2026-09-04T20:00Z`. Correctly SKIP-ALL'd as a holiday, no tradable book.
+- Friday **Sep 4 evening is never scanned by design** (prior Fridays Aug 28 / Aug 21 /
+  Aug 14 all have 0 scan commits — you cannot cleanly hold an AH entry over a weekend).
+- **This is a holiday no-session day, not a coverage failure and not a detection miss.**
+  Baseline is NOT incremented (a day with no session is not a counted sample).
+
+### Today's Winner
+
+**No AH→PM winner today** — no after-hours session existed (Labor Day). No stock could
+have shown the AH→PM pattern.
+
+Biggest **live premarket** mover this morning is a pure PM-only gapper:
+
+**BNC** — CEA Industries Inc. (BNB / crypto-treasury + controlled-env-ag climate systems)
+- Catalyst: none verified same-day. BNB digital-asset-treasury name; move is consistent
+  with a crypto rally over the long weekend. Grade **None** (unverified).
+- Previous Close (Fri Sep 4, SIP-confirmed): **$3.49**
+- Friday AH: **flat** — +3–4% on tiny volume (137–6,400 sh/bar). No AH footprint.
+- Premarket now: SIP first bars $6.01 (04:00 ET) / $5.94 (04:05 ET); Yahoo high $6.67 @04:20
+- **From correct $3.49 close: ~+72% (SIP $6.01) to ~+93% (peak ~$6.72) — BELOW the >100% bar.**
+  (The "+102.7%" Yahoo print used a stale $3.29 = Wed Sep 3 close, not Friday's $3.49.)
+- SIP volume: **1.72M sh / 19,336 trades** @04:00, **1.39M sh / 18,550 trades** @04:05 —
+  genuine, heavy, liquid. Holdable in character, but **uncapturable overnight** (no AH
+  session to enter; flat in the only AH session it had, Friday).
+- Float: 36.2M | Market Cap: ~$143.8M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **N/A** — there was no evening screening session (holiday).
+- BNC was flat in Friday's AH (+3–4%, no volume) and gapped only in Tuesday premarket on
+  weekend news → a **PM-only gapper**, structurally undetectable by the AH scanner.
+- Scanner gap: none actionable. Holiday + PM-only gapper. Not a detection miss.
+
+### Baseline Tracking
+
+Holiday, no session evaluated — baseline unchanged (not a counted sample; no back-fill).
+
+- Days tracked: **78** (unchanged — Sep 7 was a market holiday, no session)
+- Winners detected by scanner: **64/73 (87.7%)** — unchanged
+- Winner selected for paper trade: **35/71 (49.3%)** — unchanged
+- Target: >80% detection
+- Status: **BASELINE MET** (87.7% detection)
+
+### Retrospective Scan Results
+
+- Live PM scan (Sep 8, 04:22 ET): 6 hits — GMEX +36.4%, BNC +61.5% (scan basis; +72–93%
+  vs correct close), ISPC +29.9%, WETO +5.3%, CYPH +6.2%, VIVK +6.4%.
+- Only BNC is a strong mover; it is a PM-only gapper (flat Friday AH). GMEX +34% (0.78→1.05),
+  low volume by comparison. None cleared the >100% winner bar from the correct prev close.
+- No AH reconstruction applies (no AH session last night).
+
+### Open Position P&L (Alpaca)
+
+No open positions. Alpaca (source of truth) shows zero holdings. No executed positions.
+Last entries (CHPT, TLYS, GIPR, PLAG) were all exited Sep 4; flat since.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **N/A — market holiday** (Sep 7 Labor Day). The 9 logged "scans"
+  saw only stale Friday data; Friday Sep 4 evening is never scanned by design.
+- Candidates found: none tradable (holiday).
+- Retrospective matches: N/A.
+
+### Missed Opportunities
+
+No significant missed opportunities. BNC (biggest PM mover, ~+72–93%) is a PM-only gapper
+on holiday-weekend news — structurally undetectable by the AH scanner, not a miss.
+
+### AH Mover Follow-Through
+
+N/A — no after-hours session last night (Labor Day). No AH movers to follow through.
+
+### Price Charts
+
+```
+BNC - 2-Day Price Timeline (5-min intervals)
+Previous Close (correct, SIP): $3.49  |  Peak: ~$6.72 (~+93% from $3.49) at 04:20 ET
+Friday AH: FLAT (+3-4%, 137-6,400 sh/bar) — no AH footprint
+Tuesday PM: gapped $3.49 -> ~$6.0-6.7 on 1.4-1.7M sh/bar, 18-19K trades/bar (heavy, liquid)
+Shape: pure PM-only gapper (weekend/holiday news), not an AH->PM continuation
+```
+
+### Notes
+
+- **Holiday no-session day (Sep 7 Labor Day).** No AH session → no AH→PM winner possible →
+  baseline unchanged at 78 / 64 detected / 35 selected. Not a coverage failure (scanner is
+  not scheduled for a closed market) and not a detection miss.
+- **Friday evenings are never scanned** (confirmed: Aug 28 / Aug 21 / Aug 14 = 0 scan
+  commits). This is by design (no clean weekend hold). Missing Sep 4 evening scan is expected.
+- **BNC prev-close correction:** true Friday close is **$3.49** (SIP daily bar), not the
+  $3.29 that Yahoo `--pm-history` and `price-timeline.py` use (that $3.29 is Wed Sep 3's
+  close). On the correct basis BNC's PM peak is ~+93%, **below** the >100% winner bar — so
+  even the biggest mover today does not qualify as a crowned winner. Reinforces checking the
+  % basis against the SIP daily bar before crowning.
+- **PM-only-gapper tracking:** biggest raw PM mover = BNC (~+72–93%), holdable in character
+  (1.4–1.7M sh/bar, 18–19K trades/bar) but uncapturable overnight. The dedicated
+  `pm-open-scan` pulse owns the authoritative holdable classification (standing holdable
+  count in `pm-open-scan.csv`: **43**). No hand-count maintained here. Not a detection miss.
+- All standing tracker counts carry over unchanged (no new cases on a no-session night):
+  in-window feed-lag misses 4 (≥3 escalation trigger REACHED); price-floor exclusions 5/0
+  holdable; stale-book execution-blocks 3; no-fillable-book skips 2; float-gate skips 1;
+  final-scan gate-blocks 2 (TRUG, UPC); AH-peak-vs-PM-peak extreme zone 8 fade / 1 continue
+  (routing trigger REACHED); reverse-split this-week bucket 4/4 fade (RESOLVED).
