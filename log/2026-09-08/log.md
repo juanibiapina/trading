@@ -398,6 +398,74 @@ no re-entry — one entry per candidate per night). No new entries this scan.
 - Carry-forward 21:30 regular-session watch names never built an AH footprint — dropped.
 - Next scan 00:00 CET.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**Entry-eligible scan.** Scanner: **11 hits.** SUNE held from 23:00 (position open, no
+re-entry — one entry per candidate per night). Two **new** >10% AH names this scan: ZJYL and
+ACCL. Neither enterable (see below). No new entries.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.37 | +0.4% | +22.8% | $2.91 | +23.3% | 9.7M | 1.4M | 7.0x | 5.4M | Engineering & Construction |
+| TWG | [TV](https://www.tradingview.com/chart/?symbol=TWG) | $0.52 | +17.8% | +6.2% | $0.55 | +25.1% | 5.1M | 8.7M | 0.6x | 44.5M | Food Distributors |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $2.45 | +5.6% | +13.5% | $2.78 | +19.8% | 1.6M | 472K | 3.3x | 6.5M | Information Technology Services |
+| ATER | [TV](https://www.tradingview.com/chart/?symbol=ATER) | $0.73 | +16.4% | +5.2% | $0.77 | +22.4% | 1.4M | 9.5M | 0.1x | 13.7M | Internet Retail |
+| ZJYL | [TV](https://www.tradingview.com/chart/?symbol=ZJYL) | $2.02 | -2.9% | +28.5% | $2.60 | +24.8% | 306K | 72K | 4.3x | 64.7M | Medical Specialties |
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $0.58 | +3.8% | +5.6% | $0.61 | +9.6% | 306K | 715K | 0.4x | 39.8M | Integrated Oil |
+| ONCO | [TV](https://www.tradingview.com/chart/?symbol=ONCO) | $0.84 | -17.6% | +6.0% | $0.89 | -12.7% | 251K | 893K | 0.3x | 3.9M | Pharmaceuticals: Major |
+| OFAL | [TV](https://www.tradingview.com/chart/?symbol=OFAL) | $0.72 | -7.7% | +5.6% | $0.76 | -2.6% | 154K | 18.3M | 0.0x | 1.9M | Engineering & Construction |
+| LASE | [TV](https://www.tradingview.com/chart/?symbol=LASE) | $0.95 | -32.1% | +5.1% | $1.00 | -28.6% | 154K | 3.0M | 0.1x | 37.3M | Electronic Equipment/Instruments |
+| ACCL | [TV](https://www.tradingview.com/chart/?symbol=ACCL) | $2.67 | -2.6% | +10.5% | $2.95 | +7.7% | 138K | 26K | 5.3x | 4.9M | Miscellaneous Commercial Services |
+| FGL | [TV](https://www.tradingview.com/chart/?symbol=FGL) | $7.57 | -18.6% | +15.6% | $8.75 | -5.9% | 135K | 212K | 0.6x | 60K | Engineering & Construction |
+
+**Spike-bar / CONFIRM-3 instrumentation (log-only, >10% AH names):**
+- `SUNE  SPIKE 16:05ET +35% $3.19 942 trades / 248k sh (first co-spike bar)` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE**
+- `ANY   SPIKE 16:06ET +20% $2.95 241 trades / 48k sh` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE**
+- `ZJYL  SPIKE 17:07ET +33% $2.68 103 trades / 11k sh (first co-spike bar)` — `CONFIRM-3 NO no local-volume new-high ignition`
+- `ACCL  SPIKE 17:26ET +42% $3.80 144 trades / 9k sh (first co-spike bar)` — `CONFIRM-3 NO ignition 17:25ET failed third-bar hold/volume`
+- FGL — illiquid microfloat carried skip (below), no instrumentation re-run.
+
+**Per-candidate evaluation:**
+- **SUNE — held, no re-entry.** Already entered at 23:00 ($2.95, 33 sh, Grade C). AH +22.8%,
+  still holding/building, VRatio 7.0x. Position now $2.96 (+0.3%). One entry per candidate per
+  night — no averaging in. Premarket exit handled by position-evaluation.
+- **ZJYL — qualified-but-untradable broker-block, skip.** `tradable=false` (broker cannot
+  fill) — no position possible regardless of the move. Also float 64.7M (>50M float gate) and
+  first AH scan appearance (2-AH-scan gate not cleared). SIP shows a *real* late build though:
+  240.5K sh / 2,785 trades @17:40 ET, 216.4K / 2,527 @17:45, H $2.68 corroborates scanner AH
+  price $2.60 (no bad print). Genuine move, but uninvestable — recorded as a qualified-but-
+  untradable broker-block for the morning-eval tally. Skip.
+- **ACCL — SPIKE→FADE + first AH scan, skip/watch.** `tradable=true`, float 4.9M (<50M), Day%
+  −2.6% (> −15%), VRatio 5.3x, Total +7.7% under ceiling. Catalyst: Acco Group Holdings launch
+  of licensed corporate services in Singapore (GlobeNewswire, same-day ~1 hr ago) — **Grade C**
+  (minor business-expansion PR). BUT: (1) first AH scan appearance — **2-AH-scan gate not
+  cleared** (cannot enter tonight regardless); (2) SIP shows **SPIKE→FADE**: ignition bar 88K
+  sh / 1,428 trades @17:25 ET spiking to H $3.80, then volume collapsing 68K→44K→11K→9.6K and
+  price bleeding $3.80→$3.05 (~20% off the high); (3) book stale + very wide (bid $2.32 / ask
+  $3.09 @20:00Z, ~33% spread). Fading spike on a thin, wide book. Watch only.
+- **TWG** — AH +6.2% (below 10% bar), high float 44.5M, VRatio 0.6x. Regular-session mover.
+  Watch only.
+- **ANY** — AH bounced to +13.5% but SIP still SPIKE→FADE (peaked 16:25/16:30 ET then volume
+  collapsed to 20–51K sh/bar; first-bar spike $2.95, CONFIRM-3 NO). Modest AH% bounce on thin
+  volume is not a build. 0/10+ SPIKE→FADE pattern. Skip (carried).
+- **ATER** — AH +5.2% (below 10% bar), VRatio 0.1x (AH vol far below 9.5M avg). Regular-session
+  mover. Watch only.
+- **EONR / OFAL** — AH +5.6% each (below 10% bar). Watch only.
+- **ONCO** — Day −17.6%, Total −12.7% (below regular close = dead-cat). Skip.
+- **LASE** — Day −32.1%, Total −28.6% (deep dead-cat bounce). Skip.
+- **FGL** — **illiquid microfloat, skip (carried).** Float 60K, AH vol 135K, Total −5.9%
+  (Day −18.6% dead-cat + bounce). Stale wide quote across all scans, bad-print / no fillable
+  book. Skip.
+
+**Notes:**
+- **No new entries.** SUNE (only qualifying BUILD) held from 23:00, +0.3%. Two new >10% AH
+  names both uninvestable: ZJYL untradable (broker-block, recorded for morning tally), ACCL
+  SPIKE→FADE + first-AH-scan (2-AH-scan gate). All other hits below the 10% AH bar or
+  dead-cat/illiquid.
+- No FINAL-SCAN-GATE-BLOCK, CHASE-CAP, or DEAD-CAT/CEILING-OVERRIDE cases this scan.
+- Next scan 00:30 CET (final scheduled scan). ACCL is the only new name worth a 2nd-scan
+  cross-check — but it is fading; unlikely to qualify.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
