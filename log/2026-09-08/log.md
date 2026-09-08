@@ -168,6 +168,23 @@ Scanner: 36 regular-session hits. Notable low-float / high-move watch candidates
 - No spike-bar / CONFIRM-3 instrumentation run — those apply to AH candidates (>10% AH
   change), and AH is not yet open.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Observation-only scan (learning-phase: no entries before 23:00 CET).** AH just opened
+this minute (16:00 ET) — VRatio has not accumulated yet.
+
+Scanner: **0 hits.** No candidates cleared the AH threshold at 16:00 ET.
+
+**Notes:**
+- AH opened exactly at scan time (16:00:18 ET); `postmarket_volume` has not built, so the
+  screener shows no matches yet. Expected at the first AH scan.
+- Carry the 21:30 regular-session watch names into later AH scans: **BNC** (+53% RS,
+  crypto-treasury gapper), **MOBX** (+40%, IRVol 43.9), **ARBE** (+15%, IRVol 55.1),
+  **INDP** (+49%, 4.7M float), **NUR** (+43%), plus tiny-float **HCWC** (711K), **SST**
+  (2.2M), **KPLT** (1.2M), **LABT** (1.6M).
+- No spike-bar / CONFIRM-3 instrumentation — no AH candidates >10% yet.
+- Next scan 22:30 CET (observation), first possible entries at 23:00 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
