@@ -185,6 +185,30 @@ Scanner: **0 hits.** No candidates cleared the AH threshold at 16:00 ET.
 - No spike-bar / CONFIRM-3 instrumentation — no AH candidates >10% yet.
 - Next scan 22:30 CET (observation), first possible entries at 23:00 CET.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+**Observation-only scan (learning-phase: no entries before 23:00 CET).**
+
+Scanner: **0 hits.** No candidates cleared the AH threshold at 16:15 ET.
+
+SIP cross-check of carry-forward watch names (first AH bar, 16:00–16:05 ET) — all
+holding regular-session levels, none spiking further in AH, none >10% AH change:
+
+| Ticker | AH bar C | vs RS close | AH vol | trades | Note |
+|--------|----------|-------------|--------|--------|------|
+| BNC | $5.25 | ~flat ($5.35 RS) | 80.8K | 307 | crypto-treasury gapper, no AH extension |
+| INDP | $1.85 | ~flat ($1.82 RS) | 33.6K | 275 | holding RS gain, no AH spike |
+| MOBX | $1.28 | ~flat ($1.30 RS) | 176.9K | 461 | most AH volume, but flat |
+| NUR | $2.45 | ~flat ($2.53 RS) | 83.9K | 676 | slight fade off RS |
+
+**Notes:**
+- TradingView scanner 0 hits; SIP confirms no name is extending in AH — all carry-forward
+  watch candidates are just holding intraday gains, no fresh AH momentum/ignition.
+- No spike-bar / CONFIRM-3 instrumentation run — no candidate shows >10% AH change.
+- No entries (observation-only window; also no qualifying candidate).
+- Carry all watch names forward to 23:00 CET (first possible entry scan). Watch whether any
+  builds a real AH footprint before then.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
