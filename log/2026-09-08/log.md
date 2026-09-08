@@ -110,3 +110,16 @@ Shape: pure PM-only gapper (weekend/holiday news), not an AH->PM continuation
   holdable; stale-book execution-blocks 3; no-fillable-book skips 2; float-gate skips 1;
   final-scan gate-blocks 2 (TRUG, UPC); AH-peak-vs-PM-peak extreme zone 8 fade / 1 continue
   (routing trigger REACHED); reverse-split this-week bucket 4/4 fade (RESOLVED).
+
+## Position Evaluation — 10:30 CET
+
+No open positions. Alpaca (source of truth) shows zero holdings; `OPEN_POSITIONS.md`
+current table also empty — they agree, no reconciliation needed. Nothing to hold, trail,
+or sell. Flat since Sep 4 exits (CHPT, TLYS, GIPR, PLAG). Sep 7 was Labor Day (no session).
+
+| Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| — | — | — | — | — | — | — | — | No open positions |
+
+**Actions taken:**
+- None. Flat account, no positions to evaluate.
