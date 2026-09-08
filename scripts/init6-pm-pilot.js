@@ -123,7 +123,15 @@ function loadHoldablePmOnly() {
   const rows = [];
   for (const l of lines) {
     const f = l.split(",");
-    if (f[3] === "none" && f[9] === "holdable") rows.push({ date: f[0], sym: f[1], cls: f[9] });
+    // footprint=none = verified PM-only gapper. Also include footprint=unknown
+    // rows explicitly flagged as a market holiday: on a holiday there was NO AH
+    // session at all, so the name is the purest PM-only gapper (the AH scanner
+    // is categorically blind), functionally identical to footprint=none. Only 3
+    // such rows exist and all are genuine no-session holiday gappers; the other
+    // "unknown" rows (data gaps, not holidays) stay excluded to keep the
+    // universe clean.
+    const holidayPmOnly = f[3] === "unknown" && /holiday/i.test(l);
+    if ((f[3] === "none" || holidayPmOnly) && f[9] === "holdable") rows.push({ date: f[0], sym: f[1], cls: f[9] });
   }
   return rows;
 }

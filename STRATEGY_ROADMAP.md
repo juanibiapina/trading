@@ -263,6 +263,37 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-09-08 (strategy-advance) — pilot universe widened to include
+   no-AH-session holiday PM-only gappers; two fresh out-of-sample admits (ISPC
+   +10% limit-win, BNC -15.3% fade), WETO-2 self-corrected to a limit-win;
+   entered set n=18, edge holds +5.0%/name, fade-tail 3/18 (17%). Init 3
+   data-blocked.** First run since Fri 09-04 (Mon 09-07 was Labor Day, market
+   closed), so Tue 09-08 PM had three holdable PM-only gappers with **no AH
+   session at all** (the purest AH-scanner blind spot): BNC +68.2%, GMEX +35.1%,
+   ISPC +26.0%. These were tagged footprint=`unknown` (no AH to check), which the
+   pilot loader had always excluded, so widened `init6-pm-pilot.js` to also admit
+   footprint=`unknown` rows explicitly flagged as a market **holiday** (only the
+   3 09-08 rows match; the other 13 `unknown` data-gap rows stay excluded — clean,
+   precise). Re-ran: **GMEX skipped** by the continuation gate (wick-peak plateau
+   at gap-mid, correct); **BNC admitted** (entered $6.32 at 04:15 ET) and **faded**
+   — never reached the resting +10% limit ($6.95), drifted to PM-last -15.3%;
+   **ISPC admitted** (entered $1.96 at 04:15 ET) and **filled the +10% limit**
+   ($2.16) intrabar = a win. Separately, WETO-2 (09-04) reclassified -1.8% -> +10.0%
+   on fuller 1-min bars (its +10% limit $4.35 filled intrabar). Entered set moves
+   n=16 -> **n=18: SUM +89.4% / mean +5.0% / median +10.0% / positive 14/18**, vs a
+   PM-last hold-to-open floor of -6.4% and a do-nothing baseline of 0%. Net of ~2%
+   spread ~+3.0%/name. The **fade-tail is 3/18 (BIVI -27.1%, MIMI-2 -6.9%, BNC
+   -15.3%) = 17%** — WETO-2 left the tail (corrected to a win), BNC replaced it, and
+   n grew, so the ratio eased from 19% and stays under the ~25% that would erode the
+   edge below the spread. **Caveat:** 09-08 rows were computed while premarket was
+   still live (~09:00 ET at run time), so BNC's PM-last may shift by the 09:30 cap;
+   the ISPC/WETO-2 limit fills are locked. Init 3 is **data-blocked** (no held-name
+   exit since 09-04; `OPEN_POSITIONS.md` flat), so the peak-seeking sim holds at
+   n=36. Init 2 broker research is blocked on Juan (needs an IBKR/Webull account
+   for the fill test). Still log-only, no orders. Next: keep seeding both sims when
+   Wed 09-09 data lands; with n=18 / 14 positive / two converging studies / tail at
+   17%, the live PM-gapper pulse stays near proposable — hold until n grows and the
+   tail stays under ~25%.
    **Update 2026-09-04 (strategy-advance) — pilot admitted a fresh
    out-of-sample name (WETO-2) and it FADED; entered set n=16, edge eases to
    +5.2%/name, fade-tail 3/16 (19%). Init 3 seeded four exits (PLAG limit-win),
