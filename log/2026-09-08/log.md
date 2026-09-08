@@ -348,6 +348,56 @@ accumulating (16:45 ET). Scanner: **5 hits.**
 - Carry-forward 21:30 regular-session watch names (BNC, MOBX, INDP, NUR, etc.) never built a real AH footprint — dropped.
 - Grade C hold strategy: exit in premarket (stop -10%). Set premarket exit for SUNE.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**Entry-eligible scan.** Scanner: **8 hits.** SUNE already entered at 23:00 (position held,
+no re-entry — one entry per candidate per night). No new entries this scan.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.37 | +0.4% | +24.9% | $2.96 | +25.4% | 8.7M | 1.3M | 6.9x | 5.4M | Engineering & Construction |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $2.45 | +5.6% | +11.8% | $2.74 | +18.1% | 1.5M | 464K | 3.3x | 6.5M | Information Technology Services |
+| ARBE | [TV](https://www.tradingview.com/chart/?symbol=ARBE) | $0.74 | +16.9% | +6.7% | $0.79 | +24.7% | 1.4M | 10.6M | 0.1x | 106.2M | Electrical Products |
+| GMEX | [TV](https://www.tradingview.com/chart/?symbol=GMEX) | $0.63 | -14.5% | +6.6% | $0.68 | -8.8% | 1.3M | 3.0M | 0.4x | n/a | Specialty Stores |
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $1.59 | +3.2% | +6.9% | $1.70 | +10.4% | 238K | 2.1M | 0.1x | 2.5M | Miscellaneous Commercial Services |
+| FGL | [TV](https://www.tradingview.com/chart/?symbol=FGL) | $7.57 | -18.6% | +16.2% | $8.80 | -5.4% | 120K | 210K | 0.6x | 60K | Engineering & Construction |
+| ONCO | [TV](https://www.tradingview.com/chart/?symbol=ONCO) | $0.84 | -17.6% | +6.6% | $0.90 | -12.2% | 83K | 875K | 0.1x | 3.9M | Pharmaceuticals: Major |
+| CMTG | [TV](https://www.tradingview.com/chart/?symbol=CMTG) | $1.54 | -4.9% | +8.4% | $1.67 | +3.1% | 62K | 713K | 0.1x | 105.1M | Real Estate Investment Trusts |
+
+**Spike-bar / CONFIRM-3 instrumentation (log-only, >10% AH names):**
+- `SUNE  SPIKE 16:05ET +35% $3.19 942 trades / 248k sh (first co-spike bar)` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE**
+- `ANY   SPIKE 16:06ET +20% $2.95 241 trades / 48k sh` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE**
+- FGL — illiquid microfloat carried skip (below), no instrumentation re-run.
+
+**Per-candidate evaluation:**
+- **SUNE — held, no re-entry.** Already entered at 23:00 ($2.95, 33 sh, Grade C). AH +24.9%,
+  still building/holding, VRatio 6.9x. One entry per candidate per night — no averaging in.
+  Position management handled by premarket position-evaluation.
+- **ANY — skip (SPIKE→FADE, carried).** Bounced back above 10% (+11.8% AH) but SIP confirms
+  fade: peaked 16:25/16:30 ET ($2.98, 397K/460K sh) then volume collapsed to 20–51K sh/bar,
+  price churning $2.68 (~10% off the $2.98 high) with no fresh volume-backed build. First-bar
+  spike $2.95 @16:06, CONFIRM-3 NO. Modest AH% bounce on thin volume is not a build. Peaked
+  early + fading = SPIKE→FADE (0/10+ for PM continuation). `tradable=true`, book bid $2.73 /
+  ask $2.76, but no volume ignition. Skip (same as 23:00).
+- **ARBE** — AH +6.7% (below 10% bar), float 106.2M (>50M), VRatio 0.1x. Regular-session
+  mover, no AH ignition. Watch only.
+- **GMEX** — Day −14.5%, AH +6.6% (below bar), Total −8.8% (below regular close = dead-cat).
+  Skip.
+- **ISPC** — AH +6.9% (below 10% bar), VRatio 0.1x. Watch only.
+- **FGL** — **illiquid microfloat, skip (carried).** Float 60K, AH vol 120K, Total −5.4%
+  (Day −18.6% dead-cat + bounce). Stale wide quote across all scans, bad-print / no fillable
+  book. Skip.
+- **ONCO** — Day −17.6%, AH +6.6% (below bar), Total −12.2% (below close = dead-cat). Skip.
+- **CMTG** — AH +8.4% (below 10% bar), float 105.1M (>50M), VRatio 0.1x. Skip.
+
+**Notes:**
+- **No new entries.** SUNE (only qualifying BUILD) already held from 23:00. ANY re-crossed
+  10% AH but on collapsed volume (SPIKE→FADE), correctly skipped again. All other hits below
+  the 10% AH bar or dead-cat/illiquid.
+- No FINAL-SCAN-GATE-BLOCK, CHASE-CAP, or DEAD-CAT/CEILING-OVERRIDE cases this scan.
+- Carry-forward 21:30 regular-session watch names never built an AH footprint — dropped.
+- Next scan 00:00 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
