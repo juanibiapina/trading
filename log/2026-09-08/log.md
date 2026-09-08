@@ -136,3 +136,40 @@ or sell. Flat since Sep 4 exits. Sep 7 was Labor Day (no session), no overnight 
 
 **Actions taken:**
 - None. Flat account, no positions to evaluate.
+
+## Scan 21:30 CET (3:30 PM ET)
+
+**Regular-session watch scan — AH not yet open (15:30 ET). No entries per regular-session
+caution rule.** Flag notable low-float movers as "Watch — pending AH confirmation." Only
+enter if a name reappears in an AH scan (22:00+ CET) with sustained momentum.
+
+Scanner: 36 regular-session hits. Notable low-float / high-move watch candidates:
+
+| Ticker | Chart | Price | Chg% | Float | MCap | IRVol | Industry | Note |
+|--------|-------|-------|------|-------|------|-------|----------|------|
+| INDP | [TV](https://www.tradingview.com/chart/?symbol=INDP) | $1.82 | +49.3% | 4.7M | $242.6M | 35.0 | Pharmaceuticals: Major | Watch — pending AH |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $1.30 | +40.3% | 14.6M | $22.2M | 43.9 | Semiconductors | Watch — pending AH |
+| NUR | [TV](https://www.tradingview.com/chart/?symbol=NUR) | $2.53 | +42.9% | n/a | $33.1M | 1690.5 | Electronics Distributors | Watch — pending AH |
+| BNC | [TV](https://www.tradingview.com/chart/?symbol=BNC) | $5.35 | +53.3% | 36.2M | $220.3M | 117.6 | Trucks/Constr Machinery | Same as AM PM-gapper (crypto-treasury) |
+| SST | [TV](https://www.tradingview.com/chart/?symbol=SST) | $5.01 | +30.7% | 2.2M | $52.5M | 3.5 | Packaged Software | Watch — pending AH |
+| ETS | [TV](https://www.tradingview.com/chart/?symbol=ETS) | $1.09 | +31.3% | n/a | $53.1M | 257.1 | Air Freight/Couriers | Watch — pending AH |
+| SWVL | [TV](https://www.tradingview.com/chart/?symbol=SWVL) | $6.40 | +29.8% | 5.3M | $63.8M | 0.3 | Other Transportation | Watch — low IRVol |
+| HCWC | [TV](https://www.tradingview.com/chart/?symbol=HCWC) | $8.54 | +21.7% | 711K | $7.9M | 3.0 | Food Retail | Watch — tiny float |
+| KPLT | [TV](https://www.tradingview.com/chart/?symbol=KPLT) | $9.50 | +20.3% | 1.2M | $47.2M | 5.5 | Misc Commercial Svcs | Watch — pending AH |
+| LABT | [TV](https://www.tradingview.com/chart/?symbol=LABT) | $2.25 | +19.7% | 1.6M | $5.3M | 1.4 | Biotechnology | Watch — pending AH |
+
+**Notes:**
+- This is the pre-AH watch scan. No paper trades entered (learning-phase rule: no entries
+  before AH opens; observation only until 22:00+ CET, entries only at 23:00+ CET).
+- ARBE (+15.0%, IRVol 55.1) and MOBX (+40.3%, IRVol 43.9) show the strongest intraday
+  relative-volume; carry both into AH scans.
+- BNC already flagged this morning as a PM-only crypto-treasury gapper (Friday AH flat).
+  Now +53% in regular session — watch whether it carries an AH footprint tonight.
+- No spike-bar / CONFIRM-3 instrumentation run — those apply to AH candidates (>10% AH
+  change), and AH is not yet open.
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+| — | — | — | — | — | No entries (regular-session watch scan, AH not open) |
