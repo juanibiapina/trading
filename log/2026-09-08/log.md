@@ -466,6 +466,71 @@ ACCL. Neither enterable (see below). No new entries.
 - Next scan 00:30 CET (final scheduled scan). ACCL is the only new name worth a 2nd-scan
   cross-check — but it is fading; unlikely to qualify.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**Final scheduled scan.** Scanner: **12 hits.** SUNE held from 23:00 (position open,
++1.0%; no re-entry — one entry per candidate per night). No new entries — the only new
+gate-crosser (ACCL) is a fading spike on a stale wide book. No qualifying BUILD.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.37 | +0.4% | +26.2% | $2.99 | +26.7% | 10.4M | 1.5M | 7.1x | 5.4M | Engineering & Construction |
+| TWG | [TV](https://www.tradingview.com/chart/?symbol=TWG) | $0.52 | +17.8% | +5.9% | $0.55 | +24.7% | 5.3M | 8.7M | 0.6x | 44.5M | Food Distributors |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $2.45 | +5.6% | +11.4% | $2.73 | +17.7% | 1.6M | 479K | 3.4x | 6.5M | Information Technology Services |
+| ZJYL | [TV](https://www.tradingview.com/chart/?symbol=ZJYL) | $2.02 | -2.9% | +14.4% | $2.31 | +11.1% | 674K | 120K | 5.6x | 64.7M | Medical Specialties |
+| GLXG | [TV](https://www.tradingview.com/chart/?symbol=GLXG) | $1.02 | +8.4% | +7.8% | $1.10 | +16.9% | 613K | 98K | 6.2x | 1.7M | Miscellaneous Commercial Services |
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $1.59 | +3.2% | +6.9% | $1.70 | +10.4% | 365K | 2.2M | 0.2x | 2.5M | Miscellaneous Commercial Services |
+| ONCO | [TV](https://www.tradingview.com/chart/?symbol=ONCO) | $0.84 | -17.6% | +6.0% | $0.89 | -12.7% | 255K | 893K | 0.3x | 3.9M | Pharmaceuticals: Major |
+| LASE | [TV](https://www.tradingview.com/chart/?symbol=LASE) | $0.95 | -32.1% | +5.1% | $1.00 | -28.6% | 176K | 3.0M | 0.1x | 37.3M | Electronic Equipment/Instruments |
+| SGLY | [TV](https://www.tradingview.com/chart/?symbol=SGLY) | $1.58 | +14.5% | +6.3% | $1.68 | +21.7% | 173K | 470K | 0.4x | 5.1M | Air Freight/Couriers |
+| ACCL | [TV](https://www.tradingview.com/chart/?symbol=ACCL) | $2.67 | -2.6% | +13.1% | $3.02 | +10.2% | 164K | 30K | 5.5x | 4.9M | Miscellaneous Commercial Services |
+| FGL | [TV](https://www.tradingview.com/chart/?symbol=FGL) | $7.57 | -18.6% | +9.2% | $8.27 | -11.1% | 152K | 215K | 0.7x | 60K | Engineering & Construction |
+| RETO | [TV](https://www.tradingview.com/chart/?symbol=RETO) | $0.54 | -49.4% | +6.2% | $0.57 | -46.2% | 56K | 298K | 0.2x | 35.8M | Other Metals/Minerals |
+
+**Spike-bar / CONFIRM-3 instrumentation (log-only, >10% AH names):**
+- `SUNE  SPIKE 16:05ET +35% $3.19 942 trades / 248k sh (first co-spike bar)` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE**
+- `ANY   SPIKE 16:06ET +20% $2.95 241 trades / 48k sh` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE**
+- `ACCL  SPIKE 17:26ET +42% $3.80 144 trades / 9k sh (first co-spike bar)` — `CONFIRM-3 NO ignition 17:25ET failed third-bar hold/volume`
+
+**Per-candidate evaluation:**
+- **SUNE — held, no re-entry.** Already entered at 23:00 ($2.95, 33 sh, Grade C). AH +26.2%,
+  still building/holding, VRatio 7.1x, position $2.98 (+1.0%). One entry per candidate per
+  night — no averaging in. Premarket exit handled by position-evaluation.
+- **ACCL — skip (SPIKE→FADE on a stale wide book).** Now cleared the 2-AH-scan gate mechanically
+  (00:00 +10.5%, 00:30 +13.1%), but it is a fading spike, not a build: SIP ignition bar 88K sh /
+  1,428 trades @17:25 ET spiking to H $3.80, then volume collapsing 68K→44K→11K→10K→9K→6K→2K and
+  price bleeding $3.80→$3.00–3.18 (~17–20% off the high). Small 10K re-bump @18:10 ET, no fresh
+  volume-backed new high. CONFIRM-3 NO. Book stale (quote stamped 20:00Z, ~30 min old) and very
+  wide (bid $2.32 / ask $3.09, ~33% spread) — no clean fillable book. `tradable=true`, float 4.9M,
+  Grade C (Acco Group Singapore corporate-services PR), Total +10.2% under ceiling — but
+  SPIKE→FADE (0/10+ for PM continuation) plus a wide stale book. **Not a FINAL-SCAN-GATE-BLOCK**
+  (that requires CONFIRM-3 YES on accumulating volume; ACCL is CONFIRM-3 NO and fading). Skip.
+- **ZJYL — qualified-but-untradable broker-block, skip (carried).** `tradable=false` (recorded
+  at 00:00) — no position possible. AH +14.4% real (VRatio 5.6x) but uninvestable; also float
+  64.7M (>50M gate). Carried untradable, no workup re-run.
+- **ANY — skip (SPIKE→FADE, carried).** AH +11.4% but SIP confirms fade: peaked 16:25/16:30 ET
+  then volume collapsed to 20–51K sh/bar, price churning ~10% off the $2.98 high on thin volume.
+  First-bar spike $2.95, CONFIRM-3 NO. 0/10+ SPIKE→FADE. Skip.
+- **TWG** — AH +5.9% (below 10% bar), high float 44.5M, VRatio 0.6x. Regular-session mover. Watch.
+- **GLXG / SGLY** — AH +7.8% / +6.3% (below 10% bar). Watch only.
+- **ISPC** — AH +6.9% (below 10% bar), VRatio 0.2x. Watch only.
+- **ONCO / LASE / RETO / FGL** — all dead-cat (Day −17.6% / −32.1% / −49.4% / −18.6%, Total below
+  regular close). Skip. FGL also illiquid microfloat (60K, stale wide book), carried skip.
+
+**Final-scan feed-lag cross-check:** SUNE is the strong, volume-backed name and is already the
+scanner's top hit (VRatio 7.1x, SIP-confirmed). No tracked pipeline name (21:30 watch list BNC /
+MOBX / INDP / NUR, or earlier AH names) is under-reported by the scan — none shows a real
+SIP-backed >10% AH surge that the TradingView feed dropped. No rescue needed.
+
+**Notes:**
+- **No new entries.** SUNE (only qualifying BUILD) held from 23:00, +1.0%. The one new gate-crosser
+  (ACCL) is a fading spike on a stale wide book — correctly skipped. ZJYL untradable (carried), ANY
+  SPIKE→FADE (carried). All other hits below the 10% AH bar or dead-cat/illiquid.
+- No FINAL-SCAN-GATE-BLOCK, CHASE-CAP, or DEAD-CAT/CEILING-OVERRIDE cases this scan.
+- **Night summary:** one entry tonight — **SUNE $2.95, 33 sh, Grade C** (SUNation Energy financing
+  agreement, heavy volume-backed BUILD/hold, fresh day-1 igniter). Grade C hold strategy: exit in
+  premarket. Position-evaluation owns the exit.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
