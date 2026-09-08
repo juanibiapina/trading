@@ -79,6 +79,20 @@ real winner today"** and say why — do **not** crown a weak, low-volume mover
 baseline diagnostic still runs on whatever the biggest genuine mover was, but
 the email must not present a weak name as a winner.
 
+**Prev-close basis check before crowning (recurring — 2026-09-08 BNC):**
+before crowning (or rejecting) any name near the ±100% bar, verify the
+**previous-close basis** the % is measured from. Yahoo's `previousClose`
+(and therefore `price-timeline.py`) can return a **stale close from before a
+weekend or holiday gap** — after a long weekend or a market holiday it may
+report the close two trading days back, not the true last session. A wrong
+(lower) basis inflates the % and can falsely push a sub-100% mover over the
+winner bar. **Confirm the basis against the SIP daily bar**
+(`node scripts/broker.js bars SYM --tf 1Day --limit 3`) and recompute the % from
+the true last-session close before crowning. (Basis: BNC Sep 8, Yahoo/tooling
+used $3.29 = Wed Sep 3 close → "+102.7%" over the bar, but the true Friday Sep 4
+close was $3.49 → ~+93%, **below** the bar. Applies every post-weekend /
+post-holiday morning.)
+
 **Actionable-winner refinement (Juan, recurring — 2026-08-26 WVVIP feedback):**
 clearing >100% on volume is necessary but **not sufficient** to be crowned "the
 winner." The headline winner must also be **capturable** — a name with a real
