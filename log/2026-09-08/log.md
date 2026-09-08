@@ -312,8 +312,44 @@ accumulating (16:45 ET). Scanner: **5 hits.**
   from the AH scanner — dropped unless they re-ignite.
 - Next scan 23:00 CET — first possible entries.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**First entry-eligible scan (learning-phase: entries allowed 23:00+ CET).** Scanner: **7 hits.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.37 | +0.4% | +20.7% | $2.86 | +21.2% | 6.5M | 1.0M | 6.5x | 5.4M | Engineering & Construction |
+| GCDT | [TV](https://www.tradingview.com/chart/?symbol=GCDT) | $0.91 | +143.3% | +9.1% | $0.99 | +165.4% | 17.1M | 39.5M | 0.4x | n/a | Engineering & Construction |
+| TWG | [TV](https://www.tradingview.com/chart/?symbol=TWG) | $0.52 | +17.8% | +7.5% | $0.56 | +26.6% | 4.3M | 8.6M | 0.5x | 44.5M | Food Distributors |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $2.45 | +5.6% | +8.9% | $2.67 | +15.0% | 1.3M | 442K | 3.0x | 6.5M | Information Technology Services |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $1.27 | +36.5% | +5.5% | $1.34 | +44.1% | 1.2M | 15.8M | 0.1x | 14.6M | Semiconductors |
+| FGL | [TV](https://www.tradingview.com/chart/?symbol=FGL) | $7.57 | -18.6% | +30.4% | $9.87 | +6.2% | 94K | 205K | 0.5x | 60K | Engineering & Construction |
+| EONR | [TV](https://www.tradingview.com/chart/?symbol=EONR) | $0.58 | +3.8% | +5.5% | $0.61 | +9.5% | 65K | 691K | 0.1x | 39.8M | Integrated Oil |
+
+**Spike-bar / CONFIRM-3 instrumentation (log-only, >10% AH names):**
+- `SUNE  SPIKE 16:05ET +35% $3.19 942 trades / 248k sh (first co-spike bar)` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE** (AH high in first bar + CONFIRM-3 NO)
+- `ANY   SPIKE 16:06ET +20% $2.95 241 trades / 48k sh` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE**
+- FGL — illiquid microfloat carried skip (below), no instrumentation re-run.
+
+**Per-candidate evaluation:**
+- **SUNE — ENTERED.** Cleared the 2-AH-scan gate (>10% AH at 22:30 +20.0%, 22:45 +24.9%, 23:00 +20.7% — 3 AH scans). SIP confirms real heavy accumulation across every bar: 1.49M / 1.66M / 1.0M / 1.14M / 674K / 784K / 515K / 443K / 269K sh, 10.1k / 14.5k / 8.3k / 9.0k / 5.1k / 6.0k / 4.1k / 3.8k / 2.5k trades — VRatio 6.5x, not a stale figure. VWAP $2.85→$3.00 corroborates scanner AH price (no bad print). Fresh real-time book bid $2.91 x100 / ask $2.95 x100 (20:59Z), tight. Day% +0.4% = **pure AH ignition** (not dead-cat, not intraday-extended). Total +21.2% well under the +150% ceiling. Float 5.4M (<50M). `tradable=true`. **Not a multi-session runner** — WINNERS_TRACKING SUNE entry is 2026-03-18 (6 months old, unrelated); today Day% +0.4% = fresh day-1 AH igniter. Catalyst: SUNation Energy strategic financing agreement with Participate Energy for residential solar+battery growth (GlobeNewswire, same-day) — **Grade C** (financing/partnership, weak). First-bar-spike + CONFIRM-3 NO noted (log-only, no decision impact); price holding within ~7% of the $3.19 first-bar high on accumulating volume reads hold, not fade. Volume tapering in the latest bars (269K last vs 1.5M first) — noted, but still liquid and within 20% of high. **Order: BUY 33 @ limit $2.99 ext → filled $2.95** (id ca713441).
+- **ANY — skip (SPIKE→FADE, faded below threshold).** Cleared the gate earlier (22:30 +12.7%, 22:45 +19.2%) but AH change has now dropped to +8.9% (below 10%) at this entry scan. SIP shows a clear fade: volume peaked 397K/460K sh at 16:25/16:30 ET then collapsed to 151K/62K/33K; price faded $2.98 → $2.65 across bars. First-bar-spike $2.95 @16:06, CONFIRM-3 NO. Declining across scans with collapsing volume = fade, not hold. Trajectory dominates: SUNE (BUILD/hold) preferred over ANY (SPIKE→FADE). Skip.
+- **GCDT** — AH +9.1% (below 10% bar). Day% +143.3% (huge regular-session runner), Total +165.4% **above the +150% ceiling**. VRatio 0.4x (AH vol below huge 39.5M avg). Extended intraday, no AH ignition. Skip.
+- **TWG** — AH +7.5% (below 10% bar). High float 44.5M, VRatio 0.5x. Regular-session mover. Watch only.
+- **MOBX** — AH +5.5% (below 10% bar). VRatio 0.1x (AH vol far below 15.8M avg). Regular-session mover fading in AH. Watch only.
+- **FGL** — **illiquid microfloat, skip (carried).** Float 60K, AH vol 94K, Total only +6.2% (Day −18.6% dead-cat + bounce). Stale + very wide quote across prior scans, bad-print / no fillable book. Skip.
+- **EONR** — AH +5.5% (below 10% bar), VRatio 0.1x. Watch only.
+
+**Chase-cap check (log-only):** SUNE qualifying-scan Total% +20.5% (22:30) to +25.5% (22:45); fill $2.95 = Entry Total% +24.5%, within the qualifying range. Limit $2.99 filled at the $2.95 ask, no chase above the qualifying AH price. No CHASE-CAP concern (well under the +120% fade zone).
+
+**Notes:**
+- **One entry: SUNE** (Grade C, fresh day-1 AH igniter, heavy volume-backed BUILD/hold). Filled $2.95, 33 shares (~$97).
+- ANY was the only other gated name; it faded below 10% AH with collapsing volume — SPIKE→FADE, correctly skipped in favor of the SUNE BUILD.
+- Carry-forward 21:30 regular-session watch names (BNC, MOBX, INDP, NUR, etc.) never built a real AH footprint — dropped.
+- Grade C hold strategy: exit in premarket (stop -10%). Set premarket exit for SUNE.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-| — | — | — | — | — | No entries (regular-session watch scan, AH not open) |
+| SUNE | $2.95 | 23:00 CET (5:00 PM ET) | 33 | ca713441 | Grade C (SUNation Energy financing agreement). Cleared 2-AH-scan gate (3 scans >10%), VRatio 6.5x heavy SIP accumulation, Day% +0.4% pure AH ignition, Total +21.2% under ceiling, float 5.4M, fresh tight book. Fresh day-1 igniter. |

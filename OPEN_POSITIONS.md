@@ -8,8 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Order ID | Grade | Entered | Notes |
 |--------|-------|--------|----------|-------|---------|-------|
-
-_No open positions._
+| SUNE | $2.95 | 33 | ca713441 | C | 2026-09-08 23:00 CET | SUNation Energy strategic financing agreement w/ Participate Energy (residential solar+battery, GlobeNewswire same-day) — Grade C financing/partnership. Cleared 2-AH-scan gate (22:30 +20.0%, 22:45 +24.9%, 23:00 +20.7%). Heavy SIP accumulation (VRatio 6.5x, 1.0-1.66M sh/bar, 8-14k trades/bar), VWAP $2.85-3.00 corroborates (no bad print), Day% +0.4% pure AH ignition, Total +21.2% under ceiling, float 5.4M, fresh tight book (bid $2.91/ask $2.95 @20:59Z). Fresh day-1 igniter. First-bar-spike + CONFIRM-3 NO (log-only). BUY 33 @ limit $2.99 ext filled $2.95. Grade C hold: exit in premarket, stop -10% ($2.66). |
 
 ## Position Rules
 
