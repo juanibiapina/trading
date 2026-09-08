@@ -209,6 +209,57 @@ holding regular-session levels, none spiking further in AH, none >10% AH change:
 - Carry all watch names forward to 23:00 CET (first possible entry scan). Watch whether any
   builds a real AH footprint before then.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**Observation-only scan (learning-phase: no entries before 23:00 CET).** First real AH
+volume has now accumulated (16:30 ET). Scanner: **5 hits.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.37 | +0.4% | +20.0% | $2.84 | +20.5% | 2.7M | 545K | 4.9x | 5.4M | Engineering & Construction |
+| TWG | [TV](https://www.tradingview.com/chart/?symbol=TWG) | $0.52 | +17.8% | +6.5% | $0.56 | +25.4% | 2.3M | 8.4M | 0.3x | 44.5M | Food Distributors |
+| LHSW | [TV](https://www.tradingview.com/chart/?symbol=LHSW) | $1.32 | -70.7% | +12.9% | $1.49 | -66.9% | 1.9M | 2.4M | 0.8x | 1.0M | Computer Processing Hardware |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $2.45 | +5.6% | +12.7% | $2.76 | +19.0% | 225K | 313K | 0.7x | 6.5M | Information Technology Services |
+| FGL | [TV](https://www.tradingview.com/chart/?symbol=FGL) | $7.57 | -18.6% | +28.1% | $9.70 | +4.3% | 44K | 194K | 0.2x | 60K | Engineering & Construction |
+
+**Spike-bar / CONFIRM-3 instrumentation (log-only, >10% AH names):**
+- `SUNE  SPIKE 16:05ET +35% $3.19 942 trades / 248k sh (first co-spike bar)` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE** (AH high in first bar + CONFIRM-3 NO)
+- `ANY   SPIKE 16:06ET +20% $2.95 241 trades / 48k sh` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE**
+- `LHSW  SPIKE 16:05ET +66% $2.19 2571 trades / 439k sh` — `CONFIRM-3 NO no local-volume new-high ignition`
+- `FGL   SPIKE 16:03ET +45% $11.00 365 trades / 9k sh` — `CONFIRM-3 NO no local-volume new-high ignition`
+
+**Per-candidate evaluation:**
+- **SUNE — strongest carry candidate.** SIP shows *real, heavy accumulation*: 1.49M / 1.66M
+  / 1.0M sh per bar, 10.1k / 14.5k / 8.3k trades — genuine liquid AH, not a stale VRatio.
+  VWAP $2.85→$2.99 corroborates scanner AH price (no bad print). Fresh **real-time book**
+  bid $2.97 x100 / ask $3.00 x100 (20:30Z). Day% +0.4% = **pure AH ignition** (not a
+  dead-cat, not extended intraday). Total +20.5% is well under the +150% ceiling. Float 5.4M.
+  `tradable=true`. Catalyst: **SUNation Energy strategic financing agreement with Participate
+  Energy** to support residential solar + battery growth (GlobeNewswire, same-day) — **Grade
+  C** (financing/partnership, weak). First-bar-spike + CONFIRM-3 NO noted, but volume is
+  accumulating across bars and price is *holding within ~6% of the $3.19 peak* ($2.98–3.00),
+  which reads as hold, not fade. **Carry to 23:00 CET for entry** — needs a 2nd AH scan >10%
+  to clear the gate (this is scan #1 above 10%).
+- **TWG** — AH change +6.5% (below the 10% instrumentation/qualifying bar). High float 44.5M,
+  VRatio 0.3x (AH vol below its huge 8.4M avg). Day +17.8% is regular-session. Watch only.
+- **LHSW** — **dead-cat bounce, skip.** Day −70.7%, Total −66.9% (deep below regular close —
+  a true dead-cat, still far under prior close). SIP: spiked $2.19 @16:05 then faded to
+  $1.46 (SPIKE→FADE). Recovering from a crash, not building. Skip per dead-cat rule.
+- **ANY** — real but light AH vol (120–141k sh/bar), quote stale + wide (bid $1.99 / ask
+  $2.84 @20:00Z). SPIKE→FADE off $2.95 @16:06 to ~$2.72. First-bar-spike, CONFIRM-3 NO. Watch
+  only, weak.
+- **FGL** — **illiquid microfloat, skip.** Float 60K, AH vol only 44K (9–16k sh/bar). $11.84
+  print faded to $9.00; quote stale + very wide (bid $6.36 / ask $10.13). Total only +4.3%
+  (Day −18.6% dead-cat + bounce). Bad-print / no clean fillable book. Skip.
+
+**Notes:**
+- Observation-only window — **no entries this scan.** SUNE is the clear carry candidate; it
+  needs to hold >10% AH into the 23:00 CET scan (2nd AH scan) to clear the 2-AH-scan gate.
+- Carry-forward 21:30 regular-session watch names (BNC, MOBX, INDP, NUR, etc.) did **not**
+  appear in the AH scanner and are not extending in AH — dropping unless they re-ignite.
+- Next scan 23:00 CET (first possible entry). If SUNE holds >10% AH with accumulating SIP
+  volume, it clears the gate and qualifies for entry.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
