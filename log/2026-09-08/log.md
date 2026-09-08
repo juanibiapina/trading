@@ -260,6 +260,58 @@ volume has now accumulated (16:30 ET). Scanner: **5 hits.**
 - Next scan 23:00 CET (first possible entry). If SUNE holds >10% AH with accumulating SIP
   volume, it clears the gate and qualifies for entry.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+**Observation-only scan (learning-phase: no entries before 23:00 CET).** AH volume
+accumulating (16:45 ET). Scanner: **5 hits.**
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUNE | [TV](https://www.tradingview.com/chart/?symbol=SUNE) | $2.37 | +0.4% | +24.9% | $2.96 | +25.5% | 5.1M | 826K | 6.1x | 5.4M | Engineering & Construction |
+| TWG | [TV](https://www.tradingview.com/chart/?symbol=TWG) | $0.52 | +17.8% | +5.1% | $0.55 | +23.7% | 2.7M | 8.4M | 0.3x | 44.5M | Food Distributors |
+| ANY | [TV](https://www.tradingview.com/chart/?symbol=ANY) | $2.45 | +5.6% | +19.2% | $2.92 | +25.9% | 746K | 372K | 2.0x | 6.5M | Information Technology Services |
+| ARBE | [TV](https://www.tradingview.com/chart/?symbol=ARBE) | $0.74 | +16.9% | +6.3% | $0.79 | +24.3% | 616K | 10.6M | 0.1x | 106.2M | Electrical Products |
+| FGL | [TV](https://www.tradingview.com/chart/?symbol=FGL) | $7.57 | -18.6% | +18.5% | $8.97 | -3.5% | 65K | 198K | 0.3x | 60K | Engineering & Construction |
+
+**Spike-bar / CONFIRM-3 instrumentation (log-only, >10% AH names):**
+- `SUNE  SPIKE 16:05ET +35% $3.19 942 trades / 248k sh (first co-spike bar)` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE** (AH high in first bar + CONFIRM-3 NO)
+- `ANY   SPIKE 16:06ET +20% $2.95 241 trades / 48k sh` — `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — **FIRST-BAR-SPIKE**
+- `FGL   SPIKE 16:03ET +45% $11.00 365 trades / 9k sh` — `CONFIRM-3 NO no local-volume new-high ignition`
+
+**Per-candidate evaluation:**
+- **SUNE — cleared the 2-AH-scan gate** (>10% AH at 22:30 +20.0% and 22:45 +24.9%). SIP
+  confirms *real, heavy accumulation across every bar*: 1.49M / 1.66M / 1.0M / 1.14M / 674K /
+  784K sh, 10.1k / 14.5k / 8.3k / 9.0k / 5.1k / 6.0k trades — VRatio 6.1x, not a stale figure.
+  VWAP $2.85→$3.00 corroborates the scanner AH price (no bad print). Fresh real-time book
+  bid $2.90 x100 / ask $2.93 x100 (20:45Z), tight. Day% +0.4% = **pure AH ignition** (not
+  dead-cat, not intraday-extended). Total +25.5% is well under the +150% ceiling. Float 5.4M
+  (<50M). `tradable=true`. Catalyst: SUNation Energy strategic financing agreement with
+  Participate Energy for residential solar+battery growth (GlobeNewswire, same-day) — **Grade
+  C** (financing/partnership, weak). First-bar-spike + CONFIRM-3 NO noted (log-only, no
+  decision impact), but price is *holding within ~7% of the $3.19 first-bar high* ($2.93–3.00)
+  on accumulating volume — reads hold, not fade. **Ready for entry at the 23:00 CET scan.**
+- **ANY — also cleared the 2-AH-scan gate** (>10% AH at 22:30 +12.7% and 22:45 +19.2%). SIP
+  vol lighter and choppier (120K/141K/119K/84K/397K/461K sh; 821/1044/627/583/3077/3323
+  trades) — real but a fraction of SUNE. Price churns $2.68–2.98, no clean build; first-bar
+  high $2.95, CONFIRM-3 NO. Fresh-ish book bid $2.73 / ask $2.76 (20:33Z). Day% +5.6%, Total
+  +25.9% under ceiling, float 6.5M, `tradable=true`. Weaker BUILD than SUNE but qualifies —
+  **carry to 23:00 for entry evaluation** (catalyst search pending at 23:00).
+- **TWG** — AH +5.1% (below 10% bar), high float 44.5M, VRatio 0.3x. Regular-session mover.
+  Watch only.
+- **ARBE** — AH +6.3% (below 10% bar), float 106.2M (>50M), VRatio 0.1x. Watch only.
+- **FGL** — **illiquid microfloat, skip.** Float 60K, AH vol 65K, quote stale + very wide
+  (bid $6.36 / ask $10.13 @20:00Z). Total −3.5% (Day −18.6% dead-cat + bounce). SPIKE→FADE
+  $11.00→$8.97, bad-print / no fillable book. Skip.
+
+**Notes:**
+- Observation-only window — **no entries this scan** (learning-phase: entries only at 23:00+).
+- Two names have now cleared the 2-AH-scan gate: **SUNE** (strong, heavy-volume BUILD, Grade
+  C catalyst) and **ANY** (weaker, choppier, no confirmed catalyst yet). Both hold within
+  ~20% of their AH highs; multiple positions allowed. Evaluate both for entry at 23:00 CET.
+- Carry-forward 21:30 regular-session watch names (BNC, MOBX, INDP, NUR, etc.) still absent
+  from the AH scanner — dropped unless they re-ignite.
+- Next scan 23:00 CET — first possible entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
