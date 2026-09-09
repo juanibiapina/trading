@@ -536,3 +536,203 @@ SIP-backed >10% AH surge that the TradingView feed dropped. No rescue needed.
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | SUNE | $2.95 | 23:00 CET (5:00 PM ET) | 33 | ca713441 | Grade C (SUNation Energy financing agreement). Cleared 2-AH-scan gate (3 scans >10%), VRatio 6.5x heavy SIP accumulation, Day% +0.4% pure AH ignition, Total +21.2% under ceiling, float 5.4M, fresh tight book. Fresh day-1 igniter. |
+
+---
+
+## Morning Evaluation — 10:20 CET (Sep 9, evaluating Sep 8 AH session)
+
+> Pulse 1. Diagnoses the Sep 8 evening scans above. (The eval at the *top* of this
+> file is the misfiled Sep 8-morning holiday eval — a different day.)
+
+### Today's Winner
+
+**No real AH→PM winner today.** Nothing with an after-hours footprint cleared the
+>100% bar. The morning's biggest raw explosion was a **PM-only gapper**:
+
+**YMAT** — J-Star Holding Co. (Taiwan micro-cap, Electrical Products)
+- Catalyst: **none verified same-day** (search returned only old May–July items; Nasdaq
+  min-bid delisting-determination overhang from June 12). Grade **None** — a low-float
+  squeeze, 1.6M float, VRatio 49.7.
+- Previous Close (Sep 8 SIP): **$1.32** (Yahoo's $1.69 is a stale anchor; ANCHOR WARNING).
+- AH last night: **dead** — SIP bars 100–2,321 sh/bar, price $1.22–$1.46 (−28% to −14% vs
+  close). No AH footprint.
+- Premarket now: SIP first bar 04:00 ET **O $1.75 → H $3.28** on **1.28M sh / 13,272 trades**
+  (vwap $2.55); 04:05 **1.43M sh / 13,582 trades** vwap $2.44. From $1.32 close:
+  **wick $3.28 = +148%**, sustained vwap ~$2.44–2.55 = **+85–93%**.
+- Classification: **PM-only gapper** (flat AH → ignited only at 04:00 ET PM open),
+  **holdable** in character (heavy, sustained, liquid). Structurally undetectable by the
+  AH scanner. **Not a detection miss — not counted vs baseline.**
+- Float: 1.6M | Market Cap: ~$5.3M
+
+**Best actual AH→PM trades (real AH footprint, both detected):**
+- **SUNE** (entered $2.95) — AH built to $3.36 (+42%) @18:55 ET, PM peak SIP $3.11 (+32%),
+  now ~$2.97. AH peak was the better exit; PM faded but held above close.
+- **ACCL** (skipped, SPIKE→FADE) — AH spike $3.80 (+42%) @17:26 ET faded to ~$2.86, then
+  **re-exploded in PM to $4.09 (+53%)** first bar on 748K sh / 10,547 trades. Fade-rule
+  false-negative (float 4.9M, above the sub-3M band — negative control).
+
+Neither cleared >100%. YMAT (the >100% move) had no AH entry — uncapturable overnight.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **N/A for the winner** — YMAT was dead in AH, so no evening
+  scan could see it (PM-only gapper).
+- SUNE and ACCL were both **detected** (SUNE 3+ scans, entered; ACCL 2 scans, skipped as
+  SPIKE→FADE). The scanner worked on the AH names.
+- Scanner gap: none actionable. A PM-only gapper is a structural blind spot, not a fixable
+  scanner miss.
+
+**Broker-block tracking (tradable=false):** No pure broker-block tonight. ZJYL was
+`tradable=false` but also float 64.7M (>50M gate) — not a clean all-gates qualifier, so not
+added. Standing count unchanged.
+
+**Stale-book execution-block tracking:** No new case tonight. Standing count: **3** (NUWE,
+KUST, CLRO), all detected winners, all profitable — unchanged.
+
+**No-fillable-book skip tracking:** No new case tonight. Standing count: **2** (OFAL, BIVI),
+both faded (skip validated, 0 cost) — unchanged.
+
+**Float-gate skip tracking:** No new case tonight. Standing count: **1** (CAPR, ran) —
+unchanged.
+
+**Final-scan gate-block tracking:** No new case tonight. ACCL first appeared at 00:00 (not
+final-scan-only) and was CONFIRM-3 NO / fading, so it is not a gate-block. Standing count:
+**2** (TRUG, UPC), both ran — unchanged.
+
+**Multi-session-runner outcome tracking:** +**SUNE** (Sep 8→9, **day-1 fresh igniter**,
+Day% +0.4% pure AH ignition, Grade C SUNation Energy financing, entered $2.95 → PM peak
+$3.11 = **+5.4% then round-tripped to ~entry = flat/marginal**). **Standing: 1 multi-session
+runner (1 faded: DAIC) / 16 first-day igniters (6 ran; 4 flat: PXS, TLYS, CHPT, SUNE; 6
+faded).** First-day run rate 6/16 (37.5%) — the "fresh igniters follow through" hypothesis
+stays weak. Data collection only; no gate change.
+
+### Baseline Tracking
+
+Sep 8 was a real trading session (9 scans ran) → counted sample, increment +1. **No baseline
+gap:** the last counted session was Sep 3 (Days tracked 78, diagnosed in `log/2026-09-03`);
+Sep 4 was a Friday (no Friday-evening session by design) and Sep 7 was Labor Day (holiday, no
+session) — both correctly uncounted. Chain intact.
+
+No >100% AH→PM winner existed to capture; crediting **+SUNE** as the biggest genuine detected
+AH→PM mover we entered (ACCL also detected). Selection numerator unchanged (no >100% winner
+to select), denominator +1 — same convention as Sep 2 / Sep 3.
+
+- Days tracked: **79** (was 78 + 1)
+- Winners detected by scanner: **65/74 (87.8%)** — +SUNE (detected 3 scans + entered; no
+  >100% winner cleared the bar tonight)
+- Winner selected for paper trade: **35/72 (48.6%)** — no >100% winner existed to capture;
+  entered SUNE (biggest clean AH→PM build), detected
+- Target: >80% detection
+- Status: **BASELINE MET** (87.8% detection)
+
+### Retrospective Scan Results
+
+- Live PM scan (Sep 9, 04:21 ET): 4 hits — **YMAT +87.9%** (scan basis; +148% wick vs $1.32
+  SIP close), ACCL +21.7%, SUNE +20.7%, USDE +6.2%.
+- YMAT is the only >100% move and it is a **PM-only gapper** (SIP AH bars 100–2,321 sh, flat).
+- AH reconstruction (`--ah-history` + SIP bars) confirms SUNE (real +42% AH build, 10.4M AH
+  vol) and ACCL (spike→fade $3.80 then PM re-explosion) as the real AH names.
+
+### Open Position P&L (Alpaca)
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| SUNE | $2.95 | +21.2% | C — SUNation financing | 23:00 CET | $3.11 (SIP) | 04:00 ET | — (open) | — | ~+0.7% (live) | 🟡 Open |
+
+**Quote-freshness note:** Alpaca `positions` showed `current_price $3.05 / +3.4%`, but the
+live SIP PM tape is ~$2.97 (08:10 ET, C $2.97 on 293K sh). Reporting P&L against the live SIP
+price (~+0.7%), flagging the Alpaca $3.05 as slightly high/stale. Exit is owned by
+position-evaluation (10:30 / 14:30 CET) — not closed here.
+
+**Total Realized P&L (Alpaca fills only): €0.00** (SUNE still open; no exits at this pulse).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **9** (of 7 scheduled — 22:15 & 22:45 extras added; full entry-window
+  coverage 21:30–00:30 CET). No coverage failure.
+- Candidates found: ~12 unique tickers at the final scan.
+- Retrospective matches: SUNE, ACCL, ANY, ZJYL all appeared in evening scans. Winner YMAT
+  did not (PM-only gapper, structurally invisible to AH scan).
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| YMAT | flat AH (−14 to −28%) | PM-only gapper — ignited 04:00 ET, no AH footprint (structural blind spot, not a scanner failure) | Yes if PM-entered (+85–148%), but uncapturable via AH strategy |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| SUNE | $3.36 (+42%) | 18:55 ET | Build then drift | ~$2.97 (+25%) | −12% | +25% | AH peak was better exit; held above close |
+| ACCL | $3.80 (+42%) | 17:26 ET | Spike→fade | ~$3.25 (from $4.09 pk) | — | +22% (pk +53%) | Faded AH, **re-exploded PM to $4.09** then faded |
+| ANY | $2.73 (+11%) | 16:25 ET | Spike→fade | ~$2.65 (+8%) | −5% | +8% | Faded on thin PM vol (31K sh) — skip validated |
+| ZJYL | $2.31 (+14%) | — | Build (untradable) | ~$2.28 (+13%) | −4% | +13% | `tradable=false` broker-block; mild, low vol |
+
+**AH-peak-vs-PM-peak check:** SUNE AH $3.36 (+42%) > PM $3.11 (+32%) — AH was the better exit
+(below the ~+130% extreme zone, so not an extreme-runner tally case). ACCL PM $4.09 (+53%) >
+AH $3.80 (+42%) — PM exceeded AH (also below extreme zone). No new extreme-zone (>~+130%)
+case tonight. Standing extreme-zone tally unchanged: **8 fade / 1 continue**.
+
+**Fade-rule false-negative:** ACCL (Sep 8→9, float **4.9M — above the sub-3M band**, Grade C
+Acco Group Singapore corporate-services PR) faded in AH ($3.80 @17:26 → ~$2.86) then
+re-exploded PM to $4.09. (a) AH-first-sighting entry $2.95 (00:00 scan) → PM peak $4.09 =
+**+38.6%**; (b) PM-open re-entry vwap $3.50 → $4.09 = **+16.9%**. Because float 4.9M > 3M,
+this is a **negative-control data point** (higher-float fader that re-exploded) — **not**
+counted toward the ≥4/5 sub-3M trigger. **Standing sub-3M count unchanged: 4 of 14 (below the
+≥80% trigger).**
+
+**Chase-cap tracking:** SUNE entered $2.95 at +21.2% total — not a chase into the fade zone.
+No new case. Standing count: **1** (XOS, never-reclaimed) — unchanged.
+
+**PM-only-gapper tracking:** Morning's biggest raw mover = **YMAT +148% wick / +85–93%
+sustained**, **holdable** in character (1.28–1.43M sh/bar, 13k+ trades/bar). PM-only gapper.
+It is not yet in `log/pm-open-scan.csv` (pm-open pulse runs ~04:00–05:00 ET; YMAT ignited
+04:00 ET, may be captured on that pulse's next write). Current holdable-count in
+`pm-open-scan.csv`: **46** (already well past the ≥3–4 cluster threshold). Standing action
+unchanged: the holdable-PM-only-gapper cluster is an Initiative-6 email decision, not applied
+here. Not a detection miss.
+
+**In-window feed-lag miss:** No new case tonight — the final-scan cross-check found SUNE was
+already the scanner's top hit and no real SIP-backed >10% AH name was dropped by the feed.
+Standing count: **4** (BTCT, KUST, WLDS, RAIN) — the ≥3 escalation trigger remains REACHED;
+route the AH-data-source-verification recommendation to Juan's daily email (unchanged, no new
+evidence tonight).
+
+**Price-floor exclusion:** No new sub-$0.50 case in tonight's PM movers. Standing count: **5,
+0 holdable** — unchanged.
+
+**Reverse-split-squeeze fade:** No reverse-split name entered or notably skipped tonight.
+Tally unchanged (this-week bucket 4/4 fade — recency signal RESOLVED, routed to email).
+
+**Late-AH-tail surge:** None tonight — YMAT's move was PM-only (04:00 ET), not an 18:30–20:00
+ET tail surge. Tally unchanged.
+
+### Price Charts
+
+**YMAT** (2-day, Yahoo anchor $1.69 stale; real close $1.32):
+```
+Previous Close: $1.69 (stale anchor; real Sep 8 close $1.32)
+2-Day Range: $1.02 - $3.28   Peak: $3.28 (+148% from $1.32) at 09-09 08:00 ET
+AH 09-08 16:00-19:55 ET: dead, $1.22-$1.46 on 100-2,321 sh/bar (flat/negative)
+PM 09-09 04:00 ET: O $1.75 -> H $3.28 on 1.28M sh / 13,272 trades (vwap $2.55) -> sustained $2.44-2.55
+= PM-only gapper: no AH footprint, ignited at PM open on heavy liquid volume.
+```
+
+**SUNE** (entered $2.95): AH built +26% across 3 scans to $3.36 (+42%) @18:55 ET, drifted to
+~$2.88 by 19:55 ET; PM peak SIP $3.11 @04:00 ET (631K sh), holding ~$2.90-2.97. AH peak was
+the better exit.
+
+### Notes
+
+- **No AH→PM winner cleared >100%.** The night's one >100% move (YMAT +148%) was a PM-only
+  gapper (dead in AH) — structurally uncapturable via the AH strategy, not counted vs baseline.
+- Scanner performed correctly on the AH names: SUNE (entered) and ACCL (skipped fade) both
+  detected. ACCL's PM re-explosion is a higher-float (4.9M) fade false-negative — a negative
+  control for the sub-3M hypothesis, does not move the trigger.
+- Baseline: **79 tracked, 65/74 detected (87.8%) — BASELINE MET.** No baseline gap; Fri Sep 4
+  and holiday Sep 7 correctly uncounted.
+- Coverage: full (9 scans, entry window covered).
+- **Open position SUNE** (~flat) — exit owned by position-evaluation, not this prompt.
+- **For the daily email (standing, no new evidence tonight):** in-window feed-lag miss count
+  4 (AH-data-source verification); holdable PM-only-gapper cluster (Initiative-6 pilot);
+  this-week reverse-split conviction downgrade; partial-profit-on-extreme-runners (8/9).

@@ -6,7 +6,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| _(empty — all names aged to Historical 2026-09-08; no new winner today, Sep 7 was a market holiday)_ | | | | | | |
+| 2026-09-09 | YMAT | None (Taiwan micro-float squeeze; June Nasdaq delisting-determination overhang) | $3.28 PM SIP (+148% from $1.32; 1.28M sh/13,272 tr) | — | ~$2.38 | **PM-only gapper** (dead AH, ignited 04:00 ET), holdable in character; NOT an AH→PM winner, not counted vs baseline. Float 1.6M |
 
 ## Historical Winners (with multi-day outcome)
 
@@ -14,7 +14,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 |------|--------|----------|---------|---------|-------|-------|---------|
 | 2026-09-03 | PLAG | None (unverified; iFLYTEK contract ~3wk old) | $1.00 AH SIP (+66.7%) | $0.94 PM SIP (+56.7%, 2.12M sh/9,962 tr) | — | $0.65 | Day 5: faded to $0.65. **no real winner** (nothing >100%); biggest genuine AH→PM mover, DETECTED (3 scans) + ENTERED @ $0.74, sold +13.5% (Sep 4). Float 11.6M |
 | 2026-09-02 | GELS | None (unverified; +31.6% regular session, AH continuation) | $1.10 AH SIP (+57%) | $0.97 PM SIP | ~$0.83 | $0.89 | Day 6: ~$0.89. **no real winner** — DETECTED (3 scans) + ENTERED @ $1.02, exited −15.7%, AH peak was the exit. Float n/a |
-| 2026-09-01 | BIAF | None (unverified; +44.5% regular session, AH continuation) | $8.12 AH SIP (+78%) | $6.84 PM SIP (+50%) | — | **$12.78** 🚀 | Day 7: **multi-day RUNNER to $12.78** (well above all prior peaks). DETECTED (4 scans), correctly skipped (AH >10% once, `ask $0.00 x0` no fillable book) — the illiquid skip missed a large multi-day runner. Float 573K |
+| 2026-09-01 | BIAF | None (unverified; +44.5% regular session, AH continuation) | $8.12 AH SIP (+78%) | $6.84 PM SIP (+50%) | — | **$12.78** 🚀 | Day 7: **multi-day RUNNER to $12.78** → still climbing, **$15.27 on Sep 9** (well above all prior peaks). DETECTED (4 scans), correctly skipped (AH >10% once, `ask $0.00 x0` no fillable book) — the illiquid skip missed a large multi-day runner. Float 573K |
 | 2026-08-31 | GPRO | C — Markiplier large-stake meme event | $1.44 AH SIP (+63.6%, 3–5M sh/bar) | $1.67 PM SIP (+90%, 7.4M sh/26K tr) | — | ~$1.39 | Day 8: settled ~$1.39 (near $1.30 entry). **DETECTED (22:30+ scans) + ENTERED @ $1.30** — under the >100% bar. Float 125.1M |
 | 2026-08-31 | SSM | B — non-binding LOI to combine with Sports One + 19.9% stake | $5.20 AH SIP (+94.8%) | $4.77 PM SIP (+79%) | — | ~$3.50 | Day 8: faded to $3.50 (below $4.50 entry). **DETECTED (00:00 scan) + ENTERED @ $4.50** — under the >100% bar, AH peak was the exit. Float 1.0M |
 | 2026-08-27 | AEMD | None (Aethlon Medical; clinical-stage Hemopurifier cancer trial) | $3.46 AH SIP (+59.4%) | $3.82 PM SIP (+76.0%) | ~$3.24 | $2.49 | Day 5: faded to $2.49 from $3.82 day-1 peak. **DETECTED all AH scans + ENTERED @ $3.12** — biggest genuine mover, under the +100% winner bar. Float 695K |
