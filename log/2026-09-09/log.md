@@ -73,6 +73,33 @@ Notes:
 - No spike-bar / CONFIRM-3 instrumentation — only one AH 5-min bar exists, too early for the detectors.
 - **Action:** none (observation window). Re-scan at 22:30 / 23:00 CET; enter only if YMAT (or another name) reappears with sustained >10% AH across ≥2 AH scans and clears all gates.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+**AH scan — observation only** (learning-phase default: no entries before 23:00 CET). Scanner ran at 16:30 ET, 4 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HCAI | [TV](https://www.tradingview.com/chart/?symbol=HCAI) | $4.20 | -0.5% | +23.6% | $5.19 | +23.0% | 554K | 93K | 6.0x | 3.3M | Industrial Machinery |
+| FTFT | [TV](https://www.tradingview.com/chart/?symbol=FTFT) | $2.09 | +59.5% | +13.7% | $2.38 | +81.4% | 927K | 8.9M | 0.1x | 5.4M | Finance/Rental/Leasing |
+| LHSW | [TV](https://www.tradingview.com/chart/?symbol=LHSW) | $1.02 | -22.7% | +10.8% | $1.13 | -14.4% | 164K | 3.1M | 0.1x | 1.0M | Computer Processing Hardware |
+| AMCI | [TV](https://www.tradingview.com/chart/?symbol=AMCI) | $3.18 | -20.7% | +5.9% | $3.37 | -16.0% | 147K | 122K | 1.2x | 3.7M | Packaged Software |
+
+**Instrumentation (log-only, no decision impact):**
+- `HCAI 2026-09-09 SPIKE 16:05ET +28% $5.36 488 trades / 41k sh (first co-spike bar) (as-of 16:30ET)`
+- `HCAI 2026-09-09 CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET`
+- `FTFT 2026-09-09 SPIKE 16:13ET +22% $2.54 1854 trades / 311k sh (first co-spike bar) (as-of 16:30ET)`
+- `FTFT 2026-09-09 CONFIRM-3 PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET`
+- `LHSW 2026-09-09 NO-SPIKE peak +12% @16:14ET (no bar cleared +15% on a volume co-spike) (as-of 16:30ET)`
+- `LHSW 2026-09-09 CONFIRM-3 PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET`
+
+**Per-candidate reads:**
+- **HCAI** — lead watch. Fresh AH igniter (Day flat -0.5%, pure AH ignition, not dead-cat). Real SIP accumulation: 356K sh/6462 trades (16:05), 496K sh/8959 trades (16:10), 227K sh/4073 trades (16:15); VWAP $5.05-5.25 corroborates scanner $5.19 — real spike, not a bad print. Float 3.3M, VRatio 6.0x, Total% +23% (well under 150% ceiling). `tradable=true`. **Catalyst FOUND:** GlobeNewswire 2026-09-09 (~16:04 ET) — strategic cooperation framework agreement with Beyinda Limited to expand precision metal components market in China (partnership/cooperation; framework = leans Grade B/C, decide at entry). **FIRST-BAR-SPIKE:** AH high $5.55 printed 16:10 ET (first AH bar 16:00-16:15) and CONFIRM-3 reads NO — open-bar spike, needs a volume-backed new high to confirm a build vs fade. Off peak $5.55→$5.14 (-7%, still within 20%). Quote showed stale `ask $0.00 x0` @20:00:03Z (AH-open snapshot) — recheck live book at 23:00. **Needs 2nd AH scan at 23:00 to clear the gate.**
+- **FTFT** — extended/multi-session risk. Already ran +59.5% in the regular session; Total% +81.4% is a day-2-type move, not a fresh day-1 igniter. Real AH volume (spike-bar 311k sh/1854 trades) but scanner VRatio 0.1x reflects the collapsed intraday base. Was fading below close at 22:15. Watch, do not chase an extended runner.
+- **LHSW** — DROP. Dead-cat: Day -22.7%, AH bounce still -14.4% below prior close (Total% negative), NO-SPIKE, VRatio 0.1x. Recovering from a sell-off, not building.
+- **AMCI** — DROP. AH +5.9% below the 10% threshold; dead-cat (Day -20.7%, Total% -16.0%).
+
+**Action:** none (observation window, before 23:00 CET). HCAI is the lead entry candidate for 23:00 if it holds/rebuilds with a live fillable book across a 2nd AH scan. Re-scan at 23:00 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
