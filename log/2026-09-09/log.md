@@ -191,6 +191,39 @@ Notes:
 
 **Action:** Entered **UFG** (Grade B earnings beat — revenue +72%/guidance raised, fresh day-1 igniter, cleared 2-AH-scan gate, real SIP volume, holding within 20% of AH high). Real Alpaca fill. Open positions now: CULP, HCAI, UFG. Position management handled by premarket position-evaluation pulse.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+**AH scan — ENTRIES ALLOWED.** Scanner ran at 18:00 ET, 10 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.72 | +25.0% | +13.9% | $0.82 | +42.4% | 10.5M | 10.7M | 1.0x | 9.8M | Wholesale Distributors |
+| FTFT | [TV](https://www.tradingview.com/chart/?symbol=FTFT) | $2.09 | +59.5% | +30.1% | $2.72 | +107.6% | 7.0M | 9.6M | 0.7x | 5.4M | Finance/Rental/Leasing |
+| HCAI | [TV](https://www.tradingview.com/chart/?symbol=HCAI) | $4.20 | -0.5% | +8.6% | $4.56 | +8.1% | 1.2M | 195K | 6.2x | 3.3M | Industrial Machinery |
+| CULP | [TV](https://www.tradingview.com/chart/?symbol=CULP) | $3.49 | +2.0% | +18.1% | $4.12 | +20.5% | 759K | 118K | 6.4x | 11.3M | Textiles |
+| MIMI | [TV](https://www.tradingview.com/chart/?symbol=MIMI) | $0.94 | +3.7% | +5.1% | $0.99 | +9.0% | 320K | 23.6M | 0.0x | 8.1M | Miscellaneous Commercial Services |
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $2.44 | -27.4% | +6.6% | $2.60 | -22.6% | 215K | 2.1M | 0.1x | 551K | Medical/Nursing Services |
+| PHGE | [TV](https://www.tradingview.com/chart/?symbol=PHGE) | $1.62 | +4.5% | +9.9% | $1.78 | +14.9% | 152K | 325K | 0.5x | 2.3M | Biotechnology |
+| DPU | [TV](https://www.tradingview.com/chart/?symbol=DPU) | $2.05 | +1.0% | +10.2% | $2.26 | +11.3% | 106K | 853K | 0.1x | 1.7M | Miscellaneous Commercial Services |
+| TSSI | [TV](https://www.tradingview.com/chart/?symbol=TSSI) | $8.33 | -3.8% | +5.0% | $8.75 | +1.0% | 74K | 747K | 0.1x | 25.7M | Information Technology Services |
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $0.96 | -7.3% | +5.8% | $1.02 | -1.9% | 55K | 361K | 0.2x | 4.5M | Wholesale Distributors |
+
+**Instrumentation (log-only, no decision impact):**
+- `DPU 2026-09-09 SPIKE 16:47ET +15% $2.36 90 trades / 5k sh (first co-spike bar) (as-of 18:00ET)`
+- `DPU 2026-09-09 CONFIRM-3 NO no local-volume new-high ignition as-of 18:00ET`
+
+**Per-candidate reads:**
+- **CULP — already entered at 23:00 (Grade B).** Still qualifying and holding: AH +18.1%, Total% +20.5%, VRatio 6.4x — best-behaved open position, building toward AH high. No re-entry. Position management handled premarket.
+- **UFG — already entered at 23:30 (Grade B).** Still qualifying: AH +13.9%, Total% +42.4%, VRatio now 1.0x. No re-entry. Position management handled premarket.
+- **HCAI — already entered at 23:00 (Grade C).** AH faded to +8.6% (below the 10% threshold), Total% +8.1% — the FIRST-BAR-SPIKE + CONFIRM-3 NO fade thesis is playing out (open-bar $5.55 high → $4.56, now -18% off high, at the edge of the 20% hold band). Open position; hold/sell decision is the premarket position-evaluation pulse's job, not this entry pulse.
+- **FTFT — SKIP (carried).** Faded intraday spike / extended runner + dilution. AH% now +30.1% / Total% +107.6% is a discontinuous feed-lag-driven extended move; ran $3.55 intraday then faded -41% to close before AH opened. CONFIRM-3 NO, Grade C framework agreements + dilution history. Skip stands from 23:00.
+- **DPU — DROP (thin drift, gate not cleared).** AH +10.2% clears threshold this scan but this is only the 1st AH scan >10% (23:30 was +7.8%) → 2-AH-scan gate NOT cleared. SIP confirms **thin drift, not a build**: per-bar volume 2K-16K sh / tens of trades (VRatio 0.1x, sub-1x), no accumulation. SPIKE was a weak 5k-sh bar; CONFIRM-3 NO. Quote wide/stale (`bid $1.78 / ask $2.50 @20:00Z`). Rising Total% on thin per-bar volume = thin drift skip.
+- **PHGE — DROP.** AH +9.9% below the 10% threshold. VRatio 0.5x (AH volume not real).
+- **TNON — DROP.** Dead-cat: Day -27.4%, AH bounce still -22.6% below prior close, AH +6.6% below threshold.
+- **MIMI / TSSI / EHGO — DROP.** All below the 10% AH threshold (+5.1% / +5.0% / +5.8%); MIMI/TSSI/EHGO VRatio ≤0.2x (AH volume not real), EHGO negative Total%.
+
+**Action:** No new entries. No fresh candidate cleared the 2-AH-scan gate — DPU is a thin drift (VRatio 0.1x, 1st scan >10%), all other new names below threshold or dead-cat. Open positions unchanged: CULP (holding/building, Grade B), UFG (holding, Grade B), HCAI (fading past FIRST-BAR-SPIKE thesis, Grade C). Position management handled by premarket position-evaluation pulse. One scheduled scan remains (00:30 CET / 18:30 ET).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
