@@ -6,9 +6,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 ## Current Positions
 
-| Ticker | Entry | Shares | Order ID | Grade | Entered | Notes |
-|--------|-------|--------|----------|-------|---------|-------|
-| SUNE | $2.95 | 33 | ca713441 | C | 2026-09-08 23:00 CET | SUNation Energy strategic financing agreement w/ Participate Energy (residential solar+battery, GlobeNewswire same-day) — Grade C financing/partnership. Cleared 2-AH-scan gate (22:30 +20.0%, 22:45 +24.9%, 23:00 +20.7%). Heavy SIP accumulation (VRatio 6.5x, 1.0-1.66M sh/bar, 8-14k trades/bar), VWAP $2.85-3.00 corroborates (no bad print), Day% +0.4% pure AH ignition, Total +21.2% under ceiling, float 5.4M, fresh tight book (bid $2.91/ask $2.95 @20:59Z). Fresh day-1 igniter. First-bar-spike + CONFIRM-3 NO (log-only). BUY 33 @ limit $2.99 ext filled $2.95. Grade C hold: exit in premarket, stop -10% ($2.66). |
+_No open positions._
 
 ## Position Rules
 
@@ -60,6 +58,7 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| SUNE | $2.95 | $3.06 | +$3.63 | +3.7% | 1 | C (SUNation Energy strategic financing agreement w/ Participate Energy, residential solar+battery, GlobeNewswire same-day; float 5.4M) | Grade C — exit first PM pulse. Entered 09-08 23:00 CET on AH ignition (cleared 2-AH-scan gate +20.0%→+24.9%→+20.7%, VRatio 6.5x). PM 09-09 opened liquid ($3.11 first bar, 631K sh/5768 trades), dipped to $2.80 then rebuilt to $3.02-3.15 (vwap $2.90→$3.04, 763K sh/6743 trades last bar). Stale Alpaca quote (ask $2.95 @20:59Z prior close); used SIP level. SELL 33 @ limit $2.98 ext (id 7f06a2e3) filled @ $3.06 (price improvement in liquid book). Real fill $3.06. Weak financing catalyst gave a first-bar PM dip then rebuild; exited first PM pulse at small profit. |
 | CHPT | $6.21 | $9.32 | +$49.76 | +50.1% | 2 | B (ChargePoint Q2 earnings, Electrical Products, float 22.7M) | Grade B — day-2 time limit + big winner. Entered 09-02 23:00 CET on AH BUILD/hold within 3% of AH high. Flat day 1 ($6.14 PM). Day 2 09-04 gapped to $9.2-9.5 PM (SIP vwap $9.37, liquid first bar 605 trades). Alpaca bid stale ($7.79 @20:00Z); used SIP level. SELL 16 @ limit $9.10 ext (id 2f6ec972) filled @ $9.32 (price improvement in liquid book). Real fill $9.32. Grade B held to day-2 limit captured a +50% re-rate on day 2. |
 | PLAG | $0.74 | $0.84 | +$11.30 | +13.5% | 1 | None (Planet Green Holdings, Food: Specialty/Candy, float 11.6M; no fresh same-day catalyst, iFLYTEK deal 3 weeks old) | Grade None — exit first PM at any profit. Entered 09-03 23:00 CET on volume-backed AH BUILD, CONFIRM-3 YES. PM 09-04 opened liquid ($0.90, 2.1M sh/9962 trades first bar, H $0.93) then faded to $0.84 (vwap $0.88→$0.84). Alpaca ask $0.00 x0 stale; used SIP level. SELL 113 @ limit $0.80 ext (id f72c3050) filled @ $0.84 (price improvement). Real fill $0.84. No-catalyst BUILD gave a first-bar PM pop then faded; exited at profit. |
 | GIPR | $0.63 | $0.48 | -$22.65 | -23.8% | 1 | None (Generation Income Properties REIT, float 2.6M; no fresh same-day catalyst, latest 8-K Apr 22 2026) | Grade None — exit first PM opportunity + far below -10% hard stop. Entered 09-03 23:30 CET on real volume-backed AH BUILD, CONFIRM-3 YES. PM 09-04 opened $0.57, spiked $0.60 then dumped to $0.48-0.50 on liquid SIP volume (572K sh/1925 trades first bar, vwap $0.52→$0.49). SELL 151 @ limit $0.46 ext (id 9759553b) filled @ $0.48 (price improvement). Real fill $0.48. No-catalyst BUILD collapsed at PM open. |
