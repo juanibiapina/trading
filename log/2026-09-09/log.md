@@ -100,6 +100,35 @@ Notes:
 
 **Action:** none (observation window, before 23:00 CET). HCAI is the lead entry candidate for 23:00 if it holds/rebuilds with a live fillable book across a 2nd AH scan. Re-scan at 23:00 CET.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+**AH scan — observation only** (learning-phase default: no entries before 23:00 CET). Scanner ran at 16:45 ET, 5 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| FRTT | [TV](https://www.tradingview.com/chart/?symbol=FRTT) | $0.92 | +0.8% | +19.8% | $1.10 | +20.7% | 1.9M | 429K | 4.4x | n/a | Chemicals: Agricultural |
+| HCAI | [TV](https://www.tradingview.com/chart/?symbol=HCAI) | $4.20 | -0.5% | +13.6% | $4.77 | +13.0% | 895K | 146K | 6.1x | 3.3M | Industrial Machinery |
+| CULP | [TV](https://www.tradingview.com/chart/?symbol=CULP) | $3.49 | +2.0% | +16.6% | $4.07 | +19.0% | 335K | 67K | 5.0x | 11.3M | Textiles |
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.72 | +25.0% | +8.3% | $0.78 | +35.4% | 357K | 9.6M | 0.0x | 9.8M | Wholesale Distributors |
+| LHSW | [TV](https://www.tradingview.com/chart/?symbol=LHSW) | $1.02 | -22.7% | +6.9% | $1.09 | -17.4% | 273K | 3.2M | 0.1x | 1.0M | Computer Processing Hardware |
+
+**Instrumentation (log-only, no decision impact):**
+- `FRTT 2026-09-09 SPIKE 16:27ET +30% $1.20 1715 trades / 295k sh (first co-spike bar) (as-of 16:45ET)`
+- `FRTT 2026-09-09 CONFIRM-3 YES ignition 16:15ET 3517.2x; confirmed 16:25ET $1.09 as-of 16:45ET`
+- `HCAI 2026-09-09 SPIKE 16:05ET +28% $5.36 488 trades / 41k sh (first co-spike bar) (as-of 16:45ET)`
+- `HCAI 2026-09-09 CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 16:45ET`
+- `CULP 2026-09-09 SPIKE 16:14ET +16% $4.05 209 trades / 22k sh (first co-spike bar) (as-of 16:45ET)`
+- `CULP 2026-09-09 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 16:45ET`
+
+**Per-candidate reads:**
+- **CULP** — NEW, lead entry candidate. Fresh day-1 AH igniter (Day flat +2.0%, pure AH ignition). **Catalyst FOUND (Grade B):** Culp Inc Q1 FY2027 earnings released after close today (StockTitan ~16:05 ET) — "turned a quarterly loss into a $6M profit" (earnings beat). Real SIP accumulation building: 258K sh/2937 trades (16:15), 129K sh/1591 trades (16:30, into the high); VWAP $3.79-$4.11 corroborates scanner $4.07 — real spike, not a bad print. Holding/building $4.02-4.12, AH high $4.18 at 16:15-16:20 ET (not first bar), current within ~2% of high = BUILD/hold profile. Float 11.3M (above 10M ideal, not a filter). VRatio 5.0x, Total% +19% (well under 150% ceiling). `tradable=true shortable=true`. Quote stale (`ask $4.11 @20:00:02Z` = AH-open snapshot). First AH appearance this scan — **needs 2nd AH scan at 23:00 to clear the 2-AH-scan gate.**
+- **FRTT** — NEW. Fort Technology (Nasdaq: FRTT), not Frontier Communications. Real liquid AH mover: SIP 633K/428K/1095K/1248K sh per bar, thousands of trades; two-sided book bid $1.00 x100 / ask $1.03 x100. CONFIRM-3 YES (real accumulation), spike 16:27 ET. BUT **fading from the $1.20 peak (16:25 bar) to $0.98 (16:30 bar)** — early-peak-fading profile. **Catalyst:** company had an Aug 11 M&A (Logia USA 50.1% acquisition) but no confirmed *same-day* driver found in 2 searches — will re-run at 23:00. Float n/a (MCap 8.6M). `tradable=true`. First AH appearance this scan — needs 2nd AH scan; watch whether it rebuilds or keeps fading.
+- **HCAI** — 2nd AH appearance (22:30 + 22:45), 2-AH-scan gate now cleared. Partnership catalyst (Beyinda framework agreement, leans Grade B/C). BUT **FIRST-BAR-SPIKE + CONFIRM-3 NO** — AH high $5.55 printed on the open bar (16:10 ET), never made a volume-backed new high; now $4.77 (off the $5.55 open peak −14%, at edge of the 20% hold band). Live book still `ask $0.00 x0` (stale @20:00 snapshot) — recheck real fillable ask at 23:00 before any entry. AH% decaying 22:30 +23.6% → 22:45 +13.6% = fading open-bar spike, not a build.
+- **UFG** — DROP. AH +8.3% below the 10% threshold; VRatio 0.0x (dead AH volume). Day +25.0% was a regular-session pop that already faded.
+- **LHSW** — DROP (carried). Dead-cat: Day -22.7%, AH bounce still -17.4% below prior close, AH +6.9% below threshold, VRatio 0.1x.
+
+**Action:** none (observation window, before 23:00 CET). Lead 23:00 entry candidate is **CULP** (fresh day-1 igniter, Grade B earnings beat, BUILD/hold on real SIP volume) — enter if it reappears at 23:00 with sustained >10% AH (2nd AH scan) and a live fillable book. HCAI has cleared the gate but is a fading first-bar-open-spike with no fillable ask; FRTT needs a 2nd scan and a same-day catalyst re-check. Re-scan at 23:00 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
