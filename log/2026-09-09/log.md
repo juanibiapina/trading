@@ -9,3 +9,10 @@
 - SELL 33 SUNE @ limit $2.98 ext (id 7f06a2e3) filled @ $3.06 — real fill, +$3.63 (+3.7%)
 - No open positions remain
 - SIP PM 09-09: opened $3.11 (631K sh/5768 trades), dipped $2.80, rebuilt $3.02-3.15 (vwap $3.04). Stale Alpaca quote (ask $2.95 @20:59Z) ignored; used SIP level.
+
+## Position Evaluation — 14:30 CET
+
+No open positions. SUNE exited at 10:30 pulse (filled $3.06, +3.7%). Nothing to evaluate.
+
+**Actions taken:**
+- None. Flat, all cash ($99,830.84 equity). Alpaca and OPEN_POSITIONS.md agree (no positions).
