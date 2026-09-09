@@ -160,9 +160,41 @@ Notes:
 
 **Action:** Entered **CULP** (Grade B earnings beat, fresh day-1 BUILD/hold) and **HCAI** (Grade C framework partnership, cleared gate, FIRST-BAR-SPIKE holding within 20%). Both real Alpaca fills. Skipped FTFT (faded intraday spike, extended, dilution). Position management (hold/sell) handled by premarket position-evaluation pulse.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+**AH scan — ENTRIES ALLOWED.** Scanner ran at 17:30 ET, 6 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.72 | +25.0% | +12.5% | $0.81 | +40.6% | 9.6M | 10.6M | 0.9x | 9.8M | Wholesale Distributors |
+| FTFT | [TV](https://www.tradingview.com/chart/?symbol=FTFT) | $2.09 | +59.5% | +34.9% | $2.82 | +115.3% | 5.6M | 9.4M | 0.6x | 5.4M | Finance/Rental/Leasing |
+| CULP | [TV](https://www.tradingview.com/chart/?symbol=CULP) | $3.49 | +2.0% | +17.8% | $4.11 | +20.2% | 713K | 113K | 6.3x | 11.3M | Textiles |
+| PHGE | [TV](https://www.tradingview.com/chart/?symbol=PHGE) | $1.62 | +4.5% | +9.3% | $1.77 | +14.2% | 137K | 324K | 0.4x | 2.3M | Biotechnology |
+| DPU | [TV](https://www.tradingview.com/chart/?symbol=DPU) | $2.05 | +1.0% | +7.8% | $2.21 | +8.9% | 82K | 850K | 0.1x | 1.7M | Miscellaneous Commercial Services |
+| TSSI | [TV](https://www.tradingview.com/chart/?symbol=TSSI) | $8.33 | -3.8% | +6.5% | $8.87 | +2.4% | 65K | 746K | 0.1x | 25.7M | Information Technology Services |
+
+**Instrumentation (log-only, no decision impact):**
+- `UFG 2026-09-09 SPIKE 16:30ET +15% $0.83 881 trades / 255k sh (first co-spike bar) (as-of 17:30ET)`
+- `UFG 2026-09-09 CONFIRM-3 YES ignition 16:25ET 7.2x; confirmed 16:35ET $0.84 as-of 17:30ET`
+- `FTFT 2026-09-09 SPIKE 16:13ET +22% $2.54 1854 trades / 311k sh (first co-spike bar) (as-of 17:30ET)`
+- `FTFT 2026-09-09 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 17:30ET`
+- `CULP 2026-09-09 SPIKE 16:14ET +16% $4.05 209 trades / 22k sh (first co-spike bar) (as-of 17:30ET)`
+- `CULP 2026-09-09 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 17:30ET`
+
+**Per-candidate reads:**
+- **UFG — ENTERED (Grade B).** NEW qualifier: cleared the 2-AH-scan gate (23:00 +17.7% → 23:30 +12.5% AH, both >10%). Day +25.0% (positive, not dead-cat). **Catalyst Grade B:** Uni-Fuels Holdings (Singapore marine-fuel trader) H1 2026 record results — revenue +72%, guidance raised (GlobeNewswire/StockTitan today). Fresh day-1 igniter (last traded 09-02 was Grade None, no catalyst; today has a real earnings catalyst). Real SIP accumulation, not a bad print: 2.46M sh/7751 trades (20:30Z, ignition), 1.24M–1.62M sh/bar sustained through 20:50Z, VWAP $0.78–0.88 corroborates scanner $0.81. AH high $0.92 @16:45 ET, stabilized $0.79–0.82 base since (-13% off high, within 20% hold band). Float 9.8M, Total% +40.6% (well under 150% ceiling). `tradable=true`. Quote stale (`bid $0.62 / ask $0.83 @20:00Z`, 90 min behind) — freshness guard: 1M+ sh/bar SIP proves real liquidity, used SIP level. **BUY 118 @ limit $0.85 ext (id 9afbc7bc) filled @ $0.81.** CHASE-CAP: qualifying AH $0.81/+40.6% → fill $0.81/+40.6%, no chase. MULTI-SESSION check: not in WINNERS_TRACKING, Day move is same-day earnings-driven = fresh day-1 igniter.
+- **FTFT — SKIP (carried; faded intraday spike / extended runner + dilution).** Skip stands from 23:00. AH% jumped to +34.9% (from +14.5% at 23:00) = discontinuous feed-lag artifact, not real. Day +59.5% / Total% +115.3% is a day-2-type extended move; ran to $3.55 intraday then faded -41% to close before AH opened. CONFIRM-3 NO. Grade C framework agreements + dilution history (1-for-4 reverse split Aug 26, offshore equity financing). Extended + faded + Grade C + dilution → skip.
+- **CULP — already entered at 23:00 (Grade B).** Still qualifying (AH +17.8%, Total% +20.2%, VRatio 6.3x). No re-entry (one entry per candidate per night). Position management handled premarket.
+- **PHGE — DROP.** AH +9.3% below the 10% threshold. VRatio 0.4x (AH volume not real).
+- **DPU — DROP.** AH +7.8% below threshold. VRatio 0.1x.
+- **TSSI — DROP.** AH +6.5% below threshold, Day -3.8%, VRatio 0.1x.
+
+**Action:** Entered **UFG** (Grade B earnings beat — revenue +72%/guidance raised, fresh day-1 igniter, cleared 2-AH-scan gate, real SIP volume, holding within 20% of AH high). Real Alpaca fill. Open positions now: CULP, HCAI, UFG. Position management handled by premarket position-evaluation pulse.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | CULP | $4.10 | 23:00 CET (5:00 PM ET) | 24 | b3754b0e | Grade B — Q1 FY2027 earnings beat (loss→$6M profit). Fresh day-1 igniter, BUILD/hold within 5% of AH high, cleared 2-AH-scan gate, real SIP volume. |
 | HCAI | $4.80 | 23:00 CET (5:00 PM ET) | 20 | 45f024ee | Grade C — Beyinda framework cooperation agreement (non-binding). Cleared 2-AH-scan gate 3×. FIRST-BAR-SPIKE + CONFIRM-3 NO, holding within 20% of AH high (concern noted). |
+| UFG | $0.81 | 23:30 CET (5:30 PM ET) | 118 | 9afbc7bc | Grade B — Uni-Fuels H1 2026 earnings (revenue +72%, guidance raised). Fresh day-1 igniter, cleared 2-AH-scan gate, real SIP volume (2.46M sh ignition bar), holding within 20% of AH high. No chase (fill = qualifying level). |
