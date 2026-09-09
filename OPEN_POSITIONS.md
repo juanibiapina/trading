@@ -6,7 +6,10 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 ## Current Positions
 
-_No open positions._
+| Ticker | Entry | Shares | Cost | Grade | Entry Date | Notes |
+|--------|-------|--------|------|-------|------------|-------|
+| CULP | $4.10 | 24 | $98.40 | B | 2026-09-09 | Q1 FY2027 earnings beat (loss → $6M profit), Textiles, float 11.3M. Fresh day-1 AH igniter, BUILD/hold within 5% of AH high $4.18. Cleared 2-AH-scan gate (22:45 +19.0% → 23:00 +15.8%). Real SIP volume, VWAP $3.98-4.11 corroborates. Fill $4.10 = Total% +17.5% (below qualifying +19.0%, no chase). Hold up to 2 days, stop -15% ($3.49). |
+| HCAI | $4.80 | 20 | $96.00 | C | 2026-09-09 | Beyinda framework cooperation agreement (China precision-metal-components partnership, non-binding framework → weak), Industrial Machinery, float 3.3M. Cleared 2-AH-scan gate (22:30 +23.0% → 22:45 +13.0% → 23:00 +15.6%). FIRST-BAR-SPIKE (AH high $5.55 @16:10 ET open bar) + CONFIRM-3 NO, holding ~$4.90 (-11% off high, within 20% band). Fill $4.80 = Total% +14.3% (at qualifying, no chase). Exit in premarket, stop -10% ($4.32). |
 
 ## Position Rules
 

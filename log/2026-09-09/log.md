@@ -129,9 +129,40 @@ Notes:
 
 **Action:** none (observation window, before 23:00 CET). Lead 23:00 entry candidate is **CULP** (fresh day-1 igniter, Grade B earnings beat, BUILD/hold on real SIP volume) — enter if it reappears at 23:00 with sustained >10% AH (2nd AH scan) and a live fillable book. HCAI has cleared the gate but is a fading first-bar-open-spike with no fillable ask; FRTT needs a 2nd scan and a same-day catalyst re-check. Re-scan at 23:00 CET.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+**AH scan — ENTRIES ALLOWED** (learning-phase default: entries permitted at 23:00+ CET). Scanner ran at 17:00 ET, 6 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.72 | +25.0% | +17.7% | $0.85 | +47.1% | 5.2M | 10.1M | 0.5x | 9.8M | Wholesale Distributors |
+| FRTT | [TV](https://www.tradingview.com/chart/?symbol=FRTT) | $0.92 | +0.8% | +6.0% | $0.97 | +6.8% | 3.5M | 605K | 5.9x | n/a | Chemicals: Agricultural |
+| FTFT | [TV](https://www.tradingview.com/chart/?symbol=FTFT) | $2.09 | +59.5% | +14.5% | $2.39 | +82.6% | 1.9M | 9.0M | 0.2x | 5.4M | Finance/Rental/Leasing |
+| HCAI | [TV](https://www.tradingview.com/chart/?symbol=HCAI) | $4.20 | -0.5% | +16.2% | $4.88 | +15.6% | 1.0M | 169K | 6.1x | 3.3M | Industrial Machinery |
+| CULP | [TV](https://www.tradingview.com/chart/?symbol=CULP) | $3.49 | +2.0% | +13.5% | $3.96 | +15.8% | 544K | 93K | 5.9x | 11.3M | Textiles |
+| PHGE | [TV](https://www.tradingview.com/chart/?symbol=PHGE) | $1.62 | +4.5% | +5.6% | $1.71 | +10.3% | 79K | 317K | 0.2x | 2.3M | Biotechnology |
+
+**Instrumentation (log-only, no decision impact):**
+- `HCAI 2026-09-09 SPIKE 16:05ET +28% $5.36 488 trades / 41k sh (first co-spike bar) (as-of 17:00ET)`
+- `HCAI 2026-09-09 CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 17:00ET`
+- `CULP 2026-09-09 SPIKE 16:14ET +16% $4.05 209 trades / 22k sh (first co-spike bar) (as-of 17:00ET)`
+- `CULP 2026-09-09 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 17:00ET`
+- `FTFT 2026-09-09 SPIKE 16:13ET +22% $2.54 1854 trades / 311k sh (first co-spike bar) (as-of 17:00ET)`
+- `FTFT 2026-09-09 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 17:00ET`
+
+**Per-candidate reads:**
+- **CULP — ENTERED (Grade B).** Fresh day-1 AH igniter (Day +2.0%, pure AH ignition). Cleared the 2-AH-scan gate (22:45 +16.6% → 23:00 +13.5% AH; Total% +19.0% → +15.8%). **Catalyst Grade B:** Culp Inc Q1 FY2027 earnings after close — turned a quarterly loss into a $6M profit (earnings beat). Real SIP accumulation: 258K sh/2937 trades (16:15, into the AH high $4.18), holding $3.96-4.12 across 16:15-16:45 (VWAP $3.98-4.11 corroborates scanner $3.96 — not a bad print). Current ~$3.98 = -4.8% off AH high = **BUILD/hold**. Float 11.3M (above 10M ideal, not a filter). VRatio 5.9x, Total% +15.8% (well under 150% ceiling). `tradable=true shortable=true`. CONFIRM-3 reads NO but that is log-only instrumentation, not a gate. **BUY 24 @ limit $4.15 ext (id b3754b0e) filled @ $4.10.** CHASE-CAP: qualifying AH $4.07/+19.0% → fill $4.10/+17.5%, chase gap -1.5pp (fill below qualifying, no chase). MULTI-SESSION check: not in WINNERS_TRACKING, Day flat = fresh day-1 igniter.
+- **HCAI — ENTERED (Grade C).** Cleared the 2-AH-scan gate 3× (22:30 +23.6% → 22:45 +13.6% → 23:00 +16.2% AH). Fresh igniter (Day -0.5%, not dead-cat). **Catalyst Grade C:** GlobeNewswire ~16:04 ET — strategic *cooperation framework* agreement with Beyinda Limited to expand precision metal components in China (non-binding framework = weak → C). Real SIP accumulation early (356K/496K/227K sh per bar 16:05-16:15, VWAP $5.05-5.25 corroborated). **FIRST-BAR-SPIKE:** AH high $5.55 printed 16:10 ET on the open bars, CONFIRM-3 NO — never made a volume-backed new high; bled to ~$4.90 base (16:25-16:45), volume decaying (496K → 62K → 39K sh/bar). Current $4.90 = -11% off high = still within the 20% hold band. Float 3.3M, VRatio 6.1x, Total% +15.6% (well under ceiling). `tradable=true`. Quote showed stale `ask $0.00 x0` @20:00Z (AH-open snapshot, 60 min stale) — freshness guard: HCAI traded 1M+ sh in SIP, so real liquidity exists; the $0.00 ask is a snapshot artifact, not proof of no book. Placed a limit at SIP level. **BUY 20 @ limit $5.00 ext (id 45f024ee) filled @ $4.80.** CHASE-CAP: qualifying AH $4.77/+13.0% → fill $4.80/+14.3%, chase gap +1.3pp (no chase). Concern noted: FIRST-BAR-SPIKE + CONFIRM-3 NO + decaying volume — this entry instruments whether a first-bar-open-spike that holds within 20% fades overnight.
+- **FTFT — SKIP (faded intraday spike / extended runner).** Cleared the 2-AH-scan gate technically (22:30 +13.7% → 23:00 +14.5%) but Day +59.5% / Total% +82.6% is an extended, not-fresh move. Robinhood shows Sept 9 regular-session range $1.25-$3.55: FTFT ran to $3.55 intraday then faded -41% to close $2.09 **before AH even opened**. The AH bounce to $2.54 is a *lower* high than the intraday $3.55 = spike→fade, not a fresh BUILD. Catalyst is non-binding framework agreements (TransGen SC Tech acquisition + S1Quant crypto-asset-management) = Grade C. Dilution history: 1-for-4 reverse split Aug 26, offshore equity financing Aug 4. Faded intraday spike + extended + Grade C + dilution → skip.
+- **UFG — DROP.** Only 1 AH scan >10% (this scan +17.7%; 22:45 was +8.3% below threshold) → 2-AH-scan gate NOT cleared. VRatio 0.5x (AH volume not real), Day +25.0% was a regular-session pop that faded.
+- **FRTT — DROP.** AH +6.0% below the 10% threshold this scan (was +19.8% at 22:45, now faded). Early-peak-fading; dropped below threshold.
+- **PHGE — DROP.** AH +5.6% below the 10% threshold. VRatio 0.2x (AH volume not real).
+
+**Action:** Entered **CULP** (Grade B earnings beat, fresh day-1 BUILD/hold) and **HCAI** (Grade C framework partnership, cleared gate, FIRST-BAR-SPIKE holding within 20%). Both real Alpaca fills. Skipped FTFT (faded intraday spike, extended, dilution). Position management (hold/sell) handled by premarket position-evaluation pulse.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-
-_No entries this pulse — regular-session watch-only scan (AH not open)._
+| CULP | $4.10 | 23:00 CET (5:00 PM ET) | 24 | b3754b0e | Grade B — Q1 FY2027 earnings beat (loss→$6M profit). Fresh day-1 igniter, BUILD/hold within 5% of AH high, cleared 2-AH-scan gate, real SIP volume. |
+| HCAI | $4.80 | 23:00 CET (5:00 PM ET) | 20 | 45f024ee | Grade C — Beyinda framework cooperation agreement (non-binding). Cleared 2-AH-scan gate 3×. FIRST-BAR-SPIKE + CONFIRM-3 NO, holding within 20% of AH high (concern noted). |
