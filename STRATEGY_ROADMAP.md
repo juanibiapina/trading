@@ -263,6 +263,43 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-09-09 (strategy-advance) — two fresh out-of-sample names
+   (YMAT +72.8%, DPU +45.3%) both gate-skipped as wick-peaks; entered set holds
+   n=18, edge +5.0%/name, fade-tail 3/18 (17%). Wick-denominator re-test (08-26
+   trigger met) confirms keeping the conservative wick-high gate.** Wed 09-09 PM
+   had three holdable PM-only gappers: YMAT +72.8% (footprint=none, 1.6M float),
+   DPU +45.3% (footprint=none), FGL +43.2% (ah-detected, outside the pilot's
+   footprint=none universe). Re-ran `init6-pm-pilot.js` (41 candidates): **both
+   YMAT and DPU were skipped by the continuation gate** — YMAT wicked to $3.28
+   then plateaued ~25% below it (GMEX-style wick-peak), DPU had only 3 real bars
+   (late 04:35 ramp + SIP blocking the recent ~15 min), so neither can hold R+1/
+   R+2 against the wick high. Entered set stays **n=18: SUM +90.0% / mean +5.0% /
+   median +10.0% / positive 14/18**, vs a PM-last floor of -6.4% and a do-nothing
+   baseline of 0%; net of ~2% spread ~+3.0%/name. Fuller 09-08 data refined BNC
+   to PM-last -14.7% (was -15.3%) and ISPC to -2.6% (limit-win locked); fade-tail
+   3/18 (BIVI -27.1%, MIMI-2 -6.9%, BNC -14.7%) = 17%. **YMAT/DPU are the 3rd and
+   4th wick-then-rebuild holdables the wick-high gate has rejected (after WVVIP
+   08-25, RDIB 08-26), meeting the 08-26 trigger to re-test a holdable-gated
+   close-denominator.** Re-ran `init6-gate-denom-test.js` (footprint=none, n=61):
+   close-denom recovers 4 clean holdable +10% winners (WXM, RDIB, YDDL, DPU) but
+   **also admits YMAT as a -23% fade into the holdable set** (its early plateau
+   collapsed after 04:45 to PM-last -23%) AND balloons the uninvestable
+   false-positive bucket from -16.3%/n7 to -61.7%/n13 (LICN -50%, DXST -15%). So
+   the relaxation is still not free: within holdable it lifts SUM (+94.8 -> +111.7)
+   but dilutes the mean (+5.9 -> +5.3) and adds a fade to the tail. **Decision:
+   keep the conservative wick-high gate** — for the 09-09 pair specifically it was
+   net +13% (correctly avoided YMAT -23%, missed DPU +10%), and the wick-high
+   rejection of wick-peak fades is exactly the protection the pilot wants before
+   going live. Init 3 data-blocked (no held-name exit, `OPEN_POSITIONS.md` flat),
+   holds at n=36; Init 2 blocked on Juan (account). Still log-only, no orders.
+   Next: keep seeding both sims; revisit the close-denominator only if clean
+   wick-rebuild winners (WXM/RDIB/YDDL/DPU-type) start clearly outnumbering
+   YMAT-type wick-fades. **Deadline note:** with the ~10-01 net-positive target
+   ~3 weeks out and the live cycle entering none of these PM-only gappers, the
+   two standing asks below are now the money-fast bottleneck — the Init 6 pilot
+   edge is stable (n=18, +5.0%/name, tail 17%, two converging studies) but going
+   live needs a broker that actually fills these names (Init 2 account) plus
+   Juan's sign-off on the entry pulse.
    **Update 2026-09-08 (strategy-advance) — pilot universe widened to include
    no-AH-session holiday PM-only gappers; two fresh out-of-sample admits (ISPC
    +10% limit-win, BNC -15.3% fade), WETO-2 self-corrected to a limit-win;
