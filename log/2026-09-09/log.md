@@ -224,6 +224,47 @@ Notes:
 
 **Action:** No new entries. No fresh candidate cleared the 2-AH-scan gate — DPU is a thin drift (VRatio 0.1x, 1st scan >10%), all other new names below threshold or dead-cat. Open positions unchanged: CULP (holding/building, Grade B), UFG (holding, Grade B), HCAI (fading past FIRST-BAR-SPIKE thesis, Grade C). Position management handled by premarket position-evaluation pulse. One scheduled scan remains (00:30 CET / 18:30 ET).
 
+## Scan 00:30 CET (6:30 PM ET)
+
+**AH scan — ENTRIES ALLOWED. Final scheduled scan of the night.** Scanner ran at 18:30 ET, 7 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.72 | +25.0% | +12.5% | $0.81 | +40.6% | 12.3M | 10.9M | 1.1x | 9.8M | Wholesale Distributors |
+| FTFT | [TV](https://www.tradingview.com/chart/?symbol=FTFT) | $2.09 | +59.5% | +24.4% | $2.60 | +98.5% | 7.8M | 9.7M | 0.8x | 5.4M | Finance/Rental/Leasing |
+| HCAI | [TV](https://www.tradingview.com/chart/?symbol=HCAI) | $4.20 | -0.5% | +13.8% | $4.78 | +13.3% | 1.2M | 199K | 6.2x | 3.3M | Industrial Machinery |
+| CULP | [TV](https://www.tradingview.com/chart/?symbol=CULP) | $3.49 | +2.0% | +16.6% | $4.07 | +19.0% | 799K | 123K | 6.5x | 11.3M | Textiles |
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $2.44 | -27.4% | +5.3% | $2.57 | -23.5% | 231K | 2.1M | 0.1x | 551K | Medical/Nursing Services |
+| PHGE | [TV](https://www.tradingview.com/chart/?symbol=PHGE) | $1.62 | +4.5% | +11.1% | $1.80 | +16.1% | 158K | 326K | 0.5x | 2.3M | Biotechnology |
+| DPU | [TV](https://www.tradingview.com/chart/?symbol=DPU) | $2.05 | +1.0% | +7.8% | $2.21 | +8.8% | 118K | 855K | 0.1x | 1.7M | Miscellaneous Commercial Services |
+
+**Instrumentation (log-only, no decision impact):**
+- `UFG 2026-09-09 SPIKE 16:30ET +15% $0.83 881 trades / 255k sh (first co-spike bar) (as-of 18:30ET)`
+- `UFG 2026-09-09 CONFIRM-3 YES ignition 16:25ET 7.2x; confirmed 16:35ET $0.84 as-of 18:30ET`
+- `FTFT 2026-09-09 SPIKE 16:13ET +22% $2.54 1854 trades / 311k sh (first co-spike bar) (as-of 18:30ET)`
+- `FTFT 2026-09-09 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 18:30ET`
+- `HCAI 2026-09-09 SPIKE 16:05ET +28% $5.36 488 trades / 41k sh (first co-spike bar) (as-of 18:30ET)`
+- `HCAI 2026-09-09 CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 18:30ET`
+- `CULP 2026-09-09 SPIKE 16:14ET +16% $4.05 209 trades / 22k sh (first co-spike bar) (as-of 18:30ET)`
+- `CULP 2026-09-09 CONFIRM-3 NO ignition 16:10ET failed third-bar hold/volume as-of 18:30ET`
+- `PHGE 2026-09-09 NO-SPIKE peak +14% @16:16ET (no bar cleared +15% on a volume co-spike) (as-of 18:30ET)`
+- `PHGE 2026-09-09 CONFIRM-3 NO no local-volume new-high ignition as-of 18:30ET`
+
+**Per-candidate reads:**
+- **CULP — already entered at 23:00 (Grade B).** Still qualifying: AH +16.6%, Total% +19.0%, VRatio 6.5x — best-behaved open position, holding near AH high. No re-entry. Position management handled premarket.
+- **UFG — already entered at 23:30 (Grade B).** Still qualifying: AH +12.5%, Total% +40.6%, VRatio 1.1x. No re-entry. Position management handled premarket.
+- **HCAI — already entered at 23:00 (Grade C).** AH +13.8% back above threshold, Total% +13.3%. FIRST-BAR-SPIKE + CONFIRM-3 NO thesis still in play (open-bar $5.55 high → $4.78, -14% off high, within the 20% hold band). Open position; hold/sell is the premarket pulse's job.
+- **FTFT — SKIP (carried).** Faded intraday spike / extended runner + dilution. AH% +24.4% / Total% +98.5% is a discontinuous feed-lag-driven extended move; ran $3.55 intraday then faded -41% to close before AH opened. CONFIRM-3 NO, Grade C framework agreements + dilution history. Skip stands from 23:00.
+- **PHGE — DROP (thin drift, gate not cleared).** First AH scan >10% (23:00 +5.6% → 23:30 +9.3% → 00:00 +9.9% → 00:30 +11.1%), so the 2-AH-scan gate is NOT cleared at the final scan. SIP confirms thin drift, not a build: peak $1.85 @17:00 ET then fade to ~$1.77; per-bar volume tens of trades / few-K sh, single 68K-sh bar at 16:15 ET (VRatio 0.5x). NO-SPIKE, CONFIRM-3 NO. **Not a FINAL-SCAN-GATE-BLOCK** — fails the "real volume-backed late ignition" test (thin, no CONFIRM-3 YES). Rising Total% on thin per-bar volume = thin-drift skip.
+- **TNON — DROP.** Dead-cat: Day -27.4%, AH bounce still -23.5% below prior close, AH +5.3% below threshold, VRatio 0.1x.
+- **DPU — DROP (thin drift, carried).** AH +7.8% back below the 10% threshold (was +10.2% at 00:00). VRatio 0.1x, per-bar volume 2K-16K sh. Never cleared the 2-AH-scan gate.
+
+**Final-scan feed-lag cross-check (pipeline names):** FRTT (dropped off the scan after peaking +19.8% at 22:45) — SIP confirms a genuine early-peak fade: $1.20 @16:25 ET → ~$0.91 @17:45 ET (back to ~close $0.92). Not under-reported by TradingView; correctly off the scan, no rescue. Other pipeline names (UFG/HCAI/CULP/FTFT) all present in the scan at their real SIP levels; no feed-lag omission this scan.
+
+**FINAL-SCAN-GATE-BLOCK:** none. No name cleared every rule except the 2-AH-scan gate with real volume-backed late ignition — PHGE (the only fresh threshold-crosser) is a thin drift (VRatio 0.5x, NO-SPIKE, CONFIRM-3 NO), not a genuine late igniter.
+
+**Action:** No new entries at the final scan. Open positions unchanged: CULP (Grade B, holding near AH high), UFG (Grade B, holding), HCAI (Grade C, fading past FIRST-BAR-SPIKE thesis but within 20% band). Night complete — 3 entries (CULP, HCAI, UFG). Position management (hold/sell) handled by the premarket position-evaluation pulse.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
