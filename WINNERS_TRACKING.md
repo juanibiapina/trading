@@ -6,7 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-09-09 | YMAT | None (Taiwan micro-float squeeze; June Nasdaq delisting-determination overhang) | $3.28 PM SIP (+148% from $1.32; 1.28M sh/13,272 tr) | — | ~$2.38 | **PM-only gapper** (dead AH, ignited 04:00 ET), holdable in character; NOT an AH→PM winner, not counted vs baseline. Float 1.6M |
+| 2026-09-09 | YMAT | None (Taiwan micro-float squeeze; June Nasdaq delisting-determination overhang) | $3.28 PM SIP (+148% from $1.32; 1.28M sh/13,272 tr) | — | ~$1.32 (faded to close) | **PM-only gapper** (dead AH, ignited 04:00 ET), holdable in character; day-2 faded back to base. NOT an AH→PM winner, not counted vs baseline. Float 1.6M |
+| 2026-09-10 | TNON | C — early $5.16M convertible-note repayment (funded by dilutive $4.2M offering) | $4.22 PM SIP (+72.9% from $2.44; 1.18M sh/13,095 tr) 04:00 ET | — | ~$3.66-4.22 | **No real winner** (below +100% bar); dead-cat bounce off −27% dilution dump. DETECTED (2 scans), correctly skipped (dead-cat + sub-10% AH threshold). Float 551K |
 
 ## Historical Winners (with multi-day outcome)
 
