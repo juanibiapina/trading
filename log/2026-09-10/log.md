@@ -167,3 +167,14 @@ Notes:
 - TNON is yesterday's dilution dead-cat that bounced +72.9% in PM — already traded through; watch only, no re-entry thesis unless a fresh AH catalyst appears.
 - No spike-bar / CONFIRM-3 instrumentation this pulse — AH bars do not exist yet (AH opens 16:00 ET).
 - **Action:** none. Re-scan at 22:00+ CET to see which names carry real AH liquidity.
+
+## Scan 22:00 CET (4:00 PM ET)
+
+**AH just opened (16:00 ET).** Scanner ran at 16:00:28 ET — 28 seconds into after-hours, before any postmarket volume accumulates. TradingView postmarket fields empty this early.
+
+**No candidates found.**
+
+- `scan.py --all` (AFTERHOURS session): 0 hits.
+- Observation-only pulse (before 23:00 CET) — no entries regardless.
+- 21:30 regular-session watch names (TNON, DBGI, AHMA, VANAF, PSIG, PHGE, BYSI, SKYQ, ATER, CMRC, TPET) carry forward; re-check for real AH liquidity at 22:30. Most showed collapsed intraday volume (VChg −80%+) at 21:30, so few are expected to carry into AH.
+- **Action:** none. Re-scan at 22:30 CET once AH volume accumulates.
