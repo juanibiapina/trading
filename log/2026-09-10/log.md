@@ -319,3 +319,48 @@ OMH (AH +8.0%) and CLIK (AH +7.2%) are **below the 10% AH threshold** — not en
 - **TPET** (Day +11.6%, AH +5.9%), **FTFT** (Day −1.9%, AH +8.3%): both below the 10% AH threshold; TPET VRatio 0.1x (thin AH), FTFT VRatio 0.0x (yesterday's faded reverse-split name). No entry.
 - **No dead-cat-override, ceiling-override, chase-cap, final-scan-gate-block, broker-block, stale-book, or no-fillable-book cases** this pulse.
 - **Action:** none (no entry). Re-scan at 00:00 CET — primary watch is DBGI reclaiming >10% AH for a 2nd qualifying scan; GBR as a secondary if it clears threshold.
+
+## Scan 00:00 CET (6:00 PM ET)
+
+**AH open 120 min (18:00 ET). Entry window open (23:00+ CET).** Scanner ran at 18:00:17 ET — 5 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $2.11 | −2.2% | +14.7% | $2.42 | +12.1% | 1.0M | 142K | 7.2x | 1.7M | Pharmaceuticals: Major |
+| NCRA | [TV](https://www.tradingview.com/chart/?symbol=NCRA) | $1.86 | +0.0% | +12.9% | $2.10 | +12.9% | 130K | 6.7M | 0.0x | 1.9M | Engineering & Construction |
+| GBR | [TV](https://www.tradingview.com/chart/?symbol=GBR) | $0.84 | +11.1% | +5.9% | $0.89 | +17.7% | 545K | 87K | 6.3x | 4.7M | Real Estate Development |
+| TPET | [TV](https://www.tradingview.com/chart/?symbol=TPET) | $2.02 | +11.6% | +8.9% | $2.20 | +21.5% | 348K | 2.4M | 0.1x | 4.8M | Integrated Oil |
+| ELOG | [TV](https://www.tradingview.com/chart/?symbol=ELOG) | $0.61 | −9.5% | +7.1% | $0.66 | −3.1% | 495K | 1.1M | 0.4x | 6.8M | Air Freight/Couriers |
+
+**Only XRTX (+14.7%) and NCRA (+12.9%) clear the 10% AH threshold.** GBR (+5.9%), TPET (+8.9%), ELOG (+7.1%) are all below the threshold — not entry candidates.
+
+**Decision this pulse: NO live entry.** The one 2-AH-scan-gate passer (XRTX) is a confirmed first-bar-spike skip. The one fresh >10% igniter (NCRA) is on its first AH scan and fails the 2-AH-scan gate. No BUILD candidate holding above threshold.
+
+### XRTX — SKIP (first-bar-spike / fade), FIRST-BAR-SPIKE WATCH carried
+
+- **Passes the 2-AH-scan gate** (>10% AH at 22:30, 22:45, 23:00, 23:30, 00:00) — but skipped on the first-bar-spike rule.
+- **Instrumentation:** `SPIKE 16:05ET +28% $2.70 390 trades / 38k sh (first co-spike bar)`, `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 18:00ET` — every scan.
+- **SIP:** AH high $2.74 (344,820 sh / 3,509 trades) printed in the 16:05 ET first bar, volume fades every bar after; price ~$2.40–2.42. No volume-backed new AH high after the open bar.
+- **Skip rule:** AH high in first AH bar + CONFIRM-3 NO every scan = single-bar pop, not a build → skip. Float 1.7M / VRatio 7.2x do not override.
+- **FIRST-BAR-SPIKE WATCH (hypothetical):** entry $2.44 @ 23:00 CET carried; still ~$2.42 (within ~20% of $2.74 high). Morning-eval tracks whether the skip was correct. (Standing first-bar-spike entries 0/3 sustained.)
+
+### NCRA — NEW, fresh late igniter, fails 2-AH-scan gate (NOT entered)
+
+- **First AH-scan appearance >10% is this 00:00 scan** — cannot enter (2-AH-scan gate). Not yet the final scan, so it can earn a 2nd qualifying scan at 00:30.
+- **Instrumentation:** `SPIKE 17:27ET +17% $2.17 111 trades / 10k sh (first co-spike bar)`, `CONFIRM-3 NO no local-volume new-high ignition as-of 18:00ET`.
+- **SIP bars = real but modest accumulation, already fading:** flat/thin until 21:25Z (17:25 ET), then ignition 50,118 sh / 252 trades (H $2.17), 26,550 / 244, 44,367 / 503 (H $2.16), 29,441 / 383, then 10,215 / 104 (17:45 ET, H $2.10). Peak $2.17 at 17:25 ET; per-bar volume decaying off the peak. Real trades (hundreds/bar) but tens-of-K sh/bar, not hundreds-of-K — a modest igniter, not a heavy build. Scanner VRatio 0.0x reflects the 6.7M avg vol denominator; SIP shows the AH move is real but light.
+- **Setup:** float 1.9M (tiny), Day% +0.0% (pure AH ignition, fresh day-1 igniter — not a multi-session runner), Total% +12.9% (well under +150% ceiling), `tradable=true`. Quote `bid $1.59 x100 ask $0.00 x0` (timestamped 20:00:01Z = stale near-close; no live fillable ask yet).
+- **Catalyst (tentative, ~Grade C/None):** 2 websearch calls — no confirmed same-day PR or earnings (next earnings 11/13/2026). Recent corporate action on file: acquired a 30% controlling interest in Qmax Technology (Taiwan memory/storage) — a pivot toward memory/storage, but no dated same-day release confirmed. Recorded as **no confirmed same-day catalyst** this pulse; re-search at 00:30 if it clears the gate.
+- **Action:** carry as watch. If NCRA holds >10% AH at the 00:30 final scan, it earns its 2nd qualifying scan — but 00:30 is the last scheduled scan, so a 2nd-scan qualification there triggers the **FINAL-SCAN-GATE-BLOCK** instrumentation note rather than a live entry (gate requires 2 AH scans, and this would be scans #1 at 00:00 and #2 at 00:30 — it does qualify the gate at 00:30 if it holds, then evaluate all other rules). On current fading per-bar volume it is weakening.
+
+### DBGI — BUILD topped and faded, gate never met (carried, effectively dead)
+
+- **SIP:** peaked H $7.85 (371K sh / 5,374 trades) at 16:40 ET, then bled every bar to $6.90 (17:35 ET, 55K sh / 843 trades) — now ~+1.6% AH, well below the 10% threshold and ~12% off the $7.85 peak.
+- Cleared >10% AH **only once** (23:00 scan) → 2-AH-scan gate never met. The build peaked at 16:40 ET and has faded for ~55 min. Topped build, not an entry. Watch only.
+
+### Other tracked names
+
+- **TNON** (multi-session runner): absent from this scan / below threshold. Late-stage day-2+ dilution runner — watch only.
+- **GBR** (Day +11.1%, AH +5.9%), **TPET** (Day +11.6%, AH +8.9%), **ELOG** (Day −9.5%, AH +7.1%): all below the 10% AH threshold. TPET VRatio 0.1x (thin AH), ELOG VRatio 0.4x (thin, Day −9.5%). No entry, no full workup.
+- **No dead-cat-override, ceiling-override, chase-cap, broker-block, stale-book, or no-fillable-book cases** this pulse.
+- **Action:** none (no entry). Re-scan at 00:30 CET (final) — watch NCRA for a 2nd qualifying AH scan (→ FINAL-SCAN-GATE-BLOCK check if it holds), and cross-check all pipeline names (DBGI, TNON, XRTX, GBR, TPET, NCRA) against SIP per the final-scan feed-lag rule before finalizing.
