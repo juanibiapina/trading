@@ -141,3 +141,29 @@ Source of truth: Alpaca `broker.js positions`. Quote feed still frozen at 20:00Z
 - SELL HCAI: canceled stale 10:30 order (id 56b71006, limit $4.68, unfilled in dead book). Repriced SELL 20 @ limit $4.10 ext (id b4efbafd) → filled @ $4.13 (price improvement). Real fill $4.13. P&L -$13.40 (-14.0%). Moved to Closed Positions.
 - CULP: HOLD, no action (Grade B day 1, ~flat, within params).
 - UFG: HOLD, no action (Grade B day 1, -12.3%, above -15% stop). Near stop — sell next pulse if it breaks $0.69.
+
+## Scan 21:30 CET (3:30 PM ET)
+
+**REGULAR session — AH not open yet (opens 16:00 ET / 22:00 CET).** Watch-only pulse per regular-session caution rule. No paper entries. Candidates flagged pending AH confirmation; only enter if they reappear in a 22:00+ CET AH scan with sustained momentum.
+
+Regular-session movers >10% (watch list):
+
+| Ticker | Chg% | Price | Float | MCap | VChg% | Industry | Note |
+|--------|------|-------|-------|------|-------|----------|------|
+| TNON | +119.3 | $5.35 | 899K | $2.5M | -100.0 | Medical/Nursing Services | Yesterday's dilution dead-cat (+72.9% PM); volume dead — watch AH |
+| DBGI | +83.2 | $6.87 | 906K | $6.4M | -99.9 | Apparel/Footwear | Tiny float; volume dead — watch AH |
+| AHMA | +36.3 | $1.75 | 2.1M | $51.9M | -82.5 | Misc Commercial Services | Low float; intraday pop faded — watch AH |
+| VANAF | +29.3 | $0.75 | 5.6M | $12.6M | -67.7 | Financial Conglomerates | Volume faded — watch AH |
+| PSIG | +28.4 | $2.29 | 8.6M | $35.3M | +22.0 | Air Freight/Couriers | Volume still positive — watch AH |
+| PHGE | +24.1 | $2.01 | n/a | $5.5M | -99.9 | Biotechnology | Prior winner name; volume dead — watch AH |
+| BYSI | +21.8 | $0.77 | 31.9M | $31.5M | -45.1 | Pharmaceuticals: Major | High float — watch AH |
+| SKYQ | +20.4 | $3.21 | 7.3M | $28.4M | -81.4 | Integrated Oil | Volume faded — watch AH |
+| ATER | +20.3 | $0.85 | 13.7M | $15.3M | +572.0 | Internet Retail | Volume building into close — watch AH |
+| CMRC | +18.3 | $3.08 | 73.4M | $254.8M | -27.9 | Packaged Software | High float — watch AH |
+| TPET | +11.1 | $2.01 | 4.8M | $9.9M | +77.1 | Integrated Oil | Volume still positive — watch AH |
+
+Notes:
+- Most movers show collapsed intraday volume (VChg -80%+), meaning the regular-session pop already faded. ATER (VChg +572), TPET (+77), PSIG (+22) are the exceptions with volume still building/positive into the close.
+- TNON is yesterday's dilution dead-cat that bounced +72.9% in PM — already traded through; watch only, no re-entry thesis unless a fresh AH catalyst appears.
+- No spike-bar / CONFIRM-3 instrumentation this pulse — AH bars do not exist yet (AH opens 16:00 ET).
+- **Action:** none. Re-scan at 22:00+ CET to see which names carry real AH liquidity.
