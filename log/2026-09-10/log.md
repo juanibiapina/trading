@@ -178,3 +178,15 @@ Notes:
 - Observation-only pulse (before 23:00 CET) — no entries regardless.
 - 21:30 regular-session watch names (TNON, DBGI, AHMA, VANAF, PSIG, PHGE, BYSI, SKYQ, ATER, CMRC, TPET) carry forward; re-check for real AH liquidity at 22:30. Most showed collapsed intraday volume (VChg −80%+) at 21:30, so few are expected to carry into AH.
 - **Action:** none. Re-scan at 22:30 CET once AH volume accumulates.
+
+## Scan 22:15 CET (4:15 PM ET)
+
+**AH open 15 min (16:15 ET).** Scanner ran at 16:15:24 ET.
+
+**No candidates found.**
+
+- `scan.py --all` (AFTERHOURS session): 0 hits. TradingView postmarket volume still not accumulating enough to clear thresholds this early.
+- Observation-only pulse (before 23:00 CET) — no entries regardless.
+- 21:30 regular-session watch names (TNON, DBGI, AHMA, VANAF, PSIG, PHGE, BYSI, SKYQ, ATER, CMRC, TPET) still not carrying into AH on the scan — consistent with their collapsed intraday volume (VChg −80%+). ATER/TPET/PSIG (the volume-still-positive exceptions at 21:30) also absent so far.
+- No spike-bar / CONFIRM-3 instrumentation this pulse — no AH candidates above the 10% threshold to instrument.
+- **Action:** none. Re-scan at 22:30 CET once AH volume accumulates.
