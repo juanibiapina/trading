@@ -6,6 +6,65 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-09-09 — re: Trading Scanner Report - 2026-09-08
+
+**Juan said:** "SUNE is not a good entry because price only went up in the first
+5m bar. all subsequent bars are stable, so you shouldn't entry. How about we
+monitor every 5m in the beginning of PM so that we can enter stocks that have:
+- increasing price for the first 2 or 3 5m bars
+- super high volume compared to the rest of the time (something is happening,
+volume is enough, no need for catalist). the graph for volume reveals a lot to
+me, but I don't know what the calculation should be."
+
+**Interpretation:** Three linked points, all entry-shape/timing, not detection.
+
+1. **SUNE was a bad entry — one-bar price pop, then flat.** SUNE entered $2.95
+   (Grade C financing) and closed +3.7%. Juan rejects the *shape*: price rose
+   only on the first 5m bar, then all subsequent bars were stable. A single-bar
+   pop with no continuation is not the ignition profile — it is the price-only /
+   no-sustained-build case, adjacent to the flat-volume rejects (GELS/GIPR
+   09-02/09-04, DAIC 08-24, BOOM 07-31). SUNE is a new **negative control**: not
+   a flat-volume price spike, but a *single-bar* move that stalls.
+
+2. **Enter on 2-3 rising 5m bars; monitor every 5m at the start of the window.**
+   Juan restates the entry-shape and cadence rule: require **increasing price
+   across the first 2-3 5m bars** (a held build, not one bar), and poll every
+   5m early so the build is caught in real time. This is the **third** live
+   restatement of "2-3 bars are enough + add early 5m pulses" (AEMD 08-28, AMIX
+   07-29) — now framed as a build-confirmation gate (2-3 consecutive up bars)
+   rather than a latency complaint. Note he says "beginning of PM"; the pilot
+   universe already targets the ~04:00-04:21 ET PM-open ignition (Init 6), so
+   this rule applies to both the AH-open and PM-open ignition windows.
+
+3. **"Super high volume vs the rest of the time" — define the volume metric.**
+   Juan wants entry gated on volume that is far above the ticker's own baseline
+   ("something is happening, volume is enough, no need for catalyst") — the same
+   per-bar local-spike idea as the 10-20x gate (09-02/09-04). New and concrete:
+   he says **the volume graph reveals a lot but he does not know what the
+   calculation should be** — an explicit request to *define the volume metric*
+   (per-bar volume vs a rolling baseline of the ticker's own recent bars, the
+   ratio/threshold, and how to render it on the chart). Note "no need for
+   catalyst" reaffirms volume+price ignition can stand alone.
+
+**Action:** Captured and routed; no live rule/schedule change here.
+- **Point 1 (SUNE):** added as a negative control the entry gate must reject —
+  a single-bar price pop that stalls (subsequent bars flat). Routed to
+  Initiative 1 alongside GELS/GIPR, tagged as the "one bar up then stable" shape
+  (distinct from flat-volume). Flagged for the next `scanner-improvement` run.
+- **Point 2 (2-3 rising bars + 5m cadence):** routed to Initiative 3 as the
+  third live restatement (AEMD, AMIX) of the 2-3-bar build confirmation + denser
+  early 5m pulses. Reinforces the CONFIRM-hard-gate + cadence-densify proposal
+  already staged for Juan. This converges with Init 6's continuation gate (R+1/
+  R+2 must hold), which already encodes "2-3 bars must hold, not one wick."
+- **Point 3 (define the volume metric):** routed to Initiative 1 as a concrete
+  spec ask — define the per-bar local-volume-spike calculation (rolling baseline
+  window, ratio, 10-20x threshold from 09-02) and render it on the daily-email
+  volume chart (Initiative 5) so the "graph reveals a lot" becomes an explicit,
+  computed gate. Flagged for the next `scanner-improvement` run to specify and
+  implement the metric.
+
+---
+
 ### 2026-09-04 — re: Trading Scanner Report - 2026-09-03
 
 **Juan said:** "GIPR is another violation of volume rule. Can you also research

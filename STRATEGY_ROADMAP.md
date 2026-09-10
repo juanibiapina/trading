@@ -205,6 +205,18 @@ the ignition**, not a new signal.
    ignition**, since CONFIRM-3 YES fired on DAIC's thin AH-open bar. Routed to
    `scanner-improvement` to re-check the CONFIRM-3 spike-size threshold. See
    `FEEDBACK_LOG.md` 2026-08-27.
+   **Update 2026-09-09 (Juan feedback, 09-08 cycle):** "SUNE is not a good entry
+   because price only went up in the first 5m bar. all subsequent bars are
+   stable ... How about we monitor every 5m in the beginning of PM so that we
+   can enter stocks that have increasing price for the first 2 or 3 5m bars."
+   Third live restatement of the 2-3-bar rule (AEMD 08-28, AMIX 07-29), now as a
+   **build-confirmation gate**: require increasing price across the first 2-3 5m
+   bars (a held build, not a one-bar pop like SUNE) and poll every 5m early so
+   the build is caught live. Converges with Init 6's continuation gate (R+1/R+2
+   must hold 80% of the ignition) — both encode "2-3 bars must hold, not one
+   wick." Reinforces the cadence-densify + hard-CONFIRM-gate proposal already
+   staged for Juan; the volume half of the same ask is routed to Init 1 (define
+   the per-bar volume metric). See `FEEDBACK_LOG.md` 2026-09-09.
 3. **Initiative 5 - better data + review surface (graphs, sources).** AH/PM
    volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
    raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports
@@ -612,6 +624,23 @@ the 09-03 email — "GIPR is another violation of volume rule." GIPR was entered
 gate but had no real 10-20x per-bar ignition. Sixth-plus repeat of the theme.
 Add GIPR alongside GELS as a negative control the queued 10-20x local-spike
 hard gate must reject. See FEEDBACK_LOG 2026-09-04.
+
+**Feedback update (2026-09-09) — SUNE negative control + define the volume
+metric:** Juan on the 09-08 email — "SUNE is not a good entry because price only
+went up in the first 5m bar. all subsequent bars are stable ... super high
+volume compared to the rest of the time (something is happening, volume is
+enough, no need for catalist). the graph for volume reveals a lot to me, but I
+don't know what the calculation should be." Two items. (1) **SUNE** is a new
+negative control of a *different* shape than the flat-volume rejects: a
+single-bar price pop that stalls (first 5m bar up, subsequent bars flat) — the
+"one bar up then stable" case the entry gate must reject. Add alongside GELS/
+GIPR. (2) **Define the volume metric.** Juan explicitly asks what the volume
+calculation should be — turn the directional 10-20x idea into a concrete spec:
+per-bar volume vs a rolling baseline of the ticker's own recent bars, the
+ratio/threshold, and how to render it on the daily-email chart (folds into
+Init 5) so the "graph reveals a lot" becomes a computed gate. "No need for
+catalyst" reaffirms the volume+price co-spike can stand alone. Routed to
+`scanner-improvement` to specify and implement. See FEEDBACK_LOG 2026-09-09.
 
 **Feedback update (2026-08-25):** Juan flagged DAIC (re: 08-24 email) — "no
 volume spike. normal hours volume is the same as after hours, it was only a
