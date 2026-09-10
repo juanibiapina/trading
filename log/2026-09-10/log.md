@@ -190,3 +190,25 @@ Notes:
 - 21:30 regular-session watch names (TNON, DBGI, AHMA, VANAF, PSIG, PHGE, BYSI, SKYQ, ATER, CMRC, TPET) still not carrying into AH on the scan — consistent with their collapsed intraday volume (VChg −80%+). ATER/TPET/PSIG (the volume-still-positive exceptions at 21:30) also absent so far.
 - No spike-bar / CONFIRM-3 instrumentation this pulse — no AH candidates above the 10% threshold to instrument.
 - **Action:** none. Re-scan at 22:30 CET once AH volume accumulates.
+
+## Scan 22:30 CET (4:30 PM ET)
+
+**AH open 30 min (16:30 ET).** Scanner ran at 16:30:11 ET — 1 hit.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $2.11 | −2.2% | +16.6% | $2.46 | +14.0% | 470K | 76K | 6.2x | 1.7M | Pharmaceuticals: Major |
+
+**Observation-only pulse (before 23:00 CET) — no entries regardless.**
+
+**XRTX instrumentation:**
+- `SPIKE 16:05ET +28% $2.70 390 trades / 38k sh (first co-spike bar)` — ignition fired in the **first AH bar**.
+- `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume` — no local-volume new-high build after the open pop.
+- SIP bars: real volume but **fading across bars** — 16:05 bar 344,820 sh / 3,509 trades (H $2.74, the AH peak), 16:10 bar 235,333 sh / 2,264 trades (H $2.58), 16:15 bar 160,156 sh / 1,752 trades (H $2.54, close $2.28). Price and per-bar volume both declining off the 16:05 peak.
+- Quote: `bid $1.85 x100 ask $0.00 x0` (timestamped 20:00:02Z = stale/near-close; no live fillable ask reading yet).
+- **Pattern: first-bar spike → fade.** Float 1.7M (<3M), VRatio 6.2x, but AH high ($2.74) printed in the first bar and volume is fading — this is the FIRST-BAR-SPIKE / SPIKE→FADE profile, not a build. Watch at 23:00: needs a volume-backed new AH high (CONFIRM-3 flip) to become entry-worthy; on current trajectory it is a skip candidate under the first-bar-spike rule.
+
+**Catalyst:** not searched this pulse (observation-only; no entry). Structured catalyst search deferred to the 23:00 entry scan if XRTX still clears the AH threshold.
+
+- 21:30 regular-session watch names (TNON, DBGI, AHMA, VANAF, PSIG, PHGE, BYSI, SKYQ, ATER, CMRC, TPET) still absent from the AH scan — consistent with their collapsed intraday volume. None carried real AH liquidity.
+- **Action:** none (observation-only). Re-scan at 23:00 CET; XRTX is the only live AH candidate so far — evaluate for entry then if it holds the threshold and flips to a build.
