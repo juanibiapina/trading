@@ -278,3 +278,44 @@ OMH (AH +8.0%) and CLIK (AH +7.2%) are **below the 10% AH threshold** — not en
 - 21:30 regular-session watch names (AHMA, VANAF, PSIG, PHGE, BYSI, SKYQ, ATER, CMRC, TPET): still absent from the AH scan / below threshold. None carried real AH liquidity.
 - **No dead-cat-override, ceiling-override, chase-cap, final-scan-gate-block, broker-block, stale-book, or no-fillable-book cases** this pulse. DBGI is a clean 2-AH-scan-gate-pending BUILD; XRTX a first-bar-spike skip.
 - **Action:** none (no entry). Re-scan at 23:30 CET — primary watch is DBGI holding >10% AH to clear the 2-scan gate and become entry-worthy.
+
+## Scan 23:30 CET (5:30 PM ET)
+
+**AH open 90 min (17:30 ET). Entry window open (23:00+ CET).** Scanner ran at 17:30:14 ET — 6 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $5.30 | +117.2% | +7.2% | $5.68 | +132.8% | 5.1M | 14.6M | 0.3x | 899K | Medical/Nursing Services |
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $6.79 | +81.1% | +6.9% | $7.26 | +93.6% | 1.4M | 3.2M | 0.4x | 906K | Apparel/Footwear |
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $2.11 | −2.2% | +12.3% | $2.37 | +9.8% | 904K | 128K | 7.1x | 1.7M | Pharmaceuticals: Major |
+| GBR | [TV](https://www.tradingview.com/chart/?symbol=GBR) | $0.84 | +11.1% | +5.5% | $0.89 | +17.2% | 511K | 83K | 6.1x | 4.7M | Real Estate Development |
+| TPET | [TV](https://www.tradingview.com/chart/?symbol=TPET) | $2.02 | +11.6% | +5.9% | $2.14 | +18.1% | 277K | 2.4M | 0.1x | 4.8M | Integrated Oil |
+| FTFT | [TV](https://www.tradingview.com/chart/?symbol=FTFT) | $2.05 | −1.9% | +8.3% | $2.22 | +6.2% | 227K | 11.3M | 0.0x | 5.4M | Finance/Rental/Leasing |
+
+**Only XRTX clears the 10% AH threshold this scan.** DBGI (+6.9%), TNON (+7.2%), GBR (+5.5%), TPET (+5.9%), FTFT (+8.3%) are all below the 10% AH threshold — not entry candidates.
+
+**Decision this pulse: NO live entry.** The only 2-AH-scan-gate passer (XRTX) is a confirmed first-bar-spike skip. The BUILD candidate (DBGI) topped and faded below the 10% AH threshold, and never got a 2nd AH scan >10% — gate not met.
+
+### DBGI — BUILD topped and faded, 2-AH-scan gate NOT met (NOT entered)
+
+- **Instrumentation:** `NO-SPIKE peak +16% @16:43ET` (gradual volume-backed build, no single ignition bar), `CONFIRM-3 NO ignition 16:40ET failed third-bar hold/volume as-of 17:30ET`.
+- **SIP bars = build peaked at 16:40 ET, now bleeding:** ran to **H$7.85 (371K sh / 5,374 trades) at 16:40 ET** (the big-volume new-high bar), then faded every bar: $7.60 → $7.37 → $7.26 → $7.33 → $7.20 → $7.38. Current ~$7.38 (17:15 ET bar), holding within ~6% of the $7.85 peak but per-bar volume decaying (371K → 160K → 115K → 82K → 80K → 71K → 43K → 59K sh).
+- **Gate status:** cleared >10% AH **only once** (23:00 scan, +13.1% / AH $7.68). At 22:30–22:45 it was below threshold/absent; at 23:30 it faded to +8.7% AH (SIP) / +6.9% (scanner). **Only 1 AH scan >10% → fails the 2-AH-scan gate.** The build peaked at 16:40 ET (+15.6% AH high) and is bleeding — the gate correctly blocks a topped-and-fading entry.
+- **Setup (recorded):** float 906K (tiny), day-1 fresh igniter, Grade B ($165M contract + go-private review), Total% +93.6% (under +150% ceiling), Day% +81.1%. A clean setup that simply did not sustain 10% AH across 2 scans.
+- **Action:** carry as watch. If DBGI reclaims >10% AH ($7.47+) and holds at the 00:00 scan, it earns its 2nd qualifying AH scan — re-evaluate then. On current fading trajectory it is a topped build, not an entry.
+
+### XRTX — SKIP (first-bar-spike / fade), FIRST-BAR-SPIKE WATCH carried
+
+- **Passes the 2-AH-scan gate** (>10% AH at 22:30 +16.6%, 22:45 +15.2%, 23:00 +13.7%, 23:30 +12.3%) — but skipped on the first-bar-spike rule.
+- **Instrumentation:** `SPIKE 16:05ET +28% $2.70 390 trades / 38k sh (first co-spike bar)`, `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 17:30ET` — every scan.
+- **SIP bars = first-bar spike → fade unchanged:** peak $2.74 (344,820 sh / 3,509 trades) at 16:05 ET, then volume fades every bar to ~5–35K sh; price flat-lined ~$2.38–2.40, vwap $2.38. No volume-backed new AH high after the open bar.
+- **Skip rule:** AH high in the first AH bar (16:00–16:15 ET) + CONFIRM-3 NO every scan = single-bar pop, not a build → skip live entry. Float 1.7M / VRatio 7.1x do not override.
+- **FIRST-BAR-SPIKE WATCH (hypothetical):** entry $2.44 @ 23:00 CET carried; still sits ~$2.40 (within ~20% of $2.74 high). Morning-eval tracks whether the skip was correct. (Standing first-bar-spike entries 0/3 sustained.)
+
+### Other tracked names
+
+- **TNON** (multi-session runner): yesterday's dilution dead-cat, ran regular session +117%, now +7.2% AH (VRatio 0.3x, thin on 14.6M avg vol). Late-stage day-2+ dilution runner — watch only, not entry-worthy.
+- **GBR** (NEW): Day +11.1%, AH +5.5% (below threshold), Total +17.2%, float 4.7M, VRatio 6.1x. Real Estate Development. Below the 10% AH threshold — no entry, no full workup. Watch at 00:00 if it clears 10% AH.
+- **TPET** (Day +11.6%, AH +5.9%), **FTFT** (Day −1.9%, AH +8.3%): both below the 10% AH threshold; TPET VRatio 0.1x (thin AH), FTFT VRatio 0.0x (yesterday's faded reverse-split name). No entry.
+- **No dead-cat-override, ceiling-override, chase-cap, final-scan-gate-block, broker-block, stale-book, or no-fillable-book cases** this pulse.
+- **Action:** none (no entry). Re-scan at 00:00 CET — primary watch is DBGI reclaiming >10% AH for a 2nd qualifying scan; GBR as a secondary if it clears threshold.
