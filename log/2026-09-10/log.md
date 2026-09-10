@@ -364,3 +364,47 @@ OMH (AH +8.0%) and CLIK (AH +7.2%) are **below the 10% AH threshold** — not en
 - **GBR** (Day +11.1%, AH +5.9%), **TPET** (Day +11.6%, AH +8.9%), **ELOG** (Day −9.5%, AH +7.1%): all below the 10% AH threshold. TPET VRatio 0.1x (thin AH), ELOG VRatio 0.4x (thin, Day −9.5%). No entry, no full workup.
 - **No dead-cat-override, ceiling-override, chase-cap, broker-block, stale-book, or no-fillable-book cases** this pulse.
 - **Action:** none (no entry). Re-scan at 00:30 CET (final) — watch NCRA for a 2nd qualifying AH scan (→ FINAL-SCAN-GATE-BLOCK check if it holds), and cross-check all pipeline names (DBGI, TNON, XRTX, GBR, TPET, NCRA) against SIP per the final-scan feed-lag rule before finalizing.
+
+## Scan 00:30 CET (6:30 PM ET) — FINAL SCAN
+
+**AH open 150 min (18:30 ET). Entry window open (23:00+ CET). Last scheduled scan.** Scanner ran at 18:30:13 ET — 2 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $2.11 | −2.2% | +14.7% | $2.42 | +12.1% | 1.1M | 149K | 7.2x | 1.7M | Pharmaceuticals: Major |
+| NCRA | [TV](https://www.tradingview.com/chart/?symbol=NCRA) | $1.86 | +0.0% | +11.3% | $2.07 | +11.3% | 168K | 6.7M | 0.0x | 1.9M | Engineering & Construction |
+
+**Decision this final pulse: NO live entry.** XRTX is a confirmed first-bar-spike skip (carried all night). NCRA now clears the 2-AH-scan gate (00:00 +12.9%, 00:30 +11.3%) but is a **thin-drift skip** — its held Total% sits on collapsing per-bar SIP volume, not a real accumulating build. Both skip.
+
+### NCRA — 2-AH-scan gate MET, SKIP on thin-drift / not-accumulating rule (NOT entered)
+
+- **Gate mechanically met:** >10% AH at 00:00 (+12.9%) and 00:30 (+11.3%) = 2 AH scans. First AH appearance was 00:00, so this is **not** a FINAL-SCAN-GATE-BLOCK case (the gate is satisfied, not the blocker).
+- **Instrumentation:** `SPIKE 17:27ET +17% $2.17 111 trades / 10k sh (first co-spike bar)` — ignition at 17:27 ET, **not** the first AH bar (so not a first-bar-spike). `CONFIRM-3 NO no local-volume new-high ignition as-of 18:30ET` — no volume-backed new AH high after the 17:25 ET peak.
+- **SIP bars = thin drift, not a build (MODD precedent):** peak $2.17 at 21:25Z (17:25 ET) on 50,118 sh / 252 trades, then per-bar volume **collapses every bar** — 26,550 → 44,367 → 29,441 → 10,215 → 8,157 → 12,910 → 8,235 → 1,371 → 7,146 → 2,612 sh (last bar 22:15Z = 18:15 ET, 14 trades). VRatio 0.0x, hundreds→tens of trades/bar, tens-of-K→single-digit-K sh/bar. Price held ~$2.08 but on dying volume. **A Total% that holds ~12% while per-bar SIP volume stays thin and decaying is a thin drift, not a build** — apply the thin/not-accumulating skip, do not read the held Total% as a BUILD signal.
+- **No fillable book:** quote `bid $1.59 x100 ask $0.00 x0` (timestamped 20:00:01Z = stale near-close; no live fillable ask reading in the thin book).
+- **Setup (recorded):** float 1.9M (tiny), Day% +0.0% (pure AH ignition, fresh day-1 igniter), Total% +11.3% (well under +150% ceiling), `tradable=true`. Catalyst unconfirmed (2 prior websearch calls found no dated same-day PR/earnings; next earnings 11/13/2026; recent Qmax Technology 30% stake pivot on file but no same-day release) — **no confirmed same-day catalyst**.
+- **Action:** SKIP. Not a live entry (thin drift + no fillable book). Not a gate-block (gate met). Records as a thin-drift skip for morning-eval — a candidate that mechanically cleared the 2-AH-scan gate but whose AH move was light and fading, correctly rejected by the thin/not-accumulating rule.
+
+### XRTX — SKIP (first-bar-spike / fade), FIRST-BAR-SPIKE WATCH carried to close
+
+- **Passes the 2-AH-scan gate** (>10% AH at 22:30, 22:45, 23:00, 23:30, 00:00, 00:30 — every scan) — skipped on the first-bar-spike rule all night.
+- **Instrumentation:** `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 18:30ET`. SIP last bars ~$2.45–2.49 (21:35Z / 17:35 ET, 19K–30K sh/bar), still within ~20% of the $2.74 first-bar high but never made a volume-backed new AH high.
+- **Skip rule:** AH high in the first AH bar (16:00–16:15 ET) + CONFIRM-3 NO every scan = single-bar pop, not a build → skip. Float 1.7M / VRatio 7.2x do not override.
+- **FIRST-BAR-SPIKE WATCH (hypothetical):** entry $2.44 @ 23:00 CET carried to night's close; last ~$2.45–2.49. Morning-eval tracks whether the skip was correct. (Standing first-bar-spike entries 0/3 sustained.)
+
+### Final-scan feed-lag cross-check (pipeline names)
+
+Cross-checked every tracked name against SIP before finalizing. **No feed-lag rescue needed** — TradingView's 2 hits (XRTX, NCRA) match SIP; no tracked name is under-reported while SIP shows it above 10% AH on accumulating volume.
+
+- **DBGI**: SIP faded to $6.90 (17:35 ET, 55K sh/843 tr) = +1.6% AH, ~12% off the $7.85 peak. Topped build, dead — cleared >10% AH only once (23:00). Below threshold, no rescue.
+- **TNON** (multi-session runner): SIP $5.41 (17:35 ET, 114K sh/997 tr) = +2.1% AH. Volume real but AH move small on a late-stage day-2+ dilution runner. Below threshold, watch only.
+- **GBR**: SIP $0.89 (+5.9% AH) on 4.5K sh/bar (14 trades) — thin, below threshold.
+- **TPET**: SIP $2.15 (+6.4% AH) on 26K sh/bar — below threshold.
+- **ELOG** (Day −9.5%), FTFT, and the 21:30 regular-session watch names: all below the 10% AH threshold / absent. None carried real AH liquidity above threshold.
+
+### Night summary
+
+- **No live entry any scan tonight.** Nine scans ran (21:30 watch-only, 22:00, 22:15, 22:30, 22:45, 23:00, 23:30, 00:00, 00:30). No candidate cleared all entry gates with a real accumulating build.
+- **Two 2-AH-scan-gate passers, both correctly skipped:** XRTX (first-bar-spike/fade) and NCRA (thin-drift/not-accumulating). The one clean BUILD setup (DBGI — tiny 906K float, Grade B $165M contract) topped at 16:40 ET and never held >10% AH across 2 scans, so the 2-AH-scan gate blocked a topped-and-fading entry.
+- **No dead-cat-override, ceiling-override, chase-cap, final-scan-gate-block, broker-block, stale-book, no-fillable-book (live), or in-window feed-lag cases** tonight. NCRA's stale `ask $0.00 x0` is a near-close artifact, not a live no-book reading; skip driven by thin-drift.
+- **DBGI note for morning-eval:** clean tiny-float Grade-B BUILD that peaked at 16:40 ET (+15.6% AH) and faded before earning a 2nd qualifying AH scan. Worth tracking in the retrospective whether it re-ignited into PM (a build that tops early on the open bars, like the first-bar-spike names, tends to fade overnight).
