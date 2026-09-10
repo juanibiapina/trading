@@ -212,3 +212,30 @@ Notes:
 
 - 21:30 regular-session watch names (TNON, DBGI, AHMA, VANAF, PSIG, PHGE, BYSI, SKYQ, ATER, CMRC, TPET) still absent from the AH scan — consistent with their collapsed intraday volume. None carried real AH liquidity.
 - **Action:** none (observation-only). Re-scan at 23:00 CET; XRTX is the only live AH candidate so far — evaluate for entry then if it holds the threshold and flips to a build.
+
+## Scan 22:45 CET (4:45 PM ET)
+
+**AH open 45 min (16:45 ET).** Scanner ran at 16:45:13 ET — 2 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $5.30 | +117.2% | +8.5% | $5.75 | +135.7% | 2.9M | 14.3M | 0.2x | 899K | Medical/Nursing Services |
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $2.11 | −2.2% | +15.2% | $2.43 | +12.6% | 718K | 106K | 6.8x | 1.7M | Pharmaceuticals: Major |
+
+**Observation-only pulse (before 23:00 CET) — no entries regardless.**
+
+**XRTX instrumentation (AH >10%):**
+- `SPIKE 16:05ET +28% $2.70 390 trades / 38k sh (first co-spike bar)` — ignition still the first AH bar.
+- `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 16:45ET` — still no volume-backed new AH high.
+- SIP bars confirm **first-bar spike → fade**: 16:05 peak $2.74 (344,820 sh / 3,509 trades), then 235K → 160K → 59K → 78K → 40K sh per bar; price bled to ~$2.40. VWAP $2.40 last bar.
+- Quote `bid $1.85 x100 ask $0.00 x0` (timestamped 20:00:02Z = stale/near-close; no live fillable ask).
+- **Pattern unchanged: FIRST-BAR-SPIKE / SPIKE→FADE.** Float 1.7M, VRatio 6.8x, but AH high printed first bar, CONFIRM-3 NO, volume fading. On current trajectory this is a **skip under the first-bar-spike rule** unless it flips CONFIRM-3 at 23:00.
+
+**TNON (AH +8.5%, below 10% instrumentation threshold; huge Total% from Day%):**
+- Yesterday's dilution dead-cat (funded $4.2M offering + note repayment) that bounced +72.9% in PM. Today it ran the **regular session +117.2%** and is up a further +8.5% in AH — this is a **MULTI-SESSION-RUNNER** (day 2+ of the move), not a fresh first-day igniter.
+- VRatio 0.2x (AH vol 2.9M vs 14.3M avg) = **thin AH relative to the huge daily volume**; AH move is a small extension on top of an already-extended runner.
+- Total% +135.7% (below the +150% ceiling but a late-stage runner). Quote `bid $4.47 x100 ask $0.00 x0` (stale near-close; no live fillable ask).
+- Not entry-worthy: late-stage multi-session runner, thin AH VRatio, dilution-driven origin. Watch only.
+
+- 21:30 regular-session watch names (DBGI, AHMA, VANAF, PSIG, PHGE, BYSI, SKYQ, ATER, CMRC, TPET) still absent from the AH scan.
+- **Action:** none (observation-only). Re-scan at 23:00 CET. XRTX = first-bar-spike/fade skip candidate; TNON = multi-session-runner watch. No BUILD pattern present yet.
