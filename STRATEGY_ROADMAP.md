@@ -275,6 +275,34 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-09-10 (strategy-advance) — fresh out-of-sample admit (EHGO,
+   filled the +10% limit) + one gate-skip (TNON wick-peak); entered set grows to
+   n=19, edge firms to +5.3%/name, fade-tail 3/19 (16%).** Thu 09-10 logged two
+   holdable footprint=none PM-only gappers: EHGO +15.2% (recurring
+   registered-direct-offering dilution name, 07-13/07-16/07-23/07-28/09-01) and
+   TNON +47.1% (Tenon Medical, 551K-float squeeze). Re-ran `init6-pm-pilot.js`
+   (43 candidates). **EHGO was admitted** by the continuation gate (entered $1.03
+   at 04:30 ET after the flat 04:00-04:10 open, ignition 04:15) and its early
+   ramp **filled the resting +10% limit ($1.13)** intrabar = a win at the exit
+   rule, even though it drifted to PM-last -2.9% (exactly the peak-seeking case
+   the resting limit is built for). **TNON was skipped** — its $4.22 first-bar
+   wick then plateau ~$3.6 (>15% below the wick) is the GMEX/YMAT wick-peak
+   shape the R+1/R+2 80%-of-high hold rejects by design. Entered set moves
+   n=18 -> **n=19: SUM +100.0% / mean +5.3% / median +10.0% / positive 15/19**,
+   vs a PM-last hold-to-open floor of -6.2% and a do-nothing baseline of 0%. Net
+   of ~2% spread ~+3.3%/name. The **fade-tail eases to 3/19 (BIVI -27.1%, MIMI-2
+   -6.9%, BNC -14.7%) = 16%** — EHGO added a limit-win not a fade, and n grew, so
+   the ratio slips from 17% and stays well under the ~25% that would erode the
+   edge below the spread. This is the second EHGO admit (07-23 held +59% PM-last)
+   — the recurring dilution names keep re-igniting and the gate keeps catching
+   the holdable ones. Init 3 **data-blocked** (CULP + UFG still held at the 09-10
+   14:30 pulse, no held-name exit to seed; `peak-seeking-exit-sim.js` holds at
+   n=36). Init 2 blocked on Juan (account). Still log-only, no orders. **Deadline
+   note:** with the ~10-01 net-positive target ~3 weeks out and the live cycle
+   entering none of these PM-only gappers, the two standing asks below stay the
+   money-fast bottleneck — the pilot edge is stable (n=19, +5.3%/name, tail 16%,
+   two converging studies) but going live needs a broker that fills these names
+   (Init 2 account) plus Juan's sign-off on the entry pulse.
    **Update 2026-09-09 (strategy-advance) — two fresh out-of-sample names
    (YMAT +72.8%, DPU +45.3%) both gate-skipped as wick-peaks; entered set holds
    n=18, edge +5.0%/name, fade-tail 3/18 (17%). Wick-denominator re-test (08-26
