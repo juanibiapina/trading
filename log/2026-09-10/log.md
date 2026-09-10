@@ -121,3 +121,23 @@ Source of truth: Alpaca `broker.js positions`. Quote feed frozen at 20:00Z prior
 **Actions taken:**
 - SELL 20 HCAI @ limit $4.68 ext (id 56b71006) — submitted, resting in dead PM book (no trades since 08:15Z, last traded $4.73-4.75). Awaiting fill; confirm at 14:30 pulse.
 - CULP, UFG: no action (HOLD, both Grade B day 1 within params).
+
+## Position Evaluation — 14:30 CET
+
+Source of truth: Alpaca `broker.js positions`. Quote feed still frozen at 20:00Z prior close for all three names (CULP ask $4.11, HCAI bid $3.59/ask $0.00 x0, UFG ask $0.83); priced off SIP 5Min PM bars (latest ~12:15Z, ~15 min old).
+
+| Ticker | Entry | Current (SIP) | P&L % | Peak (SIP) | Peak P&L | Days | Grade | Decision | Reason |
+|--------|-------|---------------|-------|------------|----------|------|-------|----------|--------|
+| CULP | $4.10 | $4.10 | ~0% | $4.25 | +3.7% | 1 | B | HOLD | Day 1 of 2, flat, stop $3.49 not hit, earnings-beat catalyst intact |
+| UFG | $0.81 | $0.71 | -12.3% | $0.83 | +2.5% | 1 | B | HOLD | Day 1 of 2, above -15% stop ($0.69), record-results catalyst intact; near stop |
+| HCAI | $4.80 | $4.18 | -12.9% | $5.32 (first-bar) | +10.8% | 1 | C | SELL | Grade C first-PM-pulse + below -10% hard stop ($4.32) |
+
+**SIP PM levels (near 14:30 CET / 12:15Z):**
+- CULP: holding $4.08-4.15, vwap ~$4.10, liquid (17-51 trades/bar). ~flat vs entry.
+- UFG: bled from $0.77 open to $0.68-0.72, holding ~$0.71, vwap $0.71. -12.3%, above $0.69 stop.
+- HCAI: first-bar $5.32 pop (vwap $4.89) round-tripped; bled to $4.15-4.24 midday (vwap $4.16-4.22), below -10% hard stop.
+
+**Actions taken:**
+- SELL HCAI: canceled stale 10:30 order (id 56b71006, limit $4.68, unfilled in dead book). Repriced SELL 20 @ limit $4.10 ext (id b4efbafd) → filled @ $4.13 (price improvement). Real fill $4.13. P&L -$13.40 (-14.0%). Moved to Closed Positions.
+- CULP: HOLD, no action (Grade B day 1, ~flat, within params).
+- UFG: HOLD, no action (Grade B day 1, -12.3%, above -15% stop). Near stop — sell next pulse if it breaks $0.69.
