@@ -102,3 +102,22 @@ UFG   prev close $0.72 | AH peak $0.92 | PM peak $0.83 | entry $0.81
 - **In-window feed-lag miss:** none this session. Standing count 4 (escalation trigger REACHED — AH-data-source cross-check recommendation already routed to daily email).
 - **Broker-block / stale-book / no-fillable-book / float-gate / final-scan gate-block:** no new cases this session. Standing counts unchanged (broker-block 2; stale-book 3; no-fillable-book 2; float-gate 1; final-scan gate-block 2).
 - **Open positions carried:** CULP, HCAI, UFG — all flat-to-down in early PM, none reclaimed their AH peak (CULP mild continue). Position management (hold/sell) at the 10:30 / 14:30 CET position-eval pulses, not here.
+
+## Position Evaluation — 10:30 CET
+
+Source of truth: Alpaca `broker.js positions`. Quote feed frozen at 20:00Z prior close for all three names; priced off SIP 5Min PM bars (PM open 08:00Z EDT).
+
+| Ticker | Entry | Current | P&L % | Peak (SIP) | Peak P&L | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|------|-------|----------|--------|
+| CULP | $4.10 | $4.10 | ~0% | $4.25 | +3.7% | 1 | B | HOLD | Day 1 of 2, flat, stop $3.49 not hit, earnings-beat catalyst intact |
+| UFG | $0.81 | $0.77 | -4.9% | $0.83 (AH $0.92 +13.6%) | +2.5% today | 1 | B | HOLD | Day 1 of 2, above -15% stop ($0.69), record-results catalyst intact |
+| HCAI | $4.80 | $4.75 | -1.0% | $5.32 (first-bar spike) | +10.8% | 1 | C | SELL | Grade C = exit first PM pulse; above -10% stop ($4.32) |
+
+**SIP PM bars (08:00-08:15Z):**
+- CULP: O$4.15 H$4.25 →holding $4.07-4.16, vwap $4.11, liquid (1542→39 trades/bar)
+- UFG: O$0.82 dip$0.75 →holding $0.76-0.78, vwap $0.77, liquid (3410→187 trades/bar)
+- HCAI: O$4.60 spike$5.32 →holding $4.75-4.90, vwap $4.78 (2576→210 trades/bar); book went dead after 08:15Z
+
+**Actions taken:**
+- SELL 20 HCAI @ limit $4.68 ext (id 56b71006) — submitted, resting in dead PM book (no trades since 08:15Z, last traded $4.73-4.75). Awaiting fill; confirm at 14:30 pulse.
+- CULP, UFG: no action (HOLD, both Grade B day 1 within params).
