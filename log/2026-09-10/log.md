@@ -408,3 +408,105 @@ Cross-checked every tracked name against SIP before finalizing. **No feed-lag re
 - **Two 2-AH-scan-gate passers, both correctly skipped:** XRTX (first-bar-spike/fade) and NCRA (thin-drift/not-accumulating). The one clean BUILD setup (DBGI — tiny 906K float, Grade B $165M contract) topped at 16:40 ET and never held >10% AH across 2 scans, so the 2-AH-scan gate blocked a topped-and-fading entry.
 - **No dead-cat-override, ceiling-override, chase-cap, final-scan-gate-block, broker-block, stale-book, no-fillable-book (live), or in-window feed-lag cases** tonight. NCRA's stale `ask $0.00 x0` is a near-close artifact, not a live no-book reading; skip driven by thin-drift.
 - **DBGI note for morning-eval:** clean tiny-float Grade-B BUILD that peaked at 16:40 ET (+15.6% AH) and faded before earning a 2nd qualifying AH scan. Worth tracking in the retrospective whether it re-ignited into PM (a build that tops early on the open bars, like the first-bar-spike names, tends to fade overnight).
+
+---
+
+## Morning Evaluation — 10:20 CET (Sep 11, evaluating Sep 10 AH session)
+
+### Today's Winner
+
+**No real winner today.** Nothing cleared the >100% AH→PM winner bar on accumulating SIP volume. The biggest genuine AH→PM mover was **TNON**, but on the correct prev-close basis it is a **day-2+ multi-session runner** up only ~+11% AH / +30% PM — far below the bar — with **no fillable AH book** (`ask $0.00 x0`), so it was neither a >100% explosion nor capturable.
+
+**TNON** (Tenon Medical) — Medical/Nursing Services
+- Catalyst: **Grade C/D** — full early repayment of senior convertible notes (removes dilutive overhang) + regained Nasdaq minimum-bid-price compliance. Also a **1-for-35 reverse split effective Aug 10, 2026** (~1 month old, weeks-old bucket). The +117% move happened during the **Sep 10 regular session**, not after-hours.
+- Previous Close (last regular session, Sep 10): **$5.30** — Yahoo `prevClose $2.44` is the **stale Sep 9 close** (ANCHOR WARNING confirmed; SIP AH open bar $5.30 matches the regular close). All the "+130–180%" figures from `price-timeline.py`/Yahoo are measured off the stale $2.44 basis and are fictional as an overnight gain.
+- AH last night: peak **$5.89** at 19:55 ET = **+11.1%** from $5.30 (real: 1.19M sh open bar, sustained 100K–1M sh/bar, thousands of trades — real liquidity, small % move).
+- Premarket now: SIP peak **$6.90** at 04:05 ET = **+30.2%** from $5.30 (560K sh / 8,682 trades).
+- Hypothetical P&L (AH $5.30 → PM peak $6.90): **+30.2%** — but the live book shows `ask $0.00 x0` (no fillable offer), so this was **not capturable**.
+- Float: 899K (manufactured by the 1-for-35 split) | Market Cap: ~$5.5M
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — TNON was in every Sep 10 scan (Day +117%, AH +7–8%, VRatio 0.2–0.3x), tagged **multi-session-runner / dilution watch**.
+- Why not acted on: AH move sat **below the 10% AH threshold** the whole window on the real basis, and it is a **late-stage day-2+ runner** off a dilution/compliance catalyst — correctly watch-only, not entry-worthy. The +30% PM continuation was also uncapturable (`ask $0.00 x0`).
+- Scanner gap: **none.** The scanner saw it and classified it correctly. This is a no-winner morning, not a detection miss.
+
+**Broker-block tracking:** No new case. Standing: SHPH ×2 (Jun 25, Jul 13).
+
+**Stale-book execution-block tracking:** No new case. Standing count: **3** (NUWE, KUST, CLRO) — all three detected winners, all profitable.
+
+**No-fillable-book skip tracking:** No new case (TNON's `ask $0.00 x0` came on a name below the AH momentum gates, so it is not a momentum-qualified no-book skip). Standing count: **2** (OFAL, BIVI), both faded (skip validated, 0 cost).
+
+**Float-gate skip tracking:** No new case. Standing count: **1** (CAPR, ran — float gate cost a near-winner).
+
+**Final-scan gate-block tracking:** No new case. NCRA met the 2-AH-scan gate mechanically (00:00 +12.9%, 00:30 +11.3%) — gate satisfied, not blocked — and was skipped on the thin-drift/not-accumulating rule (PM +26% peak to $2.35 came on only 28.7K sh / 333 trades, then faded; skip roughly validated). Standing count: **2** (TRUG, UPC), both ran.
+
+**Multi-session-runner outcome tracking:** No new *entered* case (TNON was watch-only, not entered). Standing: 1 multi-session runner (1 faded: DAIC) / 16 first-day igniters (6 ran, 4 flat, 6 faded).
+
+**First-bar-spike skip-validation tracking:** **+XRTX (first post-gate WATCH case, RAN).** FIRST-BAR-SPIKE WATCH hypothetical entry $2.44 (23:00 CET); AH high $2.74 first bar, CONFIRM-3 NO all scans. PM SIP peak **$2.83** at 04:00 ET (+16.0% over the $2.44 entry, above the $2.74 AH high) on 283K sh / 3,371 trades in the first PM bar, then faded to $2.54 (still +4% over entry). This is a **ran** outcome — the first-bar-spike skip cost a capturable +16% first-bar pop. **Standing: 3 pre-gate entries (0 ran: LABT, SUNE, HCAI) + 1 post-gate WATCH (1 ran: XRTX).** Per the tracker rule, a post-gate WATCH that ran routes to Juan's daily email for a hold-test refinement — **route XRTX**. One case does not overturn the gate (the 3 pre-gate entries all failed to run), but it is the first evidence the gate skipped a capturable first-bar pop; record and route, do not change the gate here.
+
+### Baseline Tracking
+
+- Days tracked: **81** (was 80 + 1)
+- Winners detected by scanner: **67/76 (88.2%)** — +TNON (biggest genuine mover, detected every scan, correctly classified multi-session-runner/dilution watch)
+- Winner selected for paper trade: **35/74 (47.3%)** — no capturable >100% winner existed; TNON was a sub-threshold day-2 runner with no fillable AH book
+- Target: >80% detection
+- Status: **BASELINE MET**
+- **Baseline chain intact:** latest baseline (Days 80) evaluated Sep 9 night (in `log/2026-09-10` top), Sep 10 is the immediately-preceding session, evaluated here → 81. No baseline gap.
+
+### Retrospective Scan Results
+- Live PM scan (`scan.py --all --session premarket`, 04:20 ET): 3 hits — LBGJ +30.4% ($2.53), TNON +25.3% ($6.64), XRTX +19.0% ($2.51). Thin, quiet morning; none near +100%.
+- Forced AH scan (`--session afterhours`): 0 hits (overnight TradingView postmarket feed returns 0, as expected — secondary diagnostic only).
+- AH reconstruction (`check-prices.py --ah-history` + SIP bars): confirms TNON's real $5.30 basis and +11% AH / +30% PM continuation on real volume; XRTX first-bar spike $2.74; LBGJ AH peak $2.60 (+22.6%), PM $2.53.
+
+### Open Position P&L (Alpaca)
+
+Two carryover positions open (no new Sep 10-session entries — the log shows "Action: none" every scan). Exits are handled by `position-evaluation.md` (10:30/14:30 CET); reported here for context only. **Alpaca quotes are stale** (both timestamped 20:00 ET / `ask $0.00 x0` on CULP), so P&L is reported against **live PM SIP prices**:
+
+| Ticker | Entry | Live PM (SIP) | P&L % (live) | Alpaca reported | Note |
+|--------|-------|---------------|--------------|-----------------|------|
+| CULP | $4.10 | $3.74 (04:05 ET, thin 945 sh) | **−8.8%** | −9.6% ($3.71, stale) | thin PM tape |
+| UFG  | $0.81 | $0.60–0.63 (04:05 ET) | **≈−25%** | −24.6% ($0.61, stale) | consistent w/ live |
+
+No new executed positions this session. **Total Realized P&L (Alpaca fills only): €0.00** (no fills).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **9** (21:30 watch-only, 22:00, 22:15, 22:30, 22:45, 23:00, 23:30, 00:00, 00:30 CET) — **7 of 7 scheduled ran** (plus 2 extra). No coverage failure; entry window fully captured.
+- Candidates found: ~8 unique tickers (XRTX, DBGI, TNON, NCRA, GBR, TPET, FTFT, LBGJ).
+- Retrospective matches: biggest PM movers (TNON, XRTX, LBGJ) all detected in-window.
+
+### Missed Opportunities
+
+No significant missed opportunities. No >100% winner existed. TNON, XRTX, DBGI, NCRA all detected in-window and correctly classified.
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| TNON | $5.89 (+11.1%) | 19:55 ET | Build (slow) | $6.90 peak / ~$6.14 | +17% peak vs AH | +30.2% peak | PM exceeded AH — continued (day-2 runner, uncapturable book) |
+| XRTX | $2.74 | first bar (16:20 ET) | Spike→fade | $2.83 peak / $2.54 | +3% peak vs AH | +34% peak | PM one-bar pop above AH high then faded — marginal continue |
+| DBGI | $7.85 (+~15.6% AH) | 16:40 ET | Spike→fade | $6.33 peak / $6.10 | −19% vs AH | — | Faded; AH was the better exit — 2-AH-scan gate correctly blocked a topped entry |
+| NCRA | ~$2.10 | 18:00 ET | Late thin-drift | $2.35 peak / $2.15 | +12% peak | +26% peak | Modest PM pop on thin 28K-sh volume — thin-drift skip roughly validated |
+
+**AH-peak-vs-PM-peak check:** DBGI is the only clean AH-peak-was-better-exit case (AH $7.85 > PM $6.33), but at ~+15% AH it is well outside the >~+130% extreme-runner zone, so it does **not** enter the extreme-runner tally. No extreme-zone (>~+130% from the true close) runner today. Standing extreme-zone tally unchanged: **8 fade (MSW, DSY, AQB, XOS, BTCT, LOOP, DAIC, AMIX) / 1 continue (BAOS)** — 8/9 = 89%, routing trigger REACHED (partial-profit-on-extreme-runners recommendation already routed to Juan's email).
+
+**Chase-cap / entry-extension outcome tracking:** No fills this session. Standing count: **1** (XOS, never-reclaimed).
+
+### Notes
+- **No real winner today** — nothing cleared >100% AH→PM. Biggest genuine mover TNON (+30% PM continuation) was a day-2+ multi-session runner off a dilution/compliance catalyst, detected and correctly watch-only, with an unfillable book. Quiet, thin morning (3 PM scan hits).
+- **Prev-close basis trap caught (TNON):** Yahoo/`price-timeline.py` reported "+151–180%" off the **stale $2.44 Sep 9 close**; the true last-regular-close is **$5.30** (SIP AH open bar confirms). On the real basis TNON is only +11% AH / +30% PM. Recurring post-run day-2 basis check applied — do not crown a stale-basis "+180%."
+- **XRTX first-bar-spike skip RAN (route to email):** the first post-gate FIRST-BAR-SPIKE WATCH case ran +16% (PM peak $2.83 over the $2.44 hypothetical entry) on real first-bar volume before fading. Standing 3 pre-gate (0 ran) + 1 post-gate (1 ran). Routed to Juan's daily email for a hold-test refinement per the tracker rule; gate unchanged here.
+- **PM-only gapper tracking:** Today's biggest raw PM mover (TNON) is an **AH→PM continuation** (real AH footprint), not a PM-only gapper — no blind spot this morning. Standing holdable PM-only-gapper count in `log/pm-open-scan.csv`: **50** (well above the ≥3–4 cluster threshold). Standing action: Initiative-6 early-PM hypothetical-entry pilot already routed to Juan's daily email.
+- **Coverage:** 7 of 7 scheduled scans ran (+2 extra) — no coverage failure.
+- **Reverse-split-squeeze note (not an entry):** TNON carries a 1-for-35 reverse split (Aug 10, ~1 month old / weeks-old bucket) but was watch-only, not entered, and its Sep 10 driver was the note-repayment/compliance news, not the split — not added to the reverse-split entry tally (that tracks entered/notable-skipped momentum names). Recency split unchanged: this-week 4/4 faded; weeks/months-old 3/5 non-fade.
+- **DBGI:** clean tiny-float (906K) Grade-B $165M-contract BUILD that topped at 16:40 ET (AH $7.85) and faded into PM ($6.33) — did NOT re-ignite. Confirms the 2-AH-scan gate protected against a topped early-bar entry.
+
+### Price Charts
+
+**TNON** (basis note: `price-timeline.py` uses the stale $2.44 Yahoo prevClose; the true basis is the $5.30 Sep 10 regular close → real AH +11% / PM +30%):
+- 2-day range $3.42–$6.85 | PM peak $6.85 (09-11 08:05 ET) | current ~$6.16
+- Day-2+ multi-session runner; AH build was slow (+11%), PM continued to +30% on real volume.
+
+**XRTX** (FIRST-BAR-SPIKE WATCH, hypothetical entry $2.44):
+- 2-day range $2.11–$2.84 | PM peak $2.84 (09-11 08:00 ET) | current ~$2.50
+- First-bar spike then all-night fade; PM one-bar pop to $2.84 (+16% over entry) then settled ~$2.50 = ran (routed to email).
