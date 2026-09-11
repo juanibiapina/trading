@@ -275,6 +275,32 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-09-11 (strategy-advance) — no fresh admit (LBGJ + SXTC both
+   gate-skipped as wick-peaks); entered set holds n=19, edge steady +5.3%/name,
+   fade-tail 3/19 (16%). Init 3 unblocked (UFG-2, CULP seeded, n=38); Init 2
+   blocked on Juan.** Fri 09-11 logged three PM-only gappers: AENT +97.8%
+   (uninvestable, straight-down spike-fade), LBGJ +29.6% and SXTC +21.9% (both
+   footprint=none, in the pilot universe). Re-ran `init6-pm-pilot.js` (45
+   candidates): **both LBGJ and SXTC were skipped by the continuation gate** —
+   each is a first-bar wick then a flat plateau at gap-mid (LBGJ $3.25 wick ->
+   $2.49-2.58 closes ~gap-mid $2.595; SXTC $2.74 wick -> $2.16-2.38 closes
+   ~gap-mid $2.335), the weak-hold wick-peak shape the R+1/R+2 80%-of-high hold
+   rejects by design (same as TNON/YMAT/GMEX). Entered set stays **n=19: SUM
+   +100.0% / mean +5.3% / median +10.0% / positive 15/19**, vs a PM-last floor
+   of -5.8% and a do-nothing baseline of 0%; net of ~2% spread ~+3.3%/name.
+   Fade-tail 3/19 (BIVI -27.1%, MIMI-2 -6.9%, BNC -14.7%) = 16%, unchanged.
+   (EHGO 09-10's PM-last row recomputed -2.9% -> +3.9% on fuller 1-min bars; its
+   +10% limit-win was already locked, so SUM unchanged.) **Init 3 unblocked** —
+   CULP and UFG (both held since before 09-08) finally exited at the 09-11
+   04:30 ET pulse, the first held-name seeds since 09-04. Both are thin dead
+   books: UFG exit $0.6055 -> peak $0.616 (+1.7%), lim10 ($0.666) unfilled,
+   PM-last $0.57 (-5.7%); CULP exit $3.69 -> peak $3.785 (+2.6%), lim10 ($4.059)
+   unfilled, PM-last +2.6%. Appended both to `peak-seeking-exit-sim.js`
+   (n=36 -> n=38) and `premarket-exit-gap.csv`; re-ran: plain **+10% sell-limit
+   stays the best rule at n=38: SUM +100.7% / mean +2.6%, positive 24/38** (down
+   from n=36's +104.0/+2.9; UFG a small drag, CULP a small positive, conclusion
+   unchanged). Init 2 remains blocked on Juan (needs an account for the fill
+   test). Still log-only, no orders.
    **Update 2026-09-10 (strategy-advance) — fresh out-of-sample admit (EHGO,
    filled the +10% limit) + one gate-skip (TNON wick-peak); entered set grows to
    n=19, edge firms to +5.3%/name, fade-tail 3/19 (16%).** Thu 09-10 logged two
