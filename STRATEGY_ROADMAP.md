@@ -275,6 +275,43 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-09-14 (strategy-advance) — fresh out-of-sample admit AEHL
+   (footprint SIP-resolved unknown->none) is a HARD FADE; the gate false-positive
+   drops the entered edge to n=20 / +3.3%/name (net ~+1.3%), fade-tail 4/20
+   (20%). Init 3 data-blocked (flat book), Init 2 blocked on Juan.** First run
+   since Fri 09-11 (Sat/Sun closed). Mon 09-14's PM-open scan logged three
+   footprint=`unknown` gappers (Friday evening's AH scan was never captured, so
+   the pulse could not classify them). Resolved all three against Friday 09-11
+   SIP AH bars: **VSME** (274K sh/1489 tr at ~$1.3) and **CRBP** (thousands of
+   trades at ~$10.3) both had real Friday AH sessions -> reclassified
+   `ah-detected` (AH-footprint names we merely failed to scan, correctly excluded
+   from the PM-only pilot); **AEHL** had ZERO Friday AH prints -> `none`, a
+   genuine PM-only gapper (same class as its 08-31 weekend-gap appearance),
+   eligible for the pilot. Re-ran `init6-pm-pilot.js` (46 candidates): **AEHL was
+   ADMITTED** (entry $9.12 at 04:15 ET) and **faded to PM-last -34.1%** (never
+   reached the +10% limit; verified the bleed to ~$6 on real 1-min volume, not a
+   stray print). This is a **gate false-positive**: AEHL's 04:00 bar wicked to
+   $10.61 then closed $8.69, and its R+1/R+2 closes ($9.20/$9.12) held just above
+   80% of the wick high ($8.49), so the wick-high gate admitted it — then it bled
+   -34% all premarket. Entered set moves n=19 -> **n=20: SUM +65.9% / mean +3.3% /
+   median +10.0% / positive 15/20**, vs a PM-last floor of -7.3% and a do-nothing
+   baseline of 0%; net of ~2% spread **~+1.3%/name (down from +3.3%)**. The
+   **fade-tail grows to 4/20 (BIVI -27.1, MIMI-2 -6.9, BNC -14.7, AEHL -34.1) =
+   20%**, nearing the ~25% that erodes the edge below the spread. **AEHL is the
+   strongest evidence yet FOR the (currently optional) ~-15% catastrophe-stop on
+   the exit rule**: a -15% stop caps AEHL at -15% instead of -34%, lifting the
+   entered mean back to ~+4.3%/name — the fade-tail is the one risk the resting
+   +10% limit cannot dodge, and a wide catastrophe-stop is the direct fix. So the
+   wick-high gate cuts both ways: it false-negatives rebuilders (WVVIP/RDIB) and
+   now false-positives a wick-peak fader (AEHL). Init 3 **data-blocked** (flat
+   book since the 09-11 UFG/CULP exits, no held-name exit to seed), holds at
+   n=38. Init 2 blocked on Juan (needs an account for the fill test). Still
+   log-only, no orders. Next: keep seeding; if the fade-tail holds near/above
+   ~20-25%, promote the ~-15% catastrophe-stop from optional into the exit
+   proposal before proposing any live PM-gapper pulse. **Deadline note:** with
+   the ~10-01 net-positive target ~2.5 weeks out and the live cycle entering none
+   of these gappers, the two standing asks remain the money-fast bottleneck, and
+   the pilot edge just thinned to ~+1.3%/name net — the catastrophe-stop matters.
    **Update 2026-09-11 (strategy-advance) — no fresh admit (LBGJ + SXTC both
    gate-skipped as wick-peaks); entered set holds n=19, edge steady +5.3%/name,
    fade-tail 3/19 (16%). Init 3 unblocked (UFG-2, CULP seeded, n=38); Init 2
@@ -1586,9 +1623,9 @@ tracker).
       04:30 ET market exit for Grade-None/held overnight names with a resting
       sell-limit ~+10% above the exit price (GTC through premarket, cancel at
       09:30 ET); keep the 04:30 market exit only as the fallback if unfilled.**
-      Evidence (updated 08-28, `scripts/peak-seeking-exit-sim.js`, log-only,
-      **n=28 out-of-sample seeds**): the resting +10% sell-limit stays the best
-      robust rule at **+76.1% total / +2.7% per name, positive on 18 of 28** vs
+      Evidence (updated 09-11, `scripts/peak-seeking-exit-sim.js`, log-only,
+      **n=38 out-of-sample seeds**): the resting +10% sell-limit stays the best
+      robust rule at **+100.7% total / +2.6% per name, positive on 24 of 38** vs
       selling at 04:30, beating every trailing stop and non-outlier-driven wider
       limit. It wins because early peakers spike then crash, so a modest resting
       limit fills into the first spike before the dump; today's WHLR-type
