@@ -123,6 +123,42 @@ Scanner returned **4 AH hits** (ran 16:45:19 ET). Observation-only per learning-
 
 **No entries** — observation-only (pre-23:00 CET), and no candidate shows a BUILD pattern (HCAI and XPON both spike→fade). Next scan 23:00 CET (5:00 PM ET) — entries begin. Re-check whether any fresh name ignites with real accumulating SIP volume and a BUILD-and-hold pattern.
 
+## Scan 23:00 CET (5:00 PM ET) — AH OPEN, entries begin
+
+Scanner returned **2 AH hits** (ran 17:00:26 ET). Entries are allowed from this scan per learning-phase rules.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VEEA | [TV](https://www.tradingview.com/chart/?symbol=VEEA) | $2.29 | +46.8% | +14.5% | $2.62 | +68.0% | 976K | 654K | 1.5x | 1.6M | Packaged Software |
+| HCAI | [TV](https://www.tradingview.com/chart/?symbol=HCAI) | $1.85 | -17.2% | +18.1% | $2.19 | -2.2% | 638K | 431K | 1.5x | 7.3M | Industrial Machinery |
+
+### Evaluation
+
+**VEEA — genuine BUILD with Grade-A catalyst, but blocked by the 2-AH-scan gate (first AH appearance). GATE-PENDING for 23:30, no entry at 23:00.**
+
+Instrumentation:
+- `SPIKE 16:42ET +17% $2.67 1070 trades / 204k sh (first co-spike bar) (as-of 17:00ET)` — real price+volume co-spike ignition.
+- `CONFIRM-3 PENDING ignition 16:40ET; waiting for third bar as-of 17:00ET`
+- SIP bars (real accumulating volume, not a bad print): flat base 16:00–16:35 ET ($2.18–2.32, 9–86K sh/bar), then ignition — **16:40 ET 892,666 sh / 5,880 tr H $2.74 vwap $2.56 → 16:45 ET 1,121,423 sh / 8,921 tr H $2.80 vwap $2.65 C $2.75**. Nearly 1M+ sh and thousands of trades per bar = real book, still building at scan time.
+- Quote `bid $2.81 x100 / ask $2.85 x100` (17:00 ET) — real two-sided fillable book, tight 4¢ spread. `tradable=true`.
+- **Catalyst (Grade A):** Veea + NovaGen **potential merger** to launch an Edge AI-powered Global Health Platform, with a **US$10M investment commitment from GeoNova Capital** (GlobeNewswire, Sep 14, ~16:40 ET — dropped exactly at the ignition bar). Term-sheet/potential merger + fresh capital + new platform → momentum-gradable (NOT a definitive fixed-price cash deal, so the merger-arb→D exclusion does not apply). This can still re-rate. Grade **A**.
+
+  **Why no entry at 23:00:** VEEA fails the **2-AH-scan gate** — this is its *first* AH scan >10% (it ignited at 16:40 ET, ~1 min after the 22:45 CET scan window, so it did not appear in any of the 22:00/22:15/22:30/22:45 scans). The gate requires AH change >10% in ≥2 after-hours scans. Every *other* gate passes: float 1.6M (ideal), Day% +46.8% (>−15%), Total% +68.0% (well under the +150% ceiling), real accumulating SIP volume, fillable book, tradable, Grade-A catalyst, BUILD-and-hold pattern (price $2.75→$2.83 rising, not fading). This is a fresh day-1 igniter that just needs one more AH scan.
+
+  **GATE-PENDING (real pending entry, not a hypothetical watch):** If VEEA still shows >10% AH change at the 23:30 CET scan, it clears the 2-AH-scan gate and should be **entered** (assuming Total% still under +150% and the book still fillable). This is not the final scan (00:30), so the FINAL-SCAN-GATE-BLOCK instrumentation does not apply — the gate legitimately stands and VEEA has 3 more scans (23:30/00:00/00:30) to confirm. Multi-session check: VEEA spiked intraday too (Day% +46.8%), but its AH ignition is a fresh same-day catalyst move, not a prior-session runner (not in WINNERS_TRACKING as a prior entry) — treat as day-1 igniter.
+
+**HCAI — dead-cat + first-bar spike→fade, now breaking down. Skip (carried, 3rd AH scan).**
+- `SPIKE 16:05ET +26% $2.33 48 trades / 3k sh (first co-spike bar) (as-of 17:00ET)`
+- `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 17:00ET`
+- SIP bars now show a clear breakdown: peak $2.60 in the first bar (16:05 ET, 218K sh), declining highs and volume every bar since, and the **16:45 ET bar collapsed to C $1.90 (L $1.90), vol 48K** — now trading *below* its regular close $1.85 context and far below the AH high. The dead-cat bounce is rolling over.
+- Quote `bid $1.48 x100 / ask $2.18 x100` (stale 16:00 snapshot, wide spread).
+
+  **Why skip (three converging signals, all now confirmed by the fade):** (1) **Dead-cat bounce** — Day% −17.2%, bouncing then rolling over; (2) **First-bar spike→fade** — AH high $2.60 in the first AH bar (16:05 ET), CONFIRM-3 NO all three scans, now broken down to $1.90; (3) **Repeat fader** — HCAI's one-bar PM pop Sep 9→10 ($5.32 → $4.73) is already in the plan's FIRST-BAR-SPIKE 0/3 dataset. **Dead-cat-override check:** does NOT qualify — AH% is falling across scans (+22.9% → +19.2% → +18.1%) and price has now dropped below the regular close, the opposite of a rising reclaim.
+
+  **FIRST-BAR-SPIKE WATCH update:** hypothetical entry recorded $2.21 @ 16:45 ET (22:45 CET) is now $1.90 (−14%) — the first-bar-spike skip is tracking correct so far. Continue recording for the morning-eval tracker.
+
+**No entries at 23:00.** VEEA is a strong GATE-PENDING candidate (enter at 23:30 if it holds >10% AH); HCAI is a confirmed dead-cat/first-bar-spike fade. Next scan **23:30 CET (5:30 PM ET)** — priority: re-check VEEA for the second AH scan to clear the gate; watch for any fresh igniter with accumulating SIP volume.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
