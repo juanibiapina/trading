@@ -84,6 +84,45 @@ Scanner returned **2 AH hits** (ran 16:30:25 ET). Observation-only per learning-
 
 No entry (also pre-23:00 CET). Next scan 23:00 CET (5:00 PM ET) — entries begin. Re-check whether any fresh name ignites with real accumulating SIP volume and a BUILD pattern; HCAI's fade trajectory makes continuation unlikely, but re-verify if it reappears building.
 
+## Scan 22:45 CET (4:45 PM ET) — AH OPEN, observation only
+
+Scanner returned **4 AH hits** (ran 16:45:19 ET). Observation-only per learning-phase rules (no entries before the 23:00 CET scan).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HCAI | [TV](https://www.tradingview.com/chart/?symbol=HCAI) | $1.85 | -17.2% | +19.2% | $2.21 | -1.3% | 588K | 425K | 1.4x | 7.3M | Industrial Machinery |
+| AIXC | [TV](https://www.tradingview.com/chart/?symbol=AIXC) | $1.19 | +32.7% | +5.0% | $1.25 | +39.4% | 192K | 521K | 0.4x | 7.1M | Packaged Software |
+| XPON | [TV](https://www.tradingview.com/chart/?symbol=XPON) | $4.59 | -9.5% | +10.0% | $5.05 | -0.4% | 132K | 162K | 0.8x | 680K | Electrical Products |
+| VSME | [TV](https://www.tradingview.com/chart/?symbol=VSME) | $1.30 | +21.5% | +5.4% | $1.37 | +28.0% | 79K | 2.8M | 0.0x | 2.6M | Advertising/Marketing |
+
+### Evaluation
+
+**AIXC / VSME — below threshold, watch only.** Both AH change <10% (AIXC +5.0%, VSME +5.4%). VRatio near zero (AIXC 0.4x, VSME 0.0x) — no unusual accumulating AH volume. Their Total% (AIXC +39.4%, VSME +28.0%) is regular-session gain carried in, not an AH build. Not candidates.
+
+**XPON — new, tiny float, but SPIKE→FADE with no catalyst. Skip.** Float 680K (ideal), `tradable=true`. Only the second name >10% AH change, so instrumented:
+- `NO-SPIKE peak +22% @16:24ET (no bar cleared +15% on a volume co-spike) (as-of 16:45ET)`
+- `CONFIRM-3 NO ignition 16:20ET failed third-bar hold/volume as-of 16:45ET`
+- SIP bars (real volume, not a bad print, but **fading**): 16:20 ET 53K sh / 1,154 tr H $5.61 vwap $5.29 → 16:25 ET 129K sh / 2,084 tr H $5.35 vwap $5.14 → 16:30 ET 38K sh / 590 tr H $5.10 C $4.80 vwap $4.92. Ignited 16:20, peaked ~$5.61 @16:24, declining price and volume since.
+- Quote `bid $3.98 x100 / ask $5.64 x100` — very wide spread; ask $5.64 is stale near the peak while SIP has faded to $4.80.
+- **Catalyst search (4 calls budget, 2 used):** no same-day catalyst found. Most recent items are stale — Aug 24 definitive agreement (potential $91M investments), June RV/OEM news, an oil & gas exploration acquisition. Nothing dated Sep 14.
+
+  **Why skip:** SPIKE→FADE (peaked 16:24 ET, fading since) — 0/10+ for PM continuation regardless of float/catalyst. Day% -9.5% (down day). First AH appearance, so fails the 2-AH-scan gate. No same-day catalyst. Illiquid wide book. Observation-only anyway (pre-23:00 CET).
+
+**HCAI — dead-cat + first-bar spike→fade, skip (carried from 22:30).** Now on its second >10% AH scan (+22.9% at 22:30 → +19.2% now), AH Vol up to 588K / VRatio 1.4x, but still fading:
+- `SPIKE 16:05ET +26% $2.33 48 trades / 3k sh (first co-spike bar) (as-of 16:45ET)`
+- `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 16:45ET`
+- SIP bars: 16:05 ET 218K sh / 2,264 tr H $2.60 → 16:10 H $2.38 → 16:15 H $2.32 → 16:20 H $2.40 → 16:25 H $2.31 → 16:30 H $2.26 C $2.23. AH high $2.60 in the first bar, declining highs and volume (218K→21K) every bar since.
+- Quote `bid $1.48 x100 / ask $2.18 x100` (wide spread).
+- **Catalyst search:** no same-day HCAI-specific catalyst found (results were generic HCA Healthcare AI items).
+
+  **Why skip (three converging signals):** (1) **Dead-cat bounce** — Day% -17.2%, bouncing in AH, not building new momentum; (2) **First-bar spike→fade** — AH high $2.60 printed in the first AH bar (16:05 ET), CONFIRM-3 NO every scan, volume/highs declining since; (3) **Repeat fader** — HCAI's one-bar PM pop Sep 9→10 ($5.32 → $4.73) is already in the plan's FIRST-BAR-SPIKE 0/3 dataset.
+
+  **Dead-cat-override check:** Does NOT qualify — AH% is *falling* across scans (+22.9% → +19.2%) and price sits below the regular close context; the override requires a *rising* AH% reclaim above the regular close.
+
+  **FIRST-BAR-SPIKE WATCH (data collection):** AH high $2.60 @16:05 ET (first AH bar), CONFIRM-3 NO across both scans, current $2.21 sits within ~15% of that high. Recording hypothetical entry **$2.21 @ 16:45 ET (22:45 CET)** for the morning-eval tracker to measure whether the first-bar-spike skip was correct (overlaps the dead-cat skip).
+
+**No entries** — observation-only (pre-23:00 CET), and no candidate shows a BUILD pattern (HCAI and XPON both spike→fade). Next scan 23:00 CET (5:00 PM ET) — entries begin. Re-check whether any fresh name ignites with real accumulating SIP volume and a BUILD-and-hold pattern.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
