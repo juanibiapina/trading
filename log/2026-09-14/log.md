@@ -191,6 +191,35 @@ Instrumentation (AH change +34.1% >10%):
 
 **Entered VEEA (Grade A, real BUILD).** HCAI is a confirmed dead-cat/first-bar-spike fade. Next scan **00:00 CET (6:00 PM ET)** — monitor VEEA's overnight trajectory; watch for any fresh late igniter with accumulating SIP volume and a second AH scan to clear the gate.
 
+## Scan 00:00 CET (6:00 PM ET) — AH OPEN, entries allowed
+
+Scanner returned **4 AH hits** (ran 18:00:37 ET). Entries allowed per learning-phase rules.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VEEA | [TV](https://www.tradingview.com/chart/?symbol=VEEA) | $2.29 | +46.8% | +59.8% | $3.66 | +134.6% | 11.6M | 1.9M | 6.1x | 1.6M | Packaged Software |
+| HCAI | [TV](https://www.tradingview.com/chart/?symbol=HCAI) | $1.85 | -17.2% | +7.3% | $1.99 | -11.2% | 753K | 445K | 1.7x | 7.3M | Industrial Machinery |
+| BOXL | [TV](https://www.tradingview.com/chart/?symbol=BOXL) | $5.43 | -4.6% | +7.7% | $5.85 | +2.8% | 205K | 60K | 3.4x | 565K | Computer Peripherals |
+| XPON | [TV](https://www.tradingview.com/chart/?symbol=XPON) | $4.59 | -9.5% | +6.3% | $4.88 | -3.7% | 198K | 171K | 1.2x | 680K | Electrical Products |
+
+### Evaluation
+
+**VEEA — OPEN POSITION, still building strongly. No re-entry (one entry per candidate per night).** Entered 23:30 CET @ $3.38; Alpaca now shows **$3.94, P&L +16.6%**.
+
+Instrumentation (AH change +59.8% >10%):
+- `SPIKE 16:42ET +17% $2.67 1070 trades / 204k sh (first co-spike bar) (as-of 18:00ET)`
+- `CONFIRM-3 YES ignition 16:40ET 67.3x; confirmed 16:50ET $2.77 as-of 18:00ET`
+- SIP bars confirm the BUILD is still running, not fading: 17:15 ET 1,314K sh / 10,027 tr H $3.38 → 17:20 ET 851K sh / 7,149 tr H $3.40 → 17:25 ET 548K sh / 4,206 tr H $3.36 → 17:30 ET 917K sh / 7,260 tr H $3.50 → **17:35 ET 1,278K sh / 10,520 tr H $3.83 C $3.80 vwap $3.66** — still making new AH highs on 1M+ sh / 10K+ trades per bar. Textbook continued BUILD.
+- Total% now +134.6% (from prior close $1.56), just under the +150% ceiling. Position is up; the entry thesis (Grade-A catalyst + real accumulating BUILD) is playing out. Position management (hold/exit) is handled by the premarket `position-evaluation.md` run, not here.
+
+**HCAI — dead-cat + first-bar spike→fade, faded below threshold. Skip (carried, 5th AH scan).** AH Chg +7.3% (below the 10% threshold), Total% −11.2% (below prior close). SIP continues to confirm the roll-over from the first-bar peak $2.60 @16:05 ET. No instrumentation this scan (AH change <10%). Three converging skip signals stand (dead-cat bounce Day% −17.2%; first-bar spike→fade, CONFIRM-3 NO every scan; repeat fader Sep 9→10). Dead-cat-override does NOT qualify — AH% fell every scan (+22.9% → +19.2% → +18.1% → +6.2% → +7.3%). **FIRST-BAR-SPIKE WATCH update:** hypothetical entry $2.21 @ 16:45 ET is now $1.99 (−10%) — skip tracking correct.
+
+**BOXL — new, below threshold + no AH book. Skip.** AH change +7.7% (below the 10% threshold). Float 565K (ideal) and VRatio 3.4x, but quote `bid $4.66 x100 / ask $0.00 x0` — **no fillable ask book** (illiquid, no AH liquidity). Day% −4.6% (mild down day), Total% only +2.8%. Not a candidate: sub-threshold AH move on an illiquid book. No instrumentation (AH change <10%).
+
+**XPON — carried, still SPIKE→FADE below threshold. Skip.** AH change +6.3% (below threshold, down from +10.0% at 22:45), Total% −3.7%, Day% −9.5%. Quote `bid $3.98 x100 / ask $5.64 x100` — same wide/stale book as earlier. Faded further from its 16:24 ET peak; no catalyst found in prior scan. Not a candidate.
+
+**No new entries at 00:00.** VEEA (open position) is building strongly toward the ceiling; no other name clears the 10% AH threshold. Next scan **00:30 CET (6:30 PM ET) — final scheduled scan.** Priorities: apply the final-scan feed-lag cross-check to tracked pipeline names (VEEA, HCAI, XPON, BOXL, plus 21:30 watch names) against SIP; watch for any late igniter (FINAL-SCAN-GATE-BLOCK instrumentation if one ignites too late for a second AH scan).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
