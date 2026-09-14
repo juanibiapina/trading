@@ -25,6 +25,21 @@ Scanner returned 32 regular-session hits. Filtering out volume-collapse artifact
 
 **Next scan: 22:00 CET (16:00 ET) — AH opens.** Re-check whether any watch name carries into after-hours with real SIP volume. Entries only begin at the 23:00 CET scan per learning-phase rules.
 
+## Scan 22:00 CET (4:00 PM ET) — AH OPEN, observation only
+
+Scanner returned **0 AH hits** — it ran at 16:00:21 ET, ~20 seconds after after-hours opened, before any AH volume had accumulated. Observation-only scan per learning-phase rules (no entries before the 23:00 CET scan).
+
+**Watch-candidate AH book check (21:30 regular-session names):**
+
+| Ticker | AH Quote (16:00 ET) | Read |
+|--------|---------------------|------|
+| VANAF  | no quote (404) | Not tradable on Alpaca — likely OTC/foreign line. Drop. |
+| AIXC   | bid $0.95 x100 / ask $1.20 x500 | Wide spread, closing snapshot only, no AH prints yet |
+| VSME   | bid $1.12 x100 / ask $0.00 x0 | No ask book — no fillable AH liquidity |
+| HMR    | bid $1.49 x100 / ask $2.08 x100 | Very wide spread, closing snapshot, no AH prints |
+
+No candidate shows a real accumulating AH book this early. Nothing to instrument (no name >10% AH change with live AH volume yet). Next scan 22:30 CET (4:30 PM ET) — re-check whether any 21:30 watch name carries into AH with real SIP volume; entries only begin at the 23:00 CET scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
