@@ -220,6 +220,55 @@ Instrumentation (AH change +59.8% >10%):
 
 **No new entries at 00:00.** VEEA (open position) is building strongly toward the ceiling; no other name clears the 10% AH threshold. Next scan **00:30 CET (6:30 PM ET) — final scheduled scan.** Priorities: apply the final-scan feed-lag cross-check to tracked pipeline names (VEEA, HCAI, XPON, BOXL, plus 21:30 watch names) against SIP; watch for any late igniter (FINAL-SCAN-GATE-BLOCK instrumentation if one ignites too late for a second AH scan).
 
+## Scan 00:30 CET (6:30 PM ET) — AH OPEN, FINAL scheduled scan
+
+Scanner returned **5 AH hits** (ran 18:30:24 ET). Entries allowed per learning-phase rules. This is the last scheduled scan of the night.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VEEA | [TV](https://www.tradingview.com/chart/?symbol=VEEA) | $2.29 | +46.8% | +64.6% | $3.77 | +141.7% | 16.0M | 2.4M | 6.6x | 1.6M | Packaged Software |
+| HCAI | [TV](https://www.tradingview.com/chart/?symbol=HCAI) | $1.85 | -17.2% | +14.3% | $2.12 | -5.4% | 777K | 448K | 1.7x | 7.3M | Industrial Machinery |
+| XPON | [TV](https://www.tradingview.com/chart/?symbol=XPON) | $4.59 | -9.5% | +14.2% | $5.24 | +3.4% | 336K | 191K | 1.8x | 680K | Electrical Products |
+| BOXL | [TV](https://www.tradingview.com/chart/?symbol=BOXL) | $5.43 | -4.6% | +6.8% | $5.80 | +1.9% | 243K | 64K | 3.8x | 565K | Computer Peripherals |
+| MITQ | [TV](https://www.tradingview.com/chart/?symbol=MITQ) | $0.64 | +6.7% | +9.3% | $0.70 | +16.6% | 220K | 99K | 2.2x | 6.6M | Electronics/Appliances |
+
+### Evaluation
+
+**VEEA — OPEN POSITION, still building strongly. No re-entry (one entry per candidate per night).** Entered 23:30 CET @ $3.38; Alpaca now shows **$3.82, P&L +13.0%**.
+
+Instrumentation (AH change +64.6% >10%):
+- `SPIKE 16:42ET +17% $2.67 1070 trades / 204k sh (first co-spike bar) (as-of 18:30ET)`
+- `CONFIRM-3 YES ignition 16:40ET 67.3x; confirmed 16:50ET $2.77 as-of 18:30ET`
+- Scanner AH Vol 16.0M / VRatio 6.6x — real accumulating book all night. Total% +141.7% (from prior close $1.56), still under the +150% ceiling. The entry thesis (Grade-A catalyst + real accumulating BUILD) is playing out; position up +13.0%. Hold/exit is handled by the premarket `position-evaluation.md` run, not here.
+
+**HCAI — dead-cat + first-bar spike→fade, bounced back above threshold but still a faded spike. Skip (carried, 6th AH scan).** AH Chg back to +14.3% (from +7.3% at 00:00), price $2.12, but Total% still −5.4% (below prior close).
+- `SPIKE 16:05ET +26% $2.33 48 trades / 3k sh (first co-spike bar) (as-of 18:30ET)`
+- `CONFIRM-3 NO ignition 16:05ET failed third-bar hold/volume as-of 18:30ET`
+- The bounce from $1.90 → $2.12 is a rebuild **>18% off the first-bar AH high $2.60** — per the plan's hold-vs-fade rule, a rebuild far below the AH high (>20% off) is a faded spike, not a hold. Three converging skip signals stand: (1) dead-cat bounce (Day% −17.2%); (2) first-bar spike→fade (AH high $2.60 @16:05 ET, CONFIRM-3 NO every scan); (3) repeat fader (Sep 9→10 one-bar PM pop in the FIRST-BAR-SPIKE 0/3 dataset). Dead-cat-override does NOT qualify — AH% has whipsawed (+22.9%→+19.2%→+18.1%→+6.2%→+7.3%→+14.3%), never a sustained rising reclaim above the regular close; Total% remains negative.
+- **FIRST-BAR-SPIKE WATCH update:** hypothetical entry $2.21 @ 16:45 ET (22:45 CET) is now $2.12 (−4%) — the first-bar-spike skip is still tracking correct.
+
+**XPON — clears the 2-AH-scan gate on paper, but it's a thin-drift second wave on a SPIKE→FADE first wave. Skip.** AH Chg +14.2% now, and it was +10.0% at 22:45 CET — so numerically it has 2 AH scans >10% (the gate). But the SIP tells the real story:
+- `SPIKE 18:02ET +19% $5.48 153 trades / 10k sh (first co-spike bar) (as-of 18:30ET)`
+- `CONFIRM-3 NO ignition 16:20ET failed third-bar hold/volume as-of 18:30ET`
+- **Wave 1 (real volume, faded):** 16:20 ET 53K sh / 1,154 tr H $5.61 → 16:25 ET 129K sh / 2,084 tr H $5.35 → 16:30 ET 38K sh H $4.80, then bled to ~$4.40–4.70 for over an hour on thin prints.
+- **Wave 2 (thin drift, NOT a build):** 17:40 ET 11.5K sh / 129 tr → 17:45 ET 11.8K sh / 152 tr → 17:50 ET 7.5K sh / 167 tr → 18:02 ET spike 10K sh / 153 tr. Price is climbing back toward the $5.61 first-wave high but on a **fraction of the volume** (tens-of-K sh, hundreds of trades per bar). Per the MODD thin-drift rule, a rising Total% on thin per-bar SIP volume is a thin drift, not a build — do NOT read the reclaim toward the high as a BUILD signal.
+- Quote `bid $3.98 x100 / ask $5.64 x100` (stale 16:00 ET snapshot, very wide). Down day (Day% −9.5%), no same-day catalyst (searched at 22:45; only stale Aug 24 items). Skip: SPIKE→FADE first wave + thin-drift second wave, no catalyst, down day.
+
+**MITQ — new, below threshold, thin late pop. Skip.** AH change +9.3% (below the 10% threshold). Float 6.6M, VRatio 2.2x, `tradable`-unknown, quote `bid $0.56 x100 / ask $0.79 x100` (stale, wide).
+- `SPIKE 17:50ET +17% $0.75 63 trades / 6k sh (first co-spike bar) (as-of 18:30ET)` — thin.
+- `CONFIRM-3 NO ignition 16:15ET failed third-bar hold/volume as-of 18:30ET`
+- SIP: early AH churn 16:15–16:30 ET ($0.72–0.74 on 15–60K sh), faded to $0.65, then a late pop 18:10 ET H $0.81 (51.7K sh / 241 tr) already back to $0.74. A sub-threshold penny name ($0.70) with a thin late pop and CONFIRM-3 NO. First AH appearance → fails the 2-AH-scan gate. Not a candidate.
+
+**BOXL — carried, below threshold, no AH book. Skip.** AH change +6.8% (below the 10% threshold), Total% +1.9%, Day% −4.6%. Prior scan showed `ask $0.00 x0` (no fillable AH liquidity). Not a candidate.
+
+### Final-scan instrumentation
+
+**FINAL-SCAN-GATE-BLOCK check — none.** No name clears every entry rule except the 2-AH-scan gate. The only fresh first-AH-appearance name is MITQ, but it is **below** the 10% AH threshold (+9.3%), CONFIRM-3 NO, and on thin volume (63 tr / 6k sh spike) — not a genuine volume-backed late igniter. No block to record.
+
+**Final-scan feed-lag cross-check — no rescue needed.** Cross-checked tracked pipeline names against SIP: VEEA (real, in position, 1M+ sh/bar all night), HCAI (real but fading below close), XPON (real but thin second wave), MITQ (thin), BOXL (below threshold). The 21:30 regular-session watch names (AIXC, VSME, HMR, MYSE, PMI) never carried into AH with accumulating SIP volume (all flat/sub-threshold in earlier scans). TradingView is not under-reporting any tracked name above threshold on real volume — no SIP-truth rescue applies.
+
+**No new entries at 00:30.** VEEA remains the sole entry of the night (Grade A, real BUILD, up +13.0%). Night complete — this was the final scheduled scan. HCAI/XPON/MITQ/BOXL are all fades or sub-threshold. VEEA position management moves to the premarket `position-evaluation.md` run.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
