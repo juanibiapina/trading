@@ -77,6 +77,52 @@ None show AH ignition. Carry all four forward as watch names; re-check at 22:30/
 
 **Next scan:** 22:30 CET (observation). First eligible entry scan is 23:00 CET — re-check RETO's trajectory and any new igniters then.
 
+## Scan 22:30 CET (4:30 PM ET) — observation only
+
+**Scanner: 4 hits** (ran 16:30:18 ET). Observation only per the learning-phase gate (no entries before 23:00 CET). First eligible entry scan is 23:00 CET.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| RETO | [TV](https://www.tradingview.com/chart/?symbol=RETO) | $2.80 | +676.3% | +62.1% | $4.54 | +1158.7% | 12.0M | 21.0M | 0.6 | 35.8M | Other Metals/Minerals |
+| WAFU | [TV](https://www.tradingview.com/chart/?symbol=WAFU) | $1.39 | +1.5% | +90.6% | $2.65 | +93.4% | 5.5M | 662K | 8.4 | 3.0M | Misc Commercial Services |
+| TPST | [TV](https://www.tradingview.com/chart/?symbol=TPST) | $0.76 | -3.7% | +25.8% | $0.95 | +21.1% | 907K | 352K | 2.6 | 9.6M | Pharmaceuticals: Major |
+| YFOR | [TV](https://www.tradingview.com/chart/?symbol=YFOR) | $1.40 | -2.8% | +10.7% | $1.55 | +7.6% | 348K | 641K | 0.5 | 1.6M | Misc Commercial Services |
+
+**Instrumentation (log-only, no decision impact):**
+- RETO — `SPIKE-BAR: NO-SPIKE peak +186% @16:05ET` · `CONFIRM-3: NO no local-volume new-high ignition as-of 16:30ET`
+- WAFU — `SPIKE-BAR: SPIKE 16:01ET +29% $1.80 554 trades / 96k sh` · `CONFIRM-3: PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET`
+- TPST — `SPIKE-BAR: SPIKE 16:05ET +20% $0.91 40 trades / 14k sh` · `CONFIRM-3: NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET`
+- YFOR — `SPIKE-BAR: SPIKE 16:00ET +16% $1.62 185 trades / 56k sh` · `CONFIRM-3: PENDING ignition 16:15ET; waiting for third bar as-of 16:30ET`
+
+**Candidate evaluation:**
+
+**WAFU — strongest fresh igniter; primary 23:00 entry candidate if it holds (observation only now).**
+- Fresh day-1 AH ignition: Day% only +1.5% (regular session flat) → the entire +90.6% move is pure AH. Float **3.0M** (ideal <10M), VRatio **8.4**, Total% **+93.4%** (well under the +150% ceiling), tradable=true.
+- SIP bars (16:00–16:15 ET) confirm a **real volume-backed build**, not a bad print:
+  - 16:00 O$1.40 H$1.85 C$1.69 — vol 1,021,824 / 5,925 trades — vwap $1.73
+  - 16:05 H$2.14 C$1.93 — vol 1,629,758 / 9,730 trades — vwap $1.92
+  - 16:10 H**$2.98** C$2.64 — vol 3,689,471 / 26,122 trades — vwap $2.50 (peak bar)
+  - 16:15 H$2.80 L$2.10 C$2.49 — vol 1,967,971 / 14,352 trades — vwap $2.37
+  - VWAP rising $1.73→$2.50 on accumulating volume; scanner AH $2.65 corroborates SIP (not a bad print). AH high **$2.98 @16:10 ET**, now ~$2.49 (~17% off high — within the ~20% "holding" band, but only 2 bars past peak; too early to call fade).
+- Quote at scan is stale (bid $1.16 / ask $1.61 @ 16:00 ET, 30 min behind) — freshness guard: lean on SIP + real-time book at 23:00.
+- **Catalyst:** StockTitan — Wah Fu announced its wholly-owned subsidiary Beijing Huaxia Dadi Distance Education signed and began implementing **three AI customization projects** (incl. a Sino-Russian bilingual industrial AI digital human). Chinese small-cap AI operational PR — Grade B/C, plausible momentum driver.
+- **Status:** First AH scan appearance (not in 22:00/22:15). Needs to reappear at 23:00 with AH% >10% to satisfy the 2-AH-scan gate. **Watch → likely entry at 23:00 if the build holds within ~20% of the AH high.**
+
+**RETO — carried skip (first-bar spike + extreme extension), fading as thesis predicted.**
+- Now bid $2.94 / ask $3.00 @ 16:31 ET (fresh quote) — **faded ~37% off the $4.73 first-bar high** to ~$3.00. Still +733% total extension from prev close ($0.36). Two independent blocks unchanged: (1) extension ~8× the +150% ceiling (no ceiling-override — AH high was the first 16:00 bar, not after 17:00 ET); (2) first-bar spike, CONFIRM-3 NO every scan.
+- **FIRST-BAR-SPIKE WATCH** continues (hypothetical entry $4.50 @ 22:15 CET). The fade to ~$3.00 supports the skip.
+
+**TPST — likely skip (thin ignition + weak catalyst).**
+- Ignition thin: SPIKE 16:05 ET was only 40 trades / 14k sh; CONFIRM-3 NO (failed third-bar hold/volume). VRatio 2.6, Total +21%, float 9.6M. Quote stale (bid $0.63 / ask $0.88 @ 16:00 ET).
+- **Catalyst:** H.C. Wainwright 28th Annual Global conference presentation Sept 15 + next-gen in vivo CAR-T pipeline. A conference presentation is a weak Grade C catalyst, not fresh operational news. Thin volume + weak catalyst → skip candidate.
+
+**YFOR — marginal (borderline threshold, below-avg AH volume).**
+- AH Chg +10.7% (barely above threshold), Total +7.6%, VRatio **0.5** (AH vol below its own average — not unusual accumulation). Float 1.6M (small). CONFIRM-3 PENDING. Quote stale (bid $1.20 / ask $1.62 @ 16:00 ET). Low priority; no catalyst searched (marginal signal). Carry as watch.
+
+**VEEA** — open position (28 sh @ $3.38), handled by position-evaluation; excluded from entries.
+
+**Next scan:** 23:00 CET (5:00 PM ET) — **first eligible entry scan.** Re-check WAFU (2-AH-scan gate + hold vs fade), RETO trajectory, and any new igniters.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
