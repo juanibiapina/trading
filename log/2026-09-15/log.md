@@ -52,6 +52,31 @@ None show AH ignition. Carry all four forward as watch names; re-check at 22:30/
 
 **Next scan:** 22:30 CET (4:30 PM ET) — observation. First eligible entry scan is 23:00 CET.
 
+## Scan 22:15 CET (4:15 PM ET) — observation only
+
+**Scanner: 0 hits** (ran 16:15:13 ET). But a watch-name re-check caught **RETO igniting in AH.**
+
+**RETO — real AH igniter, but blocked on extension + first-bar spike (observation only regardless):**
+- Quote: bid $4.44 x200 / ask $4.50 x300 @ 16:15 ET — real, two-sided fillable book (vs $1.20/$3.49 at 22:00 — the book has settled and run up).
+- SIP first AH bar (16:00 ET): O $2.80 H **$4.73** L $2.47 C $4.58, **vol 5,755,832 / 35,514 trades**, VWAP $3.37 — genuine, massive AH liquidity. Not a bad print (quote corroborates SIP high).
+- Context: prev close **$0.36** → regular close $2.87 (Day% +695.7%) → AH ~$4.50. **Total% from prev close = +1150%.**
+- Float 35.8M; tradable=true; day 1 of the move (daily bars show only the $0.36 prior close, no multi-session run).
+- `SPIKE-BAR: NO-SPIKE peak +11% @16:00ET` · `CONFIRM-3: NO no local-volume new-high ignition as-of 16:15ET`
+- **Verdict: skip even at entry time.** Two independent blocks: (1) **Entry extension ceiling** — +1150% total is ~8× the +150% ceiling; no overnight margin. Does NOT qualify for ceiling-override watch (that requires AH high *after* 17:00 ET; RETO's high was the first 16:00 bar). (2) **First-bar spike** — AH high $4.73 printed in the first AH bar, CONFIRM-3 NO.
+- **FIRST-BAR-SPIKE WATCH (hypothetical):** entry $4.50 @ 22:15 CET (16:15 ET). Tracks whether the first-bar-spike + extreme-extension skip was correct into PM.
+
+**Other watch names (no AH ignition):**
+
+| Ticker | AH Bid | AH Ask | Note |
+|--------|--------|--------|------|
+| MEDS | $1.48 x100 | $2.76 x1100 | Bid ticked up but ask is a stale x1100 resting order; still below regular close, no ignition. |
+| IPW | $2.23 x100 | $3.00 x100 | Stale (quote 16:00 ET), wide spread, no AH prints. |
+| MYSZ | $2.29 x100 | $2.32 x100 | Flat vs day, no AH ignition. |
+
+**VEEA** — open position (28 sh @ $3.38), handled by position-evaluation; excluded from entries.
+
+**Next scan:** 22:30 CET (observation). First eligible entry scan is 23:00 CET — re-check RETO's trajectory and any new igniters then.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
