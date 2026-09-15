@@ -15,3 +15,26 @@
 
 **Actions taken:**
 - None. HOLD VEEA. No stop update (peak +31% below +50% trail trigger; hard stop stays -25% = $2.54).
+
+## Scan 21:30 CET (3:30 PM ET) — Regular session, watch only
+
+**AH not open yet** (opens 16:00 ET / 22:00 CET). No entries this scan per the regular-session caution rule. These are day-session movers flagged as **Watch — pending AH confirmation**; only enter if they reappear in an AH scan (22:00+ CET) with sustained momentum.
+
+| Ticker | Chart | Price | Day% | 5mVol | IRVol | VChg% | Float | MCap | Industry | Note |
+|--------|-------|-------|------|-------|-------|-------|-------|------|----------|------|
+| RETO | [TV](https://www.tradingview.com/chart/?symbol=RETO) | $2.87 | +695.7% | 1.5M | 561.7 | -31.8% | 35.8M | 13.3M | Other Metals/Minerals | Huge day move but volume fading; float >10M. Watch AH. |
+| MEDS | [TV](https://www.tradingview.com/chart/?symbol=MEDS) | $1.92 | +121.9% | 100 | 209.8 | -100.0% | 1.5M | 2.7M | Medical Distributors | Small float, move already spent (vol collapsed). Watch AH. |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $3.49 | +81.0% | 1K | 869.5 | -99.9% | 945K | 3.3M | Internet Retail | Tiny float, high IRVol; 5m vol dried up. Watch AH. |
+| MYSZ | [TV](https://www.tradingview.com/chart/?symbol=MYSZ) | $2.10 | +26.5% | 70K | 428.2 | -25.1% | 646K | 1.5M | Internet Software/Services | Micro float; still trading volume. Watch AH. |
+
+**VEEA** ($5.91, +158.1% day) appears at the top of the scan but is an **open position** (28 sh @ $3.38, held) — handled by position-evaluation, excluded from entries (one entry per candidate per night).
+
+**Other hits noted (lower priority):** MTEN +11.7% (6.1M float), CLNN +26.4% (pharma, 10.6M float), UPLD +23.6%. Most remaining scan hits show VChg% deeply negative (fading, move already spent) or floats well above 10M. No AH data to evaluate yet.
+
+**Next scan:** 22:00 CET (4:00 PM ET) — first true AH scan. Observation only until 23:00 CET (learning-phase entry gate).
+
+## Paper Trades (Alpaca fills)
+
+| Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
+|--------|------------|------------|-----------------|----------|--------|
+| _none yet — regular-session watch scan, AH not open_ | | | | | |
