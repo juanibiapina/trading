@@ -275,6 +275,46 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-09-15 (strategy-advance) — fresh out-of-sample admit MTEN
+   FILLED the +10% limit (peak-seek win); entered set n=21 firms to +3.7%/name
+   (net ~+1.7%), fade-tail eases to 4/21 (19%). And the 09-14 catastrophe-stop
+   hypothesis is REJECTED: a proper intrabar test shows a stop HURTS the edge at
+   every width, so the exit proposal stays a plain +10% limit, no stop.** One
+   fresh holdable footprint=none PM-only gapper logged 09-15 (MTEN +15.9%,
+   Mingteng Intl 6.1M-float micro-cap). Re-ran `init6-pm-pilot.js` (47
+   candidates): **MTEN was admitted** by the continuation gate (entered $1.14 at
+   04:40 ET) and its early ramp **filled the resting +10% limit ($1.25)**
+   intrabar = a win at the exit rule, even though it drifted to PM-last -9.6%
+   (the exact peak-seeking case the resting limit is built for). AEHL's 09-14 row
+   also recomputed -34.1% -> -32.6% on fuller 1-min bars. Entered set moves
+   n=20 -> **n=21: SUM +77.5% / mean +3.7% / median +10.0% / positive 16/21**, vs
+   a PM-last floor of -7.3% and a do-nothing baseline of 0%; net of ~2% spread
+   **~+1.7%/name (up from +1.3%)**. The **fade-tail eases to 4/21 (BIVI -27.1,
+   MIMI-2 -6.9, BNC -14.7, AEHL -32.6) = 19%** — MTEN added a limit-win not a
+   fade, so the ratio slips back from 20% and stays under the ~25% that erodes
+   the edge below the spread. **Catastrophe-stop RESOLVED:** the 09-14 note staged
+   promoting the optional ~-15% catastrophe-stop into the exit proposal if the
+   fade-tail held near ~20-25%. Built `scripts/init6-catastrophe-stop.js`
+   (log-only) to test it properly with intrabar 1-min bars, and swept widths
+   -15/-20/-25/-30% under both conservative and optimistic same-bar tie-breaks.
+   **Every width is net-negative vs the plain +10% limit (+1.7%/name):** -15%
+   -0.4, -20% +0.9, -25% +0.5, -30% -0.1. Cause: these micro-float PM gappers
+   whipsaw deep intrabar then re-ramp, and the resting +10% limit's whole edge is
+   staying in all premarket to catch the re-ramp — WBUY (07-23) entered $1.28,
+   dumped to ~$0.84 (-34%), then re-ramped to $1.68 filling the +10% limit at
+   08:32 ET; any stop bails at the whipsaw low and misses it (verified on real
+   SIP bars, tie-break-robust: WBUY/WHLR are genuine time-ordered pre-empts, not
+   same-bar artifacts). **Decision: DROP the optional catastrophe-stop; keep the
+   exit rule a plain resting +10% sell-limit + PM-last fallback.** Init 3 remains
+   **data-blocked** (VEEA held day 1, no exit at the 09-15 pulse), holds at n=38.
+   Init 2 blocked on Juan (needs an account for the fill test). Still log-only, no
+   orders. Next: keep seeding holdable PM-only gappers; the pilot edge is stable
+   (n=21, +3.7%/name, 16/21 positive, tail 19%, two converging studies) and the
+   exit rule is now simplified (no stop) — the live blocker stays the broker
+   (Init 2 account) plus Juan's veto on the entry pulse. **Deadline note:** the
+   ~10-01 net-positive target is ~2 weeks out and the live cycle still enters
+   none of these gappers, so the two standing asks remain the money-fast
+   bottleneck.
    **Update 2026-09-14 (strategy-advance) — fresh out-of-sample admit AEHL
    (footprint SIP-resolved unknown->none) is a HARD FADE; the gate false-positive
    drops the entered edge to n=20 / +3.3%/name (net ~+1.3%), fade-tail 4/20
