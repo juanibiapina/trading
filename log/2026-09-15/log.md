@@ -338,6 +338,68 @@ None show AH ignition. Carry all four forward as watch names; re-check at 22:30/
 
 **Next scan:** 00:30 CET (6:30 PM ET) — **last scheduled scan.** Re-check MEDS (does it hold near the $2.69 AH high; still ceiling-blocked at +192% regardless), WNW (fade confirmation), WAFU/YFOR trajectory (exits handled by premarket position-evaluation), and any final-scan late igniters (apply the feed-lag cross-check to pipeline names).
 
+## Scan 00:30 CET (6:30 PM ET) — last scheduled scan
+
+**Scanner: 13 hits** (ran 18:30:23 ET). **No new entries.** MEDS technically cleared both of its 00:00 blocks (Total% dropped +192.4% → +148.5%, under the +150% ceiling; 2-AH-scan gate now met with 00:00 + 00:30 appearances) — but it cleared the ceiling *only by fading* ~20% off its $2.69 peak on collapsing volume, so it is skipped on the hold-vs-fade rule. WAFU/YFOR were entered at 23:00 (excluded — one entry per candidate per night); trajectory noted below.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| RETO | [TV](https://www.tradingview.com/chart/?symbol=RETO) | $2.80 | +676.3% | +45.0% | $4.06 | +1025.6% | 30.4M | 23.1M | 1.3 | 35.8M | Other Metals/Minerals |
+| WAFU | [TV](https://www.tradingview.com/chart/?symbol=WAFU) | $1.39 | +1.5% | +35.3% | $1.88 | +37.2% | 20.2M | 2.3M | 8.6 | 3.0M | Misc Commercial Services |
+| TPST | [TV](https://www.tradingview.com/chart/?symbol=TPST) | $0.76 | -3.7% | +39.2% | $1.05 | +34.1% | 18.3M | 2.2M | 8.3 | 9.6M | Pharmaceuticals: Major |
+| PDSB | [TV](https://www.tradingview.com/chart/?symbol=PDSB) | $0.59 | +46.7% | +6.5% | $0.62 | +56.2% | 11.1M | 98.4M | 0.1 | 55.0M | Pharmaceuticals: Major |
+| MEDS | [TV](https://www.tradingview.com/chart/?symbol=MEDS) | $1.62 | +87.2% | +32.7% | $2.15 | +148.5% | 10.6M | 6.4M | 1.7 | 1.5M | Medical Distributors |
+| YFOR | [TV](https://www.tradingview.com/chart/?symbol=YFOR) | $1.40 | -2.8% | +27.9% | $1.79 | +24.3% | 7.1M | 1.4M | 4.9 | 1.6M | Misc Commercial Services |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $2.35 | -1.3% | +13.2% | $2.66 | +11.8% | 757K | 143K | 5.3 | 26.2M | Internet Retail |
+| GWAV | [TV](https://www.tradingview.com/chart/?symbol=GWAV) | $2.66 | -16.2% | +23.7% | $3.29 | +3.6% | 5K | 40K | 0.1 | 219K | Misc Commercial Services |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $1.14 | -0.9% | +6.1% | $1.21 | +5.2% | 818K | 467K | 1.8 | n/a | Oilfield Services/Equipment |
+| BURU | [TV](https://www.tradingview.com/chart/?symbol=BURU) | $1.20 | -11.1% | +5.0% | $1.26 | -6.7% | 224K | 950K | 0.2 | 8.4M | Electronic Components |
+| WWR | [TV](https://www.tradingview.com/chart/?symbol=WWR) | $0.54 | -4.7% | +7.2% | $0.58 | +2.1% | 73K | 938K | 0.1 | 117.5M | Other Metals/Minerals |
+| TOPS | [TV](https://www.tradingview.com/chart/?symbol=TOPS) | $0.80 | +13.1% | +5.2% | $0.84 | +19.0% | 61K | 87K | 0.7 | 4.1M | Marine Shipping |
+| CDZI | [TV](https://www.tradingview.com/chart/?symbol=CDZI) | $3.51 | -2.5% | +9.1% | $3.83 | +6.4% | 56K | 890K | 0.1 | 56.6M | Real Estate Development |
+
+**Instrumentation (log-only, no decision impact):**
+- MEDS — `SPIKE-BAR: SPIKE 17:22ET +15% $1.87 589 trades / 118k sh` · `CONFIRM-3: YES ignition 17:20ET 14.6x; confirmed 17:30ET $2.58 as-of 18:30ET`
+- WNW — `SPIKE-BAR: SPIKE 16:19ET +26% $2.95 212 trades / 98k sh` · `CONFIRM-3: NO ignition 16:15ET failed third-bar hold/volume as-of 18:30ET`
+- TPST — `SPIKE-BAR: SPIKE 16:05ET +20% $0.91 40 trades / 14k sh` · `CONFIRM-3: NO ignition 16:05ET failed third-bar hold/volume as-of 18:30ET`
+- RETO — `SPIKE-BAR: NO-SPIKE peak +186% @16:05ET` · `CONFIRM-3: NO no local-volume new-high ignition as-of 18:30ET`
+- GWAV — `SPIKE-BAR: SPIKE 16:37ET +21% $3.22 22 trades / 1k sh` · `CONFIRM-3: NO no local-volume new-high ignition as-of 18:30ET`
+
+**Candidate evaluation:**
+
+**MEDS — both 00:00 blocks technically cleared, but SKIP (cleared the ceiling only by fading; hold-vs-fade dominates).**
+- **Gates now cleared:** Total% **+148.5%** (was +192.4% at 00:00 — under the +150% ceiling now); 2-AH-scan gate met (00:00 +56.2% → 00:30 +32.7%, both AH scans >10%); Day% +87.2% (above -15%); float **1.5M** (ideal); tradable=true; `CONFIRM-3 YES 14.6x` (the night's only YES — real, volume-backed ignition after 17:00 ET).
+- **But the trajectory is now a FADE, not a hold.** SIP (forced-recent, to 18:15 ET): peaked **$2.69 @ 17:30 ET** (1.87M sh / 11,763 tr), then 17:45 dropped to $2.03–2.23 (938K sh), bounced to $2.54 @ 18:00 ET (741K sh), then settled $2.08–2.15 as **volume collapsed** — 18:05 373K → 18:10 246K → 18:15 **110K sh**. Yahoo 18:20–18:31 ET: $2.05–$2.18. Current ~$2.15 is **~20% off the $2.69 high** (right at the boundary); the **live quote bid $1.74** (ask $3.50 stale/wide) is ~35% off — real sell pressure. AH price declined across both scans it appeared in ($2.53 → $2.15).
+- **The reason it dropped under the ceiling is the fade itself** (price $2.53 → $2.15 = -15%). Entering a name that cleared +150% only by fading is the anti-signal — at +148.5% it sits exactly in the ATPC (+154%→-14.1%) / ANY (+155%→-21.3%) loss zone. Grade None (no catalyst — 3 searches at 00:00 returned only 2024-or-older results).
+- **No ceiling-override watch:** VRatio **1.7** (<5x required) — fails the override's volume gate (10.6M AH vol against a high 6.4M avg daily volume).
+- **Verdict: SKIP** on hold-vs-fade + extension-at-ceiling. **FADE-SKIP WATCH (hypothetical):** entry ~$2.15 @ 00:30 CET (18:30 ET) — recorded so morning-eval can measure whether skipping the night's only CONFIRM-3 YES (a genuine post-17:00 igniter that faded ~20% and slipped under the ceiling) was correct. This is the key data point of the night: a name whose ceiling + 2-AH-scan blocks *cleared by fading*.
+
+**WNW — 3 AH scans >10% + under ceiling, but SKIP (thin drift, early peak, CONFIRM-3 NO).**
+- 2-AH-scan gate met (23:00 +15.7% → 00:00 +11.9% → 00:30 +13.2%), Total% only +11.8% (well under ceiling), Day% -1.3% (fresh AH move), VRatio 5.3, tradable=true, float 26.2M (high).
+- **But it is a spike-and-drift, not a build.** AH high **$3.08 @ 16:35 ET** (early, before 17:00) on the 16:15–16:35 spike, then volume **dried up**: recent SIP bars (17:00–18:15 ET) are 657–41K sh / 10–216 trades each — textbook thin drift (tens-of-K sh, tens–low-hundreds of trades). Total AH vol crept 591K → 727K → 757K over the last hour (barely any new volume). Current ~$2.62–2.66 holds within ~14% of $3.08 but on essentially no volume. `CONFIRM-3 NO`.
+- Trajectory dominates: early peak (16:35 ET) + thin declining volume = SPIKE→FADE class (0/6+ for PM continuation). **Verdict: SKIP.** Catalyst: none found earlier; trajectory is the skip regardless.
+
+**GWAV — new AH>10% name, SKIP (illiquid / no AH book + dead-cat + thin print).**
+- First AH appearance. Day% **-16.2%** (below the -15% threshold → dead-cat territory). AH vol **5K** / VRatio 0.1 (40K avg) — no real AH accumulation. SPIKE-BAR reads only 22 trades / 1k sh (thin/bad print). Quote **stale** (bid $2.25 / ask $4.34 @ 16:00 ET, 2.5h behind) — huge spread, no fillable AH book. Float 219K (micro). No dead-cat-override (only 1 AH scan, illiquid — not a volume-backed reclaim). **Verdict: SKIP** as illiquid + dead-cat + thin.
+
+**RETO — carried skip (first-bar spike + extreme extension).** AH $4.06, +45.0% AH chg — bounced back toward the $4.73 first-bar high (~14% off) but still **+1025.6% total extension** from prev close ($0.36), ~7× the +150% ceiling. Two blocks unchanged: extension far above ceiling (no ceiling-override — AH high was the first 16:00 bar) + first-bar spike (CONFIRM-3 NO every scan). **FIRST-BAR-SPIKE WATCH** continues (hypothetical entry $4.50 @ 22:15 CET; now $4.06 = -9.8%).
+
+**TPST — carried skip (SPIKE→FADE).** AH $1.05, +39.2% AH chg — bounced but still ~39% below the $1.73 spike high (16:20 ET); ignition volume declined into the fade. Weak Grade C catalyst (H.C. Wainwright conference presentation). CONFIRM-3 NO. Skip continues.
+
+**PDSB — carried skip (Grade D dilution + multi-session runner), now sub-threshold.** AH +6.5% (fell below the 10% threshold; was +15.3% at 23:30). Grade D PIPE financing, multi-session runner (+183% ~1 week ago on the same PIPE), float 55.0M, VRatio 0.1. Skip stands on every count.
+
+**Open positions (entered 23:00; excluded from new entries — exits handled by premarket position-evaluation):**
+- **WAFU** — entered $2.21, now $1.73 (Alpaca P&L **-21.7%**). AH Chg $2.59 → $1.88; faded hard off the $3.25 AH high, as the intra-window borderline-hold concern flagged at entry. Grade None.
+- **YFOR** — entered $1.55, now $1.71 (Alpaca P&L **+10.3%**). AH $1.79; holding above entry. Grade None.
+
+**Sub-threshold / no-accumulation (skip):** STAK +6.1%, BURU +5.0% (Day -11.1%, Total -6.7%), WWR +7.2%, TOPS +5.2%, CDZI +9.1% — all below the 10% AH threshold or no AH accumulation.
+
+**Final-scan feed-lag cross-check (pipeline names):** All tracked AH names this night (RETO, WAFU, TPST, MEDS, YFOR, WNW, PDSB) are present in the 18:30 ET scan — no TradingView under-report/omission to rescue. MEDS surfaced at 00:00 (feed-lag from its 17:20 ET ignition) and is present again here. No new omitted igniter on SIP. **No FINAL-SCAN-GATE-BLOCK:** the only first-appearance name (GWAV) fails multiple entry rules (illiquid, Day% <-15%, thin) — it is not a genuine late igniter blocked solely by the gate.
+
+**VEEA** — open position (28 sh @ $3.38, now $5.57, +64.8%), handled by position-evaluation; excluded from entries.
+
+**End of scheduled scans.** Tonight's entries: WAFU (23:00, $2.21, now -21.7%) and YFOR (23:00, $1.55, now +10.3%). Exits handled by premarket position-evaluation. Morning-eval to check the FADE-SKIP WATCH on MEDS (skipped the night's only CONFIRM-3 YES on the hold-vs-fade + extension-at-ceiling rules) and the RETO FIRST-BAR-SPIKE WATCH.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
