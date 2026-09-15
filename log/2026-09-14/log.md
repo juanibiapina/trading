@@ -274,3 +274,102 @@ Instrumentation (AH change +64.6% >10%):
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | VEEA | $3.38 | 2026-09-14 17:30 ET (23:30 CET) | 28 | dad1e466 | Grade A — Veea+NovaGen potential merger term sheet + GeoNova $10M investment (GlobeNewswire ~16:40 ET at ignition). Real accumulating AH BUILD (1M+ sh/bar, still new highs), cleared 2-AH-scan gate (+14.5%→+34.1%), float 1.6M, VRatio 5.1x, CONFIRM-3 YES 67.3x, Total% +96.8% under ceiling. Fresh day-1 igniter. |
+
+## Morning Evaluation — 10:20 CET (Sep 15, evaluating Sep 14 AH session)
+
+### Today's Winner
+
+**No real winner today.** Nothing cleared the >100% winner bar measured from the correct previous close. Two genuine, volume-backed AH→PM movers both fell just short: **VEEA +89.5%** and **MYSZ +90.8%** (both from their true Monday closes). We entered VEEA — the biggest genuine mover — and it is holding a small gain.
+
+**VEEA** (Veea Inc.) — Packaged Software / AI edge infrastructure — **the biggest genuine mover, DETECTED + ENTERED**
+- Catalyst: **Grade A** — Veea + NovaGen **potential merger term sheet** to launch an Edge AI-powered Global Health Platform + a **US$10M investment commitment from GeoNova Capital** (GlobeNewswire, Sep 14 ~16:40 ET — dropped exactly at the ignition bar). Momentum-gradable (potential/term-sheet merger + fresh capital + new platform, not a fixed-price cash deal → no merger-arb→D exclusion).
+- **Prev-close basis check (post-nothing, but stale-basis case):** Yahoo `previousClose` = $1.56 is a **stale one-session-old basis** (Friday Sep 11 close). The true last-session close is **Monday Sep 14 = $2.29** (VEEA ran +46.8% in Monday's regular session first). ANCHOR WARNING fired. The scanner/tooling `Total%` used the stale $1.56, inflating the headline to "+178%" at peak — **fictional over-statement**. Corrected from $2.29: AH peak +85.6%, PM peak +89.5%. **Below the +100% winner bar.**
+- Previous Close (true, Monday Sep 14): **$2.29** (Yahoo $1.56 = stale Friday close)
+- AH last night (SIP): BUILD from $2.26 (16:00 ET) → **$4.25 high at 19:50 ET** = +85.6% from $2.29, on massive accumulating volume (ignition 16:40 ET 892K sh, sustained 500K–1.5M sh/bar & thousands of trades/bar all night). Real book, no bad print (Yahoo AH high $4.25 matched SIP).
+- Premarket now (SIP): PM open bar 04:00 ET **H $4.34** on 1.39M sh / 18,364 trades = **+89.5% from $2.29** (Yahoo under-reported the peak at $4.03). Currently ~$3.71.
+- Hypothetical P&L (AH entry → PM peak): AH ignition ~$2.56 → PM peak $4.34 = **+69.5%** (we entered later at $3.38 → PM peak = +28.4%).
+- SIP peak vs winner bar: $4.34 = **+89.5%** from the true close = **below +100%**.
+- Float: 1.6M | Market Cap: ~$7.1M
+
+**MYSZ** (My Size, Inc.) — Internet Software/Services — **comparable secondary mover, NOT DETECTED (feed-lag miss)**
+- Catalyst: none same-day verified (AI fashion / body-measurement platform; ultra-low float squeeze).
+- Previous Close: $1.73. AH (SIP): thin until an **18:25 ET ignition** (222K sh/1,857 tr → $2.40), AH SIP peak $2.52 (+45.7%) at 19:55 ET. PM (SIP): blast to **$3.30 at 04:05 ET on 1.68M sh / 18,619 trades = +90.8%**.
+- MYSZ never appeared in any evening scan despite being >10% AH on 212K sh/bar at the 18:30 ET last scan → **in-window feed-lag miss** (see Notes). Hypo AH $2.25 → PM $3.30 = **+46.7%**.
+
+**Scanner Diagnostic (VEEA, the biggest genuine mover):**
+- Detectable at screening time? **YES — detected AND entered.**
+- VEEA ignited at 16:40 ET (~1 min after the 22:45 CET scan), first surfaced at the **23:00 CET scan** (+14.5% AH, $2.62), cleared the 2-AH-scan gate at **23:30 CET** (+34.1%) → **ENTERED @ $3.38**. It kept building every scan (23:00 +14.5% → 23:30 +34.1% → 00:00 +59.8% → 00:30 +64.6% AH) on 1M+ sh/bar. Textbook BUILD-and-hold, Grade A catalyst, float 1.6M, fillable two-sided book. Selection was correct — we traded the biggest genuine mover of the night.
+- Scanner gap: none for VEEA. The one gap is MYSZ (feed-lag miss, see Notes) — a comparable-size mover the TradingView postmarket feed dropped.
+
+### Baseline Tracking
+
+**Baseline gap:** the immediately-preceding trading day, **Friday Sep 11**, was **never diagnosed** — `log/2026-09-11/log.md` holds only Position Evaluations, no Morning Evaluation and no `Days tracked` line (corroborated by `pm-open-scan.csv`: "the 09-11 Friday log contains no AH scan"). That night's winner was never checked, so a detection miss there could be hidden. Per the rule this is **not back-filled**: the chain jumps 81 → 82 for the Sep 14 session only.
+
+- Days tracked: **82** (was 81 + 1 — Sep 14 session only; Sep 11 Friday NOT back-filled, baseline gap)
+- Winners detected by scanner: **68/77 (88.3%)** — +VEEA (biggest genuine mover, detected in 4 scans + entered)
+- Winner selected for paper trade: **35/75 (46.7%)** — no >100% winner existed to capture; VEEA (+89.5% PM, the biggest genuine mover) was entered but fell short of the +100% bar
+- Target: >80% detection
+- Status: **BASELINE MET** (88.3%)
+
+### Retrospective Scan Results
+
+- Live PM scan (04:22 ET): 3 hits — VEEA +65.0% (at scan time; peak +89.5%), MYSZ +85.5% (peak +90.8%), AIIO +9.4% (float 106.7M, small move, not a candidate).
+- Forced AH scan: 0 hits (expected — overnight TradingView postmarket fields return stale/0, per the data-hierarchy note; not used as the primary source).
+- SIP reconstruction: VEEA and MYSZ both real, heavily-traded movers; HCAI and XPON both faded (see follow-through).
+
+### Open Position P&L (Alpaca)
+
+VEEA is our sole open position. **Quote-freshness note:** the Alpaca `quote` endpoint is stale (VEEA book frozen at 16:59 ET), but the `positions` `current_price` $3.71 matches the live PM tape (Yahoo 04:25 ET $3.73, SIP 08:05Z close $3.84), so the +9.8% is a valid live figure, not a stale artifact.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| VEEA | $3.38 | +47.6% (from $2.29; scanner tracked +116.7% from stale $1.56) | A — Veea+NovaGen merger term sheet + GeoNova $10M | 2026-09-14 17:30 ET (23:30 CET) | $4.34 (SIP) | 04:00 ET | — (open) | unrealized | **+9.8%** (peak-to-entry was +28.4%) | 🟢 OPEN |
+
+Hold/exit is handled by `position-evaluation.md` (10:30 / 14:30 CET), not here. **Total Realized P&L (Alpaca fills only): €0.00** (no exits).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) + 2 extra observation scans (22:15, 22:45). Full coverage — entry window (23:00–00:30 CET) fully captured.
+- Candidates found: VEEA, HCAI, XPON, BOXL, MITQ, HITI, AIXC, VSME (across scans).
+- Retrospective matches: VEEA caught (and traded). MYSZ missed (feed-lag).
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| MYSZ | +35.8% at 18:30 ET (peak +45.7% @19:55 ET) | **In-window feed-lag miss** — ignited 18:25 ET on 222K→212K sh/bar; SIP >10% on accumulating volume at the 18:30 ET last scan, but the TradingView postmarket feed never surfaced it (brand-new name, no pipeline footprint to cross-check) | Yes — hypo AH $2.25 → PM peak $3.30 = **+46.7%** |
+
+### AH Mover Follow-Through
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| VEEA | $4.25 (SIP) | 19:50 ET | **Build** (rose every scan +14.5%→+64.6% AH) | ~$3.71 | −12.7% | +62.0% (from $2.29) | **Continued** — PM peak $4.34 > AH peak $4.25 (barely); +89.5%, below the extreme zone. Entered, holding +9.8% |
+| HCAI | $2.60 | 16:05 ET (first bar) | **Spike→fade** | ~$1.92 | −26.2% | +3.8% (from $1.85) | **Faded** — AH peak (first bar) was the better exit. Dead-cat + first-bar-spike, correctly skipped |
+| XPON | $5.61 | 16:24 ET | **Spike→fade** | ~$4.91 | −12.5% | +7.0% (from $4.59) | **Faded** — AH peak was the better exit. Sub-3M float, correctly skipped |
+
+**AH-peak-vs-PM-peak:** VEEA PM peak ($4.34) slightly EXCEEDED its AH peak ($4.25) = continued, but at +89.5% it is **below the ~+130% extreme-runner zone**, so it does not enter that tally (standing unchanged: 8 fade / 1 continue). HCAI and XPON both had AH peaks above their PM peaks (AH was the exit) but neither is in the extreme zone.
+
+**Chase-cap:** VEEA fill Total% +116.7% (from the stale $1.56 basis; only +47.6% from the true $2.29 close), qualifying-scan Total% +96.8%, chase gap +19.9% — landed just **under** the ~+120% fade zone. **PM reclaimed the fill** (peak $4.34 > $3.38) → a chase that reclaimed = **negative control**. Standing count unchanged: 1 (XOS, never-reclaimed).
+
+### Price Charts
+
+VEEA 2-day timeline (basis Yahoo $1.56 — read peaks from the true $2.29 close: AH $4.25=+85.6%, PM $4.34=+89.5%):
+
+```
+Previous Close: $1.56 (stale; true Monday close $2.29)
+2-Day Range: $1.50 - $4.34   Peak: $4.34 at 09-15 08:00 ET (04:00 ET)
+Flat base $2.2 (16:00–16:35 ET) → ignition 16:40 ET → steady BUILD to $4.25 (19:50 ET)
+→ PM open bar $4.34 (04:00 ET) on 1.39M sh → pulled back to ~$3.71
+```
+
+### Notes
+
+- **Baseline gap (Fri Sep 11):** no Morning Evaluation exists for the Sep 11 session; retrospective was skipped. Chain jumps 81→82 (Sep 14 only); Sep 11's winner/detection status is unknown and NOT counted. First recorded gap in the recent chain — one-off, likely a missed weekend-morning pulse. Watch for recurrence.
+- **Coverage:** 7 of 7 scheduled evening scans ran (+2 extras). No coverage failure.
+- **In-window feed-lag miss:** +**MYSZ** (Sep 14→15, surge 18:25 ET, SIP ~$2.35/+35.8% on 212K sh / 1,644 tr at the 18:30 ET last scan, ignited ~5 min before it; hypo AH $2.25 → PM peak $3.30 = **+46.7%**). **Standing count: 5** (BTCT, KUST, WLDS, RAIN, MYSZ) — the ≥3 escalation trigger remains **REACHED**. Route the AH-data-source-verification recommendation (independent whole-universe gainers cross-check at the final scan) to Juan's daily email as a data-reliability decision. No scanner parameter change here.
+- **FIRST-BAR-SPIKE skip-validation:** +**HCAI** (Sep 14→15, post-gate WATCH, AH high $2.60 @16:05 ET first bar, CONFIRM-3 NO every scan, hypo entry $2.21 @16:45 ET → PM peak $2.02 = **faded, skip validated, 0 cost**). Standing: **3 pre-gate entries (0 ran: LABT, SUNE, HCAI-Sep10) + 2 post-gate WATCH (XRTX ran, HCAI-Sep15 faded)**. Gate holds (4 of 5 overall fade-or-flat).
+- **Fade-rule false-negative (sub-3M):** +**XPON** (Sep 14→15, float 680K, Grade None, AH SIP peak $5.61 @16:24 ET → PM SIP peak $5.20, PM below AH peak = **fell short**). **Standing sub-3M count: 4 of 15** — below the ≥4/5 (≥80%) trigger; exception stays withdrawn.
+- **Multi-session-runner tracking:** +**VEEA** (Sep 14→15, **day-1 fresh igniter**, Day% +46.8% same-session, Grade A, entered $3.38 → PM peak $4.34 = **+28.4%, ran**). **Standing: 1 multi-session runner (1 faded) / 20 first-day igniters (7 ran, 6 flat, 7 faded).** First-day run rate 7/20 = 35% — "fresh igniters follow through" stays weak. Data only, no gate change.
+- **PM-only gapper:** none today — the biggest raw movers (VEEA +89.5%, MYSZ +90.8%) are both AH→PM continuations, not PM-only gappers. `pm-open-scan.csv` holdable count = **53** (holdable-cluster threshold long exceeded → recurring Initiative-6 early-PM hypothetical-entry pilot routed to Juan's daily email). No 2026-09-15 pm-open row committed yet at eval time.
+- **No new cases:** reverse-split-squeeze, broker-block (`tradable=false`), stale-book execution-block, no-fillable-book skip, float-gate skip, final-scan gate-block, dead-cat-override watch, ceiling-override watch. HCAI was a dead-cat but the override did NOT qualify (AH% whipsawed, never a rising reclaim above the close). BOXL/HITI had `ask $0.00 x0` but were below the 10% AH threshold, so they don't reach the no-fillable-book tracker.
+- **Prev-close-basis lesson:** VEEA is the textbook stale-basis case — Yahoo prevClose $1.56 (Friday) vs true Monday close $2.29. The tooling's "+178%" headline was fictional; the real AH→PM move is +85.6%/+89.5%, **below the winner bar**. Always recompute % from the true last-session close before crowning.
