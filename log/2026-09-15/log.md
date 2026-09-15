@@ -227,6 +227,58 @@ None show AH ignition. Carry all four forward as watch names; re-check at 22:30/
 
 **Next scan:** 23:30 CET (5:30 PM ET) — monitor WAFU (hold vs fade), YFOR (build continuation), and any new igniters. Note: WAFU/YFOR entries are the night's data; position management (exits) is handled by premarket position-evaluation.
 
+## Scan 23:30 CET (5:30 PM ET) — monitor + late-igniter check
+
+**Scanner: 11 hits** (ran 17:30:22 ET). **No new entries.** Only new AH>10% name is PDSB, blocked on the 2-AH-scan gate (first AH appearance) + Grade D dilution catalyst. WAFU and YFOR were entered at 23:00 (excluded from new entries — one entry per candidate per night); trajectory noted below.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| RETO | [TV](https://www.tradingview.com/chart/?symbol=RETO) | $2.80 | +676.3% | +20.7% | $3.38 | +837.1% | 26.0M | 22.6M | 1.2 | 35.8M | Other Metals/Minerals |
+| WAFU | [TV](https://www.tradingview.com/chart/?symbol=WAFU) | $1.39 | +1.5% | +59.0% | $2.21 | +61.3% | 18.1M | 2.1M | 8.6 | 3.0M | Misc Commercial Services |
+| TPST | [TV](https://www.tradingview.com/chart/?symbol=TPST) | $0.76 | -3.7% | +35.0% | $1.02 | +30.1% | 15.9M | 2.0M | 8.1 | 9.6M | Pharmaceuticals: Major |
+| PDSB | [TV](https://www.tradingview.com/chart/?symbol=PDSB) | $0.59 | +46.7% | +15.3% | $0.68 | +69.1% | 6.1M | 97.9M | 0.1 | 55.0M | Pharmaceuticals: Major |
+| YFOR | [TV](https://www.tradingview.com/chart/?symbol=YFOR) | $1.40 | -2.8% | +25.0% | $1.75 | +21.5% | 6.1M | 1.3M | 4.6 | 1.6M | Misc Commercial Services |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $1.14 | -0.9% | +6.9% | $1.22 | +6.0% | 743K | 459K | 1.6 | n/a | Oilfield Services/Equipment |
+| BNGO | [TV](https://www.tradingview.com/chart/?symbol=BNGO) | $1.56 | +17.3% | +11.5% | $1.74 | +30.8% | 681K | 4.1M | 0.2 | 11.1M | Biotechnology |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $2.35 | -1.3% | +8.9% | $2.56 | +7.6% | 668K | 133K | 5.0 | 26.2M | Internet Retail |
+| REED | [TV](https://www.tradingview.com/chart/?symbol=REED) | $0.85 | +14.9% | +7.3% | $0.91 | +23.3% | 500K | 210K | 2.4 | 5.5M | Beverages: Non-Alcoholic |
+| MYSZ | [TV](https://www.tradingview.com/chart/?symbol=MYSZ) | $2.32 | +39.8% | +7.8% | $2.50 | +50.6% | 322K | 3.1M | 0.1 | 646K | Internet Software/Services |
+| CDZI | [TV](https://www.tradingview.com/chart/?symbol=CDZI) | $3.51 | -2.5% | +9.1% | $3.83 | +6.4% | 56K | 890K | 0.1 | 56.6M | Real Estate Development |
+
+**Instrumentation (log-only, no decision impact):**
+- PDSB — `SPIKE-BAR: SPIKE 16:09ET +15% $0.68 371 trades / 128k sh` · `CONFIRM-3: PENDING ignition 17:10ET; waiting for third bar as-of 17:30ET`
+- WAFU — `SPIKE-BAR: SPIKE 16:01ET +29% $1.80 554 trades / 96k sh` · `CONFIRM-3: NO ignition 16:10ET failed third-bar hold/volume as-of 17:30ET`
+- YFOR — `SPIKE-BAR: SPIKE 16:00ET +16% $1.62 185 trades / 56k sh` · `CONFIRM-3: NO ignition 16:15ET failed third-bar hold/volume as-of 17:30ET`
+- TPST — `SPIKE-BAR: SPIKE 16:05ET +20% $0.91 40 trades / 14k sh` · `CONFIRM-3: NO ignition 16:05ET failed third-bar hold/volume as-of 17:30ET`
+- RETO — `SPIKE-BAR: NO-SPIKE peak +186% @16:05ET` · `CONFIRM-3: NO no local-volume new-high ignition as-of 17:30ET`
+- BNGO — `SPIKE-BAR: SPIKE 16:38ET +18% $1.84 506 trades / 115k sh` · `CONFIRM-3: NO ignition 16:35ET failed third-bar hold/volume as-of 17:30ET`
+
+**Candidate evaluation:**
+
+**PDSB — new AH>10% name, real late build, but SKIP (2-AH-scan gate + Grade D dilution + multi-session runner).**
+- First AH scan appearance (not in 22:00–23:00). Day% +46.7% is a regular-session move; AH adds +15.3% on top. Float **55.0M** (high), VRatio **0.1** (6.1M AH vol vs a 97.9M average — AH volume not unusual for this name), Total% +69.1% (under ceiling), tradable=true.
+- SIP shows a **real, accelerating late build** at scan time: quiet 16:15–16:40 ET (~$0.58, 50–190K sh/bar), then 16:45 725K sh → 16:50 1.19M sh/1,486 tr → **17:10 ET 1.72M sh/2,766 tr H$0.70** → 17:15 ET 1.42M sh/1,816 tr H$0.70 C$0.68, VWAP $0.68 (new AH high, building at scan). Genuine accumulation, not a bad print.
+- Quote stale: bid $0.54 x500 / ask **$0.80 x20000** @ 16:52 ET (~38 min behind at scan) — the x20000 ask is a large resting ceiling. Freshness guard: lean on SIP.
+- **Catalyst: Grade D (dilution).** PDS Biotech PIPE financing — up to $22.55M PIPE announced ~1 week ago (shares rocketed 183% to $0.62 then), **initial $11.3M closing PR Sept 14** (GlobeNewswire). Today's move is continued PIPE momentum, not a fresh first-day catalyst. A financing/dilution catalyst is Grade D (exit immediately).
+- **Multi-session runner:** already ran +183% ~1 week ago on the same PIPE; not a fresh day-1 igniter ("first day of unusual activity" fails).
+- **Verdict: SKIP.** Blocked on three independent counts: (1) 2-AH-scan gate not met (first AH appearance); (2) Grade D dilution catalyst; (3) multi-session runner on a stale catalyst. VRatio 0.1 adds a fourth concern. The late SIP build is real but does not override the gate or the dilution grade. Carry forward; if it reappears at 00:00 with AH>10% the gate would clear, but Grade D keeps it a skip.
+
+**WAFU — open position (entered 23:00 @ $2.21), fading as the intra-window concern predicted.**
+- Now $1.97 (Alpaca P&L **-10.9%**). AH Chg fell +86.1% (23:00) → +59.0% (23:30); AH price $2.59 → $2.21 = the borderline-hold flagged at entry has rolled over off the $3.25 AH high. Grade None. Excluded from new entries (one entry per candidate per night); exit handled by premarket position-evaluation.
+
+**YFOR — open position (entered 23:00 @ $1.55), holding above entry.**
+- Now $1.74 (Alpaca P&L **+12.3%**). AH Chg +42.1% (23:00) → +25.0% (23:30) — pulled back from the 23:00 peak ($1.99) but still above the $1.55 fill. Grade None. Excluded from new entries; exit handled by premarket position-evaluation.
+
+**RETO — carried skip (first-bar spike + extreme extension).** AH $3.38, +20.7% AH chg — bounced off the ~$2.97 low but still ~29% below the $4.73 first-bar high and +837% total extension from prev close ($0.36), ~5.6× the +150% ceiling. Two blocks unchanged: extension far above ceiling (no ceiling-override — AH high was the first 16:00 bar) + first-bar spike (CONFIRM-3 NO every scan). **FIRST-BAR-SPIKE WATCH** continues (hypothetical entry $4.50 @ 22:15 CET; now $3.38 = -24.9%).
+
+**TPST — carried skip (SPIKE→FADE).** AH $1.02, +35.0% AH chg — bounced off the ~$1.00 low but still ~41% below the $1.73 spike high (16:20 ET); volume was declining into the fade. Weak Grade C catalyst (H.C. Wainwright conference presentation). Skip continues.
+
+**Sub-threshold / no-accumulation (skip):** BNGO +11.5% AH but VRatio 0.2 (681K AH vol vs 4.1M avg — no real AH accumulation; Day% +17.3% is a regular-session move). WNW +8.9% (faded from +15.7% at 23:00; only 1 scan >10%; float 26.2M). MYSZ +7.8%, REED +7.3%, CDZI +9.1%, STAK +6.9% — all below the 10% AH threshold.
+
+**VEEA** — open position (28 sh @ $3.38, now $5.65, +67.2%), handled by position-evaluation; excluded from entries.
+
+**Next scan:** 00:00 CET (6:00 PM ET) — monitor WAFU (fade), YFOR (hold), PDSB (does it reappear + hold, though Grade D keeps it a skip), and any new igniters. WAFU/YFOR exits are handled by premarket position-evaluation.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
