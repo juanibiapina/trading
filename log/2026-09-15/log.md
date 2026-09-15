@@ -33,6 +33,25 @@
 
 **Next scan:** 22:00 CET (4:00 PM ET) — first true AH scan. Observation only until 23:00 CET (learning-phase entry gate).
 
+## Scan 22:00 CET (4:00 PM ET) — first AH scan, observation only
+
+**Scanner: 0 hits** (ran 16:00:53 ET, 53s into AH — postmarket volume not yet accumulated; zero hits expected this early). Observation only per the learning-phase gate (no entries before 23:00 CET).
+
+**Watch-name AH quote check (early, thin books):**
+
+| Ticker | AH Bid | AH Ask | Note |
+|--------|--------|--------|------|
+| RETO | $1.20 x200 | $3.49 x200 | Book not settled — huge spread, day move already faded intraday. |
+| MEDS | $1.38 x100 | $2.76 x1100 | Wide spread; intraday move already spent. |
+| IPW | $2.23 x100 | $3.00 x100 | Wide spread, tiny float. |
+| MYSZ | $2.29 x100 | $2.32 x100 | Tight book but flat vs day close (~$2.10-2.30); no AH ignition. |
+
+None show AH ignition. Carry all four forward as watch names; re-check at 22:30/23:00.
+
+**VEEA** — open position (28 sh @ $3.38), handled by position-evaluation; excluded from entries.
+
+**Next scan:** 22:30 CET (4:30 PM ET) — observation. First eligible entry scan is 23:00 CET.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
