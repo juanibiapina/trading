@@ -180,8 +180,56 @@ None show AH ignition. Carry all four forward as watch names; re-check at 22:30/
 
 **Next scan:** 23:00 CET (5:00 PM ET) — **first eligible entry scan.** Re-check WAFU (hold vs fade + fresh fillable book → enter if holding), TPST (fade vs reclaim), RETO trajectory, and any new igniters.
 
+## Scan 23:00 CET (5:00 PM ET) — first eligible entry scan
+
+**Scanner: 7 hits** (ran 17:00:27 ET). First eligible entry scan (learning-phase gate). **Entered WAFU and YFOR** — both cleared every entry gate; per the W24 multi-position rule, entered both.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| RETO | [TV](https://www.tradingview.com/chart/?symbol=RETO) | $2.80 | +676.3% | +6.1% | $2.97 | +723.4% | 19.9M | 21.9M | 0.9 | 35.8M | Other Metals/Minerals |
+| WAFU | [TV](https://www.tradingview.com/chart/?symbol=WAFU) | $1.39 | +1.5% | +86.1% | $2.59 | +88.8% | 15.1M | 1.8M | 8.5 | 3.0M | Misc Commercial Services |
+| TPST | [TV](https://www.tradingview.com/chart/?symbol=TPST) | $0.76 | -3.7% | +31.1% | $0.99 | +26.2% | 12.9M | 1.6M | 7.9 | 9.6M | Pharmaceuticals: Major |
+| YFOR | [TV](https://www.tradingview.com/chart/?symbol=YFOR) | $1.40 | -2.8% | +42.1% | $1.99 | +38.2% | 2.8M | 934K | 3.0 | 1.6M | Misc Commercial Services |
+| STAK | [TV](https://www.tradingview.com/chart/?symbol=STAK) | $1.14 | -0.9% | +5.3% | $1.20 | +4.3% | 698K | 454K | 1.5 | n/a | Oilfield Services/Equipment |
+| WNW | [TV](https://www.tradingview.com/chart/?symbol=WNW) | $2.35 | -1.3% | +15.7% | $2.72 | +14.3% | 591K | 124K | 4.8 | 26.2M | Internet Retail |
+| BNGO | [TV](https://www.tradingview.com/chart/?symbol=BNGO) | $1.56 | +17.3% | +6.4% | $1.66 | +24.8% | 515K | 4.1M | 0.1 | 11.1M | Biotechnology |
+
+**Instrumentation (log-only, no decision impact):**
+- WAFU — `SPIKE-BAR: SPIKE 16:01ET +29% $1.80 554 trades / 96k sh` · `CONFIRM-3: NO ignition 16:10ET failed third-bar hold/volume as-of 17:00ET`
+- YFOR — `SPIKE-BAR: SPIKE 16:00ET +16% $1.62 185 trades / 56k sh` · `CONFIRM-3: NO ignition 16:15ET failed third-bar hold/volume as-of 17:00ET` (note: the real ignition is the 16:40-16:45 volume surge, which the detector's "ignition 16:15" framing missed — trajectory/SIP is truth)
+- TPST — `SPIKE-BAR: SPIKE 16:05ET +20% $0.91 40 trades / 14k sh` · `CONFIRM-3: NO ignition 16:05ET failed third-bar hold/volume as-of 17:00ET`
+- RETO — `SPIKE-BAR: NO-SPIKE peak +186% @16:05ET` · `CONFIRM-3: NO no local-volume new-high ignition as-of 17:00ET`
+
+**ENTERED — WAFU (Grade None, 38 sh @ $2.21):**
+- **All gates cleared:** Float 3.0M (ideal), 2-AH-scan gate met (22:30 +90.6% → 22:45 +84.9% → 23:00 +86.1%, AH% flat/holding across three scans), Total% +88.8% (under +150% ceiling), Day% +1.5% (above -15%), tradable=true.
+- **Real volume-backed BUILD** (SIP 16:00-16:45 ET): 16:00 1.02M sh/5,925 tr → 16:10 3.69M sh/26,122 tr (H$2.98) → 16:35 2.76M sh/20,718 tr making a **NEW AH high $3.25** (past the first-bar spike) → 16:40 1.58M sh → 16:45 1.11M sh (C$2.26). Not a bad print (SIP H $3.25 exceeds scanner AH $2.59). VRatio 8.5.
+- **Fresh day-1 igniter** (Day% +1.5% → entire move is AH; daily bars show only prev close $1.37; not a multi-session runner. Prior WAFU trade Aug 10 +8.2% was weeks ago).
+- **Catalyst: None** — no fresh same-day driver found (3 searches). The "3 AI customization projects" PR is **Aug 10-11 2026** (over a month old), last earnings Jul 30. Prior scans (22:30/22:45) mis-attributed that stale PR as tonight's catalyst — corrected here. No-catalyst handling: enter with concern noted (not a skip reason in learning phase).
+- **Concern:** borderline hold — ~20% off the $3.25 high at scan; last SIP bars faded ($2.59→$2.26 on declining volume). At scan level AH% is flat/holding (~+85-90% across 3 scans), which supports entry, but the intra-window fade is a real risk. Grade None → exit at first PM opportunity.
+- **Order:** BUY 38 @ limit $2.70 ext (id 4ea8860f) → **filled @ $2.21.** Favorable fill: the real market (~$2.21, matching the 16:45 SIP close) was below the stale scanner $2.59.
+- **CHASE-CAP:** N/A (favorable) — qualifying AH $2.59/+88.8%; fill $2.21/+59.0%; chase gap **-29.8%** (filled *below* qualifying, not chased into fade zone). Stale-book artifact worked in our favor.
+
+**ENTERED — YFOR (Grade None, 57 sh @ $1.55):**
+- **All gates cleared:** Float 1.6M (ideal, ultra-low), 2-AH-scan gate met (22:30 +10.7% → 22:45 +16.4% → 23:00 +42.1%, **building across all scans**), Total% +38.2% (well under ceiling), Day% -2.8% (above -15%), tradable=true, fresh fillable book (bid $1.63 x100 / ask $1.74 x100 @ 16:59:59 ET).
+- **Accelerating volume-backed BUILD** (SIP): quiet 16:00-16:35 (29-500K sh/bar) then **late ignition accelerating** — 16:40 ET 1.37M sh/10,449 tr (H$2.07) → 16:45 ET 1.79M sh/14,879 tr making a **NEW AH high $2.15 in the last bar** (at highs, building), VWAP rising $1.93→$2.06. VRatio 3.0. This is the strongest BUILD trajectory of the night.
+- **Fresh day-1 igniter** (Day% -2.8% → pure-AH move; daily bars show one prev close $1.44; not a multi-session runner). YFOR = ex-YYGH (rebrand eff. Sept 2), traded Aug 25 +25.5% / Jul 10 -17.5% under old ticker — weeks ago, not a recent-session run.
+- **Catalyst: None** — no fresh same-day driver found (4 searches). Only the Aug 31 rebrand PR (YY Group→YYForce, YYGH→YFOR). No-catalyst handling: enter with concern noted.
+- **Order:** BUY 57 @ limit $1.80 ext (id ce1c6258) → **filled @ $1.55.** Favorable fill: real ask ($1.55) below scanner $1.99. Grade None → exit at first PM opportunity.
+- **CHASE-CAP:** N/A (favorable) — qualifying AH $1.99/+38.2%; fill $1.55/+10.7%; chase gap **-27.5%** (filled *below* qualifying).
+
+**SKIP — TPST (SPIKE→FADE):** Gate met (22:30 +25.8% → 22:45 +52.2% → 23:00 +31.1%) but SIP shows spike-and-fade: peaked **$1.73 @16:20 ET** (3.96M sh) then faded ~40% to ~$1.00 on **declining volume** (3.96M→2.39M→2.9M→1.59M→0.94M→0.70M sh/bar). Now ~30-40% off the spike high — beyond the ~20% holding band. Weak Grade C catalyst (H.C. Wainwright conference presentation). Per hold-vs-fade rule → skip. Fresh quote bid $0.94 / ask $1.30.
+
+**SKIP (carried) — RETO (first-bar spike + extreme extension):** AH $2.97, +6.1% AH chg — faded ~37% off the $4.73 first-bar high. Still +723% total extension from prev close ($0.36) — ~5× the +150% ceiling. Two independent blocks unchanged: (1) extension far above ceiling (no ceiling-override — AH high was the first 16:00 bar, not after 17:00 ET); (2) first-bar spike, CONFIRM-3 NO every scan. **FIRST-BAR-SPIKE WATCH** continues (hypothetical entry $4.50 @ 22:15 CET). The fade to ~$2.97 supports the skip.
+
+**Sub-threshold / no-accumulation (skip):** STAK +5.3%, WNW +15.7% (but only 1 AH scan >10% — 2-AH-scan gate not met; float 26.2M; carry as watch), BNGO +6.4% (VRatio 0.1 — no real AH accumulation; Day% +17.3% is a regular-session move).
+
+**VEEA** — open position (28 sh @ $3.38, now $5.45, +61.3%), handled by position-evaluation; excluded from entries.
+
+**Next scan:** 23:30 CET (5:30 PM ET) — monitor WAFU (hold vs fade), YFOR (build continuation), and any new igniters. Note: WAFU/YFOR entries are the night's data; position management (exits) is handled by premarket position-evaluation.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-| _none yet — regular-session watch scan, AH not open_ | | | | | |
+| WAFU | $2.21 | 23:00 CET (17:00 ET) | 38 | 4ea8860f | Grade None. Float 3.0M, VRatio 8.5, 2-AH-scan gate met, real volume-backed BUILD (new AH high $3.25 @16:35 ET), Total% +88.8% under ceiling, fresh day-1 igniter. No fresh catalyst (AI PR is Aug 10-11). Favorable fill below stale scanner $2.59. |
+| YFOR | $1.55 | 23:00 CET (17:00 ET) | 57 | ce1c6258 | Grade None. Float 1.6M, VRatio 3.0, 2-AH-scan gate met (building +10.7%→+42.1%), accelerating BUILD (1.79M sh/14.9k tr @16:45 making new high $2.15), Total% +38.2%, fresh day-1 igniter. No fresh catalyst (only Aug 31 rebrand). Favorable fill below scanner $1.99. |
