@@ -68,6 +68,23 @@ No candidates found.
 
 No paper trades submitted. No candidate reappeared from the regular-session watchlist.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| RETO | [TV](https://www.tradingview.com/chart/?symbol=RETO) | $1.84 | -34.3% | +6.0% | $1.95 | -30.4% | 2.9M | 37.5M | 0.1x | 35.8M | Other Metals/Minerals |
+| MYSZ | [TV](https://www.tradingview.com/chart/?symbol=MYSZ) | $1.97 | -15.1% | +14.1% | $2.25 | -3.1% | 1.1M | 3.3M | 0.3x | 646K | Internet Software/Services |
+| ANVS | [TV](https://www.tradingview.com/chart/?symbol=ANVS) | $1.04 | -7.1% | +5.8% | $1.10 | -1.8% | 126K | 2.0M | 0.1x | 37.9M | Pharmaceuticals: Major |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $3.28 | +3.5% | +20.1% | $3.94 | +24.3% | 72K | 150K | 0.5x | 13K | Personnel Services |
+
+**Evaluation and paper-trade decisions:**
+- **RETO — Watch:** AH change is only +6.0%; Day% is −34.3%, consistent with the dead-cat risk. SIP bars through 20:15Z showed real volume but the move peaked at $2.45 and faded to $1.86. Not eligible at this observation scan.
+- **MYSZ — Skip:** AH change is +14.1%, but Day% −15.1% fails the −15% gate and structured search found a $2.5M private placement expected to close September 16 (Grade D dilution). SIP volume was real and accumulated through 20:10Z, then faded. Spike instrumentation: `MYSZ 2026-09-16  SPIKE  16:06ET  +16%  $2.29  71 trades / 11k sh  (first co-spike bar) (as-of 16:30ET)`; `MYSZ 2026-09-16  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET`.
+- **ANVS — Watch:** AH change is +5.8%, below the +10% candidate threshold. SIP activity was thin after the opening bar (6 trades, then 1 trade), so it is not a volume-backed build.
+- **LGCL — Skip:** AH change is +20.1% with accumulating SIP volume through 20:15Z, but the quote has no fillable ask (`ask $0.00 x0`), so it fails the AH-liquidity sanity check. Catalyst search found no same-day earnings, press release, or SEC catalyst. Spike instrumentation: `LGCL 2026-09-16  SPIKE  16:14ET  +24%  $4.08  1054 trades / 77k sh  (first co-spike bar) (as-of 16:30ET)`; `LGCL 2026-09-16  CONFIRM-3  PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET`.
+
+No paper trades submitted: the 22:30 CET scan is observation-only during the learning phase. No positions were added to `OPEN_POSITIONS.md`.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
