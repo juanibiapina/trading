@@ -168,10 +168,50 @@ No paper trades submitted: the 22:30 CET scan is observation-only during the lea
 
 **Paper trades:** DTSS only. Alpaca position confirmed at 93 shares with a $0.86 average fill; `OPEN_POSITIONS.md` was updated. No other orders were submitted.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DTSS | [TV](https://www.tradingview.com/chart/?symbol=DTSS) | $0.59 | -7.6% | +35.3% | $0.80 | +25.0% | 11.9M | 3.0M | 4.0x | 8.2M | Packaged Software |
+| QCLS | [TV](https://www.tradingview.com/chart/?symbol=QCLS) | $0.96 | +118.4% | +6.9% | $1.03 | +133.4% | 5.2M | 25.3M | 0.2x | 7.8M | Pharmaceuticals: Major |
+| ZTG | [TV](https://www.tradingview.com/chart/?symbol=ZTG) | $1.18 | +75.3% | +19.5% | $1.41 | +109.5% | 4.8M | 16.9M | 0.3x | n/a | Data Processing Services |
+| KXIN | [TV](https://www.tradingview.com/chart/?symbol=KXIN) | $1.13 | +9.7% | +15.0% | $1.30 | +26.2% | 4.3M | 596K | 7.2x | 1.5M | Specialty Stores |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $2.01 | -7.8% | +58.2% | $3.18 | +45.9% | 2.0M | 1.6M | 1.3x | 1.3M | Miscellaneous |
+| YFOR | [TV](https://www.tradingview.com/chart/?symbol=YFOR) | $1.72 | +22.9% | +12.2% | $1.93 | +37.9% | 1.9M | 2.3M | 0.8x | 1.6M | Miscellaneous Commercial Services |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $9.22 | +78.7% | +9.5% | $10.10 | +95.7% | 938K | 3.2M | 0.3x | 1.4M | Building Products |
+| NEXR | [TV](https://www.tradingview.com/chart/?symbol=NEXR) | $1.42 | -10.7% | +8.5% | $1.54 | -3.1% | 122K | 327K | 0.4x | 557K | Recreational Products |
+| WAFU | [TV](https://www.tradingview.com/chart/?symbol=WAFU) | $1.48 | +6.5% | +6.1% | $1.57 | +12.9% | 98K | 3.2M | 0.0x | 3.0M | Miscellaneous Commercial Services |
+| HLSQ | [TV](https://www.tradingview.com/chart/?symbol=HLSQ) | $0.72 | -25.6% | +6.9% | $0.77 | -20.4% | 78K | 931K | 0.1x | 2.5M | Biotechnology |
+| TNON | [TV](https://www.tradingview.com/chart/?symbol=TNON) | $3.91 | -22.7% | +8.7% | $4.25 | -16.0% | 65K | 26.8M | 0.0x | 899K | Medical/Nursing Services |
+| CURI | [TV](https://www.tradingview.com/chart/?symbol=CURI) | $2.79 | -0.7% | +5.4% | $2.94 | +4.7% | 61K | 760K | 0.1x | 40.2M | Movies/Entertainment |
+
+**Evaluation and paper-trade decisions:**
+- **YFOR — ENTERED, Grade None.** YYForce, Miscellaneous Commercial Services, float 1.6M, Day% +22.9%. It qualified in two AH scans (+10.5% at 23:30 CET and +12.2% now), stayed below the +150% extension ceiling at +37.9% total, and held within about 4% of the SIP AH high of $2.06 at 17:25 ET. SIP confirmed a late real build: 941K shares/4,509 trades at 17:20 ET, 405K/2,057 at 17:25, and 191K/1,346 at 17:30; later volume faded while price held near the high. Four targeted searches found no fresh same-day earnings, press release, or SEC filing; the surfaced same-day commentary referred to the Aug 31 rebrand, so Grade None concern. `tradable=true`; the quote was two-sided but stale (`bid $1.61 x500`, `ask $1.86 x500`, 16:59 ET), and a re-pull remained stale. Recent price checks and `WINNERS_TRACKING.md` showed no prior-day entry for this move, so it was recorded as a fresh day-1 AH igniter rather than a multi-session runner. Submitted `BUY 53 YFOR --limit $1.90 --ext`; Alpaca filled all 53 at **$1.88**, order `7143a625`. Fill Entry Total% was +34.3% from the $1.40 prior close versus +35.7% at the qualifying scan; no CHASE-CAP note was triggered.
+- **DAIC — Watch, no entry.** CID HoldCo, Miscellaneous, float 1.3M, Day% -7.8%. This was the first qualifying AH scan, so the two-AH-scan gate was not met. SIP corroborated a real late build: activity was thin through 17:25 ET, then 670K shares/6,236 trades at 17:30, 991K/10,723 at 17:35, 907K/8,405 at 17:40, and 907K/8,362 at 17:45; the latest SIP close was $3.40 versus the scanner's $3.18. Four targeted searches found no same-day earnings, press release, or SEC 8-K; Grade None concern. The quote showed `ask $0.00 x0` and was stale at the 16:00 ET AH open, so no fillable book was confirmed. The real SIP build was retained as a watch for the next scan, not rejected as a bad print.
+- **ZTG — Skip: SPIKE→FADE and Grade D catalyst.** Zenta Group, Data Processing Services, float unavailable, Day% +75.3%. It now had two qualifying scans (+18.5% at 23:30 CET and +19.5% now), but the SIP peak was $1.80 at 16:55 ET and the latest SIP close was $1.45, while volume decelerated from 1.77M shares/10,474 trades at 16:55 to 79K/586 at 17:35. The same-day ZentoAI buyout completion used cash plus newly issued shares; this is dilution/share-issuance risk, Grade D, not Grade A. No order submitted.
+- **KXIN — Skip: SPIKE→FADE and no catalyst.** Kaixin Holdings, Specialty Stores, float 1.5M, Day% +9.7%. It remained above +10% AH for a third scan (+11.5% → +23.0% → +15.0%), but the SIP peak was $1.68 at 16:17 ET and the latest close was $1.29, more than 20% below the high; volume faded to 50K shares/259 trades at 17:40 ET. Four targeted searches were rerun and found no same-day earnings, press release, or SEC 8-K; Grade None concern. `tradable=true`, but the stale two-sided quote did not change the early-peak fade decision. No order submitted.
+- **DTSS — Existing position; no new order.** Datasea remained above threshold, but the scanner eased from +48.6% AH at 23:30 CET to +35.3% now while AH volume rose to 11.9M. SIP remained real, with a $1.03 high at 17:10 ET and a latest $0.78 close at 17:35 ET, about 24% below the high. The existing 93-share Grade B position from the 23:30 scan remains open; this entry-only pulse made no position-management decision.
+- **Sub-threshold watch:** QCLS (+6.9% AH), AEHL (+9.5%), NEXR (+8.5%), WAFU (+6.1%), HLSQ (+6.9%), TNON (+8.7%), and CURI (+5.4%) did not trigger new entry workups. HLSQ and TNON remained dead-cat/day-loss observations; the other names stayed below the +10% AH threshold.
+
+**Spike-bar and third-bar instrumentation:**
+- `DTSS 2026-09-16  SPIKE  16:37ET  +20%  $0.71  51 trades / 19k sh  (first co-spike bar) (as-of 18:00ET)`
+- `DTSS 2026-09-16  CONFIRM-3  NO ignition 16:35ET failed third-bar hold/volume as-of 18:00ET`
+- `ZTG 2026-09-16  SPIKE  16:55ET  +19%  $1.41  499 trades / 89k sh  (first co-spike bar) (as-of 18:00ET)`
+- `ZTG 2026-09-16  CONFIRM-3  NO ignition 16:55ET failed third-bar hold/volume as-of 18:00ET`
+- `KXIN 2026-09-16  SPIKE  16:17ET  +49%  $1.68  500 trades / 108k sh  (first co-spike bar) (as-of 18:00ET)`
+- `KXIN 2026-09-16  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 18:00ET`
+- `DAIC 2026-09-16  SPIKE  17:30ET  +36%  $2.73  155 trades / 41k sh  (first co-spike bar) (as-of 18:00ET)`
+- `DAIC 2026-09-16  CONFIRM-3  YES ignition 17:30ET 724.8x; confirmed 17:40ET $3.19 as-of 18:00ET`
+- `YFOR 2026-09-16  SPIKE  17:20ET  +16%  $1.99  225 trades / 75k sh  (first co-spike bar) (as-of 18:00ET)`
+- `YFOR 2026-09-16  CONFIRM-3  YES ignition 17:15ET 4.2x; confirmed 17:25ET $2.06 as-of 18:00ET`
+
+**Paper trades:** YFOR only at this scan. Alpaca positions confirmed at 93 DTSS shares @ $0.86 and 53 YFOR shares @ $1.88; no other orders were submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | DTSS | $0.86 | 23:30 CET | 93 | 4fece182 | Grade B; same-day AI elderly-care robot cooperation, real SIP accumulation, BUILD/hold trajectory |
+| YFOR | $1.88 | 00:00 CET | 53 | 7143a625 | Grade None; no fresh catalyst found, late real AH BUILD/HOLD, fresh day-1 igniter |
 
-One paper trade filled on 2026-09-16: DTSS, 93 shares at $0.86 average fill. No other orders were submitted.
+Two paper trades filled on 2026-09-16: DTSS, 93 shares at $0.86 average fill, and YFOR, 53 shares at $1.88 average fill. No other orders were submitted.

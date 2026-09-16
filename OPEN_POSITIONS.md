@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|--------|------|-------|------------|-------|
 | DTSS | $0.86 | 93 | $79.98 | B | 2026-09-16 | Datasea same-day strategic cooperation to develop AI elderly-care robots; BUY limit $1.10 ext filled at $0.86, order 4fece182. |
+| YFOR | $1.88 | 53 | $99.64 | None | 2026-09-16 | YYForce late AH BUILD/HOLD; no fresh same-day catalyst found; BUY limit $1.90 ext filled at $1.88, order 7143a625. |
 
 ## Position Rules
 
