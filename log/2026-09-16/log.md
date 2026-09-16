@@ -104,9 +104,46 @@ No paper trades submitted: the 22:30 CET scan is observation-only during the lea
 
 **Paper trades:** None. No positions were added to `OPEN_POSITIONS.md`.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| QCLS | [TV](https://www.tradingview.com/chart/?symbol=QCLS) | $0.96 | +118.4% | +13.9% | $1.10 | +148.9% | 3.9M | 25.2M | 0.2x | 7.8M | Pharmaceuticals: Major |
+| DTSS | [TV](https://www.tradingview.com/chart/?symbol=DTSS) | $0.59 | -7.6% | +28.6% | $0.76 | +18.7% | 3.9M | 2.1M | 1.8x | 8.2M | Packaged Software |
+| KXIN | [TV](https://www.tradingview.com/chart/?symbol=KXIN) | $1.13 | +9.7% | +23.0% | $1.39 | +35.0% | 3.5M | 505K | 6.8x | 1.5M | Specialty Stores |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $9.22 | +78.7% | +34.2% | $12.37 | +139.7% | 633K | 3.2M | 0.2x | 1.4M | Building Products |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $3.28 | +3.5% | +6.4% | $3.49 | +10.1% | 214K | 167K | 1.3x | 13K | Personnel Services |
+| GIFT | [TV](https://www.tradingview.com/chart/?symbol=GIFT) | $0.64 | -8.6% | +27.7% | $0.82 | +16.8% | 3K | 26K | 0.1x | 23.3M | Data Processing Services |
+| YMAT | [TV](https://www.tradingview.com/chart/?symbol=YMAT) | $1.38 | -16.9% | +23.9% | $1.71 | +3.0% | 1K | 3.8M | 0.0x | 1.6M | Electrical Products |
+
+**Evaluation and paper-trade decisions:**
+- **QCLS — FIRST-BAR-SPIKE WATCH; no entry.** Q/C Technologies, Pharmaceuticals: Major, float 7.8M. This was the first AH appearance above +10% tonight, so the 2-AH-scan gate was not met. SIP bars were real but front-loaded (1.62M shares/4,292 trades at 16:00ET, then 119K–693K shares/bar); current SIP close was $1.04 at 16:45ET versus the scanner's $1.10. Structured four-search catalyst work found same-day reporting that Q/C named a photonics CTO; Grade C. AH high printed in the first AH bar and no later volume-backed new high fired, so record the hypothetical FIRST-BAR-SPIKE WATCH entry at $1.10 at 17:00ET. No order submitted.
+- **DTSS — Watch; no entry.** Datasea, Packaged Software, float 8.2M. AH change was +6.0% at 22:45 CET and +28.6% now, so it had only one qualifying AH scan. SIP confirmed a late real ignition (1.27M shares/3,102 trades at 16:35ET; 2.96M/10,167 at 16:40ET), followed by a fade to $0.72 at 16:45ET. Same-day PR search found a strategic cooperation to develop AI elderly-care robots; Grade B. The 16:37ET spike was already fading and did not meet the two-scan gate. No order submitted.
+- **KXIN — Skip: SPIKE→FADE-only qualifying name.** Kaixin Holdings, Specialty Stores, float 1.5M, tradable=true. It cleared the two-AH-scan requirement (+11.5% at 22:45 CET, +23.0% now), and SIP confirmed real accumulation (487K–899K shares and 2,815–5,383 trades/bar from 16:15–16:30ET). However, the 16:17ET peak was $1.68 and the latest SIP close was $1.31 at 16:45ET; the scanner level $1.39 remained an early-peak fade. The quote was two-sided but stale at 16:00ET (`bid $0.95 x100`, `ask $1.33 x100`), so current fillability was not confirmed. Four structured searches found no same-day catalyst; Grade None concern. The only qualifying candidate was an early SPIKE→FADE, so the trajectory rule blocks the live entry. No order submitted.
+- **AEHL — Skip: Grade D dilution and only one qualifying AH scan.** Antelope Enterprise, Building Products, float 1.4M. Same-day search found the closing of a $6.0M 8.00% convertible promissory-note offering; Grade D. SIP showed real trading, including 333K shares/7,456 trades at 16:05ET and 339K/8,417 at 16:40ET, but the move was volatile and the current scanner level was below the SIP high. AH was +7.9% at 22:45 CET and +34.2% now, so the two-AH-scan gate was not met. No order submitted.
+- **LGCL — Watch below threshold.** AH change fell from +20.1% at 22:30 CET to +5.5% at 22:45 CET and +6.4% now. The prior no-ask book failure remains the relevant liquidity result; no new entry workup or order was performed.
+- **GIFT — Skip: stale/thin AH volume.** Giftify, Data Processing Services, float 23.3M. SIP showed only 2,430 shares/3 trades at 16:00ET and 500 shares/1 trade at 16:40ET, with no accumulation; VRatio was 0.1x. Four structured searches found no company-specific same-day catalyst; Grade None concern. The nonzero quote was stale at 16:00ET. No order submitted.
+- **YMAT — Skip: dead-cat/day gate, no AH book, and thin volume.** J-Star Holding, Electrical Products, float 1.6M. Day% was -16.9%, below the -15% gate, and AH did not rise across two scans to qualify for a dead-cat override. SIP showed only 573 shares/5 trades at 16:00ET, 1,012/3 at 16:40ET, and 1,992/21 at 16:45ET. The quote had `ask $0.00 x0`; four structured searches found no company-specific same-day catalyst; Grade None concern. No order submitted.
+
+**Spike-bar instrumentation:**
+- `QCLS 2026-09-16  SPIKE  16:01ET  +20%  $1.15  1107 trades / 360k sh  (first co-spike bar) (as-of 17:00ET)`
+- `QCLS 2026-09-16  CONFIRM-3  NO no local-volume new-high ignition as-of 17:00ET`
+- `DTSS 2026-09-16  SPIKE  16:37ET  +20%  $0.71  51 trades / 19k sh  (first co-spike bar) (as-of 17:00ET)`
+- `DTSS 2026-09-16  CONFIRM-3  NO ignition 16:35ET failed third-bar hold/volume as-of 17:00ET`
+- `KXIN 2026-09-16  SPIKE  16:17ET  +49%  $1.68  500 trades / 108k sh  (first co-spike bar) (as-of 17:00ET)`
+- `KXIN 2026-09-16  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 17:00ET`
+- `AEHL 2026-09-16  SPIKE  16:05ET  +33%  $12.27  1947 trades / 116k sh  (first co-spike bar) (as-of 17:00ET)`
+- `AEHL 2026-09-16  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 17:00ET`
+- `GIFT 2026-09-16  NO-SPIKE  peak +28% @16:43ET  (no bar cleared +15% on a volume co-spike) (as-of 17:00ET)`
+- `GIFT 2026-09-16  CONFIRM-3  NO no local-volume new-high ignition as-of 17:00ET`
+- `YMAT 2026-09-16  NO-SPIKE  peak +24% @16:44ET  (no bar cleared +15% on a volume co-spike) (as-of 17:00ET)`
+- `YMAT 2026-09-16  CONFIRM-3  NO no local-volume new-high ignition as-of 17:00ET`
+
+**Paper trades:** None. KXIN was the only candidate to clear the two-AH-scan timing gate, but its early SPIKE→FADE trajectory blocked entry. No Alpaca orders were submitted and `OPEN_POSITIONS.md` remains unchanged with no open positions.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
-No paper trades: the scan ran before after-hours opened.
+No paper trades submitted on 2026-09-16; the 23:00 CET scan found no candidate that cleared all entry gates.
