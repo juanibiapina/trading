@@ -207,6 +207,46 @@ No paper trades submitted: the 22:30 CET scan is observation-only during the lea
 
 **Paper trades:** YFOR only at this scan. Alpaca positions confirmed at 93 DTSS shares @ $0.86 and 53 YFOR shares @ $1.88; no other orders were submitted.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DTSS | [TV](https://www.tradingview.com/chart/?symbol=DTSS) | $0.59 | -7.6% | +28.2% | $0.76 | +18.4% | 12.3M | 3.0M | 4.1x | 8.2M | Packaged Software |
+| RETO | [TV](https://www.tradingview.com/chart/?symbol=RETO) | $1.84 | -34.3% | +34.2% | $2.47 | -11.8% | 10.0M | 38.3M | 0.3x | 35.8M | Other Metals/Minerals |
+| ZTG | [TV](https://www.tradingview.com/chart/?symbol=ZTG) | $1.18 | +75.3% | +16.9% | $1.38 | +105.1% | 5.1M | 17.0M | 0.3x | n/a | Data Processing Services |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $2.01 | -7.8% | +76.6% | $3.55 | +62.8% | 4.7M | 1.9M | 2.5x | 1.3M | Miscellaneous |
+| KXIN | [TV](https://www.tradingview.com/chart/?symbol=KXIN) | $1.13 | +9.7% | +21.2% | $1.37 | +33.0% | 4.5M | 614K | 7.3x | 1.5M | Specialty Stores |
+| YFOR | [TV](https://www.tradingview.com/chart/?symbol=YFOR) | $1.72 | +22.9% | +8.1% | $1.86 | +32.9% | 2.0M | 2.3M | 0.9x | 1.6M | Miscellaneous Commercial Services |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $9.22 | +78.7% | +8.5% | $10.00 | +93.9% | 969K | 3.2M | 0.3x | 1.4M | Building Products |
+| EU | [TV](https://www.tradingview.com/chart/?symbol=EU) | $0.88 | -5.3% | +6.2% | $0.93 | +0.5% | 235K | 8.3M | 0.0x | n/a | Other Metals/Minerals |
+| NEXR | [TV](https://www.tradingview.com/chart/?symbol=NEXR) | $1.42 | -10.7% | +9.2% | $1.55 | -2.5% | 145K | 328K | 0.4x | 557K | Recreational Products |
+| HLSQ | [TV](https://www.tradingview.com/chart/?symbol=HLSQ) | $0.72 | -25.6% | +5.5% | $0.76 | -21.4% | 80K | 931K | 0.1x | 2.5M | Biotechnology |
+| CURI | [TV](https://www.tradingview.com/chart/?symbol=CURI) | $2.79 | -0.7% | +5.4% | $2.94 | +4.7% | 61K | 760K | 0.1x | 40.2M | Movies/Entertainment |
+
+**Evaluation and paper-trade decisions:**
+- **DTSS — Existing position; no new order.** Datasea, Packaged Software, float 8.2M, Day% -7.6%. It remained above the AH threshold at +28.2% with VRatio 4.1x. SIP bars through 17:35 ET showed real accumulation and repeated 200K+ share bars, but the latest SIP close was $0.78 after a $1.03 high. This entry-only pulse made no position-management decision; the existing 93-share Grade B position remains open.
+- **RETO — DEAD-CAT-OVERRIDE WATCH; no entry.** ReTo Eco-Solutions, Other Metals/Minerals, float 35.8M, Day% -34.3%. The regular-session close was $1.84 and AH reclaimed above it, rising from +6.0% at 22:30 CET to +34.2% now, so it is a dead-cat override data point. It had only one scan above +10%, so it also failed the two-AH-scan gate. SIP re-pulls remained stale at 17:35 ET while the Yahoo timeline showed a late move to $2.47 at 18:00 ET and a fade to about $2.30 by 18:30 ET; the scanner signal was treated as unconfirmed-live, not rejected as a bad print. The stale quote was two-sided (`bid $1.61 x100`, `ask $1.86 x100`, 16:59 ET); `tradable=true`. Four targeted searches found no same-day earnings, press release, or SEC 8-K catalyst; Grade None concern. **DEAD-CAT-OVERRIDE WATCH hypothetical entry: $2.47 at 00:30 CET.** No order submitted.
+- **ZTG — Skip: Grade D and SPIKE→FADE.** Zenta Group, Data Processing Services, Day% +75.3%, with three qualifying AH scans and Total% +105.1%. SIP showed the real 16:55 ET spike at 1.77M shares/10,474 trades, then deceleration; the latest SIP close was $1.45, more than 20% below the $1.80 high. The same-day Form 6-K reported completion of the ZentoAI buyout using cash plus newly issued shares, so this is Grade D dilution/share-issuance risk, not Grade A. `tradable=true`; the quote was stale but two-sided (`bid $1.61 x100`, `ask $1.97 x100`, 16:59 ET). No order submitted.
+- **DAIC — Skip: illiquid (no AH book).** CID HoldCo, Miscellaneous, float 1.3M, Day% -7.8%. It cleared the two-AH-scan gate (+58.2% at 00:00 CET and +76.6% now), stayed below the +150% ceiling, and showed a volume-backed BUILD: the SIP 18:10-18:15 ET bars contained 415K/3,698 and 694K/5,921 shares/trades, with the latest SIP close $3.90 corroborating the scanner region. `tradable=true`, but the repeated quote remained `ask $0.00 x0` (bid $1.72 x100, timestamp 16:00 ET), so there was no fillable AH book. Four targeted searches found no same-day earnings, press release, or SEC 8-K catalyst; Grade None concern. No order submitted.
+- **KXIN — Skip: stale volume/book confirmation; earlier SPIKE→FADE not overturned.** Kaixin Holdings, Specialty Stores, float 1.5M, Day% +9.7%. It passed the two-AH-scan gate and had VRatio 7.3x, but SIP re-pulls stopped at 17:40 ET after the early $1.68 peak and showed fading volume to 50K shares/259 trades. Yahoo's price timeline showed a later 18:20-18:32 ET run to $2.28, but Yahoo cannot verify AH volume and the Alpaca quote remained stale at 16:00 ET (`bid $0.95 x100`, `ask $1.33 x100`); the late move therefore did not establish a volume-backed BUILD or current fillable book. Four targeted searches were rerun and found no same-day earnings, press release, or SEC 8-K catalyst; Grade None concern. `tradable=true`. No order submitted.
+- **Sub-threshold track only:** YFOR (+8.1% AH; existing position), AEHL (+8.5%; prior Grade D dilution skip), NEXR (+9.2%; below threshold), EU (+6.2%; VRatio 0.0x), HLSQ (+5.5%; Day% -25.6% dead-cat observation), and CURI (+5.4%) did not trigger new entry workups.
+
+**Final-scan feed-lag cross-check:** Cross-checked every prior AH candidate and every 21:30 CET regular-session watch name with SIP bars. No omitted pipeline name had fresh, accumulating SIP volume above the +10% AH threshold. DAIC's SIP build corroborated its late move; RETO and KXIN had stale SIP data and were not rejected as bad prints. The other omitted names were flat/down, below threshold, thin, or had no SIP bars.
+
+**Spike-bar and third-bar instrumentation:**
+- `DTSS 2026-09-16  SPIKE  16:37ET  +20%  $0.71  51 trades / 19k sh  (first co-spike bar) (as-of 18:30ET)`
+- `DTSS 2026-09-16  CONFIRM-3  NO ignition 16:35ET failed third-bar hold/volume as-of 18:30ET`
+- `RETO 2026-09-16  SPIKE  17:55ET  +22%  $2.24  1119 trades / 213k sh  (first co-spike bar) (as-of 18:30ET)`
+- `RETO 2026-09-16  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 18:30ET`
+- `ZTG 2026-09-16  SPIKE  16:55ET  +19%  $1.41  499 trades / 89k sh  (first co-spike bar) (as-of 18:30ET)`
+- `ZTG 2026-09-16  CONFIRM-3  NO ignition 16:55ET failed third-bar hold/volume as-of 18:30ET`
+- `DAIC 2026-09-16  SPIKE  17:30ET  +36%  $2.73  155 trades / 41k sh  (first co-spike bar) (as-of 18:30ET)`
+- `DAIC 2026-09-16  CONFIRM-3  YES ignition 17:30ET 724.8x; confirmed 17:40ET $3.19 as-of 18:30ET`
+- `KXIN 2026-09-16  SPIKE  16:17ET  +49%  $1.68  500 trades / 108k sh  (first co-spike bar) (as-of 18:30ET)`
+- `KXIN 2026-09-16  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 18:30ET`
+
+**Paper trades:** None at this scan. No new positions were added to `OPEN_POSITIONS.md`; the existing DTSS and YFOR positions were unchanged.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
