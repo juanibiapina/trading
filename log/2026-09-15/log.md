@@ -406,3 +406,115 @@ None show AH ignition. Carry all four forward as watch names; re-check at 22:30/
 |--------|------------|------------|-----------------|----------|--------|
 | WAFU | $2.21 | 23:00 CET (17:00 ET) | 38 | 4ea8860f | Grade None. Float 3.0M, VRatio 8.5, 2-AH-scan gate met, real volume-backed BUILD (new AH high $3.25 @16:35 ET), Total% +88.8% under ceiling, fresh day-1 igniter. No fresh catalyst (AI PR is Aug 10-11). Favorable fill below stale scanner $2.59. |
 | YFOR | $1.55 | 23:00 CET (17:00 ET) | 57 | ce1c6258 | Grade None. Float 1.6M, VRatio 3.0, 2-AH-scan gate met (building +10.7%→+42.1%), accelerating BUILD (1.79M sh/14.9k tr @16:45 making new high $2.15), Total% +38.2%, fresh day-1 igniter. No fresh catalyst (only Aug 31 rebrand). Favorable fill below scanner $1.99. |
+
+## Morning Evaluation — 10:20 CET (Sep 16, evaluating Sep 15 AH session)
+
+### Today's Winner
+
+**RETO** — Other Metals/Minerals (ReTo Eco-Solutions, Chinese eco/construction-materials micro-cap)
+- Catalyst: **None verified** — QuiverQuant: "heavy speculative trading with no clear fresh catalyst." Ran +676% in the regular Sep 15 session ($0.361→$2.80) with no company-specific driver. Grade None.
+- Previous Close (regular Sep 15): **$2.80** (correct basis). Yahoo `previousClose` $0.36 is the **stale Friday close** — RETO's +676% regular-session run made it diverge; measuring from $0.36 gives a fictional "+1150-2079%." All AH→PM math below uses $2.80.
+- AH last night: **SIP high $8.00 @ 16:05 ET (22:05 CET)** on **5.5M sh / 45,900 trades** = **+185.7% from $2.80** (16:05 bar VWAP $5.97 = +113%). Faded to ~$2.80 by 16:35 ET, rebuilt to ~$4.58 by end of AH.
+- Premarket now: **SIP high $5.52 @ 04:00 ET = +97.1%** (2.57M sh / 35,716 trades), now fading ~$3.86–4.39.
+- Hypothetical P&L (AH entry → PM peak): realistic post-spike AH entry ~$3.00–3.13 (16:35–17:00 ET) → PM peak $5.52 = **+76–84%**; the 16:05 first-bar spike itself hit $8.00 = +186% intra-AH. **AH peak ($8.00) exceeded the PM peak ($5.52)** → AH was the better exit (extreme-runner fade).
+- Float: 35.8M | Market Cap: $103.2M
+- Winner-bar check: **CLEARED** — AH high $8.00 = +185.7% on massive accumulating SIP volume (5.5M sh, 45,900 trades in one 5-min bar). Capturable — genuine two-sided fillable book (bid $4.44 x200 / ask $4.50 x300 @ 16:15 ET), not a phantom. Note SIP high $8.00 > Yahoo $6.06 — Yahoo under-reported the peak; SIP used.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES** — RETO was in **every scan** (21:30 → 00:30 CET). At 22:15 CET (16:15 ET) it was explicitly flagged as a real AH igniter with the SIP first bar (5.76M sh / 35,514 trades) and a fresh two-sided book. Detection was perfect.
+- Why we didn't act (two independent, correct blocks): (1) **Extreme extension** — Total% far above the +150% ceiling (even from the true $2.80 close, RETO layered an AH spike on top of a +676% regular-session run; no overnight margin). (2) **First-bar spike** — AH high printed in the first 16:00–16:05 bar, CONFIRM-3 NO every scan. It was logged as a **FIRST-BAR-SPIKE WATCH** (hypothetical entry $4.50 @ 22:15 CET).
+- Scanner gap: **NONE.** The scanner detected the winner flawlessly. This is a *detected + correctly-skipped* winner (BTCT/DAIC/WVVIP class), not a detection failure. RETO's AH $8.00 → PM $5.52 fade validates the extension skip; the first-bar-spike WATCH did run modestly (see tracker).
+
+**Winner selected for paper trade?** No. We entered WAFU and YFOR (both Grade None day-1 igniters); RETO — the >100% winner — was correctly un-enterable per our rules (first-bar spike + extreme extension). No other >100% capturable-and-ruleable winner existed.
+
+**Broker-block tracking:** No new case. RETO/WAFU/YFOR/MEDS all `tradable=true`. Standing unchanged (SHPH ×2).
+
+**Stale-book execution-block tracking:** No new case. WAFU/YFOR filled; no `tradable=true` name was blocked solely by a stale quote through the final scan. **Standing count: 3** (NUWE, KUST, CLRO), all profitable — unchanged.
+
+**No-fillable-book skip tracking:** No new case tonight (RETO had a real fillable book; it was skipped on extension/first-bar-spike, not liquidity). **Standing count: 2** (OFAL, BIVI), both faded — unchanged.
+
+**Float-gate skip tracking:** No new case (no name blocked purely on float >50M). **Standing count: 1** (CAPR ran) — unchanged.
+
+**Final-scan gate-block tracking:** No new case — the only final-scan first-appearance name (GWAV) failed multiple rules (illiquid, Day% −16.2%, thin), not a genuine late igniter blocked solely by the 2-scan gate. **Standing count: 2** (TRUG, UPC, both ran) — unchanged.
+
+**Multi-session-runner outcome tracking:** Two entries tonight, both **fresh first-day igniters**:
+- **WAFU** (day 1, Day% +1.5% pure-AH ignition, Grade None, entered $2.21 → PM peak $1.93 SIP = **−12.7%, faded** below entry).
+- **YFOR** (day 1, Day% −2.8% pure-AH ignition, Grade None, entered $1.55 → PM peak $1.87 SIP = **+20.6%, ran**).
+**Standing: 1 multi-session runner (1 faded: DAIC) / 22 first-day igniters (8 ran: WNW, AEMD, GPRO, PETZ, SSM, PLAG, VEEA, YFOR; 6 flat: PXS, TLYS, CHPT, SUNE, CULP, HCAI; 8 faded: MODD, LABT, KITT, UFG(Sep2), GELS, GIPR, UFG(Sep9), WAFU).** First-day run rate 8/22 (36%) — "fresh igniters follow through" stays weak. Data collection only; no gate change.
+
+**First-bar-spike skip-validation tracking:** **RETO** post-gate WATCH — first-bar spike (AH high $8.00 @16:05 ET, CONFIRM-3 NO every scan), hypothetical entry $4.50 @ 22:15 CET → PM SIP peak $5.52 = **+22.7%, ran** (above the $4.73 first-bar 16:00-bar high; below the $8.00 16:05 spike). **Routed to Juan's daily email** per the tracker rule (a WATCH that ran). Caveat: RETO's dominant, co-equal block was the **extreme extension ceiling** — relaxing the first-bar-spike gate alone would not have entered it, and the AH $8.00 → PM $5.52 fade shows the extension skip was right. **Standing: 3 pre-gate entries (0 ran: LABT, SUNE, HCAI-Sep10) + 3 post-gate WATCH (2 ran: XRTX, RETO; 1 faded: HCAI-Sep15).** Overall 4 of 6 fade-or-flat — gate holds; the two runs (XRTX, RETO) are both extension/dead-cat co-blocked, not clean first-bar-spike-only misses. Record + route, no gate change.
+
+### Baseline Tracking
+
+- Days tracked: **83** (was 82 + 1 — Sep 15 session only; Sep 11 Friday still NOT back-filled, prior baseline gap unchanged)
+- Winners detected by scanner: **69/78 (88.5%)** — +RETO (detected in all 9 scans; correctly skipped on first-bar-spike + extreme extension)
+- Winner selected for paper trade: **35/76 (46.1%)** — RETO (the >100% winner) was correctly un-enterable per rules; WAFU/YFOR entered but are not the winner
+- Target: >80% detection
+- Status: **BASELINE MET** (88.5% detection)
+
+### Retrospective Scan Results
+
+- **Live PM scan (04:20 ET):** 6 hits — RETO +70.7% ($4.78), TPST +49.5% ($1.13), WAFU +21.6% ($1.69), YFOR +20.7% ($1.69), MEDS +9.3% ($1.77), PDSB +5.7% ($0.62). All had AH footprints last night — no PM-only gapper dominates.
+- **Forced AH scan (secondary diagnostic):** 0 hits (expected — TradingView postmarket feed returns 0 overnight).
+- **AH reconstruction (SIP):** RETO the clear winner (AH $8.00 → PM $5.52, both on multi-million-share bars). WAFU/YFOR/TPST/MEDS all faded AH→PM.
+
+### Open Position P&L (Alpaca)
+
+Real Alpaca fills. VEEA carried from the Sep 14 session (handled by position-evaluation); WAFU/YFOR are Sep 15 entries. Exits are NOT made here.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| VEEA | $3.38 | — (Sep 14) | A — Veea+NovaGen merger term sheet + GeoNova $10M | Sep 14 23:00 CET | $5.84 | 04:00 ET | (open) | +$51.21 | +54.1% | 🟢 Open (carried) |
+| WAFU | $2.21 | +59.0% | None | 23:00 CET | $1.93 | 04:00 ET | (open) | −$20.14 | −24.0% | 🔴 Open, PM never reclaimed entry |
+| YFOR | $1.55 | +10.7% | None | 23:00 CET | $1.87 | 04:00 ET | (open) | +$7.98 | +9.0% | 🟢 Open, above entry |
+
+PM peaks verified against SIP 5-min bars (Sep 16 08:00Z). VEEA `current_price` $5.21 matches live SIP PM (~$5.26) — not stale. WAFU ($1.68) and YFOR ($1.69) match SIP PM — fresh.
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits this session — all positions open, exits handled by position-evaluation at 10:30/14:30 CET).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) + 2 extra observation scans (22:15, 22:45) = 9 total. **Full coverage of the entry window.**
+- Candidates found: ~13 unique tickers across the night (RETO, WAFU, TPST, YFOR, MEDS, PDSB, WNW, BNGO, STAK, VRA, MYSZ, GWAV, others).
+- Retrospective matches: every PM mover (RETO, TPST, WAFU, YFOR, MEDS, PDSB) was in the evening scans. 6/6.
+
+### Missed Opportunities
+
+No significant missed opportunities. Every PM mover was detected in the evening scans. The winner (RETO) was detected in all 9 scans and correctly skipped on entry rules.
+
+### AH Mover Follow-Through
+
+Stocks in 2+ evening scans with AH change >10%:
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|-----------|---------|
+| RETO | $8.00 (+185.7%) | 16:05 ET | Spike→fade→rebuild | $5.52 PM peak / ~$3.86 now | −31% | +97.1% (PM peak) | **AH was better exit** (extreme-runner fade) |
+| WAFU | $3.25 (+133.8%) | 16:35 ET | Spike→fade | $1.93 PM peak | −41% | +38.8% (PM peak) | **AH was better exit** (borderline extreme-zone fade) |
+| TPST | $1.73 (+127.6%) | 16:20 ET | Spike→fade | $1.28 PM peak | −26% | +68.4% (PM peak) | **AH was better exit** |
+| YFOR | $2.15 (+53.6%) | 16:45 ET | Build→fade | $1.87 PM peak | −13% | +33.6% (PM peak) | AH was better exit (modest) |
+| MEDS | $2.69 (+66.0%) | 17:30 ET | Late build→fade | $1.92 PM peak | −29% | +18.5% (PM peak) | AH was better exit |
+
+**AH-peak-vs-PM-peak check (extreme-runner fade tally):** RETO (AH +185.7% > PM +97.1%) is a clean extreme-zone (>+130%) fade; WAFU (AH +133.8% > PM +38.8%) is a borderline extreme-zone fade. **Standing: 10 fade (MSW, DSY, AQB, XOS, BTCT, LOOP, DAIC, AMIX, RETO, WAFU) / 1 continue (BAOS)** = 11 cases, 91% fade. Routing trigger (≥9 cases at ≥85% fade) remains **REACHED** — partial-profit-on-extreme-runners recommendation already routed to Juan's daily email; exit rule is his domain, unchanged here.
+
+**MEDS FADE-SKIP WATCH outcome:** hypothetical entry $2.15 @ 00:30 CET (18:30 ET) → PM SIP peak $1.92 = **−10.7%, faded. Skip validated (0 cost).** Skipping the night's only CONFIRM-3 YES on the hold-vs-fade + extension-at-ceiling rules was correct.
+
+**Chase-cap / entry-extension outcome tracking:** No new case. WAFU (fill +59.0% vs qualifying +88.8%) and YFOR (fill +10.7% vs qualifying +38.2%) both filled *below* the qualifying scan price (favorable stale-book artifact), not chased into the >+120% fade zone. **Standing count: 1** (XOS, never-reclaimed) — unchanged. Note WAFU's fill was never reclaimed in PM (−24%), but that is entry-into-a-fader, not a chase.
+
+### Notes
+
+- **Winner is a detected-and-correctly-skipped case.** RETO cleared +185.7% AH on 5.5M sh/45,900 trades (real, liquid) but was a first-bar spike layered on a +676% regular-session run — extension ~5-8× the ceiling. The scanner's detection is perfect; the entry rules correctly avoided chasing it, and the AH $8.00 → PM $5.52 fade confirms the skip. Detection baseline stays healthy at 88.5%.
+- **Prev-close basis correction applied (recurring guard).** Yahoo/`price-timeline.py` used the stale $0.36 Friday close for RETO, inflating the move to "+2079%." True basis is the $2.80 regular Sep 15 close (confirmed by the SIP AH first-bar open $2.80). All winner math uses $2.80. This is the post-run analog of the BNC post-weekend basis case — a hard-running regular session leaves Yahoo's `previousClose` stale.
+- **PM-only gapper:** none dominates today; the biggest raw PM mover (RETO +70.7%) is an AH→PM continuation the scanner detected. Holdable PM-only count in `log/pm-open-scan.csv` = **54** (cluster long past the ≥3–4 threshold; already routed as the Initiative-6 early-PM pilot decision to Juan's email).
+- **Coverage:** 7 of 7 scheduled scans ran (+2 extra) — no coverage failure. Coverage-failure tally unchanged.
+- **In-window feed-lag miss tally:** no new case (RETO surged in-window at AH open and was surfaced). **Standing count: 5** (BTCT, KUST, WLDS, RAIN, MYSZ) — trigger REACHED, AH-data-source cross-check already routed to Juan's email.
+- **Routed to Juan's daily email this pulse:** (1) RETO first-bar-spike WATCH that ran (+22.7%), with the extension-co-block caveat; (2) re-statement of the standing extreme-runner-fade (10/11) and in-window feed-lag (5) recommendations already open.
+
+### Price Charts
+
+**RETO** (basis note: `price-timeline.py` uses stale $0.36; true basis $2.80):
+- 2-Day Range: $0.35 – $7.86 (Yahoo; SIP AH high $8.00). Peak $7.86 @ 09-15 16:05 ET (the AH-open first-bar spike). PM 04:00 ET $4.66 → faded to $3.49 → ~$3.78.
+- Shape: massive AH-open spike to $8.00, faded to ~$2.80 by 16:35 ET, choppy $3.80–4.40 all overnight, PM re-poke to $5.52 then fade. Classic extreme first-bar spike + overnight fade.
+
+**WAFU** (prev close $1.37): range $1.32–$3.25, peak $3.25 (+137.2%) @ 16:35 ET, now ~$1.72. Spiked AH then faded below the $2.21 entry.
+
+**YFOR** (prev close $1.44): range $1.36–$2.15, peak $2.15 (+49.3%) @ 16:45 ET, now ~$1.68. Built into the entry, PM held above the $1.55 fill.
