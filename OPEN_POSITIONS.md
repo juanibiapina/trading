@@ -6,10 +6,9 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 ## Current Positions
 
-_No open positions (all closed 2026-09-16 10:30 CET pulse)._
-
 | Ticker | Entry | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|--------|------|-------|------------|-------|
+| DTSS | $0.86 | 93 | $79.98 | B | 2026-09-16 | Datasea same-day strategic cooperation to develop AI elderly-care robots; BUY limit $1.10 ext filled at $0.86, order 4fece182. |
 
 ## Position Rules
 

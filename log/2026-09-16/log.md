@@ -141,9 +141,37 @@ No paper trades submitted: the 22:30 CET scan is observation-only during the lea
 
 **Paper trades:** None. KXIN was the only candidate to clear the two-AH-scan timing gate, but its early SPIKE→FADE trajectory blocked entry. No Alpaca orders were submitted and `OPEN_POSITIONS.md` remains unchanged with no open positions.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DTSS | [TV](https://www.tradingview.com/chart/?symbol=DTSS) | $0.59 | -7.6% | +48.6% | $0.88 | +37.3% | 9.6M | 2.7M | 3.5x | 8.2M | Packaged Software |
+| QCLS | [TV](https://www.tradingview.com/chart/?symbol=QCLS) | $0.96 | +118.4% | +8.9% | $1.05 | +137.9% | 4.7M | 25.2M | 0.2x | 7.8M | Pharmaceuticals: Major |
+| ZTG | [TV](https://www.tradingview.com/chart/?symbol=ZTG) | $1.18 | +75.3% | +18.5% | $1.40 | +107.8% | 4.0M | 16.8M | 0.2x | n/a | Data Processing Services |
+| KXIN | [TV](https://www.tradingview.com/chart/?symbol=KXIN) | $1.13 | +9.7% | +13.3% | $1.28 | +24.3% | 4.0M | 558K | 7.1x | 1.5M | Specialty Stores |
+| BENF | [TV](https://www.tradingview.com/chart/?symbol=BENF) | $0.82 | +36.1% | +6.2% | $0.87 | +44.5% | 959K | 17.9M | 0.1x | 2.3M | Investment Managers |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $9.22 | +78.7% | +8.2% | $9.98 | +93.4% | 839K | 3.2M | 0.3x | 1.4M | Building Products |
+| YFOR | [TV](https://www.tradingview.com/chart/?symbol=YFOR) | $1.72 | +22.9% | +10.5% | $1.90 | +35.7% | 265K | 2.1M | 0.1x | 1.6M | Miscellaneous Commercial Services |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $3.28 | +3.5% | +7.6% | $3.53 | +11.4% | 222K | 168K | 1.3x | 13K | Personnel Services |
+| HLSQ | [TV](https://www.tradingview.com/chart/?symbol=HLSQ) | $0.72 | -25.6% | +5.5% | $0.76 | -21.4% | 71K | 930K | 0.1x | 2.5M | Biotechnology |
+
+**Evaluation and paper-trade decisions:**
+- **DTSS — ENTERED, Grade B.** Datasea, Packaged Software, float 8.2M, Day% -7.6%. It qualified across two AH scans (+28.6% at 23:00 CET and +48.6% now), remained within ~15% of its SIP AH high ($1.03 at 17:10 ET), and showed real volume accumulation: 1.27M shares/3,102 trades at 16:35 ET, 2.96M/10,167 at 16:40 ET, then 806K-1.92M shares with 2,621-6,240 trades per bar at 17:05-17:10 ET. The latest SIP bar reached 17:15 ET ($0.80 close), corroborating the scanner's $0.88 region; the feed was 15 minutes behind and was not treated as a bad print. The real-time quote was two-sided but wide/stale (`bid $0.71 x400`, `ask $1.07 x100`, timestamp 16:49 ET). Four targeted searches found a same-day PR announcing strategic cooperation to develop AI elderly-care robots; no same-day earnings or SEC 8-K catalyst was found. Grade B. Recent daily bars show no adjacent prior-session run; DTSS is a fresh day-1 AH igniter, not a multi-session runner in `WINNERS_TRACKING.md` (the older Aug 10 volume spike is not part of this move). Spike instrumentation: `DTSS 2026-09-16  SPIKE  16:37ET  +20%  $0.71  51 trades / 19k sh  (first co-spike bar) (as-of 17:30ET)`; `DTSS 2026-09-16  CONFIRM-3  NO ignition 16:35ET failed third-bar hold/volume as-of 17:30ET`. Submitted `BUY 93 DTSS --limit $1.10 --ext`; Alpaca filled all 93 at **$0.86**, order `4fece182`. Fill Entry Total% was +45.8% versus +37.3% at the qualifying scan; no CHASE-CAP threshold was triggered.
+- **ZTG — Skip: one qualifying AH scan and SPIKE→FADE.** Zenta Group, Data Processing Services, float unavailable, Day% +75.3%. SIP volume was real at the 16:55-17:05 ET spike (0.94M-1.77M shares and 6,365-10,474 trades per bar), but it decelerated to 233K-291K shares and 1,528-1,956 trades by 17:10-17:15 ET. SIP high was $1.80 at 16:55 ET and latest close was $1.31, more than 20% below the high; the scanner's $1.40 was consistent with the fading region. Catalyst search found a same-day Form 6-K reporting completion of the ZentoAI buyout using cash plus newly issued shares, following the Sep 9 definitive acquisition announcement. Treat as Grade D fixed-consideration/share-issuance risk, not Grade A. Spike instrumentation: `ZTG 2026-09-16  SPIKE  16:55ET  +19%  $1.41  499 trades / 89k sh  (first co-spike bar) (as-of 17:30ET)`; `ZTG 2026-09-16  CONFIRM-3  NO ignition 16:55ET failed third-bar hold/volume as-of 17:30ET`. No order submitted.
+- **KXIN — Skip: SPIKE→FADE.** Kaixin Holdings, Specialty Stores, float 1.5M, Day% +9.7%. It had three qualifying AH scans (+11.5% at 22:45, +23.0% at 23:00, +13.3% now) and `tradable=true`; SIP confirmed an early real spike, but volume faded from 487K-899K shares and 2,815-5,383 trades per bar at 16:15-16:30 ET to 27K-130K shares and 128-743 trades per bar after 16:50 ET. The SIP high was $1.68 at 16:17 ET and the latest close was $1.24, more than 20% below the high. Four structured searches were rerun and found no same-day earnings, press release, or SEC 8-K catalyst; Grade None concern. Quote was two-sided but stale (`bid $0.95 x100`, `ask $1.33 x100` at 16:00 ET). Spike instrumentation: `KXIN 2026-09-16  SPIKE  16:17ET  +49%  $1.68  500 trades / 108k sh  (first co-spike bar) (as-of 17:30ET)`; `KXIN 2026-09-16  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 17:30ET`. No order submitted.
+- **YFOR — Skip: one qualifying AH scan and thin/no volume-backed build.** YYForce, Miscellaneous Commercial Services, float 1.6M, Day% +22.9%. This was its first AH scan above +10%; SIP price rose from $1.72 at 16:00 ET to $1.95 at 17:15 ET, but per-bar volume remained mostly 4K-42K shares and 34-227 trades, with only 154K shares/588 trades in the latest bar, below the accumulating hundreds-of-thousands/thousands-of-trades build standard. Four targeted searches found no same-day primary-source earnings, press release, or SEC filing; the surfaced rebrand release was Aug 31 and secondary commentary was not a verified catalyst. Grade None concern. Quote was two-sided but 31 minutes stale (`bid $1.61 x500`, `ask $1.86 x500` at 16:59 ET). Spike instrumentation: `YFOR 2026-09-16  NO-SPIKE  peak +12% @17:15ET  (no bar cleared +15% on a volume co-spike) (as-of 17:30ET)`; `YFOR 2026-09-16  CONFIRM-3  PENDING ignition 17:15ET; waiting for third bar as-of 17:30ET`. No order submitted.
+- **QCLS — Watch below threshold.** AH change fell from +13.9% at 23:00 CET to +8.9%; the prior FIRST-BAR-SPIKE WATCH remains observation-only.
+- **BENF — Watch below threshold.** AH change was +6.2%, below the +10% candidate threshold; the regular-session watch remains unqualified.
+- **AEHL — Watch below threshold after fade.** AH change fell from +34.2% at 23:00 CET to +8.2%; the prior Grade D dilution skip remains in force.
+- **LGCL — Watch below threshold.** AH change held near +6.4% to +7.6%; the prior no-fillable-ask result remains relevant.
+- **HLSQ — Watch below threshold.** New Biotechnology result at +5.5% AH with Day% -25.6%; no entry workup was triggered.
+
+**Paper trades:** DTSS only. Alpaca position confirmed at 93 shares with a $0.86 average fill; `OPEN_POSITIONS.md` was updated. No other orders were submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| DTSS | $0.86 | 23:30 CET | 93 | 4fece182 | Grade B; same-day AI elderly-care robot cooperation, real SIP accumulation, BUILD/hold trajectory |
 
-No paper trades submitted on 2026-09-16; the 23:00 CET scan found no candidate that cleared all entry gates.
+One paper trade filled on 2026-09-16: DTSS, 93 shares at $0.86 average fill. No other orders were submitted.
