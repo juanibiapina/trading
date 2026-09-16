@@ -85,6 +85,25 @@ No paper trades submitted. No candidate reappeared from the regular-session watc
 
 No paper trades submitted: the 22:30 CET scan is observation-only during the learning phase. No positions were added to `OPEN_POSITIONS.md`.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| KXIN | [TV](https://www.tradingview.com/chart/?symbol=KXIN) | $1.13 | +9.7% | +11.5% | $1.26 | +22.3% | 1.9M | 325K | 5.8x | 1.5M | Specialty Stores |
+| MEDS | [TV](https://www.tradingview.com/chart/?symbol=MEDS) | $6.07 | +274.7% | +7.6% | $6.53 | +303.1% | 1.4M | 25.2M | 0.1x | 1.5M | Medical Distributors |
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.56 | +4.8% | +6.3% | $0.59 | +11.4% | 404K | 11.6M | 0.0x | 9.8M | Wholesale Distributors |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $9.22 | +78.7% | +7.9% | $9.95 | +92.8% | 399K | 3.1M | 0.1x | 1.4M | Building Products |
+| LGCL | [TV](https://www.tradingview.com/chart/?symbol=LGCL) | $3.28 | +3.5% | +5.5% | $3.46 | +9.1% | 196K | 165K | 1.2x | 13K | Personnel Services |
+| FEAM | [TV](https://www.tradingview.com/chart/?symbol=FEAM) | $1.76 | +39.7% | +5.7% | $1.86 | +47.6% | 176K | 412K | 0.4x | 20.9M | Chemicals: Specialty |
+| ANVS | [TV](https://www.tradingview.com/chart/?symbol=ANVS) | $1.04 | -7.1% | +5.8% | $1.10 | -1.8% | 126K | 2.0M | 0.1x | 37.9M | Pharmaceuticals: Major |
+| DTSS | [TV](https://www.tradingview.com/chart/?symbol=DTSS) | $0.59 | -7.6% | +6.0% | $0.63 | -2.1% | 81K | 1.7M | 0.0x | 8.2M | Packaged Software |
+
+**Evaluation and paper-trade decisions:**
+- **KXIN — Watch; no entry at this scan.** New Kaixin Holdings candidate in Specialty Stores; float 1.5M and Day% +9.7%. Fresh SIP bars from 16:15–16:30 ET showed 487K–899K shares and 2,815–5,383 trades per bar; the move reached $1.68 and the latest SIP close was $1.51, corroborating real AH activity. `tradable=true`. The 16:00 ET quote was two-sided (`bid $0.95 x100`, `ask $1.33 x100`) but stale at scan time. Four targeted searches covering earnings, press releases, SEC 8-K filings, and same-day news found **no catalyst**; Grade **None** concern. Spike instrumentation: `KXIN 2026-09-16  SPIKE  16:17ET  +49%  $1.68  500 trades / 108k sh  (first co-spike bar) (as-of 16:45ET)`. Third-bar instrumentation: `KXIN 2026-09-16  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 16:45ET`. TradingView under-reported the fresh SIP level ($1.26 vs $1.51); this is treated as feed lag, not a bad print. This is the first AH observation and the scan is before the 23:00 CET learning-phase entry time, so no order was submitted.
+- **MEDS, UFG, AEHL, LGCL, FEAM, ANVS, DTSS — Watch/track only.** These previously tracked names remained at +5.5% to +7.9% AH change, below the +10% candidate threshold at this scan. No new entry workup or order was performed.
+
+**Paper trades:** None. No positions were added to `OPEN_POSITIONS.md`.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
