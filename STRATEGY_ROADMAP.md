@@ -275,6 +275,40 @@ the ignition**, not a new signal.
    continuation gate, paired with the lim10 resting-sell-limit exit both studies
    converged on, measured log-only against the baseline before any live orders.
    See `FEEDBACK_LOG.md` 2026-08-21.
+   **Update 2026-09-16 (strategy-advance) — fresh holdable PM-only gapper MEDS
+   (+68.5%) is GATE-SKIPPED as a VWAP-decline false-negative; entered set holds
+   n=21, edge steady +3.7%/name (net ~+1.7%), fade-tail 4/21 (19%). Init 3
+   UNBLOCKED — VEEA/WAFU/YFOR exits seeded (n=41), plain +10% limit still best.
+   Init 2 blocked on Juan.** One fresh holdable footprint=none PM-only gapper
+   logged 09-16 (MEDS +68.5%, DataMEDS AI 1.5M-float squeeze, genuine multi-hour
+   liquid exit window). Re-ran `init6-pm-pilot.js` (48 candidates): **MEDS was
+   SKIPPED by the continuation gate** — its 04:10 ET ignition (12,689 tr) wicked
+   to $2.90/$3.24, but the R+2 bar (04:20) per-bar VWAP $2.83 fell below R+1's
+   $2.94×0.98 ($2.88), tripping the **VWAP-non-declining** reject. This is a
+   conservative **false-negative**: entered at the R+3 open (~$2.62), the resting
+   +10% limit ($2.88) WOULD have filled — the 04:25 bar high hit $2.88, and MEDS
+   re-ramped to $4.21 by 06:10 ET. But the same VWAP-dip protection that skipped
+   MEDS is what rejects the AEHL-type wick-peak faders, so the skip is by design;
+   MEDS joins the wick-rebuild false-negatives (WVVIP/RDIB) as the bounded cost
+   of the conservative gate. Entered set unchanged at **n=21: SUM +77.5% / mean
+   +3.7% / median +10.0% / positive 16/21**, net of ~2% spread ~+1.7%/name;
+   fade-tail 4/21 (BIVI, MIMI-2, BNC, AEHL) = 19%, unchanged. **Init 3 unblocked**
+   — VEEA (Grade-A trail-stop win, exit $5.22 from a $7.49 peak = the first live
+   Grade-A trail win, +$51.52), WAFU ($1.71) and YFOR ($1.67) all exited at the
+   09-16 04:32 ET pulse (first held-name seeds since 09-11). All three are
+   dead/fading post-exit books with lim10 unfilled: VEEA peak +2.1% / PM-last
+   -1.3%, WAFU faded -9.9% (never traded above exit), YFOR peak +7.8% / PM-last
+   +1.8%. Appended all three to `peak-seeking-exit-sim.js` (n=38 -> n=41) and
+   `premarket-exit-gap.csv`; re-ran: plain **+10% sell-limit stays the best rule
+   at n=41: SUM +91.4% / mean +2.2%, positive 25/41** (down from n=38's
+   +100.7/+2.6; WAFU -9.9% the main drag, VEEA a small drag, YFOR a small
+   positive; OCO-floor variants remain within noise, consistent with the 09-15
+   stop rejection). Init 2 blocked on Juan (needs an account for the fill test).
+   Still log-only, no orders. **Deadline note:** equity $99,822.72 (-$177 net,
+   ~10-01 target ~2 weeks out); today's live cycle DID earn +$39.36 net via the
+   AH->PM core (VEEA trail win), but the account is still net-negative and enters
+   none of the PM-only gappers the pilot proves out — the two standing asks stay
+   the money-fast bottleneck.
    **Update 2026-09-15 (strategy-advance) — fresh out-of-sample admit MTEN
    FILLED the +10% limit (peak-seek win); entered set n=21 firms to +3.7%/name
    (net ~+1.7%), fade-tail eases to 4/21 (19%). And the 09-14 catastrophe-stop
