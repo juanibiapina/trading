@@ -62,6 +62,12 @@ No open positions. Alpaca `positions` returns none; `OPEN_POSITIONS.md` matches.
 
 No candidates found.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+No candidates found.
+
+No paper trades submitted. No candidate reappeared from the regular-session watchlist.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
