@@ -58,6 +58,10 @@ No open positions. Alpaca `positions` returns none; `OPEN_POSITIONS.md` matches.
 
 **Decision:** Watch only. This was a regular-session scan, so no ticker had an AH change, AH price, AH volume, or AH VRatio to evaluate. No catalyst searches, SIP checks, spike-bar checks, third-bar checks, or Alpaca orders were run.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
