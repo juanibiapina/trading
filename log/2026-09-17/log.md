@@ -84,8 +84,22 @@ No candidates found.
 
 No paper trades were placed. The after-hours scan returned zero hits; no entry qualified.
 
+## Scan 22:20 CEST (4:20 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $1.60 | +25.0% | +25.6% | $2.01 | +57.0% | 1.4M | 187K | 7.4x | 2.1M | Biotechnology |
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $1.66 | -6.7% | +22.3% | $2.03 | +14.0% | 52K | 387K | 0.1x | 1.7M | Pharmaceuticals: Major |
+
+**Evaluation and instrumentation:**
+
+- **TCRT:** Watch only; learning-phase entries open at 23:00 CET. `tradable=true`; quote $2.17 bid x100 / $2.19 ask x100 at 16:20 ET. Fresh SIP bars corroborate the move and show accumulation: 16:00–16:05 ET volume 1.68M/13,218 trades, then 2.61M/20,491 trades; latest SIP bar 16:05 ET is within the expected 15-minute feed lag. `NO-SPIKE  peak +41% @16:03ET  (no bar cleared +15% on a volume co-spike)`; `CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET`. AH high printed in the first AH bar, so record **FIRST-BAR-SPIKE WATCH** (hypothetical $2.01 at 22:20 CET); do not enter unless later scans show the required pattern. Catalyst search: no current-date earnings, press release, or 8-K verified in four searches. A TipRanks result describes a Sep 16 bylaw update, but its publication time is unavailable, so it is background and not used as a fresh catalyst grade.
+- **XRTX:** Watch only; learning-phase entries open at 23:00 CET. `tradable=true`; SIP bars show thin volume: 16:00–16:05 ET 53K/148 trades, then 144K/1,142 trades. TradingView VRatio is 0.1x, so this is not volume-backed BUILD evidence yet. Quote re-pull remained stale at 16:00 ET ($1.41 bid x100 / $2.03 ask x100) while scanning at 16:20 ET; treat the verification as unconfirmed, not a bad-print rejection. `SPIKE  16:04ET  +27%  $2.10  137 trades / 49k sh`; `CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET`. Catalyst search found no fresh Sep 17 catalyst; the Sep 10 16:05 ET manufacturing PR and Sep 8 investor-relations announcement are background only. Wide AH spread and thin volume require a later scan.
+
+No paper trades were placed because the learning-phase 23:00 CET entry gate has not opened.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-| — | — | — | — | — | No fills. Regular-session caution; all 40 names remain Watch — pending AH confirmation. |
+| — | — | — | — | — | No fills. 22:20 CET was observation-only under the learning-phase 23:00 CET entry gate; TCRT and XRTX remain under review. |
