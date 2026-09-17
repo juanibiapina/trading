@@ -224,6 +224,52 @@ No paper trades were placed. TCRT and XRTX remain first-bar-spike watches; VRME 
 
 **Paper-trade decision:** Entered TCRT only. VRME was already open; CPOP, DAIC, DLXY, XRTX, IPDN, and KXIN were skipped under the rules above. No other orders were submitted.
 
+## Scan 00:00 CEST (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VRME | [TV](https://www.tradingview.com/chart/?symbol=VRME) | $0.77 | +14.5% | +25.7% | $0.97 | +43.9% | 11.9M | 1.3M | 8.8x | 10.0M | Packaged Software |
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $1.60 | +25.0% | +31.9% | $2.11 | +64.8% | 11.8M | 1.4M | 8.2x | 2.1M | Biotechnology |
+| DLXY | [TV](https://www.tradingview.com/chart/?symbol=DLXY) | $0.84 | -63.1% | +37.3% | $1.16 | -49.3% | 7.1M | 27.1M | 0.3x | 5.0M | Wholesale Distributors |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $5.30 | +163.7% | +14.9% | $6.09 | +203.0% | 4.4M | 13.2M | 0.3x | 1.3M | Miscellaneous |
+| KXIN | [TV](https://www.tradingview.com/chart/?symbol=KXIN) | $1.75 | +54.9% | +10.3% | $1.93 | +70.8% | 1.2M | 9.0M | 0.1x | 1.5M | Specialty Stores |
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $1.66 | -6.7% | +34.3% | $2.23 | +25.3% | 1.0M | 502K | 2.0x | 1.7M | Pharmaceuticals: Major |
+| CPOP | [TV](https://www.tradingview.com/chart/?symbol=CPOP) | $3.72 | +18.8% | +16.6% | $4.34 | +38.6% | 916K | 179K | 5.1x | 518K | Advertising/Marketing Services |
+| YCBD | [TV](https://www.tradingview.com/chart/?symbol=YCBD) | $0.50 | +7.3% | +6.2% | $0.53 | +14.0% | 500K | 158K | 3.2x | 10.1M | Pharmaceuticals: Other |
+| IPDN | [TV](https://www.tradingview.com/chart/?symbol=IPDN) | $3.44 | +12.4% | +10.2% | $3.79 | +23.9% | 401K | 1.9M | 0.2x | n/a | Commercial Printing/Forms |
+| IMCC | [TV](https://www.tradingview.com/chart/?symbol=IMCC) | $1.74 | +6.7% | +8.0% | $1.88 | +15.3% | 292K | 112K | 2.6x | 91K | Agricultural Commodities/Milling |
+| USDE | [TV](https://www.tradingview.com/chart/?symbol=USDE) | $7.71 | +24.4% | +5.8% | $8.15 | +31.5% | 110K | 4.4M | 0.0x | 20.8M | Packaged Software |
+
+**Evaluation and instrumentation:**
+
+- **VRME — existing position, no duplicate entry:** Scanner moved from $0.96/+42.8% total at 23:30 to $0.97/+43.9%. SIP remains real and corroborates the opening move: 16:10 2.64M shares/9,063 trades, 16:20 2.69M/10,856, and 17:30 190K/946; latest bar available was 17:35 at $0.97 close, 58K shares/227 trades. The current quote was stale at 16:59 ET ($0.84 bid x1,600 / $1.02 ask x500). The same-day VerifyMe shareholder PR, dated 2026-09-17 and reported by Investing.com at 14:14 ET, remains Grade C. No position-management action was taken.
+  - `VRME 2026-09-17  SPIKE  16:09ET  +22%  $0.94  262 trades / 65k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `VRME 2026-09-17  CONFIRM-3  YES ignition 16:05ET 392.9x; confirmed 16:15ET $0.93 as-of 18:00ET`
+- **TCRT — existing position, no duplicate entry:** Scanner moved from $2.15/+67.9% total to $2.11/+64.8%. SIP shows a real late hold/re-accumulation, with 17:00–17:15 bars of 154K/1,434, 223K/1,559, 238K/1,513, and 310K/2,039 shares/trades; latest available 17:35 bar closed $2.17 on 47K/496. The current quote was stale at 16:59 ET ($2.09 bid x100 / $2.11 ask x100). No fresh 2026-09-17 earnings, press release, or 8-K catalyst was found in the prior four-search workup; Grade None. No position-management action was taken.
+  - `TCRT 2026-09-17  NO-SPIKE  peak +54% @16:38ET  (no bar cleared +15% on a volume co-spike) (as-of 18:00ET)`
+  - `TCRT 2026-09-17  CONFIRM-3  NO no local-volume new-high ignition as-of 18:00ET`
+- **DLXY — DEAD-CAT-OVERRIDE WATCH, skip live entry:** The move rose from +13.5% AH/$0.96 at 23:30 to +37.3%/$1.16, reclaiming above the $0.84 regular close across two AH scans. SIP corroborates the reclaim and real late accumulation: 16:50–16:55 bars 489K/1,625 and 1.36M/3,939, then 17:15–17:35 bars 566K/2,003, 754K/2,976, 1.23M/4,257, 937K/3,112, and 523K/1,650. The latest SIP bar closed $1.17, close to the scanner level; the quote was stale at 16:59 ET ($1.05 bid x100 / $1.08 ask x100). The same-day non-binding LOI report involving up to a 48% interest in East Kazakhstan Sarybulak oil field was dated 2026-09-17, but its exact release time was unavailable and it was not used to override the dead-cat rule. Record hypothetical entry $1.16 at 00:00 CEST.
+  - `DLXY 2026-09-17  SPIKE  16:53ET  +15%  $0.97  380 trades / 115k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `DLXY 2026-09-17  CONFIRM-3  NO ignition 16:50ET failed third-bar hold/volume as-of 18:00ET`
+- **DAIC — skip:** The latest scanner Total% is +203.0%, above the +150% entry ceiling. SIP confirms a real late build, including 17:00–17:15 bars of 371K/3,180, 497K/3,937, 565K/5,866, and 260K/2,469 shares/trades, followed by 17:30–17:35 bars of 216K/1,801 and 187K/1,448. The current price remains within 5% of the $6.39 AH high, but VRatio is only 0.3x, so the ceiling-override watch does not apply. It is a multi-session runner carried from Sep 16; no fresh operational catalyst was verified. No order.
+  - `DAIC 2026-09-17  SPIKE  17:09ET  +19%  $6.30  1410 trades / 169k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `DAIC 2026-09-17  CONFIRM-3  YES ignition 17:00ET 2.6x; confirmed 17:10ET $5.89 as-of 18:00ET`
+- **KXIN — skip/wait:** AH change is now +10.3%, but the 23:30 reading was exactly +10.0%, so it has only one qualifying scan under the strict >10% two-scan gate. It is also a **MULTI-SESSION-RUNNER** carried from the Sep 16 winner and its real volume is fading: the late bars fell from 188K/985 trades at 17:20 to 77.6K/510 at 17:30 and 48.4K/381 at 17:35; current quote was stale at 16:00 ET ($1.53 bid x100 / $2.07 ask x100). Four targeted searches found no same-day earnings, GlobeNewswire/PRNewswire/BusinessWire release, or SEC 8-K; current-day results were commentary only, so Grade None. No order.
+  - `KXIN 2026-09-17  SPIKE  17:22ET  +19%  $2.08  307 trades / 62k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `KXIN 2026-09-17  CONFIRM-3  NO ignition 17:00ET failed third-bar hold/volume as-of 18:00ET`
+- **XRTX — DEFER, no order this pulse:** The prior first-bar-spike watch is superseded by a later SIP-backed ignition: 17:30 reached $2.28 on 173K shares/1,600 trades and 17:35 held $2.07 on 116K/852. The scanner now shows $2.23/+34.3% AH and +25.3% total, within the +150% ceiling; float is 1.7M, Day% is -6.7%, it is tradable, and the two-AH-scan gate is met. No fresh Sep 17 catalyst was found; Grade None. The Alpaca quote re-pull remained frozen at 16:00 ET ($1.41 bid x100 / $2.03 ask x100), more than an hour behind the scan, so the candidate is unconfirmed-but-live rather than a bad print; defer to the next scan instead of submitting an order against stale fillability.
+  - `XRTX 2026-09-17  SPIKE  16:04ET  +27%  $2.10  137 trades / 49k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `XRTX 2026-09-17  CONFIRM-3  YES ignition 17:30ET 26.2x; confirmed 17:40ET $2.23 as-of 18:00ET`
+- **CPOP — skip:** It remains within the two-scan gate, but the real-volume burst at 16:35–16:40 (202K/3,040 and 232K/3,545 trades) faded to 3.7K/99 trades by 17:35. The scanner price $4.34 is about 11% below the $4.88 SIP high, and the quote remained stale at 16:00 ET with a wide $3.16 bid x100 / $4.31 ask x100. No fresh Sep 17 catalyst was found; Grade None. No order.
+  - `CPOP 2026-09-17  SPIKE  16:19ET  +18%  $4.40  654 trades / 49k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `CPOP 2026-09-17  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 18:00ET`
+- **IPDN — skip:** The two-scan gate is met, but real activity faded after the 17:30–17:35 burst (111K/1,793 and 166K/2,199 trades) to 60K/641 and 29K/248 by 17:45. Alpaca reported `ask $0.00 x0` at 16:00 ET, so there is no fillable AH book. SIP's latest $4.01 close corroborates the scanner's move shape; this is an illiquid-book skip, not a bad-print rejection. No fresh Sep 17 catalyst was found; Grade None. No order.
+  - `IPDN 2026-09-17  SPIKE  16:56ET  +18%  $4.07  85 trades / 7k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `IPDN 2026-09-17  CONFIRM-3  NO ignition 16:55ET failed third-bar hold/volume as-of 18:00ET`
+- **YCBD, IMCC, and USDE:** AH changes remain below +10% (+6.2%, +8.0%, and +5.8%), so none met the entry threshold. No entry workup or order was required.
+
+**Paper-trade decision:** No new paper orders were submitted. VRME and TCRT are existing positions; DLXY is a dead-cat-override watch; DAIC exceeds the extension ceiling; KXIN lacks two strictly qualifying AH scans and has fading real volume; XRTX has a real late ignition but stale Alpaca fillability; CPOP and IPDN are fading/illiquid. `OPEN_POSITIONS.md` is unchanged.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
