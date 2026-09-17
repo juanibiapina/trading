@@ -98,6 +98,22 @@ No paper trades were placed. The after-hours scan returned zero hits; no entry q
 
 No paper trades were placed because the learning-phase 23:00 CET entry gate has not opened.
 
+## Scan 22:25 CEST (4:25 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $1.60 | +25.0% | +42.5% | $2.28 | +78.1% | 3.4M | 446K | 7.7x | 2.1M | Biotechnology |
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $1.66 | -6.7% | +17.5% | $1.95 | +9.6% | 173K | 402K | 0.4x | 1.7M | Pharmaceuticals: Major |
+| CPOP | [TV](https://www.tradingview.com/chart/?symbol=CPOP) | $3.72 | +18.8% | +8.1% | $4.02 | +28.4% | 68K | 58K | 1.2x | 518K | Advertising/Marketing Services |
+
+**Evaluation and instrumentation:**
+
+- **TCRT:** Previously seen at 22:20 CET and strengthening on the scanner (+25.6% AH / $2.01 / +57.0% total → +42.5% AH / $2.28 / +78.1% total). `tradable=true`. SIP bars corroborate the price and show real accumulation through 16:15 ET: 16:00–16:05 ET 1.68M shares / 13,218 trades, 16:05–16:10 ET 2.61M / 20,491, 16:10–16:15 ET 1.29M / 10,346; latest SIP data is about 10 minutes behind the scan. The current quote was $2.07 bid x100 / $2.09 ask x100 at 16:25 ET, below the scanner's $2.28, so the move is fading from the SIP $2.44 high but remains within 20% of that high. `NO-SPIKE  peak +52% @16:06ET  (no bar cleared +15% on a volume co-spike) (as-of 16:25ET)`; `CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET`. The AH high printed in the first AH bar and confirmation remains NO, so record **FIRST-BAR-SPIKE WATCH** with hypothetical entry $2.28 at 22:25 CET; no live entry. Four targeted searches found no fresh Sep 17 earnings, press release, or 8-K catalyst, so no catalyst grade is assigned.
+- **XRTX:** Previously seen at 22:20 CET and weakening (+22.3% AH / $2.03 / +14.0% total → +17.5% AH / $1.95 / +9.6% total). `tradable=true`. SIP bars show only moderate accumulation: 16:00–16:05 ET 53K shares / 148 trades, 16:05–16:10 ET 144K / 1,142, 16:10–16:15 ET 188K / 1,027; TradingView VRatio is only 0.4x. The quote remained stale at 16:00 ET ($1.41 bid x100 / $2.03 ask x100), so this is unconfirmed current data rather than a bad-print rejection. `SPIKE  16:04ET  +27%  $2.10  137 trades / 49k sh  (first co-spike bar) (as-of 16:25ET)`; `CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET`. The AH high printed in the first AH bar and confirmation remains NO, so record **FIRST-BAR-SPIKE WATCH** with hypothetical entry $1.95 at 22:25 CET; no live entry. Four targeted searches found no fresh Sep 17 earnings, press release, or 8-K catalyst. The Sep 10 16:05 ET manufacturing PR is background only, not a fresh catalyst.
+- **CPOP:** New candidate. `tradable=true`. SIP bars corroborate the scanner level ($4.14 high / $3.92 VWAP in the first bar; latest $3.99 close) with 65K / 565 trades, then 30K / 257 and 27K / 256. AH change is only +8.1%, below the >10% entry threshold, and the stock appeared in only one AH scan; watch pending sustained AH confirmation. No catalyst search was required at this threshold.
+
+No paper trades were placed. The learning-phase 23:00 CET entry gate has not opened; TCRT and XRTX are first-bar-spike watches, and CPOP remains below the AH threshold.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
