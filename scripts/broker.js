@@ -15,11 +15,11 @@
  *   node scripts/broker.js account
  *   node scripts/broker.js positions
  *   node scripts/broker.js orders [open|closed|all]
- *   node scripts/broker.js order <id>
+ *   node scripts/broker.js order <id|prefix>
  *   node scripts/broker.js buy  <SYM> <qty> [--limit P] [--tif day|gtc] [--ext]
  *   node scripts/broker.js sell <SYM> <qty> [--limit P] [--tif day|gtc] [--ext]
  *      --ext = extended-hours (pre/post market). Requires --limit; forces tif=day.
- *   node scripts/broker.js cancel <id>
+ *   node scripts/broker.js cancel <id|prefix>
  *   node scripts/broker.js clock                # market clock: is_open + next open/close (ET)
  *   node scripts/broker.js quote <SYM>
  *   node scripts/broker.js bars  <SYM> [--tf 5Min] [--start ISO] [--limit N] [--feed sip|iex]
@@ -106,9 +106,20 @@ async function cmdOrders(flags, positional) {
   }
 }
 
+async function resolveOrderId(id) {
+  const isFullUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id);
+  if (isFullUuid) return id;
+  const orders = await api(TRADING, "/v2/orders?status=all&limit=500&direction=desc");
+  const matches = orders.filter((o) => o.id.startsWith(id.toLowerCase()));
+  if (matches.length === 0) throw new Error(`no order matches id prefix '${id}'`);
+  if (matches.length > 1) throw new Error(`ambiguous id prefix '${id}' matches ${matches.length} orders: ${matches.map((o) => o.id.slice(0, 8)).join(", ")}`);
+  return matches[0].id;
+}
+
 async function cmdOrder(flags, positional) {
-  const id = positional[0];
-  if (!id) throw new Error("usage: order <id>");
+  const input = positional[0];
+  if (!input) throw new Error("usage: order <id|prefix>");
+  const id = await resolveOrderId(input);
   const o = await api(TRADING, `/v2/orders/${id}`);
   console.log(JSON.stringify(o, null, 2));
 }
@@ -132,20 +143,9 @@ async function submit(side, flags, positional) {
 }
 
 async function cmdCancel(flags, positional) {
-  let id = positional[0];
-  if (!id) throw new Error("usage: cancel <id>");
-  // `orders` prints an 8-char id prefix; Alpaca's DELETE needs the full UUID.
-  // Passing the short prefix returns a confusing "422: order_id is missing".
-  // Resolve any non-UUID input against open orders by prefix so `cancel <short>`
-  // works with the id shown by `orders`.
-  const isFullUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id);
-  if (!isFullUuid) {
-    const open = await api(TRADING, "/v2/orders?status=open&limit=500&direction=desc");
-    const matches = open.filter((o) => o.id.startsWith(id.toLowerCase()));
-    if (matches.length === 0) throw new Error(`no open order matches id prefix '${id}'`);
-    if (matches.length > 1) throw new Error(`ambiguous id prefix '${id}' matches ${matches.length} open orders: ${matches.map((o) => o.id.slice(0, 8)).join(", ")}`);
-    id = matches[0].id;
-  }
+  const input = positional[0];
+  if (!input) throw new Error("usage: cancel <id|prefix>");
+  const id = await resolveOrderId(input);
   await api(TRADING, `/v2/orders/${id}`, { method: "DELETE" });
   console.log(`Canceled ${id}`);
 }

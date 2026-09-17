@@ -8,7 +8,7 @@ time to justify piloting hypothetical entries?
 **Non-interactive:** This pulse runs unattended. Never ask Juan questions or show Telegram buttons here — no one answers. Route anything needing his input to the **daily email** (questions go in emails only).
 
 See `STRATEGY_ROADMAP.md` Initiative 6 and `INIT6_EXTREME_MOVERS.md` for context.
-The AH->PM scanner (`post-market-scan.md`) only sees stocks with an after-hours
+The AH->PM scanner (`prompts/post-market-scan.md`) only sees stocks with an after-hours
 footprint. The biggest raw morning movers keep being **PM-only gappers**: flat or
 down in after-hours, exploding only after 04:00 ET on overnight news. This pulse
 watches that blind spot.
@@ -62,7 +62,7 @@ Read the bars from ~04:00 ET (`08:00Z` EDT) onward and determine:
   prior night's `log/YYYY-MM-DD/log.md` scan sections (or note "unknown" if no
   log). A PM-only gapper has **no** AH footprint — that is the blind-spot class
   this pulse targets. Names that DID appear in last night's AH scan are already
-  covered by `post-market-scan.md`; tag them `ah-detected` and deprioritise.
+  covered by `prompts/post-market-scan.md`; tag them `ah-detected` and deprioritise.
 - **PM high + time** (ET) and **ramp-start time** (first 5-min bar with real
   volume, i.e. thousands of trades / hundreds of K+ shares).
 - **Liquidity:** peak `vol` and `trades` per 5-min bar during the elevated
