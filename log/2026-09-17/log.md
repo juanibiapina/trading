@@ -66,6 +66,12 @@ No candidates found.
 
 No paper trades were placed. The 21:30 CET regular-session watchlist did not produce an after-hours confirmation at the opening scan.
 
+## Scan 22:05 CET (4:05 PM ET)
+
+No candidates found.
+
+No paper trades were placed. The opening after-hours scan returned zero hits; no entry qualified.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
