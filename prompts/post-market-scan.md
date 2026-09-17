@@ -68,7 +68,7 @@ Do NOT use raw `curl` to Yahoo Finance (it fails without the User-Agent header t
 
 Read the existing log to see which tickers were already found in previous scans today.
 
-**Spike-bar instrumentation (log-only, no decision impact):** For each candidate with AH change >10%, run the spike-bar detector and record its one-line verdict in the scan notes. This is instrumentation for Initiatives 1+3 (Juan's "catch the first volume spike bar" ask): it flags whether the first price+volume co-spike (ignition) bar has fired yet, as-of this scan minute. Do NOT gate entries on it yet — just log it so the now-15-min-spaced AH-open grid (22:00-23:00 CET) accumulates ignition-bar timing on live candidates.
+**Spike-bar instrumentation (log-only, no decision impact):** For each candidate with AH change >10%, run the spike-bar detector and record its one-line verdict in the scan notes. This is instrumentation for Initiatives 1+3 (Juan's "catch the first volume spike bar" ask): it flags whether the first price+volume co-spike (ignition) bar has fired yet, as-of this scan minute. Do NOT gate entries on it yet — just log it so the now-5-min-spaced opening grid (22:00-22:30 CET) accumulates ignition-bar timing on live candidates.
 
 ```bash
 # AH-eve date = the US trading date (LOG_DIR date). --now = current ET minute (HH:MM).

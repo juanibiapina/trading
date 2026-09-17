@@ -1295,7 +1295,9 @@ exactly the enabler for Juan's 2026-07-16 "catch the first volume spike bar"
 ask, whose blocker is this detection latency.
 
 **Current schedule (cron, Europe/Berlin local time):**
-- Post-market scans: 21:30, 22:00, **22:15**, 22:30, **22:45**, 23:00, 23:30, 00:00, 00:30 (9 scans; 22:15/22:45 added 2026-07-17, observation-only)
+**Update 2026-09-17 (strategy-advance) — active Init 6 pilot rechecked; Init 3 opening cadence densified in log-only mode.** The 09-17 PM-open scan added DAIC, KXIN, and RETO as `ah-detected`, so no new `footprint=none` candidate entered the Init 6 universe. Re-ran `init6-pm-pilot.js` over 48 candidates; the deterministic ledger remains **n=21, SUM +77.5%, mean +3.7%/name, positive 16/21, fade-tail 4/21 (19%)**. This is insufficient new pilot sample, not a failure. For Init 3, added four new observation pulses at 22:05, 22:10, 22:20, and 22:25 CET (16:05, 16:10, 16:20, and 16:25 ET), completing five-minute coverage through the first 30 minutes of after-hours without retiming an existing pulse; these run before the 23:00 CET entry window and place no orders. A fresh nine-name 2026-09-16 `ah-5m-confirmation.js` check returned 2 YES and 7 NO (DAIC 17:30 ET at 724.8x; YFOR 17:15 ET at 4.2x), which is instrumentation rather than promotion evidence. Cost is +4 observation rounds/day; next measure ignition-to-scan lag, first-2/3-bar capture, and false positives.
+
+- Post-market scans: 21:30, 22:00, 22:05, 22:10, **22:15**, 22:20, 22:25, 22:30, **22:45**, 23:00, 23:30, 00:00, 00:30 (13 scans; 22:05/22:10/22:20/22:25 added 2026-09-17 as observation-only; 22:15/22:45 added 2026-07-17, observation-only)
 - Morning eval: 10:20 | Position evals: 10:30, 14:30
 - Daily email: 11:30 | Scanner improvement: 14:20 | Process review: 14:40
 
