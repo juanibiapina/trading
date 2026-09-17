@@ -132,8 +132,28 @@ No paper trades were placed. The learning-phase 23:00 CET entry gate has not ope
 
 No paper trades were placed. TCRT and XRTX remain first-bar-spike watches; VRME has real volume and a fresh Grade-C PR but needs a later scan; CPOP remains below threshold.
 
+## Scan 22:45 CEST (4:45 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VRME | [TV](https://www.tradingview.com/chart/?symbol=VRME) | $0.77 | +14.5% | +36.4% | $1.05 | +56.1% | 8.0M | 928K | 8.6x | 10.0M | Packaged Software |
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $1.60 | +25.0% | +29.4% | $2.07 | +61.7% | 6.5M | 811K | 8.1x | 2.1M | Biotechnology |
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $1.66 | -6.7% | +18.7% | $1.97 | +10.7% | 440K | 433K | 1.0x | 1.7M | Pharmaceuticals: Major |
+| BIAF | [TV](https://www.tradingview.com/chart/?symbol=BIAF) | $8.75 | +63.6% | +7.0% | $9.36 | +75.0% | 271K | 8.0M | 0.0x | 591K | Medical Specialties |
+| CPOP | [TV](https://www.tradingview.com/chart/?symbol=CPOP) | $3.72 | +18.8% | +7.8% | $4.01 | +28.1% | 238K | 82K | 2.9x | 518K | Advertising/Marketing Services |
+
+**Evaluation and instrumentation:**
+
+- **VRME:** Previously seen at 22:30 CEST and strengthening (+29.9% AH / $1.00 / +48.7% total → +36.4% / $1.05 / +56.1%). SIP corroborates a real, accumulating move through 16:30 ET: 16:05 86K shares / 348 trades, 16:10 2.64M / 9,063, 16:15 1.69M / 5,873, 16:20 2.69M / 10,856, 16:25 1.50M / 7,065, and 16:30 1.18M / 4,241; latest SIP high $1.06 and VWAP $1.00. The 16:45 ET quote was fresh and two-sided at $0.84 bid x2,100 / $1.01 ask x200. `VRME 2026-09-17  SPIKE  16:09ET  +22%  $0.94  262 trades / 65k sh  (first co-spike bar) (as-of 16:45ET)`; `VRME 2026-09-17  CONFIRM-3  YES ignition 16:05ET 392.9x; confirmed 16:15ET $0.93 as-of 16:45ET`. The same-day catalyst is VerifyMe's shareholder PR, **“VerifyMe Urges Shareholders to Vote \"For\" Proposal 6 to Advance Proposed Figure OPEN Listing,”** dated Sep 17, with Investing.com publication at 14:14 ET; Grade C. No paper trade: the learning-phase entry gate opens at 23:00 CEST. It has now cleared the two-AH-scan threshold, so re-evaluate at 23:00 if the book and trajectory remain valid.
+- **TCRT:** Previously seen at 22:20, 22:25, and 22:30 CEST; it is fading from +34.4% AH / $2.15 / +68.0% total to +29.4% / $2.07 / +61.7%. SIP confirms real accumulation through 16:30 ET, with the latest bar at 16:30 O $2.07, H $2.39, L $2.02, C $2.33, 1.29M shares / 11,146 trades; the fresh quote was $2.10 bid x100 / $2.13 ask x100. `TCRT 2026-09-17  NO-SPIKE  peak +52% @16:06ET  (no bar cleared +15% on a volume co-spike) (as-of 16:45ET)`; `TCRT 2026-09-17  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET`. AH high $2.44 printed in the first AH bar and confirmation remains NO, so record **FIRST-BAR-SPIKE WATCH** with hypothetical entry $2.07 at 22:45 CEST; skip the live entry. Four targeted searches found no verified Sep 17 earnings, press release, or 8-K catalyst; Grade None.
+- **XRTX:** Previously seen at 22:20, 22:25, and 22:30 CEST; it recovered slightly from +16.6% AH / $1.94 / +8.7% total to +18.7% / $1.97 / +10.7%, but remains a first-bar spike with thin, fading real volume. SIP reaches 16:30 ET and corroborates the scanner level: 16:00 53K shares / 148 trades, 16:05 144K / 1,142, 16:10 188K / 1,027, then 16:15 49K / 309, 16:20 40K / 286, 16:25 32K / 189, and 16:30 56K / 316. The quote is stale at 16:00 ET ($1.41 bid x100 / $2.03 ask x100), so it is stale verification rather than a bad-print rejection. `XRTX 2026-09-17  SPIKE  16:04ET  +27%  $2.10  137 trades / 49k sh  (first co-spike bar) (as-of 16:45ET)`; `XRTX 2026-09-17  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET`. AH high $2.10 printed in the first AH bar and confirmation remains NO, so record **FIRST-BAR-SPIKE WATCH** with hypothetical entry $1.97 at 22:45 CEST; skip the live entry. Four targeted searches found no verified Sep 17 earnings, press release, or 8-K catalyst; Grade None.
+- **BIAF:** Previously present on the 21:30 CEST regular-session watch. It rose from +47.9% day / $7.91 to +63.6% / $8.75 regular-session close, but AH change is only +7.0%, below the sustained AH-entry threshold; VRatio is 0.0x. Watch only; no AH entry qualification or catalyst search.
+- **CPOP:** Previously seen at 22:25 and 22:30 CEST. AH change improved from +5.9% to +7.8%, with volume 238K and VRatio 2.9x, but remains below the +10% AH threshold. Watch only; no entry qualification or catalyst search.
+
+**Paper-trade decision:** No orders submitted. The learning-phase entry gate has not opened; VRME is the only candidate provisionally eligible for a 23:00 CEST re-evaluation, while TCRT and XRTX are first-bar-spike skips.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-| — | — | — | — | — | No fills. 22:20 and 22:30 CEST were observation-only under the learning-phase 23:00 CEST entry gate; TCRT and XRTX are first-bar-spike skips, and VRME has not completed the two-AH-scan gate. |
+| — | — | — | — | — | No fills. Scans through 22:45 CEST were observation-only under the learning-phase 23:00 CEST entry gate; TCRT and XRTX are first-bar-spike skips, and VRME is provisionally eligible for re-evaluation at 23:00 CEST. |
