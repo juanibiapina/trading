@@ -96,6 +96,7 @@ For each **new** candidate (not in prior scans), evaluate against the entry crit
   2. **Press releases**: search GlobeNewswire, PRNewswire, or BusinessWire for same-day releases (search "[TICKER] press release" or "[company name] announcement"). PRs often drop at exactly 4:00-4:05 PM ET and may not appear in general news searches immediately.
   3. **SEC filings**: check for 8-K filings (material events) on the same day.
   4. If none of the above finds a catalyst, note "no catalyst found" — see "No-catalyst handling" below.
+  **Catalyst freshness check:** record the source date and time for every catalyst used in a grade. A release must be from the current US trading date (or the immediately preceding overnight news window); an older item is background, not a fresh catalyst. If an earlier scan assigned a catalyst without a verified date, correct the note and grade at the next eligible scan before using it in the entry decision. Do not grade from a headline alone.
   **Search tool — exact invocation (do not go hunting for it):** the CLI is `websearch` and it needs a subcommand:
 
   ```bash
