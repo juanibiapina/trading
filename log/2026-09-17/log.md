@@ -60,6 +60,12 @@ The scanner returned **40 regular-session hits**. **No paper trades** were place
 | BMGL | [TV](https://www.tradingview.com/chart/?symbol=BMGL) | $4.75 | +15.9 | 218 | 435 | 0.0 | -87.7 | 501K | 7.4M | Medical/Nursing Services |
 | VRME | [TV](https://www.tradingview.com/chart/?symbol=VRME) | $0.78 | +15.5 | 668 | 1K | 8.7 | +568.0 | 10.0M | 10.2M | Packaged Software |
 
+## Scan 22:00 CEST (4:00 PM ET)
+
+No candidates found.
+
+No paper trades were placed. The 21:30 CET regular-session watchlist did not produce an after-hours confirmation at the opening scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
