@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|--------|------|-------|------------|-------|
 | VRME | $0.99 | 98 | $97.02 | C | 2026-09-17 | VerifyMe same-day shareholder PR; exit in premarket. |
+| TCRT | $2.18 | 47 | $102.46 | None | 2026-09-17 | Alaunos Therapeutics; no fresh catalyst, real AH hold/re-accumulation; exit at first premarket opportunity. |
 
 ## Position Rules
 

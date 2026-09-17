@@ -181,8 +181,52 @@ No paper trades were placed. TCRT and XRTX remain first-bar-spike watches; VRME 
 
 **Paper-trade decision:** Entered VRME only. TCRT is a fading no-catalyst setup; CPOP lacks a second qualifying AH scan and has a stale book; XRTX is a first-bar-spike skip; BIAF and KUST remain below threshold.
 
+## Scan 23:30 CEST (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VRME | [TV](https://www.tradingview.com/chart/?symbol=VRME) | $0.77 | +14.5% | +24.7% | $0.96 | +42.8% | 11.3M | 1.3M | 8.8x | 10.0M | Packaged Software |
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $1.60 | +25.0% | +34.3% | $2.15 | +67.9% | 11.1M | 1.4M | 8.1x | 2.1M | Biotechnology |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $5.30 | +163.7% | +11.3% | $5.90 | +193.5% | 3.5M | 13.1M | 0.3x | 1.3M | Miscellaneous |
+| DLXY | [TV](https://www.tradingview.com/chart/?symbol=DLXY) | $0.84 | -63.1% | +13.5% | $0.96 | -58.1% | 2.9M | 26.6M | 0.1x | 5.0M | Wholesale Distributors |
+| CPOP | [TV](https://www.tradingview.com/chart/?symbol=CPOP) | $3.72 | +18.8% | +23.1% | $4.58 | +46.3% | 829K | 167K | 5.0x | 518K | Advertising/Marketing Services |
+| KXIN | [TV](https://www.tradingview.com/chart/?symbol=KXIN) | $1.75 | +54.9% | +10.0% | $1.93 | +70.4% | 667K | 8.9M | 0.1x | 1.5M | Specialty Stores |
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $1.66 | -6.7% | +10.2% | $1.83 | +2.8% | 589K | 450K | 1.3x | 1.7M | Pharmaceuticals: Major |
+| YCBD | [TV](https://www.tradingview.com/chart/?symbol=YCBD) | $0.50 | +7.3% | +8.0% | $0.54 | +15.9% | 459K | 153K | 3.0x | 10.1M | Pharmaceuticals: Other |
+| IPDN | [TV](https://www.tradingview.com/chart/?symbol=IPDN) | $3.44 | +12.4% | +10.8% | $3.81 | +24.5% | 145K | 1.9M | 0.1x | n/a | Commercial Printing/Forms |
+| MEDS | [TV](https://www.tradingview.com/chart/?symbol=MEDS) | $4.64 | -23.6% | +5.4% | $4.89 | -19.4% | 131K | 26.2M | 0.0x | 1.5M | Medical Distributors |
+| IMCC | [TV](https://www.tradingview.com/chart/?symbol=IMCC) | $1.74 | +6.7% | +9.2% | $1.90 | +16.6% | 72K | 85K | 0.8x | 91K | Agricultural Commodities/Milling |
+
+**Evaluation and instrumentation:**
+
+- **TCRT — ENTERED:** `tradable=true`. SIP corroborates a real move and late re-accumulation through 17:15 ET: 17:00 154K shares/1,434 trades, 17:05 223K/1,559, 17:10 238K/1,513, and 17:15 310K/2,039. SIP high was $2.47 at 16:35 ET; scanner price $2.15 remained within 13% of the high. The quote re-pull remained stale at 16:59 ET but showed a narrow two-sided book ($2.09 bid x100 / $2.11 ask x100). Four targeted searches found no fresh 2026-09-17 earnings, press release, or 8-K; Grade None. Recent daily bars show a fresh regular-session move from $1.28 on Sep 16 to $1.60 on Sep 17, not a prior multi-session runner. Entered 47 shares with a $2.18 extended-hours limit; order `2bbcf6f1-04be-45e3-803e-93078b0661cf` filled at **$2.18**. Fill Entry Total% was +36.3% versus the $1.60 close; the two-scan qualifying Total% was +78.1%, so no chase-cap condition. No catalyst and `CONFIRM-3 NO` did not gate this learning-phase entry; the real-volume hold/re-accumulation pattern qualified it.
+  - `TCRT 2026-09-17  NO-SPIKE  peak +54% @16:38ET  (no bar cleared +15% on a volume co-spike) (as-of 17:30ET)`
+  - `TCRT 2026-09-17  CONFIRM-3  NO no local-volume new-high ignition as-of 17:30ET`
+- **VRME — existing position, no duplicate entry:** Scanner moved from $0.98/+45.8% total at 23:00 to $0.96/+42.8%. SIP remains real, with the latest bar at 17:15 ET closing $0.96 after the $1.10 AH high. Same-day VerifyMe shareholder PR, dated 2026-09-17 and published at 14:14 ET, remains Grade C. No position-management action was taken.
+  - `VRME 2026-09-17  SPIKE  16:09ET  +22%  $0.94  262 trades / 65k sh  (first co-spike bar) (as-of 17:30ET)`
+  - `VRME 2026-09-17  CONFIRM-3  YES ignition 16:05ET 392.9x; confirmed 16:15ET $0.93 as-of 17:30ET`
+- **CPOP — skip:** This is the second qualifying AH scan (+21.0% at 23:00, +23.1% now), and SIP corroborates the move, but volume faded from 232K shares/3,545 trades at 16:40 ET to 42K/559 by 17:15 ET. The quote remained stale at 16:00 ET after re-pull and was very wide ($3.16 bid x100 / $4.31 ask x100). Four targeted searches found no fresh Sep 17 catalyst; the Sep 14 share consolidation is background. Skip for fading post-spike volume and unconfirmed fillability.
+  - `CPOP 2026-09-17  SPIKE  16:19ET  +18%  $4.40  654 trades / 49k sh  (first co-spike bar) (as-of 17:30ET)`
+  - `CPOP 2026-09-17  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 17:30ET`
+- **DAIC — skip:** `tradable=true`. SIP shows a real late build, including 17:00–17:15 ET bars of 371K/3,180, 497K/3,937, 565K/5,866, and 260K/2,469 shares/trades, with a $6.39 high and $5.90 latest close. It is a multi-session runner carried from `WINNERS_TRACKING.md` (Sep 16) and the scanner Total% is +193.5%, above the +150% entry ceiling. VRatio is only 0.3x, so the ceiling-override watch does not apply. Four searches found no fresh operational catalyst; the Sep 16 proxy and Sep 17 commentary are background, not a catalyst grade. Skip.
+  - `DAIC 2026-09-17  SPIKE  17:09ET  +19%  $6.30  1410 trades / 169k sh  (first co-spike bar) (as-of 17:30ET)`
+  - `DAIC 2026-09-17  CONFIRM-3  YES ignition 17:00ET 2.6x; confirmed 17:10ET $5.89 as-of 17:30ET`
+- **DLXY — skip:** `tradable=true`. TradingView is lagging the SIP: the latest SIP bar at 17:15 ET reached $1.20 and closed $1.17, or +39.3% from the $0.84 regular close, after 16:50–16:55 ET bars of 489K/1,625 and 1.36M/3,939 shares/trades. The day move is -63.1%, so the dead-cat rule blocks entry; this is also the first AH scan and fails the two-scan gate. SIP shows a late reclaim above the regular close, but the required two-scan rising reclaim for a DEAD-CAT-OVERRIDE WATCH is not yet present. Catalyst search found a same-day reported non-binding LOI for Delixy to acquire or merge up to 48% of Tarbagatay Munay (StocksToTrade result dated 2026-09-17; exact release time not exposed); this is potential Grade A background, not an entry override.
+  - `DLXY 2026-09-17  SPIKE  16:53ET  +15%  $0.97  380 trades / 115k sh  (first co-spike bar) (as-of 17:30ET)`
+  - `DLXY 2026-09-17  CONFIRM-3  NO ignition 16:50ET failed third-bar hold/volume as-of 17:30ET`
+- **XRTX — FIRST-BAR-SPIKE WATCH, skip:** SIP confirms the first AH bar high at $2.10 followed by thin/fading activity, ending at $1.87 in the 17:15 ET bar. Four searches found no fresh Sep 17 catalyst; the Sep 10 manufacturing PR is background. Record hypothetical entry $1.83 at 23:30 CEST for the morning tracker.
+  - `XRTX 2026-09-17  SPIKE  16:04ET  +27%  $2.10  137 trades / 49k sh  (first co-spike bar) (as-of 17:30ET)`
+  - `XRTX 2026-09-17  CONFIRM-3  NO no local-volume new-high ignition as-of 17:30ET`
+- **IPDN — skip:** First AH appearance. SIP volume was thin and faded from 80K shares/1,050 trades at 17:00 ET to 8.6K/172 at 17:15 ET; VRatio is 0.1x. The quote remained stale at 16:00 ET with `ask $0.00 x0`, so there is no confirmed fillable AH book. Four searches found no fresh Sep 17 catalyst; the Sep 11 reverse split is background.
+  - `IPDN 2026-09-17  SPIKE  16:56ET  +18%  $4.07  85 trades / 7k sh  (first co-spike bar) (as-of 17:30ET)`
+  - `IPDN 2026-09-17  CONFIRM-3  NO ignition 16:55ET failed third-bar hold/volume as-of 17:30ET`
+- **KXIN — skip:** AH change is exactly +10.0%, below the strict >10% gate; it is also a multi-session runner carried from Sep 16 with VRatio 0.1x and no confirmation. **YCBD, BIAF, MEDS, and IMCC** remain below the +10% AH threshold and received no entry workup.
+
+**Paper-trade decision:** Entered TCRT only. VRME was already open; CPOP, DAIC, DLXY, XRTX, IPDN, and KXIN were skipped under the rules above. No other orders were submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | VRME | $0.99 | 23:00 CEST | 98 | `3d090148-613a-48df-aac2-ab93115e040e` | Grade C; fresh same-day shareholder PR, real SIP volume, two-AH-scan gate, confirmation YES, and price held within 20% of the AH high. |
+| TCRT | $2.18 | 23:30 CEST | 47 | `2bbcf6f1-04be-45e3-803e-93078b0661cf` | Grade None; fresh real-volume AH hold/re-accumulation near the high, two-AH-scan gate, and no fresh catalyst. |
