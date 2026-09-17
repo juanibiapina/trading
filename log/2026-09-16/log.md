@@ -255,3 +255,140 @@ No paper trades submitted: the 22:30 CET scan is observation-only during the lea
 | YFOR | $1.88 | 00:00 CET | 53 | 7143a625 | Grade None; no fresh catalyst found, late real AH BUILD/HOLD, fresh day-1 igniter |
 
 Two paper trades filled on 2026-09-16: DTSS, 93 shares at $0.86 average fill, and YFOR, 53 shares at $1.88 average fill. No other orders were submitted.
+
+## Morning Evaluation — 10:20 CET (Sep 17, evaluating Sep 16 AH session)
+
+### Today's Winner
+
+**KXIN** — Specialty Stores (Kaixin Holdings)
+- Catalyst: **None verified**. Two searches found no fresh Sep 16 earnings, press release, or SEC catalyst. Grade None.
+- Previous Close: **$1.13**, confirmed by the SIP daily bar. Yahoo/`price-timeline.py` reported a stale $1.02 basis.
+- AH last night: First qualifying scanner entry was **$1.26 (+11.5%) at 22:45 CET**; the same period had real SIP trading around $1.31-$1.39. SIP AH peak was **$2.78 (+146.0%) at 19:50 ET**.
+- Premarket now: **$2.09 (+85.0%)** on the live scan. SIP PM peak was **$2.75 (+143.4%) at 04:00 ET**; the latest available SIP close was $2.01 at 04:05 ET.
+- Hypothetical P&L (qualified AH entry $1.26 → SIP PM peak $2.75): **+118.3%**. Using the contemporaneous SIP level near $1.31 gives +109.9%.
+- Float: **1.5M** | Market Cap: **$1.9M** at the regular close.
+- Winner-bar check: **CLEARED**. The AH tape accumulated **14.16M shares / 90,431 trades** across the returned bars, including 487K-1.43M shares and 2,815-9,860 trades per bar during the initial build. The first PM bar added **2.18M shares / 20,276 trades**. `tradable=true`; the AH quote was stale but two-sided (`bid $0.95 x100 / ask $1.33 x100`), so this was not a phantom or `ask $0.00 x0` name.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **YES, with feed latency**. The exact 22:15 CET scan returned no candidates, but KXIN appeared at 22:45 CET and remained in the 23:00, 23:30, 00:00, and 00:30 scans, before the entry window.
+- At first qualifying scan it showed scanner $1.26, +11.5% AH, +22.3% total, and 1.9M AH volume. SIP confirmed the early 16:15-16:30 ET build with 487K-899K shares and 2,815-5,383 trades per bar.
+- Why we did not act: the 16:17 ET spike faded from its $1.68 high to the $1.31-$1.39 area, `CONFIRM-3` stayed **NO**, and no catalyst was verified. The SPIKE→FADE rule correctly blocked the entry at the time. KXIN later re-ramped during AH; its final AH SIP peak $2.78 still slightly exceeded the PM SIP peak $2.75.
+- Scanner gap: **No whole-market detection miss.** The earlier TradingView level was stale versus SIP, so an earlier independent SIP cross-check would have improved timing and confidence, but the name was surfaced before the actionable entry window.
+
+**Winner selected for paper trade?** **No.** KXIN was detected but skipped on the trajectory and catalyst-quality rules; DTSS and YFOR were entered, but neither was the winner.
+
+**Broker-block tracking:** No new case. KXIN, DAIC, DTSS, YFOR, MEDS, RETO, and ZTG were `tradable=true`. Standing tally remains **2 SHPH cases**.
+
+**Stale-book execution-block tracking:** No new case. KXIN did not clear the trajectory gate, so its stale quote was not a stale-book-only execution block. Standing count remains **3** (NUWE, KUST, CLRO), all detected winners and profitable.
+
+**No-fillable-book skip tracking:** **+DAIC** (Sep 16, float 1.3M, Grade None, qualified final AH price ~$3.55, `tradable=true`, repeated `ask $0.00 x0`; SIP PM peak $3.40 = **−4.2%** from the final qualified price, skip validated). Standing count: **3** (DAIC, OFAL, BIVI), all faded/flat; no cost demonstrated.
+
+**Float-gate skip tracking:** No new case. Standing count remains **1** (CAPR, ran).
+
+**Dead-cat-override watch tracking:** **RETO** (Sep 16, Day% −34.3%, first qualified at 00:30 CET) had hypothetical entry $2.47 → SIP PM peak $2.71 = **+9.7%**, a modest continuation. It was not a clean selection case because it also failed the two-AH-scan gate and was an extreme multi-session extension. No ceiling-override watch was logged tonight.
+
+**Final-scan gate-block tracking:** No new case. RETO first qualified at the final scan but also failed the Day% gate and the dead-cat/trajectory conditions, so it was not a pure 2-AH-scan gate block. Standing count remains **2** (TRUG, UPC), both ran.
+
+**Multi-session-runner outcome tracking:** Both fills were fresh first-day igniters:
+- **DTSS** — day 1, Day% −7.6%, Grade B, entered $0.86 → SIP PM peak $0.94 = **+9.3%, ran**, then marked ~$0.74.
+- **YFOR** — day 1, Day% +22.9%, Grade None, entered $1.88 → SIP PM peak $1.85 = **−1.6%, flat/faded**. The true Sep 16 SIP close was $1.72; the scanner's stale $1.40 basis overstated Entry Total%.
+- Standing: **1 multi-session runner (1 faded: DAIC) / 24 first-day igniters (9 ran, 7 flat, 8 faded)**. First-day run rate: **9/24 (37.5%)**. No gate change.
+
+**First-bar-spike skip-validation tracking:** No new FIRST-BAR-SPIKE WATCH case. KXIN's first co-spike was at 16:17 ET, not the first AH bar. Standing remains **3 pre-gate entries (0 ran) + 3 post-gate WATCH (2 ran, 1 faded)**; overall 4/6 fade-or-flat. No gate change.
+
+### Baseline Tracking
+
+- Days tracked: **84** (was 83 + 1 for the Sep 16 session; Sep 11 Friday remains the prior baseline gap and was not back-filled).
+- Winners detected by scanner: **70/79 (88.6%)** — added KXIN; detected in the evening scans.
+- Winner selected for paper trade: **35/77 (45.5%)** — KXIN was detected but not entered because the skip rules blocked it.
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+- Live premarket scan at 04:20 ET: **7 hits** — KXIN, RETO, DAIC, DTSS, MEDS, CYPH, and ZTG. All seven had appeared in the evening scans; retrospective match **7/7**.
+- Forced after-hours scan: **0 hits**, confirming that overnight TradingView postmarket fields are not a reliable retrospective source.
+- SIP basis and peaks: KXIN $1.13 → $2.75 PM; DAIC $2.01 → $3.40 PM; DTSS $0.59 → $0.94 PM; YFOR $1.72 → $1.85 PM; MEDS $6.07 → $8.04 PM; RETO $1.84 → $2.71 PM; ZTG $1.18 → $1.44 PM. KXIN was the largest raw PM mover and the only name clearing the >100% winner bar on the true prior-close basis.
+- Biggest raw PM mover classification: **KXIN was an AH→PM continuation**, not a PM-only gapper. Its SIP AH tape was already active before the premarket open.
+- The authoritative `log/pm-open-scan.csv` holdable PM-only count is **55**. The holdable cluster remains above the 3-4 case threshold and remains an Initiative-6 early-PM pilot decision for the daily email; no action is applied here.
+
+### Open Position P&L (Alpaca)
+
+Only real Alpaca fills are listed. No exits or position-management actions were taken in this retrospective.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| DTSS | $0.86 | +45.8% from true $0.59 close | B — AI elderly-care robot cooperation | 23:30 CET | $0.94 SIP | 04:00 ET | (open) | **−$11.16** at last SIP $0.74 | **−14.0%** | 🔴 Open; Alpaca $0.75 mark was stale |
+| YFOR | $1.88 | +9.3% from true $1.72 close | None | 00:00 CET | $1.85 SIP | 04:00 ET | (open) | **~+$0.53** at Yahoo ~$1.89 04:22 ET; last SIP $1.77 | **~+0.5%** | 🟡 Open; Alpaca $1.87 mark was stale |
+
+Alpaca `positions` returned DTSS 93 shares at $0.86 and YFOR 53 shares at $1.88. DTSS and YFOR quote timestamps were Sep 16 16:49 ET and 16:59 ET, so Alpaca's displayed marks were stale and are not reported as live P&L. SIP PM bars verified DTSS's $0.94 peak and YFOR's $1.85 peak. **No position was closed.**
+
+**Total Realized P&L (Alpaca fills only): €0.00** (no exits in this pulse; position evaluation remains separate).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) plus extra 22:15 and 22:45 scans = **9 total**. Full entry-window coverage.
+- Candidates found: **43 unique tickers** across the scans.
+- Retrospective matches: **7/7** live PM hits were present in the evening scans.
+
+### Missed Opportunities
+
+No significant detection misses. KXIN, the winner, appeared in the evening scans and was skipped for a documented trajectory/catalyst reason. The exact 22:15 scan had no hit because the TradingView level lagged the SIP tape, but later scans caught KXIN before the entry window.
+
+### AH Mover Follow-Through
+
+Every name below appeared in at least two evening scans above +10% AH.
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|---------|---------|-----------|---------------|------------|-----------|------------|---------|
+| KXIN | $2.78 (+146.0%) | 19:50 ET | Spike→fade→late re-ramp | $2.75 SIP peak / ~$2.09 now | −1.1% | +143.4% | AH was slightly better exit; extreme-zone fade |
+| DTSS | $1.03 (+74.6%) | 17:10 ET | Late ignition/build→fade | $0.94 SIP peak | −8.7% | +59.3% | AH was better exit |
+| ZTG | $1.80 (+52.5%) | 16:55 ET | Spike→fade | $1.44 SIP peak | −20.0% | +22.0% | AH was better exit |
+| DAIC | $4.40 (+119.0%) | 18:20 ET | Late build→fade | $3.40 SIP peak | −22.7% | +69.2% | AH was better exit |
+| YFOR | $2.06 (+19.8%) | 17:25 ET | Build→fade | $1.85 SIP peak | −10.2% | +7.6% | AH was better exit |
+
+**AH-peak-vs-PM-peak extreme-zone tally:** Add KXIN (AH +146.0% > PM +143.4%, slight fade; AH was the better exit). Standing: **11 fade / 1 continue = 12 cases (91.7% fade)**. The ≥9 cases at ≥85% routing trigger remains reached; the partial-profit-on-extreme-runners recommendation stays in Juan's daily email. No exit rule is changed here.
+
+**Fade-rule false-negative tracking:** KXIN is **not** a PM re-explosion false negative under the standing definition. The early AH spike faded, but the final AH SIP peak $2.78 was still above the PM SIP peak $2.75. Record it as a same-night low-float negative control: float 1.5M, Grade None, early AH peak $1.68 → final AH $2.78 → PM $2.75, so it fell short of the PM-above-AH-peak test. Standing remains **4/15** SIP-verified sub-3M faders re-exploding; the ≥80% exception trigger remains unmet.
+
+**Late-AH-tail surge tracking:** No new case. KXIN's SIP tape was already above the +10% threshold and near +111% at the 18:30 ET last-scan timestamp; the later AH tail extended an already detected move rather than creating a new true-tail winner. The ORIS true-tail and BTCT feed-lag cases remain the standing tally.
+
+**In-window feed-lag miss tracking:** No new case. KXIN was surfaced, and no omitted name had a brand-new in-window SIP surge that was absent from every scan. Standing count remains **5** (BTCT, KUST, WLDS, RAIN, MYSZ); the independent whole-universe AH-data cross-check recommendation remains routed to the daily email.
+
+**Price-floor exclusion tracking:** No new case. Standing count remains **5 across 2 nights, 0 holdable**; no sub-$0.50 real in-window AH mover met the holdable threshold.
+
+**Reverse-split-squeeze fade tracking:** No new Sep 16 entry or notable skip had a reverse-split catalyst. Standing tally remains **this-week 4/4 faded; older splits 3/5 continued/non-fade**. The this-week conviction-downgrade recommendation remains in the daily email; no gate change.
+
+**Chase-cap / entry-extension tracking:** No new case. DTSS and YFOR filled below their qualifying scanner prices, not in the >+120% chase zone. Standing remains **1** (XOS, never reclaimed).
+
+### Notes
+
+- **Coverage:** 7/7 scheduled scans ran plus two extras; no coverage failure and no coverage tally change.
+- **Baseline gap:** No new gap between the Sep 15 baseline and this Sep 16 session. Sep 11 remains the previously recorded un-evaluated Friday session; it was not back-filled.
+- **Selection diagnosis:** KXIN shows the scanner can detect a real >100% winner while the trajectory rule prevents entry into an early spike/fade. The winner's final AH peak was marginally better than the PM peak, so the skip remains supported even though the hypothetical entry was profitable.
+- **Daily-email routing:** Re-state the already-reached AH data-source verification decision (5 feed-lag misses), the already-reached extreme-runner partial-profit decision (11/12), and the holdable PM-only cluster (55) without changing live gates. The new no-fillable-book DAIC result is selection data, not a baseline miss.
+
+### Price Charts
+
+`price-timeline.py` was run for KXIN, DAIC, DTSS, YFOR, MEDS, RETO, and ZTG. Its Yahoo percentage labels use stale bases for KXIN, DAIC, MEDS, RETO, and ZTG; the SIP-corrected values above are authoritative. KXIN's Yahoo shape chart is included below:
+
+```text
+KXIN — Yahoo shape only; SIP basis $1.13
+$2.72 |                                                     peak AH $2.78 SIP
+      |                                                █████████
+      |                                           █████
+$1.03 |███████████████████████████████████████████          PM $2.75 SIP
+      +-------------------------------------------------------------->
+        AH build $1.13 → early fade $1.24-$1.34 → late ramp → PM peak
+```
+
+Strong-candidate timelines, using SIP levels and true daily closes:
+
+```text
+DAIC  $2.01 ── AH build ── $4.40 AH peak ── $3.40 PM peak
+DTSS  $0.59 ── late AH build ── $1.03 AH peak ── $0.94 PM peak ── ~$0.74
+YFOR  $1.72 ── AH build ── $2.06 AH peak ── $1.85 PM peak
+MEDS  $6.07 ── AH ~$6.89 ── $8.04 PM peak ── ~$6.79
+RETO  $1.84 ── AH $2.64 ── $2.71 PM peak
+ZTG   $1.18 ── early spike $1.80 AH ── $1.44 PM peak
+```
