@@ -8,6 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|--------|------|-------|------------|-------|
+| VRME | $0.99 | 98 | $97.02 | C | 2026-09-17 | VerifyMe same-day shareholder PR; exit in premarket. |
 
 ## Position Rules
 
