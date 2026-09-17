@@ -6,6 +6,16 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-09-16 — re: Trading Scanner Report - 2026-09-15
+
+**Juan said:** "Please please change the schedules for every 5m in the beginning of after hours, otherwise you'll continue to miss the early after hours."
+
+**Interpretation:** Juan wants the beginning of the after-hours window monitored on a 5-minute cadence, not the current 15-minute opening cadence. The goal is to catch the first 2–3 rising 5-minute bars and avoid late entries on early igniters such as RETO. This is an adaptive-scheduling request for Initiative 3, not a new strategy or entry rule.
+
+**Action:** Routed to Initiative 3 and marked as an explicit scheduler directive rather than a proposal. The scheduler is managed outside this repository, so no scheduler file was changed in this capture pulse; the next scheduler/strategy-advance run should add 5-minute scans across the beginning of the after-hours window. Flagged for the next scanner-improvement run to verify the new cadence and measure early-ignition capture lag.
+
+---
+
 ### 2026-09-09 — re: Trading Scanner Report - 2026-09-08
 
 **Juan said:** "SUNE is not a good entry because price only went up in the first

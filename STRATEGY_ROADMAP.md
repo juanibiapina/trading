@@ -217,6 +217,14 @@ the ignition**, not a new signal.
    wick." Reinforces the cadence-densify + hard-CONFIRM-gate proposal already
    staged for Juan; the volume half of the same ask is routed to Init 1 (define
    the per-bar volume metric). See `FEEDBACK_LOG.md` 2026-09-09.
+   **Update 2026-09-16 (Juan feedback, re: 09-15 cycle):** Juan explicitly
+   directs the opening after-hours schedule to run every 5 minutes: "change the
+   schedules for every 5m in the beginning of after hours" to avoid missing
+   early igniters. This converts Init 3's prior 15-minute opening-hour proposal
+   into an approved scheduler requirement. The scheduler is managed outside
+   this repository; no schedule file is changed by the feedback-capture pulse.
+   Route the external scheduler update to the next scheduler/strategy-advance
+   run, then measure first-2/3-bar capture and ignition-to-scan lag.
 3. **Initiative 5 - better data + review surface (graphs, sources).** AH/PM
    volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
    raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports
