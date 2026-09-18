@@ -338,3 +338,142 @@ No paper trades were placed. TCRT and XRTX remain first-bar-spike watches; VRME 
 |--------|------------|------------|-----------------|----------|--------|
 | VRME | $0.99 | 23:00 CEST | 98 | `3d090148-613a-48df-aac2-ab93115e040e` | Grade C; fresh same-day shareholder PR, real SIP volume, two-AH-scan gate, confirmation YES, and price held within 20% of the AH high. |
 | TCRT | $2.18 | 23:30 CEST | 47 | `2bbcf6f1-04be-45e3-803e-93078b0661cf` | Grade None; fresh real-volume AH hold/re-accumulation near the high, two-AH-scan gate, and no fresh catalyst. |
+
+## Morning Evaluation — 10:20 CET (CEST), evaluating Sep 17 AH session
+
+### Today's Winner
+
+**No real winner today.** The largest genuine mover was **SSM** — Motor Vehicles (Sono Group N.V.). Its Yahoo premarket high crossed the +100% headline bar, but the required late peak is not SIP-verified yet, and the AH book was not fillable. The stock is therefore not crowned as a winner.
+
+**SSM** — Motor Vehicles
+- Catalyst: **None verified**. Searches found no fresh Sep 17 earnings, press release, or SEC catalyst. Grade None.
+- Previous Close: **$1.46**, confirmed by the SIP daily bar for Sep 17. Yahoo's $1.69 anchor was stale and would understate the move.
+- AH last night: **$2.26 (+54.8% from $1.46)** at the 00:30 CET final scan; SIP high **$2.57 (+76.0%)** at 18:25 ET on 547K shares / 4,495 trades in that bar.
+- Premarket now: **~$2.90 Yahoo / $2.66 live scan** at the 04:20 ET evaluation. SIP's latest accessible bar closed $2.64 at 04:05 ET.
+- PM peak: **$3.10 Yahoo (+112.3% from the SIP close)**; SIP verifies only through $2.86 (+95.9%) at 04:05 ET because the latest SIP bars are delayed.
+- Hypothetical P&L (final AH scan $2.26 → Yahoo PM peak $3.10): **+37.2% provisional**. SIP-confirmed through 04:05 ET: $2.26 → $2.86 = **+26.5%**.
+- Float: **1.1M** | Market Cap: **$4.0M**.
+- Winner-bar check: **NOT VERIFIED**. SIP confirms real accumulating PM volume in the accessible bars: 1.72M shares / 14,752 trades and 1.55M / 13,597 trades, but the SIP high remains below +100%. The AH book at the final verification was `ask $0.00 x0`, so the move was not actionable even if the delayed peak later verifies above +100%.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **NO at 22:15 CET; YES by the final scheduled scan.** SIP was quiet near $1.46 through 17:30 ET, then the move began at 17:40 ET and SSM appeared in the 00:30 CET scan.
+- At the final scan it showed $2.26, +54.8% AH from the true $1.46 close, with SIP accumulation already at 446K–547K shares and 4,028–4,495 trades per bar. It had only one qualifying scan, `CONFIRM-3 NO`, and no fillable AH offer.
+- Why we did not act: the two-AH-scan gate was not met, confirmation stayed NO, and Alpaca reported the stale `ask $0.00 x0` book. No catalyst was verified.
+- Scanner gap: **No whole-market detection miss.** The scanner surfaced SSM in the entry window. The needed improvement is timestamp-fresh SIP/book verification for late final-scan candidates, not a threshold change.
+
+**Winner selected for paper trade?** **No.** There was no SIP-verified, capturable >100% winner. SSM was detected but correctly skipped on confirmation, scan count, and fillability.
+
+**Broker-block tracking:** No new case. Standing tally remains **2 SHPH cases**.
+
+**Stale-book execution-block tracking:** **+XRTX** (Sep 17, quote frozen at 16:00 ET through the 18:30 ET final scan; SIP late ignition reached $2.32 on 238K shares / 1,926 trades, qualifying final-scan price ~$2.00, PM SIP peak $1.90 = **−5.0%** from the blocked entry). XRTX was `tradable=true` and otherwise cleared the scan, trajectory, volume, and extension gates; it was not entered solely because the quote stayed stale. **Standing count: 4** (NUWE, KUST, CLRO, XRTX); 3 profitable, XRTX a skip-validating negative control. Route the repeated stale extended-hours quote problem to the daily email; do not change the safety gate here.
+
+**No-fillable-book skip tracking:** No new case. SSM did not clear the other gates, so its `ask $0.00 x0` was not a no-fillable-book momentum skip. Standing count remains **3** (DAIC, OFAL, BIVI), all faded/flat.
+
+**Float-gate skip tracking:** No new case. Standing count remains **1** (CAPR, ran).
+
+**Final-scan gate-block tracking:** No new case. SSM, IMCC, and other final-scan names failed additional confirmation, liquidity, or trajectory conditions; none was blocked solely by the two-AH-scan gate. Standing count remains **2** (TRUG, UPC), both ran.
+
+**Dead-cat-override watch tracking:** **DLXY** (Sep 17, Day −63.1%, hypothetical $1.14 at 00:30 CET) reached a SIP PM high of **$1.31** at 04:00 ET = **+14.9%**, then traded around $1.13. The continuation was a one-bar/modest move on 1.21M shares / 6,216 trades and did not persist. The documented rows are JEM (−15.9%), USDE (real-volume positive counterexample), KUST (+8.9% then collapse), BIYA (−9.4%), STAK (+2.2%), CSAI (−3.0%), RDAC (−28.6%), EJH (+12.7% thin), RETO (+9.7%), and DLXY (+14.9%). No gate change.
+
+**Multi-session-runner outcome tracking:** Both fills were fresh first-day igniters:
+- **VRME** — day 1, Day% +14.5%, Grade C, true SIP close $0.77, entered $0.99 → SIP PM peak $0.92 = **−7.1%, faded**.
+- **TCRT** — day 1, Day% +25.0%, Grade None, true SIP close $1.60, entered $2.18 → SIP PM peak $2.04 = **−6.4%, faded**.
+- Standing: **1 multi-session runner (1 faded: DAIC) / 26 first-day igniters (9 ran, 7 flat, 10 faded)**. First-day run rate: **9/26 (34.6%)**. No gate change.
+
+**First-bar-spike skip-validation tracking:** No new case. VRME's high was not the first AH bar, TCRT peaked later, and XRTX later formed a separate ignition rather than remaining a first-bar-only skip. Standing remains **3 pre-gate entries (0 ran) + 3 post-gate WATCH (2 ran, 1 faded)**; overall 4/6 fade-or-flat.
+
+### Baseline Tracking
+
+- Days tracked: **85** (was 84 + 1 for the Sep 17 session; Sep 11 Friday remains the prior baseline gap and was not back-filled).
+- Winners detected by scanner: **71/80 (88.8%)** — added SSM; detected in the final scheduled scan.
+- Winner selected for paper trade: **35/78 (44.9%)** — no SIP-verified, capturable >100% winner existed; SSM was detected but correctly skipped.
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+- Live premarket scan at 04:20 ET: **7 hits** — SSM, DLXY, BTCT, BNC, USDE, VRME, and TCRT.
+- Forced after-hours scan: **0 hits**, confirming that overnight TradingView postmarket fields are not reliable for retrospective discovery.
+- SSM was the biggest raw PM mover and an **AH→PM continuation**, not a PM-only gapper. The AH tape had already reached +54.8% from the true close before the final scan. The authoritative `log/pm-open-scan.csv` holdable PM-only count is **55**; the Initiative-6 early-PM pilot remains a daily-email decision.
+- Retrospective matches: **5/7** live PM hits were present in the evening scans (SSM, DLXY, USDE, VRME, TCRT). BTCT and BNC were not surfaced, but neither approached the +100% winner bar.
+
+### Open Position P&L (Alpaca)
+
+Only real Alpaca fills are listed. No exit or position-management action was taken; exits remain the responsibility of `position-evaluation.md`.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| VRME | $0.99 | +28.6% from SIP $0.77 close | C — VerifyMe shareholder PR | 23:00 CET | $0.92 SIP | 04:00 ET | (open) | **−$14.70** at live Yahoo $0.84 | **−15.2%** | 🔴 Open; Alpaca quote stale at Sep 17 16:59 ET |
+| TCRT | $2.18 | +36.3% from SIP $1.60 close | None | 23:30 CET | $2.04 SIP | 04:00 ET | (open) | **−$12.22** at live Yahoo $1.92 | **−11.9%** | 🔴 Open; Alpaca quote stale at Sep 17 16:59 ET |
+
+Alpaca `positions` reported VRME 98 shares at $0.99 and TCRT 47 shares at $2.18. The displayed current prices matched the Yahoo shape by coincidence, but both Alpaca quote timestamps were stale at about 16:59 ET on Sep 17. SIP bars verified the overnight peaks and the live-price cross-check; the Alpaca marks are not treated as current execution prices.
+
+**Total Realized P&L (Alpaca fills only): $0.00** (no exits in this pulse).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CET) plus **6 extra scans** (22:05, 22:10, 22:15, 22:20, 22:25, 22:45) = **13 total**. Full entry-window coverage.
+- Candidates found: **53 unique tickers** across the 13 scans.
+- Retrospective matches: **5/7** live PM hits.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|---------|-----------|------------|---------------------|
+| BTCT | SIP AH high $1.21 (+7.1% from $1.13) | Below the +10% AH threshold; AH activity was sparse, with no accumulating volume before the PM move. | Yes, but only a moderate +19% from the AH area $1.19 to the SIP PM high $1.42; not a baseline winner. |
+| BNC | SIP AH high $5.47 (+14.9% from $4.76), but mostly tiny bars | TradingView did not surface it; SIP AH bars were thin and non-accumulating, while the PM high reached $6.46 (+35.7% from close). | Yes, approximately +18% from the $5.47 AH high; not a >100% winner and not a real-volume scanner miss. |
+
+No significant baseline detection miss occurred. Both omitted names were sub-threshold or thin relative to the strategy's real-volume winner definition.
+
+### AH Mover Follow-Through
+
+Every row below appeared in at least two evening scans above +10% AH. Percentages use SIP daily closes, not stale Yahoo anchors.
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|---------|---------|-----------|---------------|------------|-----------|------------|---------|
+| VRME | $1.10 (+42.9%) | 16:20 ET | Spike→fade/hold | $0.84 | −16.4% | +9.1% | AH was better; entered position faded |
+| TCRT | $2.47 (+54.4%) | 16:35 ET | Spike→fade→hold | $1.92 | −17.4% | +20.0% | AH was better; entered position faded |
+| DLXY | $1.33 (+58.3%) | 17:25 ET | Late surge→fade/hold | $1.13 | −15.0% | +34.5% | AH was better; dead-cat skip modestly continued in PM |
+| DAIC | $6.39 (+20.6%) | 17:10 ET | Build→fade | $4.77 | −25.3% | −10.0% | AH was better; multi-session/ceiling skip validated |
+| XRTX | $2.32 (+30.3%) | 17:40 ET | Late surge→fade | $1.71 | −26.3% | −4.5% | AH was better; stale-book block cost nothing |
+| KXIN | $2.08 (+18.9%) | 17:20 ET | Spike→fade→rebound | $1.71 | −17.8% | −2.3% | AH was better; repeat-runner fade |
+| CPOP | $4.93 (+32.5%) | 19:55 ET | Spike→fade→thin re-ramp | $4.44 | −9.9% | +19.4% | AH was better; no-confirmation skip validated |
+
+**AH-peak-vs-PM-peak check:** All seven SIP-verified AH movers peaked above their PM peaks. None entered the >~+130% extreme-zone sample, so the standing **11 fade / 1 continue** tally is unchanged and the partial-profit recommendation remains routed to the daily email.
+
+**Fade-rule false-negative tracking:** No re-explosion false negative occurred. **CPOP** is a new sub-3M negative control: float 518K, Grade None, AH first-sighting/qualified area ~$4.02 → PM SIP peak $4.80 = **+19.4%**; realistic PM-open VWAP $4.50 → $4.80 = **+6.7%**, but PM stayed below the SIP AH peak $4.93. It fell short rather than re-exploding. Standing SIP-verified sub-3M faders: **4/16** re-exploded; the ≥80% trigger remains unmet.
+
+**Late-AH-tail surge tracking:** No new case. SSM's defining AH surge ran from about 17:40 to 18:25 ET, before the 18:30 ET final scan, so it was an in-window late ignition rather than a 18:30–20:00 ET tail surge. The standing cases remain ORIS (true-tail) and BTCT (feed-lag).
+
+**In-window feed-lag miss tracking:** No new case. The evening scans surfaced SSM, DLXY, USDE, VRME, and TCRT; BTCT had no >10% AH signal and BNC had thin/non-accumulating AH tape. Standing count remains **5** (BTCT, KUST, WLDS, RAIN, MYSZ); the independent whole-universe AH-data cross-check recommendation remains routed to the daily email.
+
+**Price-floor exclusion tracking:** No new case. Standing count remains **5 across 2 nights, 0 holdable**; no sub-$0.50 name appeared as a real in-window AH mover.
+
+**Reverse-split-squeeze fade tracking:** No new Sep 17 entry or notable skip had a reverse-split catalyst. Standing tally remains **this-week 4/4 faded; older splits 3/5 continued/non-fade**. The recency conviction-downgrade recommendation remains in the daily email; no live gate change.
+
+**Chase-cap / entry-extension outcome tracking:** No new case. VRME filled at +28.6% total versus the qualifying +45.8% scanner reading, and TCRT filled at +36.3% versus +78.1%; neither fill chased into the >+120% zone. Standing remains **1** (XOS, never reclaimed).
+
+### Notes
+
+- **Coverage:** 7/7 scheduled scans ran. No coverage failure and no coverage tally change.
+- **Baseline gap:** Sep 11 remains the only recorded un-evaluated trading-day gap. It was not back-filled into this sample.
+- **Selection diagnosis:** SSM shows that a late, real-volume mover can be detected at the final scan without becoming a valid entry. The scan found it; the two-scan, confirmation, and fillability checks blocked it. No entry-rule change is justified.
+- **Daily-email routing:** Re-state the already-reached AH data-source verification decision (5 feed-lag misses), the holdable PM-only cluster (55; Initiative 6), the extreme-runner partial-profit decision (11/12), and the this-week reverse-split conviction downgrade. Add the repeated stale-book execution problem (4 cases; 3 profitable, XRTX negative control) as an execution-feed decision. These are email-only decisions; no Telegram question or button was sent.
+
+### Price Charts
+
+`python3 scripts/price-timeline.py SSM TCRT VRME` was run. Its Yahoo shape output used the stale SSM $1.69 anchor; the SIP-corrected chart below uses the true Sep 17 close of $1.46. Yahoo extended-hours volume is not used.
+
+```text
+SSM — SIP basis $1.46; Yahoo shape, late SIP bars pending
+$3.10       Yahoo PM peak (+112.3% provisional)
+  |                         ╭─╮
+$2.86       SIP-confirmed ──╯ ╰─╮ (+95.9% at 04:05 ET)
+  |                    ╭───────╯
+$2.57       AH SIP peak ─╯
+  |              ╭───────
+$1.46       SIP regular close ───── quiet AH ── final scan $2.26 ── PM
+
+TCRT — SIP basis $1.60: $1.60 ── AH $2.47 ── PM SIP $2.04 ── now $1.92
+VRME — SIP basis $0.77: $0.77 ── AH $1.10 ── PM SIP $0.92 ── now $0.84
+```
