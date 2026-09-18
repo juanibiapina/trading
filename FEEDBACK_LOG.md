@@ -6,6 +6,16 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-09-17 — re: Trading Scanner Report - 2026-09-16
+
+**Juan said:** "YFOR (open position) SHOULD NOT HAVE BEEN ENTERED. You keep entering positions where I can clearly see in the graphs that the volume is not spiking compared to previous days. Is there a discrepancy between the data you use to enter vs the data you use to generate the graphs? Tackle this immediately. When do you progress on your initiatives? I don't see a lot changing, so set up schedules for dealing with initiatives. This needs to move faster."
+
+**Interpretation:** Two process failures are being flagged. (1) YFOR's 2026-09-16 entry used the current-session local-volume signal but did not compare it against the prior AH session or enforce the requested 10x-plus local-spike gate. The entry bar at 17:20 ET had 941,842 shares and 4,509 trades, but the confirmation ratio was only 4.2x; the prior YFOR AH session printed larger 1.37M-1.79M-share bars. (2) The entry path and chart do not use identical metrics: discovery starts with TradingView, SIP validates current AH bars, and `chart.py` uses Yahoo OHLC with Alpaca SIP extended-hours volume backfill. The YFOR audit found no raw extended-hours volume-source mismatch; the gap is the missing shared cross-session baseline and the chart's capped visual scale.
+
+**Action:** Audited YFOR with Alpaca SIP bars and routed the scanner correction to Initiative 1 / the next scanner-improvement run: use one explicit volume metric in entry decisions and charts, classify repeat tickers as multi-session runners, and reject entry bars below the 10x local-spike threshold. No large live strategy change was made in this capture pulse. Added a second weekday `strategy-advance` checkpoint at 18:00 Europe/Berlin; the existing 15:00 run remains, so initiative work now has two scheduled progress runs per weekday. Message routed for the next scanner-improvement and strategy-advance runs.
+
+---
+
 ### 2026-09-16 — re: Trading Scanner Report - 2026-09-15
 
 **Juan said:** "Please please change the schedules for every 5m in the beginning of after hours, otherwise you'll continue to miss the early after hours."

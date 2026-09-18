@@ -21,6 +21,8 @@ behind the active pilot. Each `strategy-advance` run advances the top pilot step
 **plus** clears ready low-risk build/research items (cap ~1-2 extra per run so
 runs stay focused and never break the daily cycle).
 
+**Update (2026-09-17, Juan feedback):** The YFOR audit found no raw extended-hours volume-source mismatch: entry validation uses Alpaca SIP bars, while `chart.py` uses Yahoo OHLC plus Alpaca SIP volume backfill. The mismatch was metric scope. YFOR's 17:20 ET entry bar had 941,842 shares / 4,509 trades and a 4.2x local ratio, but its prior AH session printed larger 1.37M-1.79M-share bars; the entry path did not enforce the requested 10x-plus local-spike and cross-session comparison. Route this to Initiative 1 / `scanner-improvement` to define one volume metric for both decisions and charts, classify repeat tickers as multi-session runners, and reject sub-10x local spikes. No live entry rule changed in this capture pulse. To accelerate initiative work, the external scheduler now runs `strategy-advance` at 15:00 and 18:00 Europe/Berlin on weekdays; trading scans and position-evaluation pulses are unchanged.
+
 These are strategy-level changes and live **outside** the daily
 scanner-improvement loop (which is restricted to surgical scanner/process
 tweaks). The scanner-improvement task may reference this file but must not
