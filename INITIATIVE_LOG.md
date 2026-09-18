@@ -7,6 +7,18 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-09-18 — Initiative 6 pilot unchanged; Initiative 3 second/third-bar replay adds one insufficient data point
+
+**Evaluated:** The earlier 2026-09-18 opening-grid step **partially worked but remains insufficient to judge the hypothesis**. The 13-pulse grid ran, but the first session produced no actionable names in the new 22:05/22:10/22:15 CET window, so it did not establish a lag reduction.
+
+**Step taken:** **Pilot / Initiative 6 plus parallel Research / Initiative 3.** Re-ran `node scripts/init6-pm-pilot.js`, then replayed the eight Sep 17 AH candidates through `node scripts/ah-5m-confirmation-replay.js` using the log-only second/third-bar confirmation test. Ran `node --check` and the live confirmation instrument; all passed and no orders, schedules, or trading rules changed.
+
+**Result:** Init 6 remains **n=21, SUM +77.5%, mean +3.7%/name, positive 16/21, fade-tail 4/21 (19%)** with no new admit. The replay admitted **SSM on the second bar only (1/8)**: hypothetical entry $1.67 at 17:50 ET produced +27.5% to PM open and +91.0% to PM high, versus +21.7% PM-open return from the current grid's $1.75 entry, a **+4.6-point entry-price edge**. No candidate passed the third-bar test; the sample is too small to support a schedule or hard-gate change.
+
+**Hypothesis / next step:** More AH sessions will show whether second-bar confirmation reduces entry latency without admitting the weak names rejected by third-bar confirmation. Keep the Init 6 pilot unchanged, collect opening-grid sessions, and measure each candidate's SIP ignition, first observation, confirmation verdict, and outcome before proposing any timing or entry change.
+
+**Needs from Juan:** nothing new. Standing asks remain the IBKR paper account plus consolidated extended-hours US-equities data/API access (or Webull EU credentials) for Initiative 2, and review of the Init 3 plain +10% premarket sell-limit proposal.
+
 ### 2026-09-18 — Initiative 6 pilot unchanged; Initiative 3 exit-gap sim seeded to n=43; opening-grid result still insufficient
 
 **Evaluated:** The 2026-09-17 step **partially worked but is insufficient to judge the cadence hypothesis.** All 13 opening-grid scans ran, and the new 22:05/22:10/22:15 observation scans returned no candidates; the first actionable names appeared at 22:20 and 22:30. The cadence is operational, but one session provides no proven ignition-lag reduction. The prior step's Init 6 rerun was correct; today's `footprint=none` rows were thin and did not create a fresh pilot admit.
