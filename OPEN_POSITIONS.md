@@ -8,8 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|--------|------|-------|------------|-------|
-| VRME | $0.99 | 98 | $97.02 | C | 2026-09-17 | VerifyMe same-day shareholder PR; exit in premarket. |
-| TCRT | $2.18 | 47 | $102.46 | None | 2026-09-17 | Alaunos Therapeutics; no fresh catalyst, real AH hold/re-accumulation; exit at first premarket opportunity. |
+| _None_ | — | — | — | — | — | No open positions; Alpaca confirmed empty after 2026-09-18 pulse. |
 
 ## Position Rules
 
@@ -61,6 +60,8 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| VRME | $0.99 | $0.81 | -$17.64 | -18.2% | 1 | C (VerifyMe same-day shareholder PR) | Grade C — exit in first premarket pulse and below the -10% hard stop. Alpaca current price was $0.80 (-19.1%) at evaluation; SIP verified PM high $0.92 (-7.1% from entry). SELL 98 @ limit $0.81 ext (id 1199b169) filled @ $0.81. Real fill used for final P&L. |
+| TCRT | $2.18 | $1.97 | -$9.87 | -9.6% | 1 | None (no fresh catalyst) | Grade None — exit at first premarket opportunity; Alpaca current price was $1.94 (-11.0%) at evaluation, below the -10% hard stop. SIP verified PM high $2.04 (-6.4% from entry). Initial SELL @ $2.06 (id 744d8e67) was canceled, then SELL 47 @ limit $1.94 ext (id a83b9280) filled @ $1.97. Real fill used for final P&L. |
 | DTSS | $0.86 | $0.624 | -$21.95 | -27.4% | 1 | B (Datasea same-day strategic cooperation to develop AI elderly-care robots) | Grade B — **hard stop hit** (entry stop $0.731). SIP verified peak $1.03 (+19.8%); current Alpaca price was $0.62 (-27.3%) at evaluation. SELL 93 @ limit $0.60 ext (id e8d09793) filled @ $0.624. Real fill used for final P&L. |
 | YFOR | $1.88 | $1.76 | -$6.36 | -6.4% | 1 | None (YYForce late AH BUILD/HOLD; no fresh same-day catalyst) | Grade None — **exit first premarket pulse**. SIP verified peak $2.25 (+19.7%); current Alpaca price was $1.82 (-3.2%) at evaluation. Initial SELL 53 @ limit $1.79 ext did not fill; repriced to $1.58 (id d60401a1), filled @ $1.76. Real fill used for final P&L. |
 | VEEA | $3.38 | $5.22 | +$51.52 | +54.4% | 2 | A (Veea + NovaGen merger term sheet + GeoNova $10M investment commitment, GlobeNewswire ~16:40 ET; potential/term-sheet merger, not fixed-price cash → gradable A; float 1.6M) | Grade A — **trail stop hit (peak −20%)**. Entered 09-14 23:30 CET on real accumulating AH BUILD. Day 1 held/built; day 2 09-15 regular session exploded to SIP high **$7.49** (16:00Z hour, vwap $6.61, 180K trades — real liquid level, peak **+121.6%**), then retraced. PM 09-16 opened liquid (08:00Z 1546 trades, vwap $5.30) and settled ~$5.20 (08:15Z close $5.20, vwap $5.24) — **−30.6% off the $7.49 peak**, below the peak−20% trail ($5.99). Sold to lock the gain. Alpaca quote stale (bid $4.87 @20:00Z prior close); used SIP level. SELL 28 @ limit $5.10 ext (id 733b9e34) filled @ $5.22 (price improvement in liquid PM book). Real fill $5.22. First Grade-A trail-stop win: a +122% intraday runner captured at +54% after the 20% pullback trigger. |
