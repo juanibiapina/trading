@@ -45,3 +45,5 @@ date,ticker,entry,exit,exitZ,note
 2026-09-16,VEEA,?,5.22,2026-09-16T08:32:11Z,held exit 04:32 ET (Grade-A trail-stop win); dead-ish PM book after exit, PM peak $5.33 08:45 ET (+2.1%); lim10 ($5.742) unfilled, PM-last $5.15 (-1.3%)
 2026-09-16,WAFU,?,1.71,2026-09-16T08:32:11Z,held exit 04:32 ET; faded post-exit, PM peak only $1.70 08:40 ET (below exit); lim10 ($1.881) unfilled, PM-last $1.54 (-9.9%)
 2026-09-16,YFOR,?,1.67,2026-09-16T08:32:11Z,held exit 04:32 ET; stalled book, PM peak $1.80 09:35 ET (+7.8%); lim10 ($1.837) unfilled, PM-last $1.7008 (+1.8%)
+2026-09-17,DTSS,0.8594,0.624,2026-09-17T08:31:22Z,Grade B exit 04:31 ET; full capped SIP peak $1.18 at 09:10 ET (+89.1% vs exit), PM-last $0.9674; position-evaluation peak $1.03 superseded by full SIP bars
+2026-09-17,YFOR,1.88,1.76,2026-09-17T08:31:37Z,Grade None exit 04:31 ET; full capped SIP peak $1.876 at 04:40 ET (+6.6% vs exit), PM-last $1.82; position-evaluation $2.25 conflicts with full SIP bars and is excluded

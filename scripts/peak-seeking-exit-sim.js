@@ -55,6 +55,8 @@ const names = [
   ["VEEA","2026-09-16",5.22],
   ["WAFU","2026-09-16",1.71],
   ["YFOR","2026-09-16",1.67],
+  ["DTSS","2026-09-17",0.624],
+  ["YFOR","2026-09-17",1.76],
 ];
 const CAP = "13:30:00Z"; // 09:30 ET
 const limits = [5,10,15,20,30]; // resting sell-limit % above exit

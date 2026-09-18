@@ -7,6 +7,19 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-09-18 — Initiative 6 pilot unchanged; Initiative 3 exit-gap sim seeded to n=43; opening-grid result still insufficient
+
+**Evaluated:** The 2026-09-17 step **partially worked but is insufficient to judge the cadence hypothesis.** All 13 opening-grid scans ran, and the new 22:05/22:10/22:15 observation scans returned no candidates; the first actionable names appeared at 22:20 and 22:30. The cadence is operational, but one session provides no proven ignition-lag reduction. The prior step's Init 6 rerun was correct; today's `footprint=none` rows were thin and did not create a fresh pilot admit.
+
+**Step taken:** **Pilot / Initiative 6 plus parallel Instrument / Initiative 3.** (1) Re-ran `node scripts/init6-pm-pilot.js` over the 48-candidate tracker. (2) Ran `node scripts/ah-5m-confirmation.js` on six Sep 17 candidates: 2 YES (VRME, XRTX) and 4 NO (SSM, DLXY, TCRT, CPOP). (3) Pulled complete Sep 17 SIP 1-minute bars and real fill timestamps for DTSS and YFOR, rejected the conflicting YFOR $2.25 position-evaluation peak, appended both reconciled exits to `peak-seeking-exit-sim.js` and `premarket-exit-gap.csv`, and re-ran the sim. All work stayed log-only; no orders or live rules changed.
+
+**Result:** Init 6 remains **n=21, SUM +77.5%, mean +3.7%/name, median +10.0%, positive 16/21, fade-tail 4/21 (19%)**; Sep 18's three `footprint=none` rows (BTCT, USDE, YCBD) were classified thin, so there was no new holdable admit. Init 3 now has **n=43** seeds; the plain +10% sell-limit remains best at **SUM +101.9%, mean +2.4%/name, positive 27/43**. DTSS's full capped SIP peak was $1.18 after its $0.624 exit; YFOR's was $1.876 after its $1.76 exit, not the disputed $2.25 mark.
+
+**Hypothesis / next step:** The five-minute opening grid may reduce ignition-to-observation lag, but the first complete session showed no pre-16:20 ET actionable discovery despite the added 16:05/16:10/16:15 ET pulses. Collect more sessions and measure each candidate's SIP ignition, first scan, CONFIRM-3 verdict, and later outcome before changing timing. Keep the Init 6 pilot unchanged and admit the next verified `footprint=none` holdable gapper. Keep the Init 3 exit proposal log-only.
+
+**Needs from Juan:** nothing new. Standing asks remain an IBKR paper account plus consolidated extended-hours US-equities data/API access (or Webull EU credentials) for Initiative 2's fill test, and review of the Init 3 plain +10% premarket sell-limit proposal.
+
+
 ### 2026-09-17 — Initiative 6 pilot: no fresh PM-only admit; Initiative 3 five-minute AH opening shadow cadence wired; full exit seeding deferred on incomplete SIP data
 
 **Evaluated:** The 2026-09-16 step **worked.** MEDS was logged and correctly rejected by the conservative VWAP-decline continuation gate, while the Init 6 ledger held at n=21 and Init 3's VEEA/WAFU/YFOR seeds kept the plain +10% limit as the best rule at n=41. The 2026-09-17 PM-open scan added DAIC, KXIN, and RETO, but all three were `ah-detected`, so there was no new PM-only pilot case. DTSS and YFOR did exit today, but the full post-exit SIP window was not yet available at this 15:00 CET run; the position-evaluation note's YFOR peak ($2.25) conflicts with the available SIP/Yahoo PM peak ($1.88), so those exits were not added to the Init 3 sim on uncertain evidence.
