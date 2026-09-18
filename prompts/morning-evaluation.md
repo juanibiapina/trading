@@ -27,7 +27,7 @@ Apply this data hierarchy from the start of the pulse:
 - Run `date` to get the current time
 - Determine yesterday's US trading date (the AH session we're evaluating)
 - Set `LOG_FILE=log/YYYY-MM-DD/log.md` using that date
-- Pull latest changes: `git stash && git pull --ff-only && git stash pop 2>/dev/null || true`
+- Pull latest changes with the lock-aware sync helper: `bash scripts/sync-repo.sh`
 - **Get cumulative baseline** (pulse 1 only): Find the most recent previous log with baseline tracking and extract the counts:
   ```bash
   # Find most recent log with baseline tracking (excluding today)

@@ -35,7 +35,7 @@ watches that blind spot.
   anyway and note the session (still useful; classify whatever gappers exist).
 - Set `TRACKER=log/pm-open-scan.csv` (create with the header row below if
   missing).
-- Pull latest: `git stash && git pull --ff-only && git stash pop 2>/dev/null || true`
+- Pull latest with the lock-aware sync helper: `bash scripts/sync-repo.sh`
 
 ### 2. Discover PM gappers
 

@@ -19,7 +19,7 @@ Apply this data hierarchy from the start of the pulse:
 - Run `date` to get the current time
 - Determine the US trading date: if current CET time is before 06:00, the trading date is yesterday (CET). Otherwise it's today.
 - Set `LOG_DIR=log/YYYY-MM-DD` and `LOG_FILE=log/YYYY-MM-DD/log.md` using the trading date
-- Pull latest changes: `git stash && git pull --ff-only && git stash pop 2>/dev/null || true`
+- Pull latest changes with the lock-aware sync helper: `bash scripts/sync-repo.sh`
 
 ### 2. Run Scanner
 

@@ -20,7 +20,7 @@ Apply this data hierarchy from the start of the pulse:
 
 ```bash
 date
-git stash && git pull --ff-only && git stash pop 2>/dev/null || true
+bash scripts/sync-repo.sh
 TODAY=$(date +%F)
 mkdir -p "log/$TODAY"
 touch "log/$TODAY/log.md"
