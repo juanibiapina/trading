@@ -96,6 +96,22 @@ No candidates found.
 
 **Decision:** Observation only. No paper trades submitted.
 
+## Scan 22:25 CEST (4:25 PM ET)
+
+**Session:** After-hours. TradingView returned two candidates. CELZ was already present at 22:20 CEST; TOPS was new. The learning-phase entry gate remains closed before 23:00 CEST, so this scan was observation-only.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $1.00 | +4.0% | +26.4% | $1.27 | +31.5% | 6.7M | 923K | 7.3x | 6.6M | Medical Specialties |
+| TOPS | [TV](https://www.tradingview.com/chart/?symbol=TOPS) | $0.72 | +0.8% | +34.0% | $0.96 | +35.1% | 2.0M | 441K | 4.5x | 4.1M | Marine Shipping |
+
+**Verification and evaluation:**
+
+- **CELZ:** `tradable=true`. SIP confirmed real AH accumulation through the available 16:10 ET bar: 3.44M shares/15,575 trades, 3.91M/16,204, then 2.23M/8,145; price peaked at $1.43 at 16:05 ET and faded to $1.22. The quote at 16:25 ET was fillable at bid $1.23 x500 / ask $1.24 x600; the recheck at 16:27 ET remained $1.23/$1.24. Four targeted searches found **no fresh Sep 21 catalyst**; older CELZ filings/news are background only. `CELZ 2026-09-21  NO-SPIKE  peak +43% @16:05ET  (no bar cleared +15% on a volume co-spike) (as-of 16:25ET)`; `CELZ 2026-09-21  CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET`. **FIRST-BAR-SPIKE WATCH** — hypothetical entry $1.23 at 16:25 ET. The scanner price was above the latest SIP close because the SIP feed was ~15 minutes delayed; the live quote corroborated a liquid book. No live entry before the 23:00 CEST gate.
+- **TOPS:** New candidate. `tradable=true`. SIP confirmed a real build after a 270-share/4-trade opening print: 16:05 ET traded 2.13M shares/7,226 trades at $0.96, and 16:10 ET traded 3.89M/13,976 trades at $1.08. The quote at 16:25 ET was fillable at bid $1.14 x1900 / ask $1.16 x500; the recheck at 16:27 ET was $1.10/$1.12. The TradingView $0.96 price was stale versus the SIP and live book; the strong signal was treated as unconfirmed-but-live, not rejected. Four targeted searches found **no fresh Sep 21 catalyst**; the July 29 SPV transaction is stale background. `TOPS 2026-09-21  SPIKE  16:07ET  +28%  $0.92  677 trades / 218k sh  (first co-spike bar) (as-of 16:25ET)`; `TOPS 2026-09-21  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-of 16:25ET`. Only one AH scan currently qualifies; wait for the next scan and the 23:00 CEST gate.
+
+**Decision:** Observation only. No paper trades submitted. No positions were added to `OPEN_POSITIONS.md`.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
