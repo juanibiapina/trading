@@ -112,6 +112,28 @@ No candidates found.
 
 **Decision:** Observation only. No paper trades submitted. No positions were added to `OPEN_POSITIONS.md`.
 
+## Scan 22:30 CEST (4:30 PM ET)
+
+**Session:** After-hours. TradingView returned five candidates. The learning-phase entry gate remains closed before 23:00 CEST, so this scan was observation-only. CELZ and TOPS were carried from 22:25; RUBI and NUR were new AH candidates; FJET was carried from the regular-session watch.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $1.00 | +4.0% | +21.4% | $1.22 | +26.3% | 8.8M | 1.2M | 7.6x | 6.6M | Medical Specialties |
+| TOPS | [TV](https://www.tradingview.com/chart/?symbol=TOPS) | $0.72 | +0.8% | +49.0% | $1.07 | +50.3% | 5.5M | 831K | 6.7x | 4.1M | Marine Shipping |
+| RUBI | [TV](https://www.tradingview.com/chart/?symbol=RUBI) | $1.25 | +9.6% | +17.6% | $1.47 | +28.9% | 926K | 512K | 1.8x | 1.8M | Marine Shipping |
+| NUR | [TV](https://www.tradingview.com/chart/?symbol=NUR) | $1.35 | +10.7% | +22.0% | $1.65 | +35.0% | 168K | 5.5M | 0.0x | 9.9M | Electronics Distributors |
+| FJET | [TV](https://www.tradingview.com/chart/?symbol=FJET) | $1.97 | +20.1% | +5.6% | $2.08 | +26.8% | 57K | 2.6M | 0.0x | 40.3M | Miscellaneous Commercial Services |
+
+**Verification and evaluation:**
+
+- **CELZ:** `tradable=true`; fresh quote at 20:31Z was bid $1.21 x500 / ask $1.22 x500. SIP confirmed real volume through 20:15Z: 3.44M/15,575 trades, 3.91M/16,204, 2.23M/8,145, and 1.40M/4,840; the SIP high was $1.43 and the latest close $1.23. The candidate faded from the 16:05ET high and remained a first-bar pop. Four targeted searches found no fresh Sep 21 catalyst; May 8 earnings and the July 1 8-K were stale background. `CELZ 2026-09-21  NO-SPIKE  peak +43% @16:05ET  (no bar cleared +15% on a volume co-spike) (as-of 16:30ET)`; `CELZ 2026-09-21  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET`. **FIRST-BAR-SPIKE WATCH** — hypothetical entry $1.22 at 16:30ET; skip the live entry because CONFIRM-3 remained NO across the tracked scans.
+- **TOPS:** `tradable=true`; fresh quote at 20:31Z was bid $1.33 x2400 / ask $1.35 x500. SIP showed a genuine build: 20:05Z 2.13M shares/7,226 trades, 20:10Z 3.89M/13,976, and 20:15Z 4.23M/16,677, with high $1.18 and latest close $1.13. The scanner price was lagging the SIP, not a bad print. Four targeted searches found no fresh Sep 21 earnings, press release, or 8-K; older TOPS company material was background only. `TOPS 2026-09-21  SPIKE  16:07ET  +28%  $0.92  677 trades / 218k sh  (first co-spike bar) (as-of 16:30ET)`; `TOPS 2026-09-21  CONFIRM-3  YES ignition 16:05ET 7879.1x; confirmed 16:15ET $1.13 as-of 16:30ET`. **Watch for the 23:00 CEST gate:** this is the strongest qualifying pipeline name, with two AH scans above +10%, real accumulating SIP volume, Day% above -15%, float 4.1M, and Total% below +150%; no order was submitted before 23:00 CEST.
+- **RUBI:** New candidate; `tradable=true`. SIP confirmed a real but fading move: 20:10Z 1.04M shares/5,570 trades at VWAP $1.49, then 20:15Z 521K/2,539 at VWAP $1.28; high $1.65 and latest close $1.20. The scanner $1.47 was corroborated by the SIP VWAP/high. The quote recheck remained stale at 20:00Z (bid $1.04 x100 / ask $1.44 x100), so it was treated as unconfirmed current liquidity rather than rejected as a bad print. A current-day catalyst was found: Rubico GlobeNewswire press release dated Sep 21, 2026 at 08:30ET, “Announces Transition to Quarterly Reporting of Financial Results”; this is a weak reporting-policy PR, **Grade C**. `RUBI 2026-09-21  SPIKE  16:12ET  +32%  $1.65  1639 trades / 321k sh  (first co-spike bar) (as-of 16:30ET)`; `RUBI 2026-09-21  CONFIRM-3  PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET`. **Watch/skip for now:** first AH scan only, spike-to-fade trajectory, and stale quote; no live order.
+- **NUR:** New candidate; `tradable=true`. SIP showed later real volume but a sharp fade: 20:10Z 177K shares/636 trades at VWAP $1.52, then 20:15Z 719K/3,725 at VWAP $1.58; high $1.78 and latest close $1.44. The TradingView VRatio 0.0x was not accepted as proof of a bad print because SIP corroborated the price and real trades; the quote recheck was stale at 20:00Z (bid $1.13 x100 / ask $1.62 x100). Four targeted searches found no fresh Sep 21 catalyst; the Sep 16 NurExone result was unrelated and stale. `NUR 2026-09-21  SPIKE  16:12ET  +16%  $1.56  89 trades / 44k sh  (first co-spike bar) (as-of 16:30ET)`; `NUR 2026-09-21  CONFIRM-3  PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET`. **Watch/skip for now:** first AH scan only and no catalyst; no live order.
+- **FJET:** Carried from the 21:30 CEST regular-session watch. Day% eased from +25.3% to +20.1%, but AH change was only +5.6%, below the +10% AH gate; no two-scan entry gate. Watch only.
+
+**Decision:** No paper trades submitted. The 23:00 CEST learning-phase gate was not open. `OPEN_POSITIONS.md` was unchanged; no Alpaca order or fill existed to record.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
