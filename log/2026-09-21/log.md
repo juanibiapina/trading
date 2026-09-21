@@ -204,6 +204,30 @@ No candidates found.
 
 **Decision:** No new paper trades submitted. QNME was blocked by its unusable AH book; NCPL failed the volume and two-scan gates; TOPS was already filled and was not averaged. `OPEN_POSITIONS.md` remained unchanged.
 
+## Scan 00:00 CEST (6:00 PM ET)
+
+**Session:** After-hours. TradingView scanner snapshot: 18:00:23 ET. TOPS, QNME, and NCPL were above the +10% AH threshold. This was not the final 00:30 CEST scan, so the final-scan feed-lag cross-check was not due.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TOPS | [TV](https://www.tradingview.com/chart/?symbol=TOPS) | $0.72 | +0.8% | +60.2% | $1.15 | +61.5% | 50.6M | 5.6M | 9.0x | 4.1M | Marine Shipping |
+| QNME | [TV](https://www.tradingview.com/chart/?symbol=QNME) | $0.64 | +14.6% | +72.0% | $1.10 | +97.0% | 40.2M | 38.9M | 1.0x | 25.8M | Air Freight/Couriers |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.01 | +36.4% | +10.9% | $1.12 | +51.2% | 2.1M | 27.3M | 0.1x | 4.4M | Miscellaneous Commercial Services |
+| TOMZ | [TV](https://www.tradingview.com/chart/?symbol=TOMZ) | $1.43 | -2.1% | +7.0% | $1.53 | +4.8% | 1.8M | 221K | 8.0x | 5.2M | Industrial Machinery |
+| NUR | [TV](https://www.tradingview.com/chart/?symbol=NUR) | $1.35 | +10.7% | +9.6% | $1.48 | +21.3% | 1.2M | 5.7M | 0.2x | 9.9M | Electronics Distributors |
+| CISS | [TV](https://www.tradingview.com/chart/?symbol=CISS) | $1.23 | -4.7% | +8.1% | $1.33 | +3.1% | 488K | 1.8M | 0.3x | 1.4M | Marine Shipping |
+| GDC | [TV](https://www.tradingview.com/chart/?symbol=GDC) | $1.46 | +13.2% | +5.5% | $1.54 | +19.4% | 245K | 1.0M | 0.2x | 4.1M | Packaged Software |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $2.90 | -19.9% | +9.0% | $3.16 | -12.7% | 197K | 83K | 2.4x | 1.1M | Advertising/Marketing Services |
+
+**Verification and decisions:**
+
+- **TOPS:** Existing position only; one-entry-per-candidate rule blocked another order. Scanner price fell from $1.44 at 17:30 ET to $1.15, while SIP showed genuine accumulated volume through 17:35 ET and a $1.62 AH high. The current SIP close was $1.15, about 29% below the high, so the new trajectory was a fade; position management remains with the separate premarket workflow. `tradable=true`; the Alpaca quote remained fillable but stale at 16:59:59 ET (`bid $1.50 x1100 / ask $1.56 x500`). No new order. `TOPS 2026-09-21  SPIKE  16:07ET  +28%  $0.92  677 trades / 218k sh  (first co-spike bar) (as-of 18:00ET)`; `TOPS 2026-09-21  CONFIRM-3  YES ignition 16:05ET 7879.1x; confirmed 16:15ET $1.13 as-of 18:00ET`.
+- **QNME:** Cleared the two-AH-scan gate with a late BUILD/hold pattern. SIP corroborated the scanner and showed real accumulation through 17:35 ET, with 1.2M–5.2M shares and 1,317–11,406 trades per bar after ignition; latest SIP close $1.05 and high $1.18. The fresh SEC 8-K filed Sep 21 at 16:15:26 ET disclosed the planned purchase of 32 GPU servers from Compal for approximately $18.8M; **Grade B**. `tradable=true`, but the quote remained stale at 16:47:38 ET and unusable (`bid $1.00 x500 / ask $69.69 x3500`). SIP was fresh enough to corroborate the move, so this was not rejected as a bad print; no sane fillable book existed for a limit order. **Skip: unusable AH ask/book; no order.** `QNME 2026-09-21  SPIKE  16:17ET  +16%  $0.74  511 trades / 444k sh  (first co-spike bar) (as-of 18:00ET)`; `QNME 2026-09-21  CONFIRM-3  YES ignition 16:15ET 35.0x; confirmed 16:25ET $0.79 as-of 18:00ET`.
+- **NCPL:** Remained above the AH threshold but failed real-volume confirmation. SIP showed a 17:05 ET spike to $1.21 followed by thin bars, generally tens to low hundreds of thousands of shares and 108–1,297 trades; latest close $1.15, below the $1.21 high. `tradable=true`; quote was stale and wide from 16:00 ET (`bid $0.86 x100 / ask $1.40 x1400`). Four targeted searches were rerun for earnings, press releases, announcements, and SEC 8-Ks; **no fresh Sep 21 company catalyst found**. **Skip: thin/not-accumulating SIP volume, CONFIRM-3 NO, no catalyst, and no new entry.** `NCPL 2026-09-21  SPIKE  17:09ET  +20%  $1.21  512 trades / 211k sh  (first co-spike bar) (as-of 18:00ET)`; `NCPL 2026-09-21  CONFIRM-3  NO ignition 17:05ET failed third-bar hold/volume as-of 18:00ET`.
+- **TOMZ, NUR, CISS, GDC, STFS:** AH changes remained below +10%; observation only. No entry work or orders.
+
+**Decision:** No new paper trades submitted. Alpaca confirmed only the existing TOPS position (`64 @ $1.40`); QNME was blocked by its unusable quote, and NCPL was blocked by thin SIP volume, failed confirmation, and no fresh catalyst.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
