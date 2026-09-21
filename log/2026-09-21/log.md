@@ -70,6 +70,14 @@ No candidates found.
 
 No candidates found.
 
+## Scan 22:15 CEST (4:15 PM ET)
+
+**Session:** After-hours. TradingView scanner returned 0 hits. No candidates found; no catalyst, SIP, quote, spike-bar, or third-bar verification was needed.
+
+**Decision:** Observation only. Learning-phase entry gate is not open before 23:00 CET; no paper trades submitted.
+
+No candidates found.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
