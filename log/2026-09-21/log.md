@@ -228,6 +228,39 @@ No candidates found.
 
 **Decision:** No new paper trades submitted. Alpaca confirmed only the existing TOPS position (`64 @ $1.40`); QNME was blocked by its unusable quote, and NCPL was blocked by thin SIP volume, failed confirmation, and no fresh catalyst.
 
+## Scan 00:30 CEST (6:30 PM ET)
+
+**Session:** After-hours, final scheduled scan. TradingView returned 11 hits. The final feed-lag cross-check used `check-prices.py --ah-history` for all 21:30 CEST watch names; no omitted watch name showed more than 10% continuation versus its last regular-session close. Apparent AH gains in AVAT, GLND, BTTC, and similar names were regular-session anchor effects or flat/fading AH action. No SIP rescue candidate was found.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TOPS | [TV](https://www.tradingview.com/chart/?symbol=TOPS) | $0.72 | +0.8% | +54.6% | $1.11 | +55.9% | 53.0M | 5.9M | 9.0x | 4.1M | Marine Shipping |
+| QNME | [TV](https://www.tradingview.com/chart/?symbol=QNME) | $0.64 | +14.6% | +56.3% | $1.00 | +79.1% | 44.0M | 39.3M | 1.1x | 25.8M | Air Freight/Couriers |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.01 | +36.4% | +5.9% | $1.07 | +44.5% | 2.4M | 27.4M | 0.1x | 4.4M | Miscellaneous Commercial Services |
+| TOMZ | [TV](https://www.tradingview.com/chart/?symbol=TOMZ) | $1.43 | -2.1% | +7.7% | $1.54 | +5.5% | 1.8M | 228K | 8.0x | 5.2M | Industrial Machinery |
+| NUR | [TV](https://www.tradingview.com/chart/?symbol=NUR) | $1.35 | +10.7% | +10.3% | $1.49 | +22.0% | 1.4M | 5.7M | 0.2x | 9.9M | Electronics Distributors |
+| CISS | [TV](https://www.tradingview.com/chart/?symbol=CISS) | $1.23 | -4.7% | +10.4% | $1.36 | +5.3% | 567K | 1.8M | 0.3x | 1.4M | Marine Shipping |
+| HUBC | [TV](https://www.tradingview.com/chart/?symbol=HUBC) | $6.00 | +30.4% | +33.2% | $7.99 | +73.7% | 339K | 105K | 3.2x | 1.8M | Miscellaneous Commercial Services |
+| GDC | [TV](https://www.tradingview.com/chart/?symbol=GDC) | $1.46 | +13.2% | +5.5% | $1.54 | +19.4% | 258K | 1.0M | 0.3x | 4.1M | Packaged Software |
+| STFS | [TV](https://www.tradingview.com/chart/?symbol=STFS) | $2.90 | -19.9% | +10.7% | $3.21 | -11.3% | 212K | 85K | 2.5x | 1.1M | Advertising/Marketing Services |
+| UFG | [TV](https://www.tradingview.com/chart/?symbol=UFG) | $0.51 | -3.8% | +6.0% | $0.54 | +2.0% | 88K | 9.8M | 0.0x | 9.8M | Wholesale Distributors |
+| TAOX | [TV](https://www.tradingview.com/chart/?symbol=TAOX) | $4.80 | +5.0% | +9.2% | $5.24 | +14.7% | 66K | 254K | 0.3x | 7.3M | Packaged Software |
+
+**Verification, instrumentation, and decisions:**
+
+- **TOPS:** Existing position only. SIP was fresh through 18:15 ET and showed sustained accumulation with 459K–5.4M shares and 2,077–18,646 trades per bar; the final scanner price was corroborated by the latest SIP close near $1.10. The scanner and SIP move remained real, but price had faded from the $1.62 SIP high. Four catalyst searches found **no fresh Sep 21 catalyst**; Sep 16 earnings and older releases were stale. Multi-session check: fresh first-day AH igniter, not in `WINNERS_TRACKING.md`, Day% +0.8%. `TOPS 2026-09-21  SPIKE  16:07ET  +28%  $0.92  677 trades / 218k sh  (first co-spike bar) (as-of 18:30ET)`; `TOPS 2026-09-21  CONFIRM-3  YES ignition 16:05ET 7879.1x; confirmed 16:15ET $1.13 as-of 18:30ET`. **Decision:** Keep the existing 64-share position; do not average in.
+- **QNME:** Cleared the two-AH-scan gate and had real SIP accumulation, with 1.2M–5.2M shares and 1,317–11,406 trades per bar after the 16:15 ET ignition. The re-pull remained stale at 17:35 ET, so the strong scanner signal was treated as unconfirmed-but-live rather than rejected as a bad print. The fresh SEC 8-K was filed Sep 21 at 16:15:26 ET and disclosed the planned purchase of 32 GPU servers for about $18.8M; **Grade B**. `tradable=true`, but the quote remained unusable at 16:47:38 ET (`bid $1.00 x500 / ask $69.69 x3500`). `QNME 2026-09-21  SPIKE  16:17ET  +16%  $0.74  511 trades / 444k sh  (first co-spike bar) (as-of 18:30ET)`; `QNME 2026-09-21  CONFIRM-3  YES ignition 16:15ET 35.0x; confirmed 16:25ET $0.79 as-of 18:30ET`. **Skip: no sane fillable AH book; no order.**
+- **NUR:** Had no fresh catalyst after the four-search workup; Sep 16 material was stale/unrelated. SIP confirmed the early spike but volume faded after the 16:10–16:15 ET bars, and the quote remained stale/wide from 16:00 ET (`bid $1.13 x100 / ask $1.62 x100`). The opening AH high was printed in the first 15-minute block and no later volume-backed new-high ignition occurred. `NUR 2026-09-21  SPIKE  16:12ET  +16%  $1.56  89 trades / 44k sh  (first co-spike bar) (as-of 18:30ET)`; `NUR 2026-09-21  CONFIRM-3  NO ignition 16:10ET failed third-bar hold/volume as-of 18:30ET`. **FIRST-BAR-SPIKE WATCH:** hypothetical entry $1.49 at 18:30 ET; skip live entry.
+- **CISS:** Four searches found no verified fresh Sep 21 company catalyst; hits referenced Aug 27 Q2 results and same-day commentary/ownership discussion, not a current-day company release or 8-K. SIP activity was thin and not accumulating: the largest bar was 185K shares/655 trades at 16:30 ET, followed by smaller bars; the quote was stale and wide (`bid $1.04 x100 / ask $1.42 x100` at 16:00 ET). `CISS 2026-09-21  SPIKE  16:33ET  +15%  $1.42  158 trades / 43k sh  (first co-spike bar) (as-of 18:30ET)`; `CISS 2026-09-21  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET`. **Skip: thin/not-accumulating volume, no second qualifying scan, and no fillable book.**
+- **HUBC:** New final-scan candidate; `tradable=true`. SIP confirmed a real late spike, with 202K/4,530 trades at 17:50 ET and 148K/3,512 at 17:55 ET, but it faded from the $10.98 SIP high to $7.26 by 18:15 ET. The quote recheck remained stale from 16:00 ET (`bid $5.19 x100 / ask $6.96 x100`). Four searches found **no fresh Sep 21 earnings, press release, or 8-K**; the Sep 11 reverse split and older company releases were stale background. `HUBC 2026-09-21  SPIKE  17:50ET  +60%  $9.61  502 trades / 23k sh  (first co-spike bar) (as-of 18:30ET)`; `HUBC 2026-09-21  CONFIRM-3  NO ignition 17:45ET failed third-bar hold/volume as-of 18:30ET`. **Skip: first final-scan appearance, SPIKE→FADE, CONFIRM-3 NO, and no current fillable book.**
+- **STFS:** Four searches found no fresh Sep 21 catalyst. SIP showed an initial 16:55 ET spike of 138K shares/1,759 trades followed by 79K/1,119 and then thin fading bars; the quote had `ask $0.00 x0`. Day% was -19.9%, and although the scanner price reclaimed the regular close, the later rise was not a volume-backed build. `STFS 2026-09-21  SPIKE  16:55ET  +20%  $3.48  38 trades / 1k sh  (first co-spike bar) (as-of 18:30ET)`; `STFS 2026-09-21  CONFIRM-3  NO ignition 16:55ET failed third-bar hold/volume as-of 18:30ET`. **DEAD-CAT skip; no DEAD-CAT-OVERRIDE WATCH because the reclaim was thin and not accumulating.**
+- **NCPL:** AH change fell to +5.9%, below the entry threshold; prior thin-volume/CONFIRM-3-NO rejection carried forward. **No new order.**
+- **TOMZ, GDC, UFG, and TAOX:** AH changes remained below +10%; observation only.
+
+**Final-scan instrumentation:** No `FINAL-SCAN-GATE-BLOCK` qualified. HUBC failed CONFIRM-3 and had no current fillable book; QNME had an unusable ask; all other AH-qualified names failed a volume, trajectory, or two-scan gate. No chase-cap note was required because no new order filled.
+
+**Paper trade decision:** No new Alpaca orders or fills. Broker positions remained `TOPS 64 @ $1.40`; `OPEN_POSITIONS.md` was unchanged.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
