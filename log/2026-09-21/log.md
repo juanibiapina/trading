@@ -100,4 +100,4 @@ No candidates found.
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
-| _None_ | — | — | — | — | No AH confirmation; no order submitted. |
+| _None_ | — | — | — | — | Observation-only scan; learning-phase gate closed before 23:00 CET; no order submitted. |
