@@ -78,6 +78,24 @@ No candidates found.
 
 No candidates found.
 
+## Scan 22:20 CEST (4:20 PM ET)
+
+**Session:** After-hours. TradingView returned three candidates. The learning-phase entry gate is closed before 23:00 CEST, so this scan was observation-only.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $1.00 | +4.0% | +34.3% | $1.35 | +39.8% | 3.1M | 524K | 6.0x | 6.6M | Medical Specialties |
+| LOBO | [TV](https://www.tradingview.com/chart/?symbol=LOBO) | $0.70 | +32.1% | +7.1% | $0.75 | +41.5% | 678K | 17.3M | 0.0x | 9.3M | Motor Vehicles |
+| FEBO | [TV](https://www.tradingview.com/chart/?symbol=FEBO) | $0.66 | -5.5% | +12.1% | $0.74 | +6.0% | 78K | 267K | 0.3x | 3.1M | Electronics/Appliances |
+
+**Verification and evaluation:**
+
+- **CELZ:** `tradable=true`. SIP confirmed genuine AH activity: 16:00–16:05 ET bars traded 3.44M/15,575 and 3.91M/16,204 shares/trades; SIP high $1.43 and VWAPs $1.28/$1.35 corroborated the scanner move. The 16:20 ET quote was fillable at bid $1.25 x1000 / ask $1.27 x400. Structured searches (earnings, press releases, company announcements, and SEC 8-K) found **no fresh Sep 21 catalyst**; Sep 17 patent news is stale background. Current price faded from the early AH high but remained within 20%. Instrumentation: `CELZ 2026-09-21  NO-SPIKE  peak +43% @16:05ET  (no bar cleared +15% on a volume co-spike) (as-of 16:20ET)`; `CELZ 2026-09-21  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET`. **FIRST-BAR-SPIKE WATCH** — hypothetical entry $1.25 at 16:20 ET; no live entry before the 23:00 CEST gate.
+- **FEBO:** `tradable=true`. SIP showed thin, fading activity: 16:00–16:05 ET bars traded 88K/339 and 111K/496 shares/trades, with price falling from $0.76 to $0.70. The quote was stale at 16:00 ET with a wide $0.56 bid / $0.76 ask. This is thin/not-accumulating activity, not a volume-backed build. Structured searches found **no fresh Sep 21 catalyst**; the surfaced Nasdaq deficiency notice was from Jul 30. Instrumentation: `FEBO 2026-09-21  SPIKE  16:02ET  +15%  $0.76  55 trades / 17k sh  (first co-spike bar) (as-of 16:20ET)`; `FEBO 2026-09-21  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET`. **Skip: thin/fading AH volume; no paper order.**
+- **LOBO:** `tradable=true`. The Yahoo anchor warning shows $0.53 previous close versus $0.70 last regular close; the scanner's real AH change is +7.1% from the regular close, below the +10% AH threshold. SIP volume was real (699K then 285K shares; 1,741 then 893 trades), but the quote was stale at 16:00 ET and wide at $0.61/$0.82. **Watch: below AH threshold and no two-scan entry gate.**
+
+**Decision:** Observation only. No paper trades submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
