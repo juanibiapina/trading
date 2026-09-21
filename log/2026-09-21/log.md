@@ -134,6 +134,27 @@ No candidates found.
 
 **Decision:** No paper trades submitted. The 23:00 CEST learning-phase gate was not open. `OPEN_POSITIONS.md` was unchanged; no Alpaca order or fill existed to record.
 
+## Scan 22:45 CEST (4:45 PM ET)
+
+**Session:** After-hours. TradingView returned five candidates. TOPS and CELZ were carried from earlier AH scans; QNME was new. The learning-phase entry gate remains closed before 23:00 CEST, so this scan was observation-only. No paper orders were submitted.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TOPS | [TV](https://www.tradingview.com/chart/?symbol=TOPS) | $0.72 | +0.8% | +79.7% | $1.29 | +81.2% | 15.9M | 1.9M | 8.4x | 4.1M | Marine Shipping |
+| CELZ | [TV](https://www.tradingview.com/chart/?symbol=CELZ) | $1.00 | +4.0% | +19.4% | $1.20 | +24.2% | 11.5M | 1.4M | 8.0x | 6.6M | Medical Specialties |
+| QNME | [TV](https://www.tradingview.com/chart/?symbol=QNME) | $0.64 | +14.6% | +23.0% | $0.79 | +40.9% | 7.9M | 35.6M | 0.2x | 25.8M | Air Freight/Couriers |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.01 | +36.4% | +6.9% | $1.08 | +45.8% | 584K | 27.2M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| VNTG | [TV](https://www.tradingview.com/chart/?symbol=VNTG) | $0.67 | +14.8% | +5.6% | $0.71 | +21.3% | 72K | 344K | 0.2x | 10.6M | Marine Shipping |
+
+**Verification and evaluation:**
+
+- **TOPS:** `tradable=true`; current quote was bid $1.30 x1400 / ask $1.32 x2000 at 16:45 ET. SIP confirmed sustained real accumulation through 16:30 ET: 2.13M/7,226 trades, 3.89M/13,976, 4.23M/16,677, 2.67M/10,392, 4.11M/15,339, and 4.46M/16,109 shares/trades per bar, with SIP high $1.44 and close $1.28. The current book corroborated the move. Four fresh targeted searches found **no catalyst found for Sep 21**; the July 29 SPV material is stale background. `TOPS 2026-09-21  SPIKE  16:07ET  +28%  $0.92  677 trades / 218k sh  (first co-spike bar) (as-of 16:45ET)`; `TOPS 2026-09-21  CONFIRM-3  YES ignition 16:05ET 7879.1x; confirmed 16:15ET $1.13 as-of 16:45ET`. This remains the strongest pipeline candidate: three AH scans above +10%, BUILD/hold trajectory, float 4.1M, Day% above -15%, and Total% below +150%. **Watch for 23:00 CEST entry eligibility; no order before the gate.**
+- **CELZ:** `tradable=true`; current quote was bid $1.25 x1500 / ask $1.26 x500 at 16:45 ET. SIP showed genuine but fading/oscillating activity through 16:30 ET: the first two bars traded 3.44M/15,575 and 3.91M/16,204, then 2.23M/8,145, 1.40M/4,840, 1.00M/3,516, 456K/1,618, and 672K/2,381 shares/trades; AH high remained $1.43. Four fresh targeted searches found **no catalyst found for Sep 21**; the Sep 17 patent filing, May 8 earnings, and July 1 8-K are stale background. `CELZ 2026-09-21  NO-SPIKE  peak +43% @16:05ET  (no bar cleared +15% on a volume co-spike) (as-of 16:45ET)`; `CELZ 2026-09-21  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET`. **FIRST-BAR-SPIKE WATCH** — hypothetical entry $1.26 at 16:45 ET; skip live entry because the AH high printed in the first bar and CONFIRM-3 remained NO across scans.
+- **QNME:** New candidate; `tradable=true`, but the current quote was bid $1.04 x300 / ask $69.69 x3500 at 16:45 ET, not a usable few-cents-wide fillable book. SIP confirmed a genuine late build despite TradingView VRatio 0.2x: 16:15 ET traded 1.29M/2,594, 16:20 ET 4.22M/9,815, 16:25 ET 2.55M/5,372, and 16:30 ET 5.18M/11,406 shares/trades, with SIP high $1.03 and close $0.98. Four targeted searches found **no catalyst found for Sep 21**; the Aug 5 rebrand and Aug 20 8-K are stale background. `QNME 2026-09-21  SPIKE  16:17ET  +16%  $0.74  511 trades / 444k sh  (first co-spike bar) (as-of 16:45ET)`; `QNME 2026-09-21  CONFIRM-3  YES ignition 16:15ET 35.0x; confirmed 16:25ET $0.79 as-of 16:45ET`. **Watch:** first AH scan only, no two-scan gate, and the ask is an unusable outlier; do not enter at this scan.
+- **NCPL/VNTG:** AH changes were below the +10% candidate threshold; no entry work was required. Both remained observation-only.
+
+**Decision:** No paper trades submitted. TOPS and QNME remain pipeline watches for the 23:00 CEST gate; CELZ is a FIRST-BAR-SPIKE WATCH and live entry is skipped. `OPEN_POSITIONS.md` was unchanged; no Alpaca fill existed to record.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
