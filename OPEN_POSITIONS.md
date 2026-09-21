@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|--------|------|-------|------------|-------|
-| _None_ | — | — | — | — | — | No open positions; Alpaca confirmed empty after 2026-09-18 pulse. |
+| TOPS | $1.40 | 64 | $89.60 | None | 2026-09-21 | Fresh first-day AH BUILD/hold; real SIP accumulation; no fresh catalyst. Alpaca fill `7a9ceade-fcba-489d-b2b1-770027397f15`. |
 
 ## Position Rules
 
