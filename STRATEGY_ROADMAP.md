@@ -1374,6 +1374,10 @@ grows to >= ~12 so it doesn't hinge on one INLF. Problem (a) stays log-only
 accumulation. Next: keep `pm-open-scan` growing n; build the 1-min exit test at
 n>=12.
 
+**Current status (2026-09-21):** **ACTIVE serialized pilot; log-only.** Re-ran `scripts/init6-pm-pilot.js` after the 2026-09-21 PM-open scan. GLND, GRML, and LOBO were AH-detected holdables; AVAT and SUIG were thin PM-only rows, so no new PM-only candidate entered the pilot. The ledger remains **n=21, SUM +77.5%, mean +3.7%/name, positive 16/21, fade-tail 4/21 (19%)**.
+
+**Parallel Initiative 3 research (2026-09-21):** Replayed the complete 2026-09-18 AH session through `scripts/ah-5m-confirmation-replay.js`. The second-bar test admitted 3/5 (GLND, GRML, LOBO); the third-bar test admitted 2/5 (GLND, LOBO). GLND's second-bar entry reached +82.3% at PM open and +126.8% at PM high; GRML reached +45.5% at PM open and +153.9% at PM high but failed the third-bar test; LOBO was a false-positive at -9.2%/-14.8% to PM open. AVAT and SUIG had no qualifying local-volume ignition. This mixed one-session result is insufficient to change the schedule or hard gate. All work stayed log-only; no orders, live rules, or schedules changed.
+
 **Update 2026-07-24 (strategy-advance) — mechanical-exit sim, problem (a)
 NEGATIVE at 5-min cadence.** Built `scripts/pm-gapper-exit-sim.js` (log-only):
 reuses the continuation gate for entry, then walks PM 5-min bars applying causal

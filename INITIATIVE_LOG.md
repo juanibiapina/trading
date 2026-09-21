@@ -7,6 +7,18 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-09-21 — Initiative 6 pilot unchanged; Initiative 3 replay adds mixed second/third-bar evidence
+
+**Evaluated:** The prior 2026-09-18 opening-grid step remains **insufficient to judge**. The weekend added no market session, and the 2026-09-21 PM-open scan produced no new holdable PM-only candidate: GLND, GRML, and LOBO were AH-detected; AVAT and SUIG were thin.
+
+**Step taken:** **Pilot / Initiative 6 plus parallel Research / Initiative 3.** Re-ran `node scripts/init6-pm-pilot.js` over the 48-candidate tracker. Replayed the complete 2026-09-18 AH session (GLND, GRML, LOBO, AVAT, SUIG) through `node scripts/ah-5m-confirmation-replay.js`. Ran `node --check` on both scripts and `python3 -m py_compile scripts/*.py`; all work stayed log-only with no orders, live rules, or schedule changes.
+
+**Result:** Initiative 6 remains **n=21, SUM +77.5%, mean +3.7%/name, positive 16/21, fade-tail 4/21 (19%)**. The second-bar replay admitted 3/5: GLND entered at $1.64 for +82.3% to PM open and +126.8% to PM high, GRML entered at $3.23 for +45.5% to PM open and +153.9% to PM high, and LOBO entered at $0.76 for -9.2% to PM open. The third-bar replay admitted 2/5: GLND and LOBO; GRML's strong run was rejected, while LOBO remained a false-positive at -14.8% to PM open. AVAT and SUIG had no qualifying local-volume ignition. One mixed session does not support a cadence or hard-gate change.
+
+**Hypothesis / next step:** More complete AH sessions will show whether second-bar confirmation reduces entry latency without admitting LOBO-type weak builds, and whether third-bar confirmation rejects too many real runners such as GRML. Keep the Init 6 pilot unchanged, collect the next session, and measure ignition-to-first-observation lag plus second/third-bar outcomes.
+
+**Needs from Juan:** nothing new. Standing asks remain the IBKR paper account plus consolidated extended-hours US-equities data/API access (or Webull EU credentials) for Initiative 2, and review of the Init 3 plain +10% premarket sell-limit proposal.
+
 ### 2026-09-18 — Initiative 6 pilot unchanged; Initiative 3 second/third-bar replay adds one insufficient data point
 
 **Evaluated:** The earlier 2026-09-18 opening-grid step **partially worked but remains insufficient to judge the hypothesis**. The 13-pulse grid ran, but the first session produced no actionable names in the new 22:05/22:10/22:15 CET window, so it did not establish a lag reduction.
