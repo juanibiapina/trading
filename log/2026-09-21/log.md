@@ -48,6 +48,14 @@
 | VNTG | [TV](https://www.tradingview.com/chart/?symbol=VNTG) | $0.68 | +15.4% | — | — | — | — | — | — | 10.6M | Marine Shipping |
 | SUIG | [TV](https://www.tradingview.com/chart/?symbol=SUIG) | $1.44 | +15.2% | — | — | — | — | — | — | 62.7M | Finance/Rental/Leasing |
 
+## Scan 22:00 CEST (4:00 PM ET)
+
+**Session:** After-hours. TradingView scanner returned 0 hits. No candidates found; no catalyst, SIP, quote, spike-bar, or third-bar verification was needed.
+
+**Decision:** Observation only. No paper trades submitted.
+
+No candidates found.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
