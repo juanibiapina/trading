@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trading review 2026-09-18</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 16px/1.5 system-ui, sans-serif; margin: 0 auto; max-width: 1100px; padding: 24px; }
+    a { color: #2f6feb; }
+    figure { display: inline-block; margin: 0 16px 16px 0; vertical-align: top; width: min(100%, 560px); }
+    img { border: 1px solid #888; max-width: 100%; height: auto; }
+    figcaption { font-size: 0.85rem; margin-top: 4px; }
+    pre { background: #222; border-radius: 6px; overflow-x: auto; padding: 16px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Trading review: 2026-09-18</h1>
+    <p><a href="https://github.com/juanibiapina/trading/blob/main/log/2026-09-18/log.md">Open source log</a></p>
+  </header>
+  <main>
+    <h2>Charts</h2>
+    <p>No chart images were generated for this cycle.</p>
+    <h2>Daily log</h2>
+    <pre>## Position Evaluation — 10:30 CET
+
+| Ticker | Entry | Current | P&amp;L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| VRME | $0.99 | $0.80 | -19.1% | $0.92 | 1 | C | SELL | Exit in the first premarket pulse; the Alpaca current price was below the -10% hard stop. SIP verified PM peak was $0.92 (-7.1% from entry). |
+| TCRT | $2.18 | $1.94 | -11.0% | $2.04 | 1 | None | SELL | Exit at the first premarket opportunity; the Alpaca current price breached the -10% hard stop. SIP verified PM peak was $2.04 (-6.4% from entry). |
+
+**Actions taken:**
+- Sold VRME: 98 shares at a $0.81 extended-hours limit, order `1199b169`, filled at $0.81; final P&amp;L -$17.64 (-18.2%).
+- Sold TCRT: initial 47-share order at $2.06 (`744d8e67`) canceled when it did not fill; repriced to a $1.94 extended-hours limit, order `a83b9280`, filled at $1.97; final P&amp;L -$9.87 (-9.6%).
+- Alpaca quotes were stale at Sep 17 20:59Z ($2.09 bid TCRT; $0.84 bid VRME), so the sell orders were repriced from the latest Alpaca position marks to obtain fills. SIP 5-minute bars verified the PM peaks and showed no bad-print replacement level.
+- Alpaca reports no open positions after both fills.
+
+## Position Evaluation — 14:30 CET
+
+| Ticker | Entry | Current | P&amp;L % | Peak | Days | Grade | Decision | Reason |
+|--------|-------|---------|-------|------|------|-------|----------|--------|
+| _None_ | — | — | — | — | — | — | HOLD | Alpaca reports no open positions; no action required. |
+
+**Actions taken:**
+- No sells, trail updates, or price checks were required.
+- `OPEN_POSITIONS.md` already matched Alpaca: no current positions.
+</pre>
+  </main>
+</body>
+</html>

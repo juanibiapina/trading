@@ -7,6 +7,18 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-09-21 — Initiative 6 pilot unchanged; Initiative 5 report prototype delivered
+
+**Evaluated:** The prior 2026-09-21 15:00 step remains **insufficient to judge** the active pilot. The second same-day run had no new US market session and the 2026-09-21 PM-open rows were already evaluated; no new holdable PM-only candidate was available.
+
+**Step taken:** **Pilot / Initiative 6 plus parallel build / Initiative 5.** Re-ran `node scripts/init6-pm-pilot.js` over the 48-candidate tracker. Added `scripts/generate-html-report.py`, a dependency-free static report builder that creates a dated HTML review with the daily log and any chart assets, then ran it for 2026-09-18 to create `reports/2026-09-18/index.html` and `reports/index.html`.
+
+**Result:** Init 6 remains **n=21, SUM +77.5%, mean +3.7%/name, positive 16/21, fade-tail 4/21 (19%)**; 27 candidates remain gate-skipped and no new pilot row was added. Initiative 5's prototype passed `python3 -m py_compile` and an end-to-end generation check; no orders, live rules, or schedules changed. GitHub Pages publication remains separate and is not enabled by this step.
+
+**Hypothesis / next step:** The Init 6 continuation-gate pilot still needs the next complete market session for new evidence; admit the next verified holdable PM-only gapper and keep measuring the fade-tail. For Init 5, use the generator on a cycle with charts and decide whether the static report surface warrants a Pages publishing workflow.
+
+**Needs from Juan:** nothing new. Standing asks remain an IBKR paper account plus consolidated extended-hours US-equities data/API access (or Webull EU credentials) for Initiative 2, and review of the Init 3 plain +10% premarket sell-limit proposal.
+
 ### 2026-09-21 — Initiative 6 pilot unchanged; Initiative 3 replay adds mixed second/third-bar evidence
 
 **Evaluated:** The prior 2026-09-18 opening-grid step remains **insufficient to judge**. The weekend added no market session, and the 2026-09-21 PM-open scan produced no new holdable PM-only candidate: GLND, GRML, and LOBO were AH-detected; AVAT and SUIG were thin.
