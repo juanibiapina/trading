@@ -56,6 +56,12 @@
 
 No candidates found.
 
+## Scan 22:05 CEST (4:05 PM ET)
+
+No candidates found.
+
+**Decision:** Observation only. Learning-phase entry gate is not open before 23:00 CET; no paper trades submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
