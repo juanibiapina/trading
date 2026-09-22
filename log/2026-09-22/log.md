@@ -96,6 +96,26 @@ No candidates found.
 
 No candidates found.
 
+## Scan 22:20 CET (4:20 PM ET)
+
+**Session:** AFTERHOURS. `python3 scripts/scan.py --all` returned 2 candidates. This is the first AH observation for both names tonight. The learning-phase rule blocks paper entries before the 23:00 CET scan and requires two qualifying AH scans.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| IPDN | [TV](https://www.tradingview.com/chart/?symbol=IPDN) | $3.90 | +16.1% | +55.4% | $6.06 | +80.4% | 611K | 2.1M | 0.3x | 476K | Commercial Printing/Forms |
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $2.22 | -3.5% | +11.3% | $2.47 | +7.4% | 197K | 148K | 1.3x | 643K | Medical Specialties |
+
+**Evaluation notes:**
+
+- **IPDN — Watch, no entry yet.** `tradable=true`. SIP corroborated real AH activity through 16:05 ET: 16:00 bar O $3.90 / H $6.20 / C $6.10, 880,120 shares, VWAP $5.45, 12,217 trades; 16:05 bar O $6.06 / H $7.39 / C $6.96, 1,584,769 shares, VWAP $6.76, 24,240 trades. The SIP feed was current through 16:05 ET, within the expected free-tier lag at this scan, so this was not rejected as a bad print. The 16:00 quote was stale versus the SIP bars (`bid $3.35 x100 / ask $4.68 x100`), so no order was sized. Structured catalyst search covered earnings, press releases, SEC 8-Ks, and company announcements in four targeted searches; **no fresh catalyst found**. The Sep 9 reverse-split material is stale background, not a current catalyst; grade remains **None**. The 476K float and real SIP accumulation are favorable, but the AH high printed in the opening bar and `CONFIRM-3 NO` is only a first-scan observation. Recheck at 23:00 CET for a second qualifying AH scan and repeated confirmation before any possible entry. Yahoo reported previous close $3.36 versus the scanner's regular close $3.90; the scanner close is retained in the table and the SIP bars are used for verification.
+  - `IPDN 2026-09-22  SPIKE  16:02ET  +38%  $5.37  2645 trades / 202k sh  (first co-spike bar) (as-of 16:20ET)`
+  - `IPDN 2026-09-22  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET`
+- **GCTK — Skip: illiquid (no AH book); no entry.** `tradable=true`, but the quote showed `bid $1.94 x100 / ask $0.00 x0` at 16:00 ET, so the candidate had no fillable two-sided AH book. SIP showed an early pop that faded: 16:00 bar O $2.22 / H $2.74 / C $2.47, 238,988 shares, VWAP $2.53, 2,081 trades; 16:05 bar O $2.47 / H $2.53 / C $2.30, 103,840 shares, VWAP $2.42, 1,033 trades. Structured catalyst search covered earnings, press releases, SEC 8-Ks, and company announcements in four targeted searches; **no fresh catalyst found**. Older financing and reverse-split results are background only; grade remains **None**. The first-bar pop and `CONFIRM-3 NO` do not overcome the zero-size ask.
+  - `GCTK 2026-09-22  SPIKE  16:00ET  +18%  $2.62  91 trades / 13k sh  (first co-spike bar) (as-of 16:20ET)`
+  - `GCTK 2026-09-22  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET`
+
+**Paper-trade decision:** No entries. IPDN is observation-only because it is before 23:00 CET and has only one AH scan; GCTK is skipped for the zero-size AH ask and fading SIP action. No Alpaca buy orders were submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
