@@ -7,6 +7,18 @@ This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
 
+### 2026-09-22 — Initiative 6 pilot advances; Initiative 3 replay and Initiative 5 report delivered
+
+**Evaluated:** The prior 2026-09-21 opening-grid step was **partially useful but insufficient to judge**. The complete 2026-09-21 AH replay produced one QNME admit under both the second- and third-bar tests; the sample did not support changing the schedule or hard gate. The prior Init 6 rerun had no new PM-only candidate; today's session supplied fresh evidence.
+
+**Step taken:** **Pilot / Initiative 6 plus parallel Research / Initiative 3 and build / Initiative 5.** Re-ran `node scripts/init6-pm-pilot.js` over the full tracker, replayed QNME, GRML, GDC, STI, and GURE through `node scripts/ah-5m-confirmation-replay.js`, and generated `reports/2026-09-21/index.html` from the daily log and TOPS chart. Verified the replay and pilot with `node --check`; verified the report builder with `python3 -m py_compile`. All work stayed log-only.
+
+**Result:** Init 6 admitted fresh PM-only holdables **STI** and **GURE**, and both hypothetical entries filled the +10% limit. The ledger is now **n=23, SUM +97.5%, mean +4.2%/name, median +10.0%, positive 18/23, fade-tail 4/23 (17%)**; the PM-last comparison is **-7.6% mean**, for an estimated **+2.2%/name net of 2% spread**. Init 3's QNME second-bar entry returned **+18.6% to PM open / +104.7% to PM high** and its third-bar entry returned **+29.1% / +122.8%** versus the current-grid entry; GRML and GDC rejected, STI had no AH ignition, and GURE had only two AH bars. Init 5's report rendered with one chart and updated the index. No order, live rule, or existing trading-pulse timing changed.
+
+**Hypothesis / next step:** Init 6's edge remains positive out of sample; admit the next verified holdable PM-only gapper and keep tracking the fade-tail. Init 3 should replay the next complete AH session and accumulate second/third-bar outcomes before proposing cadence or gate changes. Init 5 should use the generated report surface for another chart-bearing cycle before deciding whether a Pages publishing workflow adds enough review value.
+
+**Needs from Juan:** nothing new. Standing asks remain an IBKR paper account plus consolidated extended-hours US-equities data/API access (or Webull EU credentials) for Initiative 2, and review of the Init 3 plain +10% premarket sell-limit proposal.
+
 ### 2026-09-21 — Initiative 6 pilot unchanged; Initiative 5 report prototype delivered
 
 **Evaluated:** The prior 2026-09-21 15:00 step remains **insufficient to judge** the active pilot. The second same-day run had no new US market session and the 2026-09-21 PM-open rows were already evaluated; no new holdable PM-only candidate was available.
