@@ -266,3 +266,140 @@ No candidates found.
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | TOPS | $1.40 | 23:00 CET | 64 | `7a9ceade-fcba-489d-b2b1-770027397f15` | Grade None; fresh first-day AH BUILD/hold, real SIP accumulation, no fresh catalyst; filled on extended-hours limit order. |
+
+## Morning Evaluation — 10:20 CET (CEST), evaluating Sep 21 AH session
+
+### Today's Winner
+
+**TOPS** — Marine Shipping
+- Catalyst: **None verified**. The Sep 21 searches found no fresh earnings, press release, or SEC catalyst; older company material was background only. Grade None.
+- Previous Close: **$0.72**, confirmed by the Sep 21 SIP daily bar. Yahoo's $0.71 anchor is close but not used for the calculations.
+- AH last night: first qualifying scan $0.96 at 22:25 CEST; actual 23:00 CEST fill **$1.40 (+94.4%)**. SIP AH peak **$1.62 (+125.0%) at 16:55 ET**, backed by 3.39M shares / 12,415 trades in that bar and 64.4M shares / 232,946 trades across the returned AH session.
+- Premarket now: **$1.23 (+70.8%)** on the live scan; latest accessible SIP bar closed $1.24 at 04:05 ET.
+- PM peak: **$1.41 (+95.8%) at 04:05 ET**, backed by 1.50M shares / 6,255 trades in the bar.
+- Hypothetical P&L: actual AH fill $1.40 → PM peak $1.41 = **+0.7%**; first qualifying scan $0.96 → PM peak = **+46.9%**; final scan $1.11 → PM peak = **+27.0%**.
+- Float: **4.1M** | Market Cap: **about $3.0M at the $0.72 close; $5.4M on the current scan**.
+- Winner-bar check: **CLEARED in AH**. TOPS exceeded the +100% target on accumulating SIP volume and had a two-sided fillable AH book at the eligible scan (`bid $1.50 x1100 / ask $1.56 x500` at 16:59:59 ET). The PM peak stayed below +100%, but this was the strongest real AH→PM continuation and the actual paper trade was filled.
+
+**Scanner Diagnostic:**
+- Detectable at screening time? **NO at the exact 22:15 CEST scan; YES by 22:25 CEST and throughout the entry window.** The 22:15 scan returned no hits even though SIP had already printed the 16:15 ET build at $1.13 close / $1.18 high on 4.23M shares and 16,677 trades. TOPS appeared at 22:25 and was present in the 22:30, 22:45, 23:00, 23:30, 00:00, and 00:30 scans.
+- At the first eligible scan it showed $1.33, +85.2% AH and +86.8% total. It had a confirmed BUILD, real accumulating volume, `tradable=true`, and a fillable book. We entered 64 shares at $1.40.
+- Scanner gap: **No baseline detection miss.** The initial 22:15 TradingView result was delayed by about 10 minutes, but the extra 22:25 scan and the scheduled 22:30 scan recovered the name before entry. No scanner threshold change is justified.
+
+**Winner selected for paper trade?** **YES.** TOPS was the selected winner and filled at $1.40; the PM peak only barely reclaimed the fill before fading.
+
+**Broker-block tracking:** No new case. Standing tally remains **2 SHPH cases**; QNME was `tradable=true`, not broker-blocked.
+
+**Stale-book execution-block tracking:** No new case. TOPS's quote was stale after the fill but did not block execution; QNME was skipped for its unusable wide book and is tracked separately. Standing count remains **4** (NUWE, KUST, CLRO profitable; XRTX negative control). Route the repeated stale extended-hours quote problem to the daily email; do not change the safety gate here.
+
+**No-fillable-book skip tracking:** **+QNME** (Sep 21, float 25.8M, Grade B GPU-server 8-K, qualified final-scan AH price ~$1.00; `tradable=true`, but the quote was unusable at `bid $1.00 x500 / ask $69.69 x3500`). SIP PM peak $1.13 = **+13.0%** from the qualified price, a modest run rather than a fade. Standing count: **4** (DAIC, OFAL, BIVI faded/flat; QNME ran modestly). This is one selection-cost observation, not a gate change.
+
+**Float-gate skip tracking:** No new case. Standing count remains **1** (CAPR, ran).
+
+**Final-scan gate-block tracking:** No new case. Standing count remains **2** (TRUG, UPC), both ran.
+
+**Ceiling/dead-cat override and fade-rule tracking:** No new ceiling-override, dead-cat-override, or SPIKE→FADE re-explosion case. The first-bar CELZ watch is recorded below under first-bar validation.
+
+**Multi-session-runner outcome tracking:** TOPS was a **fresh first-day AH igniter** (Day% +0.8%, Grade None), entered $1.40 → PM peak $1.41 = **+0.7%, flat/marginal**. Standing: **1 multi-session runner (1 faded: DAIC) / 27 first-day igniters (9 ran, 8 flat, 10 faded)**. First-day run rate: **9/27 (33.3%)**. No entry gate change.
+
+**First-bar-spike skip-validation tracking:** **+CELZ** (Sep 21, AH high $1.43 at 16:05 ET, `CONFIRM-3 NO`; hypothetical eligible entry $1.10 at 17:00 ET) → SIP PM peak $0.94 = **−14.5%, faded; skip validated**. Standing: **3 pre-gate entries (0 ran) + 4 post-gate WATCH (2 ran: XRTX, RETO; 2 faded: HCAI, CELZ)**. Overall **5 of 7 fade-or-flat**; no gate change.
+
+### Baseline Tracking
+
+- Days tracked: **86** (was 85 + 1 for the Sep 21 session; Sep 18 remains an un-evaluated gap and was not back-filled).
+- Winners detected by scanner: **72/81 (88.9%)** — added TOPS; detected by 22:25 CEST and in all later eligible scans.
+- Winner selected for paper trade: **36/79 (45.6%)** — TOPS was filled at $1.40.
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+- Live premarket scan at 04:20 ET: **7 hits** — TOPS, QNME, RYDE, GRML, SLXN, GDC, and STI.
+- SIP daily bars corrected stale anchors: GRML's true Sep 21 close was $9.42, not Yahoo's $2.85; SLXN's true close was $0.54, not Yahoo's $0.44. TOPS and QNME true closes were $0.72 and $0.64.
+- The biggest raw PM mover on the true SIP basis was TOPS, an **AH→PM continuation** the evening scanner could detect. The authoritative `log/pm-open-scan.csv` holdable PM-only count is **55**; no new PM-only row is added and the Initiative-6 early-PM pilot remains a daily-email decision.
+- Evening-log matches: **4/7** live PM hits — TOPS, QNME, SLXN, and GDC. RYDE had a flat/down AH tape; STI stayed below the AH threshold; GRML was a real in-window AH mover omitted by TradingView.
+
+### Open Position P&L (Alpaca)
+
+Only the real Alpaca fill is listed. No position-management action was taken; exits remain the responsibility of `position-evaluation.md`.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| TOPS | $1.40 | +94.4% from SIP $0.72 close | None | 23:00 CEST | $1.41 SIP | 04:05 ET | (open) | **−$10.88** at live SIP ~$1.23 | **−12.1%** | 🔴 Open; Alpaca mark $1.21 and quote timestamp 16:59:59 ET Sep 21 are stale |
+
+Alpaca `positions` reported 64 TOPS shares at $1.40, current price $1.21, and P&L −$12.16 / −13.6%. The quote timestamp is stale from the prior AH session. SIP's latest accessible PM close was about $1.24 and the live scan was $1.23, so the stale Alpaca mark is not reported as current execution P&L.
+
+**Total Realized P&L (Alpaca fills only): $0.00** (no exits in this pulse).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST) plus **6 extra scans** (22:05, 22:10, 22:15, 22:20, 22:25, 22:45) = **13 total**. Full entry-window coverage.
+- Candidates found: **52 unique tickers** across the 13 scans.
+- Retrospective matches: **4/7** live PM hits.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|---------|-----------|------------|---------------------|
+| GRML | SIP AH high $11.12 (+18.0% from $9.42) at 18:30 ET; 18:15 bar VWAP $10.53 (+11.8%) | **In-window feed-lag miss:** not in any evening scan despite 18:15–18:30 ET accumulating bars of 693K→617K→314K shares and 6,228→7,000→3,823 trades. | Yes, approximately $10.65 → SIP PM peak $12.10 = **+13.6%**, but not a +100% baseline winner. |
+| RYDE | AH high $0.71 (−2.1% from $0.72) | PM-only move began at 04:00 ET; no actionable AH signal for the evening scanner. | PM high $0.97 (+40.6% from close), but structurally not an AH-scanner opportunity. |
+| STI | AH SIP high $7.75 (+6.7% from $7.26) on sparse AH prints | Below the +10% AH threshold and had no accumulating AH signal. | PM high $10.43 (+43.8% from close), but not a baseline winner. |
+
+### AH Mover Follow-Through
+
+Every row below appeared in at least two evening scans above +10% AH. Percentages use SIP daily closes.
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|---------|---------|-----------|---------------|------------|-----------|------------|---------|
+| TOPS | $1.62 (+125.0%) | 16:55 ET | Build→spike→fade→re-ramp | $1.23 | −24.1% | +70.8% | AH was better; PM peak $1.41 barely reclaimed the fill |
+| QNME | $1.18 (+84.4%) | 17:30 ET | Late build→fade/hold | $1.05 | −11.0% | +64.1% | AH was better; no-fillable-book skip ran modestly |
+| CELZ | $1.43 (+43.0%) | 16:05 ET | Spike→fade | $0.92 | −35.7% | −8.0% | First-bar skip validated; AH was better |
+
+**AH-peak-vs-PM-peak check:** TOPS, QNME, and CELZ all had PM peaks below their AH peaks. TOPS's AH peak was +125.0%, below the ~+130% extreme-zone threshold, so the standing extreme-zone tally remains **11 fade / 1 continue**; the partial-profit recommendation remains routed to the daily email.
+
+**Fade-rule false-negative tracking:** No new SPIKE→FADE re-explosion. The standing SIP-verified sub-3M tally remains **4/16**; the ≥80% exception trigger remains unmet.
+
+**Late-AH-tail surge tracking:** No new case. TOPS's defining surge began at 16:05 ET and GRML's defining in-window surge began at 18:15 ET, both before the 18:30 ET final scan. The standing cases remain ORIS (true-tail) and BTCT (feed-lag).
+
+**In-window feed-lag miss tracking:** **+GRML** (Sep 21): true close $9.42; SIP AH surge at 18:15 ET reached VWAP $10.53 / high $10.98 on 693K shares and 6,228 trades, then 18:20 ET traded 617K / 7,000 and the 18:30 ET level was about $11.04 on 314K / 3,823. It was absent from every evening scan; SIP PM peak reached $12.10 = about **+13.6%** from a realistic $10.65 AH entry. **Standing count: 6** (BTCT, KUST, WLDS, RAIN, MYSZ, GRML). The whole-universe AH-data-source verification recommendation remains routed to the daily email; no scanner parameter changed.
+
+**Price-floor exclusion tracking:** No new case. Standing count remains **5 across 2 nights, 0 holdable**.
+
+**Reverse-split-squeeze fade tracking:** No new Sep 21 entry or notable skipped candidate had a reverse-split catalyst. Standing tally remains **this-week 4/4 faded; older splits 3/5 continued/non-fade**. The recency conviction-downgrade recommendation remains in the daily email; no live gate change.
+
+**PM-only gapper tracking:** TOPS was the morning's biggest raw mover and was an AH→PM continuation, not a PM-only gapper. The holdable PM-only cluster remains at **55** in `log/pm-open-scan.csv`; do not maintain a separate hand-count.
+
+**Chase-cap / entry-extension outcome tracking:** No new case. TOPS filled at +94.4% total versus the qualifying 23:00 scan at +86.8%; the +7.6-point difference stayed below the >+120% chase zone and PM peak reclaimed the fill by $0.01. Standing remains **1** (XOS, never reclaimed).
+
+### Notes
+
+- Baseline-gap check before this evaluation found **Sep 18** and the current Sep 21 log without a `Days tracked:` line. Sep 21 is now recorded above; Sep 18 remains the un-evaluated gap. Sep 11 remains the earlier carried baseline gap.
+- Coverage was complete at 7/7 scheduled scans; no coverage-failure tally change.
+- TOPS was detected and selected, but its actual fill produced only a +0.7% PM peak-to-entry result and a live mark around −12%; correct winner identity did not produce a strong trade.
+- GRML is the new in-window TradingView feed-lag miss. It was not a +100% baseline winner, but it is a real data-source reliability failure and raises the standing miss tally to 6.
+- No position was closed. No live entry gate, exit rule, price floor, or fade exception changed.
+- Daily-email routing only: re-state the 6-case AH data-source verification decision, 55 holdable PM-only cases / Initiative-6 pilot, 11/12 extreme-runner partial-profit decision, this-week reverse-split conviction downgrade, and repeated stale-book execution problem (4 cases; 3 profitable, XRTX negative control). QNME is one modest no-fillable-book run against three prior faded/flat cases; it does not justify a gate change.
+
+### Price Charts
+
+`python3 scripts/price-timeline.py TOPS QNME CELZ` was run. SIP-corrected summaries:
+
+```text
+TOPS — SIP basis $0.72 (Yahoo shape anchor $0.71)
+$1.62  AH peak 16:55 ET (+125.0%) ─────────╮
+$1.41  PM peak 04:05 ET (+95.8%) ──────────╯╲
+$1.23  current PM scan (+70.8%) ─────────────╯
+$0.72  regular close ─────────────────────────
+
+QNME — SIP basis $0.64
+$1.18  AH peak 17:30 ET (+84.4%) ───────╮
+$1.13  PM peak 04:00 ET (+76.6%) ───────╯╲
+$1.05  current PM scan (+64.1%) ─────────╯
+$0.64  regular close ─────────────────────
+
+CELZ — SIP basis $1.00
+$1.43  AH peak 16:05 ET (+43.0%) ───────╮
+$1.00  AH late-session level ───────────╯╲
+$0.94  PM peak 04:00 ET (−6.0%) ─────────╯
+$0.92  current PM scan (−8.0%) ──────────
+```
