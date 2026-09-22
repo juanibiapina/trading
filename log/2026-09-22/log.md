@@ -80,6 +80,14 @@ No candidates found.
 
 No candidates found.
 
+## Scan 22:10 CET (4:10 PM ET)
+
+**Session:** AFTERHOURS. `python3 scripts/scan.py --all` returned no candidates. No candidate-specific spike-bar, third-bar, catalyst, SIP-volume, quote, tradability, or order checks were applicable.
+
+**Paper-trade decision:** No entries. The learning-phase rule blocks entries before the 23:00 CET scan and requires two qualifying after-hours scans.
+
+No candidates found.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
