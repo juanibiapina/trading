@@ -47,7 +47,7 @@ MIN_PM_CHANGE = 5            # Minimum premarket change %
 # After-hours filters
 MIN_AH_VOLUME = 50_000       # Minimum after-hours volume
 MIN_AH_CHANGE = 5            # Minimum after-hours change %
-MIN_AH_CHANGE_HIGH = 20      # High AH change (catches data gaps where volume=0)
+MIN_AH_CHANGE_HIGH = 15      # Supplementary AH change pass; catches moderate movers missed by volume rank
 
 
 def get_session():
@@ -169,7 +169,7 @@ def build_filters(session, biotech_only=False, day_movers=False, high_change=Fal
     return filters
 
 
-def get_sort_field(session, day_movers=False):
+def get_sort_field(session, day_movers=False, high_change=False):
     """Return the sort field for the current session."""
     if day_movers:
         return "change"
@@ -178,7 +178,7 @@ def get_sort_field(session, day_movers=False):
     elif session == "premarket":
         return "premarket_volume"
     elif session == "afterhours":
-        return "postmarket_volume"
+        return "postmarket_change" if high_change else "postmarket_volume"
     return "volume"
 
 
@@ -197,7 +197,7 @@ def scan(session, biotech_only=False, day_movers=False, high_change=False):
     payload = {
         "columns": columns,
         "filter": build_filters(session, biotech_only, day_movers, high_change),
-        "sort": {"sortBy": get_sort_field(session, day_movers), "sortOrder": "desc"},
+        "sort": {"sortBy": get_sort_field(session, day_movers, high_change), "sortOrder": "desc"},
         "markets": ["america"],
         "symbols": {"query": {"types": ["stock"]}},
         "options": {"lang": "en"},
