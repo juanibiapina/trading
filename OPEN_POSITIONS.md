@@ -8,7 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
-| TOPS | $1.40 | $1.32 | $1.62 | -5.7% | +15.7% | 64 | $89.60 | None | 2026-09-21 | Fresh first-day AH BUILD/hold; real SIP accumulation; no fresh catalyst. SIP-verified peak $1.62; hard stop $1.26. Alpaca fill `7a9ceade-fcba-489d-b2b1-770027397f15`. 2026-09-22 10:30 CEST evaluation: HOLD. |
+| TOPS | $1.40 | $1.32 | $1.62 | -5.7% | +15.7% | 64 | $89.60 | None | 2026-09-21 | Fresh first-day AH BUILD/hold; real SIP accumulation; no fresh catalyst. SIP-verified peak $1.62; hard stop $1.26. Alpaca fill `7a9ceade-fcba-489d-b2b1-770027397f15`. 2026-09-22 14:30 CEST evaluation: HOLD; Alpaca current $1.32 (-5.7%), quote bid $1.32, below-profit and above hard-stop thresholds. |
 
 ## Position Rules
 
