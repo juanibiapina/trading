@@ -1,0 +1,55 @@
+name: Publish trading review reports
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "reports/**"
+      - "log/**"
+      - "scripts/generate-html-report.py"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build report site
+        run: |
+          python3 scripts/generate-html-report.py
+          mkdir -p site
+          cp -R reports log site/
+          cat > site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Trading reviews</title></head>
+          <body><h1>Trading reviews</h1><p><a href="reports/index.html">Open daily reports</a></p></body>
+          </html>
+          HTML
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

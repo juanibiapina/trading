@@ -1759,7 +1759,7 @@ tracker).
 - [x] Initiative 5: **daily-email render race fixed** (2026-07-16). Added a
       post-push raw-URL HTTP-200 poll to `prompts/daily-email.md` before sending
       (drops any image still not live), closing the 07-09 RPGL-didn't-render
-      race. GitHub Pages HTML reports remain the last open Init 5 follow-on.
+      race. GitHub Pages HTML reports remain the last open Init 5 follow-on. **Update 2026-09-22 18:00 CEST:** added `.github/workflows/pages.yml` to build the latest report and chart assets into a Pages artifact on pushes to `main`; the local build reproduced `reports/2026-09-21/index.html` with one chart, and the public chart URL returned HTTP 200. Pages deployment is delivery-only and does not change trading logic or pulse timing.
 - [x] Initiative 6 (problem a): the **holdable PM-only gappers carry no long
       edge** (2026-07-14). `scripts/pm-gapper-sim.js` shows all realistic
       entry×exit combos lose (-8 to -13%/trade); no live-pulse entry rule is

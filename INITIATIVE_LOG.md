@@ -3,6 +3,19 @@
 Daily progress on the strategy roadmap (`STRATEGY_ROADMAP.md`), one initiative
 at a time. Written by the `strategy-advance` pulse. Newest first.
 
+### 2026-09-22 — Initiative 6 pilot recheck; Initiative 5 Pages workflow
+
+**Evaluated:** The prior 2026-09-22 pilot step **worked**: STI and GURE were admitted and both hypothetical +10% limits filled. A full rerun after the complete SIP window revised their PM-last comparison from the earlier -7.6% mean to -7.3%; the lim10 result stayed unchanged. Initiative 3's prior AH replay remains **insufficient data** for a schedule or hard-gate decision because no new complete AH session existed at this checkpoint.
+
+**Step taken:** **Pilot / Initiative 6 plus parallel build / Initiative 5.** Re-ran `node scripts/init6-pm-pilot.js`, which rewrote the deterministic shadow ledger with the fuller STI/GURE bars. Added `.github/workflows/pages.yml` to build the latest static reports and chart assets into a GitHub Pages artifact on `main` pushes. Verified `python3 -m py_compile scripts/generate-html-report.py`, regenerated `reports/2026-09-21/index.html`, verified the report contains `TOPS-1131.png`, and confirmed the public raw chart URL returns HTTP 200. All work stayed log-only; no orders, live rules, or trading-pulse timing changed.
+
+**Result:** Initiative 6 remains **n=23, SUM +97.5%, mean +4.2%/name, median +10.0%, positive 18/23, fade-tail 4/23 (17%)**; the PM-last comparison is **-7.3% mean**, for an estimated **+2.2%/name net of 2% spread**. Initiative 5 now has an automated Pages delivery workflow locally validated against the chart-bearing report; the workflow still needs its post-push deployment check. No new evidence justifies changing Initiative 3's cadence or confirmation gate.
+
+**Hypothesis / next step:** The Init 6 edge remains positive out of sample; admit the next verified holdable PM-only gapper and keep measuring the fade-tail. After the next complete AH session, replay second/third-bar outcomes for Init 3 and compare ignition-to-first-observation lag before proposing any entry-gate or scan change. After push, verify the Pages deployment URL and keep the report surface delivery-only.
+
+**Needs from Juan:** nothing new. Standing asks remain an IBKR paper account plus consolidated extended-hours US-equities data/API access (or Webull credentials) for Initiative 2, and review of the Init 3 plain +10% premarket sell-limit proposal.
+
+
 This is the strategy-level analog of `SCANNER_CHANGELOG.md` (which logs surgical
 scanner tweaks). Each entry evaluates the previous step, records the step taken
 today, and sets the hypothesis/next step for the following run.
