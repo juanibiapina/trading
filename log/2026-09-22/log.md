@@ -64,6 +64,14 @@
 
 **Paper-trade decision:** No entries. The scanner was still in the regular session, so the 2-AH-scan gate, AH volume confirmation, quote liquidity check, catalyst freshness check, and paper order submission were not applicable.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+**Session:** AFTERHOURS. Scanner returned no candidates at the first after-hours scan. No spike-bar, third-bar, catalyst, SIP-volume, quote, or order checks were applicable.
+
+**Paper-trade decision:** No entries. The learning-phase rule blocks entries before the 23:00 CET scan and requires two qualifying after-hours scans.
+
+No candidates found.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
