@@ -34,8 +34,9 @@ This runs daily after the morning evaluation. The goal is continuous, data-drive
 ### 1. Read Context
 
 - Read `SCANNER_CHANGELOG.md` — understand what changes have been made and what's pending evaluation
-- Read today's morning evaluation log (`log/YYYY-MM-DD/log.md` — determine the date: if before 06:00 CET, use yesterday's CET date)
+- Read the log that the morning evaluation updated (`log/YYYY-MM-DD/log.md` — normally the prior completed US trading date, not blindly the current calendar date). Confirm the cycle date from the recent log directories before reading.
 - Read the last 3-5 days of logs for patterns (check `log/` directory)
+- Read the selected cycle log from the start. Before using a nonzero read offset, check the file's current line count; never reuse an offset from another log, and treat a short log as valid.
 - Read `Day Trading.md` for current rules and lessons
 
 ### 2. Evaluate Previous Changes

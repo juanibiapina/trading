@@ -13,6 +13,8 @@ Read:
 - `SCANNER_CHANGELOG.md` -- latest entry for today's scanner improvement
 - `log/YYYY-MM-DD/process-review.md` -- process issues found (optional)
 
+Use the cycle date resolved above for every log path; do not default to the current calendar date when the current day's directory contains only position or scan entries. Read the cycle log from the start. Before using a nonzero read offset, check the file's current line count; never reuse an offset from another log, and treat a short log as valid.
+
 Check whether `log/YYYY-MM-DD/process-review.md` exists before reading it. If it is missing, treat that as "no process review file for this cycle" rather than an error.
 
 ### 2. Generate Charts (Initiative 5)
