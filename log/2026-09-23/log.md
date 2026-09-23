@@ -322,6 +322,54 @@ WETO 2026-09-23  CONFIRM-3  YES ignition 17:15ET 61.3x; confirmed 17:25ET $1.92 
 
 **Freshness note:** SIP bars for all three names stopped at 17:35 ET; a repeat pull did not advance the cutoff. Their Alpaca quotes also remained timestamped 16:00 ET after re-pull. Treat these as stale sources, not as current book confirmation. No paper orders were submitted and no positions were added to `OPEN_POSITIONS.md`.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-23 18:30:16 ET; 12 hits. This is the last scheduled scan. Prior scans and the 21:30 CET watchlist were checked. No paper order was submitted.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $2.03 | -8.6% | +91.6% | $3.89 | +75.2% | 19.0M | 2.6M | 7.3x | 643K | Medical Specialties |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.04 | +7.2% | +25.0% | $1.30 | +34.0% | 8.7M | 29.8M | 0.3x | 4.4M | Miscellaneous Commercial Services |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $1.45 | -12.1% | +45.5% | $2.11 | +27.9% | 8.6M | 4.6M | 1.9x | 915K | Other Transportation |
+| VRME | [TV](https://www.tradingview.com/chart/?symbol=VRME) | $1.15 | +10.6% | +7.8% | $1.24 | +19.2% | 7.3M | 14.1M | 0.5x | 10.0M | Packaged Software |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $5.44 | +190.9% | +8.1% | $5.88 | +214.4% | 3.8M | 11.0M | 0.3x | n/a | Real Estate Investment Trusts |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $0.66 | -0.4% | +34.4% | $0.88 | +33.8% | 2.7M | 494K | 5.6x | 6.2M | Miscellaneous Commercial Services |
+| CLDI | [TV](https://www.tradingview.com/chart/?symbol=CLDI) | $1.09 | -1.8% | +9.2% | $1.19 | +7.2% | 2.4M | 326K | 7.5x | 2.6M | Biotechnology |
+| IMCC | [TV](https://www.tradingview.com/chart/?symbol=IMCC) | $2.91 | -29.7% | +6.2% | $3.09 | -25.4% | 1.3M | 16.2M | 0.1x | 546K | Agricultural Commodities/Milling |
+| INV | [TV](https://www.tradingview.com/chart/?symbol=INV) | $0.83 | -5.7% | +8.4% | $0.90 | +2.2% | 116K | 14.0M | 0.0x | 53.5M | Investment Managers |
+| PAL | [TV](https://www.tradingview.com/chart/?symbol=PAL) | $3.86 | -2.5% | +5.2% | $4.06 | +2.5% | 101K | 1.1M | 0.1x | 24.2M | Trucking |
+| LFMD | [TV](https://www.tradingview.com/chart/?symbol=LFMD) | $3.05 | -7.6% | +8.2% | $3.30 | +0.0% | 53K | 960K | 0.1x | 39.2M | Medical/Nursing Services |
+| ZKIN | [TV](https://www.tradingview.com/chart/?symbol=ZKIN) | $1.70 | +17.2% | +12.9% | $1.92 | +32.4% | 51K | 76K | 0.7x | 68.4M | Industrial Machinery |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Candidate checks and paper-trade decisions:**
+
+- **GCTK — skip; SPIKE→FADE and no current book.** It remained above +10% AH across prior scans, but scanner AH price fell from $4.74 at 00:00 to $3.89; the current price is 28.8% below its $5.46 SIP high at 16:45 ET, outside the ~20% hold zone. SIP verifies substantial earlier volume but its last bar is 17:35 ET, 55 minutes stale; the repeat pull did not advance it. Yahoo's timeline shape also shows the fade, but is not used for exact price or volume. The current Alpaca quote is stale at 16:00 ET (`bid $1.76 x100 / ask $2.31 x100`). Prior verified fresh catalyst remains the Lōkahi Therapeutics first external fee-for-service client release, Business Wire via FinancialContent, Sep 23 at 16:30 ET; provisional Grade B. No order; the catalyst does not override the fading trajectory or unverified live book.
+- **NCPL — skip; SPIKE→FADE, thin current activity, no fresh catalyst.** The scanner remains +25.0% AH, down from +55.8% at 23:30 and +32.2% at 00:00; $1.30 is about 33% below the $1.94 SIP high. SIP volume declined after the 17:00–17:05 ignition and reached 208,351 shares / 743 trades at 17:35 ET; that bar and the unchanged quote (`bid $0.92 x100 / ask $1.24 x100`, 16:00 ET) are stale. Four targeted searches (earnings, same-day PR, 8-K, company IR) found no Sep 23 catalyst; the latest official PR found was Aug 12 and an Aug 18 filing is background. Grade None is a concern, not the skip reason. No order.
+- **WETO — no order; two qualifying scans, but first-day-activity check and live book fail.** AH change rose from +27.6% at 00:00 to +45.5%; Day% is -12.1%, Total% +27.9%, float 915K. SIP confirms a real late build through 17:35 ET: 195,793 shares / 1,365 trades at 17:15, 550,112 / 3,412 at 17:20, 1,330,143 / 8,133 at 17:25, and 1,043,271 / 6,424 at 17:35 (close $1.85). The SIP cutoff is 55 minutes before this scan; repeat pull did not advance. Yahoo's timeline shape reached a later high and eased, but is not used for exact levels or volume. Daily bars show 20.69M shares on Sep 17 versus 2.27M, 1.04M, 1.04M, and 976K on the next sessions through Sep 23, so unusual activity predates today. Four targeted searches found no Sep 23 earnings, PR, or filing; a Sep 17 company update is stale background (Grade None). Alpaca's quote is stale at 16:00 ET (`bid $1.20 x100 / ask $1.68 x100`). The prior unusual-volume day and unavailable current book block entry; no order.
+- **KUST — skip; only one qualifying AH scan, no fillable ask, and prior unusual activity.** This is its first >10% AH appearance tonight, so it fails the two-scan gate. SIP confirms late volume through 18:15 ET: 1,960,431 shares / 6,637 trades at 18:10 and 2,442,414 / 7,495 at 18:15; the bar high was $0.95 and close $0.82. The scanner's $0.88 is within that range, not a bad-print contradiction. The Alpaca quote is stale at 16:00 ET and has no ask (`bid $0.54 x100 / ask $0.00 x0`). Tradable=true. Daily volume was 511,200 on Sep 17 and 426,600 on Sep 18, above the prior typical 89K–195K range. Four targeted searches found no Sep 23 earnings, PR, or 8-K; no fresh catalyst (Grade None). No order. It does not qualify for FINAL-SCAN-GATE-BLOCK instrumentation because no fillable ask book is present.
+- **ZKIN — skip; no volume-backed build and no current book.** This is the first qualifying AH scan. SIP volume is thin relative to the scanner move: the last bar at 18:15 ET was 18,703 shares / 61 trades after mostly sparse bars; its close was $1.70 versus a $2.00 AH high. CONFIRM-3 is NO. Scanner VRatio is only 0.7x. Tradable=true, but the 16:00 ET quote is stale and wide (`bid $1.34 x100 / ask $2.14 x100`). Four targeted searches found no Sep 23 earnings, PR, or SEC filing; the Aug 18 Form 6-K is background, so Grade None. No order.
+
+**Final-scan feed-lag cross-check:** Yahoo AH timelines were checked for the 21:30 CET regular-session watchlist and names tracked in earlier AH scans. Yahoo indicates VRME near $1.28 around 18:30 ET (roughly +11% from the $1.15 regular close) while TradingView reports +7.8%; SIP ends at 17:35 ET after the $1.57 early high, with later bars down to $1.25 and 79,367 shares / 234 trades. Its Alpaca quote is stale at 16:59:59 ET (`bid $1.23 x200 / ask $1.44 x200`). This does not establish fresh accumulating SIP volume, so VRME was not rescued. WHLR's Yahoo timeline is around $6.02 versus the $5.44 regular close (roughly +11%), while TradingView reports +8.1%; SIP ends at 17:35 ET with $5.84 close, 18,308 shares / 349 trades, after the $7.11 early high. The quote is stale at 16:00 ET. Neither name has fresh volume-backed evidence for a feed-lag rescue; WHLR also exceeds the +150% Total% entry ceiling. No other checked pipeline name showed a qualifying omitted mover. Yahoo returned no AH history for GBLRF. Yahoo prices are used here only for timeline shape, not exact levels or volume.
+
+**Spike-bar and third-bar instrumentation (log-only):**
+
+```text
+GCTK 2026-09-23  SPIKE  16:22ET  +20%  $2.43  683 trades / 111k sh  (first co-spike bar) (as-of 18:30ET)
+NCPL 2026-09-23  SPIKE  17:00ET  +24%  $1.29  180 trades / 55k sh  (first co-spike bar) (as-of 18:30ET)
+WETO 2026-09-23  SPIKE  17:18ET  +20%  $1.74  429 trades / 68k sh  (first co-spike bar) (as-of 18:30ET)
+KUST 2026-09-23  SPIKE  18:07ET  +15%  $0.76  144 trades / 39k sh  (first co-spike bar) (as-of 18:30ET)
+ZKIN 2026-09-23  NO-SPIKE  peak +18% @18:16ET  (no bar cleared +15% on a volume co-spike) (as-of 18:30ET)
+GCTK 2026-09-23  CONFIRM-3  YES ignition 16:20ET 827.4x; confirmed 16:30ET $3.69 as-of 18:30ET
+NCPL 2026-09-23  CONFIRM-3  YES ignition 16:50ET 13.7x; confirmed 17:00ET $1.48 as-of 18:30ET
+WETO 2026-09-23  CONFIRM-3  YES ignition 17:15ET 61.3x; confirmed 17:25ET $1.92 as-of 18:30ET
+KUST 2026-09-23  CONFIRM-3  YES ignition 18:05ET 21.8x; confirmed 18:15ET $0.82 as-of 18:30ET
+ZKIN 2026-09-23  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET
+```
+
+No candidate cleared all entry rules with a fresh, fillable AH book. No paper orders were placed; `OPEN_POSITIONS.md` is unchanged. The `Paper Trades` table below remains empty. No FINAL-SCAN-GATE-BLOCK met its fillable-book requirement.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
