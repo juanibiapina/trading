@@ -199,6 +199,43 @@ WHLR 2026-09-23  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET
 
 **Freshness note:** SIP and quote checks were repeated once. SIP remained current only through the 16:30 ET bar; quotes remained timestamped 16:00 ET for WHLR, GCTK, GCDT, DBGI, and NCPL, and 16:21 ET for MSS. Treat those quotes as stale, not as current fillable books. GCTK's scanner price is behind its last corroborated SIP bar, while Yahoo's later price timeline suggests further movement; the discrepancy is unconfirmed, not a bad-print rejection. No paper trades were submitted before the entry window.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-23 17:00:15 ET; 6 hits. The 23:00 CET learning-phase entry window is open. Current-day scans were checked for repeat candidates.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $2.03 | -8.6% | +142.4% | $4.92 | +121.6% | 8.0M | 1.2M | 6.6x | 643K | Medical Specialties |
+| VRME | [TV](https://www.tradingview.com/chart/?symbol=VRME) | $1.15 | +10.6% | +16.4% | $1.34 | +28.7% | 1.8M | 13.5M | 0.1x | 10.0M | Packaged Software |
+| MSS | [TV](https://www.tradingview.com/chart/?symbol=MSS) | $2.10 | +34.6% | +9.5% | $2.30 | +47.4% | 1.1M | 9.8M | 0.1x | 524K | Food Retail |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.04 | +7.2% | +12.5% | $1.17 | +20.6% | 237K | 28.9M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $1.45 | -12.1% | +5.5% | $1.53 | -7.3% | 81K | 3.6M | 0.0x | 915K | Other Transportation |
+| HVII | [TV](https://www.tradingview.com/chart/?symbol=HVII) | $4.46 | -50.9% | +6.5% | $4.75 | -47.7% | 51K | 580K | 0.1x | 19.2M | Financial Conglomerates |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Candidate checks and paper-trade decisions:**
+
+- **GCTK — no order this scan; recheck next scan.** This is the second AH scan above +10% (22:45: +53.2%; now +142.4%), with Total% +121.6% below the +150% ceiling and float 643K. `tradable=true` was verified earlier. SIP confirms substantial real accumulation: 915,069 shares / 8,171 trades at 16:20 ET, 1,860,263 / 18,856 at 16:25, 2,383,021 / 24,556 at 16:30, and 2,980,056 / 33,707 at 16:40; the 16:45 bar traded 2,513,963 / 28,198, with H $5.46 and C $4.72. The latest SIP bar is 15 minutes behind this scan. Yahoo's timeline (shape only) shows a pullback after the late rise; it does not establish an exact current price. Alpaca quote re-pull still returns the 16:00 ET book (`bid $1.76 x100 / ask $2.31 x100`), so there is no verified current fillable book. This is a stale-source conflict, not a bad-print rejection. The fresh same-day catalyst remains the Lōkahi Therapeutics first external fee-for-service client release, published 16:30 ET Sep 23 (Business Wire via FinancialContent); provisional Grade B. The release followed the first SIP ignition around 16:20 ET. GCTK is absent from `WINNERS_TRACKING.md`; Sep 22 volume was elevated at 540K, so first-day-unusual status remains uncertain. No order until the book and current trajectory can be verified.
+- **VRME — observe; only one qualifying AH scan.** AH change rose from +7.8% at 22:45 to +16.4%; prior scans were below +10%, so the two-scan gate is not met. SIP shows a real late volume burst: 661,678 shares / 2,506 trades at 16:30 ET, 535,072 / 2,348 at 16:35, 416,172 / 1,941 at 16:40, and 585,406 / 2,636 at 16:45. Yahoo's timeline (shape only) peaks near 16:50 and then retreats; the current live quote is 16:59:59 ET (`bid $1.23 x200 / ask $1.44 x200`), a wide spread. Four targeted searches found no Sep 23 earnings, press release, or 8-K. A Sep 22 Figure OPEN/Proposal 6 voting release is prior-day context; its exact publication time was not verified, so it is not used as a fresh catalyst (Grade None pending verification). CONFIRM-3 is instrumentation only and did not affect this decision.
+- **NCPL — skip for thin, non-accumulating activity.** AH change remains +12.5% across qualifying scans, but scanner AH volume only moved from 222K to 237K and VRatio remains 0.0x. SIP volume declined from 94,782 shares / 90 trades at 16:00 ET to 3,128 / 22 at 16:45, with intervening bars mostly below 16K shares. Yahoo's later price timeline rises, but volume is not used from Yahoo and SIP has not confirmed a real build. Alpaca quote re-pull remains stale at 16:00 ET (`bid $0.92 x100 / ask $1.24 x100`). Repeated earnings, press-release, and 8-K searches found no fresh Sep 23 catalyst. No order; thin activity and an unverified live book block entry.
+- **DBGI — FIRST-BAR-SPIKE WATCH; no live entry.** Hypothetical entry: $6.58 at the 22:45 CET scan. SIP AH high $7.75 printed at 16:10 ET in the first AH bar; CONFIRM-3 was NO at both 16:30 and 16:45 ET. By about 17:00 ET, the Yahoo price timeline (shape only) had faded back below the $5.71 regular-session close; SIP through 16:45 closed at $5.28. DBGI is absent from the current primary scan. This is a logged skip hypothesis, not a paper position.
+- **Other prior pipeline names:** WHLR, GCDT, and MSS are absent from this scan. WHLR was last above the +150% extension ceiling; GCDT had a same-day reverse-split catalyst (Grade D); MSS had one qualifying AH scan and unusual volume already present Sep 22. No new order decision was made for those absent names.
+- **MSS, WETO, HVII:** below the strict +10% AH-change gate in this scan; no new catalyst workup or entry.
+
+**Spike-bar and third-bar instrumentation (log-only):**
+
+```text
+GCTK 2026-09-23  SPIKE  16:22ET  +20%  $2.43  683 trades / 111k sh  (first co-spike bar) (as-of 17:00ET)
+GCTK 2026-09-23  CONFIRM-3  YES ignition 16:20ET 827.4x; confirmed 16:30ET $3.69 as-of 17:00ET
+VRME 2026-09-23  SPIKE  16:31ET  +19%  $1.37  475 trades / 141k sh  (first co-spike bar) (as-of 17:00ET)
+VRME 2026-09-23  CONFIRM-3  NO ignition 16:30ET failed third-bar hold/volume as-of 17:00ET
+NCPL 2026-09-23  NO-SPIKE  peak +14% @16:16ET  (no bar cleared +15% on a volume co-spike) (as-of 17:00ET)
+NCPL 2026-09-23  CONFIRM-3  NO no local-volume new-high ignition as-of 17:00ET
+```
+
+No paper orders were submitted. GCTK's qualifying scanner signal remains unconfirmed by a current book; VRME lacks a second qualifying AH scan; NCPL's SIP volume is thin and declining.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
