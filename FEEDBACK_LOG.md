@@ -6,6 +6,14 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-09-22 — re: Trading Scanner Report - 2026-09-21
+
+**Juan said:** "You entered too late. Also the ibroker thing will still be blocked for a while. Move on to other things for now, I'll get to that eventually."
+
+**Interpretation:** Juan confirms TOPS was entered too late: the first qualifying scan was $0.96 → $1.41, but the actual fill was $1.40 and captured only +0.7% to the PM peak. He also says the IBKR broker-switch test remains blocked for now and should not hold up other initiative work.
+
+**Action:** Routed the late-entry feedback to Initiative 3 and the next scanner-improvement run: continue measuring the 5-minute opening cadence and earlier confirmed volume-and-price entries; no broad strategy change was made in this pulse. Marked Initiative 2's broker fill test deferred pending Juan's account or credentials; continue other initiatives in parallel.
+
 ### 2026-09-17 — re: Trading Scanner Report - 2026-09-16
 
 **Juan said:** "YFOR (open position) SHOULD NOT HAVE BEEN ENTERED. You keep entering positions where I can clearly see in the graphs that the volume is not spiking compared to previous days. Is there a discrepancy between the data you use to enter vs the data you use to generate the graphs? Tackle this immediately. When do you progress on your initiatives? I don't see a lot changing, so set up schedules for dealing with initiatives. This needs to move faster."

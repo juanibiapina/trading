@@ -91,8 +91,10 @@ the ignition**, not a new signal.
    sub-$1 micro-floats) to see which actually fills extended-hours limits, and
    report the best fit. Research/test is non-serialized low-risk work, so
    `strategy-advance` starts it in parallel with the active Init 6 pilot. No
-   live broker switch applied yet — evaluate and propose. See FEEDBACK_LOG
-   2026-09-04.
+   live broker switch applied yet — evaluate and propose when Juan provides an
+   account. **Update 2026-09-22 (Juan feedback):** the IBKR/broker-switch fill
+   test remains blocked for now; defer this work and move on to other
+   initiatives until Juan supplies access. See `FEEDBACK_LOG.md` 2026-09-22.
    **Update 2026-09-04→09-07 (strategy-advance) — shortlist done, best fit
    identified, blocked on an account.** Researched all four candidates from
    primary sources and wrote `INIT2_BROKER_ALTERNATIVES.md`. Results:
@@ -227,6 +229,11 @@ the ignition**, not a new signal.
    this repository; no schedule file is changed by the feedback-capture pulse.
    Route the external scheduler update to the next scheduler/strategy-advance
    run, then measure first-2/3-bar capture and ignition-to-scan lag.
+   **Update 2026-09-22 (Juan feedback, TOPS cycle):** the first qualifying scan
+   saw TOPS near $0.96, but the fill came at $1.40 and captured only +0.7% to
+   the PM peak. This is another late-entry datapoint; keep the approved 5-minute
+   opening cadence and earlier volume-and-price confirmation work as the route.
+   See `FEEDBACK_LOG.md` 2026-09-22.
 3. **Initiative 5 - better data + review surface (graphs, sources).** AH/PM
    volume backfill shipped (2026-07-14). Ready low-risk follow-ups: the post-push
    raw-URL 200-check (fixes the Gmail render race) and GitHub Pages HTML reports
