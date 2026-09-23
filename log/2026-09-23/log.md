@@ -283,6 +283,45 @@ CPOP 2026-09-23  CONFIRM-3  NO ignition 17:05ET failed third-bar hold/volume as-
 
 **Freshness note:** SIP bars reached 17:15 ET, the free-tier cutoff 15 minutes before this scan. Quotes were re-pulled once; GCTK, NCPL, WHLR, and CPOP still returned 16:00 ET data, and VRME returned 16:59:59 ET data. Treat those books as stale, not as current liquidity evidence. Scanner/SIP level differences are unconfirmed where the SIP window ends earlier; no bad-print rejection was applied. No orders were placed, and no positions were added to `OPEN_POSITIONS.md`.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-23 18:00:16 ET; 10 hits. Prior scans in this log were checked for repeat candidates. The learning-phase entry window is open. No paper order was submitted because no candidate had both an eligible setup and a verified current fillable AH book.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $2.03 | -8.6% | +133.3% | $4.74 | +113.4% | 17.2M | 2.4M | 7.2x | 643K | Medical Specialties |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.04 | +7.2% | +32.2% | $1.38 | +41.8% | 8.2M | 29.7M | 0.3x | 4.4M | Miscellaneous Commercial Services |
+| VRME | [TV](https://www.tradingview.com/chart/?symbol=VRME) | $1.15 | +10.6% | +7.8% | $1.24 | +19.2% | 7.0M | 14.1M | 0.5x | 10.0M | Packaged Software |
+| GCDT | [TV](https://www.tradingview.com/chart/?symbol=GCDT) | $0.51 | +50.0% | +5.9% | $0.54 | +58.9% | 5.4M | 20.0M | 0.3x | n/a | Engineering & Construction |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $1.45 | -12.1% | +27.6% | $1.85 | +12.1% | 3.9M | 4.0M | 1.0x | 915K | Other Transportation |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $5.44 | +190.9% | +8.1% | $5.88 | +214.4% | 3.7M | 10.9M | 0.3x | n/a | Real Estate Investment Trusts |
+| CLDI | [TV](https://www.tradingview.com/chart/?symbol=CLDI) | $1.09 | -1.8% | +7.3% | $1.17 | +5.4% | 2.3M | 315K | 7.4x | 2.6M | Biotechnology |
+| AUUD | [TV](https://www.tradingview.com/chart/?symbol=AUUD) | $1.31 | -1.5% | +6.1% | $1.39 | +4.5% | 542K | 1.9M | 0.3x | 5.2M | Packaged Software |
+| PAL | [TV](https://www.tradingview.com/chart/?symbol=PAL) | $3.86 | -2.5% | +5.2% | $4.06 | +2.5% | 101K | 1.1M | 0.1x | 24.2M | Trucking |
+| LFMD | [TV](https://www.tradingview.com/chart/?symbol=LFMD) | $3.05 | -7.6% | +8.2% | $3.30 | +0.0% | 53K | 960K | 0.1x | 39.2M | Medical/Nursing Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Candidate checks and paper-trade decisions:**
+
+- **GCTK — no order; live book remains unverified.** Prior qualifying scans include 22:45 (+53.2%), 23:00 (+142.4%), 23:30 (+104.4%), and this scan (+133.3%). Total% +113.4% is below the +150% ceiling; Day% -8.6%; float 643K. The verified fresh catalyst remains Lōkahi Therapeutics' first external fee-for-service client release, published 16:30 ET Sep 23 (Business Wire via FinancialContent), provisionally Grade B. SIP confirms heavy real activity and scanner-price corroboration through 17:35 ET: 17:30 bar 633,938 shares / 7,449 trades, close $4.26; 17:35 bar 729,925 / 7,751, VWAP $4.40, close $4.59. The scanner's $4.74 is near that last SIP close and within 13.2% of the SIP AH high $5.46 at 16:45 ET. Price recovered from the 23:30 scanner's $4.15; current shape is not a decisive new high. SIP stopped at 17:35 ET, 25 minutes before this scan, and a re-pull returned the same cutoff. Alpaca quote also re-pulled unchanged at 16:00 ET (`bid $1.76 x100 / ask $2.31 x100`), so it is stale, not a verified current AH book. No order; this is unconfirmed by current fillable liquidity, not a bad-print rejection.
+- **WETO — watch; second qualifying AH scan is still required.** First scan above +10% AH (prior readings were below threshold); therefore the two-scan gate fails. Float 915K, Day% -12.1%, Total% +12.1%, and `tradable=true`. SIP confirms the late move and the scanner price: volume accelerated to 195,793 shares / 1,365 trades at 17:15 ET, 550,112 / 3,412 at 17:20, 1,330,143 / 8,133 at 17:25, and 1,043,271 / 6,424 at 17:35; SIP high $2.05 at 17:25 and latest close $1.85 at 17:35. Three targeted searches found no fresh Sep 23 earnings, company release, or 8-K; releases surfaced for July 22–23 are background, so catalyst grade is None. The re-pulled Alpaca quote is stale at 16:00 ET (`bid $1.20 x100 / ask $1.68 x100`), not a current fillable book. No order; re-evaluate only if it appears above threshold in a later AH scan with a live two-sided book.
+- **NCPL — skip; late spike has faded.** Prior qualifying readings include +12.5% at 22:20, +12.9% at 22:30, +12.5% at 22:45 and 23:00, and +55.8% at 23:30; now +32.2%. SIP verifies the prior late ignition (17:00 bar 502,713 shares / 1,975 trades; 17:05 3,035,903 / 16,256; high $1.94), but price then fell to $1.38 by the 17:35 close, 28.9% below that high. Latest bar volume declined to 208,351 shares / 743 trades. Scanner price is corroborated by SIP, but the price path is SPIKE→FADE and volume has decelerated. Three targeted catalyst searches again found no fresh Sep 23 earnings, press release, or 8-K; the latest official PR found was Aug 12. `tradable=true` was verified earlier. Quote remains stale at 16:00 ET (`bid $0.92 x100 / ask $1.24 x100`). No order.
+- **Other scan results:** VRME, GCDT, WHLR, CLDI, AUUD, PAL, and LFMD are below the strict >10% AH-change gate. Prior decisions remain unchanged; notably, GCDT has the previously documented Grade D reverse-split catalyst and WHLR remains over the +150% Total% extension ceiling.
+
+**Spike-bar and third-bar instrumentation (log-only):**
+
+```text
+GCTK 2026-09-23  SPIKE  16:22ET  +20%  $2.43  683 trades / 111k sh  (first co-spike bar) (as-of 18:00ET)
+GCTK 2026-09-23  CONFIRM-3  YES ignition 16:20ET 827.4x; confirmed 16:30ET $3.69 as-of 18:00ET
+NCPL 2026-09-23  SPIKE  17:00ET  +24%  $1.29  180 trades / 55k sh  (first co-spike bar) (as-of 18:00ET)
+NCPL 2026-09-23  CONFIRM-3  YES ignition 16:50ET 13.7x; confirmed 17:00ET $1.48 as-of 18:00ET
+WETO 2026-09-23  SPIKE  17:18ET  +20%  $1.74  429 trades / 68k sh  (first co-spike bar) (as-of 18:00ET)
+WETO 2026-09-23  CONFIRM-3  YES ignition 17:15ET 61.3x; confirmed 17:25ET $1.92 as-of 18:00ET
+```
+
+**Freshness note:** SIP bars for all three names stopped at 17:35 ET; a repeat pull did not advance the cutoff. Their Alpaca quotes also remained timestamped 16:00 ET after re-pull. Treat these as stale sources, not as current book confirmation. No paper orders were submitted and no positions were added to `OPEN_POSITIONS.md`.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
