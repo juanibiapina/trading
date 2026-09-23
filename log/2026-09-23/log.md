@@ -118,6 +118,37 @@ Supplementary AH-change-only (>15%, not in volume pass): none
 - **DBGI — observe / no entry.** First AH appearance at +10.0%, not above the strict >10% gate; one AH scan cannot satisfy the two-scan requirement. No catalyst workup at this threshold. VRatio is 0.1x.
 - **NCPL — observe / no entry.** AH change fell from +12.5% at 22:20 to +8.7%, with scanner AH price down from $1.17 to $1.13. Prior SIP check showed thin activity; current VRatio remains negligible (0.0x), so this is not a volume-backed build.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-23 16:30:29 ET; 7 hits. Observation-only before the 23:00 CET learning-phase entry window; no orders placed.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $5.44 | +190.9% | +15.5% | $6.28 | +235.9% | 1.3M | 10.6M | 0.1x | 568K | Real Estate Investment Trusts |
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $5.71 | +21.2% | +28.0% | $7.31 | +55.2% | 717K | 3.6M | 0.2x | 916K | Apparel/Footwear |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.04 | +7.2% | +12.9% | $1.17 | +21.0% | 183K | 28.9M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| LXEO | [TV](https://www.tradingview.com/chart/?symbol=LXEO) | $3.52 | -13.5% | +7.6% | $3.79 | -7.0% | 128K | 1.4M | 0.1x | 69.1M | Biotechnology |
+| MSS | [TV](https://www.tradingview.com/chart/?symbol=MSS) | $2.10 | +34.6% | +6.2% | $2.23 | +42.9% | 108K | 9.7M | 0.0x | 524K | Food Retail |
+| VRME | [TV](https://www.tradingview.com/chart/?symbol=VRME) | $1.15 | +10.6% | +7.0% | $1.23 | +18.3% | 106K | 13.3M | 0.0x | 10.0M | Packaged Software |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $1.45 | -12.1% | +5.4% | $1.53 | -7.3% | 54K | 3.6M | 0.0x | 915K | Other Transportation |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Candidate checks and decisions:**
+
+- **WHLR — no entry.** AH change was above +10% at 22:20 (+12.9%) and 22:30 (+15.5%), but total extension is +235.9%, above the +150% ceiling. SIP confirms real AH activity: bars from 16:00–16:15 ET traded 385,609–814,074 shares each with 4,299–9,867 trades; the high of $6.70 at 16:15 ET corroborates the scanner price. The high was before 17:00 ET, so the ceiling-override watch does not qualify. Four catalyst searches found no fresh Sep 23 catalyst, so provisional grade is None (a concern, not the skip reason). Wheeler's official IR page dates its Q2 results release Aug 6, 2026 at 4:20 PM EDT; the Sep 22 reverse split is prior-day background. `tradable=true`. The quote re-pull remained timestamped 16:00 ET, so the current AH book is unverified. If still above +150% at 23:00, skip under the extension ceiling.
+  - WHLR 2026-09-23  SPIKE  16:05ET  +18%  $6.40  2370 trades / 195k sh  (first co-spike bar) (as-of 16:30ET)
+  - WHLR 2026-09-23  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET
+- **DBGI — observe; not entry-eligible yet.** This is the first scan above the strict +10% AH threshold; the prior 22:25 reading was +10.0%, and only one qualifying AH scan has occurred. Float 916K and Day% +21.2%. SIP confirms real accumulation through 16:15 ET: 1,510,003 shares / 27,546 trades across the four bars, with volume rising to 722,042 shares / 13,246 trades at 16:10 ET. SIP high $7.75 corroborates the scanner's $7.31; the 16:15 bar eased to $6.98 close on 354,304 shares / 6,493 trades. Four targeted searches found no fresh Sep 23 earnings, press release, or 8-K; older August forecast coverage is background, so catalyst grade is None for now. `tradable=true`. The quote re-pull remained timestamped 16:00 ET, so the current AH book is unverified. The high was printed at 16:10 ET; CONFIRM-3 remains PENDING, so the first-bar-spike skip condition is not met. No entry before 23:00 CET; reassess the second qualifying AH scan and live book then.
+  - DBGI 2026-09-23  SPIKE  16:06ET  +16%  $6.62  294 trades / 20k sh  (first co-spike bar) (as-of 16:30ET)
+  - DBGI 2026-09-23  CONFIRM-3  PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET
+- **NCPL — skip for thin, fading AH activity.** AH change was +12.5% at 22:20, fell to +8.7% at 22:25, and returned to +12.9% now. SIP volume is thin and declining: 94,782 shares / 90 trades at 16:00 ET, then 65,355 / 143, 26,357 / 60, and 15,346 / 90. VRatio is 0.0x; the rising scanner Total% is not a volume-backed build. Four searches found no fresh Sep 23 catalyst; Netcapital's latest official press release found was dated Aug 12, and the Aug 18 8-K is background. No catalyst is a concern, not an independent learning-phase skip reason. `tradable=true`; the quote re-pull remained timestamped 16:00 ET, so the current AH book is unverified.
+  - NCPL 2026-09-23  NO-SPIKE  peak +14% @16:16ET  (no bar cleared +15% on a volume co-spike) (as-of 16:30ET)
+  - NCPL 2026-09-23  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET
+- **LXEO, MSS, VRME, WETO — observe only.** AH change is below +10%; no catalyst or spike instrumentation was triggered.
+
+**Freshness note:** Re-pulled quotes for WHLR, DBGI, and NCPL all remained timestamped 16:00 ET. The latest SIP bars start at 16:15 ET (through 16:20 ET), 10 minutes before this scan. Treat the quotes as stale, not as a current fillable AH book. SIP highs corroborate the WHLR and DBGI scanner levels; no bad-print rejection was applied. No paper trades were placed before the 23:00 CET entry window.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
