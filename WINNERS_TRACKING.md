@@ -6,7 +6,8 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-09-21 | TOPS | None verified (Top Ships; no fresh Sep 21 catalyst) | $1.62 AH SIP (+125.0% from $0.72; 16:55 ET, 3.39M sh/12,415 tr) | $1.41 PM SIP (+95.8% from $0.72) 04:05 ET, 1.50M sh/6,255 tr | ~$1.23 (Sep 22 PM) | **Winner, DETECTED by 22:25 CEST + ENTERED @ $1.40**. AH peak exceeded PM peak; fresh day-1 igniter, Grade None, float 4.1M. |
+| 2026-09-21 | TOPS | None verified (Top Ships; no fresh Sep 21 catalyst) | $1.62 AH SIP (+125.0% from $0.72; 16:55 ET, 3.39M sh/12,415 tr) | $1.41 PM SIP (+95.8% from $0.72) 04:05 ET, 1.50M sh/6,255 tr | $0.70 exit fill (Sep 23 04:31 ET) | **Closed by separate position-evaluation pulse @ $0.70; realized −$44.80 (−50.0%).** Entry was $1.40; Grade None; float 4.1M. |
+| 2026-09-22 | WHLR | None; 1-for-9 reverse split effective Sep 21, no fresh operational catalyst | $5.10 PM SIP (+172.7% from $1.87; 04:05 ET, 1.29M sh/14,197 tr) | — (Sep 23 regular close not available) | $3.97 TradingView scan (Sep 23 04:20 ET) | **Raw market benchmark; actionable capture not confirmed**. AH peak $4.39 (+134.8%) at 18:40 ET. Alpaca's only quote was stale at 16:00 ET; no entry. Coverage failed before breakout. Float 568K.
 
 
 ## Historical Winners (with multi-day outcome)

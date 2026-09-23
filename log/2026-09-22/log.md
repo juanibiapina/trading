@@ -121,3 +121,160 @@ No candidates found.
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | — | — | — | — | — | No fill; awaiting after-hours confirmation. |
+
+## Morning Evaluation — 10:20 CET (CEST), evaluating Sep 22 AH session
+
+### Today's Winner
+
+**No confirmed actionable winner. Raw market leader: WHLR — Real Estate / REIT.** WHLR cleared the +100% move and SIP-volume tests, but the AH fillable book could not be verified because Alpaca's only quote was stale. Keep it as the baseline benchmark, not an actual or capturable trade.
+
+- Catalyst: **1-for-9 reverse split**, effective Sep 21 at 17:01 ET; no fresh operational catalyst found. Catalyst grade: **None**. The split is structural, not an operational improvement.
+- Previous Close: **$1.87**, verified by the Sep 22 SIP daily bar. Yahoo's $2.07 anchor is stale and was not used.
+- AH last night: breakout began at 16:35 ET. SIP's first breakout bar opened at **$2.08**, reached $3.36, and closed $3.24 on 930,783 shares / 8,789 trades (VWAP $2.78). SIP AH peak was **$4.39 (+134.8%) at 18:40 ET** on 606,681 shares / 6,227 trades (VWAP $4.21).
+- Premarket now: the whole-market TradingView scan reported **$3.97 (+112.3%) at 04:20 ET**. The latest accessible SIP bar closed $4.77 at 04:05 ET; the SIP feed did not cover the final 15 minutes. Alpaca's quote remained stale from 16:00 ET, so no exact live executable price is claimed.
+- SIP PM peak so far: **$5.10 (+172.7%) at 04:05 ET**, backed by 1,291,039 shares / 14,197 trades (VWAP $4.52). Yahoo's $6.45–$6.76 highs are not SIP-confirmed and are excluded.
+- Hypothetical P&L: first breakout-bar open $2.08 → SIP PM peak $5.10 = **+145.2% theoretical**. A more realistic scheduled 23:00 CEST entry proxy is the 17:00 ET SIP close $3.54 → $5.10 = **+44.1%**. Neither is an actual fill.
+- Float: **568K** | Market Cap: **$1.1M** as reported by the screener.
+- Captureability: Alpaca reports `tradable=true`, and the SIP tape is heavily traded. Its quote was only `bid $1.59 x100 / ask $2.33 x100 @ 16:00 ET`, before the breakout, and remained stale at evaluation. The book at a realistic AH entry is unverified; the strict actionable-winner test is therefore **not confirmed**.
+
+**Second-largest PM name: IPDN.** SIP daily close $3.90; AH SIP peak $9.55 (+144.9%) at 16:35 ET; PM SIP peak $8.20 (+110.3%) at 04:05 ET on 830,814 shares / 16,212 trades. The PM peak stayed below the AH peak. It was surfaced once at 22:20 CEST, before entry eligibility; no later scheduled scan ran. Its quote was also stale at 16:00 ET. IPDN had a recent 1-for-30 reverse split announced Sep 10, no fresh operational catalyst, float 476K, and Grade None.
+
+**Scanner Diagnostic:**
+- Detectable at screening time (~22:15 CEST)? **NO.** At 16:15 ET, WHLR's SIP close was $1.96, only +4.8% from the correct $1.87 close, below the +10% AH threshold.
+- WHLR ignited at 16:35 ET. By 17:00 ET, it was $3.54 with accumulating volume and would likely have appeared in a functioning 23:00 CEST scan. The 18:30 ET SIP bar was already $3.72 close / $3.85 high (+98.9% / +105.9% from close).
+- The last logged scan was 22:20 CEST (16:20 ET). No scan ran in the 23:00–00:30 CEST entry window. This is a **coverage failure**, not a scanner-threshold or TradingView-feed-lag diagnosis. Do not count WHLR as a detection or selection miss.
+- Scanner gap: restore the five missing scheduled checkpoints (22:30, 23:00, 23:30, 00:00, 00:30 CEST). No threshold change is supported.
+
+**Winner selected for paper trade?** **No.** No entry-window scans ran. This evaluation submitted no orders.
+
+**Broker-block tracking:** No new case. IPDN and WHLR were `tradable=true`; neither qualified for an actual entry scan. Standing tally remains **2 SHPH cases**.
+
+**Stale-book execution-block tracking:** No new case; WHLR was never surfaced by an eligible scan and no entry was attempted. Standing count remains **4** (NUWE, KUST, CLRO profitable; XRTX negative control). Keep the live-book safety gate unchanged.
+
+**No-fillable-book skip tracking:** No new case. GCTK had `ask $0.00 x0` but did not clear the two-scan entry gate. Standing count remains **4** (DAIC, OFAL, BIVI faded/flat; QNME ran modestly).
+
+**Float-gate skip tracking:** No new case. Standing count remains **1** (CAPR ran).
+
+**Final-scan gate-block tracking:** No new case. Standing count remains **2** (TRUG and UPC, both ran).
+
+**Ceiling/dead-cat override and fade-rule tracking:** No override watches were logged. No new SIP-verified sub-3M fade-rule re-explosion; standing count remains **4/16**, below the ≥80% trigger. No late-AH-tail surge case: WHLR's defining ignition began at 16:35 ET, well before 18:30 ET. Its later 18:40 ET high extended an already-large move; it was not a new defining tail surge.
+
+**In-window feed-lag tracking:** No new case. WHLR was not surfaced because scans stopped before its 16:35 ET ignition; this is covered by the scheduler outage, not a TradingView feed-lag miss. Standing count remains **6** (BTCT, KUST, WLDS, RAIN, MYSZ, GRML); the whole-universe AH data-source verification remains a daily-email item.
+
+**Price-floor exclusion tracking:** No new case. Standing count remains **5 across 2 nights, 0 holdable**.
+
+**PM-only gapper tracking:** WHLR was an **AH→PM continuation**, not a PM-only gapper. Do not add a PM-only row. The authoritative `log/pm-open-scan.csv` holdable PM-only count is **57**; the Initiative-6 early-PM pilot remains a daily-email decision.
+
+**Reverse-split-squeeze tracking:**
+- **WHLR:** 1-for-9 effective Sep 21 (same-week), 568K float, Grade None, no operational catalyst. Counterfactual first eligible scan price $3.54 → PM peak $5.10 = **+44.1%, continued**. No actual entry; the scan-coverage failure prevented a live decision.
+- **IPDN:** 1-for-30 announced Sep 10 (weeks-old), 476K float, Grade None, no fresh operational catalyst. Counterfactual 17:00 ET scan-price proxy $6.52 → PM peak $8.20 = **+25.8%, above entry**; AH peak $9.55 remained the better exit. No actual entry.
+- Updated recency tally: **same-week splits 4/5 faded (one continued); weeks-old splits 4/6 continued and 2/6 faded**. WHLR is a same-week continuation counterexample; IPDN adds an older-split continuation. Keep collecting data and make no gate change. Update the existing conviction-downgrade email item with these counterexamples.
+
+**Multi-session-runner outcome tracking:** No new Alpaca entry occurred. Standing count remains **1 multi-session runner (1 faded) / 27 first-day igniters (9 ran, 8 flat, 10 faded)**. WHLR is a raw benchmark, not an entry, and is excluded.
+
+**First-bar-spike skip-validation tracking:** No new WATCH met the entry-window criteria. Standing tally remains **3 pre-gate entries (0 ran) + 4 post-gate WATCH (2 ran, 2 faded); 5 of 7 fade-or-flat**.
+
+### Baseline Tracking
+
+- Days tracked: **87** (86 + 1 for the Sep 22 session). Existing baseline gaps remain **Sep 11 and Sep 18**; neither is back-filled.
+- Winners detected by scanner: **72/81 (88.9%)** — unchanged. The Sep 22 winner is excluded from the detection denominator because coverage failed during the entry window.
+- Winner selected for paper trade: **36/79 (45.6%)** — unchanged. No selection opportunity existed during the missing entry window.
+- Target: >80% detection
+- Status: **BASELINE MET**
+
+### Retrospective Scan Results
+
+Premarket scan at 04:20 ET returned six names. Percentages below use SIP Sep 22 daily closes, not Yahoo's stale `previousClose`; prices are latest scanner quotes, while AH/PM peaks are SIP-verified through the latest returned bars.
+
+| Ticker | SIP Close | Scan PM Price / Change | AH SIP Peak / Change | PM SIP Peak / Change | Evening Scan Result |
+|--------|-----------|------------------------|---------------------|---------------------|---------------------|
+| WHLR | $1.87 | $3.97 / +112.3% | $4.39 / +134.8% | $5.10 / +172.7% | Not surfaced; scan coverage ended before ignition |
+| IPDN | $3.90 | $7.59 / +94.6% | $9.55 / +144.9% | $8.20 / +110.3% | Surfaced once at 22:20 CEST |
+| BFRG | $0.60 | $0.69 / +14.6% | $0.96 / +60.0% | $0.74 / +23.3% | Not surfaced |
+| SQFT | $1.25 | $1.54 / +23.2% | $2.34 / +87.2% | $1.82 / +45.6% | Not surfaced |
+| DCOY | $3.10 | $3.85 / +24.2% | $4.10 / +32.3% | $4.40 / +41.9% | Not surfaced |
+| HAO | $2.85 | $3.43 / +20.4% | $3.52 / +23.5% | $4.00 / +40.4% | Not surfaced |
+
+SIP confirmed that WHLR, IPDN, BFRG, and SQFT had substantial AH volume. WHLR and IPDN each cleared +100% from the SIP prior close at their verified PM peaks. WHLR's SIP peak exceeded its AH peak; IPDN's PM peak fell below its AH peak. Yahoo under-reported the AH peak for several names and printed unsupported WHLR PM highs; SIP levels above are authoritative.
+
+### Open Position P&L (Alpaca)
+
+**No open positions remain.** The separate 10:30 CET position-evaluation pulse closed TOPS at 04:31 ET while this retrospective was running. This pulse submitted no orders.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| TOPS | $1.40 | +94.4% from SIP $0.72 close | None | Sep 21, 23:00 CEST | $0.81 SIP | Sep 23, 04:00 ET | $0.70 fill | −$44.80 | −50.0% | Closed by separate position-evaluation pulse |
+
+The Sep 23 position pulse recorded the real SELL fill: 64 shares at $0.70 against the $1.40 entry. Its latest accessible TOPS SIP PM bar closed $0.70 with VWAP $0.71; the Alpaca quote was stale from Sep 22 16:00 ET. Total realized P&L for this position: **−$44.80**.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **2 of 7 scheduled** (21:30 and 22:00 CEST). Four extra early scans ran at 22:05, 22:10, 22:15, and 22:20; total log sections: **6**. No scan ran from 22:30 through 00:30 CEST.
+- Candidates found: **34 unique tickers** across the logged scans.
+- Retrospective matches: **1/6** premarket scan names (IPDN).
+- Coverage-failure tally: add **2026-09-22 — 2/7 scheduled scans**. Prior definite incidents are Jun 18–19 (2/7), Jun 24–25 (6/7; entry window covered), Jul 28 (6/7), and Aug 7 (no evening scan; retrospective skipped). Aug 14 remains unverified. No second definite failure occurred within about 10 trading sessions, so the repeated-failure escalation threshold is not newly met.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|---------|-----------|------------|----------------------|
+| WHLR | SIP peak $4.39 (+134.8% from $1.87); 16:35–18:40 ET SIP bars had 930K–1.30M shares and 8.8K–12.0K trades during the ignition/build | Coverage failure: only scans through 16:20 ET were logged; no entry-window scans ran. At 16:15 ET it was only +4.8%, below threshold. Not counted as a detection miss. | Yes on price path: first breakout-bar open $2.08 → SIP PM peak $5.10 = +145.2%; a 17:00 ET scan-price proxy $3.54 → $5.10 = +44.1%. Fillability was not verified. |
+| IPDN | AH SIP peak $9.55 (+144.9%); PM SIP peak $8.20 (+110.3%) | Detected once at 22:20 CEST, but no later eligible scan ran. One-scan observation only; not counted as a selection miss because of coverage failure. | Counterfactual 17:00 ET price $6.52 → PM peak $8.20 = +25.8%; AH peak was the better exit. |
+
+### AH Mover Follow-Through
+
+No ticker appeared in two or more evening scans above +10% because the entry-window scans did not run. The six-name retrospective table above records the independently discovered movers. The two SIP-verified extreme AH runners were IPDN and WHLR:
+
+- IPDN: AH $9.55 (+144.9%) > PM $8.20 (+110.3%); AH was the better exit (**fade**).
+- WHLR: AH $4.39 (+134.8%) < PM $5.10 (+172.7%); PM exceeded the AH peak (**continued**).
+- Updated extreme-zone tally: **12 fades / 2 continues = 85.7% fade**. The ≥9 and ≥85% routing threshold remains met; keep the partial-profit recommendation in the daily email, with WHLR as a counterexample.
+
+**Chase-cap / entry-extension tracking:** No new actual fill. Standing count remains **1** (XOS, never reclaimed).
+
+### Notes
+
+- The Sep 22 log had six scan sections, but only two matched scheduled checkpoints. Four early bonus scans do not replace the five missing scheduled scans, including the full 23:00–00:30 CEST entry window.
+- Add Sep 22 (2/7) to the coverage tally. The last definite complete/entry-window outage was Aug 7, more than 10 sessions earlier; do not escalate scheduler investigation under the ≥2-within-~10-sessions rule yet.
+- WHLR is the largest raw PM mover and a real AH→PM continuation, not a PM-only gapper. The raw Yahoo PM high is not SIP-confirmed; use $5.10 as the highest SIP-verified peak through 04:05 ET.
+- WHLR and IPDN add two reverse-split continuation cases. The same-week tally is now 4/5 faded; the older-split tally is 4/6 continued and 2/6 faded. The prior perfect 4/4 fresh-split fade signal is no longer universal.
+- The authoritative PM-only holdable count is **57** from `log/pm-open-scan.csv`; no hand-count or new PM-only row was added.
+- No scanner thresholds, entry rules, or position-management rules changed. The separate position-evaluation pulse closed TOPS; this evaluation placed no orders.
+- Daily-email routing: update the reverse-split conviction-downgrade recommendation with WHLR's same-week continuation and IPDN's older-split continuation; retain the 6-case whole-universe AH data-source verification recommendation, 57 holdable PM-only cases / Initiative-6 pilot, 12/14 extreme-zone result, and stale-book execution issue (4 cases, 3 profitable, XRTX negative control). Record the Sep 22 2/7 coverage failure for monitoring; no scheduler escalation threshold is met.
+
+### Price Charts
+
+`python3 scripts/price-timeline.py WHLR IPDN` was run. The Yahoo-rendered chart shows price shape only; its anchors and unsupported WHLR highs are not used for exact levels. SIP-corrected basis: WHLR previous close $1.87, AH peak $4.39, PM peak $5.10; IPDN previous close $3.90, AH peak $9.55, PM peak $8.20.
+
+```text
+WHLR — Yahoo timeline shape (SIP correction applies)
+$   6.48 │
+         │
+         │
+         │
+         │
+         │
+         │                                                         ██
+         │                                              █   ███   █  █
+         │                                             █ ███   ███
+         │
+         │    ██                      ██
+$   1.66 │████  ██████████████████████  ███████████████
+         └────────────────────────────────────────────────────────────
+SIP peak: $5.10 at 04:05 ET. Yahoo's $6.76 peak is unsupported.
+
+IPDN — Yahoo timeline shape (SIP correction applies)
+$   9.01 │                                                          █
+         │
+         │
+         │                                                      █    █
+         │                                                     █ █
+         │
+         │                                                    █   ██
+         │
+         │
+         │
+         │                                                 ███
+$   3.25 │█████████████████████████████████████████████████
+         └────────────────────────────────────────────────────────────
+SIP AH peak: $9.55; SIP PM peak: $8.20. Yahoo under-reported both peaks.
+```
