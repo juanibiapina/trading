@@ -57,6 +57,12 @@ Scanner session: AFTERHOURS, 2026-09-23 16:05:25 ET; 0 hits. No candidates found
 
 Supplementary AH-change-only (>15%, not in volume pass): none
 
+## Scan 22:10 CET (4:10 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-23 16:10:18 ET; 0 hits. No candidates found. Observation-only scan before the 23:00 CET entry window; no paper orders placed.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
