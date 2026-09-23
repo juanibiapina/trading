@@ -112,6 +112,8 @@ Update `OPEN_POSITIONS.md`:
 - Update trailing stops if applicable
 - Move sold positions to Closed Positions table
 
+Only edit content needed to reconcile positions or record the evaluation; skip cosmetic whitespace changes. If an exact-text edit fails, reread the current file, choose a shorter unique target, and retry once. Do not repeat the unchanged `oldText`.
+
 ### 7. Log Summary
 
 Append to today's log (`log/YYYY-MM-DD/log.md`):

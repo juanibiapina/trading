@@ -62,6 +62,8 @@ For each change:
 2. Make the edit (small, surgical)
 3. Verify the file still works (e.g., `python3 scripts/scan.py --help` for syntax check)
 
+If an exact-text edit fails, reread the current file, choose a shorter unique target, and retry once. Do not repeat the unchanged `oldText`; skip cosmetic-only edits rather than spending retries on them.
+
 ### 5. Update Changelog
 
 Prepend a new entry to `SCANNER_CHANGELOG.md` (before the previous entries, after the header sections):
