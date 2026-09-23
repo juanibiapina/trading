@@ -101,6 +101,23 @@ Supplementary AH-change-only (>15%, not in volume pass): none
   - CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
 - **FLNA — no entry; AH change +5.6%, below the +10% multi-scan entry threshold.**
 
+## Scan 22:25 CET (4:25 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-23 16:25:18 ET; 3 hits. This is observation-only before the 23:00 CET learning-phase entry window. No current candidate clears the strict >10% AH-change threshold, so no catalyst workups, orders, or spike-bar/CONFIRM-3 instrumentation were triggered. No paper trades placed.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $5.44 | +190.9% | +5.5% | $5.74 | +207.0% | 915K | 10.6M | 0.1x | 568K | Real Estate Investment Trusts |
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $5.71 | +21.2% | +10.0% | $6.28 | +33.3% | 279K | 3.5M | 0.1x | 916K | Apparel/Footwear |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.04 | +7.2% | +8.7% | $1.13 | +16.5% | 156K | 28.9M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Candidate changes and decisions:**
+- **WHLR — observe / no entry.** AH change retreated from +12.9% at 22:20 to +5.5%; scanner AH price fell from $6.14 to $5.74. Total% remains +207.0%, above the +150% entry ceiling, and prior checks found no fresh catalyst. VRatio remains negligible (0.1x).
+- **DBGI — observe / no entry.** First AH appearance at +10.0%, not above the strict >10% gate; one AH scan cannot satisfy the two-scan requirement. No catalyst workup at this threshold. VRatio is 0.1x.
+- **NCPL — observe / no entry.** AH change fell from +12.5% at 22:20 to +8.7%, with scanner AH price down from $1.17 to $1.13. Prior SIP check showed thin activity; current VRatio remains negligible (0.0x), so this is not a volume-backed build.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
