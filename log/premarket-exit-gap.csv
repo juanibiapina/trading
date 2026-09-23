@@ -47,3 +47,4 @@ date,ticker,entry,exit,exitZ,note
 2026-09-16,YFOR,?,1.67,2026-09-16T08:32:11Z,held exit 04:32 ET; stalled book, PM peak $1.80 09:35 ET (+7.8%); lim10 ($1.837) unfilled, PM-last $1.7008 (+1.8%)
 2026-09-17,DTSS,0.8594,0.624,2026-09-17T08:31:22Z,Grade B exit 04:31 ET; full capped SIP peak $1.18 at 09:10 ET (+89.1% vs exit), PM-last $0.9674; position-evaluation peak $1.03 superseded by full SIP bars
 2026-09-17,YFOR,1.88,1.76,2026-09-17T08:31:37Z,Grade None exit 04:31 ET; full capped SIP peak $1.876 at 04:40 ET (+6.6% vs exit), PM-last $1.82; position-evaluation $2.25 conflicts with full SIP bars and is excluded
+2026-09-23,TOPS,1.40,0.70,2026-09-23T08:31:51.483627Z,Grade None day-2 exit; actual Alpaca fill; post-exit PM peak $0.7498 at 07:00 ET (+7.1%), PM-last $0.7299 (+4.3%); +10% limit unfilled

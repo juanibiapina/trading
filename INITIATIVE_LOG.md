@@ -3,6 +3,18 @@
 Daily progress on the strategy roadmap (`STRATEGY_ROADMAP.md`), one initiative
 at a time. Written by the `strategy-advance` pulse. Newest first.
 
+### 2026-09-23 18:00 — Initiative 6 recheck; Initiative 3 full-window simulator correction
+
+**Evaluated:** The prior Sep 23 step remains **insufficient for a cadence decision**: the second/third-bar replay admitted 2/6 names and both variants had negative mean entry-price edge versus the current grid. The Init 6 pilot had no new holdable PM-only candidate. Initiative 5's Pages delivery **worked**: workflow 35866528073 succeeded and the report/chart URLs returned HTTP 200. While seeding TOPS, I found `peak-seeking-exit-sim.js` had requested only the broker CLI's default 20 five-minute bars (100 minutes), truncating the claimed full premarket window.
+
+**Step taken:** Re-ran `node scripts/init6-pm-pilot.js` over the 50-candidate tracker; added TOPS's verified Alpaca sell fill ($0.70 at 2026-09-23 08:31:51Z) to `log/premarket-exit-gap.csv` and the exit simulator; changed the simulator to request 300 bars; and re-ran all 44 exit seeds through the 09:30 ET cap. `node --check scripts/peak-seeking-exit-sim.js` and both full-window replay scripts ran successfully. No live order, rule, or trading-pulse timing changed.
+
+**Result:** Init 6 remains **n=23, SUM +97.5%, mean +4.2%/name, median +10.0%, positive 18/23, fade-tail 4/23 (17%)**; Sep 23 added no pilot case. Corrected Init 3 results: resting +5% limit **+132.7% total / +3.0% per name**; +10% limit **+130.1% / +3.0%**, positive **30/44**. The 2.6-point aggregate difference does not establish a better threshold, and OHLC limit hits remain modeled rather than actual fills; prior truncated simulator totals are superseded. TOPS's post-exit peak was **$0.7498 at 07:00 ET (+7.1%)**; PM-last was **$0.7299 (+4.3%)**, so neither a +10% limit nor higher target filled. Paper equity remains **$99,721.90 (-$278.10)**.
+
+**Hypothesis / next step:** Keep Initiative 6 log-only and re-run it on the next verified holdable PM-only gapper. For Initiative 3, seed the next completed exit and compare +5% versus +10% on full-window bars; do not promote either threshold until the difference is material and execution costs/fills are accounted for. Keep the four-scan resource proposal pending Juan's veto; no scheduler timing changed.
+
+**Needs from Juan:** no new ask. Standing asks remain the four-pulse schedule veto, IBKR/Webull access for the broker fill test, and review of the premarket exit proposal; the corrected +5%/+10% comparison is not a live recommendation.
+
 ### 2026-09-23 — Initiative 6 pilot recheck; Initiative 3 replay; Initiative 5 report
 
 **Evaluated:** The prior Init 6 step **worked for its observed cases**: STI and GURE both passed the gate and filled the hypothetical +10% limit, while the completed-bar rerun revised PM-last to -7.3% without changing the limit results. Today's Sep 23 PM-open rows were AH-detected or thin, so there is **insufficient fresh pilot data** to update the out-of-sample edge. The prior Init 3 QNME replay remained too small for a timing decision; today's six-name session expands the evidence but remains mixed.

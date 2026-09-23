@@ -57,6 +57,7 @@ const names = [
   ["YFOR","2026-09-16",1.67],
   ["DTSS","2026-09-17",0.624],
   ["YFOR","2026-09-17",1.76],
+  ["TOPS","2026-09-23",0.70],
 ];
 const CAP = "13:30:00Z"; // 09:30 ET
 const limits = [5,10,15,20,30]; // resting sell-limit % above exit
@@ -68,7 +69,7 @@ const trails = [8,12,15,20];    // trailing-stop % from running high
 const ocoFloors = [0, 5, 10, 15, 20]; // % below exit for the protective stop, limit fixed +10%
 
 function fetchBars(sym, date){
-  const out = execFileSync("node",["scripts/broker.js","bars",sym,"--start",`${date}T08:30:00Z`,"--json"],{encoding:"utf8"});
+  const out = execFileSync("node",["scripts/broker.js","bars",sym,"--start",`${date}T08:30:00Z`,"--limit","300","--json"],{encoding:"utf8"});
   const j = JSON.parse(out);
   const bars = (j.bars||j).filter(b=> b.t > `${date}T08:30:00Z` && b.t < `${date}T${CAP}`);
   return bars;

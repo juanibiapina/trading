@@ -1744,7 +1744,7 @@ tracker).
       **optional, not required**. The clean ask is the plain resting +10%
       sell-limit (GTC premarket, cancel 09:30 ET, plain 04:30 market exit as
       fallback). Changes live exit behavior → **proposed, not applied**. Details
-      in the Initiative 3 status + `log/premarket-exit-gap.csv`.
+      in the Initiative 3 status + `log/premarket-exit-gap.csv`. **Full-window correction (2026-09-23):** `peak-seeking-exit-sim.js` had used the broker CLI's default 20 five-minute bars (100 minutes), not the full premarket. Fetching 300 bars and capping at 09:30 ET gives **n=44**: the +5% limit returns **+132.7% total (+3.0% per name)**, while the +10% limit returns **+130.1% (+3.0%)**, positive 30/44. The 2.6-point aggregate difference does not distinguish thresholds; this supersedes earlier simulator totals. Keep both thresholds log-only and collect more completed exits; no live exit change is promoted.
 - [x] Initiative 6 (problem b): the **partial-hold pilot ask is WITHDRAWN**
       (2026-07-13). `scripts/trailing-sim.js` simulated the trailing-stop hold
       on all 14 closed round-trips' real regular-session 5-min SIP paths; every
