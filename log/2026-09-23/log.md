@@ -51,6 +51,12 @@ Scanner session: REGULAR, 2026-09-23 15:30:17 ET; 26 hits. After-hours trading h
 | TLSA | $1.03 | +15.7% | 300 | 12K | 2.9 | -89.0% | 65.4M | Pharmaceuticals: Major | Watch — pending AH confirmation |
 | ZKIN | $1.67 | +15.2% | 100 | 2K | 38.3 | +0.0% | 68.4M | Industrial Machinery | Watch — pending AH confirmation |
 
+## Scan 22:05 CET (4:05 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-23 16:05:25 ET; 0 hits. No candidates found. The 21:30 CET regular-session watch names did not reappear in this after-hours scan. Observation-only scan; no paper orders placed.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
