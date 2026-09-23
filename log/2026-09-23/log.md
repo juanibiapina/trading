@@ -69,6 +69,38 @@ Scanner session: AFTERHOURS, 2026-09-23 16:15:25 ET; 0 hits. No candidates found
 
 Supplementary AH-change-only (>15%, not in volume pass): none
 
+## Scan 22:20 CET (4:20 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-23 16:20:17 ET; 5 hits. This is observation-only: the learning-phase entry window starts at 23:00 CET. No orders placed.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| IMCC | [TV](https://www.tradingview.com/chart/?symbol=IMCC) | $2.91 | -29.7% | +16.8% | $3.40 | -17.9% | 535K | 16.1M | 0.0x | 546K | Agricultural Commodities/Milling |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $5.44 | +190.9% | +12.9% | $6.14 | +228.3% | 300K | 10.5M | 0.0x | 568K | Real Estate Investment Trusts |
+| CLDI | [TV](https://www.tradingview.com/chart/?symbol=CLDI) | $1.09 | -1.8% | +26.6% | $1.38 | +24.3% | 235K | 77K | 3.0x | 2.6M | Biotechnology |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.04 | +7.2% | +12.5% | $1.17 | +20.6% | 94K | 28.8M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| FLNA | [TV](https://www.tradingview.com/chart/?symbol=FLNA) | $0.87 | -15.5% | +5.6% | $0.92 | -10.8% | 65K | 10.2M | 0.0x | 47.3M | Biotechnology |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Candidate checks and decisions:**
+
+**First-bar-spike monitoring:** Current AH highs for IMCC ($3.78), WHLR ($6.57), and CLDI ($1.52) were printed by 16:05 ET, inside the 16:00–16:15 ET first-bar window; each current CONFIRM-3 verdict is NO. This is the first qualifying instrumented scan, so persistence across later scans is not established. If NO persists, skip live entry and record FIRST-BAR-SPIKE WATCH with the hypothetical price and scan time.
+
+- **IMCC — observe; no entry before 23:00 CET.** Float 546K. Structured search found two current-date releases: a non-binding agreement to acquire 51% of Space Defense Innovations at 07:30 ET, and pricing of a $1.31M registered direct offering at 08:37 ET (dilutive, Grade D). Day% is -29.7%, so the live entry is blocked by the dead-cat rule. AH price is above the regular close on this first qualifying AH scan; only flag DEAD-CAT-OVERRIDE WATCH if AH% continues rising across a second AH scan. 16:20ET SIP bars end at 16:05ET: 16:00 bar 649,003 shares / 5,630 trades, VWAP $3.43; 16:05 bar 506,794 / 4,731, VWAP $3.36. Real activity and price corroboration; volume eased on bar two. Broker tradable=true.
+  - SPIKE  16:02ET  +29%  $3.76  1976 trades / 259k sh  (first co-spike bar) (as-of 16:20ET)
+  - CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+- **WHLR — observe; no entry before 23:00 CET.** Float 568K. No verified fresh catalyst found for Sep 23; search surfaced the 1-for-9 reverse split effective Sep 22, which is prior-day background, not a fresh catalyst. Total% +228.3% is above the +150% entry ceiling; the ceiling-override conditions are not established (AH peak is currently before 17:00 ET and there is only one qualifying AH scan). SIP through 16:05ET shows 385,609 shares / 4,299 trades at 16:00 and 814,074 / 9,867 at 16:05; VWAPs $5.82 and $6.17. Real volume is accumulating. Broker tradable=true. This ticker was on the 21:30 CET regular-session watchlist.
+  - SPIKE  16:05ET  +18%  $6.40  2370 trades / 195k sh  (first co-spike bar) (as-of 16:20ET)
+  - CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+- **CLDI — observe; no entry before 23:00 CET.** Float 2.6M; Day% -1.8%; no same-day earnings, press release, or 8-K found in four targeted searches. Sep 17 offering and earlier pipeline updates are background, not fresh catalysts; no catalyst is a concern, not a learning-phase skip reason. SIP through 16:05ET confirms accumulating real volume: 260,427 shares / 1,287 trades at 16:00 and 1,664,630 / 9,278 at 16:05; VWAPs $1.37 and $1.31. SIP high $1.52 corroborates the scanner's $1.38; last bar is 15 minutes behind this scan, so it is not a bad-print contradiction. Broker tradable=true.
+  - SPIKE  16:03ET  +34%  $1.46  141 trades / 19k sh  (first co-spike bar) (as-of 16:20ET)
+  - CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+- **NCPL — observe; no entry before 23:00 CET; thin-volume concern.** Float 4.4M. No fresh Sep 23 earnings, press release, or 8-K found in four targeted searches. SIP through 16:05ET shows only 94,782 shares / 90 trades at 16:00 and 65,355 / 143 at 16:05, below the thousands-of-trades / hundreds-of-thousands-of-shares evidence for a real build. Do not treat the rising scanner Total% as a build if later bars remain this thin. Broker tradable=true. This ticker was on the 21:30 CET regular-session watchlist.
+  - NCPL 2026-09-23  NO-SPIKE  peak +13% @16:05ET  (no bar cleared +15% on a volume co-spike) (as-of 16:20ET)
+  - CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+- **FLNA — no entry; AH change +5.6%, below the +10% multi-scan entry threshold.**
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
