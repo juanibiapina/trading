@@ -149,6 +149,56 @@ Supplementary AH-change-only (>15%, not in volume pass): none
 
 **Freshness note:** Re-pulled quotes for WHLR, DBGI, and NCPL all remained timestamped 16:00 ET. The latest SIP bars start at 16:15 ET (through 16:20 ET), 10 minutes before this scan. Treat the quotes as stale, not as a current fillable AH book. SIP highs corroborate the WHLR and DBGI scanner levels; no bad-print rejection was applied. No paper trades were placed before the 23:00 CET entry window.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-23 16:45:16 ET; 9 hits. This scan ran before the 23:00 CET learning-phase entry window, so no orders were placed. The prior scans and current-day log were checked for repeat candidates.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $5.44 | +190.9% | +16.0% | $6.31 | +237.4% | 2.6M | 10.8M | 0.2x | 568K | Real Estate Investment Trusts |
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $2.03 | -8.6% | +53.2% | $3.11 | +40.1% | 2.2M | 467K | 4.7x | 643K | Medical Specialties |
+| GCDT | [TV](https://www.tradingview.com/chart/?symbol=GCDT) | $0.51 | +50.0% | +17.4% | $0.60 | +76.2% | 1.8M | 19.7M | 0.1x | n/a | Engineering & Construction |
+| DBGI | [TV](https://www.tradingview.com/chart/?symbol=DBGI) | $5.71 | +21.2% | +15.2% | $6.58 | +39.7% | 1.2M | 3.7M | 0.3x | 916K | Apparel/Footwear |
+| MSS | [TV](https://www.tradingview.com/chart/?symbol=MSS) | $2.10 | +34.6% | +11.0% | $2.33 | +49.4% | 931K | 9.7M | 0.1x | 524K | Food Retail |
+| VRME | [TV](https://www.tradingview.com/chart/?symbol=VRME) | $1.15 | +10.6% | +7.8% | $1.24 | +19.2% | 246K | 13.3M | 0.0x | 10.0M | Packaged Software |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.04 | +7.2% | +12.5% | $1.17 | +20.6% | 222K | 28.9M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| LXEO | [TV](https://www.tradingview.com/chart/?symbol=LXEO) | $3.52 | -13.5% | +7.6% | $3.79 | -7.0% | 128K | 1.4M | 0.1x | 69.1M | Biotechnology |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $1.45 | -12.1% | +5.5% | $1.53 | -7.3% | 74K | 3.6M | 0.0x | 915K | Other Transportation |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Candidate checks and paper-trade decisions:**
+
+- **GCTK — observe; eligible only for a later scan.** This is its first >10% AH scan; Day% is -8.6%, float 643K, and Total% is +40.1%. Alpaca reports `tradable=true`. SIP confirms real accumulating volume through the 16:30 ET bar: 915,069 shares / 8,171 trades, 1,860,263 / 18,856, then 2,383,021 / 24,556; the SIP high reached $3.75 and the last close was $3.69. TradingView's $3.11 AH price is stale relative to that SIP bar. Yahoo's price timeline shows a later sharp rise and slight retrace through 16:48, but Yahoo prices are not used for exact levels or volume. The quote re-pull remained stale at 16:00 ET (`bid $1.76 x100 / ask $2.31 x100`), so the current fillable book is unverified. Catalyst search found no earnings today and no same-day 8-K; Business Wire / FinancialContent published a Lōkahi Therapeutics release at **16:30 ET, Sep 23** describing its first external fee-for-service client for the ai² asset-identification platform. Lōkahi is a GlucoTrack subsidiary; this is a fresh, limited-scope commercial milestone, provisionally **Grade B** (no contract value disclosed). The release followed the first SIP ignition around 16:20 ET, so it does not explain the initial move. Recent daily bars show no prior large price run; Sep 22 volume was elevated at 540K, so check whether unusual activity persists before any entry. No order before 23:00 CET; require another qualifying AH scan, current SIP/book confirmation, and trajectory review.
+  - Source: [Business Wire release via FinancialContent](https://www.financialcontent.com/article/bizwire-2026-9-23-lkahi-therapeutics-advances-its-proprietary-ai-pipeline-formerly-ai-futures-lab-process-from-internal-asset-engine-to-revenue-generating-platform).
+- **GCDT — skip live entry; Grade D.** The same-day GlobeNewswire release announces a 1-for-6 share consolidation effective Oct 7, 2026. The source is dated Sep 23; its publication time was not available in the search results. This is a reverse-split/structural-negative catalyst, not a momentum-grade positive. Alpaca says `tradable=true`, but the quote is stale at 16:00 ET and unusable (`bid $0.43 x100 / ask $12.00 x12,000`). SIP confirms the move traded: 1,399,743 shares / 2,937 trades at 16:25 ET and 1,041,007 / 2,322 at 16:30 ET; price fell from a $0.62 high to a $0.53 close. The scanner's $0.60 is within the SIP range, but the current book is not fillable at a reasonable spread. Only one qualifying AH scan so far; no order.
+  - Source: [GlobeNewswire release](https://www.globenewswire.com/news-release/2026/09/23/3367479/0/en/green-circle-decarbonize-technology-limited-announces-1-for-6-share-consolidation-to-become-effective-on-october-7-2026.html).
+- **DBGI — observe; first-bar-spike risk, no order before 23:00 CET.** AH change fell from +28.0% at 22:30 to +15.2%; scanner price fell from $7.31 to $6.58. SIP's high of $7.75 was printed at 16:10 ET in the first AH bar, then bars faded to a $6.20 close at 16:30 ET. The first-bar high and current `CONFIRM-3 NO` make this a developing first-bar-spike skip; the prior 22:30 reading was still `PENDING`, so the repeated-NO condition is not yet established. If it remains NO on the next scan, skip the live entry and record a FIRST-BAR-SPIKE WATCH at that scan's price/time. Four targeted searches in the prior scan plus three targeted re-checks now found no fresh Sep 23 earnings, PR, or 8-K; no catalyst remains a concern, not a standalone skip reason. Tradable was verified true previously; the quote still re-pulls at 16:00 ET (`bid $4.58 x100 / ask $6.62 x100`), so no current fillable book is confirmed. Two AH scans have exceeded +10%, but trajectory and first-bar rules still need review at/after 23:00.
+- **MSS — observe; not first-day activity and only one qualifying AH scan.** This is the first scan above +10% AH; the prior 22:30 reading was +6.2%. Alpaca says `tradable=true`. SIP activity peaked at 16:15–16:20 ET (354,472 and 448,784 shares; 2,236 and 3,454 trades), then eased to 95,393 shares / 658 trades at 16:30 as price retreated from the $2.49 high to $2.27. Yahoo's price timeline also shows a post-peak fade; its prices are used only for shape. The quote at 16:21:31 ET (`bid $2.31 x100 / ask $2.44 x100`) is stale for this scan. A same-day Nasdaq press release says Maison Solutions eliminated all outstanding convertible notes, reducing the conversion overhang; search results identify Sep 23 but did not expose the release time. This is provisionally **Grade C** pending exact source-time verification. Daily bars show 1.927M shares on Sep 22 versus 110K–193K on Sep 17–21, so unusual activity predates today's move; no prior large price run is visible, but the first-day-unusual-activity gate fails. Skip live entry on that gate even if AH% persists.
+  - Source: [Nasdaq press release](https://www.nasdaq.com/press-release/maison-solutions-eliminates-all-outstanding-convertible-notes-removing-legacy).
+- **WHLR — skip live entry.** AH change rose from +12.9% at 22:20 to +15.5% at 22:30 and +16.0% now, but Total% is +237.4%, above the +150% extension ceiling. The ceiling-override watch does not qualify: SIP AH high $7.11 was printed at 16:20 ET, before 17:00 ET. SIP volume was real early but faded to 168,849 shares / 1,758 trades in the 16:30 ET bar; quote re-pull remains stale at 16:00 ET (`bid $4.60 x100 / ask $6.27 x100`). Four targeted searches previously found no fresh Sep 23 catalyst; the Sep 22 reverse split is background. No order.
+- **NCPL — skip for thin, fading AH activity.** AH change remains +12.5%, but SIP volume fell from 94,782 shares / 90 trades at 16:00 ET to 8,183 / 22 at 16:30 ET. This is not a volume-backed build; four targeted searches previously found no fresh Sep 23 catalyst. Quote is stale at 16:00 ET (`bid $0.92 x100 / ask $1.24 x100`). No order.
+- **VRME, LXEO, WETO — observation only.** AH change remains below the strict >10% gate; no catalyst workup, order, or spike instrumentation was triggered.
+
+**Spike-bar and third-bar instrumentation (log-only):**
+
+```text
+GCTK 2026-09-23  SPIKE  16:22ET  +20%  $2.43  683 trades / 111k sh  (first co-spike bar) (as-of 16:45ET)
+GCTK 2026-09-23  CONFIRM-3  YES ignition 16:20ET 827.4x; confirmed 16:30ET $3.69 as-of 16:45ET
+GCDT 2026-09-23  SPIKE  16:28ET  +16%  $0.59  842 trades / 502k sh  (first co-spike bar) (as-of 16:45ET)
+GCDT 2026-09-23  CONFIRM-3  PENDING ignition 16:25ET; waiting for third bar as-of 16:45ET
+DBGI 2026-09-23  SPIKE  16:06ET  +16%  $6.62  294 trades / 20k sh  (first co-spike bar) (as-of 16:45ET)
+DBGI 2026-09-23  CONFIRM-3  NO ignition 16:10ET failed third-bar hold/volume as-of 16:45ET
+MSS 2026-09-23  SPIKE  16:21ET  +19%  $2.49  1704 trades / 226k sh  (first co-spike bar) (as-of 16:45ET)
+MSS 2026-09-23  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 16:45ET
+NCPL 2026-09-23  NO-SPIKE  peak +14% @16:16ET  (no bar cleared +15% on a volume co-spike) (as-of 16:45ET)
+NCPL 2026-09-23  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET
+WHLR 2026-09-23  SPIKE  16:05ET  +18%  $6.40  2370 trades / 195k sh  (first co-spike bar) (as-of 16:45ET)
+WHLR 2026-09-23  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET
+```
+
+**Freshness note:** SIP and quote checks were repeated once. SIP remained current only through the 16:30 ET bar; quotes remained timestamped 16:00 ET for WHLR, GCTK, GCDT, DBGI, and NCPL, and 16:21 ET for MSS. Treat those quotes as stale, not as current fillable books. GCTK's scanner price is behind its last corroborated SIP bar, while Yahoo's later price timeline suggests further movement; the discrepancy is unconfirmed, not a bad-print rejection. No paper trades were submitted before the entry window.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
