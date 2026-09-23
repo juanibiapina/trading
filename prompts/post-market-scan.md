@@ -45,6 +45,7 @@ python3 scripts/scan.py --all
 
   [results table or "No candidates found."]
   ```
+- For every after-hours scan, copy the scanner's `Supplementary AH-change-only` line into the scan section verbatim, including `none`. This identifies tickers added by the change-ranked pass that were absent from the primary volume-ranked pass; it does not qualify them for entry.
 
 - If there ARE results, format them as:
   ```markdown

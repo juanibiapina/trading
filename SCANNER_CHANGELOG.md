@@ -33,7 +33,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Paper trades with ~€100 positions
 - All sectors — no sector restriction (learning phase, see Day Trading.md)
 - Session timing follows America/New_York market hours, including DST
-- **Supplementary AH-change scan:** after-hours runs also query `postmarket_change >15%`, rank that pass by AH change, and merge it with the primary volume-ranked results; SIP and book checks remain mandatory before any decision
+- **Supplementary AH-change scan:** after-hours runs also query `postmarket_change >15%`, rank that pass by AH change, and merge it with the primary volume-ranked results. `scan.py` reports names found only by this pass; evening logs preserve that line and morning evaluations classify the outcomes. SIP and book checks remain mandatory before any decision.
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: float <50M, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
@@ -76,6 +76,23 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-09-23 — Track Supplementary AH-Change Pass Outcomes
+
+**Context:** The Sep 22 morning evaluation found only 2 of 7 scheduled scans ran, with no entry-window coverage. It also could not identify which tickers came only from the new AH-change-ranked pass, so the Sep 22 threshold change remains unevaluated.
+
+**Evaluation of previous changes:**
+- 2026-09-22 supplementary AH-change pass: **Insufficient data.** Coverage failed at 2/7 scheduled scans and logs did not preserve pass provenance; there is no evidence yet about incremental candidates or false positives. Keep the 15% threshold unchanged.
+
+**Changes:**
+1. **scripts/scan.py** — Print the tickers found only by the supplementary AH-change pass, or `none`, on each after-hours scan.
+   - Why: merged results did not show which query surfaced a ticker, preventing a direct evaluation of the Sep 22 change.
+   - Hypothesis: I expect this will make source attribution complete on the next 10 covered after-hours sessions. Measurable: each AH scan logs the supplementary-only list, and the morning evaluation reports unique names and assessed outcomes without changing entry decisions.
+2. **prompts/post-market-scan.md and prompts/morning-evaluation.md** — Preserve the source list in evening logs and classify its candidates as PM continuation, faded/no follow-through, or unassessed.
+   - Why: scanner output alone is transient; the daily log needs the source and outcome to evaluate whether the pass adds useful candidates.
+   - Hypothesis: I expect this will produce an auditable outcome sample for the supplementary pass over the next 10 covered sessions. Measurable: each morning reports the number of unique supplementary-only names and the continuation/fade/unassessed split; missing source lines are marked incomplete, not zero.
+
+**Updated process:** Supplementary AH-change-only tickers are printed by `scan.py`, copied into each AH scan log, and evaluated in the next morning retrospective. The 15% threshold and all entry rules remain unchanged.
+
 ### 2026-09-22 — Broaden the Supplementary AH Change Scan for Feed/Rank Gaps
 
 **Context:** The Sep 21 morning evaluation found a real in-window omission: **GRML** was absent from all 13 evening scans even though SIP showed an accumulating +18.0% AH move at 18:30 ET and a realistic AH-entry → PM-peak continuation of about +13.6%. GRML was below the supplementary pass's old +20% change cutoff, and that pass was still ranked by volume, so it could not reliably recover moderate movers outside the primary 50-row volume result.
@@ -90,6 +107,8 @@ _(entries are prepended — newest first)_
    - Hypothesis: the next 10 after-hours sessions will surface more 15–20% AH movers that the primary pass omits, including GRML-like cases, without creating automatic entries because SIP volume, trajectory, catalyst, and book checks remain unchanged. Measure: compare supplementary-only tickers and false-positive rate in the daily logs.
 
 **Updated parameters:** `MIN_AH_CHANGE_HIGH = 15%` (supplementary change-ranked pass; primary `MIN_AH_CHANGE = 5%` unchanged). No strategy, position-sizing, or entry gate changed.
+
+**Evaluation:** **Insufficient data.** The Sep 22 session recorded only 2 of 7 scheduled scans and no supplementary-only source labels; the entry window was uncovered. The logged outcomes cannot show whether the new pass added useful candidates or excess false positives, so keep the threshold under observation.
 
 ### 2026-09-18 — Sync Multi-Session and Stale-Book Tracker Seeds After Sep 17 Fades
 

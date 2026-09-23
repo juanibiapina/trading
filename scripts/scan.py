@@ -291,7 +291,7 @@ def fmt_float(n):
     return fmt_number(n)
 
 
-def print_results(results, session, previous_tickers=None):
+def print_results(results, session, previous_tickers=None, supplementary_only=None):
     """Print results in a formatted table."""
     et = datetime.now(ET)
     session_label = {
@@ -306,6 +306,10 @@ def print_results(results, session, previous_tickers=None):
     print(f"\n{'=' * 115}")
     print(f"  {session_label} Scan: {et.strftime('%Y-%m-%d %H:%M:%S')} ET  |  {len(results)} hits")
     print(f"{'=' * 115}")
+
+    if supplementary_only is not None:
+        names = ", ".join(supplementary_only) if supplementary_only else "none"
+        print(f"  Supplementary AH-change-only (>{MIN_AH_CHANGE_HIGH}%, not in volume pass): {names}")
 
     if not results:
         print("  No matches.")
@@ -405,6 +409,7 @@ def watch(interval, session, biotech_only=False):
                 previous_tickers = set()
 
             results = scan(session, biotech_only)
+            supplementary_only = None
             if session == "regular":
                 day_mover_results = scan(session, biotech_only, day_movers=True)
                 seen = {r["ticker"] for r in results}
@@ -415,11 +420,12 @@ def watch(interval, session, biotech_only=False):
                 # Catch data gaps: high AH change even if volume=0
                 high_change_results = scan(session, biotech_only, high_change=True)
                 seen = {r["ticker"] for r in results}
+                supplementary_only = sorted({r["ticker"] for r in high_change_results} - seen)
                 for r in high_change_results:
                     if r["ticker"] not in seen:
                         results.append(r)
             current_tickers = {r["ticker"] for r in results}
-            print_results(results, session, previous_tickers)
+            print_results(results, session, previous_tickers, supplementary_only=supplementary_only)
 
             # Notify on new tickers
             for r in results:
@@ -474,6 +480,7 @@ def main():
         watch(args.watch, session, biotech_only)
     else:
         results = scan(session, biotech_only)
+        supplementary_only = None
         if session == "regular":
             day_mover_results = scan(session, biotech_only, day_movers=True)
             seen = {r["ticker"] for r in results}
@@ -484,10 +491,11 @@ def main():
             # Catch data gaps: high AH change even if volume=0
             high_change_results = scan(session, biotech_only, high_change=True)
             seen = {r["ticker"] for r in results}
+            supplementary_only = sorted({r["ticker"] for r in high_change_results} - seen)
             for r in high_change_results:
                 if r["ticker"] not in seen:
                     results.append(r)
-        print_results(results, session)
+        print_results(results, session, supplementary_only=supplementary_only)
 
 
 if __name__ == "__main__":
