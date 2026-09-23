@@ -236,6 +236,53 @@ NCPL 2026-09-23  CONFIRM-3  NO no local-volume new-high ignition as-of 17:00ET
 
 No paper orders were submitted. GCTK's qualifying scanner signal remains unconfirmed by a current book; VRME lacks a second qualifying AH scan; NCPL's SIP volume is thin and declining.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-23 17:30:18 ET; 12 hits. The entry window is open. Prior scans were checked for repeat candidates. No paper order was submitted: no candidate had both a verified current fillable quote and a qualifying, non-fading setup.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| GCTK | [TV](https://www.tradingview.com/chart/?symbol=GCTK) | $2.03 | -8.6% | +104.4% | $4.15 | +86.9% | 14.1M | 2.0M | 7.1x | 643K | Medical Specialties |
+| VRME | [TV](https://www.tradingview.com/chart/?symbol=VRME) | $1.15 | +10.6% | +11.3% | $1.28 | +23.1% | 6.5M | 14.0M | 0.5x | 10.0M | Packaged Software |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.04 | +7.2% | +55.8% | $1.62 | +67.0% | 5.2M | 29.4M | 0.2x | 4.4M | Miscellaneous Commercial Services |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $5.44 | +190.9% | +10.1% | $5.99 | +220.3% | 3.5M | 10.9M | 0.3x | 568K | Real Estate Investment Trusts |
+| CLDI | [TV](https://www.tradingview.com/chart/?symbol=CLDI) | $1.09 | -1.8% | +6.4% | $1.16 | +4.5% | 2.3M | 312K | 7.4x | 2.6M | Biotechnology |
+| MSS | [TV](https://www.tradingview.com/chart/?symbol=MSS) | $2.10 | +34.6% | +7.3% | $2.25 | +44.4% | 1.2M | 9.8M | 0.1x | 524K | Food Retail |
+| GIPR | [TV](https://www.tradingview.com/chart/?symbol=GIPR) | $0.53 | -7.3% | +9.9% | $0.58 | +1.8% | 1.1M | 41.0M | 0.0x | 2.8M | Real Estate Investment Trusts |
+| AUUD | [TV](https://www.tradingview.com/chart/?symbol=AUUD) | $1.31 | -1.5% | +7.3% | $1.41 | +5.6% | 340K | 1.9M | 0.2x | 5.2M | Packaged Software |
+| PAL | [TV](https://www.tradingview.com/chart/?symbol=PAL) | $3.86 | -2.5% | +5.2% | $4.06 | +2.5% | 101K | 1.1M | 0.1x | 24.2M | Trucking |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $1.45 | -12.1% | +8.3% | $1.57 | -4.8% | 97K | 3.6M | 0.0x | 915K | Other Transportation |
+| KIDZ | [TV](https://www.tradingview.com/chart/?symbol=KIDZ) | $2.81 | -5.4% | +9.4% | $3.08 | +3.5% | 94K | 1.1M | 0.1x | 859K | Internet Software/Services |
+| CPOP | [TV](https://www.tradingview.com/chart/?symbol=CPOP) | $5.17 | +9.8% | +15.1% | $5.95 | +26.3% | 38K | 1.1M | 0.0x | 518K | Advertising/Marketing Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): CPOP
+
+**Candidate checks and paper-trade decisions:**
+
+- **GCTK — no entry; current trajectory is SPIKE→FADE.** It has appeared above +10% in multiple AH scans and remains below the +150% extension ceiling. The verified fresh catalyst remains Lōkahi Therapeutics' first external fee-for-service client release, published by Business Wire via FinancialContent at **16:30 ET on Sep 23**; provisional Grade B. SIP confirms real accumulation through 17:15 ET, including 2.98M shares / 33,707 trades at 16:40 ET and a $5.46 high at 16:45 ET. It then pulled back: the 17:15 bar closed $3.98, and the scanner's $4.15 is about 24% below the SIP high and down from $4.92 at 23:00 CET. Quote re-pulls still return the 16:00 ET book (`bid $1.76 x100 / ask $2.31 x100`), so the live spread and fillable price are unverified. Scanner price is within the recent SIP range; no bad-print rejection. No order.
+- **VRME — skip live entry; fading after an early peak.** AH change rose to +16.4% at 23:00 CET and is now +11.3%; the scanner price fell from $1.34 to $1.28. SIP confirms a real burst, peaking at $1.57 at 16:50 ET, then declining to a $1.25 close on the 17:15 ET bar as bar volume fell. CONFIRM-3 is log-only. Repeated current-date earnings, press-release, and 8-K searches found no Sep 23 catalyst: the visible merger/vote material predates today, and the 8-K results were older. `tradable=true`; the quote remains stale at 16:59:59 ET (`bid $1.23 x200 / ask $1.44 x200`). No order.
+- **NCPL — watch for a later scan; no order now.** AH change is +55.8%, after repeated +12.5% readings, and Total% is +67.0%, below the extension ceiling. The abrupt scanner change was rechecked against SIP: real late accumulation occurred, including 502,713 shares / 1,975 trades at 17:00 ET and 3,035,903 / 16,256 at 17:05 ET, with a $1.94 high. Subsequent bars faded to $1.45 at 17:15 ET; the scanner's $1.62 is within 16.5% of that high. Earlier AH bars were thin, and the quote re-pulls remain stale at 16:00 ET (`bid $0.92 x100 / ask $1.24 x100`), so the current book and price are not verified. Earnings lookup surfaced only an estimated Sep 21 date, not a verified Sep 23 report; the PR lookup surfaced an Aug 12 release and the 8-K lookup an older June filing. No fresh catalyst found; no-catalyst status is a concern, not a skip rule. `tradable=true`. Recheck the live book and trajectory on the next scan; do not use CONFIRM-3 as an entry gate.
+- **WHLR — skip live entry on the +150% extension ceiling.** Total% is +220.3%, and the scanner's +10.1% AH change is near the threshold. SIP's $7.11 high occurred at 16:20 ET; later bars faded, including 47,676 shares / 588 trades at 17:10 ET. The quote remains stale at 16:00 ET (`bid $4.60 x100 / ask $6.27 x100`). Searches found no fresh Sep 23 company catalyst: Q2 earnings were released Aug 6 at 16:20 ET, and the reverse split was effective Sep 22; Sep 23 market-recap articles are not company catalysts. No order.
+- **CPOP — no entry; first qualifying scan with thin SIP activity.** Float is 518K and Day% is +9.8%, but it has only one qualifying AH scan. SIP corroborates the scanner's $5.95 level (high $6.00 at 17:05 ET) but shows only 7,319 shares / 256 trades in that bar and 4,916 / 83 in the 17:15 bar; no accumulating high-volume build is established. Earnings, press-release, and filing searches found no dated Sep 23 catalyst. The 15-for-1 consolidation announced about two weeks earlier is background, not fresh news. `tradable=true`; the quote was re-pulled but remained stale at 16:00 ET (`bid $4.12 x100 / ask $0.00 x0`), so it cannot establish the current book. No order.
+- **CLDI, MSS, GIPR, AUUD, PAL, WETO, KIDZ — no new entry workup.** All are below the strict >10% AH-change threshold. CPOP is the only supplementary change-ranked name and is assessed above.
+
+**Spike-bar and third-bar instrumentation (log-only):**
+
+```text
+GCTK 2026-09-23  SPIKE  16:22ET  +20%  $2.43  683 trades / 111k sh  (first co-spike bar) (as-of 17:30ET)
+GCTK 2026-09-23  CONFIRM-3  YES ignition 16:20ET 827.4x; confirmed 16:30ET $3.69 as-of 17:30ET
+VRME 2026-09-23  SPIKE  16:31ET  +19%  $1.37  475 trades / 141k sh  (first co-spike bar) (as-of 17:30ET)
+VRME 2026-09-23  CONFIRM-3  NO ignition 16:30ET failed third-bar hold/volume as-of 17:30ET
+NCPL 2026-09-23  SPIKE  17:00ET  +24%  $1.29  180 trades / 55k sh  (first co-spike bar) (as-of 17:30ET)
+NCPL 2026-09-23  CONFIRM-3  YES ignition 16:50ET 13.7x; confirmed 17:00ET $1.48 as-of 17:30ET
+WHLR 2026-09-23  SPIKE  16:05ET  +18%  $6.40  2370 trades / 195k sh  (first co-spike bar) (as-of 17:30ET)
+WHLR 2026-09-23  CONFIRM-3  NO no local-volume new-high ignition as-of 17:30ET
+CPOP 2026-09-23  SPIKE  17:11ET  +16%  $6.00  132 trades / 6k sh  (first co-spike bar) (as-of 17:30ET)
+CPOP 2026-09-23  CONFIRM-3  NO ignition 17:05ET failed third-bar hold/volume as-of 17:30ET
+```
+
+**Freshness note:** SIP bars reached 17:15 ET, the free-tier cutoff 15 minutes before this scan. Quotes were re-pulled once; GCTK, NCPL, WHLR, and CPOP still returned 16:00 ET data, and VRME returned 16:59:59 ET data. Treat those books as stale, not as current liquidity evidence. Scanner/SIP level differences are unconfirmed where the SIP window ends earlier; no bad-print rejection was applied. No orders were placed, and no positions were added to `OPEN_POSITIONS.md`.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
