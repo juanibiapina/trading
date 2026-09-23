@@ -8,7 +8,6 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
-| TOPS | $1.40 | $1.32 | $1.62 | -5.7% | +15.7% | 64 | $89.60 | None | 2026-09-21 | Fresh first-day AH BUILD/hold; real SIP accumulation; no fresh catalyst. SIP-verified peak $1.62; hard stop $1.26. Alpaca fill `7a9ceade-fcba-489d-b2b1-770027397f15`. 2026-09-22 14:30 CEST evaluation: HOLD; Alpaca current $1.32 (-5.7%), quote bid $1.32, below-profit and above hard-stop thresholds. |
 
 ## Position Rules
 
@@ -60,6 +59,7 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| TOPS | $1.40 | $0.70 | -$44.80 | -50.0% | 2 | None (no fresh catalyst) | Grade None — sell at first premarket opportunity; Alpaca mark $0.6989 (-50.1%) was far below the -10% hard stop ($1.26). SIP confirmed peak $1.62 (2026-09-21 20:55Z, 3.39M shares, VWAP $1.54); PM bars showed $0.70 close / $0.71 VWAP. Alpaca quote was stale (Sep 22 20:00Z bid $0.774), so SELL 64 @ $0.67 ext (id b732f236) filled @ $0.70 on 2026-09-23. Final P&L uses real fill: -$44.80 (-50.0%). |
 | VRME | $0.99 | $0.81 | -$17.64 | -18.2% | 1 | C (VerifyMe same-day shareholder PR) | Grade C — exit in first premarket pulse and below the -10% hard stop. Alpaca current price was $0.80 (-19.1%) at evaluation; SIP verified PM high $0.92 (-7.1% from entry). SELL 98 @ limit $0.81 ext (id 1199b169) filled @ $0.81. Real fill used for final P&L. |
 | TCRT | $2.18 | $1.97 | -$9.87 | -9.6% | 1 | None (no fresh catalyst) | Grade None — exit at first premarket opportunity; Alpaca current price was $1.94 (-11.0%) at evaluation, below the -10% hard stop. SIP verified PM high $2.04 (-6.4% from entry). Initial SELL @ $2.06 (id 744d8e67) was canceled, then SELL 47 @ limit $1.94 ext (id a83b9280) filled @ $1.97. Real fill used for final P&L. |
 | DTSS | $0.86 | $0.624 | -$21.95 | -27.4% | 1 | B (Datasea same-day strategic cooperation to develop AI elderly-care robots) | Grade B — **hard stop hit** (entry stop $0.731). SIP verified peak $1.03 (+19.8%); current Alpaca price was $0.62 (-27.3%) at evaluation. SELL 93 @ limit $0.60 ext (id e8d09793) filled @ $0.624. Real fill used for final P&L. |
