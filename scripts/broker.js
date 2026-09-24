@@ -35,11 +35,6 @@ const DATA = process.env.ALPACA_DATA_URL || "https://data.alpaca.markets";
 const KEY = process.env.ALPACA_API_KEY;
 const SECRET = process.env.ALPACA_SECRET_KEY;
 
-if (!KEY || !SECRET) {
-  console.error("ERROR: ALPACA_API_KEY / ALPACA_SECRET_KEY not set in env.");
-  process.exit(1);
-}
-
 const HEADERS = {
   "APCA-API-KEY-ID": KEY,
   "APCA-API-SECRET-KEY": SECRET,
@@ -214,12 +209,31 @@ const COMMANDS = {
 
 async function main() {
   const [cmd, ...rest] = process.argv.slice(2);
+  if (!cmd || cmd === "--help" || cmd === "-h" || cmd === "help") {
+    console.log(`Usage:
+  node scripts/broker.js account
+  node scripts/broker.js positions
+  node scripts/broker.js orders [open|closed|all]
+  node scripts/broker.js order <id|prefix>
+  node scripts/broker.js buy|sell <SYM> <qty> [--limit P] [--tif day|gtc] [--ext]
+  node scripts/broker.js cancel <id|prefix>
+  node scripts/broker.js clock
+  node scripts/broker.js quote <SYM>
+  node scripts/broker.js bars <SYM> [--tf 5Min] [--start ISO] [--limit N] [--feed sip|iex]
+  node scripts/broker.js tradable <SYM>
+
+Add --json to any command for raw JSON output.`);
+    return;
+  }
+  if (!KEY || !SECRET) {
+    console.error("ERROR: ALPACA_API_KEY / ALPACA_SECRET_KEY not set in env.");
+    process.exit(1);
+  }
   const { flags, positional } = parseFlags(rest);
   const fn = COMMANDS[cmd];
   if (!fn) {
     console.error("Commands: " + Object.keys(COMMANDS).join(", "));
-    console.error("Run with no args for usage in the file header.");
-    process.exit(cmd ? 1 : 0);
+    process.exit(1);
   }
   try { await fn(flags, positional); }
   catch (e) { console.error("ERROR:", e.message); process.exit(1); }
