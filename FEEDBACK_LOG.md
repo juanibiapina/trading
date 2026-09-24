@@ -6,6 +6,14 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-09-23 — re: Trading Scanner Report - 2026-09-22
+
+**Juan said:** “You need to leave before open.”
+
+**Interpretation:** Juan explicitly reaffirms that positions must be closed before the regular-session open. The Sep 22 report records TOPS sold at 04:31 ET, before the 09:30 ET open, and the broker currently reports no open positions.
+
+**Action:** Routed to Initiative 6 as confirmation of the existing premarket-exit boundary. No strategy or execution-rule change was needed; keep verifying positions are flat before the open.
+
 ### 2026-09-22 — re: Trading Scanner Report - 2026-09-21
 
 **Juan said:** "You entered too late. Also the ibroker thing will still be blocked for a while. Move on to other things for now, I'll get to that eventually."
