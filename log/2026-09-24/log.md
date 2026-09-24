@@ -119,6 +119,24 @@ Supplementary AH-change-only (>15%, not in volume pass): none
 
 Paper-trade decision: **no entry**. This scan ran before the 23:00 CET learning-phase entry window. OFAL and FOFO have appeared above +10% in two AH scans but are currently fading; PMAX has only one AH appearance and needs another qualifying AH scan. Reassess trajectory, quote freshness, and all entry gates in a later scan. No Alpaca orders were submitted, and no positions were added to `OPEN_POSITIONS.md`.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| OFAL | [TV](https://www.tradingview.com/chart/?symbol=OFAL) | $0.51 | -13.8% | +38.6% | $0.70 | +19.5% | 5.8M | 1.6M | 3.6x | 1.9M | Engineering & Construction |
+| FOFO | [TV](https://www.tradingview.com/chart/?symbol=FOFO) | $2.43 | +38.1% | +24.7% | $3.03 | +72.2% | 2.0M | 611K | 3.2x | 3.0M | Miscellaneous Commercial Services |
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $1.65 | +80.6% | +7.9% | $1.78 | +94.9% | 1.5M | 5.7M | 0.3x | 1.2M | Specialty Telecommunications |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.27 | +22.1% | +8.7% | $1.38 | +32.7% | 540K | 34.9M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Evaluation notes**
+- **OFAL:** Existing current-day GlobeNewswire roadmap / conditional senior-living release remains a fresh but weak Grade C catalyst; the source date is 2026-09-24 and no release time is published. Relative to 22:25, scanner price held at $0.70, AH change rose from +36.8% to +38.6%, Total% rose from +17.9% to +19.5%, and AH volume rose from 4.7M to 5.8M (VRatio 3.1x→3.6x). SIP confirms real accumulation through 16:15 ET: 9.69M shares / 28,788 trades across reported bars; the 16:15 bar printed $0.83 high/close on 3.56M shares and 11,142 trades. The latest SIP bar is 15 minutes behind this scan; scanner price $0.70 is below the SIP high, not a bad-print contradiction. Re-pull returned the same data. Quote also remained stale at 16:00 ET (`bid $0.43 x100 / ask $0.59 x100`), so current fillability is unconfirmed. `OFAL 2026-09-24  SPIKE  16:00ET  +35%  $0.69  725 trades / 211k sh  (first co-spike bar) (as-of 16:30ET)`. `OFAL 2026-09-24  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET`.
+- **FOFO:** Prior no-catalyst status was rechecked with four targeted searches covering same-day earnings, press releases, SEC 8-K filings, and current-day news; no fresh catalyst was found. Older results are background only; Grade None. Compared with 22:25, scanner price rose from $2.95 to $3.03, AH change from +21.4% to +24.7%, Total% from +67.6% to +72.2%, and AH volume from 1.3M to 2.0M (VRatio 2.5x→3.2x). SIP confirms real accumulation through 16:15 ET: 3.15M shares / 31,993 trades; a later high of $3.31 printed at 16:10 ET, then the 16:15 bar closed at $2.70 (558K shares / 5,822 trades). The latest SIP bar and quote are stale relative to this scan, so the scanner's $3.03 is unconfirmed against the current tape; do not reject it as a bad print from stale data. Re-pull returned the same data. Quote remained stale at 16:00:56 ET (`bid $2.02 x100 / ask $0.00 x0`), so there is no confirmed current fillable book. This was not a first-bar-only high because SIP recorded a later $3.31 high at 16:10 ET. `FOFO 2026-09-24  SPIKE  16:02ET  +35%  $3.27  4529 trades / 501k sh  (first co-spike bar) (as-of 16:30ET)`. `FOFO 2026-09-24  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET`.
+- **PMAX:** AH change fell from +14.5% at 22:25 to +7.9%, below the +10% threshold; no entry workup. **NCPL:** AH change eased from +9.4% to +8.7%, also below threshold; no entry workup.
+
+Paper-trade decision: **no entry**. The 22:30 CET scan is observation-only; learning-phase entries cannot start before 23:00 CET. OFAL and FOFO remain above +10% across multiple AH scans, but current quote data are stale and FOFO has no confirmed fillable ask. Reassess trajectory, SIP freshness, catalyst status, and live book at the next scan. No Alpaca orders were submitted, and `OPEN_POSITIONS.md` was not changed.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
