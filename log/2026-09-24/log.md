@@ -99,6 +99,26 @@ Supplementary AH-change-only (>15%, not in volume pass): none
 
 Paper-trade decision: **no entry**. This is an observation-only scan before the 23:00 CET entry window, and OFAL/FOFO have only one AH scan appearance so far. FOFO is additionally on FIRST-BAR-SPIKE WATCH; the watch records a hypothetical entry and is not an order. No Alpaca orders were submitted, and no positions were added to `OPEN_POSITIONS.md`.
 
+## Scan 22:25 CET (4:25 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| OFAL | [TV](https://www.tradingview.com/chart/?symbol=OFAL) | $0.51 | -13.8% | +36.8% | $0.70 | +17.9% | 4.7M | 1.5M | 3.1x | 1.9M | Engineering & Construction |
+| FOFO | [TV](https://www.tradingview.com/chart/?symbol=FOFO) | $2.43 | +38.1% | +21.4% | $2.95 | +67.6% | 1.3M | 519K | 2.5x | 3.0M | Miscellaneous Commercial Services |
+| PMAX | [TV](https://www.tradingview.com/chart/?symbol=PMAX) | $1.65 | +80.6% | +14.5% | $1.89 | +106.9% | 824K | 5.6M | 0.1x | 1.2M | Specialty Telecommunications |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.27 | +22.1% | +9.4% | $1.39 | +33.6% | 333K | 34.9M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| NWTG | [TV](https://www.tradingview.com/chart/?symbol=NWTG) | $0.96 | -15.9% | +7.0% | $1.03 | -10.0% | 90K | 104K | 0.9x | 3.4M | Recreational Products |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Evaluation notes**
+- **OFAL:** `tradable=true`; existing Sep. 24 GlobeNewswire roadmap/conditional senior-living news remains a fresh but weak Grade C catalyst (release date verified; no clock time published). AH change eased from +47.2% at 22:20 to +36.8%; scanner price fell from $0.75 to $0.70. SIP confirms real activity through 16:10 ET: 16:00 2.57M shares / 7,200 trades, 16:05 2.42M / 6,718, 16:10 1.14M / 3,728; latest SIP close $0.70 corroborates the scanner. Data are 15 minutes behind this scan. Quote is stale at 16:00 ET (`bid $0.43 x100 / ask $0.59 x100`), so current fillability is unconfirmed; do not treat it as a current book rejection. `SPIKE 16:00ET +35% $0.69 725 trades / 211k sh (first co-spike bar) (as-of 16:25ET)`. `CONFIRM-3 NO no local-volume new-high ignition as-of 16:25ET`.
+- **FOFO:** `tradable=true`. AH change eased from +26.3% to +21.4%; Total% eased from +74.4% to +67.6%. Four fresh searches for current-day earnings, press releases, SEC 8-Ks, and news found no verified same-day catalyst; the half-year results release was about two weeks old, so it is not fresh. SIP shows real volume through 16:10 ET (1.08M / 10,204 trades, 612K / 6,893, then 891K / 9,074); the latest SIP close $3.03 is near the scanner's $2.95. The quote remains stale at 16:00:56 ET (`bid $2.02 x100 / ask $0.00 x0`); a second pull returned the same timestamp, so live fillability is unconfirmed, not disproven. Correction to the 22:20 note: the first-bar high was not the session high—SIP's 16:10 bar reached $3.31, above the first-bar $3.27 high. **Retract the provisional FIRST-BAR-SPIKE WATCH**; its hypothetical $3.07 entry at 16:20 is no longer an active watch. `SPIKE 16:02ET +35% $3.27 4529 trades / 501k sh (first co-spike bar) (as-of 16:25ET)`. `CONFIRM-3 NO no local-volume new-high ignition as-of 16:25ET`.
+- **PMAX:** First after-hours appearance; `tradable=true`. Four focused searches found no verified fresh earnings, company press release, or same-day 8-K. A Sep. 24 third-party GoInvest article surfaced, but it is not a verified company catalyst; grade None pending new evidence. Recent daily price history does not show a multi-session run, and no current prior-day entry appears in `WINNERS_TRACKING.md`. SIP confirms real accumulation despite TradingView's 0.1x VRatio: 16:00 80K shares / 387 trades, 16:05 872K / 5,499, 16:10 829K / 5,007. SIP high $1.96 and scanner price $1.89 are consistent; the bars are 15 minutes behind. The 16:25:45 ET quote has a fillable two-sided book (`bid $1.81 x100 / ask $1.84 x100`). `SPIKE 16:08ET +15% $1.90 1909 trades / 319k sh (first co-spike bar) (as-of 16:25ET)`. `CONFIRM-3 PENDING ignition 16:05ET; waiting for third bar as-of 16:25ET`.
+- **NCPL:** AH change rose from +6.5% to +9.4%, still below the +10% candidate threshold. **NWTG:** AH change is +7.0%, also below threshold; no further workup. Neither received a catalyst search or entry evaluation.
+
+Paper-trade decision: **no entry**. This scan ran before the 23:00 CET learning-phase entry window. OFAL and FOFO have appeared above +10% in two AH scans but are currently fading; PMAX has only one AH appearance and needs another qualifying AH scan. Reassess trajectory, quote freshness, and all entry gates in a later scan. No Alpaca orders were submitted, and no positions were added to `OPEN_POSITIONS.md`.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
