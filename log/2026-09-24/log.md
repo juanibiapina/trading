@@ -80,6 +80,25 @@ Supplementary AH-change-only (>15%, not in volume pass): none
 
 Paper-trade decision: **no entry**. The scanner returned 0 hits, so there are no candidates to evaluate or trade. No Alpaca orders were submitted.
 
+## Scan 22:20 CET (4:20 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| OFAL | [TV](https://www.tradingview.com/chart/?symbol=OFAL) | $0.51 | -13.8% | +47.2% | $0.75 | +26.9% | 2.4M | 1.2M | 2.0x | 1.9M | Engineering & Construction |
+| FOFO | [TV](https://www.tradingview.com/chart/?symbol=FOFO) | $2.43 | +38.1% | +26.3% | $3.07 | +74.4% | 818K | 449K | 1.8x | 3.0M | Miscellaneous Commercial Services |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.27 | +22.1% | +6.5% | $1.35 | +30.1% | 215K | 34.9M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $1.25 | +3.3% | +8.8% | $1.36 | +12.4% | 179K | 172K | 1.0x | 2.5M | Miscellaneous Commercial Services |
+| TAOP | [TV](https://www.tradingview.com/chart/?symbol=TAOP) | $0.59 | -7.4% | +8.1% | $0.64 | +0.1% | 113K | 496K | 0.2x | 2.3M | Packaged Software |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Evaluation notes**
+- **OFAL:** `tradable=true`. Current-day GlobeNewswire release, dated Sep. 24, 2026; the source page does not state a clock time. It describes a long-term Choshi development roadmap, early discussions for music programming, and a provisional senior-living agreement subject to city approval; grade C (weak/early-stage corporate news). Four-hour-window earnings/filing search found no same-day earnings or 8-K. SIP shows real activity through 16:05 ET: 2.57M shares / 7,200 trades at 16:00, then 2.42M / 6,718 at 16:05; scanner's $0.75 is corroborated by SIP's $0.76 first-bar high. Latest SIP bar and quote are stale relative to this scan (bars through 16:05 ET; quote timestamp 16:00 ET), so current AH liquidity and price are unconfirmed; do not call a bad print from this stale snapshot. `SPIKE 16:00ET +35% $0.69 725 trades / 211k sh (first co-spike bar) (as-of 16:20ET)`. `CONFIRM-3 NO no local-volume new-high ignition as-of 16:20ET`.
+- **FOFO:** `tradable=true`. No catalyst found after four focused searches covering same-day earnings, press releases, SEC 8-K filings, and current-day news; no-catalyst is a concern, not a standalone skip. SIP confirms substantial real volume through 16:05 ET: 1.08M shares / 10,204 trades at 16:00, then 612K / 6,893 at 16:05; the initial $3.27 SIP high corroborates a real AH spike. Quote is stale (16:00:56 ET) and showed `ask $0.00 x0`, so current fillable liquidity is unconfirmed; recheck before any later entry decision. The high so far was in the first AH bar and confirmation is `NO`; **FIRST-BAR-SPIKE WATCH**, hypothetical entry at scanner AH price $3.07 at 16:20 ET. `SPIKE 16:02ET +35% $3.27 4529 trades / 501k sh (first co-spike bar) (as-of 16:20ET)`. `CONFIRM-3 NO no local-volume new-high ignition as-of 16:20ET`.
+- **NCPL, ISPC, TAOP:** AH changes are below +10%; not currently entry-qualified.
+
+Paper-trade decision: **no entry**. This is an observation-only scan before the 23:00 CET entry window, and OFAL/FOFO have only one AH scan appearance so far. FOFO is additionally on FIRST-BAR-SPIKE WATCH; the watch records a hypothetical entry and is not an order. No Alpaca orders were submitted, and no positions were added to `OPEN_POSITIONS.md`.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
