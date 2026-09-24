@@ -48,6 +48,14 @@ Scanner status: `REGULAR`, 39 hits. After-hours trading has not opened. These ar
 
 Paper-trade decision: **no entry**. This scan ran before the 4:00 PM ET after-hours open; all names require a subsequent AH appearance and confirmation. No orders were submitted. The supplementary AH-change-only line is not applicable to this REGULAR-session scan.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+Paper-trade decision: **no entry**. The scanner returned 0 hits at the after-hours open, so no candidates qualified for further evaluation. No Alpaca orders were submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
