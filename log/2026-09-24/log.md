@@ -56,6 +56,14 @@ Supplementary AH-change-only (>15%, not in volume pass): none
 
 Paper-trade decision: **no entry**. The scanner returned 0 hits at the after-hours open, so no candidates qualified for further evaluation. No Alpaca orders were submitted.
 
+## Scan 22:05 CET (4:05 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+Paper-trade decision: **no entry**. The scanner returned 0 hits. This is an observation-only scan before the 23:00 CET entry window; no Alpaca orders were submitted.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
