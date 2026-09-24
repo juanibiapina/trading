@@ -3,6 +3,18 @@
 Daily progress on the strategy roadmap (`STRATEGY_ROADMAP.md`), one initiative
 at a time. Written by the `strategy-advance` pulse. Newest first.
 
+### 2026-09-24 15:00 — Initiative 6 pilot recheck; Initiative 3 replay; Initiative 5 report deployed
+
+**Evaluated:** Initiative 6's Sep 23 run had no fresh PM-only holdable, and today's scan likewise produced none, so the pilot has no new outcome to judge. Initiative 3's prior full-window simulator correction worked technically, but the +5% and +10% exit thresholds remain indistinguishable at n=44 (both +3.0% mean; 2.6 points total difference). Initiative 5's prior Pages deployment succeeded; today's cycle tests the report on a new chart-bearing date.
+
+**Step taken:** Re-ran `node scripts/init6-pm-pilot.js`; replayed seven Sep 23 AH candidates with `node scripts/ah-5m-confirmation-replay.js` against Sep 24 premarket bars; generated `reports/2026-09-23/index.html`; compiled the report builder and checked its local chart links; committed and pushed as `fc058f5`. Pages run **36003309053** succeeded, and the report, report index, and all three chart assets returned HTTP 200. No live orders, trading rules, or scan/evaluation times changed.
+
+**Result:** Initiative 6 remains **n=23, SUM +97.5%, mean +4.2%/name, median +10.0%, positive 18/23, fade-tail 4/23 (17%)**; estimated +2.2%/name after ~2% spread remains hypothetical versus the live baseline of 0%. Sep 24's GCTK and WETO PM-open rows were AH-detected; SPHL was uninvestable, so no new pilot case qualified. Paper equity is **$99,721.90 (-$278.10)** and the account is flat. Initiative 3's partial replay admitted **2/7** on the 2-bar test (GCTK, WETO) and **3/7** on the 3-bar test (adds NCPL). Their average entry-price advantage over the current grid was **+13.2%** and **+1.9%**, respectively; NCPL's third-bar entry was -20.8% to PM open and only +4.0% to the observed PM high. The replay used bars available at 09:02 ET, before the 09:30 ET premarket cap, so this evidence is provisional and does not support a gate or cadence change. The new Sep 23 Pages report contains three charts and is live.
+
+**Hypothesis / next step:** At the 18:00 CEST checkpoint, rerun the Sep 23 replay after the full premarket window and determine whether the 2-bar entry advantage repeats without the GCTK outlier or admits additional fades. Keep Initiative 6 log-only and rerun on the next verified holdable PM-only gapper. Continue publishing each chart-bearing daily report and check its public assets after deployment.
+
+**Needs from Juan:** No new asks. Existing email-routed asks remain: veto the proposed retirement of the 22:05/22:10/22:20/22:25 CET observation scans; provide IBKR/Webull access for the broker fill test; review the proposed Initiative 3 +10% premarket exit.
+
 ### 2026-09-23 18:00 — Initiative 6 recheck; Initiative 3 full-window simulator correction
 
 **Evaluated:** The prior Sep 23 step remains **insufficient for a cadence decision**: the second/third-bar replay admitted 2/6 names and both variants had negative mean entry-price edge versus the current grid. The Init 6 pilot had no new holdable PM-only candidate. Initiative 5's Pages delivery **worked**: workflow 35866528073 succeeded and the report/chart URLs returned HTTP 200. While seeding TOPS, I found `peak-seeking-exit-sim.js` had requested only the broker CLI's default 20 five-minute bars (100 minutes), truncating the claimed full premarket window.

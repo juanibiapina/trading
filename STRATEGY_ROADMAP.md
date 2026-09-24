@@ -1364,6 +1364,12 @@ requiring action (keys, decisions) will be listed in the email and here.
 
 ## Initiative 6 — Catch the rare extreme runners (+300-600%)
 
+**Progress update (2026-09-24, 15:00 CEST):** Re-ran `scripts/init6-pm-pilot.js` over 50 tracked candidates. Sep 24's GCTK and WETO rows were AH-detected, while SPHL was uninvestable; no new PM-only holdable entered. The log-only pilot remains **n=23, SUM +97.5%, mean +4.2%/name, median +10.0%, positive 18/23, fade-tail 4/23 (17%)**, or estimated **+2.2%/name after ~2% spread**, against the live-cycle baseline of 0%. This is hypothetical, not a live edge; keep the pilot active and do not promote it. Paper equity remains **$99,721.90 (-$278.10)** with no open positions. No new evidence identifies a faster competing core strategy.
+
+**Parallel Initiative 3 research (2026-09-24):** Replayed seven Sep 23 AH candidates against Sep 24 PM bars available through 09:02 ET. The **2-bar test admitted 2/7**: GCTK showed +20.6% to PM first-bar open / +62.4% observed PM high from the hypothetical $3.11 entry versus the $4.32 current-grid entry; WETO showed +24.9% / +39.9% from $1.93 versus grid $1.90. The **3-bar test admitted 3/7**, adding NCPL, which returned -20.8% to PM open and only +4.0% to the observed PM high. Mean entry-price advantage was +13.2% for 2-bar and +1.9% for 3-bar; this is a small, outlier-sensitive sample and the 09:02 ET PM window was incomplete. Re-run after 09:30 ET before judging; no cadence, gate, or live-entry change is justified. The prior full-window +5%/+10% exit comparison remains inconclusive at n=44 (both +3.0% mean; 2.6-point total difference).
+
+**Parallel Initiative 5 delivery (2026-09-24):** Generated `reports/2026-09-23/index.html` with three charts, passed local link checks, and published it through Pages run **36003309053**. The report, report index, and all three chart assets returned HTTP 200. No live order, trading rule, or scan/evaluation time changed. The four-pulse retirement proposal remains pending Juan's veto; the Init 2 broker test and Init 3 exit proposal remain open asks.
+
 **Idea (Juan, 2026-06-23):** For weeks the daily winner has been a +20-100%
 AH->PM mover. Juan wants the system to also catch the rare +600% explosions
 ("600% and others like that"), not just the moderate movers.
