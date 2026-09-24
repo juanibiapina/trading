@@ -375,3 +375,122 @@ No candidate cleared all entry rules with a fresh, fillable AH book. No paper or
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | — | — | — | — | — | No AH-confirmed entries; no orders placed. |
+
+## Morning Evaluation — 10:20 CET (CEST), evaluating Sep 23 AH session
+
+### Today's Winner
+
+**No actionable winner today.** The raw PM leader was SPHL, but its AH tape and book were not capturable. GCTK was the strongest volume-backed >100% PM candidate and was detected by the evening scanner, but its AH peak faded and its book was stale.
+
+**Raw PM leader: SPHL — Homebuilding.**
+- Catalyst: None verified; two targeted searches found no Sep 23 company release. Grade None.
+- Previous close: **$2.31**, SIP daily close for Sep 23. Yahoo's $2.22 anchor was stale.
+- AH: SIP high **$2.55 (+10.4%) at 16:33 ET**, but the 16:30 ET bar had only 4,790 shares / 40 trades. Later AH prints were sparse.
+- Premarket now: scanner $3.50 (+51.6%) at 04:20 ET. SIP PM high was **$6.27 (+171.4%) at 04:00 ET**. The high printed in the first PM minute on 22,216 shares / 397 trades; the full first five-minute bar had 521,226 shares / 8,961 trades. It fell to a $3.60 five-minute high by 04:05 ET.
+- AH entry / hypothetical P&L: no reliable, fillable AH entry. The last quote was stale (`ask $0.00 x0` at 16:00 ET), and AH volume did not accumulate. The $6.27 PM print was not sustained.
+- Float: 1.2M | Market cap: $28.3M per the screener.
+- Verdict: **not a real actionable winner**. It was a thin AH signal followed by a fast PM spike and reversal; no entry was possible on a verified AH book.
+
+**Strongest volume-backed contender: GCTK — Medical Specialties.**
+- Catalyst: Lōkahi Therapeutics' first external fee-for-service client; Grade B, disclosed the prior afternoon.
+- Previous close: **$2.03**, SIP daily close for Sep 23.
+- AH: SIP peak **$5.46 (+169.0%) at 16:45 ET**, on 2.51M shares / 28,198 trades; the 16:40 ET bar traded 2.98M / 33,707.
+- Premarket: whole-market scan $4.18 (+105.9%) at 04:20 ET; SIP peak **$4.77 (+135.0%) at 04:00 ET**, backed by 1.38M shares / 19,818 trades in the first five-minute bar.
+- Entry check: GCTK first appeared on the scanner at 22:45 CET. The scan reported $3.11, while SIP's 16:45 ET close was $4.72 and its high was $5.46; the scanner price was stale. At the 23:00 CET eligible scan, SIP closed $3.97 while the scanner reported $4.92. The Alpaca quote remained stale from 16:00 ET (`bid $1.76 x100 / ask $2.31 x100`). At the final scan, SIP closed $3.79; the next PM peak $4.77 is +25.9% from that level, but the AH book was never verified and the tape had faded well below its AH peak.
+- Float: 643K. The PM peak stayed below the AH peak, so GCTK does not meet the actionable-winner test despite clearing +100% from the SIP close.
+
+**Scanner Diagnostic:**
+- Raw leader detectable at ~22:15 CET? **NO.** The 22:15 scan had no hits; SPHL's first >10% AH SIP print came later and had only 4.8K shares / 40 trades.
+- Volume-backed contender detectable? **YES, later.** GCTK's 16:20 ET ignition followed the 22:15 scan by five minutes. It first appeared on the 22:45 scan, then was repeatedly detected. At 22:45 the screener showed +53.2% AH and 4.7x VRatio; SIP already showed a $5.46 high and heavy volume. It was not entered because the scanner/book data were stale and the move faded; by the final scan the SIP close was $3.79, 30.6% below the AH peak.
+- Scanner gap: no threshold change is supported. The current gaps were delayed/misaligned TradingView levels and stale AH quotes, not failure to discover GCTK. SPHL did not meet the real-volume/fillability bar.
+
+**Winner selected for paper trade?** **No.** No actionable >100% AH-to-PM opportunity had a verified fillable AH book. No orders were placed.
+
+### Baseline Tracking
+
+- Days tracked: **88** (87 + 1 for the Sep 23 session).
+- Winners detected by scanner: **72/81 (88.9%)** — unchanged; no actionable winner qualified for this sample.
+- Winner selected for paper trade: **36/79 (45.6%)** — unchanged; no actionable selection opportunity.
+- Baseline gaps: **Sep 11 and Sep 18** remain un-evaluated and were not back-filled.
+- Target: >80% detection. Status: **BASELINE MET**.
+
+### Retrospective Scan Results
+
+The whole-market premarket sweep found six tickers. SIP daily bars supplied each previous-close basis; SIP five-minute bars supplied exact AH/PM peaks. Yahoo timeline peaks are shape-only and are not used as exact levels.
+
+| Ticker | SIP Close | PM scan price / change | AH SIP peak / change | PM SIP peak / change | Evening result |
+|--------|-----------|------------------------|---------------------|---------------------|-----------------|
+| GCTK | $2.03 | $4.18 / +105.9% | $5.46 / +169.0% | $4.77 / +135.0% | Detected repeatedly; stale scanner/book levels, AH fade |
+| SPHL | $2.31 | $3.50 / +51.6% | $2.55 / +10.4% | $6.27 / +171.4% | Not surfaced; AH volume too thin to qualify |
+| WETO | $1.45 | $2.22 / +53.1% | $2.39 / +64.8% | $2.70 / +86.2% | Detected at 00:00 and 00:30 CET |
+| VRME | $1.15 | $1.38 / +20.0% | $1.57 / +36.5% | $1.51 / +31.3% | Detected at 23:00 and 23:30 CET |
+| SDEV | $1.12 | $1.26 / +12.5% | $1.13 / +0.9% | $1.39 / +24.1% | Not surfaced |
+| NCPL | $1.04 | $1.16 / +11.5% | $1.94 / +86.5% | $1.29 / +24.0% | Detected repeatedly; late AH spike faded |
+
+SIP daily basis corrections: Yahoo/price-timeline supplied stale closes for GCTK ($2.22 vs SIP $2.03), SPHL ($2.22 vs $2.31), and SDEV ($1.27 vs $1.12). For WHLR, Yahoo's $1.87 anchor is the Sep 22 close; the true Sep 23 SIP close was **$5.44**. Its Sep 24 PM SIP high $4.86 is **−10.7%** from the true close, not the false +156.6% reported from Yahoo's stale basis.
+
+### Open Position P&L (Alpaca)
+
+**No open positions.** The Sep 23 evening log records no fills or orders. No executed positions were added by this evaluation.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled checkpoints** — 21:30, 22:05 (the 22:00 checkpoint), 22:30, 23:00, 23:30, 00:00, and 00:30 CET. Extra observations ran at 22:10, 22:15, 22:20, 22:25, and 22:45. No coverage failure.
+- Candidates found: **44 unique tickers** across the logged scan tables.
+- Retrospective matches: **4/6** premarket names appeared in evening scans (GCTK, WETO, VRME, NCPL).
+- Supplementary AH-change-only pass: all logged source lines are present; **1 unique supplementary-only ticker, CPOP**. Morning PM outcome was not checked; classify as **unassessed**, not a false positive.
+
+### Missed Opportunities
+
+| Ticker | AH signal | Why missed | Would be profitable? |
+|--------|-----------|------------|----------------------|
+| SPHL | SIP AH high $2.55 (+10.4%), only 4,790 shares / 40 trades in the 16:30 ET bar | AH tape was sparse and the quote had no offer (`ask $0.00 x0`); the +171.4% PM high was a brief first-minute spike and reversed by 04:05 ET | Not realistically capturable; excluded from baseline misses |
+| SDEV | No volume-backed AH move; SIP AH high $1.13 vs $1.12 close | Below the AH momentum threshold | No; SIP PM peak was +24.1% from close, below the +100% target |
+
+### AH Mover Follow-Through
+
+| Ticker | AH peak | Peak time | AH trajectory | PM peak | From AH peak | From close | Verdict |
+|--------|----------|-----------|---------------|---------|--------------|------------|---------|
+| GCTK | $5.46 (+169.0%) | 16:45 ET | Early surge, then fade | $4.77 | −12.6% | +135.0% | AH was the better exit; PM peak was volume-backed but below AH high |
+| NCPL | $1.94 (+86.5%) | 17:05 ET | Late surge, then fade | $1.29 | −33.5% | +24.0% | AH was the better exit |
+| WHLR | $7.11 (+30.7%) | 16:20 ET | Early spike, then fade | $4.86 | −31.6% | −10.7% | Faded from both AH peak and Sep 23 close |
+| DBGI | $7.75 (+35.7%) | 16:10 ET | First-bar spike, then fade | $5.90 | −23.9% | +3.3% | PM remained below AH peak |
+| VRME | $1.57 (+36.5%) | 16:50 ET | Early build, then fade | $1.51 | −3.8% | +31.3% | PM remained below AH peak |
+| WETO | $2.39 (+64.8%) | 18:00 ET | Late surge/build | $2.70 | +13.0% | +86.2% | PM exceeded AH peak; still below the +100% winner bar |
+
+The PM chart's SPHL high ($5.97) understated SIP's $6.27 high. The GCTK, WETO, VRME, NCPL, and DBGI PM peaks above are SIP-verified. SIP PM bars end around 04:10 ET because the free feed blocks the most recent ~15 minutes; the 04:20 TradingView scan is used only for current scan prices.
+
+### Notes
+
+- **Coverage:** 7/7 scheduled checkpoints ran. Coverage-failure tally unchanged; the Sep 22 2/7 failure remains the latest recent failure. No scheduler escalation.
+- **In-window feed-lag:** No new case. All volume-backed AH ignitions found in this session were surfaced; SPHL's 4.8K-share AH print does not meet the accumulating-volume definition. Standing count: **6** (BTCT, KUST, WLDS, RAIN, MYSZ, GRML). The whole-universe independent final-scan cross-check remains a daily-email decision.
+- **Late-AH-tail:** No new case. No defining surge after the 18:30 ET final scan.
+- **PM-only:** Today's raw PM leader SPHL had an AH footprint over +10% but only 4.8K shares / 40 trades; classify as a thin AH→PM continuation, not a PM-only gapper. The authoritative `log/pm-open-scan.csv` holdable count is **57**; the Initiative-6 early-PM pilot remains a daily-email decision.
+- **Price floor:** No new sub-$0.50 case. Standing count: **5 across 2 nights, 0 holdable**. No floor change; the proposed observation pass remains a daily-email question.
+- **Fade-rule false-negative tracking:** **+GCTK** was correctly skipped, not a re-explosion. Float 643K, Grade B; AH peak $5.46 → SIP PM peak $4.77 (PM stayed below AH peak). Optimistic first-sighting proxy: SIP $4.72 → $4.77 = **+1.1%**. Realistic PM-open re-check: $3.75 → $4.77 = **+27.2% peak**, but it occurred in the first PM bar, which closed $4.19 (+11.7% from open). Standing sub-3M sample: **4/17 re-exploded**; the ≥80% trigger remains unmet. Same-night faders correctly skipped: NCPL, float 4.4M, AH $1.94 → PM $1.29; VRME, float 10.0M, AH $1.57 → PM $1.51. GCTK's Grade B catalyst did not overcome its AH fade.
+- **Extreme AH runners:** **+GCTK** (AH +169.0%, PM +135.0%; PM peak below AH peak). Standing tally: **13 fades / 2 continues = 86.7% fade**. The ≥9-case / ≥85% routing trigger remains reached; partial-profit-on-extreme-runners remains a daily-email decision.
+- **Ceiling/dead-cat overrides:** No qualifying override watch was logged.
+- **Broker blocks:** No `tradable=false` candidate cleared all entry gates. Standing SHPH broker-block tally remains **2**.
+- **Stale-book execution blocks:** No new tally case. GCTK's quote stayed stale, but the candidate also failed the fade/trajectory decision; the block was not solely stale-book execution. Standing count: **4** (NUWE, KUST, CLRO profitable; XRTX negative control).
+- **No-fillable-book skips:** No new candidate cleared all momentum gates with a confirmed `ask $0.00 x0` book. SPHL did not have a volume-backed AH setup; GCTK's quote was stale, not a current no-offer quote. Standing count: **4** (DAIC, OFAL, BIVI faded/flat; QNME ran modestly).
+- **Float-gate skips:** No new case. Standing count: **1**, CAPR ran.
+- **Final-scan gate blocks:** No new case. Standing count: **2** (TRUG and UPC, both ran).
+- **Reverse-split outcomes:** WHLR's Sep 23→24 follow-through faded from the final scan's $5.88 to SIP PM peak $4.86 (−17.3%); this is the same Sep 21 1-for-9 split/squeeze already represented in the tally and is not counted as an independent case. GCDT's newly announced 1-for-6 consolidation is effective Oct 7, not yet effective: its first qualifying AH scan price $0.60 → SIP PM peak $0.66 = **+10.0%**. Record GCDT separately as a future-announced consolidation observation (Grade D, float unavailable); it failed the two-scan/fillability gates and does not change the effective-split buckets. Effective-split standing counts remain **4/5 same-week faded (one continued); 4/6 weeks-old continued and 2/6 faded**.
+- **Multi-session runners:** No Alpaca entries. Standing count remains **1 multi-session runner (1 faded) / 27 first-day igniters (9 ran, 8 flat, 10 faded)**.
+- **First-bar-spike validation:** **+DBGI** WATCH (hypothetical entry $6.58; SIP PM peak $5.90) = **−10.3%, faded; skip validated**. Standing: **3 pre-gate entries (0 ran) + 5 post-gate WATCH (2 ran, 3 faded)**; **6/8 fade-or-flat**. No gate change.
+- **Float-gate, final-scan, first-bar, and fillability results are selection diagnostics; none is counted against scanner detection.** No strategy or scanner parameter changed.
+- **Active watch:** No new actionable winner was added to `WINNERS_TRACKING.md`. WHLR and TOPS were refreshed from SIP prices; neither is an open position.
+- **Daily-email routing:** Sent the standing user decisions for AH-source verification (6 feed-lag misses), Initiative-6 PM pilot (57 holdable cases), extreme-runner partial-profit rule (13/15), stale-quote execution feed (4 cases), final-scan exception (2/2 ran), reverse-split recency conviction, and the price-floor observation question. No scanner or trading rule is changed by this evaluation.
+
+### Price Charts
+
+`python3 scripts/price-timeline.py GCTK SPHL WETO NCPL VRME DBGI` was run. Yahoo chart points below show session shape only; SIP values set the exact levels and previous-close basis.
+
+```text
+GCTK  $2.03 ── AH ↑ $5.46 ── fade to $3.66 ── PM ↑ $4.77 ── current scan $4.18
+SPHL  $2.31 ── AH ↑ $2.55 (thin) ── PM spike $6.27 ── fell below $3.60 by 04:05 ET
+WETO  $1.45 ── AH build ↑ $2.39 ── PM ↑ $2.70 (held above AH peak)
+NCPL  $1.04 ── AH spike ↑ $1.94 ── fade ── PM peak $1.29
+VRME  $1.15 ── AH peak $1.57 ── fade ── PM peak $1.51
+DBGI  $5.71 ── first-bar AH peak $7.75 ── fade ── PM peak $5.90
+```
