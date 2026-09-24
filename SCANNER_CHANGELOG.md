@@ -33,7 +33,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Paper trades with ~€100 positions
 - All sectors — no sector restriction (learning phase, see Day Trading.md)
 - Session timing follows America/New_York market hours, including DST
-- **Supplementary AH-change scan:** after-hours runs also query `postmarket_change >15%`, rank that pass by AH change, and merge it with the primary volume-ranked results. `scan.py` reports names found only by this pass; evening logs preserve that line and morning evaluations classify the outcomes. SIP and book checks remain mandatory before any decision.
+- **Supplementary AH-change scan:** after-hours runs also query `postmarket_change >15%`, rank that pass by AH change, and merge it with the primary volume-ranked results. `scan.py` reports names found only by this pass; evening logs preserve that line, and morning evaluations compare each unique name's SIP PM high with its latest logged AH price (or state why the outcome is unassessed). SIP and book checks remain mandatory before any decision.
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: float <50M, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
@@ -76,6 +76,21 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-09-24 — Verify PM Follow-Through for Supplementary-Only Names
+
+**Context:** The Sep 23 session had full 7/7 scan coverage and preserved every supplementary-source line. The morning evaluation identified one unique supplementary-only ticker, CPOP, but left its PM outcome unassessed because it was not in the morning scan or main retrospective table. Source attribution worked; the pass's follow-through remains unknown.
+
+**Evaluation of previous changes:**
+- 2026-09-23 supplementary-pass outcome tracking: **Partially held.** The log preserved source lines and counted CPOP as the sole supplementary-only ticker, correctly marking it unassessed rather than a false positive. Its PM bars were not checked, so the outcome measurement was incomplete.
+- 2026-09-22 supplementary AH-change pass: **Insufficient data.** CPOP is one candidate from one covered session, and its PM outcome is unknown. There is not enough evidence to assess whether lowering the cutoff and ranking by AH change recovers useful movers or adds false positives. Keep the 15% cutoff unchanged.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — Require a SIP 5-minute PM-bar check for every unique supplementary-only ticker, compare the PM high with its latest logged AH scan price, and record the return or a specific data limitation.
+   - Why: CPOP was correctly attributed to the supplementary pass but remained unassessed because it was absent from the main retrospective workup.
+   - Hypothesis: I expect this will produce an explicit outcome attempt for every supplementary-only ticker over the next 10 covered sessions. Measurable: 100% receive a SIP PM return or a specific reason SIP evidence is unavailable; no entry decisions change.
+
+**Updated process:** Every morning evaluation checks SIP PM bars for each unique supplementary-only ticker, compares the PM high with its latest logged AH scan price, and records the return or a specific data limitation. The 15% cutoff and all entry rules remain unchanged.
+
 ### 2026-09-23 — Track Supplementary AH-Change Pass Outcomes
 
 **Context:** The Sep 22 morning evaluation found only 2 of 7 scheduled scans ran, with no entry-window coverage. It also could not identify which tickers came only from the new AH-change-ranked pass, so the Sep 22 threshold change remains unevaluated.
@@ -92,6 +107,8 @@ _(entries are prepended — newest first)_
    - Hypothesis: I expect this will produce an auditable outcome sample for the supplementary pass over the next 10 covered sessions. Measurable: each morning reports the number of unique supplementary-only names and the continuation/fade/unassessed split; missing source lines are marked incomplete, not zero.
 
 **Updated process:** Supplementary AH-change-only tickers are printed by `scan.py`, copied into each AH scan log, and evaluated in the next morning retrospective. The 15% threshold and all entry rules remain unchanged.
+
+**Evaluation (2026-09-24):** **Partially held.** Sep 23's complete source lines and CPOP count verify attribution; its PM outcome remained unassessed, so the follow-through portion is incomplete. The new morning-evaluation requirement addresses this gap.
 
 ### 2026-09-22 — Broaden the Supplementary AH Change Scan for Feed/Rank Gaps
 
