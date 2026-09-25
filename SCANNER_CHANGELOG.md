@@ -33,7 +33,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Paper trades with ~€100 positions
 - All sectors — no sector restriction (learning phase, see Day Trading.md)
 - Session timing follows America/New_York market hours, including DST
-- **Supplementary AH-change scan:** after-hours runs also query `postmarket_change >15%`, rank that pass by AH change, and merge it with the primary volume-ranked results. `scan.py` reports names found only by this pass; evening logs preserve that line, and morning evaluations compare each unique name's SIP PM high with its latest logged AH price (or state why the outcome is unassessed). SIP and book checks remain mandatory before any decision.
+- **Supplementary AH-change scan:** after-hours runs also query `postmarket_change >15%`, rank that pass by AH change, and merge it with the primary volume-ranked results. `scan.py` reports names found only by this pass; evening logs preserve that line, and morning evaluations compare each unique name's SIP PM high with its latest logged AH price (or state why the outcome is unassessed). They also record peak-bar shares/trades and the next PM close, marking unheld peaks as transient separately from the raw outcome. SIP and book checks remain mandatory before any decision.
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: float <50M, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
@@ -76,6 +76,22 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-09-25 — Separate Thin PM Peaks from Supplementary Pass Follow-Through
+
+**Context:** The Sep 24 session ran 7/7 scheduled scans. ACTU was the only supplementary-only name: its last AH scan price $0.73 exceeded its SIP PM high $0.66 (−9.6%, 1,362 shares / 9 trades). Backchecking Sep 23's previously unassessed CPOP found a $5.97 PM high vs its $5.95 last AH scan (+0.3%) on 2,489 shares / 74 trades; the peak bar closed $5.90 and the next available PM bar closed $5.52. A raw positive peak can be too thin and brief to count as useful follow-through.
+
+**Evaluation of previous changes:**
+- 2026-09-24 SIP PM check: **Held for the first covered session (1/1).** ACTU received an explicit SIP-based return, with no unassessed supplementary-only names. Ten covered sessions are still needed to evaluate completeness over time.
+- 2026-09-23 source attribution: **Held in the Sep 24 session.** Every AH scan preserved the source line and ACTU was counted once across two appearances. Sep 23's CPOP was attributable but initially unassessed; the historical SIP backcheck now shows only a thin, transient +0.3% peak.
+- 2026-09-22 change-ranked >15% pass: **Insufficient data for a threshold decision.** Two covered sessions yielded CPOP (transient +0.3%) and ACTU (−9.6%), neither a sustained continuation. Keep the cutoff and all entry checks unchanged while collecting more outcomes.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — For each supplementary-only name, report SIP peak-bar shares/trades and the next available PM close; annotate a positive raw peak that is not held at that next close as transient, without changing the raw continuation/fade count.
+   - Why: CPOP's +0.3% PM high on 2,489 shares fell below its $5.95 AH reference by the end of the first PM bar and remained below it at the next bar.
+   - Hypothesis: I expect 100% of supplementary-only outcome checks over the next 10 covered sessions to report peak liquidity and next-bar persistence (or explicitly mark unavailable evidence), preventing isolated highs from being described as sustained opportunities. The raw peak split and entry rules remain unchanged.
+
+**Updated process:** Supplementary-pass outcomes retain the raw SIP PM-peak comparison and separately identify transient peaks using the following PM bar's close. No scanner parameter, entry gate, or position rule changed.
+
 ### 2026-09-24 — Verify PM Follow-Through for Supplementary-Only Names
 
 **Context:** The Sep 23 session had full 7/7 scan coverage and preserved every supplementary-source line. The morning evaluation identified one unique supplementary-only ticker, CPOP, but left its PM outcome unassessed because it was not in the morning scan or main retrospective table. Source attribution worked; the pass's follow-through remains unknown.
@@ -90,6 +106,8 @@ _(entries are prepended — newest first)_
    - Hypothesis: I expect this will produce an explicit outcome attempt for every supplementary-only ticker over the next 10 covered sessions. Measurable: 100% receive a SIP PM return or a specific reason SIP evidence is unavailable; no entry decisions change.
 
 **Updated process:** Every morning evaluation checks SIP PM bars for each unique supplementary-only ticker, compares the PM high with its latest logged AH scan price, and records the return or a specific data limitation. The 15% cutoff and all entry rules remain unchanged.
+
+**Evaluation (2026-09-25):** Held for 1/1 unique supplementary-only name in the first fully covered session after the change: ACTU $0.73 AH → $0.66 SIP PM high (−9.6%). Nine more covered sessions are needed to assess the 10-session completeness target.
 
 ### 2026-09-23 — Track Supplementary AH-Change Pass Outcomes
 
@@ -110,6 +128,8 @@ _(entries are prepended — newest first)_
 
 **Evaluation (2026-09-24):** **Partially held.** Sep 23's complete source lines and CPOP count verify attribution; its PM outcome remained unassessed, so the follow-through portion is incomplete. The new morning-evaluation requirement addresses this gap.
 
+**Evaluation (2026-09-25):** Source attribution held again on Sep 24 (all source lines present, ACTU counted once across two scans). Historical SIP backcheck resolved CPOP: $5.95 last AH scan → $5.97 PM high (+0.3%) on 2,489 shares / 74 trades; its peak bar closed $5.90 and the next bar closed $5.52. The previous morning report remains historically incomplete, but both identified names now have measured outcomes.
+
 ### 2026-09-22 — Broaden the Supplementary AH Change Scan for Feed/Rank Gaps
 
 **Context:** The Sep 21 morning evaluation found a real in-window omission: **GRML** was absent from all 13 evening scans even though SIP showed an accumulating +18.0% AH move at 18:30 ET and a realistic AH-entry → PM-peak continuation of about +13.6%. GRML was below the supplementary pass's old +20% change cutoff, and that pass was still ranked by volume, so it could not reliably recover moderate movers outside the primary 50-row volume result.
@@ -126,6 +146,8 @@ _(entries are prepended — newest first)_
 **Updated parameters:** `MIN_AH_CHANGE_HIGH = 15%` (supplementary change-ranked pass; primary `MIN_AH_CHANGE = 5%` unchanged). No strategy, position-sizing, or entry gate changed.
 
 **Evaluation:** **Insufficient data.** The Sep 22 session recorded only 2 of 7 scheduled scans and no supplementary-only source labels; the entry window was uncovered. The logged outcomes cannot show whether the new pass added useful candidates or excess false positives, so keep the threshold under observation.
+
+**Evaluation (2026-09-25):** Still insufficient for a cutoff change. Sep 23 and Sep 24 had full coverage; their two unique supplementary-only names were CPOP (thin +0.3% peak, not held in the next bar) and ACTU (−9.6% to PM peak). No sustained incremental continuation has been observed yet.
 
 ### 2026-09-18 — Sync Multi-Session and Stale-Book Tracker Seeds After Sep 17 Fades
 
