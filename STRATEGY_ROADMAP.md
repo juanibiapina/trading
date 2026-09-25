@@ -1128,6 +1128,8 @@ Remaining Init 5 items unchanged: (1) minor cosmetic regular-open volume bar
 scale; (2) post-push raw-URL 200-check for the render race; (3) GitHub Pages
 HTML reports.
 
+**Feedback update (2026-09-24):** Juan reported that the Sep 23 daily-email charts did not work, then asked us to disregard the report because he may have been offline. All three raw PNG URLs (SPHL, GCTK, TOPS) returned HTTP 200 with `image/png` on recheck. No new chart-delivery defect is established; keep the current delivery path and investigate only if it recurs while online. See `FEEDBACK_LOG.md` 2026-09-24.
+
 **Feedback update (2026-07-29):** Juan read ONMD's chart as "not enough volume."
 The AH tape logged 5M shares / 3.7x average, but the shared volume axis was set
 by a 5.9M regular-open bar, visually compressing the AH bars. The volume-scale

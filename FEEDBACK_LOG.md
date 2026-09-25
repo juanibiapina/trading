@@ -6,6 +6,14 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-09-24 — re: Trading Scanner Report - 2026-09-23
+
+**Juan said:** “Charts didn't work.” In a follow-up seconds later: “I said Images didn't work, but I think I was offline at the time, so disregard that.” (InboxKit messages 169 and 170.)
+
+**Interpretation:** Juan withdrew the chart-render complaint; his connection may have been offline. This is not evidence of a broken daily-email chart pipeline.
+
+**Action:** Checked the three Sep 23 email chart URLs (SPHL, GCTK, TOPS): each returned HTTP 200 with `image/png`. Routed the retraction to Initiative 5; no chart fix or strategy change is needed from this report. Revisit only if the issue recurs while online.
+
 ### 2026-09-23 — re: Trading Scanner Report - 2026-09-22
 
 **Juan said:** “You need to leave before open.”
