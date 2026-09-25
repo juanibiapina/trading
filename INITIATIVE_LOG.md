@@ -3,6 +3,18 @@
 Daily progress on the strategy roadmap (`STRATEGY_ROADMAP.md`), one initiative
 at a time. Written by the `strategy-advance` pulse. Newest first.
 
+### 2026-09-25 15:00 — Initiative 6 pilot recheck and investability-bias audit
+
+**Evaluated:** The Sep 24 pilot hypothesis has insufficient new holdable PM-only evidence: today's PM tracker marks INLF/GLND/FTHM as AH-detected, IFBD as thin/AH-detected, and SDEV as PM-only but thin through 04:45 ET. Yesterday's Initiative 3 seven-name replay remains one-session, GCTK-driven evidence, not a timing rule. The Sep 24 Initiative 5 Pages HTTP-200 checks worked. The holdable-only pilot estimate needed a separate bias check because `classification=holdable` is assigned after watching the PM session.
+
+**Step taken:** Re-ran `node scripts/init6-pm-pilot.js`, then added a log-only all-classification sensitivity tally to that script without altering its 23-row shadow ledger or placing orders. Excluded the current incomplete PM window from the sensitivity tally. Cross-checked the separate 1-minute gapper simulator; verified the edited script with `node --check`, a full execution, and `git diff --check`. Initiative 6 remains the highest unblocked $/time experiment because its modeled entry/exit is positive, but measuring whether that edge survives causal selection takes priority over another incomplete Initiative 3 replay. Initiative 2 remains blocked on Juan's broker access; Initiative 3's Sep 25 full PM outcome is not available until after 09:30 ET.
+
+**Result:** The holdable-only pilot stays **n=23, +97.5% total / +4.2% gross per admitted name, 18/23 positive, 4/23 fade-tail**; assumed 2% spread leaves **+2.2%/name**. The same gate also admits **6 thin names (+5.8% mean)** and **3 uninvestable names (-10.4% mean)** in completed sessions. Across all **32** admissions the modeled return is **+3.2% gross / +1.2% after assumed spread**, before executable-quote and limit-fill checks. This sensitivity is not a tradable strategy: classifications are retrospective and bar highs only model sell-limit touches. The holdable-only edge is subject to selection bias; no promotion, schedule change, or live-rule change is justified. Last observed paper equity remains **$99,721.90 (-$278.10)**, with no open positions at the Sep 25 evaluation.
+
+**Hypothesis / next step:** After the Sep 25 PM window completes, rerun both tallies and check whether SDEV's full-window classification/outcome changes. Next research step: define a liquidity/investability flag using only bars or quotes available **before** the hypothetical R+3 entry, then measure the gate on that causal cohort. Keep the four-scan retirement proposal pending Juan's veto; do not change existing trading scan times.
+
+**Needs from Juan:** Nothing new. The existing email-routed asks remain the four-scan schedule veto, deferred IBKR/Webull access, and review of the proposed Initiative 3 premarket exit; no question is raised here.
+
 ### 2026-09-24 18:00 — Initiative 6 pilot recheck; Initiative 3 full-window replay
 
 **Evaluated:** Initiative 6's 15:00 rerun found no fresh PM-only holdable, so there is insufficient new pilot data to judge its edge. Initiative 3's 15:00 replay was explicitly provisional before the 09:30 ET cap; the full-window rerun now shows that the apparent 2-bar entry-price advantage is GCTK-driven and that the 3-bar test adds a volatile NCPL case. Initiative 5's Pages deployment worked at 15:00: the report, index, and three chart assets returned HTTP 200.

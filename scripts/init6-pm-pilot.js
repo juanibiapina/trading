@@ -9,11 +9,10 @@
  * against the current live baseline, which enters NONE of these PM-only gappers
  * (the AH scanner is structurally blind to them), so the baseline P&L is $0.
  *
- * Why this restricts to holdable: pm-gapper-exit-sim-1min.js runs the same gate
- * over ALL footprint=none names and the gate admits thin/uninvestable
- * false-positives (WLDS, SDEV, EHGO-2) that we could never fill at size and
- * that drag the mean. A real pilot only "enters" names we could actually fill,
- * so this runner restricts to classification=holdable — the investable universe.
+ * This pilot restricts to classification=holdable, assigned after observing
+ * the premarket session. That is a hindsight filter, not a causal entry rule.
+ * The separate all-classification tally measures its effect; neither tally
+ * proves executable fills or identifies a live investability gate.
  *
  * Mechanism (identical gate + exit as the converged studies):
  *   - Entry: 5-min continuation gate. Ignition = first PM 5-min bar with
@@ -118,7 +117,7 @@ function sim(sym, date, cls) {
   };
 }
 
-function loadHoldablePmOnly() {
+function loadPmOnly() {
   const lines = fs.readFileSync(TRACKER, "utf8").trim().split("\n").slice(1);
   const rows = [];
   for (const l of lines) {
@@ -131,7 +130,7 @@ function loadHoldablePmOnly() {
     // "unknown" rows (data gaps, not holidays) stay excluded to keep the
     // universe clean.
     const holidayPmOnly = f[3] === "unknown" && /holiday/i.test(l);
-    if ((f[3] === "none" || holidayPmOnly) && f[9] === "holdable") rows.push({ date: f[0], sym: f[1], cls: f[9] });
+    if (f[3] === "none" || holidayPmOnly) rows.push({ date: f[0], sym: f[1], cls: f[9] });
   }
   return rows;
 }
@@ -146,7 +145,7 @@ function main() {
   const argv = process.argv.slice(2);
   let cases;
   if (argv.length >= 2) cases = [{ sym: argv[0], date: argv[1], cls: "holdable" }];
-  else cases = loadHoldablePmOnly();
+  else cases = loadPmOnly().filter((c) => c.cls === "holdable");
 
   console.log("# Initiative 6 early-PM hypothetical-entry PILOT (LOG-ONLY, no orders)");
   console.log(`# universe: holdable footprint=none PM-only gappers from pm-open-scan.csv (n=${cases.length} candidates)`);
@@ -186,6 +185,30 @@ function main() {
   const header = "date,ticker,entry,entry_et,exit_px,exit_ret,exit_type,pm_last_ret";
   fs.writeFileSync(LEDGER, header + "\n" + ledgerRows.join("\n") + "\n");
   console.log(`\n# Shadow ledger written: ${path.relative(path.join(__dirname, ".."), LEDGER)} (${ledgerRows.length} entered rows)`);
+
+  if (argv.length === 0) {
+    const excluded = loadPmOnly().filter((c) =>
+      c.cls !== "holdable" && Date.now() >= Date.parse(`${c.date}T13:45:00Z`)
+    );
+    const excludedRets = [];
+    const excludedByClass = {};
+    for (const c of excluded) {
+      const r = sim(c.sym, c.date, c.cls);
+      if (r.error || !r.admit) continue;
+      excludedRets.push(r.exitRet);
+      (excludedByClass[c.cls] ||= []).push(r.exitRet);
+    }
+    const completedHoldableRets = rets.filter((_, i) =>
+      Date.now() >= Date.parse(`${ledgerRows[i].split(",")[0]}T13:45:00Z`)
+    );
+    const all = [...completedHoldableRets, ...excludedRets];
+    console.log(`\n# Hindsight-classification sensitivity (research only; excluded cases through prior completed PM windows; not in shadow ledger):`);
+    for (const [cls, xs] of Object.entries(excludedByClass)) {
+      console.log(`  ${cls}: admitted ${xs.length}, mean ${sign(mean(xs))}${mean(xs).toFixed(1)}%`);
+    }
+    console.log(`  all classifications: admitted ${all.length}, mean ${sign(mean(all))}${mean(all).toFixed(1)}% gross / ${sign(mean(all) - 2)}${(mean(all) - 2).toFixed(1)}% after assumed 2% spread`);
+    console.log(`  Missing piece: investability labels are assigned after PM opens; this is NOT an executable all-name strategy.`);
+  }
 }
 
 main();
