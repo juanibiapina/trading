@@ -317,3 +317,101 @@ Alpaca reports no open positions. `OPEN_POSITIONS.md` also has no current positi
 
 **Actions taken:**
 - No orders submitted.
+
+## Morning Evaluation — 10:22 CEST, 2026-09-25 (04:22 ET)
+
+### Today's Winner
+
+**No real winner today as of 04:22 ET.** The largest genuine AH→PM mover, **INLF** (industrial machinery), reached only **$5.73 PM / +94.2%** from its *true* September 24 SIP close of $2.95. Its $5.95 / +101.7% **AH** peak was at 19:55 ET, but the +100% gain was not sustained into PM. The SIP PM high printed on 653,434 shares / 12,328 trades at 04:00 ET; the 04:05 ET bar closed $5.30 on 382,868 shares / 5,256 trades. The 04:20 ET TradingView scan quoted $5.44; Yahoo's ~$5.26 at 04:21 ET is a shape/current-price indication only, not a SIP-confirmed level. Free-tier SIP PM bars are approximately 15 minutes delayed. No >100% **PM** peak is verified in the screened universe at this pulse.
+
+- Catalyst: **B — H1 FY2026 results**, revenue $12.94M (+26.01% YoY), net income $1.01M versus a $1.98M loss. [Issuer PRNewswire release](https://www.prnewswire.com/news-releases/inlif-limited-reports-first-half-of-fiscal-year-2026-financial-results-302889709.html), dated Sep 24; exact release time unverified. No consensus beat verified.
+- SIP previous close: **$2.95** (Yahoo/price-timeline incorrectly used $2.91, the Sep 23 close).
+- AH first qualified scan: $4.04/+36.9% AH at 23:00 CEST (17:00 ET); late high $5.95/+101.7% at 19:55 ET on 166,193 shares / 1,869 trades.
+- SIP PM peak: $5.73/+94.2% at 04:00 ET; latest SIP close $5.30/+79.7% at 04:05 ET. Illustrative $4.21 23:30 CEST scan entry → PM **peak** +36.1%; this is **not executable P&L** because there was no current fillable ask and no order/fill.
+- Float: 979K; TradingView market cap: ~$3.1M at regular close (scanner estimate, not refreshed to PM).
+
+**Scanner Diagnostic:** Detectable during the scheduled entry window? **YES.** INLF was in the 23:00, 23:30, 00:00, and 00:30 CEST scans: AH +36.9%/$4.04 → +42.7%/$4.21 → +46.4%/$4.32 → +43.7%/$4.24; scanner volume 1.6M→4.7M and VRatio 5.9→6.7x. Its SIP ignition began 16:30 ET with 623K shares / 8,464 trades in five minutes, followed by 1.09M / 16,355. At 22:15 CEST (16:15 ET) it had not ignited; it was first found after the earnings release. By the first eligible 23:30 scan it cleared repeat-scan, price, float, catalyst, and initial BUILD/volume checks, but Alpaca's quote was stuck at 16:00 ET (bid $2.53 x100 / ask $3.37 x100; **not a current executable $4.21 ask**). No order was placed. Later volume faded, independently blocking a late entry. **Gap: execution-book freshness, not scanner discovery/threshold.** Do not bypass the live-book safety gate. The 18:30–20:00 ET tail added the only >100% AH print, but PM did not preserve it; do not label it a late-tail winner.
+
+GLND's apparent +128.9% Yahoo PM gain is a **stale-close illusion**: Yahoo used Sep 23 $2.91, but Sep 24 SIP daily close was $5.35. Its real PM high was $6.84/**+27.9%** on 1.16M shares / 15,013 trades (04:05 ET). Its AH peak was $6.20/+15.9% from the true close (18:55 ET), not +113%.
+
+### Baseline Tracking
+
+- Days tracked: **89** (88 + Sep 24 session only).
+- Winners detected by scanner: **72/81 (88.9%)** — unchanged; no actionable >100% AH→PM winner verified, so no detection opportunity added. INLF, the biggest genuine mover, **was detected**, but is not promoted to a winner.
+- Winner selected for paper trade: **36/79 (45.6%)** — unchanged; no executed trade, and no qualifying winner sample added.
+- Target: >80% detection. Status: **BASELINE MET** on the existing winner sample.
+- Earlier baseline gaps **Sep 11 and Sep 18** remain unfilled; Sep 23 was the immediately preceding logged trading-day evaluation (no new gap).
+
+### Retrospective Scan Results
+
+Independent live whole-market TradingView premarket scan returned **7** names (INLF, GLND, FTHM, IFBD, SDEV, ONCO, BENF); the scanner's $0.50 price floor/other filters limit this sweep. AH/PM highs below are SIP 5-minute highs (not Yahoo highs), from Sep 24 16:00–20:00 ET and Sep 25 04:00–04:10 ET; SIP daily bars set the close basis. Prices may develop after the pulse.
+
+| Ticker | True prior close | AH SIP peak | PM SIP peak | Evening scan | Assessment |
+|--------|------------------|-------------|-------------|--------------|------------|
+| INLF | $2.95 | $5.95 (+101.7%, 19:55) | $5.73 (+94.2%, 04:00) | Caught 23:00–00:30 | Biggest AH→PM opportunity but below PM winner bar; stale book blocked first eligible entry |
+| GLND | $5.35 | $6.20 (+15.9%, 18:55) | $6.84 (+27.9%, 04:05) | Caught 21:30/00:30; AH below threshold at final scan | Genuine continuation, not +100%; Yahoo anchor $2.91 wrong |
+| FTHM | $0.52 | $0.73 (+40.4%, 16:40) | $0.76 (+46.2%, 04:00) | Caught 23:00–00:30; faded at entries | PM high slightly exceeded AH high, but first-bar PM close $0.64; below winner bar |
+| IFBD | $1.13 | $1.80 (+59.3%, 17:40) | $1.59 (+40.7%, 04:00) | Caught 00:00/00:30 | AH was better exit; cross-scan fade |
+| ONCO | $0.91 | $1.13 (+24.2%, 17:10) | $1.08 (+18.7%, 04:00) | Caught 23:30–00:30 | Faded below AH high |
+| BENF | $1.45 | $1.75 (+20.7%, 17:10) | $1.65 (+13.8%, 04:00) | Caught 23:00–00:30 | Dead-cat watch, no follow-through; Yahoo $1.86 PM high not confirmed by SIP |
+| SDEV | $1.29 | $1.36 (+5.4%, 16:00; 44,513 sh/195 trades) | $1.57 (+21.7%, 04:00; 579,976 sh/4,220 trades) | Absent from logged AH tables | PM move developed after a sub-threshold AH; no detection miss |
+
+### Open Position P&L (Alpaca)
+
+**No executed positions; no open positions.** `broker.js positions` reports none. The illustrative INLF return above and all watch outcomes below are hypothetical, not realized P&L. **Total realized P&L from this session: $0.00.** No hold/sell orders were considered or placed here.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST); six extra observations ran 22:05, 22:10, 22:15, 22:20, 22:25, 22:45. Entry window was covered. No coverage failure this session.
+- Candidates found: **52 unique ticker rows** across regular + AH scan tables, **13** actual scan sections. Of the 7 current PM-scan names, **6/7** appeared in evening tables (all except SDEV); INLF was fully detected. The 21:30 regular row is not AH confirmation.
+- Supplementary AH-change-only: **1 unique ticker, ACTU** (23:30 and 00:00 CEST; all AH scan source lines present). Latest supplementary scan price **$0.73** → SIP PM peak **$0.66**, **−9.6%**, 1,362 shares / 9 trades at 04:00 ET: **0 continued, 1 faded/no follow-through, 0 unassessed**. Not classified by presence/absence in the PM TradingView scan.
+- No verified new in-window TradingView feed-lag miss, true late-tail winner, or PM-only raw leader from the screened universe. Independent unrestricted sub-$0.50 PM evidence is **not available in this filtered sweep**; price-floor exclusions remain unassessed rather than asserted absent.
+
+### Missed Opportunities
+
+| Ticker | AH signal | Why absent/blocked | PM outcome |
+|--------|-----------|--------------------|------------|
+| SDEV | SIP AH $1.36 vs $1.29 true close, +5.4% on 44,513 shares / 195 trades in its peak bar | Below +10% AH threshold | SIP PM $1.57/+21.7% from close; not a >100% winner or detection miss |
+| INLF | Confirmed +36.9% at first scan, heavy SIP volume | **Not missed by scanner**; stale Alpaca quote blocked first eligible entry | Hypothetical $4.21→$5.73 **+36.1%** PM peak; not a fill |
+| GLND | Real +15.9% AH peak, +5.6% at final scan | Visible in regular/last AH table; weak AH signal relative to previous day's +83.8% regular run | $5.65 final scan→$6.84 peak **+21.1%**; below +100% from true close |
+
+### AH Mover Follow-Through
+
+For repeated >10% AH-scan names; all peaks verified against SIP. Current PM uses latest SIP bar close (04:00 or 04:05 ET), not a stale Alpaca position price. Peak times ET.
+
+| Ticker | AH peak / time | AH trajectory | PM peak | Latest SIP PM | PM vs AH peak | Verdict |
+|--------|----------------|---------------|---------|---------------|---------------|---------|
+| INLF | $5.95 / 19:55 | Build across scans; late tail extension | $5.73 | $5.30 | −3.7% | AH better; PM +94.2% from true close |
+| OFAL | $0.84 / 16:20 | Spike→fade | $0.58 | $0.51 | −31.0% | Skip validated |
+| FTHM | $0.73 / 16:40 | Spike→fade at entry window, late AH rebound | $0.76 | $0.62 | +4.1% | Brief PM-open high on 2.91M sh/11,399 trades; then faded |
+| FOFO | $3.31 / 16:10 | Spike→fade | $2.40 | $2.21 | −27.5% | Skip validated; FIRST-BAR-SPIKE WATCH was retracted at 22:25 |
+| PMAX | $1.96 / 16:10 | Spike→fade, declining volume | $1.56 | $1.45 | −20.4% | Skip validated |
+| NCPL | $1.58 / 19:25 | Early spike, thin late tape | $1.56 | $1.40 | −1.3% | Below AH high |
+| ONCO | $1.13 / 17:10 | Spike→fade | $1.08 | $1.03 | −4.4% | AH better |
+| IFBD | $1.80 / 17:40 | Spike→fade across scans | $1.59 | $1.40 | −11.7% | AH better |
+
+### Notes
+
+- **Stale-book execution-block tally: 5** (NUWE, KUST, CLRO, XRTX, **INLF Sep 24→25**). INLF was first eligible at 23:30 CEST at ~$4.21 with fresh prior SIP activity (16:30–16:55 ET 0.55M–1.09M shares/7K–16K trades per bar; 17:15 ET 232K/2,943); quote stayed frozen at **16:00 ET**, bid $2.53/ask $3.37 x100, 90 minutes old at eligibility and still frozen at 18:30 ET. PM SIP peak $5.73 gives **+36.1% theoretical** before spread/slippage. At 00:00 and 00:30 late volume also faded, so the first eligible scan is the clean stale-book-only block; later scans are co-blocked. Route repeated stale-book problem/cumulative hypothetical cost to the daily email for execution-feed decision; do not remove live-book safety.
+- **Dead-cat-override WATCH:** BENF hypothetical $1.66 → SIP $1.65 = **−0.6%**; ACTU latest $0.73 → $0.66 = **−9.6%** on only 1,362 sh/9 tr (not a viable PM exit); WHLR $4.30 → $4.19 = **−2.6%** (Yahoo $4.24 not yet SIP confirmed). All three faded from watch entry; no dead-cat rule change. No CEILING-OVERRIDE WATCH logged.
+- **Sub-3M float SPIKE→FADE sample:** prior log **4/17** re-exploded. Add **OFAL** (1.9M, Grade C, AH $0.84 > PM $0.58, failed; (a) first-sighting $0.75→$0.58 = −22.7%; (b) PM-open VWAP $0.53→$0.58 = +9.4% transient first-bar high, PM bar closed $0.51) and **PMAX** (1.2M, Grade None, AH $1.96 > PM $1.56, failed; (a) $1.89→$1.56 = −17.5%; (b) PM-open VWAP $1.48→$1.56 = +5.4% within the first bar, closed $1.41). **Standing 4/19** SIP-verified re-explosions, far below ≥80%; no exception. Other correct skips: FTHM 20.6M Grade C ($0.73→$0.76 marginal PM high but no material re-explosion), FOFO 3.0M Grade None, ONCO 4.4M Grade None, IFBD 8.2M provisional Grade C. No Grade A/B fade-skip exception evidence this session.
+- **Raw PM leader:** INLF (+94.2% at SIP peak from true close) is an **AH→PM continuation**, not a PM-only gapper; it appeared repeatedly in evening scans. `log/pm-open-scan.csv` currently has **57 holdable PM-only** rows by the specified query (no Sep 25 row yet at 04:22 ET); do not hand-maintain a parallel tally. Initiative-6 early-PM pilot is a daily-email decision.
+- **Extreme AH peak-vs-PM peak:** no new >~130%-from-close AH name on SIP-verified true basis. Standing **13 fades / 2 continues = 86.7% fade** from Sep 23; partial-profit recommendation remains for daily email, not this evaluation.
+- **Other running trackers:** no executed entries (multi-session **1 faded / 27 first-day: 9 ran, 8 flat, 10 faded** unchanged), no qualifying new broker block (`ZJYL tradable=false` appeared only once at +15%, CONFIRM-3 NO), no no-fillable-only or float-only skip, no solely final-scan 2-scan block, and no active FIRST-BAR-SPIKE WATCH (FOFO was retracted). Standing no-fillable **4**, float-only **1**, final-scan **2**, first-bar **3 pre-gate + 5 post-gate (2 ran/3 faded)**. No new reverse-split entry; this-week split recency standing **4/5 faded** and older **4/6 continued** (per Sep 23 log). No new fill chase. In-window feed-lag standing **6** and floor-exclusion standing **5 (0 holdable)** from the previous log; the independent whole-universe final-scan/data-source cross-check and floor decision remain for daily email. Sep 22's 2/7 scan failure is the latest recent coverage gap; Sep 24 ran 7/7.
+- **Data correction:** `price-timeline.py` uses stale Yahoo prior closes for INLF ($2.91 vs SIP Sep 24 $2.95) and GLND ($2.91 vs SIP Sep 24 $5.35); percentages above always use SIP daily close. Yahoo's INLF AH high $5.73 also under-reported the SIP AH high $5.95. Yahoo's BENF PM high $1.86 has not appeared in SIP bars through 04:05 ET ($1.65 max); do not use it for the override outcome.
+
+### Price Charts
+
+ASCII excerpts from `python3 scripts/price-timeline.py INLF GLND FTHM` at 04:21 ET. **Timeline chart percentages are Yahoo-based and stale for INLF/GLND; corrected SIP values appear above.** The chart's `[OVN]` tags denote the AH session in the tool output.
+
+```text
+INLF  2-day $2.83 ──────────────────── $5.95 (SIP AH 19:55 ET)
+      REG $2.95 → AH $4.04 (17:00) → $4.24 (18:30) → $5.95 (19:55)
+      PM  $5.73 high (04:00) → $5.30 close (04:05)  ↘
+GLND  2-day $2.80 ──────────────────── $6.84 (SIP PM 04:05 ET)
+      REG $5.35 → AH $5.65 (18:30) → $6.20 (18:55)
+      PM  $6.77 high (04:00) → $6.84 high (04:05)   ↗
+FTHM  2-day $0.52 ──────────────────── $0.76 (SIP PM 04:00 ET)
+      REG $0.52 → AH $0.73 (16:40) → $0.58 (18:30)
+      PM  $0.76 high (04:00) → $0.62 close (04:05)  ↘
+```
