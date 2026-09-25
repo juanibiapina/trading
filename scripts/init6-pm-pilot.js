@@ -44,6 +44,7 @@ const path = require("path");
 
 const TRACKER = path.join(__dirname, "..", "log", "pm-open-scan.csv");
 const LEDGER = path.join(__dirname, "..", "log", "init6-pm-pilot.csv");
+const LIQUIDITY_AUDIT = path.join(__dirname, "..", "log", "init6-preentry-liquidity.csv");
 const TRADES_MIN = 3000;
 const HOLD_FRAC = 0.8;
 const LIMIT_GAIN = 10; // the converged resting sell-limit width
@@ -85,7 +86,11 @@ function gate(bars5, date) {
   if (b1.c < HOLD_FRAC * hi1) return { admit: false };
   if (b2.c < HOLD_FRAC * hi2) return { admit: false };
   if (b2.vwap < b1.vwap * 0.98) return { admit: false };
-  return { admit: true, entry: pm[rIdx + 3].o, entryTime: pm[rIdx + 3].t };
+  return {
+    admit: true, entry: pm[rIdx + 3].o, entryTime: pm[rIdx + 3].t,
+    confirmTradesMin: Math.min(b1.trades, b2.trades),
+    confirmNotionalMin: Math.min(b1.vol * b1.vwap, b2.vol * b2.vwap),
+  };
 }
 
 // Resting +10% sell-limit; fills intrabar on the first 1-min bar reaching it,
@@ -112,6 +117,7 @@ function sim(sym, date, cls) {
   return {
     sym, date, cls, admit: true,
     entry, entryTime: g.entryTime,
+    confirmTradesMin: g.confirmTradesMin, confirmNotionalMin: g.confirmNotionalMin,
     exitPx: exit.px, exitRet: exit.ret, filled: exit.filled, exitAt: exit.at,
     pmLastRet: pct(entry, pmLast),
   };
@@ -156,6 +162,7 @@ function main() {
   const rets = [];
   const pmLastRets = [];
   const ledgerRows = [];
+  const holdableResults = [];
   let skipped = 0;
   for (const c of cases) {
     const r = sim(c.sym, c.date, c.cls);
@@ -170,6 +177,7 @@ function main() {
       `${r.date}  ${r.sym.padEnd(5)}  $${r.entry.toFixed(2).padStart(5)}  ${entryEt}     $${r.exitPx.toFixed(2).padStart(5)}  ${(r.filled ? "LIMIT" : "pmlast").padEnd(6)}  ${(sign(r.exitRet) + r.exitRet.toFixed(1) + "%").padStart(7)}  ${(sign(r.pmLastRet) + r.pmLastRet.toFixed(1) + "%").padStart(7)}`
     );
     rets.push(r.exitRet);
+    holdableResults.push(r);
     pmLastRets.push(r.pmLastRet);
     ledgerRows.push([r.date, r.sym, r.entry.toFixed(4), entryEt, r.exitPx.toFixed(4), r.exitRet.toFixed(2), r.filled ? "limit" : "pmlast", r.pmLastRet.toFixed(2)].join(","));
   }
@@ -190,18 +198,28 @@ function main() {
     const excluded = loadPmOnly().filter((c) =>
       c.cls !== "holdable" && Date.now() >= Date.parse(`${c.date}T13:45:00Z`)
     );
-    const excludedRets = [];
+    const excludedResults = [];
     const excludedByClass = {};
     for (const c of excluded) {
       const r = sim(c.sym, c.date, c.cls);
       if (r.error || !r.admit) continue;
-      excludedRets.push(r.exitRet);
+      excludedResults.push(r);
       (excludedByClass[c.cls] ||= []).push(r.exitRet);
     }
-    const completedHoldableRets = rets.filter((_, i) =>
-      Date.now() >= Date.parse(`${ledgerRows[i].split(",")[0]}T13:45:00Z`)
+    const completedHoldable = holdableResults.filter((r) =>
+      Date.now() >= Date.parse(`${r.date}T13:45:00Z`)
     );
-    const all = [...completedHoldableRets, ...excludedRets];
+    const completed = [...completedHoldable, ...excludedResults]
+      .sort((a, b) => a.date.localeCompare(b.date) || a.sym.localeCompare(b.sym));
+    const all = completed.map((r) => r.exitRet);
+    const auditRows = completed.map((r) => [
+      r.date, r.sym, r.cls, r.entryTime, r.confirmTradesMin,
+      r.confirmNotionalMin.toFixed(2), r.exitRet.toFixed(2), r.filled ? "limit" : "pmlast",
+    ].join(","));
+    fs.writeFileSync(LIQUIDITY_AUDIT,
+      "date,ticker,retrospective_class,entry_utc,min_confirm_trades,min_confirm_notional_usd,modeled_return_pct,exit_type\n"
+      + auditRows.join("\n") + "\n");
+    console.log(`# Pre-entry liquidity audit written: ${path.relative(path.join(__dirname, ".."), LIQUIDITY_AUDIT)} (${completed.length} admitted rows)`);
     console.log(`\n# Hindsight-classification sensitivity (research only; excluded cases through prior completed PM windows; not in shadow ledger):`);
     for (const [cls, xs] of Object.entries(excludedByClass)) {
       console.log(`  ${cls}: admitted ${xs.length}, mean ${sign(mean(xs))}${mean(xs).toFixed(1)}%`);
