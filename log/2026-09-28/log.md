@@ -34,6 +34,14 @@ Scanner session: REGULAR, 2026-09-28 15:30:23 ET; 27 hits. AH change, AH price, 
 | REBN | [TV](https://www.tradingview.com/chart/?symbol=REBN) | $1.43 | +15.3% | 276 | 625 | 2.0 | +38.0% | 6.0M | Restaurants | Watch — pending AH confirmation |
 | FUSE | [TV](https://www.tradingview.com/chart/?symbol=FUSE) | $0.66 | +15.1% | 1K | 43K | 801.4 | -96.9% | 15.7M | Packaged Software | Watch — pending AH confirmation |
 
+## Scan 22:00 CEST (4:00 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-28 16:00:18 ET; 0 hits. The regular-session watch names remain pending AH confirmation. No paper orders submitted; entries begin at the 23:00 CEST scan after two qualifying AH scans.
+
+  Supplementary AH-change-only (>15%, not in volume pass): none
+
+No candidates found.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
