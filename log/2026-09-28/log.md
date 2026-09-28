@@ -86,6 +86,26 @@ Scanner session: AFTERHOURS, 2026-09-28 16:20:19 ET; 4 hits. First AH appearance
 - NCI catalyst: no verified fresh catalyst found. Three targeted earnings/release/filing searches were rate limited; the fourth Tavily search returned unrelated or older filings (including a Sep 16 NCI International filing). Grade None provisionally; recheck if NCI remains above +10% AH in a later scan.
 - BYSI (+5.4% AH), XHLD (+7.5% AH), LDI (+5.6% AH): watch for sustained >10% AH in later scans; none qualifies for an entry or >10% bar instrumentation now.
 
+## Scan 22:25 CEST (4:25 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-28 16:25:19 ET; 2 hits. First AH appearance for MSGY and GNPX. NCI from 22:20 did not reappear; no tracked name has two >10% AH scans yet. No paper orders before the 23:00 CEST entry window.
+
+  Supplementary AH-change-only (>15%, not in volume pass): none
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MSGY | [TV](https://www.tradingview.com/chart/?symbol=MSGY) | $3.13 | -61.2% | +27.8% | $4.00 | -50.4% | 323K | 6.5M | 0.0x | 1.5M | Engineering & Construction |
+| GNPX | [TV](https://www.tradingview.com/chart/?symbol=GNPX) | $2.81 | -14.6% | +10.7% | $3.11 | -5.5% | 63K | 365K | 0.2x | 818K | Pharmaceuticals: Major |
+
+**Evaluation notes:**
+- MSGY (construction, float 1.5M): tradable=true. MSGY 2026-09-28  SPIKE  16:06ET  +37%  $4.30  994 trades / 87k sh  (first co-spike bar) (as-of 16:25ET)
+- MSGY 2026-09-28  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-of 16:25ET
+- MSGY SIP 16:05 ET: H $4.60, VWAP $4.21, 421,860 shares / 5,082 trades; 16:10 ET: H $4.45, VWAP $4.18, 258,906 shares / 3,033 trades. This corroborates the scanner's $4.00 AH price; bars only reach 16:10 ET. Quote bid $2.69 x100 / ask $0.00 x0 is timestamped 16:00 ET, so it cannot establish the current book. Watch only: Day% -61.2% dead-cat gate and only one AH scan. Price has reclaimed its $3.13 regular close, but a DEAD-CAT-OVERRIDE WATCH needs rising AH% across at least two AH scans; no hypothetical entry yet. Today's 16:05 ET SIP bar made the current AH high; later scans will establish whether it holds or fades and whether CONFIRM-3 stays NO.
+- MSGY fresh catalyst: [Sep 28 Form 6-K and attached Sep 28 press release](https://www.stocktitan.net/sec-filings/MSGY/6-k-masonglory-ltd-current-report-foreign-issuer-0c340ed73d8d.html) describe a $1.0M private placement and warrants to fund continued acquisition of Beta Beteiligungs equity. Source excerpt confirms date Sep 28, 2026; release time was not provided, and the full filing page returned HTTP 403. Grade **D (dilution)** from the filing excerpt, subject to checking the full terms if reconsidered. Sep 25's run from ~$2 to an $8.07 close makes this a multi-session mover, not a fresh day-one igniter.
+- GNPX (pharmaceuticals, float 818K): tradable=true. GNPX 2026-09-28  NO-SPIKE  peak +14% @16:10ET  (no bar cleared +15% on a volume co-spike) (as-of 16:25ET)
+- GNPX 2026-09-28  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-of 16:25ET
+- GNPX SIP 16:05 ET: H $3.14, VWAP $3.07, 76,207 shares / 710 trades; 16:10 ET: H $3.19, VWAP $3.10, 41,136 shares / 366 trades. Price is corroborated, but real AH volume is lower in the second bar and does not yet show sustained high participation. Quote bid $2.32 x100 / ask $3.32 x100 is timestamped 16:00 ET, too old to establish a current fillable book. Watch for another >10% AH scan and accumulating SIP volume; no entry before 23:00. Four targeted search calls (earnings, release, filing; press-release retry on Tavily after rate limits) found no verified Sep 28 catalyst. The Sep 8 company presentation is old background. Grade **None** provisionally; repeat the structured search if GNPX remains >10% AH in a later scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
