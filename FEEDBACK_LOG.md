@@ -6,6 +6,14 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-09-25 — re: Trading Scanner Report - 2026-09-24
+
+**Juan said:** “Omg INLF doubled, it would have been perfect. Amazing volume. That's what we need to enter” (InboxKit message 172).
+
+**Interpretation:** INLF is the kind of rising-price, exceptional-volume setup Juan wants entered. It more than doubled from the $2.95 true close at its $5.95 after-hours peak (+101.7%); its $5.73 premarket peak was +94.2% from that close. The first eligible scan saw it near $4.21, making the $5.73 premarket peak +36.1% theoretical from that point. The scanner detected it, but Alpaca's quote stayed frozen at 16:00 ET, so there was no verified current ask or paper fill. Later volume faded. This reinforces the volume-and-price entry profile while exposing the execution-data block; the peak is not realized profit.
+
+**Action:** Routed to Initiative 2 as the fifth stale-book execution block and to the next scanner-improvement run to assess ways to verify a current fillable book on strong, volume-backed names. Keep the existing fresh-book check; the broker fill test remains deferred pending Juan's access. No entry-rule or strategy change made in this capture pulse.
+
 ### 2026-09-24 — re: Trading Scanner Report - 2026-09-23
 
 **Juan said:** “Charts didn't work.” In a follow-up seconds later: “I said Images didn't work, but I think I was offline at the time, so disregard that.” (InboxKit messages 169 and 170.)

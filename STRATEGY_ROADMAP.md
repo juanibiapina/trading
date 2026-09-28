@@ -95,6 +95,17 @@ the ignition**, not a new signal.
    account. **Update 2026-09-22 (Juan feedback):** the IBKR/broker-switch fill
    test remains blocked for now; defer this work and move on to other
    initiatives until Juan supplies access. See `FEEDBACK_LOG.md` 2026-09-22.
+   **Update 2026-09-25 (Juan feedback, INLF):** Juan calls INLF's rising
+   price and exceptional volume the setup to enter. The Sep 24 scanner found
+   it in four eligible-window scans, but the first entry-eligible ~$4.21
+   observation had a 16:00 ET frozen Alpaca quote, so no current ask or fill
+   could be verified. Its $5.73 SIP PM peak implies +36.1% theoretical from
+   that observation; its $5.95 AH peak more than doubled the $2.95 true close,
+   while the PM peak did not. This is the **fifth stale-book execution block**
+   (NUWE, KUST, CLRO, XRTX, INLF), with no realized gain. Keep the live-book
+   check; route a current-book verification diagnostic for strong volume-backed
+   candidates to `scanner-improvement`. The IBKR paper-fill test stays deferred
+   until Juan provides access. See `FEEDBACK_LOG.md` 2026-09-25.
    **Update 2026-09-04→09-07 (strategy-advance) — shortlist done, best fit
    identified, blocked on an account.** Researched all four candidates from
    primary sources and wrote `INIT2_BROKER_ALTERNATIVES.md`. Results:
