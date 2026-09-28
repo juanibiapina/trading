@@ -1,5 +1,17 @@
 # Initiative Log
 
+### 2026-09-28 15:00 — Initiative 6 prospective PM cohort
+
+**Evaluated:** The Sep 25 all-classification sensitivity and pre-entry liquidity audit ran on completed data, but the proposed >=1,000-trade diagnostic did not separate uninvestable names: all 3 remained admitted. The hypothesis that a prospectively captured pre-entry universe and quotes will reveal selection/fillability bias has **insufficient data**: no 04:10 ET cohort existed before today's window. The Sep 25 pilot added no admit. Paper equity is $99,721.90 (-$278.10), flat; no proven executable competing core edge supersedes Initiative 6.
+
+**Step taken:** **Active pilot / Initiative 6:** ran the gate on the Sep 28 tracker at 09:00 ET, then built `scripts/init6-cohort-snapshot.py`, a one-file-per-day pre-entry discovery/quote snapshot, with a narrow log-only pulse at 10:10 Europe/Berlin. It records all names returned by the existing TradingView premarket filters/top-50 volume sort, plus contemporaneous IEX bid, ask, size, venue, quote timestamp, and age. Added `prompts/init6-cohort-snapshot.md` and one new job to the external scheduler; no existing trading scan/evaluation timing changed. `python3 -m py_compile`, a network dry run, scheduler JSON validation, and `git diff --check` verify the build. The dry run at 09:03 ET wrote no retrospective cohort.
+
+**Result:** The provisional rerun added two Sep 28 PM-only holdables: WBUY hypothetically entered $0.96 at 05:10 ET and touched +10%; SDEV hypothetically entered $1.75 at 04:15 ET and stood -1.7% at the latest available bar, with no limit touch. Their 09:30 ET outcomes are pending, so the committed pilot ledger stays at **n=23, +4.2% gross/name** on completed sessions. Dry-run discovery returned **17 candidates, 14 with two-sided IEX quotes**; quote timestamps and age are retained because a two-sided IEX quote can be stale or nonfillable. The 04:10 snapshot cannot see later igniters (such as WBUY at 04:30), SIP bars are delayed, and modeled bar-high touches are not sell fills. No order or live rule changed.
+
+**Hypothesis / next step:** At 18:00 CEST, rerun the pilot after Sep 28's full 09:30 ET window and finalize WBUY/SDEV. On the next aligned weekday, check that the 04:10 cohort file is created before hypothetical entries; compare frozen discovery to the 11:00 tracker and later gate decisions across all captured names, including rejects. Record missing late igniters and quote freshness before claiming executable returns. A single 10:10 Berlin cron misses the 04:10 ET alignment during Europe/US DST transition weeks; the ET guard will skip rather than backfill, and timing should be corrected before those weeks.
+
+**Needs from Juan:** nothing new. The four-scan AH retirement veto and Initiative 3 exit review remain email-routed; Initiative 2 broker access remains deferred at Juan's request.
+
 Daily progress on the strategy roadmap (`STRATEGY_ROADMAP.md`), one initiative
 at a time. Written by the `strategy-advance` pulse. Newest first.
 
