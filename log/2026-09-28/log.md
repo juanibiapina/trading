@@ -66,6 +66,26 @@ Scanner session: AFTERHOURS, 2026-09-28 16:15:22 ET; 0 hits. Regular-session wat
 
 No candidates found.
 
+## Scan 22:20 CEST (4:20 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-28 16:20:19 ET; 4 hits. First AH appearance for BYSI, NCI, XHLD, and LDI; BYSI, XHLD, and LDI are below +10% AH. Regular-session watch appearances do not count toward the two-AH-scan entry gate. No paper orders submitted before 23:00 CEST.
+
+  Supplementary AH-change-only (>15%, not in volume pass): none
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| BYSI | [TV](https://www.tradingview.com/chart/?symbol=BYSI) | $1.12 | +44.1% | +5.4% | $1.18 | +51.8% | 1.9M | 579K | 3.3x | 31.9M | Pharmaceuticals: Major |
+| NCI | [TV](https://www.tradingview.com/chart/?symbol=NCI) | $2.38 | -83.8% | +10.5% | $2.63 | -82.0% | 412K | 1.2M | 0.3x | 2.4M | Apparel/Footwear Retail |
+| XHLD | [TV](https://www.tradingview.com/chart/?symbol=XHLD) | $0.98 | -92.4% | +7.5% | $1.05 | -91.9% | 360K | 5.7M | 0.1x | 10.5M | Miscellaneous Commercial Services |
+| LDI | [TV](https://www.tradingview.com/chart/?symbol=LDI) | $0.61 | -9.0% | +5.6% | $0.64 | -3.9% | 159K | 7.9M | 0.0x | 109.2M | Finance/Rental/Leasing |
+
+**Evaluation notes:**
+- NCI (retail, float 2.4M): tradable=true. NCI 2026-09-28  SPIKE  16:01ET  +18%  $2.80  138 trades / 26k sh  (first co-spike bar) (as-of 16:20ET)
+- NCI 2026-09-28  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+- NCI SIP: 16:00 ET bar H $3.22, vwap $2.91, 486,801 shares / 3,470 trades; 16:05 ET bar H $2.70, vwap $2.44, 166,673 shares / 1,599 trades. The highest high in the returned bars is in the first bar; later bars are unavailable as of this scan. Quote bid $2.06 x100 / ask $2.84 x100 is timestamped 16:00 ET and is stale for a current liquidity decision. VRatio alone does not establish AH volume. Skip entry: Day% -83.8% and only one AH scan; above the $2.38 regular close, but no two-scan rising reclaim for a DEAD-CAT-OVERRIDE WATCH yet. At 16:20 ET, CONFIRM-3 is NO, but future scans are needed to establish the persistent NO condition for a FIRST-BAR-SPIKE WATCH. No hypothetical entry recorded yet.
+- NCI catalyst: no verified fresh catalyst found. Three targeted earnings/release/filing searches were rate limited; the fourth Tavily search returned unrelated or older filings (including a Sep 16 NCI International filing). Grade None provisionally; recheck if NCI remains above +10% AH in a later scan.
+- BYSI (+5.4% AH), XHLD (+7.5% AH), LDI (+5.6% AH): watch for sustained >10% AH in later scans; none qualifies for an entry or >10% bar instrumentation now.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
