@@ -31,3 +31,5 @@ date,ticker,retrospective_class,entry_utc,min_confirm_trades,min_confirm_notiona
 2026-09-18,USDE,thin,2026-09-18T08:15:00Z,410,255909.34,10.00,limit
 2026-09-22,GURE,holdable,2026-09-22T08:40:00Z,2594,765658.32,10.00,limit
 2026-09-22,STI,holdable,2026-09-22T08:15:00Z,2544,1027353.84,10.00,limit
+2026-09-28,SDEV,holdable,2026-09-28T08:15:00Z,1632,496475.40,-2.29,pmlast
+2026-09-28,WBUY,holdable,2026-09-28T09:10:00Z,3654,908413.11,10.00,limit
