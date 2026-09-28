@@ -125,6 +125,37 @@ Scanner session: AFTERHOURS, 2026-09-28 16:30:19 ET; 3 hits. MSGY's second >10% 
 - GNPX (pharmaceuticals, float 818K, tradable=true at 22:25): AH% fell +10.7% → +8.6% and VRatio is 0.3x. Below the >10% sustained gate; keep on watch. The 22:25 structured search found no verified fresh catalyst (provisional Grade None). No >10% spike/third-bar instrumentation for this scan.
 - KNDI (motor vehicles, float 85.6M): new AH appearance +8.2%, VRatio 0.1x despite the strong regular session. Watch for >10% sustained AH movement; regular-session +39.5% alone does not qualify. No >10% spike/third-bar instrumentation for this scan.
 
+## Scan 22:45 CEST (4:45 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-28 16:45:18 ET; 7 hits. POCI, WBUY, SDEV, and XLAB appear for the first time in AH; XLAB came from the supplementary change-ranked pass. MSGY remains above +10% across three AH scans (+27.8% → +26.5% → +27.8%) but Day% is -61.2%. GNPX returns above +10% (+10.7% at 22:25, +8.6% at 22:30, +10.3% now); POCI and XLAB have only one AH appearance. No paper orders before the 23:00 CEST entry window.
+
+  Supplementary AH-change-only (>15%, not in volume pass): XLAB
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| KNDI | [TV](https://www.tradingview.com/chart/?symbol=KNDI) | $0.82 | +39.5% | +7.3% | $0.88 | +49.7% | 3.9M | 8.7M | 0.4x | 85.6M | Motor Vehicles |
+| MSGY | [TV](https://www.tradingview.com/chart/?symbol=MSGY) | $3.13 | -61.2% | +27.8% | $4.00 | -50.4% | 716K | 6.5M | 0.1x | 1.5M | Engineering & Construction |
+| POCI | [TV](https://www.tradingview.com/chart/?symbol=POCI) | $4.53 | -2.3% | +13.8% | $5.15 | +11.2% | 166K | 71K | 2.3x | 7.9M | Medical Specialties |
+| GNPX | [TV](https://www.tradingview.com/chart/?symbol=GNPX) | $2.81 | -14.6% | +10.3% | $3.10 | -5.8% | 156K | 376K | 0.4x | 818K | Pharmaceuticals: Major |
+| WBUY | [TV](https://www.tradingview.com/chart/?symbol=WBUY) | $0.90 | +8.2% | +5.4% | $0.95 | +14.0% | 113K | 3.8M | 0.0x | 2.5M | Food Retail |
+| SDEV | [TV](https://www.tradingview.com/chart/?symbol=SDEV) | $1.57 | +5.4% | +5.1% | $1.65 | +10.7% | 65K | 4.2M | 0.0x | 1.8M | Pharmaceuticals: Major |
+| XLAB | [TV](https://www.tradingview.com/chart/?symbol=XLAB) | $2.40 | -1.2% | +22.9% | $2.95 | +21.4% | 1K | 52K | 0.0x | 25.9M | Financial Conglomerates |
+
+**Evaluation notes:**
+- MSGY (construction, float 1.5M; tradable=true at 22:25): MSGY 2026-09-28  SPIKE  16:06ET  +37%  $4.30  994 trades / 87k sh  (first co-spike bar) (as-of 16:45ET)
+- MSGY 2026-09-28  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:45ET
+- MSGY: SIP confirms real but fading volume: 16:05 ET 422K shares / 5,082 trades, VWAP $4.21; 16:30 ET 22K / 365, VWAP $3.95. AH high $4.60 was in the 16:05 bar, and scanner $4.00 is 13% below it. The last SIP bar is 16:30 ET (normal ~15-minute historical lag); Alpaca quote bid $2.69 x100 / ask $0.00 x0 is stuck at 16:00 ET, so it does not prove a current empty book. **FIRST-BAR-SPIKE WATCH**: initial AH high in first 15 minutes, CONFIRM-3 NO on both completed checks (16:30 and 16:45), no later local-volume new high; hypothetical $4.00 at 16:45 ET. Skip live entry on that trajectory and the Day% -61.2% dead-cat gate. Despite trading above the $3.13 regular close, AH% has not risen across two scans, so no DEAD-CAT-OVERRIDE WATCH. Sep 28 Form 6-K/private placement and warrants (release time unverified, documented at 22:25) remain provisional Grade D, and Sep 25's earlier run makes this a multi-session mover.
+- POCI (medical optics, float 7.9M): tradable=true. POCI 2026-09-28  SPIKE  16:21ET  +22%  $5.51  101 trades / 8k sh  (first co-spike bar) (as-of 16:45ET)
+- POCI 2026-09-28  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 16:45ET
+- POCI: SIP corroborates a real 16:20 ET spike (H $5.85, VWAP $5.38, 157K shares / 2,021 trades), then 16:25 73K / 930 and 16:30 32K / 453; participation is falling, and the $5.15 scanner price is ~12% below the 16:20 high. Quote bid $3.81 x100 / ask $0.00 x0 is timestamped 16:00 ET and cannot verify the live book. One AH scan only; watch for renewed accumulation and a second >10% AH scan after 23:00. [Sep 23 company announcement](https://www.stocktitan.net/news/POCI/precision-optics-schedules-fourth-quarter-and-fiscal-year-2026-clr7zoryq0dl.html) schedules FY2026 earnings release after the Sep 28 close and a 17:00 ET call. That announcement is five days old; searches have not verified that the results were released as of 16:45 ET, so no earnings grade from the scheduled event. Three default-provider earnings/PR/8-K searches were rate limited; the Tavily retry found the schedule and no released results. Provisional Grade None pending actual dated results.
+- GNPX (pharmaceuticals, float 818K; tradable=true at 22:25): GNPX 2026-09-28  NO-SPIKE  peak +14% @16:18ET  (no bar cleared +15% on a volume co-spike) (as-of 16:45ET)
+- GNPX 2026-09-28  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:45ET
+- GNPX: second >10% AH appearance, but not a sustained volume build. SIP 16:05 ET 76K shares / 710 trades, VWAP $3.07; by 16:30 only 4.7K / 53, VWAP $3.11. Scanner +10.3% is consistent with the $3.03–3.16 SIP range; real activity is thinning. Quote bid $2.32 x100 / ask $3.32 x100 is frozen at 16:00 ET, not current fillability. Skip at this observation scan; if it holds >10% at the entry window, recheck accumulation and book. Repeated earnings and release/filing searches: the default provider rate limited one and timed out another; Tavily found no Sep 28 announcement, only older Aug/Sep material. Provisional Grade None; no verified fresh catalyst.
+- XLAB (financial conglomerates/AI infrastructure, float 25.9M): tradable=true. XLAB 2026-09-28  SPIKE  16:30ET  +28%  $3.06  105 trades / 23k sh  (first co-spike bar) (as-of 16:45ET)
+- XLAB 2026-09-28  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET
+- XLAB: supplementary-only scanner $2.95 / +22.9% against just 1K reported AH volume and 0.0x VRatio. SIP has one material bar at 16:30 ET, H $3.06 but close $2.26, VWAP $2.60, 56K shares / 428 trades; Yahoo's 16:30–16:45 timeline stays ~$2.26 (shape only). The $3.06 high printed, but there is no accumulating volume or sustained $2.95 level in the available SIP bars. Quote bid $1.96 x100 / ask $0.00 x0 is frozen at 16:00 ET, so current fillability remains unknown. Skip pending a second >10% AH scan with real accumulation, not on the supplementary pass alone. Three default-provider searches were rate limited; a Tavily retry surfaced Sep 28 dated 8-K/A and 10-K excerpts (business-combination financial statements, wider FY2026 loss), without a verified filing time or a same-day price-driving release. No catalyst grade assigned from a filing headline alone; earlier Sep 14/21 press releases are background.
+- KNDI: AH% +8.2% → +7.3%, VRatio 0.1x → 0.4x; strong regular-session gain is not a qualifying AH move. WBUY and SDEV: first AH appearances +5.4% and +5.1% with 0.0x VRatio. Watch only; no >10% bar instrumentation or entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
