@@ -106,6 +106,25 @@ Scanner session: AFTERHOURS, 2026-09-28 16:25:19 ET; 2 hits. First AH appearance
 - GNPX 2026-09-28  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-of 16:25ET
 - GNPX SIP 16:05 ET: H $3.14, VWAP $3.07, 76,207 shares / 710 trades; 16:10 ET: H $3.19, VWAP $3.10, 41,136 shares / 366 trades. Price is corroborated, but real AH volume is lower in the second bar and does not yet show sustained high participation. Quote bid $2.32 x100 / ask $3.32 x100 is timestamped 16:00 ET, too old to establish a current fillable book. Watch for another >10% AH scan and accumulating SIP volume; no entry before 23:00. Four targeted search calls (earnings, release, filing; press-release retry on Tavily after rate limits) found no verified Sep 28 catalyst. The Sep 8 company presentation is old background. Grade **None** provisionally; repeat the structured search if GNPX remains >10% AH in a later scan.
 
+## Scan 22:30 CEST (4:30 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-28 16:30:19 ET; 3 hits. MSGY's second >10% AH appearance is +27.8% → +26.5%; GNPX fell from +10.7% to +8.6%. KNDI's first AH appearance is below +10% and its 21:30 regular-session appearance does not count toward the AH gate. No paper orders before 23:00 CEST.
+
+  Supplementary AH-change-only (>15%, not in volume pass): none
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| KNDI | [TV](https://www.tradingview.com/chart/?symbol=KNDI) | $0.82 | +39.5% | +8.2% | $0.89 | +51.0% | 926K | 8.4M | 0.1x | 85.6M | Motor Vehicles |
+| MSGY | [TV](https://www.tradingview.com/chart/?symbol=MSGY) | $3.13 | -61.2% | +26.5% | $3.96 | -50.9% | 517K | 6.5M | 0.1x | 1.5M | Engineering & Construction |
+| GNPX | [TV](https://www.tradingview.com/chart/?symbol=GNPX) | $2.81 | -14.6% | +8.6% | $3.05 | -7.2% | 98K | 369K | 0.3x | 818K | Pharmaceuticals: Major |
+
+**Evaluation notes:**
+- MSGY (construction, float 1.5M, tradable=true at 22:25): MSGY 2026-09-28  SPIKE  16:06ET  +37%  $4.30  994 trades / 87k sh  (first co-spike bar) (as-of 16:30ET)
+- MSGY 2026-09-28  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET
+- MSGY: AH% eased +27.8% → +26.5%; scanner $4.00 → $3.96, below the first 15-minute SIP high $4.60 by ~14%. SIP bars 16:05 / 16:10 / 16:15 ET: 422K / 259K / 105K shares and 5,082 / 3,033 / 1,245 trades, with VWAP $4.21 → $4.18 → $3.93. Real but declining participation; bars only reach 16:15, so later trajectory is not verified by SIP. Quote bid $2.69 x100 / ask $0.00 x0 remains timestamped 16:00 ET; stale book cannot confirm fillability at 16:30. Skip live entry: pre-23:00 observation window and Day% -61.2% dead-cat gate. It remains above the $3.13 regular close, but AH% declined between these two scans, so no DEAD-CAT-OVERRIDE WATCH. The peak was within the first 15 AH minutes and CONFIRM-3 is now NO; continue tracking for persistent NO before designating a FIRST-BAR-SPIKE WATCH. The Sep 28 6-K/private-placement catalyst (release time unverified) was documented at 22:25; provisional Grade D (dilution), no new headline used for grading.
+- GNPX (pharmaceuticals, float 818K, tradable=true at 22:25): AH% fell +10.7% → +8.6% and VRatio is 0.3x. Below the >10% sustained gate; keep on watch. The 22:25 structured search found no verified fresh catalyst (provisional Grade None). No >10% spike/third-bar instrumentation for this scan.
+- KNDI (motor vehicles, float 85.6M): new AH appearance +8.2%, VRatio 0.1x despite the strong regular session. Watch for >10% sustained AH movement; regular-session +39.5% alone does not qualify. No >10% spike/third-bar instrumentation for this scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
