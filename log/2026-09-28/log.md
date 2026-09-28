@@ -50,6 +50,14 @@ Scanner session: AFTERHOURS, 2026-09-28 16:05:18 ET; 0 hits. Regular-session wat
 
 No candidates found.
 
+## Scan 22:10 CEST (4:10 PM ET)
+
+Scanner session: AFTERHOURS, 2026-09-28 16:10:22 ET; 0 hits. Regular-session watch names remain pending AH confirmation. No candidates meet the >10% AH threshold for spike-bar or CONFIRM-3 instrumentation. No paper orders submitted; entries begin at the 23:00 CEST scan after two qualifying AH scans.
+
+  Supplementary AH-change-only (>15%, not in volume pass): none
+
+No candidates found.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
