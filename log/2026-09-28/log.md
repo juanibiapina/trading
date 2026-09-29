@@ -282,3 +282,90 @@ Scanner session: AFTERHOURS, 2026-09-28 18:30:17 ET; 12 hits. Final scheduled sc
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+
+## Morning Evaluation — 10:25 CEST (04:25 ET, September 29)
+
+### Today's Winner
+
+**No real, capturable AH→PM winner verified at this pulse.** The largest raw PM high was **EGG** (Enigmatig, Singapore business/financial licensing services): SIP September 28 close **$4.25** (Yahoo/price-timeline erroneously anchors at Friday's $2.80); last scan $4.93 at 00:30 CEST (+16.0% AH from the real close), AH SIP high $5.17 at 19:55 ET. September 29 PM SIP high **$13.11 (+208.5%)** at 04:00 ET, in the **first minute only** (78,573 shares/1,596 trades; VWAP $7.81, close $6.74); 04:01 high $7.19/close $5.61, 04:05 five-minute bar close $4.63. The 04:00 five-minute bar had 417,267 shares/8,632 trades, VWAP $6.13, so the high is a real SIP print, not a Yahoo invention. A $4.93 AH hypothetical to $13.11 high is **+165.9% on paper**, but no contemporaneous fillable AH book was verified: Alpaca's bid $3.62 x100/ask $4.88 x100 is frozen at 16:00 ET. The $13.11 exit existed for less than a minute and subsequent bars did not hold that level. Float 8.3M; TradingView market cap ~$119M. No verified fresh Sep 28–29 catalyst from the evening searches or today's targeted Tavily retry: **Grade None**. EGG was **detected**, and skipped on first qualifying final scan, falling participation, `CONFIRM-3 NO`, and stale book. A second qualifying scan and a fresh executable AH quote would have been needed to establish an entry; a threshold change is unsupported.
+
+**SLXN** (Silexion Therapeutics, biotech) is the price-floor diagnostic, not a crowned winner. SIP daily close **$0.2484**, in-window AH ignition 16:35 ET high $0.4000 on 6.12M shares/9,694 trades, 16:45 high $0.4196 on 7.29M/10,324; 18:30 ET around $0.40. PM SIP high **$0.4977 (+100.4%)** at 04:03 ET, 2.14M shares/3,889 trades in that minute; 04:04 closed $0.4476, and 04:05–04:10 SIP VWAP was $0.4463. Hypothetical $0.38 AH → $0.4977 peak **+31.0%**, but the >100% level was a single-minute high. Alpaca `tradable=true`; the only AH quote was **bid $0.21/ask $0.31 x100 at 16:00 ET**, a ~40% bid-to-ask spread relative to the close and stale before the 16:35 surge. No live AH fillable spread can be established. Float 5.6M; market cap ~$2.7M by TradingView; catalyst unverified/Grade None. The scanner excludes its entire in-window volume-backed surge by `MIN_PRICE=$0.50`. It is a **price-floor detection miss** under that tracker's explicit rule, with **investability unconfirmed, not a holdable exception**. A log-only unrestricted sub-$0.50 pass with live-book verification could measure this gap; the ≥3 holdable nights trigger for changing the floor is not met.
+
+**BKYI** (BIO-key, information technology services; float 1.3M, market cap ~$2.4M) was the strongest *current* filtered PM scan name at 04:20 ET. SIP daily close $1.68, AH high $1.78 on only 250 shares/2 trades at 17:35 ET; PM ignited at 04:00 ET (1.29M shares/11,318 trades) and reached $3.28 **+95.2%** at 04:05 ET (2.60M/24,928, VWAP $2.88, close $3.01). Yahoo's $1.79 basis and $3.04 peak understate/alter the real move. AH→PM $1.71 (19:30 ET) → $3.28 implies +91.8% only as an **unfillable hindsight** entry: no AH volume/book, Alpaca ask $0.00 x0 on a frozen 16:00 ET quote. **PM-only gapper, not an AH-scanner miss or AH→PM winner.** Catalyst unverified/Grade None.
+
+### Baseline Tracking
+
+- Days tracked: **90** (89 + Sep 28 session only). **Baseline gaps:** Sep 25 and Sep 28 morning retrospectives are absent from their trading-date logs; neither was backfilled into the sample. Earlier Sep 11 and Sep 18 gaps remain.
+- Winners detected by scanner: **72/82 (87.8%)**. Carry forward 72/81 and add **SLXN as one explicit price-floor detection miss** under the floor tracker, even though no capturable winner was crowned. EGG was detected; BKYI is structurally PM-only. This mixed convention counts raw floor exclusions in the detection denominator; it must not be mistaken for a capturable-winner sample.
+- Winner selected for paper trade: **36/79 (45.6%)**, unchanged; no actual fill and no qualifying capturable winner sample.
+- Target: >80% detection. Status: **BASELINE MET** on the tracked sample; missing retrospective days and the price-floor convention limit its interpretation.
+
+### Retrospective Scan Results
+
+Filtered live `scan.py --all --session premarket`: 5 hits (BKYI, FFAI, EGG, SDEV, IVVD). An independent TradingView sweep removing price and market-cap caps, sorted by PM change with ≥50K reported PM volume, also found **SLXN, SANG, SMMT, NVTS, CYAB**; the excluded SLXN was the critical floor test. SIP five-minute highs below are historical through approximately 04:05 ET; prices can change later. All percentage bases are SIP Sep 28 daily closes, correcting stale Yahoo anchors.
+
+| Ticker | True close | AH SIP high | PM SIP high | Last evening signal | Outcome |
+|--------|------------|-------------|-------------|---------------------|---------|
+| EGG | $4.25 | $5.17 (+21.6%, 19:55) | $13.11 (+208.5%, 04:00) | $4.93/+16.0%, final scan only | Detected; transient one-minute PM high, AH book stale; uncapturable as verified |
+| SLXN | $0.2484 | $0.43 (~+73%, 18:00) | $0.4977 (+100.4%, 04:03) | Absent, below $0.50 floor | In-window floor exclusion; high not sustained, book stale/wide |
+| BKYI | $1.68 | $1.78 (+6.0%, only 250 shares) | $3.28 (+95.2%, 04:05) | Absent; no AH setup | Liquid PM-only ignition; no AH entry |
+| SANG | $3.59 | $6.01 (+67.4%, 17:45) | $5.16 (+43.7%, 04:00) | $5.03/+40.1%, final scan | Detected; AH peak was better exit, final-scan gate co-blocked by declining tape/stale book |
+| FFAI | $1.41 | $2.40 (+70.2%, 17:00) | $1.85 (+31.2%, 04:00) | $2.21→$1.72→$1.75, 23:30–00:30 | Detected, spike→fade; AH better exit |
+| MSGY | $3.13 | $4.60 (+47.0%, 16:05) | $3.55 (+13.4%, 04:00) | $4.00→$3.62, multiple scans | Detected, dead-cat/first-bar spike; faded |
+| XLAB | $2.40 scanner close | $3.06 (16:30; 56K/428) | $2.16 (04:00; 280/7) | Supplementary $2.95 at 22:45 | Detected; no PM continuation |
+| SMMT / NVTS | Above scanner price/cap limits | AH >10% from close | $19.81 / $13.30 SIP | Absent | Genuine larger-cap AH movers, but PM far below +100% |
+
+### Open Position P&L (Alpaca)
+
+**No executed positions and no open positions.** `broker.js positions` returned none; last night's paper-trades table has no fills. **Total realized P&L for this session: $0.00.** All AH→PM returns above are hypothetical, not a broker P&L or an exit decision.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST), plus six extra 22:05–22:45 observations. Entry window covered. **46 unique** tickers appeared in all evening tables, **23 unique** in AH tables. Of the filtered PM scan's five names, **4/5** were in evening tables (all except BKYI); BKYI had no actionable AH signal.
+- Supplementary AH-change-only: **1 unique name, XLAB**, at 22:45; every AH scan has a source line. Last logged $2.95 → SIP PM high $2.16 = **−26.8%**. Peak bar 280 shares/7 trades at 04:00 ET, no next PM SIP bar available. **0 PM continuations / 1 faded / 0 unassessed**; persistence is inapplicable to a below-entry high, and there is no later-bar close to report.
+- Miss diagnosis: **SLXN** is a deliberate universe floor exclusion on a real 16:35 ET, 6.12M-share surge; **BKYI** ignited only at 04:00 ET, no AH signal; **EGG** was visible at 00:30 but did not pass a second qualifying AH scan or establish a fresh fillable book. SANG first appeared at the final scan but `CONFIRM-3 NO` and a stale book mean it is not a sole final-scan gate-block. No new whole-universe in-window feed-lag miss, late-AH-tail winner, clean ceiling/dead-cat override, broker `tradable=false` block, or clean float-only / stale-book-only qualifying entry verified.
+
+### Missed Opportunities
+
+| Ticker | AH signal | Reason | PM result |
+|--------|-----------|--------|-----------|
+| SLXN | 16:35 $0.40 high, 6.12M shares/9,694 trades from $0.2484 close | Price < $0.50 throughout evening; stale/wide 16:00 quote prevented capturability verdict | $0.4977 high; $0.4476 close in that 04:00–04:05 bar; theoretical $0.38→high +31.0% |
+| BKYI | AH $1.78 high on 250 shares | PM-only ignition; no evening entry | $3.28 high on 2.60M shares/24,928 trades, +95.2% from true close |
+| EGG | $4.93 at final scan | Detected; one qualifying AH scan and stale book | $13.11 first-minute wick; 04:01 closed $5.61, 04:05 bar closed $4.63 |
+
+### AH Mover Follow-Through
+
+Repeated >10% evening AH-scan appearances, including GNPX's nonconsecutive two; SIP highs and latest available PM SIP close where present.
+
+| Ticker | AH peak / ET | Scan trajectory | PM high / ET | Latest SIP PM | PM vs AH peak | Verdict |
+|--------|--------------|-----------------|--------------|---------------|---------------|---------|
+| FFAI | $2.40 / 17:00 | Spike→fade, $2.21→$1.72→$1.75 | $1.85 / 04:00 | $1.66 / 04:05 | −22.9% | Correct fade skip, AH better exit |
+| MSGY | $4.60 / 16:05 | First-bar spike→fade, $4.00→$3.62 | $3.55 / 04:00 | $3.28 / 04:05 | −22.8% | Correct dead-cat/fade skip, AH better exit |
+| GNPX | $3.20 / 16:15 | $3.11→$3.10, then below +10% | no SIP PM bar | no SIP PM bar | unassessed by SIP | Yahoo PM shape ~$3.06–3.11 only; SIP PM peak/volume unavailable |
+
+### Notes
+
+- **FIRST-BAR-SPIKE WATCH:** MSGY (Grade D dilution, float 1.5M), hypothetical final-scan $3.62 → SIP PM peak $3.55 = **−1.9%, faded; skip validated**. Its Day% −61.2%, fading AH volume and dead-cat rule co-blocked entry. Prior standing **3 pre-gate (0 ran) + 5 post-gate (2 ran/3 faded)** → **3 pre-gate + 6 post-gate (2 ran/4 faded)**. No gate change.
+- **Sub-3M AH-fader sample:** MSGY (1.5M, Grade D) AH $4.60 > PM $3.55, **fell short**. (a) first sighting $4.00 → $3.55 = **−11.3%**; (b) PM-open VWAP $3.2283 → $3.55 high = **+10.0%**, but 23,854 shares/340 trades in the opening bar and $3.36 close make the high a weak exit. Prior **4/19** → **4/20** re-explosions, far below ≥80%. FFAI (6.0M, Grade None), $2.40 AH > $1.85 PM, is a higher-float correct fade skip; hypothetical $2.21 first qualifying scan → $1.85 = **−16.3%**. No Grade A/B fader rescue.
+- **Price-floor exclusion:** SLXN added: prior **5 across 2 nights, 0 confirmed holdable** → **6 across 3 nights, 0 confirmed holdable, 1 pending executable-book verdict**. Raw +100.4% peak on heavy SIP volume was not sustained above +100%; the 16:00 quote is too old to prove the spread during the surge. Do not relax the floor without ≥3 >100% *holdable on tight live spreads* on ≥3 separate nights. Record the detection miss but leave the floor intact.
+- **Raw PM leader:** EGG by **SIP high** +208.5% from true close; **AH→PM continuation**, detected at final scan, unconfirmed executable book. BKYI is the distinct **holdable PM-only gapper**: 04:00 and 04:05 SIP bars closed $2.55/$3.01 on 1.29M/2.60M shares and 11,318/24,928 trades; no AH signal. `log/pm-open-scan.csv` currently has **59 holdable PM-only** rows by its authoritative query, but **no Sep 29 row yet** as of this evaluation; dedicated PM-open pulse owns that record. Its early-PM hypothetical-entry pilot is an Initiative-6 decision for the daily email.
+- **Coverage and baseline gaps:** Sep 28 evening itself ran 7/7; Sep 22 ran **2/7** and Sep 25's log contains **0/7 scheduled evening scan sections** (only position evaluations). Two coverage failures within about five sessions warrant a **scheduler/bridge reliability investigation** in the daily email; neither unassessed prior morning is silently added to the detection or selection rate. Sep 25 and Sep 28 morning baseline retrospectives were skipped.
+- **Other standing trackers (prior-log authority):** in-window feed-lag **6**; no-fillable-only **4**; stale-book-only **5**; float-only **1**; final-scan-only **2**; extreme-zone AH>PM **13 fades / 2 continues (86.7%)**; this-week reverse splits **4/5 faded**, older **4/6 continued**; multi-session entries **1 faded**, first-day entries **27 (9 ran/8 flat/10 faded)**; fill chase **1 never reclaimed**. No actual entry last night, no new case for these trackers. Keep the standing whole-universe AH-source check, stale-book execution-data investigation, reverse-split recency conviction downgrade, and extreme-runner partial-profit proposal in the daily email. No entry/exit rule was changed here.
+- **Timing/data quality:** the ASCII chart below displays Yahoo's stale EGG $2.80 and BKYI $1.79 bases and labels 20:00–23:55 ET as `OVN`; all evaluated percentages above use SIP Sep 28 daily closes and SIP highs. Live book snapshots for EGG/BKYI/SLXN were still frozen at Sep 28 16:00 ET. Free-tier SIP PM bars lag this 04:25 ET pulse by ~15 minutes; later PM outcomes are open.
+
+### Price Charts
+
+ASCII excerpts from `python3 scripts/price-timeline.py EGG BKYI FFAI SANG` (04:21 ET); peak corrections from SIP bars. Bars are price shape, not Yahoo volume evidence.
+
+```text
+EGG   $4.25 REG ─ $4.93 last scan ─ $5.17 AH high ─ $13.11 PM 04:00 wick
+         └───────────────────────────────────────────────────▲─╲ $5.25 04:00 close → $4.63 04:05
+BKYI  $1.68 REG ─ $1.71 AH tail ─────────────────── $2.55 04:00 → $3.28 04:05
+         └────────────────────────────────────────────────────╱ PM-only; no AH book
+FFAI  $1.41 REG ─────────── $2.40 17:00 AH ─ $1.75 final ─ $1.85 PM → $1.66
+         └──────────────────▲───────────────────────────────────────╲
+SANG  $3.59 REG ─────────── $6.01 17:45 AH ─ $5.03 final ─ $5.16 PM
+         └──────────────────▲──────────────────────────────────────╲
+SLXN  $0.2484 REG ─ $0.40 16:35 AH ─ $0.38 final ─ $0.4977 PM 04:03 → $0.451 04:05
+         └──────────────────────────────────────────▲──────────────╲ (excluded by floor)
+```

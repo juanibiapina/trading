@@ -6,14 +6,15 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-09-21 | TOPS | None verified (Top Ships; no fresh Sep 21 catalyst) | $1.62 AH SIP (+125.0% from $0.72; 16:55 ET, 3.39M sh/12,415 tr) | $1.41 PM SIP (+95.8% from $0.72) 04:05 ET, 1.50M sh/6,255 tr | $0.68 SIP daily close Sep 24; no Sep 25 PM quote in price check | **Closed by separate position-evaluation pulse @ $0.70; realized −$44.80 (−50.0%).** Entry was $1.40; Grade None; float 4.1M. Day 4: below day-1 PM peak, no renewed run. |
-| 2026-09-22 | WHLR | None; 1-for-9 reverse split effective Sep 21, no fresh operational catalyst | $5.10 PM SIP (+172.7% from $1.87; 04:05 ET, 1.29M sh/14,197 tr) | $4.86 PM SIP on Sep 24, −10.7% from true Sep 23 close $5.44 | $3.74 SIP close Sep 24; Sep 25 PM $4.19 SIP peak at 04:05 ET, then $4.14 close | **Raw market benchmark; actionable capture not confirmed.** Day 3: Sep 24 AH $4.85 fell to Sep 25 PM $4.19 (−13.6% from AH high); no new >100% move from Sep 24 close $3.74. Alpaca's quote was stale and no entry occurred. Yahoo's $5.44 Sep 25 prior-close anchor is stale. Float 568K.
 
+No active watches as of September 29; no capturable AH→PM winner was verified for the September 28 session.
 
 ## Historical Winners (with multi-day outcome)
 
 | Date | Ticker | Catalyst | AH Peak | PM Peak | Day 2 | Day 5 | Outcome |
 |------|--------|----------|---------|---------|-------|-------|---------|
+| 2026-09-21 | TOPS | None verified | $1.62 AH SIP (+125% from $0.72) | $1.41 PM SIP (+95.8%) | — | $0.64 Sep 28 SIP close; $0.62 PM Sep 29 | Day 8: faded below original $1.40 entry and day-1 peak; separate position pulse exited at $0.70, −$44.80 (−50.0%). No renewed multi-day run. |
+| 2026-09-22 | WHLR | None; 1-for-9 reverse split effective Sep 21 | $5.10 PM SIP (+172.7% from $1.87) | $5.10 PM SIP | — | $4.09 Sep 28 SIP close; $4.04 PM Sep 29 | Day 7: below original $5.10 PM peak, no further >100% move. Raw benchmark only; no confirmed actionable AH entry and no fill. |
 | 2026-09-17 | SSM | None verified | $2.57 AH SIP (+76.0% from $1.46) | $3.10 Yahoo provisional; SIP verified through $2.86 (+95.9%) | ~$1.51 (Sep 22 last) | — | **No real winner pending SIP verification.** Detected at final scan, skipped on `CONFIRM-3 NO` and stale `ask $0.00 x0`. |
 | 2026-09-16 | KXIN | None verified | $2.78 AH SIP (+146.0% from $1.13) | $2.75 PM SIP (+143.4%) | ~$1.45 (Sep 22 last) | — | **Winner, detected and correctly not entered** after SPIKE→FADE / `CONFIRM-3 NO`; AH was slightly better. |
 | 2026-09-15 | RETO | None verified | $8.00 AH SIP (+185.7% from $2.80) | $5.52 PM SIP (+97.1%) | ~$0.19 (Sep 22 last) | — | **Winner, detected and correctly skipped** on first-bar spike and extreme extension; AH was the better exit. |
