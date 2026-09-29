@@ -1,5 +1,17 @@
 # Initiative Log
 
+### 2026-09-29 18:00 — Initiative 6 completed BKYI pilot; Initiative 3 DST observation coverage
+
+**Evaluated:** The Sep 28 step's WBUY and SDEV outcomes remain in the completed ledger, but its prospective-cohort hypothesis has **insufficient data**: there is no Sep 29 cohort CSV and no 10:10 Berlin cohort session. The persistent job was present in `scheduler.json`, but the bridge loads jobs only at startup; the current process started at 15:04 today. No pre-entry snapshot can be reconstructed after the fact. The modeled edge still has no executable book/fill evidence.
+
+**Step taken:** **Active pilot / Initiative 6:** reran `node scripts/init6-pm-pilot.js` after the full Sep 29 PM window and checked Alpaca equity and positions. This remains the highest unblocked modeled $/time lever, but its causal discovery/fill gap is the critical test. **Parallel instrument / Initiative 3:** added narrow 09:10 Berlin shadow cohort jobs for the spring and autumn DST mismatch windows in the external scheduler. Their ET guard skips extra runs outside 04:07–04:14 ET and refuses duplicate files. Earlier uncommitted cohort completion guard and pilot-ledger changes were reviewed and verified. No trading scan/evaluation time, live rule, or order changed.
+
+**Result:** BKYI passed the hypothetical continuation gate at $3.03 (04:15 ET) and its 1-minute SIP high touched the $3.333 +10% limit; completed PM-last was +10.89%. Holdable ledger **n=26, +115.2% total / +4.4% gross per admit / 20/26 positive**, ~+2.4% after assumed 2% spread; all hindsight classes **n=35, +3.4% gross per admit / +1.4% after spread**. At ~€100 size, the holdable estimate implies ~€2.40 per admit; account equity is **$99,721.90 (-$278.10)** and flat. These remain modeled OHLC returns, not fills. Python compilation, a network dry run (20 candidates, 20 two-sided IEX quotes at 12:04 ET, no file), scheduler JSON/Croner validation, timezone conversion, and `git diff --check` passed. The new jobs are persisted but will join the live scheduler on the next bridge restart; the pre-existing 10:10 job is due Sep 30.
+
+**Hypothesis / next step:** At Sep 30 04:10 ET, confirm a real cohort CSV appears before the earliest R+3 entry, then compare every frozen candidate with the later tracker and gate, including rejects, late igniters, and quote ages. Verify the mismatch jobs are loaded before October 25; the pilot's hardcoded UTC daylight-saving bar bounds also need correction before winter data. Reassess and research alternative strategies at the October 1 checkpoint if the paper account remains negative. Keep the pilot log-only until prospective discovery and executable fills support promotion.
+
+**Needs from Juan:** nothing new. Broker access remains deferred at Juan's request; the standing four-scan retirement veto and premarket exit review stay routed to the daily email.
+
 ### 2026-09-28 18:00 — Initiative 6 completed PM pilot; Initiative 3 timing replay
 
 **Evaluated:** The 15:00 step's provisional WBUY limit-touch held on completed Sep 28 premarket SIP bars; SDEV finished at -2.29% to PM-last without a +10% high touch. The prospective cohort hypothesis remains **insufficient data**: the 04:10 ET job was added after today's window, and there is no Sep 28 snapshot. The snapshot dry run only proved that discovery and quote requests returned data at 09:03 ET; it did not test pre-entry capture or fillability.

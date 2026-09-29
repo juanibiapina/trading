@@ -67,6 +67,9 @@ def main():
     observed = datetime.now(timezone.utc)
     with ThreadPoolExecutor(max_workers=6) as pool:
         quotes = list(pool.map(lambda c: quote(c["ticker"], observed), candidates))
+    completed = datetime.now(timezone.utc).astimezone(ET)
+    if not args.dry_run and (completed.date() != local.date() or completed.hour != 4 or completed.minute > 14):
+        raise SystemExit(f"Snapshot finished after the pre-entry window at {completed:%Y-%m-%d %H:%M ET}. No cohort written.")
     rows = [
         {
             "observed_utc": observed.isoformat(), "ticker": c["ticker"],

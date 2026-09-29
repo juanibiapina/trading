@@ -24,3 +24,4 @@ date,ticker,entry,entry_et,exit_px,exit_ret,exit_type,pm_last_ret
 2026-09-22,GURE,3.8400,04:40,4.2240,10.00,limit,-15.36
 2026-09-28,WBUY,0.9600,05:10,1.0560,10.00,limit,8.33
 2026-09-28,SDEV,1.7500,04:15,1.7100,-2.29,pmlast,-2.29
+2026-09-29,BKYI,3.0300,04:15,3.3330,10.00,limit,10.89
