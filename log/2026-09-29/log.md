@@ -35,6 +35,14 @@ Regular-session scan at 15:30 ET, before the 16:00 ET after-hours open. The scan
 
 **Decision:** Watch — pending AH confirmation for all 26 names. No AH scan has occurred, so none meets the two-scan AH gate; no paper orders submitted. Recheck these regular-session watch names in the 00:30 CEST final-scan feed-lag cross-check.
 
+## Scan 22:00 CEST (4:00 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Decision:** No paper orders. The 21:30 regular-session watch names did not appear in this AH scan; they remain pending AH confirmation. Entry evaluation starts at 23:00 CEST after at least two qualifying AH scans.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
