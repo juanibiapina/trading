@@ -93,6 +93,41 @@ NCI 2026-09-29  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
 
 **Decision:** No paper orders at 22:20 CEST. This is an observation scan before the 23:00 CEST entry window, and no name has appeared in two >10% AH scans yet. Recheck trajectory, catalyst freshness, SIP accumulation, and a current two-sided book if any name later qualifies. NCI's Day% ≤ -15% also blocks live entry under the dead-cat rule.
 
+## Scan 22:25 CEST (4:25 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $0.51 | -2.9% | +28.0% | $0.66 | +24.3% | 7.1M | 8.1M | 0.9x | 1.4M | Miscellaneous Commercial Services |
+| MCDIF | [TV](https://www.tradingview.com/chart/?symbol=MCDIF) | $4.00 | -5.9% | +6.2% | $4.25 | +0.0% | 1.1M | 122K | 9.3x | n/a | Engineering & Construction |
+| NCI | [TV](https://www.tradingview.com/chart/?symbol=NCI) | $1.26 | -47.1% | +34.8% | $1.70 | -28.6% | 563K | 1.5M | 0.4x | 2.4M | Apparel/Footwear Retail |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $1.10 | -34.1% | +18.2% | $1.30 | -22.2% | 407K | 8.2M | 0.0x | 915K | Other Transportation |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $3.04 | +55.9% | +7.2% | $3.26 | +67.2% | 380K | 4.2M | 0.1x | 1.2M | Environmental Services |
+| ACH | [TV](https://www.tradingview.com/chart/?symbol=ACH) | $0.61 | -5.8% | +5.6% | $0.65 | -0.6% | 107K | 1.7M | 0.1x | 69.7M | Medical Specialties |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**SUGP — FIRST-BAR-SPIKE WATCH:** Second AH appearance, +28.8% → +28.0%, scanner price steady ~$0.66. SIP 16:00/16:05/16:10 ET bars: 3.75M/3.61M/2.24M shares and 8,994/9,520/5,750 trades; opening high $0.72 at 16:05, then $0.69, with last available bar closing $0.64. The SIP bars returned at this scan only reach 16:10 ET (~15 minutes behind); they support real early volume and a first-bar high but cannot establish current accumulation. Alpaca quote still stamped 16:00:02 ET, `bid $0.43 x100, ask $0.00 x0`, so a current fillable book is unconfirmed. Repeated same-day earnings/PR/filing search found no September 29 catalyst: [filing index](https://stocktitan.net/sec-filings/SUGP) lists September 15 as latest; January earnings and May offering are old background. Provisional Grade None. Hypothetical observation entry $0.66 at 22:25 CEST; first-bar-spike skip applies if the NO confirmation persists at entry time. Instrumentation (as of 16:26 ET):
+
+SUGP 2026-09-29  SPIKE  16:00ET  +31%  $0.67  788 trades / 321k sh  (first co-spike bar) (as-of 16:26ET)
+
+SUGP 2026-09-29  CONFIRM-3  NO no local-volume new-high ignition as-of 16:26ET
+
+**NCI — dead-cat risk; FIRST-BAR-SPIKE WATCH:** Second AH appearance, +36.5% → +34.8%, with regular session -47.1%. It reclaimed today's $1.26 regular close, but AH% is falling across scans, so the dead-cat-override watch condition is not met. SIP 16:00/16:05/16:10 ET: 175K/491K/223K shares and 1,281/3,671/1,507 trades; high $1.94 in the first bar, last available close $1.56. SIP ends 16:10 ET; Alpaca quote remains stamped 16:00:03 ET with `ask $0.00 x0`, so current liquidity is unconfirmed. Repeated earnings/PR/filing search found no September 29 catalyst; [filing index](https://www.stocktitan.net/sec-filings/NCI) lists September 16 as latest (Grade None). Hypothetical observation entry $1.70 at 22:25 CEST to track the first-bar-spike skip; dead-cat rule independently bars a live entry. Instrumentation (as of 16:26 ET):
+
+NCI 2026-09-29  SPIKE  16:03ET  +54%  $1.94  254 trades / 28k sh  (first co-spike bar) (as-of 16:26ET)
+
+NCI 2026-09-29  CONFIRM-3  NO no local-volume new-high ignition as-of 16:26ET
+
+**WETO — new; dead-cat watch, no entry:** Wetour Robotics (formerly Webus International), physical AI/transportation, float 915K. Alpaca `tradable=true`. SIP 16:00/16:05/16:10 ET bars: 21K/420K/340K shares, 88/2,005/1,755 trades, highs $1.11/$1.36/$1.30 and VWAP $1.10/$1.28/$1.24. This confirms a real early surge near the scanner's $1.30, despite its 0.0x TradingView VRatio; last returned SIP bar is ~15 minutes old. Current 16:25:58 ET quote has bid $1.26 x100 and ask $1.27 x100. Day% -34.1% excludes live entry; first AH appearance also fails the two-scan gate. The early high $1.36 at 16:05 has not been exceeded in the returned SIP bars; confirmation is still pending, so no first-bar-spike skip label yet. Targeted earnings and combined PR/6-K searches found no September 29 catalyst: [filing index](https://www.stocktitan.net/sec-filings/WETO) lists September 18 as latest; [stock profile](https://stockanalysis.com/stocks/weto) estimates next earnings October 23. Grade None pending fresh news. Recheck whether AH% rises across two scans while staying above today's $1.10 close before flagging a DEAD-CAT-OVERRIDE WATCH. Instrumentation (as of 16:26 ET):
+
+WETO 2026-09-29  SPIKE  16:08ET  +21%  $1.33  584 trades / 121k sh  (first co-spike bar) (as-of 16:26ET)
+
+WETO 2026-09-29  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-of 16:26ET
+
+**MCDIF:** New, Alpaca `tradable=false`; untradable (carry this status forward without repeated catalyst/SIP workup). Also below +10% AH. **DXST:** Regular-session watch, first AH appearance only +7.2%; Alpaca tradable, pending sustained >10% AH. **ACH:** Prior AH name, +5.2% → +5.6%, still below +10% AH; Alpaca tradable at prior scan. No catalyst workup required for these three at this scan.
+
+**Decision:** No paper orders. It is 22:25 CEST, before the 23:00 entry window. SUGP and NCI have two >10% AH appearances, but both printed their high in the opening bars and have CONFIRM-3 NO on both scans; NCI also fails the Day% gate. WETO is on its first AH appearance and fails the Day% gate. Recheck fresh SIP bars and a current two-sided book at a later eligible scan before any entry; the quoted SIP/quote timestamps here are not proof of current prices.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
