@@ -43,6 +43,14 @@ Supplementary AH-change-only (>15%, not in volume pass): none
 
 **Decision:** No paper orders. The 21:30 regular-session watch names did not appear in this AH scan; they remain pending AH confirmation. Entry evaluation starts at 23:00 CEST after at least two qualifying AH scans.
 
+## Scan 22:05 CEST (4:05 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**Decision:** No paper orders. This is an observation scan before the 23:00 CEST entry window; the regular-session watch names still need AH confirmation.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
