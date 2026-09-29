@@ -128,6 +128,54 @@ WETO 2026-09-29  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-o
 
 **Decision:** No paper orders. It is 22:25 CEST, before the 23:00 entry window. SUGP and NCI have two >10% AH appearances, but both printed their high in the opening bars and have CONFIRM-3 NO on both scans; NCI also fails the Day% gate. WETO is on its first AH appearance and fails the Day% gate. Recheck fresh SIP bars and a current two-sided book at a later eligible scan before any entry; the quoted SIP/quote timestamps here are not proof of current prices.
 
+## Scan 22:30 CEST (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $0.51 | -2.9% | +22.9% | $0.63 | +19.4% | 9.2M | 8.4M | 1.1x | 1.4M | Miscellaneous Commercial Services |
+| MCDIF | [TV](https://www.tradingview.com/chart/?symbol=MCDIF) | $4.00 | -5.9% | +6.2% | $4.25 | +0.0% | 1.1M | 122K | 9.3x | n/a | Engineering & Construction |
+| NCI | [TV](https://www.tradingview.com/chart/?symbol=NCI) | $1.26 | -47.1% | +23.0% | $1.55 | -34.9% | 751K | 1.5M | 0.5x | 2.4M | Apparel/Footwear Retail |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $1.10 | -34.1% | +13.6% | $1.25 | -25.1% | 723K | 8.2M | 0.1x | 915K | Other Transportation |
+| AIXC | [TV](https://www.tradingview.com/chart/?symbol=AIXC) | $1.01 | -39.2% | +28.7% | $1.30 | -21.7% | 689K | 862K | 0.8x | 7.1M | Packaged Software |
+| DXST | [TV](https://www.tradingview.com/chart/?symbol=DXST) | $3.04 | +55.9% | +5.9% | $3.22 | +65.1% | 497K | 4.2M | 0.1x | 1.2M | Environmental Services |
+| HUBC | [TV](https://www.tradingview.com/chart/?symbol=HUBC) | $0.99 | -33.2% | +18.6% | $1.18 | -20.8% | 42K | 449K | 0.1x | 1.8M | Miscellaneous Commercial Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): HUBC
+
+**SUGP — FIRST-BAR-SPIKE WATCH:** Third qualifying AH scan; +28.8% → +28.0% → +22.9%, price $0.66 → $0.66 → $0.63. SIP through the 16:15 ET bar shows 3.75M/3.61M/2.24M/2.92M shares with 8,994/9,520/5,750/7,299 trades: real early volume, but the $0.72 high was printed at 16:05 and no local-volume new-high ignition followed. Scanner price is about 13% below that high. Broker quote remains stamped 16:00:02 ET, `bid $0.43 x100, ask $0.00 x0`; a current fillable book is unverified. Repeat earnings/PR/filing search found no September 29 catalyst; the [latest indexed filing](https://stocktitan.net/sec-filings/SUGP) is September 15 (Grade None). Hypothetical entry **$0.63 at 22:30 CEST** for morning tracking; skip a live entry if this opening-bar-only pattern persists at entry time. Instrumentation:
+
+SUGP 2026-09-29  SPIKE  16:00ET  +31%  $0.67  788 trades / 321k sh  (first co-spike bar) (as-of 16:30ET)
+
+SUGP 2026-09-29  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET
+
+**NCI — FIRST-BAR-SPIKE WATCH; dead-cat skip:** +36.5% → +34.8% → +23.0% AH; regular day -47.1%. It reclaimed the $1.26 regular close but AH% declined on consecutive scans, so the DEAD-CAT-OVERRIDE WATCH condition is absent. SIP through 16:15 ET shows 175K/491K/223K/138K shares and 1,281/3,671/1,507/884 trades; high $1.94 was in the opening bar, with no later volume-backed new high. Repeat earnings/PR/filing search found no September 29 catalyst; [latest indexed filing](https://www.stocktitan.net/sec-filings/NCI) is September 16 (Grade None). Hypothetical entry **$1.55 at 22:30 CEST** for first-bar-skip tracking; regular-session loss independently blocks live entry. Instrumentation:
+
+NCI 2026-09-29  SPIKE  16:03ET  +54%  $1.94  254 trades / 28k sh  (first co-spike bar) (as-of 16:30ET)
+
+NCI 2026-09-29  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET
+
+**WETO — watch, dead-cat skip:** Second >10% AH scan, but AH% fell +18.2% → +13.6% after a -34.1% regular day; no rising reclaim for a DEAD-CAT-OVERRIDE WATCH. SIP through 16:15 ET: 21K/420K/340K/86K shares and 88/2,005/1,755/445 trades, high $1.36 at 16:05, last close $1.23. Real early spike, then fading volume; 16:29:40 ET book bid $1.23 x100, ask $1.25 x100. Repeat earnings/PR/filing search found no September 29 catalyst; [earlier filing index](https://www.stocktitan.net/sec-filings/WETO) showed September 18 latest (Grade None). CONFIRM-3 is now NO after the prior PENDING; monitor whether it stays NO before calling this a persistent first-bar-spike watch. Instrumentation:
+
+WETO 2026-09-29  SPIKE  16:08ET  +21%  $1.33  584 trades / 121k sh  (first co-spike bar) (as-of 16:30ET)
+
+WETO 2026-09-29  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET
+
+**AIXC — new, dead-cat skip:** Alpaca tradable; float 7.1M, software/embodied robotics. SIP 16:10/16:15 ET bars have 734K/1.20M shares and 3,288/5,336 trades, high $1.42/$1.38, VWAP $1.31/$1.26: a real surge corroborating the scanner's $1.30, though it has not sustained a new high. SIP only reaches 16:15 ET; the broker quote `bid $0.86 x100, ask $1.20 x100` is stamped 16:00:00 ET and is stale. Yahoo shows $1.06 at 16:30 but its AH volume/precise price are not used. [Company investor release](https://investors.aixcrypto.ai/news-releases/news-release-details/aixcrypto-holdings-nasdaq-aixc-soon-be-traded-under-ffr-signs) dated **September 28, 17:00 ET** announces a **non-binding** term sheet for a roughly $200M stock acquisition of Faraday Future's robotics business and an AIXC → FFR ticker change September 30; this is the immediately preceding overnight window, not a September 29 earnings release or a completed deal. Tentative Grade C for a proposed deal, with no fixed-price cash merger to grade D. Targeted earnings, PR, and 8-K searches found no newer September 29 release. First >10% AH appearance, Day% -39.2%: no entry and no override watch without AH% rising across two scans. Instrumentation:
+
+AIXC 2026-09-29  SPIKE  16:12ET  +26%  $1.27  409 trades / 56k sh  (first co-spike bar) (as-of 16:30ET)
+
+AIXC 2026-09-29  CONFIRM-3  PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET
+
+**HUBC — new, dead-cat / thin-volume skip:** Alpaca tradable; float 1.8M, cybersecurity. SIP through 16:15 ET shows only 11K/15K/20K/24K shares and 73/77/117/144 trades, with a $1.20 high at 16:15 and $1.06 last close; scanner $1.18 had a print but the move lacks sustained AH volume. Quote `bid $0.84 x100, ask $0.00 x0` is timestamped 16:00:03 ET, so current liquidity is unverified. Day% -33.2%; first >10% AH appearance. Earnings/PR/6-K searches found no fresh September 29 catalyst (Grade None). The [September 28, 05:06 ET Form 6-K](https://www.stocktitan.net/sec-filings/HUBC/6-k-hub-cyber-security-ltd-current-report-foreign-issuer-ae7648ea4990.html) attaches a **September 25** Nasdaq minimum-value deficiency release; this is older background, not today's momentum catalyst. Instrumentation:
+
+HUBC 2026-09-29  NO-SPIKE  peak +21% @16:15ET  (no bar cleared +15% on a volume co-spike) (as-of 16:30ET)
+
+HUBC 2026-09-29  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET
+
+**MCDIF:** Untradable (carried from 22:25), +6.2% AH; no repeated broker/SIP/news workup. **DXST:** +7.2% → +5.9% AH, below the >10% threshold despite its +55.9% day. **ACH:** Previously tracked, absent from this scan. No new entry-eligible setup among them.
+
+**Decision:** No paper orders at 22:30 CEST; entry starts at 23:00. SUGP's repeated opening-bar-only profile is tracked as a hypothetical skip; NCI, WETO, AIXC, and HUBC have Day% ≤ -15%, and HUBC also has thin SIP volume. Reassess fresh bars, current two-sided books, trajectories, and the two-AH-scan gate at the next eligible scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
