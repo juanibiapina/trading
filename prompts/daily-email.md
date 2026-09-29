@@ -1,21 +1,21 @@
-Send the daily summary email. This is the last task in the daily cycle.
+Send the daily summary email for the completed overnight cycle. This pulse runs before the day's scanner improvement and process review.
 
-Read today's logs and send a single HTML email summarizing everything.
+Read the completed work available at send time and send one HTML email.
 
 ## Steps
 
-### 1. Read Today's Data
+### 1. Read Completed Data
 
 Determine yesterday's US trading date. This is the date the morning evaluation used (the AH session being reviewed). The log was created by last night's post-market scans and updated by this morning's evaluation.
 
 Read:
 - `log/YYYY-MM-DD/log.md` -- morning eval: today's winner, scanner diagnostic, baseline tracking, paper trades, AH mover follow-through
-- `SCANNER_CHANGELOG.md` -- latest entry for today's scanner improvement
-- `log/YYYY-MM-DD/process-review.md` -- process issues found (optional)
+- `SCANNER_CHANGELOG.md` -- latest completed scanner improvement; label its date, since today's improvement may run after this email
+- Latest completed `log/*/process-review.md` -- process issues and any needs-user-action items; label its date, since today's review may run after this email
 
-Use the cycle date resolved above for every log path; do not default to the current calendar date when the current day's directory contains only position or scan entries. Read the cycle log from the start. Before using a nonzero read offset, check the file's current line count; never reuse an offset from another log, and treat a short log as valid.
+Use the cycle date resolved above for the overnight log, chart paths, and email subject; do not default to the current calendar date when the current day's directory contains only position or scan entries. Read the cycle log from the start. Before using a nonzero read offset, check the file's current line count; never reuse an offset from another log, and treat a short log as valid.
 
-Check whether `log/YYYY-MM-DD/process-review.md` exists before reading it. If it is missing, treat that as "no process review file for this cycle" rather than an error.
+Find the newest existing process review by date, independent of the overnight log date. If there is no completed review, say "No completed process review available." If the latest review predates this email, do not describe the intervening sessions as reviewed or clean. Include any unresolved needs-user-action item from that review in the email. Today's later scanner improvement and process review can be reported in the next daily email.
 
 ### 2. Generate Charts (Initiative 5)
 
@@ -136,11 +136,11 @@ AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;
 <p style="background: #f5f5f5; padding: 10px; border-radius: 4px;">Cumulative Paper P&amp;L: [running total]</p>
 
 <h3 style="color: #555;">Scanner Improvement</h3>
-<p>[What changed, brief hypothesis]</p>
+<p>[Date of latest completed change and what changed, with brief hypothesis; say if no change is recorded for this overnight cycle]</p>
 
 <h3 style="color: #555;">Process Review</h3>
-<p>[Issues found and severity, or "No issues - all sessions ran clean."]</p>
-<p>[If any issues need user action, highlight them]</p>
+<p>[Date of latest completed review and its findings; if none exists, say no completed review is available. Do not claim today's sessions ran clean before they are reviewed.]</p>
+<p>[If the completed review has unresolved needs-user-action items, highlight them]</p>
 
 <h3 style="color: #555;">Feedback Acknowledged</h3>
 <!-- Juan asked (08-27) to see his feedback reflected back so he knows it landed.
