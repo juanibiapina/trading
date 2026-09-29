@@ -63,7 +63,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **Fade-rule false-negative tracker:** each morning eval records any candidate skipped on the SPIKE→FADE / early-peak-fade rule that then re-exploded in premarket (PM peak above its AH peak and above a profitable entry), with a running tally (float + catalyst grade per case). The re-ramp is **float-conditional**: the trigger to propose the exception is **≥4/5 (≥80%) *sub-3M-float* AH-faders re-exploding** (higher-float faders — LIQT 24.2M, TGE 44.2M — keep fading and are the negative control, not counted toward the trigger). At the trigger, propose a sub-3M-float PM-open re-check exception to the fade skip. **Standing sub-3M count: 4 of 15** (LNKS/RPGL/ATPC/BJDX re-exploded; SIP-corrected CRE Jun cycle, IOTR, WLDS, CRE Jul 29→30 cycle, VSME, ABTS, IPW, LGCL, TGL, and NXTT fell short). The exception is not one case from promotion; the overall SIP-verified sample must reach ≥80% (data collection only).
 - **Reverse-split-squeeze fade tracker:** each morning eval records, for every entered/notable name whose catalyst is a reverse stock split (not a fresh operational catalyst), whether it faded overnight or continued, plus split ratio, split recency (this-week vs months-old), float, and entry→PM-peak P&L, in a running tally. A reverse split is a listing-compliance/distress signal (manufactured low float), not isolated by the catalyst-grade or float trackers. Data collection, no gate change — dataset for deciding whether reverse-split recency should downgrade entry conviction (data collection: ELPW Jul 10 1:80 faded −17.8%, YYGH Jul 10 30:1 faded −17.5%, EDHL Jul 6 1:16 months-old +6% mild, DCX Jul 8 flat). **This-week bucket now 4/4 faded (ELPW, YYGH, BIYA, BTOG) — recency signal RESOLVED; conviction-downgrade recommendation for this-week reverse splits with no fresh operational catalyst routed to Juan's daily email.**
 - **Price-floor exclusion tracker:** each morning eval uses the independent whole-market PM sweep (no price/mcap cap) to find real, in-window, volume-backed AH movers that no scan surfaced solely because they sit below `MIN_PRICE = $0.50`, and logs each with its AH signal, PM peak, hypo AH→PM P&L, Alpaca `tradable`, and a **holdable vs uninvestable** verdict (book spread relative to price; gain sustained ≥2 consecutive 5-min bars). Counted as a detection miss (the signal was real and in-window; our universe filter chose not to query it), but `MIN_PRICE` is **not** changed on this evidence — threshold to propose a floor change or a log-only sub-$0.50 pass is ≥3 sub-$0.50 names on ≥3 separate nights that are both >100% and holdable on tight spreads; until then it is a question for the daily email. Standing count 5 across 2 nights, **0 holdable** (CISS +164% ~40% spread and unwound in 25 min, OMH `tradable=false`, GOSS flat AH→PM — latest authoritative tally in morning evaluations)
-- **Scan-coverage check:** each morning eval verifies how many of the 7 scheduled evening scans actually ran (count `## Scan` sections / git commits), records `Evening scans ran: X of 7`, and keeps a coverage-failure tally in Notes. On a night the scanner did not cover the entry window, the night's winner is **not** counted as a detection miss and selection is not penalized — it is logged as a coverage failure, not a threshold gap (founding case: Jun 18–19, only 2 of 7 scans ran)
+- **Scan-coverage check:** each morning eval verifies how many of the 7 scheduled evening scans actually ran (match `## Scan` headings / git commits to scheduled checkpoints, counting each once), records `Evening scans ran: X of 7`, and keeps a coverage-failure tally in Notes. It checks the last ~10 completed US trading sessions, carries forward dated shortfalls (an existing log without scans is 0/7; a missing log is unknown), and routes ≥2 failures to the daily email for scheduler/bridge investigation. Missing morning retrospectives are baseline gaps tracked separately. On a night the scanner did not cover the entry window, the night's winner is **not** counted as a detection miss and selection is not penalized — it is logged as a coverage failure, not a threshold gap (founding case: Jun 18–19, only 2 of 7 scans ran)
 
 ## Modifiable Files
 
@@ -75,6 +75,23 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-09-29 — Carry Recent Scan Coverage Failures into Morning Reviews
+
+**Context:** The Sep 28 session ran 7/7 scheduled scans, but its morning evaluation found Sep 25 had 0/7 logged evening scans and no morning retrospective. Sep 22 had 2/7. A healthy latest session alone does not describe recent detection coverage; both failures within about five sessions need a dated reliability signal.
+
+**Evaluation of previous changes:**
+- 2026-09-25 peak-persistence check: **Held for 1/1 eligible covered session; insufficient data for the 10-session target.** Sep 28's XLAB outcome reported a $2.16 SIP PM high versus $2.95 last AH price (−26.8%), peak liquidity of 280 shares / 7 trades, and no next PM bar available. Sep 25 had no evening scans or morning retrospective and supplies no pass outcome.
+- 2026-09-24 SIP PM outcome check: **Held in the next covered session.** XLAB received an explicit outcome; ACTU from Sep 24 was also assessed (−9.6%). Two subsequent covered names have outcomes, below the 10-session completeness target.
+- 2026-09-23 source attribution: **Held where scans ran.** Sep 28 logged a source line on every AH scan and identified XLAB once. No provenance can be evaluated for Sep 25's 0/7 session.
+- 2026-09-22 change-ranked >15% pass: **Insufficient data for a cutoff decision.** Across three covered sessions, CPOP's +0.3% SIP peak was transient; ACTU (−9.6%) and XLAB (−26.8%) faded. No sustained incremental continuation has been observed; keep the cutoff and entry checks.
+
+**Changes:**
+1. **prompts/morning-evaluation.md** — Count scheduled checkpoints once (including slightly late scans and CET/CEST labels), carry dated coverage failures from the last ~10 completed US sessions, and route repeated failures to the daily email; distinguish logs with 0 scans from missing logs and from missing morning retrospectives.
+   - Why: Sep 22 had six scan sections but only 2/7 scheduled checkpoints, Sep 25 had 0/7, and Sep 28 had thirteen sections but 7/7 checkpoints. A current-session-only or raw-section count can hide coverage gaps.
+   - Hypothesis: I expect the next five morning evaluations to list every logged <7/7 session in the lookback (including Sep 22 and Sep 25 while in range), mark absent logs as unknown, and flag ≥2 failures for the daily email. Measure: 5/5 evaluations carry the applicable dates without counting uncovered sessions as detection misses.
+
+**Updated process:** Morning evaluations retain recent dated coverage failures and escalate repeated gaps. Scanner parameters, entry rules, and position sizing are unchanged.
 
 ### 2026-09-25 — Separate Thin PM Peaks from Supplementary Pass Follow-Through
 
@@ -92,6 +109,8 @@ _(entries are prepended — newest first)_
 
 **Updated process:** Supplementary-pass outcomes retain the raw SIP PM-peak comparison and separately identify transient peaks using the following PM bar's close. No scanner parameter, entry gate, or position rule changed.
 
+**Evaluation (2026-09-29):** Held for the first eligible covered session after this change: Sep 28's XLAB had a reported peak of 280 shares / 7 trades and no later PM bar (persistence unavailable); its raw peak was below the AH reference, so no transient-positive label applied. Sep 25 supplied no evening scans. The 10-covered-session completeness target has only 1 eligible session so far.
+
 ### 2026-09-24 — Verify PM Follow-Through for Supplementary-Only Names
 
 **Context:** The Sep 23 session had full 7/7 scan coverage and preserved every supplementary-source line. The morning evaluation identified one unique supplementary-only ticker, CPOP, but left its PM outcome unassessed because it was not in the morning scan or main retrospective table. Source attribution worked; the pass's follow-through remains unknown.
@@ -108,6 +127,8 @@ _(entries are prepended — newest first)_
 **Updated process:** Every morning evaluation checks SIP PM bars for each unique supplementary-only ticker, compares the PM high with its latest logged AH scan price, and records the return or a specific data limitation. The 15% cutoff and all entry rules remain unchanged.
 
 **Evaluation (2026-09-25):** Held for 1/1 unique supplementary-only name in the first fully covered session after the change: ACTU $0.73 AH → $0.66 SIP PM high (−9.6%). Nine more covered sessions are needed to assess the 10-session completeness target.
+
+**Evaluation (2026-09-29):** Held for XLAB in the next covered session: $2.95 AH → $2.16 SIP PM high (−26.8%). Both ACTU and XLAB now have explicit outcomes; Sep 25's 0/7 session contributes no candidate. The 10-session target remains pending.
 
 ### 2026-09-23 — Track Supplementary AH-Change Pass Outcomes
 
@@ -130,6 +151,8 @@ _(entries are prepended — newest first)_
 
 **Evaluation (2026-09-25):** Source attribution held again on Sep 24 (all source lines present, ACTU counted once across two scans). Historical SIP backcheck resolved CPOP: $5.95 last AH scan → $5.97 PM high (+0.3%) on 2,489 shares / 74 trades; its peak bar closed $5.90 and the next bar closed $5.52. The previous morning report remains historically incomplete, but both identified names now have measured outcomes.
 
+**Evaluation (2026-09-29):** Sep 28 logged all AH source lines and counted XLAB once; its PM outcome was assessed. The Sep 25 session with 0/7 scans provides no source lines to evaluate. The 10-covered-session attribution target remains pending.
+
 ### 2026-09-22 — Broaden the Supplementary AH Change Scan for Feed/Rank Gaps
 
 **Context:** The Sep 21 morning evaluation found a real in-window omission: **GRML** was absent from all 13 evening scans even though SIP showed an accumulating +18.0% AH move at 18:30 ET and a realistic AH-entry → PM-peak continuation of about +13.6%. GRML was below the supplementary pass's old +20% change cutoff, and that pass was still ranked by volume, so it could not reliably recover moderate movers outside the primary 50-row volume result.
@@ -148,6 +171,8 @@ _(entries are prepended — newest first)_
 **Evaluation:** **Insufficient data.** The Sep 22 session recorded only 2 of 7 scheduled scans and no supplementary-only source labels; the entry window was uncovered. The logged outcomes cannot show whether the new pass added useful candidates or excess false positives, so keep the threshold under observation.
 
 **Evaluation (2026-09-25):** Still insufficient for a cutoff change. Sep 23 and Sep 24 had full coverage; their two unique supplementary-only names were CPOP (thin +0.3% peak, not held in the next bar) and ACTU (−9.6% to PM peak). No sustained incremental continuation has been observed yet.
+
+**Evaluation (2026-09-29):** Insufficient data for a threshold decision. Sep 28 added XLAB (−26.8% to SIP PM high) on full coverage; Sep 25 had 0/7 scans. The three assessed supplementary-only names across Sep 23, 24, and 28 contain no sustained continuation. Keep the >15% pass under observation.
 
 ### 2026-09-18 — Sync Multi-Session and Stale-Book Tracker Seeds After Sep 17 Fades
 
