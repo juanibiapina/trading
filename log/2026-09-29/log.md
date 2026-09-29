@@ -67,6 +67,32 @@ Supplementary AH-change-only (>15%, not in volume pass): none
 
 **Decision:** No paper orders. The scanner found no AH candidates; the 21:30 regular-session watch names remain pending AH confirmation. This observation scan is before the 23:00 CEST entry window, and none has met the two-scan AH gate.
 
+## Scan 22:20 CEST (4:20 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $0.51 | -2.9% | +28.8% | $0.66 | +25.1% | 3.6M | 7.8M | 0.5x | 1.4M | Miscellaneous Commercial Services |
+| NCI | [TV](https://www.tradingview.com/chart/?symbol=NCI) | $1.26 | -47.1% | +36.5% | $1.72 | -27.7% | 147K | 1.4M | 0.1x | 2.4M | Apparel/Footwear Retail |
+| ACH | [TV](https://www.tradingview.com/chart/?symbol=ACH) | $0.61 | -5.8% | +5.2% | $0.64 | -0.9% | 98K | 1.7M | 0.1x | 69.7M | Medical Specialties |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+**SUGP — watch:** Alpaca tradable. SIP 16:00/16:05 ET bars: 3.75M/3.61M shares, 8,994/9,520 trades, highs $0.70/$0.72, VWAP $0.66/$0.68; scanner $0.66 is corroborated. Early high $0.72 at 16:05 ET; currently ~8% below it. Broker quote `bid $0.43 x100, ask $0.00 x0` was timestamped 16:00:02 ET, so the current fillable book is unverified. Yahoo AH volume (16K) contradicts SIP and is ignored. Sector: Hong Kong security services. Earnings, PR, and filing searches found no fresh September 29 catalyst (Grade None if subsequently qualified); [PR Newswire](https://www.prnewswire.com/news/su-group-holdings-limited) showed older releases, and [SEC filing index](https://stocktitan.net/sec-filings/SUGP) listed September 15 as latest. Instrumentation:
+
+SUGP 2026-09-29  SPIKE  16:00ET  +31%  $0.67  788 trades / 321k sh  (first co-spike bar) (as-of 16:20ET)
+
+SUGP 2026-09-29  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+
+**NCI — watch, dead-cat risk:** Alpaca tradable. SIP 16:00/16:05 ET bars: 175K/491K shares, 1,281/3,671 trades, highs $1.94/$1.84, VWAP $1.69/$1.74; scanner $1.72 is corroborated. High $1.94 was in the opening bar, currently ~11% below. Regular session fell 47.1%; AH has reclaimed its $1.26 regular close, but a rising AH% across two scans has not yet been observed, so the dead-cat-override watch condition is pending. Yahoo uses the prior-day close $2.38 for its AH percentage (the scanner uses today's $1.26 regular close); its 15K AH volume contradicts SIP and is ignored. Broker quote `bid $1.08 x100, ask $0.00 x0` was timestamped 16:00:03 ET, so current book is unverified. Sector: Hong Kong apparel retail. Earnings, PR, and filing searches found no fresh September 29 catalyst (Grade None if subsequently qualified); [GlobeNewswire releases](https://rss.globenewswire.com/search/organization/neo-concept%2520international%2520group%2520holdings%2520limited) were older, and [SEC filing index](https://www.stocktitan.net/sec-filings/NCI) listed September 16 as latest. Instrumentation:
+
+NCI 2026-09-29  SPIKE  16:03ET  +54%  $1.94  254 trades / 28k sh  (first co-spike bar) (as-of 16:20ET)
+
+NCI 2026-09-29  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+
+**ACH — watch:** +5.2% AH is below the >10% entry threshold; no structured catalyst workup at this scan. Alpaca tradable; sector medical specialties.
+
+**Decision:** No paper orders at 22:20 CEST. This is an observation scan before the 23:00 CEST entry window, and no name has appeared in two >10% AH scans yet. Recheck trajectory, catalyst freshness, SIP accumulation, and a current two-sided book if any name later qualifies. NCI's Day% ≤ -15% also blocks live entry under the dead-cat rule.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
