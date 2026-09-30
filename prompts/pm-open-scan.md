@@ -98,6 +98,8 @@ date,ticker,pm_gap_pct,ah_footprint,pm_high,pm_high_time_et,ramp_start_et,peak_v
   on HTTP 429 retry once with `-p tavily`)
 - `notes` = short price-path description (e.g. "held $1.00-1.10 across 6 bars")
 
+If appending with Python's `csv.writer`, use `csv.writer(file, lineterminator='\n')` with `open(..., 'a', newline='')`. Its default CRLF endings fail `git diff --check`; preserve existing rows when appending.
+
 **Do not submit any Alpaca order. Do not touch `OPEN_POSITIONS.md`.** This pulse
 is instrumentation only.
 
