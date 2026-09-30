@@ -7,7 +7,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
 
-No active watches as of September 29; no capturable AH→PM winner was verified for the September 28 session.
+No active watches as of September 30; no capturable >100% AH→PM winner was verified for the September 29 session. NCI briefly reached +103.2% from its September 29 regular close on SIP volume, but its AH ask was unverified and the PM high did not hold.
 
 ## Historical Winners (with multi-day outcome)
 

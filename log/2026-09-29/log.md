@@ -200,3 +200,314 @@ Alpaca paper account PA37U2Y192A7 has no open positions. `OPEN_POSITIONS.md` agr
 | — | — | — | — | — | — | — | — | No open positions |
 
 **Actions taken:** None. No orders submitted or tracking changes needed.
+
+## Morning Evaluation — 10:32 CEST (04:32 ET, September 30)
+
+### Today's Winner
+
+**No confirmed capturable >100% AH→PM winner at this pulse.** The largest raw SIP PM move was **NCI** (Neo-Concept International Group Holdings; apparel retail, Hong Kong), detected in all three late observation scans. September 29 regular close was **$1.26** (SIP daily bar); September 28 close was $2.38. The stock fell **47.1%** during the September 29 regular session. The $2.38 Yahoo `previousClose` belongs to September 28, so its negative AH/PM percentages are anchored to the wrong session for this overnight comparison.
+
+- Fresh catalyst: none verified. The September 29 evening filing/PR searches and today's targeted news search found no same-day release; **Grade None**. Float **2.4M**; TradingView market cap about **$3.0M** at the September 29 close.
+- Scanned AH: **$1.72/+36.5%** at 22:20, $1.70/+34.8% at 22:25, **$1.55/+23.0% at 22:30 CEST**; SIP volume was substantial, including **925K shares/6,515 trades at 16:20 ET** and **976K/7,031 at 16:40 ET**, when AH reached **$2.35/+86.5%**. The later high invalidates the *provisional* first-bar-high description in the early scans.
+- SIP PM high **$2.56/+103.2%** at 04:00 ET, on **1,996,589 shares/14,237 trades** (bar VWAP $2.35, close $2.31); the next bar closed **$2.26**. Last verified SIP close **$2.13 at 04:15 ET**; Yahoo shape was about $2.13 at 04:26. The >100% level was a real print but did not persist into the next bar.
+- Hypothetical $1.55 at the 22:30 scan → $2.56 PM high: **+65.2%**, unfilled and dependent on a peak exit. The Alpaca quote during scanning was frozen at **16:00:03 ET, bid $1.08 x100 / ask $0.00 x0**; the 04:20 ET check still returned the same snapshot. No executable AH entry or peak exit was verified. The regular-day collapse, falling AH percentages across scans, `CONFIRM-3 NO` at each observed scan, and missing entry-window scans independently prevent calling it a selected winner. **Detected and skipped; capturability unverified.**
+
+**Scanner diagnostic:** Detectable by 22:20 CEST: **YES**. Detection threshold and sector coverage worked; the 22:30 scan showed real but fading activity. Four later scheduled scans, including the whole 23:00–00:30 entry window, did not run. The actionable change is to restore scan coverage and verify live extended-hours quotes; lowering a scan threshold would not resolve this case. NCI is an observation, **not a detection or selection miss**.
+
+**Other strong tape:** **KALA** (pharma, float 18.6M) rose after the last actual scan. Its **September 29 SIP daily close was $0.50**, while Yahoo/`price-timeline.py` used September 28's $0.45; the $0.92 SIP AH high at 18:45 ET on 2.27M shares/4,617 trades was therefore **+84%**, not +104%. PM SIP high $0.80/+60% in the 04:00 bar on 1.35M shares/6,756 trades, then $0.69 at 04:05: AH was the better exit. A $0.62 AH ignition entry at 17:55 ET → $0.80 PM peak is **+29.0% theoretical**; current broker book is also frozen at 16:00 ET with no ask. [KALA's September 29 07:30 ET release](https://www.newsfilecorp.com/release/316479) announced a **non-binding ~$15M telehealth acquisition LOI**, signed September 24; tentative **Grade C** proposed-deal catalyst, not a completed acquisition. The 17:55–18:45 ET surge fell inside the *scheduled* entry window but after the last scan that actually ran. It is a **coverage failure**, not a proved threshold/feed-lag miss. **WETO** (transportation, float 915K) was detected at $1.30→$1.25 after a −34.1% regular day; SIP AH high $1.37, PM high $1.64/+49.1% from its September 29 $1.10 close, $1.25→$1.64 **+31.2% hypothetical**, then the 04:05 bar closed $1.33. Its 16:29 ET quote had a $1.23/$1.25 book, but the dead-cat gate barred entry. Neither KALA nor WETO meets the >100% winner bar on its correct session basis.
+
+### Baseline Tracking
+
+- Days tracked: **91** (90 + September 29 only). Carried baseline gaps **September 11, 18, 25, and 28**; those sessions were not silently added. The immediately prior baseline was in September 28's log, evaluating that session.
+- Winners detected by scanner: **72/82 (87.8%)**, unchanged. This inherited series includes earlier raw price-floor exclusions despite the absence of a capturable winner on some days. NCI was detected, and the missing entry window prevents a new detection-failure sample. The separate BIYA and FNGR observations below are not crowned winners and are not added to this denominator.
+- Winner selected for paper trade: **36/79 (45.6%)**, unchanged. No fill, no qualifying capturable >100% winner, and no entry-window coverage.
+- Target: **>80%** detection. Status: **BASELINE MET** on recorded samples; skipped retrospectives and coverage failures limit its interpretation.
+
+### Retrospective Scan Results
+
+The filtered live `scan.py --all --session premarket` found **NCI, WETO, KALA, BIYA** at about 04:21 ET. An independent TradingView listed-stock sweep sorted by PM change removed the scanner's price and market-cap caps; it also found **FNGR** below $0.50 and **CAPR** above the cap. SIP historical five-minute bars verify the prices below; Yahoo history supplies timeline shape only. SIP PM bars on the free tier lag about 15 minutes, so the latest verified close is not the live book.
+
+| Ticker | Sep 29 SIP close | SIP AH high | SIP PM high / ET | Last evening scan | Finding |
+|--------|------------------|-------------|------------------|-------------------|---------|
+| NCI | $1.26 | $2.35 / 16:40 (+86.5%) | $2.56 / 04:00 (+103.2%; 1.997M/14,237) | $1.55 at 22:30 | Detected; no verified fillable AH ask; first PM bar closed $2.31 |
+| KALA | $0.50 | $0.92 / 18:45 (+84%; 2.268M/4,617) | $0.80 / 04:00 (+60%; 1.350M/6,756) | Absent; ignition after 22:30 | Entry-window coverage lost; correct stale Yahoo basis |
+| WETO | $1.10 | $1.37 / 17:20 (+24.5%) | $1.64 / 04:00 (+49.1%; 1.138M/6,455) | $1.25 at 22:30 | Detected, dead-cat skip; PM first-bar close $1.61, next $1.33 |
+| BIYA | $2.05 | $2.74 / 16:25 (+33.7%; 126K/1,207, later 703K/6,737) | $2.67 / 04:10 (+30.2%; 365K/2,915) | Absent | In-window feed-lag observation; AH peak higher |
+| SUGP | $0.51 | $0.72 / 16:05 (+41.2%; 3.615M/9,520) | $0.54 / 04:00 (+5.9%; 66K/393) | $0.63 at 22:30 | Detected, first-bar watch faded; AH better exit |
+| FNGR | $0.14 (rounded; TV $0.1377) | $0.19 / 16:25 on 6.728M/7,561 | $0.20 / 04:00 on 12.063M/16,121 | Absent, sub-$0.50 | Real below-floor activity, below winner bar; spread unverified |
+| HUBC | $0.99 scanner close | $1.20 / 16:15 | $1.08 / 04:00 (6,927/81) | $1.18 supplementary at 22:30 | Detected; thin and faded |
+
+**AIXC** was also found at 22:30 after a −39.2% regular day, but its current-date SIP PM request returned no bars; Yahoo's available PM history was for **September 29**, not this September 30 PM. Its outcome is unassessed, not a fabricated fade. **DXST, ACH, MCDIF** did not clear >10% AH in the available scans; MCDIF was marked `tradable=false` and was not an entry qualifier.
+
+### Open Position P&L (Alpaca)
+
+**No executed positions and no open positions.** `broker.js positions` returned none, and last night's paper-trades table has no fills. **Total realized P&L for this session: $0.00.** All entry→PM figures above are hypothetical. Position decisions belong to the separate position-evaluation pulse.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **3 of 7 scheduled** (21:30, 22:00, 22:30 CEST), plus five extra observations at 22:05–22:25. **23:00, 23:30, 00:00 and 00:30 did not run**; the entire eligible entry window was lost. The 21:30 scan was regular-session watch only. The tables contained **33 unique tickers overall / 8 unique AH names**; **2/4** filtered PM names appeared in evening AH tables (NCI, WETO). BIYA was absent despite a covered-window SIP surge; KALA surged after the last actual scan.
+- Supplementary AH-change-only: all seven available AH scan sections include a source line; **one unique ticker, HUBC**, at $1.18 (22:30). Its SIP PM high **$1.08 (−8.5%)** was in the 04:00 ET bar on **6,927 shares/81 trades**; next 04:05 bar closed **$1.01** on 163 shares/5 trades. **0 continuation / 1 faded / 0 unassessed**. This supplementary name was also visible in the main 22:30 combined table.
+- **In-window feed-lag observation: BIYA.** At 16:25 ET its SIP high reached $2.74 on 126,454 shares/1,207 trades; the 16:30 bar closed $2.53 (+23.4% from $2.05), **702,809 shares/6,737 trades**; the 16:35 bar added 690,511/7,497. It was absent from every scan through 22:30 CEST, including the 16:30 ET checkpoint, despite being inside price/cap limits. A hypothetical $2.39 near the 16:30 bar → SIP PM high $2.67 = **+11.7%**, with no contemporaneous executable book; the broker's 16:45 ET quote ($2.37/$2.42 x100) confirms a later two-sided snapshot only. The missing later scans prevent a claim about what a full evening would have shown. This is a **data-feed reliability observation**, not a >100% winner miss counted against the baseline or a lost trade charged to selection.
+
+### Missed Opportunities
+
+| Ticker | AH signal | Why absent / skipped | PM result |
+|--------|-----------|----------------------|-----------|
+| KALA | $0.62 at 17:55 ET; $0.92 at 18:45 on sustained SIP volume | No scheduled 23:00–00:30 scans ran; stale no-ask quote | $0.80 PM peak, below AH high; $0.62→$0.80 +29.0% theoretical |
+| BIYA | $2.53/+23.4% by the covered 16:30 ET bar on 703K/6,737 | TradingView AH feed omitted it at 22:30 | $2.67 PM peak; $2.39→$2.67 +11.7% theoretical |
+| FNGR | Sub-$0.50 in-window $0.19 AH high on 6.73M/7,561 | Scanner `MIN_PRICE=$0.50`; live book was frozen and wide | $0.20 PM peak, only +~43% from rounded close; no >100% winner |
+
+### AH Mover Follow-Through
+
+Repeated >10% evening AH-scan names (AH and PM highs are SIP; current ~04:26 ET Yahoo shape for names with available data):
+
+| Ticker | AH peak / ET | AH trajectory in scans | PM high / ET | PM current / 04:26 ET | PM vs AH peak | Verdict |
+|--------|--------------|------------------------|--------------|------------------------|---------------|---------|
+| NCI | $2.35 / 16:40 | +36.5→+34.8→+23.0%, scan fade, then real later re-ramp | $2.56 / 04:00 | ~$2.13 | +8.9% | PM briefly exceeded AH; no verified AH ask; dead-cat co-block |
+| SUGP | $0.72 / 16:05 | +28.8→+28.0→+22.9%, first-bar spike→fade | $0.54 / 04:00 | ~$0.49 | −25.0% | First-bar skip validated; AH better exit |
+| WETO | $1.37 / 17:20 | +18.2→+13.6%, early spike→fade | $1.64 / 04:00 | ~$1.34 | +19.7% | PM first bar offered a transient high; dead-cat co-block |
+
+HUBC appeared in just one AH scan through 22:30 and is covered in the supplementary result. There were no ceiling-override or dead-cat-override WATCH flags (the regular-day losers did not show the required rising reclaim across two scans). No actual fill, no broker-block qualifier, no pure stale-book or no-fillable-book qualifier, no pure float-only or final-scan-only qualifier, and no qualifying split-catalyst entry was established before the entry window disappeared. No new extreme AH >~130% outcome or chase-fill observation.
+
+### Notes
+
+- **Coverage-failure tally (last 10 completed US sessions, Sep 16–29):** Sep 18 **0/7** (log has position evaluations only), Sep 22 **2/7**, Sep 25 **0/7** (log has position evaluations only), Sep 29 **3/7**. Sep 23's 22:05 run covers its slightly late 22:00 checkpoint, so it is **7/7**; other sessions in this window were **7/7**. **Four failures in ten sessions**, with all eligible entry scans absent tonight. Route the dated counts and a scheduler/bridge reliability investigation to the **daily email**; do not tune a market threshold to compensate for missed jobs. **Baseline-gap tally:** Sep 11, Sep 18, Sep 25, Sep 28 lack morning retrospectives; the latter two were carried from the prior evaluation. Sep 29 is evaluated here, with only one `Days tracked:` increment.
+- **FIRST-BAR-SPIKE WATCH outcomes:** SUGP (float 1.4M, Grade None) hypothetical $0.63 → PM $0.54 = **−14.3%, fade; skip validated**. NCI (float 2.4M, Grade None) hypothetical $1.55 → $2.56 = **+65.2% raw peak, ran**, but its **later 16:40 ET AH high $2.35 surpassed the 16:00 opening high $1.94**: the early first-bar WATCH diagnosis became obsolete before the entry window. Its −47.1% day, frozen zero-ask quote, and missing eligible scans co-blocked a trade. Prior **3 pre-gate + 6 post-gate (2 ran/4 faded)** → **3 pre-gate + 8 flagged post-gate WATCH observations (3 ran/5 faded)**, of which NCI is *not a clean first-bar-only gate test*. Route NCI's later BUILD/recheck lesson through the daily email; do not infer that lifting the first-bar rule alone would have entered it.
+- **Sub-3M AH-fader tracker:** prior **4/20** SIP-verified re-explosions. SUGP, float 1.4M, Grade None, $0.72 AH peak → $0.54 PM peak: **fell short**; (a) first sighting $0.66 → $0.54 **−18.2%**, (b) 04:00 ET opening VWAP $0.51 → $0.54 **+5.9%**, with only 66K shares/393 trades and a $0.51 close. **4/21**. NCI and WETO both rose above their AH peaks in PM after scanned-window fades, but were primarily dead-cat skips; NCI also resumed to a *new AH high after the last scan*. Their (a)/(b) observations are NCI $1.72→$2.56 **+48.8%** / PM-open VWAP $2.35→$2.56 **+8.9%**, WETO $1.30→$1.64 **+26.2%** / PM-open VWAP $1.48→$1.64 **+10.8%**. Both highs were in the first PM bar and quickly faded; keep these co-blocked cases separate from the pure fade-rule denominator. No strong Grade A/B catalyst fader rescued by PM.
+- **Raw PM leader:** NCI, **AH→PM continuation**, detected. The apparent $2.38 Yahoo basis is the prior *trading day*, not Sep 29's $1.26 regular close. No new PM-only leader is charged to the evening baseline. `log/pm-open-scan.csv` currently counts **60 holdable PM-only rows** by its authoritative query and has **no September 30 row yet**; the dedicated PM-open pulse owns that file. Carry the early-PM hypothetical-entry pilot as an **Initiative-6 decision for the daily email**, with the currently recorded count.
+- **Below-$0.50 observation:** FNGR (Sep 29→30, tradable=true, SIP Sep 29 close ~$0.14, $0.19/+~36% AH on 6.73M/7,561 at 16:25 ET; PM $0.20/+~43% on 12.06M/16,121). Alpaca quote frozen at 16:00 ET **$0.12 bid/$0.16 ask x100**, a 25%-of-ask spread before the surge. **Uninvestable/unverified fillability** for the AH entry; it never cleared >100%. Prior floor tracker **6 across 3 nights, 0 confirmed holdable and 1 pending** → **7 across 4 nights, 0 confirmed >100% holdable and 1 pending**. This lower-gain, uncovered-night observation is not added as a baseline winner miss. Leave `MIN_PRICE` unchanged; the ≥3 separate >100% holdable nights threshold is unmet.
+- **Other tracker standings, using Sep 28's log as authority:** feed-lag **6 confirmed** before BIYA → **7 observations** including BIYA's covered early bar, with tonight's truncated window stated above; no-fillable-only **4**; stale-book-only **5**; float-only **1**; final-scan-only **2**; extreme AH>PM zone **13 fades/2 continues (86.7%)**; this-week reverse splits **4/5 faded**, older **4/6 continued**; multi-session entries **1 faded**, first-day entries **27 (9 ran/8 flat/10 faded)**; fill chase **1 never reclaimed**. No new clean cases in those buckets. The existing whole-universe AH-source cross-check, stale-book execution-feed investigation, reverse-split recency downgrade, and extreme-runner partial-profit proposal remain **daily-email decisions**. No live entry or exit gate was changed here.
+- **Data limits:** At 10:32 CEST, historical SIP PM bars reached roughly 04:15 ET, so later prices and persistence can change in subsequent pulses. Yahoo's extended-hours bar volume is missing; its NCI and KALA change anchors are stale. AIXC's returned Yahoo PM history belongs to Sep 29, and September 30 SIP PM bars were unavailable. Hypothetical peaks assume execution that has not been demonstrated by a fresh AH book.
+
+### Price Charts
+
+`python3 scripts/price-timeline.py NCI KALA WETO` captured at approximately 10:26 CEST; chart percentages use Yahoo's previous-close anchor and the session labels mark 20:00–23:55 ET as `OVN`. The SIP corrections and actual AH/PM sessions above take precedence.
+
+```text
+
+========================================================================
+ NCI - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $2.38
+2-Day Range: $1.31 - $2.56
+Current: $2.10 (-11.7% from prev close)
+Peak: $2.56 (+7.5%) at 09-30 08:00 ET
+
+Chart (oldest → newest):
+$   2.31 │
+         │
+         │                                                  █
+         │                                                 █
+         │█                                                  █      ██
+         │ █                                                   █████
+         │  ████  ████                                        █
+         │      ██    ██             ████████ ██          █
+         │                       ████        █  ███████
+         │              █       █
+         │                   ██                        ███
+$   1.31 │               ████  █
+         └────────────────────────────────────────────────────────────
+
+Session Timeline (last 24h):
+------------------------------------------------------------
+  [OVN] 09-29 20:40 ET: $   2.11 ( -11.2%)  Vol:
+  [OVN] 09-29 20:45 ET: $   2.05 ( -13.9%)  Vol:
+  [OVN] 09-29 20:50 ET: $   1.99 ( -16.4%)  Vol:
+  [OVN] 09-29 20:55 ET: $   1.97 ( -17.3%)  Vol:
+  [OVN] 09-29 21:00 ET: $   1.82 ( -23.5%)  Vol:
+  [OVN] 09-29 21:05 ET: $   1.80 ( -24.4%)  Vol:
+  [OVN] 09-29 21:10 ET: $   1.88 ( -21.0%)  Vol:
+  [OVN] 09-29 21:15 ET: $   1.97 ( -17.2%)  Vol:
+  [OVN] 09-29 21:20 ET: $   1.93 ( -18.9%)  Vol:
+  [OVN] 09-29 21:25 ET: $   1.81 ( -23.9%)  Vol:
+  [OVN] 09-29 21:30 ET: $   1.91 ( -19.8%)  Vol:
+  [OVN] 09-29 21:35 ET: $   1.87 ( -21.4%)  Vol:
+  [OVN] 09-29 21:40 ET: $   1.81 ( -23.9%)  Vol:
+  [OVN] 09-29 21:45 ET: $   1.85 ( -22.3%)  Vol:
+  [OVN] 09-29 21:50 ET: $   1.87 ( -21.4%)  Vol:
+  [OVN] 09-29 21:55 ET: $   1.86 ( -21.8%)  Vol:
+  [OVN] 09-29 22:00 ET: $   1.94 ( -18.5%)  Vol:
+  [OVN] 09-29 22:05 ET: $   1.87 ( -21.4%)  Vol:
+  [OVN] 09-29 22:10 ET: $   1.93 ( -18.9%)  Vol:
+  [OVN] 09-29 22:15 ET: $   1.90 ( -20.2%)  Vol:
+  [OVN] 09-29 22:20 ET: $   1.89 ( -20.6%)  Vol:
+  [OVN] 09-29 22:25 ET: $   2.01 ( -15.5%)  Vol:
+  [OVN] 09-29 22:30 ET: $   2.00 ( -16.0%)  Vol:
+  [OVN] 09-29 22:35 ET: $   1.97 ( -17.2%)  Vol:
+  [OVN] 09-29 22:40 ET: $   1.97 ( -17.2%)  Vol:
+  [OVN] 09-29 22:45 ET: $   1.98 ( -16.8%)  Vol:
+  [OVN] 09-29 22:50 ET: $   1.95 ( -18.1%)  Vol:
+  [OVN] 09-29 22:55 ET: $   2.01 ( -15.6%)  Vol:
+  [OVN] 09-29 23:00 ET: $   2.00 ( -16.0%)  Vol:
+  [OVN] 09-29 23:05 ET: $   2.03 ( -14.7%)  Vol:
+  [OVN] 09-29 23:10 ET: $   2.02 ( -15.1%)  Vol:
+  [OVN] 09-29 23:15 ET: $   2.09 ( -12.2%)  Vol:
+  [OVN] 09-29 23:20 ET: $   2.13 ( -10.5%)  Vol:
+  [OVN] 09-29 23:25 ET: $   2.15 (  -9.7%)  Vol:
+  [OVN] 09-29 23:30 ET: $   2.20 (  -7.6%)  Vol:
+  [OVN] 09-29 23:35 ET: $   2.24 (  -5.9%)  Vol:
+  [OVN] 09-29 23:40 ET: $   2.21 (  -7.2%)  Vol:
+  [OVN] 09-29 23:45 ET: $   2.16 (  -9.2%)  Vol:
+  [OVN] 09-29 23:50 ET: $   2.22 (  -6.7%)  Vol:
+  [OVN] 09-29 23:55 ET: $   2.22 (  -6.7%)  Vol:
+  [PM] 09-30 08:00 ET: $   2.31 (  -3.0%)  Vol:
+  [PM] 09-30 08:05 ET: $   2.25 (  -5.4%)  Vol:
+  [PM] 09-30 08:10 ET: $   2.23 (  -6.2%)  Vol:
+  [PM] 09-30 08:15 ET: $   2.13 ( -10.5%)  Vol:
+  [PM] 09-30 08:20 ET: $   2.11 ( -11.3%)  Vol:
+  [PM] 09-30 08:25 ET: $   2.16 (  -9.2%)  Vol:
+  [PM] 09-30 08:30 ET: $   2.13 ( -10.5%)  Vol:
+  [PM] 09-30 08:32 ET: $   2.10 ( -11.7%)  Vol:
+
+========================================================================
+ KALA - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $0.45
+2-Day Range: $0.39 - $0.92
+Current: $0.70 (+54.4% from prev close)
+Peak: $0.92 (+104.7%) at 09-29 22:45 ET
+
+Chart (oldest → newest):
+$   0.88 │
+         │
+         │
+         │
+         │
+         │
+         │
+         │
+         │ █                                  █                     ██
+         │                     █        ██████ ████████████████ ██ █
+         │█               █████ ████████                       █  █
+$   0.39 │  ██████████████
+         └────────────────────────────────────────────────────────────
+
+Session Timeline (last 24h):
+------------------------------------------------------------
+  [OVN] 09-29 20:15 ET: $   0.47 (  +3.7%)  Vol:
+  [OVN] 09-29 20:20 ET: $   0.49 (  +9.4%)  Vol:
+  [OVN] 09-29 20:25 ET: $   0.50 ( +11.2%)  Vol:
+  [OVN] 09-29 20:30 ET: $   0.47 (  +4.4%)  Vol:
+  [OVN] 09-29 20:35 ET: $   0.51 ( +12.6%)  Vol:
+  [OVN] 09-29 20:55 ET: $   0.47 (  +4.4%)  Vol:
+  [OVN] 09-29 21:00 ET: $   0.47 (  +5.0%)  Vol:
+  [OVN] 09-29 21:10 ET: $   0.48 (  +6.6%)  Vol:
+  [OVN] 09-29 21:15 ET: $   0.50 ( +10.4%)  Vol:
+  [OVN] 09-29 21:20 ET: $   0.50 ( +11.1%)  Vol:
+  [OVN] 09-29 21:30 ET: $   0.54 ( +19.7%)  Vol:
+  [OVN] 09-29 21:35 ET: $   0.52 ( +15.5%)  Vol:
+  [OVN] 09-29 21:40 ET: $   0.55 ( +21.9%)  Vol:
+  [OVN] 09-29 21:45 ET: $   0.53 ( +18.8%)  Vol:
+  [OVN] 09-29 21:50 ET: $   0.54 ( +20.6%)  Vol:
+  [OVN] 09-29 21:55 ET: $   0.62 ( +37.7%)  Vol:
+  [OVN] 09-29 22:00 ET: $   0.64 ( +41.7%)  Vol:
+  [OVN] 09-29 22:05 ET: $   0.76 ( +68.8%)  Vol:
+  [OVN] 09-29 22:10 ET: $   0.85 ( +88.8%)  Vol:
+  [OVN] 09-29 22:15 ET: $   0.78 ( +72.2%)  Vol:
+  [OVN] 09-29 22:20 ET: $   0.73 ( +61.4%)  Vol:
+  [OVN] 09-29 22:25 ET: $   0.76 ( +68.4%)  Vol:
+  [OVN] 09-29 22:30 ET: $   0.75 ( +66.7%)  Vol:
+  [OVN] 09-29 22:35 ET: $   0.83 ( +83.8%)  Vol:
+  [OVN] 09-29 22:40 ET: $   0.88 ( +95.8%)  Vol:
+  [OVN] 09-29 22:45 ET: $   0.86 ( +91.6%)  Vol:
+  [OVN] 09-29 22:50 ET: $   0.82 ( +83.2%)  Vol:
+  [OVN] 09-29 22:55 ET: $   0.84 ( +85.6%)  Vol:
+  [OVN] 09-29 23:00 ET: $   0.82 ( +82.5%)  Vol:
+  [OVN] 09-29 23:05 ET: $   0.86 ( +90.4%)  Vol:
+  [OVN] 09-29 23:10 ET: $   0.88 ( +95.4%)  Vol:
+  [OVN] 09-29 23:15 ET: $   0.83 ( +84.7%)  Vol:
+  [OVN] 09-29 23:20 ET: $   0.80 ( +78.1%)  Vol:
+  [OVN] 09-29 23:25 ET: $   0.79 ( +74.4%)  Vol:
+  [OVN] 09-29 23:30 ET: $   0.82 ( +81.6%)  Vol:
+  [OVN] 09-29 23:35 ET: $   0.82 ( +82.0%)  Vol:
+  [OVN] 09-29 23:40 ET: $   0.81 ( +80.3%)  Vol:
+  [OVN] 09-29 23:45 ET: $   0.81 ( +80.9%)  Vol:
+  [OVN] 09-29 23:50 ET: $   0.79 ( +74.6%)  Vol:
+  [OVN] 09-29 23:55 ET: $   0.79 ( +75.6%)  Vol:
+  [PM] 09-30 08:00 ET: $   0.71 ( +57.5%)  Vol:
+  [PM] 09-30 08:05 ET: $   0.69 ( +53.5%)  Vol:
+  [PM] 09-30 08:10 ET: $   0.70 ( +55.5%)  Vol:
+  [PM] 09-30 08:15 ET: $   0.71 ( +58.0%)  Vol:
+  [PM] 09-30 08:20 ET: $   0.69 ( +54.4%)  Vol:
+  [PM] 09-30 08:25 ET: $   0.71 ( +58.6%)  Vol:
+  [PM] 09-30 08:30 ET: $   0.70 ( +54.6%)  Vol:
+  [PM] 09-30 08:32 ET: $   0.70 ( +54.4%)  Vol:
+
+========================================================================
+ WETO - 2-Day Price Timeline (5-min intervals)
+========================================================================
+
+Previous Close: $1.67
+2-Day Range: $1.08 - $1.99
+Current: $1.31 (-21.5% from prev close)
+Peak: $1.99 (+19.2%) at 09-29 14:55 ET
+
+Chart (oldest → newest):
+$   1.93 │
+         │
+         │
+         │
+         │█████████████████████      █
+         │                     ██████
+         │
+         │                             ███
+         │                            █   █████               ███ ██ █
+         │                                               █████   █  █
+         │
+$   1.08 │                                     ██████████
+         └────────────────────────────────────────────────────────────
+
+Session Timeline (last 24h):
+------------------------------------------------------------
+  [OVN] 09-29 20:40 ET: $   1.31 ( -21.6%)  Vol:
+  [OVN] 09-29 20:45 ET: $   1.31 ( -21.6%)  Vol:
+  [OVN] 09-29 20:50 ET: $   1.29 ( -22.8%)  Vol:
+  [OVN] 09-29 20:55 ET: $   1.26 ( -24.6%)  Vol:
+  [OVN] 09-29 21:00 ET: $   1.25 ( -25.1%)  Vol:
+  [OVN] 09-29 21:05 ET: $   1.27 ( -24.0%)  Vol:
+  [OVN] 09-29 21:10 ET: $   1.28 ( -23.4%)  Vol:
+  [OVN] 09-29 21:15 ET: $   1.34 ( -19.8%)  Vol:
+  [OVN] 09-29 21:20 ET: $   1.34 ( -19.8%)  Vol:
+  [OVN] 09-29 21:25 ET: $   1.29 ( -22.8%)  Vol:
+  [OVN] 09-29 21:30 ET: $   1.32 ( -21.0%)  Vol:
+  [OVN] 09-29 21:35 ET: $   1.32 ( -21.0%)  Vol:
+  [OVN] 09-29 21:40 ET: $   1.29 ( -22.7%)  Vol:
+  [OVN] 09-29 21:45 ET: $   1.29 ( -22.8%)  Vol:
+  [OVN] 09-29 21:50 ET: $   1.33 ( -20.4%)  Vol:
+  [OVN] 09-29 21:55 ET: $   1.31 ( -21.6%)  Vol:
+  [OVN] 09-29 22:00 ET: $   1.31 ( -21.6%)  Vol:
+  [OVN] 09-29 22:05 ET: $   1.30 ( -22.2%)  Vol:
+  [OVN] 09-29 22:10 ET: $   1.31 ( -21.5%)  Vol:
+  [OVN] 09-29 22:15 ET: $   1.31 ( -21.6%)  Vol:
+  [OVN] 09-29 22:20 ET: $   1.32 ( -20.9%)  Vol:
+  [OVN] 09-29 22:25 ET: $   1.35 ( -19.2%)  Vol:
+  [OVN] 09-29 22:30 ET: $   1.34 ( -19.8%)  Vol:
+  [OVN] 09-29 22:35 ET: $   1.32 ( -21.0%)  Vol:
+  [OVN] 09-29 22:40 ET: $   1.34 ( -19.8%)  Vol:
+  [OVN] 09-29 22:45 ET: $   1.31 ( -21.6%)  Vol:
+  [OVN] 09-29 22:50 ET: $   1.31 ( -21.6%)  Vol:
+  [OVN] 09-29 22:55 ET: $   1.34 ( -19.8%)  Vol:
+  [OVN] 09-29 23:00 ET: $   1.32 ( -21.0%)  Vol:
+  [OVN] 09-29 23:05 ET: $   1.32 ( -21.0%)  Vol:
+  [OVN] 09-29 23:10 ET: $   1.31 ( -21.5%)  Vol:
+  [OVN] 09-29 23:15 ET: $   1.32 ( -21.0%)  Vol:
+  [OVN] 09-29 23:20 ET: $   1.31 ( -21.5%)  Vol:
+  [OVN] 09-29 23:25 ET: $   1.30 ( -22.2%)  Vol:
+  [OVN] 09-29 23:30 ET: $   1.30 ( -22.2%)  Vol:
+  [OVN] 09-29 23:35 ET: $   1.31 ( -21.6%)  Vol:
+  [OVN] 09-29 23:40 ET: $   1.31 ( -21.6%)  Vol:
+  [OVN] 09-29 23:45 ET: $   1.32 ( -21.0%)  Vol:
+  [OVN] 09-29 23:50 ET: $   1.35 ( -19.2%)  Vol:
+  [OVN] 09-29 23:55 ET: $   1.32 ( -21.0%)  Vol:
+  [PM] 09-30 08:00 ET: $   1.61 (  -3.6%)  Vol:
+  [PM] 09-30 08:05 ET: $   1.33 ( -20.4%)  Vol:
+  [PM] 09-30 08:10 ET: $   1.32 ( -21.0%)  Vol:
+  [PM] 09-30 08:15 ET: $   1.35 ( -19.1%)  Vol:
+  [PM] 09-30 08:20 ET: $   1.32 ( -20.9%)  Vol:
+  [PM] 09-30 08:25 ET: $   1.34 ( -19.8%)  Vol:
+  [PM] 09-30 08:30 ET: $   1.31 ( -21.5%)  Vol:
+  [PM] 09-30 08:32 ET: $   1.31 ( -21.5%)  Vol:
+
+```
