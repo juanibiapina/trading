@@ -222,6 +222,82 @@ DKI's third ignition bar starts at 16:15 ET and is outside the available SIP cov
 
 **Daily email:** No item from this scan requires Juan's input.
 
+## Scan 22:30 CEST (4:30 PM ET)
+
+`python3 scripts/scan.py --all` ran at 16:30:26 ET (22:30:26 CEST), in the AFTERHOURS session. Six candidates were discovered. HIT and DKI have three scanner appearances above +10% AH (22:20, 22:25, and 22:30); NCPL and LPA each have their first. FLNA and USBC remain below threshold. The scanner snapshot requires fresh broker confirmation before any entry. The 22:25 pulse committed during this workup; its results are included in the histories below.
+
+  Supplementary AH-change-only (>15%, not in volume pass): none
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HIT | [TV](https://www.tradingview.com/chart/?symbol=HIT) | $0.82 | -3.7% | +25.5% | $1.03 | +20.8% | 3.0M | 381K | 7.9x | 20.5M | Information Technology Services |
+| DKI | [TV](https://www.tradingview.com/chart/?symbol=DKI) | $1.57 | -38.4% | +37.6% | $2.16 | -15.3% | 1.3M | 345K | 3.7x | 1.2M | Packaged Software |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.24 | +1.6% | +15.3% | $1.43 | +17.2% | 381K | 40.8M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| LPA | [TV](https://www.tradingview.com/chart/?symbol=LPA) | $2.86 | +1.4% | +12.9% | $3.23 | +14.5% | 204K | 50K | 4.0x | 5.2M | Real Estate Development |
+| FLNA | [TV](https://www.tradingview.com/chart/?symbol=FLNA) | $0.89 | -4.2% | +6.1% | $0.94 | +1.7% | 67K | 10.8M | 0.0x | 47.3M | Biotechnology |
+| USBC | [TV](https://www.tradingview.com/chart/?symbol=USBC) | $0.54 | +0.8% | +7.6% | $0.59 | +8.4% | 53K | 325K | 0.2x | 14.8M | Electronic Equipment/Instruments |
+
+### Evaluation notes
+
+**Decision:** Observation only; no paper orders submitted. Entries begin at the 23:00 CEST scan. HIT's opening-spike evidence and DKI's dead-cat gate also block entry on the current evidence. NCPL and LPA need a second qualifying AH scan and all remaining entry checks. No filled position was added to the paper-trade table or `OPEN_POSITIONS.md`.
+
+**Tradability:** HIT, DKI, and NCPL retain their earlier verified `tradable=true` results. New candidates LPA and USBC each returned `tradable=true` before further workup; FLNA also returned true before the concurrent 22:25 result was read. Carry BENF's verified `tradable=true` result from 22:25. Float and industry are recorded for pattern tracking.
+
+**SIP volume and freshness:** `broker.js bars --tf 5Min --start 2026-09-30T20:00:00Z` returned consolidated SIP for HIT, DKI, NCPL, and LPA. The latest available bar starts at 16:15 ET, consistent with the approximately 15-minute free-tier delay; the unserved later bars cannot establish the current high or liquidity. All four scanner prices fall within the available SIP traded ranges. No bad-print rejection is supported by these bars.
+
+| Ticker | Bar start ET | High | Close | VWAP | Shares | Trades |
+|--------|--------------|------|-------|------|--------|--------|
+| HIT | 16:00 | $1.12 | $0.97 | $0.99 | 1,065,934 | 3,505 |
+| HIT | 16:05 | $1.02 | $0.91 | $0.95 | 626,990 | 2,374 |
+| HIT | 16:10 | $1.08 | $1.03 | $1.03 | 1,596,712 | 7,553 |
+| HIT | 16:15 | $1.04 | $0.92 | $0.98 | 930,280 | 4,078 |
+| DKI | 16:00 | $2.20 | $2.04 | $1.86 | 231,693 | 1,440 |
+| DKI | 16:05 | $2.37 | $2.25 | $2.25 | 932,414 | 8,477 |
+| DKI | 16:10 | $2.35 | $2.16 | $2.17 | 398,562 | 4,121 |
+| DKI | 16:15 | $2.26 | $2.25 | $2.12 | 249,617 | 2,235 |
+| NCPL | 16:00 | $1.36 | $1.33 | $1.28 | 147,135 | 212 |
+| NCPL | 16:05 | $1.38 | $1.34 | $1.34 | 73,890 | 350 |
+| NCPL | 16:10 | $1.47 | $1.43 | $1.42 | 191,674 | 770 |
+| NCPL | 16:15 | $1.43 | $1.35 | $1.37 | 192,636 | 467 |
+| LPA | 16:00 | $2.86 | $2.86 | $2.86 | 152 | 4 |
+| LPA | 16:10 | $3.50 | $3.21 | $3.32 | 273,176 | 3,655 |
+| LPA | 16:15 | $3.25 | $3.14 | $3.17 | 142,321 | 1,461 |
+
+- **HIT — FIRST-BAR-SPIKE WATCH; skip live entry on the available opening-spike evidence. Hypothetical $1.03 at 16:30 ET / 22:30 CEST.** Scanner AH +18.2% → +13.3% → +25.5%, AH Vol 1.0M → 1.6M → 3.0M. SIP confirms 4,219,916 shares / 17,510 trades, including a second volume surge at 16:10, but no new high above the opening 16:00 bar's $1.12. CONFIRM-3 is NO in all three scans. The scanner price is 8.0% below that high; proximity alone does not remove the first-bar-spike rule. The 16:15 bar lost the second surge, closing $0.92 with lower VWAP and volume. Yahoo's timeline checked through 16:31 suggests continued fading after 16:10, so rising delayed scanner AH% does not establish a current BUILD. Verify the later SIP bars at the eligible scan before carrying the opening-high classification forward. Grade **None**; InsurTech / IT services.
+- **DKI — Skip live entry: Day -38.4%, dead-cat gate. DEAD-CAT-OVERRIDE WATCH (carried): hypothetical $2.23 at 16:25 ET / 22:25 CEST.** The prior scan recorded the rising reclaim +27.4% → +42.1% above the $1.57 regular close. This scan eased to +37.6% / $2.16, so it does not establish a new rising reclaim; retain the original hypothetical for morning evaluation. SIP confirms 1,812,286 shares / 16,273 trades. Its available high remains $2.37 in the 16:05 opening bar, with volume falling 932K → 399K → 250K. The fresh 16:30:57 quote is bid $1.87 x100 / ask $1.91 x100, below the delayed scanner $2.16; Yahoo's timeline also suggests fading after the opening move. The hypothetical captures the scanner reclaim, not a verified current BUILD. CONFIRM-3 changed from PENDING to NO; do not use that transition to grade or rank it. Grade **None**, with unverified same-day commentary noted below; mobile gaming / packaged software.
+- **NCPL — Watch; first >10% AH scan, thin volume and stale zero-ask book.** Scanner AH +7.3% → +8.9% → +15.3%, AH Vol 144K → 204K → 381K. SIP confirms 605,335 shares / 1,799 trades, but only 212–770 trades per five-minute bar; this does not establish the thousands-of-trades sustained accumulation required for a BUILD entry. The available high is $1.47 at 16:10; the next bar closed $1.35 with VWAP falling $1.42 → $1.37. Yahoo's timeline suggests the move subsequently eased. VRatio 0.0x is rounded discovery data. Recheck accumulation and a current two-sided book before sizing. Grade **None**; fintech / capital-raising services.
+- **LPA — Watch; first >10% AH scan, real ignition but incomplete follow-through and stale zero-ask book.** SIP confirms 415,649 shares / 5,120 trades, with a 273,176-share / 3,655-trade surge at 16:10 followed by 142,321 shares / 1,461 trades at 16:15. Its available high is $3.50 at 16:10, and the scanner $3.23 is 7.7% below it. Yahoo's later timeline suggests a rebound after 16:25; exact levels and any new high require SIP confirmation. CONFIRM-3 remains PENDING and has no independent decision impact. Grade **None**; Latin American logistics real estate. A second qualifying scan and fresh book are required.
+- **FLNA — Watch; AH +6.1%, below >10% entry threshold.** The 22:25 scanner displayed +10.0% at the rounding boundary; this scan eased to +6.1%, price $0.97 → $0.94, while discovery volume rose 52K → 67K. It still has no verified >10% scheduled-scan appearance. Float 47.3M; Filana Therapeutics, formerly Cassava Sciences, epilepsy biotechnology. Carry Grade **None** and the 22:25 thin-volume/catalyst findings; no new >10% workup is triggered.
+- **USBC — Watch; AH +7.6%, below >10% entry threshold.** First discovery; float 14.8M, electronic equipment/instruments. No >10% catalyst or spike-bar workup is triggered.
+
+**Book checks and stale data:** HIT returned bid $1.00 x100 / ask $1.04 x100 at 16:10:50 ET; NCPL returned bid $1.23 x100 / ask $0.00 x0 at 16:00:41; LPA returned bid $2.46 x100 / ask $0.00 x0 at 16:00:01. One re-pull of each returned the same timestamps. These snapshots do not verify current fillable liquidity, and NCPL/LPA cannot be sized from zero asks. Their consolidated SIP trades establish real AH activity; the stale quotes do not support calling the volume a stale regular-session artifact. DKI's two-sided quote is fresh, but its other entry gates still fail. Yahoo was used only for timeline shape, with zero extended-hours volume ignored and no precise entry/high levels taken from it.
+
+**Spike-bar and third-bar instrumentation (verbatim; log only):**
+
+```text
+HIT 2026-09-30  SPIKE  16:00ET  +37%  $1.12  221 trades / 67k sh  (first co-spike bar) (as-of 16:30ET)
+DKI 2026-09-30  SPIKE  16:01ET  +20%  $1.89  256 trades / 43k sh  (first co-spike bar) (as-of 16:30ET)
+NCPL 2026-09-30  SPIKE  16:13ET  +18%  $1.46  213 trades / 79k sh  (first co-spike bar) (as-of 16:30ET)
+LPA 2026-09-30  SPIKE  16:12ET  +22%  $3.50  1174 trades / 89k sh  (first co-spike bar) (as-of 16:30ET)
+HIT 2026-09-30  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET
+DKI 2026-09-30  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET
+NCPL 2026-09-30  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET
+LPA 2026-09-30  CONFIRM-3  PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET
+```
+
+CONFIRM-3 is recorded for observation; only the explicitly specified first-bar-spike rule combines a persistent opening high with repeated NO readings. PENDING on LPA reflects delayed SIP coverage.
+
+**Structured catalyst searches:** Four `websearch search` calls per >10% ticker: earnings on September 30, one identical Tavily retry after the default provider returned a rate-limit error, same-day wire releases, and SEC material filings (8-K, plus 6-K for foreign issuers DKI/LPA). HIT and DKI were searched again for newly indexed news. Budgets are exhausted for this pulse. **HIT, DKI, NCPL, LPA: no verified fresh catalyst found; grades None.** No catalyst remains a documented concern, not a learning-phase skip. No unverified headline is used to assign an operational-news grade.
+
+- **HIT:** The [company release index](https://healthintech.investorroom.com/Press-Releases) points to August 13 Q2 results; the [filing index](https://www.stocktitan.net/sec-filings/HIT) returned September 15 tax-withholding transactions. No fresh earnings, release, or material filing was found. Older news remains background.
+- **DKI:** Earnings search returned August 13 results and a [GuruFocus article](https://www.gurufocus.com/news/9103534/darkiris-dki-advances-ai-video-platform-and-expands-in-north-america-amid-challenging-valuation) alleging a same-day Cine3.AI / North America update. Its page metadata verifies publication **September 30, 2026 at 09:57:07 ET (13:57:07Z)**. This verifies the article's timestamp, not the underlying company announcement. The wire search returned the [August 14 operational update](https://www.globenewswire.com/news-release/2026/08/14/3345600/0/en/darkiris-inc-updates-strategic-and-operational-progress-on-ai-initiatives-and-gaming-business.html), published **August 14 at 16:05 ET**, and the [filing index](https://www.stocktitan.net/sec-filings/DKI) returned September 18. Direct retrieval of the older wire page timed out. No fresh primary announcement was verified; retain **None** with the same-day commentary as an unconfirmed lead.
+- **NCPL:** Earnings search returned older results and an estimated October 2 reporting date, not a September 30 earnings release. The wire search found the [September 25 Nasdaq delayed-filing notice](https://www.globenewswire.com/news-release/2026/09/25/3369339/0/en/netcapital-inc-receives-nasdaq-notice-related-to-delayed-quarterly-report-on-form-10-q.html); [SEC searches](https://www.stocktitan.net/sec-filings/NCPL/8-k.html) found the same notice and older financing. These are background; no fresh catalyst was verified.
+- **LPA:** Earnings search returned Q2 results released August 12. News searches returned the [September 21 Costa Rica asset sale](https://lpamericas.com/logistic-properties-of-the-americas-advances-capital-reallocation-strategy-with-costa-rica-asset-sale), distributed at **16:30 ET on September 21** per the news index, and September 11 Peru-sale approval. SEC search returned September 21 as the latest indexed filing. These older asset-sale items do not establish a fresh September 30 catalyst and are not used for grading.
+
+**Carry forward:** Add LPA and USBC to the 30-name pipeline established at 22:25 (32 unique names total). BENF dropped out of this snapshot; retain its 22:25 below-threshold, sparse-trading watch and tradability result for the final cross-check. MCDIF remains **untradable (carried)** with GBLRF, MHUAF, SFES, WTLLF, BMNM, and FNFI; no repeated workup was performed on those seven broker blocks. At the 00:30 CEST final scan, cross-check tracked tradable names against SIP for feed-lag omissions. Before any later entry, verify recent daily activity for MULTI-SESSION-RUNNER instrumentation and the current sustained AH trajectory. No fill occurred, so CHASE-CAP instrumentation does not apply; this is not the final scan, so FINAL-SCAN-GATE-BLOCK instrumentation does not apply.
+
+**Daily email:** No item from this scan requires Juan's input. Include the stale-book limitations and DKI's unverified commentary lead in the daily scan summary.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
