@@ -1,5 +1,17 @@
 # Initiative Log
 
+### 2026-09-30 15:00 — Initiative 6 prospective cohort audit; Initiative 3 coverage
+
+**Evaluated:** The Sep 29 hypothesis **worked operationally**: `log/init6-cohort/2026-09-30.csv` was written at 04:10:40 ET, before the earliest 04:15 hypothetical entry. The claim that it could establish a PM-only executable edge has **insufficient data** today: the later selected tracker names all had AH footprints and no PM-only candidate was logged. The prior completed holdable ledger remains n=26 / +4.4% modeled gross per admit; no actual fill was verified.
+
+**Step taken:** **Active pilot / Initiative 6:** built and ran `scripts/init6-cohort-audit.py` to compare the immutable snapshot to the later PM tracker and check quote ages without changing the shadow ledger. **Parallel research / Initiative 3:** checked the Sep 29 daily scan-coverage tally and paper equity. Restoring the eligible AH entry scans is the larger immediate money-fast lever than refining a ~€2.40 modeled net PM-only admit, while the pilot's causal discovery and fill test still needs more sessions.
+
+**Result:** The 04:10 cohort held **19 names**; **0/4** of the later selected tracker names (NCI, KALA, BIYA, WETO) were in it. All four were `ah-detected`; **0** tracked PM-only cases means the pilot has no fresh entry or measured recall today. Among 19 IEX quotes, 14 carried a `two-sided` label, but ages ranged **40,255–43,839 seconds** and **0** had a positive-size ask <=60 seconds old. The tracker is selective, so untracked cohort names cannot be called losers or rejects. Sep 29 completed only **3/7** core AH scans and missed all four entry-window scans; the daily log counts incomplete core coverage in **4/10** recent sessions. KALA's missed-window $0.62→$0.80 is +29.0% hypothetical with no verified fill. Account equity is **$99,721.90 (-$278.10)**, flat. `python3 scripts/init6-cohort-audit.py 2026-09-30`, Python compilation, and `git diff --check` passed. No order, live rule, or existing scan time changed.
+
+**Hypothesis / next step:** At 18:00, evaluate the completed Sep 30 PM window and retain the completed 26-row ledger if no PM-only candidate appeared. At the next prospective PM-only ignition, compare frozen discovery, gate accept/reject, timing, and quote freshness before claiming an edge. Investigate the missing Sep 29 AH sessions; the existing four-scan retirement proposal is pending Juan's veto, and its effect on coverage is unproven. At the October 1 checkpoint, if equity remains negative, open the requested alternative-strategy research and pivot proposal rather than scale a modeled return. Verify DST jobs were loaded before October 25.
+
+**Needs from Juan:** nothing new. The four-observation-scan retirement veto and premarket-exit review remain routed to daily email; broker access stays deferred at Juan's request.
+
 ### 2026-09-29 18:00 — Initiative 6 completed BKYI pilot; Initiative 3 DST observation coverage
 
 **Evaluated:** The Sep 28 step's WBUY and SDEV outcomes remain in the completed ledger, but its prospective-cohort hypothesis has **insufficient data**: there is no Sep 29 cohort CSV and no 10:10 Berlin cohort session. The persistent job was present in `scheduler.json`, but the bridge loads jobs only at startup; the current process started at 15:04 today. No pre-entry snapshot can be reconstructed after the fact. The modeled edge still has no executable book/fill evidence.
