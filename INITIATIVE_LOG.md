@@ -1,5 +1,17 @@
 # Initiative Log
 
+### 2026-09-30 18:00 — Initiative 6 completed-window pilot; Initiative 3 entry-scan outage
+
+**Evaluated:** The 15:00 hypothesis **worked operationally**: the cohort file existed before possible entry and the completed Sep 30 window added no PM-only tracker name. Pilot recall and executable edge remain **insufficient data** because all four selected names (NCI, KALA, BIYA, WETO) had AH footprints; no PM-only candidate was available to compare with the 19-name frozen cohort. The Sep 29 scan-coverage failure needed a cause check.
+
+**Step taken:** **Active pilot / Initiative 6:** ran `node --check scripts/init6-pm-pilot.js`, reran the completed-window pilot and `python3 scripts/init6-cohort-audit.py 2026-09-30`. This tests the highest unblocked modeled PM-only edge without promoting a hindsight result. **Parallel research / Initiative 3:** compared the Sep 29 scheduler jobs with saved Pi session timestamps, stop reasons, and error messages, using the completed 22:30 scan as a positive control. Restoring eligible AH scans has higher immediate expected dollars than refining an approximately €2.40 modeled net PM-only admit, subject to stale-book execution limits.
+
+**Result:** No Sep 30 PM-only case entered. The completed holdable ledger remains **n=26, +115.2% modeled total / +4.4% gross per admit / 20/26 positive**, or approximately +2.4% per admit after an assumed 2% spread; all retrospective classes remain **n=35, +3.4% gross per admit**. The 04:10:38 ET cohort contained 19 names, with zero fresh asks <=60 seconds old; it captured 0/4 later selected AH-footprint names, which does not measure PM-only recall. The Sep 29 22:30 CEST scan session completed, while the 22:45 and all four 23:00–00:30 entry job sessions started and stopped in about one second with **“Your authentication token has been invalidated. Please try signing in again.”** The Sep 30 15:00 session completed. This identifies a transient provider authentication interruption, not a scheduler omission or evidence that the extra observation scans caused the Sep 29 miss. The separate Sep 22 usage-limit event still supports the pending four-scan resource proposal. No order, existing scan time, or live rule changed.
+
+**Hypothesis / next step:** At the next AH entry window, check whether scheduled sessions complete after the transient auth error and escalate authentication recovery if it recurs; do not credit a scan trim for solving an unrelated failure. For Initiative 6, await a prospectively captured PM-only case and compare discovery, gate verdict, quote freshness, and modeled outcome before any promotion. At the October 1 checkpoint, if paper equity remains negative (last observed $99,721.90, down $278.10), open the alternative agent-strategy research and core-strategy pivot proposal Juan requested.
+
+**Needs from Juan:** nothing new. The four-observation-scan retirement veto and premarket exit review remain for daily email; broker access stays deferred at Juan's request.
+
 ### 2026-09-30 15:00 — Initiative 6 prospective cohort audit; Initiative 3 coverage
 
 **Evaluated:** The Sep 29 hypothesis **worked operationally**: `log/init6-cohort/2026-09-30.csv` was written at 04:10:40 ET, before the earliest 04:15 hypothetical entry. The claim that it could establish a PM-only executable edge has **insufficient data** today: the later selected tracker names all had AH footprints and no PM-only candidate was logged. The prior completed holdable ledger remains n=26 / +4.4% modeled gross per admit; no actual fill was verified.
