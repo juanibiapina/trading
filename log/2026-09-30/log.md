@@ -298,6 +298,70 @@ CONFIRM-3 is recorded for observation; only the explicitly specified first-bar-s
 
 **Daily email:** No item from this scan requires Juan's input. Include the stale-book limitations and DKI's unverified commentary lead in the daily scan summary.
 
+## Scan 22:45 CEST (4:45 PM ET)
+
+`python3 scripts/scan.py --all` ran at 16:45:32 ET (22:45:32 CEST), in the AFTERHOURS session. Seven candidates were discovered. DKI has its fourth scanner appearance above +10% AH; LPA has its second (22:30 and 22:45). SES, WETO, and IMCC are new tonight. HIT dropped out; NCPL and FLNA are below threshold.
+
+  Supplementary AH-change-only (>15%, not in volume pass): none
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| DKI | [TV](https://www.tradingview.com/chart/?symbol=DKI) | $1.57 | -38.4% | +24.8% | $1.96 | -23.1% | 2.0M | 431K | 4.6x | 1.2M | Packaged Software |
+| SES | [TV](https://www.tradingview.com/chart/?symbol=SES) | $0.60 | +12.3% | +6.7% | $0.64 | +19.8% | 739K | 19.2M | 0.0x | 250.0M | Electrical Products |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.24 | +1.6% | +6.8% | $1.32 | +8.5% | 621K | 40.9M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| LPA | [TV](https://www.tradingview.com/chart/?symbol=LPA) | $2.86 | +1.4% | +12.6% | $3.22 | +14.2% | 445K | 80K | 5.6x | 5.2M | Real Estate Development |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $1.01 | -8.2% | +5.9% | $1.07 | -2.7% | 210K | 9.3M | 0.0x | 915K | Other Transportation |
+| IMCC | [TV](https://www.tradingview.com/chart/?symbol=IMCC) | $2.25 | -8.2% | +6.5% | $2.40 | -2.2% | 162K | 16.9M | 0.0x | 1.5M | Agricultural Commodities/Milling |
+| FLNA | [TV](https://www.tradingview.com/chart/?symbol=FLNA) | $0.89 | -4.2% | +9.5% | $0.97 | +4.9% | 87K | 10.8M | 0.0x | 47.3M | Biotechnology |
+
+### Evaluation notes
+
+**Decision:** Observation only; no paper orders submitted. This is the 22:45 scan, before the 23:00 CEST entry window. LPA clears the two-AH-scan count but still needs a current fillable book and a trajectory recheck at the eligible scan. DKI remains blocked by the dead-cat gate. The other five scanner names are below the strict >10% AH threshold. No filled position was added to the paper-trade table or `OPEN_POSITIONS.md`.
+
+**Tradability:** New names SES, WETO, and IMCC each returned `tradable=true` before their SIP workup. Carry the earlier true results for DKI, LPA, NCPL, FLNA, and HIT. Float and industry remain pattern-tracking data, not learning-phase skip reasons.
+
+**SIP volume and freshness:** All seven bar requests used `--tf 5Min --start 2026-09-30T20:00:00Z` and returned `feed=sip`. The latest available bar starts at 16:30 ET, 15 minutes before this scan, consistent with the historical-feed delay. Later bars and the current AH high remain unverified. DKI and LPA scanner prices are corroborated by the available traded ranges; no bad-print rejection is supported. Scanner AH Vol and VRatio are discovery data, not fillable-liquidity evidence.
+
+| Ticker | Available SIP shares | Trades | Latest bar start ET | Latest high | Latest close | Latest VWAP | Latest shares | Latest trades |
+|--------|----------------------|--------|---------------------|-------------|--------------|-------------|---------------|---------------|
+| DKI | 2,764,814 | 23,883 | 16:30 | $1.97 | $1.68 | $1.82 | 342,185 | 2,511 |
+| LPA | 1,074,446 | 12,997 | 16:30 | $3.49 | $3.34 | $3.40 | 505,055 | 6,315 |
+| HIT | 5,175,334 | 20,845 | 16:30 | $0.89 | $0.87 | $0.86 | 138,855 | 478 |
+| NCPL | 674,690 | 2,104 | 16:30 | $1.36 | $1.32 | $1.33 | 8,689 | 48 |
+| SES | 1,305,813 | 322 | 16:30 | $0.64 | $0.64 | $0.64 | 1,741 | 7 |
+| WETO | 242,407 | 792 | 16:30 | $1.09 | $1.06 | $1.07 | 24,898 | 125 |
+| IMCC | 198,192 | 1,608 | 16:30 | $2.35 | $2.29 | $2.32 | 4,513 | 41 |
+
+- **LPA — Watch; two qualifying scans, renewed real volume, current book unconfirmed.** Scanner AH +12.9% → +12.6%, price $3.23 → $3.22, AH Vol 204K → 445K, VRatio 4.0x → 5.6x. SIP shows a renewed 16:30 surge of 505,055 shares / 6,315 trades, versus 40,829 / 601 at 16:20 and 112,913 / 961 at 16:25. VWAP rose $3.15 → $3.21 → $3.40. This is real accumulation after the opening dip. The available AH high remains $3.50 at 16:10 ET; the later $3.49 high nearly retested it, and the scanner price is 8.0% below it. **FIRST-BAR-SPIKE WATCH (provisional): hypothetical $3.22 at 16:45 ET / 22:45 CEST.** CONFIRM-3 changed from PENDING to its first NO verdict; the earlier scans were PENDING, so a persistent NO history has not yet been established. Recheck whether later volume-backed highs replace the opening high before applying the first-bar-spike skip. The CONFIRM-3 verdict does not independently grade or rank the candidate. Grade **None (provisional; fresh 6-K contents unverified)**; Latin American logistics real estate. Recheck current two-sided liquidity before sizing at 23:00 or later.
+- **DKI — Skip live entry: Day -38.4%, dead-cat gate; opening move is fading.** Scanner AH +42.1% → +37.6% → +24.8% across the last three scans; price $2.23 → $2.16 → $1.96 despite AH Vol rising 960K → 1.3M → 2.0M. SIP confirms real trading but VWAP fell $2.23 → $2.06 → $1.82 in the last three available bars, and the 16:30 close $1.68 is 29.1% below the $2.37 opening high at 16:05. The scanner price is only 17.3% below that high, illustrating the delayed view. **DEAD-CAT-OVERRIDE WATCH (carried): hypothetical $2.23 at 16:25 ET / 22:25 CEST.** Retain the original rising-reclaim hypothetical; this declining scan creates no new override. Grade **None**; mobile gaming / packaged software.
+- **NCPL — Watch below threshold; fade with sharply falling volume.** Scanner AH +15.3% → +6.8%, price $1.43 → $1.32, while cumulative discovery volume rose 381K → 621K. Available SIP volume fell 192,636 → 41,647 → 19,019 → 8,689 shares; trades fell 467 → 164 → 93 → 48. VWAP fell $1.37 → $1.35 → $1.33 → $1.33. Cumulative volume growth does not establish a BUILD here. It retains only one qualifying scanner appearance, at 22:30. Grade **None** carried; fintech / capital-raising services.
+- **FLNA — Watch below threshold.** Scanner AH +6.1% → +9.5%, price $0.94 → $0.97, AH Vol 67K → 87K. No verified >10% scheduled-scan appearance exists; the earlier +10.0% display was at the rounding boundary. Carry the previous thin-volume findings and Grade **None**. Biotechnology; float 47.3M.
+- **SES — Watch below threshold; sparse trades after the opening volume.** First discovery, AH +6.7%. Of 1,305,813 available SIP shares, 1,082,473 were in the opening bar with only 71 trades. The latest bar has 1,741 shares / seven trades; sustained liquid accumulation is not established. Float 250.0M is recorded, not used to skip it. Electrical products / battery technology. No >10% catalyst workup is triggered.
+- **WETO — Watch below threshold; thin activity.** First discovery, AH +5.9%; available SIP bars have 7,906–100,449 shares and 54–170 trades each. The latest bar has 24,898 shares / 125 trades, not thousands of trades with hundreds of K shares. Other transportation; float 915K. No >10% catalyst workup is triggered.
+- **IMCC — Watch below threshold; brief spike followed by fading volume.** First discovery, AH +6.5%. The 16:15 SIP bar reached $2.80 on 155,652 shares / 1,275 trades, but subsequent volume fell to 24,012 → 9,646 → 4,513 shares and VWAP to $2.39 → $2.34 → $2.32. The available close is $2.29. Agricultural commodities/milling label; cannabis company, float 1.5M. No >10% catalyst workup is triggered by the current scanner reading.
+
+**Dropped prior candidate — HIT:** Its absence from discovery is supported by a faded SIP trajectory: available closes $0.92 → $0.91 → $0.86 → $0.87, with the last two VWAPs $0.87 → $0.86 and only 478 trades in the latest bar. The latest available close is 22.3% below the unchanged $1.12 opening high, so stabilization here does not qualify as holding near the high. Carry the **FIRST-BAR-SPIKE WATCH** hypothetical $1.03 at 16:30 ET / 22:30 CEST and Grade **None**. Retain HIT in the pipeline for the final feed-lag cross-check; dropping from the scanner does not itself establish the current price.
+
+**Book freshness:** LPA returned bid $2.46 x100 / ask $0.00 x0 at 16:00:01 ET; NCPL bid $1.23 x100 / ask $0.00 x0 at 16:00:41; HIT bid $1.00 x100 / ask $1.04 x100 at 16:10:50; DKI bid $1.89 x100 / ask $1.94 x100 at 16:32:05. One re-pull of each returned identical timestamps. These are stale snapshots, especially LPA, NCPL, and HIT; none verifies the instantaneous book at 16:45. LPA/NCPL cannot be sized from zero asks. Their SIP trades confirm real AH activity, so these stale snapshots do not support a hard bad-print or fictitious-volume conclusion. Recheck a current two-sided book at any eligible entry scan. No book was requested for the new below-threshold names.
+
+**Spike-bar and third-bar instrumentation (verbatim; log only):**
+
+```text
+DKI 2026-09-30  SPIKE  16:01ET  +20%  $1.89  256 trades / 43k sh  (first co-spike bar) (as-of 16:45ET)
+DKI 2026-09-30  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:45ET
+LPA 2026-09-30  SPIKE  16:12ET  +22%  $3.50  1174 trades / 89k sh  (first co-spike bar) (as-of 16:45ET)
+LPA 2026-09-30  CONFIRM-3  NO ignition 16:10ET failed third-bar hold/volume as-of 16:45ET
+```
+
+**Structured catalyst searches:** DKI received three Tavily `websearch search` calls covering September 30 earnings, same-day wire releases, and SEC material filings (8-K / 6-K). LPA received the same three checks plus one targeted search for the newly surfaced September 30 6-K, reaching its four-call budget. No verified fresh operational catalyst was found. No catalyst is a documented concern, not a learning-phase entry skip.
+
+- **DKI — Grade None:** [Earnings history](https://www.marketbeat.com/stocks/NASDAQ/DKI/earnings) points to August 13 results. The [wire release](https://www.globenewswire.com/news-release/2026/08/14/3345600/0/en/darkiris-inc-updates-strategic-and-operational-progress-on-ai-initiatives-and-gaming-business.html) is dated **August 14, 2026 at 16:05 ET**; the [TMX release index](https://money.tmx.com/en/quote/DKI:US/news) also dates the earnings release **August 13 at 08:00 ET**. The [filing index](https://www.stocktitan.net/sec-filings/DKI) returned September 18 as its latest filing. All are background. The prior scan's September 30 commentary lead remains unverified as a fresh underlying company announcement; no headline-only grade is assigned.
+- **LPA — Grade None, provisional:** [Earnings searches](https://ir.lpamericas.com/news-events/news/news-details/2026/Logistic-Properties-of-the-Americas-Announces-Second-Quarter-2026-Earnings-Results/default.aspx) returned the August 12 Q2 release. The [news index](https://marketchameleon.com/Overview/LPA/Summary) dates the Costa Rica sale release **September 21 at 16:30 ET** and Peru regulatory approval **September 11 at 09:25 ET**; these are background. The [MarketBeat filing search](https://www.marketbeat.com/stocks/NYSEAMERICAN/LPA/sec-filings) surfaced a same-day 6-K, contrary to the older September 21 index snapshot. Direct [SEC submissions](https://data.sec.gov/submissions/CIK0001997711.json) confirmed **filing date September 30, 2026**, accession **0001997711-26-000172**, acceptance timestamp **2026-09-30T16:14:00.000Z (12:14 ET)**, primary document `latampropertiesoftheameric.htm`. Retrieval of the [primary 6-K](https://www.sec.gov/Archives/edgar/data/1997711/000199771126000172/latampropertiesoftheameric.htm) and the [official IR filing page](https://ir.lpamericas.com/financials/sec-filings/default.aspx) each returned HTTP 403. The filing is fresh, but its contents and any attached release time are unverified. Recheck its contents at the next eligible scan before assigning an operational or dilution grade; freshness alone does not establish a catalyst type.
+
+**Carry forward:** Add SES, WETO, and IMCC to the 32-name pipeline (35 unique names total). Carry seven **untradable (carried)** broker blocks: GBLRF, MHUAF, SFES, WTLLF, BMNM, FNFI, MCDIF; no repeated verification or catalyst search was performed on them. BENF and USBC are absent but remain tracked. At 00:30 CEST, cross-check the 28 tracked tradable names against SIP for feed-lag omissions. Before any later entry, check recent daily bars and `WINNERS_TRACKING.md` for MULTI-SESSION-RUNNER instrumentation. No fill occurred, so CHASE-CAP does not apply; this is not the final scan, so FINAL-SCAN-GATE-BLOCK does not apply.
+
+**Daily email:** Include LPA's renewed SIP surge, stale zero-ask quote, and confirmed September 30 6-K with contents unverified due to HTTP 403. No item from this scan requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
