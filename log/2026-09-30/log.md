@@ -155,6 +155,73 @@ CONFIRM-3 PENDING on DKI reflects the available bars; the newest SIP bar is stil
 
 **Daily email:** No item from this scan requires Juan's input.
 
+## Scan 22:25 CEST (4:25 PM ET)
+
+`python3 scripts/scan.py --all` ran at 16:25:26 ET (22:25:26 CEST), in the AFTERHOURS session. Five candidates were discovered; BENF and FLNA are new tonight. HIT and DKI each have two >10% AH appearances, at 22:20 and 22:25. Entries begin at 23:00 CEST.
+
+  Supplementary AH-change-only (>15%, not in volume pass): none
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| HIT | [TV](https://www.tradingview.com/chart/?symbol=HIT) | $0.82 | -3.7% | +13.3% | $0.93 | +9.1% | 1.6M | 221K | 7.1x | 20.5M | Information Technology Services |
+| DKI | [TV](https://www.tradingview.com/chart/?symbol=DKI) | $1.57 | -38.4% | +42.1% | $2.23 | -12.5% | 960K | 304K | 3.2x | 1.2M | Packaged Software |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.24 | +1.6% | +8.9% | $1.35 | +10.7% | 204K | 40.8M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| BENF | [TV](https://www.tradingview.com/chart/?symbol=BENF) | $1.36 | -3.5% | +5.1% | $1.43 | +1.4% | 87K | 42.7M | 0.0x | 2.1M | Investment Managers |
+| FLNA | [TV](https://www.tradingview.com/chart/?symbol=FLNA) | $0.89 | -4.2% | +10.0% | $0.97 | +5.4% | 52K | 10.8M | 0.0x | 47.3M | Biotechnology |
+
+### Evaluation notes
+
+**Decision:** Observation only; no paper orders submitted. HIT and DKI clear the two-AH-scan count but still require the entry window and all other gates. No filled position was added to the paper-trade table or `OPEN_POSITIONS.md`. Float and sector remain pattern-tracking data, not learning-phase skip reasons.
+
+**Tradability:** BENF and FLNA returned `tradable=true` before their SIP workup. Carry the earlier `tradable=true` results for HIT, DKI, and NCPL. MCDIF dropped out of this snapshot and remains **untradable (carried)**; its verification and catalyst searches were not repeated.
+
+**SIP evidence:** All five bar requests used `--tf 5Min --start 2026-09-30T20:00:00Z` and returned `feed=sip`. The latest available bar starts at 16:10 ET, 15 minutes behind this scan, covering trades through 16:15. These delayed bars confirm opening activity; they do not establish the price at 16:25. No bad-print rejection is supported by a price difference against this incomplete coverage.
+
+| Ticker | Bar start ET | High | Close | VWAP | Shares | Trades |
+|--------|--------------|------|-------|------|--------|--------|
+| HIT | 16:10 | $1.08 | $1.03 | $1.03 | 1,596,712 | 7,553 |
+| DKI | 16:10 | $2.35 | $2.16 | $2.17 | 398,562 | 4,121 |
+| NCPL | 16:10 | $1.47 | $1.43 | $1.42 | 191,674 | 770 |
+| BENF | 16:00 | $1.36 | $1.36 | $1.36 | 86,756 | 4 |
+| BENF | 16:05 | $1.43 | $1.43 | $1.43 | 724 | 1 |
+| BENF | 16:10 | $1.41 | $1.41 | $1.40 | 1,900 | 3 |
+| FLNA | 16:00 | $0.98 | $0.98 | $0.93 | 29,987 | 52 |
+| FLNA | 16:05 | $0.99 | $0.98 | $0.96 | 23,133 | 84 |
+| FLNA | 16:10 | $0.98 | $0.94 | $0.97 | 17,133 | 90 |
+
+- **HIT — Watch; opening high still unreclaimed.** Scanner AH +18.2% → +13.3%, price $0.97 → $0.93; discovery volume 1.0M → 1.6M and VRatio 6.4x → 7.1x. SIP totals 3,289,636 shares / 13,432 trades across three bars. The third bar regained volume and VWAP after the second-bar dip, but its $1.08 high remains below the $1.12 opening high at 16:00 ET. Scanner price is 17.0% below that high. **FIRST-BAR-SPIKE WATCH (provisional): hypothetical $0.93 at 16:25 ET / 22:25 CEST.** CONFIRM-3 is NO on both scans; if the opening high remains unreclaimed with NO on every scan at entry time, apply the first-bar-spike skip. Later-bar coverage remains incomplete, so do not classify an established BUILD from discovery volume alone. Grade **None**; InsurTech / IT services.
+- **DKI — Skip live entry: Day -38.4%, dead-cat gate. DEAD-CAT-OVERRIDE WATCH: hypothetical $2.23 at 16:25 ET / 22:25 CEST.** Scanner AH +27.4% → +42.1% and price $2.00 → $2.23 across two AH scans, both above the $1.57 regular close. This meets the rising-reclaim watch condition while retaining the live-entry skip. SIP totals 1,562,669 shares / 14,038 trades; the third bar is liquid but slowed from 932K shares / 8,477 trades to 399K / 4,121, with VWAP $2.25 → $2.17. Available high $2.37 at 16:05 ET; scanner price is 5.9% below it. Grade **None**; mobile gaming / packaged software.
+- **NCPL — Watch; scanner remains below threshold.** AH +7.3% → +8.9%, price $1.33 → $1.35; discovery volume 144K → 204K. SIP totals 412,699 shares / 1,332 trades; the third bar improved to 192K / 770 trades and a new available high of $1.47. Its earlier 16:10-bar close $1.43 was approximately +15.3% above the rounded regular close, exceeding the delayed scanner reading. Retain this discrepancy for later verification; it does not establish a second current >10% AH scan. A sustained volume-backed BUILD and current fillable book remain unconfirmed. Sector: capital-raising services. Run the structured catalyst search if it qualifies above threshold in a later scan.
+- **BENF — Skip current setup: below AH threshold and sparse trading.** Only eight SIP trades / 89,380 shares across three bars; 86,756 shares were concentrated in four opening trades, followed by 724 and 1,900 shares. This is not sustained liquid accumulation. The zero-ask snapshot is stale and cannot support sizing. Sector: investment managers.
+- **FLNA — Watch below the verified threshold; thin volume.** The original scanner rounded AH change to +10.0%; that alone does not verify the strict >10% gate. A separate unrounded scanner check at 16:27:45 ET returned +9.503386%, AH price $0.9702, regular close $0.886. Do not count that check as another scheduled scan or infer the original unrounded value from it. SIP totals 70,253 shares / 226 trades, with shares declining 29,987 → 23,133 → 17,133; this is thin trading, not a volume-backed BUILD. Grade **None**; Filana Therapeutics, formerly Cassava Sciences, epilepsy biotechnology. The 47.3M float is recorded for pattern tracking.
+
+**Book freshness:** HIT returned bid $1.00 x100 / ask $1.04 x100 at 16:10:50 ET; DKI bid $1.29 x100 / ask $0.00 x0 at 16:00:02 ET. One re-pull returned the same timestamps. NCPL returned bid $1.23 x100 / ask $0.00 x0 at 16:00:41 ET; BENF bid $1.20 x100 / ask $0.00 x0 at 16:00:02 ET; FLNA bid $0.76 x100 / ask $1.08 x100 at 16:00:00 ET. All are stale relative to the scan. No current two-sided fillable book is established; no order can be sized from these snapshots. SIP confirms real AH trades, so stale zero asks do not prove the observed volume is fictitious. Recheck books at any eligible entry scan.
+
+**Spike-bar and third-bar instrumentation (verbatim; log only):** HIT and DKI exceed the scanner threshold. FLNA was also instrumented because the displayed percentage was at the rounding boundary; NCPL was instrumented because its available SIP bars exceeded +10% despite the lower scanner reading.
+
+```text
+HIT 2026-09-30  SPIKE  16:00ET  +37%  $1.12  221 trades / 67k sh  (first co-spike bar) (as-of 16:25ET)
+HIT 2026-09-30  CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET
+DKI 2026-09-30  SPIKE  16:01ET  +20%  $1.89  256 trades / 43k sh  (first co-spike bar) (as-of 16:25ET)
+DKI 2026-09-30  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-of 16:25ET
+FLNA 2026-09-30  NO-SPIKE  peak +11% @16:09ET  (no bar cleared +15% on a volume co-spike) (as-of 16:25ET)
+FLNA 2026-09-30  CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET
+NCPL 2026-09-30  SPIKE  16:13ET  +18%  $1.46  213 trades / 79k sh  (first co-spike bar) (as-of 16:25ET)
+NCPL 2026-09-30  CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET
+```
+
+DKI's third ignition bar starts at 16:15 ET and is outside the available SIP coverage; PENDING remains expected. The instrumentation does not grade or rank entries; HIT's provisional watch records the separately specified persistent-opening-high rule.
+
+**Catalyst freshness:** Three Tavily `websearch search` calls each refreshed HIT and DKI earnings, same-day press releases, and material SEC filings (8-K / 6-K for DKI). FLNA received four calls covering earnings, press releases, and SEC filings; the initial earnings query included unrelated company names, which were discarded, and the fourth call checked the correctly identified Filana Therapeutics. No catalyst with a verified current-trading-date or preceding-overnight publication date/time was found. Grades remain **None**; absence of a catalyst is a concern, not a learning-phase entry skip.
+
+- **HIT:** [Earnings history](https://www.wallstreetzen.com/stocks/us/nasdaq/hit/earnings) returned August 13, 2026 results. The [company release index](https://healthintech.investorroom.com/Press-Releases?l=50) returned older announcements; the [company SEC index](https://healthintech.investorroom.com/SEC-Filings) returned August 13 8-Ks, and other filing results returned September 15–16 insider tax-withholding disclosures. These dates are background, not fresh catalysts; no publication time was used for grading.
+- **DKI:** [Earnings history](https://www.marketbeat.com/stocks/NASDAQ/DKI/earnings) returned August 13, 2026 results. PR searches found no verified same-day company release; other results showed an August 14 AI/gaming update. The [SEC index](https://www.stocktitan.net/sec-filings/DKI) returned September 18 filings and the October 6 meeting notice. These are background; no fresh publication time was verified or used for grading.
+- **FLNA:** The [company release index](https://www.filanatx.com/press-releases) and [investor page](https://www.filanatx.com) returned July 29, 2026 Q2 earnings and September 22, 2026 FDA clinical-hold clearance news. The [filing overview](https://www.stocktitan.net/overview/FLNA) returned September 22 as its latest filing. All predate this trading date; the FDA headline is not used to assign a fresh Grade B.
+
+**Carry forward:** Thirty unique names are now in tonight's pipeline: the previous 28 plus BENF and FLNA. Carry seven untradable names: GBLRF, MHUAF, SFES, WTLLF, BMNM, FNFI, MCDIF. At 00:30 CEST, cross-check all tracked tradable names for final-scan feed lag. Before any later entry, check recent daily bars and `WINNERS_TRACKING.md` for MULTI-SESSION-RUNNER instrumentation. Chase-cap and final-scan gate-block instrumentation do not apply to this observation scan.
+
+**Daily email:** No item from this scan requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
