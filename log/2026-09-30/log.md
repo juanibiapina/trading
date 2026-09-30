@@ -587,6 +587,125 @@ CONFIRM-3 does not independently enter, skip, grade, or rank candidates. LPA app
 
 **Daily email:** Include the no-entry decision, TGE's two-scan qualification and fresh earnings blocked by the frozen quote, LPA's $3.33 FIRST-BAR-SPIKE WATCH, QSI's late surge awaiting a second scan, and KRMD's supplementary discovery with only 209 shares after the closing bar. Report the stale book timestamps as the execution-verification limitation. No item from this pulse requires Juan's input.
 
+## Scan 00:30 CEST (6:30 PM ET)
+
+`python3 scripts/scan.py --all` ran at **18:30:29 ET on September 30** (00:30:29 CEST on October 1), in the AFTERHOURS session, and returned 12 candidates. This is the final scheduled scan for the September 30 US trading date. LPA has six scanner appearances above +10% AH; QSI has two (00:00 and 00:30). PWCM has its first qualifying appearance. PWCM and HCAI are new tonight. Regular-session appearances do not count toward the two-AH-scan gate.
+
+  Supplementary AH-change-only (>15%, not in volume pass): none
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TGE | [TV](https://www.tradingview.com/chart/?symbol=TGE) | $1.55 | +86.7% | +7.7% | $1.67 | +101.2% | 10.1M | 19.3M | 0.5x | 44.2M | Financial Conglomerates |
+| LPA | [TV](https://www.tradingview.com/chart/?symbol=LPA) | $2.86 | +1.4% | +14.7% | $3.28 | +16.3% | 2.2M | 297K | 7.2x | 5.2M | Real Estate Development |
+| QSI | [TV](https://www.tradingview.com/chart/?symbol=QSI) | $1.07 | +11.7% | +10.3% | $1.18 | +23.2% | 1.6M | 5.2M | 0.3x | 171.3M | Packaged Software |
+| WETO | [TV](https://www.tradingview.com/chart/?symbol=WETO) | $1.01 | -8.2% | +7.9% | $1.09 | -0.9% | 1.6M | 9.4M | 0.2x | 915K | Other Transportation |
+| SES | [TV](https://www.tradingview.com/chart/?symbol=SES) | $0.60 | +12.3% | +5.0% | $0.63 | +17.9% | 860K | 19.2M | 0.0x | 250.0M | Electrical Products |
+| CHGA | [TV](https://www.tradingview.com/chart/?symbol=CHGA) | $2.40 | +22.4% | +5.2% | $2.53 | +28.9% | 447K | 3.3M | 0.1x | 1.1M | Biotechnology |
+| GURE | [TV](https://www.tradingview.com/chart/?symbol=GURE) | $3.06 | -4.4% | +7.8% | $3.30 | +3.1% | 321K | 370K | 0.9x | 1.3M | Chemicals: Specialty |
+| PWCM | [TV](https://www.tradingview.com/chart/?symbol=PWCM) | $1.13 | +14.5% | +15.0% | $1.30 | +31.7% | 203K | 603K | 0.3x | 2.3M | Miscellaneous Commercial Services |
+| IMCC | [TV](https://www.tradingview.com/chart/?symbol=IMCC) | $2.25 | -8.2% | +6.7% | $2.40 | -2.0% | 199K | 16.9M | 0.0x | 1.5M | Agricultural Commodities/Milling |
+| BURU | [TV](https://www.tradingview.com/chart/?symbol=BURU) | $0.99 | +4.9% | +9.5% | $1.08 | +14.9% | 186K | 1.1M | 0.2x | 8.4M | Electronic Components |
+| FLNA | [TV](https://www.tradingview.com/chart/?symbol=FLNA) | $0.89 | -4.2% | +5.2% | $0.93 | +0.8% | 98K | 10.8M | 0.0x | 47.3M | Biotechnology |
+| HCAI | [TV](https://www.tradingview.com/chart/?symbol=HCAI) | $0.53 | -0.4% | +7.3% | $0.57 | +6.9% | 50K | 1.7M | 0.0x | 7.3M | Industrial Machinery |
+
+### Evaluation notes
+
+**Decision: no paper entries.** LPA retains the first-bar-spike skip and has no verified current ask. QSI clears the two-scan count but recent volume has faded to tens of K shares / tens or hundreds of trades per bar, and its quote is stale. PWCM has real late ignition but only one qualifying scan and no verified current book. No candidate clears every entry gate. Alpaca reports no open positions; the order history has no new entry or open order. No order was submitted and no fill was added to the paper-trade table or `OPEN_POSITIONS.md`.
+
+**Tradability:** New names PWCM and HCAI returned `tradable=true` before workup. Alpaca identifies PWCM as **PowerCompute, Inc.**, formerly LM Funding America: Bitcoin mining/treasury and planned HPC/AI infrastructure, alongside specialty finance. Carry the previously verified true states for other scanner and pipeline names. Carry seven **untradable (carried)** states without repeated SIP verification or catalyst searches: GBLRF, MHUAF, SFES, WTLLF, BMNM, FNFI, MCDIF. Float and sector are recorded for pattern analysis, without a float or sector skip.
+
+- **LPA — Skip: FIRST-BAR-SPIKE, thin recent activity, and no verified current fillable ask. FIRST-BAR-SPIKE WATCH: hypothetical $3.28 at 18:30 ET / 00:30 CEST.** Scanner AH +16.4% → +14.7%, price $3.33 → $3.28 since 00:00, while discovery volume rose 2.1M → 2.2M. SIP totals 2,779,454 shares / 30,698 trades. Its AH high remains **$3.50 at 16:10 ET**, within the opening 16:00–16:15 window; no later volume-backed high reclaimed it. Every completed CONFIRM-3 verdict is NO; the earlier PENDING readings are not counted as NO. The scanner price remains 6.3% below that opening high, which does not remove the specified first-bar-spike skip. Recent bar volume is 27,475 / 317 trades → 8,505 / 130 → 36,553 / 394, with VWAP $3.32 → $3.27 → $3.25. This is not renewed liquid accumulation. **Grade D carried**, from the verified current-date fixed-price cash property-sale completion under the supplied asset-purchase exclusion. Logistics real estate; float 5.2M. This hypothetical is for morning evaluation, not a position.
+- **QSI — Skip: thin/fading volume after the late surge and stale book; two qualifying scans are established.** Scanner AH +11.2% → +10.3%, price $1.19 → $1.18, discovery volume 947K → 1.6M since 00:00. The 17:45 surge reached **$1.25** on 287,048 shares / 883 trades. Volume then declined 198,985 / 661 → 84,304 / 257 → 50,028 / 227 → 47,702 / 108 → 35,659 / 74 → 34,120 / 181; VWAP eased $1.21 → $1.21 → $1.20 → $1.18 → $1.18 → $1.19. Its latest available close $1.18 is only 5.6% below the high, but proximity alone cannot replace sustained real volume. Yahoo's later timeline suggests a rebound after 18:15; that shape does not establish current SIP liquidity. **Grade None** after refreshed earnings/PR/SEC searches; no verified fresh catalyst found. Proteomics/protein sequencing; float 171.3M is recorded, not used as a skip. CONFIRM-3 NO does not cause this decision.
+- **PWCM — Skip: only one qualifying AH scan and current fillable book unverified; real late ignition detected.** Scanner $1.30 / AH +15.0% / Total +31.7% is inside the actual SIP traded range. Liquid activity increased from 21,624 shares / 93 trades at 18:00 to 45,113 / 198 at 18:05, 115,066 / 1,071 at 18:10, and **874,185 / 5,313 at 18:15**, with VWAP $1.16 → $1.20 → $1.30 → $1.44. Total SIP volume is 1,111,464 shares / 6,940 trades. The available AH high is **$1.51 at 18:15**; that bar closed $1.45, +28.3% above the regular close and about +46.9% from the previous close, still below the extension ceiling. This is a real late-volume surge despite discovery VRatio 0.3x. A within-pulse TradingView check advanced to $1.42 / AH +25.7%; it is delayed-feed verification, not a second independent scheduled scan. Yahoo's later shape shows a retreat after 18:15; do not infer a current BUILD/hold solely from the delayed highs. **Grade None**; no verified fresh catalyst found. Bitcoin mining/treasury and HPC/AI infrastructure; float 2.3M. CONFIRM-3 PENDING remains log-only. Retain this late discovery for morning analysis.
+- **TGE — Skip: current AH below +10% and fading recent price/volume.** Scanner AH +10.3% → +7.7%, price $1.71 → $1.67 since 00:00. SIP latest closes are $1.66 → $1.66 → $1.63, with VWAP $1.69 → $1.66 → $1.63 and 78K–122K shares / 386–588 trades per bar. Its latest available close is 11.9% below the $1.85 high at 17:05 and +5.2% above the regular close. This is a decline across scans, rather than the earlier range hold. Carry **Grade B**, verified September 30 interim earnings. The 16:59:31 quote also remains stale. Media/entertainment/hospitality; float 44.2M.
+- **WETO — Skip current setup: below threshold and thin post-surge activity.** Scanner AH +10.9% → +7.9%, price $1.12 → $1.09. The latest SIP bar has only 9,577 shares / 75 trades, VWAP $1.10; no renewed liquid BUILD is established. Carry Grade None and the previously documented stale-book limitation. Physical AI/wearable robotics; float 915K.
+- **KRMD — Omitted scanner watch; skip sparse prints and unverified ask.** The supplementary pass did not add it this scan, but pipeline SIP still shows a latest $3.35 print, +14.3% above the regular close, at 17:50 ET. Total volume is 31,506 shares / 12 trades; only **409 shares / four trades** followed the opening closing-auction bar. No sustained real liquidity exists. Its stale zero-ask quote cannot size an entry. Carry Grade None; infusion devices, float 43.1M. This is detected but unqualified, not a volume-backed feed rescue.
+
+**Other scanner names:** SES (+5.0%), CHGA (+5.2%), GURE (+7.8%), IMCC (+6.7%), BURU (+9.5%), FLNA (+5.2%), and new HCAI (+7.3%) are below +10% in the discovery snapshot. SIP latest bars have 2/40/6/1/47/4/5 trades respectively. BURU's cumulative discovery volume increased 58K → 186K without sustained liquid bars; FLNA eased +7.2% → +5.2%. GURE had an earlier SIP high $4.05 at 16:50 but is now $3.30 with only 539 shares / six trades at 18:10. Current rising or cumulative figures cannot establish liquid BUILD entries here. No fresh >10% candidate workup is triggered for these names.
+
+**Final-scan feed-lag cross-check:** All **38 tradable names** in tonight's pipeline were checked with `broker.js bars --tf 5Min --start 2026-09-30T20:00:00Z --limit 1000`, including every regular-session watch, SGRX from the initial 21:30 snapshot, and all dropped AH candidates. Every request returned `feed=sip`. The seven carried false states were excluded from repeat verification. There are now **45 unique tracked names**: the previous 43 plus PWCM and HCAI.
+
+The liquid names' latest available bar starts at **18:15 ET**, covering through 18:20, consistent with the free-tier historical delay at this scan. The unserved later minutes are not contradictory evidence. Earlier last bars on sparse names are listed below; do not treat those as fresh levels at 18:30. No omitted candidate shows a current available >10% level on sustained liquid bars that clears the remaining entry rules. KRMD is above threshold on isolated tiny trades; PWCM is already in the scanner and lacks a second appearance/current book. HIT and PARA remain deep fades (latest closes $0.80/$0.61, 28.6%/25.6% below their AH highs); DKI is $1.47 below its $1.57 regular close and retains the Day -38.4% dead-cat skip. Carry HIT's earlier FIRST-BAR-SPIKE WATCH hypothetical $1.03 at 16:30 and DKI's DEAD-CAT-OVERRIDE WATCH $2.23 at 16:25 for morning evaluation.
+
+A within-pulse, unfiltered TradingView lookup resolved regular-session closes for all 38 symbols so AH changes below use the **regular close**, not the previous-day close or the 21:30 intraday price. It returned QSI +9.36% while SIP's available close remained +10.3%; the SIP reading is retained, and QSI's original two qualifying scheduled appearances stand. This lookup does not count as another scan. Broker display prices are rounded to cents, so SIP-derived percentages below are approximate. Yahoo was used only for later timeline shape, with no AH volume or exact-price verification taken from it.
+
+| Ticker | Regular close | Latest SIP close | AH% vs regular close | Bar start ET | Bar shares / trades | Total SIP shares / trades |
+|--------|---------------|------------------|----------------------|--------------|---------------------|---------------------------|
+| TGE | $1.55 | $1.63 | +5.2% | 18:15 | 122,006 / 588 | 10,778,525 / 38,437 |
+| CMCT | $2.93 | $2.88 | -1.7% | 18:15 | 2,486 / 43 | 539,491 / 4,258 |
+| CHGA | $2.4 | $2.54 | +5.8% | 18:15 | 2,240 / 40 | 516,491 / 3,591 |
+| GOW | $3.18 | $2.96 | -6.9% | 18:15 | 5,187 / 57 | 1,267,631 / 9,243 |
+| TNON | $4.09 | $4.05 | -1.0% | 18:15 | 7,267 / 122 | 2,134,568 / 18,668 |
+| CNTB | $1.1 | $1.12 | +1.8% | 18:15 | 9,886 / 56 | 1,722,961 / 4,287 |
+| VBIO | $2.8 | $2.87 | +2.5% | 18:15 | 603 / 16 | 216,117 / 1,490 |
+| RFL | $1.32 | $1.26 | -4.5% | 18:15 | 415 / 6 | 25,975 / 98 |
+| FFR | $1.31 | $1.31 | +0.0% | 18:15 | 2,560 / 19 | 402,492 / 1,393 |
+| SOTK | $5.9 | $6.05 | +2.5% | 18:05 | 301 / 1 | 8,337 / 13 |
+| MSGY | $5.66 | $5.63 | -0.5% | 18:15 | 2,125 / 55 | 203,368 / 2,704 |
+| FBDT | $1.04 | $1.04 | +0.0% | 18:10 | 322 / 1 | 60,117 / 134 |
+| ACTU | $0.7797 | $0.72 | -7.7% | 17:05 | 500 / 1 | 11,098 / 11 |
+| PMVP | $1.67 | $1.61 | -3.6% | 17:55 | 100 / 1 | 216,037 / 23 |
+| TLSA | $1.11 | $1.11 | +0.0% | 18:05 | 151 / 1 | 13,324 / 25 |
+| MWYN | $1.12 | $1.12 | +0.0% | 16:00 | 311 / 3 | 311 / 3 |
+| EPOW | $3.96 | $3.96 | +0.0% | 16:00 | 164 / 1 | 164 / 1 |
+| HIT | $0.8207 | $0.80 | -2.5% | 18:15 | 4,740 / 18 | 6,018,419 / 22,977 |
+| DKI | $1.57 | $1.47 | -6.4% | 18:15 | 7,472 / 29 | 3,407,299 / 28,247 |
+| NCPL | $1.24 | $1.30 | +4.8% | 18:15 | 9,083 / 10 | 971,597 / 2,575 |
+| BENF | $1.36 | $1.38 | +1.5% | 18:15 | 385 / 2 | 101,582 / 52 |
+| FLNA | $0.886 | $0.94 | +6.1% | 18:15 | 1,785 / 4 | 103,655 / 412 |
+| LPA | $2.86 | $3.24 | +13.3% | 18:15 | 36,553 / 394 | 2,779,454 / 30,698 |
+| USBC | $0.544 | $0.55 | +1.1% | 18:00 | 150 / 1 | 55,381 / 81 |
+| SES | $0.6 | $0.63 | +5.0% | 18:15 | 3,451 / 2 | 1,430,670 / 499 |
+| WETO | $1.01 | $1.11 | +9.9% | 18:15 | 9,577 / 75 | 1,672,837 / 7,093 |
+| IMCC | $2.25 | $2.40 | +6.7% | 18:15 | 100 / 1 | 233,321 / 1,759 |
+| PARA | $0.649 | $0.61 | -6.0% | 18:15 | 1,068 / 10 | 2,782,611 / 9,369 |
+| SDEV | $2.59 | $2.67 | +3.1% | 18:15 | 10,318 / 85 | 685,754 / 3,641 |
+| ACH | $0.5627 | $0.56 | -0.5% | 17:40 | 125 / 1 | 378,153 / 18 |
+| RCON | $1.29 | $1.27 | -1.6% | 18:15 | 200 / 1 | 70,089 / 376 |
+| QSI | $1.07 | $1.18 | +10.3% | 18:15 | 34,120 / 181 | 1,714,353 / 3,738 |
+| GURE | $3.06 | $3.30 | +7.8% | 18:10 | 539 / 6 | 421,519 / 5,144 |
+| BURU | $0.9861 | $1.08 | +9.5% | 18:15 | 9,293 / 47 | 204,476 / 628 |
+| KRMD | $2.93 | $3.35 | +14.3% | 17:50 | 200 / 1 | 31,506 / 12 |
+| SGRX | $1.59 | $1.53 | -3.8% | 17:35 | 496 / 2 | 27,254 / 108 |
+| PWCM | $1.13 | $1.45 | +28.3% | 18:15 | 874,185 / 5,313 | 1,111,464 / 6,940 |
+| HCAI | $0.5345 | $0.56 | +4.8% | 18:15 | 1,009 / 5 | 53,380 / 203 |
+
+**Book freshness, including one re-pull:** LPA, QSI, PWCM, TGE, and KRMD returned identical timestamps on re-pull. None verifies the book at 18:30. Consolidated SIP shows genuine trades; stale quotes do not justify a fictitious-volume or bad-print rejection. No order was sized from them.
+
+| Ticker | Bid | Ask | Quote time ET |
+|--------|-----|-----|---------------|
+| LPA | $2.46 x100 | $0.00 x0 | 16:00:01 |
+| QSI | $1.10 x300 | $1.19 x500 | 16:59:07 |
+| PWCM | $0.946 x100 | $1.29 x100 | 16:00:00 |
+| TGE | $1.49 x500 | $1.65 x400 | 16:59:31 |
+| KRMD | $2.51 x100 | $0.00 x0 | 16:00:03 |
+
+**Spike-bar and third-bar instrumentation (verbatim; log only):** The three >10% scanner candidates were instrumented; KRMD was also instrumented because the pipeline cross-check retained it above threshold on thin trades.
+
+```text
+LPA 2026-09-30  SPIKE  16:12ET  +22%  $3.50  1174 trades / 89k sh  (first co-spike bar) (as-of 18:30ET)
+QSI 2026-09-30  SPIKE  17:47ET  +17%  $1.25  275 trades / 147k sh  (first co-spike bar) (as-of 18:30ET)
+PWCM 2026-09-30  SPIKE  18:13ET  +19%  $1.34  418 trades / 47k sh  (first co-spike bar) (as-of 18:30ET)
+LPA 2026-09-30  CONFIRM-3  NO ignition 16:10ET failed third-bar hold/volume as-of 18:30ET
+QSI 2026-09-30  CONFIRM-3  NO ignition 17:45ET failed third-bar hold/volume as-of 18:30ET
+PWCM 2026-09-30  CONFIRM-3  PENDING ignition 18:10ET; waiting for third bar as-of 18:30ET
+KRMD 2026-09-30  NO-SPIKE  peak +15% @17:44ET  (no bar cleared +15% on a volume co-spike) (as-of 18:30ET)
+KRMD 2026-09-30  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET
+```
+
+CONFIRM-3 NO/PENDING does not independently enter, skip, grade, or rank candidates. LPA uses the separately specified persistent-opening-high rule. PWCM's ignition is at 18:10; its third five-minute bar starts at 18:20, beyond the available SIP coverage during this workup, so PENDING is expected.
+
+**Structured catalyst checks:** QSI received three Tavily `websearch search` calls covering September 30 earnings, same-day wire releases, and SEC 8-K filings. PWCM received four calls: earnings, press releases, SEC material filings, and a corrected issuer-specific PR search after the initial expanded company name was incorrect. Only results for Alpaca-verified PowerCompute were retained. Budgets were respected. **QSI and PWCM: no verified fresh catalyst found; Grade None.** No catalyst is a documented learning-phase concern, not the reason for either skip. Prior primary-source catalyst grades with verified dates/times are carried for LPA and TGE.
+
+- **PWCM — Grade None:** [Earnings announcement](https://www.nasdaq.com/press-release/powercompute-announces-second-quarter-2026-earnings-call-august-14-2026-2026-08-07) schedules Q2 results for **August 14, 2026 at 08:30 ET**, not today. The official [miner-refresh release](https://www.power-compute.com/investors/news-events/press-releases/detail/201/powercompute-miner-refresh-expected-to-deliver-nearly-39) is dated **September 23, 2026**, with approximately 1,000 miners expected by September 30. The earlier [operational update](https://www.power-compute.com/investors/news-events/press-releases/detail/200/powercompute-announces-august-2026-production-and) also forecasts that date. An event calendar listing September 30 as “new miners online” is a scheduled expectation, not a verified fresh completion announcement. The [SEC index](https://www.marketbeat.com/stocks/NASDAQ/PWCM/sec-filings) returns September 23 as latest 8-K. These older items are background; no current-date or preceding-overnight catalyst publication date/time was verified or used for grading.
+- **QSI — Grade None:** [Earnings history](https://public.com/stocks/qsi/earnings) and the [Q2 wire release](https://www.globenewswire.com/news-release/2026/08/13/3344917/0/en/quantum-si-reports-second-quarter-2026-financial-results-and-provides-proteus-development-update.html) identify **August 13, 2026** results. Today's PR search returned August/September 9 material, and [SEC searches](https://ir.quantum-si.com/financial-information/sec-filings) returned older material without a verified September 30 event. Carry the prior verified [HUPO interim-data announcement](https://www.quantum-si.com/press-releases/quantum-si-presents-interim-proteus-data-at-world-hupo-2026-demonstrating-a-significant-step-change-in-performance-compared-to-platinum-pro), dated **September 28**, and September 29 filing describing that event as background. No fresh publication date/time is established or used for grading.
+- **LPA — Grade D carried:** The verified [September 30 6-K](https://www.sec.gov/Archives/edgar/data/1997711/000199771126000172/latampropertiesoftheameric.htm) was accepted **September 30 at 12:14 ET (16:14Z)**. Its [property-sale closing release](https://www.sec.gov/Archives/edgar/data/1997711/000199771126000172/ex991lpacompletesplssalepr.htm) confirms the $145M Parque Logístico Lima Sur sale to FIBRA Prime. Carry the supplied fixed-price cash asset-purchase exclusion; no fixed per-share takeover price is claimed. Separate wire-publication time remains unverified.
+- **TGE — Grade B carried:** [PRNewswire interim results](https://www.prnewswire.com/news-releases/tges-profit-surged-by-9-9-times-with-total-assets-at-us1-8bn-and-net-assets-at-us932m-302894260.html) were published **September 30 at 06:27 ET**; the verified [6-K](https://www.sec.gov/Archives/edgar/data/2053456/000121390026104923/ea0307190-6k_generation.htm) was accepted **05:14:02 ET**. The prior scan read the results: customer-contract revenue +35.8%, EPS $0.12 → $0.56, with total reported revenue declining and the absent prior-year share-based expense aiding the profit comparison. No analyst-consensus beat or new after-close release is claimed.
+
+**Final-scan gate-block instrumentation:** No strict **FINAL-SCAN-GATE-BLOCK** case qualifies. PWCM is the relevant late discovery, but its frozen 16:00 book leaves current fillable liquidity unverified, its current hold after the later timeline retreat is unconfirmed, and CONFIRM-3 is still PENDING on delayed coverage. It is not blocked solely by the two-scan gate. KRMD additionally fails the real-volume/book checks; QSI already has two qualifying scans. These verdicts are recorded for the tracker without changing entry behavior. No fill occurred, so CHASE-CAP does not apply; no pre-entry MULTI-SESSION-RUNNER tag is needed and no first-day claim is inferred. No dead-cat or ceiling override watch is newly established.
+
+**Daily email:** Report no entries, completion of the 38-name SIP cross-check, LPA's FIRST-BAR-SPIKE WATCH hypothetical $3.28 at 18:30, QSI's two-scan qualification with thin recent volume, and PWCM's genuine late 874K-share / 5,313-trade ignition blocked by one appearance and a frozen quote. Include KRMD's omitted but sparse prints, TGE's fading trajectory, and the repeated 16:00/16:59 quote timestamps as the execution-verification limitation. No item from this pulse requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
