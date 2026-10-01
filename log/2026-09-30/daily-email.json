@@ -1,0 +1,27 @@
+{
+  "cycle_date": "2026-09-30",
+  "status": "sent",
+  "provider": "InboxKit",
+  "message_id": 176,
+  "from": "zero@inboxkit.cc",
+  "to": "juanibiapina@gmail.com",
+  "subject": "Trading Scanner Report - 2026-09-30",
+  "send_started_at": "2026-10-01T09:37:53.789284+00:00",
+  "sent_at": "2026-10-01T09:37:54.944392+00:00",
+  "sent_at_source": "Successful InboxKit response observed locally",
+  "previous_successful_send_at": "2026-09-30T09:33:21.987+00:00",
+  "previous_message_id": 174,
+  "previous_send_time_source": "Pi daily-email session 01a0f1a6-41cd-76a2-80ab-eae0158c7707 tool result",
+  "reporting_cutoff_at": "2026-10-01T09:37:53.789284+00:00",
+  "body_file": "daily-email.html",
+  "body_sha256": "39a02970dfe7ec8ceb9b5ef9861db5bb123c2bd13e8b0e324174fc4c8107248f",
+  "chart_urls": [],
+  "charts_omitted_reason": "No verified actionable winner or open Alpaca positions at send time",
+  "latest_scanner_improvement_date": "2026-09-30",
+  "latest_completed_process_review_date": "2026-09-30",
+  "initiative_updates": [
+    3,
+    4,
+    6
+  ]
+}
