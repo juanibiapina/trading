@@ -570,9 +570,110 @@ AMOD 2026-10-01  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-
 
 **Daily email:** Report ELUT's first qualifying appearance, real 16:45 ignition, fresh Grade C $8M cash-receipt release, subsequent pullback and stale quote; SORA's renewed volume without a later new high and FIRST-BAR-SPIKE WATCH hypothetical; and AMOD's Day% block and thinning fade. No item requires Juan's input.
 
+## Scan 00:00 CEST (6:00 PM ET)
+
+**Decision:** No entry. ELUT now has two qualifying AH appearances, but its early surge continues to fade with lighter recent participation. SORA retains its first-bar-spike block. AMOD has resumed a real BUILD but still fails the Day% rule; record a new hypothetical override watch. SCKT, IPW, and UONEK each have only one qualifying appearance, with additional volume/book concerns. No paper orders submitted.
+
+`python3 scripts/scan.py --all` ran at **18:00:26 ET / 00:00:26 CEST on October 2 / 22:00:26 UTC on October 1**, in the AFTERHOURS session, and returned **13 hits** after `bash scripts/sync-repo.sh` reported the repository up to date. The US trading date and log date remain **2026-10-01**, because Berlin time is before 06:00. Verification followed at approximately 18:00–18:03 ET; detector cutoffs preserve **18:00 ET**. The table preserves scanner discovery readings.
+
+```text
+  Supplementary AH-change-only (>15%, not in volume pass): UONEK
+  AH >10% at this snapshot (unrounded): AMOD, ELUT, IPW, SCKT, SORA, UONEK
+```
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SCKT | [TV](https://www.tradingview.com/chart/?symbol=SCKT) | $0.54 | +21.0% | +11.7% | $0.60 | +35.2% | 12.1M | 13.1M | 0.9x | 5.7M | Computer Peripherals |
+| AMOD | [TV](https://www.tradingview.com/chart/?symbol=AMOD) | $1.17 | -24.5% | +32.5% | $1.55 | +0.0% | 4.8M | 696K | 6.9x | 543K | Packaged Software |
+| ELUT | [TV](https://www.tradingview.com/chart/?symbol=ELUT) | $0.80 | +1.3% | +17.5% | $0.94 | +19.0% | 4.2M | 489K | 8.6x | 35.3M | Biotechnology |
+| SORA | [TV](https://www.tradingview.com/chart/?symbol=SORA) | $2.40 | +4.3% | +28.8% | $3.09 | +34.3% | 3.6M | 481K | 7.4x | 4.9M | Wholesale Distributors |
+| SDEV | [TV](https://www.tradingview.com/chart/?symbol=SDEV) | $3.66 | +41.3% | +6.6% | $3.90 | +50.6% | 2.0M | 36.9M | 0.1x | 1.8M | Pharmaceuticals: Major |
+| BTTC | [TV](https://www.tradingview.com/chart/?symbol=BTTC) | $0.63 | +21.8% | +5.0% | $0.67 | +27.9% | 1.4M | 64.5M | 0.0x | 10.8M | Packaged Software |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $1.14 | -1.7% | +10.5% | $1.26 | +8.6% | 1.2M | 431K | 2.7x | 1.2M | Internet Retail |
+| QNME | [TV](https://www.tradingview.com/chart/?symbol=QNME) | $0.54 | +1.2% | +7.8% | $0.58 | +9.0% | 656K | 55.4M | 0.0x | 25.8M | Air Freight/Couriers |
+| NCI | [TV](https://www.tradingview.com/chart/?symbol=NCI) | $1.06 | -15.9% | +6.6% | $1.13 | -10.3% | 355K | 4.1M | 0.1x | 2.4M | Apparel/Footwear Retail |
+| AGIG | [TV](https://www.tradingview.com/chart/?symbol=AGIG) | $0.96 | -11.6% | +5.9% | $1.02 | -6.4% | 65K | 139K | 0.5x | 11.9M | Oil & Gas Production |
+| CMCT | [TV](https://www.tradingview.com/chart/?symbol=CMCT) | $3.62 | +23.5% | +6.4% | $3.85 | +31.4% | 59K | 3.4M | 0.0x | 2.8M | Real Estate Investment Trusts |
+| KPTI | [TV](https://www.tradingview.com/chart/?symbol=KPTI) | $0.87 | -29.0% | +6.1% | $0.92 | -24.6% | 58K | 1.4M | 0.0x | 18.6M | Pharmaceuticals: Major |
+| UONEK | [TV](https://www.tradingview.com/chart/?symbol=UONEK) | $3.64 | -3.7% | +15.1% | $4.19 | +10.8% | 552 | 10K | 0.1x | 1.6M | Movies/Entertainment |
+
+### Evaluation notes
+
+**Tradability and appearance counts:** Fresh candidates **IPW, UONEK, QNME, and KPTI returned `tradable=true`**, active on Nasdaq, before further workup. Other positive checks carry forward, including SCKT's 22:45 check and BTTC's regular-session check. The unrounded scanner lists establish **SORA 6**, **AMOD 5**, **ELUT 2** (23:30, 00:00), **SCKT 1**, **IPW 1**, **UONEK 1**, **WCT 2**, and **SSM 1**. SCKT's earlier below-threshold appearances add zero; regular-session appearances add zero. UONEK was added by the supplementary change pass, which does not qualify it for entry. All displayed Total% values are below +150%. Float and industry are observations; no sector or float exclusion was applied.
+
+**SIP verification and freshness:** `broker.js bars SYM --tf 5Min --start 2026-10-01T20:00:00Z --limit 300` returned **consolidated SIP** for all six >10% names. A repeat pull with `--json` confirmed the same newest **17:45 ET** bar for each, consistent with the approximately 15-minute free-tier delay. No pagination remains. These bars establish the available tape, rather than a current executable quote. Every scanner AH price is within observed SIP ranges; no verified bad-print rejection applies. Yahoo `check-prices.py --ah-history` supplied later timeline shapes only. Its extended-hours volume, exact prices/highs, and changes anchored to the previous day's close were not used for liquidity or appearance counts.
+
+| Ticker | Verified AH shares | Trades | SIP AH high / bar start ET | Latest SIP close | Off high | Latest bar shares / trades |
+|--------|--------------------|--------|---------------------------|------------------|----------|---------------------------|
+| ELUT | 4,802,169 | 17,523 | $1.10 / 16:45 | $0.9200 | -16.4% | 167,940 / 512 |
+| SCKT | 12,659,017 | 22,881 | $0.6539 / 16:15 | $0.5970 | -8.7% | 57,359 / 188 |
+| SORA | 4,797,063 | 54,786 | $3.64 / 16:05 | $3.0300 | -16.8% | 77,621 / 767 |
+| AMOD | 5,899,928 | 30,878 | $1.69 / 17:45 | $1.6689 | -1.2% | 580,711 / 2,998 |
+| IPW | 1,432,511 | 9,917 | $1.4969 / 17:15 | $1.2100 | -19.2% | 42,270 / 260 |
+| UONEK | 1,335 | 51 | $4.19 / 17:35 | $3.8500 | -8.1% | 570 / 20 |
+
+**ELUT — skip SPIKE→FADE with lighter recent participation; current book unconfirmed.** Since 23:30, scanner AH% falls **+20.0% → +17.5%**, price **$0.96 → $0.94**, and Total **+21.5% → +19.0%**, while discovery volume grows **3.4M → 4.2M**. SIP adds **888,428 shares / 2,812 trades** since the preceding verification, but the early surge's hundreds-of-thousands of shares and thousands of trades per bar have eased to **79,049–192,007 shares / 245–723 trades** in the last four bars. Recent closes fall **$0.9603 → $0.9589 → $0.9392 → $0.9200** at 17:30–17:45; VWAP eases **$0.9620 → $0.9466 → $0.9468 → $0.9373**. The last bar's shares increase 28.8%, but this does not reverse the lower prices or restore ignition-level participation. Its high remains at **16:45**, followed by lower highs and a renewed decline; the later Yahoo shape also continues downward with small rebounds. Being within 20% of that high alone does not establish a HOLD. The two-appearance gate is met, but the trajectory requirement and the requirement for sustained volume are not. This is not an opening-bar spike; CONFIRM-3 NO supplies no independent block. Reassess if the final scan shows a sustained recovery on renewed volume.
+
+**SORA — skip FIRST-BAR-SPIKE.** Since 23:30, scanner AH% falls **+35.0% → +28.8%**, price **$3.24 → $3.09**, and Total **+40.8% → +34.3%**, while discovery volume grows **3.1M → 3.6M**. SIP adds **420,775 shares / 4,009 trades**. The opening high remains **$3.64 in the 16:05 bar**; no later bar exceeds it. Recent closes are **$3.21 → $3.08 → $3.10 → $3.03** at 17:30–17:45, with only 43,664–101,832 shares / 428–820 trades per bar. CONFIRM-3 remains **NO in all six evaluations**. Apply the first-bar-spike skip even within 20% of the opening high. **FIRST-BAR-SPIKE WATCH hypothetical: $3.09 at 00:00 CEST / 18:00 ET**, Total **+34.3%**. Revisit the block if a later volume-backed new high appears; this hypothetical is not a fill.
+
+**AMOD — skip Day% failure; renewed BUILD / DEAD-CAT-OVERRIDE WATCH.** Since 23:30, scanner AH% rises **+14.5% → +32.5%**, price **$1.34 → $1.55**, and Total **-13.5% → +0.0%**, while discovery volume grows **4.2M → 4.8M**. SIP adds **1,228,572 shares / 6,024 trades** and confirms a genuine late rebuild: at 17:35, 17:40, and 17:45, closes rise **$1.43 → $1.5502 → $1.6689**, VWAP rises **$1.4408 → $1.5025 → $1.6253**, shares rise **103,870 → 240,491 → 580,711**, and trades rise **546 → 1,114 → 2,998**. The **17:45 high $1.69** exceeds the former **16:35 high $1.59**. This is a volume-backed BUILD above the **$1.17 regular close**, not thin drift or a bad print. Day **-24.5%** still blocks live entry. **DEAD-CAT-OVERRIDE WATCH hypothetical: $1.55 at 00:00 CEST / 18:00 ET**, Total **+0.0%**. Rising AH% across the 23:30 and 00:00 snapshots and the renewed real accumulation support this new observation; earlier hypotheticals remain in their original sections. CONFIRM-3's original failed-ignition verdict does not block or downgrade the renewed build. Scanner float **543K may be stale** after the PIPE issuance.
+
+**SCKT — watch; first qualifying appearance, thinner recovery and no verified fillable ask.** Since 23:30, scanner AH% rises **+5.1% → +11.7%**, price **$0.57 → $0.60**, and discovery volume **10.9M → 12.1M**. SIP confirms the real earlier spike: **2.50M / 4,341 trades at 16:15**, followed by **2.87M / 4,940 at 16:20**. A later recovery closes at $0.61 at 17:30, but its next closes are **$0.5965 → $0.6033 → $0.5970**, and volume falls **443,916 → 266,692 → 259,328 → 57,359 shares**, with latest volume down **77.9%** and only **188 trades**. The sub-1x discovery ratio plus weakening recent tape does not establish a fresh BUILD. The two-appearance gate fails independently. Its high occurred in the **16:15–16:20 bar**, after the opening window, so no FIRST-BAR-SPIKE WATCH is assigned. The stale zero-ask quote below provides no current fillable book; it does not erase the real SIP volume.
+
+**IPW — watch/skip this entry; first appearance and SPIKE→FADE.** New discovery, float **1.2M**, Internet Retail, Day **-1.7%**, Total **+8.6%**. SIP verifies a real **17:15 ignition** and multi-bar activity: **247,763 / 1,729 trades**, **339,684 / 2,643**, and **380,249 / 2,379** at 17:15–17:25. The rebound never exceeds the **$1.4969 high in the 17:15 bar**. Later closes ease **$1.4000 → $1.2880 → $1.2600 → $1.2700 → $1.2100**; the last two bars have only **35,111 / 274 trades** and **42,270 / 260**. The latest close is **19.2% below** the high. Yahoo's later shape continues the fade before a small rebound. One qualifying appearance fails the two-scan gate; price and recent participation also fail the sustained BUILD/HOLD check. CONFIRM-3 **YES is logged only** and does not override the current trajectory. No first-bar-spike label applies to a 17:15 high.
+
+**UONEK — skip thin/not-accumulating AH tape; one appearance.** New supplementary-pass discovery, float **1.6M**, Movies/Entertainment, Day **-3.7%**, Total **+10.8%**. SIP returns only three sparse bars: **130 shares / 16 trades at 17:30**, **635 / 15 at 17:35**, and **570 / 20 at 17:45**, totaling **1,335 shares / 51 trades**. The scanner's $4.19 did trade in the 17:35 bar, so do not call it a bad print. This is not the accumulating hundreds-of-thousands of shares / thousands of trades required for real momentum entry. The Yahoo timeline is erratic and diverges from precise SIP levels; those prices are not used. Proximity to the high, a sized but stale quote, and supplementary discovery cannot establish liquidity. The two-appearance gate also fails.
+
+**Catalysts — dated prior grades carried; new structured searches completed:**
+
+- **ELUT, Grade C:** [GlobeNewswire cash-receipt release](https://www.globenewswire.com/news-release/2026/10/01/3373430/0/en/elutia-receives-8-million-payment-from-boston-scientific-company-now-fully-funded-into-2029.html), **October 1, 2026, 16:45 ET / 22:45 CEST**, verified in full at 23:30. The $8M escrow payment from the 2025 BioEnvelope sale funds operations into 2029; no new acquisition or FDA clearance was announced.
+- **SORA, Grade C:** [GlobeNewswire Plume memorandum](https://www.globenewswire.com/news-release/2026/10/01/3373374/0/en/asiastrategy-signs-memorandum-of-understanding-with-plume-network-to-advance-real-world-asset-tokenisation-across-asia.html), **October 1, 2026, 16:05 ET / 22:05 CEST**, verified in the 22:25 workup. The exploratory joint-venture memorandum is non-binding.
+- **AMOD, Grade D:** [SEC 8-K](https://www.sec.gov/Archives/edgar/data/1862463/000149315226045296/form8-k.htm) and [acceptance index](https://www.sec.gov/Archives/edgar/data/1862463/000149315226045296/0001493152-26-045296-index.html), **October 1, 2026, accepted 11:30:52 (EDGAR displayed time)**, verified at 22:30. Fresh disclosure of the September 30 PIPE closing: **51,621,560 shares plus warrants for the same number**, exchanged for 3,170 bitcoin.
+- **SCKT, Grade None — no catalyst found:** Four calls covered today's earnings, same-day newswire/company releases, same-day SEC 8-K, and a Tavily follow-up. The [July 30 Q2 earnings release](https://www.prnewswire.com/news-releases/socket-mobile-reports-second-quarter-2026-results-302839330.html) is background. Company indexes surfaced CaptureSDK/product announcements without a verified current-date release time; no grade is assigned from those headlines.
+- **IPW, Grade None — no catalyst found:** Four calls covered today's earnings, same-day newswire/company releases, same-day SEC 8-K, and a Tavily follow-up. The [company release index](https://ipower.gcs-web.com) surfaced an **August 5 reverse split** and **July 23 non-binding GPU LOI**, both background. No current-date or immediately preceding overnight catalyst with a verified timestamp was found.
+- **UONEK, Grade None — no catalyst found:** Four calls covered today's earnings, same-day newswire releases, same-day SEC 8-K, and a Tavily follow-up. Results surfaced Q2 earnings, older debt restructurings and the **January 16 reverse-split release**, without a verified fresh event. No current-date or immediately preceding overnight catalyst with a verified timestamp was found.
+
+No-catalyst is a documented concern, not an entry skip reason. The searches stop at four calls per new >10% workup. Search indexes cannot establish the absence of a newer filing.
+
+**Quote freshness and liquidity:** Each quote was checked twice and remained unchanged:
+
+```text
+ELUT  bid $0.85 x300  ask $1.01 x100  @ 2026-10-01T20:57:24.346040236Z
+SCKT  bid $0.46 x100  ask $0.00 x0  @ 2026-10-01T20:00:02.143954291Z
+SORA  bid $1.93 x100  ask $2.78 x100  @ 2026-10-01T20:00:00.60007104Z
+AMOD  bid $1.31 x100  ask $1.34 x100  @ 2026-10-01T20:58:48.514738532Z
+IPW  bid $0.95 x100  ask $1.37 x100  @ 2026-10-01T20:00:02.084910545Z
+UONEK  bid $3.00 x100  ask $4.53 x100  @ 2026-10-01T20:00:00.367415945Z
+```
+
+ELUT's quote is about **63 minutes old**, AMOD's **61 minutes old**, and the others **120 minutes old** at the snapshot. **Current fillable liquidity is unconfirmed for all six**. SCKT has **no sized ask from this source** and cannot support an entry; the stale quote does not prove current consolidated-market illiquidity. The other sized books are also stale and cannot supply current sizing prices. Do not reject a strong scanner move as a bad print from these stale quotes. Updated SIP corroborates the real AMOD build and the other scanner levels. No sizing or order was attempted because entry gates already fail; recheck the book on the final scan.
+
+**Instrumentation (verbatim; log-only):** Standalone SPIKE and CONFIRM-3 results do not grade, rank, or determine entries. SORA's separate first-bar-spike rule uses its persistent opening high and repeated NO condition.
+
+```text
+ELUT 2026-10-01  SPIKE  16:46ET  +38%  $1.10  95 trades / 25k sh  (first co-spike bar) (as-of 18:00ET)
+ELUT 2026-10-01  CONFIRM-3  NO ignition 16:45ET failed third-bar hold/volume as-of 18:00ET
+SCKT 2026-10-01  SPIKE  16:18ET  +20%  $0.65  1981 trades / 1068k sh  (first co-spike bar) (as-of 18:00ET)
+SCKT 2026-10-01  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 18:00ET
+SORA 2026-10-01  SPIKE  16:06ET  +52%  $3.64  243 trades / 17k sh  (first co-spike bar) (as-of 18:00ET)
+SORA 2026-10-01  CONFIRM-3  NO no local-volume new-high ignition as-of 18:00ET
+AMOD 2026-10-01  SPIKE  16:15ET  +15%  $1.35  366 trades / 64k sh  (first co-spike bar) (as-of 18:00ET)
+AMOD 2026-10-01  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 18:00ET
+IPW 2026-10-01  SPIKE  17:18ET  +27%  $1.45  366 trades / 46k sh  (first co-spike bar) (as-of 18:00ET)
+IPW 2026-10-01  CONFIRM-3  YES ignition 17:15ET 148.8x; confirmed 17:25ET $1.40 as-of 18:00ET
+UONEK 2026-10-01  NO-SPIKE  peak +15% @17:36ET  (no bar cleared +15% on a volume co-spike) (as-of 18:00ET)
+UONEK 2026-10-01  CONFIRM-3  NO no local-volume new-high ignition as-of 18:00ET
+```
+
+**Other scanner names — below entry threshold:** SDEV rises **+5.7% → +6.6% AH** with discovery volume **1.4M → 2.0M**; NCI rises **+5.7% → +6.6%** with **292K → 355K**, but Day **-15.9%** also fails. CMCT eases **+9.5% → +6.4%**, price **$3.96 → $3.85**, with **51K → 59K**. AGIG remains **+5.9% / $1.02 / 65K**. BTTC makes its first AH appearance at **+5.0%**, separate from its regular-session watch. New QNME is **+7.8%**; new KPTI is **+6.1%** and Day **-29.0%**, below the Day% cutoff. None supplies a >10% AH appearance. Discovery volume alone does not establish AH accumulation or a fillable book; no catalyst or detector workup is due below threshold.
+
+**Carry forward and fills:** Tonight's pipeline contains **40 unique names**: the preceding 36 plus IPW, UONEK, QNME, and KPTI. Retain every pipeline name, including absent regular-session watches, for the **00:30 CEST / 18:30 ET final-scan feed-lag cross-check**. WCT, SSM, and MVST are absent and add no appearance; their prior notes and hypothetical watches carry forward. EVOL, GBLRF, MHUAF, CRMZ, FNFI, SGRP, LTCEF, and EJH remain **untradable (carried)** without repeated volume/catalyst workups. Alpaca `positions --json` returned `[]`, `orders open` returned `No open orders.`, and `orders all` shows no new entry fills. No fill requires an OPEN_POSITIONS entry. Chase-cap and multi-session-runner entry instrumentation do not apply without an entry. This is the 18:00 scan; final-scan gate-block instrumentation is due at 18:30, not here.
+
+**Daily email:** Report the no-entry decision; ELUT's second appearance with declining price and lighter tape; SORA's FIRST-BAR-SPIKE WATCH at $3.09; AMOD's renewed real BUILD and DEAD-CAT-OVERRIDE WATCH at $1.55 despite its Day% block; SCKT's stale zero-ask quote; IPW's real ignition followed by fade; and UONEK's supplementary discovery with only 1,335 SIP shares / 51 trades. Include the stale-quote verification limitation. No item requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
-No entries through the 23:30 CEST scan. SORA has five qualifying AH appearances but retains its first-bar-spike block; AMOD has four but fails the Day% rule and its recovery has faded. New ELUT has one qualifying appearance, with real volume followed by a pullback; it requires a second AH appearance and renewed trajectory/book verification. WCT retains two qualifying appearances with Day% and trajectory blocks; SSM retains one and is below threshold in the current scan. The hypothetical watches in the scan notes are not fills. Alpaca has no open positions or orders at the 23:30 verification.
+No entries through the 00:00 CEST scan (18:00 ET on October 1). SORA has six qualifying AH appearances but retains its first-bar-spike block. AMOD has five and has resumed a real BUILD, but Day -24.5% still blocks entry; its new DEAD-CAT-OVERRIDE WATCH is hypothetical. ELUT now has two appearances but continues to fade with lighter recent participation. SCKT, IPW, and UONEK each have one appearance, with additional volume/book concerns. WCT retains two appearances with Day% and trajectory blocks; SSM retains one. The hypothetical watches in the scan notes are not fills. Alpaca has no open positions or orders at this pulse's verification.
