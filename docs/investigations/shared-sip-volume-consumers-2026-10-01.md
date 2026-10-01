@@ -35,6 +35,7 @@ An absent SIP interval may represent no trades or unavailable data. This deliver
 - The opt-in YFOR CLI output retained the entire pre-change header/verdict as its prefix.
 - Mismatched symbol/date and incomplete reconstruction files returned a failing CLI status before broker requests.
 - The normal report command discovers the dated artifacts, so the Pages build preserves the tables without an extra workflow flag.
+- Pages push run **36891077226** succeeded for commit `9aa0040`. Both `https://juanibiapina.github.io/trading/reports/2026-10-01/index.html` and `https://juanibiapina.dev/trading/reports/2026-10-01/index.html` returned HTTP 200 with all 50 rows and the expected YFOR/GIPR ratios. The delayed automatic push run superseded the manually dispatched run.
 
 ## Reproduce
 
