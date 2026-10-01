@@ -112,9 +112,30 @@ AH >10% at this snapshot (unrounded): none
 
 **Daily email:** No item from this scan requires Juan's input.
 
+## Scan 22:05 CEST (4:05 PM ET)
+
+**Decision:** Observe — no candidates found. No paper orders submitted; entries begin at the 23:00 CEST scan (17:00 ET).
+
+`python3 scripts/scan.py --all` ran at 16:05:25 ET (22:05:25 CEST / 20:05:25 UTC), in the AFTERHOURS session, and returned 0 hits. The US trading date is 2026-10-01. Repository sync completed before scanning.
+
+No candidates found.
+
+```text
+  Supplementary AH-change-only (>15%, not in volume pass): none
+  AH >10% at this snapshot (unrounded): none
+```
+
+### Evaluation notes
+
+**AH appearance count:** Both AH scans so far (22:00 and 22:05 CEST) returned no candidates. No ticker has a scanner-confirmed >10% AH appearance. The 21:30 regular-session appearances do not count toward the two-AH-scan entry gate. There are no AH candidates requiring catalyst research, SIP verification, spike-bar, or CONFIRM-3 instrumentation at this snapshot.
+
+**Carry forward:** Retain all 28 names from the 21:30 watchlist for later scans and the 00:30 CEST final-scan feed-lag cross-check. EVOL, GBLRF, MHUAF, CRMZ, FNFI, SGRP, LTCEF, and EJH remain untradable (carried). This scan supplies no updated price or volume evidence for the watchlist; absence alone does not establish an AH fade. AH volume verification starts at `2026-10-01T20:00:00Z`.
+
+**Daily email:** No item from this scan requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
-No entries from the 21:30 or 22:00 CEST scans: observation only before the 23:00 CEST entry window.
+No entries from the 21:30, 22:00, or 22:05 CEST scans: observation only before the 23:00 CEST entry window.
