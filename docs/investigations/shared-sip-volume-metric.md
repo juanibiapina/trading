@@ -52,8 +52,8 @@ Omit `--input` to fetch SIP and use `--save-input PATH` to archive it. JSON and 
 
 The network run, archived CLI replay and Python compilation passed. Verification reproduced both YFOR ratios and the report, kept output identical after changing future volumes, and returned unknown on missing slots, zero baselines and incomplete prior-session coverage. November and September AH bounds used the correct differing UTC offsets.
 
-## Next step — October 1 18:00 CEST
+## Consumer delivery — October 1 18:00 CEST
 
-Add opt-in log-only consumption of these JSON rows to the confirmation output and chart/report annotations. Keep existing verdicts and decision rules intact, then check the same bar timestamp and ratio appear in both consumers. Expand the verification to one fresh volume-backed winner and one additional negative control before proposing any threshold or cross-session entry rule.
+Opt-in confirmation and HTML report consumption is complete. [The delivery report](shared-sip-volume-consumers-2026-10-01.md) records the matching rows, preserved verdict, and additional INLF/GIPR controls. It also records the missing-baseline and local-threshold limits that prevent promotion.
 
-No input from Juan blocks instrumentation. The daily email should report the distinction between local ignition and prior-session magnitude and link the YFOR artifact.
+The next chart-bearing cycle should verify daily publication beside charts. Research sparse-slot interpretation and prior-session coverage before proposing a gate. No input from Juan blocks instrumentation; the next daily email should report both Initiative 1 and Initiative 5 deliveries.

@@ -5,9 +5,12 @@ from __future__ import annotations
 
 import argparse
 import html
+import json
 import re
 from datetime import date
 from pathlib import Path
+
+from volume_metric import VERSION, timestamp
 
 ROOT = Path(__file__).resolve().parents[1]
 LOG_ROOT = ROOT / "log"
@@ -42,7 +45,42 @@ def choose_date(value: str | None) -> str:
     return dates[0]
 
 
-def report_html(day: str, log_text: str, charts: list[Path]) -> str:
+def volume_context_html(paths: list[Path]) -> str:
+    sections = []
+    for path in paths:
+        result = json.loads(path.read_text(encoding="utf-8"))
+        if result["metric_version"] != VERSION:
+            raise ValueError(f"Unsupported volume metric: {path}")
+        as_of = timestamp(result["as_of_utc"])
+        rows = []
+        for row in result["rows"]:
+            if timestamp(row["bar_end_utc"]) > as_of:
+                raise ValueError(f"Incomplete volume bar: {path}")
+            ratio = lambda value: "unknown" if value is None else f"{value:.4f}x"
+            baseline = "unknown" if row["baseline_shares"] is None else f"{row['baseline_shares']:,.0f}"
+            values = (row["bar_et"], f"{row['shares']:,}", baseline, ratio(row["local_ratio"]),
+                      ratio(row["prior_peak_ratio"]), row["local_status"])
+            cells = "".join(f"<td>{html.escape(str(value))}</td>" for value in values)
+            rows.append(f'<tr data-bar-start-utc="{html.escape(row["bar_start_utc"])}">{cells}</tr>')
+        sections.append(
+            f'<section><h3>{html.escape(result["symbol"])} — {html.escape(result["date"])} AH</h3>'
+            f'<p>Previous AH: {html.escape(result["prior_date"])}; '
+            f'{result["prior_observed_slots"]}/{result["prior_expected_slots"]} observed bars. '
+            f'Reconstructed through {html.escape(result["as_of_utc"])}; '
+            f'data fetched {html.escape(result["source_observed_utc"])}.</p>'
+            '<table><thead><tr><th>Bar start ET</th><th>Shares</th><th>Prior 3-bar median</th>'
+            '<th>Local ratio</th><th>Prior AH peak ratio</th><th>Coverage status</th></tr></thead>'
+            f'<tbody>{"".join(rows)}</tbody></table></section>'
+        )
+    if not sections:
+        return ""
+    return ('<h2>AH volume context</h2><p>Observation only. Local ratio compares raw SIP shares with the '
+            'median of three preceding five-minute bars. Prior ratio compares with the largest bar in the '
+            'complete previous AH session. Missing data or a zero baseline yields unknown. '
+            'Historical reconstruction does not prove availability at the bar close.</p>' + "".join(sections))
+
+
+def report_html(day: str, log_text: str, charts: list[Path], volume_context: str = "") -> str:
     escaped_day = html.escape(day)
     chart_markup = "\n".join(
         f'<figure><img src="../../log/{escaped_day}/{html.escape(chart.name)}" '
@@ -65,6 +103,9 @@ def report_html(day: str, log_text: str, charts: list[Path]) -> str:
     figure {{ display: inline-block; margin: 0 16px 16px 0; vertical-align: top; width: min(100%, 560px); }}
     img {{ border: 1px solid #888; max-width: 100%; height: auto; }}
     figcaption {{ font-size: 0.85rem; margin-top: 4px; }}
+    table {{ border-collapse: collapse; width: 100%; font-size: 0.85rem; }}
+    td, th {{ padding: 6px; border-bottom: 1px solid #888; text-align: right; }}
+    section {{ overflow-x: auto; }}
     pre {{ background: #222; border-radius: 6px; overflow-x: auto; padding: 16px; white-space: pre-wrap; }}
   </style>
 </head>
@@ -76,6 +117,7 @@ def report_html(day: str, log_text: str, charts: list[Path]) -> str:
   <main>
     <h2>Charts</h2>
     {chart_markup}
+    {volume_context}
     <h2>Daily log</h2>
     <pre>{html.escape(log_text)}</pre>
   </main>
@@ -101,15 +143,19 @@ def write_index(days: list[str]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--date", help="daily log date; defaults to the newest dated log")
+    parser.add_argument("--volume-metric", type=Path, action="append", default=[],
+                        help="include shared metric JSON; dated *-volume-metric.json artifacts also opt in")
     args = parser.parse_args()
 
     day = choose_date(args.date)
     log_dir = LOG_ROOT / day
     charts = sorted(log_dir.glob("*.png"))
+    metric_paths = sorted({path.resolve() for path in [*log_dir.glob("*-volume-metric.json"), *args.volume_metric]})
+    volume_context = volume_context_html(metric_paths)
     output_dir = REPORT_ROOT / day
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "index.html").write_text(
-        report_html(day, (log_dir / "log.md").read_text(encoding="utf-8", errors="replace"), charts),
+        report_html(day, (log_dir / "log.md").read_text(encoding="utf-8", errors="replace"), charts, volume_context),
         encoding="utf-8",
     )
     write_index(sorted({entry.name for entry in REPORT_ROOT.iterdir() if entry.is_dir() and DATE_RE.fullmatch(entry.name)}, reverse=True))

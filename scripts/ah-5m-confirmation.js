@@ -8,7 +8,9 @@
  *
  * Usage:
  *   node scripts/ah-5m-confirmation.js SYM:YYYY-MM-DD [SYM:YYYY-MM-DD ...]
- *        [--now HH:MM]
+ *        [--now HH:MM] [--volume-metric PATH]
+ *   --volume-metric reads volume_metric.py JSON for one matching symbol/date;
+ *   its rows are separate observations and cannot affect CONFIRM-3.
  */
 
 const { execFileSync } = require("child_process");
@@ -87,12 +89,35 @@ function analyze(sym, date, now) {
   return `${sym} ${date}  CONFIRM-3  NO no local-volume new-high ignition${now ? ` as-of ${now}ET` : ""}`;
 }
 
+function volumeAnnotation(file, sym, date, now) {
+  const result = JSON.parse(require("fs").readFileSync(file, "utf8"));
+  if (result.metric_version !== "sip-ah-volume-v1" || result.symbol !== sym || result.date !== date) {
+    throw new Error("Shared volume file must match the symbol, AH date and metric version");
+  }
+  const asOf = Date.parse(result.as_of_utc);
+  if (!Number.isFinite(asOf) || !Array.isArray(result.rows)) throw new Error("Invalid shared volume rows/as-of");
+  const clock = new Intl.DateTimeFormat("en-GB", { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  const day = new Intl.DateTimeFormat("sv-SE", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" });
+  const ratio = (value) => value === null ? "unknown" : `${value.toFixed(4)}x`;
+  const lines = [`# ${sym} shared SIP volume; prior ${result.prior_date} ${result.prior_observed_slots}/${result.prior_expected_slots} slots; log-only`,
+    `# reconstructed as-of ${result.as_of_utc}; source fetched ${result.source_observed_utc}`];
+  for (const row of result.rows) {
+    const end = Date.parse(row.bar_end_utc);
+    if (!Number.isFinite(end) || end > asOf || day.format(end - 1) !== date) throw new Error("Shared volume contains an invalid or incomplete AH bar");
+    if (now && minutes(clock.format(end)) > minutes(now)) throw new Error("Shared volume contains a bar closed after --now");
+    lines.push(`${sym} ${date}  VOLUME-CONTEXT ${row.bar_et}ET start=${row.bar_start_utc} shares=${row.shares} local=${ratio(row.local_ratio)} prior-peak=${ratio(row.prior_peak_ratio)} status=${row.local_status}`);
+  }
+  return lines.join("\n");
+}
+
 function main() {
   let now = null;
+  let volumeFile = null;
   const pairs = [];
   const args = process.argv.slice(2);
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--now") { now = args[++i]; continue; }
+    if (args[i] === "--volume-metric") { volumeFile = args[++i]; continue; }
     if (/^[A-Za-z.\-]+:\d{4}-\d{2}-\d{2}$/.test(args[i])) {
       const [sym, date] = args[i].split(":");
       pairs.push([sym.toUpperCase(), date]);
@@ -102,11 +127,19 @@ function main() {
     console.error("usage: node scripts/ah-5m-confirmation.js SYM:YYYY-MM-DD [...] [--now HH:MM]");
     process.exit(1);
   }
+  let annotation = null;
+  if (volumeFile) {
+    try {
+      if (pairs.length !== 1) throw new Error("--volume-metric requires exactly one symbol/date pair");
+      annotation = volumeAnnotation(volumeFile, ...pairs[0], now);
+    } catch (error) { console.error(error.message); process.exit(1); }
+  }
   console.log(`# third-bar confirmation (log-only)${now ? ` now<=${now}ET` : ""}`);
   for (const [sym, date] of pairs) {
     try { console.log(analyze(sym, date, now)); }
     catch (error) { console.log(`${sym} ${date}  CONFIRM-3  ERROR ${error.message.split("\n")[0]}`); }
   }
+  if (annotation) console.log(annotation);
 }
 
 main();

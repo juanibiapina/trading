@@ -39,9 +39,11 @@ Use only long/cash research. First examine a regular-session intraday horizon, w
 
 The money-fast rationale is executable frequency and capacity: these candidates may avoid the known stale extended-hours IEX books and support repeated observations. Their edge size and net dollars per day are **unknown**. This warrants a cheap feasibility test, not a claim that liquid stocks already outperform Initiative 6.
 
-## Next smallest deliverable — October 1 18:00 CEST
+## Feasibility delivery — October 1 18:00 CEST
 
-Produce a read-only data feasibility census for all eight fixed symbols:
+The [read-only census](init7-data-census-2026-10-01.md) is complete, with raw evidence in `log/2026-10-01/init7-data-census.json` and an offline replay in `scripts/init7-data-census.py`. Data feasibility supports specifying the prospective comparison; it does not establish an execution edge. The next deliverable is a frozen numerical control and one bounded agent variant at the October 2 15:00 run.
+
+The census covered all eight fixed symbols:
 
 1. Fetch September 30 completed regular-session SIP five-minute bars with explicit start/end times and pagination. Record coverage and the calendar/session bounds.
 2. Capture October 1 regular-session IEX quotes with observation time, quote age, positive bid/ask sizes and spread. A quote is evidence about the book, not an order fill.
