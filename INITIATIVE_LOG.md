@@ -1,5 +1,17 @@
 # Initiative Log
 
+### 2026-10-01 — Initiative 4 progress reporting and initiative workflow
+
+**Evaluated:** Juan's Sep 30 reply to the Sep 29 report asks for updates on every initiative that moved and requires initiatives to advance (InboxKit message 175). The quoted email includes scanner improvement and process review but no initiative progress section.
+
+**Step taken:** Updated `prompts/daily-email.md` to read the initiative log and roadmap and report every initiative that advanced since the previous successful email. Updated `prompts/strategy-advance.md` to review all active initiatives, produce new evidence or a verified deliverable each run, and advance ready parallel work when the pilot has no new data. Added process-review checks for stalled work and omitted email updates.
+
+**Result:** The daily email template now has an Initiative Progress section with dated completed steps, results, and next deliverables. The strategy workflow distinguishes monitoring from progress and considers time since the last concrete step. Initiative 4's roadmap notes and `FEEDBACK_LOG.md` record the directive and delivery.
+
+**Hypothesis / next step:** Verify that the next daily email includes every initiative that moved during its reporting window, including this Initiative 4 delivery and parallel work. The next strategy-advance run should produce concrete initiative evidence or a deliverable; scanner-improvement/process-review should check compliance and route any remaining process gap.
+
+**Needs from Juan:** nothing new. Initiative 2's broker test remains deferred per his Sep 22 instruction.
+
 ### 2026-09-30 18:00 — Initiative 6 completed-window pilot; Initiative 3 entry-scan outage
 
 **Evaluated:** The 15:00 hypothesis **worked operationally**: the cohort file existed before possible entry and the completed Sep 30 window added no PM-only tracker name. Pilot recall and executable edge remain **insufficient data** because all four selected names (NCI, KALA, BIYA, WETO) had AH footprints; no PM-only candidate was available to compare with the 19-name frozen cohort. The Sep 29 scan-coverage failure needed a cause check.

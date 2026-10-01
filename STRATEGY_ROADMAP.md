@@ -1361,7 +1361,11 @@ can edit its own crons but should confirm timing changes here first).
 Juan's Gmail. Add a pulse that checks for replies to those emails; replies are
 the channel for Juan's feedback to feed back into the system.
 
-**Status:** DONE (initial setup) — iterating.
+**Status:** DONE (initial setup) — iterating. Initiative progress reporting added 2026-10-01; the next daily email will verify delivery.
+
+**Progress 2026-10-01 (Juan's Sep 30 reply):** Updated `prompts/daily-email.md` to read the initiative log and roadmap and report every initiative that moved since the previous successful email, with the completed step, result, date, and next step. Recorded this delivery in `INITIATIVE_LOG.md`. See `FEEDBACK_LOG.md` 2026-10-01, InboxKit message 175.
+
+**Cross-initiative directive:** Juan requires initiatives to move. `strategy-advance` now checks the last concrete progress and next deliverable for every active initiative, prioritizes work that has waited longest among comparable unblocked items, and must produce new evidence, resolve an open question, or deliver a verified change each run. An unchanged rerun is a monitoring result. When the pilot has no new data, advance another ready research, instrumentation, or build item. Record the exact dependency and next check for blocked work; Initiative 2's broker test remains deferred per Juan's Sep 22 instruction. `process-review` now checks for repeated runs without concrete progress and for missing initiative updates in the daily email.
 
 **What is set up:**
 - `scripts/send-email-inboxkit.js` — sends as `zero@inboxkit.cc` via InboxKit

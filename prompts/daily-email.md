@@ -12,6 +12,10 @@ Read:
 - `log/YYYY-MM-DD/log.md` -- morning eval: today's winner, scanner diagnostic, baseline tracking, paper trades, AH mover follow-through
 - `SCANNER_CHANGELOG.md` -- latest completed scanner improvement; label its date, since today's improvement may run after this email
 - Latest completed `log/*/process-review.md` -- process issues and any needs-user-action items; label its date, since today's review may run after this email
+- `INITIATIVE_LOG.md` and `STRATEGY_ROADMAP.md` -- completed progress for every initiative since the previous successful daily email, including parallel work recorded under another initiative's heading
+- `FEEDBACK_LOG.md` -- new feedback and the changes or follow-up it caused
+
+Resolve the initiative reporting window from the previous successful email's recorded send time. If that time is unavailable, state the window used and report the latest completed initiative entries with their dates. Include all initiatives that moved in that window, even when their work belongs to a different trading-cycle date. Group multiple steps for one initiative into one concise update: initiative number/name, completion date/time, concrete step, result, and next step. An unchanged rerun is monitoring; describe it accurately. If none moved, say so and name the next concrete deliverable. Briefly identify active work that is blocked or deferred and the dependency or next check; preserve Juan's broker-test deferral.
 
 Use the cycle date resolved above for the overnight log, chart paths, and email subject; do not default to the current calendar date when the current day's directory contains only position or scan entries. Read the cycle log from the start. Before using a nonzero read offset, check the file's current line count; never reuse an offset from another log, and treat a short log as valid.
 
@@ -141,6 +145,13 @@ AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;
 <h3 style="color: #555;">Process Review</h3>
 <p>[Date of latest completed review and its findings; if none exists, say no completed review is available. Do not claim today's sessions ran clean before they are reviewed.]</p>
 <p>[If the completed review has unresolved needs-user-action items, highlight them]</p>
+
+<h3 style="color: #555;">Initiative Progress</h3>
+<p>[Reporting window: previous successful email send time through this send time]</p>
+<ul>
+<li><strong>Initiative [N] &mdash; [name], [completion date/time]</strong>: [completed step and concrete result]. Next: [next deliverable].</li>
+</ul>
+<p>[One update per initiative that moved, including parallel work. If none moved, say so and give the next concrete deliverable. Briefly list active blocked/deferred work and its dependency or next check.]</p>
 
 <h3 style="color: #555;">Feedback Acknowledged</h3>
 <!-- Juan asked (08-27) to see his feedback reflected back so he knows it landed.

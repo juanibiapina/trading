@@ -6,6 +6,14 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-10-01 — re: Trading Scanner Report - 2026-09-29
+
+**Juan said:** “Are you doing projects and processes? I want updates in the email for each initiative that has moved. initiatives MUST move.” (InboxKit message 175, received 2026-09-30.)
+
+**Interpretation:** Juan requires concrete initiative progress and visibility in the daily email. Every initiative that advanced since the previous email needs its own dated update with the completed step and result. Repeating unchanged metrics does not establish progress; blocked work needs a specific next step while other initiatives advance.
+
+**Action:** Applied the reporting change under Initiative 4: `prompts/daily-email.md` now reads `INITIATIVE_LOG.md` and `STRATEGY_ROADMAP.md` and includes every initiative that moved since the previous email. Updated `prompts/strategy-advance.md` to review each active initiative's last progress, produce new evidence or a deliverable each run, and redirect work when a pilot has no new data. Updated `prompts/process-review.md` to check for stalled initiative work and missing email updates. Recorded this delivery in `INITIATIVE_LOG.md`; the next strategy-advance run owns substantive initiative work, and the next scanner-improvement/process-review runs should check that the reporting and progress requirements are followed.
+
 ### 2026-09-25 — re: Trading Scanner Report - 2026-09-24
 
 **Juan said:** “Omg INLF doubled, it would have been perfect. Amazing volume. That's what we need to enter” (InboxKit message 172).

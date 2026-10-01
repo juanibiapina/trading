@@ -16,6 +16,7 @@ This runs daily after scanner-improvement. The goal: catch systemic issues where
 4. **Token waste** — long debugging sequences that could be avoided with a simple environment fix
 5. **Prompt confusion** — sessions misinterpreting instructions, doing steps out of order, or skipping steps
 6. **Stale references** — prompts referencing tools, files, or rules that no longer exist
+7. **Initiative progress and reporting** — read recent `INITIATIVE_LOG.md` entries and active `STRATEGY_ROADMAP.md` items. Check for two consecutive strategy runs with only unchanged reruns and no new evidence, resolved question, or verified delivery; check for ready work repeatedly skipped without a reason. Confirm the latest completed daily email reports each initiative that moved before its send time, including parallel work. Record missing updates or stalled work as process issues and route the next concrete step to `strategy-advance`; preserve explicit deferrals such as Initiative 2's broker test.
 
 ## What You Can Fix
 

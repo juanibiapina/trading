@@ -36,8 +36,15 @@ they are always in scope to raise.
   said? Record the result before taking a new step.
 - **Evidence before promotion.** Never promote an initiative to the live cycle
   without data showing an edge over the current baseline.
-- **Be conservative.** A slow roadmap is fine. A broken daily cycle is not.
-  Prefer shadow/log-only changes over anything that alters live paper trading.
+- **Protect the daily cycle.** Prefer shadow/log-only changes over anything
+  that alters live paper trading.
+- **Initiatives must move (Juan, Sep 30 reply; captured Oct 1).** Each run must
+  add new evidence, resolve an open question, or deliver a verified change.
+  Repeating unchanged metrics is monitoring. If the active pilot has no new
+  data, record that result and advance another ready research, instrumentation,
+  or build item. Record exact dependencies and the next check for blocked work;
+  preserve Juan's broker-test deferral. If every item is blocked, record that
+  fact and the next available step without claiming progress.
 
 ## What You Can Change
 
@@ -80,6 +87,13 @@ enough evidence to judge it? If yes, record `did it work` with the evidence. If
 no, note "insufficient data" and continue.
 
 ### 3. Select Today's Active Initiative
+
+Review every active initiative's last concrete progress date, current dependency,
+and next deliverable before selecting work. Among unblocked items with comparable
+expected impact, prioritize the one that has waited longest. If an item has been
+skipped repeatedly, record the reason and the next run or condition that will
+advance it. Treat a pilot waiting for new market data as a monitoring check and
+use the remaining work budget for a ready parallel item.
 
 Advance the active **pilot** (if any) first, then clear ready low-risk
 non-pilot items, all ranked by the North Star (expected dollars per unit time =
