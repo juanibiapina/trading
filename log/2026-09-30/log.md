@@ -728,3 +728,217 @@ Alpaca paper account PA37U2Y192A7 reports no open positions. `OPEN_POSITIONS.md`
 |--------|-------|---------|-------|------|------|-------|----------|--------|
 
 **Actions taken:** None; no positions to evaluate or sell.
+
+## Morning Evaluation — 10:29 CEST (04:29 ET, October 1)
+
+Pulse 1 began at 10:20 CEST. This evaluates the **September 30 US after-hours session**. Independent discovery preceded reading this session's log. Final SIP requests at 10:29 CEST provide historical PM bars through **04:10 ET** for active names; sparse names have earlier last trades. Later Yahoo prices below are approximate timeline observations, not verified live executable levels.
+
+### Today's Winner
+
+**No real winner today at this early pulse.** No independently discovered name verifies all three requirements: >100% from the September 30 regular close, high accumulating SIP volume, and a capturable AH entry. **RZAI** is the biggest raw PM mover, with a real >100% SIP peak, but its AH execution is unverified. **GIPR** is the strongest liquid PM-only burst and remains below the >100% bar. Neither is crowned an actionable AH→PM winner.
+
+**RZAI — AI fire detection / disaster prevention; raw benchmark only.**
+
+- Catalyst: **provisional Grade D (financing/dilution)** for the direct-listing and preferred-placement event; no fresh earnings, contract, or approval catalyst verified. The [September 30 direct-listing report](https://www.renaissancecapital.com/IPO-Center/News/121960/korean-disaster-sensing-company-roze-ai-finalizes-nasdaq-direct-listing) confirms a Korean fire-safety company, 18.1M registered resale shares, and a separate $10M preferred placement. This company has no connection to SoftBank's similarly named Roze. Listing activity is verified background; the specific driver and release time of the AH ramp are unverified. Three news searches total were used; no provider rate-limit response occurred.
+- Previous close for this overnight comparison: **$21.88**, September 30 SIP daily close. Yahoo's $27.63 is the opening reference for its first trading session, not an established prior daily close; SIP has no September 29 daily bar for RZAI.
+- AH: at **16:15 ET / 22:15 CEST**, SIP close **$23.00 (+5.1%)**, only **930 shares / 56 trades** in that bar. Ignition started in the **16:20** bar, reaching $50 on 5,447 shares / 572 trades. The **16:35** AH high was **$58.00 (+165.1%)**, on **30,524 shares / 3,749 trades**, VWAP $50.33. Total AH: **211,692 shares / 20,849 trades**, with later bars mostly hundreds or thousands of shares.
+- PM peak: **$53.29 (+143.6%) at 04:00 ET**, on **56,984 shares / 7,295 trades**, VWAP $49.34, close $48.04. The next bar closed **$43.74**, just below the $43.76 level needed for +100%; latest verified close **$40.98 at 04:10 ET (+87.3%)**. Total verified PM: **88,612 shares / 10,223 trades**. Yahoo's later shape is approximately **$42.32 at 04:27 ET**, not a verified quote.
+- Illustrative AH reference **$39.00 at 17:00 ET / 23:00 CEST** → PM high $53.29: **+36.6% hypothetical**. This is a traded bar price, with no demonstrated entry or peak exit. Alpaca returned **`tradable=true` but quote HTTP 404, no quote found**. A current two-sided AH book was never recorded. Sparse share volume and absent executable-book evidence prevent crowning it.
+- Float **24.5M**, market cap **$1.22B** in the independent TradingView snapshot; these are screener estimates.
+
+**Scanner Diagnostic:**
+
+- Detectable at ~22:15 CEST? **NO under the live scanner**: $21.88 regular price exceeds `MAX_PRICE=$10`, and $1.22B cap exceeds $300M. The contemporaneous 16:15 SIP bar was also below +10% AH with little activity. Its subsequent ramp was visible to the independent whole-market sweep, but RZAI never appeared in the evening pipeline.
+- Why no action: deliberate upper price/cap universe exclusions, no verified fillable book, and substantially smaller share volume than liquid microcap runners. It is **not an in-window TradingView feed-lag miss**.
+- Scanner gap: a separate observation sweep without price/cap limits would expose this raw mover. This is evidence about universe coverage; it does not establish an investable trade or justify changing live parameters here.
+
+**GIPR — real estate investment trust; PM-only benchmark, not the winner.** September 30 SIP close **$0.3990**; AH high $0.3990, last $0.3895, only **71,395 shares / 122 trades** all AH. It ignited at **04:00 ET**: SIP high **$0.7267 (+82.1%)**, **4,960,696 shares / 17,766 trades**, VWAP $0.6208, close $0.5899; next close $0.5588, then $0.5860 at 04:10. Verified PM totals **14.01M shares / 41,000 trades**. The liquid plateau is real, but the high is below +100% and there was no AH signal. Yahoo's stale $0.3742 basis would inflate the high to +94.2%. No AH scanner change could predict its PM-only ignition. The broker quote is frozen at September 30 16:00 ET, so current spread/fillability remains unverified.
+
+### Baseline Tracking
+
+Source: the latest standing baseline in **September 29's log**, immediately preceding this evaluated session. No intervening trading-session log is missing a baseline line.
+
+- Days tracked: **92** (91 + September 30 only).
+- Winners detected by scanner: **72/82 (87.8%)**, unchanged; no qualifying capturable >100% winner added. The prior cumulative ticker history is retained in earlier logs.
+- Winner selected for paper trade: **36/79 (45.6%)**, unchanged; no filled trade or eligible winner-selection sample.
+- Baseline gaps confirmed by session-log checks: **September 11, 18, and 25**. Prior notes also carried September 28, but that session's log now contains both a morning evaluation and `Days tracked:`; it is not an outstanding gap under the session-log convention. No cumulative count was back-filled during this pulse.
+- Target: **>80% detection**. Status: **BASELINE MET** on the inherited recorded sample. The inherited detection denominator includes some earlier raw >100% floor exclusions; it is not a pure capturable-winner sample. Missing evaluations and scan coverage still limit the result.
+
+### Retrospective Scan Results
+
+`scan.py --all --session premarket` at **04:20:40 ET** found **SDEV, WETO, QSI**. Before reading the evening log, an independent TradingView listed-stock sweep removed price, cap, and volume floors and ranked current PM change: **797 positive-change symbols**, top 100 returned. It exposed RZAI, GIPR, LESL, and GNS. Whole-market ranking is discovery evidence; the table uses **SIP highs and daily closes**. Yahoo history supplied trajectory only. No forced morning AH scan was needed.
+
+| Ticker | Sep 30 SIP close | AH SIP high / ET | PM SIP high / ET | Peak-bar shares / trades | Evening discovery / outcome |
+|--------|------------------|------------------|------------------|--------------------------|-----------------------------|
+| RZAI | $21.88 | $58.00 / 16:35 | $53.29 / 04:00 (+143.6%) | 56,984 / 7,295 | Absent; upper price/cap exclusions, book unverified; AH was better |
+| GIPR | $0.3990 | $0.3990 / 16:00 | $0.7267 / 04:00 (+82.1%) | 4,960,696 / 17,766 | PM-only, no AH signal |
+| LESL | $0.1600 | $0.2700 / 17:30 | $0.2496 / 04:00 (+56.0%) | 13,876,807 / 22,021 | Below price floor; prior regular session −26.5%; AH was better |
+| GNS | $0.1590 | $0.2450 / 19:10 | $0.2289 / 04:00 (+44.0%) | 16,490,006 / 20,521 | Below floor; defining surge at 18:31–18:33 after final scan; AH was better |
+| SDEV | $2.59 | $2.80 / 19:35 | $3.07 / 04:10 (+18.5%) | 606,282 / 3,710 | Detected, <10% AH during scans and −20.8% Day; modest PM continuation |
+| WETO | $1.01 | $1.24 / 16:45 | $1.24 / 04:00 (+22.8%) | 420,314 / 2,502 | Detected, thin/fading late tape; PM only matched AH high |
+| QSI | $1.07 | $1.25 / 17:45 | $1.21 / 04:00 (+13.1%) | 118,137 / 406 | Detected twice above +10%; late volume and book failed |
+| TGE | $1.55 | $1.85 / 17:05 | $1.58 / 04:00 (+1.9%) | 79,495 / 671 | Detected; stale-book block at 00:00, then faded |
+| LPA | $2.86 | $3.50 / 16:10 | $3.19 / 04:00 (+11.5%) | 44,707 / 560 | Detected; first-bar high persisted; below $3.28 watch entry |
+| HIT | $0.8207 | $1.12 / 16:00 | $0.7924 / 04:00 (−3.4%) | 23,997 / 114 | Detected; first-bar skip faded |
+| DKI | $1.57 | $2.37 / 16:05 | $1.40 / 04:00 (−10.8%) | 66,949 / 597 | Detected; dead-cat override watch failed |
+| PWCM | $1.13 | $1.5102 / 18:15 | $1.08 / 04:00 (−4.4%) | 10,339 / 107 | Detected at final scan; one-scan, trajectory, and book co-blocks |
+| KRMD | $2.93 | $3.3733 / 17:40 | No SIP PM bars | — | Supplementary observation unassessed in PM; sparse AH prints |
+
+**Peak corrections:** Yahoo's RZAI chart shows **$70 at the bar it labels 20:25 ET**; the actual **16:25 ET SIP high was $53.56**, VWAP $45.01, 18,895 shares / 2,666 trades; full-session SIP high was $58.00. Do not use $70 as an AH level. Yahoo's PM close-based history misses real SIP peaks: RZAI $47.89 versus $53.29, GIPR ~$0.59 versus $0.7267, LESL ~$0.21 versus $0.2496, WETO $1.13 versus $1.24. All reported peaks above use SIP. SDEV's later Yahoo shape (~$3.18 at 04:27) is outside the available SIP cutoff and is not a verified new peak.
+
+### Open Position P&L (Alpaca)
+
+**No executed positions and no open positions.** `broker.js positions --json` returned `[]`; `orders all --json` contained no orders created since September 30 AH open. Last night's paper-trade table is empty. **Total realized P&L for this session: $0.00.** No currency conversion is assumed. All entry→PM results in this evaluation are hypothetical.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** — 21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST. **Six extra observations** at 22:05, 22:10, 22:15, 22:20, 22:25, 22:45; they do not inflate scheduled coverage. The full eligible entry window was covered.
+- Candidates found: **45 unique pipeline names**, including SGRX from the initial regular snapshot; **44** appear in refreshed tables. **24 unique AH names**, including supplementary KRMD. Seven OTC names were untradable observations, not otherwise-qualified broker blocks. The final scan checked all **38 tradable pipeline names** against delayed SIP.
+- Retrospective matches: **3/3 filtered PM discoveries** (SDEV, WETO, QSI) were detected in evening AH tables. The broader sweep's leading RZAI, GIPR, LESL, GNS were absent for distinct universe/timing reasons described here.
+- **Supplementary AH-change-only:** source lines exist in all **12 AH scan sections**; **1 unique ticker, KRMD**, first listed at 00:00. Latest logged price **$3.35** in the final pipeline cross-check, versus $3.37 in its discovery scan. SIP PM requests from October 1 08:00Z returned **no bars** through the 04:10 historical cutoff. Yahoo has ~$2.98 at 04:05, but supplies no trustworthy volume or exact peak. **0 continuation / 0 faded / 1 unassessed**. Peak shares/trades, next close, and persistence are **unavailable pending SIP PM evidence**. Absence from the morning scan is not a false-positive verdict. AH itself was genuinely thin: 33,578 shares / 33 trades, with only 2,481 shares / 25 trades after the closing bar.
+
+### Missed Opportunities
+
+| Ticker | AH signal | Why absent / blocked | PM economics |
+|--------|-----------|----------------------|--------------|
+| RZAI | $58 peak, 16:35; 30,524 shares / 3,749 trades | $21.88 price and ~$1.22B cap outside query; no verified executable book | $39 illustrative AH reference→$53.29 +36.6%; no demonstrated fill |
+| LESL | 16:15 close $0.2049/+28.1% on 4.692M shares / 5,708 trades | Deliberate sub-$0.50 exclusion; −26.5% regular-session crash also fails dead-cat entry gate | First AH close $0.1915→$0.2496 +30.3%; wide stale book, peak unwound |
+| GNS | Below +10% through 18:29; 18:32 surge on 876K shares / 1,285 trades | Below floor and decisive move after final scan | 18:32 VWAP $0.1941→PM $0.2289 +17.9% theoretical; AH high $0.245 was better |
+| TGE | Two qualifying scans at $1.71; real near-high hold before late fade | Quote remained frozen at 16:59:31 ET; later final scan also failed AH threshold | $1.71→PM peak $1.58 **−7.6%**; stale-book negative control |
+
+No verified missed **capturable >100%** AH→PM opportunity was found at this cutoff. Deliberate universe omissions are still recorded for scanner diagnosis.
+
+### AH Mover Follow-Through
+
+Every ticker with >10% AH in two or more evening scans is included. WETO's 23:30 displayed +10.0% was a rounding boundary; its within-pulse unrounded +10.792% is documented, and the definite 23:00/00:00 qualifying appearances suffice. Current PM columns use the latest **verified historical SIP close**; later Yahoo shape is listed separately.
+
+| Ticker | AH peak / ET | AH trajectory | PM peak / ET | Latest verified PM / ET | From AH peak | From Sep 30 close | Verdict |
+|--------|--------------|---------------|--------------|-------------------------|--------------|-------------------|---------|
+| HIT | $1.12 / 16:00 | Spike→fade, +18.2→13.3→25.5→5.3%; delayed discovery overstated recovery | $0.7924 / 04:00 | $0.7551 / 04:10 | −32.6% | −8.0% | PM peak fell short; first-bar skip validated; AH better |
+| DKI | $2.37 / 16:05 | Opening spike→fade, +27.4→42.1→37.6→24.8%, then absent | $1.40 / 04:00 | $1.3605 / 04:10 | −42.6% | −13.3% | PM peak fell short; dead-cat watch failed; AH better |
+| LPA | $3.50 / 16:10 | Spike→hold below opening high; later retests and declining volume | $3.19 / 04:00 | $3.15 / 04:10 | −10.0% | +10.1% | PM peak fell short; below watch entry; AH better |
+| WETO | $1.24 / 16:45 | Late surge→fade; +14.8→~10.8→10.9→7.9% | $1.24 / 04:00 | $1.09 / 04:10 | −12.1% | +7.9% | PM peak matched AH, no re-explosion; later bars thin |
+| TGE | $1.85 / 17:05 | Build→hold→fade; +10.3→10.3→7.7% | $1.58 / 04:00 | $1.51 / 04:10 | −18.4% | −2.6% | PM peak fell short; Grade B did not rescue fade; AH better |
+| QSI | $1.25 / 17:45 | Late surge→hold on declining volume; +11.2→10.3% | $1.21 / 04:00 | $1.1550 / 04:10 | −7.6% | +7.9% | PM peak fell short; $1.18 reference→peak +2.5% on thin PM tape |
+
+Later approximate Yahoo shape: HIT ~$0.76 at 04:24; DKI ~$1.37, TGE ~$1.51, QSI ~$1.18, WETO ~$1.10 at 04:26; LPA ~$3.18 at 04:25. These snapshots do not verify a live fillable price. **PWCM**, a single-scan name, had already fallen from its $1.5102 high to **$1.20 in the 18:25 SIP bar** before the final scan; its $1.30 discovery was delayed. PM high $1.08 never reclaimed that hypothetical entry.
+
+### Notes
+
+- **Coverage-failure tally, last 10 completed US sessions (Sep 17–30):** Sep 18 **0/7**, Sep 22 **2/7**, Sep 25 **0/7**, Sep 29 **3/7**. Other dates Sep 17, 21, 23, 24, 28, 30 were **7/7**; Sep 23's 22:05 run covers 22:00 once. No missing log in this window. **Four failures in ten sessions** remain despite tonight's complete coverage. Route the dated failures and scheduler/bridge investigation to the daily email. Baseline gaps are separate: **Sep 11, 18, 25**, with Sep 28's inherited gap label corrected as described above.
+- **FIRST-BAR-SPIKE validation:** full September 30 16:00–20:00 SIP histories confirm **HIT $1.12 at 16:00** and **LPA $3.50 at 16:10** were never surpassed later on the tape. HIT (20.5M float, None), latest preserved watch **$1.03 at 22:30**→PM $0.7924 **−23.1%**; LPA (5.2M float, D), final watch **$3.28 at 00:30**→PM $3.19 **−2.7%**. Both faded below watch entry; skips validated at this cutoff. HIT later fell below +10%; LPA additionally had thin volume and stale zero ask. Prior log had **8 flagged post-gate observations**, including NCI's superseded opening-high case: **7 valid (2 ran/5 faded)**. Add HIT/LPA → **10 flagged post-gate observations (3 ran/7 faded)**. The clean subset is **9 valid (2 ran/7 faded)**, with **1 superseded NCI observation** excluded; **3 pre-gate entries (0 ran)** remain unchanged. No post-gate run to route this cycle.
+- **Dead-cat-override WATCH:** **DKI**, float 1.2M, None, original $2.23 at **22:25 CEST**→PM $1.40 **−37.2%**; AH high $2.37 also exceeded PM. Reclaim was visible in the early scans, but the full tape faded. Keep the original reference; do not substitute a later cheaper price. Recent prior watches **BENF −0.6%, ACTU −9.6%, WHLR −2.6%** from Sep 24 remain in the outcome history; this adds one failed watch. The founding BYAH +72% remains the earlier profitable control. No ceiling-override WATCH was logged tonight.
+- **Sub-3M fade-rule sample:** carry **4/21**, add **WETO 915K, None**, AH $1.24→PM $1.24, **fell short of a material re-explosion**. (a) first qualifying scan **$1.16→$1.24 +6.9%**; (b) PM-open VWAP **$1.1572→$1.24 +7.2%**. Peak bar 420,314 shares/2,502 trades; next close $1.10, below either reference. Both peak gains were transient and did not hold. **Standing 4/22 (18.2%)**, far below ≥80%; no exception promotion. DKI's dead-cat co-block is outside the pure fade denominator: (a) first sighting $2.00→$1.40 **−30.0%**, (b) PM-open VWAP $1.3520→$1.40 **+3.6%**, only 66,949/597 and next close $1.36. PWCM (2.3M, None) is a co-blocked single-scan observation: (a) $1.30→$1.08 **−16.9%**, (b) VWAP $1.0427→$1.08 **+3.6%**, 10,339/107, next close $1.06; not added as a pure fade-rule test. Higher-float correct skips: **HIT 20.5M, LPA 5.2M, TGE 44.2M, QSI 171.3M**, all PM peaks below AH peaks. **Strong-catalyst annotation:** TGE Grade B earnings did not overcome its fade, $1.85 AH > $1.58 PM, first qualifying $1.71→peak **−7.6%**; catalyst exception evidence remains absent.
+- **Stale-book execution-block tally: 5→6.** Add **TGE Sep 30→Oct 1**, `tradable=true`, **$1.71 at 00:00 CEST**, with two >10% scans and a near-high hold. SIP 17:20–17:40 bars traded **237K–724K shares / 1,106–2,659 trades**, latest 17:45 bar 165,374/754; declining volume was a concern to recheck, while the recorded decisive block at 00:00 was the frozen quote. Book **$1.49 x500 / $1.65 x400 at 16:59:31 ET**, age **60m29s at eligibility**, still frozen through 18:30 (90m29s) and this morning. At the final scan AH fell below +10%, so that later scan was co-blocked. **PM peak $1.58, −7.6% hypothetical: negative control**, alongside XRTX. Standing cases: **NUWE +82.4%, KUST +45.9%, CLRO +34.3%, XRTX −5.0%, INLF +36.1%, TGE −7.6%** at their recorded cutoffs: **4 profitable / 2 negative controls**. Six illustrative $100 entries would sum to **+$186.10 at their peaks**, before spreads/slippage; this is not filled P&L or a demonstrated executable cost. Route the repeated quote failure and mixed economics to the daily email for an execution-data decision.
+- **Price-floor exclusions:** carry **7 across 4 nights, 0 confirmed >100%-and-holdable, 1 pending**. Add **LESL Sep 30→Oct 1**, `tradable=true`, float 9.1M, September 30 close $0.16. At 16:15 ET close **$0.2049/+28.1%** on **4,692,006 shares/5,708 trades**; AH high $0.27, PM high $0.2496/+56%. Reference first AH close $0.1915→PM high **+30.3% hypothetical**. Live broker snapshot is actually stale at **16:47:13 ET**, bid $0.1785/ask $0.25, spread **28.6% of ask**; current tight spread is unverified. PM closes $0.2110→$0.2020→$0.2079 were below the $0.2496 peak, and the prior-day −26.5% collapse co-blocks an entry. Verdict **uninvestable for this AH setup / tight live book unverified**. Standing **8 across 5 nights, 0 confirmed >100% holdable, 1 pending**. This sub-100% observation is a universe detection omission, not a new >100% winner miss; inherited baseline counting of raw >100% floor cases is unchanged.
+- **GNS timing control:** `tradable=true`, float 172.9M, regular close $0.159. SIP one-minute bars stayed below +10% through **18:29** (high $0.1744); **18:30** first crossed marginally (high $0.175, 122K/57), while the decisive ramp was **18:31–18:33**, after the final scan at 18:30:29. **18:32** high $0.2061 on **876,039 shares/1,285 trades**; **18:33** high $0.2273 on **2,005,537/2,308**. PM high $0.2289/+44%, with next close $0.1988 and 04:10 close $0.1904. Broker snapshot at 16:00 ET is stale/wide, $0.1311/$0.1813 (27.7%-of-ask spread), so tight executable liquidity is unverified. This is a **late-tail observation with an additional below-floor exclusion**, not a clean in-window price-floor-only case or a feed-lag miss; do not add it to those tallies. The precise threshold crossing within the 18:30 minute is unresolved, while the volume-backed defining move is clearly later. Add **GNS as a true-tail observation**, with its **sub-100% PM result** and unverified execution stated. The late-AH tracker now has **2 true-tail observations (ORIS, GNS)** and **1 legacy feed-lag case (BTCT)**; no new >100% tail winner is added to the baseline.
+- **Raw PM leader / PM-only tracking:** **RZAI is AH→PM continuation**, absent because of upper universe limits; not a PM-only gapper. **GIPR is the distinct holdable PM-only observation**: consecutive 04:00/04:05/04:10 closes $0.5899/$0.5588/$0.5860 on **4.96M/4.10M/4.95M shares** and **17,766/11,095/12,139 trades**. This supports a liquid plateau, not execution at the $0.7267 wick. `log/pm-open-scan.csv` is authoritative and currently counts **60 holdable PM-only rows** by its specified query; **no October 1 row yet**. The dedicated pulse's early snapshot has run, and its later classification window is still open; leave CSV ownership there. Route this observation and the existing cluster through the Initiative-6 daily-email update; do not maintain a second hand-count.
+- **Other tracker standings:** in-window feed-lag **7 observations**, including Sep 29 BIYA's truncated-window caveat, unchanged; no new brand-new in-universe volume-backed omission found. Broker-block **2 SHPH cases**, no-fillable-only **4**, float-only **1**, final-scan-only **2**, unchanged. PWCM was additionally blocked by its stale book and a retreat already visible before 18:30; it is not a solely two-scan-gate test. QSI's >50M float was explicitly not used to skip it; its volume/book failures do not qualify as a float-only miss. No actual entries: multi-session **1 faded**, first-day **27 (9 ran/8 flat/10 faded)**, fill-chase **1 never reclaimed**, unchanged. Reverse-split recency **4/5 this-week faded**, **4/6 older continued**, unchanged; no new split-catalyst entry or documented fresh split driver qualifies tonight.
+- **Extreme-runner sample:** carry **13 fades / 2 continues**, add **RZAI**: AH high **$58 (+165.1% from the $21.88 regular close), 16:35 ET**, peak bar **30,524 shares / 3,749 trades**; PM high **$53.29, 04:00 ET**, **56,984 shares / 7,295 trades**. **AH was the better peak exit**, PM fell short by **8.1%** and next PM close fell below +100%. Standing **14 fades / 2 continues (87.5% fade)** at this cutoff. RZAI is an observational price test outside the scanner universe, with no verified executable AH entry; adding that outcome does not turn it into a winner. TGE's AH extension was **+122.9% from Sep 29 $0.83** and only +19.4% from Sep 30 $1.55; neither clears the ~+130% threshold. The partial-profit recommendation remains for the exit-rule owner via daily email.
+- **Basis checks for tracked hypotheticals:** SIP daily bars verify Sep 29→Sep 30 closes: HIT **$0.8525→$0.8207**, DKI **$2.55→$1.57**, LPA **$2.82→$2.86**, TGE **$0.83→$1.55**, QSI **$0.9581→$1.07**, WETO **$1.10→$1.01**, PWCM **$0.9869→$1.13**, KRMD **$3.005→$2.93**. AH **Entry Total%** combines that day's regular move with AH and therefore uses Sep 29: HIT $1.03 **+20.8%**, DKI $2.23 **−12.5%**, LPA $3.28 **+16.3%**, TGE $1.71 **+106.0%**, QSI $1.18 **+23.2%**, WETO $1.16 **+5.5%**, PWCM $1.30 **+31.7%**. October 1 PM gaps use Sep 30 close. Returns from hypothetical entry to peak use the recorded entry itself. Yahoo's older basis is not substituted for either calculation.
+
+### Daily Email Routing
+
+- Report **no real winner**, **7/7 scheduled scans**, **no fills**, and the distinct observations: RZAI excluded/unverified, liquid PM-only GIPR below +100%, LESL below-floor crash bounce, and GNS's genuine late-tail surge (**true-tail tally 2**, separate legacy feed-lag tally 1). Include KRMD as **unassessed**, not a false positive.
+- Carry the dated **four scan-coverage failures in ten sessions** into a scheduler/bridge reliability investigation; distinguish them from baseline gaps.
+- Report **TGE as stale-book negative control #6** and the repeated frozen extended-hours quote problem, with the six-case hypothetical economics. Preserve the live-book gate and Juan's broker-test deferral; broker/feed decisions belong in email.
+- Carry the whole-universe independent AH-data-source recommendation (**7 feed-lag observations**) and the **60-row holdable PM-only cluster / Initiative 6** to their owning workstreams. GIPR's row is pending the dedicated PM-open classification; this evaluation does not create a parallel count.
+- Carry the **14/16 extreme-zone fade** partial-profit recommendation, with RZAI's outside-universe execution caveat, and updated split-recency evidence to the strategy/exit owner. Report the two new first-bar fades and **4/22** low-float fade sample as evidence; no exception threshold is met. The price-floor observation has no new >100% holdable tight-spread case.
+
+### Price Charts
+
+ASCII excerpts from `python3 scripts/price-timeline.py RZAI GIPR TGE LPA`, captured around 04:22 ET. The tool's session timeline labels UTC timestamps as ET in this output (its `08:00 ET` corresponds to **04:00 ET**, and `20:xx ET` to **16:xx ET**). Its previous-close anchors and some Yahoo peaks are also incorrect for this comparison. **The corrected SIP table above is authoritative**; these charts show price shape only. Empty Yahoo AH/PM volume fields establish no liquidity verdict.
+
+```text
+========================================================================
+ RZAI - 2-Day Price Timeline (5-min intervals)
+========================================================================
+Previous Close: $27.63 [not the Sep 30 close; corrected SIP $21.88]
+2-Day Range: $19.24 - $70.00 [Yahoo $70 is uncorroborated; SIP AH high $58]
+Current: $42.60 (+54.2% from Yahoo reference)
+Peak: $70.00 at 09-30 20:25 [actual bar 16:25 ET; SIP high $53.56]
+
+Chart (oldest → newest):
+$  48.00 │                              █  █
+         │                                                        ███
+         │                                      █ █              █   █
+         │                               ██      █ █ ███        █
+         │                                  █ ██    █   ████████
+         │                                   █
+         │
+         │█  █
+         │ ██
+         │    ██████                   █
+         │          █      █       ████
+$  19.24 │           ██████ ███████
+         └────────────────────────────────────────────────────────────
+
+========================================================================
+ GIPR - 2-Day Price Timeline (5-min intervals)
+========================================================================
+Previous Close: $0.37 [stale $0.3742; Sep 30 SIP $0.3990]
+2-Day Range: $0.37 - $0.72
+Current: $0.50 (+33.9% from Yahoo reference)
+Peak: $0.72 at 10-01 08:00 [actual 04:00 ET; SIP $0.7267/+82.1%]
+
+Chart (oldest → newest):
+$   0.59 │
+         │
+         │
+         │
+         │
+         │
+         │
+         │
+         │
+         │
+         │                   ██████████████ ███ ████████████
+$   0.37 │███████████████████              █   █            ██████████
+         └────────────────────────────────────────────────────────────
+
+========================================================================
+ TGE - 2-Day Price Timeline (5-min intervals)
+========================================================================
+Previous Close: $0.83 [Sep 29; Oct 1 PM comparison uses Sep 30 SIP $1.55]
+2-Day Range: $0.94 - $1.90
+Current: $1.49 (+79.5% from Sep 29 reference)
+Peak: $1.90 at 09-30 13:45 [regular-session peak, not AH/PM]
+
+Chart (oldest → newest):
+$   1.80 │
+         │
+         │
+         │                     ██ █                  █
+         │                  ██   █ █      █        ██ ██  ███████  ███
+         │                    █     █    █ █   █ ██     ██       ██
+         │                           ████   ███ █
+         │
+         │
+         │
+         │ █  █         ███
+$   0.94 │█ ██ █████████   █
+         └────────────────────────────────────────────────────────────
+
+========================================================================
+ LPA - 2-Day Price Timeline (5-min intervals)
+========================================================================
+Previous Close: $2.82 [Sep 29; Oct 1 PM comparison uses Sep 30 SIP $2.86]
+2-Day Range: $2.80 - $3.50
+Current: $3.21 (+13.8% from Sep 29 reference)
+Peak: $3.50 at 09-30 20:10 [actual 16:10 ET; confirmed SIP opening high]
+
+Chart (oldest → newest):
+$   3.40 │                             █
+         │                      █ █   █
+         │                 █   █   ██   ███████  █      █
+         │                    █  █   █         ██ ██████ █ ██████████
+         │             █  █                               █
+         │              ██  █                                       █
+         │
+         │
+         │
+         │
+         │  █ █    █ ██
+$   2.80 │██ █ ████ █
+         └────────────────────────────────────────────────────────────
+```

@@ -7,7 +7,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
 
-No active watches as of September 30; no capturable >100% AH→PM winner was verified for the September 29 session. NCI briefly reached +103.2% from its September 29 regular close on SIP volume, but its AH ask was unverified and the PM high did not hold.
+No active watches as of October 1; no capturable >100% AH→PM winner was verified for the September 30 session at the early morning evaluation. RZAI reached a real SIP PM high of $53.29 (+143.6% from its $21.88 September 30 close), but its AH entry book was unverified and Alpaca returned no quote. GIPR's liquid +82.1% PM burst had no AH signal and remained below the winner bar. No winner was added. There are no prior Active Watch rows to refresh or move to Historical.
 
 ## Historical Winners (with multi-day outcome)
 
