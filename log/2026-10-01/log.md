@@ -224,9 +224,80 @@ WCT 2026-10-01  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
 
 **Daily email:** Report WCT's real opening volume, fading trajectory, stale zero-ask quote, and FIRST-BAR-SPIKE WATCH hypothetical. No item from this scan requires Juan's input.
 
+## Scan 22:25 CEST (4:25 PM ET)
+
+**Decision:** Observe — no paper orders submitted. Entries begin at the 23:00 CEST scan (17:00 ET). SORA and SSM each have their first qualifying >10% AH appearance; WCT now has two, but fails the Day% rule and continues to fade.
+
+`python3 scripts/scan.py --all` ran at 16:25:28 ET (22:25:28 CEST / 20:25:28 UTC), in the AFTERHOURS session, and returned 5 hits after repository sync. The US trading date is 2026-10-01. Scanner prices and volumes are discovery readings; the verification below distinguishes delayed readings from current executable levels.
+
+```text
+  Supplementary AH-change-only (>15%, not in volume pass): none
+  AH >10% at this snapshot (unrounded): SORA, SSM, WCT
+```
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SSM | [TV](https://www.tradingview.com/chart/?symbol=SSM) | $2.21 | +97.3% | +10.4% | $2.44 | +117.8% | 2.6M | 8.0M | 0.3x | 1.1M | Motor Vehicles |
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.67 | -79.4% | +25.8% | $2.10 | -74.0% | 1.5M | 1.6M | 0.9x | 3.3M | Packaged Software |
+| SORA | [TV](https://www.tradingview.com/chart/?symbol=SORA) | $2.40 | +4.3% | +22.1% | $2.93 | +27.3% | 257K | 46K | 5.5x | 4.9M | Wholesale Distributors |
+| MVST | [TV](https://www.tradingview.com/chart/?symbol=MVST) | $0.66 | +3.2% | +6.0% | $0.70 | +9.4% | 76K | 5.7M | 0.0x | 210.1M | Electrical Products |
+| AGIG | [TV](https://www.tradingview.com/chart/?symbol=AGIG) | $0.96 | -11.6% | +5.9% | $1.02 | -6.4% | 63K | 139K | 0.5x | 11.9M | Oil & Gas Production |
+
+### Evaluation notes
+
+**Broker availability:** SORA, MVST, and AGIG returned `tradable=true` before further workup. SSM's 21:30 and WCT's 22:20 `tradable=true` checks are carried forward. Float and sector are tracked; MVST's 210.1M float does not independently disqualify it in the learning phase.
+
+**AH appearance counts:** WCT **2** (22:20, 22:25); SORA **1** (22:25); SSM **1** (22:25); MVST and AGIG **0**. These counts use the scanner's unrounded >10% lists. SSM's regular-session appearance adds no AH count. All scanner Total% values are below +150%; no ceiling override applies.
+
+**SIP verification:** `broker.js bars SYM --tf 5Min --start 2026-10-01T20:00:00Z --limit 300` returned consolidated SIP for all three >10% candidates. The newest returned bars start at 16:10 ET, consistent with approximately 15 minutes of free-tier delay at this snapshot. They verify the opening tape, not the latest scan-minute price.
+
+| Ticker | Bar start ET | Open | High | Low | Close | Shares | VWAP | Trades |
+|--------|--------------|------|------|-----|-------|--------|------|--------|
+| SORA | 16:05 | $2.43 | $3.64 | $2.42 | $2.93 | 369,642 | $3.10 | 5,208 |
+| SORA | 16:10 | $2.93 | $3.30 | $2.91 | $3.27 | 599,575 | $3.18 | 6,817 |
+| SSM | 16:00 | $2.21 | $2.32 | $2.07 | $2.10 | 1,165,872 | $2.15 | 6,195 |
+| SSM | 16:05 | $2.10 | $2.49 | $2.07 | $2.44 | 1,695,858 | $2.33 | 9,312 |
+| SSM | 16:10 | $2.44 | $2.44 | $2.21 | $2.27 | 780,544 | $2.31 | 4,733 |
+| WCT | 16:00 | $1.67 | $2.34 | $1.67 | $2.26 | 921,567 | $2.14 | 6,344 |
+| WCT | 16:05 | $2.26 | $2.29 | $2.05 | $2.12 | 798,840 | $2.16 | 5,788 |
+| WCT | 16:10 | $2.10 | $2.10 | $1.82 | $1.84 | 496,570 | $1.94 | 3,277 |
+
+**SORA — watch recovery; current liquidity unconfirmed.** SIP totals **969,217 shares / 12,025 trades**. The scanner's $2.93 is corroborated by the 16:05 bar. The next bar closes higher at $3.27 with higher volume and VWAP; this is real accumulation across the available bars. That close is 10.2% below the observed $3.64 opening high at 16:05. Yahoo's timeline continues to recover after the initial spike through 16:20, then pulls back; use it for shape only, not exact highs, volume, or entry levels. A sustained BUILD/HOLD and any later new high still require subsequent SIP confirmation.
+
+**SORA catalyst — Grade C, fresh exploratory agreement.** Four structured searches covered today's earnings, same-day newswire releases, SEC 8-K/6-K filings, and a Tavily follow-up. No same-day earnings or material filing was verified. The [GlobeNewswire release](https://www.globenewswire.com/news-release/2026/10/01/3373374/0/en/asiastrategy-signs-memorandum-of-understanding-with-plume-network-to-advance-real-world-asset-tokenisation-across-asia.html), verified from its full text, is dated **October 1, 2026, 16:05 ET / 22:05 CEST**. AsiaStrategy signed a **non-binding** memorandum with Plume to explore a tokenised-financial-products joint venture. Definitive documents, approvals, and regulatory requirements remain outstanding; no product has launched. Grade C reflects the exploratory framework rather than a completed major operational deal. The direct page request timed out; primary-release extraction supplied the date, time, and terms.
+
+**SORA book:** Both checks returned `SORA  bid $1.93 x100  ask $2.78 x100  @ 2026-10-01T20:00:00.60007104Z`. Sizes are non-zero, but the quote is already 25 minutes behind the snapshot and unchanged on retry. Current fillable liquidity is **unconfirmed**. The delayed quote does not refute the SIP move; no bad-print rejection is warranted. Recheck at a later eligible scan.
+
+**SSM — opening spike followed by decline.** SIP totals **3,642,274 shares / 20,240 trades**; the scanner's $2.44 genuinely traded in the 16:05 bar. Volume then falls 54.0% and the close declines to $2.27. The fresh book returned `SSM  bid $2.06 x100  ask $2.11 x100  @ 2026-10-01T20:23:53.425627497Z`. Its ask is 4.5% below the $2.21 regular close and 15.3% below the observed $2.49 AH high; this current book and Yahoo's descending timeline corroborate a fade. The +10.4% scanner snapshot is delayed relative to the fresh quote. Retain its appearance count, but do not treat the scanner price as current momentum. Proximity within 20% of the high does not make a declining trajectory a HOLD.
+
+**SSM catalyst — Grade None; no fully verified fresh catalyst found.** Four structured searches covered earnings, newswire releases, same-day material filings, and a Tavily follow-up. The [filing/news index](https://www.stocktitan.net/overview/SSM/) mentions an **October 1 Schedule 13D** concerning about $371K of Alpine Fox share purchases with no present control plans. The filing's acceptance time and underlying transaction dates were not verified, so it is an unresolved possible driver and is not used to assign a catalyst grade. The Sports One reverse-merger LOI is dated August 31 and remains background. No-catalyst is a concern, not an entry skip reason.
+
+**WCT — skip; Day% failure and continuing fade.** Scanner AH% falls **+35.3% → +25.8%**, scanner price **$2.26 → $2.10**, while displayed AH volume rises **798K → 1.5M**. SIP now totals **2,216,977 shares / 15,409 trades**, up 496,570 shares and 3,277 trades from the previous verification. Real volume continues, but per-bar volume, VWAP, and closes decline; the newest verified close $1.84 is **21.4% below** the $2.34 opening high. Yahoo's later timeline also declines. This is SPIKE→FADE. Day **-79.4%** independently fails the entry rule. AH% is falling across its two appearances, so no DEAD-CAT-OVERRIDE WATCH is established. Grade None from the preceding four-search workup is carried forward; WCT was not skipped for lack of a catalyst.
+
+**WCT book:** Both checks returned `WCT  bid $1.44 x100  ask $0.00 x0  @ 2026-10-01T20:00:01.128879053Z`, unchanged from 22:20. **Illiquid (no current AH book verified):** no sized ask is available from this source. The quote is stale and cannot prove that the present consolidated market has no liquidity; it also cannot support an order. The scanner's $2.10 is corroborated by historical SIP trades, so this is not a verified bad print.
+
+**Instrumentation (verbatim):** Spike-bar and CONFIRM-3 outputs are recorded for learning. Their standalone verdicts do not grade or rank entries; the separate first-bar-spike rule uses the opening-high trajectory evidence.
+
+```text
+SORA 2026-10-01  SPIKE  16:06ET  +52%  $3.64  243 trades / 17k sh  (first co-spike bar) (as-of 16:25ET)
+SORA 2026-10-01  CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET
+SSM 2026-10-01  NO-SPIKE  peak +13% @16:09ET  (no bar cleared +15% on a volume co-spike) (as-of 16:25ET)
+SSM 2026-10-01  CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET
+WCT 2026-10-01  SPIKE  16:01ET  +32%  $2.20  1188 trades / 167k sh  (first co-spike bar) (as-of 16:25ET)
+WCT 2026-10-01  CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET
+```
+
+**FIRST-BAR-SPIKE WATCH:** All observed SIP highs are in the 16:00–16:15 opening window, with CONFIRM-3 NO in every evaluation available so far. Record hypothetical scanner entries for morning measurement: **SORA $2.93 at 22:25 CEST / 16:25 ET**, **SSM $2.44 at 22:25 CEST / 16:25 ET**, and **WCT $2.10 at 22:25 CEST / 16:25 ET**. WCT's original **$2.26 at 22:20 CEST / 16:20 ET** watch remains recorded above. These are hypothetical observations, not fills or executable quotes. SORA's watch is provisional while its recovering timeline awaits later SIP: revisit the opening-high condition if a later volume-backed new high appears. SSM and WCT currently show opening-spike fades. If the opening highs persist and CONFIRM-3 remains NO at entry time, apply the first-bar-spike skip.
+
+**MVST and AGIG — watch below entry threshold.** This is each name's first AH discovery. AH +6.0% and +5.9% supply no >10% appearance. Day% exceeds -15% for both; sector and float are recorded without independent exclusions. No qualifying momentum or real AH liquidity is established by their scanner readings. Catalyst and detector workups are not required below the >10% threshold.
+
+**Carry forward:** Retain the 28 regular-session names plus WCT, SORA, MVST, and AGIG in tonight's pipeline (32 unique names; SSM was already on the regular watchlist). EVOL, GBLRF, MHUAF, CRMZ, FNFI, SGRP, LTCEF, and EJH remain untradable (carried). Preserve all pipeline names for the 00:30 CEST final-scan feed-lag cross-check. Yahoo volume was not used; Yahoo AH% anchored to the previous day's close was not used for appearance counts. No fills occurred, so there is no new OPEN_POSITIONS entry, chase-cap, or multi-session entry annotation. Final-scan gate-block instrumentation is not due at this scan.
+
+**Daily email:** Report SORA's 16:05 ET non-binding Plume catalyst and recovery with stale liquidity verification, SSM's delayed scanner gain versus fresh below-close book, WCT's continued fade and Day% failure, and the hypothetical FIRST-BAR-SPIKE WATCH entries. No item from this scan requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
-No entries from the 21:30, 22:00, 22:05, 22:10, 22:15, or 22:20 CEST scans. All precede the 23:00 CEST entry window; WCT also has only one qualifying AH appearance and fails the Day% gate.
+No entries from the 21:30, 22:00, 22:05, 22:10, 22:15, 22:20, or 22:25 CEST scans. All precede the 23:00 CEST entry window. WCT now has two qualifying AH appearances but fails the Day% and trajectory rules; SORA and SSM each have one qualifying appearance.
