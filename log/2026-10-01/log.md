@@ -175,9 +175,58 @@ No candidates found.
 
 **Daily email:** No item from this scan requires Juan's input.
 
+## Scan 22:20 CEST (4:20 PM ET)
+
+**Decision:** No entry. WCT is today's first AH candidate, but the entry window has not opened and it has only one qualifying AH appearance. Its Day% is below the dead-cat cutoff, and the verified opening spike is already fading. No paper orders submitted.
+
+`python3 scripts/scan.py --all` ran at 16:20:28 ET (22:20:28 CEST / 20:20:28 UTC), in the AFTERHOURS session, and returned 1 hit. The US trading date is 2026-10-01. Repository sync completed before scanning. Scanner readings below are discovery evidence; SIP and quote checks follow.
+
+```text
+  Supplementary AH-change-only (>15%, not in volume pass): none
+  AH >10% at this snapshot (unrounded): WCT
+```
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WCT | [TV](https://www.tradingview.com/chart/?symbol=WCT) | $1.67 | -79.4% | +35.3% | $2.26 | -72.1% | 798K | 1.6M | 0.5x | 3.3M | Packaged Software |
+
+### Evaluation notes
+
+**WCT — skip entry; track opening spike.** `broker.js tradable WCT` returned `tradable=true`, active on Nasdaq, before the volume and catalyst workup. Float 3.3M and the software sector are recorded for pattern tracking. WCT was absent from the four previous AH scans; the unrounded scanner line establishes **1 qualifying >10% AH appearance**, not the required 2. Entries begin at 23:00 CEST (17:00 ET).
+
+**SIP volume and price:** `broker.js bars WCT --tf 5Min --start 2026-10-01T20:00:00Z --limit 300` returned consolidated SIP bars:
+
+| Bar start ET | Open | High | Low | Close | Shares | VWAP | Trades |
+|--------------|------|------|-----|-------|--------|------|--------|
+| 16:00 | $1.67 | $2.34 | $1.67 | $2.26 | 921,567 | $2.14 | 6,344 |
+| 16:05 | $2.26 | $2.29 | $2.05 | $2.12 | 798,840 | $2.16 | 5,788 |
+
+The returned AH tape contains **1,720,407 shares / 12,132 trades** across two bars. This is real volume across bars, not a thin drift or stale regular-session volume artifact; the scanner's $2.26 traded within the SIP range. The latest returned bar starts at 16:05 ET, consistent with the free-tier delay at this opening scan. It verifies the early move, not the current price. Volume eased 13.3% between these bars, and the close fell $2.26 → $2.12 after an opening-bar high of $2.34. The latest verified close is 9.4% below that high, but proximity alone does not establish a BUILD/HOLD.
+
+**Trajectory and feed delay:** Yahoo `check-prices.py --ah-history WCT` also shows a descending timeline after the 16:00 bar, continuing through 16:21 ET. Use that result for shape only; its extended-hours volume is unavailable and its exact prices are not entry levels. Its metadata previous close is $8.09, while the completed regular close is $1.67: AH% is measured from $1.67; Day% and Total% use $8.09. The helper's displayed AH changes anchored to $8.09 are not AH appearance evidence. The scanner's $2.26 matches the opening SIP bar close and appears delayed relative to the declining timeline; preserve the snapshot without treating it as a current executable quote.
+
+**Book:** Both `broker.js quote WCT` checks returned `WCT  bid $1.44 x100  ask $0.00 x0  @ 2026-10-01T20:00:01.128879053Z`. The quote is about 20 minutes behind this scan and remained unchanged on retry. **Illiquid (no AH book verified):** there is no non-zero sized ask available from this source, so it cannot support an entry. The stale quote does not negate the confirmed SIP volume or prove that the current market has no liquidity. Recheck the book on a later eligible scan; do not label this a bad print.
+
+**Catalyst Grade: None — no catalyst found.** Four structured searches covered (1) today's earnings, (2) same-day GlobeNewswire/PRNewswire/BusinessWire releases, (3) SEC 8-K/6-K filings, and (4) a Tavily search for same-day earnings, announcements, and filings. No current-trading-date or immediately preceding overnight release with a verified timestamp was found. Results included the [August 31 offering close](https://www.globenewswire.com/news-release/2026/08/31/3353707/0/en/wellchange-holdings-company-limited-announces-closing-of-7-5-million-public-offering-of-its-class-a-ordinary-shares.html), the [September 3 reverse-split announcement, effective September 8](https://www.globenewswire.com/news-release/2026/09/03/3356010/0/en/wellchange-holdings-company-limited-announces-1-for-5-reverse-stock-split-effective-september-8-2026.html), and a [filing index](https://www.stocktitan.net/sec-filings/WCT/) reporting September 3 as its latest filing. These are dated background, not a fresh catalyst; indexed results cannot establish that no newer filing exists. No-catalyst is a documented concern, not an entry skip reason.
+
+**Instrumentation (verbatim; log-only):**
+
+```text
+WCT 2026-10-01  SPIKE  16:01ET  +32%  $2.20  1188 trades / 167k sh  (first co-spike bar) (as-of 16:20ET)
+WCT 2026-10-01  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+```
+
+**FIRST-BAR-SPIKE WATCH:** hypothetical scanner entry **$2.26 at 22:20 CEST / 16:20 ET**, for morning evaluation only; no fill or position. The observed SIP high $2.34 was in the first AH bar, and CONFIRM-3 is NO on its first evaluation. There is no verified later volume-backed new high. Carry the watch into later scans to check whether the opening high remains the AH high and CONFIRM-3 stays NO. The detector verdicts alone do not determine entry eligibility.
+
+**Other entry gates:** Day -79.4% fails the Day% above -15% requirement. Although the opening move reclaimed above the $1.67 regular close, **DEAD-CAT-OVERRIDE WATCH is not established**: rising AH% across at least two AH scans has not occurred. Total -72.1% is below the +150% ceiling. No chase-cap, final-scan gate-block, or multi-session entry annotation applies because no entry was made and this is an opening scan.
+
+**Carry forward:** Retain WCT plus all 28 regular-session pipeline names for later scans and the 00:30 CEST final-scan feed-lag cross-check. EVOL, GBLRF, MHUAF, CRMZ, FNFI, SGRP, LTCEF, and EJH remain untradable (carried); no repeat workup was performed on them. Their absence supplies no new trajectory evidence. AH volume verification starts at `2026-10-01T20:00:00Z`.
+
+**Daily email:** Report WCT's real opening volume, fading trajectory, stale zero-ask quote, and FIRST-BAR-SPIKE WATCH hypothetical. No item from this scan requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
-No entries from the 21:30, 22:00, 22:05, 22:10, or 22:15 CEST scans: observation only before the 23:00 CEST entry window.
+No entries from the 21:30, 22:00, 22:05, 22:10, 22:15, or 22:20 CEST scans. All precede the 23:00 CEST entry window; WCT also has only one qualifying AH appearance and fails the Day% gate.
