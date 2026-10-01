@@ -47,6 +47,8 @@ python3 scripts/scan.py --all
   ```
 - For every after-hours scan, copy the scanner's `Supplementary AH-change-only` line into the scan section verbatim, including `none`. This identifies tickers added by the change-ranked pass that were absent from the primary volume-ranked pass; it does not qualify them for entry.
 
+- For every after-hours scan, also copy the scanner's `AH >10% at this snapshot (unrounded)` line verbatim, including `none`. Use this list as scanner evidence for the existing >10% AH appearance count. Rounded table percentages and later refreshes cannot establish an earlier snapshot's value; in older logs without this line, a displayed +10.0% remains unresolved. The list reports one percentage condition; complete the SIP, trajectory, extension, and book checks before entry.
+
 - If there ARE results, format them as:
   ```markdown
   | Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |

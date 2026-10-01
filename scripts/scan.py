@@ -311,6 +311,11 @@ def print_results(results, session, previous_tickers=None, supplementary_only=No
         names = ", ".join(supplementary_only) if supplementary_only else "none"
         print(f"  Supplementary AH-change-only (>{MIN_AH_CHANGE_HIGH}%, not in volume pass): {names}")
 
+    if session == "afterhours":
+        above_ten = sorted({r["ticker"] for r in results if r["change_pct"] > 10})
+        names = ", ".join(above_ten) if above_ten else "none"
+        print(f"  AH >10% at this snapshot (unrounded): {names}")
+
     if not results:
         print("  No matches.")
         return
