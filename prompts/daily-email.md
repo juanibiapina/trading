@@ -15,7 +15,7 @@ Read:
 - `INITIATIVE_LOG.md` and `STRATEGY_ROADMAP.md` -- completed progress for every initiative since the previous successful daily email, including parallel work recorded under another initiative's heading
 - `FEEDBACK_LOG.md` -- new feedback and the changes or follow-up it caused
 
-Resolve the initiative reporting window from the previous successful email's recorded send time. If that time is unavailable, state the window used and report the latest completed initiative entries with their dates. Include all initiatives that moved in that window, even when their work belongs to a different trading-cycle date. Group multiple steps for one initiative into one concise update: initiative number/name, completion date/time, concrete step, result, and next step. An unchanged rerun is monitoring; describe it accurately. If none moved, say so and name the next concrete deliverable. Briefly identify active work that is blocked or deferred and the dependency or next check; preserve Juan's broker-test deferral.
+Resolve the initiative reporting window from the latest successful `log/*/daily-email.json` receipt (`status: sent`, ordered by `sent_at`). If the receipt is missing, locate the previous daily-email session and run `python3 scripts/pi-session-text.py /absolute/path/to/session.jsonl --role toolResult --contains 'Sent from zero@inboxkit.cc'`. Use the timestamp of a successful bash result with an InboxKit `status: sent` response. The reader accepts both string and array message content and missing optional fields; inferred DuckDB structs can fail on these logs. If no successful send time is available, state the window used and report the latest completed initiative entries with their dates. Include all initiatives that moved in that window, even when their work belongs to a different trading-cycle date. Group multiple steps for one initiative into one concise update: initiative number/name, completion date/time, concrete step, result, and next step. An unchanged rerun is monitoring; describe it accurately. If none moved, say so and name the next concrete deliverable. Briefly identify active work that is blocked or deferred and the dependency or next check; preserve Juan's broker-test deferral.
 
 Use the cycle date resolved above for the overnight log, chart paths, and email subject; do not default to the current calendar date when the current day's directory contains only position or scan entries. Read the cycle log from the start. Before using a nonzero read offset, check the file's current line count; never reuse an offset from another log, and treat a short log as valid.
 
@@ -167,6 +167,8 @@ AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;
 <p style="background: #e3f2fd; padding: 10px; border-radius: 4px; border-left: 4px solid #1976d2;">[One sentence: the single most important thing from this cycle]</p>
 </div>'
 ```
+
+After a successful InboxKit response, save the exact sent HTML as `log/YYYY-MM-DD/daily-email.html` and a `daily-email.json` receipt with `status`, `message_id`, UTC `sent_at`, `sent_at_source`, `previous_successful_send_at`, and `reporting_cutoff_at`. Use the response's send timestamp when provided; otherwise record the local time the success response arrived and label that source. Commit and push both files. If saving the receipt fails after delivery, recover the record from the session result; sending again would duplicate the email.
 
 **Formatting rules:**
 - Subject: use ASCII only -- use `-` not em dashes (they break encoding)

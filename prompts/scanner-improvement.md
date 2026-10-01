@@ -34,6 +34,7 @@ This runs daily after the morning evaluation. The goal is continuous, data-drive
 ### 1. Read Context
 
 - Read `SCANNER_CHANGELOG.md` — understand what changes have been made and what's pending evaluation
+- Read recent `FEEDBACK_LOG.md` entries and their active `STRATEGY_ROADMAP.md` items for queued scanner/process deliverables. For ready work skipped this run, record the reason and next step; route strategy-owned work to `strategy-advance` in the changelog.
 - Read the log that the morning evaluation updated (`log/YYYY-MM-DD/log.md` — normally the prior completed US trading date, not blindly the current calendar date). Confirm the cycle date from the recent log directories before reading.
 - Read the last 3-5 days of logs for patterns (check `log/` directory)
 - Read the selected cycle log from the start. Before using a nonzero read offset, check the file's current line count; never reuse an offset from another log, and treat a short log as valid.

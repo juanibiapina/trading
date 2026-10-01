@@ -78,6 +78,7 @@ they are always in scope to raise.
 - `STRATEGY_ROADMAP.md` — the source of truth for initiatives and their stage
 - `INITIATIVE_LOG.md` — what was done on prior runs and what is pending eval
 - `FEEDBACK_LOG.md` — recent Juan feedback that may re-prioritise
+- Latest completed `log/*/process-review.md` — pending agent actions routed to `strategy-advance`; complete a named deliverable or record its dependency and next run before carrying it forward. For saved-session evidence, `python3 scripts/pi-session-text.py /absolute/path/to/session.jsonl` reads text and errors without schema inference.
 - Skim the last few daily logs if the active step needs market data
 
 ### 2. Evaluate the Previous Step
