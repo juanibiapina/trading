@@ -424,9 +424,71 @@ AMOD 2026-10-01  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-
 
 **Daily email:** Include SORA's persistent FIRST-BAR-SPIKE WATCH, declining recovery and stale quote; AMOD's DEAD-CAT-OVERRIDE WATCH hypothetical, real volume, Grade D dilution disclosure and Day% block; and SCKT's below-threshold discovery. No item requires Juan's input.
 
+## Scan 23:00 CEST (5:00 PM ET)
+
+**Decision:** Skip all entries at this snapshot. The entry window is now open, but SORA remains an opening-bar spike without a later verified volume-backed new high, and AMOD fails the Day% rule. SCKT and MVST remain below the >10% AH threshold. No paper orders submitted.
+
+`python3 scripts/scan.py --all` ran at **17:00:24 ET / 23:00:24 CEST / 21:00:24 UTC**, in the AFTERHOURS session, after `bash scripts/sync-repo.sh` reported the repository up to date. The US trading date is **2026-10-01**. Broker verification followed the snapshot; detector cutoffs preserve the **17:00 ET** scan minute. The table preserves scanner discovery readings.
+
+```text
+  Supplementary AH-change-only (>15%, not in volume pass): none
+  AH >10% at this snapshot (unrounded): AMOD, SORA
+```
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SCKT | [TV](https://www.tradingview.com/chart/?symbol=SCKT) | $0.54 | +21.0% | +7.4% | $0.58 | +30.0% | 9.9M | 12.9M | 0.8x | 5.7M | Computer Peripherals |
+| AMOD | [TV](https://www.tradingview.com/chart/?symbol=AMOD) | $1.17 | -24.5% | +20.4% | $1.41 | -9.1% | 3.3M | 528K | 6.2x | 543K | Packaged Software |
+| SORA | [TV](https://www.tradingview.com/chart/?symbol=SORA) | $2.40 | +4.3% | +26.7% | $3.04 | +32.1% | 2.6M | 357K | 7.3x | 4.9M | Wholesale Distributors |
+| MVST | [TV](https://www.tradingview.com/chart/?symbol=MVST) | $0.66 | +3.2% | +6.0% | $0.70 | +9.4% | 80K | 5.8M | 0.0x | 210.1M | Electrical Products |
+
+### Evaluation notes
+
+**Tradability and AH appearance counts:** Prior `tradable=true` checks carry forward for all four scanner names; there is no new candidate requiring an initial broker check or catalyst search. The unrounded scanner lists establish **SORA 4** (22:25, 22:30, 22:45, 23:00), **AMOD 3** (22:30, 22:45, 23:00), **WCT 2** (22:20, 22:25), **SSM 1** (22:25), and **SCKT/MVST/AGIG 0**. Regular-session appearances add no AH count. All current scanner Total% values are below +150%. Float and industry remain pattern observations; no candidate is excluded for sector or float.
+
+**SIP verification:** `broker.js bars SYM --tf 5Min --start 2026-10-01T20:00:00Z --limit 300` returned consolidated SIP for SORA and AMOD. Both newest returned bars start at **16:45 ET**, consistent with the approximately 15-minute free-tier delay. The bars below extend the preceding scan's tape verification; the source confirms trading through the available window rather than the current scan-minute price.
+
+| Ticker | Bar start ET | Open | High | Low | Close | Shares | VWAP | Trades |
+|--------|--------------|------|------|-----|-------|--------|------|--------|
+| SORA | 16:35 | $3.08 | $3.15 | $2.97 | $3.13 | 190,813 | $3.04 | 2,159 |
+| SORA | 16:40 | $3.14 | $3.15 | $3.00 | $3.06 | 147,480 | $3.06 | 1,645 |
+| SORA | 16:45 | $3.04 | $3.14 | $3.00 | $3.01 | 119,786 | $3.07 | 1,534 |
+| AMOD | 16:35 | $1.44 | $1.59 | $1.43 | $1.45 | 682,332 | $1.52 | 3,916 |
+| AMOD | 16:40 | $1.45 | $1.56 | $1.40 | $1.40 | 600,356 | $1.49 | 3,077 |
+| AMOD | 16:45 | $1.41 | $1.45 | $1.32 | $1.32 | 403,322 | $1.37 | 2,018 |
+
+**SORA — skip FIRST-BAR-SPIKE; recent volume and price decline.** Since 22:45, scanner AH% falls **+34.2% → +26.7%**, price **$3.22 → $3.04**, and Total% **+39.9% → +32.1%**, while displayed AH volume grows **2.0M → 2.6M** and VRatio remains **7.3x**. SIP totals **3,591,755 shares / 42,165 trades**, adding **458,079 shares / 5,338 trades** since the previous verification. The scanner's $3.04 is corroborated by SIP trading; the move is real. Per-bar volume declines **424,861 → 190,813 → 147,480 → 119,786 shares**, with the last bar down **18.8%**. Recent closes decline **$3.13 → $3.06 → $3.01**. The observed AH high remains **$3.64 in the 16:05 bar**, and the latest verified close is **17.3% below** it. No subsequent verified bar makes a new high. The Yahoo timeline through approximately 17:01 ET shows small rebounds around the lower base; it is used only for shape, not exact levels, highs, volume, or appearance counts.
+
+**SORA FIRST-BAR-SPIKE WATCH:** The observed high remains in the **16:00–16:15 ET opening window**, and CONFIRM-3 is **NO in all four evaluations**. Apply the explicit opening-spike skip at this eligible entry scan despite proximity within 20% of the high. Record hypothetical scanner entry **$3.04 at 23:00 CEST / 17:00 ET**, Total **+32.1%**, for morning measurement only. Revisit the opening-high condition if later SIP establishes a volume-backed new high. The detector's standalone verdict does not assign a grade or rank.
+
+**SORA catalyst and quote:** Carry **Grade C** from the verified [GlobeNewswire release](https://www.globenewswire.com/news-release/2026/10/01/3373374/0/en/asiastrategy-signs-memorandum-of-understanding-with-plume-network-to-advance-real-world-asset-tokenisation-across-asia.html), **October 1, 2026, 16:05 ET / 22:05 CEST**: a non-binding Plume memorandum to explore a tokenised-products joint venture. The full terms and timestamp were verified at 22:25. Both quote checks again returned `SORA  bid $1.93 x100  ask $2.78 x100  @ 2026-10-01T20:00:00.60007104Z`. This unchanged quote is about **60 minutes old**. Current fillable liquidity remains **unconfirmed**; the stale quote does not contradict later SIP or establish a bad print. No sizing or order is supported by this book verification.
+
+**AMOD — skip Day% failure; DEAD-CAT-OVERRIDE WATCH retained with fade concern.** Scanner AH% rises **+10.1% → +16.8% → +20.4%**, price **$1.29 → $1.37 → $1.41**, and Total% **-16.9% → -11.8% → -9.1%** across its three appearances. Since 22:45, displayed AH volume increases **1.7M → 3.3M** and VRatio **4.9x → 6.2x**. Day **-24.5%** independently fails the requirement to exceed -15%; the live entry remains blocked. SIP totals **4,064,830 shares / 21,817 trades**, adding **1,686,010 shares / 9,011 trades**. This confirms substantial real trading across bars and corroborates the scanner's $1.41.
+
+**AMOD trajectory and hypothetical:** SIP establishes a later AH high of **$1.59 in the 16:35 bar**, above the prior $1.55 high at 16:15. Subsequent closes fall **$1.45 → $1.40 → $1.32**, VWAP falls **$1.52 → $1.49 → $1.37**, and volume falls **682,332 → 600,356 → 403,322 shares** (latest **-32.8%**). The latest verified close is **17.0% below** the new high and remains above the **$1.17 regular close**. Rising scanner AH% therefore overstates the latest trajectory: a real recovery made a later high, then faded. Retain **DEAD-CAT-OVERRIDE WATCH**, hypothetical scanner entry **$1.41 at 23:00 CEST / 17:00 ET**, Total **-9.1%**, with this fade concern for morning evaluation. The current book returned `AMOD  bid $1.31 x100  ask $1.34 x100  @ 2026-10-01T20:58:48.514738532Z`, approximately two minutes behind the snapshot, with a sized two-sided book. Its lower level supports the pullback. Yahoo's later timeline also shows a lower base after the recovery; only its shape is used. No first-bar-spike label applies to the later 16:35 high, and CONFIRM-3 NO supplies no independent skip.
+
+**AMOD catalyst:** Carry **Grade D** from the verified [October 1 SEC 8-K](https://www.sec.gov/Archives/edgar/data/1862463/000149315226045296/form8-k.htm), accepted **11:30:52 on October 1, 2026 (EDGAR displayed time)** in the [filing index](https://www.sec.gov/Archives/edgar/data/1862463/000149315226045296/0001493152-26-045296-index.html). This is today's disclosure of the September 30 PIPE closing: **51,621,560 common shares plus warrants for the same number**, in exchange for 3,170 bitcoin. The previously verified issuance and warrant dilution support Grade D. Scanner float **543K may be stale** after the issuance; current freely tradable float is unverified. No fresh search is required to carry the dated, verified grade. The entry skip is based on Day%, with the latest fade additionally documented.
+
+**Instrumentation (verbatim; log-only):** Standalone SPIKE and CONFIRM-3 verdicts do not enter, skip, grade, or rank trades. The separate first-bar-spike rule above uses the opening-high trajectory and repeated NO condition.
+
+```text
+SORA 2026-10-01  SPIKE  16:06ET  +52%  $3.64  243 trades / 17k sh  (first co-spike bar) (as-of 17:00ET)
+SORA 2026-10-01  CONFIRM-3  NO no local-volume new-high ignition as-of 17:00ET
+AMOD 2026-10-01  SPIKE  16:15ET  +15%  $1.35  366 trades / 64k sh  (first co-spike bar) (as-of 17:00ET)
+AMOD 2026-10-01  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 17:00ET
+```
+
+**SCKT and MVST — below entry threshold.** SCKT remains **+7.4% AH / $0.58**; displayed volume grows **6.9M → 9.9M** and VRatio **0.5x → 0.8x**. MVST remains **+6.0% AH / $0.70**; displayed volume edges **77K → 80K**. Neither has a scanner-confirmed >10% appearance, and their discovery volumes do not establish real AH liquidity. No qualifying entry, catalyst workup, or detector instrumentation is due for these below-threshold names.
+
+**Absent pipeline names:** AGIG, WCT, and SSM are absent from this snapshot and add no appearance. Carry their prior notes and hypothetical watches without inferring a new trajectory from absence. EVOL, GBLRF, MHUAF, CRMZ, FNFI, SGRP, LTCEF, and EJH remain **untradable (carried)**; no repeated SIP or catalyst workup was performed on them.
+
+**Carry forward and fills:** Retain all **34 unique pipeline names** for later scans and the **00:30 CEST / 18:30 ET final-scan feed-lag cross-check**. Alpaca `positions --json` returned `[]` and `orders open` returned `No open orders.` No entry order was submitted, so there is no fill to add to OPEN_POSITIONS. Chase-cap and multi-session entry instrumentation do not apply without an entry; final-scan gate-block instrumentation is not due. Yahoo volume and percentages anchored to the previous day's close were not used for AH appearance counts or execution decisions.
+
+**Daily email:** Include the 23:00 no-entry decision, SORA's FIRST-BAR-SPIKE WATCH hypothetical and hour-old quote, and AMOD's DEAD-CAT-OVERRIDE WATCH hypothetical with its later high, subsequent fade, Grade D disclosure, and Day% block. No item requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 
-No entries from the 21:30, 22:00, 22:05, 22:10, 22:15, 22:20, 22:25, 22:30, or 22:45 CEST scans. All precede the 23:00 CEST entry window. SORA has three qualifying AH appearances with a FIRST-BAR-SPIKE WATCH and stale book. AMOD has two but fails the Day% rule; its volume-backed recovery is recorded as a DEAD-CAT-OVERRIDE WATCH hypothetical. WCT has two but fails the Day% and trajectory rules. SSM has one qualifying appearance with an opening-spike fade. Alpaca has no open positions or orders at the 22:45 verification.
+No entries through the 23:00 CEST scan. Earlier snapshots preceded the entry window; at 23:00, SORA has four qualifying AH appearances but fails the first-bar-spike rule and has no fresh book verification. AMOD has three but fails the Day% rule; its DEAD-CAT-OVERRIDE WATCH records a real later high followed by a pullback. WCT retains two qualifying appearances with Day% and trajectory blocks; SSM retains one with an opening-spike fade. The hypothetical watches in the scan notes are not fills. Alpaca has no open positions or orders at the 23:00 verification.
