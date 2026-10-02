@@ -6,6 +6,10 @@ Usage:
     python scripts/check-prices.py TICKER1 TICKER2 ...
     python scripts/check-prices.py --ah-history TICKER1 TICKER2 ...
     python scripts/check-prices.py --pm-history TICKER1 TICKER2 ...
+    python scripts/check-prices.py --pm-history --date YYYY-MM-DD TICKER1 ...
+
+History --date selects only that ET date from Yahoo's five-day window. Missing
+sessions are unavailable; verify exact peaks, volume and dated close bases with SIP.
 
 Modes:
     default:       Show current price, premarket price, and change from close
@@ -18,7 +22,7 @@ import json
 import sys
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime
+from datetime import date, datetime
 from zoneinfo import ZoneInfo
 
 ET = ZoneInfo("America/New_York")
@@ -61,7 +65,7 @@ def get_current_price(ticker):
     }
 
 
-def get_ah_history(ticker):
+def get_ah_history(ticker, requested_date=None):
     """Get after-hours price action using 5-min intervals."""
     data = fetch_yahoo(ticker, interval="5m", range_str="5d")
     if not data or "chart" not in data:
@@ -97,20 +101,23 @@ def get_ah_history(ticker):
                     "volume": vol or 0,
                 })
 
-    # Group by date, return most recent day
+    # Select the requested ET date, or the latest available date when omitted.
     if not ah_bars:
         return None
 
-    latest_date = ah_bars[-1]["date"]
+    latest_date = requested_date.isoformat() if requested_date else ah_bars[-1]["date"]
     latest_bars = [b for b in ah_bars if b["date"] == latest_date]
+    if not latest_bars:
+        return None
 
-    previous_close = meta.get("previousClose") or meta.get("chartPreviousClose")
+    # Chart metadata describes the latest session, not a requested historical date.
+    previous_close = None if requested_date else (meta.get("previousClose") or meta.get("chartPreviousClose"))
 
     return {
         "ticker": ticker,
         "date": latest_date,
         "previous_close": previous_close,
-        "regular_close": meta.get("regularMarketPrice"),
+        "regular_close": None if requested_date else meta.get("regularMarketPrice"),
         "bars": latest_bars,
         "ah_high": max(b["price"] for b in latest_bars) if latest_bars else None,
         "ah_low": min(b["price"] for b in latest_bars) if latest_bars else None,
@@ -119,7 +126,7 @@ def get_ah_history(ticker):
     }
 
 
-def get_pm_history(ticker):
+def get_pm_history(ticker, requested_date=None):
     """Get premarket price action using 5-min intervals."""
     data = fetch_yahoo(ticker, interval="5m", range_str="5d")
     if not data or "chart" not in data:
@@ -153,16 +160,19 @@ def get_pm_history(ticker):
     if not pm_bars:
         return None
 
-    latest_date = pm_bars[-1]["date"]
+    latest_date = requested_date.isoformat() if requested_date else pm_bars[-1]["date"]
     latest_bars = [b for b in pm_bars if b["date"] == latest_date]
+    if not latest_bars:
+        return None
 
-    previous_close = meta.get("previousClose") or meta.get("chartPreviousClose")
+    # Chart metadata describes the latest session, not a requested historical date.
+    previous_close = None if requested_date else (meta.get("previousClose") or meta.get("chartPreviousClose"))
 
     return {
         "ticker": ticker,
         "date": latest_date,
         "previous_close": previous_close,
-        "regular_close": meta.get("regularMarketPrice"),
+        "regular_close": None if requested_date else meta.get("regularMarketPrice"),
         "bars": latest_bars,
         "pm_high": max(b["price"] for b in latest_bars) if latest_bars else None,
         "pm_low": min(b["price"] for b in latest_bars) if latest_bars else None,
@@ -186,12 +196,16 @@ def main():
                         help="Show after-hours price history (16:00-20:00 ET)")
     parser.add_argument("--pm-history", action="store_true",
                         help="Show premarket price history (04:00-09:30 ET)")
+    parser.add_argument("--date", type=date.fromisoformat,
+                        help="Require this ET history date (YYYY-MM-DD); Yahoo window is 5d")
     args = parser.parse_args()
+    if args.date and not (args.ah_history or args.pm_history):
+        parser.error("--date requires --ah-history or --pm-history")
 
     if args.pm_history:
         results = {}
         with ThreadPoolExecutor(max_workers=len(args.tickers)) as pool:
-            futures = {pool.submit(get_pm_history, t): t for t in args.tickers}
+            futures = {pool.submit(get_pm_history, t, args.date): t for t in args.tickers}
             for future in as_completed(futures):
                 ticker = futures[future]
                 try:
@@ -202,13 +216,17 @@ def main():
         for ticker in args.tickers:
             info = results[ticker]
             if not info:
-                print(f"\n{ticker}: No PM data available")
+                requested = f" for requested ET date {args.date} (Yahoo 5d window)" if args.date else ""
+                print(f"\n{ticker}: No PM data available{requested}")
                 continue
 
             prev = info["previous_close"] or 0
             print(f"\n{'=' * 60}")
             print(f"{ticker} — {info['name']}")
-            print(f"Date: {info['date']}  |  Prev Close: ${prev:.2f}")
+            basis = f"${prev:.2f}" if prev else "unverified (use dated SIP close)"
+            print(f"Date: {info['date']}  |  Prev Close: {basis}")
+            if args.date:
+                print("Yahoo timeline only; verify exact peaks and volume with SIP.")
             pm_vol_str = fmt_number(info['pm_volume']) if info['pm_volume'] else "n/a (Yahoo omits ext-hours vol)"
             print(f"PM High: ${info['pm_high']:.2f}  |  PM Low: ${info['pm_low']:.2f}  |  PM Vol: {pm_vol_str}")
             if prev > 0:
@@ -222,15 +240,15 @@ def main():
             print(f"{'-' * 60}")
             print(f"  {'Time':<8} {'Price':>8} {'Vol':>8} {'Chg%':>8}")
             for bar in info["bars"]:
-                chg = ((bar["price"] - prev) / prev * 100) if prev > 0 else 0
+                chg_str = f"{(bar['price'] - prev) / prev * 100:+.1f}%" if prev > 0 else "—"
                 vol_str = fmt_number(bar["volume"]) if bar["volume"] else "\u2014"
-                print(f"  {bar['time']:<8} ${bar['price']:>7.2f} {vol_str:>8} {chg:>+7.1f}%")
+                print(f"  {bar['time']:<8} ${bar['price']:>7.2f} {vol_str:>8} {chg_str:>8}")
 
     elif args.ah_history:
         # Fetch all tickers in parallel to avoid sequential timeout accumulation
         results = {}
         with ThreadPoolExecutor(max_workers=len(args.tickers)) as pool:
-            futures = {pool.submit(get_ah_history, t): t for t in args.tickers}
+            futures = {pool.submit(get_ah_history, t, args.date): t for t in args.tickers}
             for future in as_completed(futures):
                 ticker = futures[future]
                 try:
@@ -241,13 +259,17 @@ def main():
         for ticker in args.tickers:
             info = results[ticker]
             if not info:
-                print(f"\n{ticker}: No AH data available")
+                requested = f" for requested ET date {args.date} (Yahoo 5d window)" if args.date else ""
+                print(f"\n{ticker}: No AH data available{requested}")
                 continue
 
             prev = info["previous_close"] or 0
             print(f"\n{'=' * 60}")
             print(f"{ticker} — {info['name']}")
-            print(f"Date: {info['date']}  |  Prev Close: ${prev:.2f}")
+            basis = f"${prev:.2f}" if prev else "unverified (use dated SIP close)"
+            print(f"Date: {info['date']}  |  Prev Close: {basis}")
+            if args.date:
+                print("Yahoo timeline only; verify exact peaks and volume with SIP.")
             ah_vol_str = fmt_number(info['ah_volume']) if info['ah_volume'] else "n/a (Yahoo omits ext-hours vol)"
             print(f"AH High: ${info['ah_high']:.2f}  |  AH Low: ${info['ah_low']:.2f}  |  AH Vol: {ah_vol_str}")
             if prev > 0:
@@ -261,9 +283,9 @@ def main():
             print(f"{'-' * 60}")
             print(f"  {'Time':<8} {'Price':>8} {'Vol':>8} {'Chg%':>8}")
             for bar in info["bars"]:
-                chg = ((bar["price"] - prev) / prev * 100) if prev > 0 else 0
+                chg_str = f"{(bar['price'] - prev) / prev * 100:+.1f}%" if prev > 0 else "—"
                 vol_str = fmt_number(bar["volume"]) if bar["volume"] else "\u2014"
-                print(f"  {bar['time']:<8} ${bar['price']:>7.2f} {vol_str:>8} {chg:>+7.1f}%")
+                print(f"  {bar['time']:<8} ${bar['price']:>7.2f} {vol_str:>8} {chg_str:>8}")
     else:
         # Fetch all tickers in parallel
         results = {}

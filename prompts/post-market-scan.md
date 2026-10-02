@@ -61,9 +61,11 @@ python3 scripts/scan.py --all
 For price history and AH price action data, use the helper scripts:
 
 ```bash
-python3 scripts/check-prices.py --ah-history TICKER1 TICKER2 ...
+python3 scripts/check-prices.py --ah-history --date YYYY-MM-DD TICKER1 TICKER2 ...
 python3 scripts/yahoo-fetch.py TICKER --interval 5m --range 2d --prepost
 ```
+
+Use the US trading date for `--date`. If that session is unavailable, record it as unavailable. Dated Yahoo output leaves the close basis unverified; use dated SIP closes for percentages.
 
 Do NOT use raw `curl` to Yahoo Finance (it fails without the User-Agent header that these scripts handle).
 
@@ -87,6 +89,16 @@ node scripts/ah-5m-confirmation.js SYM:YYYY-MM-DD --now HH:MM
 ```
 
 Record the one-line `CONFIRM-3` result verbatim in the scan notes. `PENDING` is expected until the third five-minute bar has closed.
+
+**Shared SIP volume context (log-only):** For each >10% AH candidate verified `tradable=true`, compute `sip-ah-volume-v1` using the [shared metric specification](../docs/investigations/shared-sip-volume-metric.md). Check the previous **trading date** against the exchange calendar. Reuse the SIP workup where possible; request missing coverage with `broker.js bars SYM --tf 5Min --start <previous-AH-start-UTC> --limit 1000 --feed sip --json`. Consume every page. Archive input with `symbol`, `feed=sip`, `timeframe=5Min`, `adjustment=raw`, `observed_utc` (actual fetch time) and `bars`, covering the previous AH session and the current session through available SIP data. Explicit SIP errors and IEX fallback leave this measurement unavailable.
+
+```bash
+python3 scripts/volume_metric.py SYM YYYY-MM-DD --prior-date YYYY-MM-DD --as-of YYYY-MM-DDTHH:MM:SS-04:00 --input "$LOG_DIR/SYM-HHMM-volume-sip.json" > "$LOG_DIR/SYM-HHMM-volume-metric.json.tmp" &&
+  mv "$LOG_DIR/SYM-HHMM-volume-metric.json.tmp" "$LOG_DIR/SYM-HHMM-volume-metric.json"
+node scripts/ah-5m-confirmation.js SYM:YYYY-MM-DD --now HH:MM --volume-metric "$LOG_DIR/SYM-HHMM-volume-metric.json"
+```
+
+Run the consumer only after calculation succeeds; failed output must not use the `-volume-metric.json` suffix. Use the scan's actual ISO timestamp and ET offset for `--as-of`; `--now` is its ET minute. Each pulse gets a distinct ticker/time filename. Preserve the shared-source headers and `VOLUME-CONTEXT` rows verbatim beside the existing verdict, including completed-bar timestamps, shares, local ratio, prior-peak ratio, status and prior-session coverage. The saved computed JSON also supplies the daily HTML volume table. Ratios come only from this artifact. Missing slots stay unknown; do not infer zero volume. Log unavailable data with its reason; an empty completed-bar set is pending. Early-close bounds or unreviewed share-changing corporate actions make prior-session comparisons unverified. Keep this context observational: neither a 10x flag nor an unknown ratio enters, skips, grades or ranks a trade. Complete the existing decision checks even if this measurement fails.
 
 **First-bar-spike skip (single-bar pop — skip live entry, record hypothetical):** When a candidate's AH high was printed in the first AH bar (16:00–16:15 ET) and its `CONFIRM-3` reads `NO` every scan (no local-volume new-high ignition afterward), it is a **single-bar pop, not a build — skip the live entry**, even when it currently sits within ~20% of that open high. An open-bar print that never makes a volume-backed new high can bleed within 20% of the high for hours and still fade overnight. Still record it as **FIRST-BAR-SPIKE WATCH** in the evaluation notes with a hypothetical entry (price + scan time), mirroring the dead-cat/ceiling override watches, so the morning-eval tracker keeps measuring whether the skip was correct. (Data: pre-gate first-bar-spike entries went 0/3 for a sustained run — LABT Aug 31→Sep 1 faded −8.6%, SUNE Sep 8→9 flat/round-trip +3.7%, HCAI Sep 9→10 one-bar PM pop $5.32 then faded to $4.73. Directly implements Juan's 2026-09-09 feedback: "SUNE is not a good entry because price only went up in the first 5m bar ... you shouldn't entry." Basis: LABT peaked $3.78 @16:10 ET on the open bars, CONFIRM-3 NO every scan, held within ~7% at entry $3.49, faded −8.6% into PM.)
 

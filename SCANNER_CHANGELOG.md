@@ -35,6 +35,8 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - Session timing follows America/New_York market hours, including DST
 - **Supplementary AH-change scan:** after-hours runs also query `postmarket_change >15%`, rank that pass by AH change, and merge it with the primary volume-ranked results. `scan.py` reports names found only by this pass; evening logs preserve that line, and morning evaluations compare each unique name's SIP PM high with its latest logged AH price (or state why the outcome is unassessed). They also record peak-bar shares/trades and the next PM close, marking unheld peaks as transient separately from the raw outcome. SIP and book checks remain mandatory before any decision.
 - **AH percentage evidence:** `scan.py` prints `AH >10% at this snapshot (unrounded)` from the original unrounded result values, including `none`; evening logs preserve it for the existing AH appearance count. A rounded +10.0% in an older log is unresolved without original evidence. The list reports the percentage condition only; SIP, trajectory, extension, and book checks still determine entry.
+- **Dated Yahoo timelines:** evening and morning history checks pass `check-prices.py --date YYYY-MM-DD` with the intended ET session date. A missing session is unavailable; dated output leaves close bases and percentages unverified for SIP verification. Yahoo remains timeline-shape evidence within its five-day history window.
+- **Shared SIP volume context:** evening notes for tradable >10% AH candidates consume archived `sip-ah-volume-v1` rows through `ah-5m-confirmation.js --volume-metric PATH`. The same computed artifact supplies the daily HTML table. Archive actual fetch time, completed-bar cutoff and previous trading date; preserve unknown ratios and specific unavailable-data reasons. This is observation only. The calculation is defined in [the shared metric specification](docs/investigations/shared-sip-volume-metric.md).
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: float <50M, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
@@ -77,6 +79,42 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-10-02 — Require Dated Timelines and Share Evening Volume Measurements
+
+**Context:** Reviewed October 1's completed morning evaluation and the Sep 25, 28–30 logs; October 2's own log contains only a position evaluation. October 1 ran 7/7 scheduled scans plus six extra observations, with no fills or confirmed capturable >100% winner. AMOD was detected and blocked by the existing Day% rule; its early SIP PM high was $2.27, +94.0% from the $1.17 regular close. Yahoo returned October 1 PM history for UONEK during the October 2 evaluation. The shared volume utility and CLI/HTML consumers delivered October 1 were not yet required in evening notes.
+
+**Evaluation of previous changes:**
+
+- 2026-10-01 unrounded AH evidence: **helped; 1/5 fully covered sessions.** All 12 AH sections retained both scanner evidence lines, including empty snapshots; logged appearance counts use the unrounded lists. No refresh solely to resolve a rounded +10.0% is recorded.
+- 2026-09-30 full-AH watch recheck: **helped; 5/10 new flagged cases classified.** WCT/SORA's opening highs persisted; SSM made later volume-backed highs and was excluded as superseded. With HIT/LPA, four new valid watches and one superseded case have been reviewed. The clean standing count is 11 valid (2 ran/9 faded-flat), with NCI/SSM separate.
+- 2026-09-29 coverage lookback: **helped; 3/5 evaluations.** The Sep 18–Oct 1 lookback retained Sep 18 0/7, Sep 22 2/7, Sep 25 0/7 and Sep 29 3/7 and routed them to email.
+- 2026-09-25 peak persistence: **reporting held; 3/10 fully covered sessions.** UONEK's $3.16 SIP PM high had 172 shares/2 trades; no subsequent PM bar existed at the cutoff, so the next close was explicitly unavailable.
+- 2026-09-24 SIP outcome attempts: **helped; 4/10 fully covered sessions plus partial Sep 29.** Five names since the change have explicit attempts: four measured returns and KRMD's unavailable-data result. UONEK faded −17.7% versus its final $3.84 AH reference.
+- 2026-09-23 source attribution: **helped; 5/10 fully covered sessions plus partial Sep 29.** All 12 October 1 AH sections preserved the source line; UONEK was counted once, with 0 continuation/1 faded/0 unassessed.
+- 2026-09-22 change-ranked >15% pass: **insufficient data for a cutoff decision.** Six unique names across five fully covered sessions plus partial Sep 29; five assessed, no sustained PM continuation, KRMD still unassessed at its recorded cutoff.
+- October 1 Initiative 1/5 shared-volume delivery: **consumer verification held; live adoption untested.** All 50 archived rows replayed identically through CLI/HTML. INLF's 16:30 ignition stays `missing-baseline`; losing GIPR's ignition clears 10x locally (13.6131x). Those controls do not support a new entry gate.
+- October 2 Initiative 4 Jev reporting handoff: **held in the first email.** The October 1 report's sent receipt (InboxKit 178) and body contain Jev status `not_run`, with calls/tokens/cost unavailable rather than zero. Initiative updates separately report 1, 4, 5 and 7; Initiative 6 is monitoring only.
+
+**Changes:**
+
+1. **scripts/check-prices.py; prompts/post-market-scan.md; prompts/morning-evaluation.md** — Select the requested ET date with `--date` in AH/PM history. Report missing sessions as unavailable, and leave dated close bases/changes unverified. Prompts specify the evaluated AH date and today's ET PM date.
+   - Why: UONEK's previous PM session cannot measure today's outcome; latest-session metadata also cannot establish a historical close basis.
+   - Hypothesis: I expect every Yahoo history check over the next five fully covered sessions to name the intended ET date or record that session as unavailable, with zero earlier sessions or undated metadata percentages used as current-session evidence. Measure the command date, output date and dated SIP basis in the logs.
+2. **prompts/post-market-scan.md** — Archive shared SIP inputs and computed volume rows for each tradable >10% AH candidate, then preserve the existing consumer's source headers and volume-context rows beside its verdict. Save valid metric JSON only after successful calculation; the daily HTML report reads the same artifact.
+   - Why: Evening notes currently describe volume independently of the delivered shared calculation and chart table. Using one computed artifact makes the timestamp, shares, ratios and unknown-data status comparable.
+   - Hypothesis: I expect 100% of eligible candidate observations over the next five fully covered sessions to have a shared artifact or a specific unavailable/pending reason, with every completed row matching CLI and HTML and zero entry/skip/grade/rank changes caused by the metric. Measure artifact coverage and row equality, including missing baselines and prior-session coverage.
+
+**Verification:** Price/scanner `--help` passed. Nine offline CLI checks passed for stale/missing AH and PM sessions, exact date selection, ET midnight after DST, null closes, legacy history and invalid options. A live UONEK request selected October 2, labeled its close basis unverified and printed no derived percentages; its Yahoo prices remain shape evidence. Archived YFOR/INLF/GIPR replays matched all 50 CLI/HTML timestamps, share counts, ratios and statuses; the YFOR output retained its original YES verdict verbatim. Live broker calls used only historical bars. `git diff --check` passed. No live outcome is available for the new prompt requirements yet.
+
+**Ready work skipped / next owners:**
+
+- **Initiative 2 current-book diagnostic:** deferred under today's two-change cap. Next scanner-improvement run: add a bounded diagnostic recording feed identity, quote age and one refresh result on strong volume-backed candidates, using INLF/TGE as controls. Preserve the current-book check; the broker fill test remains deferred under Juan's Sep 22 instruction. Feed/access decisions go to the daily email.
+- **Initiative 7 Jev classifier:** October 2 `strategy-advance` owns related-project research, classification targets, labels/inputs and the first shadow implementation with dated usage/cost records, using `research` and `typesafe-ai`. Reporting was checked here; classifier research/build is strategy-owned.
+- **Initiative 1 threshold/missing-slot research and Initiative 3 earlier-entry work:** `strategy-advance` owns a bounded causal cohort and any proposed selection/timing changes. The INLF/GIPR controls prevent treating 10x or unknown-as-reject as a validated gate. All six extra opening observations ran; entry timing is still governed by existing rules.
+- **Initiative 5 chart publication:** the completed cycle has no qualifying chart images. Next chart-bearing cycle: verify the volume table appears beside charts after Pages publication. Existing 50-row consumer verification passed here.
+
+**Updated process:** Explicit session dates and shared volume observations are now required in scan notes. Scanner parameters, strategy, sizing and learning rules are unchanged. Input requests remain with the separate daily email.
+
 ### 2026-10-01 — Preserve Unrounded AH Percentage Evidence
 
 **Context:** Reviewed Sep 30's completed morning evaluation and the Sep 24, 25, 28 and 29 logs. Sep 30 ran 7/7 scheduled scans, with no fills or confirmed capturable >100% winner. FLNA at 22:25 and WETO at 23:30 displayed +10.0%, leaving the strict >10% AH condition unresolved. Later queries returned +9.503386% and +10.792079%, respectively, but could not recover the original snapshots. Repeated verification added work while the original scan-count evidence remained ambiguous.
@@ -101,6 +139,8 @@ _(entries are prepended — newest first)_
 
 **Updated process:** Evening logs retain original-snapshot AH percentage evidence for the existing appearance count. Scanner parameters, strategy, position sizing and entry gates are unchanged. Coverage failures and execution-feed decisions remain routed through the separate daily email.
 
+**Evaluation (2026-10-02):** Helped in the first fully covered session of the five-session target. All 12 October 1 AH sections preserved the unrounded list, including `none`; the appearance counts match those lists. No later refresh is recorded solely to resolve +10.0%. Four more covered sessions are needed; the archived log verifies retention, while original value/list correctness still rests on October 1's offline scanner check.
+
 ### 2026-09-30 — Recheck First-Bar Watches Against the Full AH Session
 
 **Context:** Sep 29 ran 3/7 scheduled scans and lost the entire entry window. NCI looked like a first-bar spike at 16:30 ET, but later reached a new SIP AH high of $2.35 at 16:40 ET on 976K shares/7,031 trades. The morning evaluation noted the reversal but still included NCI's hypothetical +65.2% PM peak as a run in the first-bar watch count. SUGP's $0.72 opening high remained the AH high and its $0.63 watch price faded to a $0.54 PM peak.
@@ -119,6 +159,8 @@ _(entries are prepended — newest first)_
 **Updated process:** Revalidate the opening-high premise against full AH SIP history before including a watch in the first-bar skip tally. Scanner thresholds and trading rules are unchanged.
 
 **Evaluation (2026-10-01):** Helped in the first 2 of 10 new WATCH cases. Sep 30's morning evaluation checked full 16:00–20:00 ET SIP histories for HIT ($1.12 opening high) and LPA ($3.50); neither made a later high, and both PM peaks fell below their recorded watch entries. It kept NCI's superseded observation separate and reported the clean post-gate tally as 9 valid cases (2 ran, 7 faded). Eight more new watches are needed for the target.
+
+**Evaluation (2026-10-02):** Helped; 5/10 new flagged WATCH cases classified. October 1's full AH check confirmed WCT $2.34 at 16:00 and SORA $3.64 at 16:05 remained the session highs. SSM's opening high was exceeded on later volume-backed bars, so it was classified as superseded and excluded. With HIT/LPA, four new valid cases and one superseded case have been checked. The standing clean count is 11 valid (2 ran/9 faded-flat), with NCI/SSM separate; no superseded case was added to the gate count.
 
 ### 2026-09-29 — Carry Recent Scan Coverage Failures into Morning Reviews
 
@@ -140,6 +182,8 @@ _(entries are prepended — newest first)_
 **Evaluation (2026-09-30):** Held for 1/1 subsequent evaluation. Sep 29's review listed four dated failures in the ten-session lookback (Sep 18 0/7, Sep 22 2/7, Sep 25 0/7, Sep 29 3/7), flagged them for the separate daily email and left the uncovered session out of the detection-miss sample. Four more evaluations are needed for the 5/5 target.
 
 **Evaluation (2026-10-01):** Helped in 2/2 subsequent evaluations; insufficient data for the 5/5 target. Sep 30 ran 7/7, while its evaluation retained Sep 18 0/7, Sep 22 2/7, Sep 25 0/7 and Sep 29 3/7 in the Sep 17–30 lookback and routed all four failures to the daily email. It distinguished baseline gaps from coverage and did not charge uncovered nights as detection misses.
+
+**Evaluation (2026-10-02):** Held for 3/3 subsequent evaluations; two more are needed for the target. October 1 ran 7/7 while the Sep 18–Oct 1 lookback retained all four dated failures, separated baseline gaps and routed reliability work through the daily email. Uncovered nights were not charged as detection or selection misses.
 
 ### 2026-09-25 — Separate Thin PM Peaks from Supplementary Pass Follow-Through
 
@@ -163,6 +207,8 @@ _(entries are prepended — newest first)_
 
 **Evaluation (2026-10-01):** Reporting requirement held in the second fully covered session after the change (Sep 30; Sep 28 was first). KRMD's SIP PM request returned no bars through the 04:10 ET historical cutoff, so peak liquidity, next close and persistence were explicitly unavailable. This verifies honest missing-data handling, not peak persistence; insufficient data for the 10-covered-session target. Sep 29 remains a separate partial-session check.
 
+**Evaluation (2026-10-02):** Reporting held in the third fully covered session after the change (October 1). UONEK's $3.16 PM peak had 172 shares/2 trades and no later SIP PM bar, so its next close was explicitly unavailable. The peak was below the final $3.84 AH reference; no sustained continuation was claimed. Seven more covered sessions are needed; this case does not test a positive peak's persistence.
+
 ### 2026-09-24 — Verify PM Follow-Through for Supplementary-Only Names
 
 **Context:** The Sep 23 session had full 7/7 scan coverage and preserved every supplementary-source line. The morning evaluation identified one unique supplementary-only ticker, CPOP, but left its PM outcome unassessed because it was not in the morning scan or main retrospective table. Source attribution worked; the pass's follow-through remains unknown.
@@ -185,6 +231,8 @@ _(entries are prepended — newest first)_
 **Evaluation (2026-09-30):** Held for Sep 29's HUBC on a partial 3/7 session: $1.18 last AH scan → $1.08 SIP PM high (−8.5%), 6,927 shares/81 trades. Three consecutive observed supplementary names since the change (ACTU, XLAB, HUBC) have explicit outcomes; the 10-covered-session target remains pending.
 
 **Evaluation (2026-10-01):** Outcome attempts held for all four observed supplementary-only names since the change: ACTU, XLAB and HUBC have SIP returns; KRMD was explicitly unassessed after a SIP PM request returned no bars through 04:10 ET. The measurement has three fully covered sessions (Sep 24, 28, 30) plus partial Sep 29; insufficient data for the 10-covered-session target. No return or false-positive verdict was inferred from KRMD's absence in the morning scan.
+
+**Evaluation (2026-10-02):** Outcome attempts held for all five observed names since the change. October 1's UONEK received a dated SIP PM return: final $3.84 AH → $3.16 PM high, −17.7%. Four returns and KRMD's specific unavailable-data result are recorded across four fully covered sessions plus partial Sep 29. Six more covered sessions are needed for the target.
 
 ### 2026-09-23 — Track Supplementary AH-Change Pass Outcomes
 
@@ -213,6 +261,8 @@ _(entries are prepended — newest first)_
 
 **Evaluation (2026-10-01):** Source attribution held on all 12 AH sections in Sep 30's 7/7 session: KRMD was counted once, with 0 continuation / 0 faded / 1 unassessed and a specific SIP limitation. Four fully covered sessions (Sep 23, 24, 28, 30) now preserve pass attribution, plus partial Sep 29; insufficient data for the 10-covered-session target. Sep 23's original outcome gap remains documented above.
 
+**Evaluation (2026-10-02):** Attribution held on all 12 October 1 AH sections; UONEK was counted once and assessed as 0 continuation/1 faded/0 unassessed. Five fully covered sessions now have source attribution, plus partial Sep 29. The ten-session target is still pending.
+
 ### 2026-09-22 — Broaden the Supplementary AH Change Scan for Feed/Rank Gaps
 
 **Context:** The Sep 21 morning evaluation found a real in-window omission: **GRML** was absent from all 13 evening scans even though SIP showed an accumulating +18.0% AH move at 18:30 ET and a realistic AH-entry → PM-peak continuation of about +13.6%. GRML was below the supplementary pass's old +20% change cutoff, and that pass was still ranked by volume, so it could not reliably recover moderate movers outside the primary 50-row volume result.
@@ -237,6 +287,8 @@ _(entries are prepended — newest first)_
 **Evaluation (2026-09-30):** Sep 29's partial session added HUBC, last AH scan $1.18 → SIP PM high $1.08 (−8.5%). Across four assessed unique names, none sustained a PM gain. Coverage and sample size remain insufficient to change the >15% threshold.
 
 **Evaluation (2026-10-01):** Insufficient data for a cutoff decision. Sep 30 added KRMD at $3.37 with only 31K discovery shares, then $3.35 in the final SIP pipeline check; the morning SIP PM request had no bars, leaving its outcome unassessed. Across five unique names, four have assessed outcomes (CPOP transient +0.3%, ACTU −9.6%, XLAB −26.8%, HUBC −8.5%) and none sustained a PM gain. Four fully covered sessions plus one partial session do not establish the 10-session hypothesis; retain the >15% pass.
+
+**Evaluation (2026-10-02):** Still insufficient for a cutoff decision. October 1 added UONEK: final $3.84 AH → $3.16 SIP PM high, −17.7% on 172 shares/2 trades. Six unique names now have five assessed outcomes with no sustained PM gain and one unassessed result (KRMD at its recorded cutoff). Five fully covered sessions plus partial Sep 29 remain below the ten-session target; retain the >15% pass.
 
 ### 2026-09-18 — Sync Multi-Session and Stale-Book Tracker Seeds After Sep 17 Fades
 

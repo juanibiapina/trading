@@ -48,7 +48,7 @@ Run a live premarket scan, then reconstruct the prior AH session with Yahoo hist
 
 ```bash
 python3 scripts/scan.py --all --session premarket
-python3 scripts/check-prices.py --ah-history TICKER1 TICKER2 ...
+python3 scripts/check-prices.py --ah-history --date YYYY-MM-DD TICKER1 TICKER2 ...
 ```
 
 A forced `python3 scripts/scan.py --all --session afterhours` can still be logged as a secondary diagnostic, but do **not** rely on it as the primary retrospective source. Overnight TradingView postmarket fields often return 0 hits even when the live evening scans clearly found AH movers.
@@ -125,14 +125,14 @@ For the catalyst lookup use `timeout 60 websearch search "TICKER news July 27 20
 For AH and PM price timelines (5-min intervals), use these built-in modes:
 
 ```bash
-# After-hours timeline (16:00-20:00 ET)
-python3 scripts/check-prices.py --ah-history TICKER1 TICKER2 ...
+# After-hours timeline: use the evaluated US trading date (LOG_DIR date)
+python3 scripts/check-prices.py --ah-history --date YYYY-MM-DD TICKER1 TICKER2 ...
 
-# Premarket timeline (04:00-09:30 ET)
-python3 scripts/check-prices.py --pm-history TICKER1 TICKER2 ...
+# Premarket timeline: use today's America/New_York date
+python3 scripts/check-prices.py --pm-history --date YYYY-MM-DD TICKER1 TICKER2 ...
 ```
 
-These output formatted tables with time, price, volume, and change%. Use these instead of piping yahoo-fetch.py through inline python.
+These output dated timeline tables. If the requested session is unavailable, record that limitation; an earlier session cannot supply today's PM outcome. Dated output leaves the close basis and changes unverified; use dated SIP daily closes for percentages and SIP bars for peaks and volume. Use these modes instead of piping yahoo-fetch.py through inline python.
 
 For raw JSON data (rare cases only):
 ```bash
@@ -252,7 +252,7 @@ Only real Alpaca fills go in this table (entry/exit = `filled_avg_price` from `b
 |--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
 | XXXX   | $2.50 | +35.0% | A — breakthrough data | 23:00 CET  | $3.20 | 06:15 ET | $3.10 | +€24.00 | +24.0% | ✅ Win |
 
-**PM Peak** = highest premarket price observed. **Peak Time** = when that peak occurred (ET). Track this to identify optimal exit windows. Use `check-prices.py --pm-history TICKER` to find the peak, **then verify it against SIP bars** (`node scripts/broker.js bars TICKER --tf 5Min --start <PM-date>T08:00:00Z`) — Yahoo `--pm-history` under-reports the true peak on the illiquid low-float names we trade (DCX Jul 8: Yahoo $1.48 vs SIP $1.63). Report the higher SIP peak when it is backed by real `vol`/`trades`. Under-reporting the peak understates how much gain was available, which biases the let-winners-run analysis low.
+**PM Peak** = highest premarket price observed. **Peak Time** = when that peak occurred (ET). Track this to identify optimal exit windows. Use `check-prices.py --pm-history --date YYYY-MM-DD TICKER` with today's ET date to inspect the timeline, **then verify it against SIP bars** (`node scripts/broker.js bars TICKER --tf 5Min --start <PM-date>T08:00:00Z`) — Yahoo `--pm-history` under-reports the true peak on the illiquid low-float names we trade (DCX Jul 8: Yahoo $1.48 vs SIP $1.63). Report the higher SIP peak when it is backed by real `vol`/`trades`. Under-reporting the peak understates how much gain was available, which biases the let-winners-run analysis low.
 
 **Entry Total%** = total change from **previous close** (not just AH change). Calculate as: `(entry_price - prev_close) / prev_close`. This combines Day% + AH% into one number showing how extended the stock is at entry. Example: if prev close was $4.10 and you enter at $6.86, Entry Total% = +67.3%.
 
