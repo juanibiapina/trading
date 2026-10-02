@@ -1,0 +1,37 @@
+{
+  "cycle_date": "2026-10-01",
+  "status": "sent",
+  "provider": "InboxKit",
+  "message_id": 178,
+  "from": "zero@inboxkit.cc",
+  "to": "juanibiapina@gmail.com",
+  "subject": "Trading Scanner Report - 2026-10-01",
+  "send_started_at": "2026-10-02T09:37:05.315678+00:00",
+  "sent_at": "2026-10-02T09:37:06.127188+00:00",
+  "sent_at_source": "Successful InboxKit response observed locally",
+  "previous_successful_send_at": "2026-10-01T09:37:54.944392+00:00",
+  "previous_message_id": 176,
+  "previous_receipt": "log/2026-09-30/daily-email.json",
+  "reporting_cutoff_at": "2026-10-02T09:37:05.314089+00:00",
+  "body_file": "daily-email.html",
+  "body_sha256": "554ddc212562840e43882dbb0c05013042339f6bf8ec3ca81ee6ed5f8b479547",
+  "chart_urls": [],
+  "charts_omitted_reason": "No qualifying actionable winner in the completed evaluation or open Alpaca positions at send time",
+  "latest_scanner_improvement_date": "2026-10-01",
+  "latest_completed_process_review_date": "2026-10-01",
+  "initiative_updates": [
+    1,
+    4,
+    5,
+    7
+  ],
+  "initiative_monitoring": [
+    6
+  ],
+  "jev_status": "not_run",
+  "jev_status_reason": "Classifier implementation pending; no dated classification or usage/cost artifact available",
+  "jev_calls": null,
+  "jev_tokens": null,
+  "jev_cost": null,
+  "jev_cost_currency": "USD"
+}
