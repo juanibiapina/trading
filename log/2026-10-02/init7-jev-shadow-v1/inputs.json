@@ -1,0 +1,127 @@
+{
+  "spec": "stock-catalyst-v1",
+  "prepared_on": "2026-10-02",
+  "purpose": "Retrospective and synthetic interface checks. Source summaries contain no subsequent prices, outcomes or trading grades. Expected labels are excluded from model state.",
+  "cases": [
+    {
+      "id": "AMOD-2026-10-01",
+      "kind": "archived_summary",
+      "provenance": "log/2026-10-01/log.md: October 1 22:30-23:00 catalyst workup; reconstructed on October 2 from the contemporaneous source summary, not a prospective request or verbatim filing.",
+      "state": {
+        "ticker": "AMOD",
+        "decision_cutoff_utc": "2026-10-01T21:00:00Z",
+        "sources": [
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1862463/000149315226045296/form8-k.htm",
+            "published_utc": "2026-10-01T15:30:52Z",
+            "text": "The October 1 8-K discloses the September 30 PIPE closing: 51,621,560 common shares and warrants for the same number of shares, issued in exchange for 3,170 bitcoin."
+          }
+        ]
+      },
+      "expected": {
+        "catalyst": "financing_dilution",
+        "dilutive_financing": true,
+        "binding_commercial_activity": false
+      }
+    },
+    {
+      "id": "SORA-2026-10-01",
+      "kind": "archived_summary",
+      "provenance": "log/2026-10-01/log.md: 22:25 catalyst workup; reconstructed on October 2 from the contemporaneous source summary. Primary release re-read October 2.",
+      "state": {
+        "ticker": "SORA",
+        "decision_cutoff_utc": "2026-10-01T21:00:00Z",
+        "sources": [
+          {
+            "url": "https://www.globenewswire.com/news-release/2026/10/01/3373374/0/en/asiastrategy-signs-memorandum-of-understanding-with-plume-network-to-advance-real-world-asset-tokenisation-across-asia.html",
+            "published_utc": "2026-10-01T20:05:00Z",
+            "text": "AsiaStrategy signed a non-binding memorandum of understanding with Plume Network to explore a tokenised-products joint venture across Asia. The memorandum is exploratory; no binding commercial contract or completed joint venture is announced."
+          }
+        ]
+      },
+      "expected": {
+        "catalyst": "nonbinding_plan",
+        "dilutive_financing": false,
+        "binding_commercial_activity": false
+      }
+    },
+    {
+      "id": "ELUT-2026-10-01",
+      "kind": "archived_summary",
+      "provenance": "log/2026-10-01/log.md: 23:30 catalyst workup; reconstructed on October 2 from the contemporaneous source summary, not a prospective request or verbatim release.",
+      "state": {
+        "ticker": "ELUT",
+        "decision_cutoff_utc": "2026-10-01T21:30:00Z",
+        "sources": [
+          {
+            "url": "https://www.globenewswire.com/news-release/2026/10/01/3373430/0/en/elutia-receives-8-million-payment-from-boston-scientific-company-now-fully-funded-into-2029.html",
+            "published_utc": "2026-10-01T20:45:00Z",
+            "text": "Boston Scientific released the full $8 million escrow holdback without claims from the BioEnvelope sale that closed October 1, 2025. Elutia says this completes its funding milestones and funds operations into 2029 without an equity offering. This is a scheduled cash receipt, not a new acquisition agreement. NXT-41x clearance remains expected in the first half of 2027; no regulatory clearance is announced today."
+          }
+        ]
+      },
+      "expected": {
+        "catalyst": "asset_cash_receipt",
+        "dilutive_financing": false,
+        "binding_commercial_activity": false
+      }
+    },
+    {
+      "id": "SYNTH-binding-contract",
+      "kind": "synthetic",
+      "provenance": "Authored October 2 as an explicit semantic positive control; no real company, news or return is represented.",
+      "state": {
+        "ticker": "SYNTH_CONTRACT",
+        "decision_cutoff_utc": "2026-10-02T13:00:00Z",
+        "sources": [
+          {
+            "url": "synthetic:binding-contract",
+            "published_utc": "2026-10-02T12:00:00Z",
+            "text": "The company executed a binding three-year distribution contract today. The customer commits to purchase at least $20 million of products each year. This announcement involves no equity issuance, warrants or convertible securities."
+          }
+        ]
+      },
+      "expected": {
+        "catalyst": "commercial_operation",
+        "dilutive_financing": false,
+        "binding_commercial_activity": true
+      }
+    },
+    {
+      "id": "SYNTH-no-event-evidence",
+      "kind": "synthetic",
+      "provenance": "Authored October 2 as a missing-evidence control. No-source means unknown event, not proof that no news exists.",
+      "state": {
+        "ticker": "SYNTH_UNKNOWN",
+        "decision_cutoff_utc": "2026-10-02T13:00:00Z",
+        "sources": []
+      },
+      "expected": {
+        "catalyst": "unknown",
+        "dilutive_financing": false,
+        "binding_commercial_activity": false
+      }
+    },
+    {
+      "id": "SYNTH-mixed-events",
+      "kind": "synthetic",
+      "provenance": "Authored October 2 to check that independent evidence labels coexist; no real company or return is represented.",
+      "state": {
+        "ticker": "SYNTH_MIXED",
+        "decision_cutoff_utc": "2026-10-02T13:00:00Z",
+        "sources": [
+          {
+            "url": "synthetic:mixed-events",
+            "published_utc": "2026-10-02T12:00:00Z",
+            "text": "The company announces two equally central events today. It closed a $10 million PIPE by issuing common shares and warrants. It also executed a new binding customer contract with guaranteed $10 million annual product purchases. Both events are completed commitments, not exploratory proposals."
+          }
+        ]
+      },
+      "expected": {
+        "catalyst": "mixed_other",
+        "dilutive_financing": true,
+        "binding_commercial_activity": true
+      }
+    }
+  ]
+}

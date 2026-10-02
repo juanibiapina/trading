@@ -1,0 +1,108 @@
+{
+  "case": {
+    "id": "SORA-2026-10-01",
+    "kind": "archived_summary",
+    "provenance": "log/2026-10-01/log.md: 22:25 catalyst workup; reconstructed on October 2 from the contemporaneous source summary. Primary release re-read October 2.",
+    "state": {
+      "ticker": "SORA",
+      "decision_cutoff_utc": "2026-10-01T21:00:00Z",
+      "sources": [
+        {
+          "url": "https://www.globenewswire.com/news-release/2026/10/01/3373374/0/en/asiastrategy-signs-memorandum-of-understanding-with-plume-network-to-advance-real-world-asset-tokenisation-across-asia.html",
+          "published_utc": "2026-10-01T20:05:00Z",
+          "text": "AsiaStrategy signed a non-binding memorandum of understanding with Plume Network to explore a tokenised-products joint venture across Asia. The memorandum is exploratory; no binding commercial contract or completed joint venture is announced."
+        }
+      ]
+    },
+    "expected": {
+      "catalyst": "nonbinding_plan",
+      "dilutive_financing": false,
+      "binding_commercial_activity": false
+    }
+  },
+  "request": {
+    "model": "jev-1.13.0",
+    "state": {
+      "ticker": "SORA",
+      "decision_cutoff_utc": "2026-10-01T21:00:00Z",
+      "sources": [
+        {
+          "url": "https://www.globenewswire.com/news-release/2026/10/01/3373374/0/en/asiastrategy-signs-memorandum-of-understanding-with-plume-network-to-advance-real-world-asset-tokenisation-across-asia.html",
+          "published_utc": "2026-10-01T20:05:00Z",
+          "text": "AsiaStrategy signed a non-binding memorandum of understanding with Plume Network to explore a tokenised-products joint venture across Asia. The memorandum is exploratory; no binding commercial contract or completed joint venture is announced."
+        }
+      ]
+    },
+    "questions": {
+      "catalyst": {
+        "type": "choice",
+        "instructions": "Classify the principal event documented in `sources`. Use only the supplied text. An expected future milestone is not a completed regulatory event. When distinct current events are equally central choose mixed_other. With no documented event choose unknown. Do not predict returns or assign a trading action.",
+        "criteria": {
+          "earnings_guidance": "Reported financial results or financial guidance update.",
+          "regulatory_clinical": "Completed regulatory decision or reported clinical trial result.",
+          "commercial_operation": "Executed customer contract, distribution agreement, or demonstrated operational improvement.",
+          "financing_dilution": "Capital raised by issuing stock, warrants or convertible securities, including a PIPE closing.",
+          "nonbinding_plan": "Exploratory memorandum, letter of intent or planned venture without an executed commercial commitment.",
+          "asset_cash_receipt": "Cash received from an existing asset-sale obligation or escrow; no new operating contract.",
+          "fixed_price_acquisition": "Definitive acquisition or buyout at a fixed cash price.",
+          "mixed_other": "Several equally central current events or a documented event outside these categories.",
+          "unknown": "No event text is supplied or the supplied evidence cannot establish an event."
+        }
+      },
+      "dilutive_financing": {
+        "type": "noul",
+        "instructions": "Do `sources` explicitly document a current issuance of shares, warrants or convertible securities to raise capital? Only use supplied evidence.",
+        "criteria": {
+          "true": "An equity or equity-linked financing is stated as agreed or completed.",
+          "false": "No such financing is evidenced, including funding explicitly achieved without an equity offering."
+        }
+      },
+      "binding_commercial_activity": {
+        "type": "noul",
+        "instructions": "Do `sources` document a new executed commercial customer, revenue or distribution commitment, or an already demonstrated improvement in operating activity? Only use supplied evidence.",
+        "criteria": {
+          "true": "Executed commercial activity or a demonstrated operating improvement is documented.",
+          "false": "Only plans, an exploratory non-binding venture, securities financing, an old asset-sale payment, or no event is documented."
+        }
+      }
+    }
+  },
+  "started_utc": "2026-10-02T13:09:23.752264+00:00",
+  "status": "ok",
+  "http_status": 200,
+  "response": {
+    "model": "jev-1.13.0",
+    "answers": {
+      "catalyst": {
+        "type": "choice",
+        "choice": "nonbinding_plan",
+        "confidence": 1.0,
+        "probabilities": {
+          "fixed_price_acquisition": 0.0,
+          "mixed_other": 0.0,
+          "regulatory_clinical": 0.0,
+          "nonbinding_plan": 1.0,
+          "unknown": 0.0,
+          "commercial_operation": 0.0,
+          "financing_dilution": 0.0,
+          "asset_cash_receipt": 0.0,
+          "earnings_guidance": 0.0
+        }
+      },
+      "dilutive_financing": {
+        "type": "noul",
+        "noul": 0.02
+      },
+      "binding_commercial_activity": {
+        "type": "noul",
+        "noul": 0.02
+      }
+    },
+    "usage": {
+      "input_tokens": 953,
+      "output_tokens": 156
+    }
+  },
+  "finished_utc": "2026-10-02T13:09:24.094851+00:00",
+  "elapsed_seconds": 0.3423574769985862
+}

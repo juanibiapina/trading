@@ -1,0 +1,108 @@
+{
+  "case": {
+    "id": "AMOD-2026-10-01",
+    "kind": "archived_summary",
+    "provenance": "log/2026-10-01/log.md: October 1 22:30-23:00 catalyst workup; reconstructed on October 2 from the contemporaneous source summary, not a prospective request or verbatim filing.",
+    "state": {
+      "ticker": "AMOD",
+      "decision_cutoff_utc": "2026-10-01T21:00:00Z",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1862463/000149315226045296/form8-k.htm",
+          "published_utc": "2026-10-01T15:30:52Z",
+          "text": "The October 1 8-K discloses the September 30 PIPE closing: 51,621,560 common shares and warrants for the same number of shares, issued in exchange for 3,170 bitcoin."
+        }
+      ]
+    },
+    "expected": {
+      "catalyst": "financing_dilution",
+      "dilutive_financing": true,
+      "binding_commercial_activity": false
+    }
+  },
+  "request": {
+    "model": "jev-1.13.0",
+    "state": {
+      "ticker": "AMOD",
+      "decision_cutoff_utc": "2026-10-01T21:00:00Z",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1862463/000149315226045296/form8-k.htm",
+          "published_utc": "2026-10-01T15:30:52Z",
+          "text": "The October 1 8-K discloses the September 30 PIPE closing: 51,621,560 common shares and warrants for the same number of shares, issued in exchange for 3,170 bitcoin."
+        }
+      ]
+    },
+    "questions": {
+      "catalyst": {
+        "type": "choice",
+        "instructions": "Classify the principal event documented in `sources`. Use only the supplied text. An expected future milestone is not a completed regulatory event. When distinct current events are equally central choose mixed_other. With no documented event choose unknown. Do not predict returns or assign a trading action.",
+        "criteria": {
+          "earnings_guidance": "Reported financial results or financial guidance update.",
+          "regulatory_clinical": "Completed regulatory decision or reported clinical trial result.",
+          "commercial_operation": "Executed customer contract, distribution agreement, or demonstrated operational improvement.",
+          "financing_dilution": "Capital raised by issuing stock, warrants or convertible securities, including a PIPE closing.",
+          "nonbinding_plan": "Exploratory memorandum, letter of intent or planned venture without an executed commercial commitment.",
+          "asset_cash_receipt": "Cash received from an existing asset-sale obligation or escrow; no new operating contract.",
+          "fixed_price_acquisition": "Definitive acquisition or buyout at a fixed cash price.",
+          "mixed_other": "Several equally central current events or a documented event outside these categories.",
+          "unknown": "No event text is supplied or the supplied evidence cannot establish an event."
+        }
+      },
+      "dilutive_financing": {
+        "type": "noul",
+        "instructions": "Do `sources` explicitly document a current issuance of shares, warrants or convertible securities to raise capital? Only use supplied evidence.",
+        "criteria": {
+          "true": "An equity or equity-linked financing is stated as agreed or completed.",
+          "false": "No such financing is evidenced, including funding explicitly achieved without an equity offering."
+        }
+      },
+      "binding_commercial_activity": {
+        "type": "noul",
+        "instructions": "Do `sources` document a new executed commercial customer, revenue or distribution commitment, or an already demonstrated improvement in operating activity? Only use supplied evidence.",
+        "criteria": {
+          "true": "Executed commercial activity or a demonstrated operating improvement is documented.",
+          "false": "Only plans, an exploratory non-binding venture, securities financing, an old asset-sale payment, or no event is documented."
+        }
+      }
+    }
+  },
+  "started_utc": "2026-10-02T13:09:23.363154+00:00",
+  "status": "ok",
+  "http_status": 200,
+  "response": {
+    "model": "jev-1.13.0",
+    "answers": {
+      "catalyst": {
+        "type": "choice",
+        "choice": "financing_dilution",
+        "confidence": 1.0,
+        "probabilities": {
+          "earnings_guidance": 0.0,
+          "regulatory_clinical": 0.0,
+          "commercial_operation": 0.0,
+          "nonbinding_plan": 0.0,
+          "mixed_other": 0.0,
+          "unknown": 0.0,
+          "fixed_price_acquisition": 0.0,
+          "asset_cash_receipt": 0.0,
+          "financing_dilution": 1.0
+        }
+      },
+      "dilutive_financing": {
+        "type": "noul",
+        "noul": 0.96
+      },
+      "binding_commercial_activity": {
+        "type": "noul",
+        "noul": 0.02
+      }
+    },
+    "usage": {
+      "input_tokens": 934,
+      "output_tokens": 158
+    }
+  },
+  "finished_utc": "2026-10-02T13:09:23.751507+00:00",
+  "elapsed_seconds": 0.38818877199082635
+}
