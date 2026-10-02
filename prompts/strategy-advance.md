@@ -81,6 +81,8 @@ they are always in scope to raise.
 - Latest completed `log/*/process-review.md` — pending agent actions routed to `strategy-advance`; complete a named deliverable or record its dependency and next run before carrying it forward. For saved-session evidence, `python3 scripts/pi-session-text.py /absolute/path/to/session.jsonl` reads text and errors without schema inference.
 - Skim the last few daily logs if the active step needs market data
 
+Locate sections with `rg -n '^## |^### ' STRATEGY_ROADMAP.md INITIATIVE_LOG.md FEEDBACK_LOG.md` before reading these growing files. Read the newest roadmap checkpoint, every active initiative's current status/next deliverable, consolidated dependencies, the latest completed strategy entries, and new feedback. Use bounded `read` calls at the returned line numbers. Load older entries only to evaluate a named hypothesis or dependency; follow the reader's actual continuation offset if a selected section is truncated. The current checkpoint supersedes older priority lists.
+
 ### 2. Evaluate the Previous Step
 
 Find the most recent `INITIATIVE_LOG.md` entry with a hypothesis. Is there

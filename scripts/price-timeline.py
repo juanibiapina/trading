@@ -10,7 +10,10 @@ Usage:
 import sys
 import json
 import subprocess
-from datetime import datetime, timezone
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+ET = ZoneInfo("America/New_York")
 
 def fetch_data(ticker, interval="5m", range_="2d"):
     """Fetch price data using yahoo-fetch.py"""
@@ -40,7 +43,7 @@ def parse_yahoo_data(data):
         parsed = []
         for i, ts in enumerate(timestamps):
             if i < len(closes) and closes[i]:
-                dt = datetime.fromtimestamp(ts, tz=timezone.utc)
+                dt = datetime.fromtimestamp(ts, tz=ET)
                 parsed.append({
                     'dt': dt,
                     'open': opens[i] if i < len(opens) else None,
@@ -94,7 +97,7 @@ def ascii_chart(prices, width=60, height=12):
     
     lines.append("         └" + "─" * len(sampled))
     
-    return '\n'.join(lines)
+    return '\n'.join(line.rstrip() for line in lines)
 
 def find_peak(prices):
     """Find the highest price point"""
@@ -162,12 +165,12 @@ def print_timeline(ticker):
     
     # Group by session
     for p in prices[-48:]:  # Last ~4 hours at 5-min intervals
-        hour = p['dt'].hour
-        if hour >= 16 and hour < 20:
+        minute = p['dt'].hour * 60 + p['dt'].minute
+        if 16 * 60 <= minute < 20 * 60:
             session = "AH"
-        elif hour >= 4 and hour < 9:
+        elif 4 * 60 <= minute < 9 * 60 + 30:
             session = "PM"
-        elif hour >= 9 and hour < 16:
+        elif 9 * 60 + 30 <= minute < 16 * 60:
             session = "REG"
         else:
             session = "OVN"
@@ -177,7 +180,7 @@ def print_timeline(ticker):
         pct = ""
         if prev_close and p['close']:
             pct = f" ({((p['close'] - prev_close) / prev_close) * 100:+6.1f}%)"
-        print(f"  [{session}] {time_str} ET: ${p['close']:7.2f}{pct}  Vol: {vol_str}")
+        print(f"  [{session}] {time_str} ET: ${p['close']:7.2f}{pct}  Vol: {vol_str}".rstrip())
 
 def main():
     if len(sys.argv) < 2:

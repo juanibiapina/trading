@@ -40,6 +40,8 @@ This runs daily after the morning evaluation. The goal is continuous, data-drive
 - Read the selected cycle log from the start. Before using a nonzero read offset, check the file's current line count; never reuse an offset from another log, and treat a short log as valid.
 - Read `Day Trading.md` for current rules and lessons
 
+Locate initiative and feedback sections with `rg -n '^## |^### ' STRATEGY_ROADMAP.md INITIATIVE_LOG.md FEEDBACK_LOG.md`, then read the newest roadmap checkpoint, active scanner/process deliverables and new feedback in bounded chunks. Read recent changelog hypotheses that still need evaluation; load older initiative history only for a specific dependency or control. Follow the reader's actual continuation offset when a selected section is truncated.
+
 ### 2. Evaluate Previous Changes
 
 For each recent changelog entry that has a hypothesis:

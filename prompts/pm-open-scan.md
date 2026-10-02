@@ -8,6 +8,7 @@ time to justify piloting hypothetical entries?
 **Non-interactive:** This pulse runs unattended. Never ask Juan questions or show Telegram buttons here — no one answers. Route anything needing his input to the **daily email** (questions go in emails only).
 
 See `STRATEGY_ROADMAP.md` Initiative 6 and `INIT6_EXTREME_MOVERS.md` for context.
+Use `rg -n '^## (Current priorities|Initiative 6)' STRATEGY_ROADMAP.md` to locate the newest checkpoint and Initiative 6 section, then read their current status/next deliverable in bounded chunks. Read older research only when a classification question needs it.
 The AH->PM scanner (`prompts/post-market-scan.md`) only sees stocks with an after-hours
 footprint. The biggest raw morning movers keep being **PM-only gappers**: flat or
 down in after-hours, exploding only after 04:00 ET on overnight news. This pulse
