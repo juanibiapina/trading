@@ -820,3 +820,208 @@ IPW 2026-10-01  CONFIRM-3  YES ignition 17:15ET 148.8x; confirmed 17:25ET $1.40 
 |--------|------------|------------|-----------------|----------|--------|
 
 No entries through the final 00:30 CEST scan (18:30 ET on October 1). AMOD has six qualifying AH appearances and a real late BUILD, but Day -24.5% blocks entry. SORA has seven and retains its first-bar-spike block. SDEV, HTCR, and TARA have one each, with stale-book or volume blocks. SCKT/IPW have higher historical SIP levels but insufficient current accumulation; ELUT has faded below threshold. The AMOD and SORA hypothetical watches are recorded in the scan notes and are not fills. Alpaca has no open positions or orders; OPEN_POSITIONS remains consistent with the broker.
+
+## Morning Evaluation — 10:27 CEST (04:27 ET, October 2)
+
+**Pulse 1: no real winner today at this early cutoff.** The independent discovery leader, **AMOD**, reached a real SIP PM peak of **+94.0%**, below the required **>100%**. The scanner detected it; Day −24.5% blocked entry. All **7/7 scheduled scans** ran. No trades filled and Alpaca has no open positions.
+
+This evaluates the **October 1 US AH session**. Work began at **10:20 CEST** with repository sync, a fresh PM scan, and an independent TradingView sweep before reading this session's log. The final explicit SIP pull completed at **10:27:39 CEST**, with active-name PM bars through **04:10 ET**. These are delayed historical prices; later premarket and live execution remain unverified. Raw discovery, daily bars, complete AH bars, PM bars, quotes, and broker availability are preserved in [morning-evidence-2026-10-02.json](morning-evidence-2026-10-02.json).
+
+### Today's Winner
+
+**No real winner today at this pulse.** None of the independently discovered leaders has a verified >100% move from the **October 1 regular close** on accumulating SIP volume with a capturable AH entry. AMOD is the strongest genuine AH→PM mover and the diagnostic benchmark. Do not headline it, NIVF, or SMX as a winner. SSM's apparent >100% PM figure uses the wrong session's close.
+
+**AMOD — AI retail analytics / packaged software; strongest genuine mover, below the winner bar.**
+
+- Catalyst: **Grade D — bitcoin-backed PIPE closing**, independently confirmed by the [October 1 report](https://www.gurufocus.com/news/9106095/alpha-modus-holdings-amod-completes-250m-bitcoinbacked-pipe-transaction) and the evening's verified [SEC 8-K](https://www.sec.gov/Archives/edgar/data/1862463/000149315226045296/form8-k.htm). The September 30 transaction exchanged **51,621,560 shares plus warrants for the same number** for **3,170 bitcoin**. The filing index records October 1 acceptance at **11:30:52**. Issuance/dilution is the graded event; no fresh operational catalyst is inferred. One news search and one extraction were sufficient; no rate-limit retry was needed.
+- Previous close for October 2 PM: **$1.17**, October 1 SIP daily close. **$1.55** is September 30's close, used for October 1 Day% and AH Entry Total%, not today's PM gap.
+- AH ignition: **16:15 ET / 22:15 CEST** five-minute bar, **951,981 shares / 5,009 trades**, VWAP **$1.3925**, close **$1.34**, high **$1.55**. This complete bar was not available at its opening scan timestamp. A second build began around **17:40–17:45 ET**.
+- AH peak: **$2.0999 (+79.5% from October 1 close) at 18:10 ET**, on **805,622 shares / 3,704 trades**. Complete AH volume: **16,239,547 shares / 80,355 trades**.
+- Recorded final WATCH reference: **$2.02 at 00:30 CEST / 18:30 ET**, Entry Total **+30.3% from September 30's $1.55**. Actual 18:30 SIP close was **$1.89**; the scanner snapshot lagged the tape. Neither reference is a fill.
+- PM peak: **$2.27 (+94.0%) at 04:00 ET**, on **2,090,116 shares / 14,352 trades**, VWAP **$2.0819**. Next bar closed **$2.2294** on **1,205,185 shares / 7,617 trades**. Verified PM total: **4,018,640 shares / 26,907 trades** through 04:10.
+- Latest verified PM close: **$2.11 (+80.3%) at 04:10 ET**. The 04:27 TradingView discovery snapshot reports **$2.12 (+81.2%)**; it is not an executable quote. Broker quote remains frozen at **16:58:48 ET October 1**, bid **$1.31 x100 / ask $1.34 x100**.
+- Hypothetical final WATCH→PM peak: **$2.02→$2.27 = +12.4%**. Original dead-cat watch **$1.37→$2.27 = +65.7%** is a separate, earlier reference. Neither proves a peak-price exit. A >100% PM gain would require **more than $2.34** from the verified $1.17 close.
+- Float: **543K reported**, current float unverified after the PIPE; issued shares alone do not establish freely tradable float. Market cap: **$5.8M reported**. Both are TradingView estimates that may lag the issuance.
+
+**Scanner Diagnostic:**
+
+- Detectable at ~22:15 CEST? **NO in that live snapshot; YES during the evening window.** The 22:15 scan returned no hits as the 16:15 bar was beginning. The scanner first surfaced AMOD at **22:30**, **$1.29 / +10.1% AH / 61K displayed volume / 0.4x VRatio**. Retrospective SIP verifies the ensuing ignition; the initial discovery lag is not a never-detected feed failure.
+- It qualified in **six >10% AH snapshots**: 22:30, 22:45, 23:00, 23:30, 00:00, 00:30. Fresh AH books were recorded at 16:31 and 16:45, including **$1.42 bid / $1.45 ask x100 at 16:45:54**. Later eligible books froze, so a fillable final-surge entry is unverified.
+- Why no action: **Day −24.5%** failed the live dead-cat rule. The late BUILD was real; it was detected and logged as DEAD-CAT-OVERRIDE WATCH. The frozen eligible book was an additional execution limitation. No missed >100% winner or pure stale-book-only case is established.
+- Scanner gap: **no parameter change is needed to detect this name**. Continue measuring the dead-cat reclaim watch and independently verify current books; entry-rule decisions belong to the strategy owner. This evaluation changes no entry or exit gate.
+
+### Baseline Tracking
+
+Source: **September 30's latest baseline**, immediately preceding the October 1 session. No intervening session log lacks a baseline line. The inherited gaps remain visible; skipped dates are not back-filled.
+
+- Days tracked: **93** (**92 + October 1 only**).
+- Winners detected by scanner: **72/82 (87.8%)**, unchanged; no qualifying >100% winner is added to either numerator or eligible-winner denominator. The cumulative named history remains in prior logs.
+- Winner selected for paper trade: **36/79 (45.6%)**, unchanged; no new winner-selection sample or fill. A sub-100% watch is not a selection miss.
+- Baseline gaps: **September 11, 18, and 25**, confirmed to have no `Days tracked:` line. September 28 has a recorded evaluation and is not an outstanding gap. No new gap between the baseline seed and this session.
+- Target: **>80% detection**. Status: **BASELINE MET** on the inherited recorded sample. The historical denominator contains some raw price-floor exclusions and is not a pure capturable-winner sample; missing evaluations and evening coverage also limit the rate.
+
+### Retrospective Scan Results
+
+Initial `scan.py --all --session premarket` at **04:20:39 ET** found **AMOD, QTEX, SDEV, SGRX, SMX, SORA**. An independent TradingView PM-change sweep removed price, market-cap, and volume limits and returned **all 39 symbols above +5% current PM change**; AMOD led, followed by sub-$0.50 NIVF. Discovery happened before reading the October 1 watchlist. A 04:27 refresh added SSM. Yahoo AH/PM histories supplied shape; **SIP daily closes and five-minute highs supply the levels below**. No forced morning AH scan was used.
+
+| Ticker | Oct 1 SIP close | AH SIP high / ET | PM SIP high / ET | PM gap from Oct 1 | Peak-bar shares / trades | Evening outcome |
+|--------|------------------|------------------|------------------|------------------|-------------------------|-----------------|
+| AMOD | $1.17 | $2.0999 / 18:10 | $2.27 / 04:00 | +94.0% | 2,090,116 / 14,352 | Detected; Day block; PM surpassed AH |
+| NIVF | $0.1010 | $0.1320 / 18:40 | $0.1700 / 04:00 | +68.3% | 17,472,713 / 18,608 | Below price floor; crash bounce; book stale |
+| SMX | $6.16 | $8.60 / 19:55 | $10.43 / 04:00 | +69.3% | 288,850 / 7,957 | Absent; AH thin, defining tail ramp; PM wick faded |
+| SGRX | $1.39 | $1.4790 / 16:20 | $2.08 / 04:00 | +49.6% | 456,610 / 2,647 | PM-only ignition; AH below +10% and sparse |
+| SDEV | $3.66 | $4.20 / 18:25 | $4.82 / 04:00 | +31.7% | 2,534,970 / 25,029 | Detected at final scan; one appearance + stale book |
+| SORA | $2.40 | $3.64 / 16:05 | $3.08 / 04:00 | +28.3% | 177,853 / 2,325 | Detected; opening-high skip; AH better |
+| QTEX | $0.7846 | $0.8975 / 19:30 | $0.9793 / 04:00 | +24.8% | 3,860,221 / 17,755 | Absent; first >10% AH at 19:10, after final scan |
+| SSM | $2.21 | $2.63 / 19:55 | $2.60 / 04:00 | +17.6% | 221,677 / 1,942 | Detected once; later AH high supersedes opening watch |
+| IPW | $1.1401 | $1.4969 / 17:15 | $1.25 / 04:00 | +9.6% | 22,835 / 113 | Detected once; fade/volume/book co-blocks |
+| SCKT | $0.5400 | $0.6539 / 16:15 | $0.5830 / 04:00 | +8.0% | 100,798 / 546 | Detected once above +10%; thin recent tape/zero ask |
+| HTCR | $1.9250 | $2.4660 / 18:15 | $2.03 / 04:00 | +5.5% | 6,157 / 102 | Final discovery; thin tape and zero ask |
+| ELUT | $0.8000 | $1.1000 / 16:45 | $0.8259 / 04:00 | +3.2% | 90,768 / 598 | Detected twice; faded below watch entry |
+| WCT | $1.6700 | $2.3400 / 16:00 | $1.50 / 04:00 | −10.2% | 96,773 / 882 | Detected twice; Day block/opening fade |
+| UONEK | $3.64 | $4.19 / 17:35 | $3.16 / 04:00 | −13.2% | 172 / 2 | Supplementary discovery; genuine sparse prints, faded |
+| TARA | $2.76 | $3.07 / 17:55 | No SIP PM bars | Unassessed | — | Detected once; AH high was one 100-share trade |
+
+**Basis and peak corrections:** SSM's **$1.12 Yahoo previousClose is September 30's close**. Using it makes the $2.60 PM high +132.1%; the correct **October 1 $2.21** basis makes it **+17.6%**, below the winner bar. Other Oct 1 bases are verified in the table. Yahoo close-based histories miss real peaks including AMOD **$2.23 versus SIP $2.27**, SGRX **$1.84 versus $2.08**, QTEX **~$0.97 versus $0.9793**, and SSM **$2.40 versus $2.60**. SMX's separate timeline tool reports a $10.64 high; **SIP confirms $10.43**, so $10.64 is not used as a verified level. None of these comparisons uses Yahoo extended-hours volume.
+
+**UONEK/TARA data limitations:** Yahoo `--pm-history UONEK` returned **October 1's PM session**, not October 2. Those $4.22/$4.23 prints are excluded. Today's SIP $3.16 is backed by only **172 shares / 2 trades**. TARA has no SIP PM bar through the available cutoff; its Yahoo shape cannot establish a verified PM peak.
+
+### Open Position P&L (Alpaca)
+
+**No executed positions and no open positions.** `broker.js positions --json` returned `[]`; `orders all --json` contains no order created since **October 1 20:00Z AH open**. No actual entry, Entry Total%, exit, or unrealized P&L row exists for this cycle. All watch returns here are hypothetical. **Total realized P&L for this session: $0.00.** No EUR conversion is assumed. Position management remains with the separate position-evaluation pulse.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7 scheduled** — **21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST**. Six extra observations at **22:05, 22:10, 22:15, 22:20, 22:25, 22:45** do not inflate scheduled coverage. The entire eligible entry window was covered.
+- Candidates found: **42 unique pipeline names**; **18 unique AH discovery names**, including supplementary UONEK. The other pipeline names came from the regular scan. The final scan cross-checked all **34 tradable pipeline names** with delayed SIP; eight untradable observations did not clear AH entry gates.
+- Retrospective matches: **4/7 refreshed filtered PM discoveries** were detected in the evening: **AMOD, SDEV, SORA, SSM**. **QTEX, SMX, SGRX** were absent for the timing/liquidity reasons below. The filtered list's overlap is separate from the winner detection baseline.
+- Two or more qualifying >10% AH snapshots: **AMOD 6, SORA 7, ELUT 2, WCT 2**. Single qualifying appearances: **SSM, SCKT, IPW, UONEK, SDEV, HTCR, TARA**.
+- **Supplementary AH-change-only measurement is complete for all 12 AH scan sections:** **1 unique ticker, UONEK**. Its latest logged AH price is **$3.84** in the final pipeline check, after original discovery **$4.19**. October 2 SIP PM high **$3.16 at 04:00 ET**, **172 shares / 2 trades**, is **−17.7% versus $3.84** (−24.6% versus $4.19). **Outcome split: 0 PM continuation / 1 faded-no-follow-through / 0 unassessed.** No later PM SIP bar exists at this cutoff; next close is unavailable because there were no subsequent reported bars. Persistence is not a continuation test for this faded result. Absence from the morning scan is not the basis for its verdict.
+
+### Missed Opportunities
+
+| Ticker | AH evidence | Why absent or blocked | Hypothetical PM economics |
+|--------|-------------|-----------------------|---------------------------|
+| AMOD | Late real BUILD, six qualifying scans | Detected; Day −24.5%; late book frozen | Final $2.02→$2.27 **+12.4%**; original $1.37→peak **+65.7%** |
+| NIVF | 16:40 high $0.1281/+26.8%, 3.131M shares / 2,328 trades | Deliberate **$0.50 floor**; Day −39.9% independently blocks entry | 16:40 VWAP $0.119944→$0.17 **+41.7%**; below >100% gap bar |
+| QTEX | First >10% AH at **19:10**, close $0.8677/+10.6%, 125,316 shares / 442 trades | Signal crossed after final scheduled scan | $0.8677→$0.9793 **+12.9%**; modest sub-100% tail observation |
+| SMX | 18:10 $6.79/+10.2% on **100 shares / 1 trade**; 19:45 ramp only 8,175/228 | No in-window accumulating AH signal; thin tail ramp | $7.60 tail close→$10.43 **+37.2%**, next PM close $7.4646 below entry; transient wick |
+| SGRX | Entire AH **23,245 shares / 75 trades**, high only +6.4% | **PM-only**, no AH >10% signal | Real PM $2.08 wick, next close $1.71; no AH scanner miss |
+| SDEV | Late 18:10 build; final $4.12/+12.6% AH | Detected once; frozen 15:59:51 quote also blocks | $4.12→$4.82 **+17.0%**; not a sole two-scan-gate or stale-book test |
+
+**No missed capturable >100% AH→PM winner is verified at this cutoff.** NIVF is a genuine universe omission; the sub-100% case does not add a winner-baseline miss. Timing and PM-only observations do not count against detection.
+
+### AH Mover Follow-Through
+
+Every ticker with >10% AH in two or more evening snapshots is included. Current prices below are the latest **verified historical SIP closes at 04:10 ET**, not executable live quotes.
+
+| Ticker | AH peak | Peak time ET | AH trajectory | PM peak | Current PM | From AH peak | From Oct 1 close | Verdict |
+|--------|---------|--------------|---------------|---------|------------|--------------|------------------|---------|
+| AMOD | $2.0999 | 18:10 | Build→pullback→late Build; AH +10.1→16.8→20.4→14.5→32.5→72.6% | $2.27 | $2.11 | +0.5% | +80.3% | PM peak **exceeded AH by 8.1%**; real continuation below winner bar |
+| SORA | $3.64 | 16:05 | Opening spike→hold attempts→fade; +22.1→34.6→34.2→26.7→35.0→28.8→25.8% | $3.08 | $2.78 | −23.6% | +15.8% | PM peak **fell short**; AH was better; positive watch wick did not hold |
+| ELUT | $1.10 | 16:45 | Spike→fade; +20.0→17.5%, then absent and SIP faded | $0.8259 | $0.76 | −30.9% | −5.0% | PM peak **fell short**, never reclaimed $0.94/$0.96 watches; AH better |
+| WCT | $2.34 | 16:00 | Spike→fade; +35.3→25.8→7.8%, then below regular close | $1.50 | $1.3499 | −42.3% | −19.2% | PM peak **fell short**, opening skip validated; AH better |
+
+Single-scan SSM later rebuilt to **$2.63 at 19:55 ET**; PM $2.60 fell slightly short. Single-scan IPW's PM $1.25 stayed below its $1.4969 AH high. These observations do not turn scanner appearance counts into two-scan qualifiers.
+
+### Notes
+
+- **Coverage-failure tally, last 10 completed US sessions (Sep 18–Oct 1):** **Sep 18 0/7, Sep 22 2/7, Sep 25 0/7, Sep 29 3/7**. **Sep 21, 23, 24, 28, 30, Oct 1: 7/7**; Sep 23's 22:05 scan covers the 22:00 checkpoint once. No missing log in the window. **Four failures in ten sessions** require scheduler/bridge reliability investigation through the daily email. Nights without entry-window coverage are not charged as detection or selection misses. Baseline gaps **Sep 11, 18, 25** remain separate; a missing retrospective hides unknown winner outcomes even when a log exists.
+- **Dead-cat-override WATCH — AMOD:** Grade D; reported float 543K is unreliable after issuance. Original **$1.37 at 22:45 CEST→$2.27 +65.7%**; first eligible **$1.41 at 23:00→peak +61.0%**; renewed BUILD **$1.55 at 00:00→peak +46.5%**; final **$2.02 at 00:30→peak +12.4%**. Preserve all references as one nightly case, not four wins. The next PM close $2.2294 exceeded every reference. The late eligible book was stale, so the momentum result alone does not establish executable gate cost. Add this positive outcome to the named history: founding **BYAH +72%**, recent **BENF −0.6%, ACTU −9.6%, WHLR −2.6%, DKI −37.2%**. No all-time count was provided by the prior log, so none is invented. No CEILING-OVERRIDE WATCH was logged tonight.
+- **FIRST-BAR-SPIKE validation:** complete 16:00–20:00 SIP bars confirm **WCT $2.34 at 16:00** and **SORA $3.64 at 16:05** remained their AH highs. WCT (3.3M float, None), original **$2.26→$1.50 −33.6%** (later $2.10→peak −28.6%), next PM close $1.36: **faded, skip validated**; Day −79.4% and zero-ask book were independent blocks. SORA (4.9M, C), final **$3.02→$3.08 +2.0%**, original $2.93→peak +5.1%; peak-bar close **$2.88** and next close **$2.84** are below both references. **Flat/faded versus the watch, with a transient positive wick**, no sustained run; stale book and thinning AH participation co-blocked entry. Report the raw positive wick in email so it is not hidden by the flat verdict.
+- **SSM opening WATCH superseded:** opening high $2.49 at 16:05 was exceeded at **16:55 ($2.54, 1,109,331 shares / 7,629 trades)**, then **17:00 ($2.59, 1,210,308 / 7,233)**, and **19:55 ($2.63, 278,126 / 1,442)**. Historical watch **$2.44→PM $2.60 +6.6%**, peak-bar 221,677/1,942, next close $2.35 below entry: raw gain was transient. **Exclude SSM from first-bar gate run/fade counts**, regardless of the hypothetical. Carry prior **9 valid post-gate cases (2 ran/7 faded-flat)** plus WCT/SORA → **11 valid (2 ran/9 faded-flat)**. There are **13 flagged observations**, with **2 superseded cases (NCI, SSM)** excluded. **Three pre-gate entries, zero ran**, unchanged. No live gate is changed.
+- **Sub-3M fade sample remains 4/22 (18.2%)**. No new name isolates a two-scan fade-rule skip: AMOD ended with a late BUILD; SSM rebuilt to later highs; IPW had only one qualifying appearance and additional volume/book blocks. Record low-float controls outside that denominator: **IPW 1.2M, None**, AH $1.4969→PM $1.25, fell short; **(a) first scan $1.26→peak −0.8%; (b) PM-open VWAP $1.1290→peak +10.7%**, only 22,835 shares/113 trades, next close $1.14, not a demonstrated peak exit. **HTCR 614K, None**, AH $2.466→PM $2.03, fell short; **(a) $2.32→peak −12.5%; (b) VWAP $1.9450→peak +4.4%**, only 6,157/102, next close $1.92. HTCR was a thin single-scan late build, not a pure fade-rule test. Higher-float fade controls: **WCT 3.3M, SORA 4.9M, ELUT 35.3M**, all PM peaks below AH highs. No Grade A/B skipped fader was identified this cycle; prior Grade B TGE and Grade A ALGS negatives remain. The ≥80% exception trigger is not met.
+- **Price-floor exclusions: 8→9 observations across 5→6 nights; 0 confirmed >100%-and-holdable cases, 1 inherited pending.** Add **NIVF Oct 1→2**, October 1 close **$0.101**, `tradable=true`, reported float 932K. In-window **16:40** close **$0.1179/+16.7% AH**, high **$0.1281/+26.8%**, **3,131,293 shares / 2,328 trades**, VWAP $0.119944; adjacent bars 777K/687 and 1.356M/1,108 confirm a real signal. PM high **$0.17/+68.3%**, **17,472,713/18,608** in the peak bar; next close **$0.1472**, then $0.1556 on 11.78M shares at 04:10. The liquid plateau is real, but >100% is not reached. Hypothetical 16:40 VWAP→peak **+41.7%**. Broker quote is frozen at **16:00 ET**, bid **$0.0868/ask $0.1162 x100**, spread **25.3% of ask**; a tight live spread is unverified. The regular session fell **39.9%** after a recent severe crash. Verdict **uninvestable for this AH setup / live tight book unverified**, despite PM volume. This universe omission adds no eligible-winner baseline miss; the ≥3 >100% holdable names on ≥3 nights floor-change trigger remains unmet.
+- **Raw PM leader / PM-only tracking:** **AMOD is AH→PM continuation**, not a PM-only gapper. **SGRX** is a separate sub-100% PM-only observation: AH high +6.4% on only 23,245 shares/75 trades; October 2 04:00 high $2.08/+49.6% on 456,610/2,647, then closes $1.71 and $1.8394 on 420K and 515K shares. There is a liquid plateau below the opening wick, but the full classification window and current book are unverified at this pulse. `log/pm-open-scan.csv` remains authoritative: **60 holdable PM-only rows** by the specified `none/unknown` query; **no October 2 row yet**. The dedicated classification pulse is still pending its later window. Route the established cluster through Initiative 6; do not create a second hand-count or alter its CSV here.
+- **Late-tail tracking:** AMOD's defining surge was **18:10**, before the last scan, so no new biggest-mover true-tail case is added. Carry **2 true-tail observations (ORIS, GNS) / 1 legacy feed-lag tail case (BTCT)**. **QTEX** is a smaller, separately noted true-tail timing control: SIP first crossed +10% at **19:10**, after the last scan, with **125,316 shares/442 trades**, $0.8677 close, then PM $0.9793; **+12.9% hypothetical**, sub-100%, no verified tight book. **SMX** already crossed marginally at 18:10 on 100 shares/1 trade; its 19:45–19:55 ramp had only 5K–8K shares/157–228 trades per bar. It is not a clean accumulating-volume true-tail winner or an in-window feed-lag case. Neither observation advances the scheduling trigger.
+- **In-window feed-lag standing: 7 observations, unchanged.** No brand-new, in-universe name was found that never surfaced despite a real accumulating SIP surge during the scanned window. Detected AMOD/SCKT/IPW have delayed readings; they are not new never-detected cases. NIVF is a floor exclusion, SGRX is PM-only, and SMX's in-window tape is sparse. Carry the reached independent **whole-universe AH data-source verification** recommendation to the daily email; do not adjust scanner thresholds.
+- **Execution and selection tracker standings carried from Sep 30:** broker-block **2 SHPH cases**; stale-book-only **6 cases (4 profitable/2 negative controls)**: NUWE +82.4%, KUST +45.9%, CLRO +34.3%, XRTX −5.0%, INLF +36.1%, TGE −7.6%; illustrative $100 peak returns sum **+$186.10 before costs**, not filled P&L or verified executable cost. No-fillable-only **4**, float-only **1**, final-scan-only **2**, unchanged. AMOD also fails Day%, SDEV has one appearance, SORA has an opening-spike block, and HTCR/SCKT/IPW/ELUT fail other gates; none is a new case blocked solely by book, float, or final-scan timing. Frozen AH quotes persist into this morning; preserve the live-book gate and Juan's broker-test deferral while routing the feed limitation by email.
+- **Actual-entry trackers:** no new fills. Multi-session **1 entry, faded**; first-day **27 entries (9 ran/8 flat/10 faded)**, unchanged, **9/27 = 33.3% ran**. Fill-chase **1, never reclaimed**, unchanged. No PM-reclaim row is invented for a hypothetical watch. Reverse-split recency remains **4/5 this-week faded / 4/6 older continued**; no new entered name or verified fresh split driver qualifies. WCT's Sep 8 split and IPW's Aug 5 split are older background, not a newly verified cause. Carry the recency recommendation to its strategy owner by email.
+- **Extreme-runner outcome: 14→15 fades / 2 continues = 15/17 (88.2%) faded.** Add **SSM Oct 1→2**, using the **September 30 SIP close $1.12 for total entry extension**: AH high **$2.63/+134.8% at 19:55** on **278,126 shares/1,442 trades**; PM high **$2.60/+132.1% at 04:00** on **221,677/1,942**, next close $2.35. **AH was the slightly better peak exit (PM −1.1% from AH high)**; the near-match is not a large fade. From October 1's $2.21 regular close, these are only **+19.0% AH / +17.6% PM**, so this total-extension observation is not a >100% overnight winner. Keep both bases explicit. The ≥9 cases/≥85% fade partial-profit recommendation remains reached; route to the exit owner through email without changing exits here.
+- **SIP basis checks for tracked hypotheticals:** September 30→October 1 closes: **AMOD $1.55→$1.17; SORA $2.3009→$2.40; WCT $8.09→$1.67; SSM $1.12→$2.21; ELUT $0.79→$0.80; IPW $1.16→$1.1401; SCKT $0.4463→$0.54; SDEV $2.59→$3.66; HTCR $2.00→$1.925; UONEK $3.78→$3.64; NIVF $0.168→$0.101; QTEX $0.682→$0.7846; SMX $6.61→$6.16**. October 1 **Entry Total% uses September 30**, while October 2 **PM gap uses October 1**. Hypothetical entry→peak returns use the recorded entry itself. References: AMOD $2.02 **+30.3%**, SORA $3.02 **+31.3%**, WCT $2.26 **−72.1%**, SSM $2.44 **+117.9%**, ELUT $0.94 **+19.0%**, IPW $1.26 **+8.6%**, SCKT $0.60 **+34.4%** (scanner's rounded-price Total +35.2% is not used), SDEV $4.12 **+59.1%**, HTCR $2.32 **+16.0%**, UONEK final $3.84 **+1.6%**.
+
+### Daily Email Routing
+
+- Report **no real winner at the early pulse**, strongest genuine **AMOD +94.0%**, **7/7 scheduled scans**, **no fills**, and unchanged **72/82 detection / 36/79 selection** with **93 days tracked**. Highlight AMOD's detected late BUILD, Grade D PIPE, Day block, and the final +12.4% versus original +65.7% hypothetical references. The headline must retain the >100% bar.
+- Include **Sep 18 0/7, Sep 22 2/7, Sep 25 0/7, Sep 29 3/7** and the scheduler/bridge investigation; disclose separate baseline gaps **Sep 11, 18, 25**. These infra decisions are routed here for the daily email, with no questions or Telegram buttons in this pulse.
+- Report **UONEK faded**, not unassessed or a false positive based on scan absence; its Yahoo PM history was yesterday's session. Report **TARA unassessed in PM** because SIP has no bars. Include SSM's superseded watch, correct $2.21 PM basis, and SORA's **transient +2.0% final-watch wick** with the lower next close and independent execution blocks.
+- Carry **7 feed-lag observations** and the recommendation for independent whole-universe AH verification; **6 stale-book-only outcomes with mixed economics** and repeated frozen quotes, preserving the live-book gate and broker-test deferral. Broker/feed/infra decisions belong in email.
+- Carry the **60-row holdable PM-only cluster / Initiative 6** to its owning workstream. Today's biggest raw mover is AH continuation; SGRX's separate early PM-only observation awaits the dedicated classification window.
+- Route the **15/17 extreme total-extension fade** and split-recency recommendations to their strategy/exit owners. Report **11 valid first-bar cases (2 ran/9 faded-flat)** and **4/22 low-float fade cases** as evidence; no fade exception trigger is met. NIVF adds a price-floor observation but no >100% tight-spread holdable case or floor-change trigger.
+
+### Price Charts
+
+Excerpts from `python3 scripts/price-timeline.py AMOD SORA SMX`, captured around **04:22 ET**. The tool labels UTC timestamps as ET and calls actual AH bars OVN in parts of its output: **08:00 means 04:00 ET; 20:05 means 16:05 ET**. Its previous-close basis is September 30, not October 1's close for the PM gap, and the SMX $10.64 high is not SIP-confirmed. The corrected SIP tables above determine levels and percentages; these excerpts show price shape only.
+
+```text
+========================================================================
+ AMOD - 2-Day Price Timeline (5-min intervals)
+========================================================================
+Previous Close: $1.55
+2-Day Range: $1.12 - $2.27
+Current: $2.16 (+39.4% from prev close)
+Peak: $2.27 (+46.5%) at 10-02 08:00 ET
+
+Chart (oldest → newest):
+$   2.23 │
+         │
+         │
+         │
+         │                   █
+         │
+         │         █  █
+         │██████ ██ ██ ██████ █
+         │      █
+         │                     ██
+         │                       █████ ██████████  █ █  █ █ ██ █ ███
+$   1.12 │                            █          ██ █ ██ █ █  █ █   ██
+         └────────────────────────────────────────────────────────────
+
+========================================================================
+ SORA - 2-Day Price Timeline (5-min intervals)
+========================================================================
+Previous Close: $2.30
+2-Day Range: $2.20 - $3.64
+Current: $2.72 (+18.2% from prev close)
+Peak: $3.64 (+58.2%) at 10-01 20:05 ET
+
+Chart (oldest → newest):
+$   3.40 │         █
+         │
+         │       █  █        █   █
+         │        █  ██    █  ███ ██   █    █   █████████████
+         │             ████ █       ███ ████ ███             ██
+         │      █                                              █
+         │                                                      ███
+         │                                                         ██
+         │
+         │
+         │  ████
+$   2.20 │██
+         └───────────────────────────────────────────────────────────
+
+========================================================================
+ SMX - 2-Day Price Timeline (5-min intervals)
+========================================================================
+Previous Close: $6.61
+2-Day Range: $6.15 - $10.64
+Current: $7.24 (+9.5% from prev close)
+Peak: $10.64 (+60.9%) at 10-02 08:00 ET
+
+Chart (oldest → newest):
+$   8.53 │                                                           █
+         │
+         │
+         │
+         │
+         │                                                          █
+         │                                                    █
+         │
+         │ █████ █   █                                          ██ █
+         │█     █ ███ ██ ████                               ██ █  █
+         │              █     █  █      █████  █  █        █
+$   6.15 │                   █ ██ ██████     ██ ██ ████████
+         └────────────────────────────────────────────────────────────
+```
+
+**Multi-day tracking:** `WINNERS_TRACKING.md` has no Active Watch rows. Updated its October 2 status with the verified no-winner result; no previous winner requires a price refresh or Historical transfer in this pulse.

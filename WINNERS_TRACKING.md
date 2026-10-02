@@ -7,7 +7,7 @@ This file tracks all daily winners for multi-day follow-up analysis.
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
 
-No active watches as of October 1; no capturable >100% AH→PM winner was verified for the September 30 session at the early morning evaluation. RZAI reached a real SIP PM high of $53.29 (+143.6% from its $21.88 September 30 close), but its AH entry book was unverified and Alpaca returned no quote. GIPR's liquid +82.1% PM burst had no AH signal and remained below the winner bar. No winner was added. There are no prior Active Watch rows to refresh or move to Historical.
+No active watches as of October 2. The October 1 session produced **no real winner at the early morning evaluation**: independently discovered AMOD reached a SIP PM high of **$2.27 (+94.0% from its $1.17 October 1 close)** on **2,090,116 shares / 14,352 trades** at 04:00 ET. It was detected in six qualifying AH scans but skipped on Day −24.5%; the final $2.02 watch→PM peak was +12.4% hypothetical. NIVF's +68.3% and SMX's +69.3% SIP peaks were also below the >100% bar. SSM's apparent >100% PM figure used September 30's $1.12 close; the correct October 1 basis $2.21 makes its $2.60 peak **+17.6%**. No winner was added. SIP PM evidence extends through the 04:10 ET bar, captured at 10:27 CEST; later premarket remains unassessed. There are no prior Active Watch rows to refresh or move to Historical.
 
 ## Historical Winners (with multi-day outcome)
 
