@@ -114,6 +114,19 @@ If `chart.py` produced no charts for this cycle, omit the Charts section.
 Send as `zero@inboxkit.cc` via InboxKit (not from Juan's Gmail). Juan replies to
 these emails with feedback; the `check-email-replies` pulse reads those replies.
 
+Immediately before finalizing the HTML, read this session's provider, model ID,
+and reasoning level through the bash tool:
+
+```bash
+printf 'provider=%s\nmodel=%s\nreasoning=%s\n' \
+  "${PI_PROVIDER:-unavailable}" "${PI_MODEL:-unavailable}" "${PI_REASONING_LEVEL:-unavailable}"
+```
+
+Populate the `Email session` footer from these returned values and HTML-escape
+each value. Use the exact runtime IDs; if a value is missing, show `unavailable`.
+The footer identifies the session preparing and sending this email. Other
+completed trading work can have used other models.
+
 ```bash
 node scripts/send-email-inboxkit.js \
   --to juanibiapina@gmail.com \
@@ -171,6 +184,8 @@ AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;
 
 <h3 style="color: #555;">Key Takeaway</h3>
 <p style="background: #e3f2fd; padding: 10px; border-radius: 4px; border-left: 4px solid #1976d2;">[One sentence: the single most important thing from this cycle]</p>
+
+<p style="font-size: 12px; color: #666; margin-top: 20px;">Email session: [provider]/[model ID] &middot; reasoning: [reasoning level]</p>
 </div>'
 ```
 
