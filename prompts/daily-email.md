@@ -14,6 +14,9 @@ Read:
 - Latest completed `log/*/process-review.md` -- process issues and any needs-user-action items; label its date, since today's review may run after this email
 - `INITIATIVE_LOG.md` and `STRATEGY_ROADMAP.md` -- completed progress for every initiative since the previous successful daily email, including parallel work recorded under another initiative's heading
 - `FEEDBACK_LOG.md` -- new feedback and the changes or follow-up it caused
+- Jev classification/usage artifacts referenced by Initiative 7 in `INITIATIVE_LOG.md` and `STRATEGY_ROADMAP.md` -- latest completed results and model costs
+
+**Jev reporting (Juan's October 1 reply, captured October 2):** Every daily email must include a **Jev Results and Costs** section. Give the run date/model, classified tickers and labels or a concise outcome summary, calls/token usage, and the cost in its currency for the reporting window. Identify measured charges versus estimates and cite the artifact period; report cumulative cost only if recorded. If no run completed, say "Not run" or "Failed" with the reason/next deliverable. State zero calls and $0 only when verified; otherwise say usage/cost unavailable. Preserve any cost from failed attempts. An absent artifact must not imply zero cost. This section is required even before the first classifier delivery; `scanner-improvement` and `process-review` should check its presence and evidence.
 
 Resolve the initiative reporting window from the latest successful `log/*/daily-email.json` receipt (`status: sent`, ordered by `sent_at`). If the receipt is missing, locate the previous daily-email session and run `python3 scripts/pi-session-text.py /absolute/path/to/session.jsonl --role toolResult --contains 'Sent from zero@inboxkit.cc'`. Use the timestamp of a successful bash result with an InboxKit `status: sent` response. The reader accepts both string and array message content and missing optional fields; inferred DuckDB structs can fail on these logs. If no successful send time is available, state the window used and report the latest completed initiative entries with their dates. Include all initiatives that moved in that window, even when their work belongs to a different trading-cycle date. Group multiple steps for one initiative into one concise update: initiative number/name, completion date/time, concrete step, result, and next step. An unchanged rerun is monitoring; describe it accurately. If none moved, say so and name the next concrete deliverable. Briefly identify active work that is blocked or deferred and the dependency or next check; preserve Juan's broker-test deferral.
 
@@ -152,6 +155,9 @@ AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;
 <li><strong>Initiative [N] &mdash; [name], [completion date/time]</strong>: [completed step and concrete result]. Next: [next deliverable].</li>
 </ul>
 <p>[One update per initiative that moved, including parallel work. If none moved, say so and give the next concrete deliverable. Briefly list active blocked/deferred work and its dependency or next check.]</p>
+
+<h3 style="color: #555;">Jev Results and Costs</h3>
+<p>[Run date/model and stock classification results, or explicit not-run/failure status with the next deliverable. Reporting-window calls/token usage and measured cost or labeled estimate with currency; state unavailable when records are missing. Include costs from failed attempts.]</p>
 
 <h3 style="color: #555;">Feedback Acknowledged</h3>
 <!-- Juan asked (08-27) to see his feedback reflected back so he knows it landed.

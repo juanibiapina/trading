@@ -1,5 +1,17 @@
 # Initiative Log
 
+### 2026-10-02 — Initiative 4 Jev reporting; Initiative 7 classification handoff
+
+**Evaluated:** Juan's October 1 reply requests Jev stock classification, research into related projects and their classification targets, and Jev results/costs in every daily email (InboxKit message 177). The available `typesafe-ai` skill covers Jev; the live documentation index lists SEC-industry classification and feature-discovery cookbooks.
+
+**Step taken:** Added a required Jev Results and Costs section and artifact-reading instructions to `prompts/daily-email.md`. Routed the related-project comparison and first shadow classification delivery to Initiative 7, with the `research` and `typesafe-ai` skills, current API docs, dated inputs/results and usage/cost records.
+
+**Result:** The daily email prompt now reports classification results, call/token usage and measured or explicitly estimated costs; it must show not-run/failure status and unavailable costs when records are absent. `FEEDBACK_LOG.md` captures Juan's exact request. This capture pulse made no Jev model call.
+
+**Hypothesis / next step:** October 2 15:00 strategy-advance: deliver a sourced comparison of stock-classification projects, choose labels/inputs, and record the first shadow-run implementation step. The next daily email must include Jev Results and Costs even if implementation is pending; scanner-improvement/process-review should check the section and supporting artifacts.
+
+**Needs from Juan:** nothing new; he reports the TypeSafe API key is in the environment. Initiative 2's broker test remains deferred.
+
 ### 2026-10-01 18:00 — Initiative 7 liquid-universe census; Initiative 1/5 volume consumers
 
 **Evaluated:** The 15:00 next-step hypothesis **worked for both ready deliveries**: the eight-symbol data census completed with existing read access, and confirmation/HTML consumers display identical shared volume rows. The active pilot hypothesis still has **insufficient new data**: the completed October 1 PM tracker has no PM-only case, and its 21-name prospective cohort has zero fresh positive-size asks. The repeated pilot result is monitoring. Paper equity remains **$99,721.90 (-$278.10)** with no positions; the deadline-triggered pivot research remains warranted. Both named process-review handoffs were completed at 15:00; this run delivered their consumer follow-up.
