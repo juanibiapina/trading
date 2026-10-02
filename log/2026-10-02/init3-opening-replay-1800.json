@@ -1,0 +1,65 @@
+{
+  "ah_date": "2026-10-01",
+  "pm_date": "2026-10-02",
+  "requested_utc": "2026-10-02T16:03:13.888419+00:00",
+  "received_utc": "2026-10-02T16:03:37.684061+00:00",
+  "ah_window_complete": true,
+  "pm_window_complete": true,
+  "command": [
+    "node",
+    "scripts/ah-5m-confirmation-replay.js",
+    "WCT:2026-10-01:opening-fade",
+    "SORA:2026-10-01:opening-fade",
+    "AMOD:2026-10-01:rebuild",
+    "ELUT:2026-10-01:fade",
+    "SDEV:2026-10-01:late-build",
+    "SSM:2026-10-01:rebuild",
+    "SCKT:2026-10-01:fade",
+    "IPW:2026-10-01:fade",
+    "UONEK:2026-10-01:thin",
+    "HTCR:2026-10-01:thin",
+    "TARA:2026-10-01:thin",
+    "QTEX:2026-10-01:tail",
+    "SMX:2026-10-01:thin"
+  ],
+  "cases": [
+    "2026-10-01  WCT    opening-fade          reject: no local-volume new-high ignition",
+    "2026-10-01  SORA   opening-fade          reject: no local-volume new-high ignition",
+    "2026-10-01  AMOD   rebuild               16:15 1383.7x 952k       reject                              reject",
+    "2026-10-01  ELUT   fade                  16:45 1528.0x 576k       reject                              reject",
+    "2026-10-01  SDEV   late-build            18:10 5.9x 303k          reject                              reject",
+    "2026-10-01  SSM    rebuild               19:55 6.1x 278k          reject                              reject",
+    "2026-10-01  SCKT   fade                  16:15 4.9x 2503k         reject                              reject",
+    "2026-10-01  IPW    fade                  17:15 148.8x 248k        reject                              17:30 $1.40 open -18.6% / hi -10.7% | grid $1.40 open -18.6%",
+    "2026-10-01  UONEK  thin                  reject: no local-volume new-high ignition",
+    "2026-10-01  HTCR   thin                  17:55 37.2x 21k          reject                              reject",
+    "2026-10-01  TARA   thin                  ERROR only 2 AH bars",
+    "2026-10-01  QTEX   tail                  19:10 10.6x 125k         reject                              reject",
+    "2026-10-01  SMX    thin                  18:45 3.2x 2k            reject                              reject"
+  ],
+  "raw_stdout": "# AH 5-minute second/third-bar confirmation replay (LOG-ONLY)\n# ignition: close >= +10%, green new high, >=20 trades, local volume >=2x; hold >=80%\ndate        sym    label                  ignition                 second-bar result                  third-bar result\n2026-10-01  WCT    opening-fade          reject: no local-volume new-high ignition\n2026-10-01  SORA   opening-fade          reject: no local-volume new-high ignition\n2026-10-01  AMOD   rebuild               16:15 1383.7x 952k       reject                              reject                             \n2026-10-01  ELUT   fade                  16:45 1528.0x 576k       reject                              reject                             \n2026-10-01  SDEV   late-build            18:10 5.9x 303k          reject                              reject                             \n2026-10-01  SSM    rebuild               19:55 6.1x 278k          reject                              reject                             \n2026-10-01  SCKT   fade                  16:15 4.9x 2503k         reject                              reject                             \n2026-10-01  IPW    fade                  17:15 148.8x 248k        reject                              17:30 $1.40 open -18.6% / hi -10.7% | grid $1.40 open -18.6%\n2026-10-01  UONEK  thin                  reject: no local-volume new-high ignition\n2026-10-01  HTCR   thin                  17:55 37.2x 21k          reject                              reject                             \n2026-10-01  TARA   thin                  ERROR only 2 AH bars\n2026-10-01  QTEX   tail                  19:10 10.6x 125k         reject                              reject                             \n2026-10-01  SMX    thin                  18:45 3.2x 2k            reject                              reject                             \n\n# 2bar: admitted 0/13; winners 0/3; fade false-positives 0/6\n  PM-open mean NaN%; PM-high ceiling mean NaN%; entry-price edge vs current legal grid mean NaN%\n\n# 3bar: admitted 1/13; winners 0/3; fade false-positives 1/6\n  PM-open mean -18.6%; PM-high ceiling mean -10.7%; entry-price edge vs current legal grid mean +0.0%\n",
+  "comparison_1500_cases": [
+    "2026-10-01  WCT    opening-fade          reject: no local-volume new-high ignition",
+    "2026-10-01  SORA   opening-fade          reject: no local-volume new-high ignition",
+    "2026-10-01  AMOD   rebuild               16:15 1383.7x 952k       reject                              reject",
+    "2026-10-01  ELUT   fade                  16:45 1528.0x 576k       reject                              reject",
+    "2026-10-01  SDEV   late-build            18:10 5.9x 303k          reject                              reject",
+    "2026-10-01  SSM    rebuild               19:55 6.1x 278k          reject                              reject",
+    "2026-10-01  SCKT   fade                  16:15 4.9x 2503k         reject                              reject",
+    "2026-10-01  IPW    fade                  17:15 148.8x 248k        reject                              17:30 $1.40 open -18.6% / hi -10.7% | grid $1.40 open -18.6%",
+    "2026-10-01  UONEK  thin                  reject: no local-volume new-high ignition",
+    "2026-10-01  HTCR   thin                  17:55 37.2x 21k          reject                              reject",
+    "2026-10-01  TARA   thin                  ERROR only 2 AH bars",
+    "2026-10-01  QTEX   tail                  19:10 10.6x 125k         reject                              reject",
+    "2026-10-01  SMX    thin                  18:45 3.2x 2k            reject                              reject"
+  ],
+  "limits": [
+    "Selected retrospective cohort; no whole-universe recall or fills.",
+    "CLI fixture denominators excluded.",
+    "First ignition only; later rebuilds not tested.",
+    "Gate uses active bars and rounded prices; data arrival at modeled entry not reconstructed."
+  ],
+  "admitted_cases": [
+    "2026-10-01  IPW    fade                  17:15 148.8x 248k        reject                              17:30 $1.40 open -18.6% / hi -10.7% | grid $1.40 open -18.6%"
+  ]
+}

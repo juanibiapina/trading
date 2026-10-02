@@ -1,0 +1,93 @@
+{
+  "version": "init7-comparison-v1",
+  "frozen_on": "2026-10-02",
+  "stage": "research_and_log_only_instrumentation",
+  "hypothesis": "A liquid regular-session strategy produces more net dollars per session than the current rare extended-hours admissions; a bounded Jev event veto adds value over the same numerical selector after all costs.",
+  "basket": ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA", "QQQ"],
+  "tradable_candidates": ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA"],
+  "market_comparator": "QQQ",
+  "time_zone": "America/New_York",
+  "observation_times_et": ["10:30", "11:30", "12:30", "13:30", "14:30", "15:30"],
+  "observation_deadline_seconds": 120,
+  "feature_feed": "sip",
+  "bar_timeframe_minutes": 5,
+  "request_buffer_minutes": 16,
+  "lookback_minutes": 30,
+  "required_consecutive_closes": 7,
+  "numerical_control": {
+    "id": "N1",
+    "score": "stock_last_close / stock_close_30m_earlier - QQQ_last_close / QQQ_close_30m_earlier",
+    "selection": "Highest score among all seven fixed candidates; exact ties use ascending ticker order.",
+    "eligibility": "Stock return > 0 and score > 0; otherwise cash. Missing any required basket close makes both arms cash. Do not substitute another ticker after a selected ticker fails execution eligibility.",
+    "model_calls": 0
+  },
+  "bounded_agent": {
+    "id": "A1",
+    "input": "The N1 candidate and its immutable current primary-source event text; no outcome prices, expected labels, retrieval tools or return predictions.",
+    "classifier_spec": "stock-catalyst-v1",
+    "model": "jev-1.13.0",
+    "max_calls_per_observation": 1,
+    "max_calls_per_full_session": 6,
+    "allowed_catalyst_labels": ["earnings_guidance", "regulatory_clinical", "commercial_operation"],
+    "minimum_choice_confidence": 0.8,
+    "maximum_dilutive_financing_probability_exclusive": 0.5,
+    "selection": "Retain exactly N1's ticker only when the choice is allowed, confidence >= minimum, financing probability < maximum, and every source and timing check passes; otherwise cash.",
+    "missing_source_or_failed_call": "Cash with a recorded reason. No retry, replacement ticker or alternative model. Known usage is charged even when the decision is cash; unknown usage remains unknown.",
+    "call_budget_usd": 0.05,
+    "budget_policy": "Record actual tokens, latency and measured charge or a labeled pricing estimate; a budget breach pauses later calls and remains in the trial record. The cap is a design budget, not a measured cost."
+  },
+  "primary_source_protocol": {
+    "feed": "SEC company submissions, newest accepted 8-K within the preceding 24 hours, plus its EX-99 exhibits",
+    "max_age_hours": 24,
+    "issuer_mapping": "Freeze ticker-to-CIK mapping before the first observation; archive the mapping response and hash.",
+    "capture": "Save exact response bytes for submissions JSON, filing document index, 8-K and every EX-99 document in a new observation directory; save URL, request time, receipt time, HTTP status, content type, acceptance timestamp with explicit timezone, accession, byte length and SHA-256. Archive failed requests and successful empty searches.",
+    "causality": "Every included document must be accepted and received by the decision cutoff. Cache reuse carries its original receipt time and hash. Later retrieval of an earlier published document is ineligible for an earlier decision.",
+    "text": "Deterministically strip markup, scripts and styles; archive the exact extracted text, parser version and its hash. Do not silently truncate or summarize. If the complete request exceeds the classifier's 20KB limit, record source-too-large and choose cash.",
+    "immutability": "Create directories exclusively; refuse overwrites; persist inputs and attempted-call record before inference; persist completed decision before collecting outcomes. Every observation includes the design, selector and classifier hashes.",
+    "failure": "A blocked SEC request, ambiguous issuer, missing timezone, missing exhibit, future source or extraction failure makes A1 cash. This feed may miss issuer news released before a filing; record source availability separately from model accuracy."
+  },
+  "future_pilot_capital": {
+    "initial_usd_per_arm": 100,
+    "maximum_equity_fraction_per_position": 0.95,
+    "positions_per_arm": 1,
+    "direction": "long_or_cash",
+    "quantity": "Floor allocation / assumed buy price to 9 decimal places; fractional eligibility must be checked. No leverage or shorting. Compound each arm's own net equity only within a future pilot. These are research allocations, not live sizing changes."
+  },
+  "future_pilot_execution": {
+    "quotes": "Fresh positive-size two-sided IEX book; quote must be received after the common decision is persisted. Use the same resulting quote for both arms if A1 retains N1; an earlier quote is only a book diagnostic.",
+    "quote_max_age_seconds": 60,
+    "asset_checks": "active, tradable and fractionable at observation; desired shares <= displayed bid and ask size. IEX is a single venue and does not establish NBBO or a fill.",
+    "holding": "At each next hourly observation close the existing position before any new entry, even when the selected ticker repeats; final flatten capture at 15:55 ET. Cash comparator stays cash; QQQ comparator enters at the first valid common entry observation and exits at final flatten, with the same allocation and costs.",
+    "final_flatten_et": "15:55",
+    "exit_quote_deadline_seconds": 60,
+    "missing_exit": "Unresolved exposure and incomplete session. Pause new modeled entries; preserve all rows and failures. Do not silently use a later regular or extended-hours price or assume a fill.",
+    "execution_claim": "Quote-based modeled fills only. Actual paper execution is a later, separately reviewed step."
+  },
+  "cost_accounting": {
+    "crossing": "Buy at archived ask; sell at archived bid; do not subtract the spread twice.",
+    "base_slippage_bps_per_side": 5,
+    "stress_slippage_bps_per_side": 25,
+    "fee_bps_per_side_assumed": 1,
+    "cost_status": "Slippage and fee values are frozen assumptions, not measured fills or bills; report both scenarios. Measured model charges override estimates; missing model usage or unresolved data costs makes total net cost unknown.",
+    "operating": "Record every Jev call including vetoes/failures, tokens, estimated and billed cost, network/runtime duration and added data charges. Record setup/research agent cost separately. Charge required shared capture costs to each standalone strategy; charge incremental Jev costs only to A1.",
+    "cash_yield_assumed": 0
+  },
+  "evaluation": {
+    "instrumentation_first": "Five future full regular sessions of source/feature/decision capture; no portfolios, orders or performance pilot while Initiative 6 occupies the sole pilot slot.",
+    "future_pilot_gate": "Release of the sole pilot slot and verified causal captures. Freeze an exchange-calendar list of the next 20 full sessions before the first modeled entry. Any live session/universe adoption goes to Juan's daily email.",
+    "pilot_full_sessions": 20,
+    "include": "Every predeclared session and observation, including cash, missing data, vetoes and failed calls. Half-days are excluded before outcomes. No extension to obtain a favorable result.",
+    "primary_metrics": ["modeled net USD per session", "net equity growth over the fixed window", "paired A1 minus N1 USD per initial $100", "N1 and A1 minus cash and QQQ", "opportunities and completed round trips per session"],
+    "secondary_metrics": ["maximum drawdown", "capital-hours", "quote and source coverage", "source rejection and label distributions", "tokens, latency and total operating cost"],
+    "uncertainty": "Bootstrap 20 paired daily observations with seed 7 and 10000 draws; report the 95% interval as a descriptive small-sample estimate, not proof of stationarity.",
+    "promotion_proposal_gate": "Positive total net and positive lower paired interval against the numerical control, cash and QQQ under both frozen cost scenarios; >=95% scheduled capture coverage, all exits resolved, and bounded complete operating costs. Failure supports rejection or another separately frozen variant, never automatic adoption.",
+    "current_strategy_comparator": "Report actual AH-to-PM account dollars and deployed capital over the same calendar window separately; different capital and holding hours prevent treating its raw account percentage as an equal-exposure benchmark."
+  },
+  "trial_register": [
+    {"id": "N1", "status": "frozen_untried", "description": "Positive 30-minute relative-strength numerical control"},
+    {"id": "A1", "status": "frozen_untried", "description": "N1 candidate with the bounded Jev primary-event veto"},
+    {"id": "CASH", "status": "comparator", "description": "Same initial capital, zero assumed yield"},
+    {"id": "QQQ", "status": "comparator", "description": "Same initial capital, common first-entry and final-flatten window"}
+  ],
+  "amendments": "Record every new threshold, model, source feed, selector or execution variant before future use; preserve earlier artifacts and include abandoned/failed variants. The October 1 census and October 2 classifier controls are development evidence excluded from prospective performance."
+}
