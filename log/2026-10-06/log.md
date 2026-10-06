@@ -99,6 +99,27 @@ No candidates found.
 
 **Daily email:** No item from this scan requires Juan's input.
 
+## Scan 22:05 CEST (4:05 PM ET)
+
+**Decision:** Observe — no candidates found. No paper orders submitted; entries begin at the 23:00 CEST scan (17:00 ET).
+
+`python3 scripts/scan.py --all` ran at 16:05:15 ET (22:05:15 CEST / 20:05:15 UTC) in the AFTERHOURS session and returned 0 hits. The US trading date is 2026-10-06.
+
+No candidates found.
+
+```text
+  Supplementary AH-change-only (>15%, not in volume pass): none
+  AH >10% at this snapshot (unrounded): none
+```
+
+### Evaluation notes
+
+**AH appearance count:** This is tonight's second AH scan, and neither AH scan has a scanner-confirmed >10% AH appearance. No candidate requires catalyst research, SIP verification, spike-bar, CONFIRM-3, volume-context, or book-check instrumentation at this snapshot.
+
+**Carry forward:** Keep all 28 names from the 21:30 watchlist in tonight's pipeline, including the KAPA dead-cat guard (Day -23.2%) and the OLOX day-2 multi-session tag. EVOL, MHUAF, VNPKF, WTLLF, NWINF, and KHDHF remain untradable (carried). Five minutes into AH, the scanner still returned no price or volume evidence for the watchlist, so absence does not establish an AH fade.
+
+**Daily email:** No item from this scan requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
