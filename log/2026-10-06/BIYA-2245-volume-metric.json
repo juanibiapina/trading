@@ -1,0 +1,98 @@
+{
+  "metric_version": "sip-ah-volume-v1",
+  "symbol": "BIYA",
+  "date": "2026-10-06",
+  "prior_date": "2026-10-05",
+  "as_of_utc": "2026-10-06T20:45:20+00:00",
+  "source_observed_utc": "2026-10-06T20:46:40.857794Z",
+  "prior_observed_slots": 18,
+  "prior_expected_slots": 48,
+  "prior_complete": false,
+  "prior_observed_peak_shares": 3094,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-06T20:00:00+00:00",
+      "bar_end_utc": "2026-10-06T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 1095,
+      "trades": 4,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:05:00+00:00",
+      "bar_end_utc": "2026-10-06T20:10:00+00:00",
+      "bar_et": "16:05",
+      "shares": 285556,
+      "trades": 1638,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:10:00+00:00",
+      "bar_end_utc": "2026-10-06T20:15:00+00:00",
+      "bar_et": "16:10",
+      "shares": 1072394,
+      "trades": 6193,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:15:00+00:00",
+      "bar_end_utc": "2026-10-06T20:20:00+00:00",
+      "bar_et": "16:15",
+      "shares": 1596650,
+      "trades": 9966,
+      "baseline_shares": 285556,
+      "local_ratio": 5.591372620431719,
+      "local_status": "ok",
+      "local_ge_10": false,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:20:00+00:00",
+      "bar_end_utc": "2026-10-06T20:25:00+00:00",
+      "bar_et": "16:20",
+      "shares": 550815,
+      "trades": 3532,
+      "baseline_shares": 1072394,
+      "local_ratio": 0.513631184061082,
+      "local_status": "ok",
+      "local_ge_10": false,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:25:00+00:00",
+      "bar_end_utc": "2026-10-06T20:30:00+00:00",
+      "bar_et": "16:25",
+      "shares": 307657,
+      "trades": 2003,
+      "baseline_shares": 1072394,
+      "local_ratio": 0.286888028094152,
+      "local_status": "ok",
+      "local_ge_10": false,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:30:00+00:00",
+      "bar_end_utc": "2026-10-06T20:35:00+00:00",
+      "bar_et": "16:30",
+      "shares": 452655,
+      "trades": 2671,
+      "baseline_shares": 550815,
+      "local_ratio": 0.8217913455515917,
+      "local_status": "ok",
+      "local_ge_10": false,
+      "prior_peak_ratio": null
+    }
+  ]
+}

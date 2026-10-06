@@ -1,0 +1,74 @@
+{
+  "metric_version": "sip-ah-volume-v1",
+  "symbol": "LHSW",
+  "date": "2026-10-06",
+  "prior_date": "2026-10-05",
+  "as_of_utc": "2026-10-06T20:45:20+00:00",
+  "source_observed_utc": "2026-10-06T20:46:42.735155Z",
+  "prior_observed_slots": 44,
+  "prior_expected_slots": 48,
+  "prior_complete": false,
+  "prior_observed_peak_shares": 519502,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-06T20:00:00+00:00",
+      "bar_end_utc": "2026-10-06T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 11339,
+      "trades": 3,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:15:00+00:00",
+      "bar_end_utc": "2026-10-06T20:20:00+00:00",
+      "bar_et": "16:15",
+      "shares": 60835,
+      "trades": 187,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "missing-baseline",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:20:00+00:00",
+      "bar_end_utc": "2026-10-06T20:25:00+00:00",
+      "bar_et": "16:20",
+      "shares": 118219,
+      "trades": 296,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "missing-baseline",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:25:00+00:00",
+      "bar_end_utc": "2026-10-06T20:30:00+00:00",
+      "bar_et": "16:25",
+      "shares": 399935,
+      "trades": 1453,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "missing-baseline",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:30:00+00:00",
+      "bar_end_utc": "2026-10-06T20:35:00+00:00",
+      "bar_et": "16:30",
+      "shares": 373669,
+      "trades": 1233,
+      "baseline_shares": 118219,
+      "local_ratio": 3.1608201727302716,
+      "local_status": "ok",
+      "local_ge_10": false,
+      "prior_peak_ratio": null
+    }
+  ]
+}
