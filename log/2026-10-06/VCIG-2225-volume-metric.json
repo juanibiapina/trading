@@ -1,0 +1,50 @@
+{
+  "metric_version": "sip-ah-volume-v1",
+  "symbol": "VCIG",
+  "date": "2026-10-06",
+  "prior_date": "2026-10-05",
+  "as_of_utc": "2026-10-06T20:25:29+00:00",
+  "source_observed_utc": "2026-10-06T20:26:41.230217Z",
+  "prior_observed_slots": 41,
+  "prior_expected_slots": 48,
+  "prior_complete": false,
+  "prior_observed_peak_shares": 10916,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-06T20:00:00+00:00",
+      "bar_end_utc": "2026-10-06T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 3344455,
+      "trades": 15386,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:05:00+00:00",
+      "bar_end_utc": "2026-10-06T20:10:00+00:00",
+      "bar_et": "16:05",
+      "shares": 3445449,
+      "trades": 17205,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:10:00+00:00",
+      "bar_end_utc": "2026-10-06T20:15:00+00:00",
+      "bar_et": "16:10",
+      "shares": 2459351,
+      "trades": 12500,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    }
+  ]
+}

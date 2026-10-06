@@ -1,0 +1,62 @@
+{
+  "metric_version": "sip-ah-volume-v1",
+  "symbol": "SXTC",
+  "date": "2026-10-06",
+  "prior_date": "2026-10-05",
+  "as_of_utc": "2026-10-06T20:30:14+00:00",
+  "source_observed_utc": "2026-10-06T20:32:16.010125Z",
+  "prior_observed_slots": 10,
+  "prior_expected_slots": 48,
+  "prior_complete": false,
+  "prior_observed_peak_shares": 789,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-06T20:00:00+00:00",
+      "bar_end_utc": "2026-10-06T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 75597,
+      "trades": 478,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:05:00+00:00",
+      "bar_end_utc": "2026-10-06T20:10:00+00:00",
+      "bar_et": "16:05",
+      "shares": 683755,
+      "trades": 4488,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:10:00+00:00",
+      "bar_end_utc": "2026-10-06T20:15:00+00:00",
+      "bar_et": "16:10",
+      "shares": 212492,
+      "trades": 1599,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:15:00+00:00",
+      "bar_end_utc": "2026-10-06T20:20:00+00:00",
+      "bar_et": "16:15",
+      "shares": 103774,
+      "trades": 788,
+      "baseline_shares": 212492,
+      "local_ratio": 0.4883666208610207,
+      "local_status": "ok",
+      "local_ge_10": false,
+      "prior_peak_ratio": null
+    }
+  ]
+}
