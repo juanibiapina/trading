@@ -1,0 +1,1123 @@
+{
+  "version": "init7-sec-archive-v1",
+  "parser": "init7-sec-text-v1",
+  "design_sha256": "df00c3bc9dd86117191ab86b838589e2dfdd5231ae6f1c62861b2e484915dc98",
+  "mapping_sha256": "7afbd3761b28af1237b625729fa68e2c2631f7f00429d66a05e9beec1826e6e7",
+  "window_et": [
+    "2026-07-06",
+    "2026-10-05"
+  ],
+  "weekday_observations_per_ticker": 396,
+  "limit": "Weekdays include exchange holidays; filings are fetched after the fact, so this measures source frequency and size, not causal receipt.",
+  "tickers": {
+    "AAPL": {
+      "filings": [
+        {
+          "accession": "0000320193-26-000018",
+          "items": "2.02,9.01",
+          "acceptance_utc": "2026-07-30T20:30:28Z",
+          "acceptance_header_et": "20260730163028",
+          "json_minus_header_seconds": 14400.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "959686196224d0833eb4c609f8ddd26746991da92b21d18289b482350c883c85",
+              "text_chars": 3453
+            },
+            {
+              "type": "EX-99.1",
+              "sha256": "a54900b5a205f13f9ee52e1cfa6ba3051c0ce4b5fe3d4132a7d55f5c0aaad77a",
+              "text_chars": 10446
+            }
+          ],
+          "jev_request_bytes": 17138,
+          "fits_20kb": true
+        }
+      ],
+      "observations_with_8k": 6,
+      "observations_with_fitting_8k": 6
+    },
+    "MSFT": {
+      "filings": [
+        {
+          "accession": "0001193125-26-380280",
+          "items": "7.01,9.01",
+          "acceptance_utc": "2026-09-02T20:30:24Z",
+          "acceptance_header_et": "20260902163024",
+          "json_minus_header_seconds": 0.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "c9c3afa76022067abfd9cae4dd99dabf8af1094e29deac387a2a36dcffd6f42e",
+              "text_chars": 3815
+            },
+            {
+              "type": "EX-99.1",
+              "sha256": "3bedbe9a0311ae2c3cb43b42e35d157c878deb23cdc72e3ca0faf64d0d2672f8",
+              "text_chars": 24954
+            }
+          ],
+          "jev_request_bytes": 31863,
+          "fits_20kb": false
+        },
+        {
+          "accession": "0001193125-26-323632",
+          "items": "2.02,9.01",
+          "acceptance_utc": "2026-07-29T20:04:53Z",
+          "acceptance_header_et": "20260729160453",
+          "json_minus_header_seconds": 0.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "09cf8f082764d329688acc701d6d1af724c6ff7720e3220eb9ac9640cbd8b4bd",
+              "text_chars": 3244
+            },
+            {
+              "type": "EX-99.1",
+              "sha256": "b88ea1fe8d81d4eb7891f7956bfd8941e6d745fcef0c85dc339828e417be8139",
+              "text_chars": 23143
+            }
+          ],
+          "jev_request_bytes": 30387,
+          "fits_20kb": false
+        }
+      ],
+      "observations_with_8k": 12,
+      "observations_with_fitting_8k": 0
+    },
+    "NVDA": {
+      "filings": [
+        {
+          "accession": "0001045810-26-000078",
+          "items": "8.01",
+          "acceptance_utc": "2026-09-03T12:03:56Z",
+          "acceptance_header_et": "20260903080356",
+          "json_minus_header_seconds": 0.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "18b88a08613e58f8bdf3495536530267e8a7fa4cbb3262b8522aecbb247f6619",
+              "text_chars": 8005
+            }
+          ],
+          "jev_request_bytes": 10721,
+          "fits_20kb": true
+        },
+        {
+          "accession": "0001045810-26-000073",
+          "items": "2.02,9.01",
+          "acceptance_utc": "2026-08-26T20:21:19Z",
+          "acceptance_header_et": "20260826162119",
+          "json_minus_header_seconds": 0.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "4b217854472b229de44a565e36a7e22472fc55fb26cf7bffdfe73c45b4f5950a",
+              "text_chars": 3915
+            },
+            {
+              "type": "EX-99.1",
+              "sha256": "1dea0c28492879d6d8aabf4af664d8c8a7aafa37267d69a86d6bef6f6b283065",
+              "text_chars": 22303
+            },
+            {
+              "type": "EX-99.2",
+              "sha256": "a6df4d790936eee65aca922d80823f3d632bc729be60d532be4b9e33862afbf3",
+              "text_chars": 19710
+            }
+          ],
+          "jev_request_bytes": 49855,
+          "fits_20kb": false
+        },
+        {
+          "accession": "0001045810-26-000069",
+          "items": "1.01,2.03,7.01",
+          "acceptance_utc": "2026-08-17T12:41:33Z",
+          "acceptance_header_et": "20260817084133",
+          "json_minus_header_seconds": 0.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "4828438a604deb9e31fe93b715758e5432fe167ccee57487c0e5d6617f1b695c",
+              "text_chars": 9421
+            },
+            {
+              "type": "EX-99.1",
+              "sha256": "086a0f6b898a17309b820dc75a88a7549768f4f3f8eedc1a8ac7ed710d1879db",
+              "text_chars": 9842
+            }
+          ],
+          "jev_request_bytes": 22427,
+          "fits_20kb": false
+        }
+      ],
+      "observations_with_8k": 18,
+      "observations_with_fitting_8k": 6
+    },
+    "AMZN": {
+      "filings": [
+        {
+          "accession": "0001104659-26-107526",
+          "items": "8.01,9.01",
+          "acceptance_utc": "2026-09-14T20:45:41Z",
+          "acceptance_header_et": "20260914164541",
+          "json_minus_header_seconds": 14400.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "22e2f37cf82863739ccfd2999d5dac12ba51e613dca4c7bdcbaca3e27b706ff0",
+              "text_chars": 5985
+            }
+          ],
+          "jev_request_bytes": 8854,
+          "fits_20kb": true
+        },
+        {
+          "accession": "0001018724-26-000036",
+          "items": "5.02",
+          "acceptance_utc": "2026-09-09T20:28:21Z",
+          "acceptance_header_et": "20260909162821",
+          "json_minus_header_seconds": 14400.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "cfe5431c37dd0aa74677a5e54901b6d8d6ddf618403c98e4bdde58da99bd1369",
+              "text_chars": 4976
+            }
+          ],
+          "jev_request_bytes": 7685,
+          "fits_20kb": true
+        },
+        {
+          "accession": "0001018724-26-000024",
+          "items": "2.02,9.01",
+          "acceptance_utc": "2026-07-30T20:06:23Z",
+          "acceptance_header_et": "20260730160623",
+          "json_minus_header_seconds": 14400.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "df0c6fdd338a11bf7b586a199739251e6614ea608cc28279cffeac4fbc3fa8a7",
+              "text_chars": 3925
+            },
+            {
+              "type": "EX-99.1",
+              "sha256": "abdd58b906e014d3391224d0147f2f9d3efba183261604af404711f34f461914",
+              "text_chars": 37743
+            },
+            {
+              "type": "EX-99.2",
+              "sha256": "00b753a794c4bd447df8531ad8c67b28032e5bc7e53d0cb4b8f6f17d018e712e",
+              "text_chars": 2320
+            }
+          ],
+          "jev_request_bytes": 47871,
+          "fits_20kb": false
+        },
+        {
+          "accession": "0001104659-26-082293",
+          "items": "8.01,9.01",
+          "acceptance_utc": "2026-07-09T20:46:08Z",
+          "acceptance_header_et": "20260709164608",
+          "json_minus_header_seconds": 14400.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "dd54890f77c85b7ac9db0ec03709b255fd8c35d3682af08f43959f707b5f0959",
+              "text_chars": 7086
+            }
+          ],
+          "jev_request_bytes": 9979,
+          "fits_20kb": true
+        }
+      ],
+      "observations_with_8k": 24,
+      "observations_with_fitting_8k": 18
+    },
+    "GOOGL": {
+      "filings": [
+        {
+          "accession": "0001193125-26-342390",
+          "items": "8.01,9.01",
+          "acceptance_utc": "2026-08-10T20:10:48Z",
+          "acceptance_header_et": "20260810161048",
+          "json_minus_header_seconds": 0.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "79a97625848277d8410199af52daeea24222fd9f2ed059c25caac723845a3ca1",
+              "text_chars": 7098
+            }
+          ],
+          "jev_request_bytes": 9972,
+          "fits_20kb": true
+        },
+        {
+          "accession": "0001652044-26-000066",
+          "items": "2.02,9.01",
+          "acceptance_utc": "2026-07-22T20:01:36Z",
+          "acceptance_header_et": "20260722160136",
+          "json_minus_header_seconds": 0.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "fa8fe73a01c2a073962a1d7c94e64e9728c336df2624781f691ed6511d44f7c0",
+              "text_chars": 5496
+            },
+            {
+              "type": "EX-99.1",
+              "sha256": "8f8fdcd57d70eb8428c397bb885a5435e4ce35f9b803e6b5d578feeb5115d988",
+              "text_chars": 24781
+            }
+          ],
+          "jev_request_bytes": 33702,
+          "fits_20kb": false
+        }
+      ],
+      "observations_with_8k": 12,
+      "observations_with_fitting_8k": 6
+    },
+    "META": {
+      "filings": [
+        {
+          "accession": "0001628280-26-050596",
+          "items": "2.02,9.01",
+          "acceptance_utc": "2026-07-29T20:03:23Z",
+          "acceptance_header_et": "20260729160323",
+          "json_minus_header_seconds": 14400.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "3d5454e601748d8e7baf63006ea275536ad6657454ad4689b5d77aa0ed877470",
+              "text_chars": 3855
+            },
+            {
+              "type": "EX-99.1",
+              "sha256": "171fa27ae6b174208884670afc2a0d43351e6357b4cfa4c1b0267b07b7b2d8c4",
+              "text_chars": 18552
+            }
+          ],
+          "jev_request_bytes": 25633,
+          "fits_20kb": false
+        }
+      ],
+      "observations_with_8k": 6,
+      "observations_with_fitting_8k": 0
+    },
+    "TSLA": {
+      "filings": [
+        {
+          "accession": "0001628280-26-064366",
+          "items": "2.02,9.01",
+          "acceptance_utc": "2026-10-02T13:04:26Z",
+          "acceptance_header_et": "20261002090426",
+          "json_minus_header_seconds": 0.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "232507331222a1f493a11e0dbd32d37562a92eb1346f598cd9acefd63fc6ccad",
+              "text_chars": 2981
+            },
+            {
+              "type": "EX-99.1",
+              "sha256": "b425e47f73f8ba85bbdb06529b3fe4a8027145238f864b7a7427913e55dc0548",
+              "text_chars": 2065
+            }
+          ],
+          "jev_request_bytes": 8000,
+          "fits_20kb": true
+        },
+        {
+          "accession": "0001628280-26-063820",
+          "items": "1.01,1.02,2.03,9.01",
+          "acceptance_utc": "2026-09-29T20:38:50Z",
+          "acceptance_header_et": "20260929163850",
+          "json_minus_header_seconds": 0.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "034b15de25c400b73fae3673f3fb92277112f2a60b108cf1468095a799455b84",
+              "text_chars": 9752
+            }
+          ],
+          "jev_request_bytes": 12495,
+          "fits_20kb": true
+        },
+        {
+          "accession": "0001628280-26-049213",
+          "items": "2.02,9.01",
+          "acceptance_utc": "2026-07-22T20:35:52Z",
+          "acceptance_header_et": "20260722163552",
+          "json_minus_header_seconds": 0.0,
+          "documents": [
+            {
+              "type": "8-K",
+              "sha256": "a6e890b3e02e7e0f931ea5b3d87f29d01fb148bac0085ec89404a2705c9ab00d",
+              "text_chars": 3154
+            },
+            {
+              "type": "EX-99.1",
+              "sha256": "e57dcfcd777af8915f13864d4c956fa6234f56b1a300ce526693ca839b4ddae8",
+              "text_chars": 41670
+            }
+          ],
+          "jev_request_bytes": 47988,
+          "fits_20kb": false
+        }
+      ],
+      "observations_with_8k": 18,
+      "observations_with_fitting_8k": 12
+    }
+  },
+  "totals": {
+    "observations": 2772,
+    "with_8k": 96,
+    "with_fitting_8k": 48,
+    "filings": 16,
+    "filings_fitting_20kb": 8,
+    "json_minus_header_seconds": [
+      0.0,
+      14400.0
+    ],
+    "requests": 67
+  },
+  "requests": [
+    {
+      "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "file": "AAPL-submissions.json",
+      "requested_utc": "2026-10-06T13:13:09.899548Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-06T13:13:10.123840Z",
+      "bytes": 163743,
+      "sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/0000320193-26-000018.hdr.sgml",
+      "file": "AAPL-0000320193-26-000018.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:10.273968Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:10.578884Z",
+      "bytes": 1007,
+      "sha256": "60c8768de374981277d50de57770e2d979f7a2f7d7089cadd0762579aa60ea41"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/0000320193-26-000018-index.htm",
+      "file": "AAPL-0000320193-26-000018-index.htm",
+      "requested_utc": "2026-10-06T13:13:10.728975Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:11.011030Z",
+      "bytes": 10624,
+      "sha256": "e4f5b532e6646015ee8abbfe4b34873124381f7909ed59e49ef5422c0cccf6f8"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm",
+      "file": "AAPL-0000320193-26-000018-aapl-20260730.htm",
+      "requested_utc": "2026-10-06T13:13:11.161198Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:11.447990Z",
+      "bytes": 38458,
+      "sha256": "959686196224d0833eb4c609f8ddd26746991da92b21d18289b482350c883c85"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/a8-kex991q3202606272026.htm",
+      "file": "AAPL-0000320193-26-000018-a8-kex991q3202606272026.htm",
+      "requested_utc": "2026-10-06T13:13:11.598060Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:11.875137Z",
+      "bytes": 173592,
+      "sha256": "a54900b5a205f13f9ee52e1cfa6ba3051c0ce4b5fe3d4132a7d55f5c0aaad77a"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0000789019.json",
+      "file": "MSFT-submissions.json",
+      "requested_utc": "2026-10-06T13:13:12.025234Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-06T13:13:12.256641Z",
+      "bytes": 185250,
+      "sha256": "2484a2a3b5677d892a1b25af573ce4eda7b6f449f5eda41bac6b3f106dc3139c"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/0001193125-26-380280.hdr.sgml",
+      "file": "MSFT-0001193125-26-380280.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:12.406872Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:12.923683Z",
+      "bytes": 822,
+      "sha256": "a829a777ee98f60a7020f4dd882a4f4d9585f17abc4255d13eb677e547f0aea4"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/0001193125-26-380280-index.htm",
+      "file": "MSFT-0001193125-26-380280-index.htm",
+      "requested_utc": "2026-10-06T13:13:13.073829Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:13.372273Z",
+      "bytes": 17557,
+      "sha256": "618f010b6e56597ce881da5ada82b6946615caf2d1062a68942d34a9e24753cf"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+      "file": "MSFT-0001193125-26-380280-d291965d8k.htm",
+      "requested_utc": "2026-10-06T13:13:13.522436Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:13.770119Z",
+      "bytes": 28667,
+      "sha256": "c9c3afa76022067abfd9cae4dd99dabf8af1094e29deac387a2a36dcffd6f42e"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965dex991.htm",
+      "file": "MSFT-0001193125-26-380280-d291965dex991.htm",
+      "requested_utc": "2026-10-06T13:13:13.920283Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:14.114277Z",
+      "bytes": 34290,
+      "sha256": "3bedbe9a0311ae2c3cb43b42e35d157c878deb23cdc72e3ca0faf64d0d2672f8"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/0001193125-26-323632.hdr.sgml",
+      "file": "MSFT-0001193125-26-323632.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:14.264413Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:14.738521Z",
+      "bytes": 822,
+      "sha256": "231cef4bd19bf1e0c48082eb99097a0ffa089f2f56758c592fc2a52e1175e7ad"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/0001193125-26-323632-index.htm",
+      "file": "MSFT-0001193125-26-323632-index.htm",
+      "requested_utc": "2026-10-06T13:13:14.888684Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:15.003863Z",
+      "bytes": 9186,
+      "sha256": "2588079e72145d5811c2df314450927422ed7fc365057e33522c1a54f16f9b5c"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-20260729.htm",
+      "file": "MSFT-0001193125-26-323632-msft-20260729.htm",
+      "requested_utc": "2026-10-06T13:13:15.154166Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:15.311087Z",
+      "bytes": 63454,
+      "sha256": "09cf8f082764d329688acc701d6d1af724c6ff7720e3220eb9ac9640cbd8b4bd"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+      "file": "MSFT-0001193125-26-323632-msft-ex99_1.htm",
+      "requested_utc": "2026-10-06T13:13:15.461253Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:15.797283Z",
+      "bytes": 901708,
+      "sha256": "b88ea1fe8d81d4eb7891f7956bfd8941e6d745fcef0c85dc339828e417be8139"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001045810.json",
+      "file": "NVDA-submissions.json",
+      "requested_utc": "2026-10-06T13:13:15.947436Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-06T13:13:16.287655Z",
+      "bytes": 159785,
+      "sha256": "0b3ce6a0cd78c43d69b19b7efb9effcd79d0c6bd4c43606aac84d0f872cc9c73"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/0001045810-26-000078.hdr.sgml",
+      "file": "NVDA-0001045810-26-000078.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:16.437800Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:16.700435Z",
+      "bytes": 1016,
+      "sha256": "af044f24404dcba9bef075d7a13ce516e1ffcd954930afa73abd93bc193a7540"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/0001045810-26-000078-index.htm",
+      "file": "NVDA-0001045810-26-000078-index.htm",
+      "requested_utc": "2026-10-06T13:13:16.850601Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:17.029388Z",
+      "bytes": 9548,
+      "sha256": "85d3a777ffe7d1c40a06ab61810f41cf215edf1c0d872843b573a7a077ecee65"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm",
+      "file": "NVDA-0001045810-26-000078-nvda-20260902.htm",
+      "requested_utc": "2026-10-06T13:13:17.179531Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:17.324150Z",
+      "bytes": 29289,
+      "sha256": "18b88a08613e58f8bdf3495536530267e8a7fa4cbb3262b8522aecbb247f6619"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/0001045810-26-000073.hdr.sgml",
+      "file": "NVDA-0001045810-26-000073.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:17.474305Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:17.718588Z",
+      "bytes": 1028,
+      "sha256": "d5bc67833e513e1456da97beb78936f12a0a4968f0d078b9ebb54a37fed70a18"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/0001045810-26-000073-index.htm",
+      "file": "NVDA-0001045810-26-000073-index.htm",
+      "requested_utc": "2026-10-06T13:13:17.868740Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:18.038006Z",
+      "bytes": 10597,
+      "sha256": "62590b389fd4feb908c50110ecaf9acfce9b8449b7d693c208672acd3cbe1e99"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm",
+      "file": "NVDA-0001045810-26-000073-nvda-20260826.htm",
+      "requested_utc": "2026-10-06T13:13:18.188075Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:18.379344Z",
+      "bytes": 26565,
+      "sha256": "4b217854472b229de44a565e36a7e22472fc55fb26cf7bffdfe73c45b4f5950a"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+      "file": "NVDA-0001045810-26-000073-q2fy27pr.htm",
+      "requested_utc": "2026-10-06T13:13:18.529428Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:18.754100Z",
+      "bytes": 341221,
+      "sha256": "1dea0c28492879d6d8aabf4af664d8c8a7aafa37267d69a86d6bef6f6b283065"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27cfocommentary.htm",
+      "file": "NVDA-0001045810-26-000073-q2fy27cfocommentary.htm",
+      "requested_utc": "2026-10-06T13:13:18.904279Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:19.398341Z",
+      "bytes": 256989,
+      "sha256": "a6df4d790936eee65aca922d80823f3d632bc729be60d532be4b9e33862afbf3"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/0001045810-26-000069.hdr.sgml",
+      "file": "NVDA-0001045810-26-000069.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:19.548476Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:19.862201Z",
+      "bytes": 1040,
+      "sha256": "375b7332b6427ec37201c67fd4c0ce27da9cb8980a43d0ebddd661ab9925496b"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/0001045810-26-000069-index.htm",
+      "file": "NVDA-0001045810-26-000069-index.htm",
+      "requested_utc": "2026-10-06T13:13:20.012363Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:20.509320Z",
+      "bytes": 10089,
+      "sha256": "109763cb17fbb692b3ec88a56983303687ca15501e7f1cf10184be96c72f08d0"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
+      "file": "NVDA-0001045810-26-000069-nvda-20260817.htm",
+      "requested_utc": "2026-10-06T13:13:20.659652Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:20.853522Z",
+      "bytes": 31526,
+      "sha256": "4828438a604deb9e31fe93b715758e5432fe167ccee57487c0e5d6617f1b695c"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/sbeoainvidia-portsrelease.htm",
+      "file": "NVDA-0001045810-26-000069-sbeoainvidia-portsrelease.htm",
+      "requested_utc": "2026-10-06T13:13:21.003682Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:21.464592Z",
+      "bytes": 21877,
+      "sha256": "086a0f6b898a17309b820dc75a88a7549768f4f3f8eedc1a8ac7ed710d1879db"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001018724.json",
+      "file": "AMZN-submissions.json",
+      "requested_utc": "2026-10-06T13:13:21.614796Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-06T13:13:21.887255Z",
+      "bytes": 159744,
+      "sha256": "aa73908ad46a600a4a9525ec65b777d0726c27c6de594e2c74e0e0bea832c399"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/0001104659-26-107526.hdr.sgml",
+      "file": "AMZN-0001104659-26-107526.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:22.037423Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:22.264901Z",
+      "bytes": 826,
+      "sha256": "4373c2d805e554b76b41b7749b0b7201fd1974430deb568dfd2b55ca1b8d6af9"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/0001104659-26-107526-index.htm",
+      "file": "AMZN-0001104659-26-107526-index.htm",
+      "requested_utc": "2026-10-06T13:13:22.415041Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:22.567625Z",
+      "bytes": 11291,
+      "sha256": "f52fba02c13703d784fcfb093ddb0863debc7c2a0ff89e056613225105e70906"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+      "file": "AMZN-0001104659-26-107526-tm2624614d5_8k.htm",
+      "requested_utc": "2026-10-06T13:13:22.717933Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:23.011611Z",
+      "bytes": 59970,
+      "sha256": "22e2f37cf82863739ccfd2999d5dac12ba51e613dca4c7bdcbaca3e27b706ff0"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000036/0001018724-26-000036.hdr.sgml",
+      "file": "AMZN-0001018724-26-000036.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:23.161946Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:23.461554Z",
+      "bytes": 814,
+      "sha256": "c8817b48096244becc7feacbbd9366063c339506d4d4d4d7a1d1791ba198aa6d"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000036/0001018724-26-000036-index.htm",
+      "file": "AMZN-0001018724-26-000036-index.htm",
+      "requested_utc": "2026-10-06T13:13:23.611650Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:23.917368Z",
+      "bytes": 10049,
+      "sha256": "4211ec434a58e8da3c7e105daa61846473b4d6bb89c8aaa02c5d9443fde303f1"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000036/amzn-20260908.htm",
+      "file": "AMZN-0001018724-26-000036-amzn-20260908.htm",
+      "requested_utc": "2026-10-06T13:13:24.067529Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:24.279535Z",
+      "bytes": 42924,
+      "sha256": "cfe5431c37dd0aa74677a5e54901b6d8d6ddf618403c98e4bdde58da99bd1369"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/0001018724-26-000024.hdr.sgml",
+      "file": "AMZN-0001018724-26-000024.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:24.429700Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:24.682597Z",
+      "bytes": 826,
+      "sha256": "fa28a09029a39b0aa7df7aaa0634e1bdf804ff201c356d7c447ec7f25651c311"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/0001018724-26-000024-index.htm",
+      "file": "AMZN-0001018724-26-000024-index.htm",
+      "requested_utc": "2026-10-06T13:13:24.832782Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:25.345890Z",
+      "bytes": 10978,
+      "sha256": "c30b7b16eb0e1124b08b1f60898e5020c60331b0f4dcbf2e635235b0624b13f1"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260730.htm",
+      "file": "AMZN-0001018724-26-000024-amzn-20260730.htm",
+      "requested_utc": "2026-10-06T13:13:25.495981Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:25.681350Z",
+      "bytes": 47361,
+      "sha256": "df0c6fdd338a11bf7b586a199739251e6614ea608cc28279cffeac4fbc3fa8a7"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex991.htm",
+      "file": "AMZN-0001018724-26-000024-amzn-20260630xex991.htm",
+      "requested_utc": "2026-10-06T13:13:25.831440Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:26.115691Z",
+      "bytes": 671830,
+      "sha256": "abdd58b906e014d3391224d0147f2f9d3efba183261604af404711f34f461914"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex992.htm",
+      "file": "AMZN-0001018724-26-000024-amzn-20260630xex992.htm",
+      "requested_utc": "2026-10-06T13:13:26.265945Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:26.943835Z",
+      "bytes": 4419,
+      "sha256": "00b753a794c4bd447df8531ad8c67b28032e5bc7e53d0cb4b8f6f17d018e712e"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926082293/0001104659-26-082293.hdr.sgml",
+      "file": "AMZN-0001104659-26-082293.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:27.093929Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:27.539459Z",
+      "bytes": 826,
+      "sha256": "94f97628a708cd22366c7fb96a02811afe87fd61c53f3a36844671cb368bfe76"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926082293/0001104659-26-082293-index.htm",
+      "file": "AMZN-0001104659-26-082293-index.htm",
+      "requested_utc": "2026-10-06T13:13:27.689620Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:27.973270Z",
+      "bytes": 11627,
+      "sha256": "f36931d2e9cde73e435c582eb3702657588430ed263f649ba2068aaaf5ec62f0"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926082293/tm2619352d4_8k.htm",
+      "file": "AMZN-0001104659-26-082293-tm2619352d4_8k.htm",
+      "requested_utc": "2026-10-06T13:13:28.123395Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:28.305970Z",
+      "bytes": 64053,
+      "sha256": "dd54890f77c85b7ac9db0ec03709b255fd8c35d3682af08f43959f707b5f0959"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001652044.json",
+      "file": "GOOGL-submissions.json",
+      "requested_utc": "2026-10-06T13:13:28.456056Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-06T13:13:28.868637Z",
+      "bytes": 152415,
+      "sha256": "9434407b197d6322de4bece8ad3b69459c8d6ddf3a68526b4b22b02e8175d33c"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/0001193125-26-342390.hdr.sgml",
+      "file": "GOOGL-0001193125-26-342390.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:29.018800Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:29.340730Z",
+      "bytes": 839,
+      "sha256": "176dfa7cb3525cb68378ecbbdf3492a06df99b4514b273fa80c4d2b51b3f675c"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/0001193125-26-342390-index.htm",
+      "file": "GOOGL-0001193125-26-342390-index.htm",
+      "requested_utc": "2026-10-06T13:13:29.491065Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:29.921985Z",
+      "bytes": 14467,
+      "sha256": "4cef387db0db755d738dfbf870c380b725ee04e6420d733e7e8780dd1b4d3a21"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+      "file": "GOOGL-0001193125-26-342390-d171253d8k.htm",
+      "requested_utc": "2026-10-06T13:13:30.072135Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:30.539898Z",
+      "bytes": 76072,
+      "sha256": "79a97625848277d8410199af52daeea24222fd9f2ed059c25caac723845a3ca1"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/0001652044-26-000066.hdr.sgml",
+      "file": "GOOGL-0001652044-26-000066.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:30.690170Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:31.035986Z",
+      "bytes": 839,
+      "sha256": "c5f590fa741f8b6ab931577303a9a0e80d90adecc5d52a411b39f4a32eeff6ad"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/0001652044-26-000066-index.htm",
+      "file": "GOOGL-0001652044-26-000066-index.htm",
+      "requested_utc": "2026-10-06T13:13:31.186111Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:31.354064Z",
+      "bytes": 10355,
+      "sha256": "5ee40bfe49f92a442b68823293b06190aca2b51d01d35ce20851619d35111a3e"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/goog-20260722.htm",
+      "file": "GOOGL-0001652044-26-000066-goog-20260722.htm",
+      "requested_utc": "2026-10-06T13:13:31.504221Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:32.023068Z",
+      "bytes": 65923,
+      "sha256": "fa8fe73a01c2a073962a1d7c94e64e9728c336df2624781f691ed6511d44f7c0"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+      "file": "GOOGL-0001652044-26-000066-googexhibit991q22026.htm",
+      "requested_utc": "2026-10-06T13:13:32.173214Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:32.430782Z",
+      "bytes": 371602,
+      "sha256": "8f8fdcd57d70eb8428c397bb885a5435e4ce35f9b803e6b5d578feeb5115d988"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001326801.json",
+      "file": "META-submissions.json",
+      "requested_utc": "2026-10-06T13:13:32.580886Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-06T13:13:32.788110Z",
+      "bytes": 157876,
+      "sha256": "2748907971ba09da370187949d1d9694ce036a19b511e723b99dd4c76f8ca4cb"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/0001628280-26-050596.hdr.sgml",
+      "file": "META-0001628280-26-050596.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:32.938256Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:33.395817Z",
+      "bytes": 904,
+      "sha256": "c3e1aa57c49542cc9851a3379fdfbe8ec2fba712074b5c3649029a1d5b7f084a"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/0001628280-26-050596-index.htm",
+      "file": "META-0001628280-26-050596-index.htm",
+      "requested_utc": "2026-10-06T13:13:33.545906Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:33.661021Z",
+      "bytes": 10291,
+      "sha256": "f3465b5b27a15f894e057f44ae074b28a9f0195d4ac0c32c4fb4d702f25c2314"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-20260729.htm",
+      "file": "META-0001628280-26-050596-meta-20260729.htm",
+      "requested_utc": "2026-10-06T13:13:33.811354Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:33.938339Z",
+      "bytes": 28352,
+      "sha256": "3d5454e601748d8e7baf63006ea275536ad6657454ad4689b5d77aa0ed877470"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm",
+      "file": "META-0001628280-26-050596-meta-06302026xexhibit991.htm",
+      "requested_utc": "2026-10-06T13:13:34.088504Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:34.294264Z",
+      "bytes": 273736,
+      "sha256": "171fa27ae6b174208884670afc2a0d43351e6357b4cfa4c1b0267b07b7b2d8c4"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001318605.json",
+      "file": "TSLA-submissions.json",
+      "requested_utc": "2026-10-06T13:13:34.444578Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-06T13:13:34.599885Z",
+      "bytes": 161958,
+      "sha256": "76ef728de78f5a7048154847052d1be4b76d32be9e790f57d8ce14a026be6c3a"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026064366/0001628280-26-064366.hdr.sgml",
+      "file": "TSLA-0001628280-26-064366.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:34.750054Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:35.051814Z",
+      "bytes": 898,
+      "sha256": "22b5148820923f40a27665af558f162c8da9ab81d5c168772ae5f565418215f1"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026064366/0001628280-26-064366-index.htm",
+      "file": "TSLA-0001628280-26-064366-index.htm",
+      "requested_utc": "2026-10-06T13:13:35.201947Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:35.350136Z",
+      "bytes": 9922,
+      "sha256": "5de7ae28c46fba611c64938fd767582b164a4a609540259478d5268900a7692c"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026064366/tsla-20261002.htm",
+      "file": "TSLA-0001628280-26-064366-tsla-20261002.htm",
+      "requested_utc": "2026-10-06T13:13:35.500459Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:35.712214Z",
+      "bytes": 26737,
+      "sha256": "232507331222a1f493a11e0dbd32d37562a92eb1346f598cd9acefd63fc6ccad"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026064366/exhibit991111111.htm",
+      "file": "TSLA-0001628280-26-064366-exhibit991111111.htm",
+      "requested_utc": "2026-10-06T13:13:35.862299Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:35.990336Z",
+      "bytes": 13249,
+      "sha256": "b425e47f73f8ba85bbdb06529b3fe4a8027145238f864b7a7427913e55dc0548"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026063820/0001628280-26-063820.hdr.sgml",
+      "file": "TSLA-0001628280-26-063820.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:36.140638Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:36.430570Z",
+      "bytes": 922,
+      "sha256": "cb30d83ad35f70b221720d85c4683588e1d382e47af8c42cf23cad23e339dc2d"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026063820/0001628280-26-063820-index.htm",
+      "file": "TSLA-0001628280-26-063820-index.htm",
+      "requested_utc": "2026-10-06T13:13:36.580736Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:36.705675Z",
+      "bytes": 9790,
+      "sha256": "a653b6fcee0c7bd41d16acd8c921fc487856bf3496e3974fdf2e2ff0a873028c"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026063820/tsla-20260929.htm",
+      "file": "TSLA-0001628280-26-063820-tsla-20260929.htm",
+      "requested_utc": "2026-10-06T13:13:36.855846Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:37.064208Z",
+      "bytes": 41444,
+      "sha256": "034b15de25c400b73fae3673f3fb92277112f2a60b108cf1468095a799455b84"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049213/0001628280-26-049213.hdr.sgml",
+      "file": "TSLA-0001628280-26-049213.hdr.sgml",
+      "requested_utc": "2026-10-06T13:13:37.214376Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:13:37.852220Z",
+      "bytes": 898,
+      "sha256": "5873c1cbb9e571e8612fe1ed60a18701e8bae3a56a575be2b9630d55528a7ccd"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049213/0001628280-26-049213-index.htm",
+      "file": "TSLA-0001628280-26-049213-index.htm",
+      "requested_utc": "2026-10-06T13:13:38.002383Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:13:38.209634Z",
+      "bytes": 20432,
+      "sha256": "b14f00f0dc4f13e21af1efbf3421c4c3460427d32afdfa5371d545a3f3f48081"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049213/tsla-20260722.htm",
+      "file": "TSLA-0001628280-26-049213-tsla-20260722.htm",
+      "requested_utc": "2026-10-06T13:13:38.359808Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:38.757306Z",
+      "bytes": 27603,
+      "sha256": "a6e890b3e02e7e0f931ea5b3d87f29d01fb148bac0085ec89404a2705c9ab00d"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049213/exhibit991.htm",
+      "file": "TSLA-0001628280-26-049213-exhibit991.htm",
+      "requested_utc": "2026-10-06T13:13:38.907524Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:13:39.055889Z",
+      "bytes": 52420,
+      "sha256": "e57dcfcd777af8915f13864d4c956fa6234f56b1a300ce526693ca839b4ddae8"
+    }
+  ]
+}

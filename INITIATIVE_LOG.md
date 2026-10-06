@@ -1,5 +1,59 @@
 # Initiative Log
 
+### 2026-10-06 15:00 — Initiative 6 pilot fails causal latency check; Initiative 7 SEC archiver and A1 availability census; Initiative 3 outage record
+
+**Evaluated:** The October 2 18:00 plan for October 5 did not run: both October 5 strategy runs failed at their first model call because of the expired Anthropic login. Today's results:
+
+- **Initiative 7 archiver:** **worked** as specified, and its census exposed a design flaw before any instrumentation sessions were spent.
+- **Initiative 6 "next genuine PM-only case" check:** **worked**. It showed that QTEX's cohort presence was stale data, which led to the latency test below.
+- **Initiative 1 sparse-baseline policy:** not attempted; rescheduled to 18:00.
+- **Initiative 7 orchestration:** not attempted; rescheduled to October 7 behind the A2 amendment.
+- **Process-review handoffs:**
+  - Item 1: archiver delivered; Initiative 1 moved to 18:00 and its reason recorded.
+  - Item 3: Oct 6 recorded as an outage day with no cohort; RUBI, SAIQ and QTEX checked.
+  - Item 4: outage record and late-start guard added to Initiative 3.
+
+**Step taken:**
+
+- **Initiative 6 (active pilot):** added `--delay-min` to `init6-pm-pilot.js` and reran the 26-name holdable ledger at entry latencies of 0, 5, 10 and 15 minutes. This tests whether the modeled edge can be earned with our data path. Also checked the four archived cohorts against SIP and probed the screener lag live.
+- **Initiative 7 (parallel build, oldest overdue):** built `scripts/init7-sec-archive.py`, froze the mapping, ran seven real captures and one historical capture, verified offline replay, and ran a 92-day census. Executable liquid-session frequency is the largest research lever left once the Initiative 6 slot is released.
+- **Initiative 3 (parallel research):** recorded the outage and the screener-lag evidence.
+
+**Result:**
+
+- **Initiative 6 latency.** Holdable n=26, mean +10%-limit return:
+  - 0 minutes: **+4.4%** (+2.4% net), 20/26 positive
+  - 5 minutes: **+0.7%** (-1.3% net), 18/26
+  - 10 minutes: **-3.7%**, 15/26
+  - 15 minutes: **-4.4%** (-6.4% net), 12/26
+
+  All 35 classes fall from +3.4% to -2.5% gross. The data path runs about 15 minutes late. Free SIP serves only bars at least 15 minutes old. The 04:10 ET cohorts hold the previous session's prices: Sep 30 BKYI, Oct 1 CNTB $1.8805, Oct 2 SDEV $3.59, Oct 5 SGRX $1.775. A 09:15 ET probe found the screener price in the latest IEX bar for 0 of 8 names. No pulse runs from 04:10 to 04:30 ET.
+
+  **Decision:** the pilot ended as a failed causal check, and the slot is released. Tracker, ledger and cohort stay log-only as an upper bound. QTEX (Oct 5) is a second VWAP false negative, a +10% limit win missed. RUBI (Oct 6) was correctly rejected. Fixed a bug where ad-hoc runs overwrote the ledger; a default run reproduces both ledgers exactly.
+- **Initiative 7 archiver.**
+  - Mapping: 7 unique CIKs (`7afbd376…`).
+  - Real captures: all seven returned `no_8k_within_window`, so cash.
+  - Historical AAPL capture: archived the 8-K and EX-99.1, then rejected them as `received_after_cutoff`.
+  - Checks: replay shows no problems on all 8 archives. Overwrite and a cutoff without a time zone are refused, and tampered text is detected. Synthetic decisions cover eligible (17,138 B), too large, future source and failed request.
+  - SEC JSON acceptance times are 4 hours late for 6 of 16 filings, so the filing header's Eastern time is authoritative.
+- **Initiative 7 census.** Jul 6 – Oct 5, 2,772 slots: **16 8-Ks; 8 fit 20KB; 3.5% of slots have a recent 8-K and 1.7% a usable one.** Only 2 of 7 earnings releases fit. A 20-session A1 pilot would hold about 2 Jev decisions. The proposed A2 veto variant keeps N1 when no usable source exists and goes to cash on financing/dilution or non-binding-plan labels.
+- **Other details.** Raw SEC bytes are kept exact via a `binary` entry in `.gitattributes`. No Jev call ran today, so the six-call manifest from October 2 is still the only live classification batch. No order, live rule, size or pulse timing changed. Equity is $99,721.90 (-$278.10), flat.
+- **Evidence:** `docs/investigations/init6-latency-init7-sec-2026-10-06.md`.
+
+**Hypothesis / next step:**
+
+- **October 6 18:00:**
+  - Freeze Initiative 7 amendment A2 in a new design file, keeping A1 in the trial register.
+  - Resolve Initiative 1's sparse-baseline/prior-coverage policy against INLF/GIPR/YFOR. It has waited since October 1.
+- **October 7 15:00:**
+  - Initiative 7 observation orchestration and the first scheduled capture that can load.
+  - Initiative 3 later-rebuild comparison, with the screener's ~15-minute lag modeled.
+- **Initiative 7 pilot:** five instrumentation sessions, then the comparison pilot can take the free slot.
+- **Initiative 6 reopens** only with real-time consolidated data and a deterministic watcher that enters within about a minute. A 04:10 cohort cannot discover same-day gappers.
+- **Next daily email:** report the slot release and latency table, the archiver and census, the A2 proposal, the outage record, and "Jev: not run today".
+
+**Needs from Juan:** nothing new from this loop. The process review's provider-fallback/alert decision is already routed to the daily email. Initiative 2 remains deferred, and the liquid-session proposal and the Initiative 3 proposals still stand.
+
 ### 2026-10-02 18:00 — Initiative 7 frozen comparison; Initiative 6 final SGRX; Initiative 3 completed replay
 
 **Evaluated:** The 15:00 next-step hypothesis **worked for its delivery and closure targets**: the deferred numerical-control/bounded-agent design is now frozen, SGRX's maximum-trade/no-entry result held through the completed PM window, and all 13 AH replay lines remained unchanged. The earlier Jev control batch verifies the interface only; prospective classification accuracy, calibration and profitable edge still have **insufficient data**. SGRX supplies no new admission, so the pilot's return ledger is unchanged monitoring. This run finalized the remaining October 2 process-review handoffs; the earlier Jev delivery and session-completion check were already complete.

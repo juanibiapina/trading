@@ -1,0 +1,13 @@
+[
+  {
+    "url": "https://www.sec.gov/files/company_tickers.json",
+    "file": "company_tickers.json",
+    "requested_utc": "2026-10-06T13:12:00.533690Z",
+    "user_agent": "trading-research ***@gmail.com",
+    "status": 200,
+    "content_type": "application/json",
+    "received_utc": "2026-10-06T13:12:00.812284Z",
+    "bytes": 798727,
+    "sha256": "eb943bdc3d233f54644ba916f261651460a0b94f6fbf29dbf3c1788271b17bf9"
+  }
+]

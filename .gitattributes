@@ -1,0 +1,2 @@
+# Initiative 7 archives exact SEC response bytes; their SHA-256 hashes must keep matching.
+log/**/init7-sec/** binary

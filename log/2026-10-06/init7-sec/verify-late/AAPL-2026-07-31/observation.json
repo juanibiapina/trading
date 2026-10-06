@@ -1,0 +1,151 @@
+{
+  "version": "init7-sec-archive-v1",
+  "parser": "init7-sec-text-v1",
+  "design_sha256": "df00c3bc9dd86117191ab86b838589e2dfdd5231ae6f1c62861b2e484915dc98",
+  "mapping_sha256": "7afbd3761b28af1237b625729fa68e2c2631f7f00429d66a05e9beec1826e6e7",
+  "ticker": "AAPL",
+  "cik": "0000320193",
+  "decision_cutoff_utc": "2026-07-31T14:32:00Z",
+  "started_utc": "2026-10-06T13:12:40.539185Z",
+  "status": "cash",
+  "candidates": [
+    {
+      "accession": "0000320193-26-000018",
+      "filing_date": "2026-07-30",
+      "json_acceptance": "2026-07-31T00:30:28.000Z",
+      "items": "2.02,9.01",
+      "primary_document": "aapl-20260730.htm",
+      "acceptance_utc": "2026-07-30T20:30:28Z",
+      "acceptance_header_et": "20260730163028",
+      "json_minus_header_seconds": 14400.0,
+      "within_window": true,
+      "documents_listed": [
+        {
+          "seq": "1",
+          "description": "8-K",
+          "type": "8-K",
+          "path": "/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm",
+          "document": "aapl-20260730.htm"
+        },
+        {
+          "seq": "2",
+          "description": "EX-99.1",
+          "type": "EX-99.1",
+          "path": "/Archives/edgar/data/320193/000032019326000018/a8-kex991q3202606272026.htm",
+          "document": "a8-kex991q3202606272026.htm"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "type": "8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm",
+      "file": "doc-01-8-k-aapl-20260730.htm",
+      "sha256": "959686196224d0833eb4c609f8ddd26746991da92b21d18289b482350c883c85",
+      "text_file": "doc-01-8-k-aapl-20260730.htm.txt",
+      "text_sha256": "3600540179bbc6dd98b93980a9d16db9571a66787d644d15fbf90fe08e971bed",
+      "text_chars": 3453
+    },
+    {
+      "type": "EX-99.1",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/a8-kex991q3202606272026.htm",
+      "file": "doc-02-ex-99.1-a8-kex991q3202606272026.htm",
+      "sha256": "a54900b5a205f13f9ee52e1cfa6ba3051c0ce4b5fe3d4132a7d55f5c0aaad77a",
+      "text_file": "doc-02-ex-99.1-a8-kex991q3202606272026.htm.txt",
+      "text_sha256": "edffdac2e1eeefc315eda699c33e4fbce33943860f50459044810ba80f044fed",
+      "text_chars": 10446
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "file": "submissions.json",
+      "requested_utc": "2026-10-06T13:12:40.542364Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-06T13:12:40.794203Z",
+      "bytes": 163743,
+      "sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9",
+      "received_by_cutoff": false
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/0000320193-26-000018.hdr.sgml",
+      "file": "header-01.sgml",
+      "requested_utc": "2026-10-06T13:12:40.944352Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/sgml",
+      "received_utc": "2026-10-06T13:12:41.316902Z",
+      "bytes": 1007,
+      "sha256": "60c8768de374981277d50de57770e2d979f7a2f7d7089cadd0762579aa60ea41",
+      "received_by_cutoff": false
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/0000320193-26-000018-index.htm",
+      "file": "filing-index.htm",
+      "requested_utc": "2026-10-06T13:12:41.467178Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "received_utc": "2026-10-06T13:12:41.575927Z",
+      "bytes": 10624,
+      "sha256": "e4f5b532e6646015ee8abbfe4b34873124381f7909ed59e49ef5422c0cccf6f8",
+      "received_by_cutoff": false
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm",
+      "file": "doc-01-8-k-aapl-20260730.htm",
+      "requested_utc": "2026-10-06T13:12:41.726021Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:12:42.013840Z",
+      "bytes": 38458,
+      "sha256": "959686196224d0833eb4c609f8ddd26746991da92b21d18289b482350c883c85",
+      "received_by_cutoff": false
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/a8-kex991q3202606272026.htm",
+      "file": "doc-02-ex-99.1-a8-kex991q3202606272026.htm",
+      "requested_utc": "2026-10-06T13:12:42.163932Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "text/html",
+      "received_utc": "2026-10-06T13:12:42.341455Z",
+      "bytes": 173592,
+      "sha256": "a54900b5a205f13f9ee52e1cfa6ba3051c0ce4b5fe3d4132a7d55f5c0aaad77a",
+      "received_by_cutoff": false
+    }
+  ],
+  "selected_filing": {
+    "accession": "0000320193-26-000018",
+    "filing_date": "2026-07-30",
+    "json_acceptance": "2026-07-31T00:30:28.000Z",
+    "items": "2.02,9.01",
+    "primary_document": "aapl-20260730.htm",
+    "acceptance_utc": "2026-07-30T20:30:28Z",
+    "acceptance_header_et": "20260730163028",
+    "json_minus_header_seconds": 14400.0,
+    "within_window": true,
+    "documents_listed": [
+      {
+        "seq": "1",
+        "description": "8-K",
+        "type": "8-K",
+        "path": "/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm",
+        "document": "aapl-20260730.htm"
+      },
+      {
+        "seq": "2",
+        "description": "EX-99.1",
+        "type": "EX-99.1",
+        "path": "/Archives/edgar/data/320193/000032019326000018/a8-kex991q3202606272026.htm",
+        "document": "a8-kex991q3202606272026.htm"
+      }
+    ]
+  },
+  "finished_utc": "2026-10-06T13:12:42.384238Z",
+  "cash_reason": "received_after_cutoff"
+}

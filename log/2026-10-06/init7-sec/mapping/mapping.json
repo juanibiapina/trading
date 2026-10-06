@@ -1,0 +1,49 @@
+{
+  "version": "init7-sec-archive-v1",
+  "design_sha256": "df00c3bc9dd86117191ab86b838589e2dfdd5231ae6f1c62861b2e484915dc98",
+  "frozen_utc": "2026-10-06T13:12:00.859605Z",
+  "source": {
+    "url": "https://www.sec.gov/files/company_tickers.json",
+    "file": "company_tickers.json",
+    "requested_utc": "2026-10-06T13:12:00.533690Z",
+    "user_agent": "trading-research ***@gmail.com",
+    "status": 200,
+    "content_type": "application/json",
+    "received_utc": "2026-10-06T13:12:00.812284Z",
+    "bytes": 798727,
+    "sha256": "eb943bdc3d233f54644ba916f261651460a0b94f6fbf29dbf3c1788271b17bf9"
+  },
+  "mapping": {
+    "AAPL": {
+      "cik": "0000320193",
+      "title": "Apple Inc."
+    },
+    "MSFT": {
+      "cik": "0000789019",
+      "title": "MICROSOFT CORP"
+    },
+    "NVDA": {
+      "cik": "0001045810",
+      "title": "NVIDIA CORP"
+    },
+    "AMZN": {
+      "cik": "0001018724",
+      "title": "AMAZON COM INC"
+    },
+    "GOOGL": {
+      "cik": "0001652044",
+      "title": "Alphabet Inc."
+    },
+    "META": {
+      "cik": "0001326801",
+      "title": "Meta Platforms, Inc."
+    },
+    "TSLA": {
+      "cik": "0001318605",
+      "title": "Tesla, Inc."
+    }
+  },
+  "problems": [],
+  "status": "frozen",
+  "mapping_sha256": "7afbd3761b28af1237b625729fa68e2c2631f7f00429d66a05e9beec1826e6e7"
+}

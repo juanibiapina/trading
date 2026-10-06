@@ -1,0 +1,48 @@
+# Initiative 6 early-PM hypothetical-entry PILOT (LOG-ONLY, no orders)
+# universe: holdable footprint=none PM-only gappers from pm-open-scan.csv (n=55 candidates)
+# entry: 5-min continuation gate (ignition >= 3000 trades, R+1&R+2 hold >= 80% high, VWAP non-declining), enter R+3 open
+# exit: resting +10% sell-limit (intrabar fill on 1-min bars), PM-last fallback; baseline = do-nothing = 0%
+# entry latency: first bar opening >= 5 min after the R+2 bar ends (research variant, ledgers untouched)
+
+date        sym    entry   entry_et  exit    fill    lim10   PM-last
+2026-07-13  MIMI   $ 3.73  04:20     $ 4.10  LIMIT    +10.0%   -16.6%
+2026-07-22  INLF   $ 6.13  04:20     $ 6.74  LIMIT    +10.0%   -46.5%
+2026-07-23  WBUY   $ 1.29  04:50     $ 1.42  LIMIT    +10.0%    +3.1%
+2026-07-23  EHGO   $ 3.00  04:20     $ 3.30  LIMIT    +10.0%   +37.3%
+2026-07-27  BIYA   $ 2.68  04:20     $ 2.95  LIMIT    +10.0%    +9.7%
+2026-08-04  VGAS   $ 1.14  05:10     $ 1.24  pmlast    +8.8%    +8.8%
+2026-08-13  FRGT   $ 4.39  04:20     $ 4.83  LIMIT    +10.0%   -33.0%
+2026-08-18  PFSA   $11.98  04:20     $ 8.81  pmlast   -26.5%   -26.5%
+2026-08-19  ZNB    $ 3.99  04:25     $ 4.39  LIMIT    +10.0%   -32.8%
+2026-08-19  BIVI   $ 1.83  04:20     $ 1.32  pmlast   -27.9%   -27.9%
+2026-08-27  MIMI   $ 2.43  04:20     $ 2.28  pmlast    -6.2%    -6.2%
+2026-08-28  WHLR   $ 2.43  04:20     $ 2.67  LIMIT    +10.0%   -40.3%
+2026-08-31  WETO   $ 6.87  04:20     $ 7.56  LIMIT    +10.0%    +5.1%
+2026-09-02  JLHL   $ 7.07  04:50     $ 7.78  LIMIT    +10.0%    +0.4%
+2026-09-02  VIVK   $ 1.03  04:20     $ 1.05  pmlast    +1.9%    +1.9%
+2026-09-04  WETO   $ 3.87  04:25     $ 4.26  LIMIT    +10.0%    +6.7%
+2026-09-08  BNC    $ 6.47  04:20     $ 5.39  pmlast   -16.7%   -16.7%
+2026-09-08  ISPC   $ 1.97  04:20     $ 2.17  LIMIT    +10.0%    -3.0%
+2026-09-10  EHGO   $ 1.05  04:35     $ 1.16  LIMIT    +10.0%    +1.9%
+2026-09-14  AEHL   $ 8.92  04:20     $ 6.15  pmlast   -31.1%   -31.1%
+2026-09-15  MTEN   $ 1.17  04:45     $ 1.29  LIMIT    +10.0%    -3.4%
+2026-09-22  STI    $10.12  04:20     $ 8.02  pmlast   -20.8%   -20.8%
+2026-09-22  GURE   $ 4.12  04:45     $ 3.25  pmlast   -21.1%   -21.1%
+2026-09-28  WBUY   $ 0.98  05:15     $ 1.08  LIMIT    +10.0%    +6.1%
+2026-09-28  SDEV   $ 1.77  04:20     $ 1.71  pmlast    -3.4%    -3.4%
+2026-09-29  BKYI   $ 3.05  04:20     $ 3.35  LIMIT    +10.0%   +10.2%
+
+# Pilot result on ENTERED holdable names (n=26, 29 candidates skipped by the gate):
+  lim10 exit : SUM +17.2%  mean +0.7%  median +10.0%  positive 18/26
+  PM-last    : SUM -238.0%  mean -9.2%  positive 11/26  (hold-to-open floor, no peak-seek)
+  baseline   : 0.0% (current live cycle enters none of these)
+
+# Spread note: micro-cap PM round-trip ~1-3% (buy@ask/sell@bid). Net of ~2% the lim10 pilot edge is mean -1.3%/name.
+
+# Research run: shadow ledger and liquidity audit left unchanged
+
+# Hindsight-classification sensitivity (research only; excluded cases through prior completed PM windows; not in shadow ledger):
+  thin: admitted 6, mean +6.9%
+  uninvestable: admitted 3, mean -0.1%
+  all classifications: admitted 35, mean +1.7% gross / -0.3% after assumed 2% spread
+  Missing piece: investability labels are assigned after PM opens; this is NOT an executable all-name strategy.

@@ -1,0 +1,127 @@
+{
+  "observed_utc": "2026-10-06T13:14:28.059196+00:00",
+  "session": "premarket",
+  "rows": [
+    {
+      "ticker": "OLOX",
+      "screener_price": 1.4103,
+      "screener_change_pct": 60.26,
+      "iex_last_trade": 1.48,
+      "iex_last_trade_utc": "2026-10-06T13:14:28.156387456Z",
+      "iex_bars_40m": 37,
+      "last_iex_bar_close": 1.45,
+      "minutes_ago_of_bars_containing_screener_price": [
+        36,
+        35,
+        33,
+        31,
+        27,
+        6,
+        5
+      ],
+      "latest_bar_contains_price": false
+    },
+    {
+      "ticker": "IPDN",
+      "screener_price": 6.18,
+      "screener_change_pct": 99.35,
+      "iex_last_trade": 6.16,
+      "iex_last_trade_utc": "2026-10-06T13:13:57.643146658Z",
+      "iex_bars_40m": 31,
+      "last_iex_bar_close": 6.16,
+      "minutes_ago_of_bars_containing_screener_price": [
+        28,
+        25,
+        5
+      ],
+      "latest_bar_contains_price": false
+    },
+    {
+      "ticker": "QTEX",
+      "screener_price": 1.7999,
+      "screener_change_pct": 16.88,
+      "iex_last_trade": 1.79,
+      "iex_last_trade_utc": "2026-10-06T13:10:47.555406643Z",
+      "iex_bars_40m": 26,
+      "last_iex_bar_close": 1.79,
+      "minutes_ago_of_bars_containing_screener_price": [],
+      "latest_bar_contains_price": false
+    },
+    {
+      "ticker": "RUBI",
+      "screener_price": 0.785,
+      "screener_change_pct": 12.14,
+      "iex_last_trade": 1.055,
+      "iex_last_trade_utc": "2026-10-05T16:17:15.11485154Z",
+      "iex_bars_40m": 0,
+      "last_iex_bar_close": null,
+      "minutes_ago_of_bars_containing_screener_price": [],
+      "latest_bar_contains_price": false
+    },
+    {
+      "ticker": "AIIO",
+      "screener_price": 1.24,
+      "screener_change_pct": 11.71,
+      "iex_last_trade": 1.19,
+      "iex_last_trade_utc": "2026-10-06T13:13:14.022634678Z",
+      "iex_bars_40m": 30,
+      "last_iex_bar_close": 1.19,
+      "minutes_ago_of_bars_containing_screener_price": [
+        37,
+        35,
+        33,
+        31,
+        24,
+        23,
+        22,
+        20,
+        17,
+        16,
+        14,
+        11
+      ],
+      "latest_bar_contains_price": false
+    },
+    {
+      "ticker": "JAGX",
+      "screener_price": 6.5015,
+      "screener_change_pct": 37.45,
+      "iex_last_trade": 6.48,
+      "iex_last_trade_utc": "2026-10-06T13:01:33.721971029Z",
+      "iex_bars_40m": 5,
+      "last_iex_bar_close": 6.48,
+      "minutes_ago_of_bars_containing_screener_price": [],
+      "latest_bar_contains_price": false
+    },
+    {
+      "ticker": "BRN",
+      "screener_price": 0.995514,
+      "screener_change_pct": 6.22,
+      "iex_last_trade": 1.01,
+      "iex_last_trade_utc": "2026-10-06T13:08:14.653535556Z",
+      "iex_bars_40m": 2,
+      "last_iex_bar_close": 1.01,
+      "minutes_ago_of_bars_containing_screener_price": [],
+      "latest_bar_contains_price": false
+    },
+    {
+      "ticker": "WHLR",
+      "screener_price": 1.17,
+      "screener_change_pct": 7.34,
+      "iex_last_trade": 1.12,
+      "iex_last_trade_utc": "2026-10-06T13:14:29.487577882Z",
+      "iex_bars_40m": 21,
+      "last_iex_bar_close": 1.13,
+      "minutes_ago_of_bars_containing_screener_price": [
+        31,
+        30,
+        25,
+        24,
+        23,
+        22,
+        15
+      ],
+      "latest_bar_contains_price": false
+    }
+  ]
+}

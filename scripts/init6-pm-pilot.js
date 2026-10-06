@@ -75,19 +75,25 @@ function fetchBars(sym, date, tf) {
 const pct = (from, to) => ((to - from) / from) * 100;
 
 // 5-min continuation gate — identical to pm-gapper-exit-sim-1min.js.
-function gate(bars5, date) {
+// delayMin > 0 is a causal-latency research variant: the entry moves to the
+// first bar opening at least delayMin after the R+2 confirmation bar ends
+// (free SIP bars are only served once they are >=15 minutes old).
+function gate(bars5, date, delayMin = 0) {
   const pm = bars5.filter((b) => b.t >= `${date}T08:00:00Z` && b.t < `${date}${PM_END}`);
   const rIdx = pm.findIndex((b) => b.trades >= TRADES_MIN);
   if (rIdx < 0) return { admit: false };
   if (rIdx + 3 >= pm.length) return { admit: false };
   const R = pm[rIdx], b1 = pm[rIdx + 1], b2 = pm[rIdx + 2];
+  const ready = Date.parse(b2.t) + (5 + delayMin) * 60000;
+  const eIdx = pm.findIndex((b, i) => i >= rIdx + 3 && Date.parse(b.t) >= ready);
+  if (eIdx < 0) return { admit: false };
   const hi1 = Math.max(R.h, b1.h);
   const hi2 = Math.max(hi1, b2.h);
   if (b1.c < HOLD_FRAC * hi1) return { admit: false };
   if (b2.c < HOLD_FRAC * hi2) return { admit: false };
   if (b2.vwap < b1.vwap * 0.98) return { admit: false };
   return {
-    admit: true, entry: pm[rIdx + 3].o, entryTime: pm[rIdx + 3].t,
+    admit: true, entry: pm[eIdx].o, entryTime: pm[eIdx].t,
     confirmTradesMin: Math.min(b1.trades, b2.trades),
     confirmNotionalMin: Math.min(b1.vol * b1.vwap, b2.vol * b2.vwap),
   };
@@ -104,10 +110,10 @@ function limitExit(min, entry, gainPct) {
   return { px: last.c, ret: pct(entry, last.c), at: last.t, filled: false };
 }
 
-function sim(sym, date, cls) {
+function sim(sym, date, cls, delayMin = 0) {
   const bars5 = fetchBars(sym, date, "5Min");
   if (bars5.length === 0) return { sym, date, cls, error: "no 5m bars" };
-  const g = gate(bars5, date);
+  const g = gate(bars5, date, delayMin);
   if (!g.admit) return { sym, date, cls, admit: false };
   const bars1 = fetchBars(sym, date, "1Min").filter((b) => b.t >= g.entryTime && b.t < `${date}${PM_END}`);
   if (bars1.length === 0) return { sym, date, cls, error: "no 1m bars" };
@@ -148,7 +154,14 @@ const sum = (a) => a.reduce((s, x) => s + x, 0);
 const sign = (x) => (x >= 0 ? "+" : "");
 
 function main() {
-  const argv = process.argv.slice(2);
+  const args = process.argv.slice(2);
+  const delayAt = args.indexOf("--delay-min");
+  const delayMin = delayAt >= 0 ? Number(args[delayAt + 1]) : 0;
+  if (!Number.isFinite(delayMin) || delayMin < 0) throw new Error("--delay-min needs a non-negative number");
+  const argv = delayAt >= 0 ? args.filter((_, i) => i !== delayAt && i !== delayAt + 1) : args;
+  // Ad-hoc cases and latency variants are research output; only the default
+  // full run rewrites the shadow ledger and the liquidity audit.
+  const writeLedgers = argv.length === 0 && delayMin === 0;
   let cases;
   if (argv.length >= 2) cases = [{ sym: argv[0], date: argv[1], cls: "holdable" }];
   else cases = loadPmOnly().filter((c) => c.cls === "holdable");
@@ -156,7 +169,8 @@ function main() {
   console.log("# Initiative 6 early-PM hypothetical-entry PILOT (LOG-ONLY, no orders)");
   console.log(`# universe: holdable footprint=none PM-only gappers from pm-open-scan.csv (n=${cases.length} candidates)`);
   console.log(`# entry: 5-min continuation gate (ignition >= ${TRADES_MIN} trades, R+1&R+2 hold >= ${HOLD_FRAC * 100 | 0}% high, VWAP non-declining), enter R+3 open`);
-  console.log(`# exit: resting +${LIMIT_GAIN}% sell-limit (intrabar fill on 1-min bars), PM-last fallback; baseline = do-nothing = 0%\n`);
+  console.log(`# exit: resting +${LIMIT_GAIN}% sell-limit (intrabar fill on 1-min bars), PM-last fallback; baseline = do-nothing = 0%`);
+  console.log(`# entry latency: ${delayMin ? `first bar opening >= ${delayMin} min after the R+2 bar ends (research variant, ledgers untouched)` : "R+3 open (ledger definition)"}\n`);
   console.log("date        sym    entry   entry_et  exit    fill    lim10   PM-last");
 
   const rets = [];
@@ -165,7 +179,7 @@ function main() {
   const holdableResults = [];
   let skipped = 0;
   for (const c of cases) {
-    const r = sim(c.sym, c.date, c.cls);
+    const r = sim(c.sym, c.date, c.cls, delayMin);
     if (r.error) { console.log(`${c.date}  ${c.sym.padEnd(5)}  (${r.error})`); continue; }
     if (r.admit === false) { skipped++; continue; }
     // entry_et from UTC bar time (EDT = UTC-4)
@@ -189,10 +203,14 @@ function main() {
   console.log(`  baseline   : 0.0% (current live cycle enters none of these)`);
   console.log(`\n# Spread note: micro-cap PM round-trip ~1-3% (buy@ask/sell@bid). Net of ~2% the lim10 pilot edge is mean ${sign(mean(rets) - 2)}${(mean(rets) - 2).toFixed(1)}%/name.`);
 
-  // Write the shadow ledger (overwrite; deterministic from the tracker).
-  const header = "date,ticker,entry,entry_et,exit_px,exit_ret,exit_type,pm_last_ret";
-  fs.writeFileSync(LEDGER, header + "\n" + ledgerRows.join("\n") + "\n");
-  console.log(`\n# Shadow ledger written: ${path.relative(path.join(__dirname, ".."), LEDGER)} (${ledgerRows.length} entered rows)`);
+  if (writeLedgers) {
+    // Write the shadow ledger (overwrite; deterministic from the tracker).
+    const header = "date,ticker,entry,entry_et,exit_px,exit_ret,exit_type,pm_last_ret";
+    fs.writeFileSync(LEDGER, header + "\n" + ledgerRows.join("\n") + "\n");
+    console.log(`\n# Shadow ledger written: ${path.relative(path.join(__dirname, ".."), LEDGER)} (${ledgerRows.length} entered rows)`);
+  } else {
+    console.log(`\n# Research run: shadow ledger and liquidity audit left unchanged`);
+  }
 
   if (argv.length === 0) {
     const excluded = loadPmOnly().filter((c) =>
@@ -201,7 +219,7 @@ function main() {
     const excludedResults = [];
     const excludedByClass = {};
     for (const c of excluded) {
-      const r = sim(c.sym, c.date, c.cls);
+      const r = sim(c.sym, c.date, c.cls, delayMin);
       if (r.error || !r.admit) continue;
       excludedResults.push(r);
       (excludedByClass[c.cls] ||= []).push(r.exitRet);
@@ -216,10 +234,12 @@ function main() {
       r.date, r.sym, r.cls, r.entryTime, r.confirmTradesMin,
       r.confirmNotionalMin.toFixed(2), r.exitRet.toFixed(2), r.filled ? "limit" : "pmlast",
     ].join(","));
-    fs.writeFileSync(LIQUIDITY_AUDIT,
-      "date,ticker,retrospective_class,entry_utc,min_confirm_trades,min_confirm_notional_usd,modeled_return_pct,exit_type\n"
-      + auditRows.join("\n") + "\n");
-    console.log(`# Pre-entry liquidity audit written: ${path.relative(path.join(__dirname, ".."), LIQUIDITY_AUDIT)} (${completed.length} admitted rows)`);
+    if (writeLedgers) {
+      fs.writeFileSync(LIQUIDITY_AUDIT,
+        "date,ticker,retrospective_class,entry_utc,min_confirm_trades,min_confirm_notional_usd,modeled_return_pct,exit_type\n"
+        + auditRows.join("\n") + "\n");
+      console.log(`# Pre-entry liquidity audit written: ${path.relative(path.join(__dirname, ".."), LIQUIDITY_AUDIT)} (${completed.length} admitted rows)`);
+    }
     console.log(`\n# Hindsight-classification sensitivity (research only; excluded cases through prior completed PM windows; not in shadow ledger):`);
     for (const [cls, xs] of Object.entries(excludedByClass)) {
       console.log(`  ${cls}: admitted ${xs.length}, mean ${sign(mean(xs))}${mean(xs).toFixed(1)}%`);
