@@ -1694,7 +1694,7 @@ tracker).
 
 ## Current priorities and initiative status — 2026-10-06 18:00 CEST
 
-This checkpoint supersedes the 15:00 checkpoint and earlier initiative status paragraphs. **Initiative 1's sparse-baseline policy is resolved (v2), and its first outcome test shows no volume gate has an edge on 89 real entries.** **Initiative 7's A2 veto amendment is frozen.** The pilot slot stays free. Paper equity at 18:20 CEST is **$99,721.90 (-$278.10)**, flat.
+This checkpoint supersedes the 15:00 checkpoint and earlier initiative status paragraphs. **Initiative 1's sparse-baseline policy is resolved (v2), and its first outcome test shows no volume gate has an edge on 89 real entries.** **Initiative 7's A2 veto amendment is frozen.** The pilot slot stays free. Paper equity at 18:10 CEST is **$99,721.90 (-$278.10)**, flat.
 
 **Money-fast selection:** Juan has asked for a volume entry gate more than any other selection change (ONMD, BOOM, GRSD, DAIC, GELS, GIPR, SUNE, YFOR, INLF). Testing it on every real entry shows whether volume selection can make the core strategy profitable. On this sample it cannot. A2 was the last design dependency before orchestration of the liquid-session comparison, the only candidate for the free pilot slot. **North Star check:** all 89 AH entries average **-3.2% (median -7.7%, 28 wins)**, and every volume gate tested leaves the admitted group negative. This strengthens the existing liquid-session proposal. The provider-reliability decision in the daily email remains the largest measured loss within reach.
 
