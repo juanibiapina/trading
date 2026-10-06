@@ -78,6 +78,27 @@ A run four seconds earlier (15:30:19 ET) returned 28 hits: the same names plus *
 
 **Price-basis note:** RUBI's -7.1% uses the stock-dividend-adjusted October 5 close of $0.70 ($1.05 raw ÷ 1.5). Against the raw $1.05 close, $0.65 would read as -38%. Use the adjusted basis if RUBI becomes an AH candidate.
 
+## Scan 22:00 CEST (4:00 PM ET)
+
+**Decision:** Observe — no candidates found. No paper orders submitted; entries begin at the 23:00 CEST scan (17:00 ET).
+
+`python3 scripts/scan.py --all` ran at 16:00:17 ET (22:00:17 CEST / 20:00:17 UTC) in the AFTERHOURS session and returned 0 hits. A rerun at 16:02:05 ET also returned 0 hits with the same two lines. The US trading date is 2026-10-06.
+
+No candidates found.
+
+```text
+  Supplementary AH-change-only (>15%, not in volume pass): none
+  AH >10% at this snapshot (unrounded): none
+```
+
+### Evaluation notes
+
+**AH appearance count:** This is tonight's first AH scan. No ticker has a scanner-confirmed >10% AH appearance; the 21:30 regular-session appearances do not count toward the two-AH-scan entry gate. No candidate requires catalyst research, SIP verification, spike-bar, CONFIRM-3, volume-context, or book-check instrumentation at this snapshot.
+
+**Carry forward:** Keep all 28 names from the 21:30 watchlist in tonight's pipeline, including the KAPA dead-cat guard (Day -23.2%) and the OLOX day-2 multi-session tag. EVOL, MHUAF, VNPKF, WTLLF, NWINF, and KHDHF remain untradable (carried). This opening scan returned no price or volume evidence for the watchlist, so absence does not establish an AH fade. AH volume verification starts at `2026-10-06T20:00:00Z`.
+
+**Daily email:** No item from this scan requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
