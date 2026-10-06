@@ -1,0 +1,52 @@
+<div style="font-family: -apple-system, Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333; font-size: 14px; line-height: 1.4;">
+<h2 style="color: #1a1a1a; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">Overnight Cycle: October 5 &rarr; October 6</h2>
+
+<h3 style="color: #555; margin-bottom: 4px;">Post-Market Scans</h3>
+<p style="margin-top: 0;"><strong style="color: #c62828;">0/13 ran.</strong> Every Monday-night scan (21:30&ndash;00:30 CEST) failed at start with an Anthropic login error, &ldquo;refresh token expired.&rdquo; The outage lasted from Oct 5 15:00 CEST until the login was restored at 12:42 CEST today. This morning&rsquo;s pulses all started at 12:44 CEST, 1&ndash;4 hours late. From SIP bars, a working scanner would have seen OLOX and WHLR above +10% AH at 5 checkpoints, and JAGX and QTEX at 3.</p>
+<p style="font-size: 12px;">Friday AH has no scans by design: scans run Mon&ndash;Thu and evaluations run Tue&ndash;Fri. Scheduled-night failures since Sep 22: Sep 22 (2/7), Sep 29 (3/7) and Oct 5 (0/13), so 3 of 8 nights. The morning log&rsquo;s &ldquo;5 of 10&rdquo; also counts the unscheduled Fridays.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Today&rsquo;s Winner</h3>
+<p style="margin-top: 0;"><strong>OLOX</strong> (Olenox Industries, formerly Safe &amp; Green; float 1.26M) &mdash; no verified catalyst.<br/>
+Close $0.88 &rarr; AH high $1.66 (+88.6%) on 53.5M shares &rarr; PM peak $2.245 (<span style="color: #2e7d32; font-weight: bold;">+155.1%</span>) at 04:00 ET. It held above +100% for five 5-minute bars and was at $1.68 at 06:30 ET.<br/>
+Simulated entry at 23:00 CEST near $1.37 (two-sided book at 16:59 ET) &rarr; $2.245: <span style="color: #2e7d32; font-weight: bold;">+63.9% hypothetical</span> (+38.7% to the ~$1.90 plateau).</p>
+<p>Scanner caught it? <strong style="color: #c62828;">NO</strong> &mdash; no scan ran. The SIP replay shows it would have passed every entry gate at 23:00 CEST.</p>
+<p style="font-size: 12px;">Also: SAIQ gapped +623% in the Oct 5 PM after a +75% Friday AH move that no scan covered. FRGT +439% was PM-only, under $0.50 and a one-bar wick. WHLR would have been blocked by the Day-change filter. JAGX and QTEX would have returned only +4.6% and +9.2%.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Baseline Status</h3>
+<p style="background: #f5f5f5; padding: 8px; margin-top: 0;"><strong>72/82 (87.8%) &mdash; BASELINE MET</strong>; target &gt;80%. Selection 36/79 (45.6%); 94 days tracked. Both unchanged: OLOX is excluded because no scan covered it. The gaps on Sep 11, 18, 25 and Oct 2 are all Fridays, which have no Monday retrospective.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Paper Trades</h3>
+<p style="margin-top: 0;"><strong>Cycle $0.00; no fills or open positions.</strong><br/>Cumulative: <strong style="color: #c62828;">-$278.10 (-0.28%)</strong>; equity $99,721.90.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Scanner Improvement &mdash; October 2</h3>
+<p style="margin-top: 0;">Price-history checks now use the intended ET date and mark missing sessions unavailable. Evening notes must archive shared SIP volume rows for each &gt;10% AH candidate. No scan has run since, so there is no evidence yet. Nothing changed for this cycle.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Process Review &mdash; October 2</h3>
+<p style="margin-top: 0;">Fixed trailing spaces and UTC times labeled as ET in the price timeline. Limited context reads in four prompts. No unresolved user action. It covered sessions through Oct 2 14:30 CEST; the Oct 2 strategy runs, Oct 5 sessions and the outage have not been reviewed.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Initiative Progress</h3>
+<p style="font-size: 12px; margin-top: 0;">Window: Oct 2 11:37:06 CEST (receipt 178) &rarr; this send (Oct 6).</p>
+<ul style="padding-left: 20px;">
+<li style="margin-bottom: 7px;"><strong>7 &mdash; Alternative strategies / Jev, Oct 2 15:17 and 18:21 CEST:</strong> Compared five classification approaches and built a shadow Jev catalyst classifier; 6 control calls matched 18/18 labels. Fixed in advance a test of a numerical relative-strength rule against the same rule plus a Jev news veto, on 7 large caps plus QQQ, with costs and cash/QQQ benchmarks. All 8 symbols allow fractional shares at $100. Next: the SEC filing archiver, due Oct 5 15:00 and missed in the outage.</li>
+<li style="margin-bottom: 7px;"><strong>6 &mdash; Extreme runners, Oct 2 15:17/18:21; Oct 5 10:11/11:05; Oct 6 12:47 CEST:</strong> The full-PM SGRX audit found 66/66 bars and a peak of 2,651 trades, below the 3,000-trade bar, so no admission. Ledger unchanged: 26 holdable / 35 all-class. The Oct 5 PM-open scan logged <strong>SAIQ +623%</strong> (pending), QTEX +43.6% (PM-only, holdable) and RETO +26.5%. Every Oct 5 cohort quote was ~60 hours old, and today&rsquo;s cohort was skipped (outage). Today&rsquo;s late scan found RUBI PM-only and uninvestable. Next: classify SAIQ against discovery, gates, quotes and outcome.</li>
+<li style="margin-bottom: 7px;"><strong>3 &mdash; Scheduling/exits, Oct 2 15:17/18:21 CEST:</strong> Replayed Oct 1 AH with earlier confirmation: 13 cases, no second-bar entries, and only IPW at the third bar ($1.40, &minus;18.6% to PM open), the same price as the current grid. No entry-price gain. Next: later-rebuild comparison at 15:00 today.</li>
+<li style="margin-bottom: 7px;"><strong>4 &mdash; Reporting, Oct 2 12:00/15:17 CEST:</strong> Added the session-model footer below and confirmed that the Oct 1 email included the required Jev section. Next: today&rsquo;s process review checks this email&rsquo;s coverage.</li>
+</ul>
+<p style="font-size: 12px;">Missed in the outage: the Initiative 1 sparse-baseline policy (due Oct 5 15:00) and Initiative 7 observation orchestration (due Oct 5 18:00). Initiative 5 waits for a report with charts. <strong>Initiative 2&rsquo;s broker test stays deferred per your Sep 22 instruction</strong> until broker/data/API access arrives. Open proposal: evaluate a liquid US regular-session strategy as a replacement; research continues, with no live switch.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Jev Results and Costs</h3>
+<p style="margin-top: 0;"><strong>Run Oct 2 15:09 CEST, jev-1.13.0, spec stock-catalyst-v1: completed.</strong> AMOD &rarr; financing/dilution; SORA &rarr; non-binding plan; ELUT &rarr; asset cash receipt. Three synthetic controls (binding contract, no evidence, mixed) returned the expected labels. 18/18 labels matched at confidence 1.0. This checks the interface on past and synthetic cases; it does not measure future accuracy or trading edge.<br/>
+<strong>Window usage:</strong> 6 calls, 5,471 input / 931 output tokens. <strong>Cost: $0.00023 USD estimated</strong> ($0.042/M input, output free, TypeSafe pricing checked Oct 2). Measured charge unavailable. No failed attempts. Source: log/2026-10-02/init7-jev-shadow-v1/manifest.json, the only Jev run artifact in the repo. The Oct 2 18:21 run made no Jev call, and both Oct 5 strategy runs failed before starting. Next: live inputs from the SEC archiver.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Feedback Acknowledged</h3>
+<p style="margin-top: 0;">No new feedback since the last report. The Oct 5 and Oct 6 reply checks found no unread replies.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Charts (5m + volume)</h3>
+<p style="margin: 0 0 4px;"><strong>OLOX (winner, not traded)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-05/OLOX-1259.png" alt="OLOX 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+
+<h3 style="color: #555; margin-bottom: 4px;">Key Takeaway</h3>
+<p style="background: #e3f2fd; padding: 10px; border-left: 4px solid #1976d2;">An expired login, not the scanner, cost this cycle&rsquo;s winner: all 13 scans failed while OLOX ran +155% (about +64% from a 23:00 entry).</p>
+<p style="font-size: 12px; color: #555;">Reply with feedback; it feeds the daily reply check.</p>
+<p style="font-size: 12px; color: #666; margin-top: 20px;">Email session: anthropic/claude-opus-5-5 &middot; reasoning: xhigh</p>
+</div>

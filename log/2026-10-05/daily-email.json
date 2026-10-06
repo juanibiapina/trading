@@ -1,0 +1,59 @@
+{
+  "cycle_date": "2026-10-05",
+  "status": "sent",
+  "provider": "InboxKit",
+  "message_id": 179,
+  "from": "zero@inboxkit.cc",
+  "to": "juanibiapina@gmail.com",
+  "subject": "Trading Scanner Report - 2026-10-05",
+  "send_started_at": "2026-10-06T11:00:53.008613+00:00",
+  "sent_at": "2026-10-06T11:00:54.167526+00:00",
+  "sent_at_source": "Successful InboxKit response observed locally (response has no timestamp)",
+  "previous_successful_send_at": "2026-10-02T09:37:06.127188+00:00",
+  "previous_message_id": 178,
+  "previous_receipt": "log/2026-10-01/daily-email.json",
+  "reporting_cutoff_at": "2026-10-06T11:00:53.008613+00:00",
+  "body_file": "daily-email.html",
+  "body_sha256": "b4958f361d9cedfe19a7d328d1ff84b28408d0840d88371d6c0a06ac65c4f51f",
+  "chart_urls": [
+    "https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-05/OLOX-1259.png"
+  ],
+  "chart_markers": "none; OLOX had no Alpaca fill",
+  "winner": "OLOX",
+  "winner_scanner_caught": false,
+  "winner_miss_reason": "0/13 post-market scans ran; Anthropic OAuth refresh token expired",
+  "outage": {
+    "first_failed_session_utc": "2026-10-05T13:00:00Z",
+    "last_failed_retry_utc": "2026-10-06T10:39:08Z",
+    "recovered_utc": "2026-10-06T10:44:00Z",
+    "error": "OAuth refresh failed for anthropic: invalid_grant, Refresh token expired",
+    "failed_post_market_scans": 13,
+    "failed_strategy_advance_runs": 2
+  },
+  "scheduled_night_failures_since_2026_09_22": "3/8 (Sep 22 2/7, Sep 29 3/7, Oct 5 0/13); Fridays are unscheduled by design",
+  "latest_scanner_improvement_date": "2026-10-02",
+  "latest_completed_process_review_date": "2026-10-02",
+  "initiative_updates": [
+    3,
+    4,
+    6,
+    7
+  ],
+  "initiative_blocked_or_missed": {
+    "1": "Sparse-baseline policy due Oct 5 15:00 missed in outage",
+    "2": "Deferred per Juan's Sep 22 instruction",
+    "5": "Waits for a chart-bearing report",
+    "7": "SEC archiver and observation orchestration due Oct 5 missed in outage"
+  },
+  "jev_status": "completed",
+  "jev_run": "2026-10-02T13:09:23Z, jev-1.13.0, stock-catalyst-v1",
+  "jev_calls": 6,
+  "jev_tokens": {
+    "input": 5471,
+    "output": 931
+  },
+  "jev_cost": 0.000229782,
+  "jev_cost_kind": "estimate; measured charge unavailable",
+  "jev_cost_currency": "USD",
+  "jev_artifact": "log/2026-10-02/init7-jev-shadow-v1/manifest.json"
+}
