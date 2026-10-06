@@ -1,0 +1,38 @@
+{
+  "metric_version": "sip-ah-volume-v1",
+  "symbol": "NCPL",
+  "date": "2026-10-06",
+  "prior_date": "2026-10-05",
+  "as_of_utc": "2026-10-06T20:20:13+00:00",
+  "source_observed_utc": "2026-10-06T20:21:38.519672Z",
+  "prior_observed_slots": 25,
+  "prior_expected_slots": 48,
+  "prior_complete": false,
+  "prior_observed_peak_shares": 6551,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-06T20:00:00+00:00",
+      "bar_end_utc": "2026-10-06T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 71987,
+      "trades": 261,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    },
+    {
+      "bar_start_utc": "2026-10-06T20:05:00+00:00",
+      "bar_end_utc": "2026-10-06T20:10:00+00:00",
+      "bar_et": "16:05",
+      "shares": 71440,
+      "trades": 172,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": null
+    }
+  ]
+}
