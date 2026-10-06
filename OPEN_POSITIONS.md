@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
 | BIYA | $1.91 | $1.91 | $1.91 | 0.0% | 0.0% | 52 | $99.32 | None | 2026-10-06 | AH BUILD/hold re-ignition one week after the Sep 29–30 spike; SIP high $2.07 at 16:40 ET on 802K sh / 5,837 trades, CONFIRM-3 YES; no catalyst found. Hard stop $1.72 (-10%). Exit at first premarket opportunity. Alpaca fill `d20b26bc-7405-4f87-831e-dd4f6e5d927b` at 17:01:28 ET. |
+| MTEN | $1.39 | $1.39 | $1.39 | 0.0% | 0.0% | 70 | $97.30 | B | 2026-10-06 | Same-day 6-K (EDGAR 16:30:51 ET): completed $15M cash acquisition of HK Phoenix Gateway Alliance (acquirer side; price ~2x market cap, no target revenue disclosed). AH BUILD from the 17:15 ET re-ignition: SIP 711K–1.48M sh / 3.9K–7.9K trades per bar, new high $1.59 at 17:40 ET; filled 12.6% below the high. Hard stop $1.18 (-15%); hold up to 2 days. Alpaca fill `271309e2-7bd3-49e7-b39f-0728681f53c6` at 18:01:20 ET. |
 
 ## Position Rules
 
