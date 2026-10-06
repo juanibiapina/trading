@@ -395,6 +395,106 @@ BIYA BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-06 16:27:12 ET
 
 **Daily email:** Report VCIG's 9.25M shares in its first 15 AH minutes and its post-16:15 push to about $2.00 (pending SIP), SXTC's DEAD-CAT-OVERRIDE WATCH hypothetical at $1.57 with a second leg toward $2.06, BIYA's no-catalyst 1.07M-share 16:10 bar one week after its September 29 AH spike, and the `volume_metric.py` 403 on its built-in fetch (its fixed 20:00 ET end time hits the free-tier recent-data block; fixed for this scan with a `broker.js` fetch). No item from this scan requires Juan's input.
 
+## Scan 22:30 CEST (4:30 PM ET)
+
+**Decision:** No entry; entries begin at the 23:00 CEST scan. AH appearance counts are now VCIG **3**, SXTC **3**, BIYA **2** (22:25, 22:30). BIYA is the cleanest setup so far: CONFIRM-3 turned **YES**, its SIP high came in the 16:15 bar (after the opening window) on 1.60M shares / 9,966 trades, and it holds about 5% below that high on a fresh two-sided book. VCIG's CONFIRM-3 is still NO through the 16:15 SIP bar, so its first-bar-spike status waits on SIP for the post-16:20 push. SXTC stays blocked by Day -39.9% and on DEAD-CAT-OVERRIDE WATCH; Yahoo shows a new leg to about $2.36 after this scan. No paper orders submitted.
+
+`python3 scripts/scan.py --all` ran at 16:30:14 ET (22:30:14 CEST / 20:30:14 UTC) in the AFTERHOURS session and returned 6 hits. The US trading date is 2026-10-06. Repository sync completed before the scan.
+
+```text
+  Supplementary AH-change-only (>15%, not in volume pass): none
+  AH >10% at this snapshot (unrounded): BIYA, SXTC, VCIG
+```
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $1.41 | +54.8% | +29.9% | $1.83 | +101.0% | 8.4M | 2.2M | 3.9x | 1.0M | Miscellaneous Commercial Services |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $1.36 | -2.5% | +26.0% | $1.72 | +22.9% | 1.1M | 1.7M | 0.7x | 2.7M | Personnel Services |
+| SXTC | [TV](https://www.tradingview.com/chart/?symbol=SXTC) | $1.25 | -39.9% | +22.4% | $1.53 | -26.4% | 832K | 571K | 1.5x | 1.0M | Pharmaceuticals: Major |
+| XHLD | [TV](https://www.tradingview.com/chart/?symbol=XHLD) | $0.62 | +51.6% | +6.4% | $0.66 | +61.3% | 687K | 19.4M | 0.0x | 10.5M | Miscellaneous Commercial Services |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.09 | -17.4% | +9.6% | $1.20 | -9.5% | 143K | 14.3M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| BURU | [TV](https://www.tradingview.com/chart/?symbol=BURU) | $1.20 | +7.1% | +5.8% | $1.27 | +13.4% | 118K | 1.6M | 0.1x | 8.4M | Electronic Components |
+
+### Evaluation notes
+
+**Tradability:** VCIG, SXTC, BIYA, and NCPL were verified `tradable=true` earlier tonight. XHLD (Nasdaq) and BURU (AMEX) returned `tradable=true`, both active.
+
+**New SIP bar** (`broker.js bars SYM --tf 5Min --start 2026-10-06T20:00:00Z`, feed=sip). A re-pull at 16:33 ET still ended at the 16:15 bar, about 15 minutes behind, which matches the free-tier delay. Earlier bars are in the 22:20 and 22:25 tables.
+
+| Ticker | Bar ET | Open | High | Low | Close | Shares | VWAP | Trades |
+|--------|--------|------|------|-----|-------|--------|------|--------|
+| VCIG | 16:15 | $1.83 | $1.94 | $1.70 | $1.71 | 2,090,194 | $1.83 | 10,506 |
+| SXTC | 16:15 | $1.63 | $1.63 | $1.41 | $1.45 | 103,774 | $1.48 | 788 |
+| BIYA | 16:15 | $1.75 | $1.92 | $1.71 | $1.81 | 1,596,650 | $1.82 | 9,966 |
+
+**Yahoo timeline (shape only, not volume or exact levels):** VCIG $2.02 at 16:25, $1.92 at 16:30, $1.91 at 16:33. BIYA $1.77 at 16:25, $1.79 at 16:30, $1.82 at 16:33. SXTC one-minute closes $1.73 at 16:25, $1.82 at 16:30, $2.15 at 16:31, $2.30 at 16:32, $2.36 at 16:33 (one-minute high $2.50).
+
+**BIYA — second qualifying AH scan; no entry before 23:00. BUILD with real volume.** SIP volume rose every bar: 285,556 → 1,072,394 → **1,596,650 shares** (1,638 → 6,193 → **9,966 trades**). The scanner's 0.7x VRatio understates this. The SIP high is **$1.92 in the 16:15 bar** (AH +41.2%, Total +37.1% from the $1.40 prior close), which is after the 16:00–16:15 opening window, so the first-bar-spike skip does not apply. The SIP VWAP of $1.82 corroborates the scanner's $1.72 as a lagged reading, not a bad print. The fresh IEX quote is two-sided (`BIYA  bid $1.76 x100  ask $1.79 x100  @ 2026-10-06T20:31:24.486137742Z`). At Yahoo's $1.82 the price is **5% below the high**, holding. Day -2.5% passes; Total% is about +30%, far under the +150% ceiling. Float 2.7M.
+
+- **Catalyst Grade None — no catalyst found.** Four new searches (press release, day-fresh announcements, 6-K filings, and a Tavily news query) found only background: the [PRNewswire first-half fiscal 2026 results](https://www.prnewswire.com/news-releases/baiya-international-group-inc-announces-first-half-of-fiscal-year-2026-financial-results-302893401.html) from about a week ago, the July 8, 2026 1-for-10 reverse split, and the Wall Street Zen strong-sell-to-sell change reported October 5. Nothing is dated October 6. No-catalyst is a documented concern, not a skip reason.
+- **Prior activity:** SIP daily bars show 2.93M shares on September 29 and 11.53M on September 30 (high $3.18, close $1.96), then 125K–372K per day while the price slid to $1.40. Today's regular session traded 4.04M shares. This is a re-ignition one week after the September 29–30 spike, so it fails a strict "first day of unusual activity" reading. It is not a MULTI-SESSION-RUNNER, because the intervening sessions fell. `WINNERS_TRACKING.md` has no BIYA entry.
+
+**VCIG — third qualifying AH scan; first-bar-spike status still pending.** The new 16:15 bar matched the $1.94 high without exceeding it, on 2,090,194 shares / 10,506 trades, and closed at $1.71. Per-bar volume is easing (3.34M → 3.45M → 2.46M → 2.09M). CONFIRM-3 stays NO through the 16:15 bar. The real-time IEX quote printed **bid $2.00 / ask $2.04 at 16:31:27 ET**, then $1.97/$1.99 at 16:31:38 ET. Both sit above the $1.94 SIP high, and Yahoo showed $2.02 at 16:25. That is a post-16:15 high near $2.02–2.04 that SIP has not yet covered; Yahoo is back to $1.91 at 16:33. At $2.00 Total% is +119.6% from the $0.91 prior close, at the edge of the >~120% fade zone. Catalyst Grade C (October 6 GlobeNewswire VGAIN Compute launch; clock time still unverified) and prior-activity notes are unchanged from 22:25.
+
+**SXTC — third qualifying AH scan; skip live entry (Day -39.9%); DEAD-CAT-OVERRIDE WATCH continues.** The 22:25 hypothetical ($1.57 at 16:25 ET) stands. SIP through 16:15 ET shows a fade from the $1.85 16:05 high on shrinking volume (683,755 → 212,492 → **103,774 shares**), and CONFIRM-3 turned **NO** (failed third-bar hold/volume). The scanner's AH change dipped from +25.6% to +22.4%, matching that dip. Yahoo then shows a sharp second leg after the scan: **$2.36 at 16:33 ET**, which would be AH +89% and Total +13.5% above the $2.08 prior close. SIP has not covered that leg, the IEX quote is still frozen at 16:00:03 ET with no ask, and the delayed SIP book at 16:16 ET was $1.50/$1.51. Per the freshness guard, treat the leg as unconfirmed but live, not as a bad print. One more day-fresh search found no catalyst (only a Benzinga intraday mover list noting a 21.16% decline to $1.64); Grade None stands.
+
+**Below threshold:** NCPL rose back to +9.6% on 143K AH shares; its 22:20 thin-drift skip and FIRST-BAR-SPIKE WATCH hypothetical stand, and IEX is still frozen with no ask. XHLD (+6.4% AH, Day +51.6%, Total +61.3%, from the 21:30 watchlist) and BURU (+5.8% AH, Day +7.1%) are tracked only. ICMB and MTNB are absent.
+
+**Instrumentation (verbatim; log-only):**
+
+```text
+VCIG 2026-10-06  NO-SPIKE  peak +38% @16:12ET  (no bar cleared +15% on a volume co-spike) (as-of 16:30ET)
+VCIG 2026-10-06  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET
+SXTC 2026-10-06  SPIKE  16:03ET  +32%  $1.65  135 trades / 30k sh  (first co-spike bar) (as-of 16:30ET)
+SXTC 2026-10-06  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET
+BIYA 2026-10-06  SPIKE  16:08ET  +21%  $1.65  372 trades / 58k sh  (first co-spike bar) (as-of 16:30ET)
+BIYA 2026-10-06  CONFIRM-3  YES ignition 16:05ET 260.8x; confirmed 16:15ET $1.81 as-of 16:30ET
+```
+
+**Shared SIP volume context (`sip-ah-volume-v1`, log-only):** The prior trading date is 2026-10-05. `volume_metric.py --save-input` again returned HTTP 403 on its built-in fetch, so the inputs were fetched with `broker.js bars SYM --tf 5Min --start 2026-10-05T20:00:00Z --limit 1000 --feed sip --json` (one page each, no next-page token) and archived as `log/2026-10-06/SYM-2230-volume-sip.json`, with computed rows in `SYM-2230-volume-metric.json`. The concurrent 22:25 pulse's `git add log/` committed these files in `c8be4e2`. The 16:15 bar is the first with a local ratio. Prior-session coverage is incomplete (VCIG 41/48, SXTC 10/48, BIYA 18/48), so prior-peak ratios stay unknown; observed prior peaks are VCIG 10,916, SXTC 789, and BIYA 3,094 shares. The SXTC share-consolidation headline and BIYA's July 1-for-10 reverse split remain unreviewed against this window.
+
+```text
+# VCIG shared SIP volume; prior 2026-10-05 41/48 slots; log-only
+# reconstructed as-of 2026-10-06T20:30:14+00:00; source fetched 2026-10-06T20:32:13.853065Z
+VCIG 2026-10-06  VOLUME-CONTEXT 16:00ET start=2026-10-06T20:00:00+00:00 shares=3344455 local=unknown prior-peak=unknown status=warmup
+VCIG 2026-10-06  VOLUME-CONTEXT 16:05ET start=2026-10-06T20:05:00+00:00 shares=3445449 local=unknown prior-peak=unknown status=warmup
+VCIG 2026-10-06  VOLUME-CONTEXT 16:10ET start=2026-10-06T20:10:00+00:00 shares=2459351 local=unknown prior-peak=unknown status=warmup
+VCIG 2026-10-06  VOLUME-CONTEXT 16:15ET start=2026-10-06T20:15:00+00:00 shares=2090194 local=0.6250x prior-peak=unknown status=ok
+# SXTC shared SIP volume; prior 2026-10-05 10/48 slots; log-only
+# reconstructed as-of 2026-10-06T20:30:14+00:00; source fetched 2026-10-06T20:32:16.010125Z
+SXTC 2026-10-06  VOLUME-CONTEXT 16:00ET start=2026-10-06T20:00:00+00:00 shares=75597 local=unknown prior-peak=unknown status=warmup
+SXTC 2026-10-06  VOLUME-CONTEXT 16:05ET start=2026-10-06T20:05:00+00:00 shares=683755 local=unknown prior-peak=unknown status=warmup
+SXTC 2026-10-06  VOLUME-CONTEXT 16:10ET start=2026-10-06T20:10:00+00:00 shares=212492 local=unknown prior-peak=unknown status=warmup
+SXTC 2026-10-06  VOLUME-CONTEXT 16:15ET start=2026-10-06T20:15:00+00:00 shares=103774 local=0.4884x prior-peak=unknown status=ok
+# BIYA shared SIP volume; prior 2026-10-05 18/48 slots; log-only
+# reconstructed as-of 2026-10-06T20:30:14+00:00; source fetched 2026-10-06T20:32:18.171658Z
+BIYA 2026-10-06  VOLUME-CONTEXT 16:00ET start=2026-10-06T20:00:00+00:00 shares=1095 local=unknown prior-peak=unknown status=warmup
+BIYA 2026-10-06  VOLUME-CONTEXT 16:05ET start=2026-10-06T20:05:00+00:00 shares=285556 local=unknown prior-peak=unknown status=warmup
+BIYA 2026-10-06  VOLUME-CONTEXT 16:10ET start=2026-10-06T20:10:00+00:00 shares=1072394 local=unknown prior-peak=unknown status=warmup
+BIYA 2026-10-06  VOLUME-CONTEXT 16:15ET start=2026-10-06T20:15:00+00:00 shares=1596650 local=5.5914x prior-peak=unknown status=ok
+```
+
+**Book diagnostic (verbatim; log-only):**
+
+```text
+VCIG BOOK iex bid $1.97 x1000 / ask $1.99 x100 @ 2026-10-06 16:31:38 ET age 1s two-sided spread 1.01% of ask
+VCIG BOOK sip-15m bid $1.78 x800 / ask $1.79 x1200 @ 2026-10-06 16:16:38 ET age 15m01s two-sided spread 0.56% of ask
+VCIG BOOK refresh +15s iex advanced @ 2026-10-06 16:31:54 ET
+VCIG BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-06 16:31:38 ET; log-only)
+SXTC BOOK iex bid $1.05 x100 / ask $0.0000 x0 @ 2026-10-06 16:00:03 ET age 31m35s one-sided/empty
+SXTC BOOK sip-15m bid $1.50 x2000 / ask $1.51 x1100 @ 2026-10-06 16:16:38 ET age 15m00s two-sided spread 0.66% of ask
+SXTC BOOK refresh +15s iex unchanged @ 2026-10-06 16:00:03 ET
+SXTC BOOK verdict: IEX STALE 31m35s; SIP-15m TWO-SIDED (observed 2026-10-06 16:31:38 ET; log-only)
+BIYA BOOK iex bid $1.76 x100 / ask $1.79 x100 @ 2026-10-06 16:31:24 ET age 14s two-sided spread 1.68% of ask
+BIYA BOOK sip-15m bid $1.88 x5800 / ask $1.89 x10400 @ 2026-10-06 16:16:38 ET age 15m00s two-sided spread 0.53% of ask
+BIYA BOOK refresh +15s iex advanced @ 2026-10-06 16:31:53 ET
+BIYA BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-06 16:31:38 ET; log-only)
+```
+
+**23:00 checklist:** BIYA clears the appearance gate; enter if it still shows >10% AH, SIP keeps accumulating, it holds within ~20% of its high, and the IEX book is fresh and two-sided (Grade None, concern noted). VCIG clears the appearance gate; the first-bar-spike skip lifts only if SIP bars through about 16:45 ET show the ~$2.02 high on accumulating volume and CONFIRM-3 turns YES. SXTC stays a Day% skip; check SIP for the 16:30 leg and note whether it holds above the $2.08 prior close. Keep all 28 names from the 21:30 watchlist in the pipeline for the final-scan cross-check. KAPA's dead-cat guard and OLOX's day-2 tag still apply. EVOL, MHUAF, VNPKF, WTLLF, NWINF, and KHDHF remain untradable (carried).
+
+**Daily email:** Report BIYA turning CONFIRM-3 YES on 1.60M shares in the 16:15 bar with no catalyst found, VCIG's unconfirmed push above its opening-window high, and SXTC's unconfirmed Yahoo leg to $2.36 while on DEAD-CAT-OVERRIDE WATCH. No item from this scan requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
