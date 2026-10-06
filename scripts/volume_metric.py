@@ -15,6 +15,8 @@ from zoneinfo import ZoneInfo
 ET = ZoneInfo("America/New_York")
 SLOT = dt.timedelta(minutes=5)
 VERSION = "sip-ah-volume-v1"
+VERSION_V2 = "sip-ah-volume-v2"
+FLOOR_SHARES = 100  # one round lot; a zero or near-zero baseline cannot inflate a ratio past bar shares / 100
 
 
 def timestamp(value):
@@ -56,7 +58,7 @@ def fetch_sip(symbol, prior_day, day):
             "observed_utc": dt.datetime.now(dt.timezone.utc).isoformat(), "bars": bars}
 
 
-def calculate(source, day, prior_day, as_of):
+def index_bars(source, day, prior_day):
     if source.get("feed") != "sip" or source.get("timeframe") != "5Min":
         raise ValueError("Metric requires explicitly identified SIP 5Min input")
     if source.get("adjustment") != "raw":
@@ -72,7 +74,11 @@ def calculate(source, day, prior_day, as_of):
         if not isinstance(volume, (int, float)) or volume < 0:
             raise ValueError("SIP volume must be present and nonnegative")
         indexed[time] = bar
+    return indexed
 
+
+def calculate(source, day, prior_day, as_of):
+    indexed = index_bars(source, day, prior_day)
     prior_start, prior_end = bounds(prior_day)
     if as_of < prior_end:
         raise ValueError("Prior AH session must be complete by as-of time")
@@ -114,7 +120,72 @@ def calculate(source, day, prior_day, as_of):
             "rows": rows}
 
 
+def calculate_v2(source, day, prior_day, as_of, floor=FLOOR_SHARES):
+    """v2: absent slots inside the returned span are zero-trade intervals; ratios use a round-lot floor.
+
+    Alpaca emits a bar only for an interval with trades. A slot is inferred zero when it lies at or
+    after the request start (or the first returned bar when the start is unrecorded) and before the
+    latest bar already closed by `as_of`. Slots after that bar stay unknown because data can lag.
+    """
+    indexed = index_bars(source, day, prior_day)
+    prior_start, prior_end = bounds(prior_day)
+    if as_of < prior_end:
+        raise ValueError("Prior AH session must be complete by as-of time")
+    visible = sorted(t for t in indexed if t + SLOT <= as_of)
+    requested = source.get("requested_start")
+    span_start = timestamp(requested) if requested else (visible[0] if visible else None)
+    last = visible[-1] if visible else None
+
+    def shares(time):
+        if time in indexed and time + SLOT <= as_of:
+            return indexed[time]["v"], "observed"
+        if last is not None and span_start <= time < last:
+            return 0, "absent-zero"
+        return None, "unknown"
+
+    prior = [shares(prior_start + SLOT * i) for i in range(48)]
+    prior_known = all(value is not None for value, _ in prior)
+    prior_peak = max(value for value, _ in prior) if prior_known else None
+    prior_denominator = max(prior_peak, floor) if prior_known else None
+    start, end = bounds(day)
+    rows = []
+    for time in visible:
+        if not start <= time < end:
+            continue
+        bar = indexed[time]
+        median = denominator = local_ratio = None
+        if time - 3 * SLOT < start:
+            status = "warmup"
+        else:
+            previous = [shares(time - SLOT * i)[0] for i in (1, 2, 3)]
+            if any(value is None for value in previous):
+                status = "unknown-baseline"
+            else:
+                median = statistics.median(previous)
+                denominator = max(median, floor)
+                local_ratio = bar["v"] / denominator
+                status = "ok" if median >= floor else "floored"
+        rows.append({"bar_start_utc": time.isoformat(),
+                     "bar_end_utc": (time + SLOT).isoformat(),
+                     "bar_et": time.astimezone(ET).strftime("%H:%M"),
+                     "shares": bar["v"], "trades": bar.get("n"),
+                     "baseline_median_shares": median, "baseline_shares": denominator,
+                     "local_ratio": local_ratio, "local_status": status,
+                     "local_ge_10": None if local_ratio is None else local_ratio >= 10,
+                     "prior_peak_ratio": bar["v"] / prior_denominator if prior_denominator else None})
+    return {"metric_version": VERSION_V2, "symbol": source["symbol"],
+            "date": day.isoformat(), "prior_date": prior_day.isoformat(),
+            "as_of_utc": as_of.isoformat(), "source_observed_utc": source["observed_utc"],
+            "floor_shares": floor,
+            "prior_observed_slots": sum(status == "observed" for _, status in prior),
+            "prior_inferred_zero_slots": sum(status == "absent-zero" for _, status in prior),
+            "prior_expected_slots": 48, "prior_complete": prior_known,
+            "prior_peak_shares": prior_peak, "rows": rows}
+
+
 def report(result):
+    if result["metric_version"] == VERSION_V2:
+        raise ValueError("The Markdown report describes v1 semantics; render v2 from its JSON rows")
     lines = [f"# {result['symbol']} shared volume audit — {result['date']}", "",
              f"Metric: `{result['metric_version']}`; SIP raw 5-minute shares; log-only.", "",
              f"Reconstructed through {result['as_of_utc']}; source fetched {result['source_observed_utc']}.",
@@ -147,14 +218,19 @@ def main():
     parser.add_argument("--input", type=Path, help="Replay an archived SIP input instead of fetching")
     parser.add_argument("--save-input", type=Path, help="Archive fetched SIP bars with source metadata")
     parser.add_argument("--report", type=Path, help="Write a Markdown review from the same computed rows")
+    parser.add_argument("--metric-version", choices=(VERSION, VERSION_V2), default=VERSION,
+                        help="v1 (default) keeps absent slots unknown; v2 infers zero-trade slots, floors at 100 shares")
     args = parser.parse_args()
+    if args.metric_version == VERSION_V2 and args.report:
+        parser.error("--report renders v1 only")
     symbol = args.symbol.upper()
     if not re.fullmatch(r"[A-Z][A-Z.\-]*", symbol):
         parser.error("Invalid symbol")
     source = json.loads(args.input.read_text()) if args.input else fetch_sip(symbol, args.prior_date, args.date)
     if source["symbol"] != symbol:
         parser.error("Archived symbol does not match requested symbol")
-    result = calculate(source, args.date, args.prior_date, args.as_of)
+    compute = calculate_v2 if args.metric_version == VERSION_V2 else calculate
+    result = compute(source, args.date, args.prior_date, args.as_of)
     if args.save_input:
         args.save_input.parent.mkdir(parents=True, exist_ok=True)
         args.save_input.write_text(json.dumps(source, indent=2) + "\n")

@@ -1,5 +1,41 @@
 # Initiative Log
 
+### 2026-10-06 18:00 — Initiative 1 sparse-baseline policy v2 and 89-entry volume-gate test; Initiative 7 A2 amendment frozen
+
+**Evaluated:** The 15:00 hypotheses for this run **worked**: the A2 amendment is frozen before orchestration, and Initiative 1's sparse-baseline policy is resolved against INLF, GIPR and YFOR. No pilot is active; the slot released at 15:00 stays free. Process-review handoff 2 (Initiative 7 orchestration at 18:00) stays at October 7 15:00, because A2 had to be frozen first.
+
+**Step taken:**
+
+- **Initiative 1 (oldest waiting item, since October 1):** added `sip-ah-volume-v2` to `scripts/volume_metric.py` as an opt-in version. Built `scripts/volume-entry-eval.py`, which tests volume gates against the realized return of every Alpaca paper AH entry. Juan has asked for a volume gate more than any other selection change, so this tests whether volume selection can make the core strategy profitable.
+- **Initiative 7 (last design dependency before orchestration):** froze `docs/investigations/init7-amendment-a2.json`. The liquid-session comparison is the only candidate for the free pilot slot.
+
+**Result:**
+
+- **v2 policy:** absent slots before the latest visible bar are zero-trade intervals, and ratios use a 100-share floor. v1 output is byte-identical on the YFOR, INLF and GIPR archives, and the live scan still logs v1. INLF's Sep 24 ignition measures **6,232x locally and 1,726x the prior AH peak** (v1: unknown). GIPR's ignition is **0.75x** its complete prior session's peak.
+- **89-entry test** (all 91 buys paired; 2 VTAK test lots excluded; bars closed 15 minutes before each fill): all entries **28 wins, mean -3.2%, median -7.7%, -$274.81**. No gate separates outcomes:
+  - ≥10x prior AH peak: 78 pass at -3.1%, 11 fail at -3.9% (p 0.93).
+  - Juan's local ≥10x rule: 57 pass at -2.1% (-$120), 32 fail at -5.2% (-$154) (p 0.60). The medians are -7.7% and -8.0%.
+  - Same-day regular-session baseline, ≥1x: 75 pass at -2.8%, 14 fail at -5.5% (p 0.72). At ≥3x the direction reverses.
+
+  The two baselines together flag 5 of Juan's 10 entered rejections. Most entries were first-day movers after silent evenings, so the prior-AH ratio passes GELS (13,056x) and UFG (18,295x). The offline replay reproduces the network rows exactly.
+- **A2:** pins the v1 design, archiver and classifier SHA-256 hashes (all verified). A2 holds N1's ticker unless one shared Jev call on an eligible source returns financing/dilution or a non-binding plan at ≥0.8 confidence, or a dilutive-financing probability ≥0.5. Twelve decision vectors match both A1's v1 rule and A2's rule. A1 stays registered, and the lead-extraction idea is registered as unfrozen. At the census rate, A2 differs from N1 in about two of 120 pilot observations.
+- **Other details.** No Jev call, order, live rule, size or pulse timing changed. Equity is $99,721.90 (-$278.10), flat.
+- **Evidence:** `docs/investigations/init1-volume-policy-v2-2026-10-06.md`, `log/2026-10-06/init1-volume-policy/`.
+
+**Hypothesis / next step:**
+
+- **October 7 15:00:**
+  - Initiative 7 orchestration producing N1/A1/A2 decisions that reproduce all 12 vectors, plus the first scheduled capture that can load.
+  - Initiative 3 later-rebuild comparison with the screener lag modeled. It must beat the 89-entry base rate of -3.2% per entry.
+- **October 8 15:00:** Initiative 1 consumers accept v2, and the scan's log-only context switches to it. Any new volume hypothesis is tested against the same 89-entry archive before a gate is proposed.
+- **Next daily email:**
+  - Initiative 1 finding: Juan's 10x rule does not separate outcomes on 89 entries.
+  - Initiative 7 A2 freeze.
+  - The 15:00 items: Initiative 6 slot release, archiver/census and outage record.
+  - Jev: not run on October 6.
+
+**Needs from Juan:** nothing new. The 89-entry result is evidence for the existing liquid-session proposal and is reported as a finding. Initiative 2 stays deferred; the Initiative 3 proposals stay unapplied.
+
 ### 2026-10-06 15:00 — Initiative 6 pilot fails causal latency check; Initiative 7 SEC archiver and A1 availability census; Initiative 3 outage record
 
 **Evaluated:** The October 2 18:00 plan for October 5 did not run: both October 5 strategy runs failed at their first model call because of the expired Anthropic login. Today's results:

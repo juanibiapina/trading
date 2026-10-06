@@ -1692,7 +1692,39 @@ tracker).
 
 ---
 
-## Current priorities and initiative status — 2026-10-06 15:00 CEST
+## Current priorities and initiative status — 2026-10-06 18:00 CEST
+
+This checkpoint supersedes the 15:00 checkpoint and earlier initiative status paragraphs. **Initiative 1's sparse-baseline policy is resolved (v2), and its first outcome test shows no volume gate has an edge on 89 real entries.** **Initiative 7's A2 veto amendment is frozen.** The pilot slot stays free. Paper equity at 18:20 CEST is **$99,721.90 (-$278.10)**, flat.
+
+**Money-fast selection:** Juan has asked for a volume entry gate more than any other selection change (ONMD, BOOM, GRSD, DAIC, GELS, GIPR, SUNE, YFOR, INLF). Testing it on every real entry shows whether volume selection can make the core strategy profitable. On this sample it cannot. A2 was the last design dependency before orchestration of the liquid-session comparison, the only candidate for the free pilot slot. **North Star check:** all 89 AH entries average **-3.2% (median -7.7%, 28 wins)**, and every volume gate tested leaves the admitted group negative. This strengthens the existing liquid-session proposal. The provider-reliability decision in the daily email remains the largest measured loss within reach.
+
+| Initiative | Latest concrete progress | Current status / dependency | Next deliverable and check |
+|---|---|---|---|
+| 1 — shared volume measurement | October 6 18:00: `sip-ah-volume-v2` and an outcome test on 89 entries | **Instrument; gate promotion closed on evidence.** v2 infers zero-trade slots before the latest visible bar and floors ratios at 100 shares. None of six gates separates outcomes (permutation p 0.60–0.997). The live scan still logs v1. | **October 8 15:00 (after Initiative 7/3 items):** teach the two consumers to accept v2 and switch the scan's log-only context to it. Reopen a gate only with a new hypothesis tested against the same 89-entry archive. |
+| 2 — broker execution | September 7 alternatives research | **Deferred per Juan's September 22 instruction.** | Resume the AKAN/SHPH/GIPR protocol only when access arrives; no renewed ask. |
+| 3 — scheduling and exits | October 6 15:00 outage and screener-lag record | **Research.** The 89-entry archive now supplies the outcome base rate a timing change must beat. | **October 7 15:00:** one causal later-rebuild comparison with the ~15-minute screener lag modeled. DST loading check before October 25. |
+| 4 — initiative reporting | Receipt 179 | **Delivered and verified.** | Next daily email: Initiative 6 slot release and latency table, Initiative 7 archiver/census and A2 freeze, Initiative 1 v2 and 89-entry result, Initiative 3 outage record. Jev was not run on October 6. |
+| 5 — review surface | October 1 consumers and Pages verified | **Build delivered.** | Check shared rows beside charts on the next chart-bearing cycle. |
+| 6 — PM-only gappers | October 6 15:00 latency study | **Pilot ENDED (failed causal check); log-only research continues.** | Reopen only with real-time consolidated data and a sub-minute deterministic watcher. Correct seasonal UTC bounds before winter. |
+| 7 — alternative agent strategies / Jev | October 6 18:00: A2 amendment frozen | **Research plus Instrument.** `docs/investigations/init7-amendment-a2.json` (SHA-256 `5d6bda27…`) pins the v1 design, archiver and classifier hashes, defines A2 and its no-veto reasons, and adds 12 decision vectors. A1 stays registered. At the census rate, A2 differs from N1 in about two of 120 pilot observations, so the pilot mainly measures N1 against cash and QQQ. | **October 7 15:00:** observation orchestration producing N1/A1/A2 decisions that reproduce all 12 vectors, plus the first scheduled capture that can load. Five instrumentation sessions, then the comparison pilot can take the free slot. |
+
+**Initiative 1 progress, October 6 18:00:** `scripts/volume_metric.py --metric-version sip-ah-volume-v2` (v1 stays the default; its output on the YFOR, INLF and GIPR archives is byte-identical). INLF's Sep 24 ignition measures **6,232x locally and 1,726x the prior AH peak** (v1: unknown). GIPR's prior session is complete (45 observed + 3 inferred zero), and its ignition is **0.75x** the prior peak (session maximum 2.0x). `scripts/volume-entry-eval.py` paired all 91 Alpaca buys with their sells. The 89 AH lots total **-$274.81**; with two VTAK test lots, that is within $1.76 of the account's loss. Each lot was measured on bars closed 15 minutes before its fill.
+
+| Gate | Pass: n / mean / $ | Fail: n / mean / $ | p |
+|---|---|---|---|
+| ≥10x prior AH peak | 78 / -3.1% / -$234 | 11 / -3.9% / -$41 | 0.93 |
+| Local ≥10x (Juan's rule) | 57 / -2.1% / -$120 | 32 / -5.2% / -$154 | 0.60 |
+| AH peak ≥1x same-day regular maximum | 75 / -2.8% / -$196 | 14 / -5.5% / -$79 | 0.72 |
+
+The two baselines together flag 5 of Juan's 10 entered rejections: BOOM, GIPR, YFOR, GELS and GRSD. CHPT, which he rejected, returned +50.1%; WLDS, which he praised, lost 19.4%. Evidence: `docs/investigations/init1-volume-policy-v2-2026-10-06.md` and `log/2026-10-06/init1-volume-policy/`, with an offline replay that reproduces the run exactly.
+
+**Initiative 7 progress, October 6 18:00:** A2 holds N1's ticker unless an eligible source's single shared Jev call returns financing/dilution or a non-binding plan at confidence ≥0.8, or a dilutive-financing probability ≥0.5. Missing, late, oversized or failed sources are recorded as no-veto reasons. Hashes and all 12 vectors were checked against v1's A1 rule and the amendment's A2 rule. A deterministic lead-extraction variant is registered as proposed and unfrozen. No Jev call ran.
+
+**Previous-step evaluation:** The 15:00 hypotheses for this run **worked**: A2 is frozen before any orchestration, and the sparse-baseline policy is resolved against INLF, GIPR and YFOR. The outcome test also answered the open gate-promotion question: no edge. Process-review handoff 2 (orchestration at 18:00) stays at October 7 15:00 because A2 had to be frozen first; Initiative 3's rebuild comparison shares that slot.
+
+**Needs from Juan / consolidated asks:** nothing new. The 89-entry result is new evidence for the existing liquid-session proposal and goes in the daily email as a finding; it is not a question. Initiative 2 stays deferred, and the Initiative 3 proposals stay unapplied. No trading-pulse timing change is proposed.
+
+## Prior checkpoint — 2026-10-06 15:00 CEST
 
 This checkpoint supersedes earlier checkpoints and initiative status paragraphs. **Initiative 6's pilot failed its causal execution check, and the pilot slot is released.** **Initiative 7's SEC archiver is built and verified**, and its census shows the frozen A1 arm would rarely act. The two October 5 strategy runs and all 13 October 5 post-market scans were lost to the expired Anthropic login; nothing was skipped by choice. Paper equity at 15:16 CEST is **$99,721.90 (-$278.10)**, flat.
 
