@@ -1507,6 +1507,410 @@ WHLR BOOK verdict: IEX STALE 1h04m; SIP-15m TWO-SIDED (observed 2026-10-06 18:02
 
 **Daily email:** Report the MTEN entry (70 @ $1.39, Grade B on the same-day 6-K for a completed $15M cash acquisition; BUILD from the 17:15 ET re-ignition to a $1.59 SIP high at 17:40 ET on 711K–1.48M shares per bar; filled 12.6% below the high), the BIYA position at +14.1% after a new $2.22 high, SXTC trading back at its $2.08 prior close on DEAD-CAT-OVERRIDE WATCH, and the decision not to start a WHLR watch on a thin drift. No item from this scan requires Juan's input.
 
+## Scan 00:30 CEST (6:30 PM ET)
+
+**Decision:** No entry at the final scan. BURU is the only new >10% name. Its 18:00–18:05 ET spike ran on real SIP volume (745,287 shares and 3,910 trades in the 18:05 bar), but this is its first >10% AH appearance, so the 2-AH-scan gate blocks it. CONFIRM-3 reads NO, so it does not qualify as a FINAL-SCAN-GATE-BLOCK. Every repeat name keeps its earlier skip: SXTC (Day -39.9%, DEAD-CAT-OVERRIDE WATCH continues), MI (dead-cat bounce, Grade D), NCPL and WHLR (Day% below -15% on thin SIP volume), and LCFY (thin drift, now fading). Open positions: BIYA is +23.6% after a new $2.39 SIP high and MTEN is +6.5%. The feed-lag cross-check found no tracked name above +10% that the scanner dropped or under-reported. Final AH appearance counts: SXTC **8**, BIYA **7**, NCPL **6**, MI **5**, VCIG **5** (absent), MTEN **3**, LCFY **3**, WHLR **3**, BURU **1**, LHSW **1**, ICMB **1**.
+
+`python3 scripts/scan.py --all` ran at 18:30:09 ET (00:30:09 CEST on October 7 / 22:30:09 UTC) in the AFTERHOURS session and returned 12 hits. The US trading date is 2026-10-06. Repository sync completed before the scan.
+
+```text
+  Supplementary AH-change-only (>15%, not in volume pass): none
+  AH >10% at this snapshot (unrounded): BIYA, BURU, LCFY, MI, MTEN, NCPL, SXTC, WHLR
+```
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| MTEN | [TV](https://www.tradingview.com/chart/?symbol=MTEN) | $0.96 | -0.4% | +41.9% | $1.36 | +41.3% | 9.5M | 1.2M | 7.8x | 6.1M | Industrial Machinery |
+| BIYA | [TV](https://www.tradingview.com/chart/?symbol=BIYA) | $1.36 | -2.5% | +67.0% | $2.28 | +62.9% | 9.3M | 2.6M | 3.6x | 2.7M | Personnel Services |
+| MI | [TV](https://www.tradingview.com/chart/?symbol=MI) | $1.23 | -82.4% | +18.7% | $1.46 | -79.1% | 7.2M | 18.7M | 0.4x | 542K | Internet Software/Services |
+| SXTC | [TV](https://www.tradingview.com/chart/?symbol=SXTC) | $1.25 | -39.9% | +54.4% | $1.93 | -7.2% | 6.4M | 1.2M | 5.2x | 1.0M | Pharmaceuticals: Major |
+| XHLD | [TV](https://www.tradingview.com/chart/?symbol=XHLD) | $0.62 | +51.6% | +5.2% | $0.66 | +59.5% | 3.7M | 19.8M | 0.2x | 10.5M | Miscellaneous Commercial Services |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.91 | -16.5% | +11.0% | $1.01 | -7.3% | 1.5M | 13.3M | 0.1x | 568K | Real Estate Investment Trusts |
+| BURU | [TV](https://www.tradingview.com/chart/?symbol=BURU) | $1.20 | +7.1% | +13.3% | $1.36 | +21.4% | 1.3M | 1.7M | 0.8x | 8.4M | Electronic Components |
+| LCFY | [TV](https://www.tradingview.com/chart/?symbol=LCFY) | $2.05 | -12.4% | +10.2% | $2.26 | -3.4% | 461K | 348K | 1.3x | 1.4M | Packaged Software |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.09 | -17.4% | +26.1% | $1.38 | +4.2% | 258K | 14.3M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| STEX | [TV](https://www.tradingview.com/chart/?symbol=STEX) | $0.52 | -12.7% | +6.4% | $0.55 | -7.2% | 210K | 1.1M | 0.2x | 105.3M | Investment Banks/Brokers |
+| DCX | [TV](https://www.tradingview.com/chart/?symbol=DCX) | $3.11 | -8.0% | +7.7% | $3.35 | -0.9% | 158K | 552K | 0.3x | 259K | Motor Vehicles |
+| FEAM | [TV](https://www.tradingview.com/chart/?symbol=FEAM) | $3.76 | -4.1% | +5.1% | $3.95 | +0.8% | 90K | 863K | 0.1x | 20.9M | Chemicals: Specialty |
+
+### Evaluation notes
+
+**Tradability:** BURU was re-verified `tradable=true` (AMEX, active) before the SIP and catalyst workup. The other >10% names were verified earlier tonight.
+
+**New SIP bars** (`broker.js bars SYM --tf 5Min --start 2026-10-06T21:40:00Z --limit 1000`, feed=sip). The newest bar starts 18:15 ET, 15 minutes behind the scan, which matches the free-tier delay.
+
+| Ticker | Bar ET | Open | High | Low | Close | Shares | VWAP | Trades |
+|--------|--------|------|------|-----|-------|--------|------|--------|
+| BURU | 17:55 | $1.25 | $1.25 | $1.25 | $1.25 | 1,168 | $1.25 | 12 |
+| BURU | 18:00 | $1.25 | $1.51 | $1.25 | $1.48 | 148,338 | $1.39 | 549 |
+| BURU | 18:05 | $1.48 | $1.54 | $1.38 | $1.40 | 745,287 | $1.45 | 3,910 |
+| BURU | 18:10 | $1.40 | $1.41 | $1.30 | $1.36 | 297,953 | $1.35 | 1,699 |
+| BURU | 18:15 | $1.36 | $1.40 | $1.31 | $1.35 | 169,829 | $1.36 | 885 |
+| BIYA | 17:50 | $2.00 | $2.08 | $1.98 | $2.04 | 78,955 | $2.01 | 580 |
+| BIYA | 17:55 | $2.04 | $2.15 | $2.03 | $2.12 | 159,587 | $2.08 | 919 |
+| BIYA | 18:00 | $2.12 | $2.22 | $2.06 | $2.16 | 384,968 | $2.15 | 2,294 |
+| BIYA | 18:05 | $2.16 | $2.18 | $2.06 | $2.13 | 146,383 | $2.12 | 1,087 |
+| BIYA | 18:10 | $2.14 | $2.35 | $2.13 | $2.29 | 638,636 | $2.25 | 4,703 |
+| BIYA | 18:15 | $2.30 | $2.39 | $2.25 | $2.34 | 460,625 | $2.32 | 3,438 |
+| MTEN | 17:50 | $1.44 | $1.50 | $1.37 | $1.47 | 813,333 | $1.43 | 4,263 |
+| MTEN | 17:55 | $1.48 | $1.49 | $1.35 | $1.35 | 734,449 | $1.40 | 3,897 |
+| MTEN | 18:00 | $1.36 | $1.44 | $1.35 | $1.39 | 522,431 | $1.40 | 2,292 |
+| MTEN | 18:05 | $1.38 | $1.40 | $1.33 | $1.39 | 369,491 | $1.36 | 1,851 |
+| MTEN | 18:10 | $1.39 | $1.40 | $1.36 | $1.37 | 228,087 | $1.37 | 1,108 |
+| MTEN | 18:15 | $1.37 | $1.52 | $1.34 | $1.49 | 739,281 | $1.45 | 3,135 |
+| SXTC | 18:00 | $1.99 | $2.20 | $1.99 | $2.07 | 213,751 | $2.10 | 1,579 |
+| SXTC | 18:05 | $2.06 | $2.09 | $1.98 | $1.99 | 87,783 | $2.03 | 603 |
+| SXTC | 18:10 | $2.00 | $2.02 | $1.93 | $1.93 | 45,975 | $1.96 | 361 |
+| SXTC | 18:15 | $1.95 | $1.99 | $1.93 | $1.97 | 36,807 | $1.95 | 236 |
+| NCPL | 18:05 | $1.26 | $1.34 | $1.26 | $1.34 | 36,521 | $1.31 | 194 |
+| NCPL | 18:10 | $1.34 | $1.39 | $1.31 | $1.37 | 50,963 | $1.35 | 323 |
+| NCPL | 18:15 | $1.37 | $1.40 | $1.36 | $1.37 | 47,507 | $1.38 | 262 |
+
+From 17:50 to 18:15 ET, MI printed 21,249–122,101 shares and 127–375 trades per bar at $1.37–$1.53 (18:15 close $1.38). WHLR printed 5,311–23,459 shares and 31–150 trades per bar at $0.98–$1.04. LCFY printed 2,487–7,627 shares and 28–57 trades per bar and slid from a $2.50 high at 17:50 to a $2.25 close at 18:15. NCPL had no 17:55 or 18:00 bar.
+
+**Yahoo timeline (shape only, not volume or exact levels):**
+
+| Ticker | 18:00 | 18:05 | 18:10 | 18:15 | 18:20 | 18:25 | 18:30 | 18:34 |
+|--------|-------|-------|-------|-------|-------|-------|-------|-------|
+| BURU | $1.48 | $1.40 | $1.36 | $1.35 | $1.40 | $1.37 | $1.43 | $1.44 |
+| BIYA | $2.16 | $2.13 | $2.29 | $2.34 | $2.29 | $2.34 | $2.38 | $2.40 |
+| MTEN | $1.38 | $1.39 | $1.37 | $1.49 | $1.47 | $1.48 | $1.48 | $1.49 |
+| SXTC | $2.07 | $1.99 | $1.93 | $1.99 | $1.97 | $2.02 | $2.00 | $1.98 |
+| NCPL | $1.27 | $1.34 | $1.38 | $1.38 | $1.38 | $1.39 | $1.41 | $1.38 |
+| MI | $1.43 | $1.44 | $1.46 | $1.38 | $1.43 | $1.48 | $1.46 | $1.46 |
+| WHLR | $1.02 | $0.99 | $1.02 | $1.03 | $1.03 | $1.03 | $1.02 | $1.00 (18:33) |
+| LCFY | $2.43 | $2.39 | $2.26 | $2.25 | $2.22 | $2.28 | $2.28 | $2.28 (18:33) |
+
+**BURU — first >10% AH appearance; no entry (2-AH-scan gate); not a FINAL-SCAN-GATE-BLOCK.**
+
+- **Profile:** Nuburu, NYSE American, defense lasers. Day +7.1%, Total +21.4% at the scanner's $1.36 (prior close $1.12), float 8.4M. It appeared at 22:30 at +5.8%, below threshold.
+- **SIP:** BURU traded flat at $1.21–$1.25 on under 10K shares per bar from 16:25 to 17:55 ET. It ignited at 18:00 ET (148,338 shares / 549 trades, high $1.51) and peaked at **$1.54** in the 18:05 bar on 745,287 shares and 3,910 trades. The next two bars closed at $1.36 and $1.35 while volume fell to 297,953 and then 169,829 shares, 77% below the 18:05 bar. Yahoo shows $1.43–$1.44 at 18:30–18:34 ET, about 7% below the SIP high.
+- **SIP corroborates the scanner price:** the 18:15 bar's $1.35 close and $1.36 VWAP match the scanner's $1.36, so this is not a bad print.
+- **Catalyst Grade C (financing restructuring); the driver is unconfirmed.** The [8-K accepted 2026-10-06 17:10:13 ET](https://www.sec.gov/Archives/edgar/data/1814215/000119312526415780/buru-20260930.htm) (acceptance time from `.hdr.sgml`) reports two agreements effective September 30, filed under Item 1.01. In the first, a side letter makes certain Series B preferred holders forfeit conversions priced below $0.10 per share and adds a monthly penalty if conversion shares are not registered on time. In the second, Nuburu returns 295,000 Heckler & Koch shares to Brick Lane in exchange for cancelling the $15M convertible note. The filing landed 50 minutes before the 18:00 ET ignition, so it may not be the driver. Background only: a September 22 BusinessWire PR targeted closing the 70% Tekne acquisition in the first week of October, and four searches found no closing announcement. A 1-for-40 reverse split took effect on September 1.
+- **Activity history:** SIP daily volume ran 488K–4.1M shares from September 28 to October 5, while the price climbed from $0.94 to $1.12. Today printed 3.2M shares. BURU has no `WINNERS_TRACKING.md` entry.
+- **Why this is not a FINAL-SCAN-GATE-BLOCK:** the rule requires CONFIRM-3 YES on accumulating volume, and BURU reads NO with shrinking per-bar volume. The book is also unverified. The IEX quote is frozen at 16:00:00 ET ($1.01 / $1.35 x100), and `book-check.js` returned a delayed SIP quote dated 2026-07-17 at $0.0726 (a pre-split price), so that row says nothing about tonight's book.
+- **Reference price for the morning tally:** $1.36 (scanner) at 18:30 ET, Total +21.4%.
+
+**BIYA — `already entered` (52 @ $1.91); tracking only.** SIP made a new high of **$2.39** in the 18:15 bar after a 638,636-share, 4,703-trade push at 18:10. Yahoo shows $2.40 at 18:34. `broker.js positions` marks it at $2.36, **+$23.40 (+23.6%)**. CONFIRM-3 stays YES.
+
+**MTEN — `already entered` (70 @ $1.39); tracking only.** The 17:55–18:10 bars pulled back to $1.33–$1.40 on 228K–734K shares, then the 18:15 bar re-expanded to a $1.52 high and a $1.49 close on 739,281 shares and 3,135 trades. The high is still the $1.59 from 17:40 ET. `broker.js positions` marks it at $1.48, **+$6.30 (+6.5%)**. The scanner's $1.36 lags the tape by about 30 minutes.
+
+**SXTC — eighth qualifying AH scan; skip live entry (Day -39.9%); DEAD-CAT-OVERRIDE WATCH continues.** The 18:00 bar popped to $2.20 on 213,751 shares, then three bars faded to a $1.93–$1.97 close on 36,807–87,783 shares. Yahoo shows $1.98–$2.02, back near the $2.08 prior close and about 25% below the $2.58 AH high. The 22:25 hypothetical ($1.57 at 16:25 ET) stands.
+
+**NCPL — sixth >10% AH appearance; skip stands (Day -17.4%, thin volume); no DEAD-CAT-OVERRIDE WATCH.** On price, NCPL now fits the watch conditions. AH change rose from +14.7% to +26.1%, the SIP high of $1.40 at 18:15 tops the $1.28 opening high, Total% turned positive (+4.2%), and CONFIRM-3 flipped to YES on an 18:05 ignition. Volume is still thin: 36,521–50,963 shares and 194–323 trades per bar, with VRatio 0.0x, below the accumulation rule. That keeps the 00:00 decision for WHLR and NCPL: thin drifts do not enter the watch sample. Reference price for the morning tally: $1.38 (scanner) at 18:30 ET. Grade None.
+
+**MI — fifth >10% AH appearance; skip (dead-cat bounce, Grade D).** AH change bounced from +12.2% to +18.7% ($1.46), but SIP stayed at $1.37–$1.53 on 21K–122K shares per bar. That is 21% below the $1.84 high, and AH% has risen in only one scan.
+
+**WHLR — third >10% AH appearance; skip (Day -16.5%, thin drift).** AH change fell from +14.3% to +11.0% ($1.01) on 5,311–23,459 shares per bar. The 00:00 reference price ($1.04 at 18:00 ET) stands.
+
+**LCFY — third >10% AH appearance; skip (thin drift, fading).** AH change fell from +18.6% to +10.2% ($2.26). SIP printed 2,487–7,627 shares per bar and closed at $2.25 at 18:15, 14% below the $2.62 high from 16:35 ET.
+
+**VCIG** is absent from this scan. Yahoo shows $0.97 at 18:31 ET, 31% below the $1.41 SIP close. Its SPIKE→FADE skip and the 22:20 FIRST-BAR-SPIKE WATCH hypothetical ($1.69 at 16:20 ET) stand.
+
+**Below threshold:** XHLD (+5.2%), DCX (+7.7%), STEX (+6.4%), and FEAM (+5.1%) are tracked only.
+
+**Final-scan feed-lag cross-check:** I checked every tracked name against dated SIP closes and the Yahoo AH timeline (`check-prices.py --ah-history --date 2026-10-06`). For names near the threshold, I also pulled SIP 5-minute bars. No tracked name sits above +10% while missing from, or under-reported by, the scanner.
+
+- **AH names from earlier scans:** LHSW $0.56 (-1.1%), ICMB $0.75 (+3.8%, last print 16:57 ET), and YFOR $1.03 (-8.8%) are all below threshold.
+- **OLOX:** SIP from 17:50 to 18:15 ET traded $1.27–$1.36 on 23K–104K shares per bar, +2% to +9% over the $1.25 close; Yahoo shows $1.33 (+6.4%) at 18:31. It is absent from this scan and below threshold.
+- **21:30 watchlist:** JAGX +5.0%, AIFA +2.6%, PMI +1.1%, MODD +0.7%, OFS +0.5%, AIIO 0.0%, ARKR 0.0%, HUHU -0.1%, SMXT -0.3%, IPDN -0.9%, APUS -1.8%, DLXY -3.3%, KAPA -4.3%, FFR -4.3%, RUBI -5.2% (against the $0.6541 SIP close), BESS -5.7%, and MOBX -7.1%. JONE, XSLL, and APMC show no AH prints after 16:10 ET.
+- **Untradable (carried, not rechecked):** EVOL, MHUAF, VNPKF, WTLLF, NWINF, and KHDHF.
+
+**Instrumentation (verbatim; log-only):**
+
+```text
+BIYA 2026-10-06  SPIKE  16:08ET  +21%  $1.65  372 trades / 58k sh  (first co-spike bar) (as-of 18:30ET)
+BIYA 2026-10-06  CONFIRM-3  YES ignition 16:05ET 260.8x; confirmed 16:15ET $1.81 as-of 18:30ET
+BURU 2026-10-06  SPIKE  18:04ET  +26%  $1.51  396 trades / 95k sh  (first co-spike bar) (as-of 18:30ET)
+BURU 2026-10-06  CONFIRM-3  NO ignition 18:00ET failed third-bar hold/volume as-of 18:30ET
+LCFY 2026-10-06  NO-SPIKE  peak +28% @16:38ET  (no bar cleared +15% on a volume co-spike) (as-of 18:30ET)
+LCFY 2026-10-06  CONFIRM-3  NO ignition 16:35ET failed third-bar hold/volume as-of 18:30ET
+MI 2026-10-06  SPIKE  16:18ET  +30%  $1.60  2066 trades / 421k sh  (first co-spike bar) (as-of 18:30ET)
+MI 2026-10-06  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 18:30ET
+MTEN 2026-10-06  SPIKE  16:41ET  +22%  $1.17  637 trades / 143k sh  (first co-spike bar) (as-of 18:30ET)
+MTEN 2026-10-06  CONFIRM-3  NO ignition 16:30ET failed third-bar hold/volume as-of 18:30ET
+NCPL 2026-10-06  SPIKE  18:05ET  +20%  $1.31  43 trades / 10k sh  (first co-spike bar) (as-of 18:30ET)
+NCPL 2026-10-06  CONFIRM-3  YES ignition 18:05ET 15.9x; confirmed 18:15ET $1.37 as-of 18:30ET
+SXTC 2026-10-06  SPIKE  16:03ET  +32%  $1.65  135 trades / 30k sh  (first co-spike bar) (as-of 18:30ET)
+SXTC 2026-10-06  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 18:30ET
+WHLR 2026-10-06  SPIKE  16:46ET  +16%  $1.06  110 trades / 34k sh  (first co-spike bar) (as-of 18:30ET)
+WHLR 2026-10-06  CONFIRM-3  NO ignition 16:45ET failed third-bar hold/volume as-of 18:30ET
+```
+
+**Shared SIP volume context (`sip-ah-volume-v1`, log-only):** The prior trading date is 2026-10-05, a normal Monday session. Inputs were fetched with `broker.js bars SYM --tf 5Min --start 2026-10-05T20:00:00Z --limit 1000 --feed sip --json` (one page each, no next-page token). They are archived as `log/2026-10-06/SYM-0030-volume-sip.json`, with computed rows in `SYM-0030-volume-metric.json`, for all eight `tradable=true` >10% names. MI and WHLR have complete prior-session coverage (48/48). The others stay incomplete (BURU 37/48, NCPL 25/48, BIYA 18/48, SXTC 10/48, MTEN 5/48, LCFY 1/48), so their prior-peak ratios remain unknown. BURU's 18:05 bar reads 378.51x local. BURU's September 1 reverse split precedes both sessions. The SXTC share-consolidation headline, BIYA's July 1-for-10 reverse split, and WHLR's September 21 1-for-9 reverse split remain unreviewed against this window.
+
+```text
+# BIYA shared SIP volume; prior 2026-10-05 18/48 slots; log-only
+# reconstructed as-of 2026-10-06T22:30:09+00:00; source fetched 2026-10-06T22:32:27.938233Z
+BIYA 2026-10-06  VOLUME-CONTEXT 16:00ET start=2026-10-06T20:00:00+00:00 shares=1095 local=unknown prior-peak=unknown status=warmup
+BIYA 2026-10-06  VOLUME-CONTEXT 16:05ET start=2026-10-06T20:05:00+00:00 shares=285556 local=unknown prior-peak=unknown status=warmup
+BIYA 2026-10-06  VOLUME-CONTEXT 16:10ET start=2026-10-06T20:10:00+00:00 shares=1072394 local=unknown prior-peak=unknown status=warmup
+BIYA 2026-10-06  VOLUME-CONTEXT 16:15ET start=2026-10-06T20:15:00+00:00 shares=1596650 local=5.5914x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 16:20ET start=2026-10-06T20:20:00+00:00 shares=550815 local=0.5136x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 16:25ET start=2026-10-06T20:25:00+00:00 shares=307657 local=0.2869x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 16:30ET start=2026-10-06T20:30:00+00:00 shares=452655 local=0.8218x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 16:35ET start=2026-10-06T20:35:00+00:00 shares=413407 local=0.9133x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 16:40ET start=2026-10-06T20:40:00+00:00 shares=802489 local=1.9412x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 16:45ET start=2026-10-06T20:45:00+00:00 shares=347463 local=0.7676x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 16:50ET start=2026-10-06T20:50:00+00:00 shares=242874 local=0.5875x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 16:55ET start=2026-10-06T20:55:00+00:00 shares=152538 local=0.4390x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:00ET start=2026-10-06T21:00:00+00:00 shares=248222 local=1.0220x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:05ET start=2026-10-06T21:05:00+00:00 shares=633569 local=2.6086x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:10ET start=2026-10-06T21:10:00+00:00 shares=155877 local=0.6280x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:15ET start=2026-10-06T21:15:00+00:00 shares=131059 local=0.5280x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:20ET start=2026-10-06T21:20:00+00:00 shares=110912 local=0.7115x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:25ET start=2026-10-06T21:25:00+00:00 shares=502588 local=3.8348x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:30ET start=2026-10-06T21:30:00+00:00 shares=662827 local=5.0575x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:35ET start=2026-10-06T21:35:00+00:00 shares=370276 local=0.7367x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:40ET start=2026-10-06T21:40:00+00:00 shares=151300 local=0.3010x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:45ET start=2026-10-06T21:45:00+00:00 shares=125390 local=0.3386x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:50ET start=2026-10-06T21:50:00+00:00 shares=78955 local=0.5218x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 17:55ET start=2026-10-06T21:55:00+00:00 shares=159587 local=1.2727x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 18:00ET start=2026-10-06T22:00:00+00:00 shares=384968 local=3.0702x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 18:05ET start=2026-10-06T22:05:00+00:00 shares=146383 local=0.9173x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 18:10ET start=2026-10-06T22:10:00+00:00 shares=638636 local=4.0018x prior-peak=unknown status=ok
+BIYA 2026-10-06  VOLUME-CONTEXT 18:15ET start=2026-10-06T22:15:00+00:00 shares=460625 local=1.1965x prior-peak=unknown status=ok
+# BURU shared SIP volume; prior 2026-10-05 37/48 slots; log-only
+# reconstructed as-of 2026-10-06T22:30:09+00:00; source fetched 2026-10-06T22:32:28.539019Z
+BURU 2026-10-06  VOLUME-CONTEXT 16:00ET start=2026-10-06T20:00:00+00:00 shares=6313 local=unknown prior-peak=unknown status=warmup
+BURU 2026-10-06  VOLUME-CONTEXT 16:05ET start=2026-10-06T20:05:00+00:00 shares=887 local=unknown prior-peak=unknown status=warmup
+BURU 2026-10-06  VOLUME-CONTEXT 16:10ET start=2026-10-06T20:10:00+00:00 shares=114004 local=unknown prior-peak=unknown status=warmup
+BURU 2026-10-06  VOLUME-CONTEXT 16:15ET start=2026-10-06T20:15:00+00:00 shares=75845 local=12.0141x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 16:20ET start=2026-10-06T20:20:00+00:00 shares=39438 local=0.5200x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 16:25ET start=2026-10-06T20:25:00+00:00 shares=9181 local=0.1210x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 16:30ET start=2026-10-06T20:30:00+00:00 shares=10984 local=0.2785x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 16:35ET start=2026-10-06T20:35:00+00:00 shares=2007 local=0.1827x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 16:40ET start=2026-10-06T20:40:00+00:00 shares=5517 local=0.6009x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 16:45ET start=2026-10-06T20:45:00+00:00 shares=3769 local=0.6832x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 16:50ET start=2026-10-06T20:50:00+00:00 shares=1447 local=0.3839x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 16:55ET start=2026-10-06T20:55:00+00:00 shares=658 local=0.1746x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:00ET start=2026-10-06T21:00:00+00:00 shares=9885 local=6.8314x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:05ET start=2026-10-06T21:05:00+00:00 shares=931 local=0.6434x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:10ET start=2026-10-06T21:10:00+00:00 shares=2025 local=2.1751x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:15ET start=2026-10-06T21:15:00+00:00 shares=1044 local=0.5156x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:20ET start=2026-10-06T21:20:00+00:00 shares=783 local=0.7500x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:25ET start=2026-10-06T21:25:00+00:00 shares=1066 local=1.0211x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:30ET start=2026-10-06T21:30:00+00:00 shares=302 local=0.2893x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:35ET start=2026-10-06T21:35:00+00:00 shares=1692 local=2.1609x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:40ET start=2026-10-06T21:40:00+00:00 shares=966 local=0.9062x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:45ET start=2026-10-06T21:45:00+00:00 shares=8855 local=9.1667x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:50ET start=2026-10-06T21:50:00+00:00 shares=1969 local=1.1637x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 17:55ET start=2026-10-06T21:55:00+00:00 shares=1168 local=0.5932x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 18:00ET start=2026-10-06T22:00:00+00:00 shares=148338 local=75.3367x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 18:05ET start=2026-10-06T22:05:00+00:00 shares=745287 local=378.5104x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 18:10ET start=2026-10-06T22:10:00+00:00 shares=297953 local=2.0086x prior-peak=unknown status=ok
+BURU 2026-10-06  VOLUME-CONTEXT 18:15ET start=2026-10-06T22:15:00+00:00 shares=169829 local=0.5700x prior-peak=unknown status=ok
+# LCFY shared SIP volume; prior 2026-10-05 1/48 slots; log-only
+# reconstructed as-of 2026-10-06T22:30:09+00:00; source fetched 2026-10-06T22:32:29.160686Z
+LCFY 2026-10-06  VOLUME-CONTEXT 16:00ET start=2026-10-06T20:00:00+00:00 shares=5907 local=unknown prior-peak=unknown status=warmup
+LCFY 2026-10-06  VOLUME-CONTEXT 16:15ET start=2026-10-06T20:15:00+00:00 shares=411 local=unknown prior-peak=unknown status=missing-baseline
+LCFY 2026-10-06  VOLUME-CONTEXT 16:20ET start=2026-10-06T20:20:00+00:00 shares=3627 local=unknown prior-peak=unknown status=missing-baseline
+LCFY 2026-10-06  VOLUME-CONTEXT 16:25ET start=2026-10-06T20:25:00+00:00 shares=677 local=unknown prior-peak=unknown status=missing-baseline
+LCFY 2026-10-06  VOLUME-CONTEXT 16:30ET start=2026-10-06T20:30:00+00:00 shares=1468 local=2.1684x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 16:35ET start=2026-10-06T20:35:00+00:00 shares=103702 local=70.6417x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 16:40ET start=2026-10-06T20:40:00+00:00 shares=161504 local=110.0163x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 16:45ET start=2026-10-06T20:45:00+00:00 shares=39640 local=0.3822x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 16:50ET start=2026-10-06T20:50:00+00:00 shares=24367 local=0.2350x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 16:55ET start=2026-10-06T20:55:00+00:00 shares=13202 local=0.3330x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:00ET start=2026-10-06T21:00:00+00:00 shares=55564 local=2.2803x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:05ET start=2026-10-06T21:05:00+00:00 shares=23480 local=0.9636x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:10ET start=2026-10-06T21:10:00+00:00 shares=23553 local=1.0031x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:15ET start=2026-10-06T21:15:00+00:00 shares=13446 local=0.5709x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:20ET start=2026-10-06T21:20:00+00:00 shares=7187 local=0.3061x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:25ET start=2026-10-06T21:25:00+00:00 shares=2983 local=0.2219x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:30ET start=2026-10-06T21:30:00+00:00 shares=27230 local=3.7888x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:35ET start=2026-10-06T21:35:00+00:00 shares=10004 local=1.3920x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:40ET start=2026-10-06T21:40:00+00:00 shares=2072 local=0.2071x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:45ET start=2026-10-06T21:45:00+00:00 shares=1561 local=0.1560x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:50ET start=2026-10-06T21:50:00+00:00 shares=7627 local=3.6810x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 17:55ET start=2026-10-06T21:55:00+00:00 shares=7108 local=3.4305x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 18:00ET start=2026-10-06T22:00:00+00:00 shares=2487 local=0.3499x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 18:05ET start=2026-10-06T22:05:00+00:00 shares=5625 local=0.7914x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 18:10ET start=2026-10-06T22:10:00+00:00 shares=7080 local=1.2587x prior-peak=unknown status=ok
+LCFY 2026-10-06  VOLUME-CONTEXT 18:15ET start=2026-10-06T22:15:00+00:00 shares=3881 local=0.6900x prior-peak=unknown status=ok
+# MI shared SIP volume; prior 2026-10-05 48/48 slots; log-only
+# reconstructed as-of 2026-10-06T22:30:09+00:00; source fetched 2026-10-06T22:32:29.776718Z
+MI 2026-10-06  VOLUME-CONTEXT 16:00ET start=2026-10-06T20:00:00+00:00 shares=220361 local=unknown prior-peak=0.2093x status=warmup
+MI 2026-10-06  VOLUME-CONTEXT 16:05ET start=2026-10-06T20:05:00+00:00 shares=137355 local=unknown prior-peak=0.1304x status=warmup
+MI 2026-10-06  VOLUME-CONTEXT 16:10ET start=2026-10-06T20:10:00+00:00 shares=159195 local=unknown prior-peak=0.1512x status=warmup
+MI 2026-10-06  VOLUME-CONTEXT 16:15ET start=2026-10-06T20:15:00+00:00 shares=1263614 local=7.9375x prior-peak=1.2000x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 16:20ET start=2026-10-06T20:20:00+00:00 shares=2036291 local=12.7912x prior-peak=1.9338x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 16:25ET start=2026-10-06T20:25:00+00:00 shares=868347 local=0.6872x prior-peak=0.8246x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 16:30ET start=2026-10-06T20:30:00+00:00 shares=427999 local=0.3387x prior-peak=0.4064x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 16:35ET start=2026-10-06T20:35:00+00:00 shares=400416 local=0.4611x prior-peak=0.3803x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 16:40ET start=2026-10-06T20:40:00+00:00 shares=214703 local=0.5016x prior-peak=0.2039x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 16:45ET start=2026-10-06T20:45:00+00:00 shares=461613 local=1.1528x prior-peak=0.4384x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 16:50ET start=2026-10-06T20:50:00+00:00 shares=288180 local=0.7197x prior-peak=0.2737x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 16:55ET start=2026-10-06T20:55:00+00:00 shares=181642 local=0.6303x prior-peak=0.1725x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:00ET start=2026-10-06T21:00:00+00:00 shares=90521 local=0.3141x prior-peak=0.0860x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:05ET start=2026-10-06T21:05:00+00:00 shares=140158 local=0.7716x prior-peak=0.1331x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:10ET start=2026-10-06T21:10:00+00:00 shares=74036 local=0.5282x prior-peak=0.0703x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:15ET start=2026-10-06T21:15:00+00:00 shares=63034 local=0.6963x prior-peak=0.0599x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:20ET start=2026-10-06T21:20:00+00:00 shares=30822 local=0.4163x prior-peak=0.0293x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:25ET start=2026-10-06T21:25:00+00:00 shares=68471 local=1.0863x prior-peak=0.0650x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:30ET start=2026-10-06T21:30:00+00:00 shares=74194 local=1.1770x prior-peak=0.0705x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:35ET start=2026-10-06T21:35:00+00:00 shares=69043 local=1.0084x prior-peak=0.0656x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:40ET start=2026-10-06T21:40:00+00:00 shares=103922 local=1.5052x prior-peak=0.0987x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:45ET start=2026-10-06T21:45:00+00:00 shares=137959 local=1.8594x prior-peak=0.1310x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:50ET start=2026-10-06T21:50:00+00:00 shares=122101 local=1.1749x prior-peak=0.1160x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 17:55ET start=2026-10-06T21:55:00+00:00 shares=40452 local=0.3313x prior-peak=0.0384x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 18:00ET start=2026-10-06T22:00:00+00:00 shares=86486 local=0.7083x prior-peak=0.0821x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 18:05ET start=2026-10-06T22:05:00+00:00 shares=38515 local=0.4453x prior-peak=0.0366x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 18:10ET start=2026-10-06T22:10:00+00:00 shares=21249 local=0.5253x prior-peak=0.0202x status=ok
+MI 2026-10-06  VOLUME-CONTEXT 18:15ET start=2026-10-06T22:15:00+00:00 shares=59207 local=1.5372x prior-peak=0.0562x status=ok
+# MTEN shared SIP volume; prior 2026-10-05 5/48 slots; log-only
+# reconstructed as-of 2026-10-06T22:30:09+00:00; source fetched 2026-10-06T22:32:30.422989Z
+MTEN 2026-10-06  VOLUME-CONTEXT 16:00ET start=2026-10-06T20:00:00+00:00 shares=652 local=unknown prior-peak=unknown status=warmup
+MTEN 2026-10-06  VOLUME-CONTEXT 16:30ET start=2026-10-06T20:30:00+00:00 shares=152894 local=unknown prior-peak=unknown status=missing-baseline
+MTEN 2026-10-06  VOLUME-CONTEXT 16:35ET start=2026-10-06T20:35:00+00:00 shares=170255 local=unknown prior-peak=unknown status=missing-baseline
+MTEN 2026-10-06  VOLUME-CONTEXT 16:40ET start=2026-10-06T20:40:00+00:00 shares=478591 local=unknown prior-peak=unknown status=missing-baseline
+MTEN 2026-10-06  VOLUME-CONTEXT 16:45ET start=2026-10-06T20:45:00+00:00 shares=166035 local=0.9752x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 16:50ET start=2026-10-06T20:50:00+00:00 shares=25301 local=0.1486x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 16:55ET start=2026-10-06T20:55:00+00:00 shares=12949 local=0.0780x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:00ET start=2026-10-06T21:00:00+00:00 shares=33587 local=1.3275x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:05ET start=2026-10-06T21:05:00+00:00 shares=36447 local=1.4405x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:10ET start=2026-10-06T21:10:00+00:00 shares=18168 local=0.5409x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:15ET start=2026-10-06T21:15:00+00:00 shares=969962 local=28.8791x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:20ET start=2026-10-06T21:20:00+00:00 shares=1188203 local=32.6008x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:25ET start=2026-10-06T21:25:00+00:00 shares=711200 local=0.7332x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:30ET start=2026-10-06T21:30:00+00:00 shares=952125 local=0.9816x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:35ET start=2026-10-06T21:35:00+00:00 shares=1017234 local=1.0684x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:40ET start=2026-10-06T21:40:00+00:00 shares=1476192 local=1.5504x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:45ET start=2026-10-06T21:45:00+00:00 shares=743161 local=0.7306x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:50ET start=2026-10-06T21:50:00+00:00 shares=813333 local=0.7996x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 17:55ET start=2026-10-06T21:55:00+00:00 shares=734449 local=0.9030x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 18:00ET start=2026-10-06T22:00:00+00:00 shares=522431 local=0.7030x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 18:05ET start=2026-10-06T22:05:00+00:00 shares=369491 local=0.5031x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 18:10ET start=2026-10-06T22:10:00+00:00 shares=228087 local=0.4366x prior-peak=unknown status=ok
+MTEN 2026-10-06  VOLUME-CONTEXT 18:15ET start=2026-10-06T22:15:00+00:00 shares=739281 local=2.0008x prior-peak=unknown status=ok
+# NCPL shared SIP volume; prior 2026-10-05 25/48 slots; log-only
+# reconstructed as-of 2026-10-06T22:30:09+00:00; source fetched 2026-10-06T22:32:31.032815Z
+NCPL 2026-10-06  VOLUME-CONTEXT 16:00ET start=2026-10-06T20:00:00+00:00 shares=71987 local=unknown prior-peak=unknown status=warmup
+NCPL 2026-10-06  VOLUME-CONTEXT 16:05ET start=2026-10-06T20:05:00+00:00 shares=71440 local=unknown prior-peak=unknown status=warmup
+NCPL 2026-10-06  VOLUME-CONTEXT 16:10ET start=2026-10-06T20:10:00+00:00 shares=7284 local=unknown prior-peak=unknown status=warmup
+NCPL 2026-10-06  VOLUME-CONTEXT 16:15ET start=2026-10-06T20:15:00+00:00 shares=4790 local=0.0670x prior-peak=unknown status=ok
+NCPL 2026-10-06  VOLUME-CONTEXT 16:20ET start=2026-10-06T20:20:00+00:00 shares=1020 local=0.1400x prior-peak=unknown status=ok
+NCPL 2026-10-06  VOLUME-CONTEXT 16:25ET start=2026-10-06T20:25:00+00:00 shares=7199 local=1.5029x prior-peak=unknown status=ok
+NCPL 2026-10-06  VOLUME-CONTEXT 16:30ET start=2026-10-06T20:30:00+00:00 shares=234 local=0.0489x prior-peak=unknown status=ok
+NCPL 2026-10-06  VOLUME-CONTEXT 16:35ET start=2026-10-06T20:35:00+00:00 shares=1540 local=1.5098x prior-peak=unknown status=ok
+NCPL 2026-10-06  VOLUME-CONTEXT 16:40ET start=2026-10-06T20:40:00+00:00 shares=1404 local=0.9117x prior-peak=unknown status=ok
+NCPL 2026-10-06  VOLUME-CONTEXT 16:45ET start=2026-10-06T20:45:00+00:00 shares=175 local=0.1246x prior-peak=unknown status=ok
+NCPL 2026-10-06  VOLUME-CONTEXT 16:50ET start=2026-10-06T20:50:00+00:00 shares=240 local=0.1709x prior-peak=unknown status=ok
+NCPL 2026-10-06  VOLUME-CONTEXT 17:00ET start=2026-10-06T21:00:00+00:00 shares=1760 local=unknown prior-peak=unknown status=missing-baseline
+NCPL 2026-10-06  VOLUME-CONTEXT 17:05ET start=2026-10-06T21:05:00+00:00 shares=340 local=unknown prior-peak=unknown status=missing-baseline
+NCPL 2026-10-06  VOLUME-CONTEXT 17:15ET start=2026-10-06T21:15:00+00:00 shares=1000 local=unknown prior-peak=unknown status=missing-baseline
+NCPL 2026-10-06  VOLUME-CONTEXT 17:20ET start=2026-10-06T21:20:00+00:00 shares=457 local=unknown prior-peak=unknown status=missing-baseline
+NCPL 2026-10-06  VOLUME-CONTEXT 17:25ET start=2026-10-06T21:25:00+00:00 shares=1104 local=unknown prior-peak=unknown status=missing-baseline
+NCPL 2026-10-06  VOLUME-CONTEXT 17:35ET start=2026-10-06T21:35:00+00:00 shares=17274 local=unknown prior-peak=unknown status=missing-baseline
+NCPL 2026-10-06  VOLUME-CONTEXT 17:40ET start=2026-10-06T21:40:00+00:00 shares=2298 local=unknown prior-peak=unknown status=missing-baseline
+NCPL 2026-10-06  VOLUME-CONTEXT 17:45ET start=2026-10-06T21:45:00+00:00 shares=2315 local=unknown prior-peak=unknown status=missing-baseline
+NCPL 2026-10-06  VOLUME-CONTEXT 17:50ET start=2026-10-06T21:50:00+00:00 shares=423 local=0.1827x prior-peak=unknown status=ok
+NCPL 2026-10-06  VOLUME-CONTEXT 18:05ET start=2026-10-06T22:05:00+00:00 shares=36521 local=unknown prior-peak=unknown status=missing-baseline
+NCPL 2026-10-06  VOLUME-CONTEXT 18:10ET start=2026-10-06T22:10:00+00:00 shares=50963 local=unknown prior-peak=unknown status=missing-baseline
+NCPL 2026-10-06  VOLUME-CONTEXT 18:15ET start=2026-10-06T22:15:00+00:00 shares=47507 local=unknown prior-peak=unknown status=missing-baseline
+# SXTC shared SIP volume; prior 2026-10-05 10/48 slots; log-only
+# reconstructed as-of 2026-10-06T22:30:09+00:00; source fetched 2026-10-06T22:32:31.631191Z
+SXTC 2026-10-06  VOLUME-CONTEXT 16:00ET start=2026-10-06T20:00:00+00:00 shares=75597 local=unknown prior-peak=unknown status=warmup
+SXTC 2026-10-06  VOLUME-CONTEXT 16:05ET start=2026-10-06T20:05:00+00:00 shares=683755 local=unknown prior-peak=unknown status=warmup
+SXTC 2026-10-06  VOLUME-CONTEXT 16:10ET start=2026-10-06T20:10:00+00:00 shares=212492 local=unknown prior-peak=unknown status=warmup
+SXTC 2026-10-06  VOLUME-CONTEXT 16:15ET start=2026-10-06T20:15:00+00:00 shares=103774 local=0.4884x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 16:20ET start=2026-10-06T20:20:00+00:00 shares=295399 local=1.3902x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 16:25ET start=2026-10-06T20:25:00+00:00 shares=394574 local=1.8569x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 16:30ET start=2026-10-06T20:30:00+00:00 shares=1344735 local=4.5523x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 16:35ET start=2026-10-06T20:35:00+00:00 shares=563974 local=1.4293x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 16:40ET start=2026-10-06T20:40:00+00:00 shares=508099 local=0.9009x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 16:45ET start=2026-10-06T20:45:00+00:00 shares=865653 local=1.5349x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 16:50ET start=2026-10-06T20:50:00+00:00 shares=407217 local=0.7220x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 16:55ET start=2026-10-06T20:55:00+00:00 shares=329554 local=0.6486x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:00ET start=2026-10-06T21:00:00+00:00 shares=138698 local=0.3406x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:05ET start=2026-10-06T21:05:00+00:00 shares=243462 local=0.7388x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:10ET start=2026-10-06T21:10:00+00:00 shares=110255 local=0.4529x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:15ET start=2026-10-06T21:15:00+00:00 shares=302849 local=2.1835x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:20ET start=2026-10-06T21:20:00+00:00 shares=149611 local=0.6145x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:25ET start=2026-10-06T21:25:00+00:00 shares=118758 local=0.7938x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:30ET start=2026-10-06T21:30:00+00:00 shares=126365 local=0.8446x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:35ET start=2026-10-06T21:35:00+00:00 shares=71986 local=0.5697x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:40ET start=2026-10-06T21:40:00+00:00 shares=43870 local=0.3694x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:45ET start=2026-10-06T21:45:00+00:00 shares=54064 local=0.7510x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:50ET start=2026-10-06T21:50:00+00:00 shares=51712 local=0.9565x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 17:55ET start=2026-10-06T21:55:00+00:00 shares=30898 local=0.5975x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 18:00ET start=2026-10-06T22:00:00+00:00 shares=213751 local=4.1335x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 18:05ET start=2026-10-06T22:05:00+00:00 shares=87783 local=1.6975x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 18:10ET start=2026-10-06T22:10:00+00:00 shares=45975 local=0.5237x prior-peak=unknown status=ok
+SXTC 2026-10-06  VOLUME-CONTEXT 18:15ET start=2026-10-06T22:15:00+00:00 shares=36807 local=0.4193x prior-peak=unknown status=ok
+# WHLR shared SIP volume; prior 2026-10-05 48/48 slots; log-only
+# reconstructed as-of 2026-10-06T22:30:09+00:00; source fetched 2026-10-06T22:32:32.230763Z
+WHLR 2026-10-06  VOLUME-CONTEXT 16:00ET start=2026-10-06T20:00:00+00:00 shares=79913 local=unknown prior-peak=0.0640x status=warmup
+WHLR 2026-10-06  VOLUME-CONTEXT 16:05ET start=2026-10-06T20:05:00+00:00 shares=42488 local=unknown prior-peak=0.0340x status=warmup
+WHLR 2026-10-06  VOLUME-CONTEXT 16:10ET start=2026-10-06T20:10:00+00:00 shares=11795 local=unknown prior-peak=0.0094x status=warmup
+WHLR 2026-10-06  VOLUME-CONTEXT 16:15ET start=2026-10-06T20:15:00+00:00 shares=8067 local=0.1899x prior-peak=0.0065x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 16:20ET start=2026-10-06T20:20:00+00:00 shares=10432 local=0.8844x prior-peak=0.0084x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 16:25ET start=2026-10-06T20:25:00+00:00 shares=12272 local=1.1764x prior-peak=0.0098x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 16:30ET start=2026-10-06T20:30:00+00:00 shares=8867 local=0.8500x prior-peak=0.0071x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 16:35ET start=2026-10-06T20:35:00+00:00 shares=12529 local=1.2010x prior-peak=0.0100x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 16:40ET start=2026-10-06T20:40:00+00:00 shares=23713 local=1.9323x prior-peak=0.0190x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 16:45ET start=2026-10-06T20:45:00+00:00 shares=265151 local=21.1630x prior-peak=0.2124x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 16:50ET start=2026-10-06T20:50:00+00:00 shares=280898 local=11.8457x prior-peak=0.2250x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 16:55ET start=2026-10-06T20:55:00+00:00 shares=288869 local=1.0895x prior-peak=0.2314x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:00ET start=2026-10-06T21:00:00+00:00 shares=84294 local=0.3001x prior-peak=0.0675x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:05ET start=2026-10-06T21:05:00+00:00 shares=46520 local=0.1656x prior-peak=0.0373x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:10ET start=2026-10-06T21:10:00+00:00 shares=48261 local=0.5725x prior-peak=0.0387x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:15ET start=2026-10-06T21:15:00+00:00 shares=26393 local=0.5469x prior-peak=0.0211x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:20ET start=2026-10-06T21:20:00+00:00 shares=31083 local=0.6682x prior-peak=0.0249x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:25ET start=2026-10-06T21:25:00+00:00 shares=36138 local=1.1626x prior-peak=0.0289x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:30ET start=2026-10-06T21:30:00+00:00 shares=100082 local=3.2198x prior-peak=0.0802x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:35ET start=2026-10-06T21:35:00+00:00 shares=39862 local=1.1030x prior-peak=0.0319x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:40ET start=2026-10-06T21:40:00+00:00 shares=27010 local=0.6776x prior-peak=0.0216x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:45ET start=2026-10-06T21:45:00+00:00 shares=21022 local=0.5274x prior-peak=0.0168x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:50ET start=2026-10-06T21:50:00+00:00 shares=23459 local=0.8685x prior-peak=0.0188x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 17:55ET start=2026-10-06T21:55:00+00:00 shares=7911 local=0.3372x prior-peak=0.0063x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 18:00ET start=2026-10-06T22:00:00+00:00 shares=5558 local=0.2644x prior-peak=0.0045x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 18:05ET start=2026-10-06T22:05:00+00:00 shares=21548 local=2.7238x prior-peak=0.0173x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 18:10ET start=2026-10-06T22:10:00+00:00 shares=7978 local=1.0085x prior-peak=0.0064x status=ok
+WHLR 2026-10-06  VOLUME-CONTEXT 18:15ET start=2026-10-06T22:15:00+00:00 shares=5311 local=0.6657x prior-peak=0.0043x status=ok
+```
+
+**Book diagnostic (verbatim; log-only)** for the seven tradable >10% names with SIP volume above LCFY's single-digit-thousand bars. All IEX quotes are frozen at or before 17:00 ET. BURU's `sip-15m` row is a 2026-07-17 quote and does not describe tonight's book.
+
+```text
+BIYA BOOK iex bid $1.88 x100 / ask $1.92 x100 @ 2026-10-06 16:54:16 ET age 1h38m two-sided spread 2.08% of ask
+BIYA BOOK sip-15m bid $2.32 x200 / ask $2.33 x1700 @ 2026-10-06 18:18:04 ET age 15m00s two-sided spread 0.43% of ask
+BIYA BOOK refresh +15s iex unchanged @ 2026-10-06 16:54:16 ET
+BIYA BOOK verdict: IEX STALE 1h38m; SIP-15m TWO-SIDED (observed 2026-10-06 18:33:04 ET; log-only)
+MTEN BOOK iex bid $1.00 x100 / ask $1.02 x100 @ 2026-10-06 16:46:21 ET age 1h46m two-sided spread 1.96% of ask
+MTEN BOOK sip-15m bid $1.49 x2900 / ask $1.50 x6000 @ 2026-10-06 18:18:04 ET age 15m00s two-sided spread 0.67% of ask
+MTEN BOOK refresh +15s iex unchanged @ 2026-10-06 16:46:21 ET
+MTEN BOOK verdict: IEX STALE 1h46m; SIP-15m TWO-SIDED (observed 2026-10-06 18:33:04 ET; log-only)
+BURU BOOK iex bid $1.01 x100 / ask $1.35 x100 @ 2026-10-06 16:00:00 ET age 2h33m two-sided spread 25.19% of ask
+BURU BOOK sip-15m bid $0.0726 x9000 / ask $0.0728 x2000 @ 2026-07-17 11:28:27 ET age 1951h04m two-sided spread 0.27% of ask
+BURU BOOK refresh +15s iex unchanged @ 2026-10-06 16:00:00 ET
+BURU BOOK verdict: IEX STALE 2h33m; SIP-15m TWO-SIDED (observed 2026-10-06 18:33:04 ET; log-only)
+SXTC BOOK iex bid $2.19 x100 / ask $2.24 x100 @ 2026-10-06 16:48:07 ET age 1h44m two-sided spread 2.23% of ask
+SXTC BOOK sip-15m bid $1.96 x1100 / ask $1.97 x200 @ 2026-10-06 18:18:04 ET age 15m00s two-sided spread 0.51% of ask
+SXTC BOOK refresh +15s iex unchanged @ 2026-10-06 16:48:07 ET
+SXTC BOOK verdict: IEX STALE 1h44m; SIP-15m TWO-SIDED (observed 2026-10-06 18:33:04 ET; log-only)
+MI BOOK iex bid $1.56 x100 / ask $1.59 x100 @ 2026-10-06 16:59:55 ET age 1h33m two-sided spread 1.89% of ask
+MI BOOK sip-15m bid $1.40 x4900 / ask $1.42 x500 @ 2026-10-06 18:17:59 ET age 15m06s two-sided spread 1.41% of ask
+MI BOOK refresh +15s iex unchanged @ 2026-10-06 16:59:55 ET
+MI BOOK verdict: IEX STALE 1h33m; SIP-15m TWO-SIDED (observed 2026-10-06 18:33:04 ET; log-only)
+NCPL BOOK iex bid $0.9460 x100 / ask $0.0000 x0 @ 2026-10-06 16:00:03 ET age 2h33m one-sided/empty
+NCPL BOOK sip-15m bid $1.38 x400 / ask $1.40 x1700 @ 2026-10-06 18:18:00 ET age 15m04s two-sided spread 1.43% of ask
+NCPL BOOK refresh +15s iex unchanged @ 2026-10-06 16:00:03 ET
+NCPL BOOK verdict: IEX STALE 2h33m; SIP-15m TWO-SIDED (observed 2026-10-06 18:33:04 ET; log-only)
+WHLR BOOK iex bid $1.03 x100 / ask $1.07 x100 @ 2026-10-06 16:57:58 ET age 1h35m two-sided spread 3.74% of ask
+WHLR BOOK sip-15m bid $1.02 x200 / ask $1.04 x200 @ 2026-10-06 18:17:55 ET age 15m09s two-sided spread 1.92% of ask
+WHLR BOOK refresh +15s iex unchanged @ 2026-10-06 16:57:58 ET
+WHLR BOOK verdict: IEX STALE 1h35m; SIP-15m TWO-SIDED (observed 2026-10-06 18:33:04 ET; log-only)
+```
+
+**Night summary for the morning evaluation:** Two positions are open, BIYA (52 @ $1.91, Grade None) and MTEN (70 @ $1.39, Grade B). Measure these morning references:
+
+- **Watch hypotheticals:** SXTC DEAD-CAT-OVERRIDE WATCH ($1.57 at 16:25 ET) and VCIG FIRST-BAR-SPIKE WATCH ($1.69 at 16:20 ET).
+- **Earlier FIRST-BAR-SPIKE WATCH hypotheticals:** NCPL and ICMB ($1.22 and $0.87 at 16:20 ET).
+- **Reference prices only:** BURU $1.36 (late 18:00 ET spike, blocked by the gate), NCPL $1.38 (late CONFIRM-3 YES on thin volume), and WHLR $1.04 (18:00 ET).
+
+**Daily email:** Report BIYA at +23.6% after a new $2.39 SIP high and MTEN at +6.5% after its 18:15 re-expansion. Report BURU's late 18:00 ET spike (745K shares in one bar, CONFIRM-3 NO), blocked by the 2-AH-scan gate, with a Grade C financing 8-K accepted at 17:10 ET. Report NCPL's late CONFIRM-3 YES on thin volume, kept out of the DEAD-CAT-OVERRIDE sample. One tooling issue: `book-check.js` returned a 2026-07-17 pre-split SIP quote for BURU and labelled it `TWO-SIDED`. The delayed-book diagnostic can mislabel names that changed share structure, and this needs a fix. No item from this scan requires Juan's input.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
