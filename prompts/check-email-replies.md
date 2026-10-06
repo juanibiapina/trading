@@ -13,6 +13,8 @@ KEY=$(grep -E '^export INBOXKIT_API_KEY=' /home/juan/Sync/notes/zero/.envrc | se
 curl -s "https://inboxkit.cc/api/messages?unread=true" -H "Authorization: Bearer $KEY"
 ```
 
+Use these curl commands. Cloudflare answers Python `urllib`'s default User-Agent with HTTP 403 (error code 1010); a Python client must set its own `User-Agent` header.
+
 If there are no unread messages, stop. Do not send anything. Report "no replies".
 
 ### 2. Read each reply

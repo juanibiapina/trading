@@ -16,7 +16,8 @@ Apply this data hierarchy from the start of the pulse:
 
 ### 1. Setup
 
-- Run `date` to get the current time
+- Run `date` and `TZ=America/New_York date` to get the current time
+- **Late-start guard:** these pulses are scheduled 15:30–18:30 ET, and the bridge retries provider errors until they clear, so a pulse caught in an outage can resume hours later. If the current ET time is outside 15:25–20:00 ET on a weekday, do not scan or submit orders. Append `Late-start skip: post-market pulse began at HH:MM ET, outside the AH session; no scan or order.` to the log of the most recent weekday whose 16:00 ET close has passed, commit, push, and stop.
 - Determine the US trading date: if current CET time is before 06:00, the trading date is yesterday (CET). Otherwise it's today.
 - Set `LOG_DIR=log/YYYY-MM-DD` and `LOG_FILE=log/YYYY-MM-DD/log.md` using the trading date
 - Pull latest changes with the lock-aware sync helper: `bash scripts/sync-repo.sh`
@@ -131,7 +132,7 @@ For each **new** candidate (not in prior scans), evaluate against the entry crit
 
 **Regular session caution (21:30 CET / before 4:00 PM ET):** If this scan is running before AH opens, do NOT enter paper trades yet. Flag candidates as "Watch — pending AH confirmation" in the evaluation notes. Only enter a paper trade if the stock reappears in a subsequent AH scan (22:00+ CET) with sustained momentum. Stocks that spike intraday but don't carry into AH tend to fade (e.g., SPRC -18.6%, AEMD -4.6% on March 12).
 
-If a candidate passes (and it's an AH scan), **submit a real Alpaca paper order** (extended-hours limit):
+If a candidate passes (and it's an AH scan), **submit a real Alpaca paper order** (extended-hours limit). Immediately before each buy, run `node scripts/broker.js positions` and `node scripts/broker.js orders all`. If SYM already has a position, an open buy, or a buy filled today, skip it and note `already entered`: pulses that resume together after an outage reach this step at the same time, and the log does not yet show each other's entries.
 
 ```bash
 node scripts/broker.js tradable SYM      # confirm Alpaca can trade it
