@@ -8,6 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
+| BIYA | $1.91 | $1.91 | $1.91 | 0.0% | 0.0% | 52 | $99.32 | None | 2026-10-06 | AH BUILD/hold re-ignition one week after the Sep 29–30 spike; SIP high $2.07 at 16:40 ET on 802K sh / 5,837 trades, CONFIRM-3 YES; no catalyst found. Hard stop $1.72 (-10%). Exit at first premarket opportunity. Alpaca fill `d20b26bc-7405-4f87-831e-dd4f6e5d927b` at 17:01:28 ET. |
 
 ## Position Rules
 
