@@ -31,7 +31,7 @@
 
 - **October 7 18:00:**
   - Initiative 7: the 10:30 and 11:30 ET slots each have a `decision.json` persisted within the 120 s deadline, with N1, the SEC result and A1/A2 recorded. If not, fix the cause and restart `SFm` before October 8 10:30 ET.
-  - Initiative 5: the October 6 report returns HTTP 200 after this push.
+  - Initiative 5: **done at 15:15.** After Pages run 37626777056, the published October 6 report returns 200, and 578/578 rows match beside both charts.
 - **October 8 15:00:** Initiative 1 consumers accept v2. The report generator must accept it before any v2 file lands, or the seven-day Pages build fails. Then the scan's volume command adds `--metric-version sip-ah-volume-v2`.
 - **October 8 18:00:** Initiative 7's modeled execution layer goes in a separate script.
 - **October 9 15:00:** Initiative 3 tests the +10% resting-limit exit on all 89 real entries.
