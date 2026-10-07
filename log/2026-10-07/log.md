@@ -189,6 +189,66 @@ AH >10% at this snapshot (unrounded): MVIS
 
 **PFAI** (21:30 watch name, +9.3% AH): SIP 16:00 ET bar H $6.18 on 1.02M sh / 13,995 trades, then 16:05 ET bar L $4.42 / C $4.64 on 474K sh / 6,724 trades, below the $5.07 close. The scanner's $5.54 at 16:20 is newer than SIP. Below 10%, so no instrumentation run; first-bar high, same shape as MVIS.
 
+## Scan 22:25 CEST (4:25 PM ET)
+
+`python3 scripts/scan.py --all` ran at 16:25:11 ET (22:25:11 CEST) in the AFTERHOURS session and returned 3 hits.
+
+Supplementary AH-change-only (>15%, not in volume pass): KUST, VNTG
+AH >10% at this snapshot (unrounded): KUST, VNTG
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| IRIX | [TV](https://www.tradingview.com/chart/?symbol=IRIX) | $0.88 | +29.2% | +8.0% | $0.95 | +39.6% | 163K | 1.3M | 0.1x | 10.9M | Medical Specialties |
+| VNTG | [TV](https://www.tradingview.com/chart/?symbol=VNTG) | $0.63 | -4.0% | +18.2% | $0.74 | +13.5% | 20K | 367K | 0.1x | 10.6M | Marine Shipping |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $4.50 | -1.6% | +15.5% | $5.19 | +13.6% | 15K | 44K | 0.3x | 625K | Miscellaneous Commercial Services |
+
+### Evaluation notes
+
+**Decision:** Observation only; no paper orders. This scan precedes the 23:00 CEST entry window. Qualifying AH appearances so far: KUST 1, VNTG 1, MVIS 1 (dropped out of this scan), PFAI 0, IRIX 0. SIP bars through 16:10 ET were available at 16:25 ET.
+
+**KUST** (new, `tradable=true`, float 625K, Kustom Entertainment, live entertainment/ticketing):
+
+- Spike bar: `KUST 2026-10-07  SPIKE  16:09ET  +22%  $5.50  164 trades / 18k sh  (first co-spike bar) (as-of 16:25ET)`
+- Third bar: `KUST 2026-10-07  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-of 16:25ET`
+- SIP bars: 16:00 ET $4.50 on 259 sh / 4 trades; 16:05 ET O $4.61 H $5.50 C $5.24, 17,804 sh / 164 trades, vwap $5.15; 16:10 ET O $5.19 H $5.75 L $4.93 C $5.19, 169,039 sh / 3,481 trades, vwap $5.34. Volume rose about 10x into the 16:10 bar, and the 16:10 high ($5.75, +27.8%) came after the 16:05 ignition, so this is not a first-bar spike so far. The scanner's $5.19 matches the SIP 16:10 close.
+- Shared SIP volume context:
+  ```
+  # KUST shared SIP volume sip-ah-volume-v2; prior 2026-10-06 2+46zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T20:25:11+00:00; source fetched 2026-10-07T20:25:50.248841+00:00
+  KUST 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=259 local=unknown prior-peak=0.4752x status=warmup
+  KUST 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=17804 local=unknown prior-peak=32.6679x status=warmup
+  KUST 2026-10-07  VOLUME-CONTEXT 16:10ET start=2026-10-07T20:10:00+00:00 shares=169039 local=unknown prior-peak=310.1633x status=warmup
+  ```
+- Book:
+  ```
+  KUST BOOK iex bid $3.57 x100 / ask $5.17 x100 @ 2026-10-07 16:00:02 ET age 25m52s two-sided spread 30.95% of ask
+  KUST BOOK sip-15m bid $5.32 x100 / ask $5.43 x400 @ 2026-10-07 16:10:53 ET age 15m00s two-sided spread 2.03% of ask
+  KUST BOOK refresh +15s iex unchanged @ 2026-10-07 16:00:02 ET
+  KUST BOOK verdict: IEX STALE 25m52s; SIP-15m TWO-SIDED (observed 2026-10-07 16:25:53 ET; log-only)
+  ```
+- Catalyst (2 searches): no catalyst found dated today. Background only: 1-for-10 reverse split effective 2026-10-01 (StockTitan, about a week old) and the TFL (Tickets For Less) acquisition agreement of 2026-09-01. Neither is fresh. Provisional grade: None. Re-search at the next scan if KUST stays above 10% AH.
+- Multi-session context: `WINNERS_TRACKING.md` lists KUST runs on 2026-07-15 and 2026-07-31, both months old. Day% -1.6% today, so tonight is a fresh first-day AH move. The reverse split was on 2026-10-01, before the 2026-10-06 prior session, so the prior-session volume comparison is on a split-adjusted basis.
+
+**VNTG** (new, `tradable=true`, float 10.6M, Vantage Corp, Singapore tanker shipbroking):
+
+- Spike bar: `VNTG 2026-10-07  SPIKE  16:09ET  +21%  $0.76  36 trades / 16k sh  (first co-spike bar) (as-of 16:25ET)`
+- Third bar: `VNTG 2026-10-07  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-of 16:25ET`
+- SIP bars: 16:00 ET C $0.68, 6,101 sh / 14 trades; 16:05 ET H $0.76 C $0.74, 21,451 sh / 87 trades; 16:10 ET O $0.74 L $0.63 C $0.64, 20,745 sh / 64 trades, vwap $0.65. The 16:10 bar gave back the whole move to roughly the $0.63 close, on tens of K shares and under 100 trades per bar. The scanner's $0.74 is the 16:05 close and is behind SIP. This is thin and already faded.
+- Shared SIP volume context:
+  ```
+  # VNTG shared SIP volume sip-ah-volume-v2; prior 2026-10-06 3+45zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T20:25:11+00:00; source fetched 2026-10-07T20:25:52.157870+00:00
+  VNTG 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=6101 local=unknown prior-peak=0.5916x status=warmup
+  VNTG 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=21451 local=unknown prior-peak=2.0802x status=warmup
+  VNTG 2026-10-07  VOLUME-CONTEXT 16:10ET start=2026-10-07T20:10:00+00:00 shares=20745 local=unknown prior-peak=2.0117x status=warmup
+  ```
+- Book: not run; SIP volume is not accumulating.
+- Catalyst (2 searches): no catalyst found dated today. Most recent items are the OpsWiz commercialization PR (2026-09-21) and FY2026 results; both are background.
+
+**IRIX** (21:30 watch name, +8.0% on the scanner, below 10%): SIP is ahead of the scanner. The 16:10 ET bar ran O $0.95 H $1.03 C $1.00 on 1,371,285 sh / 4,226 trades (vwap $0.99), which is +13.6% over the $0.88 close and about +58% on the day. This is the largest AH bar of the session so far. It does not count as a qualifying AH appearance until the scanner shows it above 10%; cross-check it against SIP at the next scans.
+
+**Faded 22:20 names:** MVIS dropped off the scanner; SIP 16:10 ET C $1.37 on 164K sh, about 10% below the $1.52 close, after the first-bar high of $1.86. PFAI SIP 16:10 ET C $4.10 (L $4.00), about 19% below the $5.07 close, after the $6.18 first-bar high. Both follow the first-bar-spike shape and are now below their regular closes.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
