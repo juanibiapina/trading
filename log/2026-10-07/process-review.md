@@ -45,7 +45,7 @@ All 23 sessions finished and pushed. No provider errors occurred in this window.
 ### Full reads of OPEN_POSITIONS.md
 
 - **Severity:** Wasteful
-- **Sessions affected:** 37 sessions since Sep 28 read the full 47–49 KB file: both position evaluations each day plus post-market pulses (all 10 on Sep 30, 9 on Oct 1). In this window: the 08:30 and 12:30 position evaluations and the Oct 6 00:00 CEST entry pulse.
+- **Sessions affected:** 37 sessions since Sep 28 read the full 47–49 KB file: both position evaluations each day plus post-market pulses (11 on Sep 30, 10 on Oct 1). In this window: the 08:30 and 12:30 position evaluations and the Oct 6 00:00 CEST entry pulse.
 - **Symptom:** The current positions and rules fill the first 55 lines (2.9 KB). The rest is the closed-trade history.
 - **Fix:** `prompts/position-evaluation.md` and `prompts/post-market-scan.md` now read only the open section with `sed -n '1,/^## Closed Positions/p'`. The position prompt also gives the Closed table's header and separator lines as the anchor for inserting an exit row; both commands were checked on the current file.
 - **Status:** Fixed in the prompts
