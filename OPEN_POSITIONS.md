@@ -8,6 +8,8 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
+| IPW | $1.38 | $1.35 | $1.38 | -2.2% | 0.0% | 72 | $99.36 | None | 2026-10-07 | Order 825706f4, filled 17:38:57 ET AH. Day-1 AH igniter, float 1.2M, no catalyst found. Exit at first premarket opportunity. |
+| CPHI | $0.9978 | $0.9978 | $0.9978 | 0.0% | 0.0% | 94 | $93.79 | None | 2026-10-07 | Order 58102d51, filled 18:02:02 ET AH against stale IEX ask (SIP-15m ask $1.06). Late AH BUILD, float 40.3M, no catalyst found. Exit at first premarket opportunity. |
 
 ## Position Rules
 
