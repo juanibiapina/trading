@@ -91,7 +91,8 @@ function analyze(sym, date, now) {
 
 function volumeAnnotation(file, sym, date, now) {
   const result = JSON.parse(require("fs").readFileSync(file, "utf8"));
-  if (result.metric_version !== "sip-ah-volume-v1" || result.symbol !== sym || result.date !== date) {
+  const versions = ["sip-ah-volume-v1", "sip-ah-volume-v2"];
+  if (!versions.includes(result.metric_version) || result.symbol !== sym || result.date !== date) {
     throw new Error("Shared volume file must match the symbol, AH date and metric version");
   }
   const asOf = Date.parse(result.as_of_utc);
@@ -99,7 +100,11 @@ function volumeAnnotation(file, sym, date, now) {
   const clock = new Intl.DateTimeFormat("en-GB", { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
   const day = new Intl.DateTimeFormat("sv-SE", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" });
   const ratio = (value) => value === null ? "unknown" : `${value.toFixed(4)}x`;
-  const lines = [`# ${sym} shared SIP volume; prior ${result.prior_date} ${result.prior_observed_slots}/${result.prior_expected_slots} slots; log-only`,
+  const v2 = result.metric_version === "sip-ah-volume-v2";
+  const coverage = v2
+    ? ` ${result.metric_version}; prior ${result.prior_date} ${result.prior_observed_slots}+${result.prior_inferred_zero_slots}zero/${result.prior_expected_slots} slots; floor ${result.floor_shares}`
+    : `; prior ${result.prior_date} ${result.prior_observed_slots}/${result.prior_expected_slots} slots`;
+  const lines = [`# ${sym} shared SIP volume${coverage}; log-only`,
     `# reconstructed as-of ${result.as_of_utc}; source fetched ${result.source_observed_utc}`];
   for (const row of result.rows) {
     const end = Date.parse(row.bar_end_utc);

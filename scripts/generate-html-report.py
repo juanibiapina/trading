@@ -10,7 +10,7 @@ import re
 from datetime import date
 from pathlib import Path
 
-from volume_metric import VERSION, timestamp
+from volume_metric import VERSION, VERSION_V2, timestamp
 
 ROOT = Path(__file__).resolve().parents[1]
 LOG_ROOT = ROOT / "log"
@@ -49,23 +49,28 @@ def volume_context_html(paths: list[Path]) -> str:
     sections = []
     for path in paths:
         result = json.loads(path.read_text(encoding="utf-8"))
-        if result["metric_version"] != VERSION:
+        version = result["metric_version"]
+        if version not in (VERSION, VERSION_V2):
             raise ValueError(f"Unsupported volume metric: {path}")
+        v2 = version == VERSION_V2
         as_of = timestamp(result["as_of_utc"])
         rows = []
         for row in result["rows"]:
             if timestamp(row["bar_end_utc"]) > as_of:
                 raise ValueError(f"Incomplete volume bar: {path}")
             ratio = lambda value: "unknown" if value is None else f"{value:.4f}x"
-            baseline = "unknown" if row["baseline_shares"] is None else f"{row['baseline_shares']:,.0f}"
+            median = row["baseline_median_shares"] if v2 else row["baseline_shares"]
+            baseline = "unknown" if median is None else f"{median:,.0f}"
             values = (row["bar_et"], f"{row['shares']:,}", baseline, ratio(row["local_ratio"]),
                       ratio(row["prior_peak_ratio"]), row["local_status"])
             cells = "".join(f"<td>{html.escape(str(value))}</td>" for value in values)
             rows.append(f'<tr data-bar-start-utc="{html.escape(row["bar_start_utc"])}">{cells}</tr>')
         sections.append(
             f'<section><h3>{html.escape(result["symbol"])} — {html.escape(result["date"])} AH</h3>'
-            f'<p>Previous AH: {html.escape(result["prior_date"])}; '
-            f'{result["prior_observed_slots"]}/{result["prior_expected_slots"]} observed bars. '
+            f'<p>Metric {html.escape(version)}. Previous AH: {html.escape(result["prior_date"])}; '
+            f'{result["prior_observed_slots"]}/{result["prior_expected_slots"]} observed bars'
+            + (f', {result["prior_inferred_zero_slots"]} inferred zero-trade bars; ratios floor the '
+               f'denominator at {result["floor_shares"]:,} shares. ' if v2 else '. ') +
             f'Reconstructed through {html.escape(result["as_of_utc"])}; '
             f'data fetched {html.escape(result["source_observed_utc"])}.</p>'
             '<table><thead><tr><th>Bar start ET</th><th>Shares</th><th>Prior 3-bar median</th>'
@@ -76,7 +81,8 @@ def volume_context_html(paths: list[Path]) -> str:
         return ""
     return ('<h2>AH volume context</h2><p>Observation only. Local ratio compares raw SIP shares with the '
             'median of three preceding five-minute bars. Prior ratio compares with the largest bar in the '
-            'complete previous AH session. Missing data or a zero baseline yields unknown. '
+            'complete previous AH session. Under v1, missing data or a zero baseline yields unknown; v2 counts '
+            'absent bars inside the fetched span as zero trades and floors denominators at 100 shares. '
             'Historical reconstruction does not prove availability at the bar close.</p>' + "".join(sections))
 
 

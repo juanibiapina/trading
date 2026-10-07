@@ -1,0 +1,29 @@
+{
+  "version": "init7-sec-archive-v1",
+  "parser": "init7-sec-text-v1",
+  "design_sha256": "df00c3bc9dd86117191ab86b838589e2dfdd5231ae6f1c62861b2e484915dc98",
+  "mapping_sha256": "7afbd3761b28af1237b625729fa68e2c2631f7f00429d66a05e9beec1826e6e7",
+  "ticker": "AMZN",
+  "cik": "0001018724",
+  "decision_cutoff_utc": "2026-10-07T14:32:00Z",
+  "started_utc": "2026-10-07T14:30:01.953179Z",
+  "status": "cash",
+  "candidates": [],
+  "documents": [],
+  "requests": [
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001018724.json",
+      "file": "submissions.json",
+      "requested_utc": "2026-10-07T14:30:01.955982Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-07T14:30:02.190347Z",
+      "bytes": 159904,
+      "sha256": "1f5bb6be4033e2378bfa0d14e0d9276a08d8dfb070b263f59ca0e77d68ced058",
+      "received_by_cutoff": true
+    }
+  ],
+  "finished_utc": "2026-10-07T14:30:02.200185Z",
+  "cash_reason": "no_8k_within_window"
+}

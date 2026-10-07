@@ -1692,7 +1692,31 @@ tracker).
 
 ---
 
-## Current priorities and initiative status — 2026-10-07 15:00 CEST
+## Current priorities and initiative status — 2026-10-07 18:00 CEST
+
+This checkpoint supersedes the October 7 15:00 checkpoint. **Initiative 7's first two scheduled slots ran cleanly**: both decisions persisted about 2.4 s after the slot, far inside the 120 s deadline, with matching hashes. **Initiative 1's v2 metric is now live in tonight's post-market scan**, one day ahead of schedule, because both consumers accept it and the change is log-only. The pilot slot stays free. Paper equity at 18:10 CEST is **$99,735.29 (-$264.71)**, flat.
+
+**Money-fast selection:** Initiative 7 is the only pilot candidate, so its first captures were the required check. Initiative 1's v2 switch was ready, small and log-only. Doing it before the 22:15 scan adds a night of v2 data and clears the Pages build risk before a v2 file can land. **North Star check:** unchanged. Volume gates and AH entry timing both failed on the 89 real entries, so the liquid-session comparison remains the main candidate to replace the core strategy. Provider reliability, decided outside this repo, remains the largest measured loss within reach.
+
+| Initiative | Latest concrete progress | Current status / dependency | Next deliverable and check |
+|---|---|---|---|
+| 1 — shared volume measurement | October 7 18:00: v2 consumers and scan command | **Instrument, v2 live (log-only).** `ah-5m-confirmation.js` and `generate-html-report.py` accept v1 and v2. The post-market scan command now passes `--metric-version sip-ah-volume-v2`. | **October 8 morning cycle:** the first v2 files from the October 7 scans render in the report and the Pages build passes. If a scan logged v1 or the build failed, fix it the same day. |
+| 2 — broker execution | September 7 alternatives research | **Deferred per Juan's September 22 instruction.** | Resume the AKAN/SHPH/GIPR protocol only when access arrives; no renewed ask. |
+| 3 — scheduling and exits | October 7 15:00: later-rebuild comparison | **Research.** | **October 9 15:00:** test the +10% resting sell-limit exit on all 89 real entries. Proposals stay unapplied. |
+| 4 — initiative reporting | Receipt 180 | **Delivered and verified.** | Next daily email: Initiative 7 first captures, Initiative 1 v2 switch, plus the 15:00 items. |
+| 5 — review surface | October 7 15:00: Pages workflow fixed | **Build delivered.** The report renders v2 sections with coverage and floor; v1 rows are unchanged. | Rides on Initiative 1's October 8 check. |
+| 6 — PM-only gappers | October 6 15:00 latency study | **Pilot ENDED; log-only research continues.** | Reopen only with real-time consolidated data and a sub-minute watcher. Correct seasonal UTC bounds before winter. |
+| 7 — alternative agent strategies / Jev | October 7 18:00: slots 10:30 and 11:30 ET checked | **Instrument, session 1 of 5 in progress** (`SFm` running; four slots left today). | **October 8 18:00:** check all six October 7 slots, then build the modeled execution layer in a separate script. It must record each entry quote's spread: the 10:30 IEX book for AMZN was $254.58/$255.75 (0.46% wide), the 11:30 book $256.85/$256.91 (0.02%). **October 14 15:00:** freeze the calendar and start the pilot. |
+
+**Initiative 7 progress, October 7 18:00:** both slots chose **N1 = AMZN** (relative return +0.42 and +0.36 points against QQQ). The SEC archiver returned `no_8k_within_window`, so A1 = cash and A2 = AMZN (`no_source`); no Jev call ran. Decisions persisted at 14:30:02.24 and 15:30:02.45 UTC, and every pinned hash matched. Features come from bars closed 16 minutes before the slot, as the delayed SIP feed requires. The IEX spread at 10:30 shows that modeled entries at the IEX ask could cost about half a percent on a liquid name, which an hourly strategy must beat. Evidence: `log/2026-10-07/init7-observe/`.
+
+**Initiative 1 progress, October 7 18:00:** v2 replays of all 43 October 6 archives render **578/578 rows** matching their JSON; statuses are 451 `ok`, 111 `warmup`, 16 `floored`. v1 replays stay byte-identical to the stored files, the v1 HTML rows are unchanged, and `ah-5m-confirmation.js` v1 output is byte-identical to the previous version. A live SIP fetch with the new scan command (BIYA, October 6) ran end to end. The old consumer rejects a v2 file (exit 1), which is why the consumers changed first. The prompt now says the script alone infers zero-trade slots and applies the floor.
+
+**Previous-step evaluation:** the 15:00 hypothesis for this run **worked**: both slots have a `decision.json` within the deadline, with N1, the SEC result and A1/A2 recorded. Process-review handoff 3 (v2 in the scan command) is delivered.
+
+**Needs from Juan / consolidated asks:** nothing new. No trading-pulse timing change is proposed.
+
+## Prior checkpoint — 2026-10-07 15:00 CEST
 
 This checkpoint supersedes the October 6 18:00 checkpoint and earlier initiative status paragraphs. **Initiative 7's observation orchestration is built, reproduces all 12 A2 vectors, and is capturing its first instrumentation session today** (gob job `SFm`, first slot 10:30 ET). **Initiative 3's later-rebuild comparison is done: later rebuilds lose, and no timing rule is proposed.** Initiative 5's October 6 check passed locally and exposed a Pages gap, now fixed. The pilot slot stays free. Paper equity at 15:10 CEST is **$99,735.29 (-$264.71)**, flat after BIYA.
 

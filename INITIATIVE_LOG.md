@@ -1,5 +1,33 @@
 # Initiative Log
 
+### 2026-10-07 18:00 — Initiative 7 first scheduled slots clean; Initiative 1 v2 live in the post-market scan
+
+**Evaluated:** The 15:00 hypothesis **worked**. The 10:30 and 11:30 ET slots each wrote `decision.json` about 2.4 s after the slot (deadline 120 s), with matching hashes, N1, the SEC result and A1/A2. No pilot is active.
+
+**Step taken:**
+
+- **Initiative 7 (only pilot candidate; required check):** read both slot decisions and the daemon status.
+- **Initiative 1 (process-review handoff 3, ready and log-only):** taught `ah-5m-confirmation.js` and `generate-html-report.py` to accept `sip-ah-volume-v2`, then added `--metric-version sip-ah-volume-v2` to the post-market scan's volume command. Doing it before tonight's 22:15 scan adds a night of v2 data and removes the risk of a v2 file breaking the seven-day Pages build.
+
+**Result:**
+
+- **Initiative 7.** Both slots: N1 = AMZN, SEC `no_8k_within_window`, A1 = cash, A2 = AMZN (`no_source`), no Jev call. Features use bars closed 16 minutes before the slot. The IEX book for AMZN was $254.58/$255.75 at 10:30 (0.46% wide) and $256.85/$256.91 at 11:30 (0.02%). The execution layer must record spread, because a half-percent entry cost could erase an hourly edge.
+- **Initiative 1.**
+  - 43 v2 replays of the October 6 archives render 578/578 rows matching their JSON (451 `ok`, 111 `warmup`, 16 `floored`).
+  - v1 replays stay byte-identical, v1 HTML rows are unchanged, and the confirmation script's v1 output is byte-identical to the previous version.
+  - The previous consumer rejected a v2 file (exit 1). A live SIP fetch with the new command ran end to end.
+  - The prompt now says the script alone infers zero-trade slots and applies the 100-share floor.
+- **Other details.** No order, live rule, size or pulse timing changed. Equity is $99,735.29 (-$264.71), flat.
+
+**Hypothesis / next step:**
+
+- **October 8 morning cycle:** tonight's scans write v2 metric files, the report renders them, and Pages passes. A v1 file or a failed build means fixing it the same day.
+- **October 8 18:00:** Initiative 7: all six October 7 slots and the October 8 slots persisted in time; then build the modeled execution layer with spread recorded.
+- **October 9 15:00:** Initiative 3 tests the +10% resting-limit exit on the 89 entries.
+- **Next daily email:** Initiative 7 first captures and the IEX spread finding, Initiative 1 v2 switch.
+
+**Needs from Juan:** nothing new.
+
 ### 2026-10-07 15:00 — Initiative 7 observation orchestration live; Initiative 3 later rebuilds lose; Initiative 5 check and Pages fix
 
 **Evaluated:** The October 6 18:00 hypotheses for this run **worked**. Orchestration reproduces all 12 A2 vectors, and the first scheduled capture is loaded for 10:30 ET today. Initiative 3's later-rebuild comparison ran with the 15-minute screener lag and beat nothing. No pilot is active. Process-review handoffs 1 (both dated items) and 2 (Initiative 5 check) are delivered; handoff 3 (v2 in the scan command) is set for October 8 15:00.
