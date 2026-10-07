@@ -149,6 +149,46 @@ AH >10% at this snapshot (unrounded): none
 
 PFAI traded about 1.0M shares on 14K trades in the 16:00 ET bar and closed it about 10% above the regular close, while TradingView listed nothing. One SIP bar is not a qualifying AH scan appearance; the next scans should check whether TradingView picks PFAI up and whether SIP volume keeps accumulating after the first bar. SXTC fell from $4.12 at the 21:30 scan to $2.81 by the close and lost another 14% in the first AH bar. SBFM and BIYA are fading in AH.
 
+## Scan 22:20 CEST (4:20 PM ET)
+
+`python3 scripts/scan.py --all` ran at 16:20:13 ET (22:20:13 CEST) in the AFTERHOURS session and returned 2 hits.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): MVIS
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| PFAI | [TV](https://www.tradingview.com/chart/?symbol=PFAI) | $5.07 | +116.7% | +9.3% | $5.54 | +136.9% | 717K | 2.9M | 0.2x | 3.6M | Trucks/Construction/Farm Machinery |
+| MVIS | [TV](https://www.tradingview.com/chart/?symbol=MVIS) | $1.52 | -3.8% | +11.8% | $1.70 | +7.6% | 661K | 1.1M | 0.6x | 27.9M | Semiconductors |
+
+### Evaluation notes
+
+**Decision:** Observation only; no paper orders. This scan precedes the 23:00 CEST entry window. This is the first AH scan with any hits, so MVIS has 1 qualifying AH appearance and PFAI has 0 (+9.3%, below 10%).
+
+**MVIS** (new, `tradable=true`, float 27.9M, Semiconductors/lidar):
+
+- Spike bar: `MVIS 2026-10-07  SPIKE  16:01ET  +22%  $1.85  367 trades / 64k sh  (first co-spike bar) (as-of 16:20ET)`
+- Third bar: `MVIS 2026-10-07  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET`
+- SIP bars: 16:00 ET O $1.52 H $1.86 L $1.52 C $1.66, 716,315 sh / 3,566 trades, vwap $1.72; 16:05 ET O $1.70 H $1.70 L $1.40 C $1.41, 547,866 sh / 2,190 trades, vwap $1.52. The 16:05 bar closed 7% below the regular close. The scanner's $1.70 at 16:20 sits between the two bars and is newer than the latest SIP bar, so it is not a bad print, but SIP shows a first-bar high and a full round trip in the second bar.
+- Shared SIP volume context:
+  ```
+  # MVIS shared SIP volume sip-ah-volume-v2; prior 2026-10-06 10+38zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T20:20:13+00:00; source fetched 2026-10-07T20:20:37.875192+00:00
+  MVIS 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=716315 local=unknown prior-peak=71.2893x status=warmup
+  MVIS 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=547866 local=unknown prior-peak=54.5249x status=warmup
+  ```
+- Book:
+  ```
+  MVIS BOOK iex bid $1.30 x100 / ask $1.74 x100 @ 2026-10-07 16:00:01 ET age 20m38s two-sided spread 25.29% of ask
+  MVIS BOOK sip-15m bid $1.51 x900 / ask $1.52 x2000 @ 2026-10-07 16:05:39 ET age 15m00s two-sided spread 0.66% of ask
+  MVIS BOOK refresh +15s iex unchanged @ 2026-10-07 16:00:01 ET
+  MVIS BOOK verdict: IEX STALE 20m38s; SIP-15m TWO-SIDED (observed 2026-10-07 16:20:39 ET; log-only)
+  ```
+- Catalyst (3 searches): MicroVision scheduled a video business update for 2026-10-07 at 4:00 PM ET (ACCESS Newswire, October 2, 2026, moved from 1:00 PM ET). StockTitan says the update covers commercial progress and revenue and operating expense expectations. The event is dated today and matches the 16:00 ET spike, but I found no write-up of what was said, so the catalyst content is unverified. Provisional grade: None until a dated release or 8-K with the content appears. Re-check at the next scan if MVIS stays above 10% AH.
+- Pattern: first AH bar holds the high ($1.86), CONFIRM-3 NO. If this persists across scans, MVIS fits the first-bar-spike skip. Day% -3.8% and Total% +7.6% are far below the extension ceiling.
+
+**PFAI** (21:30 watch name, +9.3% AH): SIP 16:00 ET bar H $6.18 on 1.02M sh / 13,995 trades, then 16:05 ET bar L $4.42 / C $4.64 on 474K sh / 6,724 trades, below the $5.07 close. The scanner's $5.54 at 16:20 is newer than SIP. Below 10%, so no instrumentation run; first-bar high, same shape as MVIS.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |

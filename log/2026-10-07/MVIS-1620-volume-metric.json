@@ -1,0 +1,42 @@
+{
+  "metric_version": "sip-ah-volume-v2",
+  "symbol": "MVIS",
+  "date": "2026-10-07",
+  "prior_date": "2026-10-06",
+  "as_of_utc": "2026-10-07T20:20:13+00:00",
+  "source_observed_utc": "2026-10-07T20:20:37.875192+00:00",
+  "floor_shares": 100,
+  "prior_observed_slots": 10,
+  "prior_inferred_zero_slots": 38,
+  "prior_expected_slots": 48,
+  "prior_complete": true,
+  "prior_peak_shares": 10048,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-07T20:00:00+00:00",
+      "bar_end_utc": "2026-10-07T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 716315,
+      "trades": 3566,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 71.28931130573248
+    },
+    {
+      "bar_start_utc": "2026-10-07T20:05:00+00:00",
+      "bar_end_utc": "2026-10-07T20:10:00+00:00",
+      "bar_et": "16:05",
+      "shares": 547866,
+      "trades": 2190,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 54.52488057324841
+    }
+  ]
+}
