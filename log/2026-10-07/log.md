@@ -112,6 +112,19 @@ AH >10% at this snapshot (unrounded): none
 
 **Decision:** Observation only; no paper orders. This scan precedes the 23:00 CEST entry window, and no name was above 10% AH, so no spike-bar, CONFIRM-3, SIP volume or book checks applied. SIP bars for 16:00–16:05 ET fall inside the free tier's 15-minute delay, so no SIP cross-check of the 21:30 watch names was possible yet. This scan adds zero qualifying AH appearances for every 21:30 watch name.
 
+## Scan 22:10 CEST (4:10 PM ET)
+
+No candidates found.
+
+`python3 scripts/scan.py --all` ran at 16:10:12 ET (22:10:12 CEST) in the AFTERHOURS session and returned 0 hits.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+### Evaluation notes
+
+**Decision:** Observation only; no paper orders. This scan precedes the 23:00 CEST entry window, and no name was above 10% AH, so no spike-bar, CONFIRM-3, SIP volume or book checks applied. SIP bars for 16:00–16:10 ET still fall inside the free tier's 15-minute delay, so no SIP cross-check of the 21:30 watch names was possible. This is the third consecutive empty AH scan, which suggests the TradingView postmarket fields have not populated yet; later scans should confirm whether the 21:30 movers (SXTC, PFAI, SBFM, BIYA) carry into AH. This scan adds zero qualifying AH appearances for every 21:30 watch name.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
