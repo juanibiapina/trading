@@ -17,6 +17,7 @@ SLOT = dt.timedelta(minutes=5)
 VERSION = "sip-ah-volume-v1"
 VERSION_V2 = "sip-ah-volume-v2"
 FLOOR_SHARES = 100  # one round lot; a zero or near-zero baseline cannot inflate a ratio past bar shares / 100
+SIP_DELAY = dt.timedelta(minutes=15, seconds=10)  # free-plan embargo plus a small clock margin
 
 
 def timestamp(value):
@@ -33,6 +34,10 @@ def bounds(day):
 
 def fetch_sip(symbol, prior_day, day):
     start, end = bounds(prior_day)[0], bounds(day)[1]
+    # Alpaca's free SIP plan rejects any request whose end falls in the last
+    # 15 minutes ("subscription does not permit querying recent SIP data").
+    # During a live session, request through the latest available minute.
+    end = min(end, dt.datetime.now(dt.timezone.utc) - SIP_DELAY)
     query = {"timeframe": "5Min", "feed": "sip", "adjustment": "raw",
              "start": start.isoformat(), "end": end.isoformat(), "limit": 1000}
     headers = {"APCA-API-KEY-ID": os.environ["ALPACA_API_KEY"],

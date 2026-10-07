@@ -36,6 +36,14 @@ node scripts/broker.js orders all
 
 If `OPEN_POSITIONS.md` disagrees with Alpaca, Alpaca wins. Reconcile the file.
 
+Read only the file's open section (current positions and rules, about 3 KB):
+
+```bash
+sed -n '1,/^## Closed Positions/p' OPEN_POSITIONS.md
+```
+
+The Closed Positions table below it is history (about 45 KB, newest first). Do not read it whole. To record an exit, insert the new row directly under the table's header and separator lines, which `rg -n -A1 '^\| Ticker \| Entry \| Exit \|' OPEN_POSITIONS.md` prints; use those two lines as the edit anchor.
+
 ### 2. Get Current Prices
 
 The P&L basis is Alpaca's `current_price` from `broker.js positions` (Step 1), not Yahoo. Use Yahoo only for the premarket timeline *shape*:

@@ -72,7 +72,7 @@ Do NOT use raw `curl` to Yahoo Finance (it fails without the User-Agent header t
 
 ### 4. Paper Trade Decisions
 
-Read the existing log to see which tickers were already found in previous scans today.
+Read the existing log to see which tickers were already found in previous scans today. Keep this read bounded: by the later pulses the log holds 40–120 KB of earlier scan notes. List the sections with `rg -n '^## ' "$LOG_FILE"`, then read the Paper Trades table and the most recent `## Scan` section. For an earlier note on a specific ticker (grade, catalyst, skip reason, watch), search for it with `rg -n 'TICKER' "$LOG_FILE"` and read only that part.
 
 **Spike-bar instrumentation (log-only, no decision impact):** For each candidate with AH change >10%, run the spike-bar detector and record its one-line verdict in the scan notes. This is instrumentation for Initiatives 1+3 (Juan's "catch the first volume spike bar" ask): it flags whether the first price+volume co-spike (ignition) bar has fired yet, as-of this scan minute. Do NOT gate entries on it yet — just log it so the now-5-min-spaced opening grid (22:00-22:30 CET) accumulates ignition-bar timing on live candidates.
 
@@ -91,10 +91,10 @@ node scripts/ah-5m-confirmation.js SYM:YYYY-MM-DD --now HH:MM
 
 Record the one-line `CONFIRM-3` result verbatim in the scan notes. `PENDING` is expected until the third five-minute bar has closed.
 
-**Shared SIP volume context (log-only):** For each >10% AH candidate verified `tradable=true`, compute `sip-ah-volume-v1` using the [shared metric specification](../docs/investigations/shared-sip-volume-metric.md). Check the previous **trading date** against the exchange calendar. Reuse the SIP workup where possible; request missing coverage with `broker.js bars SYM --tf 5Min --start <previous-AH-start-UTC> --limit 1000 --feed sip --json`. Consume every page. Archive input with `symbol`, `feed=sip`, `timeframe=5Min`, `adjustment=raw`, `observed_utc` (actual fetch time) and `bars`, covering the previous AH session and the current session through available SIP data. Explicit SIP errors and IEX fallback leave this measurement unavailable.
+**Shared SIP volume context (log-only):** For each >10% AH candidate verified `tradable=true`, compute `sip-ah-volume-v1` using the [shared metric specification](../docs/investigations/shared-sip-volume-metric.md). Check the previous **trading date** against the exchange calendar. `--save-input` fetches and archives the input in the same call: raw 5-minute SIP bars from the previous AH session through the latest bar outside the free plan's 15-minute delay, every page, with `observed_utc` set to the actual fetch time. Do not build the archive by hand. An explicit SIP error leaves this measurement unavailable; there is no IEX fallback. Use `--input` with an existing archive only to replay it.
 
 ```bash
-python3 scripts/volume_metric.py SYM YYYY-MM-DD --prior-date YYYY-MM-DD --as-of YYYY-MM-DDTHH:MM:SS-04:00 --input "$LOG_DIR/SYM-HHMM-volume-sip.json" > "$LOG_DIR/SYM-HHMM-volume-metric.json.tmp" &&
+python3 scripts/volume_metric.py SYM YYYY-MM-DD --prior-date YYYY-MM-DD --as-of YYYY-MM-DDTHH:MM:SS-04:00 --save-input "$LOG_DIR/SYM-HHMM-volume-sip.json" > "$LOG_DIR/SYM-HHMM-volume-metric.json.tmp" &&
   mv "$LOG_DIR/SYM-HHMM-volume-metric.json.tmp" "$LOG_DIR/SYM-HHMM-volume-metric.json"
 node scripts/ah-5m-confirmation.js SYM:YYYY-MM-DD --now HH:MM --volume-metric "$LOG_DIR/SYM-HHMM-volume-metric.json"
 ```
@@ -177,7 +177,7 @@ break/renegotiation) stays momentum-gradable on its own merits. Basis: DOMO
 week — dead money in the hold slot (Juan, 2026-07-24: "I have no idea why you're
 holding that").
 
-**Also add the position to `OPEN_POSITIONS.md`** with the real fill price, shares, and catalyst grade. Only record positions that actually filled on Alpaca.
+**Also add the position to `OPEN_POSITIONS.md`** with the real fill price, shares, and catalyst grade. Only record positions that actually filled on Alpaca. Read only the file's open section, `sed -n '1,/^## Closed Positions/p' OPEN_POSITIONS.md` (about 3 KB); the closed history below it is about 45 KB.
 
 If a candidate fails, note briefly why in the scan section (e.g., "Skip: no catalyst", "Skip: float too high").
 
