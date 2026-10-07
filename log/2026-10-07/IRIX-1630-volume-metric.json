@@ -1,0 +1,68 @@
+{
+  "metric_version": "sip-ah-volume-v2",
+  "symbol": "IRIX",
+  "date": "2026-10-07",
+  "prior_date": "2026-10-06",
+  "as_of_utc": "2026-10-07T20:30:15+00:00",
+  "source_observed_utc": "2026-10-07T20:30:40.503967+00:00",
+  "floor_shares": 100,
+  "prior_observed_slots": 1,
+  "prior_inferred_zero_slots": 47,
+  "prior_expected_slots": 48,
+  "prior_complete": true,
+  "prior_peak_shares": 239,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-07T20:00:00+00:00",
+      "bar_end_utc": "2026-10-07T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 87036,
+      "trades": 152,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 364.1673640167364
+    },
+    {
+      "bar_start_utc": "2026-10-07T20:05:00+00:00",
+      "bar_end_utc": "2026-10-07T20:10:00+00:00",
+      "bar_et": "16:05",
+      "shares": 82288,
+      "trades": 264,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 344.30125523012555
+    },
+    {
+      "bar_start_utc": "2026-10-07T20:10:00+00:00",
+      "bar_end_utc": "2026-10-07T20:15:00+00:00",
+      "bar_et": "16:10",
+      "shares": 1371285,
+      "trades": 4226,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 5737.594142259414
+    },
+    {
+      "bar_start_utc": "2026-10-07T20:15:00+00:00",
+      "bar_end_utc": "2026-10-07T20:20:00+00:00",
+      "bar_et": "16:15",
+      "shares": 883786,
+      "trades": 2976,
+      "baseline_median_shares": 87036,
+      "baseline_shares": 87036,
+      "local_ratio": 10.154258008180523,
+      "local_status": "ok",
+      "local_ge_10": true,
+      "prior_peak_ratio": 3697.8493723849374
+    }
+  ]
+}

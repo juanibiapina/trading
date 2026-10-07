@@ -249,6 +249,98 @@ AH >10% at this snapshot (unrounded): KUST, VNTG
 
 **Faded 22:20 names:** MVIS dropped off the scanner; SIP 16:10 ET C $1.37 on 164K sh, about 10% below the $1.52 close, after the first-bar high of $1.86. PFAI SIP 16:10 ET C $4.10 (L $4.00), about 19% below the $5.07 close, after the $6.18 first-bar high. Both follow the first-bar-spike shape and are now below their regular closes.
 
+## Scan 22:30 CEST (4:30 PM ET)
+
+`python3 scripts/scan.py --all` ran at 16:30:15 ET (22:30:15 CEST) in the AFTERHOURS session and returned 3 hits.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): IRIX, KUST, SUGP
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| IRIX | [TV](https://www.tradingview.com/chart/?symbol=IRIX) | $0.88 | +29.2% | +13.5% | $1.00 | +46.6% | 1.5M | 1.5M | 1.0x | 10.9M | Medical Specialties |
+| KUST | [TV](https://www.tradingview.com/chart/?symbol=KUST) | $4.50 | -1.6% | +16.8% | $5.25 | +14.9% | 114K | 61K | 1.9x | 625K | Miscellaneous Commercial Services |
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $2.64 | +8.2% | +12.5% | $2.97 | +21.7% | 85K | 1.6M | 0.1x | 1.4M | Miscellaneous Commercial Services |
+
+### Evaluation notes
+
+**Decision:** Observation only; no paper orders. This scan precedes the 23:00 CEST entry window. Qualifying AH appearances so far: KUST 2 (22:25, 22:30), IRIX 1, SUGP 1, VNTG 1 (dropped out of this scan), MVIS 1 (dropped out at 22:25). All three hits are `tradable=true`. SIP bars through 16:15 ET were available at 16:30 ET.
+
+**IRIX** (21:30 watch name, first scanner appearance above 10%, float 10.9M, IRIDEX, ophthalmic lasers):
+
+- Spike bar: `IRIX 2026-10-07  SPIKE  16:13ET  +16%  $1.02  1503 trades / 533k sh  (first co-spike bar) (as-of 16:30ET)`
+- Third bar: `IRIX 2026-10-07  CONFIRM-3  PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET`
+- SIP bars: 16:10 ET O $0.95 H $1.03 C $1.00, 1,371,285 sh / 4,226 trades, vwap $0.99; 16:15 ET O $1.00 H $1.01 L $0.94 C $0.95, 883,786 sh / 2,976 trades, vwap $0.98. Volume is real and sustained across two bars (hundreds of K shares, thousands of trades). The scanner's $1.00 matches the SIP range and sits within 3% of the $1.03 AH high, so it is holding. The AH high came in the third AH bar, after two flat bars, so this is not a first-bar spike.
+- Shared SIP volume context:
+  ```
+  # IRIX shared SIP volume sip-ah-volume-v2; prior 2026-10-06 1+47zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T20:30:15+00:00; source fetched 2026-10-07T20:30:40.503967+00:00
+  IRIX 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=87036 local=unknown prior-peak=364.1674x status=warmup
+  IRIX 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=82288 local=unknown prior-peak=344.3013x status=warmup
+  IRIX 2026-10-07  VOLUME-CONTEXT 16:10ET start=2026-10-07T20:10:00+00:00 shares=1371285 local=unknown prior-peak=5737.5941x status=warmup
+  IRIX 2026-10-07  VOLUME-CONTEXT 16:15ET start=2026-10-07T20:15:00+00:00 shares=883786 local=10.1543x prior-peak=3697.8494x status=ok
+  ```
+- Book:
+  ```
+  IRIX BOOK iex bid $0.9920 x100 / ask $1.01 x100 @ 2026-10-07 16:26:48 ET age 3m57s two-sided spread 1.78% of ask
+  IRIX BOOK sip-15m bid $0.9712 x300 / ask $0.9731 x200 @ 2026-10-07 16:15:46 ET age 15m00s two-sided spread 0.20% of ask
+  IRIX BOOK refresh +15s iex unchanged @ 2026-10-07 16:26:48 ET
+  IRIX BOOK verdict: IEX STALE 3m57s; SIP-15m TWO-SIDED (observed 2026-10-07 16:30:46 ET; log-only)
+  ```
+- Catalyst (2 searches): no company release, earnings or 8-K found dated today. The only dated item is a Defense World article of 2026-10-07 reporting that major shareholder Shih-Yao David Lin bought 17,526 shares (a Form 4 insider purchase, small size). That is weak background and does not explain a +46% total move. Grade: None.
+- Multi-session context: not in `WINNERS_TRACKING.md`. Day% +29.2% came from the regular session (21:30 watch at +14.7%), so tonight is day 1 of the move, extending into AH.
+
+**KUST** (second qualifying AH appearance, float 625K):
+
+- Spike bar: `KUST 2026-10-07  SPIKE  16:09ET  +22%  $5.50  164 trades / 18k sh  (first co-spike bar) (as-of 16:30ET)`
+- Third bar: `KUST 2026-10-07  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET`
+- SIP bars: 16:15 ET O $5.25 H $5.95 L $4.13 C $4.36, 254,335 sh / 4,337 trades, vwap $5.11. Volume kept rising (17.8K → 169K → 254K sh), and the bar made a new high at $5.95 (+32%), then closed at $4.36, 3% below the $4.50 regular close. The scanner's $5.25 at 16:30 is newer than this bar, so the swing range is $4.13–$5.95 on real trades. CONFIRM-3 turned NO because the third bar failed to hold.
+- Shared SIP volume context:
+  ```
+  # KUST shared SIP volume sip-ah-volume-v2; prior 2026-10-06 2+46zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T20:30:15+00:00; source fetched 2026-10-07T20:30:42.557562+00:00
+  KUST 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=259 local=unknown prior-peak=0.4752x status=warmup
+  KUST 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=17804 local=unknown prior-peak=32.6679x status=warmup
+  KUST 2026-10-07  VOLUME-CONTEXT 16:10ET start=2026-10-07T20:10:00+00:00 shares=169039 local=unknown prior-peak=310.1633x status=warmup
+  KUST 2026-10-07  VOLUME-CONTEXT 16:15ET start=2026-10-07T20:15:00+00:00 shares=254335 local=14.2853x prior-peak=466.6697x status=ok
+  ```
+- Book:
+  ```
+  KUST BOOK iex bid $3.57 x100 / ask $5.17 x100 @ 2026-10-07 16:00:02 ET age 30m44s two-sided spread 30.95% of ask
+  KUST BOOK sip-15m bid $5.42 x100 / ask $5.52 x200 @ 2026-10-07 16:15:46 ET age 15m00s two-sided spread 1.81% of ask
+  KUST BOOK refresh +15s iex unchanged @ 2026-10-07 16:00:02 ET
+  KUST BOOK verdict: IEX STALE 30m44s; SIP-15m TWO-SIDED (observed 2026-10-07 16:30:46 ET; log-only)
+  ```
+- Catalyst re-search (1 search, 3 total): still no catalyst dated today. Newest items are the 1-for-10 reverse split and recapitalization effective 2026-10-01 (TipRanks, 2 days old) and a 2026-10-06 article on shareholder votes. Both are background. Grade: None.
+- Pattern: KUST clears the 2-AH-scan count, but the 16:15 bar's $5.95 → $4.36 reversal and CONFIRM-3 NO make it a volatile swing, not a clean build. Re-check the trajectory at 23:00.
+
+**SUGP** (new, float 1.4M, SU Group Holdings, Hong Kong security services):
+
+- Spike bar: `SUGP 2026-10-07  SPIKE  16:13ET  +17%  $3.08  471 trades / 48k sh  (first co-spike bar) (as-of 16:30ET)`
+- Third bar: `SUGP 2026-10-07  CONFIRM-3  PENDING ignition 16:10ET; waiting for third bar as-of 16:30ET`
+- SIP bars: 16:10 ET O $2.71 H $3.08 C $2.98, 100,189 sh / 1,063 trades; 16:15 ET O $2.97 H $3.37 L $2.57 C $2.66, 411,416 sh / 4,854 trades, vwap $2.95. Volume is accumulating, but the 16:15 bar swung from a $3.37 high (+28%) to a $2.66 close (+0.8%). The scanner's $2.97 is newer than this bar and matches the 16:15 vwap.
+- Shared SIP volume context:
+  ```
+  # SUGP shared SIP volume sip-ah-volume-v2; prior 2026-10-06 28+20zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T20:30:15+00:00; source fetched 2026-10-07T20:30:44.699244+00:00
+  SUGP 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=1206 local=unknown prior-peak=0.0672x status=warmup
+  SUGP 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=3676 local=unknown prior-peak=0.2048x status=warmup
+  SUGP 2026-10-07  VOLUME-CONTEXT 16:10ET start=2026-10-07T20:10:00+00:00 shares=100189 local=unknown prior-peak=5.5806x status=warmup
+  SUGP 2026-10-07  VOLUME-CONTEXT 16:15ET start=2026-10-07T20:15:00+00:00 shares=411416 local=111.9195x prior-peak=22.9163x status=ok
+  ```
+  Prior-session comparison unverified: SUGP's 1-for-6 reverse split took effect at 12:01 AM ET today (PRNewswire, 2026-10-02), so the 2026-10-06 session traded pre-split share counts. The `prior-peak` ratio compares post-split shares against pre-split shares. The scanner's 1.6M AvgVol is likely on the pre-split basis too, which would understate VRatio.
+- Book:
+  ```
+  SUGP BOOK iex bid $2.25 x100 / ask $3.06 x100 @ 2026-10-07 16:00:00 ET age 30m46s two-sided spread 26.47% of ask
+  SUGP BOOK sip-15m bid $2.92 x100 / ask $2.95 x500 @ 2026-10-07 16:15:45 ET age 15m01s two-sided spread 1.02% of ask
+  SUGP BOOK refresh +15s iex unchanged @ 2026-10-07 16:00:00 ET
+  SUGP BOOK verdict: IEX STALE 30m46s; SIP-15m TWO-SIDED (observed 2026-10-07 16:30:46 ET; log-only)
+  ```
+- Catalyst (2 searches): no catalyst dated today. Background: the 1-for-6 reverse split effective today (announced 2026-10-02), a Nasdaq staff delisting determination with a hearing request, and a 2026-09-15 subsidiary announcement with an acquisition agreement deadline of 2026-10-31. A reverse split is not a fresh catalyst. Grade: None.
+- Multi-session context: not in `WINNERS_TRACKING.md`; Day% +8.2% on the first post-split session.
+
+**Dropped names:** VNTG and MVIS are off the scanner. Not re-pulled; both had faded below their regular closes on SIP at 22:25.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
