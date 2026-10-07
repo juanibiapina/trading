@@ -1988,7 +1988,7 @@ Both fills are open and owned by `position-evaluation.md` (10:30 / 14:30 CET); t
 | BIYA | $1.91 | +36.4% (vs $1.40) | None — no catalyst found | 23:01 CEST (17:01 ET) | $2.86 (SIP) | 04:14 ET | open | +$25.48 unrealized | +25.7% | Open; peak +49.7% |
 | MTEN | $1.39 | +44.4% (vs $0.9624) | B — same-day 6-K, completed $15M acquisition | 00:01 CEST (18:01 ET) | $1.79 (SIP) | 04:05 ET | open | +$3.58 unrealized | +3.7% | Open; peak +28.8% |
 
-**Total Realized P&L (Alpaca fills only): $0.00.** Both positions are unrealized.
+**Total Realized P&L (Alpaca fills only): +$26.00.** After this snapshot, the 10:30 CEST position evaluation sold **BIYA 52 @ $2.41** (order `12241ef6`, filled 04:31:17 ET): **+$26.00 (+26.2%)**, 15.7% below the $2.86 SIP peak. MTEN is still open (+10.8% at $1.54 when checked at ~04:33 ET).
 
 ### Scanner Effectiveness
 
@@ -2046,7 +2046,7 @@ Every name with two or more >10% AH scans. Current = latest SIP 5-minute close (
 
 ### Daily Email Routing
 
-- Headline: **BIYA is a real winner, detected and traded.** SIP PM peak $2.86 (+109.5%) on 2.78M shares in two minutes. Our 52 @ $1.91 entry peaked at +49.7% and is +25.7% at 04:29 ET. The >100% level held only about two minutes. MTEN (entered $1.39) peaked at +28.8% and is +3.7%. Detection **73/84 (86.9%)**, selection **37/80 (46.3%)**, 95 days tracked. No realized P&L yet.
+- Headline: **BIYA is a real winner, detected and traded.** SIP PM peak $2.86 (+109.5%) on 2.78M shares in two minutes. Our 52 @ $1.91 entry peaked at +49.7%; position-evaluation sold it at $2.41 (04:31 ET) for +$26.00 (+26.2%). The >100% level held only about two minutes. MTEN (entered $1.39) peaked at +28.8% and is +3.7%. Detection **73/84 (86.9%)**, selection **37/80 (46.3%)**, 95 days tracked. MTEN remains open.
 - **Question for Juan — sub-$0.50 floor:** TOPP (+309.9% PM, holdable for 20+ minutes on a 1.5–3.3% SIP spread, in-window AH +15% on 1.13M shares) is the first floor exclusion to meet both the >100% and the holdable-on-tight-spread legs. The trigger needs 3 such names on 3 nights; this is 1 of 3. Should a log-only sub-$0.50 observation pass start collecting these, given the broker-side IEX book is frozen for such names?
 - **Scheduler/bridge reliability (decision for Juan):** 4 coverage failures in the last 10 sessions (Sep 25, Sep 29, Oct 2, Oct 5). October 6 ran 7/7 and this pulse started on time.
 - **Stale-quote feed:** both fills executed on frozen IEX quotes with SIP-priced limits. Add this to the stale-book feed decision (6 standing cases).
