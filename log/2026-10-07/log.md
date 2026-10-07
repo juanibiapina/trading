@@ -125,6 +125,30 @@ AH >10% at this snapshot (unrounded): none
 
 **Decision:** Observation only; no paper orders. This scan precedes the 23:00 CEST entry window, and no name was above 10% AH, so no spike-bar, CONFIRM-3, SIP volume or book checks applied. SIP bars for 16:00–16:10 ET still fall inside the free tier's 15-minute delay, so no SIP cross-check of the 21:30 watch names was possible. This is the third consecutive empty AH scan, which suggests the TradingView postmarket fields have not populated yet; later scans should confirm whether the 21:30 movers (SXTC, PFAI, SBFM, BIYA) carry into AH. This scan adds zero qualifying AH appearances for every 21:30 watch name.
 
+## Scan 22:15 CEST (4:15 PM ET)
+
+No candidates found.
+
+`python3 scripts/scan.py --all` ran at 16:15:15 ET (22:15:15 CEST) in the AFTERHOURS session and returned 0 hits.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+### Evaluation notes
+
+**Decision:** Observation only; no paper orders. This scan precedes the 23:00 CEST entry window, and the scanner reported no name above 10% AH, so no spike-bar, CONFIRM-3, SIP volume or book checks applied. This is the fourth consecutive empty AH scan.
+
+**SIP cross-check of the top 21:30 watch names (first AH bar now outside the 15-minute delay):** The scanner's empty result does not match SIP for at least one name. Close below is the 15:55 ET bar close, an approximation of the official close.
+
+| Ticker | 15:55 bar C | 16:00 bar (O/H/L/C) | 16:00 bar vol / trades | 16:00 C vs 15:55 C |
+|--------|-------------|---------------------|------------------------|--------------------|
+| PFAI | $5.00 | $5.07 / $6.18 / $5.04 / $5.53 | 1,024,894 / 13,995 | +10.6% (H +23.6%) |
+| SXTC | $2.81 | $2.83 / $2.85 / $2.30 / $2.42 | 678,816 / 4,969 | -13.9% |
+| SBFM | $0.70 | $0.70 / $0.70 / $0.63 / $0.63 | 258,038 / 495 | -10.0% |
+| BIYA | $2.29 | $2.18 / $2.30 / $2.08 / $2.13 | 152,118 / 737 | -7.0% |
+
+PFAI traded about 1.0M shares on 14K trades in the 16:00 ET bar and closed it about 10% above the regular close, while TradingView listed nothing. One SIP bar is not a qualifying AH scan appearance; the next scans should check whether TradingView picks PFAI up and whether SIP volume keeps accumulating after the first bar. SXTC fell from $4.12 at the 21:30 scan to $2.81 by the close and lost another 14% in the first AH bar. SBFM and BIYA are fading in AH.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
