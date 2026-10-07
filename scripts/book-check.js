@@ -10,6 +10,9 @@
  * Live:       node scripts/book-check.js SYM [SYM...] [--refresh SEC] [--json]
  *             IEX latest quote plus the free 15-minute-delayed SIP latest quote
  *             (feed=delayed_sip). --refresh re-reads IEX once after SEC seconds (max 60).
+ *             A delayed snapshot older than 45 min (15 min delay + 30 min lookback) is
+ *             stale (BURU Oct 6 returned a pre-split Jul 17 quote); it is replaced by
+ *             the last historical SIP quote before now-16min, labelled `sip-hist`.
  * Historical: node scripts/book-check.js SYM [SYM...] --at ISO [--json]
  *             Last SIP quote within 30 min and last IEX quote within 12 h at or
  *             before ISO. SIP history needs ISO to be at least ~15 minutes old.
@@ -23,6 +26,9 @@ const SECRET = process.env.ALPACA_SECRET_KEY;
 const FRESH_SEC = 60;
 const SIP_LOOKBACK_MS = 30 * 60 * 1000;
 const IEX_LOOKBACK_MS = 12 * 60 * 60 * 1000;
+const SIP_DELAY_MS = 15 * 60 * 1000;
+const SIP_STALE_SEC = (SIP_DELAY_MS + SIP_LOOKBACK_MS) / 1000;
+const SIP_HIST_END_MS = 16 * 60 * 1000;
 
 function parseArgs(argv) {
   const flags = {};
@@ -93,7 +99,8 @@ function verdict(iex, sip, sipLabel) {
   const iexFresh = iexOk && iex.ageSec <= FRESH_SEC;
   const iexPart = !iexOk ? "IEX NONE" : iexFresh ? (iex.twoSided ? "IEX FRESH" : "IEX FRESH NOT-TWO-SIDED") : `IEX STALE ${fmtAge(iex.ageSec)}`;
   const sipOk = sip.present && !sip.error;
-  const sipPart = !sipOk ? `${sipLabel} NONE` : sip.twoSided ? `${sipLabel} TWO-SIDED` : `${sipLabel} NOT-TWO-SIDED`;
+  let sipPart = !sipOk ? `${sipLabel} NONE` : sip.twoSided ? `${sipLabel} TWO-SIDED` : `${sipLabel} NOT-TWO-SIDED`;
+  if (sip.staleSnapshot) sipPart = `SIP-15m STALE ${fmtAge(sip.staleSnapshot.ageSec)} -> ${sipPart}`;
   return `${iexPart}; ${sipPart}`;
 }
 
@@ -123,8 +130,15 @@ async function runLive(syms, flags) {
   const out = {};
   for (const s of syms) {
     const i = iex.error ? { error: iex.error } : describe(iex.quotes[s], nowMs);
-    const p = sip.error ? { error: sip.error } : describe(sip.quotes[s], nowMs);
-    out[s] = { observed_utc: new Date(nowMs).toISOString(), iex: i, delayed_sip: p, verdict: verdict(i, p, "SIP-15m") };
+    let p = sip.error ? { error: sip.error } : describe(sip.quotes[s], nowMs);
+    let sipLabel = "SIP-15m";
+    if (p.present && p.ageSec > SIP_STALE_SEC) {
+      const h = await lastBefore(s, "sip", nowMs - SIP_HIST_END_MS, SIP_LOOKBACK_MS);
+      const staleSnapshot = { t: p.t, ageSec: p.ageSec };
+      p = { ...(h.error ? { error: h.error } : describe(h.quote, nowMs)), staleSnapshot };
+      sipLabel = "SIP-hist";
+    }
+    out[s] = { observed_utc: new Date(nowMs).toISOString(), iex: i, delayed_sip: p, verdict: verdict(i, p, sipLabel) };
   }
   if (flags.refresh !== undefined) {
     const wait = Math.min(60, Math.max(0, Number(flags.refresh) || 0));
@@ -142,7 +156,11 @@ async function runLive(syms, flags) {
   for (const s of syms) {
     const o = out[s];
     console.log(line(s, "iex", o.iex));
-    console.log(line(s, "sip-15m", o.delayed_sip));
+    const st = o.delayed_sip.staleSnapshot;
+    if (st) {
+      console.log(`${s} BOOK sip-15m stale snapshot @ ${fmtEt(st.t)} age ${fmtAge(st.ageSec)} (older than ${fmtAge(SIP_STALE_SEC)}; replaced by sip-hist)`);
+      console.log(line(s, "sip-hist", o.delayed_sip));
+    } else console.log(line(s, "sip-15m", o.delayed_sip));
     if (o.iex_refresh) {
       const r = o.iex_refresh;
       console.log(r.error ? `${s} BOOK refresh +${r.after_sec}s iex error: ${r.error}` : `${s} BOOK refresh +${r.after_sec}s iex ${r.status}${r.present ? ` @ ${fmtEt(r.t)}` : ""}`);

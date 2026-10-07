@@ -82,12 +82,15 @@ the email must not present a weak name as a winner.
 **Prev-close basis check before crowning (recurring — 2026-09-08 BNC):**
 before crowning (or rejecting) any name near the ±100% bar, verify the
 **previous-close basis** the % is measured from. Yahoo's `previousClose`
-(and therefore `price-timeline.py`) can return a **stale close from before a
-weekend or holiday gap** — after a long weekend or a market holiday it may
-report the close two trading days back, not the true last session. A wrong
+can return a **stale close from before a weekend or holiday gap** — after a
+long weekend or a market holiday it may report the close two trading days back,
+not the true last session. `price-timeline.py` prints the basis it used
+(`regular close YYYY-MM-DD`, or `Yahoo previousClose, unverified`). A wrong
 (lower) basis inflates the % and can falsely push a sub-100% mover over the
 winner bar. **Confirm the basis against the SIP daily bar**
-(`node scripts/broker.js bars SYM --tf 1Day --limit 3`) and recompute the % from
+(`node scripts/broker.js bars SYM --tf 1Day --start YYYY-MM-DD` with a start
+about 7 days back; without `--start` Alpaca returns only today's bar, so a
+pre-open call prints `no bars`) and recompute the % from
 the true last-session close before crowning. (Basis: BNC Sep 8, Yahoo/tooling
 used $3.29 = Wed Sep 3 close → "+102.7%" over the bar, but the true Friday Sep 4
 close was $3.49 → ~+93%, **below** the bar. Applies every post-weekend /

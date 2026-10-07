@@ -111,6 +111,24 @@ def find_peak(prices):
             peak = p
     return peak
 
+def last_completed_close(meta):
+    """Return (close, label) for the latest completed regular session.
+
+    With range=2d, Yahoo's previousClose/chartPreviousClose is the close before
+    the two-day window: in premarket it is two sessions back (BIYA Oct 7 PM
+    showed the Oct 5 $1.40, not the Oct 6 $1.365). regularMarketPrice is the
+    latest regular close whenever its time is outside today's regular session.
+    """
+    price = meta.get('regularMarketPrice')
+    t = meta.get('regularMarketTime')
+    reg = (meta.get('currentTradingPeriod') or {}).get('regular') or {}
+    start, end = reg.get('start'), reg.get('end')
+    if price and t and start and end and not (start <= t < end):
+        day = datetime.fromtimestamp(t, tz=ET).strftime('%Y-%m-%d')
+        return price, f"regular close {day}"
+    fallback = meta.get('previousClose', meta.get('chartPreviousClose'))
+    return fallback, "Yahoo previousClose, unverified"
+
 def print_timeline(ticker):
     """Print price timeline for ticker"""
     data = fetch_data(ticker)
@@ -125,7 +143,7 @@ def print_timeline(ticker):
     
     # Get metadata
     meta = data.get('chart', {}).get('result', [{}])[0].get('meta', {})
-    prev_close = meta.get('previousClose', meta.get('chartPreviousClose'))
+    prev_close, basis = last_completed_close(meta)
     current = prices[-1]['close'] if prices else None
     
     print(f"\n{'='*72}")
@@ -136,7 +154,8 @@ def print_timeline(ticker):
     highs = [p['high'] for p in prices if p['high']]
     
     if prev_close:
-        print(f"\nPrevious Close: ${prev_close:.2f}")
+        shown = f"{prev_close:.4f}" if prev_close < 1 else f"{prev_close:.2f}"
+        print(f"\nPrevious Close: ${shown} ({basis})")
     
     if closes:
         min_p = min(closes)
