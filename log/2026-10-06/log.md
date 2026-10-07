@@ -1919,3 +1919,157 @@ WHLR BOOK verdict: IEX STALE 1h35m; SIP-15m TWO-SIDED (observed 2026-10-06 18:33
 | MTEN | $1.39 | 00:01 CEST Oct 7 (18:01 ET) | 70 | 271309e2-7bd3-49e7-b39f-0728681f53c6 | Grade B (same-day 6-K: completed $15M cash acquisition of HK Phoenix Gateway Alliance). BUILD: 17:15 ET re-ignition, SIP 711K–1.48M sh/bar, new high $1.59 at 17:40 ET, 2 AH scans >10% (+10.6% → +51.2%), Day -0.4%, Total +44.4%, 12.6% below high at entry. Hard stop $1.18 (-15%); hold up to 2 days. |
 
 No entries at the 21:30 CEST regular-session scan. Entries open at the 23:00 CEST scan.
+
+## Morning Evaluation — 10:20 CEST (04:20 ET, October 7)
+
+**Pulse 1: BIYA is today's winner. The scanner detected it and we hold it.** BIYA built all evening from its **$1.365** close to a **$2.4893** AH high, then spiked to **$2.86 (+109.5%)** at 04:13–04:14 ET on **2.78M shares / 19,856 trades** in those two minutes. We entered at **$1.91** at 23:01 CEST, so the position reached **+49.7%** at the peak and is **+25.7%** at 04:29 ET. The >100% level held for only about two minutes; the liquid level since then is **$2.39–$2.51 (+75% to +84%)**. MTEN, our second entry, peaked at **$1.79 (+86.7%)**, below the bar. The biggest raw mover, **TOPP (+309.9%)**, sits below the scanner's $0.50 floor. It is the first floor exclusion to clear >100% and hold on a tight SIP book.
+
+Discovery ran before reading this log: `scan.py --all --session premarket` at 04:20 ET, then an unfiltered TradingView PM sweep (no price, cap, or volume limit) and a listed-exchange sweep of October 6 regular-session movers above +15%. Every level below is an **Alpaca SIP** daily close or 5-minute/1-minute bar through the **04:15 ET** bar (SIP lags about 15 minutes). Yahoo and TradingView were used only for timeline shape and the latest price. October 6 is a normal Tuesday session, so every % uses the October 6 SIP close; entry Total% uses the October 5 SIP close.
+
+### Today's Winner
+
+**BIYA — Baiya International Group (personnel services, China), Nasdaq**
+
+- Catalyst: **None.** The scanner ran eleven searches and found nothing fresh. Background only: a 1-for-10 reverse split in July 2026 and an AH spike on September 29. Grade **None**.
+- Previous close: **$1.365** (SIP, October 6; Day −2.5% from the $1.40 October 5 close). The tooling's "$1.40 previous close" is October 5's and understates the gain (+104.3%).
+- AH last night: ignited at **16:05 ET** (285,556 → 1,072,394 → 1,596,650 shares per bar through 16:15). SIP at the scheduled checkpoints: 22:30 **$1.77 (+29.7%)**, 23:00 **$1.85 (+35.5%)**, 23:30 **$2.16 (+58.2%)**, 00:00 **$2.12 (+55.3%)**, 00:30 **$2.34 (+71.4%)**. AH SIP high **$2.4893 (+82.4%) at 19:55 ET**; AH total **14.06M shares / 93,035 trades**.
+- Premarket: opened at $2.04 and dipped to $1.70 by 04:04. It rebuilt from 04:08, and the **04:13 minute ran $2.14 → $2.84 (1,160,916 shares / 8,239 trades, close $2.76)**. The **04:14 minute hit $2.86** and closed $2.16 (1,621,736 / 11,617). The 04:10 5-minute bar holds 4,196,580 shares / 29,466 trades. TradingView also shows a $2.86 PM high. Since then: $2.39–$2.51 (+75% to +84%) at 04:25–04:30 ET.
+- Hypothetical P&L: first sighting (22:30 checkpoint) **$1.77 → $2.86 = +61.6%**. Real fill **$1.91 → $2.86 = +49.7%**; to the ~$2.40 plateau **+25.7%**.
+- Float **2.7M** | Market cap **$8.6M** (TradingView).
+- Capturable: **yes, and captured.** We hold an Alpaca fill (52 @ $1.91). The IEX quote froze at 16:54 ET, but the 00:30 scan logged a two-sided SIP book at 18:18 ET ($2.32 / $2.33).
+- Winner bar: >100% from the true last-session close on heavy, accumulating SIP volume, with a fillable book. **Clears, narrowly.** The >100% print lasted about two minutes, and the sustained PM level is +75–84%. Yahoo's 5-minute high was $2.60 until the 04:10 bar was finalized; the SIP and TradingView $2.86 is the real peak.
+
+**Scanner Diagnostic:**
+
+- Detectable at screening time (~22:15 CEST)? **YES.** At 16:15 ET BIYA was +30% on 1.6M shares per bar. The scanner first listed it at **22:25 CEST**, then in 7 AH scans in total.
+- What it looked like and what we did: at 23:00 it had CONFIRM-3 YES, a SIP high of $2.07 at 16:40, a BUILD trajectory, Day −2.5%, and Total +36.4%. It held 9% below the high on a fresh book. We **entered at the first entry scan (23:00 CEST), 52 @ $1.91.** No catalyst was found; the scanner noted that as a concern but did not use it as a skip reason.
+- Scanner gap: **none for BIYA.** The detection and selection both worked. Exits are owned by `position-evaluation.md`.
+
+**Also notable (not the headline):**
+
+- **TOPP — Toppoint Holdings (trucking), AMEX, close $0.1116. Below the $0.50 floor; biggest raw PM mover.** In-window AH signal: the 18:05 bar closed **$0.1288 (+15.4%)** on 344,725 shares / 636 trades, and the 18:10 bar closed $0.1276 (+14.3%, high $0.1362) on **1,132,824 / 1,528** (VWAP $0.1310). At the 18:30 ET checkpoint it was +6.0%. A late tail followed: **$0.1495 (+34.0%) at 19:30 ET** on 656,502 / 564. PM: **$0.4574 (+309.9%) at 04:00** on **18,314,928 / 25,777**, then 5-minute closes **$0.3097, $0.3095, $0.2813, $0.2734** (+177% → +145%) on 7.1M–18.3M shares per bar; Yahoo shows $0.27 (+141%) at 04:29. SIP book: **$0.1296 x28,400 / $0.1340 at 18:11:59 ET (spread 3.3% of ask)** and **$0.3078 / $0.3126 at 04:06:59 ET (1.5%)**. The IEX quote has been frozen at 16:00 ET with `ask $0.00 x0`. `tradable=true`, float 20.8M, Grade None (one search, nothing found). Hypothetical **18:10 VWAP $0.1310 → $0.4574 = +249%**, or **+136%** to the 04:05 close. The scanner never saw it: `MIN_PRICE = $0.50`. Even without the floor, no scheduled checkpoint caught it above +10%, so it would likely have failed the 2-AH-scan gate.
+- **MTEN — Mingteng International (automotive molds), our second entry.** Same-day 6-K on a completed $15M acquisition of HK Phoenix Gateway Alliance (Grade B per the scan). BUILD from a 17:15 ET re-ignition to an AH SIP high of $1.755 (+83.1%) at 19:55 ET. PM SIP high **$1.79 (+86.7%) at 04:05** on 2,257,912 / 12,747, then $1.44–$1.52. Below the bar. Detected (3 AH scans) and entered at $1.39.
+- **BYAH (+104.5%) is a PM-only spike.** It had no AH trades. The 04:01 minute wicked to $4.96 on 78,354 shares / 1,260 trades and closed $3.04 the same minute; by 04:25 it was $2.46 (+1.4%). It is uninvestable and not a winner.
+
+### Baseline Tracking
+
+Source: the October 5 log (Days tracked 94), which is the immediately preceding trading day. **No new baseline gap.** Existing gaps stay **Sep 11, Sep 18, Sep 25, Oct 2**.
+
+- Days tracked: **95** (94 + October 6 only).
+- Winners detected by scanner: **73/84 (86.9%)**. BIYA is added as detected (+1/+1). **TOPP adds one price-floor detection miss** (+0/+1), following the July 30 (MGRX, SBEV) and September 28 (SLXN) convention: a real, in-window, volume-backed AH mover that the universe floor excluded counts in the denominator even when it is not the headline winner.
+- Winner selected for paper trade: **37/80 (46.3%)**. BIYA was entered (+1/+1).
+- Target: >80% detection. Status: **BASELINE MET.** Coverage failures, the four skipped retrospectives, and the raw floor exclusions in the denominator all limit what the rate means.
+
+### Retrospective Scan Results
+
+`scan.py --all --session premarket` (04:20 ET): MTEN, BIYA, BURU, MI, SDEV, BYAH, SXTC. The unfiltered sweep added TOPP (sub-$0.50), NCPL, and thin single-print names (PMEC, DFLI, MKZR, OFS, BLIN, NEOG, LONA, IVF, XWEL: 100–1,810 PM shares). The regular-session sweep (OLB, MOBX, APUS, VCIG, XHLD, IPDN, SMXT, OLOX, FRGT, AIFA, PMI, DLXY, JAGX, MODD, JUNS, FFR, BESS, BFRG, RMSG) found no other in-window AH mover above +10% on real volume except VCIG (+48.9%, detected, faded). A forced `scan.py --all --session afterhours` at 04:30 ET returned **0 hits**, because the postmarket fields reset overnight.
+
+| Ticker | Oct 6 SIP close | AH SIP high / ET | PM SIP high / ET | PM high vs close | Peak-bar shares / trades | Latest | Classification |
+|--------|-----------------|------------------|------------------|------------------|--------------------------|--------|----------------|
+| BIYA | $1.365 | $2.4893 / 19:55 | $2.86 / 04:14 | **+109.5%** | 4,196,580 / 29,466 (5-min) | ~$2.40 (+76%) | AH→PM continuation; **winner**; detected + entered |
+| TOPP | $0.1116 | $0.1495 / 19:30 | $0.4574 / 04:00 | **+309.9%** | 18,314,928 / 25,777 | $0.27 (+141%) | Below $0.50 floor; in-window AH +15%, late tail +34%, PM gap; biggest raw mover |
+| BYAH | $2.425 | no AH trades | $4.96 / 04:01 | +104.5% | 78,354 / 1,260 (1-min) | $2.46 (+1.4%) | PM-only; one-minute wick; uninvestable |
+| MTEN | $0.9587 | $1.755 / 19:55 | $1.79 / 04:05 | +86.7% | 2,257,912 / 12,747 | ~$1.44–1.52 (+50–59%) | AH→PM continuation; detected + entered |
+| MI | $1.23 | $1.84 / 16:20 | $2.0262 / 04:00 | +64.7% | 1,669,220 / 10,749 | $1.84 (+49.5%) | Dead-cat bounce (Day −82.4%); PM topped the AH high |
+| SXTC | $1.25 | $2.58 / 16:30 | $1.94 / 04:00 | +55.2% | 191,723 / 2,296 | $1.72 (+37.6%) | Dead-cat (Day −39.9%); AH better |
+| BURU | $1.20 | $1.95 / 19:15 | $1.82 / 04:00 | +51.7% | 1,352,692 / 7,861 | $1.31 (+9.3%) | Final-scan first sighting; tail high after the last scan |
+| NCPL | $1.09 | $1.53 / 19:50 | $1.47 / 04:00 | +34.9% | 73,244 / 855 | $1.31 (+20.2%) | Thin drift (Day −17.4%) |
+| SDEV | $3.25 | $3.54 / 19:05 (+8.9%) | $4.01 / 04:00 | +23.4% | 1,792,248 / 14,687 | $3.83 (+17.9%) | PM-driven; AH under +10% |
+| WHLR | $0.91 | $1.24 / 16:45 | $1.05 / 04:00 | +15.4% | 99,903 / 1,290 | $0.94 (+3.0%) | Dead-cat (Day −16.5%), thin; AH better |
+| LCFY | $2.05 | $2.62 / 16:35 | $2.24 / 04:00 | +9.3% | 6,051 / 47 | $2.10 (+2.5%) | Thin drift; AH better |
+| VCIG | $1.41 | $2.10 / 16:25 | $1.18 / 04:00 | −16.3% | 406,058 / 2,172 | $0.95 (−32.6%) | Spike→fade; correctly skipped |
+
+### Open Position P&L (Alpaca)
+
+Both fills are open and owned by `position-evaluation.md` (10:30 / 14:30 CET); this pulse placed no orders. Alpaca's `current_price` matches the live price ($2.40 / $1.44 against Yahoo's $2.39 / $1.44 at 04:29 ET), so the P&L is current. The IEX quotes behind it are frozen (BIYA 16:54:16 ET, MTEN 16:46:21 ET October 6), so the live check came from Yahoo and SIP.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| BIYA | $1.91 | +36.4% (vs $1.40) | None — no catalyst found | 23:01 CEST (17:01 ET) | $2.86 (SIP) | 04:14 ET | open | +$25.48 unrealized | +25.7% | Open; peak +49.7% |
+| MTEN | $1.39 | +44.4% (vs $0.9624) | B — same-day 6-K, completed $15M acquisition | 00:01 CEST (18:01 ET) | $1.79 (SIP) | 04:05 ET | open | +$3.58 unrealized | +3.7% | Open; peak +28.8% |
+
+**Total Realized P&L (Alpaca fills only): $0.00.** Both positions are unrealized.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled checkpoints (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST), plus six extra observations (22:05, 22:10, 22:15, 22:20, 22:25, 22:45). The entry window was fully covered.
+- Candidates found: **11 unique tickers** with a >10% AH appearance (SXTC 8, BIYA 7, NCPL 6, MI 5, VCIG 5, MTEN 3, LCFY 3, WHLR 3, BURU 1, LHSW 1, ICMB 1), plus a 28-name regular-session watchlist.
+- Retrospective matches: **6/6 in-universe AH→PM movers detected** (BIYA, MTEN, MI, SXTC, BURU, NCPL). TOPP was missed (floor). BYAH is PM-only.
+- Supplementary AH-change-only pass: the line is present in all 12 AH scans. **1 unique ticker (ICMB), outcome: 0 continuation / 0 faded / 1 unassessed.** ICMB has **no SIP PM prints through the 04:15 ET bar**. Its only logged AH price was $0.87 (22:20), on a 1,537-share opening bar; the AH tape drifted to $0.70–$0.75 after that.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| TOPP | +15.4% at 18:05 ET on 345K–1.13M shares per bar; +34% tail at 19:30 | Below `MIN_PRICE = $0.50`. Even without the floor, no scheduled checkpoint showed it above +10% (18:30: +6.0%), so it would likely have had only one appearance | **Yes**: $0.1310 → $0.4574 **+249%** peak; **+136%** to the 04:05 close |
+| BURU | +18% at 00:30 (first and only appearance); tail high $1.95 at 19:15 | 2-AH-scan gate. CONFIRM-3 NO, so it is not a final-scan gate-block | Transient: $1.36 → $1.82 **+33.8%** at the 04:00 bar, which closed $1.48 (+8.8%); latest $1.31 |
+
+MI, SXTC, WHLR, NCPL, LCFY, and VCIG were detected and skipped on Day%, thin volume, or fade rules. Their outcomes are in the trackers below.
+
+### AH Mover Follow-Through
+
+Every name with two or more >10% AH scans. Current = latest SIP 5-minute close (04:10–04:15 ET) or the 04:29 Yahoo print for the two open positions.
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| BIYA | $2.4893 | 19:55 | **Build** (+30 → 36 → 58 → 55 → 71%) | $2.40 | −3.6% | +75.8% | PM peak $2.86 **exceeded AH by 14.9%**; continuation |
+| MTEN | $1.755 | 19:55 | **Late surge / build** (+8 → 24 → 41 → 54%) | $1.44 | −17.9% | +50.2% | PM peak $1.79 **exceeded AH by 2.0%**, then faded |
+| MI | $1.84 | 16:20 | **Spike→fade** (+25 → 24 → 21 → 12 → 19%) | $1.84 | 0.0% | +49.5% | PM peak $2.0262 **exceeded AH by 10.1%** |
+| SXTC | $2.58 | 16:30 | **Spike→hold** (+11 → 26 → 22 → 70 → 74 → 53 → 54%) | $1.72 | −33.3% | +37.6% | PM peak $1.94 **fell short (−24.8%)**; AH better |
+| NCPL | $1.53 | 19:50 | **Late surge**, thin (+10 → 10 → 15 → 28%) | $1.31 | −14.4% | +20.2% | PM peak $1.47 **fell short (−3.9%)**; AH better |
+| WHLR | $1.24 | 16:45 | **Spike→hold**, thin (+13 → 16 → 14 → 13%) | $0.94 | −24.4% | +3.0% | PM peak $1.05 **fell short (−15.3%)**; AH better |
+| LCFY | $2.62 | 16:35 | **Spike→fade**, thin (+21.5 → 18.6 → 10.2%) | $2.10 | −19.8% | +2.5% | PM peak $2.24 **fell short (−14.5%)**; AH better |
+| VCIG | $2.10 | 16:25 | **Spike→fade** (+43% → −27%) | $0.95 | −54.8% | −32.6% | PM peak $1.18 **fell short (−43.8%)**; AH better |
+
+**Chase-cap check:** both fills were near the qualifying-scan price (BIYA Entry Total +36.4%, MTEN +44.4%), far below the ~+120% zone, and PM reclaimed both. No new chase case; the standing count stays **1 (XOS), never reclaimed**.
+
+### Notes
+
+- **Coverage, last 10 completed sessions (Sep 23–Oct 6):** **Sep 25 0/7, Sep 29 3/7, Oct 2 0/7** (position evaluations only), **Oct 5 0/7** (no log, zero scan commits). Sep 23, 24, 28, 30, Oct 1, and **Oct 6 ran 7/7.** That is **4 failures in 10 sessions**, down from 5 after Sep 22 dropped out of the window. It is still above the ≥2 trigger, so the scheduler/bridge investigation stays routed to the email. Tonight's coverage was complete, and this pulse started on time (10:20 CEST).
+- **CEILING-OVERRIDE WATCH:** none flagged.
+- **DEAD-CAT-OVERRIDE WATCH — SXTC** (float 1.0M, Grade None, Day −39.9%): hypothetical **$1.57 at 22:25 CEST → PM SIP peak $1.94 (04:00, 191,723 / 2,296) = +23.6%**. The next closes ($1.84, $1.72) stayed above the entry. The PM peak stayed below the $2.58 AH high and the $2.08 October 5 close. Named history: founding **BYAH +72%**, **BENF −0.6%, ACTU −9.6%, WHLR −2.6%, DKI −37.2%, AMOD +65.7%, SXTC +23.6%**, now **3 positive / 4 negative**. MI and WHLR were dead-cat skips that did not meet the watch condition; MI's PM peak beat its AH high by 10.1% anyway (first sighting $1.54 at 22:45 → $2.0262, +31.6%).
+- **Sub-3M fade-rule sample: 4/22 → 4/23 (17.4%).** Add **VCIG** (float 1.04M, Grade C: a same-day product-launch PR plus a $125M equity-facility overhang). The 23:00 skip was SPIKE→FADE. AH SIP peak $2.10 at 16:25 → PM peak $1.18: **fell short.** (a) First qualifying scan $1.69 → $1.18 = **−30.2%**. (b) PM-open VWAP $1.0035 → $1.18 = **+17.6%** on 406,058 / 2,172, with the next close $0.96, below the VWAP, so the gain was transient. Controls outside the denominator: **LCFY** (1.4M, thin-drift co-block; AH $2.62 → PM $2.24; (a) first qualifying scan $2.49 at 23:30 → −10.0%, (b) $2.1623 → +3.6% on 6,051 / 47 shares). **MI** (542K, dead-cat co-block) re-exploded above its AH high; see above. No Grade A/B fader this cycle. The exception trigger stays far off.
+- **FIRST-BAR-SPIKE WATCH:** three names were flagged at 22:20. Full 16:00–20:00 SIP bars give these results.
+  - **VCIG: superseded.** Its 16:25 high of $2.10 came on 2.77M shares / 15,430 trades. Hypothetical $1.69 → $1.18 = −30.2%.
+  - **NCPL: superseded.** Later highs reached $1.40 at 18:15 (47,507 / 262) and $1.53 at 19:50 (28,158 / 109), above the $1.28 opening high, on volume similar to its 72K-share opening bars. Hypothetical $1.22 → $1.47 = +20.5%, with the next close $1.35.
+  - **ICMB: confirmed first-bar case.** The $0.87 at 16:00 was never exceeded, but the PM verdict is **pending** because there are no PM prints.
+  - Standing: **11 valid (2 ran / 9 faded-flat), 16 flagged, 4 superseded (NCI, SSM, VCIG, NCPL), 1 pending (ICMB); 3 pre-gate entries, 0 ran.** No run to route.
+- **Raw PM leader / PM-only tracking:** the biggest raw PM mover is **TOPP, +309.9%**. It is **not PM-only**: it had an in-window +15% AH move on 1.13M shares and a +34% late tail. It is an AH→PM continuation that the floor excluded. The only PM-only gapper is **BYAH (+104.5%), uninvestable**: a one-minute wick that closed 39% off its high in the same minute, on 78K shares, with no catalyst found. `log/pm-open-scan.csv` has **no October 7 rows yet** at 04:30 ET. The CSV holdable PM-only count is **62**. Carry the Initiative-6 cluster to the email. A PM-only gapper is not a scanner failure.
+- **Price-floor exclusions: 10 → 11 observations across 7 → 8 nights; 0 → 1 confirmed >100%-and-holdable; 1 inherited pending.** New row **TOPP Oct 6→7**: close $0.1116, `tradable=true`, float 20.8M, Grade None. In-window AH at 18:05–18:10 was **+14–15% on 345K–1.13M shares / 636–1,528 trades**. PM peak **$0.4574 (+309.9%)**. Hypothetical 18:10 VWAP → peak **+249%**, or **+136%** to the 04:05 close. Verdict: **holdable.** Four consecutive 5-minute closes stayed at +145% to +177% on 7.1M–18.3M shares. The SIP spread was 3.3% of ask at 18:12 ET and 1.5% at 04:07 ET. The broker-side IEX book stayed frozen and empty, so a live Alpaca entry would have hit the stale-quote problem. TOPP is the first case to meet both legs of the floor-change trigger (≥3 such names on ≥3 nights): **1 of 3. Not met.** Route as a question, not a parameter change.
+- **Late-AH-tail tracking:** BIYA's defining surge came at 16:05 ET, inside the window. Its 19:55 high continued a build that had already been detected. MTEN is the same case. TOPP's 19:15–19:30 surge (+16% → +34%) is a tail move on a below-floor name, so it is not added (GNS precedent). BURU's $1.95 tail high at 19:15 came after a detected 18:00 ignition. Standing **2 true-tail (ORIS, GNS) / 1 feed-lag (BTCT)**, unchanged.
+- **In-window feed-lag: 7, unchanged.** Every in-universe in-window mover above +10% on real volume was surfaced. OLOX touched +10–11% at 17:05–17:30 on 26K–55K shares / 90–216 trades per bar, which is thin, not accumulating. Carry the reached whole-universe AH verification recommendation to the email.
+- **Execution and selection trackers:** broker-block **2**; stale-book-only **6** (4 profitable / 2 negative); no-fillable-book **4**; float-only **1**; final-scan-only **2**. All unchanged. Both fills tonight executed while the IEX quote was frozen: BIYA at 17:01 ET against a 16:54 quote, and MTEN at 18:01 ET against a 16:46 quote ($1.00 / $1.02). The limits were priced from SIP bars. This shows a frozen IEX quote does not prevent a paper fill when the limit is set from SIP; that is evidence for the stale-book feed decision. **BURU** (float 8.4M, Grade C financing 8-K, ignited 18:00 ET) is a near-case excluded from the final-scan tally because CONFIRM-3 was NO. Its reference $1.36 reached $1.82 at the 04:00 bar (+33.8%), but the bar closed $1.48 and it is now $1.31, so the run was transient.
+- **Actual-entry trackers:** both entries are **day-1 fresh igniters** (BIYA Day −2.5%, MTEN Day −0.4%), and **both ran**: BIYA $1.91 → $2.86 (+49.7%), MTEN $1.39 → $1.79 (+28.8%). First-day igniters **27 → 29 entries (11 ran / 8 flat / 10 faded) = 37.9% ran**; multi-session **1, faded**, unchanged. Reverse-split recency stays **4/5 this-week faded / 4/6 older continued**. BIYA's July 1-for-10 split is background, not the catalyst note, so it is not added (October 1 convention).
+- **Extreme-runner tally: 15 fades / 2 continues (88.2%), unchanged.** No AH peak reached the ~+130% zone: BIYA +77.8% total from $1.40, MTEN +82.4% from $0.9624, SXTC +24.0% total from $2.08 (+106% only from its crashed $1.25 close). The partial-profit routing trigger stays reached.
+- **SIP basis checks:** October 6 closes BIYA $1.365, MTEN $0.9587, TOPP $0.1116, SXTC $1.25, MI $1.23, NCPL $1.09, VCIG $1.41, BURU $1.20, WHLR $0.91, LCFY $2.05, BYAH $2.425. October 5 closes for Entry Total%: BIYA $1.40, MTEN $0.9624. `price-timeline.py` uses October 5's close for BIYA ($1.40, showing "+104.3%"); the October 6 basis gives +109.5%.
+- **Tooling (carried from the 00:30 scan):** `book-check.js` returned a pre-split July 17 SIP quote for BURU and labelled it `TWO-SIDED`. Names whose share structure changed can be mislabelled.
+
+### Daily Email Routing
+
+- Headline: **BIYA is a real winner, detected and traded.** SIP PM peak $2.86 (+109.5%) on 2.78M shares in two minutes. Our 52 @ $1.91 entry peaked at +49.7% and is +25.7% at 04:29 ET. The >100% level held only about two minutes. MTEN (entered $1.39) peaked at +28.8% and is +3.7%. Detection **73/84 (86.9%)**, selection **37/80 (46.3%)**, 95 days tracked. No realized P&L yet.
+- **Question for Juan — sub-$0.50 floor:** TOPP (+309.9% PM, holdable for 20+ minutes on a 1.5–3.3% SIP spread, in-window AH +15% on 1.13M shares) is the first floor exclusion to meet both the >100% and the holdable-on-tight-spread legs. The trigger needs 3 such names on 3 nights; this is 1 of 3. Should a log-only sub-$0.50 observation pass start collecting these, given the broker-side IEX book is frozen for such names?
+- **Scheduler/bridge reliability (decision for Juan):** 4 coverage failures in the last 10 sessions (Sep 25, Sep 29, Oct 2, Oct 5). October 6 ran 7/7 and this pulse started on time.
+- **Stale-quote feed:** both fills executed on frozen IEX quotes with SIP-priced limits. Add this to the stale-book feed decision (6 standing cases).
+- Carry forward: 7 feed-lag observations → whole-universe AH verification; 62-row holdable PM-only cluster → Initiative 6; 15/17 extreme-runner fades → partial-profit decision; reverse-split recency recommendation; the `book-check.js` pre-split quote bug. The sub-3M fade (4/23), price-floor (1 of 3), and first-bar (no new run) triggers are not met.
+
+### Price Charts
+
+Excerpts from `python3 scripts/price-timeline.py BIYA MTEN TOPP` at ~04:29 ET. The tool's BIYA previous close is October 5's ($1.40), not October 6's ($1.365). The tables above set the levels; these rows show shape only. The block charts were flat and are omitted.
+
+```text
+BIYA  Previous Close: $1.40 | 2-Day Range: $1.30 - $2.86 | Current: $2.39 (+70.7%) | Peak: $2.86 (+104.3%) at 10-07 04:10 ET
+  [AH] 10-06 16:05 ET: $1.69 (+20.7%)   [AH] 16:35: $2.04 (+45.4%)   [AH] 17:25: $2.17 (+54.9%)
+  [AH] 10-06 18:15 ET: $2.34 (+67.2%)   [AH] 18:30: $2.38 (+70.1%)   [AH] 19:00: $2.22 (+58.6%)
+  [PM] 10-07 04:00 ET: $1.79 (+27.9%)   [PM] 04:05: $1.95 (+39.3%)   [PM] 04:10: $2.16 (+54.3%)
+  [PM] 10-07 04:15 ET: $2.24 (+60.0%)   [PM] 04:20: $2.45 (+75.0%)   [PM] 04:29: $2.39 (+70.7%)
+
+MTEN  Previous Close: $0.96 | 2-Day Range: $0.96 - $1.79 | Current: $1.45 (+50.7%) | Peak: $1.79 (+86.0%) at 10-07 04:05 ET
+  [AH] 10-06 16:30 ET: $1.10 (+14.1%)   [AH] 18:30: $1.49 (+55.0%)   [AH] 18:45: $1.65 (+71.4%)
+  [PM] 10-07 04:00 ET: $1.72 (+78.7%)   [PM] 04:05: $1.49 (+54.7%)   [PM] 04:15: $1.38 (+43.4%)
+  [PM] 10-07 04:25 ET: $1.44 (+49.5%)   [PM] 04:29: $1.44 (+49.6%)
+
+TOPP  Previous Close: $0.11 | 2-Day Range: $0.11 - $0.46 | Current: $0.27 (+141.4%) | Peak: $0.46 (+312.1%) at 10-07 04:00 ET
+  [AH] 10-06 18:10 ET: $0.13 (+16.8%)   [AH] 19:50: $0.14 (+24.0%)
+  [PM] 10-07 04:00 ET: $0.31 (+179.0%)  [PM] 04:05: $0.31 (+178.8%)  [PM] 04:10: $0.28 (+153.4%)
+  [PM] 10-07 04:15 ET: $0.27 (+146.3%)  [PM] 04:20: $0.25 (+129.1%)  [PM] 04:29: $0.27 (+141.4%)
+```
