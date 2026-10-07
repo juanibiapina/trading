@@ -1,0 +1,86 @@
+{
+  "version": "init7-observe-v1",
+  "mode": "prospective_instrumentation",
+  "scheduled_et": "2026-10-07T13:30:00-04:00",
+  "decision_cutoff_utc": "2026-10-07T17:32:00Z",
+  "started_utc": "2026-10-07T17:30:00.220133Z",
+  "hashes": {
+    "amendment": "5d6bda27adcfed77c23ccbbd599d91131b9f73b174c9b03bb876583649671160",
+    "design": "df00c3bc9dd86117191ab86b838589e2dfdd5231ae6f1c62861b2e484915dc98",
+    "archiver": "29a13561885f5445643982f8be91bc85ff39a4c9f14318c4a6087ff56d9d9c24",
+    "classifier": "1d5dd13fb89c5cbab7cd062f0a8e8dccd5023297e6b1bfa7d8127f127d231ed1",
+    "selector": "ae8aed7be5ca70ff559eba4f4b55a9530b942d760af1887f10cec73db0653269",
+    "census_helpers": "2bfd018d1a728b2e47cbf6cb0a693c9faa82a204cf4b5cc767c7af79fd653b9f",
+    "orchestrator": "f0527781efeb7da41ede7e3ce8d299957e4074bf2fd529819699b07e77552fba",
+    "mapping": "7afbd3761b28af1237b625729fa68e2c2631f7f00429d66a05e9beec1826e6e7"
+  },
+  "hash_problems": [],
+  "n1_reason": "positive_absolute_and_relative_return",
+  "market": {
+    "input": "market.json",
+    "last_receipt_utc": "2026-10-07T17:30:02.600161Z",
+    "received_by_cutoff": true,
+    "feature_cutoff_utc": "2026-10-07T17:14:00.686509+00:00",
+    "ranking": [
+      {
+        "symbol": "AAPL",
+        "relative_return_pct_points": 0.130159714752609
+      },
+      {
+        "symbol": "NVDA",
+        "relative_return_pct_points": -0.08109041096533431
+      },
+      {
+        "symbol": "MSFT",
+        "relative_return_pct_points": -0.0884988823102617
+      },
+      {
+        "symbol": "TSLA",
+        "relative_return_pct_points": -0.08888396013784217
+      },
+      {
+        "symbol": "AMZN",
+        "relative_return_pct_points": -0.15950109443889637
+      },
+      {
+        "symbol": "GOOGL",
+        "relative_return_pct_points": -0.2529495572429985
+      },
+      {
+        "symbol": "META",
+        "relative_return_pct_points": -0.2708614151803235
+      }
+    ],
+    "book_diagnostic": {
+      "quote_utc": "2026-10-07T17:30:00.757567945Z",
+      "received_utc": "2026-10-07T17:30:02.600161+00:00",
+      "bid": 335.72,
+      "ask": 335.78,
+      "bid_size": 80,
+      "ask_size": 40,
+      "age_seconds": 1.842594,
+      "fresh_two_sided": true,
+      "fractional_asset_check": "required separately",
+      "post_decision_entry_quote": false
+    }
+  },
+  "sec": {
+    "exit_code": 0,
+    "started_utc": "2026-10-07T17:30:02.621946Z",
+    "finished_utc": "2026-10-07T17:30:03.252692Z",
+    "stderr_tail": "",
+    "status": "cash",
+    "reason": "no_8k_within_window",
+    "jev_request_bytes": null,
+    "filing": null
+  },
+  "jev": null,
+  "decision": {
+    "n1": "AAPL",
+    "a1": null,
+    "a1_reason": "no_8k_within_window",
+    "a2": "AAPL",
+    "a2_reason": "no_source"
+  },
+  "decision_persisted_utc": "2026-10-07T17:30:03.255052Z"
+}
