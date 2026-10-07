@@ -368,6 +368,127 @@ AH >10% at this snapshot (unrounded): none
 - **CPHI** (float 40.3M): +7.1% AH. The 16:25 bar carried 441K sh / 1,578 trades up to $0.93, then 16:30 eased to $0.84 (206K sh). Watch only.
 - **FMST** (float 13.2M): +8.5% AH on thin volume (22–112K sh, 37–151 trades per bar). Watch only.
 
+## Scan 23:00 CEST (5:00 PM ET)
+
+`python3 scripts/scan.py --all` ran at 17:00:13 ET (23:00:13 CEST) in the AFTERHOURS session and returned 5 hits.
+
+Supplementary AH-change-only (>15%, not in volume pass): ERNA, IPW
+AH >10% at this snapshot (unrounded): ERNA, IPW, NCPL, PROF
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.59 | +45.9% | +10.1% | $1.75 | +60.6% | 1.1M | 13.3M | 0.1x | 4.4M | Miscellaneous Commercial Services |
+| FMST | [TV](https://www.tradingview.com/chart/?symbol=FMST) | $0.56 | +13.2% | +7.1% | $0.60 | +21.3% | 630K | 617K | 1.0x | 13.2M | Other Metals/Minerals |
+| PROF | [TV](https://www.tradingview.com/chart/?symbol=PROF) | $5.68 | -6.6% | +21.3% | $6.89 | +13.3% | 81K | 151K | 0.5x | 35.4M | Medical Specialties |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $1.04 | -8.0% | +17.3% | $1.22 | +8.0% | 45K | 409K | 0.1x | 1.2M | Internet Retail |
+| ERNA | [TV](https://www.tradingview.com/chart/?symbol=ERNA) | $2.39 | +6.9% | +16.3% | $2.78 | +24.4% | 29K | 41K | 0.7x | 1.1M | Pharmaceuticals: Major |
+
+### Evaluation notes
+
+**Decision:** No paper orders. The entry window is open, but no name has the required 2 qualifying AH scans. All four >10% names (NCPL, PROF, IPW, ERNA) are first AH appearances above 10%; NCPL was a 21:30 regular-session watch name, which does not count. The earlier AH qualifiers (KUST 2, IRIX 1, SUGP 1, VNTG 1, MVIS 1) are all off the scanner and had faded on SIP by 22:45. All four new names are `tradable=true`; no open positions. SIP bars through 16:45 ET were available at 17:00 ET.
+
+**NCPL** (float 4.4M, Netcapital, fintech capital platform; 21:30 watch name):
+
+- Spike bar: `NCPL 2026-10-07  SPIKE  16:32ET  +17%  $1.86  1076 trades / 280k sh  (first co-spike bar) (as-of 17:00ET)`
+- Third bar: `NCPL 2026-10-07  CONFIRM-3  NO ignition 16:30ET failed third-bar hold/volume as-of 17:00ET`
+- SIP bars: flat $1.58–$1.65 on 8–70K sh per bar until 16:30, then 16:30 O $1.65 H $1.86 C $1.77 on 576K sh / 2,476 trades; 16:35 C $1.73 (196K sh / 1,153 trades); 16:40 C $1.75 (205K sh / 1,140 trades); 16:45 C $1.66 (94K sh / 475 trades). Real volume, but fading from the 16:30 bar, and price is 11% off the $1.86 high. The scanner's $1.75 matches the 16:40 SIP range.
+- Shared SIP volume context:
+  ```
+  # NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-06 43+5zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T21:00:13+00:00; source fetched 2026-10-07T21:00:55.777593+00:00
+  NCPL 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=70160 local=unknown prior-peak=0.9746x status=warmup
+  NCPL 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=8245 local=unknown prior-peak=0.1145x status=warmup
+  NCPL 2026-10-07  VOLUME-CONTEXT 16:10ET start=2026-10-07T20:10:00+00:00 shares=27620 local=unknown prior-peak=0.3837x status=warmup
+  NCPL 2026-10-07  VOLUME-CONTEXT 16:15ET start=2026-10-07T20:15:00+00:00 shares=29276 local=1.0600x prior-peak=0.4067x status=ok
+  NCPL 2026-10-07  VOLUME-CONTEXT 16:20ET start=2026-10-07T20:20:00+00:00 shares=27482 local=0.9950x prior-peak=0.3818x status=ok
+  NCPL 2026-10-07  VOLUME-CONTEXT 16:25ET start=2026-10-07T20:25:00+00:00 shares=18556 local=0.6718x prior-peak=0.2578x status=ok
+  NCPL 2026-10-07  VOLUME-CONTEXT 16:30ET start=2026-10-07T20:30:00+00:00 shares=576193 local=20.9662x prior-peak=8.0041x status=ok
+  NCPL 2026-10-07  VOLUME-CONTEXT 16:35ET start=2026-10-07T20:35:00+00:00 shares=195535 local=7.1150x prior-peak=2.7163x status=ok
+  NCPL 2026-10-07  VOLUME-CONTEXT 16:40ET start=2026-10-07T20:40:00+00:00 shares=204701 local=1.0469x prior-peak=2.8436x status=ok
+  NCPL 2026-10-07  VOLUME-CONTEXT 16:45ET start=2026-10-07T20:45:00+00:00 shares=93757 local=0.4580x prior-peak=1.3024x status=ok
+  ```
+- Book:
+  ```
+  NCPL BOOK iex bid $1.64 x100 / ask $1.70 x100 @ 2026-10-07 16:51:26 ET age 9m40s two-sided spread 3.53% of ask
+  NCPL BOOK sip-15m bid $1.68 x2300 / ask $1.69 x400 @ 2026-10-07 16:46:05 ET age 15m01s two-sided spread 0.59% of ask
+  NCPL BOOK refresh +15s iex unchanged @ 2026-10-07 16:51:26 ET
+  NCPL BOOK verdict: IEX STALE 9m40s; SIP-15m TWO-SIDED (observed 2026-10-07 17:01:06 ET; log-only)
+  ```
+- Catalyst (3 searches): nothing dated today. Newest items are the 2026-06-04 non-binding LOI to buy Resmac mortgage assets from RezyFi (GlobeNewswire) and an August Nasdaq deficiency notice with a compliance plan due 2026-10-23. Both are background. Grade: None.
+- Multi-session context: not in `WINNERS_TRACKING.md`. Day% +45.9% came in today's regular session; day 1 of the move.
+
+**PROF** (float 35.4M, Profound Medical, MRI-guided prostate ablation):
+
+- Spike bar: `PROF 2026-10-07  SPIKE  16:36ET  +21%  $6.87  69 trades / 2k sh  (first co-spike bar) (as-of 17:00ET)`
+- Third bar: `PROF 2026-10-07  CONFIRM-3  NO ignition 16:35ET failed third-bar hold/volume as-of 17:00ET`
+- SIP bars: near-empty until 16:30; 16:35 O $6.50 H $7.51 C $6.59 on 51.8K sh / 659 trades; 16:40 C $6.89 (40.5K sh / 447 trades); 16:45 C $6.82 (7.5K sh / 201 trades). Tens of K shares, hundreds of trades, falling volume: moderate and thinning. Price is 9% off the $7.51 high; the scanner's $6.89 matches SIP.
+- Shared SIP volume context:
+  ```
+  # PROF shared SIP volume sip-ah-volume-v2; prior 2026-10-06 1+47zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T21:00:13+00:00; source fetched 2026-10-07T21:00:58.583786+00:00
+  PROF 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=2919 local=unknown prior-peak=4.2121x status=warmup
+  PROF 2026-10-07  VOLUME-CONTEXT 16:25ET start=2026-10-07T20:25:00+00:00 shares=500 local=5.0000x prior-peak=0.7215x status=floored
+  PROF 2026-10-07  VOLUME-CONTEXT 16:30ET start=2026-10-07T20:30:00+00:00 shares=4110 local=41.1000x prior-peak=5.9307x status=floored
+  PROF 2026-10-07  VOLUME-CONTEXT 16:35ET start=2026-10-07T20:35:00+00:00 shares=51786 local=103.5720x prior-peak=74.7273x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 16:40ET start=2026-10-07T20:40:00+00:00 shares=40539 local=9.8635x prior-peak=58.4978x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 16:45ET start=2026-10-07T20:45:00+00:00 shares=7528 local=0.1857x prior-peak=10.8629x status=ok
+  ```
+- Book:
+  ```
+  PROF BOOK iex bid $7.10 x100 / ask $7.87 x100 @ 2026-10-07 16:37:16 ET age 23m50s two-sided spread 9.78% of ask
+  PROF BOOK sip-15m bid $6.70 x1200 / ask $6.82 x200 @ 2026-10-07 16:46:04 ET age 15m01s two-sided spread 1.76% of ask
+  PROF BOOK refresh +15s iex unchanged @ 2026-10-07 16:37:16 ET
+  PROF BOOK verdict: IEX STALE 23m50s; SIP-15m TWO-SIDED (observed 2026-10-07 17:01:06 ET; log-only)
+  ```
+- Catalyst (1 search): GlobeNewswire 2026-10-07, "Profound Medical Reports Strong Preliminary Third Quarter 2026 Revenue" (preliminary unaudited Q3 revenue). The search showed it as 47 minutes old at about 17:02 ET, so it was released around 16:15 ET; the exact timestamp is unverified. Fresh, same-day. Grade: B (revenue beat type).
+- Multi-session context: not in `WINNERS_TRACKING.md`; Day% −6.6%, so this is a fresh AH reaction.
+
+**IPW** (float 1.2M, iPower, digital treasury and supply chain):
+
+- Spike bar: `IPW 2026-10-07  SPIKE  16:44ET  +25%  $1.30  149 trades / 23k sh  (first co-spike bar) (as-of 17:00ET)`
+- Third bar: `IPW 2026-10-07  CONFIRM-3  PENDING ignition 16:40ET; waiting for third bar as-of 17:00ET`
+- SIP bars: dead until 16:40 (single trades at $1.05–$1.07); 16:40 O $1.09 H $1.30 C $1.21 on 25K sh / 160 trades; 16:45 O $1.22 H $1.36 C $1.30 on 461K sh / 3,822 trades, vwap $1.28. Real and accelerating ignition; the 16:45 close is at +25% and near the $1.36 high. The IEX quote at 16:59:57 ET ($1.35/$1.36) shows it still near the high. The scanner's $1.22 lags SIP.
+- Shared SIP volume context:
+  ```
+  # IPW shared SIP volume sip-ah-volume-v2; prior 2026-10-06 12+36zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T21:00:13+00:00; source fetched 2026-10-07T21:01:01.487237+00:00
+  IPW 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=21000 local=unknown prior-peak=10.5000x status=warmup
+  IPW 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=150 local=unknown prior-peak=0.0750x status=warmup
+  IPW 2026-10-07  VOLUME-CONTEXT 16:10ET start=2026-10-07T20:10:00+00:00 shares=300 local=unknown prior-peak=0.1500x status=warmup
+  IPW 2026-10-07  VOLUME-CONTEXT 16:15ET start=2026-10-07T20:15:00+00:00 shares=302 local=1.0067x prior-peak=0.1510x status=ok
+  IPW 2026-10-07  VOLUME-CONTEXT 16:35ET start=2026-10-07T20:35:00+00:00 shares=165 local=1.6500x prior-peak=0.0825x status=floored
+  IPW 2026-10-07  VOLUME-CONTEXT 16:40ET start=2026-10-07T20:40:00+00:00 shares=24954 local=249.5400x prior-peak=12.4770x status=floored
+  IPW 2026-10-07  VOLUME-CONTEXT 16:45ET start=2026-10-07T20:45:00+00:00 shares=460704 local=2792.1455x prior-peak=230.3520x status=ok
+  ```
+- Book:
+  ```
+  IPW BOOK iex bid $1.35 x100 / ask $1.36 x100 @ 2026-10-07 16:59:57 ET age 1m08s two-sided spread 0.74% of ask
+  IPW BOOK sip-15m bid $1.21 x1400 / ask $1.23 x100 @ 2026-10-07 16:46:05 ET age 15m00s two-sided spread 1.63% of ask
+  IPW BOOK refresh +15s iex unchanged @ 2026-10-07 16:59:57 ET
+  IPW BOOK verdict: IEX STALE 1m08s; SIP-15m TWO-SIDED (observed 2026-10-07 17:01:06 ET; log-only)
+  ```
+- Catalyst (2 searches): nothing dated today. Background: 1-for-9 reverse split effective 2026-08-07, a July AI computing hardware leasing plan, and Public.com listing next earnings on 2026-10-08 (tomorrow, not today). Grade: None.
+- Multi-session context: not in `WINNERS_TRACKING.md`; Day% −8.0%, pure AH ignition. Strongest live build tonight; it needs a second qualifying AH scan at 23:30 to be eligible.
+
+**ERNA** (float 1.1M, Ernexa Therapeutics, cell therapy):
+
+- Spike bar: `ERNA 2026-10-07  SPIKE  16:36ET  +19%  $2.84  26 trades / 3k sh  (first co-spike bar) (as-of 17:00ET)`
+- Third bar: `ERNA 2026-10-07  CONFIRM-3  NO ignition 16:35ET failed third-bar hold/volume as-of 17:00ET`
+- SIP bars: 16:35 O $2.78 H $2.84 C $2.79 on 17.8K sh / 132 trades; 16:40 13.1K sh / 83 trades; 16:45 8.3K sh / 56 trades, pinned at $2.78–$2.79. Thin and shrinking: tens of K shares, under 150 trades per bar. Not an accumulating spike, so no book check.
+- Shared SIP volume context:
+  ```
+  # ERNA shared SIP volume sip-ah-volume-v2; prior 2026-10-06 7+41zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T21:00:13+00:00; source fetched 2026-10-07T21:01:04.130774+00:00
+  ERNA 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=750 local=unknown prior-peak=0.2341x status=warmup
+  ERNA 2026-10-07  VOLUME-CONTEXT 16:30ET start=2026-10-07T20:30:00+00:00 shares=147 local=1.4700x prior-peak=0.0459x status=floored
+  ERNA 2026-10-07  VOLUME-CONTEXT 16:35ET start=2026-10-07T20:35:00+00:00 shares=17820 local=178.2000x prior-peak=5.5618x status=floored
+  ERNA 2026-10-07  VOLUME-CONTEXT 16:40ET start=2026-10-07T20:40:00+00:00 shares=13135 local=89.3537x prior-peak=4.0996x status=ok
+  ERNA 2026-10-07  VOLUME-CONTEXT 16:45ET start=2026-10-07T20:45:00+00:00 shares=8289 local=0.6311x prior-peak=2.5871x status=ok
+  ```
+- Catalyst (2 searches): nothing dated today. Background: 2026-09-29 selection for the Cell & Gene Meeting on the Mesa (Oct 5–7) and earlier ERNA-101 manufacturing updates. Grade: None.
+
+**FMST** (float 13.2M): +7.1% AH, below threshold. Watch only.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
