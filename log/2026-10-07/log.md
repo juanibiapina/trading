@@ -810,6 +810,254 @@ AH >10% at this snapshot (unrounded): BFRG, CPHI, IPW, LGCL, PROF
 
 **Below 10%:** NCPL (+8.2%), VCIG (+7.8%, Day −45.3%, dead-cat profile), FMST (+6.0%).
 
+## Scan 00:30 CEST (6:30 PM ET)
+
+`python3 scripts/scan.py --all` ran at 18:30:16 ET (00:30:16 CEST) in the AFTERHOURS session and returned 9 hits.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): BFRG, CPHI, DKI, IPSC, IPW, PROF, SBFM, WHLR
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CPHI | [TV](https://www.tradingview.com/chart/?symbol=CPHI) | $0.85 | +32.6% | +11.8% | $0.95 | +48.2% | 7.9M | 6.9M | 1.1x | 40.3M | Pharmaceuticals: Major |
+| SBFM | [TV](https://www.tradingview.com/chart/?symbol=SBFM) | $0.70 | +75.9% | +20.3% | $0.84 | +111.6% | 5.1M | 18.2M | 0.3x | 4.2M | Pharmaceuticals: Major |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $1.04 | -8.0% | +25.0% | $1.30 | +15.0% | 3.3M | 788K | 4.2x | 1.2M | Internet Retail |
+| DKI | [TV](https://www.tradingview.com/chart/?symbol=DKI) | $1.67 | +22.8% | +37.1% | $2.29 | +68.4% | 1.9M | 5.3M | 0.4x | 1.2M | Packaged Software |
+| BFRG | [TV](https://www.tradingview.com/chart/?symbol=BFRG) | $0.71 | +2.8% | +12.3% | $0.80 | +15.5% | 1.1M | 7.4M | 0.1x | 16.0M | Packaged Software |
+| FMST | [TV](https://www.tradingview.com/chart/?symbol=FMST) | $0.56 | +13.2% | +5.4% | $0.59 | +19.2% | 729K | 627K | 1.2x | 13.2M | Other Metals/Minerals |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.69 | -24.3% | +14.7% | $0.79 | -13.2% | 501K | 4.3M | 0.1x | 568K | Real Estate Investment Trusts |
+| PROF | [TV](https://www.tradingview.com/chart/?symbol=PROF) | $5.68 | -6.6% | +19.0% | $6.76 | +11.2% | 136K | 157K | 0.9x | 35.4M | Medical Specialties |
+| IPSC | [TV](https://www.tradingview.com/chart/?symbol=IPSC) | $1.28 | -3.0% | +13.3% | $1.45 | +9.8% | 52K | 801K | 0.1x | 122.9M | Biotechnology |
+
+### Evaluation notes
+
+**Decision:** No new entries at the final scan. BFRG is the only new name with 2 AH scans >10%, and its SIP volume is a thin drift. DKI and SBFM ignited after 17:50 ET on real volume but have only this one AH scan; DKI gets a FINAL-SCAN-GATE-BLOCK note. IPW (+25.0%) and CPHI (+11.8%, off its $1.16 high) are already held. All SIP bars below run through 18:15 ET (the latest bar outside the 15-minute delay at 18:30 ET), so the verification data is fresh.
+
+**DKI — FINAL-SCAN-GATE-BLOCK (first AH scan >10%)** (DarkIris, float 1.2M, Packaged Software, `tradable=true`):
+
+- FINAL-SCAN-GATE-BLOCK: DKI, float 1.2M, Grade None, ignition 17:50 ET, qualified at the final scan at $2.29 / +68.4% Total% from the $1.36 previous close; SIP 17:50–18:15 ET 170K / 264K / 669K / 485K / 413K / 298K sh on 1,185 / 2,491 / 4,814 / 4,170 / 2,964 / 1,900 trades, vwap $2.03 → $2.38 → $2.23; CONFIRM-3 YES 6.8x; ask book SIP-15m $2.20 x2300. Blocked only by the 2-AH-scan gate.
+- Spike bar: `DKI 2026-10-07  SPIKE  17:53ET  +19%  $1.99  181 trades / 27k sh  (first co-spike bar) (as-of 18:30ET)`
+- Third bar: `DKI 2026-10-07  CONFIRM-3  YES ignition 17:50ET 6.8x; confirmed 18:00ET $2.48 as-of 18:30ET`
+- SIP: flat $1.61–$1.79 on 5–31K sh until 17:45, then the 17:50 ignition to $2.21 and an AH high of $2.70 at 18:00. 18:15 close $2.30 (15% off the high, inside the 20% hold band). SIP close matches the scanner's $2.29.
+- Catalyst (2 searches): nothing dated 2026-10-07. Background only: the 2026-10-06 report of the extraordinary meeting vote (share structure and supervoting changes) and an undated AIGC video platform launch. Grade None.
+- Multi-session context: not in `WINNERS_TRACKING.md`; previous close $1.36, today's +22.8% regular session is day 1.
+- Shared SIP volume context:
+  ```
+  # DKI shared SIP volume sip-ah-volume-v2; prior 2026-10-06 3+45zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T22:30:16+00:00; source fetched 2026-10-07T22:31:50.906660+00:00
+  DKI 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=26120 local=unknown prior-peak=77.9701x status=warmup
+  DKI 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=18361 local=unknown prior-peak=54.8090x status=warmup
+  DKI 2026-10-07  VOLUME-CONTEXT 16:10ET start=2026-10-07T20:10:00+00:00 shares=15263 local=unknown prior-peak=45.5612x status=warmup
+  DKI 2026-10-07  VOLUME-CONTEXT 16:15ET start=2026-10-07T20:15:00+00:00 shares=10293 local=0.5606x prior-peak=30.7254x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 16:20ET start=2026-10-07T20:20:00+00:00 shares=14482 local=0.9488x prior-peak=43.2299x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 16:25ET start=2026-10-07T20:25:00+00:00 shares=7201 local=0.4972x prior-peak=21.4955x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 16:30ET start=2026-10-07T20:30:00+00:00 shares=14534 local=1.4120x prior-peak=43.3851x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 16:35ET start=2026-10-07T20:35:00+00:00 shares=20396 local=1.4084x prior-peak=60.8836x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 16:40ET start=2026-10-07T20:40:00+00:00 shares=14359 local=0.9880x prior-peak=42.8627x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 16:45ET start=2026-10-07T20:45:00+00:00 shares=11038 local=0.7595x prior-peak=32.9493x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 16:50ET start=2026-10-07T20:50:00+00:00 shares=12092 local=0.8421x prior-peak=36.0955x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 16:55ET start=2026-10-07T20:55:00+00:00 shares=9799 local=0.8104x prior-peak=29.2507x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:00ET start=2026-10-07T21:00:00+00:00 shares=5880 local=0.5327x prior-peak=17.5522x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:05ET start=2026-10-07T21:05:00+00:00 shares=5961 local=0.6083x prior-peak=17.7940x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:10ET start=2026-10-07T21:10:00+00:00 shares=7982 local=1.3390x prior-peak=23.8269x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:15ET start=2026-10-07T21:15:00+00:00 shares=7338 local=1.2310x prior-peak=21.9045x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:20ET start=2026-10-07T21:20:00+00:00 shares=4671 local=0.6365x prior-peak=13.9433x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:25ET start=2026-10-07T21:25:00+00:00 shares=3849 local=0.5245x prior-peak=11.4896x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:30ET start=2026-10-07T21:30:00+00:00 shares=4719 local=1.0103x prior-peak=14.0866x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:35ET start=2026-10-07T21:35:00+00:00 shares=31458 local=6.7347x prior-peak=93.9045x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:40ET start=2026-10-07T21:40:00+00:00 shares=10709 local=2.2693x prior-peak=31.9672x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:45ET start=2026-10-07T21:45:00+00:00 shares=25118 local=2.3455x prior-peak=74.9791x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:50ET start=2026-10-07T21:50:00+00:00 shares=170084 local=6.7714x prior-peak=507.7134x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 17:55ET start=2026-10-07T21:55:00+00:00 shares=263595 local=10.4943x prior-peak=786.8507x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 18:00ET start=2026-10-07T22:00:00+00:00 shares=668842 local=3.9324x prior-peak=1996.5433x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 18:05ET start=2026-10-07T22:05:00+00:00 shares=484630 local=1.8385x prior-peak=1446.6567x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 18:10ET start=2026-10-07T22:10:00+00:00 shares=413351 local=0.8529x prior-peak=1233.8836x status=ok
+  DKI 2026-10-07  VOLUME-CONTEXT 18:15ET start=2026-10-07T22:15:00+00:00 shares=298130 local=0.6152x prior-peak=889.9403x status=ok
+  ```
+- Book:
+  ```
+  DKI BOOK iex bid $1.44 x100 / ask $1.97 x100 @ 2026-10-07 16:00:00 ET age 2h32m two-sided spread 26.90% of ask
+  DKI BOOK sip-15m bid $2.19 x100 / ask $2.20 x2300 @ 2026-10-07 18:17:01 ET age 15m01s two-sided spread 0.45% of ask
+  DKI BOOK refresh +15s iex unchanged @ 2026-10-07 16:00:00 ET
+  DKI BOOK verdict: IEX STALE 2h32m; SIP-15m TWO-SIDED (observed 2026-10-07 18:32:02 ET; log-only)
+  ```
+
+**SBFM — Watch, gate-blocked (first AH scan >10%)** (Sunshine Biopharma, float 4.2M, Pharmaceuticals, `tradable=true`):
+
+- Spike bar: `SBFM 2026-10-07  SPIKE  17:56ET  +19%  $0.83  372 trades / 149k sh  (first co-spike bar) (as-of 18:30ET)`
+- Third bar: `SBFM 2026-10-07  CONFIRM-3  NO ignition 17:55ET failed third-bar hold/volume as-of 18:30ET`
+- SIP: $0.68–$0.74 until 17:50, then 17:55 957K sh / 2,172 trades (high $0.88), followed by 600K / 1,586, 783K / 2,375, 710K / 1,803 and 396K / 1,025, capped at $0.88–$0.89 and closing $0.83 at 18:15. Real volume, but no new high after the ignition bar, so CONFIRM-3 NO and it does not meet the FINAL-SCAN-GATE-BLOCK definition. Total% +111.6% from the $0.40 previous close; Day% +75.9%.
+- Catalyst (2 searches): nothing dated 2026-10-07; the Rivaroxaban Canadian approval (June 2026) is background. Grade None.
+- Shared SIP volume context:
+  ```
+  # SBFM shared SIP volume sip-ah-volume-v2; prior 2026-10-06 40+8zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T22:30:16+00:00; source fetched 2026-10-07T22:31:52.934729+00:00
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=258038 local=unknown prior-peak=5.0310x status=warmup
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=115401 local=unknown prior-peak=2.2500x status=warmup
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:10ET start=2026-10-07T20:10:00+00:00 shares=89254 local=unknown prior-peak=1.7402x status=warmup
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:15ET start=2026-10-07T20:15:00+00:00 shares=182391 local=1.5805x prior-peak=3.5561x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:20ET start=2026-10-07T20:20:00+00:00 shares=57387 local=0.4973x prior-peak=1.1189x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:25ET start=2026-10-07T20:25:00+00:00 shares=359720 local=4.0303x prior-peak=7.0135x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:30ET start=2026-10-07T20:30:00+00:00 shares=228132 local=1.2508x prior-peak=4.4479x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:35ET start=2026-10-07T20:35:00+00:00 shares=256839 local=1.1258x prior-peak=5.0076x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:40ET start=2026-10-07T20:40:00+00:00 shares=108997 local=0.4244x prior-peak=2.1251x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:45ET start=2026-10-07T20:45:00+00:00 shares=42898 local=0.1880x prior-peak=0.8364x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:50ET start=2026-10-07T20:50:00+00:00 shares=32710 local=0.3001x prior-peak=0.6377x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 16:55ET start=2026-10-07T20:55:00+00:00 shares=113139 local=2.6374x prior-peak=2.2059x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:00ET start=2026-10-07T21:00:00+00:00 shares=34421 local=0.8024x prior-peak=0.6711x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:05ET start=2026-10-07T21:05:00+00:00 shares=44590 local=1.2954x prior-peak=0.8694x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:10ET start=2026-10-07T21:10:00+00:00 shares=43185 local=0.9685x prior-peak=0.8420x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:15ET start=2026-10-07T21:15:00+00:00 shares=30298 local=0.7016x prior-peak=0.5907x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:20ET start=2026-10-07T21:20:00+00:00 shares=65739 local=1.5223x prior-peak=1.2817x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:25ET start=2026-10-07T21:25:00+00:00 shares=47584 local=1.1019x prior-peak=0.9277x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:30ET start=2026-10-07T21:30:00+00:00 shares=55343 local=1.1631x prior-peak=1.0790x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:35ET start=2026-10-07T21:35:00+00:00 shares=13906 local=0.2513x prior-peak=0.2711x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:40ET start=2026-10-07T21:40:00+00:00 shares=45901 local=0.9646x prior-peak=0.8949x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:45ET start=2026-10-07T21:45:00+00:00 shares=111125 local=2.4210x prior-peak=2.1666x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:50ET start=2026-10-07T21:50:00+00:00 shares=91379 local=1.9908x prior-peak=1.7816x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 17:55ET start=2026-10-07T21:55:00+00:00 shares=956924 local=10.4720x prior-peak=18.6571x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 18:00ET start=2026-10-07T22:00:00+00:00 shares=599538 local=5.3952x prior-peak=11.6892x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 18:05ET start=2026-10-07T22:05:00+00:00 shares=782801 local=1.3057x prior-peak=15.2623x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 18:10ET start=2026-10-07T22:10:00+00:00 shares=710112 local=0.9071x prior-peak=13.8450x status=ok
+  SBFM 2026-10-07  VOLUME-CONTEXT 18:15ET start=2026-10-07T22:15:00+00:00 shares=395818 local=0.5574x prior-peak=7.7173x status=ok
+  ```
+- Book:
+  ```
+  SBFM BOOK iex bid $0.9374 x100 / ask $1.09 x1400 @ 2026-10-07 11:59:26 ET age 6h32m two-sided spread 14.00% of ask
+  SBFM BOOK sip-15m bid $0.8250 x100 / ask $0.8276 x700 @ 2026-10-07 18:17:02 ET age 15m00s two-sided spread 0.31% of ask
+  SBFM BOOK refresh +15s iex unchanged @ 2026-10-07 11:59:26 ET
+  SBFM BOOK verdict: IEX STALE 6h32m; SIP-15m TWO-SIDED (observed 2026-10-07 18:32:02 ET; log-only)
+  ```
+
+**BFRG — SKIP: thin drift (2nd AH scan >10%: +15.3% at 00:00, +12.3% now)** (float 16.0M, `tradable=true`):
+
+- Spike bar: `BFRG 2026-10-07  SPIKE  17:27ET  +15%  $0.82  135 trades / 51k sh  (first co-spike bar) (as-of 18:30ET)`
+- Third bar: `BFRG 2026-10-07  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET`
+- SIP 17:50–18:15: 18K, 25K, 25K, 16K, 32K, 39K sh on 21–64 trades per bar, pinned at $0.79–$0.82. VRatio 0.1x. This meets the thin, not accumulating skip.
+- Catalyst (1 search, re-run): the 2026-10-06 collaboration milestone with a global pharma partner is from the previous trading date, so it is background. Grade None.
+- Shared SIP volume context:
+  ```
+  # BFRG shared SIP volume sip-ah-volume-v2; prior 2026-10-06 48+0zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T22:30:16+00:00; source fetched 2026-10-07T22:31:54.906794+00:00
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=37935 local=unknown prior-peak=0.3961x status=warmup
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=6770 local=unknown prior-peak=0.0707x status=warmup
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:10ET start=2026-10-07T20:10:00+00:00 shares=18596 local=unknown prior-peak=0.1942x status=warmup
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:15ET start=2026-10-07T20:15:00+00:00 shares=3623 local=0.1948x prior-peak=0.0378x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:20ET start=2026-10-07T20:20:00+00:00 shares=12785 local=1.8885x prior-peak=0.1335x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:25ET start=2026-10-07T20:25:00+00:00 shares=1794 local=0.1403x prior-peak=0.0187x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:30ET start=2026-10-07T20:30:00+00:00 shares=19557 local=5.3980x prior-peak=0.2042x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:35ET start=2026-10-07T20:35:00+00:00 shares=92266 local=7.2167x prior-peak=0.9634x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:40ET start=2026-10-07T20:40:00+00:00 shares=29291 local=1.4977x prior-peak=0.3059x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:45ET start=2026-10-07T20:45:00+00:00 shares=8289 local=0.2830x prior-peak=0.0866x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:50ET start=2026-10-07T20:50:00+00:00 shares=2089 local=0.0713x prior-peak=0.0218x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 16:55ET start=2026-10-07T20:55:00+00:00 shares=15435 local=1.8621x prior-peak=0.1612x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:00ET start=2026-10-07T21:00:00+00:00 shares=8740 local=1.0544x prior-peak=0.0913x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:05ET start=2026-10-07T21:05:00+00:00 shares=1908 local=0.2183x prior-peak=0.0199x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:10ET start=2026-10-07T21:10:00+00:00 shares=25567 local=2.9253x prior-peak=0.2670x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:15ET start=2026-10-07T21:15:00+00:00 shares=255072 local=29.1844x prior-peak=2.6634x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:20ET start=2026-10-07T21:20:00+00:00 shares=11668 local=0.4564x prior-peak=0.1218x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:25ET start=2026-10-07T21:25:00+00:00 shares=169118 local=6.6147x prior-peak=1.7659x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:30ET start=2026-10-07T21:30:00+00:00 shares=56583 local=0.3346x prior-peak=0.5908x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:35ET start=2026-10-07T21:35:00+00:00 shares=111222 local=1.9656x prior-peak=1.1614x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:40ET start=2026-10-07T21:40:00+00:00 shares=16265 local=0.1462x prior-peak=0.1698x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:45ET start=2026-10-07T21:45:00+00:00 shares=78390 local=1.3854x prior-peak=0.8185x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:50ET start=2026-10-07T21:50:00+00:00 shares=18453 local=0.2354x prior-peak=0.1927x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 17:55ET start=2026-10-07T21:55:00+00:00 shares=25492 local=1.3815x prior-peak=0.2662x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 18:00ET start=2026-10-07T22:00:00+00:00 shares=24577 local=0.9641x prior-peak=0.2566x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 18:05ET start=2026-10-07T22:05:00+00:00 shares=15673 local=0.6377x prior-peak=0.1637x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 18:10ET start=2026-10-07T22:10:00+00:00 shares=31905 local=1.2982x prior-peak=0.3331x status=ok
+  BFRG 2026-10-07  VOLUME-CONTEXT 18:15ET start=2026-10-07T22:15:00+00:00 shares=39213 local=1.5955x prior-peak=0.4095x status=ok
+  ```
+
+**WHLR — SKIP: dead-cat bounce (first AH scan >10%)** (float 568K, REIT, `tradable=true`): Day% −24.3%, AH +14.7% still leaves it 13.2% below the previous close, so it does not qualify for DEAD-CAT-OVERRIDE WATCH. SIP: 17:55–18:00 spike to $0.84 on 92K / 128K sh, then 17–38K sh per bar at $0.76–$0.80.
+
+- Spike bar: `WHLR 2026-10-07  SPIKE  17:59ET  +22%  $0.84  233 trades / 61k sh  (first co-spike bar) (as-of 18:30ET)`
+- Third bar: `WHLR 2026-10-07  CONFIRM-3  NO ignition 17:55ET failed third-bar hold/volume as-of 18:30ET`
+- Shared SIP volume context:
+  ```
+  # WHLR shared SIP volume sip-ah-volume-v2; prior 2026-10-06 48+0zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T22:30:16+00:00; source fetched 2026-10-07T22:31:56.884975+00:00
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=59055 local=unknown prior-peak=0.2044x status=warmup
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:05ET start=2026-10-07T20:05:00+00:00 shares=21243 local=unknown prior-peak=0.0735x status=warmup
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:10ET start=2026-10-07T20:10:00+00:00 shares=12400 local=unknown prior-peak=0.0429x status=warmup
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:15ET start=2026-10-07T20:15:00+00:00 shares=7990 local=0.3761x prior-peak=0.0277x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:20ET start=2026-10-07T20:20:00+00:00 shares=11127 local=0.8973x prior-peak=0.0385x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:25ET start=2026-10-07T20:25:00+00:00 shares=3015 local=0.2710x prior-peak=0.0104x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:30ET start=2026-10-07T20:30:00+00:00 shares=19111 local=2.3919x prior-peak=0.0662x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:35ET start=2026-10-07T20:35:00+00:00 shares=16003 local=1.4382x prior-peak=0.0554x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:40ET start=2026-10-07T20:40:00+00:00 shares=7682 local=0.4800x prior-peak=0.0266x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:45ET start=2026-10-07T20:45:00+00:00 shares=15112 local=0.9443x prior-peak=0.0523x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:50ET start=2026-10-07T20:50:00+00:00 shares=15698 local=1.0388x prior-peak=0.0543x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 16:55ET start=2026-10-07T20:55:00+00:00 shares=6123 local=0.4052x prior-peak=0.0212x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:00ET start=2026-10-07T21:00:00+00:00 shares=3583 local=0.2371x prior-peak=0.0124x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:05ET start=2026-10-07T21:05:00+00:00 shares=9821 local=1.6040x prior-peak=0.0340x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:10ET start=2026-10-07T21:10:00+00:00 shares=2356 local=0.3848x prior-peak=0.0082x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:15ET start=2026-10-07T21:15:00+00:00 shares=735 local=0.2051x prior-peak=0.0025x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:20ET start=2026-10-07T21:20:00+00:00 shares=2360 local=1.0017x prior-peak=0.0082x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:25ET start=2026-10-07T21:25:00+00:00 shares=9932 local=4.2156x prior-peak=0.0344x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:30ET start=2026-10-07T21:30:00+00:00 shares=9336 local=3.9559x prior-peak=0.0323x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:35ET start=2026-10-07T21:35:00+00:00 shares=8633 local=0.9247x prior-peak=0.0299x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:40ET start=2026-10-07T21:40:00+00:00 shares=10191 local=1.0916x prior-peak=0.0353x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:45ET start=2026-10-07T21:45:00+00:00 shares=3128 local=0.3350x prior-peak=0.0108x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:50ET start=2026-10-07T21:50:00+00:00 shares=8667 local=1.0039x prior-peak=0.0300x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 17:55ET start=2026-10-07T21:55:00+00:00 shares=91837 local=10.5962x prior-peak=0.3179x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 18:00ET start=2026-10-07T22:00:00+00:00 shares=127842 local=14.7504x prior-peak=0.4426x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 18:05ET start=2026-10-07T22:05:00+00:00 shares=20173 local=0.2197x prior-peak=0.0698x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 18:10ET start=2026-10-07T22:10:00+00:00 shares=37789 local=0.4115x prior-peak=0.1308x status=ok
+  WHLR 2026-10-07  VOLUME-CONTEXT 18:15ET start=2026-10-07T22:15:00+00:00 shares=17248 local=0.4564x prior-peak=0.0597x status=ok
+  ```
+
+**IPSC — SKIP: thin (first AH scan >10%)** (float 122.9M, Biotechnology, `tradable=true`): SIP shows 3 AH bars after 16:00, totalling 8.8K sh on 13 trades, last print $1.35 (below the scanner's $1.45). Total% +9.8%.
+
+- Spike bar: `IPSC 2026-10-07  NO-SPIKE  peak +14% @18:08ET  (no bar cleared +15% on a volume co-spike) (as-of 18:30ET)`
+- Third bar: `IPSC 2026-10-07  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET`
+- Shared SIP volume context:
+  ```
+  # IPSC shared SIP volume sip-ah-volume-v2; prior 2026-10-06 4+44zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T22:30:16+00:00; source fetched 2026-10-07T22:31:58.884707+00:00
+  IPSC 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=43510 local=unknown prior-peak=0.7530x status=warmup
+  IPSC 2026-10-07  VOLUME-CONTEXT 18:05ET start=2026-10-07T22:05:00+00:00 shares=8000 local=80.0000x prior-peak=0.1385x status=floored
+  IPSC 2026-10-07  VOLUME-CONTEXT 18:10ET start=2026-10-07T22:10:00+00:00 shares=515 local=5.1500x prior-peak=0.0089x status=floored
+  IPSC 2026-10-07  VOLUME-CONTEXT 18:15ET start=2026-10-07T22:15:00+00:00 shares=240 local=0.4660x prior-peak=0.0042x status=ok
+  ```
+
+**PROF — SKIP: thin (4th AH scan >10%)**: SIP 17:55–18:15 at 200–2.9K sh per bar.
+
+- Spike bar: `PROF 2026-10-07  SPIKE  16:36ET  +21%  $6.87  69 trades / 2k sh  (first co-spike bar) (as-of 18:30ET)`
+- Third bar: `PROF 2026-10-07  CONFIRM-3  NO ignition 16:35ET failed third-bar hold/volume as-of 18:30ET`
+- Shared SIP volume context:
+  ```
+  # PROF shared SIP volume sip-ah-volume-v2; prior 2026-10-06 1+47zero/48 slots; floor 100; log-only
+  # reconstructed as-of 2026-10-07T22:30:16+00:00; source fetched 2026-10-07T22:32:00.849810+00:00
+  PROF 2026-10-07  VOLUME-CONTEXT 16:00ET start=2026-10-07T20:00:00+00:00 shares=2919 local=unknown prior-peak=4.2121x status=warmup
+  PROF 2026-10-07  VOLUME-CONTEXT 16:25ET start=2026-10-07T20:25:00+00:00 shares=500 local=5.0000x prior-peak=0.7215x status=floored
+  PROF 2026-10-07  VOLUME-CONTEXT 16:30ET start=2026-10-07T20:30:00+00:00 shares=4110 local=41.1000x prior-peak=5.9307x status=floored
+  PROF 2026-10-07  VOLUME-CONTEXT 16:35ET start=2026-10-07T20:35:00+00:00 shares=51786 local=103.5720x prior-peak=74.7273x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 16:40ET start=2026-10-07T20:40:00+00:00 shares=40539 local=9.8635x prior-peak=58.4978x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 16:45ET start=2026-10-07T20:45:00+00:00 shares=7528 local=0.1857x prior-peak=10.8629x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 16:50ET start=2026-10-07T20:50:00+00:00 shares=15162 local=0.3740x prior-peak=21.8788x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 16:55ET start=2026-10-07T20:55:00+00:00 shares=8667 local=0.5716x prior-peak=12.5065x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:00ET start=2026-10-07T21:00:00+00:00 shares=4761 local=0.5493x prior-peak=6.8701x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:05ET start=2026-10-07T21:05:00+00:00 shares=4604 local=0.5312x prior-peak=6.6436x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:10ET start=2026-10-07T21:10:00+00:00 shares=5952 local=1.2502x prior-peak=8.5887x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:15ET start=2026-10-07T21:15:00+00:00 shares=2019 local=0.4241x prior-peak=2.9134x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:20ET start=2026-10-07T21:20:00+00:00 shares=3761 local=0.8169x prior-peak=5.4271x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:25ET start=2026-10-07T21:25:00+00:00 shares=1810 local=0.4813x prior-peak=2.6118x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:30ET start=2026-10-07T21:30:00+00:00 shares=1506 local=0.7459x prior-peak=2.1732x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:35ET start=2026-10-07T21:35:00+00:00 shares=2611 local=1.4425x prior-peak=3.7677x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:40ET start=2026-10-07T21:40:00+00:00 shares=178 local=0.0983x prior-peak=0.2569x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:45ET start=2026-10-07T21:45:00+00:00 shares=1572 local=1.0438x prior-peak=2.2684x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:50ET start=2026-10-07T21:50:00+00:00 shares=312 local=0.1985x prior-peak=0.4502x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 17:55ET start=2026-10-07T21:55:00+00:00 shares=2545 local=8.1571x prior-peak=3.6724x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 18:00ET start=2026-10-07T22:00:00+00:00 shares=2883 local=1.8340x prior-peak=4.1602x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 18:05ET start=2026-10-07T22:05:00+00:00 shares=403 local=0.1583x prior-peak=0.5815x status=ok
+  PROF 2026-10-07  VOLUME-CONTEXT 18:15ET start=2026-10-07T22:15:00+00:00 shares=200 local=0.4963x prior-peak=0.2886x status=ok
+  ```
+
+**Final-scan feed-lag cross-check:** LGCL (>10% at 00:00) dropped from the scan. SIP shows a spike to $3.39 at 17:50 (79K sh / 557 trades), then a fade to $2.99 at 18:15, +6% over the $2.82 close: below threshold, so TradingView is not under-reporting it. `LGCL 2026-10-07  SPIKE  17:52ET  +20%  $3.39  211 trades / 31k sh  (first co-spike bar) (as-of 18:30ET)`; `LGCL 2026-10-07  CONFIRM-3  NO ignition 16:55ET failed third-bar hold/volume as-of 18:30ET`. Other 21:30 watch names are not in the scan and had no prior AH footprint above 10%.
+
+**Below 10%:** FMST (+5.4%).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |

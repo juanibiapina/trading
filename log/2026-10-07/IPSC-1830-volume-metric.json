@@ -1,0 +1,68 @@
+{
+  "metric_version": "sip-ah-volume-v2",
+  "symbol": "IPSC",
+  "date": "2026-10-07",
+  "prior_date": "2026-10-06",
+  "as_of_utc": "2026-10-07T22:30:16+00:00",
+  "source_observed_utc": "2026-10-07T22:31:58.884707+00:00",
+  "floor_shares": 100,
+  "prior_observed_slots": 4,
+  "prior_inferred_zero_slots": 44,
+  "prior_expected_slots": 48,
+  "prior_complete": true,
+  "prior_peak_shares": 57782,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-07T20:00:00+00:00",
+      "bar_end_utc": "2026-10-07T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 43510,
+      "trades": 4,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 0.7530026651898515
+    },
+    {
+      "bar_start_utc": "2026-10-07T22:05:00+00:00",
+      "bar_end_utc": "2026-10-07T22:10:00+00:00",
+      "bar_et": "18:05",
+      "shares": 8000,
+      "trades": 3,
+      "baseline_median_shares": 0,
+      "baseline_shares": 100,
+      "local_ratio": 80.0,
+      "local_status": "floored",
+      "local_ge_10": true,
+      "prior_peak_ratio": 0.13845142085770656
+    },
+    {
+      "bar_start_utc": "2026-10-07T22:10:00+00:00",
+      "bar_end_utc": "2026-10-07T22:15:00+00:00",
+      "bar_et": "18:10",
+      "shares": 515,
+      "trades": 9,
+      "baseline_median_shares": 0,
+      "baseline_shares": 100,
+      "local_ratio": 5.15,
+      "local_status": "floored",
+      "local_ge_10": false,
+      "prior_peak_ratio": 0.008912810217714858
+    },
+    {
+      "bar_start_utc": "2026-10-07T22:15:00+00:00",
+      "bar_end_utc": "2026-10-07T22:20:00+00:00",
+      "bar_et": "18:15",
+      "shares": 240,
+      "trades": 1,
+      "baseline_median_shares": 515,
+      "baseline_shares": 515,
+      "local_ratio": 0.46601941747572817,
+      "local_status": "ok",
+      "local_ge_10": false,
+      "prior_peak_ratio": 0.0041535426257311965
+    }
+  ]
+}
