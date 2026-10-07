@@ -341,6 +341,33 @@ AH >10% at this snapshot (unrounded): IRIX, KUST, SUGP
 
 **Dropped names:** VNTG and MVIS are off the scanner. Not re-pulled; both had faded below their regular closes on SIP at 22:25.
 
+## Scan 22:45 CEST (4:45 PM ET)
+
+`python3 scripts/scan.py --all` ran at 16:45:20 ET (22:45:20 CEST) in the AFTERHOURS session and returned 2 hits, neither above 10% AH.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| CPHI | [TV](https://www.tradingview.com/chart/?symbol=CPHI) | $0.85 | +32.6% | +7.1% | $0.91 | +42.0% | 1.2M | 6.2M | 0.2x | 40.3M | Pharmaceuticals: Major |
+| FMST | [TV](https://www.tradingview.com/chart/?symbol=FMST) | $0.56 | +13.2% | +8.5% | $0.61 | +22.8% | 587K | 613K | 1.0x | 13.2M | Other Metals/Minerals |
+
+### Evaluation notes
+
+**Decision:** Observation only; no paper orders. This scan precedes the 23:00 CEST entry window, and no name is above 10% AH. Spike-bar, CONFIRM-3, volume-metric and book checks apply only to >10% candidates, so none ran. Qualifying AH appearance counts are unchanged: KUST 2, IRIX 1, SUGP 1, VNTG 1, MVIS 1.
+
+**Tracked names, SIP bars through 16:30 ET:** all three 22:30 qualifiers faded off the scanner.
+
+- **IRIX** (close $0.88): made a new AH high of $1.08 in the 16:20 bar (1.35M sh / 4,673 trades), then sold off on heavy volume: 16:25 C $0.89 (1.22M sh), 16:30 C $0.81 (1.05M sh / 2,420 trades, vwap $0.85). Now about 8% below the regular close and 25% off the AH high. Spike→fade.
+- **KUST** (close $4.50): after the 16:15 swing to $5.95, it fell to $3.93 at 16:20 and has sat at $3.95–$4.13 since on thin volume (4–5K sh, 62–125 trades per bar). About 12% below the regular close. Fade; it no longer qualifies.
+- **SUGP** (close $2.64): fell from the 16:15 $3.37 high to $2.50–$2.74 on thin volume (10–14K sh per bar). 16:30 C $2.71, about +2.7% AH. Fade.
+
+**New names (below the 10% threshold):**
+
+- **CPHI** (float 40.3M): +7.1% AH. The 16:25 bar carried 441K sh / 1,578 trades up to $0.93, then 16:30 eased to $0.84 (206K sh). Watch only.
+- **FMST** (float 13.2M): +8.5% AH on thin volume (22–112K sh, 37–151 trades per bar). Watch only.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
