@@ -1,0 +1,68 @@
+<div style="font-family: -apple-system, Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333; font-size: 14px; line-height: 1.4;">
+<h2 style="color: #1a1a1a; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">Overnight Cycle: October 6 &rarr; October 7</h2>
+
+<h3 style="color: #555; margin-bottom: 4px;">Post-Market Scans</h3>
+<p style="margin-top: 0;"><strong>13/13 ran on time</strong>, the first full night since the Oct 5 outage: all 7 scheduled checkpoints (21:30&ndash;00:30 CEST) plus 6 opening observations. 11 tickers showed &gt;10% AH. Two entries: <strong>BIYA</strong> at 23:00 and <strong>MTEN</strong> at 00:00. The first four AH scans (22:00&ndash;22:15) were empty, consistent with the feed delay at the open.</p>
+<p style="font-size: 12px;">Skips held up: VCIG faded from a $2.10 AH high to $0.95. SXTC (dead-cat watch, Day &minus;39.9%) gave +23.6% hypothetical. BURU&rsquo;s late 18:00 ET spike was blocked by the two-scan gate and faded back to $1.31.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Today&rsquo;s Winner</h3>
+<p style="margin-top: 0;"><strong>BIYA</strong> (Baiya International, personnel services, Nasdaq; float 2.7M) &mdash; no catalyst found in 11 searches.<br/>
+Close $1.365 &rarr; AH high $2.49 (+82%) on 14.1M shares &rarr; PM SIP high <strong>$2.99 at 04:50 ET</strong> (+119%).<br/>
+AH entry: $1.91 (our fill) &rarr; PM peak: $2.99 (<span style="color: #2e7d32; font-weight: bold;">+56.5%</span> hypothetical); from the 22:30 first sighting at $1.77: +68.9%.</p>
+<p>Scanner caught it? <strong style="color: #2e7d32;">YES</strong> &mdash; listed from 22:25 CEST in 7 AH scans and entered at the first entry scan (23:00 CEST).</p>
+<p style="font-size: 12px;">The Grade None rule sold at the first PM check: 52 @ $2.41 at 04:31 ET, after a $2.86 spike at 04:14. BIYA then set a new high of $2.99 at 04:50 and traded $2.67 at 05:15 ET. Also: TOPP ran +310% in PM after an in-window +15% AH move on 1.1M shares, but it sits under the $0.50 price floor. It is the first floor exclusion that was both &gt;100% and holdable (1 of the 3 the floor-change trigger needs).</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Baseline Status</h3>
+<p style="font-size: 18px; background: #f5f5f5; padding: 10px; border-radius: 4px; margin-top: 0;">Detection rate: <strong>73/84 (86.9%)</strong> &mdash; Target: &gt;80%<br/>
+<span style="color: #1976d2;">BASELINE MET</span></p>
+<p style="font-size: 12px;">Selection 37/80 (46.3%); 95 days tracked. BIYA counts as detected and entered; TOPP adds a price-floor miss to the denominator.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Paper Trades</h3>
+<p style="font-size: 18px; margin-top: 0;">Paper P&amp;L: <span style="color: #2e7d32; font-weight: bold;">+$26.00 (+26.2%)</span> realized on BIYA</p>
+<p style="margin-top: 0;">MTEN open: 70 @ $1.39 (Grade B, same-day 6-K on a completed $15M acquisition). It peaked at $1.79 (+28.8%) at 04:05 ET and is $1.45 now (<span style="color: #2e7d32; font-weight: bold;">+$3.85, +4.0%</span>). It is held to day 2: hard stop $1.18, time exit at the Oct 8 premarket pulse.</p>
+<p style="background: #f5f5f5; padding: 10px; border-radius: 4px;">Cumulative Paper P&amp;L: <strong style="color: #c62828;">&minus;$252.10 (&minus;0.25%)</strong> realized; equity $99,751.74 including MTEN.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Scanner Improvement &mdash; October 6 (14:27 CEST)</h3>
+<p style="margin-top: 0;">New <code>book-check.js</code> prints Alpaca&rsquo;s IEX quote beside the free 15-minute-delayed consolidated (SIP) book. IEX trades only 08:00&ndash;17:00 ET, so Alpaca&rsquo;s quote is frozen for the whole 23:00 CEST entry window. At all 6 past stale-book blocks (4 would have profited), a two-sided SIP book existed with 0.13&ndash;2.72% spreads. Hypothesis: &ge;80% of candidates checked from 23:00 CEST on read &ldquo;IEX stale, SIP two-sided&rdquo;. Log-only; no gate changed.<br/>
+<strong>First night:</strong> 21 of 21 checks from 23:00 on read that way, and BIYA and MTEN both filled on paper against frozen IEX quotes with limits priced from SIP. One bug: BURU got a July pre-split quote labelled two-sided. That needs a fix.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Process Review &mdash; October 6 (14:53 CEST)</h3>
+<p style="margin-top: 0;">Root cause of the Oct 5&ndash;6 outage: an Oct 5 dotfiles change made <code>anthropic/claude-opus-5-5</code> the default, and its stored login had expired. 15 sessions failed over 21.7 hours. This was the third provider failure in 14 days. Fixed in the repo:</p>
+<ul style="padding-left: 20px; margin-top: 0;">
+<li>A post-market pulse that starts outside 15:25&ndash;20:00 ET now stops without scanning or ordering, and each buy first checks for an existing position or order.</li>
+<li><code>sync-repo.sh</code> holds a lock; 90/90 concurrent syncs passed in a test.</li>
+<li>The InboxKit reply check uses curl (Python&rsquo;s default User-Agent gets a 403).</li>
+</ul>
+<p style="background: #fff3e0; padding: 10px; border-left: 4px solid #ef6c00;"><strong>Needs your action (still open):</strong> in the bridge/dotfiles, (1) treat login errors as permanent: stop retrying and send one Telegram alert; (2) let scheduled pulses fall back to the other enabled provider; (3) make one test call after changing the default provider. Approve all three or pick a subset. Item 2 decides which model runs trading pulses during an outage. Dotfiles still has <code>maxRetries: 100000</code>.</p>
+<p style="font-size: 12px;">The review covered sessions through Oct 6 14:30 CEST. Last night&rsquo;s scans and this morning&rsquo;s sessions have not been reviewed.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Initiative Progress</h3>
+<p style="font-size: 12px; margin-top: 0;">Window: Oct 6 13:00:54 CEST (receipt 179) &rarr; this send (Oct 7).</p>
+<ul style="padding-left: 20px;">
+<li style="margin-bottom: 7px;"><strong>1 &mdash; Volume measurement, Oct 6 18:11 CEST:</strong> Added metric v2 (fills zero-trade slots; v1 output unchanged). Tested volume gates on all 89 Alpaca AH entries: 28 wins, mean &minus;3.2%, median &minus;7.7%, &minus;$274.81. Your local &ge;10x rule: 57 pass at &minus;2.1% vs 32 fail at &minus;5.2% (p 0.60). The prior-AH-peak and regular-session gates do no better (p 0.93, 0.72). No volume gate separates outcomes. Next: Oct 8 15:00, the scan&rsquo;s log-only context switches to v2.</li>
+<li style="margin-bottom: 7px;"><strong>6 &mdash; PM-only gappers, Oct 6 15:18 CEST:</strong> Pilot <strong>ended</strong> on a latency test. The holdable set (n=26) returns +4.4% entering at once, +0.7% at 5 min, &minus;3.7% at 10 and &minus;4.4% at 15. Our free data runs about 15 min late, and the 04:10 ET cohorts held the prior session&rsquo;s prices. Slot released. The Oct 7 cohort and PM-open scan still ran log-only: 6 gappers, no fresh holdable PM-only name. Next: reopen only with real-time consolidated data and a sub-minute watcher.</li>
+<li style="margin-bottom: 7px;"><strong>7 &mdash; Alternative strategies / Jev, Oct 6 15:18 and 18:11 CEST:</strong> Built the SEC filing archiver: 7 issuers mapped, 7 live captures (no 8-K in window), offline replay verified, late or tampered inputs rejected. A 92-day census found a usable 8-K in 1.7% of slots, so a 20-session pilot would hold about 2 Jev decisions. Froze amendment A2: keep the numeric pick unless Jev labels the filing as financing/dilution or a non-binding plan at &ge;0.8 confidence. Next: Oct 7 15:00 orchestration that reproduces all 12 decision vectors, then 5 instrumentation sessions before the pilot.</li>
+<li style="margin-bottom: 7px;"><strong>3 &mdash; Scheduling/exits, Oct 6 15:18 CEST:</strong> Recorded the outage (Sep 22, Sep 29, Oct 5&ndash;6) and the ~15-minute screener lag as timing inputs. Next: Oct 7 15:00 later-rebuild comparison with the lag modeled; it must beat &minus;3.2% per entry.</li>
+</ul>
+<p style="font-size: 12px;">Waiting: Initiative 5&rsquo;s check of volume rows beside charts (this is the first cycle with both). <strong>Initiative 2&rsquo;s broker test stays deferred per your Sep 22 instruction.</strong> Open proposal: evaluate a liquid US regular-session strategy as a replacement; the 89-entry result adds evidence, and no live switch is made. Your call if wanted: real-time SIP data would remove the stale-quote problem and is Initiative 6&rsquo;s reopen condition.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Jev Results and Costs</h3>
+<p style="margin-top: 0;"><strong>Not run in this window.</strong> Both Oct 6 strategy runs (15:00, 18:00) recorded no Jev call, and no new Jev run artifact exists. The work went to the SEC archiver and A2, which defines the single Jev call per usable filing.<br/>
+<strong>Window usage:</strong> 0 calls, $0.00 per repo records; TypeSafe billing was not queried, so a measured charge is unavailable. No failed attempts.<br/>
+<strong>Cumulative recorded:</strong> 6 calls, 5,471 input / 931 output tokens, <strong>$0.00023 USD estimated</strong> (Oct 2 run, jev-1.13.0, stock-catalyst-v1; log/2026-10-02/init7-jev-shadow-v1/manifest.json).<br/>
+Next: the Oct 7 15:00 orchestration and the first scheduled capture that can feed Jev.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Feedback Acknowledged</h3>
+<p style="margin-top: 0;">No new feedback since last report. The newest entry is still Oct 2 (always report Jev results and costs), which the section above follows.</p>
+
+<h3 style="color: #555; margin-bottom: 4px;">Charts (5m + volume)</h3>
+<p style="margin: 0 0 4px;"><strong>BIYA (winner; entry $1.91, exit $2.41)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-06/BIYA-1132.png" alt="BIYA 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+<p style="margin: 0 0 4px;"><strong>MTEN (open position; entry $1.39)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-06/MTEN-1132.png" alt="MTEN 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+
+<h3 style="color: #555; margin-bottom: 4px;">Key Takeaway</h3>
+<p style="background: #e3f2fd; padding: 10px; border-radius: 4px; border-left: 4px solid #1976d2;">The scanner found and traded the winner (+$26 on BIYA) with detection at 86.9%, yet all 89 past AH entries average &minus;3.2% and no volume gate changes that; the remaining problem is selection and exits.</p>
+<p style="font-size: 12px; color: #555;">Reply with feedback; it feeds the daily reply check.</p>
+<p style="font-size: 12px; color: #666; margin-top: 20px;">Email session: anthropic/claude-opus-5-5 &middot; reasoning: xhigh</p>
+</div>

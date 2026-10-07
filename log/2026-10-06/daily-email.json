@@ -1,0 +1,62 @@
+{
+  "cycle_date": "2026-10-06",
+  "status": "sent",
+  "provider": "InboxKit",
+  "message_id": 180,
+  "from": "zero@inboxkit.cc",
+  "to": "juanibiapina@gmail.com",
+  "subject": "Trading Scanner Report - 2026-10-06",
+  "send_started_at": "2026-10-07T09:35:29.355902+00:00",
+  "sent_at": "2026-10-07T09:35:30.370779+00:00",
+  "sent_at_source": "Successful InboxKit response observed locally (response has no timestamp)",
+  "previous_successful_send_at": "2026-10-06T11:00:54.167526+00:00",
+  "previous_message_id": 179,
+  "previous_receipt": "log/2026-10-05/daily-email.json",
+  "reporting_cutoff_at": "2026-10-07T09:35:29.355902+00:00",
+  "body_file": "daily-email.html",
+  "body_sha256": "e5a52a05d4cb275bf47406cfcf6bb66f01b1dd4095ae698820a4381f03b69ee4",
+  "chart_urls": [
+    "https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-06/BIYA-1132.png",
+    "https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-06/MTEN-1132.png"
+  ],
+  "chart_markers": "BIYA entry 1.91@2026-10-06 17:01 ET, exit 2.41@2026-10-07 04:31 ET; MTEN entry 1.39@2026-10-06 18:01 ET (Alpaca fills)",
+  "winner": "BIYA",
+  "winner_scanner_caught": true,
+  "winner_pm_sip_high": {
+    "price": 2.99,
+    "time_et": "2026-10-07 04:50",
+    "vs_close_pct": 119.0
+  },
+  "realized_cycle_pnl_usd": 26.0,
+  "cumulative_realized_pnl_usd": -252.1,
+  "equity_usd": 99751.74,
+  "open_positions": [
+    "MTEN 70 @ 1.39"
+  ],
+  "latest_scanner_improvement_date": "2026-10-06",
+  "latest_completed_process_review_date": "2026-10-06",
+  "process_review_needs_user_action": "provider login errors: permanent-error alert, provider fallback, test call after default change",
+  "initiative_updates": [
+    1,
+    6,
+    7,
+    3
+  ],
+  "initiative_blocked_or_deferred": {
+    "2": "Deferred per Juan's Sep 22 instruction",
+    "5": "Volume rows beside charts check pending; first cycle with both",
+    "6": "Pilot ended; reopen needs real-time consolidated data and sub-minute watcher"
+  },
+  "jev_status": "not run in window",
+  "jev_window_calls": 0,
+  "jev_window_cost_usd": 0.0,
+  "jev_window_cost_kind": "repo records only (no new manifest; Oct 6 strategy runs logged no Jev call); TypeSafe billing not queried",
+  "jev_cumulative_recorded": {
+    "calls": 6,
+    "input_tokens": 5471,
+    "output_tokens": 931,
+    "cost_usd_estimate": 0.000229782,
+    "artifact": "log/2026-10-02/init7-jev-shadow-v1/manifest.json"
+  },
+  "new_feedback": false
+}
