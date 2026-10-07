@@ -86,6 +86,19 @@
 
 **Multi-session context (for MULTI-SESSION-RUNNER tagging if they qualify in AH):** BIYA is the 2026-10-06 AH→PM winner (`WINNERS_TRACKING.md`, PM peak $2.86 at 04:14 ET today) and was sold this morning at $2.41; today's +59.0% is day 2 of that move. MTEN was entered 2026-10-06 and stopped out today at $1.21. SXTC, NCPL and VCIG were tracked AH candidates on 2026-10-06, so any AH move tonight is day 2+.
 
+## Scan 22:00 CEST (4:00 PM ET)
+
+No candidates found.
+
+`python3 scripts/scan.py --all` ran at 16:00:15 ET (22:00:15 CEST) in the AFTERHOURS session and returned 0 hits.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+### Evaluation notes
+
+**Decision:** Observation only; no paper orders. This scan precedes the 23:00 CEST entry window, and no name was above 10% AH, so no spike-bar, CONFIRM-3, SIP volume or book checks applied. The scan ran 15 seconds after the AH open, so the TradingView postmarket fields had little or no AH data yet. This scan counts as zero qualifying AH appearances for every 21:30 watch name (SXTC, PFAI, SBFM, BIYA, CPHI, MNDR, LGCL and the rest).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
