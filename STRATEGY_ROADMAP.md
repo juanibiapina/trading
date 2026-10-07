@@ -1692,7 +1692,42 @@ tracker).
 
 ---
 
-## Current priorities and initiative status — 2026-10-06 18:00 CEST
+## Current priorities and initiative status — 2026-10-07 15:00 CEST
+
+This checkpoint supersedes the October 6 18:00 checkpoint and earlier initiative status paragraphs. **Initiative 7's observation orchestration is built, reproduces all 12 A2 vectors, and is capturing its first instrumentation session today** (gob job `SFm`, first slot 10:30 ET). **Initiative 3's later-rebuild comparison is done: later rebuilds lose, and no timing rule is proposed.** Initiative 5's October 6 check passed locally and exposed a Pages gap, now fixed. The pilot slot stays free. Paper equity at 15:10 CEST is **$99,735.29 (-$264.71)**, flat after BIYA.
+
+**Money-fast selection:** Initiative 7's liquid-session comparison is the only pilot candidate, and orchestration was its last build before instrumentation. Today's capture starts the five sessions it needs. Initiative 3's comparison had moved twice and tests whether timing can rescue the core strategy. **North Star check:** it cannot on this evidence. No entry-timing variant beats the 89-entry base rate (-3.2%) beyond chance, which strengthens the existing liquid-session proposal. Provider reliability, decided outside this repo, remains the largest measured loss within reach.
+
+| Initiative | Latest concrete progress | Current status / dependency | Next deliverable and check |
+|---|---|---|---|
+| 1 — shared volume measurement | October 6 18:00: v2 metric and 89-entry gate test | **Instrument; gate promotion closed on evidence.** `generate-html-report.py` raises on any metric version other than v1. Pages now rebuilds seven days, so one v2 file would fail the whole build. | **October 8 15:00:** teach `ah-5m-confirmation.js` and `generate-html-report.py` to accept v2, then add `--metric-version sip-ah-volume-v2` to the post-market scan's `--save-input` volume command (process-review handoff 3). |
+| 2 — broker execution | September 7 alternatives research | **Deferred per Juan's September 22 instruction.** | Resume the AKAN/SHPH/GIPR protocol only when access arrives; no renewed ask. |
+| 3 — scheduling and exits | October 7 15:00: later-rebuild comparison and DST loading check | **Research; AH entry-timing line closed for now.** Allowing a later rebuild adds losers at every confirmation length and lag tested. DST cohort jobs are loaded (bridge started Oct 5 11:22, after the Sep 29 18:05 scheduler write). | **October 9 15:00:** test the standing +10% resting sell-limit exit proposal on all 89 real entries. That means fetching each next-morning SIP premarket and adding it to the archive. Proposals (scan retirement, late-window scans, exit) stay unapplied. |
+| 4 — initiative reporting | Receipt 180 | **Delivered and verified.** | Next daily email: Initiative 7 orchestration and today's captures; one development Jev call (5,914 / 157 tokens, $0.000248 estimated, excluded from the trial); Initiative 3 rebuild result; Initiative 5 check and Pages fix. |
+| 5 — review surface | October 7 15:00: October 6 rows checked, Pages workflow fixed | **Build delivered; check passed locally.** 578/578 rows match beside both charts. The published page was 404 because Pages built only the newest log. | **October 7 18:00:** confirm the October 6 report returns HTTP 200 after this push. |
+| 6 — PM-only gappers | October 6 15:00 latency study | **Pilot ENDED (failed causal check); log-only research continues.** | Reopen only with real-time consolidated data and a sub-minute deterministic watcher. Correct seasonal UTC bounds before winter. |
+| 7 — alternative agent strategies / Jev | October 7 15:00: `scripts/init7-observe.py` and daemon `SFm` | **Instrument, session 1 of 5 today.** Each slot writes `log/<date>/init7-observe/<HHMM>/decision.json` before outcomes. The daemon skips half-days and stops after five full sessions (Oct 7, 8, 9, 12, 13). | **October 7 18:00:** check the 10:30 and 11:30 ET decisions: coverage, latency against the 120 s deadline, and the SEC result. **October 8 18:00:** build the pilot's modeled execution layer (post-decision IEX quote, hourly close/re-entry, 15:55 flatten, QQQ and cash comparators) as a separate script, so the orchestrator's pinned hash stays unchanged. **October 14 15:00:** freeze the 20-session calendar and start the comparison pilot in the free slot, with modeled quotes only. |
+
+**Initiative 7 progress, October 7 15:00:** `scripts/init7-observe.py` (`verify`, `observe`, `daemon`, `status`; SHA-256 `f0527781…`) runs one slot: delayed SIP basket bars and IEX books, then the pinned selector's N1, the pinned archiver for N1's ticker, at most one Jev call, and A1/A2. The common decision cutoff is the scheduled time plus the design's 120-second deadline. Inputs received later, or any mismatch with the amendment's pinned hashes, make every arm cash. Checks: hashes match; **12/12 vectors**; the offline rehearsal on the October 1 census reproduces the October 2 reference `features.json` exactly; 7/7 live SEC captures returned `no_8k_within_window`, so A2 follows N1 (`no_source`). A development Jev call on the archived AAPL Q3 8-K returned `earnings_guidance` at confidence 1.0 with dilutive financing 0.03, so both arms keep AAPL. That call used 5,914 input and 157 output tokens, about $0.000248 estimated, and is excluded from the trial. The scheduler only runs agent prompts and loads jobs at startup, so the daemon runs under gob with no extra agent sessions or bridge restart. Evidence: `docs/investigations/init7-orchestration-init3-rebuild-2026-10-07.md`, `log/2026-10-07/init7-observe-dev/`.
+
+**Initiative 3 progress, October 7 15:00:** `scripts/init3-rebuild-eval.py` replays the 89-entry archive offline with the October 1 confirmation gate. Entry is 15 minutes after the confirming bar closes, and exit is each trade's realized exit.
+
+| Variant (15-min lag) | Admits | Mean | Median | Wins | Selection p |
+|---|---:|---:|---:|---:|---:|
+| All real entries | 89 | -3.2% | -7.7% | 28 | — |
+| First ignition, 2-bar | 41 | -0.2% | -9.8% | 17 | 0.67 |
+| Re-arm (rebuild allowed), 2-bar | 49 | -2.4% | -9.9% | 18 | 0.81 |
+| Re-arm, 3-bar | 45 | -3.7% | -11.5% | 15 | 0.69 |
+
+The eight later-rebuild admits average **-13.9%** (1 win). The first-ignition subset entering at or after 17:00 ET shows +10.0% on 19 names, but without BAOS (+143%) and VEEA (+77%) it is -1.8%. That split was found after the fact. Bar opens omit the spread that real fills paid, so these returns lean optimistic. Full rows: `log/2026-10-07/init3-rebuild/result.json`.
+
+**Initiative 5 progress, October 7 15:00:** the generated October 6 report has 43 volume sections whose 578 rows match the metric files field for field, beside the BIYA and MTEN charts. The published page returned 404, because the Pages workflow rebuilt only the newest dated log and the premarket scan created October 7's first. `.github/workflows/pages.yml` now rebuilds the seven newest; the loop ran locally with exit 0. The email does not link the report, so nothing visible broke.
+
+**Previous-step evaluation:** The October 6 18:00 hypotheses for this run **worked**. Orchestration reproduces all 12 vectors, the first scheduled capture is loaded for 10:30 ET today, and Initiative 3's comparison ran with the lag modeled and beat nothing. Process-review handoffs 1 and 2 are delivered; handoff 3 is set for October 8 15:00.
+
+**Needs from Juan / consolidated asks:** nothing new. Initiative 2 stays deferred, and the Initiative 3 proposals stay unapplied. No trading-pulse timing change is proposed.
+
+## Prior checkpoint — 2026-10-06 18:00 CEST
 
 This checkpoint supersedes the 15:00 checkpoint and earlier initiative status paragraphs. **Initiative 1's sparse-baseline policy is resolved (v2), and its first outcome test shows no volume gate has an edge on 89 real entries.** **Initiative 7's A2 veto amendment is frozen.** The pilot slot stays free. Paper equity at 18:10 CEST is **$99,721.90 (-$278.10)**, flat.
 

@@ -1,5 +1,45 @@
 # Initiative Log
 
+### 2026-10-07 15:00 — Initiative 7 observation orchestration live; Initiative 3 later rebuilds lose; Initiative 5 check and Pages fix
+
+**Evaluated:** The October 6 18:00 hypotheses for this run **worked**. Orchestration reproduces all 12 A2 vectors, and the first scheduled capture is loaded for 10:30 ET today. Initiative 3's later-rebuild comparison ran with the 15-minute screener lag and beat nothing. No pilot is active. Process-review handoffs 1 (both dated items) and 2 (Initiative 5 check) are delivered; handoff 3 (v2 in the scan command) is set for October 8 15:00.
+
+**Step taken:**
+
+- **Initiative 7 (only pilot candidate; last build before instrumentation):** built `scripts/init7-observe.py` and started gob job `SFm` (`daemon --sessions 5`) at 13:06 UTC.
+- **Initiative 3 (moved twice; tests whether timing can rescue the core strategy):** built `scripts/init3-rebuild-eval.py` and ran it offline on the 89-entry archive.
+- **Initiative 5 (ready check without a slot):** generated the October 6 report, compared its rows with the metric files, and fixed the Pages workflow.
+
+**Result:**
+
+- **Initiative 7.** One slot captures delayed SIP basket bars and IEX books, selects N1 with the pinned selector, runs the pinned SEC archiver for N1's ticker, makes at most one Jev call, and writes A1/A2 to `decision.json` before outcomes. The decision cutoff is the scheduled time plus 120 seconds. Late inputs or any pinned-hash mismatch make every arm cash.
+  - Checks: hashes match, **12/12 vectors**, and the offline rehearsal reproduces the October 2 reference `features.json` exactly. All 7 live SEC captures returned `no_8k_within_window`, so A2 holds N1 (`no_source`). Both refusal paths exit 1.
+  - **Jev:** 1 development call on the archived AAPL Q3 8-K with receipt flags overridden: `earnings_guidance`, confidence 1.0, dilutive financing 0.03, so A1 and A2 keep AAPL. **5,914 input / 157 output tokens, $0.000248 estimated**; billed charge unavailable; excluded from the trial.
+  - The daemon sleeps until each slot (10:30–15:30 ET), skips half-days, and stops after five full sessions (Oct 7, 8, 9, 12, 13). It needs no agent session or bridge restart.
+- **Initiative 3.** Same gate as the October 1 replay; entry 15 minutes after confirmation; exit at the realized exit.
+  - First ignition, 2-bar: 41 admits, **-0.2% mean, -9.8% median**, selection p 0.67.
+  - Re-arm (rebuild allowed), 2-bar: 49 admits, -2.4%. The **8 rebuild admits average -13.9%** (1 win, YFOR).
+  - Re-arm, 3-bar: 45 admits, -3.7%. Base: 89 entries, -3.2%.
+  - The ≥17:00 ET first-ignition subset (+10.0%, n=19) is BAOS and VEEA; without them it is -1.8%.
+  - **Decision:** no timing or rebuild rule proposed; AMOD's question is closed.
+- **Initiative 3 DST check:** the bridge started Oct 5 11:22 CEST, after the Sep 29 18:05 scheduler write, so the three DST cohort jobs are loaded.
+- **Initiative 5.** 43 sections and **578/578 rows match** beside the BIYA and MTEN charts. The published October 6 page was 404, because Pages built only the newest log and the premarket scan created October 7's first. `pages.yml` now rebuilds the seven newest dated logs; the loop ran locally with exit 0.
+- **Other details.** No order, live rule, size or pulse timing changed. Equity is $99,735.29 (-$264.71), flat.
+- **Evidence:** `docs/investigations/init7-orchestration-init3-rebuild-2026-10-07.md`, `log/2026-10-07/init7-observe-dev/`, `log/2026-10-07/init3-rebuild/`.
+
+**Hypothesis / next step:**
+
+- **October 7 18:00:**
+  - Initiative 7: the 10:30 and 11:30 ET slots each have a `decision.json` persisted within the 120 s deadline, with N1, the SEC result and A1/A2 recorded. If not, fix the cause and restart `SFm` before October 8 10:30 ET.
+  - Initiative 5: the October 6 report returns HTTP 200 after this push.
+- **October 8 15:00:** Initiative 1 consumers accept v2. The report generator must accept it before any v2 file lands, or the seven-day Pages build fails. Then the scan's volume command adds `--metric-version sip-ah-volume-v2`.
+- **October 8 18:00:** Initiative 7's modeled execution layer goes in a separate script.
+- **October 9 15:00:** Initiative 3 tests the +10% resting-limit exit on all 89 real entries.
+- **October 14 15:00:** freeze the 20-session calendar and start the Initiative 7 comparison pilot.
+- **Next daily email:** Initiative 7 orchestration and captures, the Jev call and cost, the Initiative 3 result, the Initiative 5 check and fix.
+
+**Needs from Juan:** nothing new. Initiative 2 stays deferred, and the Initiative 3 proposals stay unapplied.
+
 ### 2026-10-06 18:00 — Initiative 1 sparse-baseline policy v2 and 89-entry volume-gate test; Initiative 7 A2 amendment frozen
 
 **Evaluated:** The 15:00 hypotheses for this run **worked**: the A2 amendment is frozen before orchestration, and Initiative 1's sparse-baseline policy is resolved against INLF, GIPR and YFOR. No pilot is active; the slot released at 15:00 stays free. Process-review handoff 2 (Initiative 7 orchestration at 18:00) stays at October 7 15:00, because A2 had to be frozen first.

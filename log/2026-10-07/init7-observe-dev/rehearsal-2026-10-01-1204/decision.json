@@ -1,0 +1,66 @@
+{
+  "version": "init7-observe-v1",
+  "mode": "rehearsal_excluded_from_trial",
+  "scheduled_et": "2026-10-01T12:04:00-04:00",
+  "decision_cutoff_utc": "2026-10-01T16:06:00Z",
+  "started_utc": "2026-10-07T13:05:38.758188Z",
+  "hashes": {
+    "amendment": "5d6bda27adcfed77c23ccbbd599d91131b9f73b174c9b03bb876583649671160",
+    "design": "df00c3bc9dd86117191ab86b838589e2dfdd5231ae6f1c62861b2e484915dc98",
+    "archiver": "29a13561885f5445643982f8be91bc85ff39a4c9f14318c4a6087ff56d9d9c24",
+    "classifier": "1d5dd13fb89c5cbab7cd062f0a8e8dccd5023297e6b1bfa7d8127f127d231ed1",
+    "selector": "ae8aed7be5ca70ff559eba4f4b55a9530b942d760af1887f10cec73db0653269",
+    "census_helpers": "2bfd018d1a728b2e47cbf6cb0a693c9faa82a204cf4b5cc767c7af79fd653b9f",
+    "orchestrator": "f0527781efeb7da41ede7e3ce8d299957e4074bf2fd529819699b07e77552fba",
+    "mapping": "7afbd3761b28af1237b625729fa68e2c2631f7f00429d66a05e9beec1826e6e7"
+  },
+  "hash_problems": [],
+  "n1_reason": "no_positive_absolute_and_relative_return",
+  "market": {
+    "input": "log/2026-10-01/init7-data-census.json",
+    "last_receipt_utc": "2026-10-01T16:04:08.580666Z",
+    "received_by_cutoff": true,
+    "feature_cutoff_utc": "2026-10-01T15:48:05.641320+00:00",
+    "ranking": [
+      {
+        "symbol": "META",
+        "relative_return_pct_points": 0.15020919769214158
+      },
+      {
+        "symbol": "NVDA",
+        "relative_return_pct_points": 0.12882333805294133
+      },
+      {
+        "symbol": "AMZN",
+        "relative_return_pct_points": 0.0324066636203435
+      },
+      {
+        "symbol": "GOOGL",
+        "relative_return_pct_points": -0.014530215208052866
+      },
+      {
+        "symbol": "MSFT",
+        "relative_return_pct_points": -0.1304611026158753
+      },
+      {
+        "symbol": "TSLA",
+        "relative_return_pct_points": -0.3092241784312
+      },
+      {
+        "symbol": "AAPL",
+        "relative_return_pct_points": -0.7392069382344157
+      }
+    ],
+    "book_diagnostic": null
+  },
+  "sec": null,
+  "jev": null,
+  "decision": {
+    "n1": null,
+    "a1": null,
+    "a1_reason": "n1_cash",
+    "a2": null,
+    "a2_reason": "n1_cash"
+  },
+  "decision_persisted_utc": "2026-10-07T13:05:38.762976Z"
+}

@@ -1,0 +1,29 @@
+{
+  "version": "init7-sec-archive-v1",
+  "parser": "init7-sec-text-v1",
+  "design_sha256": "df00c3bc9dd86117191ab86b838589e2dfdd5231ae6f1c62861b2e484915dc98",
+  "mapping_sha256": "7afbd3761b28af1237b625729fa68e2c2631f7f00429d66a05e9beec1826e6e7",
+  "ticker": "MSFT",
+  "cik": "0000789019",
+  "decision_cutoff_utc": "2026-10-07T13:07:51.053079Z",
+  "started_utc": "2026-10-07T13:05:51.605244Z",
+  "status": "cash",
+  "candidates": [],
+  "documents": [],
+  "requests": [
+    {
+      "url": "https://data.sec.gov/submissions/CIK0000789019.json",
+      "file": "submissions.json",
+      "requested_utc": "2026-10-07T13:05:51.607961Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-07T13:05:51.902957Z",
+      "bytes": 185250,
+      "sha256": "2484a2a3b5677d892a1b25af573ce4eda7b6f449f5eda41bac6b3f106dc3139c",
+      "received_by_cutoff": true
+    }
+  ],
+  "finished_utc": "2026-10-07T13:05:51.913195Z",
+  "cash_reason": "no_8k_within_window"
+}

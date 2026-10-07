@@ -34,7 +34,13 @@ jobs:
 
       - name: Build report site
         run: |
-          python3 scripts/generate-html-report.py
+          # Rebuild the seven newest dated logs. Building only the newest one dropped the
+          # previous day's report as soon as the morning scans created today's log.
+          for day in $(ls -d log/20??-??-?? | xargs -n1 basename | sort -r | head -7); do
+            if [ -f "log/$day/log.md" ]; then
+              python3 scripts/generate-html-report.py --date "$day"
+            fi
+          done
           mkdir -p site
           cp -R reports log site/
           cat > site/index.html <<'HTML'

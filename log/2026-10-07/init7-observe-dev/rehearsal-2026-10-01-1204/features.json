@@ -1,0 +1,99 @@
+{
+  "decision_cutoff_utc": "2026-10-01T16:04:08.580666+00:00",
+  "feature_cutoff_utc": "2026-10-01T15:48:05.641320+00:00",
+  "last_complete_end_utc": "2026-10-01T15:45:00+00:00",
+  "required_bar_starts_utc": [
+    "2026-10-01T15:10:00+00:00",
+    "2026-10-01T15:15:00+00:00",
+    "2026-10-01T15:20:00+00:00",
+    "2026-10-01T15:25:00+00:00",
+    "2026-10-01T15:30:00+00:00",
+    "2026-10-01T15:35:00+00:00",
+    "2026-10-01T15:40:00+00:00"
+  ],
+  "scheduled_observation": false,
+  "rows": [
+    {
+      "symbol": "AAPL",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.8976769576029664
+    },
+    {
+      "symbol": "MSFT",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.28893112198442594
+    },
+    {
+      "symbol": "NVDA",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.029646681315609325
+    },
+    {
+      "symbol": "AMZN",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.12606335574820715
+    },
+    {
+      "symbol": "GOOGL",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.17300023457660352
+    },
+    {
+      "symbol": "META",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.00826082167640907
+    },
+    {
+      "symbol": "TSLA",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.46769419779975063
+    },
+    {
+      "symbol": "QQQ",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.15847001936855065
+    }
+  ],
+  "numerical_candidate": null,
+  "reason": "no_positive_absolute_and_relative_return",
+  "book_diagnostic": null,
+  "limit": "Feature/interface replay only; pre-decision IEX quote is not an entry fill. No Jev decision, portfolio or prospective return.",
+  "ranking": [
+    {
+      "symbol": "META",
+      "relative_return_pct_points": 0.15020919769214158
+    },
+    {
+      "symbol": "NVDA",
+      "relative_return_pct_points": 0.12882333805294133
+    },
+    {
+      "symbol": "AMZN",
+      "relative_return_pct_points": 0.0324066636203435
+    },
+    {
+      "symbol": "GOOGL",
+      "relative_return_pct_points": -0.014530215208052866
+    },
+    {
+      "symbol": "MSFT",
+      "relative_return_pct_points": -0.1304611026158753
+    },
+    {
+      "symbol": "TSLA",
+      "relative_return_pct_points": -0.3092241784312
+    },
+    {
+      "symbol": "AAPL",
+      "relative_return_pct_points": -0.7392069382344157
+    }
+  ]
+}

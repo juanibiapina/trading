@@ -1,0 +1,44 @@
+{
+  "spec": "stock-catalyst-v1",
+  "model_requested": "jev-1.13.0",
+  "started_utc": "2026-10-07T13:06:02.534862+00:00",
+  "status": "completed",
+  "input_sha256": "e5e55f87e3a54e6fbca45defb7e159475ea1beca2b4ae1740693903db2eac3c5",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "summary": {
+    "calls_attempted": 1,
+    "calls_validated": 1,
+    "calls_with_known_usage": 1,
+    "usage_known": {
+      "input_tokens": 5914,
+      "output_tokens": 157
+    },
+    "estimated_cost_usd_known": 0.000248388,
+    "estimated_cost_usd_total": 0.000248388,
+    "measured_charge": null,
+    "pricing": {
+      "currency": "USD",
+      "input_per_million": 0.042,
+      "output_per_million": 0,
+      "source": "https://docs.typesafe.ai/models.md",
+      "checked_on": "2026-10-02"
+    },
+    "comparisons": [
+      {
+        "id": "AAPL-2026-07-30T21:30:28Z",
+        "kind": "development_glue_check_excluded_from_trial",
+        "ticker": "AAPL",
+        "predicted": {
+          "catalyst": "earnings_guidance",
+          "dilutive_financing": false,
+          "binding_commercial_activity": true
+        },
+        "expected": {},
+        "matches": {},
+        "confidence": 1.0
+      }
+    ],
+    "limit": "Retrospective/synthetic interface checks; no prospective accuracy or trading edge measured."
+  },
+  "finished_utc": "2026-10-07T13:06:02.940178+00:00"
+}
