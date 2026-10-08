@@ -583,6 +583,118 @@ AH >10% at this snapshot (unrounded): OLB, REFR, VEEA, WHLR, WORX, XELB, XRTX
     - `XRTX BOOK verdict: IEX STALE 1h01m; SIP-15m TWO-SIDED (observed 2026-10-08 18:01:35 ET; log-only)`
 - **GSIT** (+7.2%), **VAI** (+6.4%), **LTRN** (+5.8%): below threshold.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| OLB | [TV](https://www.tradingview.com/chart/?symbol=OLB) | $0.55 | +41.9% | +19.8% | $0.66 | +70.0% | 34.3M | 125.4M | 0.3x | 18.7M | Internet Software/Services |
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $1.85 | +6.0% | +23.2% | $2.28 | +30.7% | 8.4M | 1.0M | 8.4x | 1.7M | Pharmaceuticals: Major |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.70 | +1.3% | +14.3% | $0.80 | +15.7% | 4.2M | 4.5M | 0.9x | 568K | Real Estate Investment Trusts |
+| XELB | [TV](https://www.tradingview.com/chart/?symbol=XELB) | $0.64 | +21.4% | +7.9% | $0.69 | +30.9% | 2.9M | 2.0M | 1.4x | 4.5M | Apparel/Footwear |
+| WORX | [TV](https://www.tradingview.com/chart/?symbol=WORX) | $4.20 | -27.0% | +35.0% | $5.67 | -1.4% | 1.2M | 240K | 5.2x | 522K | Packaged Software |
+| VEEA | [TV](https://www.tradingview.com/chart/?symbol=VEEA) | $3.87 | -17.8% | +22.5% | $4.74 | +0.6% | 974K | 15.6M | 0.1x | 1.6M | Packaged Software |
+| GSIT | [TV](https://www.tradingview.com/chart/?symbol=GSIT) | $4.92 | -8.5% | +7.2% | $5.28 | -1.9% | 190K | 368K | 0.5x | 33.1M | Semiconductors |
+| VAI | [TV](https://www.tradingview.com/chart/?symbol=VAI) | $2.58 | +2.2% | +12.2% | $2.90 | +14.6% | 121K | 64K | 1.9x | 14.6M | Finance/Rental/Leasing |
+| LTRN | [TV](https://www.tradingview.com/chart/?symbol=LTRN) | $0.83 | -8.8% | +5.8% | $0.88 | -3.5% | 85K | 329K | 0.3x | 11.6M | Pharmaceuticals: Major |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): OLB, VAI, VEEA, WHLR, WORX, XRTX
+
+**Evaluation notes:**
+- Scanner ran at 18:30:10 ET (final scheduled scan). Pre-check: positions OLB 141 @ $0.71 (now $0.65, -8.4%) and XRTX 44 @ $2.22 (now $2.28, +2.7%); no open buy orders. **No entries this scan**: VEEA is the only name that reached its 2nd AH scan >10%, and the dead-cat filter blocks it. VAI is on its first AH scan >10% with thin volume.
+- **VEEA — DEAD-CAT-OVERRIDE WATCH (hypothetical entry $4.91 SIP / $4.74 scanner at 18:30 ET)** (2nd AH scan >10%: +11.6% → +22.5%; Day% -17.8%). AH% rose across scans and price reclaimed well above the $3.87 regular close (SIP $4.91 = +26.9% AH; Total% +4.2% vs the $4.71 prior close). New AH high $4.94 at 17:55 ET, retested $4.94 at 18:15 ET on 120K sh / 1,615 trades; volume sustained 48K–172K sh / 670–2,400 trades per bar since 17:50 ET. This is a BUILD with CONFIRM-3 YES. Live entry skipped solely on the dead-cat filter (Day% ≤ -15%). Catalyst unchanged: Grade C (Nasdaq compliance regained, GlobeNewswire Oct 8 ~17:20 ET).
+  - Spike-bar: `VEEA 2026-10-08  SPIKE  17:23ET  +16%  $4.49  263 trades / 29k sh  (first co-spike bar) (as-of 18:30ET)`
+  - Third-bar: `VEEA 2026-10-08  CONFIRM-3  YES ignition 17:20ET 437.9x; confirmed 17:30ET $4.76 as-of 18:30ET`
+  - Volume context (`# VEEA shared SIP volume sip-ah-volume-v2; prior 2026-10-07 25+23zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T22:30:10+00:00; source fetched 2026-10-08T22:30:44.746123+00:00`); new rows since 18:00:
+    - `VEEA 2026-10-08  VOLUME-CONTEXT 17:50ET start=2026-10-08T21:50:00+00:00 shares=58374 local=0.5989x prior-peak=6.3651x status=ok`
+    - `VEEA 2026-10-08  VOLUME-CONTEXT 17:55ET start=2026-10-08T21:55:00+00:00 shares=172012 local=2.7429x prior-peak=18.7561x status=ok`
+    - `VEEA 2026-10-08  VOLUME-CONTEXT 18:00ET start=2026-10-08T22:00:00+00:00 shares=109997 local=1.1285x prior-peak=11.9940x status=ok`
+    - `VEEA 2026-10-08  VOLUME-CONTEXT 18:05ET start=2026-10-08T22:05:00+00:00 shares=79878 local=0.7262x prior-peak=8.7098x status=ok`
+    - `VEEA 2026-10-08  VOLUME-CONTEXT 18:10ET start=2026-10-08T22:10:00+00:00 shares=47897 local=0.4354x prior-peak=5.2227x status=ok`
+    - `VEEA 2026-10-08  VOLUME-CONTEXT 18:15ET start=2026-10-08T22:15:00+00:00 shares=119571 local=1.4969x prior-peak=13.0379x status=ok`
+    - Earlier rows unchanged from the 00:00 scan; full set in [VEEA-1830-volume-metric.json](VEEA-1830-volume-metric.json).
+  - Book (log-only):
+    - `VEEA BOOK iex bid $3.25 x100 / ask $4.54 x100 @ 2026-10-08 16:00:00 ET age 2h31m two-sided spread 28.41% of ask`
+    - `VEEA BOOK sip-15m bid $4.82 x100 / ask $4.85 x1000 @ 2026-10-08 18:16:32 ET age 15m01s two-sided spread 0.62% of ask`
+    - `VEEA BOOK refresh +15s iex unchanged @ 2026-10-08 16:00:00 ET`
+    - `VEEA BOOK verdict: IEX STALE 2h31m; SIP-15m TWO-SIDED (observed 2026-10-08 18:31:33 ET; log-only)`
+- **VAI — Skip: 1st AH scan >10% (2-AH-scan gate), thin volume, no catalyst** (Finance/Rental/Leasing, float 14.6M, Day% +2.2%, Total% +14.6%). `tradable=true`. Not a FINAL-SCAN-GATE-BLOCK: ignition at 17:20–17:30 ET ran on 24K–47K sh / 52–311 trades per bar, then 165–4,398 sh / 2–16 trades per bar, and CONFIRM-3 is NO. SIP $2.88–2.95 corroborates the scanner $2.90, 10% under the $3.20 high. Catalyst (3 searches): no catalyst found.
+  - Spike-bar: `VAI 2026-10-08  SPIKE  17:29ET  +16%  $2.98  52 trades / 13k sh  (first co-spike bar) (as-of 18:30ET)`
+  - Third-bar: `VAI 2026-10-08  CONFIRM-3  NO ignition 17:25ET failed third-bar hold/volume as-of 18:30ET`
+  - Volume context (`# VAI shared SIP volume sip-ah-volume-v2; prior 2026-10-07 3+45zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T22:30:10+00:00; source fetched 2026-10-08T22:30:44.073999+00:00`):
+    - `VAI 2026-10-08  VOLUME-CONTEXT 17:10ET start=2026-10-08T21:10:00+00:00 shares=10005 local=100.0500x prior-peak=40.0200x status=floored`
+    - `VAI 2026-10-08  VOLUME-CONTEXT 17:20ET start=2026-10-08T21:20:00+00:00 shares=24078 local=240.7800x prior-peak=96.3120x status=floored`
+    - `VAI 2026-10-08  VOLUME-CONTEXT 17:25ET start=2026-10-08T21:25:00+00:00 shares=46602 local=4.6579x prior-peak=186.4080x status=ok`
+    - `VAI 2026-10-08  VOLUME-CONTEXT 17:30ET start=2026-10-08T21:30:00+00:00 shares=31883 local=1.3242x prior-peak=127.5320x status=ok`
+    - `VAI 2026-10-08  VOLUME-CONTEXT 17:35ET start=2026-10-08T21:35:00+00:00 shares=13276 local=0.4164x prior-peak=53.1040x status=ok`
+    - `VAI 2026-10-08  VOLUME-CONTEXT 17:40ET start=2026-10-08T21:40:00+00:00 shares=470 local=0.0147x prior-peak=1.8800x status=ok`
+    - `VAI 2026-10-08  VOLUME-CONTEXT 17:55ET start=2026-10-08T21:55:00+00:00 shares=214 local=2.1400x prior-peak=0.8560x status=floored`
+    - `VAI 2026-10-08  VOLUME-CONTEXT 18:00ET start=2026-10-08T22:00:00+00:00 shares=4398 local=43.9800x prior-peak=17.5920x status=floored`
+    - `VAI 2026-10-08  VOLUME-CONTEXT 18:05ET start=2026-10-08T22:05:00+00:00 shares=165 local=0.7710x prior-peak=0.6600x status=ok`
+    - `VAI 2026-10-08  VOLUME-CONTEXT 18:15ET start=2026-10-08T22:15:00+00:00 shares=3000 local=18.1818x prior-peak=12.0000x status=ok`
+- **XELB — dropped below threshold (feed-lag cross-check)**. Scanner +7.9%; SIP agrees: $0.67–0.69 since 17:50 ET (+5–8% AH) on 42K–179K sh per bar, 20% under the $0.84 high. Only one AH scan >10%; no entry.
+- **WORX — DEAD-CAT-OVERRIDE WATCH continues (hypothetical entry $6.18 at 17:30 ET)**. Scanner $5.67 (+35.0% AH); SIP closed $5.32 at 18:15 ET, 25% under the $7.14 high, on 11K–38K sh per bar. Fading; still above the $4.20 regular close.
+  - Spike-bar: `WORX 2026-10-08  SPIKE  16:32ET  +24%  $5.22  25 trades / 1k sh  (first co-spike bar) (as-of 18:30ET)`
+  - Third-bar: `WORX 2026-10-08  CONFIRM-3  NO ignition 16:50ET failed third-bar hold/volume as-of 18:30ET`
+  - Volume context (`# WORX shared SIP volume sip-ah-volume-v2; prior 2026-10-07 9+39zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T22:30:10+00:00; source fetched 2026-10-08T22:30:46.070153+00:00`); new rows since 18:00:
+    - `WORX 2026-10-08  VOLUME-CONTEXT 17:50ET start=2026-10-08T21:50:00+00:00 shares=38345 local=0.6574x prior-peak=6.1244x status=ok`
+    - `WORX 2026-10-08  VOLUME-CONTEXT 17:55ET start=2026-10-08T21:55:00+00:00 shares=10828 local=0.2824x prior-peak=1.7294x status=ok`
+    - `WORX 2026-10-08  VOLUME-CONTEXT 18:00ET start=2026-10-08T22:00:00+00:00 shares=12318 local=0.4603x prior-peak=1.9674x status=ok`
+    - `WORX 2026-10-08  VOLUME-CONTEXT 18:05ET start=2026-10-08T22:05:00+00:00 shares=26464 local=2.1484x prior-peak=4.2268x status=ok`
+    - `WORX 2026-10-08  VOLUME-CONTEXT 18:10ET start=2026-10-08T22:10:00+00:00 shares=23099 local=1.8752x prior-peak=3.6893x status=ok`
+    - `WORX 2026-10-08  VOLUME-CONTEXT 18:15ET start=2026-10-08T22:15:00+00:00 shares=28851 local=1.2490x prior-peak=4.6080x status=ok`
+  - Book (log-only):
+    - `WORX BOOK iex bid $0.9030 x100 / ask $1.22 x100 @ 2026-04-13 16:00:00 ET age 4274h31m two-sided spread 25.98% of ask`
+    - `WORX BOOK sip-15m bid $5.62 x500 / ask $5.63 x100 @ 2026-10-08 18:16:33 ET age 15m00s two-sided spread 0.18% of ask`
+    - `WORX BOOK refresh +15s iex unchanged @ 2026-04-13 16:00:00 ET`
+    - `WORX BOOK verdict: IEX STALE 4274h31m; SIP-15m TWO-SIDED (observed 2026-10-08 18:31:33 ET; log-only)`
+- **WHLR — Skip: SPIKE→FADE, thin drift** (4th AH scan >10%: +14.3%). SIP $0.78–0.81 since 17:50 ET on 9K–36K sh / 58–175 trades per bar, ~10% under the $0.90 high from 16:25 ET. Tens-of-K shares per bar: not a build.
+  - Spike-bar: `WHLR 2026-10-08  SPIKE  16:26ET  +23%  $0.86  219 trades / 60k sh  (first co-spike bar) (as-of 18:30ET)`
+  - Third-bar: `WHLR 2026-10-08  CONFIRM-3  NO ignition 16:25ET failed third-bar hold/volume as-of 18:30ET`
+  - Volume context (`# WHLR shared SIP volume sip-ah-volume-v2; prior 2026-10-07 47+1zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T22:30:10+00:00; source fetched 2026-10-08T22:30:45.432881+00:00`); new rows since 18:00:
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 17:50ET start=2026-10-08T21:50:00+00:00 shares=8823 local=0.3242x prior-peak=0.0690x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 17:55ET start=2026-10-08T21:55:00+00:00 shares=35813 local=2.8683x prior-peak=0.2801x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 18:00ET start=2026-10-08T22:00:00+00:00 shares=19680 local=1.5762x prior-peak=0.1539x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 18:05ET start=2026-10-08T22:05:00+00:00 shares=12343 local=0.6272x prior-peak=0.0965x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 18:10ET start=2026-10-08T22:10:00+00:00 shares=19205 local=0.9759x prior-peak=0.1502x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 18:15ET start=2026-10-08T22:15:00+00:00 shares=28798 local=1.4995x prior-peak=0.2253x status=ok`
+  - Book (log-only):
+    - `WHLR BOOK iex bid $0.5891 x100 / ask $0.0000 x0 @ 2026-10-08 16:00:02 ET age 2h31m one-sided/empty`
+    - `WHLR BOOK sip-15m bid $0.7841 x200 / ask $0.8056 x1000 @ 2026-10-08 18:16:29 ET age 15m04s two-sided spread 2.67% of ask`
+    - `WHLR BOOK refresh +15s iex unchanged @ 2026-10-08 16:00:02 ET`
+    - `WHLR BOOK verdict: IEX STALE 2h31m; SIP-15m TWO-SIDED (observed 2026-10-08 18:31:33 ET; log-only)`
+- **OLB** (held, fill $0.71): scanner $0.66 (+19.8% AH). SIP drifted lower $0.69 → $0.64 from 17:50 to 18:15 ET on 370K–1.1M sh per bar; $0.64 is 13.5% under the $0.74 high and below the fill.
+  - Spike-bar: `OLB 2026-10-08  SPIKE  16:45ET  +22%  $0.67  1689 trades / 1277k sh  (first co-spike bar) (as-of 18:30ET)`
+  - Third-bar: `OLB 2026-10-08  CONFIRM-3  NO ignition 16:45ET failed third-bar hold/volume as-of 18:30ET`
+  - Volume context (`# OLB shared SIP volume sip-ah-volume-v2; prior 2026-10-07 48+0zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T22:30:10+00:00; source fetched 2026-10-08T22:30:43.486511+00:00`); new rows since 18:00:
+    - `OLB 2026-10-08  VOLUME-CONTEXT 17:50ET start=2026-10-08T21:50:00+00:00 shares=1110784 local=0.9829x prior-peak=0.8243x status=ok`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 17:55ET start=2026-10-08T21:55:00+00:00 shares=881997 local=0.7940x prior-peak=0.6545x status=ok`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 18:00ET start=2026-10-08T22:00:00+00:00 shares=516827 local=0.4752x prior-peak=0.3835x status=ok`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 18:05ET start=2026-10-08T22:05:00+00:00 shares=371009 local=0.4206x prior-peak=0.2753x status=ok`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 18:10ET start=2026-10-08T22:10:00+00:00 shares=398124 local=0.7703x prior-peak=0.2954x status=ok`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 18:15ET start=2026-10-08T22:15:00+00:00 shares=533199 local=1.3393x prior-peak=0.3957x status=ok`
+  - Book (log-only):
+    - `OLB BOOK iex bid $0.4688 x100 / ask $0.0000 x0 @ 2026-10-08 16:00:04 ET age 2h31m one-sided/empty`
+    - `OLB BOOK sip-15m bid $0.6385 x200 / ask $0.6390 x100 @ 2026-10-08 18:16:33 ET age 15m00s two-sided spread 0.08% of ask`
+    - `OLB BOOK refresh +15s iex unchanged @ 2026-10-08 16:00:04 ET`
+    - `OLB BOOK verdict: IEX STALE 2h31m; SIP-15m TWO-SIDED (observed 2026-10-08 18:31:33 ET; log-only)`
+- **XRTX** (held, fill $2.22): scanner $2.28 (+23.2% AH). SIP pushed to $2.35 at 17:50 ET on 142K sh / 1,030 trades, then $2.23–2.29 on 26K–106K sh per bar; 18:15 ET close $2.23, ~9% under the $2.46 high.
+  - Spike-bar: `XRTX 2026-10-08  NO-SPIKE  peak +33% @16:22ET  (no bar cleared +15% on a volume co-spike) (as-of 18:30ET)`
+  - Third-bar: `XRTX 2026-10-08  CONFIRM-3  YES ignition 16:05ET 3.7x; confirmed 16:15ET $2.39 as-of 18:30ET`
+  - Volume context (`# XRTX shared SIP volume sip-ah-volume-v2; prior 2026-10-07 1+47zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T22:30:10+00:00; source fetched 2026-10-08T22:30:46.636192+00:00`); new rows since 18:00:
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 17:50ET start=2026-10-08T21:50:00+00:00 shares=141948 local=2.9163x prior-peak=133.1595x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 17:55ET start=2026-10-08T21:55:00+00:00 shares=105731 local=2.0621x prior-peak=99.1848x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 18:00ET start=2026-10-08T22:00:00+00:00 shares=94410 local=0.8929x prior-peak=88.5647x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 18:05ET start=2026-10-08T22:05:00+00:00 shares=26226 local=0.2480x prior-peak=24.6023x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 18:10ET start=2026-10-08T22:10:00+00:00 shares=55415 local=0.5870x prior-peak=51.9841x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 18:15ET start=2026-10-08T22:15:00+00:00 shares=62061 local=1.1199x prior-peak=58.2186x status=ok`
+  - Book (log-only):
+    - `XRTX BOOK iex bid $2.23 x100 / ask $2.27 x100 @ 2026-10-08 16:59:46 ET age 1h31m two-sided spread 1.76% of ask`
+    - `XRTX BOOK sip-15m bid $2.26 x1000 / ask $2.27 x1100 @ 2026-10-08 18:16:33 ET age 15m00s two-sided spread 0.44% of ask`
+    - `XRTX BOOK refresh +15s iex unchanged @ 2026-10-08 16:59:46 ET`
+    - `XRTX BOOK verdict: IEX STALE 1h31m; SIP-15m TWO-SIDED (observed 2026-10-08 18:31:33 ET; log-only)`
+- **GSIT** (+7.2%), **LTRN** (+5.8%): below threshold. **REFR** dropped out of the scan (thin, skipped at 00:00).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
