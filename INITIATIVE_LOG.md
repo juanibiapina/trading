@@ -1,5 +1,32 @@
 # Initiative Log
 
+### 2026-10-08 15:00 — Initiative 1 v2 check passed; Initiative 3 resting-limit exit fails on 89 entries, proposal withdrawn
+
+**Evaluated:** The October 7 18:00 hypothesis for the October 8 morning cycle **worked**. All 24 October 7 volume-metric files are `sip-ah-volume-v2` (331 rows: 254 `ok`, 59 `warmup`, 18 `floored`). The report renders 24 sections and 331 rows; Pages run 37778868698 succeeded, and the published page is byte-identical to the local build. All six October 7 Initiative 7 slots persisted (latency 2.2–4.4 s). No pilot is active.
+
+**Step taken:**
+
+- **Initiative 1 (due this morning):** checked the v2 files, the local report and the published page.
+- **Initiative 3 (moved up from October 9; the last open lever for the core strategy without a new entry signal):** built `scripts/init3-limit-exit-eval.py`, fetched next-session premarket SIP bars for all 89 real AH entries into `log/2026-10-08/init3-limit-exit/sip-pm/`, and ran 16 exit rules against a modeled 04:30 open exit. `--replay` reproduces `result.json` byte for byte.
+
+**Result:**
+
+- **Standing proposal fails.** +10% above the 04:30 price: -0.8% mean, -0.08 points against the 04:30 exit (p 0.97). Withdrawn in the consolidated asks.
+- **Entry-anchored limits look positive only with touch fills.** +15% from the fill: +3.3% mean (p 0.049, best of 16 rules, so not significant after the multiple tests); +10%: +2.2%. With VWAP fills these fall to 0.0% and +0.1%. Half the +15% fills come from evening AH bars, and its second chronological half is +1.1%.
+- **Execution gap.** Realized -3.2% against a modeled 04:30 exit of -0.8% (-2.45 points, p 0.06). The 74 next-premarket exits trail by 1.8 points (median -0.2); the 15 trades held past the next morning trail by **5.5 points** (median -7.9).
+- **North Star:** volume gates, entry timing and exits have all failed on the same 89 entries. The Initiative 7 liquid-session comparison stays the main replacement candidate.
+- **Other details.** No order, live rule, size or pulse timing changed. Equity $99,720.39 (-$279.61).
+- **Evidence:** `docs/investigations/init3-limit-exit-2026-10-08.md`, `log/2026-10-08/init3-limit-exit/result.json`.
+
+**Hypothesis / next step:**
+
+- **October 8 18:00:** Initiative 7: today's slots persisted in time; build the modeled execution layer with spread recorded.
+- **October 9 15:00:** Initiative 3: split the 2.5-point execution gap into spread at the exit fill and late or multi-day exits, from order timestamps and archived SIP bars. If spread dominates, Initiative 7's execution layer must charge a comparable cost per round trip.
+- **October 14 15:00:** freeze the Initiative 7 calendar and start the pilot.
+- **Next daily email:** Initiative 1 check; Initiative 3 exit result and withdrawal; Jev not run on October 8 at 15:00.
+
+**Needs from Juan:** nothing new. Initiative 2 stays deferred.
+
 ### 2026-10-07 18:00 — Initiative 7 first scheduled slots clean; Initiative 1 v2 live in the post-market scan
 
 **Evaluated:** The 15:00 hypothesis **worked**. The 10:30 and 11:30 ET slots each wrote `decision.json` about 2.4 s after the slot (deadline 120 s), with matching hashes, N1, the SEC result and A1/A2. No pilot is active.

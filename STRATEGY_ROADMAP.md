@@ -1692,7 +1692,29 @@ tracker).
 
 ---
 
-## Current priorities and initiative status — 2026-10-07 18:00 CEST
+## Current priorities and initiative status — 2026-10-08 15:00 CEST
+
+This checkpoint supersedes the October 7 18:00 checkpoint. **Initiative 1's v2 check passed**: every October 7 metric file is v2, and the published report matches the local build byte for byte. **Initiative 3's resting-limit exit test ran a day early on all 89 real entries, and the standing +10% exit proposal is withdrawn**: it adds -0.08 points per trade over a plain 04:30 exit. The pilot slot stays free. Paper equity at 15:20 CEST is **$99,720.39 (-$279.61)**, flat.
+
+**Money-fast selection:** Initiative 1's check was due this morning and took one read. Initiative 3's exit test was the last open lever that could make the core strategy pay without a new entry signal, and it needed no market hours, so it moved up from October 9. Initiative 7's execution layer stays at 18:00, after today's first slot. **North Star check:** no exit rule makes AH→PM clearly profitable. The best variant that survives a conservative fill check is about breakeven before spread. Volume gates, entry timing and now exits have all failed on the same 89 entries, so the Initiative 7 liquid-session comparison stays the main replacement candidate.
+
+| Initiative | Latest concrete progress | Current status / dependency | Next deliverable and check |
+|---|---|---|---|
+| 1 — shared volume measurement | October 8 15:00: v2 check passed | **Instrument, v2 live (log-only), verified.** 24 October 7 files, 331 rows (254 `ok`, 59 `warmup`, 18 `floored`); 24 sections and 331 rows render; Pages run 37778868698 succeeded and the published page equals the local build. | No dated item. Test any new volume hypothesis on the 89-entry archive before proposing a gate. |
+| 2 — broker execution | September 7 alternatives research | **Deferred per Juan's September 22 instruction.** | Resume the AKAN/SHPH/GIPR protocol only when access arrives; no renewed ask. |
+| 3 — scheduling and exits | October 8 15:00: resting-limit exit test on 89 entries | **Research; exit proposal withdrawn.** An entry-anchored +15% limit is the only positive rule (+3.3% touch fill), but it falls to 0.0% with VWAP fills. Holds past the next morning cost 5.5 points per trade against a 04:30 exit. | **October 9 15:00:** split the 2.5-point realized-vs-modeled gap into spread at the exit fill and late or multi-day exits, using order timestamps and the archived SIP bars. That sizes the cost Initiative 7's execution layer must model. |
+| 4 — initiative reporting | Receipt 181 | **Delivered and verified.** | Next daily email: Initiative 1 check, Initiative 3 exit result and withdrawal, plus the 18:00 items. |
+| 5 — review surface | October 8 15:00: v2 page verified | **Build delivered.** | No dated item. |
+| 6 — PM-only gappers | October 6 15:00 latency study | **Pilot ENDED; log-only research continues.** | Reopen only with real-time consolidated data and a sub-minute watcher. Correct seasonal UTC bounds before winter. |
+| 7 — alternative agent strategies / Jev | October 7 18:00 (all six October 7 slots now written) | **Instrument, session 2 of 5 today** (`SFm` running). October 7: N1 = AMZN ×3, AAPL ×2, TSLA ×1; all SEC `no_8k_within_window`; no Jev call; latency 2.2–4.4 s. | **October 8 18:00:** check today's slots, then build the modeled execution layer with spread recorded. **October 14 15:00:** freeze the calendar and start the pilot. |
+
+**Initiative 3 progress, October 8 15:00:** `scripts/init3-limit-exit-eval.py` adds each entry's next-session premarket SIP bars and replays offline byte for byte. On n=89: realized -3.2% mean; a modeled 04:30 open exit -0.8%; the standing proposal (+10% above the 04:30 price) -0.8% (diff -0.08 points, p 0.97). Entry-anchored limits from the fill: +10% gives +2.2% and +15% gives +3.3% (p 0.049, best of 16 rules, so not significant after the multiple tests). Half the +15% fills come from evening AH bars. With VWAP fills the same rules return 0.0% to +0.8%, and the +15% rule's second chronological half is +1.1%. The 15 trades held past the next morning trail a 04:30 exit by 5.5 points on average. Evidence: `docs/investigations/init3-limit-exit-2026-10-08.md`, `log/2026-10-08/init3-limit-exit/`.
+
+**Previous-step evaluation:** the October 7 18:00 hypothesis for the October 8 morning cycle **worked**: the scans wrote v2 files, the report renders them and Pages passed. All six October 7 Initiative 7 slots persisted in time.
+
+**Needs from Juan / consolidated asks:** nothing new. The Initiative 3 exit proposal is withdrawn on evidence. No trading-pulse timing change is proposed.
+
+## Prior checkpoint — 2026-10-07 18:00 CEST
 
 This checkpoint supersedes the October 7 15:00 checkpoint. **Initiative 7's first two scheduled slots ran cleanly**: both decisions persisted about 2.4 s after the slot, far inside the 120 s deadline, with matching hashes. **Initiative 1's v2 metric is now live in tonight's post-market scan**, one day ahead of schedule, because both consumers accept it and the change is log-only. The pilot slot stays free. Paper equity at 18:10 CEST is **$99,735.29 (-$264.71)**, flat.
 
@@ -2014,7 +2036,8 @@ The next research priority is **Initiative 7's liquid regular-session feasibilit
       18:30 final scan, ran to PM +47%; an 18:15 scan would have made it
       entry-eligible). Silence = wire it a future run once the tally is firm;
       say the word to veto. Details in `INIT3_IGNITION_TIMING.md`.
-- [ ] Initiative 3 (execution pivot): **FIRMED PROPOSAL — replace the plain
+- [x] **WITHDRAWN 2026-10-08 on evidence:** on all 89 real AH entries the +10% limit above the 04:30 price adds -0.08 points per trade over a plain 04:30 exit (p 0.97); see `docs/investigations/init3-limit-exit-2026-10-08.md`. Original text kept below.
+      Initiative 3 (execution pivot): **FIRMED PROPOSAL — replace the plain
       04:30 ET market exit for Grade-None/held overnight names with a resting
       sell-limit ~+10% above the exit price (GTC through premarket, cancel at
       09:30 ET); keep the 04:30 market exit only as the fallback if unfilled.**
