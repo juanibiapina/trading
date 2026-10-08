@@ -1,0 +1,17 @@
+{
+  "version": "init7-observe-v1",
+  "mode": "prospective_instrumentation",
+  "scheduled_et": "2026-10-08T11:30:00-04:00",
+  "decision_cutoff_utc": "2026-10-08T15:32:00Z",
+  "started_utc": "2026-10-08T15:30:00.008680Z",
+  "hashes": {
+    "amendment": "5d6bda27adcfed77c23ccbbd599d91131b9f73b174c9b03bb876583649671160",
+    "design": "df00c3bc9dd86117191ab86b838589e2dfdd5231ae6f1c62861b2e484915dc98",
+    "archiver": "29a13561885f5445643982f8be91bc85ff39a4c9f14318c4a6087ff56d9d9c24",
+    "classifier": "1d5dd13fb89c5cbab7cd062f0a8e8dccd5023297e6b1bfa7d8127f127d231ed1",
+    "selector": "ae8aed7be5ca70ff559eba4f4b55a9530b942d760af1887f10cec73db0653269",
+    "census_helpers": "2bfd018d1a728b2e47cbf6cb0a693c9faa82a204cf4b5cc767c7af79fd653b9f",
+    "orchestrator": "f0527781efeb7da41ede7e3ce8d299957e4074bf2fd529819699b07e77552fba",
+    "mapping": "7afbd3761b28af1237b625729fa68e2c2631f7f00429d66a05e9beec1826e6e7"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "decision_cutoff_utc": "2026-10-08T15:30:01.827328+00:00",
+  "feature_cutoff_utc": "2026-10-08T15:14:00.338677+00:00",
+  "last_complete_end_utc": "2026-10-08T15:10:00+00:00",
+  "required_bar_starts_utc": [
+    "2026-10-08T14:35:00+00:00",
+    "2026-10-08T14:40:00+00:00",
+    "2026-10-08T14:45:00+00:00",
+    "2026-10-08T14:50:00+00:00",
+    "2026-10-08T14:55:00+00:00",
+    "2026-10-08T15:00:00+00:00",
+    "2026-10-08T15:05:00+00:00"
+  ],
+  "scheduled_observation": true,
+  "rows": [
+    {
+      "symbol": "AAPL",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": 0.004444115250734626
+    },
+    {
+      "symbol": "MSFT",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.0602420979310736
+    },
+    {
+      "symbol": "NVDA",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.21168435069871538
+    },
+    {
+      "symbol": "AMZN",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.09225749664385496
+    },
+    {
+      "symbol": "GOOGL",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": 0.04541068286314509
+    },
+    {
+      "symbol": "META",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": 0.009686838354361349
+    },
+    {
+      "symbol": "TSLA",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.20604763179019603
+    },
+    {
+      "symbol": "QQQ",
+      "missing_utc": [],
+      "observed_required_closes": 7,
+      "return_30m_pct": -0.26835057190669476
+    }
+  ],
+  "numerical_candidate": "GOOGL",
+  "reason": "positive_absolute_and_relative_return",
+  "book_diagnostic": {
+    "quote_utc": "2026-10-08T15:30:00.666808785Z",
+    "received_utc": "2026-10-08T15:30:01.827328+00:00",
+    "bid": 350.5,
+    "ask": 350.77,
+    "bid_size": 120,
+    "ask_size": 40,
+    "age_seconds": 1.16052,
+    "fresh_two_sided": true,
+    "fractional_asset_check": "required separately",
+    "post_decision_entry_quote": false
+  },
+  "limit": "Feature/interface replay only; pre-decision IEX quote is not an entry fill. No Jev decision, portfolio or prospective return.",
+  "ranking": [
+    {
+      "symbol": "GOOGL",
+      "relative_return_pct_points": 0.31376125476983985
+    },
+    {
+      "symbol": "META",
+      "relative_return_pct_points": 0.2780374102610561
+    },
+    {
+      "symbol": "AAPL",
+      "relative_return_pct_points": 0.2727946871574294
+    },
+    {
+      "symbol": "MSFT",
+      "relative_return_pct_points": 0.20810847397562116
+    },
+    {
+      "symbol": "AMZN",
+      "relative_return_pct_points": 0.1760930752628398
+    },
+    {
+      "symbol": "TSLA",
+      "relative_return_pct_points": 0.06230294011649873
+    },
+    {
+      "symbol": "NVDA",
+      "relative_return_pct_points": 0.05666622120797937
+    }
+  ]
+}

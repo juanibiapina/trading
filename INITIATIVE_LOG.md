@@ -1,5 +1,33 @@
 # Initiative Log
 
+### 2026-10-08 18:00 — Initiative 7 modeled execution layer live; IEX books overstate spread cost 13-fold, amendment A3 prices fills at the NBBO
+
+**Evaluated:** The October 8 15:00 hypothesis for this run **worked**. All six October 7 slots and today's 10:30, 11:30 and 12:30 slots persisted decisions within 4 s of the slot (N1 today: NVDA, GOOGL, TSLA; SEC `no_8k_within_window` each time; no Jev call). No pilot is active.
+
+**Step taken:**
+
+- **Initiative 7 (dated item; last build before the October 14 pilot, the main replacement candidate):** built `scripts/init7-execute.py`. It has four subcommands: `capture` for the post-decision IEX book and asset status at each slot and at the 15:55 flatten, `nbbo` for the delayed SIP quote at the same instant, `ledger` to replay N1/A1/A2/CASH/QQQ under both cost scenarios with IEX or SIP fills, and `spreads`. Started gob job `3t2` (`daemon --until 2026-10-13`) at 16:04 UTC.
+- **Spread check (decides whether the cost model is realistic):** matched the 64 archived pre-decision IEX books with SIP quotes at their receipt times, and froze amendment A3 before any modeled entry.
+
+**Result:**
+
+- **First live capture:** 12:30 ET, received 0.47 s after the decision persisted, no errors, all eight assets fractionable.
+- **IEX vs NBBO:** mean spread 17.98 bps on IEX against 1.41 at the SIP NBBO; medians 4.77 and 1.29. TSLA 51.6 against 1.47; META 21.7 against 2.28. At 12:30 N1 picked TSLA with an IEX book of $371.77/$377.77 against an NBBO of $373.06/$373.17, so an IEX-priced entry would have started 1.23% down.
+- **Amendment A3:** fills are priced at the last SIP quote up to the IEX capture's receipt. IEX still decides availability, and the IEX-priced ledger is reported as a conservative scenario. Real-time SIP quotes return HTTP 403 on this plan, so the NBBO is read only after the delay and never feeds a decision.
+- **Cost to beat:** with NBBO fills, the frozen 12 bps base allowance dominates. Six round trips cost about $0.76 a day on $95.
+- **Verification:** a `/tmp` rehearsal reproduced an NVDA round trip by hand ($95.00 cost, $94.874 proceeds, -$0.126 net). It marked a position with no next book unresolved and rejected a flatten quote taken before 15:55. Both fill sources ran. `init7-observe.py` and its pinned hashes are untouched.
+- **Other details.** No order, live rule, size or pulse timing changed. Equity $99,720.39 (-$279.61).
+- **Evidence:** `docs/investigations/init7-execution-layer-2026-10-08.md`, `docs/investigations/init7-amendment-a3.json`, `log/2026-10-08/init7-execute/`.
+
+**Hypothesis / next step:**
+
+- **October 9 15:00:** Initiative 7: run `nbbo` and both ledgers for October 8. Every arm must resolve at the 15:55 flatten. Then Initiative 3's execution-gap split.
+- **October 9 18:00:** Initiative 7: October 9 has six slot captures and a flatten capture.
+- **October 14 15:00:** freeze the 20-session calendar, pin `init7-execute.py`'s hash, restart both daemons for the pilot window (`SFm` stops after October 13), and start the pilot.
+- **Next daily email:** execution layer, IEX vs NBBO spreads, amendment A3; Jev not run.
+
+**Needs from Juan:** nothing new. Initiative 2 stays deferred.
+
 ### 2026-10-08 15:00 — Initiative 1 v2 check passed; Initiative 3 resting-limit exit fails on 89 entries, proposal withdrawn
 
 **Evaluated:** The October 7 18:00 hypothesis for the October 8 morning cycle **worked**. All 24 October 7 volume-metric files are `sip-ah-volume-v2` (331 rows: 254 `ok`, 59 `warmup`, 18 `floored`). The report renders 24 sections and 331 rows; Pages run 37778868698 succeeded, and the published page is byte-identical to the local build. All six October 7 Initiative 7 slots persisted (latency 2.2–4.4 s). No pilot is active.

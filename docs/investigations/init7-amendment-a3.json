@@ -1,0 +1,19 @@
+{
+  "version": "init7-comparison-v1-amendment-A3",
+  "frozen_on": "2026-10-08",
+  "amends": {
+    "design_file": "docs/investigations/init7-comparison-v1.json",
+    "design_sha256": "df00c3bc9dd86117191ab86b838589e2dfdd5231ae6f1c62861b2e484915dc98",
+    "sections": ["future_pilot_execution.quotes", "cost_accounting.crossing"]
+  },
+  "reason": "This Alpaca data plan refuses real-time SIP quotes (HTTP 403 'subscription does not permit querying recent SIP data', checked 2026-10-08 16:03 UTC), so live books are IEX only. On the 64 archived pre-decision IEX books (October 7 and 8, 8 symbols x 8 slots), the mean IEX spread is 17.98 bps against 1.41 bps for the SIP NBBO at the same instant (medians 4.77 and 1.29). TSLA's median is 51.6 bps on IEX against 1.47 bps at the NBBO. Pricing fills at the IEX book would charge the hourly arms about 16.6 bps per round trip that a routed order does not pay. Evidence: log/2026-10-08/init7-execute/iex-vs-sip-spreads.json.",
+  "fill_source": {
+    "primary": "sip_nbbo",
+    "rule": "Each modeled fill uses the last SIP quote in the 60 seconds up to the receipt time of the post-decision IEX capture. The SIP quote is fetched after the 16-minute delay and archived as nbbo.json beside capture.json. Buy at its ask, sell at its bid; shares must not exceed its displayed size.",
+    "availability": "The IEX capture still decides whether a fill is possible: it must be received after the persisted decision, fresh (<= 60 s), two-sided with positive sizes, and the asset active, tradable and fractionable. A missing or stale SIP quote is a missing fill under the existing missing-entry and missing-exit rules.",
+    "causality": "The decision never reads the SIP quote. The quote is an outcome used only to price the fill, captured for the instant the IEX book was received.",
+    "secondary": "Report the same ledger priced at the IEX book as a conservative scenario beside the primary result. It does not gate promotion."
+  },
+  "unchanged": "Slippage and fee allowances (5 and 25 bps base and stress slippage per side, 1 bp fee per side), capital, holding, flatten and evaluation rules stay as frozen in v1.",
+  "implementation": "scripts/init7-execute.py (capture, nbbo, ledger --fill-source sip). Its SHA-256 is pinned when the 20-session pilot calendar is frozen."
+}

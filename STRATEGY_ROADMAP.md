@@ -1692,7 +1692,29 @@ tracker).
 
 ---
 
-## Current priorities and initiative status — 2026-10-08 15:00 CEST
+## Current priorities and initiative status — 2026-10-08 18:00 CEST
+
+This checkpoint supersedes the October 8 15:00 checkpoint. **Initiative 7's modeled execution layer is built and capturing live** (gob job `3t2`, through October 13): the first post-decision book (12:30 ET) arrived 0.47 s after the decision. **IEX books overstate the cost of crossing the spread about 13-fold** on this basket (mean 17.98 bps against 1.41 bps at the SIP NBBO, 64 books), so **amendment A3**, frozen before any modeled entry, prices fills at the delayed SIP NBBO and keeps IEX for availability. The pilot slot stays free. Paper equity at 18:30 CEST is **$99,720.39 (-$279.61)**, flat.
+
+**Money-fast selection:** the execution layer was Initiative 7's dated item and the last build before the October 14 pilot, which is the main candidate to replace the core strategy. The spread check moved with it because the cost model decides whether an hourly strategy can clear its friction at all. **North Star check:** unchanged. The October 8 15:00 result left no core-strategy exit lever; Initiative 7's pilot remains the largest open lever.
+
+| Initiative | Latest concrete progress | Current status / dependency | Next deliverable and check |
+|---|---|---|---|
+| 1 — shared volume measurement | October 8 15:00: v2 check passed | **Instrument, v2 live (log-only), verified.** | No dated item. Test any new volume hypothesis on the 89-entry archive before proposing a gate. |
+| 2 — broker execution | September 7 alternatives research | **Deferred per Juan's September 22 instruction.** | Resume only when access arrives; no renewed ask. |
+| 3 — scheduling and exits | October 8 15:00: resting-limit exit test | **Research; exit proposal withdrawn.** | **October 9 15:00:** split the 2.5-point realized-vs-modeled gap into exit spread and late or multi-day exits. |
+| 4 — initiative reporting | Receipt 181 | **Delivered and verified.** | Next daily email: Initiative 7 execution layer, IEX vs NBBO spreads and amendment A3, plus the 15:00 items. |
+| 5 — review surface | October 8 15:00: v2 page verified | **Build delivered.** | No dated item. |
+| 6 — PM-only gappers | October 6 15:00 latency study | **Pilot ENDED; log-only research continues.** | Reopen only with real-time consolidated data and a sub-minute watcher. |
+| 7 — alternative agent strategies / Jev | October 8 18:00: execution layer and amendment A3 | **Instrument, session 2 of 5** (`SFm` observing, `3t2` capturing books). October 8 slots so far: N1 = NVDA, GOOGL, TSLA; SEC `no_8k_within_window` each time; no Jev call. | **October 9 15:00:** run `nbbo` and both ledgers for October 8 (12:30–15:30 and the flatten); every arm must resolve. **October 9 18:00:** October 9 has six slot captures and a flatten capture. **October 14 15:00:** freeze the 20-session calendar, pin `init7-execute.py`'s hash, run both daemons for the pilot window, start the pilot. |
+
+**Initiative 7 progress, October 8 18:00:** `scripts/init7-execute.py` captures a post-decision IEX book and asset status for all eight symbols at each slot and at 15:55 ET, fetches the SIP NBBO for the same instant after the delay (`nbbo`), and replays N1/A1/A2/CASH/QQQ under both cost scenarios (`ledger --fill-source iex|sip`). A `/tmp` rehearsal reproduced an NVDA round trip by hand (-$0.126 net on $95, almost all the 12 bps allowance) and marked a position with no next book unresolved. Real-time SIP quotes return HTTP 403 on this plan. On 64 archived books the IEX median spread is 4.77 bps against 1.29 at the NBBO; TSLA's is 51.6 against 1.47. At 12:30 N1 picked TSLA with an IEX ask 1.23% above the NBBO ask. With NBBO fills, the frozen 12 bps base allowance dominates: six round trips cost about $0.76 a day on $95. Evidence: `docs/investigations/init7-execution-layer-2026-10-08.md`, `docs/investigations/init7-amendment-a3.json`, `log/2026-10-08/init7-execute/`.
+
+**Previous-step evaluation:** the October 8 15:00 hypothesis for this run **worked**: all six October 7 slots and today's 10:30, 11:30 and 12:30 slots persisted their decisions within 4 s, and the execution layer is built.
+
+**Needs from Juan / consolidated asks:** nothing new. Amendment A3 changes only modeled research pricing. No trading-pulse timing change is proposed.
+
+## Prior checkpoint — 2026-10-08 15:00 CEST
 
 This checkpoint supersedes the October 7 18:00 checkpoint. **Initiative 1's v2 check passed**: every October 7 metric file is v2, and the published report matches the local build byte for byte. **Initiative 3's resting-limit exit test ran a day early on all 89 real entries, and the standing +10% exit proposal is withdrawn**: it adds -0.08 points per trade over a plain 04:30 exit. The pilot slot stays free. Paper equity at 15:20 CEST is **$99,720.39 (-$279.61)**, flat.
 

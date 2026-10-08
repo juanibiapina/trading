@@ -1,0 +1,29 @@
+{
+  "version": "init7-sec-archive-v1",
+  "parser": "init7-sec-text-v1",
+  "design_sha256": "df00c3bc9dd86117191ab86b838589e2dfdd5231ae6f1c62861b2e484915dc98",
+  "mapping_sha256": "7afbd3761b28af1237b625729fa68e2c2631f7f00429d66a05e9beec1826e6e7",
+  "ticker": "GOOGL",
+  "cik": "0001652044",
+  "decision_cutoff_utc": "2026-10-08T15:32:00Z",
+  "started_utc": "2026-10-08T15:30:02.016362Z",
+  "status": "cash",
+  "candidates": [],
+  "documents": [],
+  "requests": [
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001652044.json",
+      "file": "submissions.json",
+      "requested_utc": "2026-10-08T15:30:02.019193Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-08T15:30:03.729688Z",
+      "bytes": 152415,
+      "sha256": "9434407b197d6322de4bece8ad3b69459c8d6ddf3a68526b4b22b02e8175d33c",
+      "received_by_cutoff": true
+    }
+  ],
+  "finished_utc": "2026-10-08T15:30:03.739223Z",
+  "cash_reason": "no_8k_within_window"
+}
