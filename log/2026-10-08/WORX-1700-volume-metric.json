@@ -1,0 +1,68 @@
+{
+  "metric_version": "sip-ah-volume-v2",
+  "symbol": "WORX",
+  "date": "2026-10-08",
+  "prior_date": "2026-10-07",
+  "as_of_utc": "2026-10-08T21:00:20+00:00",
+  "source_observed_utc": "2026-10-08T21:01:17.296579+00:00",
+  "floor_shares": 100,
+  "prior_observed_slots": 9,
+  "prior_inferred_zero_slots": 39,
+  "prior_expected_slots": 48,
+  "prior_complete": true,
+  "prior_peak_shares": 6261,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-08T20:30:00+00:00",
+      "bar_end_utc": "2026-10-08T20:35:00+00:00",
+      "bar_et": "16:30",
+      "shares": 13508,
+      "trades": 264,
+      "baseline_median_shares": 0,
+      "baseline_shares": 100,
+      "local_ratio": 135.08,
+      "local_status": "floored",
+      "local_ge_10": true,
+      "prior_peak_ratio": 2.157482830218815
+    },
+    {
+      "bar_start_utc": "2026-10-08T20:35:00+00:00",
+      "bar_end_utc": "2026-10-08T20:40:00+00:00",
+      "bar_et": "16:35",
+      "shares": 119359,
+      "trades": 2709,
+      "baseline_median_shares": 0,
+      "baseline_shares": 100,
+      "local_ratio": 1193.59,
+      "local_status": "floored",
+      "local_ge_10": true,
+      "prior_peak_ratio": 19.0638875578981
+    },
+    {
+      "bar_start_utc": "2026-10-08T20:40:00+00:00",
+      "bar_end_utc": "2026-10-08T20:45:00+00:00",
+      "bar_et": "16:40",
+      "shares": 47503,
+      "trades": 931,
+      "baseline_median_shares": 13508,
+      "baseline_shares": 13508,
+      "local_ratio": 3.516656795972757,
+      "local_status": "ok",
+      "local_ge_10": false,
+      "prior_peak_ratio": 7.587126657083533
+    },
+    {
+      "bar_start_utc": "2026-10-08T20:45:00+00:00",
+      "bar_end_utc": "2026-10-08T20:50:00+00:00",
+      "bar_et": "16:45",
+      "shares": 61724,
+      "trades": 1194,
+      "baseline_median_shares": 47503,
+      "baseline_shares": 47503,
+      "local_ratio": 1.2993705660695114,
+      "local_status": "ok",
+      "local_ge_10": false,
+      "prior_peak_ratio": 9.85848905925571
+    }
+  ]
+}

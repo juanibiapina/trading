@@ -245,7 +245,105 @@ AH >10% at this snapshot (unrounded): WHLR, XRTX
 - **WRAP** (AH +6.0%, Day% -8.7%, float 41.7M): below threshold.
 - **LAB**: absent (1 AH appearance, thin/stray print at 22:20). Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) and SAIQ show no AH appearance.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $1.85 | +6.0% | +25.4% | $2.32 | +33.0% | 6.6M | 785K | 8.3x | 1.7M | Pharmaceuticals: Major |
+| OLB | [TV](https://www.tradingview.com/chart/?symbol=OLB) | $0.55 | +41.9% | +12.2% | $0.62 | +59.2% | 4.7M | 122.3M | 0.0x | 18.7M | Internet Software/Services |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.70 | +1.3% | +21.8% | $0.85 | +23.4% | 2.9M | 4.4M | 0.7x | 568K | Real Estate Investment Trusts |
+| CPHI | [TV](https://www.tradingview.com/chart/?symbol=CPHI) | $0.96 | +12.9% | +5.2% | $1.01 | +18.8% | 237K | 9.0M | 0.0x | 40.3M | Pharmaceuticals: Major |
+| WRAP | [TV](https://www.tradingview.com/chart/?symbol=WRAP) | $1.47 | -8.7% | +6.0% | $1.56 | -3.2% | 131K | 525K | 0.3x | 41.7M | Medical Specialties |
+| WORX | [TV](https://www.tradingview.com/chart/?symbol=WORX) | $4.20 | -27.0% | +15.2% | $4.84 | -15.8% | 106K | 55K | 1.9x | 522K | Packaged Software |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): OLB, WHLR, WORX, XRTX
+
+**Evaluation notes:**
+- First entry scan of the night. Scanner ran at 17:00:20 ET. Gate check: XRTX (float 1.7M, 4 AH scans >10%, Day% +6.0%) qualifies the night for entries.
+- **XRTX — ENTERED** (float 1.7M, Grade C, 4th AH scan >10%). Total% +33.0% (scanner), under the +150% ceiling; Day% +6.0%.
+  - Spike-bar: `XRTX 2026-10-08  NO-SPIKE  peak +33% @16:22ET  (no bar cleared +15% on a volume co-spike) (as-of 17:00ET)`
+  - Third-bar: `XRTX 2026-10-08  CONFIRM-3  YES ignition 16:05ET 3.7x; confirmed 16:15ET $2.39 as-of 17:00ET`
+  - Volume context (`# XRTX shared SIP volume sip-ah-volume-v2; prior 2026-10-07 1+47zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T21:00:20+00:00; source fetched 2026-10-08T21:01:10.664108+00:00`):
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:00ET start=2026-10-08T20:00:00+00:00 shares=357046 local=unknown prior-peak=334.9400x status=warmup`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:05ET start=2026-10-08T20:05:00+00:00 shares=1318488 local=unknown prior-peak=1236.8555x status=warmup`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:10ET start=2026-10-08T20:10:00+00:00 shares=1308330 local=unknown prior-peak=1227.3265x status=warmup`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:15ET start=2026-10-08T20:15:00+00:00 shares=1332683 local=1.0186x prior-peak=1250.1717x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:20ET start=2026-10-08T20:20:00+00:00 shares=922449 local=0.6996x prior-peak=865.3368x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:25ET start=2026-10-08T20:25:00+00:00 shares=604053 local=0.4617x prior-peak=566.6538x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:30ET start=2026-10-08T20:30:00+00:00 shares=509498 local=0.5523x prior-peak=477.9531x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:35ET start=2026-10-08T20:35:00+00:00 shares=602435 local=0.9973x prior-peak=565.1360x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:40ET start=2026-10-08T20:40:00+00:00 shares=636264 local=1.0562x prior-peak=596.8705x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:45ET start=2026-10-08T20:45:00+00:00 shares=358576 local=0.5952x prior-peak=336.3752x status=ok`
+  - SIP 5m: 16:35 ET 602K sh / 4,278 trades (vwap $2.34, C $2.38), 16:40 ET 636K / 4,713 (H $2.44, vwap $2.38), 16:45 ET 359K / 2,485 (vwap $2.29, C $2.26). Volume still thousands of trades per bar; price holding a $2.16–2.46 band, ~8% under the $2.46 high (16:20 ET). HOLD pattern, not a fade. The AH high came at 16:20 ET, after the first AH bar, and CONFIRM-3 is YES, so the first-bar-spike skip does not apply.
+  - Book (log-only):
+    - `XRTX BOOK iex bid $2.23 x100 / ask $2.27 x100 @ 2026-10-08 16:59:46 ET age 1m32s two-sided spread 1.76% of ask`
+    - `XRTX BOOK sip-15m bid $2.31 x300 / ask $2.32 x2600 @ 2026-10-08 16:46:16 ET age 15m02s two-sided spread 0.43% of ask`
+    - `XRTX BOOK refresh +15s iex unchanged @ 2026-10-08 16:59:46 ET`
+    - `XRTX BOOK verdict: IEX STALE 1m32s; SIP-15m TWO-SIDED (observed 2026-10-08 17:01:18 ET; log-only)`
+  - Catalyst: GlobeNewswire 2026-10-08 ~16:00 ET, "XORTX Outlines Anticipated Health Canada Clinical Trial Application for XRx-026 for Gout" (verified at 22:25 scan). Fresh, same day, plan PR only: **Grade C**, exit in premarket.
+  - Fresh day-1 igniter: not in `WINNERS_TRACKING.md`, Day% +6.0%, move is AH ignition on the PR.
+  - Pre-buy check: no open positions, no XRTX order today. Quote bid $2.23 x100 / ask $2.27 x100. Bought 44 @ limit $2.32 ext → **filled $2.22** (order b8f5f48e). Fill Entry Total% +20.0% vs qualifying-scan Total% +28.9% (22:30): no chase, no CHASE-CAP note.
+- **WHLR — Skip: SPIKE→FADE** (float 568K, Grade None, 2nd AH scan >10%, so the 2-scan gate is met). Total% +23.4%, Day% +1.3%. `tradable=true`.
+  - Spike-bar: `WHLR 2026-10-08  SPIKE  16:26ET  +23%  $0.86  219 trades / 60k sh  (first co-spike bar) (as-of 17:00ET)`
+  - Third-bar: `WHLR 2026-10-08  CONFIRM-3  NO ignition 16:25ET failed third-bar hold/volume as-of 17:00ET`
+  - Volume context (`# WHLR shared SIP volume sip-ah-volume-v2; prior 2026-10-07 47+1zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T21:00:20+00:00; source fetched 2026-10-08T21:01:12.804387+00:00`):
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:00ET start=2026-10-08T20:00:00+00:00 shares=5370 local=unknown prior-peak=0.0420x status=warmup`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:05ET start=2026-10-08T20:05:00+00:00 shares=646 local=unknown prior-peak=0.0051x status=warmup`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:10ET start=2026-10-08T20:10:00+00:00 shares=250 local=unknown prior-peak=0.0020x status=warmup`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:20ET start=2026-10-08T20:20:00+00:00 shares=3518 local=14.0720x prior-peak=0.0275x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:25ET start=2026-10-08T20:25:00+00:00 shares=901160 local=3604.6400x prior-peak=7.0490x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:30ET start=2026-10-08T20:30:00+00:00 shares=1000672 local=284.4434x prior-peak=7.8274x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:35ET start=2026-10-08T20:35:00+00:00 shares=647049 local=0.7180x prior-peak=5.0613x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:40ET start=2026-10-08T20:40:00+00:00 shares=540875 local=0.6002x prior-peak=4.2308x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:45ET start=2026-10-08T20:45:00+00:00 shares=341924 local=0.5284x prior-peak=2.6746x status=ok`
+  - SIP 5m: peak $0.95 at 16:25 ET, then 16:35 ET C $0.79, 16:40 ET C $0.85, 16:45 ET L/C $0.76 on volume tapering 1.0M → 647K → 541K → 342K sh. The 16:45 close sits 20% under the high, the scanner fell from $0.88 (16:45 scan) to $0.85, and CONFIRM-3 failed the third-bar hold. Early peak (16:25 ET) and declining across scans: SPIKE→FADE, skip. Grade None (4 searches at 22:45, no same-day news); appears in `WINNERS_TRACKING.md` Sep 22 after a 1-for-9 reverse split, a separate earlier move.
+  - Book (log-only):
+    - `WHLR BOOK iex bid $0.5891 x100 / ask $0.0000 x0 @ 2026-10-08 16:00:02 ET age 1h01m one-sided/empty`
+    - `WHLR BOOK sip-15m bid $0.8300 x100 / ask $0.8440 x100 @ 2026-10-08 16:46:18 ET age 15m00s two-sided spread 1.66% of ask`
+    - `WHLR BOOK refresh +15s iex unchanged @ 2026-10-08 16:00:02 ET`
+    - `WHLR BOOK verdict: IEX STALE 1h01m; SIP-15m TWO-SIDED (observed 2026-10-08 17:01:18 ET; log-only)`
+- **OLB** (OLB Group, Internet Software/Services, float 18.7M): first AH scan >10% (1 of 2). Total% +59.2%, Day% +41.9% (regular-session watch name now building in AH). `tradable=true`.
+  - Spike-bar: `OLB 2026-10-08  SPIKE  16:45ET  +22%  $0.67  1689 trades / 1277k sh  (first co-spike bar) (as-of 17:00ET)`
+  - Third-bar: `OLB 2026-10-08  CONFIRM-3  PENDING ignition 16:45ET; waiting for third bar as-of 17:00ET`
+  - Volume context (`# OLB shared SIP volume sip-ah-volume-v2; prior 2026-10-07 48+0zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T21:00:20+00:00; source fetched 2026-10-08T21:01:15.323053+00:00`):
+    - `OLB 2026-10-08  VOLUME-CONTEXT 16:00ET start=2026-10-08T20:00:00+00:00 shares=291519 local=unknown prior-peak=0.2163x status=warmup`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 16:05ET start=2026-10-08T20:05:00+00:00 shares=140973 local=unknown prior-peak=0.1046x status=warmup`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 16:10ET start=2026-10-08T20:10:00+00:00 shares=271156 local=unknown prior-peak=0.2012x status=warmup`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 16:15ET start=2026-10-08T20:15:00+00:00 shares=546118 local=2.0140x prior-peak=0.4052x status=ok`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 16:20ET start=2026-10-08T20:20:00+00:00 shares=103599 local=0.3821x prior-peak=0.0769x status=ok`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 16:25ET start=2026-10-08T20:25:00+00:00 shares=105203 local=0.3880x prior-peak=0.0781x status=ok`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 16:30ET start=2026-10-08T20:30:00+00:00 shares=660371 local=6.2771x prior-peak=0.4900x status=ok`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 16:35ET start=2026-10-08T20:35:00+00:00 shares=1773503 local=16.8579x prior-peak=1.3160x status=ok`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 16:40ET start=2026-10-08T20:40:00+00:00 shares=1006003 local=1.5234x prior-peak=0.7465x status=ok`
+    - `OLB 2026-10-08  VOLUME-CONTEXT 16:45ET start=2026-10-08T20:45:00+00:00 shares=3545688 local=3.5245x prior-peak=2.6311x status=ok`
+  - SIP 5m: flat $0.53–0.55 until 16:25 ET, then BUILD: 16:30 ET 660K sh (C $0.58), 16:35 ET 1.77M / 2,645 trades (C $0.60), 16:40 ET 1.0M (C $0.62), 16:45 ET 3.55M / 5,170 trades (H $0.67, vwap $0.65). Real, accumulating volume; SIP vwap corroborates the scanner's $0.62.
+  - Book (log-only):
+    - `OLB BOOK iex bid $0.4688 x100 / ask $0.0000 x0 @ 2026-10-08 16:00:04 ET age 1h01m one-sided/empty`
+    - `OLB BOOK sip-15m bid $0.6497 x500 / ask $0.6500 x1000 @ 2026-10-08 16:46:18 ET age 15m00s two-sided spread 0.05% of ask`
+    - `OLB BOOK refresh +15s iex unchanged @ 2026-10-08 16:00:04 ET`
+    - `OLB BOOK verdict: IEX STALE 1h01m; SIP-15m TWO-SIDED (observed 2026-10-08 17:01:18 ET; log-only)`
+  - Catalyst (1 search): only a share buyback with ATM suspension (ACCESSWIRE, 2026-10-06), two days old, so background. No fresh catalyst found yet; re-search at 23:30.
+  - Likely MULTI-SESSION-RUNNER context: Day% +41.9% in the regular session today before the AH build. Watch for a 2nd AH scan >10% at 23:30.
+- **WORX** (SCWorx, Packaged Software, float 522K): first AH scan >10%. Day% -27.0%, Total% -15.8%: the AH bounce stays below the $5.75 prior close. **Skip: dead-cat bounce** (Day% ≤ -15%, no reclaim of the pre-crash level and only 1 AH scan, so no override watch). `tradable=true`.
+  - Spike-bar: `WORX 2026-10-08  SPIKE  16:32ET  +24%  $5.22  25 trades / 1k sh  (first co-spike bar) (as-of 17:00ET)`
+  - Third-bar: `WORX 2026-10-08  CONFIRM-3  NO no local-volume new-high ignition as-of 17:00ET`
+  - Volume context (`# WORX shared SIP volume sip-ah-volume-v2; prior 2026-10-07 9+39zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T21:00:20+00:00; source fetched 2026-10-08T21:01:17.296579+00:00`):
+    - `WORX 2026-10-08  VOLUME-CONTEXT 16:30ET start=2026-10-08T20:30:00+00:00 shares=13508 local=135.0800x prior-peak=2.1575x status=floored`
+    - `WORX 2026-10-08  VOLUME-CONTEXT 16:35ET start=2026-10-08T20:35:00+00:00 shares=119359 local=1193.5900x prior-peak=19.0639x status=floored`
+    - `WORX 2026-10-08  VOLUME-CONTEXT 16:40ET start=2026-10-08T20:40:00+00:00 shares=47503 local=3.5167x prior-peak=7.5871x status=ok`
+    - `WORX 2026-10-08  VOLUME-CONTEXT 16:45ET start=2026-10-08T20:45:00+00:00 shares=61724 local=1.2994x prior-peak=9.8585x status=ok`
+  - SIP 5m: 16:30–16:45 ET 13K–119K sh / 264–2,709 trades, swinging $4.22–5.87, all under the $5.75 prior close implied by Day% -27%.
+  - Book (log-only):
+    - `WORX BOOK iex bid $0.9030 x100 / ask $1.22 x100 @ 2026-04-13 16:00:00 ET age 4273h01m two-sided spread 25.98% of ask`
+    - `WORX BOOK sip-15m bid $4.85 x600 / ask $4.90 x100 @ 2026-10-08 16:46:14 ET age 15m04s two-sided spread 1.02% of ask`
+    - `WORX BOOK refresh +15s iex unchanged @ 2026-10-08 16:00:00 ET`
+    - `WORX BOOK verdict: IEX STALE 4273h01m; SIP-15m TWO-SIDED (observed 2026-10-08 17:01:18 ET; log-only)`
+  - Catalyst (1 search): Nasdaq Hearings Panel let WORX keep its listing (Oct 2) and it relisted on Nasdaq Oct 7. Background, no same-day release found.
+- **CPHI** (AH +5.2%), **WRAP** (AH +6.0%): below threshold. LAB absent.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| XRTX | $2.22 | 17:01 ET (23:01 CET) | 44 | b8f5f48e | Grade C: Health Canada CTA outline PR (Oct 8 ~16:00 ET); 4 AH scans >10%, HOLD ~8% under $2.46 AH high on 360K–640K sh/bar, CONFIRM-3 YES |

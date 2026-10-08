@@ -8,6 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
+| XRTX | $2.22 | $2.22 | $2.22 | 0.0% | 0.0% | 44 | $97.68 | C | 2026-10-08 | Alpaca order b8f5f48e, filled 17:01 ET. Health Canada CTA outline PR (GlobeNewswire Oct 8 ~16:00 ET). Exit in premarket. |
 
 ## Position Rules
 
