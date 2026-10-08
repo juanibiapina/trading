@@ -1,0 +1,42 @@
+{
+  "metric_version": "sip-ah-volume-v2",
+  "symbol": "LAB",
+  "date": "2026-10-08",
+  "prior_date": "2026-10-07",
+  "as_of_utc": "2026-10-08T20:20:17+00:00",
+  "source_observed_utc": "2026-10-08T20:20:39.105066+00:00",
+  "floor_shares": 100,
+  "prior_observed_slots": 2,
+  "prior_inferred_zero_slots": 46,
+  "prior_expected_slots": 48,
+  "prior_complete": true,
+  "prior_peak_shares": 42564,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-08T20:00:00+00:00",
+      "bar_end_utc": "2026-10-08T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 356085,
+      "trades": 27,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 8.365872568367635
+    },
+    {
+      "bar_start_utc": "2026-10-08T20:05:00+00:00",
+      "bar_end_utc": "2026-10-08T20:10:00+00:00",
+      "bar_et": "16:05",
+      "shares": 8236,
+      "trades": 44,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 0.19349685179964288
+    }
+  ]
+}
