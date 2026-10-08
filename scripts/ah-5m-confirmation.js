@@ -38,9 +38,12 @@ function median(xs) {
   return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
 }
 
-function etHM(t) {
-  const d = new Date(new Date(t).getTime() - 4 * 3600e3);
-  return `${String(d.getUTCHours()).padStart(2, "0")}:${String(d.getUTCMinutes()).padStart(2, "0")}`;
+// ET wall clock and session start follow America/New_York (EDT and EST).
+const ET_CLOCK = new Intl.DateTimeFormat("en-GB", { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+function etHM(t) { return ET_CLOCK.format(new Date(t)); }
+function ahStartISO(date) {
+  const offsetH = 12 - Number(ET_CLOCK.format(new Date(`${date}T12:00:00Z`)).slice(0, 2));
+  return new Date(Date.parse(`${date}T16:00:00Z`) + offsetH * 3600e3).toISOString().replace(".000Z", "Z");
 }
 
 function minutes(hm) {
@@ -56,7 +59,7 @@ function priorClose(sym, date) {
 function analyze(sym, date, now) {
   const base = priorClose(sym, date);
   if (!base) return `${sym} ${date}  CONFIRM-3  NO-DATA prior close unavailable`;
-  const start = `${date}T20:00:00Z`;
+  const start = ahStartISO(date);
   const startMs = new Date(start).getTime();
   const ah = bars(sym, "5Min", start, 300).filter((bar) => {
     const t = new Date(bar.t).getTime();

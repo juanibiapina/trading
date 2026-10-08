@@ -32,7 +32,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - 3 morning evaluations (10:20, 12:00, 14:00 CET)
 - Paper trades with ~€100 positions
 - All sectors — no sector restriction (learning phase, see Day Trading.md)
-- Session timing follows America/New_York market hours, including DST
+- Session timing follows America/New_York market hours, including DST (`spike-bar.js` and `ah-5m-confirmation.js` compute the 16:00 ET AH start per date since 2026-10-08)
 - **Supplementary AH-change scan:** after-hours runs also query `postmarket_change >15%`, rank that pass by AH change, and merge it with the primary volume-ranked results. `scan.py` reports names found only by this pass; evening logs preserve that line, and morning evaluations compare each unique name's SIP PM high with its latest logged AH price (or state why the outcome is unassessed). They also record peak-bar shares/trades and the next PM close, marking unheld peaks as transient separately from the raw outcome. SIP and book checks remain mandatory before any decision.
 - **AH percentage evidence:** `scan.py` prints `AH >10% at this snapshot (unrounded)` from the original unrounded result values, including `none`; evening logs preserve it for the existing AH appearance count. A rounded +10.0% in an older log is unresolved without original evidence. The list reports the percentage condition only; SIP, trajectory, extension, and book checks still determine entry.
 - **Dated Yahoo timelines:** evening and morning history checks pass `check-prices.py --date YYYY-MM-DD` with the intended ET session date. A missing session is unavailable; dated output leaves close bases and percentages unverified for SIP verification. Yahoo remains timeline-shape evidence within its five-day history window.
@@ -80,6 +80,44 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-10-08 — Make the Live AH Bar Tools Follow Daylight Saving Time
+
+**Context:** Reviewed the October 7 morning evaluation (written October 8) and the Oct 1–6 logs. October 7 ran 7/7 scheduled scans plus six extra observations. DKI, the winner (SIP PM peak $3.72, +122.8%), ignited at 17:50 ET, was detected at the 00:30 CEST final scan with CONFIRM-3 YES, and was blocked by the 2-AH-scan gate; the morning evaluation routed the final-scan exception (3/3 blocked late igniters ran) to the daily email. Our two fills netted −$14.88. While replaying the spike-bar detector (yesterday's deferred task), I found that `spike-bar.js` and `ah-5m-confirmation.js`, both run on every >10% AH candidate in every evening scan, hard-code EDT: the AH window starts at `T20:00:00Z` and ET labels subtract 4 hours. US daylight saving time ends November 1, 2026. From November 2, 20:00Z is 15:00 ET, so both tools would read the last regular-session hour as after-hours and print every time one hour late. Replay on CCHH March 3, 2026 (EST) showed it: the 21:00Z opening bar was labelled `17:00ET`, and CONFIRM-3 treated that opening bar as an ignition measured against regular-session volume. CONFIRM-3 appears in entry notes, so the error would reach decisions. The morning evaluation also noted that `broker.js bars --end` was silently ignored and worked around it with `--limit 48`.
+
+**Evaluation of previous changes:**
+
+- 2026-10-07 stale delayed SIP snapshot replacement: **insufficient data for the new path; format held, 1/5 covered sessions.** October 7 logged 14 `BOOK` verdicts, all with delayed SIP ages of 15m00s–15m03s, so no snapshot was older than 45 minutes and no `sip-hist` line was due. Zero stale snapshots were labelled `TWO-SIDED`, and zero decisions changed.
+- 2026-10-07 timeline close basis: **helped; 1/5 morning evaluations.** The October 8 evaluation printed `regular close 2026-10-07` (DKI $1.67, IPW $1.04), matched the SIP closes, and made zero basis corrections.
+- 2026-10-06 book diagnostic: **helped; 2/5 covered sessions.** All 9 verdicts at 17:00 ET or later read `IEX STALE` with a two-sided `SIP-15m` book (100%, target ≥80%). Both fills (IPW, CPHI) executed against frozen IEX quotes with SIP-priced limits, already routed to the email with the feed decision.
+- 2026-10-06 stale-book reconstruction: **insufficient data; 0 new stale-book cases** (tracker stays at 6).
+- 2026-10-02 dated timelines: **insufficient data; 1/5 sessions with a Yahoo history call.** October 7 made no `check-prices.py` history calls.
+- 2026-10-02 shared SIP volume context: **coverage helped; 2/5 covered sessions.** 24 metric files and 331 `VOLUME-CONTEXT` rows, now written as `sip-ah-volume-v2` (Initiative 1's switch). No decision cited the ratios. The v2 render and Pages check belongs to `strategy-advance` today.
+- 2026-10-01 unrounded AH evidence: **helped; 3/5 covered sessions.** The line appears in all 12 AH sections plus the regular-session scan.
+- 2026-09-30 full-AH watch recheck: **no new WATCH; 8/10 classified.** Standing 11 valid (2 ran / 9 faded-flat), ICMB still pending without PM prints.
+- 2026-09-22 to 09-25 supplementary-pass changes: **first sustained continuation; still insufficient for a cutoff decision.** October 7 added 4 pass-only names: IPW continued (latest AH $1.30 → PM $2.00, +53.8%, next bar $1.65 still above), ERNA, KUST and VNTG faded. Running: 11 unique names, 9 assessed, 1 sustained continuation, 2 unassessed (KRMD, ICMB), across 7/10 fully covered sessions.
+- Deferred 2026-10-07 spike-bar replay (VCIG): **closed, no change.** VCIG October 6 reads `NO-SPIKE peak +49% @16:28ET`. The detector starts at 16:00 ET, so its baseline excludes the regular session. VCIG's heavy opening bars set a high running median, and the climb to +49% never produced one bar with 5x the median trades. That is the detector's definition of a co-spike (a gradual build on heavy volume); VCIG faded, so no decision was lost.
+
+**Changes:**
+
+1. **scripts/spike-bar.js; scripts/ah-5m-confirmation.js; prompts/morning-evaluation.md** — Both scripts now compute the AH start as 16:00 America/New_York for the trading date (`20:00Z` in EDT, `21:00Z` in EST) and format ET labels with the `America/New_York` time zone. The morning prompt's SIP bar examples now give the EST bounds (`T21:00:00Z` AH, `T09:00:00Z` PM) beside the EDT ones. The post-market prompt already did.
+   - Why: from November 2 both evening tools would mix the last regular-session hour into the AH window and shift every label by one hour; CONFIRM-3 is cited in entry notes.
+   - Hypothesis: I expect summer output to stay byte-identical (verified on 10 October 7 runs), and from November 2 every `SPIKE`/`CONFIRM-3` label to read between 16:00 and 20:00 ET and match the SIP bar's UTC time minus 5 hours. Measure on the first five covered sessions after November 2: zero labels before 16:00 ET and zero ignitions placed on the opening bar by regular-session volume.
+2. **scripts/broker.js** — `bars` now passes `--end ISO` to the data API, and the usage text lists it.
+   - Why: the October 8 morning evaluation found `--end` silently ignored, so AH queries returned PM bars.
+   - Hypothesis: I expect zero further "`--end` ignored" tooling notes over the next five morning evaluations. Queries without `--end` are unchanged.
+
+**Verification:** `node --check` passed on all three scripts. Ten runs (spike-bar and CONFIRM-3 for DKI, IPW, CPHI, MVIS, KUST on October 7 at 18:30 ET) produced byte-identical output before and after. On CCHH March 3, 2026 (EST), the opening bar now reads `SPIKE 16:00ET` (was `17:00ET`), matching the 21:00Z SIP bar; CONFIRM-3 changed from `ignition 17:00ET` to `ignition 17:45ET`, because the opening bar no longer has regular-session bars before it, as in summer. The start-time helper returns 20:00Z for October 7, October 30 and March 9, and 21:00Z for November 2 and March 3. `broker.js bars DKI --start 2026-10-07T20:00:00Z --end 2026-10-07T20:15:00Z` returned exactly four bars; the same query without `--end` is unchanged. `scan.py --help` and `git diff --check` passed. `ignition-timing.js`, `volume-lead.js`, `premarket-exit-gap.js` and `ah-5m-confirmation-replay.js` keep the fixed EDT offset; they are research replays, not run by the evening or morning prompts.
+
+**Ready work skipped / next owners:**
+
+- **Research replay scripts above:** fix the same offset before they are used on a winter date; next scanner-improvement run after a need appears, or `strategy-advance` if an initiative replays winter data.
+- **Final-scan-ignition exception (DKI, TRUG, UPC all ran):** a strategy decision, already routed to the daily email by the morning evaluation. The 2-AH-scan gate is unchanged here.
+- **Initiative 1 v2 render/Pages check and Initiative 7 execution layer:** owned by today's `strategy-advance` runs (15:00 and 18:00).
+- **Initiative 6 seasonal UTC bounds:** the roadmap lists it for `strategy-advance` before winter; today's change covers only the evening/morning scanner tools.
+- No new `FEEDBACK_LOG.md` entries since October 2.
+
+**Updated process:** The spike-bar and CONFIRM-3 tools follow daylight saving time, and SIP bar queries accept an end time. Scanner parameters, entry gates, sizing and learning rules are unchanged.
 
 ### 2026-10-07 — Replace Stale Delayed SIP Snapshots and Fix the Timeline Close Basis
 

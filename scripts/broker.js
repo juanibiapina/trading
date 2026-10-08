@@ -22,7 +22,7 @@
  *   node scripts/broker.js cancel <id|prefix>
  *   node scripts/broker.js clock                # market clock: is_open + next open/close (ET)
  *   node scripts/broker.js quote <SYM>
- *   node scripts/broker.js bars  <SYM> [--tf 5Min] [--start ISO] [--limit N] [--feed sip|iex]
+ *   node scripts/broker.js bars  <SYM> [--tf 5Min] [--start ISO] [--end ISO] [--limit N] [--feed sip|iex]
  *      feed defaults to sip (full-market volume, incl. real ext-hours); falls back
  *      to iex if the free tier blocks recent SIP data (~last 15 min).
  *   node scripts/broker.js tradable <SYM>     # is the asset tradable on Alpaca?
@@ -156,15 +156,16 @@ async function cmdQuote(flags, positional) {
 
 async function cmdBars(flags, positional) {
   const sym = (positional[0] || "").toUpperCase();
-  if (!sym) throw new Error("usage: bars <SYM> [--tf 5Min] [--start ISO] [--limit N] [--feed sip|iex]");
+  if (!sym) throw new Error("usage: bars <SYM> [--tf 5Min] [--start ISO] [--end ISO] [--limit N] [--feed sip|iex]");
   const tf = flags.tf || "5Min";
   const limit = flags.limit || 20;
   const start = flags.start ? `&start=${encodeURIComponent(flags.start)}` : "";
+  const end = flags.end ? `&end=${encodeURIComponent(flags.end)}` : "";
   // Default to SIP (full consolidated tape incl. real extended-hours volume).
   // Free tier serves SIP historical but blocks the most recent ~15 min; on that
   // error, fall back to IEX so live/recent queries still return something.
   let feed = flags.feed || "sip";
-  const path = (f) => `/v2/stocks/${sym}/bars?timeframe=${tf}&limit=${limit}&feed=${f}${start}`;
+  const path = (f) => `/v2/stocks/${sym}/bars?timeframe=${tf}&limit=${limit}&feed=${f}${start}${end}`;
   let q;
   try {
     q = await api(DATA, path(feed));
@@ -219,7 +220,7 @@ async function main() {
   node scripts/broker.js cancel <id|prefix>
   node scripts/broker.js clock
   node scripts/broker.js quote <SYM>
-  node scripts/broker.js bars <SYM> [--tf 5Min] [--start ISO] [--limit N] [--feed sip|iex]
+  node scripts/broker.js bars <SYM> [--tf 5Min] [--start ISO] [--end ISO] [--limit N] [--feed sip|iex]
   node scripts/broker.js tradable <SYM>
 
 Add --json to any command for raw JSON output.`);

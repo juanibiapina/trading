@@ -59,7 +59,8 @@ A forced `python3 scripts/scan.py --all --session afterhours` can still be logge
 **Extended-hours volume & bad-print detection (use Alpaca SIP bars, NOT Yahoo volume):** Yahoo's 5-min extended-hours bars report **no volume** for any ticker — real and phantom alike (`--ah-history`/`--pm-history` show `AH/PM Vol: n/a` and `—` per bar), so Yahoo zero-volume bars are **not** evidence of anything. For real extended-hours volume, use Alpaca SIP bars:
 
 ```bash
-# AH session = 20:00-24:00 UTC (16:00-20:00 ET) of the trading date; PM = 08:00-13:30 UTC (04:00-09:30 ET)
+# EDT: AH session = 20:00-24:00 UTC (16:00-20:00 ET) of the trading date; PM = 08:00-13:30 UTC (04:00-09:30 ET)
+# EST (from November 2, 2026): add one hour, so AH starts T21:00:00Z and PM starts T09:00:00Z
 node scripts/broker.js bars SYM --tf 5Min --start YYYY-MM-DDT20:00:00Z --limit 48
 ```
 
@@ -258,7 +259,7 @@ Only real Alpaca fills go in this table (entry/exit = `filled_avg_price` from `b
 |--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
 | XXXX   | $2.50 | +35.0% | A — breakthrough data | 23:00 CET  | $3.20 | 06:15 ET | $3.10 | +€24.00 | +24.0% | ✅ Win |
 
-**PM Peak** = highest premarket price observed. **Peak Time** = when that peak occurred (ET). Track this to identify optimal exit windows. Use `check-prices.py --pm-history --date YYYY-MM-DD TICKER` with today's ET date to inspect the timeline, **then verify it against SIP bars** (`node scripts/broker.js bars TICKER --tf 5Min --start <PM-date>T08:00:00Z`) — Yahoo `--pm-history` under-reports the true peak on the illiquid low-float names we trade (DCX Jul 8: Yahoo $1.48 vs SIP $1.63). Report the higher SIP peak when it is backed by real `vol`/`trades`. Under-reporting the peak understates how much gain was available, which biases the let-winners-run analysis low.
+**PM Peak** = highest premarket price observed. **Peak Time** = when that peak occurred (ET). Track this to identify optimal exit windows. Use `check-prices.py --pm-history --date YYYY-MM-DD TICKER` with today's ET date to inspect the timeline, **then verify it against SIP bars** (`node scripts/broker.js bars TICKER --tf 5Min --start <PM-date>T08:00:00Z` in EDT, `T09:00:00Z` in EST) — Yahoo `--pm-history` under-reports the true peak on the illiquid low-float names we trade (DCX Jul 8: Yahoo $1.48 vs SIP $1.63). Report the higher SIP peak when it is backed by real `vol`/`trades`. Under-reporting the peak understates how much gain was available, which biases the let-winners-run analysis low.
 
 **Entry Total%** = total change from **previous close** (not just AH change). Calculate as: `(entry_price - prev_close) / prev_close`. This combines Day% + AH% into one number showing how extended the stock is at entry. Example: if prev close was $4.10 and you enter at $6.86, Entry Total% = +67.3%.
 

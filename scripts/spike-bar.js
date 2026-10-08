@@ -62,9 +62,14 @@ function priorClose(sym, dateD) {
   return target ? target.c : null;
 }
 
-function etHM(t) {
-  const et = new Date(new Date(t).getTime() - 4 * 3600e3); // summer ET = UTC-4
-  return `${String(et.getUTCHours()).padStart(2, "0")}:${String(et.getUTCMinutes()).padStart(2, "0")}`;
+// ET wall clock and session start follow America/New_York, so EDT (UTC-4) and
+// EST (UTC-5, from November 1, 2026) both map 16:00 ET to the AH open.
+const ET_CLOCK = new Intl.DateTimeFormat("en-GB", { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+function etHM(t) { return ET_CLOCK.format(new Date(t)); }
+function ahStartISO(dateD) {
+  const probe = new Date(`${dateD}T12:00:00Z`);
+  const offsetH = 12 - Number(ET_CLOCK.format(probe).slice(0, 2));
+  return new Date(Date.parse(`${dateD}T16:00:00Z`) + offsetH * 3600e3).toISOString().replace(".000Z", "Z");
 }
 function etMinutes(hm) { const [h, m] = hm.split(":").map(Number); return h * 60 + m; }
 function fmtK(n) { return n >= 1000 ? `${Math.round(n / 1000)}k` : String(n); }
@@ -73,7 +78,7 @@ function analyze(sym, dateD, IGN, MINTR, K, nowHM) {
   const base = priorClose(sym, dateD);
   if (!base) return `${sym} ${dateD}: NO prior-close (daily bar missing)`;
 
-  const startISO = `${dateD}T20:00:00Z`; // 16:00 ET (summer). AH session start.
+  const startISO = ahStartISO(dateD); // 16:00 ET AH session start (DST-aware).
   const endMs = new Date(startISO).getTime() + 4 * 3600e3; // through 20:00 ET
   let all = bars(sym, "1Min", startISO, 500).filter((r) => {
     const ms = new Date(r.t).getTime();
