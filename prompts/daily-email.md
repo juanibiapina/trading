@@ -144,7 +144,10 @@ node scripts/send-email-inboxkit.js \
      biggest %. An uncapturable phantom/dilution spike (ask $0.00 x0, no fillable
      book) is NOT the winner even at +194% — crown the best captured/tradable
      mover and note the uncapturable spike separately as detected & skipped.
-     See morning-evaluation.md "Actionable-winner refinement" (WVVIP 08-26). -->
+     See morning-evaluation.md "Actionable-winner refinement" (WVVIP 08-26).
+     PM peak: the morning evaluation sees SIP PM bars only to ~04:05 ET. Re-fetch
+     the winner's PM high with `node scripts/broker.js bars SYM --tf 5Min --start
+     <PM-start-UTC>` and report it with its ET time. -->
 <p><strong>[TICKER]</strong> ([sector]) &mdash; [catalyst]<br/>
 AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;">+X%</span> hypothetical)</p>
 <p>Scanner caught it? <strong style="color: #2e7d32;">YES</strong> or <strong style="color: #c62828;">NO</strong> &mdash; [brief reason if missed]</p>
