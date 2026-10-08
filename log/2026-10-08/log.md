@@ -50,6 +50,17 @@ AH >10% at this snapshot (unrounded): n/a (regular session).
 - FLYE, QNME, OLB, PARA, CPHI show current 5m volume far below their average 5m (VChg ≈ -99%): the intraday spike volume has dried up into the close.
 - CPHI and IPW are day 2: both were entered Oct 7 AH and sold this morning (CPHI -19.7%, IPW +3.6%). Tag MULTI-SESSION-RUNNER if either reappears in AH.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- Scanner ran at 16:00:14 ET, seconds after AH opened, so TradingView postmarket fields had no AH activity yet. No candidate >10% AH; spike-bar, CONFIRM-3, volume-metric and book checks not applicable.
+- Observation scan only (entries start at 23:00 CET). Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) have no AH appearance yet; their 2-AH-scan count starts at the next scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
