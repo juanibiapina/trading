@@ -158,6 +158,40 @@ AH >10% at this snapshot (unrounded): XRTX
 - **IPSC** (AH +6.2%, VRatio 0.3x, float 122.9M) and **MOBX** (AH +6.1%, Day% -8.9%): below threshold.
 - Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) and SAIQ show no AH appearance in this scan.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $1.85 | +6.0% | +21.6% | $2.25 | +28.9% | 2.5M | 329K | 7.8x | 1.7M | Pharmaceuticals: Major |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $1.13 | -8.9% | +5.3% | $1.19 | -4.0% | 367K | 16.3M | 0.0x | 15.8M | Semiconductors |
+| SDEV | [TV](https://www.tradingview.com/chart/?symbol=SDEV) | $1.99 | -28.4% | +8.0% | $2.15 | -22.7% | 208K | 70.9M | 0.0x | 1.8M | Pharmaceuticals: Major |
+| VCIG | [TV](https://www.tradingview.com/chart/?symbol=VCIG) | $0.57 | -25.7% | +7.1% | $0.61 | -20.4% | 112K | 5.8M | 0.0x | 1.0M | Miscellaneous Commercial Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): XRTX
+
+**Evaluation notes:**
+- Observation scan only (entries start at 23:00 CET). Scanner ran at 16:30:14 ET.
+- **XRTX** (float 1.7M, Grade C from the 22:25 scan): second AH scan >10% (2 of 2), so it meets the 2-AH-scan gate for the 23:00 CET entry window. Total% +28.9%, well under the +150% ceiling; Day% +6.0%.
+  - `tradable=true` (checked at 22:25).
+  - Spike-bar: `XRTX 2026-10-08  NO-SPIKE  peak +31% @16:15ET  (no bar cleared +15% on a volume co-spike) (as-of 16:30ET)`
+  - Third-bar: `XRTX 2026-10-08  CONFIRM-3  YES ignition 16:05ET 3.7x; confirmed 16:15ET $2.39 as-of 16:30ET`
+  - Volume context (`# XRTX shared SIP volume sip-ah-volume-v2; prior 2026-10-07 1+47zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T20:30:14+00:00; source fetched 2026-10-08T20:30:22.606031+00:00`):
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:00ET start=2026-10-08T20:00:00+00:00 shares=357046 local=unknown prior-peak=334.9400x status=warmup`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:05ET start=2026-10-08T20:05:00+00:00 shares=1318488 local=unknown prior-peak=1236.8555x status=warmup`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:10ET start=2026-10-08T20:10:00+00:00 shares=1308330 local=unknown prior-peak=1227.3265x status=warmup`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:15ET start=2026-10-08T20:15:00+00:00 shares=1332683 local=1.0186x prior-peak=1250.1717x status=ok`
+  - SIP 5m: new 16:15 ET bar 1.33M sh / 9,319 trades, vwap $2.38, H $2.45 (new AH high), C $2.39. Four bars of steady 1.3M-sh / ~9-10K-trade volume: real and accumulating. Yahoo timeline $2.39 (16:15) → $2.28 (16:30); scanner $2.25 is ~8% off the SIP high $2.45, still holding within 20%. Pattern so far: BUILD/hold, high made after the open bar (so the first-bar-spike skip does not apply).
+  - Book (log-only):
+    - `XRTX BOOK iex bid $2.29 x100 / ask $2.31 x100 @ 2026-10-08 16:30:16 ET age 8s two-sided spread 0.87% of ask`
+    - `XRTX BOOK sip-15m bid $2.35 x400 / ask $2.37 x1500 @ 2026-10-08 16:15:24 ET age 15m00s two-sided spread 0.84% of ask`
+    - `XRTX BOOK refresh +15s iex advanced @ 2026-10-08 16:30:40 ET`
+    - `XRTX BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-08 16:30:24 ET; log-only)`
+  - Catalyst unchanged: GlobeNewswire 2026-10-08 ~16:00 ET Health Canada CTA outline for XRx-026, Grade C.
+  - Entry candidate at 23:00 CET if it still holds within ~20% of the $2.45 AH high on accumulating SIP volume.
+- **MOBX** (+5.3%), **SDEV** (+8.0% on Day% -28.4%, dead-cat bounce zone) and **VCIG** (+7.1% on Day% -25.7%, dead-cat bounce zone): below the 10% threshold.
+- **LAB**: absent again (1 AH appearance, thin/stray print at 22:20). Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) and SAIQ show no AH appearance.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
