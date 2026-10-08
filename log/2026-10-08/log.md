@@ -61,6 +61,17 @@ AH >10% at this snapshot (unrounded): none
 - Scanner ran at 16:00:14 ET, seconds after AH opened, so TradingView postmarket fields had no AH activity yet. No candidate >10% AH; spike-bar, CONFIRM-3, volume-metric and book checks not applicable.
 - Observation scan only (entries start at 23:00 CET). Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) have no AH appearance yet; their 2-AH-scan count starts at the next scan.
 
+## Scan 22:05 CET (4:05 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- Scanner ran at 16:05:10 ET with 0 hits. No candidate >10% AH; spike-bar, CONFIRM-3, volume-metric and book checks not applicable.
+- Observation scan only (entries start at 23:00 CET). Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) still show no AH appearance; none has an AH scan toward the 2-scan gate yet.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
