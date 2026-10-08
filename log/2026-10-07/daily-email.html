@@ -1,0 +1,61 @@
+<div style="font-family: -apple-system, Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+<h2 style="color: #1a1a1a; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">Overnight Cycle: Oct 7 AH &rarr; Oct 8 PM</h2>
+
+<h3 style="color: #555; margin-top: 20px;">Post-Market Scans</h3>
+<p>7/7 scheduled scans ran (21:30&ndash;00:30 CEST) plus 6 extra opening observations. 16 unique tickers showed &gt;10% AH (IPW and PROF 4 scans each, CPHI 3). Two paper entries: IPW at $1.38 (23:38 CEST) and CPHI at $0.9978 (00:02 CEST). DKI ignited at 17:50 ET and showed up only at the 00:30 final scan.</p>
+
+<h3 style="color: #555;">Today&rsquo;s Winner</h3>
+<p><strong>DKI</strong> &mdash; DarkIris (packaged software, HK), float 1.2M &mdash; Grade None (Oct 6 6-K: share-class vote, conditional consolidations; no operational news)<br/>
+Final-scan $2.29 &rarr; PM SIP peak $3.72 at 04:21 ET (<span style="color: #2e7d32; font-weight: bold;">+62.4%</span> hypothetical; +122.8% vs the $1.67 close). After the morning evaluation it kept running: SIP high <strong>$4.57 at 05:15 ET</strong> (<span style="color: #2e7d32; font-weight: bold;">+99.6%</span> from $2.29). The path dipped to $1.82 (&minus;20.5%) overnight first.</p>
+<p>Scanner caught it? <strong style="color: #2e7d32;">YES</strong> &mdash; at the 00:30 final scan (+37.1% AH, CONFIRM-3 YES, two-sided SIP book). The 2-AH-scan gate blocked the entry.</p>
+
+<h3 style="color: #555;">Baseline Status</h3>
+<p style="font-size: 18px; background: #f5f5f5; padding: 10px; border-radius: 4px;">Detection rate: <strong>74/85 (87.1%)</strong> &mdash; Target: &gt;80%<br/>
+<span style="color: #1976d2;">BASELINE MET</span> &middot; selection 37/81 (45.7%) &middot; 96 days tracked</p>
+
+<h3 style="color: #555;">Paper Trades</h3>
+<p style="font-size: 18px;">Overnight P&amp;L: <span style="color: #c62828; font-weight: bold;">&minus;$14.88</span></p>
+<ul>
+<li>IPW $1.38 &rarr; $1.43: <span style="color: #2e7d32;">+$3.60 (+3.6%)</span>; PM peak $2.00 (+44.9% on the fill) faded before the 10:30 pulse.</li>
+<li>CPHI $0.9978 &rarr; $0.8012: <span style="color: #c62828;">&minus;$18.48 (&minus;19.7%)</span>; never reclaimed the fill.</li>
+<li>Also since the last email: MTEN stopped out Oct 7 14:30 CEST at $1.21, <span style="color: #c62828;">&minus;$12.60 (&minus;12.9%)</span>.</li>
+</ul>
+<p style="background: #f5f5f5; padding: 10px; border-radius: 4px;">Cumulative Paper P&amp;L: <span style="color: #c62828; font-weight: bold;">&minus;$279.58</span> &middot; equity $99,720.39 &middot; no open positions</p>
+
+<h3 style="color: #555;">Charts (5m + volume)</h3>
+<p style="margin: 0 0 4px;"><strong>DKI (winner, not traded)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-07/DKI-1131.png" alt="DKI 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+
+<h3 style="color: #555;">Scanner Improvement</h3>
+<p><strong>Oct 7</strong> (latest completed): <code>book-check.js</code> now flags delayed SIP snapshots older than 45 min as stale and substitutes the last historical SIP quote (BURU had shown a July pre-split quote as tonight&rsquo;s book). <code>price-timeline.py</code> now measures from the last regular close and prints its basis; four morning evaluations had to correct it by hand. Hypothesis: zero stale snapshots labelled two-sided and zero basis corrections over the next five sessions. Today&rsquo;s run comes after this email.</p>
+
+<h3 style="color: #555;">Process Review</h3>
+<p><strong>Oct 7</strong> (latest completed, 12:40 UTC; covers sessions through Oct 7 12:30 UTC, so last night&rsquo;s scans are not reviewed yet). All 23 sessions finished with no provider errors. Fixed: <code>volume_metric.py</code> HTTP 403 (requests ended inside the 15-min SIP delay; 48 tool calls wasted on Oct 6), temp files committed by a concurrent pulse, full reads of the day log and of <code>OPEN_POSITIONS.md</code>, and a new <code>pm-sweep.py</code> for the morning premarket sweep.</p>
+<p style="background: #fff3e0; padding: 10px; border-radius: 4px; border-left: 4px solid #ef6c00;"><strong>Still needs you (from the Oct 6 review, bridge/dotfiles code):</strong> treat login errors (<code>invalid_grant</code>, expired refresh token) as permanent with one Telegram alert; let scheduled pulses fall back to the other enabled provider; make one test call after changing the default provider; and revisit <code>retry.maxRetries: 100000</code>. Provider failures stopped scans on 4 of the last 10 sessions (Sep 25, Sep 29, Oct 2, Oct 5).</p>
+
+<h3 style="color: #555;">Initiative Progress</h3>
+<p>Window: Oct 7 09:35 UTC (message 180) &rarr; this send.</p>
+<ul>
+<li><strong>Initiative 7 &mdash; Liquid-session agent strategy, Oct 7 15:00 + 18:00</strong>: built <code>init7-observe.py</code> and started the 5-session capture daemon (12/12 frozen vectors reproduced). All six Oct 7 slots wrote <code>decision.json</code> 2&ndash;4 s after the slot (deadline 120 s) with no hash problems. N1 was AMZN &times;3, AAPL &times;2, TSLA &times;1; no 8-K in window, so A1 = cash and A2 = N1. AMZN&rsquo;s IEX book was 0.46% wide at 10:30 ET, a cost an hourly strategy must beat. Next: Oct 8 18:00 modeled execution layer that records entry spread; Oct 14 freeze calendar and start the pilot.</li>
+<li><strong>Initiative 3 &mdash; Scheduling and exits, Oct 7 15:00</strong>: later-rebuild entries lose on the 89 real entries: first-ignition 2-bar &minus;0.2% mean (41 admits), the 8 rebuild admits &minus;13.9%; base &minus;3.2%. No timing rule proposed. DST cohort jobs confirmed loaded. Next: Oct 9 15:00 test the +10% resting sell-limit exit on all 89 entries.</li>
+<li><strong>Initiative 1 &mdash; Shared volume metric, Oct 7 18:00</strong>: v2 consumers and scan command live, one day early; 578/578 replayed rows match. Last night wrote 24/24 metric files as v2. Next: confirm they render and the Pages build passes today.</li>
+<li><strong>Initiative 5 &mdash; Review surface, Oct 7 15:15</strong>: Oct 6 report rows match the metric files 578/578 beside both charts. The published page was 404; Pages now rebuilds the seven newest logs, and Oct 5&ndash;7 return 200. Next: rides on Initiative 1&rsquo;s v2 check.</li>
+</ul>
+<p>Deferred/blocked: Initiative 2 broker test stays deferred per your Sep 22 instruction. Initiative 6 pilot ended; it reopens only with real-time consolidated data and a sub-minute watcher. Open for your review: the Initiative 7 direction (liquid regular-session strategy as a candidate replacement); no live switch until the pilot shows edge.</p>
+<p>Routed to <code>strategy-advance</code>: a final-scan ignition exception (CONFIRM-3 YES, accumulating SIP volume, fillable book, under the ceiling). All 3 gate-blocked late igniters ran (TRUG +47%, UPC +11.9%, DKI +62.4% at the morning check). It applies on evidence and gets reported here; reply to veto.</p>
+
+<h3 style="color: #555;">Jev Results and Costs</h3>
+<p><strong>Window run:</strong> 1 development call, Oct 7 13:06 UTC, <code>jev-1.13.0</code>, spec <code>stock-catalyst-v1</code>, on the archived AAPL Q3 8-K: <code>earnings_guidance</code> (confidence 1.0), dilutive financing 0.03, so both arms kept AAPL. Excluded from the trial.<br/>
+<strong>Scheduled slots:</strong> 0 Jev calls across the six Oct 7 slots (verified in each <code>decision.json</code>; no 8-K reached the classifier).<br/>
+<strong>Usage/cost (window):</strong> 1 call, 5,914 input / 157 output tokens, <strong>$0.000248 USD estimated</strong> from the manifest&rsquo;s pricing; billed charge unavailable (TypeSafe billing not queried). Artifact: <code>log/2026-10-07/init7-observe-dev/jev-glue-AAPL-2026-07-30/jev/manifest.json</code>.<br/>
+<strong>Cumulative recorded in repo:</strong> 7 calls, 11,385 / 1,088 tokens, ~$0.000478 USD estimated (Oct 2 shadow run + this call).</p>
+
+<h3 style="color: #555;">Feedback Acknowledged</h3>
+<p>No new feedback since last report (latest entry Oct 2: Jev classification and reporting, still in effect above).</p>
+
+<h3 style="color: #555;">Key Takeaway</h3>
+<p style="background: #e3f2fd; padding: 10px; border-radius: 4px; border-left: 4px solid #1976d2;">The scanner found DKI at 00:30 and the 2-AH-scan gate kept us out of a name that went +99.6% from the scan price by 05:15 ET; that is the third gate-blocked late igniter in a row to run.</p>
+
+<p style="font-size: 13px; color: #555;">Reply to this email with feedback or vetoes.</p>
+<p style="font-size: 12px; color: #666; margin-top: 20px;">Email session: anthropic/claude-opus-5-5 &middot; reasoning: medium</p>
+</div>

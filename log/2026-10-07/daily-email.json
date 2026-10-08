@@ -1,0 +1,66 @@
+{
+  "cycle_date": "2026-10-07",
+  "status": "sent",
+  "provider": "InboxKit",
+  "message_id": 181,
+  "from": "zero@inboxkit.cc",
+  "to": "juanibiapina@gmail.com",
+  "subject": "Trading Scanner Report - 2026-10-07",
+  "send_started_at": "2026-10-08T09:32:39.939126+00:00",
+  "sent_at": "2026-10-08T09:32:41.252001+00:00",
+  "sent_at_source": "Successful InboxKit response observed locally (response has no timestamp)",
+  "previous_successful_send_at": "2026-10-07T09:35:30.370779+00:00",
+  "previous_message_id": 180,
+  "previous_receipt": "log/2026-10-06/daily-email.json",
+  "reporting_cutoff_at": "2026-10-08T09:32:39.939126+00:00",
+  "body_file": "daily-email.html",
+  "body_sha256": "6f1d8dd52eaf211367e3d78416955031f74ba53887966a981feb43fa0a80d363",
+  "chart_urls": [
+    "https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-07/DKI-1131.png"
+  ],
+  "chart_markers": "none; DKI had no Alpaca fill",
+  "winner": "DKI",
+  "winner_scanner_caught": true,
+  "winner_miss_reason": "detected at 00:30 final scan; blocked by 2-AH-scan gate",
+  "winner_pm_sip_high": {
+    "price": 4.57,
+    "time_et": "2026-10-08 05:15",
+    "vs_close_pct": 173.7,
+    "vs_final_scan_pct": 99.6,
+    "morning_eval_peak": 3.72
+  },
+  "realized_cycle_pnl_usd": -14.88,
+  "realized_since_previous_email_usd": -27.48,
+  "cumulative_realized_pnl_usd": -279.58,
+  "equity_usd": 99720.39,
+  "open_positions": [],
+  "latest_scanner_improvement_date": "2026-10-07",
+  "latest_completed_process_review_date": "2026-10-07",
+  "process_review_needs_user_action": "carried from Oct 6 review: provider login-error alert, provider fallback, test call after default change, retry policy",
+  "initiative_updates": [
+    7,
+    3,
+    1,
+    5
+  ],
+  "initiative_blocked_or_deferred": {
+    "2": "Deferred per Juan's Sep 22 instruction",
+    "6": "Pilot ended; reopen needs real-time consolidated data and sub-minute watcher"
+  },
+  "jev_status": "1 development call in window; 0 calls in 6 scheduled Oct 7 slots",
+  "jev_window_calls": 1,
+  "jev_window_tokens": {
+    "input": 5914,
+    "output": 157
+  },
+  "jev_window_cost_usd": 0.000248388,
+  "jev_window_cost_kind": "estimate from manifest pricing; billed charge unavailable",
+  "jev_artifact": "log/2026-10-07/init7-observe-dev/jev-glue-AAPL-2026-07-30/jev/manifest.json",
+  "jev_cumulative_recorded": {
+    "calls": 7,
+    "input_tokens": 11385,
+    "output_tokens": 1088,
+    "cost_usd_estimate": 0.00047817
+  },
+  "new_feedback": false
+}
