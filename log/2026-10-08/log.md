@@ -192,6 +192,59 @@ AH >10% at this snapshot (unrounded): XRTX
 - **MOBX** (+5.3%), **SDEV** (+8.0% on Day% -28.4%, dead-cat bounce zone) and **VCIG** (+7.1% on Day% -25.7%, dead-cat bounce zone): below the 10% threshold.
 - **LAB**: absent again (1 AH appearance, thin/stray print at 22:20). Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) and SAIQ show no AH appearance.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $1.85 | +6.0% | +25.4% | $2.32 | +33.0% | 5.1M | 614K | 8.3x | 1.7M | Pharmaceuticals: Major |
+| WHLR | [TV](https://www.tradingview.com/chart/?symbol=WHLR) | $0.70 | +1.3% | +26.1% | $0.88 | +27.7% | 874K | 4.2M | 0.2x | 568K | Real Estate Investment Trusts |
+| WRAP | [TV](https://www.tradingview.com/chart/?symbol=WRAP) | $1.47 | -8.7% | +6.0% | $1.56 | -3.2% | 131K | 525K | 0.3x | 41.7M | Medical Specialties |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): WHLR, XRTX
+
+**Evaluation notes:**
+- Observation scan only (entries start at 23:00 CET). Scanner ran at 16:45:21 ET.
+- **XRTX** (float 1.7M, Grade C): third AH scan >10% (3 AH appearances). Total% +33.0%, Day% +6.0%. Remains the 23:00 CET entry candidate.
+  - Spike-bar: `XRTX 2026-10-08  NO-SPIKE  peak +33% @16:22ET  (no bar cleared +15% on a volume co-spike) (as-of 16:45ET)`
+  - Third-bar: `XRTX 2026-10-08  CONFIRM-3  YES ignition 16:05ET 3.7x; confirmed 16:15ET $2.39 as-of 16:45ET`
+  - Volume context (`# XRTX shared SIP volume sip-ah-volume-v2; prior 2026-10-07 1+47zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T20:45:21+00:00; source fetched 2026-10-08T20:45:51.289212+00:00`):
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:00ET start=2026-10-08T20:00:00+00:00 shares=357046 local=unknown prior-peak=334.9400x status=warmup`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:05ET start=2026-10-08T20:05:00+00:00 shares=1318488 local=unknown prior-peak=1236.8555x status=warmup`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:10ET start=2026-10-08T20:10:00+00:00 shares=1308330 local=unknown prior-peak=1227.3265x status=warmup`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:15ET start=2026-10-08T20:15:00+00:00 shares=1332683 local=1.0186x prior-peak=1250.1717x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:20ET start=2026-10-08T20:20:00+00:00 shares=922449 local=0.6996x prior-peak=865.3368x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:25ET start=2026-10-08T20:25:00+00:00 shares=604053 local=0.4617x prior-peak=566.6538x status=ok`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:30ET start=2026-10-08T20:30:00+00:00 shares=509498 local=0.5523x prior-peak=477.9531x status=ok`
+  - SIP 5m: 16:20 ET 922K sh / 6,449 trades (H $2.46, new AH high, vwap $2.37), 16:25 ET 604K / 4,205 (vwap $2.30), 16:30 ET 509K / 3,952 (L $2.16, vwap $2.24, C $2.26). Volume still real (thousands of trades per bar) but tapering from the 1.3M-sh bars; price drifting off the $2.46 high. Yahoo $2.38 (16:35) → $2.28 (16:45). Scanner $2.32 is ~6% off the SIP high: still holding within 20%, not yet a fade.
+  - Book (log-only):
+    - `XRTX BOOK iex bid $2.28 x100 / ask $2.30 x100 @ 2026-10-08 16:45:53 ET age 1s two-sided spread 0.87% of ask`
+    - `XRTX BOOK sip-15m bid $2.28 x1100 / ask $2.30 x400 @ 2026-10-08 16:30:53 ET age 15m02s two-sided spread 0.87% of ask`
+    - `XRTX BOOK refresh +15s iex advanced @ 2026-10-08 16:46:06 ET`
+    - `XRTX BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-08 16:45:54 ET; log-only)`
+- **WHLR** (Wheeler REIT, Real Estate Investment Trusts, float 568K): first AH scan >10% (1 of 2). Total% +27.7%, Day% +1.3%.
+  - `tradable=true`.
+  - Spike-bar: `WHLR 2026-10-08  SPIKE  16:26ET  +23%  $0.86  219 trades / 60k sh  (first co-spike bar) (as-of 16:45ET)`
+  - Third-bar: `WHLR 2026-10-08  CONFIRM-3  PENDING ignition 16:25ET; waiting for third bar as-of 16:45ET`
+  - Volume context (`# WHLR shared SIP volume sip-ah-volume-v2; prior 2026-10-07 47+1zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T20:45:21+00:00; source fetched 2026-10-08T20:45:53.308837+00:00`):
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:00ET start=2026-10-08T20:00:00+00:00 shares=5370 local=unknown prior-peak=0.0420x status=warmup`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:05ET start=2026-10-08T20:05:00+00:00 shares=646 local=unknown prior-peak=0.0051x status=warmup`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:10ET start=2026-10-08T20:10:00+00:00 shares=250 local=unknown prior-peak=0.0020x status=warmup`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:20ET start=2026-10-08T20:20:00+00:00 shares=3518 local=14.0720x prior-peak=0.0275x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:25ET start=2026-10-08T20:25:00+00:00 shares=901160 local=3604.6400x prior-peak=7.0490x status=ok`
+    - `WHLR 2026-10-08  VOLUME-CONTEXT 16:30ET start=2026-10-08T20:30:00+00:00 shares=1000672 local=284.4434x prior-peak=7.8274x status=ok`
+  - SIP 5m: flat $0.68–0.70 on a few trades 16:00–16:20 ET, then ignition at 16:25 ET: 901K sh / 2,793 trades (H $0.95, vwap $0.87, C $0.89), 16:30 ET 1.0M sh / 3,864 trades (vwap $0.89, C $0.89). Real, accumulating volume; SIP vwap corroborates the scanner's $0.88. High printed at 16:25, after the first AH bar, so the first-bar-spike skip does not apply. Yahoo $0.89 (16:30) → $0.79 (16:35) → $0.81 (16:45): ~15% off the $0.95 SIP high, still within 20%.
+  - Book (log-only):
+    - `WHLR BOOK iex bid $0.5891 x100 / ask $0.0000 x0 @ 2026-10-08 16:00:02 ET age 45m53s one-sided/empty`
+    - `WHLR BOOK sip-15m bid $0.8953 x2200 / ask $0.9000 x2700 @ 2026-10-08 16:30:55 ET age 15m00s two-sided spread 0.52% of ask`
+    - `WHLR BOOK refresh +15s iex unchanged @ 2026-10-08 16:00:02 ET`
+    - `WHLR BOOK verdict: IEX STALE 45m53s; SIP-15m TWO-SIDED (observed 2026-10-08 16:45:54 ET; log-only)`
+    - The IEX quote is a frozen 16:00 ET `ask $0.00 x0`; the delayed SIP book is two-sided. At an entry scan this needs the freshness guard: the zero ask is a stale IEX artifact, contradicted by real SIP trades.
+  - Catalyst (4 searches, budget used): no same-day release, earnings or 8-K found. Background only: serial reverse splits (1-for-3 Apr 2026, 1-for-4 effective Aug 26, 2026) and preferred/convertible conversion adjustments; a ChartMill item shows WHLR -24% in the prior session. Grade None. Concern: history of dilution through conversions.
+  - Not a multi-session runner: prior session was a -24% drop, Day% today +1.3%, move is pure AH ignition.
+- **WRAP** (AH +6.0%, Day% -8.7%, float 41.7M): below threshold.
+- **LAB**: absent (1 AH appearance, thin/stray print at 22:20). Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) and SAIQ show no AH appearance.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
