@@ -83,6 +83,17 @@ AH >10% at this snapshot (unrounded): none
 - Scanner ran at 16:10:12 ET with 0 hits. No candidate >10% AH; spike-bar, CONFIRM-3, volume-metric and book checks not applicable.
 - Observation scan only (entries start at 23:00 CET). Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) still show no AH appearance; none has an AH scan toward the 2-scan gate yet.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- Scanner ran at 16:15:20 ET with 0 hits. No candidate >10% AH; spike-bar, CONFIRM-3, volume-metric and book checks not applicable.
+- Observation scan only (entries start at 23:00 CET). Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) still show no AH appearance; none has an AH scan toward the 2-scan gate yet.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
