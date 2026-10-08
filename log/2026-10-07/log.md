@@ -1064,3 +1064,145 @@ AH >10% at this snapshot (unrounded): BFRG, CPHI, DKI, IPSC, IPW, PROF, SBFM, WH
 |--------|------------|------------|-----------------|----------|--------|
 | IPW | $1.38 | 17:38:57 ET (23:38 CEST) | 72 | 825706f4 | 2 AH scans >10%, real SIP ignition (CONFIRM-3 YES), hold near high; float 1.2M; Grade None |
 | CPHI | $0.9978 | 18:02:02 ET (00:02 CEST) | 94 | 58102d51 | 2 AH scans >10%, late BUILD to $1.16 on 0.3–1.3M sh/bar; float 40.3M; Grade None |
+
+## Morning Evaluation — 10:20 CEST (04:20 ET, October 8)
+
+**Pulse 1: DKI is today's winner. The scanner detected it at the final scan, and the 2-AH-scan gate blocked the entry.** DKI reached a SIP PM high of **$3.72 (+122.8%)** at 04:21 ET from its **$1.67** October 7 close, on **2.34M + 1.47M shares / 23,158 + 16,082 trades** in the 04:15 and 04:20 bars. Both bars closed above +100% ($3.47, $3.46). The 00:30 CEST scan logged it at **$2.29** with CONFIRM-3 YES and a two-sided SIP book, and blocked it only because it had one AH scan. Hypothetical final-scan entry → PM peak: **+62.4%**. Our two entries did not reach the bar: IPW peaked at $2.00 (+92.3% from close, +44.9% on the $1.38 fill) and CPHI never reclaimed its fill. Position-evaluation sold both at 10:30 CEST for **−$14.88** net.
+
+Discovery ran before reading this log: `scan.py --all --session premarket` at 04:20 ET (QTEX, IPW, WHLR, DKI) and `pm-sweep.py` (18 listed names above +10%, no price or cap limit). All levels below are **Alpaca SIP** daily closes or 5-minute/1-minute bars through the **04:22 ET** minute (captured 04:38 ET). Yahoo was used for timeline shape and the latest print only. October 7 is a normal Wednesday, so every PM % uses the October 7 SIP close; entry Total% uses the October 6 SIP close, as the scan did.
+
+### Today's Winner
+
+**DKI — DarkIris Inc. (packaged software / digital game storefronts, Hong Kong), Nasdaq**
+
+- Catalyst: **Grade None.** The October 6 6-K reported the extraordinary meeting results: Class B shares raised to 200 votes each, and two **conditional** 50-for-1 share consolidations that apply only if the Class A price falls below $1.00. Benzinga ran "DarkIris shares jump 16% after hours" on the vote overnight. No operational news. No split has been effected, so it does not enter the reverse-split tally.
+- Previous close: **$1.67** (SIP, October 7). October 7's regular session ran $1.27 → $3.64 intraday on 41.7M shares and closed $1.67 (+22.8% from the $1.36 October 6 close). `price-timeline.py` uses the same $1.67 basis.
+- AH last night: flat $1.53–$1.79 on 5–60K shares per bar until 17:45 ET. It ignited at **17:50 ET** (170K → 264K → 669K shares) to an AH high of **$2.70 (+61.7%) at 18:00 ET** (4,814 trades). The 00:30 CEST scan showed **$2.29 (+37.1% AH)**. It then faded to **$1.82** (18:45 bar low) and closed AH at **$1.94**.
+- Premarket: opened $2.04, dipped to $1.86, then ran from 04:13. The **04:15 bar** went to **$3.59** on 2,342,884 / 23,158 (close $3.47), the **04:20 bar** to **$3.72 at 04:21** on 1,472,817 / 16,082 (close $3.46). Yahoo shows $3.22 at 04:25 and $3.19 (+91.0%) at 04:28.
+- Hypothetical P&L: final-scan $2.29 → $3.72 = **+62.4%**. Holding overnight meant a drawdown to $1.82 (−20.5%) first, and the PM opened at $2.04, below that entry. PM-open 04:00 VWAP $1.96 → $3.72 = +89.8%.
+- Float **1.2M** | Market cap **~$3.5M** (TradingView; Class A only).
+- Capturable: **yes.** `tradable=true`. The 00:30 scan logged a two-sided SIP book ($2.19 x100 / $2.20 x2300 at 18:17 ET). The PM SIP book at 04:10 ET was $2.01 / $2.06 (2.4%). The IEX quote was frozen at the 16:00 ET close, as usual.
+- Winner bar: **clears.** +122.8% from the true last-session close, two consecutive 5-minute closes above +100%, 3.8M shares / 39K trades across the two peak bars.
+
+**Scanner Diagnostic:**
+
+- Detectable at screening time (~22:15 CEST)? **NO.** At 16:15 ET DKI was $1.55 (−7%). The AH move began at 17:50 ET (23:50 CEST). It was detected at the first scan after the ignition: the **00:30 CEST final scan**, +37.1% AH, $2.29. It was also on the 21:30 regular-session watch list.
+- Why we did not act: the **2-AH-scan gate**. It was logged as a FINAL-SCAN-GATE-BLOCK with CONFIRM-3 YES (6.8x) and a fillable SIP ask.
+- Scanner gap: **none in detection.** The gap is the entry gate on late igniters; see the final-scan gate-block tracker in Notes. A late scan would not have added a second qualifying AH scan, because DKI faded to +16% by 20:00 ET.
+
+**Also notable (not the headline):**
+
+- **IPW — iPower (internet retail), our first entry.** Fresh day-1 AH igniter (Day −8.0%). It ignited at 16:40 ET on 461K shares per bar, built through four AH scans (+17.3 → +21.0 → +24.0 → +25.0%), and extended in the unscanned tail to **$1.68 at 19:55 ET**. PM SIP high **$2.00 (+92.3%)** in the 04:10 bar on 3,411,595 / 23,113, which closed $1.71; then $1.65 and $1.55. Below the bar. Entered $1.38, sold $1.43.
+- **MRNO — Murano Global (hotels, Mexico), close $0.2361. Below the $0.50 floor.** October 7 6-K: strategic review, debt-restructuring update, and a second 180-day Nasdaq bid-price extension (no deal; Grade None). It ignited at **16:30 ET** to $0.42 (+78%) on **9.8M shares / 19,376 trades** in that 15-minute bar. It held $0.35–$0.41 for the rest of AH on 0.7–12M shares per 15 minutes, and the SIP book at 18:30 ET was $0.3752 / $0.3756 (0.1% spread). PM high **$0.46 (+94.8%)** in the 04:00 bar on 8.68M / 19,985, closing $0.38; $0.39 since. Below the >100% bar.
+
+### Baseline Tracking
+
+Source: the October 6 log (Days tracked 95), which is the immediately preceding trading day. **No new baseline gap.** Existing gaps stay **Sep 11, Sep 18, Sep 25, Oct 2**.
+
+- Days tracked: **96** (95 + October 7 only).
+- Winners detected by scanner: **74/85 (87.1%)**. DKI is added as detected (+1/+1). MRNO is a price-floor exclusion but peaked at +94.8%, below the >100% winner bar, so it does not enter the denominator.
+- Winner selected for paper trade: **37/81 (45.7%)**. DKI was not entered (+0/+1).
+- Target: >80% detection. Status: **BASELINE MET.** Coverage failures, the four skipped retrospectives, and the floor exclusions limit what the rate means.
+
+### Retrospective Scan Results
+
+`scan.py --all --session premarket` (04:20 ET): QTEX (+5.4%, 0.0x), IPW (+49.0%), WHLR (+5.8%), DKI (+19.8% at the time). `pm-sweep.py` added MRNO, SDST and OLB (all below $0.50) plus thin names: PROF 2,950 PM shares, LUCD 1,122, NXXT 1,058, UPC 1,486, LZMH 939, EDSA 4,339, CMTL 168, SKIN 598, AMBP 972, BGL 594. WOLF (+14%, $1.66B cap) is outside the strategy. No forced AH scan was run; the postmarket fields reset overnight.
+
+| Ticker | Oct 7 SIP close | AH SIP high / ET | PM SIP high / ET | PM high vs close | Peak-bar shares / trades | Latest | Classification |
+|--------|-----------------|------------------|------------------|------------------|--------------------------|--------|----------------|
+| DKI | $1.67 | $2.70 / 18:00 | $3.72 / 04:21 | **+122.8%** | 1,472,817 / 16,082 (04:20 bar) | $3.19 (+91.0%, Yahoo 04:28) | AH→PM continuation; **winner**; detected at final scan, gate-blocked |
+| MRNO | $0.2361 | $0.44 / 16:45 | $0.46 / 04:00 | +94.8% | 8,675,929 / 19,985 | $0.39 (+65%) | Below $0.50 floor; in-window AH +78% on 9.8M shares |
+| IPW | $1.04 | $1.68 / 19:55 | $2.00 / 04:10 | +92.3% | 3,411,595 / 23,113 | $1.55 (+49.0%) | AH→PM continuation; detected + entered |
+| SDST | $0.075 | $0.08 (flat) | $0.1273 / 04:00 | +69.7% | 23,123,875 / 12,956 | $0.10 (+33%) | Below floor; PM-only (flat AH) |
+| OLB | $0.387 | $0.52 / 19:45 | $0.55 / 04:05 | +42.1% | 2,712,683 / 4,299 | $0.48 (+24%) | Below floor; late-AH tail (+1% at 18:30 ET) |
+| PROF | $5.68 | $7.51 / 16:35 | $6.92 / 04:00 | +21.8% | 11,263 / 229 | $6.82 | Detected, thin; AH better |
+| SBFM | $0.70 | $0.89 / 18:05 | $0.85 / 04:00 | +21.4% | 986,224 / 10,841 | $0.70 (0%) | Final-scan first sighting, CONFIRM-3 NO; AH better |
+| WHLR | $0.69 | $0.84 / 17:55 | $0.77 / 04:00 | +11.6% | 161,242 / 1,354 | $0.71 | Dead-cat skip; AH better |
+| CPHI | $0.85 | $1.16 / 17:30 | $0.96 / 04:00 | +12.9% | 394,740 / 2,733 | $0.84 | Detected + entered; faded below fill |
+
+### Open Position P&L (Alpaca)
+
+No positions remain open. Position-evaluation (10:30 CEST, `log/2026-10-08/log.md`) sold both fills at 04:30 ET. Prices are `filled_avg_price` from `broker.js orders all`.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| IPW | $1.38 | +22.1% (vs $1.13) | None — no catalyst found | 23:38 CEST (17:38 ET) | $2.00 (SIP) | 04:10 ET | $1.43 | +$3.60 | +3.6% | ✅ Win (peak +44.9% on fill) |
+| CPHI | $0.9978 | +55.9% (vs $0.64) | None — no catalyst found | 00:02 CEST (18:02 ET) | $0.96 (SIP) | 04:00 ET | $0.8012 | −$18.48 | −19.7% | ❌ Loss (never reclaimed fill) |
+
+**Total Realized P&L (Alpaca fills only, this session): −$14.88.** IPW was sold 28.5% below its $2.00 SIP peak, which printed in the 04:10 bar and was already fading when the 10:30 pulse ran.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled checkpoints (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST), plus six extra observations (22:05, 22:10, 22:15, 22:20, 22:25, 22:45). The entry window was fully covered.
+- Candidates found: **16 unique tickers** with a >10% AH appearance (IPW 4, PROF 4, CPHI 3, KUST 2, BFRG 2, ERNA 1, NCPL 1, IRIX 1, SUGP 1, VNTG 1, MVIS 1, LGCL 1, DKI 1, SBFM 1, WHLR 1, IPSC 1), plus a 29-name regular-session watch list.
+- Retrospective matches: **all in-universe AH→PM movers detected** (DKI, IPW, plus the faders). MRNO, SDST and OLB sit below the floor.
+- Supplementary AH-change-only pass: the line is present in all 12 AH scans. **4 unique tickers, 1 continuation / 3 faded / 0 unassessed.**
+  - **IPW: continuation, sustained.** Latest logged AH price $1.30 (00:30) → PM SIP high $2.00 (+53.8%) on 3,411,595 / 23,113; the next bar closed $1.65, above $1.30.
+  - **ERNA: faded.** $2.60 (23:30) → PM high $2.46 (−5.4%) on 6,159 / 88.
+  - **KUST: faded.** $5.25 (22:30) → PM high $4.19 (−20.2%) on 1,613 / 29.
+  - **VNTG: faded.** $0.74 (22:25) → PM high $0.71 (−4.1%) on 357 / 5.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| DKI | +37.1% at 00:30 (first and only appearance); AH high +61.7% at 18:00 ET | 2-AH-scan gate (ignited 17:50 ET; FINAL-SCAN-GATE-BLOCK) | **Yes**: $2.29 → $3.72 **+62.4%**, after an overnight dip to $1.82 (−20.5%) |
+| MRNO | +78% at 16:30 ET on 9.8M shares; +59% at 18:30 | Below `MIN_PRICE = $0.50` | Modest: 18:30 ask $0.3756 → $0.46 **+22.5%** peak; +3.8% to the latest $0.39 |
+
+### AH Mover Follow-Through
+
+Every name with two or more >10% AH scans. Current = latest SIP 5-minute close (04:15–04:20 ET).
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| IPW | $1.68 | 19:55 | **Build** (+17.3 → 21.0 → 24.0 → 25.0%) | $1.55 | −7.7% | +49.0% | PM peak $2.00 **exceeded AH by 19.0%**, transient (one bar) |
+| PROF | $7.51 | 16:35 | **Spike→hold**, thin (+21.3 → 17.1 → 18.5 → 19.0%) | $6.82 | −9.2% | +20.1% | PM peak $6.92 **fell short (−7.9%)**; AH better |
+| CPHI | $1.16 | 17:30 | **Late surge → fade** (+10.5 → 24.7 → 11.8%) | $0.84 | −27.6% | −1.2% | PM peak $0.96 **fell short (−17.2%)**; AH better |
+| KUST | $5.95 | 16:15 | **Spike→fade** (+15.5 → 16.8%, then off the scan) | $4.19 | −29.6% | −6.9% | PM peak $4.19 **fell short (−29.6%)**; AH better |
+| BFRG | $0.82 | 17:25 | **Spike→hold**, thin (+15.3 → 12.3%) | $0.68 | −17.1% | −4.2% | PM peak $0.72 **fell short (−12.2%)**; AH better |
+
+DKI (one scan) is the reverse shape: AH spike→fade to $1.94, then a PM peak 37.8% above the $2.70 AH high.
+
+**Chase-cap check:** IPW filled at +22.1% Total (qualifying +11.4%, +10.7 pts) and CPHI at +55.9% (qualifying +65.3%). Neither is near the ~+120% zone. PM reclaimed IPW's fill and never reclaimed CPHI's. No new chase case; standing **1 (XOS), never reclaimed**.
+
+### Notes
+
+- **Coverage, last 10 completed sessions (Sep 24–Oct 7):** **Sep 25 0/7, Sep 29 3/7, Oct 2 0/7, Oct 5 0/7.** Sep 24, 28, 30, Oct 1, Oct 6 and **Oct 7 ran 7/7.** That is **4 failures in 10 sessions**, still above the ≥2 trigger, so the scheduler/bridge investigation stays routed to the email.
+- **CEILING-OVERRIDE / DEAD-CAT-OVERRIDE / FIRST-BAR-SPIKE WATCH:** none flagged last night. WHLR was a dead-cat skip that did not meet the watch condition (PM $0.77 < AH $0.84). Standings unchanged: dead-cat **3 positive / 4 negative**; first-bar **11 valid (2 ran / 9 faded-flat), 1 pending (ICMB)**. ICMB is still pending: no SIP PM prints again.
+- **Fade-rule tally:** no SPIKE→FADE skips in the entry window. KUST (2 AH scans before 23:00) and ERNA (1 scan) faded before they could be considered. Sub-3M sample stays **4/23 (17.4%)**.
+- **Final-scan gate-block: 2 → 3, all 3 ran.** New row **DKI** (Oct 7→8): float 1.2M, Grade None, ignition 17:50 ET, CONFIRM-3 YES 6.8x, fillable SIP ask, qualified at the final scan at $2.29 → PM SIP peak **$3.72 = +62.4%**. Caveat: the path went through $1.82 (−20.5%) overnight and a $2.04 PM open, so the result depends on holding through that dip. Previous rows: TRUG +47%, UPC +11.9%. Three of three late igniters ran, so this pulse routes a **final-scan-ignition exception proposal** to the daily email (CONFIRM-3 YES + accumulating SIP volume + fillable book, under the ceiling). The gate is unchanged here.
+- **Raw PM leader / PM-only tracking:** the biggest raw PM mover is **DKI (+122.8%)**, an **AH→PM continuation** the scanner detected (AH +62% at 18:00 ET). The only PM-only gapper is **SDST** (below the floor, +69.7% in the 04:00 bar on 23M shares, then $0.10, +33%). `log/pm-open-scan.csv` has **no October 8 rows yet** at 04:38 ET. The CSV holdable PM-only count is **62**. Carry the Initiative-6 cluster to the email.
+- **Price-floor exclusions: 11 → 12 observations across 8 → 9 nights; confirmed >100%-and-holdable stays 1 (TOPP).** New row **MRNO Oct 7→8**: close $0.2361, `tradable=true`, float 1.75M, Grade None (strategic-review 6-K). In-window AH +78% at 16:30 ET on 9.8M shares / 19,376 trades per 15 minutes, +59% at 18:30 ET. PM peak $0.46 (+94.8%). Hypothetical 18:30 ask $0.3756 → $0.46 = **+22.5%**. Verdict: **holdable on a tight book** (SIP spread 0.1% at 18:30 ET and 0.2% at 04:10 ET; AH held +50–75% for 3+ hours on millions of shares), **but not >100%**, so it does not count toward the trigger (**1 of 3, not met**). SDST (PM-only) and OLB (late tail, +1% at 18:30 ET) are not added.
+- **Late-AH-tail tracking:** DKI's surge was at 17:50 ET, inside the window. IPW's tail climb to $1.68 at 19:55 ET continued a detected build, so it is not added (BIYA convention). Standing **2 true-tail (ORIS, GNS) / 1 feed-lag (BTCT)**, unchanged.
+- **In-window feed-lag: 7, unchanged.** Every in-universe in-window mover above +10% on real volume was surfaced. Carry the whole-universe AH verification recommendation to the email.
+- **Execution and selection trackers:** broker-block **2**, stale-book-only **6**, no-fillable-book **4**, float-only **1**, all unchanged. Both fills executed against frozen IEX quotes with SIP-priced limits again: IPW at 17:38 ET against a 16:59 quote, and CPHI at 18:02 ET against the 16:00 quote. CPHI's paper fill ($0.9978) came at the stale IEX ask, about 6% below the live SIP ask of $1.06. That is a paper-engine artifact in our favour; it belongs with the stale-book feed decision.
+- **Actual-entry trackers:** both entries are **day-1 fresh igniters** (IPW Day −8.0%, CPHI Day +32.6%). IPW **ran** ($1.38 → $2.00, +44.9%); CPHI **faded** ($0.9978 → $0.96 peak, −3.8%). First-day igniters **29 → 31 entries (12 ran / 8 flat / 11 faded) = 38.7% ran**; multi-session **1, faded**, unchanged. IPW's August 7 reverse split is background, not the catalyst note, so the reverse-split tally stays **4/5 this-week faded / 4/6 older continued**.
+- **Extreme-runner tally: 15 fades / 2 continues (88.2%), unchanged.** No AH peak reached the ~+130% zone: DKI +61.7% from $1.67 (+98.5% from the $1.36 October 6 close), SBFM about +124% Total from its $0.398 October 6 close, IPW +61.5%. The partial-profit routing trigger stays reached.
+- **SIP basis checks:** October 7 closes DKI $1.67, IPW $1.04, CPHI $0.85, MRNO $0.2361 (SIP rounds to $0.24), SBFM $0.70, WHLR $0.69, PROF $5.68, KUST $4.50, ERNA $2.39, BFRG $0.71, OLB $0.387. October 6 closes for Entry Total%: IPW $1.13, CPHI $0.64. `price-timeline.py` uses the correct $1.67 / $1.04 October 7 basis this morning.
+- **Tooling:** `broker.js bars --end` is ignored with `--tf 5Min` (AH queries returned PM bars). Use `--limit 48` from the AH start and filter by date.
+
+### Daily Email Routing
+
+- Headline: **DKI is today's winner. It was detected at the 00:30 final scan and blocked by the 2-AH-scan gate.** SIP PM peak $3.72 (+122.8%) at 04:21 ET on 3.8M shares in two bars; final-scan $2.29 → +62.4% hypothetical, after a −20.5% overnight dip. Our entries: IPW +$3.60 (+3.6%; peak +44.9% on the fill), CPHI −$18.48 (−19.7%). Net **−$14.88**. Detection **74/85 (87.1%)**, selection **37/81 (45.7%)**, 96 days tracked.
+- **Decision for Juan — final-scan-ignition exception:** three late igniters blocked only by the 2-AH-scan gate (TRUG +47%, UPC +11.9%, DKI +62.4%) all ran into PM. Should a final-scan entry be allowed when CONFIRM-3 is YES, SIP volume is accumulating, the book is fillable and Total% is under the ceiling? DKI shows the cost: an overnight dip to −20.5% before the run.
+- **Scheduler/bridge reliability (decision for Juan):** 4 coverage failures in the last 10 sessions (Sep 25, Sep 29, Oct 2, Oct 5). October 6 and 7 ran 7/7.
+- **Stale-quote feed:** both fills again executed on frozen IEX quotes with SIP-priced limits; CPHI filled 6% below the live SIP ask.
+- Carry forward: 7 feed-lag observations → whole-universe AH verification; 62-row holdable PM-only cluster → Initiative 6; 15/17 extreme-runner fades → partial-profit decision; reverse-split recency recommendation; sub-$0.50 floor question (TOPP 1 of 3; MRNO holdable but +94.8%). The sub-3M fade (4/23), price-floor (1 of 3) and first-bar (no new run) triggers are not met.
+
+### Price Charts
+
+Excerpts from `python3 scripts/price-timeline.py DKI IPW CPHI MRNO` at ~04:28 ET. Yahoo's 5-minute closes; the SIP tables above set the levels. The block charts are omitted.
+
+```text
+DKI   Previous Close: $1.67 (regular close 2026-10-07) | 2-Day Range: $1.38 - $3.72 | Current: $3.19 (+91.0%) | Peak: $3.72 (+122.8%) at 10-08 04:20 ET
+  [REG] 10-07 12:40 ET: $2.27 (+35.9%)   [REG] 14:45: $1.57 (-6.0%)   [REG] 15:55: $1.71 (+2.4%)
+  [PM]  10-08 04:00 ET: $1.91 (+14.4%)   [PM] 04:05: $2.06 (+23.4%)   [PM] 04:10: $2.53 (+51.5%)
+  [PM]  10-08 04:15 ET: $3.48 (+108.4%)  [PM] 04:20: $3.46 (+107.2%)  [PM] 04:25: $3.22 (+92.8%)  [PM] 04:28: $3.19 (+91.0%)
+
+IPW   Previous Close: $1.04 (regular close 2026-10-07) | Current: $1.46 (+40.3%) | Peak: $1.99 (+91.4%) at 10-08 04:10 ET
+  [PM]  10-08 04:00 ET: $1.57   [PM] 04:05: $1.65   [PM] 04:10: $1.71   [PM] 04:15: $1.65   [PM] 04:20: $1.59
+
+CPHI  [PM] 10-08 04:00 ET: $0.83   [PM] 04:05: $0.86   [PM] 04:10: $0.85   [PM] 04:20: $0.84
+
+MRNO  [PM] 10-08 04:00 ET: $0.38   [PM] 04:05: $0.39   [PM] 04:15: $0.40   [PM] 04:21: $0.39
+```
