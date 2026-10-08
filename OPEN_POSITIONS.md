@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
 | XRTX | $2.22 | $2.22 | $2.22 | 0.0% | 0.0% | 44 | $97.68 | C | 2026-10-08 | Alpaca order b8f5f48e, filled 17:01 ET. Health Canada CTA outline PR (GlobeNewswire Oct 8 ~16:00 ET). Exit in premarket. |
+| OLB | $0.71 | $0.71 | $0.71 | 0.0% | 0.0% | 141 | $100.11 | None | 2026-10-08 | Alpaca order 3ce058a7, filled 17:31 ET. No fresh catalyst (Oct 6 buyback/ATM suspension is background; 2.17M warrant shares at $0.78 registered). AH BUILD to new highs on 2–4M sh/bar. Exit at first premarket opportunity. |
 
 ## Position Rules
 
