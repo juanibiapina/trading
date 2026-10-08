@@ -125,6 +125,39 @@ AH >10% at this snapshot (unrounded): LAB
 - **SAIQ**: AH +6.0% on Day% +41.6%, VRatio 0.1x. Below threshold.
 - Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) still show no AH appearance.
 
+## Scan 22:25 CET (4:25 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| XRTX | [TV](https://www.tradingview.com/chart/?symbol=XRTX) | $1.85 | +6.0% | +22.2% | $2.26 | +29.5% | 1.2M | 178K | 6.8x | 1.7M | Pharmaceuticals: Major |
+| IPSC | [TV](https://www.tradingview.com/chart/?symbol=IPSC) | $1.46 | +14.1% | +6.2% | $1.55 | +21.1% | 230K | 895K | 0.3x | 122.9M | Biotechnology |
+| MOBX | [TV](https://www.tradingview.com/chart/?symbol=MOBX) | $1.13 | -8.9% | +6.1% | $1.20 | -3.3% | 131K | 16.2M | 0.0x | 15.8M | Semiconductors |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): XRTX
+
+**Evaluation notes:**
+- Observation scan only (entries start at 23:00 CET). Scanner ran at 16:25:10 ET.
+- **XRTX** (XORTX Therapeutics, Pharmaceuticals: Major, float 1.7M): first AH scan >10% (1 of 2). At 22:20 it was +9.2%, below threshold.
+  - `tradable=true`.
+  - Spike-bar: `XRTX 2026-10-08  NO-SPIKE  peak +26% @16:08ET  (no bar cleared +15% on a volume co-spike) (as-of 16:25ET)`
+  - Third-bar: `XRTX 2026-10-08  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-of 16:25ET`
+  - Volume context (`# XRTX shared SIP volume sip-ah-volume-v2; prior 2026-10-07 1+47zero/48 slots; floor 100; log-only`; `# reconstructed as-of 2026-10-08T20:25:10+00:00; source fetched 2026-10-08T20:25:29.591411+00:00`):
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:00ET start=2026-10-08T20:00:00+00:00 shares=357046 local=unknown prior-peak=334.9400x status=warmup`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:05ET start=2026-10-08T20:05:00+00:00 shares=1318488 local=unknown prior-peak=1236.8555x status=warmup`
+    - `XRTX 2026-10-08  VOLUME-CONTEXT 16:10ET start=2026-10-08T20:10:00+00:00 shares=1308330 local=unknown prior-peak=1227.3265x status=warmup`
+  - SIP 5m: 16:00 ET 357K sh / 2,128 trades (vwap $2.02), 16:05 ET 1.32M sh / 10,005 trades (vwap $2.18, H $2.34), 16:10 ET 1.31M sh / 9,700 trades (vwap $2.30, H $2.39). Real, accumulating volume; SIP high $2.39 and vwap corroborate the scanner's $2.26. Yahoo timeline $2.01 → $2.39 (16:15) → $2.32 (16:25): building, holding within ~3% of the AH high.
+  - Book (log-only):
+    - `XRTX BOOK iex bid $2.31 x100 / ask $2.33 x100 @ 2026-10-08 16:25:28 ET age 2s two-sided spread 0.86% of ask`
+    - `XRTX BOOK sip-15m bid $2.26 x1500 / ask $2.28 x600 @ 2026-10-08 16:10:30 ET age 15m01s two-sided spread 0.88% of ask`
+    - `XRTX BOOK refresh +15s iex advanced @ 2026-10-08 16:25:44 ET`
+    - `XRTX BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-08 16:25:31 ET; log-only)`
+  - Catalyst (2 searches): GlobeNewswire 2026-10-08, ~16:00 ET (search showed "26 minutes ago" at ~16:26 ET), "XORTX Outlines Anticipated Health Canada Clinical Trial Application for XRx-026 for Gout". Fresh, same-day, but a plan/outline PR with no regulatory decision: **Grade C** (minor PR). Prior PRs (Sep 18 planned FDA IND, Sep 10 manufacturing start) are background.
+  - Not a multi-session runner on the evidence so far: Day% +6.0%, move is AH ignition on the PR.
+- **LAB**: absent from this scan (was +12.0% at 22:20 on a thin/stray print). 1 AH appearance so far.
+- **IPSC** (AH +6.2%, VRatio 0.3x, float 122.9M) and **MOBX** (AH +6.1%, Day% -8.9%): below threshold.
+- Regular-session watch names (FLYE, QNME, OLB, PARA, PROF, GRAN, CPHI, IPW) and SAIQ show no AH appearance in this scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
