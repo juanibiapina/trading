@@ -1,0 +1,29 @@
+{
+  "version": "init7-sec-archive-v1",
+  "parser": "init7-sec-text-v1",
+  "design_sha256": "df00c3bc9dd86117191ab86b838589e2dfdd5231ae6f1c62861b2e484915dc98",
+  "mapping_sha256": "7afbd3761b28af1237b625729fa68e2c2631f7f00429d66a05e9beec1826e6e7",
+  "ticker": "AAPL",
+  "cik": "0000320193",
+  "decision_cutoff_utc": "2026-10-08T17:32:00Z",
+  "started_utc": "2026-10-08T17:30:02.983942Z",
+  "status": "cash",
+  "candidates": [],
+  "documents": [],
+  "requests": [
+    {
+      "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "file": "submissions.json",
+      "requested_utc": "2026-10-08T17:30:02.989348Z",
+      "user_agent": "trading-research ***@gmail.com",
+      "status": 200,
+      "content_type": "application/json",
+      "received_utc": "2026-10-08T17:30:03.228065Z",
+      "bytes": 163743,
+      "sha256": "e89635068cd46772d1d3859ce2bc839fab781630787943a1874f258fa354e7a9",
+      "received_by_cutoff": true
+    }
+  ],
+  "finished_utc": "2026-10-08T17:30:03.236503Z",
+  "cash_reason": "no_8k_within_window"
+}
