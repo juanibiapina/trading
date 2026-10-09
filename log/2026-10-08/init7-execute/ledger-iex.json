@@ -1,0 +1,595 @@
+{
+  "version": "init7-execute-v1",
+  "date": "2026-10-08",
+  "mode": "modeled_quote_fills_no_orders",
+  "fill_source": "iex",
+  "start_equity_usd_per_arm": 100.0,
+  "coverage": {
+    "decisions": 6,
+    "slot_captures": 4,
+    "flatten_capture": true,
+    "slots": 6
+  },
+  "decisions": {
+    "1030": {
+      "n1": "NVDA",
+      "a1": null,
+      "a1_reason": "no_8k_within_window",
+      "a2": "NVDA",
+      "a2_reason": "no_source"
+    },
+    "1130": {
+      "n1": "GOOGL",
+      "a1": null,
+      "a1_reason": "no_8k_within_window",
+      "a2": "GOOGL",
+      "a2_reason": "no_source"
+    },
+    "1230": {
+      "n1": "TSLA",
+      "a1": null,
+      "a1_reason": "no_8k_within_window",
+      "a2": "TSLA",
+      "a2_reason": "no_source"
+    },
+    "1330": {
+      "n1": "AAPL",
+      "a1": null,
+      "a1_reason": "no_8k_within_window",
+      "a2": "AAPL",
+      "a2_reason": "no_source"
+    },
+    "1430": {
+      "n1": "AAPL",
+      "a1": null,
+      "a1_reason": "no_8k_within_window",
+      "a2": "AAPL",
+      "a2_reason": "no_source"
+    },
+    "1530": {
+      "n1": "AAPL",
+      "a1": null,
+      "a1_reason": "no_8k_within_window",
+      "a2": "AAPL",
+      "a2_reason": "no_source"
+    }
+  },
+  "arms": {
+    "N1": {
+      "base": {
+        "end_equity": 97.13838,
+        "net_usd": -2.86162,
+        "realized_net_usd": -2.861622,
+        "round_trips": 4,
+        "spread_paid_usd": 1.789992,
+        "unresolved_exposure": false,
+        "trades": [
+          {
+            "symbol": "TSLA",
+            "entry_at": "1230",
+            "shares": 0.25132497,
+            "entry_ask": 377.77,
+            "entry_bid": 371.77,
+            "entry_spread_bps": 160.1,
+            "entry_mid": 374.77,
+            "cost": 95.0,
+            "exit_at": "1330",
+            "exit_bid": 368,
+            "exit_ask": 373.77,
+            "exit_spread_bps": 155.57,
+            "proceeds": 92.432096,
+            "spread_paid_usd": 1.479047,
+            "net_usd": -2.567904,
+            "gross_mid_return_pct": -1.0366
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1330",
+            "shares": 0.273570085,
+            "entry_ask": 338.14,
+            "entry_bid": 338.04,
+            "entry_spread_bps": 2.96,
+            "entry_mid": 338.09000000000003,
+            "cost": 92.560492,
+            "exit_at": "1430",
+            "exit_bid": 339.64,
+            "exit_ask": 339.69,
+            "exit_spread_bps": 1.47,
+            "proceeds": 92.859594,
+            "spread_paid_usd": 0.020518,
+            "net_usd": 0.299102,
+            "gross_mid_return_pct": 0.4659
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1430",
+            "shares": 0.273157779,
+            "entry_ask": 339.69,
+            "entry_bid": 339.64,
+            "entry_spread_bps": 1.47,
+            "entry_mid": 339.66499999999996,
+            "cost": 92.844639,
+            "exit_at": "1530",
+            "exit_bid": 341.38,
+            "exit_ask": 341.54,
+            "exit_spread_bps": 4.69,
+            "proceeds": 93.194652,
+            "spread_paid_usd": 0.028682,
+            "net_usd": 0.350013,
+            "gross_mid_return_pct": 0.5285
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1530",
+            "shares": 0.272651165,
+            "entry_ask": 341.54,
+            "entry_bid": 341.38,
+            "entry_spread_bps": 4.69,
+            "entry_mid": 341.46000000000004,
+            "cost": 93.177152,
+            "exit_at": "flatten",
+            "exit_bid": 338.49,
+            "exit_ask": 340.25,
+            "exit_spread_bps": 51.86,
+            "proceeds": 92.234319,
+            "spread_paid_usd": 0.261745,
+            "net_usd": -0.942833,
+            "gross_mid_return_pct": -0.6121
+          }
+        ],
+        "events": [
+          {
+            "at": "1030",
+            "event": "entry_skipped",
+            "symbol": "NVDA",
+            "reason": "no_capture"
+          },
+          {
+            "at": "1130",
+            "event": "entry_skipped",
+            "symbol": "GOOGL",
+            "reason": "no_capture"
+          }
+        ]
+      },
+      "stress": {
+        "end_equity": 95.673747,
+        "net_usd": -4.326253,
+        "realized_net_usd": -4.326253,
+        "round_trips": 4,
+        "spread_paid_usd": 1.783167,
+        "unresolved_exposure": false,
+        "trades": [
+          {
+            "symbol": "TSLA",
+            "entry_at": "1230",
+            "shares": 0.250823624,
+            "entry_ask": 377.77,
+            "entry_bid": 371.77,
+            "entry_spread_bps": 160.1,
+            "entry_mid": 374.77,
+            "cost": 95.0,
+            "exit_at": "1330",
+            "exit_bid": 368,
+            "exit_ask": 373.77,
+            "exit_spread_bps": 155.57,
+            "proceeds": 92.063106,
+            "spread_paid_usd": 1.476097,
+            "net_usd": -2.936894,
+            "gross_mid_return_pct": -1.0366
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1330",
+            "shares": 0.271990377,
+            "entry_ask": 338.14,
+            "entry_bid": 338.04,
+            "entry_spread_bps": 2.96,
+            "entry_mid": 338.09000000000003,
+            "cost": 92.20995,
+            "exit_at": "1430",
+            "exit_bid": 339.64,
+            "exit_ask": 339.69,
+            "exit_spread_bps": 1.47,
+            "proceeds": 92.138627,
+            "spread_paid_usd": 0.020399,
+            "net_usd": -0.071323,
+            "gross_mid_return_pct": 0.4659
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1430",
+            "shares": 0.270550338,
+            "entry_ask": 339.69,
+            "entry_bid": 339.64,
+            "entry_spread_bps": 1.47,
+            "entry_mid": 339.66499999999996,
+            "cost": 92.142193,
+            "exit_at": "1530",
+            "exit_bid": 341.38,
+            "exit_ask": 341.54,
+            "exit_spread_bps": 4.69,
+            "proceeds": 92.120337,
+            "spread_paid_usd": 0.028408,
+            "net_usd": -0.021856,
+            "gross_mid_return_pct": 0.5285
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1530",
+            "shares": 0.26902423,
+            "entry_ask": 341.54,
+            "entry_bid": 341.38,
+            "entry_spread_bps": 4.69,
+            "entry_mid": 341.46000000000004,
+            "cost": 92.12143,
+            "exit_at": "flatten",
+            "exit_bid": 338.49,
+            "exit_ask": 340.25,
+            "exit_spread_bps": 51.86,
+            "proceeds": 90.82525,
+            "spread_paid_usd": 0.258263,
+            "net_usd": -1.29618,
+            "gross_mid_return_pct": -0.6121
+          }
+        ],
+        "events": [
+          {
+            "at": "1030",
+            "event": "entry_skipped",
+            "symbol": "NVDA",
+            "reason": "no_capture"
+          },
+          {
+            "at": "1130",
+            "event": "entry_skipped",
+            "symbol": "GOOGL",
+            "reason": "no_capture"
+          }
+        ]
+      }
+    },
+    "A1": {
+      "base": {
+        "end_equity": 100.0,
+        "net_usd": 0.0,
+        "realized_net_usd": 0,
+        "round_trips": 0,
+        "spread_paid_usd": 0,
+        "unresolved_exposure": false,
+        "trades": [],
+        "events": []
+      },
+      "stress": {
+        "end_equity": 100.0,
+        "net_usd": 0.0,
+        "realized_net_usd": 0,
+        "round_trips": 0,
+        "spread_paid_usd": 0,
+        "unresolved_exposure": false,
+        "trades": [],
+        "events": []
+      }
+    },
+    "A2": {
+      "base": {
+        "end_equity": 97.13838,
+        "net_usd": -2.86162,
+        "realized_net_usd": -2.861622,
+        "round_trips": 4,
+        "spread_paid_usd": 1.789992,
+        "unresolved_exposure": false,
+        "trades": [
+          {
+            "symbol": "TSLA",
+            "entry_at": "1230",
+            "shares": 0.25132497,
+            "entry_ask": 377.77,
+            "entry_bid": 371.77,
+            "entry_spread_bps": 160.1,
+            "entry_mid": 374.77,
+            "cost": 95.0,
+            "exit_at": "1330",
+            "exit_bid": 368,
+            "exit_ask": 373.77,
+            "exit_spread_bps": 155.57,
+            "proceeds": 92.432096,
+            "spread_paid_usd": 1.479047,
+            "net_usd": -2.567904,
+            "gross_mid_return_pct": -1.0366
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1330",
+            "shares": 0.273570085,
+            "entry_ask": 338.14,
+            "entry_bid": 338.04,
+            "entry_spread_bps": 2.96,
+            "entry_mid": 338.09000000000003,
+            "cost": 92.560492,
+            "exit_at": "1430",
+            "exit_bid": 339.64,
+            "exit_ask": 339.69,
+            "exit_spread_bps": 1.47,
+            "proceeds": 92.859594,
+            "spread_paid_usd": 0.020518,
+            "net_usd": 0.299102,
+            "gross_mid_return_pct": 0.4659
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1430",
+            "shares": 0.273157779,
+            "entry_ask": 339.69,
+            "entry_bid": 339.64,
+            "entry_spread_bps": 1.47,
+            "entry_mid": 339.66499999999996,
+            "cost": 92.844639,
+            "exit_at": "1530",
+            "exit_bid": 341.38,
+            "exit_ask": 341.54,
+            "exit_spread_bps": 4.69,
+            "proceeds": 93.194652,
+            "spread_paid_usd": 0.028682,
+            "net_usd": 0.350013,
+            "gross_mid_return_pct": 0.5285
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1530",
+            "shares": 0.272651165,
+            "entry_ask": 341.54,
+            "entry_bid": 341.38,
+            "entry_spread_bps": 4.69,
+            "entry_mid": 341.46000000000004,
+            "cost": 93.177152,
+            "exit_at": "flatten",
+            "exit_bid": 338.49,
+            "exit_ask": 340.25,
+            "exit_spread_bps": 51.86,
+            "proceeds": 92.234319,
+            "spread_paid_usd": 0.261745,
+            "net_usd": -0.942833,
+            "gross_mid_return_pct": -0.6121
+          }
+        ],
+        "events": [
+          {
+            "at": "1030",
+            "event": "entry_skipped",
+            "symbol": "NVDA",
+            "reason": "no_capture"
+          },
+          {
+            "at": "1130",
+            "event": "entry_skipped",
+            "symbol": "GOOGL",
+            "reason": "no_capture"
+          }
+        ]
+      },
+      "stress": {
+        "end_equity": 95.673747,
+        "net_usd": -4.326253,
+        "realized_net_usd": -4.326253,
+        "round_trips": 4,
+        "spread_paid_usd": 1.783167,
+        "unresolved_exposure": false,
+        "trades": [
+          {
+            "symbol": "TSLA",
+            "entry_at": "1230",
+            "shares": 0.250823624,
+            "entry_ask": 377.77,
+            "entry_bid": 371.77,
+            "entry_spread_bps": 160.1,
+            "entry_mid": 374.77,
+            "cost": 95.0,
+            "exit_at": "1330",
+            "exit_bid": 368,
+            "exit_ask": 373.77,
+            "exit_spread_bps": 155.57,
+            "proceeds": 92.063106,
+            "spread_paid_usd": 1.476097,
+            "net_usd": -2.936894,
+            "gross_mid_return_pct": -1.0366
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1330",
+            "shares": 0.271990377,
+            "entry_ask": 338.14,
+            "entry_bid": 338.04,
+            "entry_spread_bps": 2.96,
+            "entry_mid": 338.09000000000003,
+            "cost": 92.20995,
+            "exit_at": "1430",
+            "exit_bid": 339.64,
+            "exit_ask": 339.69,
+            "exit_spread_bps": 1.47,
+            "proceeds": 92.138627,
+            "spread_paid_usd": 0.020399,
+            "net_usd": -0.071323,
+            "gross_mid_return_pct": 0.4659
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1430",
+            "shares": 0.270550338,
+            "entry_ask": 339.69,
+            "entry_bid": 339.64,
+            "entry_spread_bps": 1.47,
+            "entry_mid": 339.66499999999996,
+            "cost": 92.142193,
+            "exit_at": "1530",
+            "exit_bid": 341.38,
+            "exit_ask": 341.54,
+            "exit_spread_bps": 4.69,
+            "proceeds": 92.120337,
+            "spread_paid_usd": 0.028408,
+            "net_usd": -0.021856,
+            "gross_mid_return_pct": 0.5285
+          },
+          {
+            "symbol": "AAPL",
+            "entry_at": "1530",
+            "shares": 0.26902423,
+            "entry_ask": 341.54,
+            "entry_bid": 341.38,
+            "entry_spread_bps": 4.69,
+            "entry_mid": 341.46000000000004,
+            "cost": 92.12143,
+            "exit_at": "flatten",
+            "exit_bid": 338.49,
+            "exit_ask": 340.25,
+            "exit_spread_bps": 51.86,
+            "proceeds": 90.82525,
+            "spread_paid_usd": 0.258263,
+            "net_usd": -1.29618,
+            "gross_mid_return_pct": -0.6121
+          }
+        ],
+        "events": [
+          {
+            "at": "1030",
+            "event": "entry_skipped",
+            "symbol": "NVDA",
+            "reason": "no_capture"
+          },
+          {
+            "at": "1130",
+            "event": "entry_skipped",
+            "symbol": "GOOGL",
+            "reason": "no_capture"
+          }
+        ]
+      }
+    },
+    "QQQ": {
+      "base": {
+        "end_equity": 98.957429,
+        "net_usd": -1.042571,
+        "realized_net_usd": -1.042571,
+        "round_trips": 1,
+        "spread_paid_usd": 0.006925,
+        "unresolved_exposure": false,
+        "trades": [
+          {
+            "symbol": "QQQ",
+            "entry_at": "1230",
+            "shares": 0.125907454,
+            "entry_ask": 754.07,
+            "entry_bid": 754.03,
+            "entry_spread_bps": 0.53,
+            "entry_mid": 754.05,
+            "cost": 95.0,
+            "exit_at": "flatten",
+            "exit_bid": 746.69,
+            "exit_ask": 746.76,
+            "exit_spread_bps": 0.94,
+            "proceeds": 93.957429,
+            "spread_paid_usd": 0.006925,
+            "net_usd": -1.042571,
+            "gross_mid_return_pct": -0.9714
+          }
+        ],
+        "events": []
+      },
+      "stress": {
+        "end_equity": 98.582349,
+        "net_usd": -1.417651,
+        "realized_net_usd": -1.417652,
+        "round_trips": 1,
+        "spread_paid_usd": 0.006911,
+        "unresolved_exposure": false,
+        "trades": [
+          {
+            "symbol": "QQQ",
+            "entry_at": "1230",
+            "shares": 0.125656292,
+            "entry_ask": 754.07,
+            "entry_bid": 754.03,
+            "entry_spread_bps": 0.53,
+            "entry_mid": 754.05,
+            "cost": 95.0,
+            "exit_at": "flatten",
+            "exit_bid": 746.69,
+            "exit_ask": 746.76,
+            "exit_spread_bps": 0.94,
+            "proceeds": 93.582348,
+            "spread_paid_usd": 0.006911,
+            "net_usd": -1.417652,
+            "gross_mid_return_pct": -0.9714
+          }
+        ],
+        "events": []
+      }
+    },
+    "CASH": {
+      "base": {
+        "end_equity": 100.0,
+        "net_usd": 0.0,
+        "round_trips": 0
+      },
+      "stress": {
+        "end_equity": 100.0,
+        "net_usd": 0.0,
+        "round_trips": 0
+      }
+    }
+  },
+  "iex_spread_bps": {
+    "1030": {},
+    "1130": {},
+    "1230": {
+      "NVDA": 1.7,
+      "MSFT": 20.13,
+      "AAPL": 1.48,
+      "QQQ": 0.53,
+      "TSLA": 160.1,
+      "META": 64.59,
+      "GOOGL": 13.46,
+      "AMZN": 25.13
+    },
+    "1330": {
+      "QQQ": 1.21,
+      "TSLA": 155.57,
+      "META": 11.77,
+      "GOOGL": 83.67,
+      "AMZN": 43.61,
+      "NVDA": 1.74,
+      "MSFT": 2.29,
+      "AAPL": 2.96
+    },
+    "1430": {
+      "GOOGL": 62.04,
+      "AMZN": 26.59,
+      "NVDA": 1.3,
+      "MSFT": 5.17,
+      "AAPL": 1.47,
+      "QQQ": 2.67,
+      "TSLA": 2.96,
+      "META": 19.77
+    },
+    "1530": {
+      "AMZN": 1.96,
+      "NVDA": 1.3,
+      "MSFT": 1.53,
+      "AAPL": 4.69,
+      "QQQ": 0.4,
+      "TSLA": 3.22,
+      "META": 20.83,
+      "GOOGL": 13.79
+    },
+    "flatten": {
+      "AAPL": 51.86,
+      "QQQ": 0.94,
+      "TSLA": 94.95,
+      "META": 61.93,
+      "GOOGL": 28.78,
+      "AMZN": 30.26,
+      "NVDA": 6.08,
+      "MSFT": 134.23
+    }
+  }
+}

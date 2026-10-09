@@ -1,0 +1,2389 @@
+{
+ "study": "init3-exec-gap",
+ "entries": 89,
+ "measured": 89,
+ "unmeasured": [],
+ "total": {
+  "gap": {
+   "n": 89,
+   "mean_pts": -2.45,
+   "median_pts": -0.3
+  },
+  "execution": {
+   "n": 89,
+   "mean_pts": -0.64,
+   "median_pts": -0.33
+  },
+  "timing": {
+   "n": 89,
+   "mean_pts": -1.81,
+   "median_pts": 0.0
+  }
+ },
+ "by_exit_bucket": {
+  "later day": {
+   "gap": {
+    "n": 15,
+    "mean_pts": -5.47,
+    "median_pts": -7.89
+   },
+   "execution": {
+    "n": 15,
+    "mean_pts": -1.66,
+    "median_pts": -1.51
+   },
+   "timing": {
+    "n": 15,
+    "mean_pts": -3.81,
+    "median_pts": -3.55
+   }
+  },
+  "next PM 04:30-09:30": {
+   "gap": {
+    "n": 74,
+    "mean_pts": -1.84,
+    "median_pts": -0.24
+   },
+   "execution": {
+    "n": 74,
+    "mean_pts": -0.43,
+    "median_pts": -0.31
+   },
+   "timing": {
+    "n": 74,
+    "mean_pts": -1.41,
+    "median_pts": 0.0
+   }
+  }
+ },
+ "exit_legs": {
+  "n": 89,
+  "spread_pct_of_mid": {
+   "n": 89,
+   "mean_pts": 1.39,
+   "median_pts": 0.71
+  },
+  "fill_vs_bid_pct": {
+   "n": 89,
+   "mean_pts": 0.01,
+   "median_pts": 0.0
+  },
+  "quote_age_s_median": 2.5
+ },
+ "rows": [
+  {
+   "symbol": "IVF",
+   "date": "2026-06-25",
+   "entry_price": 1.58,
+   "realized": 0.26582278481012644,
+   "archived_return": 0.26582278481012644,
+   "base0430": 0.2594936708860758,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.006329113924050667,
+   "execution": -0.0031645569620252488,
+   "timing": 0.009493670886076,
+   "exits": [
+    {
+     "et": "2026-06-26T04:30:41.225963-04:00",
+     "qty": 60.0,
+     "price": 2.0,
+     "bid": 2,
+     "ask": 2.01,
+     "quote_age_s": 0.7,
+     "spread_pct_of_mid": 0.5,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "GANX",
+   "date": "2026-06-29",
+   "entry_price": 2.39,
+   "realized": -0.17573221757322188,
+   "archived_return": -0.17573221757322188,
+   "base0430": -0.09205020920502105,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.08368200836820083,
+   "execution": -0.004184100418410045,
+   "timing": -0.07949790794979072,
+   "exits": [
+    {
+     "et": "2026-06-30T08:31:07.887365-04:00",
+     "qty": 41.0,
+     "price": 1.97,
+     "bid": 1.97,
+     "ask": 1.99,
+     "quote_age_s": 35.0,
+     "spread_pct_of_mid": 1.01,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "CTNT",
+   "date": "2026-06-29",
+   "entry_price": 2.05,
+   "realized": -0.07317073170731714,
+   "archived_return": -0.07317073170731714,
+   "base0430": -0.0585365853658536,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.014634146341463539,
+   "execution": -0.002439024390243851,
+   "timing": -0.012195121951219634,
+   "exits": [
+    {
+     "et": "2026-06-30T04:31:10.165104-04:00",
+     "qty": 48.0,
+     "price": 1.9,
+     "bid": 1.9,
+     "ask": 1.91,
+     "quote_age_s": 0.0,
+     "spread_pct_of_mid": 0.52,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "ALZN",
+   "date": "2026-06-30",
+   "entry_price": 1.31,
+   "realized": -0.01526717557251922,
+   "archived_return": -0.01526717557251922,
+   "base0430": -0.01526717557251911,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -1.1102230246251565e-16,
+   "execution": -0.0038167938931296893,
+   "timing": 0.003816793893129722,
+   "exits": [
+    {
+     "et": "2026-07-01T04:33:14.465340-04:00",
+     "qty": 73.0,
+     "price": 1.29,
+     "bid": 1.29,
+     "ask": 1.3,
+     "quote_age_s": 0.3,
+     "spread_pct_of_mid": 0.77,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "SEER",
+   "date": "2026-07-02",
+   "entry_price": 2.26,
+   "realized": -0.0265486725663715,
+   "archived_return": -0.0265486725663715,
+   "base0430": -0.11061946902654873,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": 0.08407079646017723,
+   "execution": -0.004424778761061853,
+   "timing": 0.08849557522123908,
+   "exits": [
+    {
+     "et": "2026-07-08T08:30:51.340806-04:00",
+     "qty": 43.0,
+     "price": 2.2,
+     "bid": 2.2,
+     "ask": 2.22,
+     "quote_age_s": 14.6,
+     "spread_pct_of_mid": 0.9,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "EDHL",
+   "date": "2026-07-06",
+   "entry_price": 4.81,
+   "realized": 0.06029106029106046,
+   "archived_return": 0.06029106029106046,
+   "base0430": 0.0997920997920998,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.03950103950103934,
+   "execution": -0.008316008316008325,
+   "timing": -0.031185031185031242,
+   "exits": [
+    {
+     "et": "2026-07-07T04:31:19.096631-04:00",
+     "qty": 20.0,
+     "price": 5.1,
+     "bid": 5.1,
+     "ask": 5.18,
+     "quote_age_s": 0.3,
+     "spread_pct_of_mid": 1.56,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "DCX",
+   "date": "2026-07-07",
+   "entry_price": 1.34,
+   "realized": 0.03731343283582067,
+   "archived_return": 0.03731343283582067,
+   "base0430": 0.07462686567164178,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.037313432835821114,
+   "execution": -0.0037313432835821753,
+   "timing": -0.03358208955223896,
+   "exits": [
+    {
+     "et": "2026-07-08T04:32:29.427017-04:00",
+     "qty": 66.0,
+     "price": 1.39,
+     "bid": 1.39,
+     "ask": 1.4,
+     "quote_age_s": 0.2,
+     "spread_pct_of_mid": 0.72,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "VEEE",
+   "date": "2026-07-07",
+   "entry_price": 6.28,
+   "realized": -0.017515923566879033,
+   "archived_return": -0.017515923566879033,
+   "base0430": 0.001687898089171913,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.019203821656050946,
+   "execution": -0.02070063694267514,
+   "timing": 0.0014968152866241535,
+   "exits": [
+    {
+     "et": "2026-07-08T04:31:54.682502-04:00",
+     "qty": 15.0,
+     "price": 6.17,
+     "bid": 6.17,
+     "ask": 6.43,
+     "quote_age_s": 2.6,
+     "spread_pct_of_mid": 4.13,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "SUNE",
+   "date": "2026-07-08",
+   "entry_price": 2.56,
+   "realized": -0.04687499999999989,
+   "archived_return": -0.04687499999999989,
+   "base0430": -0.046679687499999956,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.0001953124999999334,
+   "execution": -0.001953125000000132,
+   "timing": 0.0017578125000000666,
+   "exits": [
+    {
+     "et": "2026-07-09T04:30:47.037094-04:00",
+     "qty": 36.0,
+     "price": 2.44,
+     "bid": 2.44,
+     "ask": 2.45,
+     "quote_age_s": 3.7,
+     "spread_pct_of_mid": 0.41,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "PMA",
+   "date": "2026-07-09",
+   "entry_price": 1.660167,
+   "realized": -0.10852341963188039,
+   "archived_return": -0.10852341963188039,
+   "base0430": -0.10852341963188039,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.0,
+   "execution": -0.006023490407892706,
+   "timing": 0.00602349040789274,
+   "exits": [
+    {
+     "et": "2026-07-10T04:31:09.728019-04:00",
+     "qty": 60.0,
+     "price": 1.48,
+     "bid": 1.48,
+     "ask": 1.5,
+     "quote_age_s": 0.8,
+     "spread_pct_of_mid": 1.34,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "ELPW",
+   "date": "2026-07-09",
+   "entry_price": 1.18,
+   "realized": -0.17796610169491534,
+   "archived_return": -0.17796610169491534,
+   "base0430": -0.15847457627118644,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.019491525423728895,
+   "execution": -4.237288135592754e-05,
+   "timing": -0.019449152542372894,
+   "exits": [
+    {
+     "et": "2026-07-10T04:31:09.162744-04:00",
+     "qty": 83.0,
+     "price": 0.97,
+     "bid": 0.97,
+     "ask": 0.9701,
+     "quote_age_s": 0.3,
+     "spread_pct_of_mid": 0.01,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "YYGH",
+   "date": "2026-07-09",
+   "entry_price": 1.66,
+   "realized": -0.17469879518072284,
+   "archived_return": -0.17469879518072284,
+   "base0430": -0.16265060240963858,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.012048192771084265,
+   "execution": -0.009036144578313194,
+   "timing": -0.0030120481927710108,
+   "exits": [
+    {
+     "et": "2026-07-10T04:31:10.247418-04:00",
+     "qty": 58.0,
+     "price": 1.37,
+     "bid": 1.37,
+     "ask": 1.4,
+     "quote_age_s": 48.3,
+     "spread_pct_of_mid": 2.17,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "LVLU",
+   "date": "2026-07-13",
+   "entry_price": 11.03,
+   "realized": -0.26382592928377147,
+   "archived_return": -0.26382592928377147,
+   "base0430": -0.09066183136899364,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": -0.17316409791477783,
+   "execution": -0.01722574796010875,
+   "timing": -0.15593834995466915,
+   "exits": [
+    {
+     "et": "2026-07-15T08:32:24.071861-04:00",
+     "qty": 9.0,
+     "price": 8.12,
+     "bid": 8.12,
+     "ask": 8.5,
+     "quote_age_s": 96.9,
+     "spread_pct_of_mid": 4.57,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "VMAR",
+   "date": "2026-07-13",
+   "entry_price": 1.57,
+   "realized": 0.4140127388535033,
+   "archived_return": 0.4140127388535033,
+   "base0430": 0.46496815286624193,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.05095541401273862,
+   "execution": -0.0031847133757961104,
+   "timing": -0.047770700636942554,
+   "exits": [
+    {
+     "et": "2026-07-14T04:31:32.495186-04:00",
+     "qty": 62.0,
+     "price": 2.22,
+     "bid": 2.22,
+     "ask": 2.23,
+     "quote_age_s": 0.4,
+     "spread_pct_of_mid": 0.45,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "XCUR",
+   "date": "2026-07-14",
+   "entry_price": 2.4,
+   "realized": -0.16666666666666663,
+   "archived_return": -0.16666666666666663,
+   "base0430": -0.15833333333333333,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.008333333333333304,
+   "execution": -0.002083333333333289,
+   "timing": -0.006249999999999978,
+   "exits": [
+    {
+     "et": "2026-07-15T04:31:25.334924-04:00",
+     "qty": 41.0,
+     "price": 2.0,
+     "bid": 2,
+     "ask": 2.01,
+     "quote_age_s": 0.0,
+     "spread_pct_of_mid": 0.5,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "VTAK",
+   "date": "2026-07-14",
+   "entry_price": 0.7229,
+   "realized": 0.10665375570618352,
+   "archived_return": 0.10665375570618352,
+   "base0430": 0.04191451099737176,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.06473924470881176,
+   "execution": -0.002904966108728719,
+   "timing": 0.06764421081754057,
+   "exits": [
+    {
+     "et": "2026-07-15T04:31:23.033921-04:00",
+     "qty": 125.0,
+     "price": 0.8,
+     "bid": 0.8,
+     "ask": 0.8042,
+     "quote_age_s": 0.5,
+     "spread_pct_of_mid": 0.52,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "GCTK",
+   "date": "2026-07-14",
+   "entry_price": 0.8743,
+   "realized": -0.3755004003202562,
+   "archived_return": -0.3755004003202562,
+   "base0430": -0.15898433032140002,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.2165160699988562,
+   "execution": -5.718860802927427e-05,
+   "timing": -0.2164588813908268,
+   "exits": [
+    {
+     "et": "2026-07-15T08:32:22.527847-04:00",
+     "qty": 101.0,
+     "price": 0.546,
+     "bid": 0.546,
+     "ask": 0.5461,
+     "quote_age_s": 13.9,
+     "spread_pct_of_mid": 0.02,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "TGHL",
+   "date": "2026-07-15",
+   "entry_price": 1.33962,
+   "realized": -0.18633642376196236,
+   "archived_return": -0.18633642376196236,
+   "base0430": -0.1867096639345487,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.000373240172586331,
+   "execution": -0.003732401725862644,
+   "timing": 0.004105641898448975,
+   "exits": [
+    {
+     "et": "2026-07-16T04:30:40.101959-04:00",
+     "qty": 79.0,
+     "price": 1.09,
+     "bid": 1.09,
+     "ask": 1.1,
+     "quote_age_s": 0.3,
+     "spread_pct_of_mid": 0.91,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "BIYA",
+   "date": "2026-07-16",
+   "entry_price": 4.55,
+   "realized": -0.1384615384615384,
+   "archived_return": -0.1384615384615384,
+   "base0430": -0.13626373626373622,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.00219780219780219,
+   "execution": -0.003296703296703324,
+   "timing": 0.001098901098901095,
+   "exits": [
+    {
+     "et": "2026-07-17T04:31:45.716568-04:00",
+     "qty": 22.0,
+     "price": 3.92,
+     "bid": 3.92,
+     "ask": 3.95,
+     "quote_age_s": 0.9,
+     "spread_pct_of_mid": 0.76,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "CJMB",
+   "date": "2026-07-16",
+   "entry_price": 1.01,
+   "realized": 0.19801980198019797,
+   "archived_return": 0.19801980198019797,
+   "base0430": 0.3762376237623761,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.17821782178217815,
+   "execution": -0.004950495049504845,
+   "timing": -0.1732673267326732,
+   "exits": [
+    {
+     "et": "2026-07-17T08:30:45.473966-04:00",
+     "qty": 95.0,
+     "price": 1.21,
+     "bid": 1.21,
+     "ask": 1.22,
+     "quote_age_s": 5.9,
+     "spread_pct_of_mid": 0.82,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "HIHO",
+   "date": "2026-07-20",
+   "entry_price": 1.5,
+   "realized": -0.15999999999999992,
+   "archived_return": -0.15999999999999992,
+   "base0430": -0.00666666666666671,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.1533333333333332,
+   "execution": -0.0033333333333334103,
+   "timing": -0.1499999999999999,
+   "exits": [
+    {
+     "et": "2026-07-21T08:31:05.208844-04:00",
+     "qty": 59.0,
+     "price": 1.26,
+     "bid": 1.26,
+     "ask": 1.27,
+     "quote_age_s": 8.6,
+     "spread_pct_of_mid": 0.79,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "PAPL",
+   "date": "2026-07-20",
+   "entry_price": 1.1,
+   "realized": -0.23636363636363633,
+   "archived_return": -0.23636363636363633,
+   "base0430": -0.018181818181818188,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.21818181818181814,
+   "execution": -0.0018181818181818197,
+   "timing": -0.2163636363636364,
+   "exits": [
+    {
+     "et": "2026-07-21T08:31:06.543107-04:00",
+     "qty": 80.0,
+     "price": 0.84,
+     "bid": 0.84,
+     "ask": 0.844,
+     "quote_age_s": 2.6,
+     "spread_pct_of_mid": 0.48,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "PLAG",
+   "date": "2026-07-22",
+   "entry_price": 0.9771,
+   "realized": -0.11472725411933271,
+   "archived_return": -0.11472725411933271,
+   "base0430": -0.1300788046259339,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.015351550506601197,
+   "execution": -0.0025074199160782552,
+   "timing": 0.017858970422679477,
+   "exits": [
+    {
+     "et": "2026-07-23T04:31:05.922272-04:00",
+     "qty": 97.0,
+     "price": 0.865,
+     "bid": 0.865,
+     "ask": 0.8699,
+     "quote_age_s": 1.7,
+     "spread_pct_of_mid": 0.56,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "DOMO",
+   "date": "2026-07-22",
+   "entry_price": 3.92,
+   "realized": -0.09438775510204078,
+   "archived_return": -0.09438775510204078,
+   "base0430": -0.015510204081632617,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": -0.07887755102040817,
+   "execution": -0.04336734693877549,
+   "timing": -0.035510204081632746,
+   "exits": [
+    {
+     "et": "2026-07-28T07:00:00.766502-04:00",
+     "qty": 25.0,
+     "price": 3.55,
+     "bid": 3.55,
+     "ask": 3.89,
+     "quote_age_s": 0.7,
+     "spread_pct_of_mid": 9.14,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "AEHL",
+   "date": "2026-07-22",
+   "entry_price": 0.6892,
+   "realized": 0.01567034242600096,
+   "archived_return": 0.01567034242600096,
+   "base0430": 0.014799767846778833,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.0008705745792221276,
+   "execution": -0.0022489843296574874,
+   "timing": 0.003119558908879716,
+   "exits": [
+    {
+     "et": "2026-07-23T04:31:04.681078-04:00",
+     "qty": 136.0,
+     "price": 0.7,
+     "bid": 0.7,
+     "ask": 0.7031,
+     "quote_age_s": 8.7,
+     "spread_pct_of_mid": 0.44,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "LGCL",
+   "date": "2026-07-22",
+   "entry_price": 1.58,
+   "realized": 0.240506329113924,
+   "archived_return": 0.240506329113924,
+   "base0430": 0.21518987341772133,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.025316455696202667,
+   "execution": -0.003164556962025249,
+   "timing": 0.028481012658227778,
+   "exits": [
+    {
+     "et": "2026-07-23T04:31:04.305190-04:00",
+     "qty": 58.0,
+     "price": 1.96,
+     "bid": 1.96,
+     "ask": 1.97,
+     "quote_age_s": 0.3,
+     "spread_pct_of_mid": 0.51,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "AKAN",
+   "date": "2026-07-23",
+   "entry_price": 9.47,
+   "realized": 0.03801478352692711,
+   "archived_return": 0.03801478352692711,
+   "base0430": -0.007391763463569179,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.04540654699049629,
+   "execution": -0.0036958817317845976,
+   "timing": 0.049102428722280766,
+   "exits": [
+    {
+     "et": "2026-07-24T04:40:32.653027-04:00",
+     "qty": 10.0,
+     "price": 9.83,
+     "bid": 9.83,
+     "ask": 9.9,
+     "quote_age_s": 0.6,
+     "spread_pct_of_mid": 0.71,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "PAVS",
+   "date": "2026-07-23",
+   "entry_price": 7.17,
+   "realized": -0.22175732217573207,
+   "archived_return": -0.22175732217573207,
+   "base0430": -0.20641562064156205,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.015341701534170027,
+   "execution": -0.007670850767085038,
+   "timing": -0.007670850767085069,
+   "exits": [
+    {
+     "et": "2026-07-24T04:31:41.959488-04:00",
+     "qty": 13.0,
+     "price": 5.58,
+     "bid": 5.58,
+     "ask": 5.69,
+     "quote_age_s": 89.2,
+     "spread_pct_of_mid": 1.95,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "JEM",
+   "date": "2026-07-23",
+   "entry_price": 5.37,
+   "realized": 0.36685288640595903,
+   "archived_return": 0.36685288640595903,
+   "base0430": 0.1448975791433893,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.22195530726256973,
+   "execution": -0.011173184357541992,
+   "timing": 0.23312849162011173,
+   "exits": [
+    {
+     "et": "2026-07-24T04:31:42.949737-04:00",
+     "qty": 17.0,
+     "price": 7.34,
+     "bid": 7.34,
+     "ask": 7.46,
+     "quote_age_s": 0.4,
+     "spread_pct_of_mid": 1.62,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "ANY",
+   "date": "2026-07-23",
+   "entry_price": 2.29,
+   "realized": -0.11353711790393028,
+   "archived_return": -0.11353711790393028,
+   "base0430": -0.111353711790393,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.0021834061135372895,
+   "execution": -0.0021834061135372652,
+   "timing": 0.0,
+   "exits": [
+    {
+     "et": "2026-07-24T04:31:41.383026-04:00",
+     "qty": 41.0,
+     "price": 2.03,
+     "bid": 2.03,
+     "ask": 2.04,
+     "quote_age_s": 13.5,
+     "spread_pct_of_mid": 0.49,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "INLF",
+   "date": "2026-07-27",
+   "entry_price": 4.12,
+   "realized": 0.18689320388349517,
+   "archived_return": 0.18689320388349517,
+   "base0430": 0.191747572815534,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.004854368932038833,
+   "execution": -0.002427184466019581,
+   "timing": -0.0024271844660193054,
+   "exits": [
+    {
+     "et": "2026-07-28T04:30:57.569964-04:00",
+     "qty": 22.0,
+     "price": 4.89,
+     "bid": 4.89,
+     "ask": 4.91,
+     "quote_age_s": 2.3,
+     "spread_pct_of_mid": 0.41,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "BZFD",
+   "date": "2026-07-27",
+   "entry_price": 1.3,
+   "realized": -0.007692307692307554,
+   "archived_return": -0.007692307692307554,
+   "base0430": -0.007461538461538519,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.00023076923076903455,
+   "execution": -0.0038461538461537644,
+   "timing": 0.003615384615384576,
+   "exits": [
+    {
+     "et": "2026-07-28T04:30:57.986025-04:00",
+     "qty": 76.0,
+     "price": 1.29,
+     "bid": 1.29,
+     "ask": 1.3,
+     "quote_age_s": 0.6,
+     "spread_pct_of_mid": 0.77,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "AMIX",
+   "date": "2026-07-28",
+   "entry_price": 4.02,
+   "realized": 0.1641791044776122,
+   "archived_return": 0.1641791044776122,
+   "base0430": 0.13432835820895517,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.029850746268657025,
+   "execution": -0.002487562189054674,
+   "timing": 0.03233830845771157,
+   "exits": [
+    {
+     "et": "2026-07-29T04:31:01.472231-04:00",
+     "qty": 21.0,
+     "price": 4.68,
+     "bid": 4.68,
+     "ask": 4.7,
+     "quote_age_s": 0.1,
+     "spread_pct_of_mid": 0.43,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "ONMD",
+   "date": "2026-07-28",
+   "entry_price": 0.944998,
+   "realized": -0.16296119145225718,
+   "archived_return": -0.16296119145225718,
+   "base0430": -0.0842308660970712,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.07873032535518598,
+   "execution": -0.000952382968006294,
+   "timing": -0.0777779423871795,
+   "exits": [
+    {
+     "et": "2026-07-29T08:30:42.849355-04:00",
+     "qty": 108.0,
+     "price": 0.791,
+     "bid": 0.791,
+     "ask": 0.7928,
+     "quote_age_s": 3.9,
+     "spread_pct_of_mid": 0.23,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "BOOM",
+   "date": "2026-07-29",
+   "entry_price": 6.72,
+   "realized": -0.07738095238095244,
+   "archived_return": -0.07738095238095244,
+   "base0430": -0.038690476190476164,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": -0.038690476190476275,
+   "execution": -0.04910714285714287,
+   "timing": 0.01041666666666674,
+   "exits": [
+    {
+     "et": "2026-08-03T04:00:32.277552-04:00",
+     "qty": 14.0,
+     "price": 6.2,
+     "bid": 6.2,
+     "ask": 6.86,
+     "quote_age_s": 32.1,
+     "spread_pct_of_mid": 10.11,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "CELZ",
+   "date": "2026-08-05",
+   "entry_price": 0.8899,
+   "realized": -0.06292841892347456,
+   "archived_return": -0.06292841892347456,
+   "base0430": -0.0636026519833689,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.0006742330598943358,
+   "execution": -0.0034273513877963783,
+   "timing": 0.004101584447690709,
+   "exits": [
+    {
+     "et": "2026-08-06T04:31:01.272052-04:00",
+     "qty": 98.0,
+     "price": 0.8339,
+     "bid": 0.8339,
+     "ask": 0.84,
+     "quote_age_s": 4.2,
+     "spread_pct_of_mid": 0.73,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "PAVS",
+   "date": "2026-08-05",
+   "entry_price": 6.61,
+   "realized": 0.00605143721633894,
+   "archived_return": 0.00605143721633894,
+   "base0430": 0.0,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.00605143721633894,
+   "execution": -0.0030257186081693757,
+   "timing": 0.009077155824508187,
+   "exits": [
+    {
+     "et": "2026-08-06T04:31:29.724955-04:00",
+     "qty": 14.0,
+     "price": 6.65,
+     "bid": 6.65,
+     "ask": 6.69,
+     "quote_age_s": 0.2,
+     "spread_pct_of_mid": 0.6,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "DSY",
+   "date": "2026-08-06",
+   "entry_price": 7.1,
+   "realized": -0.11267605633802813,
+   "archived_return": -0.11267605633802813,
+   "base0430": -0.1591549295774648,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.04647887323943667,
+   "execution": -0.0014084507042254474,
+   "timing": 0.04788732394366213,
+   "exits": [
+    {
+     "et": "2026-08-07T04:30:31.189307-04:00",
+     "qty": 12.0,
+     "price": 6.3,
+     "bid": 6.29,
+     "ask": 6.33,
+     "quote_age_s": 0.0,
+     "spread_pct_of_mid": 0.63,
+     "vs_bid_pct": 0.16
+    }
+   ]
+  },
+  {
+   "symbol": "WAFU",
+   "date": "2026-08-10",
+   "entry_price": 1.94,
+   "realized": 0.08247422680412364,
+   "archived_return": 0.08247422680412364,
+   "base0430": 0.09793814432989678,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.015463917525773141,
+   "execution": -0.002577319587628811,
+   "timing": -0.012886597938144284,
+   "exits": [
+    {
+     "et": "2026-08-11T04:31:15.288600-04:00",
+     "qty": 43.0,
+     "price": 2.1,
+     "bid": 2.1,
+     "ask": 2.11,
+     "quote_age_s": 2.5,
+     "spread_pct_of_mid": 0.48,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "FF",
+   "date": "2026-08-10",
+   "entry_price": 6.28,
+   "realized": -0.01273885350318471,
+   "archived_return": -0.01273885350318471,
+   "base0430": -0.023885350318471388,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": 0.011146496815286677,
+   "execution": -0.019904458598726114,
+   "timing": 0.031050955414012704,
+   "exits": [
+    {
+     "et": "2026-08-12T04:30:54.159889-04:00",
+     "qty": 16.0,
+     "price": 6.2,
+     "bid": 6.2,
+     "ask": 6.45,
+     "quote_age_s": 367.1,
+     "spread_pct_of_mid": 3.95,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "MTEN",
+   "date": "2026-08-10",
+   "entry_price": 1.39,
+   "realized": -0.028776978417266008,
+   "archived_return": -0.028776978417266008,
+   "base0430": 0.005683453237410152,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.03446043165467616,
+   "execution": -0.003597122302158197,
+   "timing": -0.03086330935251802,
+   "exits": [
+    {
+     "et": "2026-08-11T04:31:15.877357-04:00",
+     "qty": 64.0,
+     "price": 1.35,
+     "bid": 1.35,
+     "ask": 1.36,
+     "quote_age_s": 1.6,
+     "spread_pct_of_mid": 0.74,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "MGIH",
+   "date": "2026-08-10",
+   "entry_price": 2.12,
+   "realized": -0.047169811320754707,
+   "archived_return": -0.047169811320754707,
+   "base0430": -0.014150943396226578,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.03301886792452813,
+   "execution": -0.004716981132075581,
+   "timing": -0.0283018867924526,
+   "exits": [
+    {
+     "et": "2026-08-11T04:31:17.787049-04:00",
+     "qty": 47.0,
+     "price": 2.02,
+     "bid": 2.02,
+     "ask": 2.04,
+     "quote_age_s": 1.3,
+     "spread_pct_of_mid": 0.99,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "DRMA",
+   "date": "2026-08-11",
+   "entry_price": 1.52,
+   "realized": -0.19078947368421062,
+   "archived_return": -0.19078947368421062,
+   "base0430": -0.05921052631578949,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.13157894736842113,
+   "execution": -0.003289473684210456,
+   "timing": -0.12828947368421062,
+   "exits": [
+    {
+     "et": "2026-08-12T08:30:36.146756-04:00",
+     "qty": 66.0,
+     "price": 1.23,
+     "bid": 1.23,
+     "ask": 1.24,
+     "quote_age_s": 5.0,
+     "spread_pct_of_mid": 0.81,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "BOXL",
+   "date": "2026-08-11",
+   "entry_price": 4.01,
+   "realized": 0.45386533665835427,
+   "archived_return": 0.45386533665835427,
+   "base0430": 0.4114713216957606,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.04239401496259365,
+   "execution": -0.0024937655860348597,
+   "timing": 0.04488778054862852,
+   "exits": [
+    {
+     "et": "2026-08-12T04:30:52.550076-04:00",
+     "qty": 24.0,
+     "price": 5.83,
+     "bid": 5.83,
+     "ask": 5.85,
+     "quote_age_s": 0.0,
+     "spread_pct_of_mid": 0.34,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "BAOS",
+   "date": "2026-08-11",
+   "entry_price": 0.9001,
+   "realized": 1.4886123764026222,
+   "archived_return": 1.4886123764026222,
+   "base0430": 1.5996000444395069,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.11098766803688465,
+   "execution": -0.005554938340184306,
+   "timing": -0.10543272969670038,
+   "exits": [
+    {
+     "et": "2026-08-12T04:30:51.977858-04:00",
+     "qty": 102.0,
+     "price": 2.24,
+     "bid": 2.24,
+     "ask": 2.25,
+     "quote_age_s": 0.1,
+     "spread_pct_of_mid": 0.45,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "GXAI",
+   "date": "2026-08-12",
+   "entry_price": 1.42,
+   "realized": -0.09859154929577463,
+   "archived_return": -0.09859154929577463,
+   "base0430": -0.09154929577464777,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.007042253521126862,
+   "execution": -0.003521126760563462,
+   "timing": -0.0035211267605633756,
+   "exits": [
+    {
+     "et": "2026-08-13T04:30:31.619193-04:00",
+     "qty": 64.0,
+     "price": 1.28,
+     "bid": 1.28,
+     "ask": 1.29,
+     "quote_age_s": 12.4,
+     "spread_pct_of_mid": 0.78,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "DARE",
+   "date": "2026-08-13",
+   "entry_price": 1.7,
+   "realized": -0.5117647058823529,
+   "archived_return": -0.5117647058823529,
+   "base0430": -0.11194117647058821,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": -0.3998235294117647,
+   "execution": -0.001294117647058877,
+   "timing": -0.3985294117647058,
+   "exits": [
+    {
+     "et": "2026-08-18T04:31:08.494086-04:00",
+     "qty": 58.0,
+     "price": 0.83,
+     "bid": 0.83,
+     "ask": 0.8344,
+     "quote_age_s": 722.8,
+     "spread_pct_of_mid": 0.53,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "GRSD",
+   "date": "2026-08-13",
+   "entry_price": 2.17,
+   "realized": -0.07373271889400923,
+   "archived_return": -0.07373271889400923,
+   "base0430": -0.032258064516129004,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": -0.04147465437788023,
+   "execution": -0.03456221198156691,
+   "timing": -0.00691244239631339,
+   "exits": [
+    {
+     "et": "2026-08-18T04:31:09.205879-04:00",
+     "qty": 45.0,
+     "price": 2.01,
+     "bid": 2.01,
+     "ask": 2.16,
+     "quote_age_s": 1869.1,
+     "spread_pct_of_mid": 7.19,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "ONFO",
+   "date": "2026-08-13",
+   "entry_price": 3.02,
+   "realized": -0.2516556291390729,
+   "archived_return": -0.2516556291390729,
+   "base0430": 0.0331125827814569,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": -0.2847682119205298,
+   "execution": -0.0016556291390728123,
+   "timing": -0.283112582781457,
+   "exits": [
+    {
+     "et": "2026-08-18T04:31:09.583588-04:00",
+     "qty": 29.0,
+     "price": 2.26,
+     "bid": 2.26,
+     "ask": 2.27,
+     "quote_age_s": 34.8,
+     "spread_pct_of_mid": 0.44,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "XOS",
+   "date": "2026-08-17",
+   "entry_price": 4.54,
+   "realized": -0.23348017621145378,
+   "archived_return": -0.23348017621145378,
+   "base0430": -0.22687224669603534,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.0066079295154184425,
+   "execution": -0.001101321585903158,
+   "timing": -0.005506607929515295,
+   "exits": [
+    {
+     "et": "2026-08-18T04:31:10.081644-04:00",
+     "qty": 21.0,
+     "price": 3.48,
+     "bid": 3.48,
+     "ask": 3.49,
+     "quote_age_s": 1.0,
+     "spread_pct_of_mid": 0.29,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "SGLY",
+   "date": "2026-08-17",
+   "entry_price": 7.01,
+   "realized": -0.23680456490727542,
+   "archived_return": -0.23680456490727542,
+   "base0430": -0.22824536376604843,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.00855920114122699,
+   "execution": -0.009985734664764663,
+   "timing": 0.0014265335235377208,
+   "exits": [
+    {
+     "et": "2026-08-18T04:31:09.716259-04:00",
+     "qty": 14.0,
+     "price": 5.35,
+     "bid": 5.35,
+     "ask": 5.49,
+     "quote_age_s": 4.7,
+     "spread_pct_of_mid": 2.58,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "TNON",
+   "date": "2026-08-18",
+   "entry_price": 8.69,
+   "realized": 0.1207239355581129,
+   "archived_return": 0.1207239355581129,
+   "base0430": 0.11507479861910253,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.0056491369390103685,
+   "execution": -0.003556846950517769,
+   "timing": 0.009205983889528202,
+   "exits": [
+    {
+     "et": "2026-08-19T04:30:46.318908-04:00",
+     "qty": 11.0,
+     "price": 9.739091,
+     "bid": 9.73,
+     "ask": 9.81,
+     "quote_age_s": 0.2,
+     "spread_pct_of_mid": 0.82,
+     "vs_bid_pct": 0.09
+    }
+   ]
+  },
+  {
+   "symbol": "MSS",
+   "date": "2026-08-18",
+   "entry_price": 1.9,
+   "realized": 0.1578947368421053,
+   "archived_return": 0.1578947368421053,
+   "base0430": 0.1578947368421053,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.0,
+   "execution": -0.002631578947368365,
+   "timing": 0.0026315789473685403,
+   "exits": [
+    {
+     "et": "2026-08-19T04:30:44.862597-04:00",
+     "qty": 55.0,
+     "price": 2.2,
+     "bid": 2.2,
+     "ask": 2.21,
+     "quote_age_s": 0.4,
+     "spread_pct_of_mid": 0.45,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "LOOP",
+   "date": "2026-08-19",
+   "entry_price": 1.36,
+   "realized": -0.18382352941176472,
+   "archived_return": -0.18382352941176472,
+   "base0430": -0.18382352941176472,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.0,
+   "execution": 0.0,
+   "timing": 0.0,
+   "exits": [
+    {
+     "et": "2026-08-20T04:30:39.073618-04:00",
+     "qty": 73.0,
+     "price": 1.11,
+     "bid": 1.11,
+     "ask": 1.11,
+     "quote_age_s": 0.8,
+     "spread_pct_of_mid": 0.0,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "BTOG",
+   "date": "2026-08-19",
+   "entry_price": 1.25,
+   "realized": -0.392,
+   "archived_return": -0.392,
+   "base0430": -0.392,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.0,
+   "execution": -0.006080000000000041,
+   "timing": 0.006080000000000085,
+   "exits": [
+    {
+     "et": "2026-08-20T04:30:38.686308-04:00",
+     "qty": 86.0,
+     "price": 0.76,
+     "bid": 0.76,
+     "ask": 0.7752,
+     "quote_age_s": 3.4,
+     "spread_pct_of_mid": 1.98,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "ISPC",
+   "date": "2026-08-20",
+   "entry_price": 2.32,
+   "realized": -0.22844827586206895,
+   "archived_return": -0.22844827586206895,
+   "base0430": -0.23706896551724133,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.008620689655172376,
+   "execution": -0.02155172413793096,
+   "timing": 0.030172413793103425,
+   "exits": [
+    {
+     "et": "2026-08-21T04:30:37.523947-04:00",
+     "qty": 32.0,
+     "price": 1.79,
+     "bid": 1.79,
+     "ask": 1.89,
+     "quote_age_s": 5.5,
+     "spread_pct_of_mid": 5.43,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "LGO",
+   "date": "2026-08-20",
+   "entry_price": 0.7299,
+   "realized": -0.08192903137416074,
+   "archived_return": -0.08192903137416074,
+   "base0430": -0.08028497054391015,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.0016440608302505932,
+   "execution": -0.0067817509247842305,
+   "timing": 0.005137690094533576,
+   "exits": [
+    {
+     "et": "2026-08-21T04:30:38.322098-04:00",
+     "qty": 126.0,
+     "price": 0.6701,
+     "bid": 0.6701,
+     "ask": 0.68,
+     "quote_age_s": 49.1,
+     "spread_pct_of_mid": 1.47,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "SUGP",
+   "date": "2026-08-20",
+   "entry_price": 3.37,
+   "realized": 0.26706231454005924,
+   "archived_return": 0.26706231454005924,
+   "base0430": 0.24183976261127582,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.02522255192878342,
+   "execution": -0.0014836795252227838,
+   "timing": 0.02670623145400608,
+   "exits": [
+    {
+     "et": "2026-08-21T04:30:39.158489-04:00",
+     "qty": 28.0,
+     "price": 4.27,
+     "bid": 4.26,
+     "ask": 4.29,
+     "quote_age_s": 0.0,
+     "spread_pct_of_mid": 0.7,
+     "vs_bid_pct": 0.23
+    }
+   ]
+  },
+  {
+   "symbol": "WLDS",
+   "date": "2026-08-24",
+   "entry_price": 3.3,
+   "realized": -0.19393939393939386,
+   "archived_return": -0.19393939393939386,
+   "base0430": -0.19090909090909092,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.003030303030302939,
+   "execution": -0.003030303030302966,
+   "timing": 0.0,
+   "exits": [
+    {
+     "et": "2026-08-25T04:30:34.003801-04:00",
+     "qty": 28.0,
+     "price": 2.66,
+     "bid": 2.66,
+     "ask": 2.68,
+     "quote_age_s": 9.3,
+     "spread_pct_of_mid": 0.75,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "YYGH",
+   "date": "2026-08-25",
+   "entry_price": 1.61,
+   "realized": 0.2546583850931676,
+   "archived_return": 0.2546583850931676,
+   "base0430": 0.2727950310559004,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.01813664596273279,
+   "execution": -0.0031055900621117347,
+   "timing": -0.015031055900621038,
+   "exits": [
+    {
+     "et": "2026-08-26T04:30:40.227991-04:00",
+     "qty": 62.0,
+     "price": 2.02,
+     "bid": 2.02,
+     "ask": 2.03,
+     "quote_age_s": 0.0,
+     "spread_pct_of_mid": 0.49,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "XPON",
+   "date": "2026-08-25",
+   "entry_price": 7.41,
+   "realized": -0.1336032388663968,
+   "archived_return": -0.1336032388663968,
+   "base0430": -0.13475033738191633,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.001147098515519529,
+   "execution": -0.0013495276653171103,
+   "timing": 0.0024966261808366808,
+   "exits": [
+    {
+     "et": "2026-08-26T04:31:34.932589-04:00",
+     "qty": 13.0,
+     "price": 6.42,
+     "bid": 6.42,
+     "ask": 6.44,
+     "quote_age_s": 4.1,
+     "spread_pct_of_mid": 0.31,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "DAIC",
+   "date": "2026-08-26",
+   "entry_price": 6.09,
+   "realized": -0.04597701149425293,
+   "archived_return": -0.04597701149425293,
+   "base0430": -0.04269293924466333,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.003284072249589598,
+   "execution": -0.0008210180623973553,
+   "timing": -0.0024630541871922818,
+   "exits": [
+    {
+     "et": "2026-08-27T04:30:49.800954-04:00",
+     "qty": 15.0,
+     "price": 5.81,
+     "bid": 5.81,
+     "ask": 5.82,
+     "quote_age_s": 1.3,
+     "spread_pct_of_mid": 0.17,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "WNW",
+   "date": "2026-08-26",
+   "entry_price": 3.12,
+   "realized": 0.22115384615384603,
+   "archived_return": 0.22115384615384603,
+   "base0430": 0.22762820512820503,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.006474358974358996,
+   "execution": -0.0016025641025640682,
+   "timing": -0.004871794871794899,
+   "exits": [
+    {
+     "et": "2026-08-27T04:30:51.734972-04:00",
+     "qty": 29.0,
+     "price": 3.81,
+     "bid": 3.81,
+     "ask": 3.82,
+     "quote_age_s": 0.4,
+     "spread_pct_of_mid": 0.26,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "AEMD",
+   "date": "2026-08-27",
+   "entry_price": 3.12,
+   "realized": 0.01602564102564097,
+   "archived_return": 0.01602564102564097,
+   "base0430": 0.01602564102564097,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.0,
+   "execution": -0.0016025641025640682,
+   "timing": 0.0016025641025640969,
+   "exits": [
+    {
+     "et": "2026-08-28T04:31:00.664937-04:00",
+     "qty": 29.0,
+     "price": 3.17,
+     "bid": 3.17,
+     "ask": 3.18,
+     "quote_age_s": 0.2,
+     "spread_pct_of_mid": 0.31,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "MODD",
+   "date": "2026-08-27",
+   "entry_price": 4.18,
+   "realized": -0.08612440191387549,
+   "archived_return": -0.08612440191387549,
+   "base0430": -0.09090909090909094,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.004784688995215447,
+   "execution": -0.01076555023923454,
+   "timing": 0.01555023923444987,
+   "exits": [
+    {
+     "et": "2026-08-28T04:32:02.269240-04:00",
+     "qty": 23.0,
+     "price": 3.82,
+     "bid": 3.82,
+     "ask": 3.91,
+     "quote_age_s": 32.1,
+     "spread_pct_of_mid": 2.33,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "PXS",
+   "date": "2026-08-31",
+   "entry_price": 6.26,
+   "realized": -0.04472843450479225,
+   "archived_return": -0.04472843450479225,
+   "base0430": -0.05591054313099031,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": 0.011182108626198062,
+   "execution": -0.02555910543130993,
+   "timing": 0.036741214057507965,
+   "exits": [
+    {
+     "et": "2026-09-02T04:30:56.347769-04:00",
+     "qty": 15.0,
+     "price": 5.98,
+     "bid": 5.98,
+     "ask": 6.3,
+     "quote_age_s": 853.3,
+     "spread_pct_of_mid": 5.21,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "LABT",
+   "date": "2026-08-31",
+   "entry_price": 3.49,
+   "realized": -0.15186246418338112,
+   "archived_return": -0.15186246418338112,
+   "base0430": -0.1404011461318052,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.011461318051575908,
+   "execution": -0.00429799426934101,
+   "timing": -0.007163323782234943,
+   "exits": [
+    {
+     "et": "2026-09-01T04:31:55.001140-04:00",
+     "qty": 28.0,
+     "price": 2.96,
+     "bid": 2.96,
+     "ask": 2.99,
+     "quote_age_s": 10.4,
+     "spread_pct_of_mid": 1.01,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "PETZ",
+   "date": "2026-08-31",
+   "entry_price": 1.5,
+   "realized": -0.03333333333333344,
+   "archived_return": -0.03333333333333344,
+   "base0430": -0.040000000000000036,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.006666666666666599,
+   "execution": -0.0033333333333334103,
+   "timing": 0.01000000000000012,
+   "exits": [
+    {
+     "et": "2026-09-01T04:31:56.973843-04:00",
+     "qty": 67.0,
+     "price": 1.45,
+     "bid": 1.45,
+     "ask": 1.46,
+     "quote_age_s": 0.7,
+     "spread_pct_of_mid": 0.69,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "GPRO",
+   "date": "2026-08-31",
+   "entry_price": 1.3,
+   "realized": 0.023076923076923217,
+   "archived_return": 0.023076923076923217,
+   "base0430": 0.03823076923076907,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.015153846153845851,
+   "execution": -0.003846153846153764,
+   "timing": -0.011307692307692241,
+   "exits": [
+    {
+     "et": "2026-09-01T04:31:54.649785-04:00",
+     "qty": 78.0,
+     "price": 1.33,
+     "bid": 1.33,
+     "ask": 1.34,
+     "quote_age_s": 0.6,
+     "spread_pct_of_mid": 0.75,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "SSM",
+   "date": "2026-08-31",
+   "entry_price": 4.5,
+   "realized": -0.16444444444444462,
+   "archived_return": -0.16444444444444462,
+   "base0430": -0.11333333333333329,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.05111111111111133,
+   "execution": -0.002222222222222175,
+   "timing": -0.04888888888888898,
+   "exits": [
+    {
+     "et": "2026-09-01T08:30:52.423152-04:00",
+     "qty": 20.0,
+     "price": 3.76,
+     "bid": 3.76,
+     "ask": 3.78,
+     "quote_age_s": 0.9,
+     "spread_pct_of_mid": 0.53,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "KITT",
+   "date": "2026-09-01",
+   "entry_price": 1.02,
+   "realized": -0.1468627450980392,
+   "archived_return": -0.1468627450980392,
+   "base0430": -0.14421568627450976,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.0026470588235294468,
+   "execution": -0.0013235294117647778,
+   "timing": -0.0013235294117647234,
+   "exits": [
+    {
+     "et": "2026-09-02T04:30:55.992596-04:00",
+     "qty": 93.0,
+     "price": 0.8702,
+     "bid": 0.8702,
+     "ask": 0.8729,
+     "quote_age_s": 1.2,
+     "spread_pct_of_mid": 0.31,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "CHPT",
+   "date": "2026-09-02",
+   "entry_price": 6.21,
+   "realized": 0.500805152979066,
+   "archived_return": 0.500805152979066,
+   "base0430": -0.006441223832528209,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": 0.5072463768115942,
+   "execution": -0.0016103059581320108,
+   "timing": 0.5088566827697263,
+   "exits": [
+    {
+     "et": "2026-09-04T04:30:57.357994-04:00",
+     "qty": 16.0,
+     "price": 9.32,
+     "bid": 9.32,
+     "ask": 9.34,
+     "quote_age_s": 15.4,
+     "spread_pct_of_mid": 0.21,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "TLYS",
+   "date": "2026-09-02",
+   "entry_price": 5.15,
+   "realized": -0.18446601941747587,
+   "archived_return": -0.18446601941747587,
+   "base0430": -0.04854368932038833,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": -0.13592233009708754,
+   "execution": -0.006796116504854223,
+   "timing": -0.1291262135922332,
+   "exits": [
+    {
+     "et": "2026-09-04T04:30:58.652682-04:00",
+     "qty": 19.0,
+     "price": 4.2,
+     "bid": 4.2,
+     "ask": 4.27,
+     "quote_age_s": 305.4,
+     "spread_pct_of_mid": 1.65,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "UFG",
+   "date": "2026-09-02",
+   "entry_price": 0.642,
+   "realized": -0.049844236760124505,
+   "archived_return": -0.049844236760124505,
+   "base0430": -0.06012461059190022,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.010280373831775713,
+   "execution": -0.0021028037383178716,
+   "timing": 0.01238317757009344,
+   "exits": [
+    {
+     "et": "2026-09-03T04:31:10.633078-04:00",
+     "qty": 147.0,
+     "price": 0.61,
+     "bid": 0.61,
+     "ask": 0.6127,
+     "quote_age_s": 23.2,
+     "spread_pct_of_mid": 0.44,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "GELS",
+   "date": "2026-09-02",
+   "entry_price": 1.02,
+   "realized": -0.15588235294117647,
+   "archived_return": -0.15588235294117647,
+   "base0430": -0.16186274509803922,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.005980392156862746,
+   "execution": -0.0004901960784313185,
+   "timing": 0.006470588235294006,
+   "exits": [
+    {
+     "et": "2026-09-03T04:31:09.214617-04:00",
+     "qty": 95.0,
+     "price": 0.861,
+     "bid": 0.861,
+     "ask": 0.862,
+     "quote_age_s": 0.0,
+     "spread_pct_of_mid": 0.12,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "PLAG",
+   "date": "2026-09-03",
+   "entry_price": 0.7363,
+   "realized": 0.14640771424691024,
+   "archived_return": 0.14640771424691024,
+   "base0430": 0.14898818416406368,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.0025804699171534384,
+   "execution": -0.0012223278554937009,
+   "timing": -0.0013581420616597395,
+   "exits": [
+    {
+     "et": "2026-09-04T04:31:00.924504-04:00",
+     "qty": 113.0,
+     "price": 0.8441,
+     "bid": 0.8441,
+     "ask": 0.8459,
+     "quote_age_s": 16.5,
+     "spread_pct_of_mid": 0.21,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "GIPR",
+   "date": "2026-09-03",
+   "entry_price": 0.63,
+   "realized": -0.2363492063492063,
+   "archived_return": -0.2363492063492063,
+   "base0430": -0.23523809523809525,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.0011111111111110628,
+   "execution": -0.0005555555555555826,
+   "timing": -0.0005555555555555314,
+   "exits": [
+    {
+     "et": "2026-09-04T04:30:58.988710-04:00",
+     "qty": 151.0,
+     "price": 0.4811,
+     "bid": 0.4811,
+     "ask": 0.4818,
+     "quote_age_s": 3.1,
+     "spread_pct_of_mid": 0.15,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "SUNE",
+   "date": "2026-09-08",
+   "entry_price": 2.95,
+   "realized": 0.037288135593220195,
+   "archived_return": 0.037288135593220195,
+   "base0430": 0.04759322033898283,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.010305084745762638,
+   "execution": -0.0016949152542372519,
+   "timing": -0.008610169491525266,
+   "exits": [
+    {
+     "et": "2026-09-09T04:30:33.436194-04:00",
+     "qty": 33.0,
+     "price": 3.06,
+     "bid": 3.06,
+     "ask": 3.07,
+     "quote_age_s": 3.3,
+     "spread_pct_of_mid": 0.33,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "CULP",
+   "date": "2026-09-09",
+   "entry_price": 4.1,
+   "realized": -0.09999999999999987,
+   "archived_return": -0.09999999999999987,
+   "base0430": 0.012195121951219745,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": -0.11219512195121961,
+   "execution": -0.021951219512195197,
+   "timing": -0.09024390243902447,
+   "exits": [
+    {
+     "et": "2026-09-11T04:30:40.249535-04:00",
+     "qty": 24.0,
+     "price": 3.69,
+     "bid": 3.69,
+     "ask": 3.87,
+     "quote_age_s": 163.4,
+     "spread_pct_of_mid": 4.76,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "HCAI",
+   "date": "2026-09-09",
+   "entry_price": 4.8,
+   "realized": -0.1395833333333334,
+   "archived_return": -0.1395833333333334,
+   "base0430": -0.02083333333333326,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.11875000000000013,
+   "execution": -0.015625000000000038,
+   "timing": -0.10312500000000002,
+   "exits": [
+    {
+     "et": "2026-09-10T08:31:32.340766-04:00",
+     "qty": 20.0,
+     "price": 4.13,
+     "bid": 4.13,
+     "ask": 4.28,
+     "quote_age_s": 78.9,
+     "spread_pct_of_mid": 3.57,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "UFG",
+   "date": "2026-09-09",
+   "entry_price": 0.81,
+   "realized": -0.2524691358024692,
+   "archived_return": -0.2524691358024692,
+   "base0430": -0.07407407407407418,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": -0.17839506172839503,
+   "execution": -0.015123456790123434,
+   "timing": -0.16327160493827153,
+   "exits": [
+    {
+     "et": "2026-09-11T04:30:40.947605-04:00",
+     "qty": 118.0,
+     "price": 0.6055,
+     "bid": 0.6055,
+     "ask": 0.63,
+     "quote_age_s": 6.0,
+     "spread_pct_of_mid": 3.97,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "VEEA",
+   "date": "2026-09-14",
+   "entry_price": 3.38,
+   "realized": 0.544378698224852,
+   "archived_return": 0.544378698224852,
+   "base0430": 0.08579881656804744,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": 0.4585798816568045,
+   "execution": -0.0029585798816570046,
+   "timing": 0.4615384615384617,
+   "exits": [
+    {
+     "et": "2026-09-16T04:32:11.731202-04:00",
+     "qty": 28.0,
+     "price": 5.22,
+     "bid": 5.22,
+     "ask": 5.24,
+     "quote_age_s": 5.0,
+     "spread_pct_of_mid": 0.38,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "YFOR",
+   "date": "2026-09-15",
+   "entry_price": 1.55,
+   "realized": 0.07741935483870965,
+   "archived_return": 0.07741935483870965,
+   "base0430": 0.06451612903225801,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.012903225806451646,
+   "execution": -0.006451612903225812,
+   "timing": 0.019354838709677358,
+   "exits": [
+    {
+     "et": "2026-09-16T04:32:11.413729-04:00",
+     "qty": 57.0,
+     "price": 1.67,
+     "bid": 1.67,
+     "ask": 1.69,
+     "quote_age_s": 8.7,
+     "spread_pct_of_mid": 1.19,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "WAFU",
+   "date": "2026-09-15",
+   "entry_price": 2.21,
+   "realized": -0.2262443438914027,
+   "archived_return": -0.2262443438914027,
+   "base0430": -0.23529411764705888,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.009049773755656187,
+   "execution": -0.0022624434389139788,
+   "timing": 0.011312217194570096,
+   "exits": [
+    {
+     "et": "2026-09-16T04:32:11.466447-04:00",
+     "qty": 38.0,
+     "price": 1.71,
+     "bid": 1.71,
+     "ask": 1.72,
+     "quote_age_s": 1.1,
+     "spread_pct_of_mid": 0.58,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "DTSS",
+   "date": "2026-09-16",
+   "entry_price": 0.8594,
+   "realized": -0.27391203164998845,
+   "archived_return": -0.27391203164998845,
+   "base0430": -0.10390970444496161,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.17000232720502684,
+   "execution": -0.0030253665347917697,
+   "timing": -0.16697696067023504,
+   "exits": [
+    {
+     "et": "2026-09-17T08:31:22.305805-04:00",
+     "qty": 93.0,
+     "price": 0.624,
+     "bid": 0.624,
+     "ask": 0.6292,
+     "quote_age_s": 0.6,
+     "spread_pct_of_mid": 0.83,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "YFOR",
+   "date": "2026-09-16",
+   "entry_price": 1.88,
+   "realized": -0.06382978723404253,
+   "archived_return": -0.06382978723404253,
+   "base0430": -0.00553191489361704,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": -0.058297872340425494,
+   "execution": -0.01595744680851065,
+   "timing": -0.04234042553191475,
+   "exits": [
+    {
+     "et": "2026-09-17T08:31:37.338936-04:00",
+     "qty": 53.0,
+     "price": 1.76,
+     "bid": 1.76,
+     "ask": 1.82,
+     "quote_age_s": 32.8,
+     "spread_pct_of_mid": 3.35,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "VRME",
+   "date": "2026-09-17",
+   "entry_price": 0.9925,
+   "realized": -0.18387909319899232,
+   "archived_return": -0.18387909319899232,
+   "base0430": -0.19073047858942072,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.0068513853904283994,
+   "execution": -0.012594458438287109,
+   "timing": 0.019445843828715392,
+   "exits": [
+    {
+     "et": "2026-09-18T04:32:09.767569-04:00",
+     "qty": 98.0,
+     "price": 0.81,
+     "bid": 0.81,
+     "ask": 0.835,
+     "quote_age_s": 0.6,
+     "spread_pct_of_mid": 3.04,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "TCRT",
+   "date": "2026-09-17",
+   "entry_price": 2.18,
+   "realized": -0.09633027522935789,
+   "archived_return": -0.09633027522935789,
+   "base0430": -0.11009174311926617,
+   "measured": true,
+   "exit_bucket": "next PM 04:30-09:30",
+   "legs": 1,
+   "gap": 0.013761467889908285,
+   "execution": -0.0022935779816514287,
+   "timing": 0.016055045871559703,
+   "exits": [
+    {
+     "et": "2026-09-18T04:32:24.861557-04:00",
+     "qty": 47.0,
+     "price": 1.97,
+     "bid": 1.97,
+     "ask": 1.98,
+     "quote_age_s": 8.3,
+     "spread_pct_of_mid": 0.51,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  },
+  {
+   "symbol": "TOPS",
+   "date": "2026-09-21",
+   "entry_price": 1.4,
+   "realized": -0.5,
+   "archived_return": -0.5,
+   "base0430": -0.04999999999999993,
+   "measured": true,
+   "exit_bucket": "later day",
+   "legs": 1,
+   "gap": -0.45000000000000007,
+   "execution": -0.003571428571428575,
+   "timing": -0.4464285714285715,
+   "exits": [
+    {
+     "et": "2026-09-23T04:31:51.483627-04:00",
+     "qty": 64.0,
+     "price": 0.7,
+     "bid": 0.7,
+     "ask": 0.71,
+     "quote_age_s": 1.0,
+     "spread_pct_of_mid": 1.42,
+     "vs_bid_pct": 0.0
+    }
+   ]
+  }
+ ]
+}

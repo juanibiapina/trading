@@ -1,5 +1,32 @@
 # Initiative Log
 
+### 2026-10-09 15:00 — Initiative 3 execution gap is the hold decision; Initiative 7 first modeled ledger resolves
+
+**Evaluated:** The October 8 18:00 hypothesis **worked**. `nbbo` wrote quotes for all five October 8 captures, and both ledgers resolved every arm at the 15:55 flatten (no unresolved exposure). No pilot is active.
+
+**Step taken:**
+
+- **Initiative 3 (dated; sizes the cheapest remaining fix to the core strategy):** built `scripts/init3-exec-gap.py`. It rebuilds each exit fill from the archived Alpaca orders, fetches the SIP NBBO at the fill, and splits realized − base0430 into execution (fill − mid) and timing (mid − 04:30 open). All 89 realized returns match the archive; `--replay` reproduces `result.json` byte for byte.
+- **Initiative 7 (dated; gate before the October 14 pilot):** ran `nbbo` and `ledger --fill-source iex|sip` for October 8.
+
+**Result:**
+
+- **Gap split:** -2.45 points = -0.64 execution + -1.81 timing. Exit spread median 0.71% of mid; fills land at the bid.
+- **The timing loss is the hold decision.** 63 trades sold at 04:30–05:00 ET beat the modeled open by 0.16 points. 11 held to the 08:30 ET pulse lost 13.25 points each; 15 held to a later day lost 5.47. Across the 26 holds: -11.9% realized against -3.1% at the 04:30 open, 21 of 26 worse, p 0.038, both halves negative. Selling everything at 04:30 would have moved the 89-trade mean from -3.2% to -1.0%: better, still negative.
+- **Proposal to Juan:** retire the Grade A/B multi-session holds. Live holding rule, so added to the consolidated asks and not applied.
+- **Initiative 7 ledger, October 8 from 12:30 (daemon started 12:04 ET, so 10:30 and 11:30 skipped):** N1 4 round trips (TSLA, then AAPL ×3): -$1.01 base / -$2.50 stress with NBBO fills; -$2.86 base with IEX fills, $1.79 of it IEX spread. QQQ -$1.03. A1 no trade; A2 equal to N1. One partial day; no conclusion.
+- **Other details.** No order, live rule, size or pulse timing changed. Equity $99,691.08 (-$308.92), no open positions.
+- **Evidence:** `docs/investigations/init3-exec-gap-2026-10-09.md`, `log/2026-10-09/init3-exec-gap/result.json`, `log/2026-10-08/init7-execute/ledger-iex.json`, `ledger-sip.json`.
+
+**Hypothesis / next step:**
+
+- **October 9 18:00:** Initiative 7: October 9 has six slot captures and a flatten capture.
+- **October 12 15:00:** Initiative 7 `nbbo` and both ledgers for October 9 (first full day). Initiative 1: test the same-date regular-session volume ratio on the 89-entry archive and on TRUG, UPC and DKI.
+- **October 14 15:00:** freeze the Initiative 7 calendar and start the pilot.
+- **Next daily email:** Initiative 3 gap split and the hold-retirement proposal; Initiative 7 first ledger; Jev not run.
+
+**Needs from Juan:** decide on retiring the Grade A/B holds (daily email). Initiative 2 stays deferred.
+
 ### 2026-10-08 18:00 — Initiative 7 modeled execution layer live; IEX books overstate spread cost 13-fold, amendment A3 prices fills at the NBBO
 
 **Evaluated:** The October 8 15:00 hypothesis for this run **worked**. All six October 7 slots and today's 10:30, 11:30 and 12:30 slots persisted decisions within 4 s of the slot (N1 today: NVDA, GOOGL, TSLA; SEC `no_8k_within_window` each time; no Jev call). No pilot is active.
