@@ -701,3 +701,143 @@ AH >10% at this snapshot (unrounded): OLB, VAI, VEEA, WHLR, WORX, XRTX
 |--------|------------|------------|-----------------|----------|--------|
 | XRTX | $2.22 | 17:01 ET (23:01 CET) | 44 | b8f5f48e | Grade C: Health Canada CTA outline PR (Oct 8 ~16:00 ET); 4 AH scans >10%, HOLD ~8% under $2.46 AH high on 360K–640K sh/bar, CONFIRM-3 YES |
 | OLB | $0.71 | 17:31 ET (23:31 CET) | 141 | 3ce058a7 | Grade None: no fresh catalyst; 2 AH scans >10% (+12.2% → +31.4%), BUILD to new $0.73 AH high at 17:10 ET on 2–4M sh / 3–6K trades per bar |
+
+## Morning Evaluation — 10:20 CEST (04:20 ET, October 9)
+
+**Pulse 1: no real winner today.** Nothing cleared the >100% bar. The biggest genuine AH→PM mover is **VEEA**: AH SIP high **$5.81 (+50.1%)** at 18:45 ET, PM SIP high **$5.48 (+41.6%)** in the 04:00 bar on 1.11M shares / 16,908 trades, from the $3.87 October 8 close. The scanner detected it (00:00 and 00:30 scans) and flagged it as a DEAD-CAT-OVERRIDE WATCH; the dead-cat filter (Day −17.8%) blocked the live entry. Both overnight fills are under water: XRTX −12.2% and OLB −16.9% at the live price. Exits belong to the 10:30 position pulse.
+
+Discovery ran before reading this log: `scan.py --all --session premarket` at 04:20 ET (VEEA, SAIQ, SDEV, DKI) and `pm-sweep.py` (17 listed names above +10%). Levels are Alpaca SIP daily closes and 5-minute bars; SIP PM bars end at the 04:05 ET bar (15-minute block). Yahoo `price-timeline.py` gives the latest prints at 04:22 ET. October 8 is a normal Thursday, so every PM % uses the October 8 SIP close.
+
+### Today's Winner
+
+**No real winner today.** Reason: the morning's largest moves are all below +100%. VEEA +41.6% (in-universe, liquid), ZBAO +60% (below the $0.50 floor, late-AH surge), SAIQ +27.8%. EJH (+22%) and UONE (+19.5%) are 100-share prints.
+
+**Biggest genuine mover: VEEA — Veea Inc. (packaged software / edge computing), Nasdaq**
+
+- Catalyst: **Grade C.** GlobeNewswire, October 8 ~17:20 ET, "Veea Regains Full Compliance with Nasdaq Continued Listing Requirements" (board and committee changes). The ignition bar matches the release time.
+- Previous close: **$3.87** (SIP, October 8; Day −17.8% from $4.71). `price-timeline.py` uses the same basis.
+- AH last night: flat $3.77–$3.95 on a few thousand shares until 17:20 ET. Ignition 17:20 ET (70K sh / 648 trades), then a build: $4.85 at 17:35, $4.94 at 17:55 and 18:15, then in the unscanned tail **$5.81 at 18:45 ET** (295,189 sh / 3,248 trades), closing AH at $5.77.
+- Premarket: 04:00 bar O $4.97 H **$5.48** L $4.62 C $5.38 on **1,109,438 sh / 16,908 trades**; 04:05 bar C $5.23 on 463K / 7,175. Yahoo $5.20 (+34.4%) at 04:22.
+- Hypothetical P&L: 00:30 watch entry $4.91 (SIP) → $5.48 = **+11.6%** (+15.6% from the $4.74 scanner price). The AH tail peak $5.81 was the better exit (+18.3%).
+- Float **1.6M** | Market cap **~$12M**.
+- Volume vs previous day: October 8 regular-session 5-minute bars peaked at 72,824 shares; the AH peak bar (295K) and PM 04:00 bar (1.11M) are a clear spike. The move fails only the % bar.
+
+**Scanner Diagnostic:**
+
+- Detectable at screening time (~22:15 CEST)? **NO.** At 16:15 ET VEEA was flat at $3.86. The AH move began at 17:20 ET (23:20 CEST).
+- Detected at the first scan after ignition (00:00 CEST, +11.6%) and again at 00:30 (+22.5%, CONFIRM-3 YES, SIP book $4.82/$4.85). Not entered: Day% −17.8% triggers the dead-cat filter. Logged as DEAD-CAT-OVERRIDE WATCH.
+- Scanner gap: **none in detection.** The entry block is the dead-cat filter; the outcome goes to the dead-cat override tally below.
+
+### Baseline Tracking
+
+Source: the October 7 log, which is the immediately preceding trading day, including its 2026-10-09 DKI correction (detected 73/84, selected 37/80, 96 days). **No new baseline gap.** Existing gaps stay **Sep 11, Sep 18, Sep 25, Oct 2**.
+
+- Days tracked: **97** (96 + October 8 only).
+- Winners detected by scanner: **73/84 (86.9%)**, unchanged. No winner today, so nothing enters the denominator.
+- Winner selected for paper trade: **37/80 (46.3%)**, unchanged.
+- Target: >80% detection. Status: **BASELINE MET.** Coverage failures, the four skipped retrospectives and the price-floor exclusions limit what the rate means.
+
+### Retrospective Scan Results
+
+`scan.py --all --session premarket` (04:20 ET): VEEA +39.5%, SAIQ +19.8%, SDEV +7.1%, DKI +5.3% (all VRatio 0.0x; postmarket volume fields reset). `pm-sweep.py` added ZBAO (+43.7%, below $0.50), FRGT and YCBD (below $0.50), and thin prints: EJH 100 sh, UONE 100, ALIS 111, VAI 3,160, ROC 200, HUM 551 (large cap), DTI 1,063, ESLA 500, WQEY 1,483, AUID 146, CLOV 16,708 ($2.4B cap). No forced AH scan was run.
+
+| Ticker | Oct 8 SIP close | AH SIP high / ET | PM SIP high / ET | PM high vs close | Peak-bar shares / trades | Latest | Classification |
+|--------|-----------------|------------------|------------------|------------------|--------------------------|--------|----------------|
+| ZBAO | $0.0586 | $0.10 / 19:30 | $0.0938 (pm-sweep) / 04:00–04:05 | +60.1% | 16.7M / 12,440 (04:00) | $0.0842 (+43.7%) | Below floor; AH surge began 19:00 ET (after the last scan); 1-for-50 reverse split announced Oct 8, effective Oct 12 |
+| VEEA | $3.87 | $5.81 / 18:45 | $5.48 / 04:00 | **+41.6%** | 1,109,438 / 16,908 | $5.20 (+34.4%) | AH→PM continuation; detected; dead-cat override watch |
+| SAIQ | $5.51 | $6.48 / 16:00 and 19:40 | $7.04 / 04:00 | +27.8% | 786,298 / 15,578 | $6.47 (+17.4%) | First-bar spike, faded to $4.45, rebuilt in the 19:35–19:45 ET tail; one scan at +6.0% |
+| WHLR | $0.70 | $0.95 / 16:25 | $0.80 / 04:00 | +14.3% | 374,695 / 4,773 | $0.68 | SPIKE→FADE skip; AH better |
+| WORX | $4.20 | $7.14 / 16:50 | $4.74 / 04:00 | +12.9% | 30,597 / 664 | $4.30 | Dead-cat override watch; faded |
+| OLB | $0.55 | $0.74 / 17:25 | $0.62 / 04:00 | +12.7% | 2,018,722 / 16,081 | $0.59 | Entered; faded below fill |
+| XRTX | $1.85 | $2.46 / 16:20 | $2.12 / 04:00 | +14.6% | 271,394 / 1,915 | $1.95 | Entered; faded below fill |
+
+### Open Position P&L (Alpaca)
+
+Both fills are still open; the 10:30 position pulse handles exits. `broker.js positions` shows XRTX $1.95 and OLB $0.59, which match the live Yahoo prints at 04:22 ET, so the position prices are current. The `quote` endpoint is stale (XRTX 16:59 ET, OLB 16:00 ET with `ask $0.00 x0`) and is not used.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| XRTX | $2.22 | +26.9% (vs $1.75 Oct 7) | C — Health Canada CTA outline PR | 23:01 CEST (17:01 ET) | $2.12 (SIP) | 04:00 ET | open | −$11.88 | −12.2% | ❌ Open, below fill |
+| OLB | $0.71 | +83.5% (vs $0.387 Oct 7) | None — no catalyst found | 23:31 CEST (17:31 ET) | $0.62 (SIP) | 04:00 ET | open | −$16.92 | −16.9% | ❌ Open, below fill |
+
+**Total Realized P&L (Alpaca fills only, this session): $0.00** (unrealized −$28.80). PM never reclaimed either fill.
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled checkpoints (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST), plus five extra observations (22:05, 22:10, 22:15, 22:20, 22:25) and 22:45. The entry window was fully covered.
+- Candidates found: **9 unique tickers** with a >10% AH appearance (XRTX 7, OLB 4, WHLR 4, WORX 4, VEEA 2, LAB 1, XELB 1, REFR 1, VAI 1).
+- Retrospective matches: the only in-universe AH→PM mover of size (VEEA) was detected. SAIQ's move came in the 19:35 ET tail and ZBAO is below the floor.
+- Supplementary AH-change-only pass: the line is present in all 12 AH scans. **1 unique ticker, 0 continuation / 1 faded / 0 unassessed.**
+  - **REFR: faded.** $0.73 (00:00) → PM SIP high $0.62 (−15.1%) on 397 sh / 2 trades (04:05 bar); next bar not yet available, persistence unknown.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| SAIQ | +6.0% at 22:20 (only scan); −4.7% at 18:30 ET; tail rebuild to $6.48 (+17.6%) at 19:40 ET | Below 10% during the scanned window; first-bar spike $6.48 at 16:00 ET faded to $4.45 by 16:30 | Modest: tail ~$6.15 (19:45 ET) → $7.04 = +14.5%; below the winner bar |
+| ZBAO | Flat $0.06 until 19:00 ET, then +60–70% by 19:30 ET on 1–5M sh / 1–4.5K trades per bar | Below `MIN_PRICE = $0.50` and after the last scan | ~$0.07 (19:00 ET) → $0.0938 ≈ +34%; reverse split pending; not >100% |
+
+### AH Mover Follow-Through
+
+Every name with two or more >10% AH scans. Current = latest Yahoo print (04:22 ET) or SIP 04:05 close.
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| XRTX | $2.46 | 16:20 | **Spike→hold** (+22.2 → 21.6 → 25.4 → 25.4 → 21.6 → 21.1 → 23.2%) | $1.95 | −20.7% | +5.4% | PM peak $2.12 **fell short (−13.8%)**; AH better |
+| OLB | $0.74 | 17:25 | **Build→fade** (+12.2 → 31.4 → 22.9 → 19.8%) | $0.59 | −20.3% | +7.3% | PM peak $0.62 **fell short (−16.2%)**; AH better |
+| WHLR | $0.95 | 16:25 | **Spike→fade** (+26.1 → 21.8 → 7.5 → 11.9 → 14.3%) | $0.68 | −28.4% | −2.9% | PM peak $0.80 **fell short (−15.8%)**; AH better |
+| WORX | $7.14 | 16:50 | **Spike→fade** (+15.2 → 47.1 → 39.0 → 35.0%) | $4.30 | −39.8% | +2.4% | PM peak $4.74 **fell short (−33.6%)**; AH better |
+| VEEA | $5.81 | 18:45 | **Late surge / build** (+11.6 → 22.5%), tail to +50.1% | $5.20 | −10.5% | +34.4% | PM peak $5.48 **fell short (−5.7%)**; AH tail better |
+
+All five AH movers peaked in after-hours. None reached the ~+130% extreme zone.
+
+**Chase-cap check:** XRTX filled at +26.9% Total (qualifying +28.9%) and OLB at +83.5% (qualifying +86.4%). No chase. Standing **1 (XOS), never reclaimed**.
+
+### Notes
+
+- **Coverage, last 10 completed sessions (Sep 25–Oct 8):** **Sep 25 0/7, Sep 29 3/7, Oct 2 0/7, Oct 5 0/7.** Sep 28, 30, Oct 1, 6, 7 and **Oct 8 ran 7/7.** Still **4 failures in 10 sessions**, above the ≥2 trigger; the scheduler/bridge investigation stays routed to the email.
+- **DEAD-CAT-OVERRIDE WATCH: 3 positive / 4 negative → 4 positive / 5 negative.**
+  - **VEEA (positive):** Day −17.8%, Grade C, float 1.6M, multi-scan AH build that reclaimed the $3.87 regular close. Hypothetical $4.91 (SIP, 18:30 ET) → PM peak $5.48 = **+11.6%**; AH tail peak $5.81 = +18.3%.
+  - **WORX (negative):** Day −27.0%, Grade None, float 522K. Hypothetical $6.18 (17:30 ET) → PM peak $4.74 = **−23.3%**. Faded from 17:30 ET on.
+- **CEILING-OVERRIDE / FIRST-BAR-SPIKE WATCH:** none flagged. First-bar standing **11 valid (2 ran / 9 faded-flat), 1 pending (ICMB)**, not re-checked this pulse.
+- **Fade-rule tally: sub-3M 4/23 → 4/24 (16.7%), trigger not met.** New row **WHLR** (Oct 8→9): float 568K, Grade None, SPIKE→FADE skip at 23:00. AH SIP peak $0.95 at 16:25 ET → PM SIP peak $0.80, **fell short**. (a) first sighting $0.88 (22:45) → $0.80 = **−9.1%**; (b) PM-open 04:00 VWAP $0.76 → $0.80 = **+5.3%**. No strong-catalyst faders.
+- **Final-scan gate-block: 2 (TRUG, UPC), unchanged; DKI excluded.** VAI (first scan at 00:30) does not qualify: thin volume (24K–47K sh per bar) and CONFIRM-3 NO. It drifted to $2.55 in AH and printed $2.97 on 3,829 shares in PM.
+- **Raw PM leader / PM-only tracking:** the biggest raw PM mover is **ZBAO (+60% high)**, an AH→PM continuation from a late-tail surge, below the floor. The biggest in-universe mover is **VEEA**, an AH→PM continuation the scanner detected. No meaningful PM-only gapper this morning (EJH and UONE are 100-share prints). `log/pm-open-scan.csv` has **no October 9 rows yet** at 04:21 ET. The CSV holdable PM-only count is **63** (was 62; the October 8 SDST row added one). Carry the Initiative-6 cluster to the email.
+- **Price-floor exclusions: 12 observations across 9 nights, unchanged; confirmed >100%-and-holdable stays 1 (TOPP).** ZBAO is not added: it was flat at $0.06 at 18:30 ET and surged from 19:00 ET, outside the scanned window, and peaked at +60%. Its 1-for-50 reverse split (announced Oct 8, effective Oct 12) makes the PM move a pre-split squeeze.
+- **Late-AH-tail tracking: 2 true-tail (ORIS, GNS) / 1 feed-lag (BTCT), unchanged.** VEEA's tail high $5.81 at 18:45 ET continued a detected build (BIYA convention). SAIQ's 19:35–19:45 ET rebuild fits the true-tail shape (−4.7% AH at 18:30 ET) but peaked +27.8% in PM, so it is not a winner and is not added.
+- **In-window feed-lag: 7, unchanged.** SAIQ's +17.6% was an intra-bar high in the 16:00 ET bar; the bar closed +6.5% and the 16:05 bar −7.4%, so no scan missed an in-window >10% move.
+- **Execution and selection trackers:** broker-block **2**, stale-book-only **6**, no-fillable-book **4**, float-only **1**, all unchanged. OLB again filled against a frozen 16:00 ET IEX quote (`ask $0.00 x0`) with a SIP-priced limit.
+- **Actual-entry trackers:**
+  - **XRTX: day-1 fresh igniter** (Day +6.0%, Grade C). $2.22 → PM SIP peak $2.12 = **−4.5%, faded.**
+  - **OLB: reclassified as a MULTI-SESSION RUNNER (day 3).** The scan note said prior sessions were flat ($0.37 Oct 6). SIP daily bars show OLB at $0.19 through Oct 5, then **Oct 6 $0.19 → $0.41 (+116%) on 765.7M shares**, Oct 7 $0.39, Oct 8 $0.55 (+41.9%). The $0.71 fill was +274% above the Oct 5 close. Grade None. $0.71 → PM SIP peak $0.62 = **−12.7%, faded.**
+  - First-day igniters **31 → 32 entries (12 ran / 8 flat / 12 faded) = 37.5% ran**. Multi-session runners **1 → 2, both faded** (DAIC, OLB).
+  - Reverse-split tally unchanged (**4/5 this-week faded / 4/6 older continued**); neither entry has a reverse-split catalyst.
+- **Extreme-runner tally: 15 fades / 2 continues (88.2%), unchanged.** No AH peak reached ~+130%. The partial-profit routing trigger stays reached.
+- **SIP basis checks:** October 8 closes VEEA $3.87, SAIQ $5.51, XRTX $1.85, OLB $0.55, WHLR $0.70, WORX $4.20, REFR $0.62, ZBAO $0.0586 (pm-sweep; SIP rounds to $0.06). October 7 closes for Entry Total%: XRTX $1.75, OLB $0.387.
+- **WINNERS_TRACKING.md:** DKI moved from Active Watch to Historical as "reclassified: not a winner" (Oct 8 close $0.75, −55% from $1.67). BIYA and OLOX refreshed; no new row.
+
+### Daily Email Routing
+
+- Headline: **No real winner for October 8→9.** Biggest genuine mover VEEA: AH +50.1%, PM +41.6% on 1.1M shares in the 04:00 bar. Detected at 00:00/00:30, blocked by the dead-cat filter; watch hypothetical +11.6%. Detection **73/84 (86.9%)**, selection **37/80 (46.3%)**, 97 days tracked.
+- Open positions at 04:22 ET: XRTX −12.2%, OLB −16.9% (unrealized −$28.80). PM never reclaimed either fill.
+- **Selection note for Juan:** OLB was entered without a MULTI-SESSION-RUNNER tag because the scan read the prior closes wrong; it was day 3 of a run that started +116% on Oct 6. Multi-session entries are now 2 of 2 faded (DAIC, OLB) against 37.5% runs for first-day igniters. Two cases are not enough for a rule; the scan step should check SIP daily bars for the prior 3 sessions before tagging.
+- **Scheduler/bridge reliability (decision for Juan):** 4 coverage failures in the last 10 sessions (Sep 25, Sep 29, Oct 2, Oct 5). October 6, 7 and 8 ran 7/7.
+- Carry forward: 7 feed-lag observations → whole-universe AH verification; 63-row holdable PM-only cluster → Initiative 6; 15/17 extreme-runner fades → partial-profit decision; reverse-split recency recommendation; sub-$0.50 floor question (TOPP 1 of 3); stale IEX quote feed. Dead-cat override now 4 positive / 5 negative. The sub-3M fade (4/24), price-floor (1 of 3), first-bar and final-scan triggers are not met.
+
+### Price Charts
+
+Excerpts from `python3 scripts/price-timeline.py VEEA SAIQ XRTX OLB` at ~04:22 ET. Yahoo 5-minute closes; the SIP tables above set the levels. Block charts omitted.
+
+```text
+VEEA  Previous Close: $3.87 (regular close 2026-10-08) | Current: $5.20 (+34.4%) | Peak: $5.48 (+41.6%) at 10-09 04:00 ET
+  [PM] 10-09 04:00 ET: $5.38 (+39.1%)  04:05: $5.23 (+35.1%)  04:10: $5.16 (+33.3%)  04:15: $5.25 (+35.6%)  04:22: $5.20 (+34.4%)
+
+SAIQ  Previous Close: $5.51 (regular close 2026-10-08) | Current: $6.47 (+17.3%) | Peak: $7.04 (+27.7%) at 10-09 04:00 ET
+  [PM] 10-09 04:00 ET: $6.64 (+20.5%)  04:05: $6.64  04:10: $6.23 (+13.0%)  04:15: $6.25  04:22: $6.47 (+17.3%)
+
+XRTX  Previous Close: $1.85 (regular close 2026-10-08) | Current: $1.95 (+5.4%) | Yahoo peak $2.02 at 04:10 ET (SIP $2.12 in the 04:00 bar)
+  [PM] 10-09 04:00 ET: $1.86 (+0.5%)  04:05: $1.91  04:10: $1.93  04:15: $1.95  04:22: $1.95 (+5.4%)
+
+OLB   Previous Close: $0.549 (regular close 2026-10-08) | Current: $0.59 (+7.9%) | 2-day peak $0.70 at 10-08 09:50 ET
+  [PM] 10-09 04:00 ET: $0.57 (+4.7%)  04:05: $0.58  04:10: $0.58  04:15: $0.60 (+9.4%)  04:22: $0.59 (+7.9%)
+```
