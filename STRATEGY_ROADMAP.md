@@ -1706,7 +1706,29 @@ tracker).
 
 ---
 
-## Current priorities and initiative status — 2026-10-09 15:00 CEST
+## Current priorities and initiative status — 2026-10-09 18:00 CEST
+
+This checkpoint supersedes the October 9 15:00 checkpoint. **Initiative 7's frozen N1 rule loses money on the past year, and the October 14 pilot will not start in this form.** Replayed on 255 full sessions (2025-10-01 to 2026-10-08), N1 made +$0.083 per session per $100 before costs and -$0.61 after the frozen base costs (-$2.65 stress). It trades 5.5 round trips a session, so it breaks even only below 0.76 bps per side; half the NBBO spread alone is 0.65. **0 of 48** rolling 20-session windows pass the promotion gate. The replay matches the live decision on all 12 slots of October 7 and 8. The pilot slot stays free. Paper equity is **$99,691.08 (-$308.92)**, no open positions.
+
+**Money-fast selection:** today's dated Initiative 7 check (six slots and a flatten for October 9) cannot finish before 16:00 ET, so it ran as a partial monitoring check and the budget went to the October 14 pilot's expected value: a four-week pilot that cannot pass is the costliest item on the roadmap. Initiative 1's October 12 item was already done by the October 9 scanner-improvement run. **North Star check:** both candidates now lose. The core AH→PM strategy is -3.2% per trade (about -1.0% with holds retired, pending Juan), and hourly megacap rotation has no gross edge. The next Initiative 7 step must find a horizon whose gross move per trade clears about 13 bps per round trip before any variant is frozen.
+
+| Initiative | Latest concrete progress | Current status / dependency | Next deliverable and check |
+|---|---|---|---|
+| 1 — shared volume measurement | October 9 scanner-improvement: same-date regular-session ratio added and tested on 89 entries | **Instrument, log-only.** The ratio does not separate outcomes (≥10x: 49 entries, -4.9%; <10x: 40, -1.1%). TRUG 18.4x and UPC 94.7x pass; DKI 0.17x fails, matching Juan. | No dated item. The October 12 test is done. |
+| 2 — broker execution | September 7 alternatives research | **Deferred per Juan's September 22 instruction.** | Resume only when access arrives; no renewed ask. |
+| 3 — scheduling and exits | October 9 15:00: execution-gap split | **Research done; hold retirement proposed to Juan.** | Wait for Juan's reply; keep the proposal open (live rule; not applied by this loop). |
+| 4 — initiative reporting | Receipt 183 | **Delivered and verified.** | Next daily email: Initiative 7 N1 history and the cancelled pilot, plus the 15:00 items (Initiative 3 gap split and hold proposal, first ledger); Jev not run. |
+| 5 — review surface | October 8 15:00: v2 page verified | **Build delivered.** | No dated item. |
+| 6 — PM-only gappers | October 6 15:00 latency study | **Pilot ENDED; log-only research continues.** | Reopen only with real-time consolidated data and a sub-minute watcher. |
+| 7 — alternative agent strategies / Jev | October 9 18:00: N1 history replay | **Instrument, session 3 of 5; N1 pilot not started.** October 9 10:30 (MSFT) and 11:30 (AMZN) persisted with book captures 0.3 s and 0.04 s later, 8/8 quotes, no errors. | **October 12 15:00:** confirm October 9 has six slots and a flatten, run `nbbo` and both ledgers. Then, on the cached year, measure gross move per trade against the 13 bps round-trip hurdle for one-hour, close-to-close and multi-day horizons in this basket, as the basis for any new frozen variant. Daemons `SFm` and `3t2` end as scheduled. |
+
+**Initiative 7 progress, October 9 18:00:** `scripts/init7-n1-history.py` replays the frozen N1 selector on cached SIP 5-minute bars (173 pages) with fills at the slot bar's open, half the A3 median NBBO spread and the frozen slippage and fee; `--replay` reproduces `result.json` byte for byte. Zero-cost interval vs cash: -$0.067 to +$0.231 per session. Holding through repeated picks would save only 200 of 1,397 round trips. Evidence: `docs/investigations/init7-n1-history-2026-10-09.md`, `log/2026-10-09/init7-n1-history/`.
+
+**Previous-step evaluation:** the October 9 15:00 hypothesis for this run (six slots and a flatten for October 9) has **insufficient data** at 12:00 ET; the two slots due so far are complete.
+
+**Needs from Juan / consolidated asks:** the Initiative 7 ask is updated: hourly megacap rotation is rejected on history. The hold-retirement proposal stays open. No trading-pulse timing change is proposed.
+
+## Prior checkpoint — 2026-10-09 15:00 CEST
 
 This checkpoint supersedes the October 8 18:00 checkpoint. **Initiative 3 split the 2.45-point realized-vs-modeled exit gap: timing is -1.81 points and execution -0.64.** Nearly all the timing loss comes from the 26 trades the 04:30 ET evaluation chose to HOLD under the Grade A/B rules: they returned -11.9% against -3.1% at the 04:30 open (gap -8.77 points, 21 of 26 worse, p 0.038). Selling everything at 04:30 would have moved the 89-trade mean from -3.2% to -1.0%. That is a live holding-rule change, so it is **proposed to Juan** in the consolidated asks. **Initiative 7's first modeled ledger (October 8, 12:30 onward) resolved every arm.** The pilot slot stays free. Paper equity at 15:20 CEST is **$99,691.08 (-$308.92)**, no open positions.
 
@@ -2003,13 +2025,15 @@ The next research priority is **Initiative 7's liquid regular-session feasibilit
 
 **Next smallest step:** At October 2 15:00 CEST, deliver a sourced comparison of stock-classification projects and select a bounded label/input specification for Jev. Save research in `docs/investigations/`; record its path and next deliverable in `INITIATIVE_LOG.md`. Then build the smallest shadow classification run with the existing environment key, preserving the model/version, dated inputs, labels/probabilities, call/token usage, actual cost or an explicitly labeled pricing estimate, and failures in dated artifacts referenced by the initiative log. Feed those artifacts to the daily email; verify representative cases before drawing trading conclusions. Continue the frozen numerical-control versus bounded-agent comparison with causal timing, equal capital, cash/QQQ comparators and all operating costs. Research and instrumentation proceed alongside Initiative 6.
 
+**Update 2026-10-09 18:00:** the frozen N1 rule loses on the past year (255 sessions: +$0.083 per session per $100 gross, -$0.61 base, -$2.65 stress; 0 of 48 20-session windows pass the gate). The October 14 pilot does not start in this form. Next: measure gross move per trade against the ~13 bps round-trip hurdle across holding horizons before freezing a new variant. See `docs/investigations/init7-n1-history-2026-10-09.md`.
+
 **Needs from Juan:** consideration of the eventual regular-session/universe direction through the daily email; nothing blocks research. Preserve the deferred broker test.
 
 ## Open asks for Juan (consolidated)
 
 - [ ] **Initiative 3 (2026-10-09, live holding rule; daily email): PROPOSAL — sell every position at the first premarket evaluation (10:30 CEST / 04:30 ET) and retire the Grade A/B multi-session holds.** On the 89 real AH entries, the 26 held past that evaluation returned -11.9% against -3.1% at the 04:30 open (21 of 26 worse, p 0.038, both chronological halves negative). Applying it would have moved the per-trade mean from -3.2% to -1.0%. It edits `prompts/position-evaluation.md` and `OPEN_POSITIONS.md`, so it is **not applied**. Evidence: `docs/investigations/init3-exec-gap-2026-10-09.md`.
 
-- [ ] **Initiative 7 (2026-10-01, core strategy/universe proposal; daily email):** the paper account missed the net-positive checkpoint. Propose evaluating an agent-assisted liquid US regular-session strategy as a replacement candidate for AH→PM micro-caps. Research is active and unblocked; live adoption needs prospective edge and execution evidence plus Juan's review. No live switch, new order or trading schedule change has been applied.
+- [ ] **Initiative 7 (2026-10-01, core strategy/universe proposal; daily email):** **Update 2026-10-09 18:00:** the first candidate, hourly relative-strength rotation in seven megacaps, lost -$0.61 per $100 per session after base costs over the past year and is not piloted. The direction stays open while a lower-turnover horizon is measured. The paper account missed the net-positive checkpoint. Propose evaluating an agent-assisted liquid US regular-session strategy as a replacement candidate for AH→PM micro-caps. Research is active and unblocked; live adoption needs prospective edge and execution evidence plus Juan's review. No live switch, new order or trading schedule change has been applied.
 
 **Broker-ask status refresh (2026-10-01):** the historical Initiative 2 access item below is **deferred per Juan's September 22 instruction**, not a renewed request. Resume only when he supplies access. Existing Initiative 3 schedule-veto and exit-review proposals remain unapplied; no new schedule change is proposed today.
 

@@ -1,0 +1,85 @@
+{
+ "sessions": 255,
+ "skipped": [
+  {
+   "date": "2025-11-28",
+   "reason": "half_day"
+  },
+  {
+   "date": "2025-12-24",
+   "reason": "half_day"
+  }
+ ],
+ "costs_bps_per_side": {
+  "base": 6.645,
+  "stress": 26.645,
+  "zero_cost": 0.0
+ },
+ "first": "2025-10-01",
+ "last": "2026-10-08",
+ "selected_observations": 1397,
+ "observations": 1530,
+ "pick_counts": {
+  "AAPL": 192,
+  "MSFT": 122,
+  "NVDA": 240,
+  "AMZN": 158,
+  "GOOGL": 185,
+  "META": 183,
+  "TSLA": 317
+ },
+ "base": {
+  "n1_mean_usd_per_session": -0.60723180116323,
+  "n1_total_usd": -154.84410929662363,
+  "n1_positive_sessions": 66,
+  "qqq_mean_usd_per_session": -0.12691855997827248,
+  "n1_minus_qqq_mean": -0.48031324118495744,
+  "n1_vs_cash_interval": [
+   -0.7587505682935001,
+   -0.46124875222950507
+  ],
+  "n1_vs_qqq_interval": [
+   -0.6047024176747176,
+   -0.35458338066070527
+  ],
+  "round_trips_per_session": 5.47843137254902
+ },
+ "stress": {
+  "n1_mean_usd_per_session": -2.6546365362111835,
+  "n1_total_usd": -676.9323167338518,
+  "n1_positive_sessions": 5,
+  "qqq_mean_usd_per_session": -0.5056540852618597,
+  "n1_minus_qqq_mean": -2.148982450949324,
+  "n1_vs_cash_interval": [
+   -2.8053591028909493,
+   -2.508284359710735
+  ],
+  "n1_vs_qqq_interval": [
+   -2.274877312127655,
+   -2.018341712378176
+  ],
+  "round_trips_per_session": 5.47843137254902
+ },
+ "zero_cost": {
+  "n1_mean_usd_per_session": 0.08279783869635149,
+  "n1_total_usd": 21.11344886756963,
+  "n1_positive_sessions": 136,
+  "qqq_mean_usd_per_session": -0.0007483946696341344,
+  "n1_minus_qqq_mean": 0.08354623336598563,
+  "n1_vs_cash_interval": [
+   -0.06714548325416302,
+   0.2310553612169692
+  ],
+  "n1_vs_qqq_interval": [
+   -0.0407710234082885,
+   0.21004577716309294
+  ],
+  "round_trips_per_session": 5.47843137254902
+ },
+ "rolling_20_session_gate": {
+  "windows": 48,
+  "step_sessions": 5,
+  "passed": 0,
+  "note": "A2/A1 legs and coverage gates not modeled; N1 vs cash and QQQ only."
+ }
+}

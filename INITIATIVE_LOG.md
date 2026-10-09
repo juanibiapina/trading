@@ -1,5 +1,30 @@
 # Initiative Log
 
+### 2026-10-09 18:00 — Initiative 7 frozen N1 rule loses on the past year; October 14 pilot not started
+
+**Evaluated:** The October 9 15:00 hypothesis for this run (October 9 has six slot captures and a flatten capture) has **insufficient data**: at 12:00 ET only 10:30 and 11:30 were due. Both persisted (N1 MSFT, then AMZN; SEC `no_8k_within_window`), and their book captures arrived 0.3 s and 0.04 s after the decision with 8/8 quotes and no errors. Initiative 1's October 12 item (regular-session ratio on the 89 entries and TRUG, UPC, DKI) was already done by the October 9 scanner-improvement run: the ratio does not separate outcomes, TRUG and UPC pass, DKI fails. No pilot is active.
+
+**Step taken:**
+
+- **Initiative 7 (decides whether the October 14 pilot can pay):** built `scripts/init7-n1-history.py`. It replays the frozen N1 selector on raw SIP 5-minute bars for 255 full sessions (2025-10-01 to 2026-10-08), fills at the open of the slot's bar, and charges half the A3 median NBBO spread plus the frozen slippage and fee (6.645 bps per side base, 26.645 stress). It applies the frozen promotion gate to rolling 20-session windows.
+
+**Result:**
+
+- **N1 has no edge after costs.** Per $100 per session: +$0.083 gross (interval -$0.067 to +$0.231), -$0.61 base, -$2.65 stress; QQQ -$0.13 base. N1 picks a ticker in 91% of slots and makes 5.5 round trips a session, so it breaks even only below 0.76 bps per side.
+- **0 of 48** rolling 20-session windows pass the gate against cash and QQQ under both cost scenarios.
+- Holding through repeated picks would save 200 of 1,397 round trips (14%), which does not close the gap.
+- **Decision:** the October 14 pilot does not start in this form. The frozen rule is unchanged and no variant was tuned. The instrumentation daemons finish as scheduled on October 13.
+- **Verification:** the replay picks the same ticker as the live decision on all 12 slots of October 7 and 8; `--replay` reproduces `result.json` byte for byte.
+- **Other details.** No order, live rule, size or pulse timing changed. Equity $99,691.08 (-$308.92), no open positions.
+- **Evidence:** `docs/investigations/init7-n1-history-2026-10-09.md`, `log/2026-10-09/init7-n1-history/`.
+
+**Hypothesis / next step:**
+
+- **October 12 15:00:** Initiative 7: confirm October 9 has six slots and a flatten, run `nbbo` and both ledgers. Then, on the cached year, measure the gross move per trade against the ~13 bps round-trip hurdle for one-hour, close-to-close and multi-day horizons in this basket. I expect only horizons of a day or longer to clear it; if none does, the megacap basket is rejected and Initiative 7 moves to a different universe.
+- **Next daily email:** N1 history and the cancelled pilot, the Initiative 3 gap split and hold-retirement proposal, the first ledger; Jev not run.
+
+**Needs from Juan:** decide on retiring the Grade A/B holds (daily email, open since 15:00). Initiative 2 stays deferred.
+
 ### 2026-10-09 15:00 — Initiative 3 execution gap is the hold decision; Initiative 7 first modeled ledger resolves
 
 **Evaluated:** The October 8 18:00 hypothesis **worked**. `nbbo` wrote quotes for all five October 8 captures, and both ledgers resolved every arm at the 15:55 flatten (no unresolved exposure). No pilot is active.
