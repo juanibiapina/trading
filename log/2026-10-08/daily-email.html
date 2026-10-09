@@ -1,0 +1,56 @@
+<div style="font-family: -apple-system, Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+<h2 style="color: #1a1a1a; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">Overnight Cycle: Oct 8 AH &rarr; Oct 9 PM</h2>
+
+<h3 style="color: #555; margin-top: 20px;">Post-Market Scans</h3>
+<p>13 scans ran (7/7 scheduled checkpoints plus six observation scans). 9 unique tickers showed &gt;10% AH. We entered two: <strong>XRTX</strong> (Grade C, Health Canada trial-plan PR) at $2.22 and <strong>OLB</strong> (no catalyst) at $0.7131. WHLR was skipped as a spike&rarr;fade. VEEA and WORX were blocked by the dead-cat filter.</p>
+
+<h3 style="color: #555;">Today&rsquo;s Winner</h3>
+<p><strong>No real winner today.</strong> No in-universe mover cleared +100%.</p>
+<p>The biggest genuine mover was <strong>VEEA</strong> (edge computing software, float 1.6M). Its catalyst was Grade C: a Nasdaq compliance notice at ~17:20 ET.<br/>
+Close $3.87 &rarr; AH high $5.81 at 18:45 ET &rarr; PM SIP high $5.48 at 04:00 ET (<span style="color: #2e7d32; font-weight: bold;">+41.6%</span>) on 1.11M shares. A re-check of SIP data through 05:15 ET found no higher print.<br/>
+A watch entry at $4.91 would have made <span style="color: #2e7d32; font-weight: bold;">+11.6%</span> hypothetical.</p>
+<p>Scanner caught it? <strong style="color: #2e7d32;">YES</strong> &mdash; detected at the 00:00 and 00:30 scans. Not entered because it was down 17.8% on the day, which triggers the dead-cat filter. The dead-cat override tally is now 4 positive / 5 negative (VEEA counts as positive, WORX as negative at &minus;23%).</p>
+
+<h3 style="color: #555;">Baseline Status</h3>
+<p style="font-size: 18px; background: #f5f5f5; padding: 10px; border-radius: 4px;">Detection rate: <strong>73/84 (86.9%)</strong> &mdash; Target: &gt;80%<br/>
+<span style="color: #1976d2;">BASELINE MET</span> &middot; selection 37/80 (46.3%) &middot; 97 days tracked</p>
+<p style="font-size: 13px;">The Oct 7 carry-forward was corrected after your DKI reply. Oct 7&rarr;8 now counts as no winner.</p>
+
+<h3 style="color: #555;">Paper Trades</h3>
+<p style="font-size: 18px;">Paper P&amp;L: <span style="color: #c62828; font-weight: bold;">&minus;$29.29</span></p>
+<p>XRTX $2.22 &rarr; $1.92 (<span style="color: #c62828;">&minus;$13.20, &minus;13.5%</span>). OLB $0.7131 &rarr; $0.599 (<span style="color: #c62828;">&minus;$16.09, &minus;16.0%</span>). Both sold at 04:30 ET. Neither reclaimed its fill in PM: the peaks were XRTX $2.12 and OLB $0.62. All five AH movers peaked in after-hours.</p>
+<p>OLB was a day&nbsp;3 multi-session runner that the scan misread as fresh. It was already +116% on Oct 6. Both multi-session entries so far have faded (DAIC, OLB). First-day igniters ran 37.5% of the time.</p>
+<p style="background: #f5f5f5; padding: 10px; border-radius: 4px;">Cumulative: equity <strong>$99,691.08</strong> (<span style="color: #c62828;">&minus;$308.92</span> since start). No open positions.</p>
+
+<h3 style="color: #555;">Scanner Improvement</h3>
+<p><strong>Oct 8 (latest completed):</strong> <code>spike-bar.js</code> and <code>ah-5m-confirmation.js</code> now follow daylight saving time. From Nov 2 they would otherwise have read the last regular-session hour as AH and labelled every bar one hour late. <code>broker.js bars</code> now honors <code>--end</code>. Summer output is byte-identical. The hypothesis is that after Nov 2 no label falls before 16:00 ET. Today&rsquo;s run comes after this email.</p>
+
+<h3 style="color: #555;">Process Review</h3>
+<p><strong>Oct 8 (latest completed, covers sessions through Oct 8 12:30 UTC):</strong> all 23 sessions finished and pushed, with no provider errors. One wasteful pattern was fixed: morning evaluations slept up to 10 min waiting for delayed PM bars. They now record &ldquo;SIP through HH:MM ET&rdquo;, and the email re-fetches the PM high. Last night&rsquo;s scans and this morning&rsquo;s evaluation are not reviewed yet.</p>
+<p style="background: #fff3e0; padding: 10px; border-radius: 4px; border-left: 4px solid #ef6c00;"><strong>Needs you (infra):</strong> (1) The provider login-error decision from Oct 6 is still open: an alert on permanent login errors, a provider fallback, a test call after a default change, and a retry policy. (2) Scheduler reliability: 4 of the last 10 sessions lost scans (Sep 25, Sep 29, Oct 2, Oct 5). Oct 6&ndash;8 ran 7/7.</p>
+
+<h3 style="color: #555;">Initiative Progress</h3>
+<p>Window: Oct 8 09:32 UTC (message 181) through this send.</p>
+<ul>
+<li><strong>Initiative 7 &mdash; alternative strategies, Oct 8 18:00 CEST</strong>: built the modeled execution layer (<code>init7-execute.py</code>). It captures books at each slot and at the 15:55 flatten, and the first capture landed 0.47&nbsp;s after its decision. Across 64 books, IEX overstates spread cost about 13x versus the SIP NBBO (mean 17.98 vs 1.41 bps). Amendment A3 now prices modeled fills at the NBBO, which puts friction at about $0.76/day on $95. All six Oct 8 slots persisted: N1 picked NVDA, GOOGL, TSLA, then AAPL three times; no 8-K and no Jev call. Next: Oct 9 15:00 NBBO and both ledgers for Oct 8; Oct 14 freeze the calendar and start the 20-session pilot.</li>
+<li><strong>Initiative 3 &mdash; scheduling and exits, Oct 8 15:00 CEST</strong>: tested 16 exit rules on all 89 real AH entries. The standing +10% resting-limit proposal adds &minus;0.08 pts per trade over a plain 04:30 exit (p&nbsp;0.97), so it is <strong>withdrawn</strong>. Realized &minus;3.2% vs a modeled 04:30 exit at &minus;0.8%. Trades held past the next morning trail by 5.5 pts. Volume gates, entry timing and exits have now all failed on the same 89 entries. Next: Oct 9 15:00, split the 2.5-pt execution gap into spread vs late exits.</li>
+<li><strong>Initiatives 1 &amp; 5 &mdash; volume metric and review surface, Oct 8 15:00 CEST</strong>: v2 check passed. All 24 Oct 7 files are v2 (331 rows), and the published page matches the local build byte for byte. On Oct 9, after your DKI reply, a new item was routed here: a log-only previous-day (regular + AH) peak-bar ratio, to be tested on the 89-entry archive. Next: scanner improvement adds the ratio.</li>
+<li><strong>Initiative 6 &mdash; PM-only gappers, Oct 9 10:10 CEST</strong>: monitoring only. The early-PM cohort snapshot and the PM-open scan (4 gappers) were logged. The pilot stays ended until real-time consolidated data and a sub-minute watcher exist.</li>
+</ul>
+<p>Deferred: Initiative 2 broker test, per your Sep 22 instruction.</p>
+
+<h3 style="color: #555;">Jev Results and Costs</h3>
+<p><strong>Not run in this window.</strong> All six Oct 8 Initiative 7 slots recorded <code>jev: null</code>, and no new Jev manifest exists. Recorded calls in the window: 0; recorded cost: $0.00 USD. That figure comes from repo artifacts only; TypeSafe billing was not queried.<br/>
+Cumulative recorded: 7 calls, 11,385 input / 1,088 output tokens, ~$0.00048 USD. This is an estimate from manifest pricing (<code>log/2026-10-02/init7-jev-shadow-v1/</code> and <code>log/2026-10-07/init7-observe-dev/</code>), not a billed charge. Every Oct 8 slot logged A2 <code>no_source</code> (no 8-K to classify), so the next Jev call depends on a slot finding a filing.</p>
+
+<h3 style="color: #555;">Feedback Acknowledged</h3>
+<ul>
+<li><strong>Oct 8 &mdash; &ldquo;DKI is NOT a winner. There is no volume spike compared to the previous day.&rdquo;</strong>: You were right. DKI&rsquo;s Oct 7 regular session had 5m bars up to 4.0M shares against an AH ignition of 669K, and it closed Oct 8 at $0.75. Changes: the winner bar now requires a spike against the previous day&rsquo;s full 5m volume, regular session included. The final-scan-ignition exception was withdrawn (gate-block tally back to 2). Baseline corrected to 73/84. The previous-day ratio was routed to Initiative 1.</li>
+</ul>
+
+<h3 style="color: #555;">Key Takeaway</h3>
+<p style="background: #e3f2fd; padding: 10px; border-radius: 4px; border-left: 4px solid #1976d2;">Both AH entries faded again and the +10% exit fix failed on 89 trades, so the Oct 14 Initiative 7 liquid-session pilot, now with realistic NBBO costs, is the main lever left.</p>
+
+<p>Reply to this email with feedback; replies feed the next cycle.</p>
+<p style="font-size: 12px; color: #666; margin-top: 20px;">Email session: anthropic/claude-opus-5-5 &middot; reasoning: medium</p>
+</div>
