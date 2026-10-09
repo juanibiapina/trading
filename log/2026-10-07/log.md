@@ -1103,6 +1103,7 @@ Source: the October 6 log (Days tracked 95), which is the immediately preceding 
 - Winners detected by scanner: **74/85 (87.1%)**. DKI is added as detected (+1/+1). MRNO is a price-floor exclusion but peaked at +94.8%, below the >100% winner bar, so it does not enter the denominator.
 - Winner selected for paper trade: **37/81 (45.7%)**. DKI was not entered (+0/+1).
 - Target: >80% detection. Status: **BASELINE MET.** Coverage failures, the four skipped retrospectives, and the floor exclusions limit what the rate means.
+- **Correction 2026-10-09 (Juan's reply to the Oct 7 email):** "DKI is NOT a winner. There is no volume spike compared to the previous day." Oct 7's regular session printed 5m SIP bars up to 4.0M shares; DKI's AH ignition bars peaked at 669K and its PM peak bars at 2.34M/1.47M. DKI comes out of the denominator: **no real winner for Oct 7→8.** Corrected carry-forward: detected **73/84 (86.9%)**, selected **37/80 (46.3%)**, days tracked 96. The final-scan gate-block tally stays **2 (TRUG, UPC)**; DKI is excluded.
 
 ### Retrospective Scan Results
 

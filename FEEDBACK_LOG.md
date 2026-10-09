@@ -6,6 +6,14 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-10-09 — re: Trading Scanner Report - 2026-10-07
+
+**Juan said:** “DKI is NOT a winner. There is no volume spike compared to the previous day.” (InboxKit message 182, received 2026-10-08 09:41 UTC.)
+
+**Interpretation:** The morning evaluation crowned DKI on price (+122.8% PM) and on the v2 metric's 78x `prior-peak` ratio, which compares AH bars with the prior AH session only. Juan compares against the previous day's full 5m volume, as the chart shows it. SIP bars confirm his reading: Oct 7's regular session traded 41.7M shares with 5m bars up to 4.0M (15:35 UTC), while DKI's AH ignition bars peaked at 669K and the 04:15/04:20 ET PM peak bars at 2.34M/1.47M. DKI closed Oct 8 at $0.75. This is the same complaint as YFOR on 2026-09-17. It also removes the third case behind the final-scan-ignition exception proposal in that email.
+
+**Action:** Added a previous-day volume-spike check (regular session included) to the winner bar in `prompts/morning-evaluation.md`. Withdrew the final-scan-ignition exception: the gate-block tally is back to 2 (TRUG, UPC), DKI is marked excluded, and new cases count only if they pass the same check. Corrected the Oct 7 baseline carry-forward in `log/2026-10-07/log.md` to no winner for Oct 7→8: detected 73/84 (86.9%), selected 37/80 (46.3%). Routed to Initiative 1 in `STRATEGY_ROADMAP.md` and to the next scanner-improvement run: add a log-only previous-day (regular + AH) peak-bar ratio to `volume_metric.py` and the report, then test it on the 89-entry archive.
+
 ### 2026-10-02 — re: Trading Scanner Report - 2026-09-30
 
 **Juan said:** “Work in this initiative: Use JEV for classifying stocks. Use research skill to find related projects and thoughts, including what they classify, and JEV skill for using it. Typesafe API key is available in the environment. In the daily email, always report Jev results and costs.” (InboxKit message 177, received 2026-10-01.)

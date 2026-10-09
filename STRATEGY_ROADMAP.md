@@ -785,6 +785,18 @@ explosion with no tradeable AH precursor. Full write-up in `INIT1_VOLUME_LEAD.md
 which is Initiative 3, not a volume-lead entry rule. This initiative folds into
 Init 3 and is effectively closed.
 
+**Juan feedback 2026-10-08 (DKI, routed 2026-10-09):** "DKI is NOT a winner.
+There is no volume spike compared to the previous day." The v2 metric's
+`prior-peak` ratio compares AH bars with the prior *AH* session only, so DKI
+showed 78x while Oct 7's regular session had 5m bars up to 4.0M against AH
+ignition bars ≤669K. Juan's comparison is the previous day's full 5m volume,
+regular session included (same complaint as YFOR, 2026-09-17). Next
+scanner-improvement or Initiative 1 run: add a log-only previous-day
+(regular + AH) peak-bar ratio to `volume_metric.py` and the report, then test
+it on the 89-entry archive and the gate-block cases. The morning-evaluation
+winner bar already applies this check by hand; the final-scan-ignition
+exception proposal is withdrawn (tally back to TRUG, UPC).
+
 **Reopened angle (Juan, 2026-07-16 email feedback):** the volume *lead* is dead,
 but Juan proposes the *first volume spike bar* as the entry trigger ("that would
 be a great entry point") and no-spike as a negative filter ("LVLU is clearly
