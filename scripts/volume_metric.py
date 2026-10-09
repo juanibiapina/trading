@@ -152,6 +152,12 @@ def calculate_v2(source, day, prior_day, as_of, floor=FLOOR_SHARES):
     prior_known = all(value is not None for value, _ in prior)
     prior_peak = max(value for value, _ in prior) if prior_known else None
     prior_denominator = max(prior_peak, floor) if prior_known else None
+    # Same-date regular session (09:30-16:00 ET): the "previous day" on the next morning's chart.
+    rth_open = dt.datetime.combine(day, dt.time(9, 30), ET).astimezone(dt.timezone.utc)
+    rth = [shares(rth_open + SLOT * i) for i in range(78)]
+    rth_known = all(value is not None for value, _ in rth)
+    rth_peak = max(value for value, _ in rth) if rth_known else None
+    rth_denominator = max(rth_peak, floor) if rth_known else None
     start, end = bounds(day)
     rows = []
     for time in visible:
@@ -177,7 +183,8 @@ def calculate_v2(source, day, prior_day, as_of, floor=FLOOR_SHARES):
                      "baseline_median_shares": median, "baseline_shares": denominator,
                      "local_ratio": local_ratio, "local_status": status,
                      "local_ge_10": None if local_ratio is None else local_ratio >= 10,
-                     "prior_peak_ratio": bar["v"] / prior_denominator if prior_denominator else None})
+                     "prior_peak_ratio": bar["v"] / prior_denominator if prior_denominator else None,
+                     "rth_peak_ratio": bar["v"] / rth_denominator if rth_denominator else None})
     return {"metric_version": VERSION_V2, "symbol": source["symbol"],
             "date": day.isoformat(), "prior_date": prior_day.isoformat(),
             "as_of_utc": as_of.isoformat(), "source_observed_utc": source["observed_utc"],
@@ -185,7 +192,11 @@ def calculate_v2(source, day, prior_day, as_of, floor=FLOOR_SHARES):
             "prior_observed_slots": sum(status == "observed" for _, status in prior),
             "prior_inferred_zero_slots": sum(status == "absent-zero" for _, status in prior),
             "prior_expected_slots": 48, "prior_complete": prior_known,
-            "prior_peak_shares": prior_peak, "rows": rows}
+            "prior_peak_shares": prior_peak,
+            "rth_observed_slots": sum(status == "observed" for _, status in rth),
+            "rth_inferred_zero_slots": sum(status == "absent-zero" for _, status in rth),
+            "rth_expected_slots": 78, "rth_complete": rth_known, "rth_peak_shares": rth_peak,
+            "rows": rows}
 
 
 def report(result):

@@ -57,3 +57,7 @@ The network run, archived CLI replay and Python compilation passed. Verification
 Opt-in confirmation and HTML report consumption is complete. [The delivery report](shared-sip-volume-consumers-2026-10-01.md) records the matching rows, preserved verdict, and additional INLF/GIPR controls. It also records the missing-baseline and local-threshold limits that prevent promotion.
 
 The next chart-bearing cycle should verify daily publication beside charts. Research sparse-slot interpretation and prior-session coverage before proposing a gate. No input from Juan blocks instrumentation; the next daily email should report both Initiative 1 and Initiative 5 deliveries.
+
+## Same-date regular-session ratio — October 9, 2026
+
+`sip-ah-volume-v2` output now adds `rth_peak_shares` (largest 5-minute SIP bar of the AH date's 09:30–16:00 ET regular session, with the v2 zero-slot and 100-share floor rules) and a per-row `rth_peak_ratio`. This is the "previous day" in Juan's DKI feedback: on the next morning's chart, the AH date's regular session is the previous day. The field is additive; files written before October 9 show `unknown`. Replay on the 89 real AH entries matches the October 6 study's `ah_vs_rth_max` on every entry and does not separate realized returns (≥1x: 75 entries, mean −2.8%; <1x: 14, mean −5.5%), so it stays log-only. Controls: DKI Oct 7 0.17x (Juan: no spike), OLB Oct 8 0.15x, VEEA Oct 8 3.5x, TRUG Aug 25 18.4x, UPC Sep 1 94.7x.

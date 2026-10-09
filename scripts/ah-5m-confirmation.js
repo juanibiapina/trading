@@ -102,10 +102,10 @@ function volumeAnnotation(file, sym, date, now) {
   if (!Number.isFinite(asOf) || !Array.isArray(result.rows)) throw new Error("Invalid shared volume rows/as-of");
   const clock = new Intl.DateTimeFormat("en-GB", { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
   const day = new Intl.DateTimeFormat("sv-SE", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" });
-  const ratio = (value) => value === null ? "unknown" : `${value.toFixed(4)}x`;
+  const ratio = (value) => value == null ? "unknown" : `${value.toFixed(4)}x`;
   const v2 = result.metric_version === "sip-ah-volume-v2";
   const coverage = v2
-    ? ` ${result.metric_version}; prior ${result.prior_date} ${result.prior_observed_slots}+${result.prior_inferred_zero_slots}zero/${result.prior_expected_slots} slots; floor ${result.floor_shares}`
+    ? ` ${result.metric_version}; prior ${result.prior_date} ${result.prior_observed_slots}+${result.prior_inferred_zero_slots}zero/${result.prior_expected_slots} slots; floor ${result.floor_shares}; same-date regular peak ${result.rth_peak_shares ?? "unknown"} sh`
     : `; prior ${result.prior_date} ${result.prior_observed_slots}/${result.prior_expected_slots} slots`;
   const lines = [`# ${sym} shared SIP volume${coverage}; log-only`,
     `# reconstructed as-of ${result.as_of_utc}; source fetched ${result.source_observed_utc}`];
@@ -113,7 +113,7 @@ function volumeAnnotation(file, sym, date, now) {
     const end = Date.parse(row.bar_end_utc);
     if (!Number.isFinite(end) || end > asOf || day.format(end - 1) !== date) throw new Error("Shared volume contains an invalid or incomplete AH bar");
     if (now && minutes(clock.format(end)) > minutes(now)) throw new Error("Shared volume contains a bar closed after --now");
-    lines.push(`${sym} ${date}  VOLUME-CONTEXT ${row.bar_et}ET start=${row.bar_start_utc} shares=${row.shares} local=${ratio(row.local_ratio)} prior-peak=${ratio(row.prior_peak_ratio)} status=${row.local_status}`);
+    lines.push(`${sym} ${date}  VOLUME-CONTEXT ${row.bar_et}ET start=${row.bar_start_utc} shares=${row.shares} local=${ratio(row.local_ratio)} prior-peak=${ratio(row.prior_peak_ratio)} rth-peak=${ratio(row.rth_peak_ratio)} status=${row.local_status}`);
   }
   return lines.join("\n");
 }

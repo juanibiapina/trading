@@ -62,7 +62,7 @@ def volume_context_html(paths: list[Path]) -> str:
             median = row["baseline_median_shares"] if v2 else row["baseline_shares"]
             baseline = "unknown" if median is None else f"{median:,.0f}"
             values = (row["bar_et"], f"{row['shares']:,}", baseline, ratio(row["local_ratio"]),
-                      ratio(row["prior_peak_ratio"]), row["local_status"])
+                      ratio(row["prior_peak_ratio"]), ratio(row.get("rth_peak_ratio")), row["local_status"])
             cells = "".join(f"<td>{html.escape(str(value))}</td>" for value in values)
             rows.append(f'<tr data-bar-start-utc="{html.escape(row["bar_start_utc"])}">{cells}</tr>')
         sections.append(
@@ -74,7 +74,7 @@ def volume_context_html(paths: list[Path]) -> str:
             f'Reconstructed through {html.escape(result["as_of_utc"])}; '
             f'data fetched {html.escape(result["source_observed_utc"])}.</p>'
             '<table><thead><tr><th>Bar start ET</th><th>Shares</th><th>Prior 3-bar median</th>'
-            '<th>Local ratio</th><th>Prior AH peak ratio</th><th>Coverage status</th></tr></thead>'
+            '<th>Local ratio</th><th>Prior AH peak ratio</th><th>Same-date regular peak ratio</th><th>Coverage status</th></tr></thead>'
             f'<tbody>{"".join(rows)}</tbody></table></section>'
         )
     if not sections:

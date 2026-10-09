@@ -91,7 +91,10 @@ Juan reads off the 5m chart. Pull the previous trading day's 5-minute SIP bars
 AH/PM peak bars. If the AH/PM peak bars are not clearly larger, the name is
 **not** a winner, however large the % move. Do not use the shared metric's
 `prior-peak` ratio for this: it compares against the prior *AH* session only
-and misses a regular-session spike. (Basis: DKI Oct 7→8 was crowned at +122.8%
+and misses a regular-session spike. When an evening `-volume-metric.json` exists
+for the name, its `rth_peak_shares` and per-bar `rth_peak_ratio` give the
+regular-session side of this comparison (largest AH bar ≤ 1x = no spike;
+DKI 0.17x, VEEA Oct 8 3.5x); still check the PM peak bars by hand. (Basis: DKI Oct 7→8 was crowned at +122.8%
 with a 78x `prior-peak` ratio, but Oct 7's regular session traded 41.7M shares
 with 5-minute bars up to 4.0M; the AH ignition bars peaked at 669K and the
 04:15/04:20 PM peak bars at 2.34M/1.47M. Juan: "DKI is NOT a winner. There is
