@@ -1,0 +1,246 @@
+{
+ "freeze": "docs/investigations/init7-reversal20-pit-freeze.json",
+ "window": [
+  "2016-01-04",
+  "2025-09-30"
+ ],
+ "sessions": 2450,
+ "universe_size": 8092,
+ "symbols_with_monthly_bars": 7262,
+ "basket_members_ever": [
+  "AAPL",
+  "AMD",
+  "AMZN",
+  "BA",
+  "BABA",
+  "BAC",
+  "BRK.B",
+  "GOOGL",
+  "META",
+  "MRNA",
+  "MSFT",
+  "MSTR",
+  "NFLX",
+  "NIO",
+  "NVDA",
+  "PG",
+  "PLTR",
+  "ROKU",
+  "SMCI",
+  "TSLA"
+ ],
+ "member_share_of_days": {
+  "AAPL": 1.0,
+  "AMD": 0.266,
+  "AMZN": 0.955,
+  "BA": 0.071,
+  "BABA": 0.31,
+  "BAC": 0.07,
+  "BRK.B": 0.036,
+  "GOOGL": 0.955,
+  "META": 0.718,
+  "MRNA": 0.009,
+  "MSFT": 0.83,
+  "MSTR": 0.016,
+  "NFLX": 0.214,
+  "NIO": 0.035,
+  "NVDA": 0.671,
+  "PG": 0.027,
+  "PLTR": 0.045,
+  "ROKU": 0.009,
+  "SMCI": 0.019,
+  "TSLA": 0.744
+ },
+ "original_seven_share_of_slots": 0.839,
+ "basket_by_year_start": {
+  "2016-01": [],
+  "2017-01": [
+   "AAPL",
+   "AMZN",
+   "GOOGL",
+   "META",
+   "BAC",
+   "MSFT",
+   "NVDA"
+  ],
+  "2018-01": [
+   "AAPL",
+   "AMZN",
+   "BABA",
+   "GOOGL",
+   "META",
+   "NVDA",
+   "TSLA"
+  ],
+  "2019-01": [
+   "AMZN",
+   "AAPL",
+   "GOOGL",
+   "MSFT",
+   "NFLX",
+   "META",
+   "NVDA"
+  ],
+  "2020-01": [
+   "AAPL",
+   "AMZN",
+   "GOOGL",
+   "MSFT",
+   "TSLA",
+   "BABA",
+   "META"
+  ],
+  "2021-01": [
+   "TSLA",
+   "AMZN",
+   "AAPL",
+   "NIO",
+   "MSFT",
+   "GOOGL",
+   "BABA"
+  ],
+  "2022-01": [
+   "TSLA",
+   "AAPL",
+   "NVDA",
+   "AMZN",
+   "MSFT",
+   "GOOGL",
+   "META"
+  ],
+  "2023-01": [
+   "TSLA",
+   "AAPL",
+   "AMZN",
+   "MSFT",
+   "NVDA",
+   "GOOGL",
+   "META"
+  ],
+  "2024-01": [
+   "TSLA",
+   "NVDA",
+   "AAPL",
+   "MSFT",
+   "AMZN",
+   "GOOGL",
+   "AMD"
+  ],
+  "2025-01": [
+   "NVDA",
+   "TSLA",
+   "AAPL",
+   "MSTR",
+   "MSFT",
+   "GOOGL",
+   "AMZN"
+  ]
+ },
+ "dropped_member_slots": 0,
+ "stale_forward_prices": 0,
+ "basket_minus_qqq_bps_mean": 89.03,
+ "vs_qqq": {
+  "trades_non_overlapping": 97,
+  "mean_bps": 174.95,
+  "positive": 53,
+  "overlapping_mean_bps": 168.58,
+  "interval_bps": [
+   1.57,
+   338.23
+  ],
+  "halves_bps": [
+   269.55,
+   82.28
+  ],
+  "offsets_positive": 20,
+  "checks": {
+   "mean_non_overlapping_gt_hurdle": true,
+   "block_bootstrap_lower_gt_0": true,
+   "both_halves_positive": true
+  },
+  "passed": true
+ },
+ "vs_basket": {
+  "trades_non_overlapping": 97,
+  "mean_bps": 90.54,
+  "positive": 46,
+  "overlapping_mean_bps": 85.34,
+  "interval_bps": [
+   -56.09,
+   223.95
+  ],
+  "halves_bps": [
+   182.97,
+   -0.02
+  ],
+  "offsets_positive": 18,
+  "checks": {
+   "mean_non_overlapping_gt_hurdle": true,
+   "block_bootstrap_lower_gt_0": false,
+   "both_halves_positive": false
+  },
+  "passed": false
+ },
+ "pick_counts": {
+  "TSLA": 27,
+  "BABA": 9,
+  "META": 8,
+  "NFLX": 8,
+  "AAPL": 7,
+  "AMD": 6,
+  "AMZN": 6,
+  "GOOGL": 6,
+  "NVDA": 6,
+  "BA": 5,
+  "BAC": 2,
+  "SMCI": 2,
+  "BRK.B": 1,
+  "MRNA": 1,
+  "MSTR": 1,
+  "NIO": 1,
+  "ROKU": 1
+ },
+ "by_year_excess_bps": {
+  "2016": [
+   6,
+   397.3
+  ],
+  "2017": [
+   11,
+   181.4
+  ],
+  "2018": [
+   11,
+   154.2
+  ],
+  "2019": [
+   10,
+   -320.7
+  ],
+  "2020": [
+   10,
+   1007.0
+  ],
+  "2021": [
+   10,
+   71.6
+  ],
+  "2022": [
+   12,
+   312.3
+  ],
+  "2023": [
+   9,
+   -48.4
+  ],
+  "2024": [
+   10,
+   -412.9
+  ],
+  "2025": [
+   8,
+   516.6
+  ]
+ },
+ "passed": false
+}

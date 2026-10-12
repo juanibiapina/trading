@@ -1,5 +1,31 @@
 # Initiative Log
 
+### 2026-10-12 18:00 — Initiative 7 20-session reversal fails on a point-in-time basket; megacap lane closed
+
+**Evaluated:** The October 12 15:00 hypothesis **worked**: the pick-over-basket edge does not pass the frozen criterion on a point-in-time basket. The mean did not shrink (+91 vs +82 bps), but the interval includes zero and the 2021–2025 half is zero. No pilot is active.
+
+**Step taken:**
+
+- **Initiative 7 (dated; settles the last megacap candidate):** froze the point-in-time basket definition and a two-part pass criterion (beat QQQ and beat the basket) in `docs/investigations/init7-reversal20-pit-freeze.json` before any fetch. Then built `scripts/init7-reversal20-pit.py`. The universe is 8,092 symbols: Alpaca active and inactive NASDAQ/NYSE/AMEX stocks plus every S&P 500 member since 2016, which adds delisted names such as TWTR, ATVI and SIVB. The basket is the top 7 by SIP vwap × volume over the prior three months. Signal, selection and hold are unchanged.
+- No other initiative had a ready item: 1 and 5 have no dated work, 3 waits on Juan, 2 is deferred and 6 is closed.
+
+**Result:**
+
+- **Pick minus QQQ:** +175 bps per 20 sessions, 97 trades, interval [+2, +338], halves +270 / +82. Passes.
+- **Pick minus point-in-time basket:** +91 bps, interval [-56, +224], halves +183 / -0. **Fails**, so the frozen rule fails overall.
+- **Basket minus QQQ:** +89 bps with no selection. Survivorship was small (today's seven fill 84% of slots), but the edge sits in the basket, and the selection adds nothing reliable. 20 names entered the basket; none delisted mid-hold, and no slot lacked bars. TSLA is 27 of 97 picks.
+- **Data deviations:** decisions start April 2016 because SIP history starts January 2016. FB and META duplicate on volume and are matched as one company, keeping META.
+- **Decision:** the reversal candidate is dropped and the megacap lane is closed. No order, live rule, size or pulse timing changed. Equity $99,691.06 (-$308.94), no open positions.
+- **Verification:** the live fetch ran in 17 minutes, and `--replay` reproduces `result.json` from the cached universe, monthly and daily bars.
+- **Evidence:** `docs/investigations/init7-reversal20-pit-2026-10-12.md`, `log/2026-10-12/init7-reversal20-pit/result.json`.
+
+**Hypothesis / next step:**
+
+- **Next run, Initiative 7:** census of liquid AH movers. Among the top ~1,000 names by trailing dollar volume, find AH ignitions over the past year from SIP 5-minute bars (16:00–17:00 ET move of at least 3% with a volume spike). Measure the return from a 17:00 ET entry to 04:30 ET, the 09:30 open and the close, net of an NBBO-based cost. Hypothesis: at some exit, the mean net return is above zero with an interval lower bound above zero; if none is, the AH→PM pattern has no edge in liquid names either.
+- **Next daily email:** the point-in-time result (reversal dropped, megacap lane closed), the horizon study, the October 9 ledger, and the open hold-retirement proposal; Jev not run.
+
+**Needs from Juan:** decide on retiring the Grade A/B holds (daily email, open since October 9). Initiative 2 stays deferred.
+
 ### 2026-10-12 15:00 — Initiative 7 intraday megacap rotation rejected at every horizon; 20-session reversal passes out of sample but its edge is mostly hindsight
 
 **Evaluated:** The October 9 18:00 hypothesis **partly worked**. October 9 has six slot captures and a flatten, with no capture errors or hash problems; `nbbo` wrote all seven quotes and both ledgers resolved every arm. I expected only horizons of a day or longer to clear the ~13 bps hurdle. No intraday horizon does, as expected, but the 1- and 5-session horizons fail too; only 20-session reversal clears it. No pilot is active.

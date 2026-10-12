@@ -1,0 +1,21 @@
+{
+  "frozen_utc": "2026-10-12T16:10:00Z",
+  "frozen_before": "any fetch of monthly bars for the broad universe or of daily bars for names outside the original seven",
+  "parent": "docs/investigations/init7-reversal20-freeze.json",
+  "purpose": "Remove survivorship from the 2016-2025 reversal test: the original basket is today's seven megacaps, which beat QQQ by 131 bps per 20 sessions with no selection.",
+  "rule_changes": "Only the basket changes. Signal, selection, 20-session close-to-close hold, benchmark QQQ, adjusted daily SIP prices and test window are unchanged from the parent freeze.",
+  "basket": {
+    "universe": "US-listed stocks on NASDAQ, NYSE or AMEX: Alpaca active and inactive us_equity assets whose names do not mark a fund (ETF, ETN, Fund, Trust, iShares, SPDR, ProShares, Direxion, Invesco, Vanguard, Schwab, Portfolio, Index), plus every S&P 500 member with an end date on or after 2016-01-01 in fja05680/sp500 sp500_ticker_start_end.csv (adds delisted names missing from Alpaca's asset list)",
+    "ranking": "sum of monthly SIP vwap x volume over the three complete calendar months before the decision day's month; names need bars in all three months",
+    "size": 7,
+    "share_classes": "one line per company: GOOG folds into GOOGL, BRK.A into BRK.B, FOX into FOXA, NWS into NWSA; also drop a symbol whose monthly bar duplicates another's (same volume and close)",
+    "membership_on_decision_day": "a top-7 name needs daily closes on both the lookback start and the decision day; otherwise it is left out of that day's basket",
+    "forward_price": "close 20 sessions later, or the last available close if the name stopped trading earlier (delisting or acquisition)"
+  },
+  "pass": {
+    "vs_qqq": "the parent criterion unchanged: mean excess per non-overlapping trade > 13.29 bps AND block-20 bootstrap 2.5% bound of the overlapping excess series > 0 AND both halves positive",
+    "vs_basket": "the same three checks applied to the pick's return minus the equal-weight point-in-time basket's return",
+    "passed": "both vs_qqq and vs_basket pass"
+  },
+  "decision_if_fail": "drop the megacap reversal candidate and move Initiative 7 to a different universe"
+}
