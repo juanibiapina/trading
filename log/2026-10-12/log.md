@@ -483,6 +483,115 @@ AH >10% at this snapshot (unrounded): BMEA, DAIC, DRK, FCHL, NCPL, RCON, WBUY
 - SUGP dropped to +9.4% AH (from +12.8%); AH% fell, so no DEAD-CAT-OVERRIDE WATCH. EHGO (+5.2%), ANGI (+8.0%) and JELD (+6.0%, dead-cat zone) are below the threshold.
 - Next scan (00:00 CET): WBUY second-scan check; DAIC watch follow-up (does it hold above $1.70 and within 20% of $2.58?); NCPL and BMEA re-check for a volume-backed new high.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.00 | +14.4% | +64.0% | $1.64 | +87.6% | 17.3M | 2.0M | 8.8x | 1.3M | Misc Commercial Services |
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $0.63 | +0.8% | +6.5% | $0.67 | +7.3% | 5.1M | 1.6M | 3.1x | 4.5M | Wholesale Distributors |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.54 | +35.1% | +11.1% | $1.71 | +50.1% | 4.1M | 12.7M | 0.3x | 4.4M | Misc Commercial Services |
+| BMEA | [TV](https://www.tradingview.com/chart/?symbol=BMEA) | $1.36 | -4.2% | +7.3% | $1.46 | +2.8% | 3.8M | 1.5M | 2.4x | 67.6M | Pharmaceuticals: Major |
+| WBUY | [TV](https://www.tradingview.com/chart/?symbol=WBUY) | $0.81 | +17.7% | +16.2% | $0.95 | +36.8% | 2.3M | 8.7M | 0.3x | 2.5M | Food Retail |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $1.70 | -28.9% | +11.2% | $1.89 | -20.9% | 2.3M | 3.2M | 0.7x | 1.6M | Miscellaneous |
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $1.81 | -18.8% | +14.4% | $2.07 | -7.2% | 965K | 726K | 1.3x | 1.5M | Misc Commercial Services |
+| MSGY | [TV](https://www.tradingview.com/chart/?symbol=MSGY) | $2.70 | -25.6% | +49.6% | $4.04 | +11.3% | 517K | 4.5M | 0.1x | 2.9M | Engineering & Construction |
+| IPW | [TV](https://www.tradingview.com/chart/?symbol=IPW) | $0.59 | -13.6% | +5.2% | $0.62 | -9.1% | 212K | 8.9M | 0.0x | 1.2M | Internet Retail |
+| MEDS | [TV](https://www.tradingview.com/chart/?symbol=MEDS) | $3.07 | +3.7% | +5.5% | $3.24 | +9.5% | 112K | 7.5M | 0.0x | 1.5M | Medical Distributors |
+| ANGI | [TV](https://www.tradingview.com/chart/?symbol=ANGI) | $6.34 | -3.8% | +8.0% | $6.85 | +3.9% | 66K | 742K | 0.1x | 33.2M | Internet Software/Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): DAIC, FCHL, MSGY, NCPL, SUGP, WBUY
+
+**Evaluation notes:**
+- Snapshot 18:00:14 ET. No new entries. All six >10% names are `tradable=true` (MSGY checked this scan). SIP bars and the delayed SIP book reach 17:45–17:46 ET. Broker: only FCHL open (58 sh @ $1.73), no open buy orders.
+- **WBUY: SKIP, single-bar spike then fade on drying volume.** Second AH appearance >10% (+14.8% at 23:30, +16.2% now), so the count gate is met. Day% +17.7%, float 2.5M, Total% ~+39% on the SIP book ($0.96 vs $0.688 prior close), fresh day 1 (no `WINNERS_TRACKING.md` entry; Oct 6–9 closes $0.69–0.74). AH high $1.04 in the 17:15 ET bar (687,268 sh / 1,863 trades). Price since then $1.00 → $0.97 → $1.01 → $0.96 → $0.93 (17:35 ET C), delayed SIP book $0.96 at 17:46 ET: 8% off the high, inside the hold band, but volume fell every bar after the spike: 195K, 197K, 136K, 72K, 26K, 18K sh (17:45 ET). Peak before 17:30 ET with declining price and volume is SPIKE→FADE and fails "volume not fading", the same call as BMEA at 23:30. Catalyst re-check (1 more search, 3 total): only an Oct 12 short-interest article and an undated H1 2026 revenue headline; no fresh release. Grade None. Hypothetical for the morning tracker: $0.96 at 00:00 CET.
+  - `WBUY 2026-10-12  SPIKE  16:49ET  +19%  $0.96  320 trades / 99k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `WBUY 2026-10-12  CONFIRM-3  NO ignition 16:45ET failed third-bar hold/volume as-of 18:00ET`
+  - Volume context (`WBUY-1800-volume-metric.json`): `# WBUY shared SIP volume sip-ah-volume-v2; prior 2026-10-09 48+0zero/48 slots; floor 100; same-date regular peak 6524823 sh; log-only` / `# reconstructed as-of 2026-10-12T22:00:14+00:00; source fetched 2026-10-12T22:01:12.642302+00:00` (16:00–17:15 ET rows unchanged from the 23:30 scan)
+    - `WBUY 2026-10-12  VOLUME-CONTEXT 17:15ET start=2026-10-12T21:15:00+00:00 shares=687268 local=14.7078x prior-peak=0.4480x rth-peak=0.1053x status=ok`
+    - `WBUY 2026-10-12  VOLUME-CONTEXT 17:20ET start=2026-10-12T21:20:00+00:00 shares=195061 local=4.1744x prior-peak=0.1271x rth-peak=0.0299x status=ok`
+    - `WBUY 2026-10-12  VOLUME-CONTEXT 17:25ET start=2026-10-12T21:25:00+00:00 shares=196965 local=1.0098x prior-peak=0.1284x rth-peak=0.0302x status=ok`
+    - `WBUY 2026-10-12  VOLUME-CONTEXT 17:30ET start=2026-10-12T21:30:00+00:00 shares=135582 local=0.6884x prior-peak=0.0884x rth-peak=0.0208x status=ok`
+    - `WBUY 2026-10-12  VOLUME-CONTEXT 17:35ET start=2026-10-12T21:35:00+00:00 shares=72326 local=0.3708x prior-peak=0.0471x rth-peak=0.0111x status=ok`
+    - `WBUY 2026-10-12  VOLUME-CONTEXT 17:40ET start=2026-10-12T21:40:00+00:00 shares=26120 local=0.1927x prior-peak=0.0170x rth-peak=0.0040x status=ok`
+    - `WBUY 2026-10-12  VOLUME-CONTEXT 17:45ET start=2026-10-12T21:45:00+00:00 shares=17947 local=0.2481x prior-peak=0.0117x rth-peak=0.0028x status=ok`
+  - Book: `WBUY BOOK iex bid $0.6978 x100 / ask $0.9290 x100 @ 2026-10-12 16:00:00 ET age 2h01m two-sided spread 24.89% of ask` / `WBUY BOOK sip-15m bid $0.9583 x300 / ask $0.9600 x500 @ 2026-10-12 17:46:20 ET age 15m04s two-sided spread 0.18% of ask` / `WBUY BOOK refresh +15s iex unchanged @ 2026-10-12 16:00:00 ET` / `WBUY BOOK verdict: IEX STALE 2h01m; SIP-15m TWO-SIDED (observed 2026-10-12 18:01:24 ET; log-only)`
+- **MSGY (new, first AH appearance >10%): SKIP live entry (dead-cat zone, Day% -25.6%). DEAD-CAT-OVERRIDE WATCH candidate, 1 of 2 rising scans; provisional hypothetical $4.05 (delayed SIP ask 17:46 ET) at 00:00 CET.** Float 2.9M, Engineering & Construction. Late real ignition: flat ~1K sh per bar until 17:20 ET, then 17:20 ET H $3.90 116,180 sh / 1,714 trades; 17:25 ET H $4.35 (AH high) 248,692 sh / 4,417 trades; 17:30 ET 218,208 sh / 5,036 trades; 17:35–17:45 ET 104–128K sh / ~2K trades per bar, C $3.78–4.05. Price reclaimed well above the $2.70 regular close and above the $3.63 prior close, holding 7–13% off the high. Multi-session: not a runner, SIP daily closes slid $4.89 (Oct 5) → $5.01 → $4.30 → $4.27 → $3.63 → $2.70; no `WINNERS_TRACKING.md` entry. Catalyst: no catalyst found (2 searches; the Sep 28 $1.0M private placement and Aug 6 share consolidation are background). The watch needs AH% still rising at 00:30.
+  - `MSGY 2026-10-12  SPIKE  17:20ET  +24%  $3.34  29 trades / 2k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `MSGY 2026-10-12  CONFIRM-3  YES ignition 17:20ET 232.4x; confirmed 17:30ET $3.66 as-of 18:00ET`
+  - Volume context (`MSGY-1800-volume-metric.json`): `# MSGY shared SIP volume sip-ah-volume-v2; prior 2026-10-09 2+46zero/48 slots; floor 100; same-date regular peak 25833 sh; log-only` / `# reconstructed as-of 2026-10-12T22:00:14+00:00; source fetched 2026-10-12T22:01:14.600085+00:00`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 16:00ET start=2026-10-12T20:00:00+00:00 shares=1500 local=unknown prior-peak=1.0638x rth-peak=0.0581x status=warmup`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 16:10ET start=2026-10-12T20:10:00+00:00 shares=201 local=unknown prior-peak=0.1426x rth-peak=0.0078x status=warmup`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 16:15ET start=2026-10-12T20:15:00+00:00 shares=100 local=0.4975x prior-peak=0.0709x rth-peak=0.0039x status=ok`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 16:55ET start=2026-10-12T20:55:00+00:00 shares=442 local=4.4200x prior-peak=0.3135x rth-peak=0.0171x status=floored`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 17:10ET start=2026-10-12T21:10:00+00:00 shares=500 local=5.0000x prior-peak=0.3546x rth-peak=0.0194x status=floored`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 17:15ET start=2026-10-12T21:15:00+00:00 shares=927 local=9.2700x prior-peak=0.6574x rth-peak=0.0359x status=floored`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 17:20ET start=2026-10-12T21:20:00+00:00 shares=116180 local=232.3600x prior-peak=82.3972x rth-peak=4.4973x status=ok`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 17:25ET start=2026-10-12T21:25:00+00:00 shares=248692 local=268.2762x prior-peak=176.3773x rth-peak=9.6269x status=ok`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 17:30ET start=2026-10-12T21:30:00+00:00 shares=218208 local=1.8782x prior-peak=154.7574x rth-peak=8.4469x status=ok`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 17:35ET start=2026-10-12T21:35:00+00:00 shares=128327 local=0.5881x prior-peak=91.0121x rth-peak=4.9676x status=ok`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 17:40ET start=2026-10-12T21:40:00+00:00 shares=104077 local=0.4770x prior-peak=73.8135x rth-peak=4.0288x status=ok`
+    - `MSGY 2026-10-12  VOLUME-CONTEXT 17:45ET start=2026-10-12T21:45:00+00:00 shares=120254 local=0.9371x prior-peak=85.2865x rth-peak=4.6551x status=ok`
+  - Book: `MSGY BOOK iex bid $2.16 x100 / ask $3.54 x100 @ 2026-10-12 16:00:00 ET age 2h01m two-sided spread 38.98% of ask` / `MSGY BOOK sip-15m bid $4.03 x100 / ask $4.05 x400 @ 2026-10-12 17:46:22 ET age 15m02s two-sided spread 0.49% of ask` / `MSGY BOOK refresh +15s iex unchanged @ 2026-10-12 16:00:00 ET` / `MSGY BOOK verdict: IEX STALE 2h01m; SIP-15m TWO-SIDED (observed 2026-10-12 18:01:24 ET; log-only)`
+- **SUGP: SKIP (dead-cat zone, Day% -18.8%), no watch.** Back above 10% (+12.8% at 23:00, +9.4% at 23:30, +14.4% now), so AH% has not risen across consecutive scans. Second ignition 17:30 ET H $2.39, 222,817 sh / 2,417 trades and 17:35 ET H $2.44, 246,781 sh / 2,525 trades, then back to C $2.02–2.07 on 55–121K sh. AH high $2.44 (17:35 ET) vs delayed SIP ask $2.17: 11% off. Price remains below the $2.23 prior close.
+  - `SUGP 2026-10-12  SPIKE  16:38ET  +34%  $2.42  411 trades / 50k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `SUGP 2026-10-12  CONFIRM-3  NO ignition 16:35ET failed third-bar hold/volume as-of 18:00ET`
+  - Volume context (`SUGP-1800-volume-metric.json`): `# SUGP shared SIP volume sip-ah-volume-v2; prior 2026-10-09 10+38zero/48 slots; floor 100; same-date regular peak 26151 sh; log-only` / `# reconstructed as-of 2026-10-12T22:00:14+00:00; source fetched 2026-10-12T22:01:16.729909+00:00`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:00ET start=2026-10-12T20:00:00+00:00 shares=959 local=unknown prior-peak=0.4293x rth-peak=0.0367x status=warmup`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:05ET start=2026-10-12T20:05:00+00:00 shares=350 local=unknown prior-peak=0.1567x rth-peak=0.0134x status=warmup`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:15ET start=2026-10-12T20:15:00+00:00 shares=262 local=0.7486x prior-peak=0.1173x rth-peak=0.0100x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:35ET start=2026-10-12T20:35:00+00:00 shares=150942 local=1509.4200x prior-peak=67.5658x rth-peak=5.7719x status=floored`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:40ET start=2026-10-12T20:40:00+00:00 shares=284009 local=2840.0900x prior-peak=127.1303x rth-peak=10.8603x status=floored`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:45ET start=2026-10-12T20:45:00+00:00 shares=74614 local=0.4943x prior-peak=33.3993x rth-peak=2.8532x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:50ET start=2026-10-12T20:50:00+00:00 shares=83414 local=0.5526x prior-peak=37.3384x rth-peak=3.1897x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:55ET start=2026-10-12T20:55:00+00:00 shares=35580 local=0.4265x prior-peak=15.9266x rth-peak=1.3606x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 17:00ET start=2026-10-12T21:00:00+00:00 shares=18279 local=0.2450x prior-peak=8.1822x rth-peak=0.6990x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 17:05ET start=2026-10-12T21:05:00+00:00 shares=22514 local=0.6328x prior-peak=10.0779x rth-peak=0.8609x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 17:10ET start=2026-10-12T21:10:00+00:00 shares=7693 local=0.3417x prior-peak=3.4436x rth-peak=0.2942x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 17:15ET start=2026-10-12T21:15:00+00:00 shares=3510 local=0.1920x prior-peak=1.5712x rth-peak=0.1342x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 17:20ET start=2026-10-12T21:20:00+00:00 shares=6040 local=0.7851x prior-peak=2.7037x rth-peak=0.2310x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 17:25ET start=2026-10-12T21:25:00+00:00 shares=7906 local=1.3089x prior-peak=3.5389x rth-peak=0.3023x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 17:30ET start=2026-10-12T21:30:00+00:00 shares=222817 local=36.8902x prior-peak=99.7390x rth-peak=8.5204x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 17:35ET start=2026-10-12T21:35:00+00:00 shares=246781 local=31.2144x prior-peak=110.4660x rth-peak=9.4368x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 17:40ET start=2026-10-12T21:40:00+00:00 shares=55267 local=0.2480x prior-peak=24.7390x rth-peak=2.1134x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 17:45ET start=2026-10-12T21:45:00+00:00 shares=121232 local=0.5441x prior-peak=54.2668x rth-peak=4.6358x status=ok`
+  - Book: `SUGP BOOK iex bid $1.53 x100 / ask $2.16 x100 @ 2026-10-12 16:00:00 ET age 2h01m two-sided spread 29.17% of ask` / `SUGP BOOK sip-15m bid $2.13 x500 / ask $2.17 x500 @ 2026-10-12 17:46:23 ET age 15m00s two-sided spread 1.84% of ask` / `SUGP BOOK refresh +15s iex unchanged @ 2026-10-12 16:00:00 ET` / `SUGP BOOK verdict: IEX STALE 2h01m; SIP-15m TWO-SIDED (observed 2026-10-12 18:01:24 ET; log-only)`
+- **DAIC (DEAD-CAT-OVERRIDE WATCH follow-up): fading.** AH% fell +28.2% → +11.2%. SIP closes $1.96 → $1.99 → $1.94 → $1.91 (17:20–17:35 ET), delayed SIP book locked at $1.90 (17:46 ET): still above the $1.70 regular close but 26% off the $2.58 high on 18–85K sh per bar. The 23:30 hypothetical ($1.99) stays on record.
+  - `DAIC 2026-10-12  SPIKE  16:54ET  +18%  $2.00  107 trades / 18k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `DAIC 2026-10-12  CONFIRM-3  YES ignition 16:50ET 3.6x; confirmed 17:00ET $2.45 as-of 18:00ET`
+  - Volume context (`DAIC-1800-volume-metric.json`): `# DAIC shared SIP volume sip-ah-volume-v2; prior 2026-10-09 12+36zero/48 slots; floor 100; same-date regular peak 763759 sh; log-only` / `# reconstructed as-of 2026-10-12T22:00:14+00:00; source fetched 2026-10-12T22:01:18.673465+00:00` (16:00–17:15 ET rows unchanged from the 23:30 scan)
+    - `DAIC 2026-10-12  VOLUME-CONTEXT 17:20ET start=2026-10-12T21:20:00+00:00 shares=80729 local=0.4067x prior-peak=6.5633x rth-peak=0.1057x status=ok`
+    - `DAIC 2026-10-12  VOLUME-CONTEXT 17:25ET start=2026-10-12T21:25:00+00:00 shares=84908 local=0.4934x prior-peak=6.9031x rth-peak=0.1112x status=ok`
+    - `DAIC 2026-10-12  VOLUME-CONTEXT 17:30ET start=2026-10-12T21:30:00+00:00 shares=39660 local=0.4671x prior-peak=3.2244x rth-peak=0.0519x status=ok`
+    - `DAIC 2026-10-12  VOLUME-CONTEXT 17:35ET start=2026-10-12T21:35:00+00:00 shares=36354 local=0.4503x prior-peak=2.9556x rth-peak=0.0476x status=ok`
+    - `DAIC 2026-10-12  VOLUME-CONTEXT 17:40ET start=2026-10-12T21:40:00+00:00 shares=40628 local=1.0244x prior-peak=3.3031x rth-peak=0.0532x status=ok`
+    - `DAIC 2026-10-12  VOLUME-CONTEXT 17:45ET start=2026-10-12T21:45:00+00:00 shares=17606 local=0.4439x prior-peak=1.4314x rth-peak=0.0231x status=ok`
+  - Book: `DAIC BOOK iex bid $1.44 x100 / ask $2.10 x100 @ 2026-10-12 16:00:01 ET age 2h01m two-sided spread 31.43% of ask` / `DAIC BOOK sip-15m bid $1.90 x700 / ask $1.90 x400 @ 2026-10-12 17:46:21 ET age 15m03s locked` / `DAIC BOOK refresh +15s iex unchanged @ 2026-10-12 16:00:01 ET` / `DAIC BOOK verdict: IEX STALE 2h01m; SIP-15m TWO-SIDED (observed 2026-10-12 18:01:24 ET; log-only)`
+- **NCPL: SKIP, still fading.** AH% +21.4% → +11.1%. SIP closes $1.74–1.79 then $1.69 (17:35 ET), delayed SIP book $1.71/$1.72: 20% off the $2.14 high on 32–135K sh per bar. Grade None.
+  - `NCPL 2026-10-12  SPIKE  16:23ET  +23%  $1.90  834 trades / 173k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `NCPL 2026-10-12  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 18:00ET`
+  - Volume context (`NCPL-1800-volume-metric.json`): `# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-09 48+0zero/48 slots; floor 100; same-date regular peak 5596496 sh; log-only` / `# reconstructed as-of 2026-10-12T22:00:14+00:00; source fetched 2026-10-12T22:01:20.713293+00:00` (16:00–17:15 ET rows unchanged from the 23:30 scan)
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 17:20ET start=2026-10-12T21:20:00+00:00 shares=135130 local=0.7771x prior-peak=0.2366x rth-peak=0.0241x status=ok`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 17:25ET start=2026-10-12T21:25:00+00:00 shares=74712 local=0.5406x prior-peak=0.1308x rth-peak=0.0133x status=ok`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 17:30ET start=2026-10-12T21:30:00+00:00 shares=94090 local=0.6963x prior-peak=0.1648x rth-peak=0.0168x status=ok`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 17:35ET start=2026-10-12T21:35:00+00:00 shares=105897 local=1.1255x prior-peak=0.1854x rth-peak=0.0189x status=ok`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 17:40ET start=2026-10-12T21:40:00+00:00 shares=31644 local=0.3363x prior-peak=0.0554x rth-peak=0.0057x status=ok`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 17:45ET start=2026-10-12T21:45:00+00:00 shares=77491 local=0.8236x prior-peak=0.1357x rth-peak=0.0138x status=ok`
+  - Book: `NCPL BOOK iex bid $1.91 x100 / ask $1.95 x100 @ 2026-10-12 16:52:29 ET age 1h08m two-sided spread 2.05% of ask` / `NCPL BOOK sip-15m bid $1.71 x500 / ask $1.72 x500 @ 2026-10-12 17:46:22 ET age 15m02s two-sided spread 0.58% of ask` / `NCPL BOOK refresh +15s iex unchanged @ 2026-10-12 16:52:29 ET` / `NCPL BOOK verdict: IEX STALE 1h08m; SIP-15m TWO-SIDED (observed 2026-10-12 18:01:24 ET; log-only)`
+- **FCHL (open position, 58 sh @ $1.73):** scanner $1.64 (+64% AH). SIP dipped to C $1.55 (17:30 ET) and recovered on 349–482K sh per bar (17:40–17:45 ET); delayed SIP book $1.70/$1.71 at 17:46 ET. Position management belongs to the premarket evaluation.
+  - `FCHL 2026-10-12  SPIKE  16:06ET  +23%  $1.23  209 trades / 42k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `FCHL 2026-10-12  CONFIRM-3  YES ignition 16:05ET 286.8x; confirmed 16:15ET $1.66 as-of 18:00ET`
+  - Volume context (`FCHL-1800-volume-metric.json`): `# FCHL shared SIP volume sip-ah-volume-v2; prior 2026-10-09 2+46zero/48 slots; floor 100; same-date regular peak 31326 sh; log-only` / `# reconstructed as-of 2026-10-12T22:00:14+00:00; source fetched 2026-10-12T22:01:22.733844+00:00` (16:00–17:15 ET rows unchanged from the 23:30 scan)
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 17:20ET start=2026-10-12T21:20:00+00:00 shares=416267 local=0.9609x prior-peak=1455.4790x rth-peak=13.2882x status=ok`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 17:25ET start=2026-10-12T21:25:00+00:00 shares=187282 local=0.4499x prior-peak=654.8322x rth-peak=5.9785x status=ok`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 17:30ET start=2026-10-12T21:30:00+00:00 shares=377788 local=0.9076x prior-peak=1320.9371x rth-peak=12.0599x status=ok`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 17:35ET start=2026-10-12T21:35:00+00:00 shares=167094 local=0.4423x prior-peak=584.2448x rth-peak=5.3340x status=ok`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 17:40ET start=2026-10-12T21:40:00+00:00 shares=349200 local=1.8646x prior-peak=1220.9790x rth-peak=11.1473x status=ok`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 17:45ET start=2026-10-12T21:45:00+00:00 shares=481712 local=1.3795x prior-peak=1684.3077x rth-peak=15.3774x status=ok`
+  - Book: `FCHL BOOK iex bid $1.69 x100 / ask $1.71 x100 @ 2026-10-12 16:59:55 ET age 1h01m two-sided spread 1.17% of ask` / `FCHL BOOK sip-15m bid $1.70 x3400 / ask $1.71 x600 @ 2026-10-12 17:46:23 ET age 15m01s two-sided spread 0.58% of ask` / `FCHL BOOK refresh +15s iex unchanged @ 2026-10-12 16:59:55 ET` / `FCHL BOOK verdict: IEX STALE 1h01m; SIP-15m TWO-SIDED (observed 2026-10-12 18:01:24 ET; log-only)`
+- BMEA fell to +7.3% AH; RCON and DRK dropped off the list. EHGO, ANGI, IPW and MEDS are below the threshold.
+- Next scan (00:30 CET, final): MSGY second-scan watch check (AH% still rising?); final-scan feed-lag cross-check on WBUY, NCPL, BMEA, DAIC, SUGP, RCON, MSGY.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
