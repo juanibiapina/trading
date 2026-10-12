@@ -8,6 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
+| FCHL | $1.73 | $1.73 | $1.73 | 0.0% | 0.0% | 58 | $100.34 | None | 2026-10-12 | AH BUILD +91% on 1M+ sh/bar, CONFIRM-3 YES, float 1.3M, no catalyst. Exit at first premarket opportunity. |
 
 ## Position Rules
 

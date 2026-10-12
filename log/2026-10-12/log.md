@@ -244,7 +244,93 @@ AH >10% at this snapshot (unrounded): FCHL, NCPL
 - **EHGO (22:30 candidate) dropped out:** not in the TradingView result. SIP 16:20 ET bar H $0.81 C $0.67, 2,157,766 sh / 6,144 trades; 16:25 ET C $0.66, 517,262 sh; 16:30 ET C $0.68, 275,973 sh / 739 trades. The last close $0.68 is +8% over the $0.63 close and 17% off the $0.82 high, with volume falling each bar. `EHGO 2026-10-12  SPIKE  16:12ET  +24%  $0.78  423 trades / 126k sh  (first co-spike bar) (as-of 16:45ET)` / `EHGO 2026-10-12  CONFIRM-3  NO ignition 16:10ET failed third-bar hold/volume as-of 16:45ET`. Below the 10% threshold; AH appearance count stays at 1. Volume metric not run (under 10%).
 - JELD (+5.7% AH, Day% -20.1%: dead-cat zone, float 83M) is below the threshold. SMTK, ITOC, OLB, LNKS and DAIC do not appear.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.00 | +14.4% | +91.0% | $1.91 | +118.5% | 12.2M | 1.4M | 8.8x | 1.3M | Misc Commercial Services |
+| EHGO | [TV](https://www.tradingview.com/chart/?symbol=EHGO) | $0.63 | +0.8% | +5.4% | $0.66 | +6.2% | 4.8M | 1.6M | 3.0x | 4.5M | Wholesale Distributors |
+| BMEA | [TV](https://www.tradingview.com/chart/?symbol=BMEA) | $1.36 | -4.2% | +13.2% | $1.54 | +8.5% | 2.3M | 1.4M | 1.6x | 67.6M | Pharmaceuticals: Major |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.54 | +35.1% | +21.3% | $1.87 | +63.8% | 1.4M | 12.4M | 0.1x | 4.4M | Misc Commercial Services |
+| SUGP | [TV](https://www.tradingview.com/chart/?symbol=SUGP) | $1.81 | -18.8% | +12.8% | $2.04 | -8.4% | 343K | 648K | 0.5x | 1.5M | Misc Commercial Services |
+| DAIC | [TV](https://www.tradingview.com/chart/?symbol=DAIC) | $1.70 | -28.9% | +5.9% | $1.80 | -24.7% | 157K | 2.9M | 0.1x | 1.6M | Miscellaneous |
+| JELD | [TV](https://www.tradingview.com/chart/?symbol=JELD) | $1.23 | -20.1% | +5.7% | $1.30 | -15.6% | 55K | 2.0M | 0.0x | 83.2M | Forest Products |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): BMEA, FCHL, NCPL, SUGP
+
+**Evaluation notes:**
+- Snapshot 17:00:12 ET. First entry scan of the night. No open positions and no FCHL orders before the buy.
+- **FCHL: ENTERED, 58 sh @ $1.73 fill (order b0ac6a3a), Grade None.** Fourth AH appearance >10%; 2-scan gate met at 22:30. `tradable=true`. Float 1.3M, Day% +14.4%, fresh day 1 (22:25 check). BUILD: AH +31% (22:25) → +61% (22:30) → +77% (22:45) → +91% (23:00).
+  - SIP 5m since 22:45: 16:35 ET bar H $1.83 C $1.78, 1,002,018 sh / 5,246 trades; 16:40 ET bar H $1.93 C $1.91, 1,596,908 sh / 8,914 trades (new high); 16:45 ET bar H $1.94 C $1.82, 899,887 sh / 5,476 trades, VWAP $1.85. Ten straight bars of ~0.9M+ sh and 5K+ trades: real, sustained volume.
+  - `FCHL 2026-10-12  SPIKE  16:06ET  +23%  $1.23  209 trades / 42k sh  (first co-spike bar) (as-of 17:00ET)`
+  - `FCHL 2026-10-12  CONFIRM-3  YES ignition 16:05ET 286.8x; confirmed 16:15ET $1.66 as-of 17:00ET`
+  - Volume context (`FCHL-1700-volume-metric.json`): `# FCHL shared SIP volume sip-ah-volume-v2; prior 2026-10-09 2+46zero/48 slots; floor 100; same-date regular peak 31326 sh; log-only` / `# reconstructed as-of 2026-10-12T21:00:12+00:00; source fetched 2026-10-12T21:00:37.357595+00:00`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 16:00ET start=2026-10-12T20:00:00+00:00 shares=4094 local=unknown prior-peak=14.3147x rth-peak=0.1307x status=warmup`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 16:05ET start=2026-10-12T20:05:00+00:00 shares=1174099 local=unknown prior-peak=4105.2413x rth-peak=37.4800x status=warmup`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 16:10ET start=2026-10-12T20:10:00+00:00 shares=2648133 local=unknown prior-peak=9259.2063x rth-peak=84.5347x status=warmup`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 16:15ET start=2026-10-12T20:15:00+00:00 shares=2074727 local=1.7671x prior-peak=7254.2902x rth-peak=66.2302x status=ok`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 16:20ET start=2026-10-12T20:20:00+00:00 shares=1816626 local=0.8756x prior-peak=6351.8392x rth-peak=57.9910x status=ok`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 16:25ET start=2026-10-12T20:25:00+00:00 shares=2009616 local=0.9686x prior-peak=7026.6294x rth-peak=64.1517x status=ok`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 16:30ET start=2026-10-12T20:30:00+00:00 shares=1376624 local=0.6850x prior-peak=4813.3706x rth-peak=43.9451x status=ok`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 16:35ET start=2026-10-12T20:35:00+00:00 shares=1002018 local=0.5516x prior-peak=3503.5594x rth-peak=31.9868x status=ok`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 16:40ET start=2026-10-12T20:40:00+00:00 shares=1596908 local=1.1600x prior-peak=5583.5944x rth-peak=50.9771x status=ok`
+    - `FCHL 2026-10-12  VOLUME-CONTEXT 16:45ET start=2026-10-12T20:45:00+00:00 shares=899887 local=0.6537x prior-peak=3146.4580x rth-peak=28.7265x status=ok`
+  - Book: `FCHL BOOK iex bid $1.69 x100 / ask $1.71 x100 @ 2026-10-12 16:59:55 ET age 50s two-sided spread 1.17% of ask` / `FCHL BOOK sip-15m bid $1.88 x200 / ask $1.89 x2300 @ 2026-10-12 16:45:45 ET age 15m00s two-sided spread 0.53% of ask` / `FCHL BOOK refresh +15s iex unchanged @ 2026-10-12 16:59:55 ET` / `FCHL BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-12 17:00:44 ET; log-only)`
+  - Hold check: the fresh IEX book ($1.69 / $1.71 at 16:59:55 ET) sits 12% under the $1.94 SIP high, inside the ~20% hold band. The scanner's $1.91 lagged a late pullback. High made in the 16:45 ET bar, after 16:15, so the first-bar-spike skip does not apply.
+  - Entry: limit $1.75 on ask $1.71 x100, filled $1.73. SIP prior close (Oct 9) $0.87, so Entry Total% = +98.9%, under the +150% ceiling. Qualifying-scan Total% (22:30) +84.2%; chase gap +14.7 pts and the fill is below +120%, so no CHASE-CAP note.
+  - Catalyst: Grade None (5 searches through 22:30; the Apr 2026 unit offering is background). Concern noted: no catalyst; exit at first premarket opportunity.
+- **NCPL: SKIP, thin drift after a failed ignition.** Second AH appearance >10% (+14.9% at 22:45, +21.3% now), so the count gate is met. `tradable=true`, float 4.4M, Day% +35.1%. The 16:20–16:25 ET ignition (363–437K sh, ~2K trades per bar) did not hold: CONFIRM-3 NO. The rise since 22:45 came on 95–147K sh / 528–854 trades per bar, VRatio 0.1x, with AH volume at 2–3% of the largest regular-session 5m bar. Per the SIP rule, a rising Total% on hundreds of trades per bar is a thin drift, not a BUILD. Catalyst None (3 searches at 22:45; same-day items are class-action notices). Repeat mover (Oct 7 +46%, today's intraday $2.66 high faded).
+  - SIP 5m since 22:45: 16:35 ET C $1.78, 131,382 sh / 768 trades; 16:40 ET H $1.90 C $1.87, 147,445 sh / 854 trades; 16:45 ET C $1.82, 95,291 sh / 528 trades.
+  - `NCPL 2026-10-12  SPIKE  16:23ET  +23%  $1.90  834 trades / 173k sh  (first co-spike bar) (as-of 17:00ET)`
+  - `NCPL 2026-10-12  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 17:00ET`
+  - Volume context (`NCPL-1700-volume-metric.json`): `# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-09 48+0zero/48 slots; floor 100; same-date regular peak 5596496 sh; log-only` / `# reconstructed as-of 2026-10-12T21:00:12+00:00; source fetched 2026-10-12T21:00:39.397397+00:00`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 16:00ET start=2026-10-12T20:00:00+00:00 shares=92959 local=unknown prior-peak=0.1628x rth-peak=0.0166x status=warmup`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 16:05ET start=2026-10-12T20:05:00+00:00 shares=72227 local=unknown prior-peak=0.1265x rth-peak=0.0129x status=warmup`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 16:10ET start=2026-10-12T20:10:00+00:00 shares=59854 local=unknown prior-peak=0.1048x rth-peak=0.0107x status=warmup`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 16:15ET start=2026-10-12T20:15:00+00:00 shares=42219 local=0.5845x prior-peak=0.0739x rth-peak=0.0075x status=ok`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 16:20ET start=2026-10-12T20:20:00+00:00 shares=363241 local=6.0688x prior-peak=0.6360x rth-peak=0.0649x status=ok`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 16:25ET start=2026-10-12T20:25:00+00:00 shares=436915 local=7.2997x prior-peak=0.7650x rth-peak=0.0781x status=ok`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 16:30ET start=2026-10-12T20:30:00+00:00 shares=169095 local=0.4655x prior-peak=0.2961x rth-peak=0.0302x status=ok`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 16:35ET start=2026-10-12T20:35:00+00:00 shares=131382 local=0.3617x prior-peak=0.2301x rth-peak=0.0235x status=ok`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 16:40ET start=2026-10-12T20:40:00+00:00 shares=147445 local=0.8720x prior-peak=0.2582x rth-peak=0.0263x status=ok`
+    - `NCPL 2026-10-12  VOLUME-CONTEXT 16:45ET start=2026-10-12T20:45:00+00:00 shares=95291 local=0.6463x prior-peak=0.1669x rth-peak=0.0170x status=ok`
+  - Book: `NCPL BOOK iex bid $1.91 x100 / ask $1.95 x100 @ 2026-10-12 16:52:29 ET age 8m16s two-sided spread 2.05% of ask` / `NCPL BOOK sip-15m bid $1.86 x1500 / ask $1.87 x7500 @ 2026-10-12 16:45:42 ET age 15m02s two-sided spread 0.53% of ask` / `NCPL BOOK refresh +15s iex unchanged @ 2026-10-12 16:52:29 ET` / `NCPL BOOK verdict: IEX STALE 8m16s; SIP-15m TWO-SIDED (observed 2026-10-12 17:00:44 ET; log-only)`
+  - Re-check at 23:30: enter only if per-bar SIP volume returns to hundreds-of-K sh / thousands of trades with a new high.
+- **BMEA (new, first AH appearance >10%, 1 of 2 needed):** `tradable=true`. Float 67.6M, Day% -4.2%, Pharmaceuticals.
+  - SIP 5m: two block prints at $1.36 (16:00, 16:25 ET; 3 and 1 trades). Ignition 16:30 ET: H $1.62 C $1.57, 897,828 sh / 4,359 trades; 16:35 ET H $1.63 C $1.56, 1,024,914 sh / 5,622 trades; 16:40 ET C $1.55, 506,559 sh / 3,053 trades; 16:45 ET H $1.65 C $1.54, 689,522 sh / 3,783 trades. Real volume; price flat in a $1.51–1.65 range after the ignition bar. The scanner's $1.54 matches.
+  - `BMEA 2026-10-12  SPIKE  16:31ET  +16%  $1.58  499 trades / 137k sh  (first co-spike bar) (as-of 17:00ET)`
+  - `BMEA 2026-10-12  CONFIRM-3  NO ignition 16:30ET failed third-bar hold/volume as-of 17:00ET`
+  - Volume context (`BMEA-1700-volume-metric.json`): `# BMEA shared SIP volume sip-ah-volume-v2; prior 2026-10-09 4+44zero/48 slots; floor 100; same-date regular peak 99405 sh; log-only` / `# reconstructed as-of 2026-10-12T21:00:12+00:00; source fetched 2026-10-12T21:00:41.384190+00:00`
+    - `BMEA 2026-10-12  VOLUME-CONTEXT 16:00ET start=2026-10-12T20:00:00+00:00 shares=32589 local=unknown prior-peak=1.3346x rth-peak=0.3278x status=warmup`
+    - `BMEA 2026-10-12  VOLUME-CONTEXT 16:25ET start=2026-10-12T20:25:00+00:00 shares=121168 local=1211.6800x prior-peak=4.9620x rth-peak=1.2189x status=floored`
+    - `BMEA 2026-10-12  VOLUME-CONTEXT 16:30ET start=2026-10-12T20:30:00+00:00 shares=897828 local=8978.2800x prior-peak=36.7676x rth-peak=9.0320x status=floored`
+    - `BMEA 2026-10-12  VOLUME-CONTEXT 16:35ET start=2026-10-12T20:35:00+00:00 shares=1024914 local=8.4586x prior-peak=41.9720x rth-peak=10.3105x status=ok`
+    - `BMEA 2026-10-12  VOLUME-CONTEXT 16:40ET start=2026-10-12T20:40:00+00:00 shares=506559 local=0.5642x prior-peak=20.7445x rth-peak=5.0959x status=ok`
+    - `BMEA 2026-10-12  VOLUME-CONTEXT 16:45ET start=2026-10-12T20:45:00+00:00 shares=689522 local=0.7680x prior-peak=28.2371x rth-peak=6.9365x status=ok`
+  - Book: `BMEA BOOK iex bid $1.49 x100 / ask $1.50 x100 @ 2026-10-12 16:59:40 ET age 1m05s two-sided spread 0.67% of ask` / `BMEA BOOK sip-15m bid $1.56 x2800 / ask $1.57 x2500 @ 2026-10-12 16:45:45 ET age 15m00s two-sided spread 0.64% of ask` / `BMEA BOOK refresh +15s iex unchanged @ 2026-10-12 16:59:40 ET` / `BMEA BOOK verdict: IEX STALE 1m05s; SIP-15m TWO-SIDED (observed 2026-10-12 17:00:44 ET; log-only)`
+  - Catalyst (2 searches): GlobeNewswire, Oct 12, 2026, ~16:28 ET: "Biomea Fusion to Announce Phase I Results for BMF-650" (oral small-molecule GLP-1 agonist), results due Tuesday Oct 13. Fresh, but it announces a readout date and contains no data. Grade C for now; the Oct 13 readout is a binary event. Background: Sep 22–23 public offering proposed then terminated.
+  - Multi-session check: SIP daily closes Oct 6–9 $1.25, $1.32, $1.37, $1.42; today $1.36. Fresh day 1. Not in `WINNERS_TRACKING.md`.
+  - IEX $1.49 / $1.50 at 16:59:40 ET is 9.6% under the $1.65 high and +10% over the close. Needs a second AH scan >10% (23:30).
+- **SUGP (new, first AH appearance >10%, 1 of 2 needed):** `tradable=true`. Float 1.5M, Day% -18.8%: dead-cat zone (Day% ≤ -15%), so a live entry is blocked regardless of the gate.
+  - SIP 5m: dead until 16:35 ET. Ignition 16:35 ET H $2.42 C $2.20, 150,942 sh / 1,414 trades; 16:40 ET H $2.23 L $1.88 C $2.05, 284,009 sh / 3,054 trades; 16:45 ET C $2.14, 74,614 sh / 873 trades (volume down 74%).
+  - `SUGP 2026-10-12  SPIKE  16:38ET  +34%  $2.42  411 trades / 50k sh  (first co-spike bar) (as-of 17:00ET)`
+  - `SUGP 2026-10-12  CONFIRM-3  NO ignition 16:35ET failed third-bar hold/volume as-of 17:00ET`
+  - Volume context (`SUGP-1700-volume-metric.json`): `# SUGP shared SIP volume sip-ah-volume-v2; prior 2026-10-09 10+38zero/48 slots; floor 100; same-date regular peak 26151 sh; log-only` / `# reconstructed as-of 2026-10-12T21:00:12+00:00; source fetched 2026-10-12T21:00:43.346163+00:00`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:00ET start=2026-10-12T20:00:00+00:00 shares=959 local=unknown prior-peak=0.4293x rth-peak=0.0367x status=warmup`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:05ET start=2026-10-12T20:05:00+00:00 shares=350 local=unknown prior-peak=0.1567x rth-peak=0.0134x status=warmup`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:15ET start=2026-10-12T20:15:00+00:00 shares=262 local=0.7486x prior-peak=0.1173x rth-peak=0.0100x status=ok`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:35ET start=2026-10-12T20:35:00+00:00 shares=150942 local=1509.4200x prior-peak=67.5658x rth-peak=5.7719x status=floored`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:40ET start=2026-10-12T20:40:00+00:00 shares=284009 local=2840.0900x prior-peak=127.1303x rth-peak=10.8603x status=floored`
+    - `SUGP 2026-10-12  VOLUME-CONTEXT 16:45ET start=2026-10-12T20:45:00+00:00 shares=74614 local=0.4943x prior-peak=33.3993x rth-peak=2.8532x status=ok`
+  - Book: `SUGP BOOK iex bid $1.53 x100 / ask $2.16 x100 @ 2026-10-12 16:00:00 ET age 1h00m two-sided spread 29.17% of ask` / `SUGP BOOK sip-15m bid $2.00 x900 / ask $2.04 x200 @ 2026-10-12 16:45:43 ET age 15m01s two-sided spread 1.96% of ask` / `SUGP BOOK refresh +15s iex unchanged @ 2026-10-12 16:00:00 ET` / `SUGP BOOK verdict: IEX STALE 1h00m; SIP-15m TWO-SIDED (observed 2026-10-12 17:00:44 ET; log-only)`
+  - Catalyst: no catalyst found (3 searches). Background only: 1-for-6 reverse split effective Oct 7 (PRNewswire, Oct 2); an acquisition-agreement deadline of Oct 31 (StockTitan event calendar, undated item). Grade None.
+  - Multi-session: SIP daily Oct 6 $0.41 → Oct 7 $2.64 is the 1-for-6 split (≈ +7% adjusted), then $2.40, $2.23, $1.81 today: a declining name, not a runner.
+  - Dead-cat-override check: AH $2.04 is above today's $1.81 regular close (Total% still -8.4% vs the Oct 9 close). One AH scan only; if AH% rises again at 23:30 while holding above $1.81, flag DEAD-CAT-OVERRIDE WATCH with a hypothetical entry.
+- EHGO dropped to +5.4% AH (below threshold); AH count stays at 1. DAIC (+5.9%, Day% -28.9%) and JELD (+5.7%, Day% -20.1%) stay in the dead-cat zone under the threshold.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| FCHL | $1.73 | 23:00 CET (5:00 PM ET) | 58 | b0ac6a3a | Grade None. 4 AH scans >10%, BUILD +31%→+91% AH on 0.9–2.6M sh per SIP bar, CONFIRM-3 YES, float 1.3M, fresh day 1, Entry Total% +98.9%. Concern: no catalyst. Exit at first premarket opportunity. |
