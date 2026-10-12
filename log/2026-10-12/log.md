@@ -87,6 +87,33 @@ AH >10% at this snapshot (unrounded): none
 - No candidate is above 10% AH, so spike-bar, CONFIRM-3, SIP volume context and book checks do not apply.
 - Observation scan (before 23:00 CET): no entries. Watch names carry to the next scan with no AH appearance toward the 2-scan gate.
 
+## Scan 22:20 CET (4:20 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| SMTK | [TV](https://www.tradingview.com/chart/?symbol=SMTK) | $1.06 | -7.8% | +22.8% | $1.30 | +13.2% | 807K | 391K | 2.1x | 855K | Semiconductors |
+| OLB | [TV](https://www.tradingview.com/chart/?symbol=OLB) | $0.65 | +32.2% | +6.8% | $0.70 | +41.2% | 3.3M | 145.6M | 0.0x | 18.7M | Internet Software/Services |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.54 | +35.1% | +5.8% | $1.63 | +43.0% | 90K | 12.3M | 0.0x | 4.4M | Misc Commercial Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): SMTK
+
+**Evaluation notes:**
+- Snapshot 16:20:09 ET, the first non-empty AH snapshot tonight. Observation scan (before 23:00 CET): no entries.
+- **SMTK (new, first AH appearance >10%, 1 of 2 needed):** `tradable=true`. Float 855K, Day% -7.8% (above the -15% dead-cat line).
+  - SIP 5m: real volume ignition at the open. 16:00 ET bar O $1.06 H $1.36 C $1.31, 904,562 sh / 4,903 trades, VWAP $1.27. 16:05 ET bar H $1.63 L $0.95 C $1.05, 3,476,762 sh / 18,187 trades, VWAP $1.35: a spike to $1.63 and a full round trip back below the $1.06 regular close inside one bar. Newest SIP bar is 16:05 ET (closes 16:10), within the free-tier delay of this scan. The scanner's $1.30 sits inside the 16:05 bar's range and near its VWAP, so it is a real print, but the last SIP close ($1.05) is below the regular close.
+  - `SPIKE 16:00ET  +20%  $1.27  196 trades / 26k sh  (first co-spike bar) (as-of 16:20ET)`
+  - `CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET`
+  - Volume context (`SMTK-1620-volume-metric.json`): `# SMTK shared SIP volume sip-ah-volume-v2; prior 2026-10-09 5+43zero/48 slots; floor 100; same-date regular peak 116519 sh; log-only` / `# reconstructed as-of 2026-10-12T20:20:00+00:00; source fetched 2026-10-12T20:20:31.537732+00:00`
+    - `SMTK 2026-10-12  VOLUME-CONTEXT 16:00ET start=2026-10-12T20:00:00+00:00 shares=904562 local=unknown prior-peak=244.6084x rth-peak=7.7632x status=warmup`
+    - `SMTK 2026-10-12  VOLUME-CONTEXT 16:05ET start=2026-10-12T20:05:00+00:00 shares=3476762 local=unknown prior-peak=940.1736x rth-peak=29.8386x status=warmup`
+  - Book: `SMTK BOOK iex bid $1.59 x100 / ask $1.63 x100 @ 2026-10-12 16:07:10 ET age 13m23s two-sided spread 2.45% of ask` / `SMTK BOOK sip-15m bid $1.49 x100 / ask $1.50 x3300 @ 2026-10-12 16:05:33 ET age 15m00s two-sided spread 0.67% of ask` / `SMTK BOOK refresh +15s iex unchanged @ 2026-10-12 16:07:10 ET` / `SMTK BOOK verdict: IEX STALE 13m23s; SIP-15m TWO-SIDED (observed 2026-10-12 16:20:32 ET; log-only)`
+  - Catalyst: no catalyst found (4 searches: dated news, press releases, announcements, 8-K). The newest company items found are older background: reverse split for Nasdaq listing (Aug 19, 2026), trading halt news pending (Aug 20, 2026), bridge note maturing Oct 30, 2026. Grade None so far; re-search at the next scan if it holds >10%.
+  - Multi-session check: not in `WINNERS_TRACKING.md`. SIP daily closes Oct 5–9: $1.22, $1.16, $1.17, $1.13, $1.15; no prior session closed ≥+50%, and today's $1.06 close is below the close 3 sessions back. Fresh day 1.
+  - Pattern flag: AH high ($1.63) printed in the 16:05 bar, inside the first-bar window (16:00–16:15 ET), with CONFIRM-3 NO. If CONFIRM-3 stays NO through 23:00 CET, this is a **first-bar spike** (skip live entry, record FIRST-BAR-SPIKE WATCH). It also fails the ~20% hold test today: the last SIP close $1.05 is 36% below the $1.63 high.
+- OLB (+6.8% AH) and NCPL (+5.8% AH) are 21:30 watch names now in the AH table below the 10% threshold. Neither counts toward the 2-scan gate. OLB was tagged MULTI-SESSION-RUNNER on Oct 8.
+- Other 21:30 watch names (MNDR, LNKS, YMAT, SKYA, WBUY, CLWT, ELOG, TCRT, XRTX, GIXI) do not appear; the 22:15 SIP cross-check showed the intraday runners giving back gains in AH.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
