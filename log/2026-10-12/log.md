@@ -50,6 +50,18 @@ AH >10% at this snapshot (unrounded): none
 - No candidate is above 10% AH, so spike-bar, CONFIRM-3, SIP volume context and book checks do not apply at this scan.
 - Observation scan (before 23:00 CET): no entries. The 21:30 watch names (MNDR, LNKS, YMAT, NCPL, SKYA, OLB, WBUY, CLWT, ELOG, TCRT, XRTX, GIXI) carry to the 22:30 scan; none has an AH appearance yet toward the 2-scan gate.
 
+## Scan 22:05 CET (4:05 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- Snapshot 16:05:11 ET returned 0 hits, the third empty snapshot of the AH open. TradingView postmarket fields may still be unpopulated five minutes in; this does not show the 21:30 watch names faded.
+- No candidate is above 10% AH, so spike-bar, CONFIRM-3, SIP volume context and book checks do not apply.
+- Observation scan (before 23:00 CET): no entries. Watch names carry to the next scan with no AH appearance toward the 2-scan gate.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
