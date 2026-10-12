@@ -38,6 +38,18 @@ AH >10% at this snapshot (unrounded): n/a (regular session).
 - MNDR, LNKS, YMAT, NCPL, OLB, CLWT, GIXI show current 5m volume far below their 5m average (VChg ≈ -99% to -100%): the intraday spike volume dried up before the close. SKYA, WBUY and ELOG still trade near or above their average 5m volume.
 - Prior footprint: OLB was tagged MULTI-SESSION-RUNNER on Oct 8 (SIP daily: Oct 6 $0.19 → $0.41); NCPL was tracked Oct 6–7; MNDR and ELOG appeared Oct 7. Check SIP daily bars for the day 2+ tag if any of them qualify in AH.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- Two snapshots, 16:00:11 ET and 16:02:22 ET, both returned 0 hits. Both ran in the first minutes of the AH session, before TradingView postmarket fields usually populate, so they show no AH movers yet; they do not show that the 21:30 watch names faded.
+- No candidate is above 10% AH, so spike-bar, CONFIRM-3, SIP volume context and book checks do not apply at this scan.
+- Observation scan (before 23:00 CET): no entries. The 21:30 watch names (MNDR, LNKS, YMAT, NCPL, SKYA, OLB, WBUY, CLWT, ELOG, TCRT, XRTX, GIXI) carry to the 22:30 scan; none has an AH appearance yet toward the 2-scan gate.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
