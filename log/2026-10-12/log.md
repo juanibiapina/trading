@@ -74,6 +74,19 @@ AH >10% at this snapshot (unrounded): none
 - No candidate is above 10% AH, so spike-bar, CONFIRM-3, SIP volume context and book checks do not apply.
 - Observation scan (before 23:00 CET): no entries. Watch names (MNDR, LNKS, YMAT, NCPL, SKYA, OLB, WBUY, CLWT, ELOG, TCRT, XRTX, GIXI) carry to the next scan with no AH appearance toward the 2-scan gate.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- Snapshot 16:15:13 ET returned 0 hits, the fifth empty snapshot since the AH open.
+- SIP cross-check on the volume-backed watch names (the latest bar the free tier serves is 16:00 ET): the first AH bar shows no AH spike. SKYA C $2.59 (H $2.63, 64K sh / 133 trades, flat vs 15:55 close $2.60); WBUY C $0.77 (L $0.75, 214K sh / 400 trades, below 15:55 close $0.82); ELOG C $1.00 (22K sh / 121 trades, flat); MNDR C $2.81 (L $2.71, 372K sh / 2,510 trades, below 15:55 close $3.02); LNKS C $2.09 (L $1.94, 877K sh / 3,910 trades, below 15:55 close $2.25); YMAT C $2.66 (L $2.60, 143K sh / 958 trades, below 15:55 close $2.88). The empty TradingView result matches SIP through 16:05 ET; the intraday runners are giving back gains in the first AH bar.
+- No candidate is above 10% AH, so spike-bar, CONFIRM-3, SIP volume context and book checks do not apply.
+- Observation scan (before 23:00 CET): no entries. Watch names carry to the next scan with no AH appearance toward the 2-scan gate.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
