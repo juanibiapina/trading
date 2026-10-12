@@ -1,0 +1,19 @@
+{
+  "frozen_utc": "2026-10-12T13:40:00Z",
+  "frozen_before": "any fetch or view of data before 2025-10-01 for this basket",
+  "origin": "log/2026-10-12/init7-horizon-study/result.json: 20d reversal was the only one of 12 selector/horizon variants whose interval cleared the 13.29 bps base hurdle on 2025-10-01..2026-10-08; 10 non-overlapping trades, so it is a hypothesis",
+  "rule": {
+    "basket": ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA"],
+    "benchmark": "QQQ",
+    "signal": "20-session close-to-close return of each name minus QQQ's, measured to the decision close",
+    "selection": "the name with the lowest relative return, only if its own 20-session return < 0 and its relative return < 0; otherwise hold cash",
+    "hold": "20 sessions, close to close",
+    "prices": "daily SIP bars, split- and dividend-adjusted (adjustment=all)"
+  },
+  "test": {
+    "window": "2016-01-01 .. 2025-09-30",
+    "trades": "non-overlapping, one decision every 20 sessions from offset 0; all 20 offsets reported as a robustness check",
+    "pass": "mean excess over QQQ per non-overlapping trade > 13.29 bps AND moving-block (block 20) bootstrap 2.5% bound of the overlapping excess series > 0 AND both halves of the window have positive mean excess",
+    "known_bias": "survivorship: the basket is today's megacaps; GOOGL/META/TSLA weights in QQQ changed over the window"
+  }
+}

@@ -1706,7 +1706,29 @@ tracker).
 
 ---
 
-## Current priorities and initiative status — 2026-10-09 18:00 CEST
+## Current priorities and initiative status — 2026-10-12 15:00 CEST
+
+This checkpoint supersedes the October 9 18:00 checkpoint. **No holding horizon from 1 hour to overnight lets the megacap basket clear the 13.29 bps round-trip cost; intraday rotation is rejected.** Hourly momentum makes +2.3 bps gross per trade. Only 20-session reversal cleared the hurdle on the past year (1 of 12 variants). Its rule was then frozen and tested on 2016–2025: it **passes** its criterion (+181 bps over QQQ per 20 sessions, 92 trades, interval lower bound +39), but **about two thirds of that is hindsight**. Holding all seven of today's megacaps beats QQQ by 131 bps with no selection, and the pick beats the basket by only +82 bps [-54, +208]. Not promoted. The pilot slot stays free. Paper equity is **$99,691.06 (-$308.94)**, no open positions.
+
+**Money-fast selection:** the October 9 ledger check and the horizon study were the dated items. The out-of-sample test followed because it settles whether Initiative 7's only surviving candidate is worth building. **North Star check:** nothing on the roadmap has a proven edge. The core strategy is -3.2% per trade, or about -1.0% if holds are retired (pending Juan). The megacap lane offers at best about 10% a year over its basket at one trade a month: slow money. The next Initiative 7 step removes the survivorship bias; if the edge disappears, the basket is dropped and the initiative moves to a different universe.
+
+| Initiative | Latest concrete progress | Current status / dependency | Next deliverable and check |
+|---|---|---|---|
+| 1 — shared volume measurement | October 9 scanner-improvement: regular-session ratio tested on 89 entries | **Instrument, log-only.** | No dated item. |
+| 2 — broker execution | September 7 alternatives research | **Deferred per Juan's September 22 instruction.** | Resume only when access arrives; no renewed ask. |
+| 3 — scheduling and exits | October 9 15:00: execution-gap split | **Research done; hold retirement proposed to Juan.** No reply in `FEEDBACK_LOG.md` as of October 12. | Wait for Juan; keep the proposal open (live rule; not applied by this loop). |
+| 4 — initiative reporting | Receipt 183 | **Delivered and verified.** | Next daily email: horizon study, reversal test and survivorship control, October 9 ledger, plus the open hold proposal; Jev not run. |
+| 5 — review surface | October 8 15:00: v2 page verified | **Build delivered.** | No dated item. |
+| 6 — PM-only gappers | October 6 15:00 latency study | **Pilot ENDED; log-only research continues.** | Reopen only with real-time consolidated data and a sub-minute watcher. |
+| 7 — alternative agent strategies / Jev | October 12 15:00: horizon study and frozen 20-session reversal test | **Research.** Intraday megacap rotation rejected; 20-session reversal not promoted (survivorship). Daemons `SFm` and `3t2` end as scheduled on October 13. | **October 12 18:00 or next run:** build a point-in-time basket (top names by trailing dollar volume each month from monthly bars of a broad US list, including later-shrunk or delisted names) and rerun the frozen rule unchanged. Pass if the pick beats both that basket and QQQ under the frozen criterion. |
+
+**Initiative 7 progress, October 12 15:00:** October 9 ledger: 6 slots and the flatten captured with no errors or hash problems. N1 (MSFT, AMZN, TSLA, META, AMZN, AAPL) made 6 round trips: -$0.48 base / -$2.73 stress with NBBO fills, -$1.72 base with IEX fills ($1.21 IEX spread). QQQ +$0.04 base; A1 no trade; A2 equal to N1. `scripts/init7-horizon-study.py` and `scripts/init7-reversal20-oos.py` are reproducible offline from cached bars. Evidence: `docs/investigations/init7-horizon-study-2026-10-12.md`, `docs/investigations/init7-reversal20-freeze.json`, `log/2026-10-12/init7-horizon-study/`, `log/2026-10-12/init7-reversal20-oos/`, `log/2026-10-09/init7-execute/ledger-*.json`.
+
+**Previous-step evaluation:** the October 9 18:00 hypothesis **partly worked**. October 9 resolved fully. As expected, no intraday horizon clears the hurdle, but the 1- and 5-session horizons do not either. Only 20 sessions does, and only with reversal.
+
+**Needs from Juan / consolidated asks:** the Initiative 7 ask is updated with the horizon result. The hold-retirement proposal stays open. No trading-pulse timing change is proposed.
+
+## Prior checkpoint — 2026-10-09 18:00 CEST
 
 This checkpoint supersedes the October 9 15:00 checkpoint. **Initiative 7's frozen N1 rule loses money on the past year, and the October 14 pilot will not start in this form.** Replayed on 255 full sessions (2025-10-01 to 2026-10-08), N1 made +$0.083 per session per $100 before costs and -$0.61 after the frozen base costs (-$2.65 stress). It trades 5.5 round trips a session, so it breaks even only below 0.76 bps per side; half the NBBO spread alone is 0.65. **0 of 48** rolling 20-session windows pass the promotion gate. The replay matches the live decision on all 12 slots of October 7 and 8. The pilot slot stays free. Paper equity is **$99,691.08 (-$308.92)**, no open positions.
 
@@ -2027,13 +2049,15 @@ The next research priority is **Initiative 7's liquid regular-session feasibilit
 
 **Update 2026-10-09 18:00:** the frozen N1 rule loses on the past year (255 sessions: +$0.083 per session per $100 gross, -$0.61 base, -$2.65 stress; 0 of 48 20-session windows pass the gate). The October 14 pilot does not start in this form. Next: measure gross move per trade against the ~13 bps round-trip hurdle across holding horizons before freezing a new variant. See `docs/investigations/init7-n1-history-2026-10-09.md`.
 
+**Update 2026-10-12 15:00:** no horizon from 1 hour to overnight clears the 13.29 bps round-trip hurdle in this basket (hourly momentum +2.3 bps gross). 20-session reversal, frozen and tested on 2016–2025, passes its criterion (+181 bps over QQQ per trade, 92 trades), but the equal-weight hindsight basket alone beats QQQ by 131 bps; the pick's edge over the basket is +82 bps [-54, +208]. Not promoted. Next: point-in-time basket to remove survivorship. See `docs/investigations/init7-horizon-study-2026-10-12.md`.
+
 **Needs from Juan:** consideration of the eventual regular-session/universe direction through the daily email; nothing blocks research. Preserve the deferred broker test.
 
 ## Open asks for Juan (consolidated)
 
 - [ ] **Initiative 3 (2026-10-09, live holding rule; daily email): PROPOSAL — sell every position at the first premarket evaluation (10:30 CEST / 04:30 ET) and retire the Grade A/B multi-session holds.** On the 89 real AH entries, the 26 held past that evaluation returned -11.9% against -3.1% at the 04:30 open (21 of 26 worse, p 0.038, both chronological halves negative). Applying it would have moved the per-trade mean from -3.2% to -1.0%. It edits `prompts/position-evaluation.md` and `OPEN_POSITIONS.md`, so it is **not applied**. Evidence: `docs/investigations/init3-exec-gap-2026-10-09.md`.
 
-- [ ] **Initiative 7 (2026-10-01, core strategy/universe proposal; daily email):** **Update 2026-10-09 18:00:** the first candidate, hourly relative-strength rotation in seven megacaps, lost -$0.61 per $100 per session after base costs over the past year and is not piloted. The direction stays open while a lower-turnover horizon is measured. The paper account missed the net-positive checkpoint. Propose evaluating an agent-assisted liquid US regular-session strategy as a replacement candidate for AH→PM micro-caps. Research is active and unblocked; live adoption needs prospective edge and execution evidence plus Juan's review. No live switch, new order or trading schedule change has been applied.
+- [ ] **Initiative 7 (2026-10-01, core strategy/universe proposal; daily email):** **Update 2026-10-12 15:00:** intraday megacap rotation is rejected at every horizon up to overnight. The only surviving candidate, a monthly 20-session reversal pick, beats QQQ out of sample, but most of that is hindsight in the basket; it is being retested on a point-in-time basket. At best it is about 10% a year over the basket, so a different universe may be the bigger lever. **Update 2026-10-09 18:00:** the first candidate, hourly relative-strength rotation in seven megacaps, lost -$0.61 per $100 per session after base costs over the past year and is not piloted. The direction stays open while a lower-turnover horizon is measured. The paper account missed the net-positive checkpoint. Propose evaluating an agent-assisted liquid US regular-session strategy as a replacement candidate for AH→PM micro-caps. Research is active and unblocked; live adoption needs prospective edge and execution evidence plus Juan's review. No live switch, new order or trading schedule change has been applied.
 
 **Broker-ask status refresh (2026-10-01):** the historical Initiative 2 access item below is **deferred per Juan's September 22 instruction**, not a renewed request. Resume only when he supplies access. Existing Initiative 3 schedule-veto and exit-review proposals remain unapplied; no new schedule change is proposed today.
 

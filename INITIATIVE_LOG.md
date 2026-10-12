@@ -1,5 +1,32 @@
 # Initiative Log
 
+### 2026-10-12 15:00 — Initiative 7 intraday megacap rotation rejected at every horizon; 20-session reversal passes out of sample but its edge is mostly hindsight
+
+**Evaluated:** The October 9 18:00 hypothesis **partly worked**. October 9 has six slot captures and a flatten, with no capture errors or hash problems; `nbbo` wrote all seven quotes and both ledgers resolved every arm. I expected only horizons of a day or longer to clear the ~13 bps hurdle. No intraday horizon does, as expected, but the 1- and 5-session horizons fail too; only 20-session reversal clears it. No pilot is active.
+
+**Step taken:**
+
+- **Initiative 7 (dated):** ran `nbbo` and `ledger --fill-source iex|sip` for October 9.
+- **Initiative 7 (dated; decides whether any variant in this basket can pay):** built `scripts/init7-horizon-study.py`. On the cached 255 sessions it measures gross return per trade for N1's momentum selector, its reversal mirror, the equal-weight basket and QQQ at 1 hour, 10:30 to close, overnight, and 1, 5 and 20 sessions.
+- **Initiative 7 (settles the only surviving candidate):** froze the 20-session reversal rule and pass criterion in `docs/investigations/init7-reversal20-freeze.json` before fetching older data. Then built `scripts/init7-reversal20-oos.py` and tested it on adjusted daily SIP bars, 2016-01-04 to 2025-09-30, with a survivorship control.
+
+**Result:**
+
+- **October 9 ledger:** N1 6 round trips (MSFT, AMZN, TSLA, META, AMZN, AAPL): -$0.48 base / -$2.73 stress with NBBO fills; -$1.72 base with IEX fills, $1.21 of it IEX spread. QQQ +$0.04 base. A1 no trade; A2 equal to N1.
+- **Horizons:** hourly momentum +2.3 bps gross [-0.6, 5.6] against a 13.29 bps hurdle; rest-of-day, overnight, 1- and 5-session selectors all fall short. Momentum worsens with horizon (20 sessions: -296 bps vs QQQ); 20-session reversal is +305 bps vs QQQ [63, 602], 1 of 12 variants on about 10 independent trades.
+- **Out-of-sample 2016–2025: frozen criterion passed.** 92 non-overlapping trades, +181 bps over QQQ per 20 sessions, overlapping interval [+39, +357], halves +251 and +119, all 20 start offsets positive.
+- **Survivorship control: selection edge not significant.** The equal-weight basket of today's megacaps beats QQQ by +131 bps per 20 sessions with no selection; the pick beats the basket by +82 bps [-54, +208], halves +72 and +91. TSLA is 37 of 92 picks.
+- **Decision:** intraday megacap rotation is rejected; 20-session reversal is not promoted. No order, live rule, size or pulse timing changed. Equity $99,691.06 (-$308.94), no open positions.
+- **Verification:** both scripts rerun offline from cached bars; all eight symbols have 2,450 complete daily bars.
+- **Evidence:** `docs/investigations/init7-horizon-study-2026-10-12.md`, `docs/investigations/init7-reversal20-freeze.json`, `log/2026-10-12/init7-horizon-study/result.json`, `log/2026-10-12/init7-reversal20-oos/result.json`, `log/2026-10-09/init7-execute/ledger-iex.json`, `ledger-sip.json`.
+
+**Hypothesis / next step:**
+
+- **Next run:** Initiative 7: build a point-in-time basket (top names by trailing dollar volume each month, ranked from monthly bars of a broad US list that includes names that later shrank or delisted) and rerun the frozen rule unchanged. I expect the pick-over-basket edge to shrink toward zero; if it is not positive under the frozen criterion, drop the megacap basket and open a different universe.
+- **Next daily email:** the horizon study, the reversal test with its survivorship control, the October 9 ledger, and the open hold-retirement proposal; Jev not run.
+
+**Needs from Juan:** decide on retiring the Grade A/B holds (daily email, open since October 9). Initiative 2 stays deferred.
+
 ### 2026-10-09 18:00 — Initiative 7 frozen N1 rule loses on the past year; October 14 pilot not started
 
 **Evaluated:** The October 9 15:00 hypothesis for this run (October 9 has six slot captures and a flatten capture) has **insufficient data**: at 12:00 ET only 10:30 and 11:30 were due. Both persisted (N1 MSFT, then AMZN; SEC `no_8k_within_window`), and their book captures arrived 0.3 s and 0.04 s after the decision with 8/8 quotes and no errors. Initiative 1's October 12 item (regular-session ratio on the 89 entries and TRUG, UPC, DKI) was already done by the October 9 scanner-improvement run: the ratio does not separate outcomes, TRUG and UPC pass, DKI fails. No pilot is active.

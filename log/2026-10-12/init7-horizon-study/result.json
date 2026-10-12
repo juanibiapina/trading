@@ -1,0 +1,798 @@
+{
+ "sessions": 255,
+ "first": "2025-10-01",
+ "last": "2026-10-08",
+ "hurdle_bps_round_trip": {
+  "base": 13.29,
+  "stress": 53.29
+ },
+ "fill_proxy": "bar open at entry and exit stamps (mid proxy), raw prices",
+ "horizons": {
+  "1h_intraday": {
+   "momentum": {
+    "trades": 1383,
+    "opportunities": 1530,
+    "mean_gross_bps": 2.32,
+    "interval_bps": [
+     -0.56,
+     5.57
+    ],
+    "first_half_bps": 2.21,
+    "second_half_bps": 2.44,
+    "hit_rate": 0.505,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -10.97,
+    "pick_counts": {
+     "AAPL": 197,
+     "MSFT": 162,
+     "NVDA": 230,
+     "AMZN": 147,
+     "GOOGL": 180,
+     "META": 174,
+     "TSLA": 293
+    },
+    "non_overlapping": {
+     "trades": 238,
+     "mean_gross_bps": 10.08,
+     "mean_vs_qqq_bps": 9.8,
+     "positive_vs_qqq": 122
+    }
+   },
+   "reversal": {
+    "trades": 1408,
+    "opportunities": 1530,
+    "mean_gross_bps": 1.08,
+    "interval_bps": [
+     -1.85,
+     3.94
+    ],
+    "first_half_bps": -0.63,
+    "second_half_bps": 2.72,
+    "hit_rate": 0.5,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -12.21,
+    "pick_counts": {
+     "AAPL": 168,
+     "MSFT": 169,
+     "NVDA": 248,
+     "AMZN": 153,
+     "GOOGL": 157,
+     "META": 196,
+     "TSLA": 317
+    },
+    "non_overlapping": {
+     "trades": 239,
+     "mean_gross_bps": 4.03,
+     "mean_vs_qqq_bps": 4.86,
+     "positive_vs_qqq": 119
+    }
+   },
+   "basket": {
+    "trades": 1530,
+    "opportunities": 1530,
+    "mean_gross_bps": 0.33,
+    "interval_bps": [
+     -1.42,
+     1.95
+    ],
+    "first_half_bps": -0.76,
+    "second_half_bps": 1.43,
+    "hit_rate": 0.522,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -12.96
+   },
+   "qqq": {
+    "trades": 1530,
+    "opportunities": 1530,
+    "mean_gross_bps": -0.01,
+    "interval_bps": [
+     -1.54,
+     1.49
+    ],
+    "first_half_bps": -0.88,
+    "second_half_bps": 0.85,
+    "hit_rate": 0.527,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -13.3
+   },
+   "abs_move": {
+    "trades": 1530,
+    "opportunities": 1530,
+    "mean_gross_bps": 35.04,
+    "interval_bps": [
+     33.76,
+     36.32
+    ],
+    "first_half_bps": 34.63,
+    "second_half_bps": 35.45,
+    "hit_rate": 1.0,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": true,
+    "mean_net_base_bps": 21.75
+   },
+   "momentum_vs_qqq": {
+    "trades": 1383,
+    "opportunities": 1530,
+    "mean_gross_bps": 2.33,
+    "interval_bps": [
+     -0.24,
+     5.06
+    ],
+    "first_half_bps": 2.83,
+    "second_half_bps": 1.87,
+    "hit_rate": 0.506,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -10.96
+   },
+   "reversal_vs_qqq": {
+    "trades": 1408,
+    "opportunities": 1530,
+    "mean_gross_bps": 0.98,
+    "interval_bps": [
+     -1.34,
+     3.29
+    ],
+    "first_half_bps": -0.01,
+    "second_half_bps": 1.93,
+    "hit_rate": 0.491,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -12.31
+   }
+  },
+  "10:30_to_close": {
+   "momentum": {
+    "trades": 242,
+    "opportunities": 255,
+    "mean_gross_bps": -1.1,
+    "interval_bps": [
+     -18.4,
+     17.24
+    ],
+    "first_half_bps": -18.34,
+    "second_half_bps": 15.86,
+    "hit_rate": 0.475,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -14.39,
+    "pick_counts": {
+     "AAPL": 35,
+     "MSFT": 29,
+     "NVDA": 39,
+     "AMZN": 23,
+     "GOOGL": 31,
+     "META": 27,
+     "TSLA": 58
+    }
+   },
+   "reversal": {
+    "trades": 240,
+    "opportunities": 255,
+    "mean_gross_bps": -0.2,
+    "interval_bps": [
+     -17.72,
+     17.78
+    ],
+    "first_half_bps": -5.16,
+    "second_half_bps": 4.43,
+    "hit_rate": 0.446,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -13.49,
+    "pick_counts": {
+     "AAPL": 22,
+     "MSFT": 22,
+     "NVDA": 46,
+     "AMZN": 26,
+     "GOOGL": 34,
+     "META": 27,
+     "TSLA": 63
+    }
+   },
+   "basket": {
+    "trades": 255,
+    "opportunities": 255,
+    "mean_gross_bps": 1.98,
+    "interval_bps": [
+     -7.94,
+     12.3
+    ],
+    "first_half_bps": -5.0,
+    "second_half_bps": 8.9,
+    "hit_rate": 0.533,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -11.31
+   },
+   "qqq": {
+    "trades": 255,
+    "opportunities": 255,
+    "mean_gross_bps": -0.08,
+    "interval_bps": [
+     -9.83,
+     9.04
+    ],
+    "first_half_bps": -5.34,
+    "second_half_bps": 5.14,
+    "hit_rate": 0.533,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -13.37
+   },
+   "abs_move": {
+    "trades": 255,
+    "opportunities": 255,
+    "mean_gross_bps": 86.17,
+    "interval_bps": [
+     80.08,
+     92.85
+    ],
+    "first_half_bps": 86.17,
+    "second_half_bps": 86.17,
+    "hit_rate": 1.0,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": true,
+    "mean_net_base_bps": 72.88
+   },
+   "momentum_vs_qqq": {
+    "trades": 242,
+    "opportunities": 255,
+    "mean_gross_bps": -0.94,
+    "interval_bps": [
+     -15.62,
+     14.17
+    ],
+    "first_half_bps": -11.65,
+    "second_half_bps": 9.59,
+    "hit_rate": 0.471,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -14.23
+   },
+   "reversal_vs_qqq": {
+    "trades": 240,
+    "opportunities": 255,
+    "mean_gross_bps": 0.91,
+    "interval_bps": [
+     -12.51,
+     15.59
+    ],
+    "first_half_bps": 2.77,
+    "second_half_bps": -0.83,
+    "hit_rate": 0.442,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -12.38
+   }
+  },
+  "overnight": {
+   "momentum": {
+    "trades": 233,
+    "opportunities": 254,
+    "mean_gross_bps": 5.14,
+    "interval_bps": [
+     -12.02,
+     24.84
+    ],
+    "first_half_bps": 9.86,
+    "second_half_bps": 0.53,
+    "hit_rate": 0.481,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -8.15,
+    "pick_counts": {
+     "AAPL": 29,
+     "MSFT": 27,
+     "NVDA": 36,
+     "AMZN": 25,
+     "GOOGL": 23,
+     "META": 35,
+     "TSLA": 58
+    }
+   },
+   "reversal": {
+    "trades": 230,
+    "opportunities": 254,
+    "mean_gross_bps": 13.47,
+    "interval_bps": [
+     -2.94,
+     30.0
+    ],
+    "first_half_bps": 25.37,
+    "second_half_bps": 1.98,
+    "hit_rate": 0.557,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": 0.18,
+    "pick_counts": {
+     "AAPL": 26,
+     "MSFT": 22,
+     "NVDA": 42,
+     "AMZN": 20,
+     "GOOGL": 33,
+     "META": 27,
+     "TSLA": 60
+    }
+   },
+   "basket": {
+    "trades": 254,
+    "opportunities": 254,
+    "mean_gross_bps": 6.57,
+    "interval_bps": [
+     -4.06,
+     17.33
+    ],
+    "first_half_bps": 8.18,
+    "second_half_bps": 4.97,
+    "hit_rate": 0.543,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -6.72
+   },
+   "qqq": {
+    "trades": 254,
+    "opportunities": 254,
+    "mean_gross_bps": 9.12,
+    "interval_bps": [
+     -1.97,
+     19.51
+    ],
+    "first_half_bps": 7.07,
+    "second_half_bps": 11.17,
+    "hit_rate": 0.559,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -4.17
+   },
+   "abs_move": {
+    "trades": 254,
+    "opportunities": 254,
+    "mean_gross_bps": 91.91,
+    "interval_bps": [
+     84.31,
+     100.15
+    ],
+    "first_half_bps": 92.19,
+    "second_half_bps": 91.64,
+    "hit_rate": 1.0,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": true,
+    "mean_net_base_bps": 78.62
+   },
+   "momentum_vs_qqq": {
+    "trades": 233,
+    "opportunities": 254,
+    "mean_gross_bps": -1.17,
+    "interval_bps": [
+     -15.72,
+     14.99
+    ],
+    "first_half_bps": 6.5,
+    "second_half_bps": -8.64,
+    "hit_rate": 0.451,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -14.46
+   },
+   "reversal_vs_qqq": {
+    "trades": 230,
+    "opportunities": 254,
+    "mean_gross_bps": 3.21,
+    "interval_bps": [
+     -10.16,
+     15.79
+    ],
+    "first_half_bps": 14.08,
+    "second_half_bps": -7.28,
+    "hit_rate": 0.474,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -10.08
+   }
+  },
+  "1d_close_to_close": {
+   "momentum": {
+    "trades": 231,
+    "opportunities": 253,
+    "mean_gross_bps": -7.29,
+    "interval_bps": [
+     -35.21,
+     20.25
+    ],
+    "first_half_bps": 0.38,
+    "second_half_bps": -14.26,
+    "hit_rate": 0.511,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -20.58,
+    "pick_counts": {
+     "AAPL": 31,
+     "MSFT": 24,
+     "NVDA": 40,
+     "AMZN": 29,
+     "GOOGL": 24,
+     "META": 37,
+     "TSLA": 46
+    }
+   },
+   "reversal": {
+    "trades": 226,
+    "opportunities": 253,
+    "mean_gross_bps": 14.59,
+    "interval_bps": [
+     -16.71,
+     48.22
+    ],
+    "first_half_bps": -4.92,
+    "second_half_bps": 34.44,
+    "hit_rate": 0.473,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": 1.3,
+    "pick_counts": {
+     "AAPL": 26,
+     "MSFT": 29,
+     "NVDA": 37,
+     "AMZN": 21,
+     "GOOGL": 28,
+     "META": 35,
+     "TSLA": 50
+    }
+   },
+   "basket": {
+    "trades": 253,
+    "opportunities": 253,
+    "mean_gross_bps": 7.22,
+    "interval_bps": [
+     -9.66,
+     24.98
+    ],
+    "first_half_bps": -3.64,
+    "second_half_bps": 17.99,
+    "hit_rate": 0.518,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -6.07
+   },
+   "qqq": {
+    "trades": 253,
+    "opportunities": 253,
+    "mean_gross_bps": 9.07,
+    "interval_bps": [
+     -6.06,
+     25.06
+    ],
+    "first_half_bps": 0.62,
+    "second_half_bps": 17.46,
+    "hit_rate": 0.553,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -4.22
+   },
+   "abs_move": {
+    "trades": 253,
+    "opportunities": 253,
+    "mean_gross_bps": 164.08,
+    "interval_bps": [
+     153.75,
+     174.93
+    ],
+    "first_half_bps": 155.03,
+    "second_half_bps": 173.05,
+    "hit_rate": 1.0,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": true,
+    "mean_net_base_bps": 150.79
+   },
+   "momentum_vs_qqq": {
+    "trades": 231,
+    "opportunities": 253,
+    "mean_gross_bps": -16.57,
+    "interval_bps": [
+     -40.2,
+     7.8
+    ],
+    "first_half_bps": 1.17,
+    "second_half_bps": -32.7,
+    "hit_rate": 0.442,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -29.86
+   },
+   "reversal_vs_qqq": {
+    "trades": 226,
+    "opportunities": 253,
+    "mean_gross_bps": 3.57,
+    "interval_bps": [
+     -21.59,
+     29.82
+    ],
+    "first_half_bps": -3.71,
+    "second_half_bps": 10.99,
+    "hit_rate": 0.46,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -9.72
+   }
+  },
+  "5d_close_to_close": {
+   "momentum": {
+    "trades": 219,
+    "opportunities": 245,
+    "mean_gross_bps": -25.58,
+    "interval_bps": [
+     -111.85,
+     67.05
+    ],
+    "first_half_bps": -26.09,
+    "second_half_bps": -25.08,
+    "hit_rate": 0.475,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -38.87,
+    "pick_counts": {
+     "AAPL": 34,
+     "MSFT": 27,
+     "NVDA": 38,
+     "AMZN": 24,
+     "GOOGL": 36,
+     "META": 27,
+     "TSLA": 33
+    },
+    "non_overlapping": {
+     "trades": 45,
+     "mean_gross_bps": -31.82,
+     "mean_vs_qqq_bps": -92.02,
+     "positive_vs_qqq": 15
+    }
+   },
+   "reversal": {
+    "trades": 220,
+    "opportunities": 245,
+    "mean_gross_bps": 73.2,
+    "interval_bps": [
+     -46.83,
+     180.57
+    ],
+    "first_half_bps": 44.37,
+    "second_half_bps": 102.57,
+    "hit_rate": 0.564,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": 59.91,
+    "pick_counts": {
+     "AAPL": 25,
+     "MSFT": 28,
+     "NVDA": 31,
+     "AMZN": 24,
+     "GOOGL": 21,
+     "META": 35,
+     "TSLA": 56
+    },
+    "non_overlapping": {
+     "trades": 45,
+     "mean_gross_bps": 43.95,
+     "mean_vs_qqq_bps": 7.57,
+     "positive_vs_qqq": 27
+    }
+   },
+   "basket": {
+    "trades": 245,
+    "opportunities": 245,
+    "mean_gross_bps": 40.12,
+    "interval_bps": [
+     -38.49,
+     113.89
+    ],
+    "first_half_bps": -4.01,
+    "second_half_bps": 83.9,
+    "hit_rate": 0.551,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": 26.83
+   },
+   "qqq": {
+    "trades": 245,
+    "opportunities": 245,
+    "mean_gross_bps": 49.45,
+    "interval_bps": [
+     -13.99,
+     109.33
+    ],
+    "first_half_bps": 10.79,
+    "second_half_bps": 87.79,
+    "hit_rate": 0.555,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": 36.16
+   },
+   "abs_move": {
+    "trades": 245,
+    "opportunities": 245,
+    "mean_gross_bps": 383.71,
+    "interval_bps": [
+     343.79,
+     433.17
+    ],
+    "first_half_bps": 356.15,
+    "second_half_bps": 411.04,
+    "hit_rate": 1.0,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": true,
+    "mean_net_base_bps": 370.42
+   },
+   "momentum_vs_qqq": {
+    "trades": 219,
+    "opportunities": 245,
+    "mean_gross_bps": -75.16,
+    "interval_bps": [
+     -157.64,
+     6.94
+    ],
+    "first_half_bps": -29.19,
+    "second_half_bps": -119.88,
+    "hit_rate": 0.402,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -88.45
+   },
+   "reversal_vs_qqq": {
+    "trades": 220,
+    "opportunities": 245,
+    "mean_gross_bps": 27.66,
+    "interval_bps": [
+     -68.44,
+     109.65
+    ],
+    "first_half_bps": 31.94,
+    "second_half_bps": 23.31,
+    "hit_rate": 0.536,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": 14.37
+   }
+  },
+  "20d_close_to_close": {
+   "momentum": {
+    "trades": 193,
+    "opportunities": 215,
+    "mean_gross_bps": -124.91,
+    "interval_bps": [
+     -577.34,
+     247.11
+    ],
+    "first_half_bps": -54.65,
+    "second_half_bps": -198.92,
+    "hit_rate": 0.378,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -138.2,
+    "pick_counts": {
+     "AAPL": 31,
+     "MSFT": 22,
+     "NVDA": 8,
+     "AMZN": 36,
+     "GOOGL": 56,
+     "META": 16,
+     "TSLA": 24
+    },
+    "non_overlapping": {
+     "trades": 9,
+     "mean_gross_bps": -174.95,
+     "mean_vs_qqq_bps": -172.21,
+     "positive_vs_qqq": 3
+    }
+   },
+   "reversal": {
+    "trades": 200,
+    "opportunities": 215,
+    "mean_gross_bps": 441.41,
+    "interval_bps": [
+     127.02,
+     795.28
+    ],
+    "first_half_bps": 369.87,
+    "second_half_bps": 520.49,
+    "hit_rate": 0.67,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": true,
+    "mean_net_base_bps": 428.12,
+    "pick_counts": {
+     "AAPL": 22,
+     "MSFT": 22,
+     "NVDA": 14,
+     "AMZN": 31,
+     "GOOGL": 18,
+     "META": 47,
+     "TSLA": 46
+    },
+    "non_overlapping": {
+     "trades": 10,
+     "mean_gross_bps": 259.91,
+     "mean_vs_qqq_bps": 209.62,
+     "positive_vs_qqq": 6
+    }
+   },
+   "basket": {
+    "trades": 215,
+    "opportunities": 215,
+    "mean_gross_bps": 127.56,
+    "interval_bps": [
+     -167.16,
+     434.31
+    ],
+    "first_half_bps": 35.7,
+    "second_half_bps": 218.57,
+    "hit_rate": 0.563,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": 114.27
+   },
+   "qqq": {
+    "trades": 215,
+    "opportunities": 215,
+    "mean_gross_bps": 185.05,
+    "interval_bps": [
+     -71.61,
+     476.26
+    ],
+    "first_half_bps": 113.65,
+    "second_half_bps": 255.8,
+    "hit_rate": 0.558,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": 171.76
+   },
+   "abs_move": {
+    "trades": 215,
+    "opportunities": 215,
+    "mean_gross_bps": 742.19,
+    "interval_bps": [
+     622.31,
+     907.78
+    ],
+    "first_half_bps": 696.21,
+    "second_half_bps": 787.75,
+    "hit_rate": 1.0,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": true,
+    "mean_net_base_bps": 728.9
+   },
+   "momentum_vs_qqq": {
+    "trades": 193,
+    "opportunities": 215,
+    "mean_gross_bps": -296.06,
+    "interval_bps": [
+     -629.27,
+     -71.62
+    ],
+    "first_half_bps": -75.68,
+    "second_half_bps": -528.16,
+    "hit_rate": 0.311,
+    "clears_base_hurdle": false,
+    "interval_clears_base_hurdle": false,
+    "mean_net_base_bps": -309.35
+   },
+   "reversal_vs_qqq": {
+    "trades": 200,
+    "opportunities": 215,
+    "mean_gross_bps": 305.07,
+    "interval_bps": [
+     62.96,
+     601.88
+    ],
+    "first_half_bps": 255.14,
+    "second_half_bps": 360.25,
+    "hit_rate": 0.645,
+    "clears_base_hurdle": true,
+    "interval_clears_base_hurdle": true,
+    "mean_net_base_bps": 291.78
+   }
+  }
+ }
+}

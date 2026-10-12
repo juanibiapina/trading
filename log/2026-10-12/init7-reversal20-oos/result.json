@@ -1,0 +1,180 @@
+{
+ "freeze": "docs/investigations/init7-reversal20-freeze.json",
+ "window": [
+  "2016-01-04",
+  "2025-09-30"
+ ],
+ "sessions": 2450,
+ "coverage": {
+  "AAPL": [
+   "2016-01-04",
+   "2025-09-30",
+   2450
+  ],
+  "MSFT": [
+   "2016-01-04",
+   "2025-09-30",
+   2450
+  ],
+  "NVDA": [
+   "2016-01-04",
+   "2025-09-30",
+   2450
+  ],
+  "AMZN": [
+   "2016-01-04",
+   "2025-09-30",
+   2450
+  ],
+  "GOOGL": [
+   "2016-01-04",
+   "2025-09-30",
+   2450
+  ],
+  "META": [
+   "2016-01-04",
+   "2025-09-30",
+   2450
+  ],
+  "TSLA": [
+   "2016-01-04",
+   "2025-09-30",
+   2450
+  ],
+  "QQQ": [
+   "2016-01-04",
+   "2025-09-30",
+   2450
+  ]
+ },
+ "hurdle_bps": 13.29,
+ "primary_offset0": {
+  "trades": 92,
+  "cash_periods": 29,
+  "mean_gross_bps": 342.3,
+  "mean_excess_bps": 180.9,
+  "positive_excess": 49
+ },
+ "overlapping_excess_bps": {
+  "mean": 204.7,
+  "interval": [
+   39.03,
+   357.48
+  ],
+  "halves": [
+   198.43,
+   210.41
+  ]
+ },
+ "halves_non_overlapping": [
+  {
+   "trades": 43,
+   "cash_periods": 18,
+   "mean_gross_bps": 423.6,
+   "mean_excess_bps": 251.47,
+   "positive_excess": 20
+  },
+  {
+   "trades": 49,
+   "cash_periods": 11,
+   "mean_gross_bps": 270.95,
+   "mean_excess_bps": 118.98,
+   "positive_excess": 29
+  }
+ ],
+ "offsets_mean_excess_bps": {
+  "0": 180.9,
+  "1": 105.01,
+  "2": 157.39,
+  "3": 75.25,
+  "4": 290.82,
+  "5": 232.38,
+  "6": 217.44,
+  "7": 145.82,
+  "8": 185.27,
+  "9": 317.77,
+  "10": 221.07,
+  "11": 194.03,
+  "12": 257.68,
+  "13": 272.95,
+  "14": 186.55,
+  "15": 188.25,
+  "16": 286.45,
+  "17": 294.28,
+  "18": 183.31,
+  "19": 116.93
+ },
+ "offsets_positive": 20,
+ "by_year_mean_excess_bps": {
+  "2016": [
+   9,
+   -164.7
+  ],
+  "2017": [
+   8,
+   723.3
+  ],
+  "2018": [
+   11,
+   223.1
+  ],
+  "2019": [
+   10,
+   -205.8
+  ],
+  "2020": [
+   6,
+   929.6
+  ],
+  "2021": [
+   10,
+   390.3
+  ],
+  "2022": [
+   12,
+   -8.4
+  ],
+  "2023": [
+   9,
+   420.4
+  ],
+  "2024": [
+   9,
+   -251.2
+  ],
+  "2025": [
+   8,
+   130.0
+  ]
+ },
+ "pick_counts": {
+  "AAPL": 7,
+  "MSFT": 1,
+  "NVDA": 15,
+  "AMZN": 8,
+  "GOOGL": 9,
+  "META": 15,
+  "TSLA": 37
+ },
+ "checks": {
+  "mean_excess_non_overlapping_gt_hurdle": true,
+  "block_bootstrap_lower_gt_0": true,
+  "both_halves_positive": true
+ },
+ "passed": true,
+ "survivorship_control": {
+  "basket_minus_qqq_bps_mean": 131.1,
+  "pick_minus_basket_bps_overlapping": {
+   "mean": 82.13,
+   "interval": [
+    -54.05,
+    207.75
+   ],
+   "halves": [
+    72.44,
+    90.96
+   ]
+  },
+  "pick_minus_basket_bps_offset0": 74.82
+ }
+}
