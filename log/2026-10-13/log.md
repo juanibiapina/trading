@@ -72,6 +72,19 @@ AH >10% at this snapshot (unrounded): none
 - None of the 21:30 watch names (JBDI, TCRT, FLYE, BKYI, PFAI, ELOG, JYD, IZM, YHC, ILAG, SMJF, GLXG, FCHL) shows >10% AH yet. No AH appearances counted toward the 2-scan gate.
 - Observation scan (before 23:00 CET entry window): no orders.
 
+## Scan 22:05 CET (4:05 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- Scanner snapshot 16:05:10 ET: 0 hits.
+- Yahoo AH timeline (shape only) for the heaviest 21:30 watch names shows flat first AH bars: JBDI $3.08→$3.15, TCRT $3.06→$3.00, JYD $1.43→$1.42, IZM $1.11→$1.13, FCHL $1.08 flat. None is moving >10% off its regular close in AH. SIP AH bars are not yet available (15-min free-tier delay), so no SIP check this scan.
+- No candidate >10% AH, so no spike-bar, CONFIRM-3, volume-metric or book-check runs. No AH appearances counted toward the 2-scan gate.
+- Observation scan (before 23:00 CET entry window): no orders.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
