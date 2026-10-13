@@ -1,7 +1,7 @@
 # Feedback Log
 
-Feedback from Juan, captured from replies to the daily trading emails (sent as
-`zero@inboxkit.cc`). Newest first. Each entry routes to a roadmap initiative, a
+Feedback from Juan, captured from replies to the daily trading emails (sent from
+`juanibiapina@gmail.com`; before 2026-10-13, from `zero@inboxkit.cc`). Newest first. Each entry routes to a roadmap initiative, a
 scanner/process tweak, or is logged for review.
 
 ---

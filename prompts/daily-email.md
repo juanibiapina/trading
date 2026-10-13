@@ -20,7 +20,7 @@ Locate roadmap/log/feedback sections with `rg -n '^## |^### ' STRATEGY_ROADMAP.m
 
 **Jev reporting (Juan's October 1 reply, captured October 2):** Every daily email must include a **Jev Results and Costs** section. Give the run date/model, classified tickers and labels or a concise outcome summary, calls/token usage, and the cost in its currency for the reporting window. Identify measured charges versus estimates and cite the artifact period; report cumulative cost only if recorded. If no run completed, say "Not run" or "Failed" with the reason/next deliverable. State zero calls and $0 only when verified; otherwise say usage/cost unavailable. Preserve any cost from failed attempts. An absent artifact must not imply zero cost. This section is required even before the first classifier delivery; `scanner-improvement` and `process-review` should check its presence and evidence.
 
-Resolve the initiative reporting window from the latest successful `log/*/daily-email.json` receipt (`status: sent`, ordered by `sent_at`). If the receipt is missing, locate the previous daily-email session and run `python3 scripts/pi-session-text.py /absolute/path/to/session.jsonl --role toolResult --contains 'Sent from zero@inboxkit.cc'`. Use the timestamp of a successful bash result with an InboxKit `status: sent` response. The reader accepts both string and array message content and missing optional fields; inferred DuckDB structs can fail on these logs. If no successful send time is available, state the window used and report the latest completed initiative entries with their dates. Include all initiatives that moved in that window, even when their work belongs to a different trading-cycle date. Group multiple steps for one initiative into one concise update: initiative number/name, completion date/time, concrete step, result, and next step. An unchanged rerun is monitoring; describe it accurately. If none moved, say so and name the next concrete deliverable. Briefly identify active work that is blocked or deferred and the dependency or next check; preserve Juan's broker-test deferral.
+Resolve the initiative reporting window from the latest successful `log/*/daily-email.json` receipt (`status: sent`, ordered by `sent_at`). If the receipt is missing, locate the previous daily-email session and run `python3 scripts/pi-session-text.py /absolute/path/to/session.jsonl --role toolResult --contains 'Sent: '`. Use the timestamp of a successful `scripts/send-email.js` result (`Sent: <Gmail message ID>`). The reader accepts both string and array message content and missing optional fields; inferred DuckDB structs can fail on these logs. If no successful send time is available, state the window used and report the latest completed initiative entries with their dates. Include all initiatives that moved in that window, even when their work belongs to a different trading-cycle date. Group multiple steps for one initiative into one concise update: initiative number/name, completion date/time, concrete step, result, and next step. An unchanged rerun is monitoring; describe it accurately. If none moved, say so and name the next concrete deliverable. Briefly identify active work that is blocked or deferred and the dependency or next check; preserve Juan's broker-test deferral.
 
 Use the cycle date resolved above for the overnight log, chart paths, and email subject; do not default to the current calendar date when the current day's directory contains only position or scan entries. Read the cycle log from the start. Before using a nonzero read offset, check the file's current line count; never reuse an offset from another log, and treat a short log as valid.
 
@@ -59,7 +59,7 @@ python3 scripts/chart.py PAPL --range 2d --out log/.../PAPL-HHMM.png \
 Omit the flags when there is no real fill (e.g. a detected-but-not-traded
 winner) -- markers reflect actual trades, not hypotheticals.
 
-InboxKit has **no attachment API**, but the repo is **public** (2026-07-03), so
+`scripts/send-email.js` sends no attachments, but the repo is **public** (2026-07-03), so
 charts are **inlined into the email body** via `raw.githubusercontent.com`
 image URLs. Gmail proxies remote https images, so `<img src>` renders inline.
 
@@ -113,8 +113,8 @@ If `chart.py` produced no charts for this cycle, omit the Charts section.
 
 ### 3. Send Email
 
-Send as `zero@inboxkit.cc` via InboxKit (not from Juan's Gmail). Juan replies to
-these emails with feedback; the `check-email-replies` pulse reads those replies.
+Send from Juan's Gmail account (`juanibiapina@gmail.com`) with `scripts/send-email.js`. Juan replies to
+these emails with feedback; the `check-email-replies` pulse reads those replies in Gmail.
 
 Immediately before finalizing the HTML, read this session's provider, model ID,
 and reasoning level through the bash tool:
@@ -130,7 +130,7 @@ The footer identifies the session preparing and sending this email. Other
 completed trading work can have used other models.
 
 ```bash
-node scripts/send-email-inboxkit.js \
+node scripts/send-email.js \
   --to juanibiapina@gmail.com \
   --subject "Trading Scanner Report - YYYY-MM-DD" \
   --body '<div style="font-family: -apple-system, Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
@@ -194,7 +194,7 @@ AH entry: $X &rarr; PM peak: $X (<span style="color: #2e7d32; font-weight: bold;
 </div>'
 ```
 
-After a successful InboxKit response, save the exact sent HTML as `log/YYYY-MM-DD/daily-email.html` and a `daily-email.json` receipt with `status`, `message_id`, UTC `sent_at`, `sent_at_source`, `previous_successful_send_at`, and `reporting_cutoff_at`. Use the response's send timestamp when provided; otherwise record the local time the success response arrived and label that source. Commit and push both files. If saving the receipt fails after delivery, recover the record from the session result; sending again would duplicate the email.
+After a successful send (`Sent: <Gmail message ID>`), save the exact sent HTML as `log/YYYY-MM-DD/daily-email.html` and a `daily-email.json` receipt with `status`, `message_id`, UTC `sent_at`, `sent_at_source`, `previous_successful_send_at`, and `reporting_cutoff_at`. `message_id` is the Gmail message ID. Record the local time the success output arrived as `sent_at` and label that source. Commit and push both files. If saving the receipt fails after delivery, recover the record from the session result; sending again would duplicate the email.
 
 **Formatting rules:**
 - Subject: use ASCII only -- use `-` not em dashes (they break encoding)
@@ -202,7 +202,7 @@ After a successful InboxKit response, save the exact sent HTML as `log/YYYY-MM-D
 - Use `&amp;` for `&`, `&mdash;` for em dashes, `&euro;` for euros
 - Color wins green (`#2e7d32`), losses red (`#c62828`)
 - Keep it short -- scannable on a phone in under 30 seconds
-- Sender is `zero@inboxkit.cc`. Invite a reply for feedback (it feeds the
+- Sender is `juanibiapina@gmail.com`. Invite a reply for feedback (it feeds the
   `check-email-replies` pulse). If `STRATEGY_ROADMAP.md` has open asks for Juan,
   surface them briefly in the email.
 - **Do not gate changes on Juan's pre-approval** (standing directive, 2026-07-16

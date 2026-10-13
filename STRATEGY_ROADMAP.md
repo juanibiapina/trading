@@ -1375,6 +1375,8 @@ can edit its own crons but should confirm timing changes here first).
 Juan's Gmail. Add a pulse that checks for replies to those emails; replies are
 the channel for Juan's feedback to feed back into the system.
 
+**Update 2026-10-13 (Juan):** InboxKit is retired. The daily email is sent from Juan's Gmail (`juanibiapina@gmail.com`) with `scripts/send-email.js`, and `check-email-replies` reads replies in the Gmail report threads. Replies to reports sent before this date went to `zero@inboxkit.cc` and are no longer read.
+
 **Status:** DONE (initial setup) — iterating. Jev results/cost reporting added 2026-10-02; the next daily email will verify delivery alongside initiative progress reporting.
 
 **Progress 2026-10-02 (Juan's October 1 reply):** `prompts/daily-email.md` now always reads the Initiative 7 Jev artifacts and includes Jev Results and Costs, covering completed results, call/token usage, measured or labeled estimated costs, and explicit not-run/failure/unavailable status. The classifier research and implementation are routed to Initiative 7. Verify the required section in the next successful email; scanner-improvement/process-review should check the artifacts behind its claims. See `FEEDBACK_LOG.md` 2026-10-02, InboxKit message 177.
@@ -1384,11 +1386,11 @@ the channel for Juan's feedback to feed back into the system.
 **Cross-initiative directive:** Juan requires initiatives to move. `strategy-advance` now checks the last concrete progress and next deliverable for every active initiative, prioritizes work that has waited longest among comparable unblocked items, and must produce new evidence, resolve an open question, or deliver a verified change each run. An unchanged rerun is a monitoring result. When the pilot has no new data, advance another ready research, instrumentation, or build item. Record the exact dependency and next check for blocked work; Initiative 2's broker test remains deferred per Juan's Sep 22 instruction. `process-review` now checks for repeated runs without concrete progress and for missing initiative updates in the daily email.
 
 **What is set up:**
-- `scripts/send-email-inboxkit.js` — sends as `zero@inboxkit.cc` via InboxKit
-  (key read from zero's `.envrc`).
-- `prompts/daily-email.md` updated to use it.
-- `prompts/check-email-replies.md` + a daily cron poll InboxKit for unread
-  replies, extract feedback, append it to `FEEDBACK_LOG.md`, and mark read.
+- `scripts/send-email.js` — sends HTML from `juanibiapina@gmail.com` with
+  gmcli's OAuth credentials. `prompts/daily-email.md` uses it.
+- `prompts/check-email-replies.md` + a daily cron read new replies in the Gmail
+  report threads, extract feedback, and append it to `FEEDBACK_LOG.md` with the
+  Gmail message ID.
 
 **Needs from Juan:** just reply to the daily emails with feedback. Anything
 requiring action (keys, decisions) will be listed in the email and here.
