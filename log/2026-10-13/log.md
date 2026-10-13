@@ -101,6 +101,21 @@ AH >10% at this snapshot (unrounded): none
 - Other watch names stay flat or fading in Yahoo AH: JBDI $3.08 → $2.84, JYD $1.43 → $1.44, IZM $1.11 → $1.12, FCHL $1.08 → $1.03.
 - Observation scan (before 23:00 CET entry window): no orders.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- Scanner snapshot 16:15:11 ET: 0 hits.
+- TCRT is still absent from the scanner. Yahoo AH timeline (shape only): $3.06 @16:00 → $3.61 @16:05 → $3.54 @16:10 → $3.45 @16:15 ET, about +14% vs the $3.03 SIP close and fading off the 16:05 high. SIP has only the 16:00 ET bar so far: O $3.03 H $3.27 L $2.80 C $3.05, 923,909 sh / 5,144 trades, vwap $3.07. SIP does not yet corroborate the Yahoo $3.45–$3.61 prints (15-min free-tier delay), so the AH level stays unverified and is not counted toward the 2-scan gate. Total% stays far above the +150% ceiling (Oct 12 SIP close $1.05).
+  - `TCRT 2026-10-13  NO-SPIKE  peak +2% @16:00ET  (no bar cleared +15% on a volume co-spike) (as-of 16:15ET)`
+  - `TCRT 2026-10-13  CONFIRM-3  NO no local-volume new-high ignition as-of 16:15ET`
+- JBDI keeps fading in Yahoo AH: $3.08 @16:00 → $2.94 @16:15 ET.
+- Observation scan (before 23:00 CET entry window): no orders.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
