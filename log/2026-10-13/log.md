@@ -116,6 +116,61 @@ AH >10% at this snapshot (unrounded): none
 - JBDI keeps fading in Yahoo AH: $3.08 @16:00 → $2.94 @16:15 ET.
 - Observation scan (before 23:00 CET entry window): no orders.
 
+## Scan 22:20 CET (4:20 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| YFOR | [TV](https://www.tradingview.com/chart/?symbol=YFOR) | $1.00 | +12.4% | +12.0% | $1.12 | +25.9% | 571K | 525K | 1.1x | 3.9M | Miscellaneous Commercial Services |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.39 | -9.7% | +13.3% | $1.57 | +2.3% | 221K | 9.7M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): NCPL, YFOR
+
+**Evaluation notes:**
+- Scanner snapshot 16:20:09 ET. First AH appearance for both names; each now has 1 AH scan toward the 2-scan gate.
+- **YFOR** (YYForce, float 3.9M): tradable=true. SIP AH is real and accumulating: 16:00 ET bar 612,779 sh / 2,431 trades (H $1.18, vwap $1.13), 16:05 ET bar 3,165,660 sh / 14,878 trades (H $1.35, C $1.32, vwap $1.28). SIP runs ahead of the scanner: $1.32 is +32% vs the $1.00 SIP close, so the scanner's $1.12 lags. IEX quote `bid $1.32 x400 ask $1.35 x400 @ 20:20:19Z` is live and two-sided.
+  - Catalyst: PRNewswire, Oct 13 2026, "YYForce Brings Humanoid Robots to Hospitality in Landmark Partnership with Novotel & Mercure Singapore on Stevens" (syndicated about 16:12 ET; exact release time not found). Hotel service-robot partnership = **Grade C** (minor PR). Background: $20M ATM offering program launched Oct 2 (dilution overhang); the Aug 25 note-tranche and warrant cancellation is old news.
+  - Fresh day-1 igniter: SIP daily closes Oct 8 $1.07 → Oct 9 $1.00 → Oct 12 $0.89 → Oct 13 $1.00. No prior session closed ≥+50%, and WINNERS_TRACKING.md has no YFOR/YYGH entry. Prior footprint as YYGH/YFOR on Jul 9–10, Jul 27, Aug 19, Aug 26 and Sep 16–17 (earlier, unrelated moves).
+  - `YFOR 2026-10-13  SPIKE  16:02ET  +16%  $1.16  300 trades / 85k sh  (first co-spike bar) (as-of 16:20ET)`
+  - `YFOR 2026-10-13  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-of 16:20ET`
+  - Volume context:
+    ```
+    # YFOR shared SIP volume sip-ah-volume-v2; prior 2026-10-12 22+26zero/48 slots; floor 100; same-date regular peak 45674 sh; log-only
+    # reconstructed as-of 2026-10-13T20:20:37+00:00; source fetched 2026-10-13T20:20:37.971427+00:00
+    YFOR 2026-10-13  VOLUME-CONTEXT 16:00ET start=2026-10-13T20:00:00+00:00 shares=612779 local=unknown prior-peak=136.1731x rth-peak=13.4164x status=warmup
+    YFOR 2026-10-13  VOLUME-CONTEXT 16:05ET start=2026-10-13T20:05:00+00:00 shares=3165660 local=unknown prior-peak=703.4800x rth-peak=69.3099x status=warmup
+    ```
+  - Book:
+    ```
+    YFOR BOOK iex bid $1.35 x400 / ask $1.37 x100 @ 2026-10-13 16:20:40 ET age 1s two-sided spread 1.46% of ask
+    YFOR BOOK sip-15m bid $1.21 x200 / ask $1.22 x4500 @ 2026-10-13 16:05:42 ET age 15m00s two-sided spread 0.82% of ask
+    YFOR BOOK refresh +15s iex advanced @ 2026-10-13 16:20:54 ET
+    YFOR BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-13 16:20:41 ET; log-only)
+    ```
+  - Watch: BUILD so far (new SIP high each bar). Entry candidate at 23:00 CET if it stays >10% AH on the next scan and keeps building.
+- **NCPL** (Netcapital, float 4.4M): tradable=true. SIP AH volume is modest and shrinking: 16:00 ET 234,236 sh / 584 trades (H $1.58), 16:05 ET 112,863 sh / 565 trades (H $1.62, C $1.54). The AH high came in the first bars. IEX quote `bid $1.37 x100 ask $0.00 x0 @ 20:00:54Z` is stale and one-sided; the delayed SIP book is two-sided.
+  - Catalyst: no fresh catalyst found (3 searches). Background only: SEC securities-fraud charges and a reported dilutive capital raise (StocksToTrade, Oct 13 12:33 ET, stock -11% intraday), plus law-firm investigation notices Oct 4 and Oct 10. Grade None.
+  - Prior sessions: SIP closes Oct 8 $1.31 → Oct 9 $1.14 → Oct 12 $1.54 (+35%, 52.0M sh, H $2.66) → Oct 13 $1.39. Below the MULTI-SESSION-RUNNER thresholds, but Oct 12 was a large-volume spike day, so this is not a first day of unusual activity. Total% from the Oct 12 close is about +2%.
+  - `NCPL 2026-10-13  NO-SPIKE  peak +14% @16:04ET  (no bar cleared +15% on a volume co-spike) (as-of 16:20ET)`
+  - `NCPL 2026-10-13  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET`
+  - Volume context:
+    ```
+    # NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-12 48+0zero/48 slots; floor 100; same-date regular peak 482043 sh; log-only
+    # reconstructed as-of 2026-10-13T20:20:37+00:00; source fetched 2026-10-13T20:20:40.150300+00:00
+    NCPL 2026-10-13  VOLUME-CONTEXT 16:00ET start=2026-10-13T20:00:00+00:00 shares=234236 local=unknown prior-peak=0.3154x rth-peak=0.4859x status=warmup
+    NCPL 2026-10-13  VOLUME-CONTEXT 16:05ET start=2026-10-13T20:05:00+00:00 shares=112863 local=unknown prior-peak=0.1520x rth-peak=0.2341x status=warmup
+    ```
+  - Book:
+    ```
+    NCPL BOOK iex bid $1.37 x100 / ask $0.0000 x0 @ 2026-10-13 16:00:54 ET age 19m48s one-sided/empty
+    NCPL BOOK sip-15m bid $1.52 x1000 / ask $1.54 x1000 @ 2026-10-13 16:05:39 ET age 15m03s two-sided spread 1.30% of ask
+    NCPL BOOK refresh +15s iex unchanged @ 2026-10-13 16:00:54 ET
+    NCPL BOOK verdict: IEX STALE 19m48s; SIP-15m TWO-SIDED (observed 2026-10-13 16:20:41 ET; log-only)
+    ```
+  - Early first-bar-spike profile (AH high in the opening bars, CONFIRM-3 NO, volume fading). If CONFIRM-3 stays NO, this is a FIRST-BAR-SPIKE skip at the entry window.
+- TCRT fades below threshold in Yahoo AH (shape only): $3.61 @16:05 → $3.27 @16:15 → $3.20 @16:20 ET, about +6% vs the $3.03 SIP close. JBDI keeps fading: $3.08 → $2.77 @16:20 ET.
+- Observation scan (before 23:00 CET entry window): no orders.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
