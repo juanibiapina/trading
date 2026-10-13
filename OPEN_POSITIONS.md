@@ -10,6 +10,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
 | AEHL | $15.40 | $15.40 | $15.40 | 0% | 0% | 6 | $92.40 | None | 2026-10-13 | AH BUILD on SIP volume (CONFIRM-3 YES), no catalyst found; $100M ATM overhang. Exit at first PM opportunity. Order 7d3cf9e8 |
 | AGMH | $0.66 | $0.66 | $0.66 | 0% | 0% | 144 | $95.04 | C | 2026-10-13 | Nasdaq compliance PR (GlobeNewswire Oct 13 ~16:15 ET), float 735K, AH rebuild near $0.74 high. Exit in PM. Order e0af8ded |
+| BKYI | $3.26 | $3.26 | $3.26 | 0% | 0% | 30 | $97.80 | B | 2026-10-13 | Contract win PR (GlobeNewswire 04:01 ET Oct 13, Middle East government agency MFA/SSO customer), float 1.3M, AH ignition 17:30 ET on SIP volume, holding ~12% off $3.72 high, +98% vs close. Hold up to 2 days, stop -15%. Order 5ac60d64 |
 
 ## Position Rules
 

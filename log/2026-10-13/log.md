@@ -783,9 +783,144 @@ AH >10% at this snapshot (unrounded): AEHL, AGMH, BKYI, DCX, NCPL, TCRT
     ```
 - JYD (+9.6%), FCHL, FLYE, LXEO, MEDS: under 10% AH, no workup.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| AGMH | [TV](https://www.tradingview.com/chart/?symbol=AGMH) | $0.53 | -2.0% | +30.9% | $0.70 | +28.3% | 15.3M | 9.0M | 1.7x | 735K | Packaged Software |
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $3.03 | +188.6% | +19.5% | $3.62 | +244.8% | 13.1M | 25.8M | 0.5x | 2.4M | Biotechnology |
+| BKYI | [TV](https://www.tradingview.com/chart/?symbol=BKYI) | $2.83 | +71.5% | +10.2% | $3.12 | +89.1% | 2.2M | 8.6M | 0.3x | 1.3M | Information Technology Services |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.39 | -9.7% | +19.4% | $1.66 | +7.8% | 1.5M | 9.8M | 0.1x | 4.4M | Miscellaneous Commercial Services |
+| AEHL | [TV](https://www.tradingview.com/chart/?symbol=AEHL) | $8.55 | -7.8% | +108.9% | $17.86 | +92.7% | 1.3M | 339K | 3.9x | 16.4M | Building Products |
+| ZTG | [TV](https://www.tradingview.com/chart/?symbol=ZTG) | $0.56 | -6.8% | +18.2% | $0.66 | +10.1% | 567K | 622K | 0.9x | n/a | Data Processing Services |
+| FCHL | [TV](https://www.tradingview.com/chart/?symbol=FCHL) | $1.07 | +7.0% | +9.3% | $1.17 | +17.0% | 381K | 5.8M | 0.1x | 1.3M | Miscellaneous Commercial Services |
+| LXEO | [TV](https://www.tradingview.com/chart/?symbol=LXEO) | $2.74 | -9.9% | +5.8% | $2.90 | -4.6% | 147K | 1.9M | 0.1x | 69.1M | Biotechnology |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): AEHL, AGMH, BKYI, NCPL, TCRT, ZTG
+
+**Evaluation notes:**
+- Scanner snapshot 18:30:08 ET (final scheduled scan). AH >10% appearances toward the 2-scan gate: NCPL 7, AEHL 5, AGMH 5, TCRT, **BKYI 2**, ZTG 1. Pre-buy `positions`: AEHL 6 @ $15.40 (now $18.00, +16.9%), AGMH 144 @ $0.66 (now $0.70, +6.7%); `orders all` shows no BKYI order.
+- **BKYI — ENTERED 30 @ $3.26 (order 5ac60d64, filled 00:32 CET / 18:32 ET).** 2nd AH >10% appearance clears the gate. Float 1.3M, tradable=true, Day% +71.5%, catalyst **Grade B** (GlobeNewswire 04:01 ET Oct 13, new Middle East government security agency customer; verified at the 00:00 scan). Holding: AH high $3.72 at 17:35 ET (after 17:30 ET, so the SPIKE→FADE-only rule does not apply); SIP since then $3.30 → $3.32 → $3.27 → $3.26 → $3.20 → $3.10 → $3.24 (18:15 ET C), so ~13% off the high, inside the ~20% hold band. Volume is real but tapering: 633K sh / 5,793 trades at the 17:35 ET peak bar, 47–133K sh / 368–705 trades per bar since 18:00 ET. Concern noted: lower highs since 17:35 ET and CONFIRM-3 NO. Not a first-bar spike (high was 17:35 ET). Day 1 of the move (00:00 scan check: no prior session ≥+50%, not in `WINNERS_TRACKING.md`). Entry Total% +97.6% vs the $1.65 Oct 12 SIP close, under the +150% ceiling. Limit $3.30 set off the SIP book because the IEX quote was frozen at 16:53 ET ($2.91/$2.96). Qualifying scanner price $3.12 (+89.1%) vs fill $3.26 (+97.6%): chase gap +8.5 pts, below the CHASE-CAP fade zone, so no CHASE-CAP note.
+  - `BKYI 2026-10-13  SPIKE  17:31ET  +18%  $3.35  807 trades / 105k sh  (first co-spike bar) (as-of 18:30ET)`
+  - `BKYI 2026-10-13  CONFIRM-3  NO ignition 17:30ET failed third-bar hold/volume as-of 18:30ET`
+  - Volume context (new rows from 18:00 ET; full set in `BKYI-1830-volume-metric.json`):
+    ```
+    # BKYI shared SIP volume sip-ah-volume-v2; prior 2026-10-12 6+42zero/48 slots; floor 100; same-date regular peak 2650087 sh; log-only
+    # reconstructed as-of 2026-10-13T22:30:08+00:00; source fetched 2026-10-13T22:31:08.860683+00:00
+    BKYI 2026-10-13  VOLUME-CONTEXT 18:00ET start=2026-10-13T22:00:00+00:00 shares=48849 local=0.4071x prior-peak=20.4048x rth-peak=0.0184x status=ok
+    BKYI 2026-10-13  VOLUME-CONTEXT 18:05ET start=2026-10-13T22:05:00+00:00 shares=46739 local=0.5950x prior-peak=19.5234x rth-peak=0.0176x status=ok
+    BKYI 2026-10-13  VOLUME-CONTEXT 18:10ET start=2026-10-13T22:10:00+00:00 shares=133059 local=2.7239x prior-peak=55.5802x rth-peak=0.0502x status=ok
+    BKYI 2026-10-13  VOLUME-CONTEXT 18:15ET start=2026-10-13T22:15:00+00:00 shares=59011 local=1.2080x prior-peak=24.6495x rth-peak=0.0223x status=ok
+    ```
+  - Book:
+    ```
+    BKYI BOOK iex bid $2.91 x100 / ask $2.96 x100 @ 2026-10-13 16:53:16 ET age 1h38m two-sided spread 1.69% of ask
+    BKYI BOOK sip-15m bid $3.18 x3600 / ask $3.19 x100 @ 2026-10-13 18:16:27 ET age 15m05s two-sided spread 0.31% of ask
+    BKYI BOOK refresh +15s iex unchanged @ 2026-10-13 16:53:16 ET
+    BKYI BOOK verdict: IEX STALE 1h38m; SIP-15m TWO-SIDED (observed 2026-10-13 18:31:31 ET; log-only)
+    ```
+- **ZTG — new, 1st AH appearance at the final scan. Skip: 2-AH-scan gate.** tradable=true, float n/a, Day% -6.8%, Total% +10.1%. Late ignition on real volume: flat $0.55–0.63 on <6K sh per bar until 18:00 ET, then SIP 18:00 ET 179K sh / 827 trades (H $0.77), 18:05 ET 307K sh / 1,411 trades (H $0.79, C $0.70), 18:10 ET $0.65, 18:15 ET 188K sh / 544 trades C $0.70. Catalyst: **Grade C** — GlobeNewswire Oct 13 (morning, before the regular session), strategic realignment to AI and data solutions and a 24,087,179 share-count clarification after the ZentoAI acquisition; the stock fell 6.8% in the regular session after it (2 searches). No FINAL-SCAN-GATE-BLOCK note: CONFIRM-3 reads NO, which fails that note's criteria.
+  - `ZTG 2026-10-13  SPIKE  18:01ET  +20%  $0.67  24 trades / 7k sh  (first co-spike bar) (as-of 18:30ET)`
+  - `ZTG 2026-10-13  CONFIRM-3  NO ignition 18:00ET failed third-bar hold/volume as-of 18:30ET`
+  - Volume context (rows from 18:00 ET; full set in `ZTG-1830-volume-metric.json`):
+    ```
+    # ZTG shared SIP volume sip-ah-volume-v2; prior 2026-10-12 8+40zero/48 slots; floor 100; same-date regular peak 42521 sh; log-only
+    # reconstructed as-of 2026-10-13T22:30:08+00:00; source fetched 2026-10-13T22:31:23.229692+00:00
+    ZTG 2026-10-13  VOLUME-CONTEXT 18:00ET start=2026-10-13T22:00:00+00:00 shares=178889 local=155.0165x prior-peak=81.4984x rth-peak=4.2071x status=ok
+    ZTG 2026-10-13  VOLUME-CONTEXT 18:05ET start=2026-10-13T22:05:00+00:00 shares=307448 local=56.1139x prior-peak=140.0674x rth-peak=7.2305x status=ok
+    ZTG 2026-10-13  VOLUME-CONTEXT 18:10ET start=2026-10-13T22:10:00+00:00 shares=108288 local=0.6053x prior-peak=49.3339x rth-peak=2.5467x status=ok
+    ZTG 2026-10-13  VOLUME-CONTEXT 18:15ET start=2026-10-13T22:15:00+00:00 shares=188083 local=1.0514x prior-peak=85.6870x rth-peak=4.4233x status=ok
+    ```
+  - Book:
+    ```
+    ZTG BOOK iex bid $0.4764 x100 / ask $0.0000 x0 @ 2026-10-13 16:00:05 ET age 2h31m one-sided/empty
+    ZTG BOOK sip-15m bid $0.7000 x200 / ask $0.7054 x1800 @ 2026-10-13 18:16:31 ET age 15m00s two-sided spread 0.77% of ask
+    ZTG BOOK refresh +15s iex unchanged @ 2026-10-13 16:00:05 ET
+    ZTG BOOK verdict: IEX STALE 2h31m; SIP-15m TWO-SIDED (observed 2026-10-13 18:31:31 ET; log-only)
+    ```
+- **AEHL — already entered (23:00).** New AH high: SIP 18:05 ET bar 96,556 sh / 3,168 trades ran $15.93 → $18.97, 18:10 ET H $19.20, 18:15 ET C $17.78. Position +16.9% at $18.00.
+  - `AEHL 2026-10-13  SPIKE  16:17ET  +33%  $11.35  432 trades / 23k sh  (first co-spike bar) (as-of 18:30ET)`
+  - `AEHL 2026-10-13  CONFIRM-3  YES ignition 16:15ET 73.0x; confirmed 16:25ET $14.36 as-of 18:30ET`
+  - Volume context (new rows from 18:00 ET; full set in `AEHL-1830-volume-metric.json`):
+    ```
+    # AEHL shared SIP volume sip-ah-volume-v2; prior 2026-10-12 2+46zero/48 slots; floor 100; same-date regular peak 12883 sh; log-only
+    # reconstructed as-of 2026-10-13T22:30:08+00:00; source fetched 2026-10-13T22:30:57.733182+00:00
+    AEHL 2026-10-13  VOLUME-CONTEXT 18:00ET start=2026-10-13T22:00:00+00:00 shares=15086 local=0.6764x prior-peak=8.8222x rth-peak=1.1710x status=ok
+    AEHL 2026-10-13  VOLUME-CONTEXT 18:05ET start=2026-10-13T22:05:00+00:00 shares=96556 local=4.4696x prior-peak=56.4655x rth-peak=7.4948x status=ok
+    AEHL 2026-10-13  VOLUME-CONTEXT 18:10ET start=2026-10-13T22:10:00+00:00 shares=46686 local=2.1611x prior-peak=27.3018x rth-peak=3.6238x status=ok
+    AEHL 2026-10-13  VOLUME-CONTEXT 18:15ET start=2026-10-13T22:15:00+00:00 shares=31100 local=0.6662x prior-peak=18.1871x rth-peak=2.4140x status=ok
+    ```
+  - Book:
+    ```
+    AEHL BOOK iex bid $6.88 x100 / ask $9.81 x100 @ 2026-10-13 16:00:00 ET age 2h31m two-sided spread 29.87% of ask
+    AEHL BOOK sip-15m bid $17.89 x300 / ask $18.00 x300 @ 2026-10-13 18:16:31 ET age 15m01s two-sided spread 0.61% of ask
+    AEHL BOOK refresh +15s iex unchanged @ 2026-10-13 16:00:00 ET
+    AEHL BOOK verdict: IEX STALE 2h31m; SIP-15m TWO-SIDED (observed 2026-10-13 18:31:31 ET; log-only)
+    ```
+- **AGMH — already entered (23:00).** Off the $0.81 17:45 ET high: SIP $0.73 → $0.70 → $0.73 → $0.70 → $0.68 (18:15 ET C) on 154–375K sh per bar, ~16% off the high. Position +6.7% at $0.70.
+  - `AGMH 2026-10-13  SPIKE  16:15ET  +23%  $0.65  289 trades / 169k sh  (first co-spike bar) (as-of 18:30ET)`
+  - `AGMH 2026-10-13  CONFIRM-3  NO ignition 16:25ET failed third-bar hold/volume as-of 18:30ET`
+  - Volume context (new rows from 18:00 ET; full set in `AGMH-1830-volume-metric.json`):
+    ```
+    # AGMH shared SIP volume sip-ah-volume-v2; prior 2026-10-12 9+39zero/48 slots; floor 100; same-date regular peak 72159 sh; log-only
+    # reconstructed as-of 2026-10-13T22:30:08+00:00; source fetched 2026-10-13T22:31:03.211275+00:00
+    AGMH 2026-10-13  VOLUME-CONTEXT 18:00ET start=2026-10-13T22:00:00+00:00 shares=375017 local=0.4854x prior-peak=371.3040x rth-peak=5.1971x status=ok
+    AGMH 2026-10-13  VOLUME-CONTEXT 18:05ET start=2026-10-13T22:05:00+00:00 shares=226593 local=0.6042x prior-peak=224.3495x rth-peak=3.1402x status=ok
+    AGMH 2026-10-13  VOLUME-CONTEXT 18:10ET start=2026-10-13T22:10:00+00:00 shares=153870 local=0.4183x prior-peak=152.3465x rth-peak=2.1324x status=ok
+    AGMH 2026-10-13  VOLUME-CONTEXT 18:15ET start=2026-10-13T22:15:00+00:00 shares=204148 local=0.9009x prior-peak=202.1267x rth-peak=2.8291x status=ok
+    ```
+  - Book:
+    ```
+    AGMH BOOK iex bid $0.4539 x100 / ask $0.6144 x100 @ 2026-10-13 16:00:00 ET age 2h31m two-sided spread 26.12% of ask
+    AGMH BOOK sip-15m bid $0.6903 x4800 / ask $0.6934 x500 @ 2026-10-13 18:16:31 ET age 15m00s two-sided spread 0.45% of ask
+    AGMH BOOK refresh +15s iex unchanged @ 2026-10-13 16:00:00 ET
+    AGMH BOOK verdict: IEX STALE 2h31m; SIP-15m TWO-SIDED (observed 2026-10-13 18:31:31 ET; log-only)
+    ```
+- **TCRT** (float 2.4M, MULTI-SESSION-RUNNER): **Skip: entry extension ceiling** (unchanged). Rebuilt toward its $3.89 17:00 ET high: SIP 18:05 ET C $3.77, 18:10 ET H $3.80, 18:15 ET C $3.73 on 209–399K sh per bar. Total% +255% at $3.73 vs the $1.05 Oct 12 SIP close. Ceiling exception does not apply (BKYI, AEHL and AGMH are lower-extension alternatives). No CEILING-OVERRIDE WATCH: VRatio 0.5x and the high was not after 17:00 ET.
+  - `TCRT 2026-10-13  SPIKE  16:09ET  +20%  $3.63  3950 trades / 714k sh  (first co-spike bar) (as-of 18:30ET)`
+  - `TCRT 2026-10-13  CONFIRM-3  NO ignition 16:55ET failed third-bar hold/volume as-of 18:30ET`
+  - Volume context (new rows from 18:00 ET; full set in `TCRT-1830-volume-metric.json`):
+    ```
+    # TCRT shared SIP volume sip-ah-volume-v2; prior 2026-10-12 32+16zero/48 slots; floor 100; same-date regular peak 9884192 sh; log-only
+    # reconstructed as-of 2026-10-13T22:30:08+00:00; source fetched 2026-10-13T22:31:18.730467+00:00
+    TCRT 2026-10-13  VOLUME-CONTEXT 18:00ET start=2026-10-13T22:00:00+00:00 shares=271830 local=1.5505x prior-peak=3.8796x rth-peak=0.0275x status=ok
+    TCRT 2026-10-13  VOLUME-CONTEXT 18:05ET start=2026-10-13T22:05:00+00:00 shares=286303 local=1.3674x prior-peak=4.0861x rth-peak=0.0290x status=ok
+    TCRT 2026-10-13  VOLUME-CONTEXT 18:10ET start=2026-10-13T22:10:00+00:00 shares=398983 local=1.4678x prior-peak=5.6943x rth-peak=0.0404x status=ok
+    TCRT 2026-10-13  VOLUME-CONTEXT 18:15ET start=2026-10-13T22:15:00+00:00 shares=209445 local=0.7316x prior-peak=2.9892x rth-peak=0.0212x status=ok
+    ```
+  - Book:
+    ```
+    TCRT BOOK iex bid $3.24 x100 / ask $3.29 x100 @ 2026-10-13 16:47:24 ET age 1h44m two-sided spread 1.52% of ask
+    TCRT BOOK sip-15m bid $3.73 x2200 / ask $3.74 x300 @ 2026-10-13 18:16:31 ET age 15m00s two-sided spread 0.27% of ask
+    TCRT BOOK refresh +15s iex unchanged @ 2026-10-13 16:47:24 ET
+    TCRT BOOK verdict: IEX STALE 1h44m; SIP-15m TWO-SIDED (observed 2026-10-13 18:31:31 ET; log-only)
+    ```
+- **NCPL** (float 4.4M, Grade None, day 2): **Skip: thin drift, not accumulating** (unchanged). Flat $1.66–1.67 since 18:00 ET on 6–27K sh / 33–91 trades per bar. Total% +7.8% vs the Oct 12 close.
+  - `NCPL 2026-10-13  SPIKE  17:40ET  +29%  $1.79  210 trades / 44k sh  (first co-spike bar) (as-of 18:30ET)`
+  - `NCPL 2026-10-13  CONFIRM-3  NO ignition 16:15ET failed third-bar hold/volume as-of 18:30ET`
+  - Volume context (new rows from 18:00 ET; full set in `NCPL-1830-volume-metric.json`):
+    ```
+    # NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-12 48+0zero/48 slots; floor 100; same-date regular peak 482043 sh; log-only
+    # reconstructed as-of 2026-10-13T22:30:08+00:00; source fetched 2026-10-13T22:31:13.911077+00:00
+    NCPL 2026-10-13  VOLUME-CONTEXT 18:00ET start=2026-10-13T22:00:00+00:00 shares=26835 local=0.9721x prior-peak=0.0361x rth-peak=0.0557x status=ok
+    NCPL 2026-10-13  VOLUME-CONTEXT 18:05ET start=2026-10-13T22:05:00+00:00 shares=19449 local=0.7248x prior-peak=0.0262x rth-peak=0.0403x status=ok
+    NCPL 2026-10-13  VOLUME-CONTEXT 18:10ET start=2026-10-13T22:10:00+00:00 shares=5947 local=0.2392x prior-peak=0.0080x rth-peak=0.0123x status=ok
+    NCPL 2026-10-13  VOLUME-CONTEXT 18:15ET start=2026-10-13T22:15:00+00:00 shares=20357 local=1.0467x prior-peak=0.0274x rth-peak=0.0422x status=ok
+    ```
+  - Book:
+    ```
+    NCPL BOOK iex bid $1.37 x100 / ask $0.0000 x0 @ 2026-10-13 16:00:54 ET age 2h30m one-sided/empty
+    NCPL BOOK sip-15m bid $1.66 x3600 / ask $1.67 x1400 @ 2026-10-13 18:16:05 ET age 15m27s two-sided spread 0.60% of ask
+    NCPL BOOK refresh +15s iex unchanged @ 2026-10-13 16:00:54 ET
+    NCPL BOOK verdict: IEX STALE 2h30m; SIP-15m TWO-SIDED (observed 2026-10-13 18:31:31 ET; log-only)
+    ```
+- **Final-scan feed-lag cross-check:** DCX (1 prior AH >10% appearance) dropped off the scan; SIP confirms the fade, $2.47 high at 17:20 ET → $2.06 at 18:15 ET (+0.5% vs close) on 2–5K sh per bar. JYD (+9.6% at 00:00) spiked to $1.89 at 17:20 ET on 549K sh / 3,226 trades, then faded to $1.40 at 18:15 ET (-4% vs the $1.46 close). Neither is under-reported. FCHL (+9.3%) and LXEO stay under 10% AH.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | AEHL | $15.40 | 23:01 CET (17:01 ET) | 6 | 7d3cf9e8 | Grade None; AH BUILD on SIP volume, CONFIRM-3 YES, holding ~18% off $18.40 high, +66% vs close |
 | AGMH | $0.66 | 23:01 CET (17:01 ET) | 144 | e0af8ded | Grade C Nasdaq compliance PR; float 735K, rebuilding near $0.74 high, +22% vs close |
+| BKYI | $3.26 | 00:32 CET (18:32 ET) | 30 | 5ac60d64 | Grade B contract win PR; float 1.3M, late AH ignition 17:30 ET on SIP volume, holding ~13% off $3.72 high, +98% vs close |
