@@ -85,6 +85,22 @@ AH >10% at this snapshot (unrounded): none
 - No candidate >10% AH, so no spike-bar, CONFIRM-3, volume-metric or book-check runs. No AH appearances counted toward the 2-scan gate.
 - Observation scan (before 23:00 CET entry window): no orders.
 
+## Scan 22:10 CET (4:10 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- Scanner snapshot 16:10:09 ET: 0 hits.
+- TCRT is missing from the scanner but Yahoo's AH timeline (shape only) shows $3.06 @16:00 → $3.61 @16:05 → $3.53 @16:10 ET. Against the SIP daily close of $3.03 that is about +17% to +19% AH; Total% from the Oct 12 SIP close of $1.05 is about +236%, well past the +150% ceiling. SIP 5-minute AH bars are not yet available (last bar 15:55 ET, 903K sh / 4,879 trades), and the IEX quote reads `bid $2.82 x100 ask $0.00 x0 @ 20:00:33Z`, so the AH level is unverified. Not counted toward the 2-scan gate on scanner evidence.
+  - `TCRT 2026-10-13  NO-SPIKE  peak +17% @16:09ET  (no bar cleared +15% on a volume co-spike) (as-of 16:11ET)`
+  - `TCRT 2026-10-13  CONFIRM-3  NO no local-volume new-high ignition as-of 16:11ET`
+  - tradable=true. MULTI-SESSION-RUNNER context: SIP daily closes Oct 9 $0.79 → Oct 12 $1.05 (+33%) → Oct 13 $3.03 (+189% on 240.6M sh), so today's close is 3.8x the close 3 sessions back. The AH high also printed in the first AH bars, which is the first-bar-spike pattern if it holds.
+- Other watch names stay flat or fading in Yahoo AH: JBDI $3.08 → $2.84, JYD $1.43 → $1.44, IZM $1.11 → $1.12, FCHL $1.08 → $1.03.
+- Observation scan (before 23:00 CET entry window): no orders.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
