@@ -1,0 +1,331 @@
+{
+  "version": "init7-execute-v1",
+  "scheduled_et": "2026-10-13T12:30:00-04:00",
+  "kind": "slot",
+  "decision_persisted_utc": "2026-10-13T16:30:02.396919Z",
+  "requested_utc": "2026-10-13T16:30:02.508366Z",
+  "quotes": {
+    "received_utc": "2026-10-13T16:30:02.867275+00:00",
+    "elapsed_seconds": 0.359,
+    "payload": {
+      "quotes": {
+        "AMZN": {
+          "ap": 260.17,
+          "as": 600,
+          "ax": "V",
+          "bp": 260.06,
+          "bs": 200,
+          "bx": "V",
+          "c": [
+            "R"
+          ],
+          "t": "2026-10-13T16:30:02.734013586Z",
+          "z": "C"
+        },
+        "NVDA": {
+          "ap": 226.97,
+          "as": 100,
+          "ax": "V",
+          "bp": 226.95,
+          "bs": 600,
+          "bx": "V",
+          "c": [
+            "R"
+          ],
+          "t": "2026-10-13T16:30:02.622479277Z",
+          "z": "C"
+        },
+        "MSFT": {
+          "ap": 546.37,
+          "as": 40,
+          "ax": "V",
+          "bp": 544.55,
+          "bs": 80,
+          "bx": "V",
+          "c": [
+            "R"
+          ],
+          "t": "2026-10-13T16:30:02.645510816Z",
+          "z": "C"
+        },
+        "AAPL": {
+          "ap": 344.3,
+          "as": 40,
+          "ax": "V",
+          "bp": 344.25,
+          "bs": 40,
+          "bx": "V",
+          "c": [
+            "R"
+          ],
+          "t": "2026-10-13T16:30:02.720434614Z",
+          "z": "C"
+        },
+        "QQQ": {
+          "ap": 743.21,
+          "as": 80,
+          "ax": "V",
+          "bp": 743.19,
+          "bs": 160,
+          "bx": "V",
+          "c": [
+            "R"
+          ],
+          "t": "2026-10-13T16:30:02.794675591Z",
+          "z": "C"
+        },
+        "TSLA": {
+          "ap": 378,
+          "as": 40,
+          "ax": "V",
+          "bp": 374.22,
+          "bs": 40,
+          "bx": "V",
+          "c": [
+            "R"
+          ],
+          "t": "2026-10-13T16:29:58.400108418Z",
+          "z": "C"
+        },
+        "META": {
+          "ap": 759.65,
+          "as": 40,
+          "ax": "V",
+          "bp": 758.67,
+          "bs": 40,
+          "bx": "V",
+          "c": [
+            "R"
+          ],
+          "t": "2026-10-13T16:29:58.762641078Z",
+          "z": "C"
+        },
+        "GOOGL": {
+          "ap": 355,
+          "as": 40,
+          "ax": "V",
+          "bp": 352.77,
+          "bs": 40,
+          "bx": "V",
+          "c": [
+            "R"
+          ],
+          "t": "2026-10-13T16:29:48.797893888Z",
+          "z": "C"
+        }
+      }
+    }
+  },
+  "assets": {
+    "AAPL": {
+      "received_utc": "2026-10-13T16:30:03.228108+00:00",
+      "elapsed_seconds": 0.361,
+      "payload": {
+        "id": "b0b6dd9d-8b9b-48a9-ba46-b9d54906e415",
+        "class": "us_equity",
+        "exchange": "NASDAQ",
+        "symbol": "AAPL",
+        "name": "Apple Inc. Common Stock",
+        "status": "active",
+        "tradable": true,
+        "marginable": true,
+        "maintenance_margin_requirement": 30,
+        "margin_requirement_long": "30",
+        "margin_requirement_short": "30",
+        "shortable": true,
+        "easy_to_borrow": true,
+        "borrow_status": "easy_to_borrow",
+        "fractionable": true,
+        "attributes": [
+          "fractional_eh_enabled",
+          "has_options",
+          "overnight_tradable"
+        ]
+      }
+    },
+    "MSFT": {
+      "received_utc": "2026-10-13T16:30:03.674732+00:00",
+      "elapsed_seconds": 0.447,
+      "payload": {
+        "id": "b6d1aa75-5c9c-4353-a305-9e2caa1925ab",
+        "class": "us_equity",
+        "exchange": "NASDAQ",
+        "symbol": "MSFT",
+        "name": "Microsoft Corporation Common Stock",
+        "status": "active",
+        "tradable": true,
+        "marginable": true,
+        "maintenance_margin_requirement": 30,
+        "margin_requirement_long": "30",
+        "margin_requirement_short": "30",
+        "shortable": true,
+        "easy_to_borrow": true,
+        "borrow_status": "easy_to_borrow",
+        "fractionable": true,
+        "attributes": [
+          "fractional_eh_enabled",
+          "has_options",
+          "overnight_tradable"
+        ]
+      }
+    },
+    "NVDA": {
+      "received_utc": "2026-10-13T16:30:04.171532+00:00",
+      "elapsed_seconds": 0.497,
+      "payload": {
+        "id": "4ce9353c-66d1-46c2-898f-fce867ab0247",
+        "class": "us_equity",
+        "exchange": "NASDAQ",
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation Common Stock",
+        "status": "active",
+        "tradable": true,
+        "marginable": true,
+        "maintenance_margin_requirement": 30,
+        "margin_requirement_long": "30",
+        "margin_requirement_short": "30",
+        "shortable": true,
+        "easy_to_borrow": true,
+        "borrow_status": "easy_to_borrow",
+        "fractionable": true,
+        "attributes": [
+          "fractional_eh_enabled",
+          "has_options",
+          "overnight_tradable"
+        ]
+      }
+    },
+    "AMZN": {
+      "received_utc": "2026-10-13T16:30:04.522803+00:00",
+      "elapsed_seconds": 0.351,
+      "payload": {
+        "id": "f801f835-bfe6-4a9d-a6b1-ccbb84bfd75f",
+        "class": "us_equity",
+        "exchange": "NASDAQ",
+        "symbol": "AMZN",
+        "name": "Amazon.com, Inc. Common Stock",
+        "status": "active",
+        "tradable": true,
+        "marginable": true,
+        "maintenance_margin_requirement": 30,
+        "margin_requirement_long": "30",
+        "margin_requirement_short": "30",
+        "shortable": true,
+        "easy_to_borrow": true,
+        "borrow_status": "easy_to_borrow",
+        "fractionable": true,
+        "attributes": [
+          "fractional_eh_enabled",
+          "has_options",
+          "overnight_tradable"
+        ]
+      }
+    },
+    "GOOGL": {
+      "received_utc": "2026-10-13T16:30:04.878033+00:00",
+      "elapsed_seconds": 0.355,
+      "payload": {
+        "id": "69b15845-7c63-4586-b274-1cfdfe9df3d8",
+        "class": "us_equity",
+        "exchange": "NASDAQ",
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc. Class A Common Stock",
+        "status": "active",
+        "tradable": true,
+        "marginable": true,
+        "maintenance_margin_requirement": 30,
+        "margin_requirement_long": "30",
+        "margin_requirement_short": "30",
+        "shortable": true,
+        "easy_to_borrow": true,
+        "borrow_status": "easy_to_borrow",
+        "fractionable": true,
+        "attributes": [
+          "fractional_eh_enabled",
+          "has_options",
+          "overnight_tradable"
+        ]
+      }
+    },
+    "META": {
+      "received_utc": "2026-10-13T16:30:05.297273+00:00",
+      "elapsed_seconds": 0.419,
+      "payload": {
+        "id": "fc6a5dcd-4a70-4b8d-b64f-d83a6dae9ba4",
+        "class": "us_equity",
+        "exchange": "NASDAQ",
+        "symbol": "META",
+        "name": "Meta Platforms, Inc. Class A Common Stock",
+        "status": "active",
+        "tradable": true,
+        "marginable": true,
+        "maintenance_margin_requirement": 30,
+        "margin_requirement_long": "30",
+        "margin_requirement_short": "30",
+        "shortable": true,
+        "easy_to_borrow": true,
+        "borrow_status": "easy_to_borrow",
+        "fractionable": true,
+        "attributes": [
+          "fractional_eh_enabled",
+          "has_options",
+          "overnight_tradable"
+        ]
+      }
+    },
+    "TSLA": {
+      "received_utc": "2026-10-13T16:30:05.742107+00:00",
+      "elapsed_seconds": 0.445,
+      "payload": {
+        "id": "8ccae427-5dd0-45b3-b5fe-7ba5e422c766",
+        "class": "us_equity",
+        "exchange": "NASDAQ",
+        "symbol": "TSLA",
+        "name": "Tesla, Inc. Common Stock",
+        "status": "active",
+        "tradable": true,
+        "marginable": true,
+        "maintenance_margin_requirement": 50,
+        "margin_requirement_long": "50",
+        "margin_requirement_short": "50",
+        "shortable": true,
+        "easy_to_borrow": true,
+        "borrow_status": "easy_to_borrow",
+        "fractionable": true,
+        "attributes": [
+          "fractional_eh_enabled",
+          "has_options",
+          "overnight_tradable"
+        ]
+      }
+    },
+    "QQQ": {
+      "received_utc": "2026-10-13T16:30:06.257429+00:00",
+      "elapsed_seconds": 0.515,
+      "payload": {
+        "id": "2d9e926c-e17c-47c3-ad8c-26c7a594e48f",
+        "class": "us_equity",
+        "exchange": "NASDAQ",
+        "symbol": "QQQ",
+        "name": "Invesco QQQ Trust, Series 1",
+        "status": "active",
+        "tradable": true,
+        "marginable": true,
+        "maintenance_margin_requirement": 30,
+        "margin_requirement_long": "30",
+        "margin_requirement_short": "30",
+        "shortable": true,
+        "easy_to_borrow": true,
+        "borrow_status": "easy_to_borrow",
+        "fractionable": true,
+        "attributes": [
+          "fractional_eh_enabled",
+          "has_options",
+          "options_late_close",
+          "overnight_tradable"
+        ]
+      }
+    }
+  },
+  "errors": []
+}
