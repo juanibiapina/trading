@@ -109,6 +109,9 @@ def get_ah_history(ticker, requested_date=None):
     latest_bars = [b for b in ah_bars if b["date"] == latest_date]
     if not latest_bars:
         return None
+    # Yahoo drops past sessions' extended-hours bars, leaving only the 16:00 close print.
+    if all(b["time"] == "16:00" for b in latest_bars):
+        return {"ticker": ticker, "date": latest_date, "close_only": True}
 
     # Chart metadata describes the latest session, not a requested historical date.
     previous_close = None if requested_date else (meta.get("previousClose") or meta.get("chartPreviousClose"))
@@ -261,6 +264,11 @@ def main():
             if not info:
                 requested = f" for requested ET date {args.date} (Yahoo 5d window)" if args.date else ""
                 print(f"\n{ticker}: No AH data available{requested}")
+                continue
+            if info.get("close_only"):
+                print(f"\n{ticker}: No AH bars after the 16:00 ET close print for {info['date']} "
+                      f"(Yahoo serves none yet, or has dropped this past session). "
+                      f"Use SIP: broker.js bars {ticker} --tf 5Min --start <AH-start-UTC>")
                 continue
 
             prev = info["previous_close"] or 0

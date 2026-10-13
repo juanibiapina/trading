@@ -44,12 +44,12 @@ Apply this data hierarchy from the start of the pulse:
 
 **Pulse 2 and 3:** Skip this full step if pulse 1 already logged a winner and scanner diagnostic. Reuse the existing winner, then update only the current PM price, P&L, and any important follow-through changes.
 
-Run a live premarket scan, then reconstruct the prior AH session with Yahoo history for the strongest PM names:
+Run a live premarket scan, then reconstruct the prior AH session from SIP 5-minute bars for the strongest PM names (command below). Yahoo drops past sessions' after-hours bars by this run, so `check-prices.py --ah-history` prints `No AH bars after the 16:00 ET close print`; record that once and skip it:
 
 ```bash
 python3 scripts/scan.py --all --session premarket
 python3 scripts/pm-sweep.py   # uncapped whole-market PM gainers (no price/mcap cap); --min-change N, --include-otc
-python3 scripts/check-prices.py --ah-history --date YYYY-MM-DD TICKER1 TICKER2 ...
+node scripts/broker.js bars SYM --tf 5Min --start YYYY-MM-DDT20:00:00Z --limit 48   # prior AH session (EST: T21:00:00Z)
 ```
 
 `scan.py` only screens its capped universe ($0.50–$10, under $300M). `pm-sweep.py` is the independent whole-market sweep for winners outside those caps, including the price-floor exclusion tracking below. Use it instead of writing a TradingView query.
@@ -266,7 +266,7 @@ Append a `## Morning Evaluation` section to the log.
 - Status: **BASELINE MET / NOT MET**
 
 ### Retrospective Scan Results
-[results from AH reconstruction via `check-prices.py --ah-history`, optional forced AH scan diagnostic, and PM scan]
+[results from AH reconstruction via SIP 5-minute bars (`broker.js bars`), optional forced AH scan diagnostic, and PM scan]
 
 ### Open Position P&L (Alpaca)
 
