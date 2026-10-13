@@ -255,6 +255,63 @@ AH >10% at this snapshot (unrounded): MWG, NCPL, TCRT, YFOR
 - JBDI and the other 21:30 watch names did not appear in this scan.
 - Observation scan (before 23:00 CET entry window): no orders.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| YFOR | [TV](https://www.tradingview.com/chart/?symbol=YFOR) | $1.00 | +12.4% | +40.0% | $1.40 | +57.4% | 5.6M | 1.1M | 5.2x | 3.9M | Miscellaneous Commercial Services |
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $3.03 | +188.6% | +16.5% | $3.53 | +236.2% | 3.2M | 24.7M | 0.1x | 2.4M | Biotechnology |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.39 | -9.7% | +7.9% | $1.50 | -2.6% | 363K | 9.7M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): TCRT, YFOR
+
+**Evaluation notes:**
+- Scanner snapshot 16:30:13 ET. AH scan count toward the 2-scan gate: YFOR 3, TCRT 2, NCPL 2 (below 10% in this snapshot), MWG 1 (dropped out).
+- **YFOR** (float 3.9M, Grade C, fresh day-1 igniter): pausing below its high. SIP 16:15 ET bar 1,735,065 sh / 7,980 trades, H $1.42, C $1.39, vwap $1.38 — no new high over the $1.44 from 16:10 ET, volume down from 2.3M. Live IEX quote is lower at `bid $1.23 x400 / ask $1.25 x400 @ 16:30:31 ET`: about 13% off the $1.44 SIP high and +25% vs the $1.00 close. The scanner's $1.40 lags the live book. Still within ~20% of the AH high, so it stays the lead candidate for 23:00 CET, but CONFIRM-3 turned NO and the high came at 16:10 ET; a further drop below ~$1.15 would make it a fade.
+  - `YFOR 2026-10-13  SPIKE  16:02ET  +16%  $1.16  300 trades / 85k sh  (first co-spike bar) (as-of 16:30ET)`
+  - `YFOR 2026-10-13  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET`
+  - Volume context:
+    ```
+    # YFOR shared SIP volume sip-ah-volume-v2; prior 2026-10-12 22+26zero/48 slots; floor 100; same-date regular peak 45674 sh; log-only
+    # reconstructed as-of 2026-10-13T20:30:19+00:00; source fetched 2026-10-13T20:30:23.454723+00:00
+    YFOR 2026-10-13  VOLUME-CONTEXT 16:00ET start=2026-10-13T20:00:00+00:00 shares=612779 local=unknown prior-peak=136.1731x rth-peak=13.4164x status=warmup
+    YFOR 2026-10-13  VOLUME-CONTEXT 16:05ET start=2026-10-13T20:05:00+00:00 shares=3165660 local=unknown prior-peak=703.4800x rth-peak=69.3099x status=warmup
+    YFOR 2026-10-13  VOLUME-CONTEXT 16:10ET start=2026-10-13T20:10:00+00:00 shares=2312373 local=unknown prior-peak=513.8607x rth-peak=50.6278x status=warmup
+    YFOR 2026-10-13  VOLUME-CONTEXT 16:15ET start=2026-10-13T20:15:00+00:00 shares=1735065 local=0.7503x prior-peak=385.5700x rth-peak=37.9880x status=ok
+    ```
+  - Book:
+    ```
+    YFOR BOOK iex bid $1.23 x400 / ask $1.25 x400 @ 2026-10-13 16:30:31 ET age 0s two-sided spread 1.60% of ask
+    YFOR BOOK sip-15m bid $1.37 x4700 / ask $1.38 x2400 @ 2026-10-13 16:15:31 ET age 15m00s two-sided spread 0.72% of ask
+    YFOR BOOK refresh +15s iex advanced @ 2026-10-13 16:30:42 ET
+    YFOR BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-13 16:30:31 ET; log-only)
+    ```
+- **TCRT** (float 2.4M, Grade A, MULTI-SESSION-RUNNER): fading. SIP 16:15 ET bar 749,611 sh / 4,542 trades, H $3.53, C $3.27 (+8% vs the $3.03 close), down from the $3.75 high at 16:10 ET. Yahoo shape continues lower: $3.22 @16:20, $3.09 @16:25, $3.11 @16:30 ET (about +3%). The scanner's $3.53 lags. Still blocked by the +150% ceiling (scanner Total% +236%); a fade from a 16:10 ET high does not qualify for CEILING-OVERRIDE WATCH. IEX quote still stale and one-sided.
+  - `TCRT 2026-10-13  SPIKE  16:09ET  +20%  $3.63  3950 trades / 714k sh  (first co-spike bar) (as-of 16:30ET)`
+  - `TCRT 2026-10-13  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET`
+  - Volume context:
+    ```
+    # TCRT shared SIP volume sip-ah-volume-v2; prior 2026-10-12 32+16zero/48 slots; floor 100; same-date regular peak 9884192 sh; log-only
+    # reconstructed as-of 2026-10-13T20:30:19+00:00; source fetched 2026-10-13T20:30:29.118543+00:00
+    TCRT 2026-10-13  VOLUME-CONTEXT 16:00ET start=2026-10-13T20:00:00+00:00 shares=923909 local=unknown prior-peak=13.1861x rth-peak=0.0935x status=warmup
+    TCRT 2026-10-13  VOLUME-CONTEXT 16:05ET start=2026-10-13T20:05:00+00:00 shares=1147870 local=unknown prior-peak=16.3825x rth-peak=0.1161x status=warmup
+    TCRT 2026-10-13  VOLUME-CONTEXT 16:10ET start=2026-10-13T20:10:00+00:00 shares=1585992 local=unknown prior-peak=22.6354x rth-peak=0.1605x status=warmup
+    TCRT 2026-10-13  VOLUME-CONTEXT 16:15ET start=2026-10-13T20:15:00+00:00 shares=749611 local=0.6530x prior-peak=10.6985x rth-peak=0.0758x status=ok
+    ```
+  - Book:
+    ```
+    TCRT BOOK iex bid $2.82 x100 / ask $0.0000 x0 @ 2026-10-13 16:00:33 ET age 29m58s one-sided/empty
+    TCRT BOOK sip-15m bid $3.42 x2500 / ask $3.47 x200 @ 2026-10-13 16:15:31 ET age 15m00s two-sided spread 1.44% of ask
+    TCRT BOOK refresh +15s iex unchanged @ 2026-10-13 16:00:33 ET
+    TCRT BOOK verdict: IEX STALE 29m58s; SIP-15m TWO-SIDED (observed 2026-10-13 16:30:31 ET; log-only)
+    ```
+- **NCPL** (float 4.4M, Grade None): scanner shows +7.9% ($1.50), but SIP printed a new AH high in the 16:15 ET bar: 301,089 sh / 930 trades, H $1.72, C $1.61 (+16% vs the $1.39 close), volume up 6x from the 16:10 bar. Yahoo shape has it back to $1.53 by 16:30 ET (+10%). This is a second leg on moderate volume after the open-bar spike; CONFIRM-3 now PENDING on a 16:15 ET ignition. Not first day of unusual activity (Oct 12 spike day). Track at 23:00.
+  - `NCPL 2026-10-13  NO-SPIKE  peak +17% @16:07ET  (no bar cleared +15% on a volume co-spike) (as-of 16:30ET)`
+  - `NCPL 2026-10-13  CONFIRM-3  PENDING ignition 16:15ET; waiting for third bar as-of 16:30ET`
+- MWG dropped out of the scan (thin print, 1 AH appearance).
+- Observation scan (before 23:00 CET entry window): no orders.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
