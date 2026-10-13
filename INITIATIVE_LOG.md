@@ -1,5 +1,34 @@
 # Initiative Log
 
+### 2026-10-13 15:00 — Initiative 7 liquid AH-mover census fails at every exit; AH→PM continuation has no edge in liquid names
+
+**Evaluated:** The October 12 18:00 hypothesis **failed**: no exit has a mean net return above zero with a positive lower bound. Before costs, the best exit (next open) averages +0.09% [-0.47, +0.59]. No pilot is active.
+
+**Step taken:**
+
+- **Initiative 7 (dated; tests the core pattern where fills are realistic):** froze `docs/investigations/init7-liquid-ah-census-freeze.json` before any fetch, then built `scripts/init7-liquid-ah-census.py`. Universe: point-in-time top 1,000 by SIP dollar volume over the prior three months (1,251 names over the year). Ignition: at least 3% from the official close to the 16:55 bar, with 16:05–16:55 volume at least 3× its 20-session median and $1M traded. Entry at the 17:00 NBBO ask; exits at the 04:30 NBBO bid, the official open minus 5 bps and the official close minus 5 bps. Date-clustered bootstrap with a Bonferroni interval over three exits.
+- One fix after the freeze: adjusted closes are rounded to cents, so the split check uses a 1% tolerance (seven false flags at 1e-6, including NFLX and KLAC). No event was a real split.
+- No other initiative had a ready item: 1 and 5 have no dated work, 3 waits on Juan, 2 is deferred and 6 is closed.
+
+**Result:**
+
+- 249 AH dates, 783 long and 637 short ignitions; 61 long lacked a valid 17:00 quote and 1 lacked a next-day bar, leaving 743.
+- **Long net per trade:** 04:30 bid -1.41% [-2.06, -0.88]; open -0.34% [-0.90, +0.18]; close -1.29% [-2.67, -0.16]. Both halves are negative at every exit. Stress (+20 bps) is worse.
+- **Before costs** (from the 17:00 mid): 04:30 +0.13%, open +0.09%, close -0.87%, all intervals span zero. In liquid names, the after-hours move is priced by 17:00.
+- **Costs:** median 17:00 spread 43 bps (quartiles 20 and 89). Selling at the 04:30 bid costs 1.5 points per trade on average, against 0.4 at the open.
+- **Descriptive:** shorting the down movers loses at every exit (-2.5%, -1.0%, -1.7%). Moves above 10% show +0.39% net at the open [-0.74, +1.48], with a negative first half (n=173). These cannot rescue the frozen test.
+- **Decision:** the liquid AH-mover candidate is dropped. No order, live rule, size or pulse timing changed. Equity $99,704.97 (-$295.03), no open positions.
+- **Verification:** the live fetch ran in about 55 minutes; `--replay` reproduces `result.json` from the cached calendar, monthly, daily, 5-minute bars and quotes.
+- **Evidence:** `docs/investigations/init7-liquid-ah-census-2026-10-13.md`, `log/2026-10-13/init7-liquid-ah-census/result.json`, `events.json.gz`.
+
+**Hypothesis / next step:**
+
+- **Next run, Initiative 7:** freeze, then test post-event drift on the 1,420 cached ignitions. Buy at the next open (or next close), hold 5 and 20 sessions, long up movers and short down movers. Compare against the equal-weight top-1,000 return over the same days, with a 10 bps round-trip cost. Hypothesis: up-mover drift beats the benchmark with an interval lower bound above zero. If not, close the liquid-event lane and report that no candidate remains.
+- Daemons `SFm` and `3t2` were still running at 15:00 CEST; they are set to end on October 13, and the next process review checks that they stopped.
+- **Next daily email:** census result (candidate dropped), the point-in-time reversal result, and the open hold-retirement proposal; Jev not run.
+
+**Needs from Juan:** decide on retiring the Grade A/B holds (daily email, open since October 9). Initiative 2 stays deferred.
+
 ### 2026-10-12 18:00 — Initiative 7 20-session reversal fails on a point-in-time basket; megacap lane closed
 
 **Evaluated:** The October 12 15:00 hypothesis **worked**: the pick-over-basket edge does not pass the frozen criterion on a point-in-time basket. The mean did not shrink (+91 vs +82 bps), but the interval includes zero and the 2021–2025 half is zero. No pilot is active.

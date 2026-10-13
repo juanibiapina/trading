@@ -1,0 +1,32 @@
+{
+  "frozen_utc": "2026-10-13T13:20:00Z",
+  "frozen_before": "any fetch of intraday bars, daily bars or quotes for this census",
+  "purpose": "Test whether the AH->PM pattern behind the core strategy has a net edge in liquid names, where books are executable. Decides whether Initiative 7 builds a liquid AH-mover candidate.",
+  "universe": {
+    "symbols": "the cached point-in-time universe from log/2026-10-12/init7-reversal20-pit/universe.json.gz (Alpaca active+inactive NASDAQ/NYSE/AMEX non-fund stocks plus S&P 500 members since 2016), with the same share-class folds",
+    "membership": "for an AH date D, the top 1000 symbols by the sum of monthly SIP vwap x volume over the three complete calendar months before D's month; names need monthly bars in all three months"
+  },
+  "dates": "AH dates D are full-session trading days from 2025-10-01 through 2026-09-30 per the Alpaca calendar; early-close days are skipped. D+1 is the next trading day.",
+  "ignition_long": {
+    "move": "close of the last SIP 5-minute bar starting 16:55 ET or earlier on D (after 16:00) divided by D's official close (raw daily bar), minus 1, is at least +3%",
+    "volume": "SIP volume in 5-minute bars starting 16:05 through 16:55 ET (the 16:00 bar is excluded because it carries closing-auction prints) is at least 3x the median of the same window over the symbol's prior 20 AH dates (missing days count as 0 volume) and at least $1,000,000 by bar vwap x volume",
+    "events": "one event per symbol per date"
+  },
+  "prices": {
+    "entry": "SIP NBBO ask of the last quote at or before 17:00:00 ET on D with timestamp after 16:55:00 ET; event dropped (and counted) if no quote, bid <= 0 or ask <= bid",
+    "exit_0430": "SIP NBBO bid of the last quote at or before 04:30:00 ET on D+1 with timestamp at or after 04:00:00 ET; if none valid, fall back to the D+1 official open minus 5 bps (counted)",
+    "exit_open": "D+1 official open (raw daily bar) minus 5 bps",
+    "exit_close": "D+1 official close (raw daily bar) minus 5 bps",
+    "splits": "drop an event if the ratio of raw to split-adjusted daily close changes between D and D+1",
+    "stress": "subtract a further 20 bps per round trip"
+  },
+  "statistics": {
+    "unit": "net return per event = exit / entry - 1",
+    "interval": "bootstrap resampling AH dates with replacement (events on a date stay together), 4000 draws, seed 13",
+    "pass_per_exit": "mean net > 0 AND lower bound of the two-sided 98.33% interval (Bonferroni over 3 exits) > 0 AND both chronological halves (split by AH date at the median event) have mean net > 0",
+    "passed": "at least one exit passes at base cost; report stress too"
+  },
+  "descriptive_only": "down movers (move <= -3% with the same volume test) as a short-fade and short-continuation view, move-size buckets (3-6%, 6-10%, >10%), entry spread distribution, events per month. None of these can rescue a failed pass.",
+  "decision_if_pass": "freeze an executable variant (entry book checks, size, exit) and run it as a shadow ledger; propose to Juan through the daily email before any live change",
+  "decision_if_fail": "the AH->PM continuation has no net edge in liquid names over the past year; record it and pick the next Initiative 7 universe or close the lane"
+}
