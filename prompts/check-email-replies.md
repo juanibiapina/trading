@@ -23,13 +23,17 @@ Read each thread:
 gmcli juanibiapina@gmail.com thread THREAD_ID
 ```
 
-Every message in a thread is from `juanibiapina@gmail.com`. The first message
-is the report itself; its ID matches `message_id` in a
-`log/*/daily-email.json` receipt. Every later message is a reply from Juan.
+The first message in a thread is the report itself. Every later message is a
+reply from Juan (`juanibiapina@gmail.com`).
 
-A reply is new when its Message-ID does not appear in `FEEDBACK_LOG.md`
-(`rg -n 'Gmail message MESSAGE_ID' FEEDBACK_LOG.md`). Do not use the `UNREAD`
-label: Juan opening the thread in Gmail marks it read.
+The search also returns reports sent before 2026-10-13 from `zero@inboxkit.cc`.
+Replies in those threads dated before 2026-10-13 were already logged in
+`FEEDBACK_LOG.md` under InboxKit message numbers, so skip them. A reply dated
+2026-10-13 or later in such a thread is a candidate like any other.
+
+A candidate reply is new when its Gmail Message-ID does not appear in
+`FEEDBACK_LOG.md` (`rg -n 'Gmail message MESSAGE_ID' FEEDBACK_LOG.md`). Do not
+use the `UNREAD` label: Juan opening the thread in Gmail marks it read.
 
 If there are no new replies, stop. Do not send anything. Report "no replies".
 
