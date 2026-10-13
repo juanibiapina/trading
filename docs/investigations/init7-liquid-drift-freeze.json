@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-10-13T16:05:00Z",
+  "frozen_before": "any multi-day return or benchmark return was computed for these events; the inputs (daily raw and split-adjusted SIP bars through 2026-10-09) were already cached by the October 13 census",
+  "purpose": "Test whether liquid after-hours ignitions drift over 5 or 20 sessions when entered in the regular session, where the extended-hours spread does not apply. Decides whether the liquid-event lane of Initiative 7 stays open.",
+  "inputs": "log/2026-10-13/init7-liquid-ah-census (calendar.json, monthly.json.gz, daily-raw.json.gz, daily-split.json.gz, ah/); events are rebuilt with candidates() from scripts/init7-liquid-ah-census.py, so the 17:00 quote is not required",
+  "events": "all long (move >= +3%) and short (move <= -3%) ignitions from candidates(); drop events flagged split D->D+1 and events whose symbol lacks split-adjusted bars on the entry or exit day",
+  "entries": {
+    "open": "split-adjusted official open of D+1",
+    "close": "split-adjusted official close of D+1"
+  },
+  "holds": {
+    "5": "exit at the split-adjusted official close of session D+5 for the open entry (D+1 is session 1) and of D+6 for the close entry",
+    "20": "exit at the split-adjusted official close of session D+20 for the open entry and of D+21 for the close entry"
+  },
+  "truncation": "events whose exit session is after 2026-10-09 (last cached bar) are excluded from that cell and counted",
+  "benchmark": "equal-weight mean of the same entry-to-exit return over the point-in-time top 1000 members for D's month (rankings() from the census script) that have split-adjusted bars on both days",
+  "unit": {
+    "long": "event return - benchmark return - 10 bps round trip",
+    "short": "-(event return - benchmark return) - 10 bps round trip (borrow cost ignored; liquid names)"
+  },
+  "statistics": {
+    "cells": "2 sides x 2 entries x 2 holds = 8",
+    "interval": "bootstrap resampling calendar months of D with replacement (events in a month stay together, covering overlapping holds), 4000 draws, seed 13; two-sided 99.375% interval (Bonferroni over 8 cells)",
+    "pass_per_cell": "mean > 0 AND interval lower bound > 0 AND both chronological halves (split by D at the median event) have mean > 0",
+    "passed": "at least one cell passes at base cost; report +20 bps stress, raw event return and benchmark return too"
+  },
+  "descriptive_only": "move-size buckets (3-6%, 6-10%, >10%) per side for the 20-session open-entry cell; event counts per month. None of these can rescue a failed pass.",
+  "decision_if_pass": "freeze an executable variant (entry at the open, hold, size) and run it as a shadow ledger on new events; propose to Juan through the daily email before any live change",
+  "decision_if_fail": "close the liquid-event lane: liquid AH ignitions carry no tradable edge overnight or over 5-20 sessions; report that no Initiative 7 candidate remains and pick the next lever by the North Star"
+}

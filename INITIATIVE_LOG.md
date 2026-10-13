@@ -1,5 +1,32 @@
 # Initiative Log
 
+### 2026-10-13 18:00 — Initiative 7 liquid drift test fails in all eight cells; liquid-event lane closed
+
+**Evaluated:** The October 13 15:00 hypothesis **failed**: up movers bought at the next open or close trail the equal-weight top 1,000 in every cell (-0.53% to -1.76% net), so no lower bound is above zero. No pilot is active.
+
+**Step taken:**
+
+- **Initiative 7 (dated; decides whether the liquid-event lane stays open):** froze `docs/investigations/init7-liquid-drift-freeze.json` before computing any multi-day or benchmark return, then built `scripts/init7-liquid-drift.py`. It rebuilds all 1,420 census ignitions (783 up, 637 down; the 17:00 quote is not needed) from the cached census data. Entries at the next open or close, holds of 5 and 20 sessions, net of the point-in-time top 1,000 equal-weight return and 10 bps round trip. Month-clustered bootstrap, Bonferroni over 8 cells.
+- One change after a draft run: a guard dropping benchmark returns beyond ±500% was not in the freeze, so it was removed. Results are identical to three decimals.
+- No other initiative had a ready item: 1 and 5 have no dated work, 3 waits on Juan, 2 is deferred and 6 is closed.
+
+**Result:**
+
+- **Long, net per trade:** open/5 -0.65% [-3.25, +0.92]; open/20 -1.76% [-8.10, +3.55]; close/5 -0.53%; close/20 -1.16%. Second halves are negative in every cell.
+- **Short, net per trade:** -0.08% to -0.55%, all intervals span zero, second halves negative.
+- **Descriptive:** at open/20, up movers of 6–10% lose -5.1% [-11.1, -0.4] with both halves negative (n=195), and shorting >10% down movers loses -2.9% (n=117). Both point to reversal; found in-sample, so it cannot rescue the test.
+- **Decision:** the liquid-event lane is closed. No order, live rule, size or pulse timing changed. Equity $99,704.97 (-$295.03), no open positions.
+- **Verification:** the script runs offline in about 65 seconds; USAR (2025-10-02) open/5 return +19.09% matches a hand computation.
+- **Evidence:** `docs/investigations/init7-liquid-drift-2026-10-13.md`, `log/2026-10-13/init7-liquid-drift/result.json`, `rows.json.gz`.
+
+**Hypothesis / next step:**
+
+- **Next run, Initiative 7:** freeze the fade (short up movers at the next open, hold 20 sessions, same benchmark and 10 bps cost), then rerun the census fetch for October 2024 – September 2025 (about 55 minutes) and test it there. Hypothesis: net above zero, interval lower bound above zero, both halves positive. If not, report that Initiative 7 has no candidate left and pick the next lever by the North Star.
+- Daemons `SFm` and `3t2` were still running at 18:00 CEST; they are set to end on October 13, and the next process review checks that they stopped.
+- **Next daily email:** census and drift results (liquid-event lane closed), the point-in-time reversal result, and the open hold-retirement proposal; Jev not run.
+
+**Needs from Juan:** decide on retiring the Grade A/B holds (daily email, open since October 9). Initiative 2 stays deferred.
+
 ### 2026-10-13 15:00 — Initiative 7 liquid AH-mover census fails at every exit; AH→PM continuation has no edge in liquid names
 
 **Evaluated:** The October 12 18:00 hypothesis **failed**: no exit has a mean net return above zero with a positive lower bound. Before costs, the best exit (next open) averages +0.09% [-0.47, +0.59]. No pilot is active.
