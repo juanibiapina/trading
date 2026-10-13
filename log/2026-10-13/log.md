@@ -10,3 +10,10 @@
 - SELL 58 FCHL, limit $1.95 ext (order 2838f088), filled $1.97 → **+$13.92 (+13.9%)**.
 - PM context (SIP 5Min from 08:00Z): 04:00 bar O $1.78 H $2.26 C $2.08 on 2.1M sh; fading to $1.97–2.00 by 04:30 ET. VWAP ~$2.02. Broker quote was stale (last AH print), so the limit was set off SIP bars.
 - No open positions remain.
+
+## Position Evaluation — 14:30 CET
+
+No open positions (Alpaca: 0 positions, equity $99,704.97). `OPEN_POSITIONS.md` matches.
+
+**Actions taken:**
+- None
