@@ -682,3 +682,142 @@ AH >10% at this snapshot (unrounded): DAIC, FCHL, ITOC, MSGY, NCPL, SUGP
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | FCHL | $1.73 | 23:00 CET (5:00 PM ET) | 58 | b0ac6a3a | Grade None. 4 AH scans >10%, BUILD +31%→+91% AH on 0.9–2.6M sh per SIP bar, CONFIRM-3 YES, float 1.3M, fresh day 1, Entry Total% +98.9%. Concern: no catalyst. Exit at first premarket opportunity. |
+
+## Morning Evaluation — 10:20 CEST (04:20 ET, October 13)
+
+**Pulse 1: FCHL is today's winner, and we detected and entered it.** FCHL closed October 12 at $1.00, ignited at 16:05 ET on 1.2–2.6M shares per SIP bar, held $1.55–1.99 all evening and printed a **PM SIP high of $2.26 (+126.0%)** in the 04:00 bar on 2,107,144 shares / 19,103 trades. Our fill was $1.73 at 23:00 CEST; the peak was +30.6% on the fill, and it is +17.9% at the 04:22 ET print ($2.04). The exit belongs to the 10:30 position pulse.
+
+Discovery ran before reading this log: `scan.py --all --session premarket` at 04:20 ET (FCHL, DCX, SUGP) and `pm-sweep.py` (12 listed names above +10%, none below $0.50). Levels are Alpaca SIP daily closes and 5-minute bars; SIP PM bars end at the 04:05 ET bar (15-minute block). October 12 (Columbus Day) was a normal NYSE session, so PM % uses the October 12 SIP close.
+
+### Today's Winner
+
+**FCHL — Fitness Champs Holdings (Singapore swimming education; Misc Commercial Services), Nasdaq**
+
+- Catalyst: **None.** Two searches found only background: a Wolf Haldenstein class action (market manipulation allegations), the March 15-for-1 reverse split, and earlier AH squeezes (Mar 26 +127%, May 13 +44%). FCHL has a history of AH pumps.
+- Previous close: **$1.00** (SIP, October 12; Day +14.4% from the $0.87 October 9 close). `price-timeline.py` uses the same basis.
+- AH last night: ignition 16:05 ET (H $1.50, 1,174,099 sh / 7,418 trades), $1.66 at 16:10 ET (2,648,133 sh / 14,916 trades), build to $1.95 at 16:50 ET, dip to $1.50 at 17:30 ET, then **AH SIP high $1.99 (+99%) at 19:35 ET**. Every AH bar through 18:30 ET traded 66K–2.6M shares.
+- Premarket now: 04:00 bar O $1.78 H **$2.26** L $1.75 C $2.08 (2.11M sh / 19,103 trades); 04:05 bar C $2.06 (1.03M sh / 9,654 trades); Yahoo $2.04 (+104.0%) at 04:22 ET. Two consecutive bars above +100% on million-share volume: a real exit window.
+- Hypothetical P&L: first sighting 22:25 CEST $1.31 → $2.26 = **+72.5%**; gate met 22:30 CEST $1.61 → **+40.4%**; actual fill $1.73 → **+30.6%**.
+- Float **1.3M** | Market cap **~$1.3M** (scanner field).
+- Volume vs previous day: October 12 regular-session 5-minute bars peaked at **31,326 sh** (15:45 ET); October 9 traded 16K shares all day. The AH peak bar (2.65M) and PM peak bar (2.11M) are 67–85x the largest regular bar. Clear spike.
+- Capturable: yes. Two-sided IEX and SIP books all evening (SIP $1.88/$1.89 at 16:45 ET), real fill at $1.73.
+
+**Scanner Diagnostic:**
+
+- Detectable at screening time (~22:15 CEST)? **YES.** First AH appearance at 22:25 CEST (+31.0% AH, $1.31, CONFIRM-3 pending), gate met at 22:30 (+61.0%), CONFIRM-3 YES (286.8x), BUILD +31 → +61 → +77 → +91% across four scans.
+- Acted on: entered 58 sh @ $1.73 at 23:00 CEST, the first entry scan. Grade None.
+- Scanner gap: **none.** Detection and selection both worked.
+
+### Baseline Tracking
+
+Source: the October 8 log (Days tracked 97, detected 73/84, selected 37/80). **New baseline gap: October 9.** The October 9 log has only position evaluations: 0/7 evening scans ran and no morning retrospective was written. `log/pm-open-scan.csv` shows YMAT +165.1% PM on October 12 (holdable, AH footprint unknown), so a winner may hide in that gap. Gaps now: **Sep 11, Sep 18, Sep 25, Oct 2, Oct 9.**
+
+- Days tracked: **98** (97 + October 12 only).
+- Winners detected by scanner: **74/85 (87.1%)**, +FCHL.
+- Winner selected for paper trade: **38/81 (46.9%)**, +FCHL.
+- Target: >80% detection. Status: **BASELINE MET.** Coverage failures, five skipped retrospectives and the price-floor exclusions limit what the rate means.
+
+### Retrospective Scan Results
+
+`scan.py --all --session premarket` (04:20 ET): FCHL +109.0%, DCX +71.8%, SUGP +29.3%. `pm-sweep.py` added thin prints: GBR 1,338 sh, AMIX 234, BKYI 7,318, DLHC 715, MSGY 13,578, FBDT 675, LRHC 832, SAIQ 36,950, MWYN 584. No forced AH scan was run. `check-prices.py --ah-history` returned only the 16:00 ET row for every name, so the AH reconstruction is SIP-only.
+
+| Ticker | Oct 12 SIP close | AH SIP high / ET | PM SIP high / ET | PM high vs close | Peak-bar shares / trades | Latest | Classification |
+|--------|-----------------|------------------|------------------|------------------|--------------------------|--------|----------------|
+| FCHL | $1.00 | $1.99 / 19:35 | $2.26 / 04:00 | **+126.0%** | 2,107,144 / 19,103 | $2.04 (+104%) | Winner; detected, entered |
+| DCX | $2.20 | $3.59 / 18:25 | $4.13 / 04:00 | +87.7% | 1,575,472 / 21,245 | $3.72 (+69%) | In-window feed-lag miss; Day −19.3% (dead-cat zone); below the winner bar |
+| SUGP | $1.81 | $2.44 / 17:35 | $2.35 / 04:00 | +29.8% | 319,525 / 3,985 | $2.21 | Dead-cat override watch; AH better |
+| ITOC | $3.58 | $4.67 / 16:05–16:10 | $5.50 / 04:00 | +53.6% | 17,205 / 410 | $3.89 | First-bar spike watch; thin one-bar PM pop |
+
+DCX catalyst: **Grade A** (GlobeNewswire, October 12: strategic investment and exclusive commercialization agreement with Whales AI). Release time not confirmed; the ignition bar is 18:20 ET.
+
+### Open Position P&L (Alpaca)
+
+`broker.js positions`: FCHL 58 @ $1.73, now $1.97 (+13.9%). The `quote` endpoint is frozen at 16:59:55 ET ($1.69/$1.71), and $1.97 trails the live prints, so the Alpaca figure is stale. P&L below uses the Yahoo 04:22 ET print ($2.04), consistent with the SIP 04:05 close ($2.06).
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| FCHL | $1.73 | +98.9% (vs $0.87 Oct 9; +73% vs the $1.00 Oct 12 close) | None — no catalyst found | 23:00 CEST (17:00 ET) | $2.26 (SIP) | 04:00 ET | open | +$17.98 | +17.9% | ✅ Open, above fill |
+
+**Total Realized P&L (Alpaca fills only, this session): $0.00** (unrealized +$17.98).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled checkpoints (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST), plus extra observations at 22:05–22:25 and 22:45. The entry window was fully covered.
+- Candidates found: **12 unique tickers** with a >10% AH appearance (FCHL, SMTK, ITOC, EHGO, NCPL, BMEA, SUGP, DAIC, DRK, RCON, WBUY, MSGY; EHGO only on the 22:30 snapshot list).
+- Retrospective matches: 1/2 in-universe AH→PM movers of size. FCHL caught; DCX missed (feed lag, below).
+- Supplementary AH-change-only pass: the line is present in all 12 AH scans. **2 unique tickers: 1 continuation / 1 faded / 0 unassessed.**
+  - **ITOC: PM continuation, transient.** $4.12 (00:30) → PM SIP high $5.50 (+33.5%) on 17,205 sh / 410 trades (04:00 bar); bar closed $3.82 and the next bar $3.89, both below $4.12. **Transient, not sustained.**
+  - **DRK: faded.** ~$2.61 (23:30 print) → PM SIP $2.42 (−7.3%) on 118 sh / 1 trade (04:00 bar); no later bar, persistence unknown.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| DCX | Flat $2.20–2.46 on <5K sh/bar until 18:20 ET, then $3.48 (195,028 sh / 2,067 tr) and $3.59 high at 18:25 ET (231,648 sh / 3,153 tr); ~$3.40 (+54.5%) at the 18:30 ET final scan | **TradingView feed lag:** the 18:30:09 ET final scan returned no DCX row although SIP shows a volume-backed +54% in-window move. Brand-new name, no pipeline footprint to cross-check. Day −19.3% would have blocked a live entry anyway (dead-cat filter, single scan) | Hypothetical $3.40 → $4.13 = **+21.5%**; below the winner bar |
+
+### AH Mover Follow-Through
+
+Every name with two or more >10% AH scans. Current = SIP 04:05 ET close.
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| FCHL | $1.99 | 19:35 | **Build→hold** (+31 → 61 → 77 → 91 → 73 → 64 → 72%) | $2.06 | +3.5% | +106% | PM peak $2.26 **exceeded AH (+13.6%)**; PM better |
+| NCPL | $2.14 | 16:50 | **Spike→fade** (+14.9 → 21.3 → 21.4 → 11.1 → 14.9%) | $1.45 | −32.2% | −5.8% | PM peak $1.55 **fell short (−27.6%)**; AH better |
+| SUGP | $2.44 | 17:35 | **Spike→hold** (+12.8 → 9.4 → 14.4 → 17.7%) | $2.21 | −9.4% | +22.1% | PM peak $2.35 **fell short (−3.7%)**; AH better |
+| DAIC | $2.58 | 17:00 | **Spike→fade, late re-ignition** (+28.2 → 11.2 → 18.8%) | $1.93 | −25.2% | +13.5% | PM peak $1.94 **fell short (−24.8%)**; AH better |
+| WBUY | $1.04 | 17:15 | **Spike→fade** (+14.8 → 16.2 → 9.8%) | $0.90 | −13.5% | +11.1% | PM peak $0.95 **fell short (−8.7%)**; AH better |
+| MSGY | $4.35 | 17:25 | **Late surge→fade** (+49.6 → 41.1%) | $2.95 | −32.2% | +9.3% | PM peak $3.08 **fell short (−29.2%)**; AH better |
+| ITOC | $4.67 | 16:05–16:10 | **First-bar spike, thin** (22:25 and 00:30 only) | $3.89 | −16.7% | +8.7% | PM one-bar $5.50 on 17K sh exceeded AH; next bar back below |
+| BMEA | ~$1.50 (scanner) | — | **Spike→fade** (23:00, 23:30 >10%; +7.3% by 00:00) | $1.48 | — | +8.8% | PM peak $1.55 ≈ AH level; no follow-through |
+
+No AH peak reached the ~+130% extreme zone (FCHL topped at +99% AH).
+
+**Chase-cap check:** FCHL qualified at 22:30 (+84.2% Total, $1.61) and filled at $1.73 (+98.9% Total), below the 23:00 scan price of $1.91. Not a chase into the >+120% zone. Standing **1 (XOS), never reclaimed**, unchanged.
+
+### Notes
+
+- **Coverage, last 10 completed sessions (Sep 29–Oct 12):** **Sep 29 3/7, Oct 2 0/7, Oct 5 0/7, Oct 9 0/7.** Sep 30, Oct 1, 6, 7, 8 and **Oct 12 ran 7/7.** Sep 25 dropped out of the window and Oct 9 entered it: still **4 failures in 10 sessions**, above the ≥2 trigger. The scheduler/bridge investigation stays routed to the email.
+- **Baseline gap October 9:** no evening scans and no retrospective. The October 12 pm-open scan logged YMAT (+165.1%, holdable), LNKS (+72.2%) and VCIG (+56.2%) with AH footprint unknown. Not counted in the baseline.
+- **DEAD-CAT-OVERRIDE WATCH: 4 positive / 5 negative → 5 positive / 6 negative.**
+  - **SUGP (positive):** Day −18.8%, Grade None, float 1.5M, AH% rose across three scans above the $1.81 regular close. Hypothetical $2.15 (00:30) → PM SIP peak $2.35 = **+9.3%** on 319,525 sh / 3,985 trades; the next bar closed $2.21, above the entry. AH high $2.44 was the better exit.
+  - **DAIC (negative):** Day −28.9%, Grade None, float 1.6M, multi-session runner. Hypothetical $1.99 (23:30) → PM SIP peak $1.94 = **−2.5%**.
+  - **MSGY (provisional, not counted):** the second rising scan never came. Provisional $4.05 (00:00) → PM SIP peak $3.08 = **−24.0%**. Supports keeping the two-rising-scan requirement.
+- **FIRST-BAR-SPIKE WATCH: ITOC (Oct 12→13) ran on raw peak, transient.** Full AH SIP bars checked: after the $4.67 opening high, the only trades were 234 sh (16:50 ET) and 232 sh (17:55 ET), so the watch stands (not superseded). Hypothetical $4.12 → PM SIP $5.50 = **+33.5%** on 17,205 sh / 410 trades; the bar closed $3.82 and the next $3.89, below entry. Independent block: thin AH tape (~4K AH shares). Standing **11 valid (2 ran / 9 faded-flat) → 12 valid (3 ran / 9 faded-flat), 1 pending (ICMB).** Routed per the tracker rule, with the caveat that the run was a single thin bar.
+- **Fade-rule tally: sub-3M 4/24 → 4/25 (16.0%), trigger not met.** New row **WBUY** (Oct 12→13): float 2.5M, Grade None, SPIKE→FADE skip at 00:00. AH SIP peak $1.04 at 17:15 ET → PM SIP peak $0.95, **fell short**. (a) first sighting 23:30 $0.94 scanner / $1.00 SIP → $0.95 = **+1.1% / −5.0%**; (b) PM-open 04:00 VWAP $0.91 → $0.95 = **+4.4%**. Higher-float control: NCPL (4.4M) AH $2.14 → PM $1.55, fell short. SMTK (855K) dropped below threshold after one scan and was never a fade-rule skip; it fell to $0.73 PM. No strong-catalyst faders.
+- **In-window feed-lag: 7 → 8 (DCX).** DCX (Oct 12→13): ignition 18:20 ET, SIP ~$3.40 (+54.5%) at the 18:30 ET final scan on 195–232K sh / 2,067–3,153 trades per bar; no scan row. Hypothetical $3.40 → $4.13 = **+21.5%**. The final-scan cross-check covers only pipeline names, so a brand-new name igniting 10 minutes before the last snapshot is invisible. The ≥3 trigger stays reached; carry the whole-universe AH verification to the email.
+- **Raw PM leader / PM-only tracking:** the biggest raw PM mover is **FCHL (+126%)**, an AH→PM continuation the scanner detected. No PM-only gapper of size this morning. `log/pm-open-scan.csv` has **no October 13 rows yet** at 04:20 ET. Holdable PM-only count **68** (was 63; the October 12 rows added YMAT, LNKS, VCIG and others). Carry the Initiative-6 cluster to the email.
+- **Price-floor exclusions: 12 observations across 9 nights, unchanged; >100%-and-holdable stays 1 (TOPP).** `pm-sweep.py` found no sub-$0.50 name above +10%.
+- **Late-AH-tail tracking: 2 true-tail (ORIS, GNS) / 1 feed-lag (BTCT), unchanged.** FCHL's $1.99 tail high (19:35 ET) extended a detected build.
+- **Execution and selection trackers:** broker-block **2**, stale-book-only **6**, no-fillable-book **4**, float-only **1**, final-scan gate-block **2 (TRUG, UPC; DKI excluded)**, all unchanged. FCHL filled against a fresh IEX quote (age 50s).
+- **Actual-entry trackers:**
+  - **FCHL: day-1 fresh igniter** (Day +14.4%; SIP closes Oct 5–9 $0.87–0.96 flat). Grade None. $1.73 → PM SIP peak $2.26 = **+30.6%, ran.**
+  - First-day igniters **32 → 33 entries (13 ran / 8 flat / 12 faded) = 39.4% ran**. Multi-session runners **2, both faded** (DAIC, OLB), unchanged.
+  - Reverse-split tally unchanged (**4/5 this-week faded / 4/6 older continued**); FCHL's March split is background, not the entry catalyst.
+- **Extreme-runner tally: 15 fades / 2 continues (88.2%), unchanged.** No AH peak reached ~+130%. The partial-profit routing trigger stays reached.
+- **CEILING-OVERRIDE WATCH:** none flagged.
+- **SIP basis checks:** October 12 closes FCHL $1.00, DCX $2.20, SUGP $1.81, DAIC $1.70, MSGY $2.70, NCPL $1.54, WBUY $0.81, ITOC $3.58, SMTK $1.06, BMEA $1.36, DRK $2.27. October 9 close for FCHL Entry Total%: $0.87.
+- **WINNERS_TRACKING.md:** FCHL added to Active Watch. BIYA (day 6) and OLOX (day 7) moved to Historical with no renewed run.
+
+### Daily Email Routing
+
+- Headline: **FCHL is the October 12→13 winner: detected and entered.** Close $1.00 → AH $1.99 → PM SIP high $2.26 (+126%) on 2.1M shares in the 04:00 bar. Fill $1.73 at 23:00 CEST, peak +30.6% on the fill, +17.9% at 04:22 ET. Detection **74/85 (87.1%)**, selection **38/81 (46.9%)**, 98 days tracked.
+- **Feed lag (decision for Juan):** DCX traded +54% AH on 200K+ shares per bar before the 18:30 ET final scan and never appeared. The in-window feed-lag count is now **8**. A whole-universe SIP or gainers cross-check at the final scan would have shown it.
+- **Scheduler/bridge reliability (decision for Juan):** 4 coverage failures in the last 10 sessions (Sep 29, Oct 2, Oct 5, Oct 9). October 9 also had no morning retrospective, a new baseline gap; YMAT +165% PM on October 12 may be a hidden winner from that night.
+- **First-bar spike (review):** ITOC's watch hypothetical reached +33.5% on one 17K-share PM bar and gave it back in the next bar. First-bar standing 3 ran / 9 faded-flat.
+- Carry forward: 68-row holdable PM-only cluster → Initiative 6; 15/17 extreme-runner fades → partial-profit decision; reverse-split recency recommendation; sub-$0.50 floor question (TOPP 1 of 3); stale IEX quote feed. Dead-cat override now 5 positive / 6 negative. The sub-3M fade (4/25), price-floor, first-bar and final-scan triggers are not met.
+
+### Price Charts
+
+Excerpts from `python3 scripts/price-timeline.py FCHL DCX SUGP ITOC` at ~04:22 ET. Yahoo 5-minute closes; Yahoo shows no AH bars after 16:00 ET for these names, so the SIP tables above set the AH levels. Block charts omitted.
+
+```
+FCHL  Previous Close $1.00 (regular close 2026-10-12) | 2-Day Range $0.88-$2.26 | Peak $2.26 (+126.0%) at 10-13 04:00 ET
+  [REG] 10-12 15:45 ET: $1.09 (+8.8%)  Vol 31,326   <- largest regular-session bar
+  [AH]  10-12 16:00 ET: $1.00
+  [PM]  10-13 04:00 ET: $2.08 (+108.1%)
+  [PM]  10-13 04:05 ET: $2.07 (+106.9%)
+  [PM]  10-13 04:10 ET: $2.07 (+107.0%)
+  [PM]  10-13 04:15 ET: $1.96 (+96.0%)
+  [PM]  10-13 04:20 ET: $2.04 (+103.9%)
+DCX   Previous Close $2.20 (regular close 2026-10-12) | 2-Day Range $2.20-$4.13 | Current $3.72 (+69.1%) | Peak $4.13 (+87.7%) at 10-13 04:00 ET
+```
