@@ -171,6 +171,90 @@ AH >10% at this snapshot (unrounded): NCPL, YFOR
 - TCRT fades below threshold in Yahoo AH (shape only): $3.61 @16:05 → $3.27 @16:15 → $3.20 @16:20 ET, about +6% vs the $3.03 SIP close. JBDI keeps fading: $3.08 → $2.77 @16:20 ET.
 - Observation scan (before 23:00 CET entry window): no orders.
 
+## Scan 22:25 CET (4:25 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| YFOR | [TV](https://www.tradingview.com/chart/?symbol=YFOR) | $1.00 | +12.4% | +32.0% | $1.32 | +48.4% | 3.4M | 823K | 4.2x | 3.9M | Miscellaneous Commercial Services |
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $3.03 | +188.6% | +18.6% | $3.59 | +242.2% | 1.8M | 24.5M | 0.1x | 2.4M | Biotechnology |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.39 | -9.7% | +13.7% | $1.58 | +2.6% | 307K | 9.7M | 0.0x | 4.4M | Miscellaneous Commercial Services |
+| MWG | [TV](https://www.tradingview.com/chart/?symbol=MWG) | $1.52 | -1.9% | +15.7% | $1.76 | +13.5% | 1K | 9K | 0.1x | 2.9M | Wholesale Distributors |
+
+Supplementary AH-change-only (>15%, not in volume pass): MWG
+AH >10% at this snapshot (unrounded): MWG, NCPL, TCRT, YFOR
+
+**Evaluation notes:**
+- Scanner snapshot 16:25:11 ET. AH scan count toward the 2-scan gate: YFOR 2, NCPL 2, TCRT 1 (first scanner appearance), MWG 1.
+- **YFOR** (float 3.9M, Grade C, fresh day-1 igniter): still BUILDING. SIP 16:10 ET bar 2,312,373 sh / 11,053 trades, H $1.44, C $1.40, vwap $1.34 (third straight new high). IEX quote live and two-sided: `bid $1.26 x400 ask $1.36 x400 @ 20:25:32Z`. Now meets the 2-AH-scan gate; lead entry candidate for 23:00 CET if it holds within ~20% of its AH high ($1.44 SIP).
+  - `YFOR 2026-10-13  SPIKE  16:02ET  +16%  $1.16  300 trades / 85k sh  (first co-spike bar) (as-of 16:25ET)`
+  - `YFOR 2026-10-13  CONFIRM-3  PENDING ignition 16:05ET; waiting for third bar as-of 16:25ET`
+  - Volume context:
+    ```
+    # YFOR shared SIP volume sip-ah-volume-v2; prior 2026-10-12 22+26zero/48 slots; floor 100; same-date regular peak 45674 sh; log-only
+    # reconstructed as-of 2026-10-13T20:25:44+00:00; source fetched 2026-10-13T20:25:45.025713+00:00
+    YFOR 2026-10-13  VOLUME-CONTEXT 16:00ET start=2026-10-13T20:00:00+00:00 shares=612779 local=unknown prior-peak=136.1731x rth-peak=13.4164x status=warmup
+    YFOR 2026-10-13  VOLUME-CONTEXT 16:05ET start=2026-10-13T20:05:00+00:00 shares=3165660 local=unknown prior-peak=703.4800x rth-peak=69.3099x status=warmup
+    YFOR 2026-10-13  VOLUME-CONTEXT 16:10ET start=2026-10-13T20:10:00+00:00 shares=2312373 local=unknown prior-peak=513.8607x rth-peak=50.6278x status=warmup
+    ```
+  - Book:
+    ```
+    YFOR BOOK iex bid $1.29 x400 / ask $1.33 x400 @ 2026-10-13 16:25:51 ET age 1s two-sided spread 3.01% of ask
+    YFOR BOOK sip-15m bid $1.28 x1200 / ask $1.29 x6400 @ 2026-10-13 16:10:52 ET age 15m00s two-sided spread 0.78% of ask
+    YFOR BOOK refresh +15s iex advanced @ 2026-10-13 16:26:05 ET
+    YFOR BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-13 16:25:52 ET; log-only)
+    ```
+- **TCRT** (Alaunos Therapeutics, float 2.4M): first scanner appearance in AH. SIP now corroborates the Yahoo prints: 16:05 ET 1,147,870 sh / 6,221 trades (H $3.63), 16:10 ET 1,585,992 sh / 10,948 trades (H $3.75, C $3.54, vwap $3.59). That is +17% to +24% vs the $3.03 SIP close on real, rising volume.
+  - Catalyst: GlobeNewswire, Oct 13 2026 (intraday, about 6 h before this scan), "Alaunos Therapeutics Announces Acquisition of Velaris Therapeutics" (completed acquisition of a PAH pipeline company; TCRT is the buyer). Fresh same-day release, **Grade A** (acquisition, acquirer side, so the merger-arb exclusion does not apply). The release drove the +189% regular session, so the AH leg is follow-through on known news.
+  - Blocks: Total% +242% is far above the +150% ceiling; MULTI-SESSION-RUNNER (day 2, Oct 12 +33% then Oct 13 +189%, close 3.8x the close 3 sessions back). AH high so far $3.75 in the 16:10 bar, after the open bar, so this is not a first-bar-spike profile. IEX quote is stale and one-sided (`bid $2.82 x100 ask $0.00 x0 @ 20:00:33Z`); the delayed SIP book is two-sided.
+  - CEILING-OVERRIDE WATCH needs an AH high after 17:00 ET; not met yet. Track at later scans.
+  - `TCRT 2026-10-13  SPIKE  16:09ET  +20%  $3.63  3950 trades / 714k sh  (first co-spike bar) (as-of 16:25ET)`
+  - `TCRT 2026-10-13  CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET`
+  - Volume context:
+    ```
+    # TCRT shared SIP volume sip-ah-volume-v2; prior 2026-10-12 32+16zero/48 slots; floor 100; same-date regular peak 9884192 sh; log-only
+    # reconstructed as-of 2026-10-13T20:25:44+00:00; source fetched 2026-10-13T20:25:48.990271+00:00
+    TCRT 2026-10-13  VOLUME-CONTEXT 16:00ET start=2026-10-13T20:00:00+00:00 shares=923909 local=unknown prior-peak=13.1861x rth-peak=0.0935x status=warmup
+    TCRT 2026-10-13  VOLUME-CONTEXT 16:05ET start=2026-10-13T20:05:00+00:00 shares=1147870 local=unknown prior-peak=16.3825x rth-peak=0.1161x status=warmup
+    TCRT 2026-10-13  VOLUME-CONTEXT 16:10ET start=2026-10-13T20:10:00+00:00 shares=1585992 local=unknown prior-peak=22.6354x rth-peak=0.1605x status=warmup
+    ```
+  - Book:
+    ```
+    TCRT BOOK iex bid $2.82 x100 / ask $0.0000 x0 @ 2026-10-13 16:00:33 ET age 25m19s one-sided/empty
+    TCRT BOOK sip-15m bid $3.63 x1300 / ask $3.68 x700 @ 2026-10-13 16:10:52 ET age 15m00s two-sided spread 1.36% of ask
+    TCRT BOOK refresh +15s iex unchanged @ 2026-10-13 16:00:33 ET
+    TCRT BOOK verdict: IEX STALE 25m19s; SIP-15m TWO-SIDED (observed 2026-10-13 16:25:52 ET; log-only)
+    ```
+- **NCPL** (float 4.4M, Grade None): fading. SIP volume shrinks each bar: 234K → 113K → 47,686 sh / 220 trades at 16:10 ET (H $1.54, C $1.50), below the $1.62 high from 16:05 ET. Catalyst recheck (1 search) found only Oct 13 law-firm investigation and class-action notices (Stockhouse, about 3 h before this scan), which are background, not a catalyst. IEX quote still stale and one-sided. FIRST-BAR-SPIKE profile holding: CONFIRM-3 NO on both AH scans.
+  - `NCPL 2026-10-13  NO-SPIKE  peak +17% @16:07ET  (no bar cleared +15% on a volume co-spike) (as-of 16:25ET)`
+  - `NCPL 2026-10-13  CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET`
+  - Volume context:
+    ```
+    # NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-12 48+0zero/48 slots; floor 100; same-date regular peak 482043 sh; log-only
+    # reconstructed as-of 2026-10-13T20:25:44+00:00; source fetched 2026-10-13T20:25:47.070317+00:00
+    NCPL 2026-10-13  VOLUME-CONTEXT 16:00ET start=2026-10-13T20:00:00+00:00 shares=234236 local=unknown prior-peak=0.3154x rth-peak=0.4859x status=warmup
+    NCPL 2026-10-13  VOLUME-CONTEXT 16:05ET start=2026-10-13T20:05:00+00:00 shares=112863 local=unknown prior-peak=0.1520x rth-peak=0.2341x status=warmup
+    NCPL 2026-10-13  VOLUME-CONTEXT 16:10ET start=2026-10-13T20:10:00+00:00 shares=47686 local=unknown prior-peak=0.0642x rth-peak=0.0989x status=warmup
+    ```
+  - Book:
+    ```
+    NCPL BOOK iex bid $1.37 x100 / ask $0.0000 x0 @ 2026-10-13 16:00:54 ET age 24m58s one-sided/empty
+    NCPL BOOK sip-15m bid $1.53 x300 / ask $1.56 x800 @ 2026-10-13 16:10:49 ET age 15m02s two-sided spread 1.92% of ask
+    NCPL BOOK refresh +15s iex unchanged @ 2026-10-13 16:00:54 ET
+    NCPL BOOK verdict: IEX STALE 24m58s; SIP-15m TWO-SIDED (observed 2026-10-13 16:25:52 ET; log-only)
+    ```
+- **MWG** (Multi Ways Holdings, float 2.9M, tradable=true): thin print. SIP shows 1,484 sh / 19 trades (H $1.85) at 16:05 ET and 1,285 sh / 17 trades (C $1.54) at 16:10 ET; the scanner's $1.76 is already gone in SIP. IEX quote `bid $0.50 x2000 ask $0.00 x0 @ 20:00:01Z` has no ask. Catalyst search (1 search) found only an older capacity-expansion PR and a past 1-for-10 reverse split; no dated same-day news. Grade None. Skip candidate as **stale VRatio / thin print** unless it builds real volume. Book check not run (no accumulating SIP volume).
+  - `MWG 2026-10-13  NO-SPIKE  peak +22% @16:08ET  (no bar cleared +15% on a volume co-spike) (as-of 16:25ET)`
+  - `MWG 2026-10-13  CONFIRM-3  NO no local-volume new-high ignition as-of 16:25ET`
+  - Volume context:
+    ```
+    # MWG shared SIP volume sip-ah-volume-v2; prior 2026-10-12 0+48zero/48 slots; floor 100; same-date regular peak 14724 sh; log-only
+    # reconstructed as-of 2026-10-13T20:25:44+00:00; source fetched 2026-10-13T20:25:50.860627+00:00
+    MWG 2026-10-13  VOLUME-CONTEXT 16:05ET start=2026-10-13T20:05:00+00:00 shares=1484 local=unknown prior-peak=14.8400x rth-peak=0.1008x status=warmup
+    MWG 2026-10-13  VOLUME-CONTEXT 16:10ET start=2026-10-13T20:10:00+00:00 shares=1285 local=unknown prior-peak=12.8500x rth-peak=0.0873x status=warmup
+    ```
+- JBDI and the other 21:30 watch names did not appear in this scan.
+- Observation scan (before 23:00 CET entry window): no orders.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
