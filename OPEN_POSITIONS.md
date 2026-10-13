@@ -8,7 +8,6 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
-| FCHL | $1.73 | $1.73 | $1.73 | 0.0% | 0.0% | 58 | $100.34 | None | 2026-10-12 | AH BUILD +91% on 1M+ sh/bar, CONFIRM-3 YES, float 1.3M, no catalyst. Exit at first premarket opportunity. |
 
 ## Position Rules
 
@@ -60,6 +59,7 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| FCHL | $1.73 | $1.97 | +$13.92 | +13.9% | 1 | None | Sold 2026-10-13 PM 04:30 ET (order 2838f088) at first premarket pulse. SIP PM high $2.26 (+30.6%) in the 04:00 bar, VWAP ~$2.02, 4.2M sh in first 20 min. Limit $1.95 filled $1.97. |
 | OLB | $0.71 | $0.60 | -$15.51 | -15.5% | 1 | None | Sold 2026-10-09 PM (order 4788c560) at first premarket pulse; below -10% hard stop. AH peak $0.74 (SIP), PM high $0.62. Book empty (stale bid $0.47); limit $0.58 filled $0.60. |
 | XRTX | $2.22 | $1.92 | -$13.20 | -13.5% | 1 | C | Sold 2026-10-09 PM (order a687cdfc) at first premarket pulse; below -10% hard stop. AH peak $2.35 (SIP), PM opened $1.91, high $2.12. Health Canada CTA PR faded overnight. |
 | IPW | $1.38 | $1.43 | +$3.60 | +3.6% | 1 | None (day-1 AH igniter, float 1.2M, no catalyst found) | Grade None — exit at first PM opportunity at any profit. Entered 10-07 17:38 ET AH. PM 10-08 opened SIP $1.73, dipped $1.48, spiked to SIP H $2.00 (08:10Z, 3.41M sh / 23.1K trades, vwap $1.79 = peak +44.9%), then faded: SIP $1.65 at 08:15Z, Yahoo $1.44 at 04:25–04:30 ET. IEX quote stale (prior day). SELL 72 @ limit $1.40 ext (id 70becac0) filled @ $1.43 at 08:30Z. Real fill $1.43. The spike lasted one 5Min bar at 04:10 ET, 20 min before the 10:30 CET pulse. |
