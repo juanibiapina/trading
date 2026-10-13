@@ -60,6 +60,18 @@ AH >10% at this snapshot (unrounded): n/a (regular session).
 - FLYE, BKYI, PFAI, ELOG, SMJF and GMEX show current 5m volume near zero against large 5m averages (VChg ≈ -99%): the intraday spike volume dried up before the close.
 - Prior footprint: TCRT was on the Oct 12 21:30 watch at +23% ($0.97) and is now $3.14, so it is day 2+ of a move; check SIP daily bars for the MULTI-SESSION-RUNNER tag if it qualifies in AH. ELOG appeared Oct 7 and Oct 12 (+30.7%). FCHL was last night's entry, sold this morning at $1.97 (+13.9%); today's $1.14 is far below that fill, so the scanner base for FCHL needs a SIP check if it reappears in AH.
 
+## Scan 22:02 CET (4:02 PM ET)
+
+No candidates found.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- First AH scan at 16:00:12 ET also returned 0 hits; rerun at 16:02:49 ET still 0 hits. The postmarket feed had few prints this early in the session.
+- None of the 21:30 watch names (JBDI, TCRT, FLYE, BKYI, PFAI, ELOG, JYD, IZM, YHC, ILAG, SMJF, GLXG, FCHL) shows >10% AH yet. No AH appearances counted toward the 2-scan gate.
+- Observation scan (before 23:00 CET entry window): no orders.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
