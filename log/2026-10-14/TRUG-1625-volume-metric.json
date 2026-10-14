@@ -1,0 +1,63 @@
+{
+  "metric_version": "sip-ah-volume-v2",
+  "symbol": "TRUG",
+  "date": "2026-10-14",
+  "prior_date": "2026-10-13",
+  "as_of_utc": "2026-10-14T20:25:10+00:00",
+  "source_observed_utc": "2026-10-14T20:25:35.748101+00:00",
+  "floor_shares": 100,
+  "prior_observed_slots": 21,
+  "prior_inferred_zero_slots": 27,
+  "prior_expected_slots": 48,
+  "prior_complete": true,
+  "prior_peak_shares": 3420,
+  "rth_observed_slots": 74,
+  "rth_inferred_zero_slots": 4,
+  "rth_expected_slots": 78,
+  "rth_complete": true,
+  "rth_peak_shares": 32960,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-14T20:00:00+00:00",
+      "bar_end_utc": "2026-10-14T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 1891,
+      "trades": 5,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 0.5529239766081872,
+      "rth_peak_ratio": 0.05737257281553398
+    },
+    {
+      "bar_start_utc": "2026-10-14T20:05:00+00:00",
+      "bar_end_utc": "2026-10-14T20:10:00+00:00",
+      "bar_et": "16:05",
+      "shares": 71586,
+      "trades": 205,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 20.931578947368422,
+      "rth_peak_ratio": 2.1719053398058255
+    },
+    {
+      "bar_start_utc": "2026-10-14T20:10:00+00:00",
+      "bar_end_utc": "2026-10-14T20:15:00+00:00",
+      "bar_et": "16:10",
+      "shares": 813779,
+      "trades": 5582,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 237.94707602339182,
+      "rth_peak_ratio": 24.689896844660193
+    }
+  ]
+}
