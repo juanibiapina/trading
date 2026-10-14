@@ -19,3 +19,10 @@ Prices: Alpaca `current_price`; peaks checked on SIP 5‑min bars from 08:00Z. Q
 **Notes:**
 - BKYI: Grade B contract win, but the AH buy came after a +98% run and it gapped below entry at the PM open. The -15% stop could not be enforced overnight; the first chance to act was already at -24%.
 - AEHL: the no-catalyst AH build ran another +55% at the PM open on heavy SIP volume (~806K sh in 20 min). The quick-exit rule captured most of it.
+
+## Position Evaluation — 14:30 CET
+
+No open positions (Alpaca `positions` empty; `OPEN_POSITIONS.md` matches). Equity $99,728.46, all cash.
+
+**Actions taken:**
+- None
