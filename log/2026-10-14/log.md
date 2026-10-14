@@ -56,6 +56,18 @@ Scanner returned 25 hits; the table keeps the 14 with Day% >+10%. Omitted: ~$10 
 - Prior footprint: GLND was a PM-only mover this morning ($2.21 Oct 13 close → $3.13 PM high) and is now +65% on the day, so it is day 2 of a move; check SIP daily bars for the MULTI-SESSION-RUNNER tag if it qualifies in AH. NCPL was a >10% AH name on Oct 13 (NO-SPIKE, CONFIRM-3 NO, first-bar high) and on Oct 6/7/12; today's +32% puts it at day 2+. GRML (+19.2% PM this morning) and MWYN (Oct 12–13 watch) also repeat.
 - MXCT float 94.8M exceeds the 50M float condition on the entry gate.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found. AH-open pulse: the 16:00:09 ET snapshot has no AH prints yet.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- No >10% AH candidates, so no spike-bar, CONFIRM-3, SIP volume or book checks to run. The 21:30 watch names (GLND, NXGL, TDIC, NCPL, etc.) carry to the next pulse.
+- Observation window (before 23:00 CET); no entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
