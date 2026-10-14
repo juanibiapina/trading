@@ -232,6 +232,61 @@ AH >10% at this snapshot (unrounded): NCPL, TRUG
 - TCRT: AH +7.7%, below the 10% threshold; Day% −31.7%. Not evaluated.
 - Observation window (before 23:00 CET); no entries.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.59 | +14.4% | +31.4% | $2.09 | +50.4% | 3.8M | 11.8M | 0.3x | 4.4M | Miscellaneous Commercial Services |
+| YYAI | [TV](https://www.tradingview.com/chart/?symbol=YYAI) | $0.69 | -2.6% | +8.5% | $0.75 | +5.6% | 393K | 253K | 1.6x | 4.6M | Containers/Packaging |
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $2.07 | -31.7% | +10.1% | $2.28 | -24.8% | 295K | 32.9M | 0.0x | 2.3M | Biotechnology |
+| SDEV | [TV](https://www.tradingview.com/chart/?symbol=SDEV) | $0.99 | -20.8% | +5.0% | $1.04 | -16.8% | 252K | 50.1M | 0.0x | 51.8M | Financial Conglomerates |
+| CDXS | [TV](https://www.tradingview.com/chart/?symbol=CDXS) | $1.29 | -2.3% | +5.6% | $1.36 | +3.2% | 75K | 805K | 0.1x | 101.7M | Chemicals: Specialty |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): NCPL, TCRT
+
+The 22:35 and 22:40 pulses left no section in the log; this scan follows 22:30.
+
+**Evaluation notes:**
+- NCPL: fourth AH scan above 10% (scan-count gate met). It is building: SIP made new AH highs after the first-bar window, 16:20 bar H $2.13 (1.27M sh / 6,661 trades) and 16:25 bar H $2.14 C $2.10 (911K sh / 4,880 trades); 16:30 C $2.04 on 502K sh / 2,789 trades. The fresh IEX quote is $2.12 / $2.14 at 16:45 ET (~+53% Total vs the $1.39 prior close), at the AH high. With the high now in the 16:25 bar, the first-bar-spike skip no longer applies on high timing, though CONFIRM-3 still reads NO. Catalyst unchanged: Grade C (Nasdaq bid-price compliance PR, GlobeNewswire 2026-10-14 ~16:00 ET). `tradable=true`. Repeat mover, no MULTI-SESSION-RUNNER tag (22:25 check). Entry decision waits for the 23:00 window.
+  - Spike-bar: `NCPL 2026-10-14  SPIKE  16:19ET  +29%  $2.05  2021 trades / 400k sh  (first co-spike bar) (as-of 16:45ET)`
+  - Third-bar: `NCPL 2026-10-14  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 16:45ET`
+  - Volume context (`NCPL-1645-volume-metric.json`, source `NCPL-1645-volume-sip.json`):
+    - `# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-13 48+0zero/48 slots; floor 100; same-date regular peak 841121 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T20:45:12+00:00; source fetched 2026-10-14T20:45:33.716805+00:00`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:00ET start=2026-10-14T20:00:00+00:00 shares=730815 local=unknown prior-peak=2.4272x rth-peak=0.8689x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:05ET start=2026-10-14T20:05:00+00:00 shares=410260 local=unknown prior-peak=1.3626x rth-peak=0.4878x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:10ET start=2026-10-14T20:10:00+00:00 shares=102754 local=unknown prior-peak=0.3413x rth-peak=0.1222x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:15ET start=2026-10-14T20:15:00+00:00 shares=707616 local=1.7248x prior-peak=2.3502x rth-peak=0.8413x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:20ET start=2026-10-14T20:20:00+00:00 shares=1273437 local=3.1040x prior-peak=4.2294x rth-peak=1.5140x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:25ET start=2026-10-14T20:25:00+00:00 shares=910853 local=1.2872x prior-peak=3.0252x rth-peak=1.0829x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:30ET start=2026-10-14T20:30:00+00:00 shares=501736 local=0.5508x prior-peak=1.6664x rth-peak=0.5965x status=ok`
+    - Consumer verdict with the metric: `NCPL 2026-10-14  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 16:45ET`
+  - Book:
+    - `NCPL BOOK iex bid $2.12 x100 / ask $2.14 x100 @ 2026-10-14 16:45:37 ET age 0s two-sided spread 0.93% of ask`
+    - `NCPL BOOK sip-15m bid $2.06 x900 / ask $2.07 x900 @ 2026-10-14 16:30:37 ET age 15m00s two-sided spread 0.48% of ask`
+    - `NCPL BOOK refresh +15s iex advanced @ 2026-10-14 16:45:41 ET`
+    - `NCPL BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-14 16:45:37 ET; log-only)`
+- TCRT: first AH scan above 10% (1 of 2). `tradable=true`. Day% −31.7% puts it under the dead-cat filter, and Total% −24.8% keeps it far below the Oct 13 close, so no DEAD-CAT-OVERRIDE. SIP volume is thin: 27K–79K sh and 141–346 trades per bar from 16:00 to 16:30 ET (prior-peak ratios 0.02–0.05x), so the drift from $2.07 to $2.29 is a thin drift, not a build. No book check (SIP volume not accumulating).
+  - Spike-bar: `TCRT 2026-10-14  NO-SPIKE  peak +11% @16:24ET  (no bar cleared +15% on a volume co-spike) (as-of 16:45ET)`
+  - Third-bar: `TCRT 2026-10-14  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET`
+  - Volume context (`TCRT-1645-volume-metric.json`, source `TCRT-1645-volume-sip.json`):
+    - `# TCRT shared SIP volume sip-ah-volume-v2; prior 2026-10-13 48+0zero/48 slots; floor 100; same-date regular peak 3615305 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T20:45:12+00:00; source fetched 2026-10-14T20:45:35.774595+00:00`
+    - `TCRT 2026-10-14  VOLUME-CONTEXT 16:00ET start=2026-10-14T20:00:00+00:00 shares=53130 local=unknown prior-peak=0.0335x rth-peak=0.0147x status=warmup`
+    - `TCRT 2026-10-14  VOLUME-CONTEXT 16:05ET start=2026-10-14T20:05:00+00:00 shares=27428 local=unknown prior-peak=0.0173x rth-peak=0.0076x status=warmup`
+    - `TCRT 2026-10-14  VOLUME-CONTEXT 16:10ET start=2026-10-14T20:10:00+00:00 shares=60354 local=unknown prior-peak=0.0381x rth-peak=0.0167x status=warmup`
+    - `TCRT 2026-10-14  VOLUME-CONTEXT 16:15ET start=2026-10-14T20:15:00+00:00 shares=66856 local=1.2583x prior-peak=0.0422x rth-peak=0.0185x status=ok`
+    - `TCRT 2026-10-14  VOLUME-CONTEXT 16:20ET start=2026-10-14T20:20:00+00:00 shares=78990 local=1.3088x prior-peak=0.0498x rth-peak=0.0218x status=ok`
+    - `TCRT 2026-10-14  VOLUME-CONTEXT 16:25ET start=2026-10-14T20:25:00+00:00 shares=33679 local=0.5038x prior-peak=0.0212x rth-peak=0.0093x status=ok`
+    - `TCRT 2026-10-14  VOLUME-CONTEXT 16:30ET start=2026-10-14T20:30:00+00:00 shares=48679 local=0.7281x prior-peak=0.0307x rth-peak=0.0135x status=ok`
+    - Consumer verdict with the metric: `TCRT 2026-10-14  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET`
+  - Catalyst (3 searches): Alaunos Therapeutics completed its acquisition of Velaris Therapeutics with a concurrent $350M private placement (GlobeNewswire 2026-10-13 ~10:31 ET). That is prior-day news, background only; it drove the Oct 13 spike that today's −31.7% session unwound. No Oct 14 after-close release found: **Grade None**.
+- TRUG: dropped out of the scan (below 10% AH); the 16:10 spike has round-tripped toward the $1.38 close.
+- YYAI, SDEV, CDXS: AH below 10%. Not evaluated.
+- Observation window (before 23:00 CET); no entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
