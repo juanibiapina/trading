@@ -1,0 +1,53 @@
+<div style="font-family: -apple-system, Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+<h2 style="color: #1a1a1a; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">Overnight Cycle: Oct 13 AH &rarr; Oct 14 PM</h2>
+
+<h3 style="color: #555; margin-top: 20px;">Post-Market Scans</h3>
+<p>13 scans ran: all 7 scheduled checkpoints (21:30&ndash;00:30 CEST) plus 6 extra observations. 10 unique tickers showed &gt;10% AH (YFOR, NCPL, TCRT, MWG, AEHL, AGMH, FBGL, BKYI, DCX, ZTG). Entered 3: <strong>AEHL</strong> $15.40, <strong>AGMH</strong> $0.66, <strong>BKYI</strong> $3.26. YFOR (+48% AH) round-tripped below its close; TCRT was skipped at the +150% ceiling.</p>
+
+<h3 style="color: #555;">Today&rsquo;s Winner</h3>
+<p><strong>AEHL</strong> (Antelope Enterprise, China e-commerce/IT; float 16.4M) &mdash; no catalyst found; background is a $100M ATM and $6M converts.<br/>
+Close $8.55 &rarr; AH SIP high $22.72 (19:00 ET) &rarr; PM SIP high <strong>$29.76</strong> at 04:10 ET (single-tick wick; bar VWAP $23.62; sustained ~$25&ndash;27 at 04:15&ndash;04:20 ET).<br/>
+AH entry: $15.40 &rarr; PM peak: $29.76 (<span style="color: #2e7d32; font-weight: bold;">+93%</span> hypothetical). Actual exit $23.78 at 04:30 ET: <span style="color: #2e7d32; font-weight: bold;">+54.4%</span>.</p>
+<p>Scanner caught it? <strong style="color: #2e7d32;">YES</strong> &mdash; first seen 22:45 CEST at +76% (CONFIRM-3 YES), gate met and entered at 23:00. AH volume bars were 27&ndash;30x the largest regular-session bar.</p>
+
+<h3 style="color: #555;">Baseline Status</h3>
+<p style="font-size: 18px; background: #f5f5f5; padding: 10px; border-radius: 4px;">Detection rate: <strong>75/86 (87.2%)</strong> &mdash; Target: &gt;80%<br/>
+<span style="color: #1976d2;">BASELINE MET</span> &middot; Selection 39/82 (47.6%) &middot; 99 days tracked</p>
+
+<h3 style="color: #555;">Paper Trades</h3>
+<p style="font-size: 18px;">Paper P&amp;L: <span style="color: #2e7d32; font-weight: bold;">+$24.00 (+8.4% on $285)</span></p>
+<p>AEHL <span style="color: #2e7d32;">+$50.28 (+54.4%)</span> &middot; AGMH <span style="color: #c62828;">&minus;$2.88 (&minus;3.0%)</span> &middot; BKYI <span style="color: #c62828;">&minus;$23.40 (&minus;23.9%)</span>. BKYI was bought at +98% on the day and gapped below the &minus;15% stop at the PM open. All sold at the 10:30 CEST evaluation; no open positions.</p>
+<p style="background: #f5f5f5; padding: 10px; border-radius: 4px;">Cumulative Paper P&amp;L: <span style="color: #c62828; font-weight: bold;">&minus;$271.54</span> (equity $99,728.46)</p>
+
+<h3 style="color: #555;">Scanner Improvement</h3>
+<p><strong>Oct 13</strong> (latest completed; today&rsquo;s run comes after this email): Yahoo no longer serves past-session AH bars, so <code>check-prices.py --ah-history</code> now says the AH session is missing instead of showing it flat at the close, and the morning evaluation rebuilds AH from SIP bars. Hypothesis: no evaluation cites a fake flat AH range over the next five sessions. This morning&rsquo;s evaluation used SIP AH bars as intended.</p>
+
+<h3 style="color: #555;">Process Review</h3>
+<p><strong>Oct 13</strong> (latest completed; covers sessions through Oct 13 12:30 UTC). Last night&rsquo;s scans and this morning&rsquo;s sessions are not reviewed yet. Finding: the new Gmail reply check would have re-logged Juan&rsquo;s old InboxKit-era replies; fixed by skipping replies before Oct 13 in those threads. 30 sessions, no provider errors.</p>
+<p style="background: #fff3e0; padding: 10px; border-radius: 4px; border-left: 4px solid #ef6c00;"><strong>Open for you (infra):</strong> scheduler reliability &mdash; 3 of the last 10 evenings lost all scans (Oct 2, 5, 9); and the provider login-error alert/fallback, open since Oct 6.</p>
+
+<h3 style="color: #555;">Initiative Progress</h3>
+<p>Window: Oct 13 09:32 UTC (last email) to this send.</p>
+<ul>
+<li><strong>Initiative 7 &mdash; alternative strategies, Oct 13 15:00 and 18:00 CEST</strong>: two frozen tests on the top 1,000 liquid names over the past year. (1) Buying 743 liquid AH movers at 17:00 ET loses at every exit: &minus;1.41% at the 04:30 bid, &minus;0.34% at the open, &minus;1.29% at the close; the move is priced in by 17:00. (2) Holding those events 5&ndash;20 sessions trails the market in all 8 cells (&minus;0.53% to &minus;1.76%). Liquid-event lane closed; four Initiative 7 candidates have now failed. Next: frozen out-of-sample test of shorting up movers for 20 sessions on Oct 2024&ndash;Sep 2025; if it fails, Initiative 7 has no candidate left.</li>
+<li><strong>Initiative 4 &mdash; reply loop, Oct 13 14:42 CEST</strong>: the Gmail reply check now ignores pre-Gmail replies, so old directives can&rsquo;t be re-applied. Next: first clean Gmail reply cycle.</li>
+<li><strong>Initiative 6 &mdash; PM-only gappers (monitoring)</strong>: log-only. TGL ran +666% PM from a $0.28 close (sub-$0.50, flat AH, wick bar); holdable PM-only count is now 69. Pilot stays closed until real-time data and a sub-minute watcher exist.</li>
+</ul>
+<p>Blocked/deferred: Initiative 2 broker test deferred per your Sep 22 instruction. Initiative 3&rsquo;s hold-retirement proposal (sell everything at the 04:30 ET evaluation; held entries returned &minus;11.9% vs &minus;3.1%) is still unapplied by strategy-advance; reply if you want it blocked. Initiatives 1 and 5 have no dated work.</p>
+
+<h3 style="color: #555;">Jev Results and Costs</h3>
+<p><strong>Not run in this window.</strong> All 6 Oct 13 Initiative 7 observation slots recorded <code>jev: null</code>, and the two strategy runs made no Jev calls. Window: 0 calls, $0.00 USD in repo records; billed charge not checked (TypeSafe billing not queried). Cumulative recorded: 7 calls, 11,385 input / 1,088 output tokens, ~$0.00048 USD (estimate from the Oct 2 and Oct 7 manifests). Next: no Jev step is scheduled; Initiative 7&rsquo;s next deliverable is the fade test above.</p>
+
+<h3 style="color: #555;">Feedback Acknowledged</h3>
+<p>No new feedback since last report.</p>
+
+<h3 style="color: #555;">Charts (5m + volume)</h3>
+<p style="margin: 0 0 4px;"><strong>AEHL (winner, traded)</strong> &mdash; entry $15.40, exit $23.78. Yahoo omits last night&rsquo;s AH bars, so the chart jumps from the 16:00 close to the PM open.</p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-13/AEHL-1131.png" alt="AEHL 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+
+<h3 style="color: #555;">Key Takeaway</h3>
+<p style="background: #e3f2fd; padding: 10px; border-radius: 4px; border-left: 4px solid #1976d2;">The scanner caught and entered the winner (AEHL +54% realized), but BKYI&rsquo;s &minus;24% gap took half of it back, so the cycle netted +$24.</p>
+
+<p>Reply to this email with feedback.</p>
+<p style="font-size: 12px; color: #666; margin-top: 20px;">Email session: anthropic/claude-opus-5-5 &middot; reasoning: medium</p>
+</div>
