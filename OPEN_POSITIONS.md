@@ -8,9 +8,6 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
-| AEHL | $15.40 | $15.40 | $15.40 | 0% | 0% | 6 | $92.40 | None | 2026-10-13 | AH BUILD on SIP volume (CONFIRM-3 YES), no catalyst found; $100M ATM overhang. Exit at first PM opportunity. Order 7d3cf9e8 |
-| AGMH | $0.66 | $0.66 | $0.66 | 0% | 0% | 144 | $95.04 | C | 2026-10-13 | Nasdaq compliance PR (GlobeNewswire Oct 13 ~16:15 ET), float 735K, AH rebuild near $0.74 high. Exit in PM. Order e0af8ded |
-| BKYI | $3.26 | $3.26 | $3.26 | 0% | 0% | 30 | $97.80 | B | 2026-10-13 | Contract win PR (GlobeNewswire 04:01 ET Oct 13, Middle East government agency MFA/SSO customer), float 1.3M, AH ignition 17:30 ET on SIP volume, holding ~12% off $3.72 high, +98% vs close. Hold up to 2 days, stop -15%. Order 5ac60d64 |
 
 ## Position Rules
 
@@ -62,6 +59,9 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| AEHL | $15.40 | $23.78 | +$50.28 | +54.4% | 1 | None | Sold 2026-10-14 PM 04:30 ET (order 3ecd0f1b) at first premarket pulse. SIP PM run: 04:10 bar H $29.76 (single spike, bar VWAP $23.62); sustained high $25.25 (04:15 bar, VWAP $24.22); 806K sh in first 20 min. Quote stale; limit $22.90 filled $23.78. |
+| AGMH | $0.66 | $0.64 | -$2.88 | -3.0% | 1 | C | Sold 2026-10-14 PM 04:30 ET (order 4c1c748e), Grade C premarket exit. SIP PM high $0.74 at 04:00 then faded to $0.63 (VWAP $0.63-0.64), 3.2M sh. Limit $0.61 filled $0.64. |
+| BKYI | $3.26 | $2.48 | -$23.40 | -23.9% | 1 | B | Sold 2026-10-14 PM 04:30 ET (order a25240dc); -15% hard stop breached. Gapped to $2.83 at PM open, broke to $2.43 by 04:10 ET (SIP). Never traded above entry after fill. Limit $2.40 filled $2.48. |
 | FCHL | $1.73 | $1.97 | +$13.92 | +13.9% | 1 | None | Sold 2026-10-13 PM 04:30 ET (order 2838f088) at first premarket pulse. SIP PM high $2.26 (+30.6%) in the 04:00 bar, VWAP ~$2.02, 4.2M sh in first 20 min. Limit $1.95 filled $1.97. |
 | OLB | $0.71 | $0.60 | -$15.51 | -15.5% | 1 | None | Sold 2026-10-09 PM (order 4788c560) at first premarket pulse; below -10% hard stop. AH peak $0.74 (SIP), PM high $0.62. Book empty (stale bid $0.47); limit $0.58 filled $0.60. |
 | XRTX | $2.22 | $1.92 | -$13.20 | -13.5% | 1 | C | Sold 2026-10-09 PM (order a687cdfc) at first premarket pulse; below -10% hard stop. AH peak $2.35 (SIP), PM opened $1.91, high $2.12. Health Canada CTA PR faded overnight. |
