@@ -105,6 +105,36 @@ AH >10% at this snapshot (unrounded): none
 - SIP cross-check of the 21:30 watch names (16:00 ET bar now served): the empty scan agrees with SIP. GLND 16:00 bar C $3.77 (vwap $3.85, 326K sh / 1,435 trades) is below its 15:55 close of $3.90. TDIC C $2.19 is below its $2.27 close. GENK C $1.63 is below its $1.68 close. NXGL 16:00 bar H $6.34 / C $5.76 (vwap $5.79, 237K sh / 3,234 trades), with C below its $5.83 price at 15:30 ET; the high was a brief wick. No watch name holds >10% AH.
 - Observation window (before 23:00 CET); no entries.
 
+## Scan 22:20 CET (4:20 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.59 | +14.4% | +17.1% | $1.86 | +34.0% | 672K | 11.5M | 0.1x | 4.4M | Miscellaneous Commercial Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): NCPL
+
+**Evaluation notes:**
+- NCPL: first AH scan above 10% (1 of 2 needed). It sold off into the close ($1.84 at 15:30 ET → $1.57 at 15:55) and reclaimed the intraday level in AH. `tradable=true`.
+  - Spike-bar: `NCPL 2026-10-14  NO-SPIKE  peak +19% @16:05ET  (no bar cleared +15% on a volume co-spike) (as-of 16:20ET)`
+  - Third-bar: `NCPL 2026-10-14  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET`
+  - Volume context (`NCPL-1620-volume-metric.json`, source `NCPL-1620-volume-sip.json`):
+    - `# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-13 48+0zero/48 slots; floor 100; same-date regular peak 841121 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T20:20:11+00:00; source fetched 2026-10-14T20:20:24.554380+00:00`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:00ET start=2026-10-14T20:00:00+00:00 shares=730815 local=unknown prior-peak=2.4272x rth-peak=0.8689x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:05ET start=2026-10-14T20:05:00+00:00 shares=410260 local=unknown prior-peak=1.3626x rth-peak=0.4878x status=warmup`
+    - Consumer verdict with the metric: `NCPL 2026-10-14  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET`
+  - SIP 5-min bars: 16:00 O $1.59 H $1.89 C $1.87 (vwap $1.80, 731K sh / 3,532 trades); 16:05 H $1.90 C $1.82 (vwap $1.85, 410K sh / 2,392 trades). Real volume, and the SIP high corroborates the $1.86 scanner price. The 16:10+ bars are still inside the free-tier delay.
+  - Book: `node scripts/broker.js quote` bid $1.97 x100 / ask $2.04 x100 at 16:19:27 ET, above the scanner's $1.86, so NCPL kept rising after the snapshot (~+28% AH, ~+46% Total at $2.03 against the $1.39 prior close implied by Day%).
+    - `NCPL BOOK iex bid $2.00 x100 / ask $2.03 x100 @ 2026-10-14 16:20:32 ET age 0s two-sided spread 1.48% of ask`
+    - `NCPL BOOK sip-15m bid $1.87 x600 / ask $1.88 x600 @ 2026-10-14 16:05:32 ET age 15m00s two-sided spread 0.53% of ask`
+    - `NCPL BOOK refresh +15s iex advanced @ 2026-10-14 16:20:45 ET`
+    - `NCPL BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-14 16:20:32 ET; log-only)`
+  - Catalyst (2 searches): GlobeNewswire 2026-10-14, ~16:00 ET, "Netcapital Inc. Regains Compliance with Nasdaq Minimum Bid Price Requirement" (Nasdaq letter dated Oct 7). Fresh but minor: **Grade C**. Background: securities class-action law firm PRs (Portnoy, Wolf Haldenstein, Oct 11–14; class period Dec 15 2021 – Sep 3 2026). The Wolf Haldenstein headline calls NCPL "acquired"; no acquisition release turned up, so treat that as unverified wording.
+  - Day 2+ of a move (21:30 notes: >10% AH on Oct 6/7/12/13). Run the MULTI-SESSION-RUNNER SIP daily-bar check if it qualifies for entry.
+- Observation window (before 23:00 CET); no entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
