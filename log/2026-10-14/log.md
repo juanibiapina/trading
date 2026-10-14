@@ -331,6 +331,81 @@ The scanner's +31.4% / $2.09 for NCPL matches the 22:45 snapshot, so TradingView
 - TCRT: back below 10% AH (+6.8%), so it stays at 1 AH scan above 10%. Dead-cat (Day% −31.7%), thin SIP volume, Grade None. Not eligible.
 - YYAI, SDEV, BENF, CISS, CDXS: AH below 10%. Not evaluated.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.59 | +14.4% | +39.6% | $2.22 | +59.7% | 6.8M | 12.2M | 0.6x | 4.4M | Miscellaneous Commercial Services |
+| YYAI | [TV](https://www.tradingview.com/chart/?symbol=YYAI) | $0.69 | -2.6% | +11.5% | $0.77 | +8.6% | 735K | 291K | 2.5x | 4.6M | Containers/Packaging |
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $2.07 | -31.7% | +6.2% | $2.20 | -27.4% | 482K | 32.9M | 0.0x | 2.3M | Biotechnology |
+| SDEV | [TV](https://www.tradingview.com/chart/?symbol=SDEV) | $0.99 | -20.8% | +5.1% | $1.04 | -16.8% | 365K | 50.1M | 0.0x | 51.8M | Financial Conglomerates |
+| CISS | [TV](https://www.tradingview.com/chart/?symbol=CISS) | $0.53 | -15.5% | +8.6% | $0.57 | -8.3% | 231K | 1.1M | 0.2x | 1.5M | Marine Shipping |
+| SBNYL | [TV](https://www.tradingview.com/chart/?symbol=SBNYL) | $1.25 | -0.8% | +10.4% | $1.38 | +9.5% | 180K | 40K | 4.5x | 59.6M | Regional Banks |
+| AGMH | [TV](https://www.tradingview.com/chart/?symbol=AGMH) | $0.50 | -5.4% | +5.8% | $0.53 | +0.1% | 161K | 10.2M | 0.0x | 735K | Packaged Software |
+| CDXS | [TV](https://www.tradingview.com/chart/?symbol=CDXS) | $1.29 | -2.3% | +5.6% | $1.36 | +3.2% | 75K | 805K | 0.1x | 101.7M | Chemicals: Specialty |
+| FBGL | [TV](https://www.tradingview.com/chart/?symbol=FBGL) | $2.40 | -31.6% | +6.2% | $2.55 | -27.4% | 59K | 359K | 0.2x | n/a | Engineering & Construction |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): NCPL, SBNYL, YYAI
+
+The 23:05–23:25 pulses left no section in the log; this scan follows 23:00.
+
+**Evaluation notes:**
+- NCPL: **already entered** (45 sh @ $2.16, 23:00 CET); broker shows the position and the filled buy, so no new order. Still building: SIP made a new AH high of $2.25 in the 17:10 bar (413K sh / 2,314 trades, VWAP $2.20) and the 17:15 bar held $2.15–$2.24 on 296K sh / 1,889 trades. Volume keeps accumulating at 295K–413K sh per bar. Scanner $2.22 (+59.7% Total) matches SIP. Position at $2.17, +0.5%.
+  - Spike-bar: `NCPL 2026-10-14  SPIKE  16:19ET  +29%  $2.05  2021 trades / 400k sh  (first co-spike bar) (as-of 17:30ET)`
+  - Third-bar: `NCPL 2026-10-14  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 17:30ET`
+  - Volume context (`NCPL-1730-volume-metric.json`, source `NCPL-1730-volume-sip.json`):
+    - `# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-13 48+0zero/48 slots; floor 100; same-date regular peak 841121 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T21:30:08+00:00; source fetched 2026-10-14T21:30:32.923875+00:00`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:00ET start=2026-10-14T20:00:00+00:00 shares=730815 local=unknown prior-peak=2.4272x rth-peak=0.8689x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:05ET start=2026-10-14T20:05:00+00:00 shares=410260 local=unknown prior-peak=1.3626x rth-peak=0.4878x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:10ET start=2026-10-14T20:10:00+00:00 shares=102754 local=unknown prior-peak=0.3413x rth-peak=0.1222x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:15ET start=2026-10-14T20:15:00+00:00 shares=707616 local=1.7248x prior-peak=2.3502x rth-peak=0.8413x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:20ET start=2026-10-14T20:20:00+00:00 shares=1273437 local=3.1040x prior-peak=4.2294x rth-peak=1.5140x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:25ET start=2026-10-14T20:25:00+00:00 shares=910853 local=1.2872x prior-peak=3.0252x rth-peak=1.0829x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:30ET start=2026-10-14T20:30:00+00:00 shares=501736 local=0.5508x prior-peak=1.6664x rth-peak=0.5965x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:35ET start=2026-10-14T20:35:00+00:00 shares=276180 local=0.3032x prior-peak=0.9173x rth-peak=0.3283x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:40ET start=2026-10-14T20:40:00+00:00 shares=516498 local=1.0294x prior-peak=1.7154x rth-peak=0.6141x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:45ET start=2026-10-14T20:45:00+00:00 shares=391784 local=0.7809x prior-peak=1.3012x rth-peak=0.4658x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:50ET start=2026-10-14T20:50:00+00:00 shares=189984 local=0.4849x prior-peak=0.6310x rth-peak=0.2259x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:55ET start=2026-10-14T20:55:00+00:00 shares=428924 local=1.0948x prior-peak=1.4246x rth-peak=0.5099x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:00ET start=2026-10-14T21:00:00+00:00 shares=395166 local=1.0086x prior-peak=1.3125x rth-peak=0.4698x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:05ET start=2026-10-14T21:05:00+00:00 shares=295024 local=0.7466x prior-peak=0.9799x rth-peak=0.3508x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:10ET start=2026-10-14T21:10:00+00:00 shares=412687 local=1.0443x prior-peak=1.3706x rth-peak=0.4906x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:15ET start=2026-10-14T21:15:00+00:00 shares=295566 local=0.7480x prior-peak=0.9817x rth-peak=0.3514x status=ok`
+    - Consumer verdict with the metric: `NCPL 2026-10-14  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 17:30ET`
+  - Book:
+    - `NCPL BOOK iex bid $2.16 x100 / ask $2.20 x100 @ 2026-10-14 16:59:34 ET age 31m08s two-sided spread 1.82% of ask`
+    - `NCPL BOOK sip-15m bid $2.19 x2100 / ask $2.20 x2100 @ 2026-10-14 17:15:43 ET age 15m00s two-sided spread 0.45% of ask`
+    - `NCPL BOOK refresh +15s iex unchanged @ 2026-10-14 16:59:34 ET`
+    - `NCPL BOOK verdict: IEX STALE 31m08s; SIP-15m TWO-SIDED (observed 2026-10-14 17:30:43 ET; log-only)`
+- YYAI: first AH scan above 10% (1 of 2), so not eligible this pulse. `tradable=true`. Scanner AH +11.5% ($0.77) but Total% only +8.6% vs the prior close. SIP shows an early pop to $0.84–$0.85 in the 16:15–16:25 bars (182K–217K sh, 697–962 trades), then a thin drift at $0.72–$0.78 on 8K–33K sh and 18–67 trades per bar since 16:45. That is a faded early spike with thin volume, not a build. No book check (SIP volume not accumulating). Catalyst (2 searches): only background items (Oct 2025 AiRWA rename and $100M JuCoin investment, Dec 2025 registered direct offering); no Oct 14 release found: **Grade None**.
+  - Spike-bar: `YYAI 2026-10-14  SPIKE  16:19ET  +22%  $0.84  121 trades / 23k sh  (first co-spike bar) (as-of 17:30ET)`
+  - Third-bar: `YYAI 2026-10-14  CONFIRM-3  NO no local-volume new-high ignition as-of 17:30ET`
+  - Volume context (`YYAI-1730-volume-metric.json`, source `YYAI-1730-volume-sip.json`):
+    - `# YYAI shared SIP volume sip-ah-volume-v2; prior 2026-10-13 4+44zero/48 slots; floor 100; same-date regular peak 11250 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T21:30:08+00:00; source fetched 2026-10-14T21:30:34.927506+00:00`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 16:15ET start=2026-10-14T20:15:00+00:00 shares=27783 local=277.8300x prior-peak=55.5660x rth-peak=2.4696x status=floored`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 16:20ET start=2026-10-14T20:20:00+00:00 shares=182000 local=1820.0000x prior-peak=364.0000x rth-peak=16.1778x status=floored`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 16:25ET start=2026-10-14T20:25:00+00:00 shares=217084 local=7.8136x prior-peak=434.1680x rth-peak=19.2964x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 16:30ET start=2026-10-14T20:30:00+00:00 shares=133382 local=0.7329x prior-peak=266.7640x rth-peak=11.8562x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 16:35ET start=2026-10-14T20:35:00+00:00 shares=52908 local=0.2907x prior-peak=105.8160x rth-peak=4.7029x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 16:40ET start=2026-10-14T20:40:00+00:00 shares=73449 local=0.5507x prior-peak=146.8980x rth-peak=6.5288x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 16:45ET start=2026-10-14T20:45:00+00:00 shares=21078 local=0.2870x prior-peak=42.1560x rth-peak=1.8736x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 16:50ET start=2026-10-14T20:50:00+00:00 shares=23423 local=0.4427x prior-peak=46.8460x rth-peak=2.0820x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 16:55ET start=2026-10-14T20:55:00+00:00 shares=8250 local=0.3522x prior-peak=16.5000x rth-peak=0.7333x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:00ET start=2026-10-14T21:00:00+00:00 shares=32629 local=1.5480x prior-peak=65.2580x rth-peak=2.9004x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:05ET start=2026-10-14T21:05:00+00:00 shares=8826 local=0.3768x prior-peak=17.6520x rth-peak=0.7845x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:10ET start=2026-10-14T21:10:00+00:00 shares=8632 local=0.9780x prior-peak=17.2640x rth-peak=0.7673x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:15ET start=2026-10-14T21:15:00+00:00 shares=10380 local=1.1761x prior-peak=20.7600x rth-peak=0.9227x status=ok`
+    - Consumer verdict with the metric: `YYAI 2026-10-14  CONFIRM-3  NO no local-volume new-high ignition as-of 17:30ET`
+- SBNYL: **untradable** (`tradable=false`, OTC preferred). Qualified-but-untradable broker-block for the morning tally: AH +10.4%, first AH scan above 10%. Carry as untradable; no SIP or catalyst workup.
+  - Spike-bar: `SBNYL 2026-10-14: NO prior-close (daily bar missing)`
+  - Third-bar: `SBNYL 2026-10-14  CONFIRM-3  NO-DATA prior close unavailable`
+- TCRT, SDEV, CISS, AGMH, CDXS, FBGL: AH below 10%. Not evaluated (TCRT stays dead-cat, Day% −31.7%).
+- No new entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
