@@ -474,6 +474,176 @@ AH >10% at this snapshot (unrounded): NCPL, SBNYL, YYAI
 - JBDI: AH +10.0% displayed, but it is absent from the unrounded >10% list, so it is below 10%. Dead-cat in any case (Day% −26.8%). Not evaluated.
 - GMEX, GENK, CLNE, CISS, AGMH, LUCD: AH below 10%. Not evaluated.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.59 | +14.4% | +30.2% | $2.07 | +48.9% | 8.2M | 12.3M | 0.7x | 4.4M | Miscellaneous Commercial Services |
+| YYAI | [TV](https://www.tradingview.com/chart/?symbol=YYAI) | $0.69 | -2.6% | +23.0% | $0.85 | +19.7% | 1.5M | 372K | 4.0x | 4.6M | Containers/Packaging |
+| JBDI | [TV](https://www.tradingview.com/chart/?symbol=JBDI) | $2.51 | -26.8% | +34.3% | $3.37 | -1.8% | 1.1M | 9.7M | 0.1x | n/a | Wholesale Distributors |
+| CLNE | [TV](https://www.tradingview.com/chart/?symbol=CLNE) | $1.35 | -5.6% | +7.4% | $1.45 | +1.4% | 307K | 949K | 0.3x | 161.1M | Gas Distributors |
+| CISS | [TV](https://www.tradingview.com/chart/?symbol=CISS) | $0.53 | -15.5% | +11.3% | $0.59 | -5.9% | 252K | 1.1M | 0.2x | 1.5M | Marine Shipping |
+| SBNYL | [TV](https://www.tradingview.com/chart/?symbol=SBNYL) | $1.25 | -0.8% | +10.4% | $1.38 | +9.5% | 180K | 40K | 4.5x | 59.6M | Regional Banks |
+| FBGL | [TV](https://www.tradingview.com/chart/?symbol=FBGL) | $2.40 | -31.6% | +13.8% | $2.73 | -22.2% | 83K | 362K | 0.2x | n/a | Engineering & Construction |
+| IBG | [TV](https://www.tradingview.com/chart/?symbol=IBG) | $0.82 | -6.6% | +19.1% | $0.98 | +11.2% | 500 | 15K | 0.0x | 3.8M | Beverages: Alcoholic |
+
+Supplementary AH-change-only (>15%, not in volume pass): IBG
+
+AH >10% at this snapshot (unrounded): CISS, FBGL, IBG, JBDI, NCPL, SBNYL, YYAI
+
+**Evaluation notes:**
+
+Final scheduled scan. No new entries: every new >10% name fails a gate (three dead-cats and one thin first-appearance name).
+
+- NCPL: **already entered** (45 sh @ $2.16, 23:00 CET). Fading slowly: scanner $2.07 (+48.9% Total), delayed SIP book $2.03 / $2.04 at 18:16 ET, ~9% under the $2.25 AH high. Volume keeps cooling (36K–131K sh per bar since 17:50 ET). Broker mark $2.04 (−5.6%).
+  - Spike-bar: `NCPL 2026-10-14  SPIKE  16:19ET  +29%  $2.05  2021 trades / 400k sh  (first co-spike bar) (as-of 18:30ET)`
+  - Third-bar: `NCPL 2026-10-14  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 18:30ET`
+  - Volume context (`NCPL-1830-volume-metric.json`, source `NCPL-1830-volume-sip.json`):
+    - `# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-13 48+0zero/48 slots; floor 100; same-date regular peak 841121 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T22:30:10+00:00; source fetched 2026-10-14T22:30:47.900112+00:00`
+    - Rows 16:00–17:45 ET match the 00:00 section.
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:50ET start=2026-10-14T21:50:00+00:00 shares=92980 local=1.1387x prior-peak=0.3088x rth-peak=0.1105x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:55ET start=2026-10-14T21:55:00+00:00 shares=87481 local=0.9624x prior-peak=0.2905x rth-peak=0.1040x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 18:00ET start=2026-10-14T22:00:00+00:00 shares=131138 local=1.4427x prior-peak=0.4355x rth-peak=0.1559x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 18:05ET start=2026-10-14T22:05:00+00:00 shares=108698 local=1.1690x prior-peak=0.3610x rth-peak=0.1292x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 18:10ET start=2026-10-14T22:10:00+00:00 shares=35814 local=0.3295x prior-peak=0.1189x rth-peak=0.0426x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 18:15ET start=2026-10-14T22:15:00+00:00 shares=74844 local=0.6885x prior-peak=0.2486x rth-peak=0.0890x status=ok`
+    - Consumer verdict with the metric: `NCPL 2026-10-14  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 18:30ET`
+  - Book:
+    - `NCPL BOOK iex bid $2.16 x100 / ask $2.20 x100 @ 2026-10-14 16:59:34 ET age 1h31m two-sided spread 1.82% of ask`
+    - `NCPL BOOK sip-15m bid $2.03 x1100 / ask $2.04 x800 @ 2026-10-14 18:16:31 ET age 15m02s two-sided spread 0.49% of ask`
+    - `NCPL BOOK refresh +15s iex unchanged @ 2026-10-14 16:59:34 ET`
+    - `NCPL BOOK verdict: IEX STALE 1h31m; SIP-15m TWO-SIDED (observed 2026-10-14 18:31:32 ET; log-only)`
+- YYAI: **already entered** (116 sh @ $0.82, 00:00 CET). Holding: scanner $0.85 (+19.7% Total), delayed SIP book $0.818 / $0.856 at 18:16 ET, ~11% under the $0.95 AH high. A 91K sh bar at 18:05 ET kept volume alive after the 17:40 high. Broker mark $0.81 (−0.9%).
+  - Spike-bar: `YYAI 2026-10-14  SPIKE  16:19ET  +22%  $0.84  121 trades / 23k sh  (first co-spike bar) (as-of 18:30ET)`
+  - Third-bar: `YYAI 2026-10-14  CONFIRM-3  YES ignition 17:30ET 3.5x; confirmed 17:40ET $0.84 as-of 18:30ET`
+  - Volume context (`YYAI-1830-volume-metric.json`, source `YYAI-1830-volume-sip.json`):
+    - `# YYAI shared SIP volume sip-ah-volume-v2; prior 2026-10-13 4+44zero/48 slots; floor 100; same-date regular peak 11250 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T22:30:10+00:00; source fetched 2026-10-14T22:30:48.551950+00:00`
+    - Rows 16:15–17:45 ET match the 00:00 section.
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:50ET start=2026-10-14T21:50:00+00:00 shares=51307 local=0.4066x prior-peak=102.6140x rth-peak=4.5606x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:55ET start=2026-10-14T21:55:00+00:00 shares=32748 local=0.2895x prior-peak=65.4960x rth-peak=2.9109x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 18:00ET start=2026-10-14T22:00:00+00:00 shares=32629 local=0.6360x prior-peak=65.2580x rth-peak=2.9004x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 18:05ET start=2026-10-14T22:05:00+00:00 shares=91689 local=2.7998x prior-peak=183.3780x rth-peak=8.1501x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 18:10ET start=2026-10-14T22:10:00+00:00 shares=55130 local=1.6835x prior-peak=110.2600x rth-peak=4.9004x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 18:15ET start=2026-10-14T22:15:00+00:00 shares=23336 local=0.4233x prior-peak=46.6720x rth-peak=2.0743x status=ok`
+    - Consumer verdict with the metric: `YYAI 2026-10-14  CONFIRM-3  YES ignition 17:30ET 3.5x; confirmed 17:40ET $0.84 as-of 18:30ET`
+  - Book:
+    - `YYAI BOOK iex bid $0.5942 x100 / ask $0.0000 x0 @ 2026-10-14 16:00:04 ET age 2h31m one-sided/empty`
+    - `YYAI BOOK sip-15m bid $0.8181 x300 / ask $0.8564 x100 @ 2026-10-14 18:16:30 ET age 15m03s two-sided spread 4.47% of ask`
+    - `YYAI BOOK refresh +15s iex unchanged @ 2026-10-14 16:00:04 ET`
+    - `YYAI BOOK verdict: IEX STALE 2h31m; SIP-15m TWO-SIDED (observed 2026-10-14 18:31:32 ET; log-only)`
+- JBDI: **Skip: dead-cat** (Day% −26.8%). **DEAD-CAT-OVERRIDE WATCH (borderline)**, hypothetical entry **$3.37 @ 00:30 CET (18:30 ET)**. `tradable=true`. It is the first unrounded >10% AH scan (00:00 showed +10.0% but was absent from the unrounded list), so it also fails the 2-AH-scan gate. Day% below −15% rules out a FINAL-SCAN-GATE-BLOCK note. SIP shows a real late ignition: flat at $2.74–2.77 until 17:45 ET, then 77K → 277K → 308K → 295K sh per bar (453 → 2,727 → 2,874 → 3,118 trades), VWAP $2.88 → $3.60, AH high **$3.80** in the 18:00 bar. That briefly reclaimed above the $3.43 Oct 13 close (+10.8%); the latest SIP bar (18:15 ET) closed $3.44, back at that close, on 136K–158K sh per bar. AH% rose +10.0% → +34.3% across the last two scans. Reclaim is marginal, so the watch is logged as borderline. **MULTI-SESSION-RUNNER**: day 2, Oct 13 ran $1.00 → $3.43 (+243%, high $9.50) on 92.6M sh, then today faded to $2.51. Catalyst (2 searches): no fresh item; StocksToTrade/Sykes Oct 14 morning pieces cover the breakout and "regulatory probe" headlines; background only: Sep 29 ZYMIX $900M convertible-note acquisition and an October extraordinary meeting. **Grade None.**
+  - Spike-bar: `JBDI 2026-10-14  SPIKE  17:49ET  +25%  $3.13  339 trades / 36k sh  (first co-spike bar) (as-of 18:30ET)`
+  - Third-bar: `JBDI 2026-10-14  CONFIRM-3  YES ignition 17:45ET 12.3x; confirmed 17:55ET $3.77 as-of 18:30ET`
+  - Volume context (`JBDI-1830-volume-metric.json`, source `JBDI-1830-volume-sip.json`):
+    - `# JBDI shared SIP volume sip-ah-volume-v2; prior 2026-10-13 48+0zero/48 slots; floor 100; same-date regular peak 248075 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T22:30:10+00:00; source fetched 2026-10-14T22:30:49.248476+00:00`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:00ET start=2026-10-14T20:00:00+00:00 shares=7293 local=unknown prior-peak=0.0157x rth-peak=0.0294x status=warmup`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:05ET start=2026-10-14T20:05:00+00:00 shares=7635 local=unknown prior-peak=0.0165x rth-peak=0.0308x status=warmup`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:10ET start=2026-10-14T20:10:00+00:00 shares=6448 local=unknown prior-peak=0.0139x rth-peak=0.0260x status=warmup`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:15ET start=2026-10-14T20:15:00+00:00 shares=3414 local=0.4681x prior-peak=0.0074x rth-peak=0.0138x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:20ET start=2026-10-14T20:20:00+00:00 shares=2566 local=0.3980x prior-peak=0.0055x rth-peak=0.0103x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:25ET start=2026-10-14T20:25:00+00:00 shares=4456 local=1.3052x prior-peak=0.0096x rth-peak=0.0180x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:30ET start=2026-10-14T20:30:00+00:00 shares=8481 local=2.4842x prior-peak=0.0183x rth-peak=0.0342x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:35ET start=2026-10-14T20:35:00+00:00 shares=925 local=0.2076x prior-peak=0.0020x rth-peak=0.0037x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:40ET start=2026-10-14T20:40:00+00:00 shares=942 local=0.2114x prior-peak=0.0020x rth-peak=0.0038x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:45ET start=2026-10-14T20:45:00+00:00 shares=3752 local=3.9830x prior-peak=0.0081x rth-peak=0.0151x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:50ET start=2026-10-14T20:50:00+00:00 shares=1073 local=1.1391x prior-peak=0.0023x rth-peak=0.0043x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 16:55ET start=2026-10-14T20:55:00+00:00 shares=901 local=0.8397x prior-peak=0.0019x rth-peak=0.0036x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:00ET start=2026-10-14T21:00:00+00:00 shares=1452 local=1.3532x prior-peak=0.0031x rth-peak=0.0059x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:05ET start=2026-10-14T21:05:00+00:00 shares=1428 local=1.3308x prior-peak=0.0031x rth-peak=0.0058x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:10ET start=2026-10-14T21:10:00+00:00 shares=198 local=0.1387x prior-peak=0.0004x rth-peak=0.0008x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:15ET start=2026-10-14T21:15:00+00:00 shares=1763 local=1.2346x prior-peak=0.0038x rth-peak=0.0071x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:20ET start=2026-10-14T21:20:00+00:00 shares=1985 local=1.3901x prior-peak=0.0043x rth-peak=0.0080x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:25ET start=2026-10-14T21:25:00+00:00 shares=11912 local=6.7567x prior-peak=0.0257x rth-peak=0.0480x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:30ET start=2026-10-14T21:30:00+00:00 shares=6301 local=3.1743x prior-peak=0.0136x rth-peak=0.0254x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:35ET start=2026-10-14T21:35:00+00:00 shares=22736 local=3.6083x prior-peak=0.0490x rth-peak=0.0916x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:40ET start=2026-10-14T21:40:00+00:00 shares=2823 local=0.2370x prior-peak=0.0061x rth-peak=0.0114x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:45ET start=2026-10-14T21:45:00+00:00 shares=77595 local=12.3147x prior-peak=0.1672x rth-peak=0.3128x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:50ET start=2026-10-14T21:50:00+00:00 shares=276881 local=12.1781x prior-peak=0.5967x rth-peak=1.1161x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 17:55ET start=2026-10-14T21:55:00+00:00 shares=308126 local=3.9710x prior-peak=0.6640x rth-peak=1.2421x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 18:00ET start=2026-10-14T22:00:00+00:00 shares=295226 local=1.0663x prior-peak=0.6362x rth-peak=1.1901x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 18:05ET start=2026-10-14T22:05:00+00:00 shares=136234 local=0.4615x prior-peak=0.2936x rth-peak=0.5492x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 18:10ET start=2026-10-14T22:10:00+00:00 shares=147578 local=0.4999x prior-peak=0.3180x rth-peak=0.5949x status=ok`
+    - `JBDI 2026-10-14  VOLUME-CONTEXT 18:15ET start=2026-10-14T22:15:00+00:00 shares=158051 local=1.0710x prior-peak=0.3406x rth-peak=0.6371x status=ok`
+    - Consumer verdict with the metric: `JBDI 2026-10-14  CONFIRM-3  YES ignition 17:45ET 12.3x; confirmed 17:55ET $3.77 as-of 18:30ET`
+  - Book:
+    - `JBDI BOOK iex bid $2.12 x100 / ask $0.0000 x0 @ 2026-10-14 16:00:03 ET age 2h31m one-sided/empty`
+    - `JBDI BOOK sip-15m bid $3.51 x400 / ask $3.54 x200 @ 2026-10-14 18:16:32 ET age 15m00s two-sided spread 0.85% of ask`
+    - `JBDI BOOK refresh +15s iex unchanged @ 2026-10-14 16:00:03 ET`
+    - `JBDI BOOK verdict: IEX STALE 2h31m; SIP-15m TWO-SIDED (observed 2026-10-14 18:31:32 ET; log-only)`
+- CISS: **Skip: dead-cat** (Day% −15.5%, Total −5.9%, still below the prior close) and first >10% AH scan. `tradable=true`. SIP is thin: the 16:45–16:50 ET bars carried 53K–60K sh, then single-digit-K bars or less; no accumulation, so no book check. Catalyst (1 search): none fresh; background reverse split and $6.0M offering. Grade None.
+  - Spike-bar: `CISS 2026-10-14  SPIKE  16:48ET  +17%  $0.62  129 trades / 18k sh  (first co-spike bar) (as-of 18:30ET)`
+  - Third-bar: `CISS 2026-10-14  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET`
+  - Volume context (`CISS-1830-volume-metric.json`, source `CISS-1830-volume-sip.json`):
+    - `# CISS shared SIP volume sip-ah-volume-v2; prior 2026-10-13 19+29zero/48 slots; floor 100; same-date regular peak 45550 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T22:30:10+00:00; source fetched 2026-10-14T22:30:49.907638+00:00`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 16:00ET start=2026-10-14T20:00:00+00:00 shares=4630 local=unknown prior-peak=0.3415x rth-peak=0.1016x status=warmup`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 16:20ET start=2026-10-14T20:20:00+00:00 shares=1101 local=11.0100x prior-peak=0.0812x rth-peak=0.0242x status=floored`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 16:25ET start=2026-10-14T20:25:00+00:00 shares=12290 local=122.9000x prior-peak=0.9065x rth-peak=0.2698x status=floored`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 16:30ET start=2026-10-14T20:30:00+00:00 shares=39330 local=35.7221x prior-peak=2.9009x rth-peak=0.8634x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 16:35ET start=2026-10-14T20:35:00+00:00 shares=35894 local=2.9206x prior-peak=2.6474x rth-peak=0.7880x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 16:40ET start=2026-10-14T20:40:00+00:00 shares=12833 local=0.3575x prior-peak=0.9465x rth-peak=0.2817x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 16:45ET start=2026-10-14T20:45:00+00:00 shares=60122 local=1.6750x prior-peak=4.4344x rth-peak=1.3199x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 16:50ET start=2026-10-14T20:50:00+00:00 shares=52996 local=1.4765x prior-peak=3.9088x rth-peak=1.1635x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 16:55ET start=2026-10-14T20:55:00+00:00 shares=7998 local=0.1509x prior-peak=0.5899x rth-peak=0.1756x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:00ET start=2026-10-14T21:00:00+00:00 shares=8394 local=0.1584x prior-peak=0.6191x rth-peak=0.1843x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:05ET start=2026-10-14T21:05:00+00:00 shares=4855 local=0.5784x prior-peak=0.3581x rth-peak=0.1066x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:10ET start=2026-10-14T21:10:00+00:00 shares=7903 local=0.9881x prior-peak=0.5829x rth-peak=0.1735x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:15ET start=2026-10-14T21:15:00+00:00 shares=555 local=0.0702x prior-peak=0.0409x rth-peak=0.0122x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:20ET start=2026-10-14T21:20:00+00:00 shares=1596 local=0.3287x prior-peak=0.1177x rth-peak=0.0350x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:25ET start=2026-10-14T21:25:00+00:00 shares=2011 local=1.2600x prior-peak=0.1483x rth-peak=0.0441x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:30ET start=2026-10-14T21:30:00+00:00 shares=615 local=0.3853x prior-peak=0.0454x rth-peak=0.0135x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:35ET start=2026-10-14T21:35:00+00:00 shares=8643 local=5.4154x prior-peak=0.6375x rth-peak=0.1897x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:40ET start=2026-10-14T21:40:00+00:00 shares=797 local=0.3963x prior-peak=0.0588x rth-peak=0.0175x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:45ET start=2026-10-14T21:45:00+00:00 shares=1951 local=2.4479x prior-peak=0.1439x rth-peak=0.0428x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:50ET start=2026-10-14T21:50:00+00:00 shares=1861 local=0.9539x prior-peak=0.1373x rth-peak=0.0409x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 17:55ET start=2026-10-14T21:55:00+00:00 shares=1655 local=0.8893x prior-peak=0.1221x rth-peak=0.0363x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 18:00ET start=2026-10-14T22:00:00+00:00 shares=896 local=0.4815x prior-peak=0.0661x rth-peak=0.0197x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 18:10ET start=2026-10-14T22:10:00+00:00 shares=880 local=0.9821x prior-peak=0.0649x rth-peak=0.0193x status=ok`
+    - `CISS 2026-10-14  VOLUME-CONTEXT 18:15ET start=2026-10-14T22:15:00+00:00 shares=354 local=0.4023x prior-peak=0.0261x rth-peak=0.0078x status=ok`
+- FBGL: **Skip: dead-cat** (Day% −31.6%, Total −22.2%) and first >10% AH scan. `tradable=true`. SIP is thin: largest bars 36K sh (16:10 ET) and 16K sh (17:55 ET), mostly hundreds to low thousands; no book check. Catalyst (1 search): FBS Global regained Nasdaq minimum bid-price compliance (GlobeNewswire via Manila Times, dated Oct 14, release time not verified; confirmation letter Oct 12). **Grade C.**
+  - Spike-bar: `FBGL 2026-10-14  SPIKE  16:12ET  +18%  $2.84  145 trades / 10k sh  (first co-spike bar) (as-of 18:30ET)`
+  - Third-bar: `FBGL 2026-10-14  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET`
+  - Volume context (`FBGL-1830-volume-metric.json`, source `FBGL-1830-volume-sip.json`):
+    - `# FBGL shared SIP volume sip-ah-volume-v2; prior 2026-10-13 45+3zero/48 slots; floor 100; same-date regular peak 17453 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T22:30:10+00:00; source fetched 2026-10-14T22:30:50.675855+00:00`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 16:00ET start=2026-10-14T20:00:00+00:00 shares=2548 local=unknown prior-peak=0.0039x rth-peak=0.1460x status=warmup`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 16:05ET start=2026-10-14T20:05:00+00:00 shares=1023 local=unknown prior-peak=0.0016x rth-peak=0.0586x status=warmup`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 16:10ET start=2026-10-14T20:10:00+00:00 shares=36490 local=unknown prior-peak=0.0561x rth-peak=2.0908x status=warmup`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 16:15ET start=2026-10-14T20:15:00+00:00 shares=11208 local=4.3987x prior-peak=0.0172x rth-peak=0.6422x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 16:20ET start=2026-10-14T20:20:00+00:00 shares=2086 local=0.1861x prior-peak=0.0032x rth-peak=0.1195x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 16:25ET start=2026-10-14T20:25:00+00:00 shares=402 local=0.0359x prior-peak=0.0006x rth-peak=0.0230x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 16:30ET start=2026-10-14T20:30:00+00:00 shares=337 local=0.1616x prior-peak=0.0005x rth-peak=0.0193x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 16:40ET start=2026-10-14T20:40:00+00:00 shares=827 local=2.4540x prior-peak=0.0013x rth-peak=0.0474x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 16:45ET start=2026-10-14T20:45:00+00:00 shares=1060 local=3.1454x prior-peak=0.0016x rth-peak=0.0607x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 16:50ET start=2026-10-14T20:50:00+00:00 shares=783 local=0.9468x prior-peak=0.0012x rth-peak=0.0449x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 16:55ET start=2026-10-14T20:55:00+00:00 shares=6191 local=7.4861x prior-peak=0.0095x rth-peak=0.3547x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 17:00ET start=2026-10-14T21:00:00+00:00 shares=3117 local=2.9406x prior-peak=0.0048x rth-peak=0.1786x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 17:05ET start=2026-10-14T21:05:00+00:00 shares=8429 local=2.7042x prior-peak=0.0130x rth-peak=0.4830x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 17:10ET start=2026-10-14T21:10:00+00:00 shares=1380 local=0.2229x prior-peak=0.0021x rth-peak=0.0791x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 17:15ET start=2026-10-14T21:15:00+00:00 shares=2156 local=0.6917x prior-peak=0.0033x rth-peak=0.1235x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 17:20ET start=2026-10-14T21:20:00+00:00 shares=748 local=0.3469x prior-peak=0.0012x rth-peak=0.0429x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 17:25ET start=2026-10-14T21:25:00+00:00 shares=311 local=0.2254x prior-peak=0.0005x rth-peak=0.0178x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 17:40ET start=2026-10-14T21:40:00+00:00 shares=476 local=4.7600x prior-peak=0.0007x rth-peak=0.0273x status=floored`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 17:45ET start=2026-10-14T21:45:00+00:00 shares=522 local=5.2200x prior-peak=0.0008x rth-peak=0.0299x status=floored`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 17:55ET start=2026-10-14T21:55:00+00:00 shares=15633 local=32.8424x prior-peak=0.0240x rth-peak=0.8957x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 18:00ET start=2026-10-14T22:00:00+00:00 shares=4561 local=8.7375x prior-peak=0.0070x rth-peak=0.2613x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 18:05ET start=2026-10-14T22:05:00+00:00 shares=2293 local=0.5027x prior-peak=0.0035x rth-peak=0.1314x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 18:10ET start=2026-10-14T22:10:00+00:00 shares=2443 local=0.5356x prior-peak=0.0038x rth-peak=0.1400x status=ok`
+    - `FBGL 2026-10-14  VOLUME-CONTEXT 18:15ET start=2026-10-14T22:15:00+00:00 shares=151 local=0.0618x prior-peak=0.0002x rth-peak=0.0087x status=ok`
+- IBG: **Skip: stale VRatio / thin.** First AH appearance (supplementary change-only pass), Day% −6.6%. `tradable=true`. SIP shows a single 18:00 ET bar of 510 sh / 4 trades at $0.98; no accumulation, so no FINAL-SCAN-GATE-BLOCK note and no book check. Catalyst (1 search): none found; background Nasdaq extension deadline Nov 11. Grade None.
+  - Spike-bar: `IBG 2026-10-14  NO-SPIKE  peak +20% @18:00ET  (no bar cleared +15% on a volume co-spike) (as-of 18:30ET)`
+  - Third-bar: `IBG 2026-10-14  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET`
+  - Volume context (`IBG-1830-volume-metric.json`, source `IBG-1830-volume-sip.json`):
+    - `# IBG shared SIP volume sip-ah-volume-v2; prior 2026-10-13 0+48zero/48 slots; floor 100; same-date regular peak 5000 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T22:30:10+00:00; source fetched 2026-10-14T22:30:51.230380+00:00`
+    - `IBG 2026-10-14  VOLUME-CONTEXT 18:00ET start=2026-10-14T22:00:00+00:00 shares=510 local=5.1000x prior-peak=5.1000x rth-peak=0.1020x status=floored`
+- SBNYL: untradable (carried). Unchanged snapshot (+10.4%). Spike-bar: `SBNYL 2026-10-14: NO prior-close (daily bar missing)`; third-bar: `SBNYL 2026-10-14  CONFIRM-3  NO-DATA prior close unavailable`.
+- CLNE: AH below 10%. Not evaluated.
+- Final-scan feed-lag cross-check (SIP last bar vs. Oct 14 regular close): none of the tracked names is above 10% AH. GLND −6.2%, NXGL −5.7% (AH high $6.34), TDIC −12.7%, MXCT +0.8%, BOXL −2.7%, MWYN −0.5%, GENK +4.7%, GRML +0.2%, FMFC 0.0%, KMRK 0.0%, DFNS −5.3%, TCRT +4.3%, TRUG +0.7% (AH high $1.74), SDEV +4.0%, GMEX +3.5%; CCG and GAUZ have no AH bars. Nothing to rescue.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
