@@ -28,6 +28,8 @@ DATA = 'https://data.alpaca.markets'
 ET = ZoneInfo('America/New_York')
 FIRST, LAST = '2025-10-01', '2026-09-30'
 HISTORY_START = '2025-08-25'          # 20+ AH sessions of volume history before FIRST
+DAILY_END = '2026-10-09'              # last daily bar fetched (covers 20-session holds after LAST)
+MONTHLY_RANGE = ('2025-07-01', '2026-08-31')
 TOP, MOVE, SPIKE, MIN_DOLLARS, LOOKBACK = 1000, 0.03, 3.0, 1_000_000, 20
 AUCTION_BPS, STRESS_BPS = 5, 20
 EXITS = ('exit_0430', 'exit_open', 'exit_close')
@@ -99,6 +101,18 @@ def last_quote(symbol, start, end):
     return {k: quotes[0].get(k) for k in ('t', 'bp', 'ap', 'bs', 'as')} if quotes else None
 
 
+def configure(first, last):
+    """Move the event window (default: the October 13 census year). History, daily and monthly ranges follow it."""
+    global FIRST, LAST, HISTORY_START, DAILY_END, MONTHLY_RANGE
+    FIRST, LAST = first, last
+    HISTORY_START = (dt.date.fromisoformat(first) - dt.timedelta(days=37)).isoformat()
+    DAILY_END = min(dt.date(2026, 10, 9), dt.date.fromisoformat(last) + dt.timedelta(days=45)).isoformat()
+    end_month = month_add(last[:7], -1)
+    y, m = map(int, end_month.split('-'))
+    last_day = (dt.date(y + m // 12, m % 12 + 1, 1) - dt.timedelta(days=1)).isoformat()
+    MONTHLY_RANGE = (month_add(first[:7], -3) + '-01', last_day)
+
+
 def month_add(ym, k):
     y, m = map(int, ym.split('-'))
     m += k
@@ -128,18 +142,18 @@ def rankings(monthly, months):
 
 def calendar():
     url = 'https://paper-api.alpaca.markets/v2/calendar?' + urllib.parse.urlencode(
-        {'start': HISTORY_START, 'end': '2026-10-09'})
+        {'start': HISTORY_START, 'end': DAILY_END})
     return [{'date': d['date'], 'close': d['close']} for d in get_json(url)]
 
 
-def fetch(out):
+def fetch(out, quotes_too=True):
     uni = load(UNIVERSE)
     symbols = sorted(set(uni['alpaca']) | set(uni['sp500_since_2016']))
     if not (out / 'calendar.json').exists():
         (out / 'calendar.json').write_text(json.dumps(calendar()))
     cal = json.loads((out / 'calendar.json').read_text())
     if not (out / 'monthly.json.gz').exists():
-        save(out / 'monthly.json.gz', bars(symbols, '1Month', '2025-07-01', '2026-08-31', 'raw'))
+        save(out / 'monthly.json.gz', bars(symbols, '1Month', *MONTHLY_RANGE, 'raw'))
     months = sorted({d['date'][:7] for d in cal if FIRST <= d['date'] <= LAST})
     top = rankings(load(out / 'monthly.json.gz'), months)
     members = sorted({s for names in top.values() for s in names})
@@ -147,7 +161,7 @@ def fetch(out):
     for adjustment in ('raw', 'split'):
         path = out / f'daily-{adjustment}.json.gz'
         if not path.exists():
-            save(path, bars(members, '1Day', HISTORY_START, '2026-10-09', adjustment, batch=100))
+            save(path, bars(members, '1Day', HISTORY_START, DAILY_END, adjustment, batch=100))
     ah_dir = out / 'ah'
     ah_dir.mkdir(exist_ok=True)
     full = [d['date'] for d in cal if d['close'] == '16:00' and d['date'] <= LAST]
@@ -156,6 +170,8 @@ def fetch(out):
         if not path.exists():
             save(path, bars(members, '5Min', iso(et(day, 1600)), iso(et(day, 1659)), 'raw', batch=500))
     print('bars cached', flush=True)
+    if not quotes_too:
+        return
     events = candidates(out, top, cal)
     qpath = out / 'quotes.json.gz'
     quotes = load(qpath) if qpath.exists() else {}
@@ -325,11 +341,16 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--replay', action='store_true')
+    parser.add_argument('--first', default=FIRST)
+    parser.add_argument('--last', default=LAST)
+    parser.add_argument('--bars-only', action='store_true', help='fetch bars, skip quotes and evaluation')
     args = parser.parse_args()
+    configure(args.first, args.last)
     args.out.mkdir(parents=True, exist_ok=True)
     if not args.replay:
-        fetch(args.out)
-    evaluate(args.out)
+        fetch(args.out, quotes_too=not args.bars_only)
+    if not args.bars_only:
+        evaluate(args.out)
 
 
 if __name__ == '__main__':

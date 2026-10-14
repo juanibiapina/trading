@@ -1,6 +1,6 @@
 # Position Evaluation
 
-Evaluate open positions and decide whether to hold or sell based on risk rules.
+Sell every open position at the first premarket evaluation, and resell anything left unfilled at 14:30 CET.
 
 **Non-interactive:** This pulse runs unattended. Never ask Juan questions or show Telegram buttons here — no one answers. Act on the best available decision and route anything needing his input to the **daily email** (questions go in emails only).
 
@@ -60,42 +60,18 @@ Calculate for each position:
 - **Peak P&L %** = (peak_price - entry_price) / entry_price (peak verified against SIP)
 - **Days held** = today - entry_date
 
-### 3. Apply Risk Rules
+### 3. Apply the Exit Rule
 
-For each position, evaluate based on catalyst grade:
+**Sell every open position at the first premarket evaluation (10:30 CET / 04:30 ET), whatever its grade.** No position is held past that pulse for a later premarket or a later day. (Applied 2026-10-14 by `strategy-advance` under Juan's standing apply-and-report directive; retroactive veto. Basis: on the 89 real Alpaca AH entries, the 26 held past the 04:30 evaluation under the old Grade A/B hold rules returned -11.9% against -3.1% if sold at the 04:30 open; 21 of 26 were worse, p 0.038, both chronological halves negative. Selling all at 04:30 would have moved the per-trade mean from -3.2% to -1.0%. See `docs/investigations/init3-exec-gap-2026-10-09.md`.)
 
-#### Grade A (Major operational catalyst)
-- **Not Grade A: definitive fixed-price cash buyouts / merger agreements.** A
-  set cash deal price pins the stock and kills AH→PM momentum. Re-grade such a
-  position **D** and exit at the first premarket opportunity, regardless of the
-  grade recorded at entry. (Basis: DOMO, Progress Software $400M all-cash asset
-  purchase — held 5 days, closed -9.4%, never moved out of a $3.5-4.5 band.)
-  Rumored / competing-bid / unfixed-ratio M&A can still re-rate and stays
-  gradable on its merits.
-- **Hold up to 5 days**
-- **Trail stop:** If peak P&L > +50%, set stop at peak - 20%
-- **Hard stop:** -25% from entry
-- **Exit trigger:** Catalyst invalidated by news
-
-#### Grade B (Solid catalyst)
-- **Hold up to 2 days**  
-- **Trail stop:** If peak P&L > +30%, set stop at peak - 15%
-- **Hard stop:** -15% from entry
-
-#### Grade C (Weak catalyst)
-- **Exit in first premarket pulse**
-- **Hard stop:** -10% from entry
-
-#### Grade D or None (No catalyst)
-- **Exit immediately at any profit**
-- **Hard stop:** -10% from entry
+- **10:30 CET pulse:** SELL every position. Price the limit off the real bid (Step 5).
+- **14:30 CET pulse:** any position still open means the 10:30 order did not fill. Cancel the stale order, take a fresh bid, and SELL again.
+- **Catalyst grade (A/B/C/D/None)** is still recorded at entry and in the exit row for pattern analysis. It no longer changes the exit time. The fixed-price cash buyout rule (grade D, not A) still applies to grading.
+- If the book has no bid at all (`bid $0.00`), rest the limit at the last SIP vwap and log it; the 14:30 pulse reprices.
 
 ### 4. Make Decisions
 
-For each position, output one of:
-- **HOLD** — Within risk parameters, catalyst intact
-- **TRAIL** — Set/update trailing stop at X price
-- **SELL** — Exit position (stop hit, time limit, or target reached)
+For each position, output **SELL** (first premarket evaluation) or **RESELL** (14:30 pulse, unfilled 10:30 order). Record the grade and the peak in the log for analysis.
 
 ### 5. Execute Sells
 
@@ -117,7 +93,6 @@ Then:
 Update `OPEN_POSITIONS.md`:
 - Update current prices
 - Update peak prices if new high
-- Update trailing stops if applicable
 - Move sold positions to Closed Positions table
 
 Only edit content needed to reconcile positions or record the evaluation; skip cosmetic whitespace changes. If an exact-text edit fails, reread the current file, choose a shorter unique target, and retry once. Do not repeat the unchanged `oldText`.
@@ -131,10 +106,10 @@ Append to today's log (`log/YYYY-MM-DD/log.md`):
 
 | Ticker | Entry | Current | P&L % | Peak | Days | Grade | Decision | Reason |
 |--------|-------|---------|-------|------|------|-------|----------|--------|
-| XXXX | $2.50 | $3.20 | +28% | $3.50 | 2 | A | HOLD | Trail stop at $2.80 |
+| XXXX | $2.50 | $3.20 | +28% | $3.50 | 1 | A | SELL | First premarket evaluation |
 
 **Actions taken:**
-- [List any sells or stop updates]
+- [List sells, fills and any reprices]
 ```
 
 ### 8. Commit
@@ -147,29 +122,14 @@ git push
 
 ## Risk Framework
 
-### Why Hold Grade A Positions
+### Why Every Position Exits at the First Premarket Evaluation
 
-From historical data:
-- **AIIO** (Grade A - $100M acquisition): +878% over 7 days
-- **UGRO** (Grade A - major merger): +62% additional after day 1
+The old rules held Grade A positions up to 5 days and Grade B up to 2, citing AIIO (+878% over 7 days) and UGRO (+62% after day 1) from the pre-Alpaca ledger. On real Alpaca fills since 2026-06-25 the holds lost: 26 held trades returned -11.9% against -3.1% at the 04:30 open. The two big hold winners (CHPT +50.9 points, VEEA +46.2) did not offset the losers (DARE -39.9, TOPS -44.6, ONFO -28.3). The 63 trades sold at 04:30-05:00 ET beat the modeled 04:30 open by 0.58 points. `Day Trading.md` already says to sell every position in premarket before the open.
 
-Both Grade A positions were multi-day runners. The pattern: **real operational catalysts drive sustained momentum.**
-
-### Why Exit Grade C/D/None Quickly
+### Why Exit No-Catalyst Names Quickly
 
 - **EZGO** (No catalyst): -99% crash
 - **WOK** (Unknown catalyst): -87% crash
 - **LNKS** (No catalyst): Back to start
 
 No-catalyst moves are often pump-and-dumps or momentum plays that reverse violently.
-
-### Position Sizing for Risk
-
-With ~$100 positions:
-- Max loss on Grade D (quick exit at -10%): $10
-- Max loss on Grade A (hold to -25% stop): $25
-- Potential gain on Grade A runner (+200%): $200
-
-**Risk/reward ratio for Grade A:** Risk $25 to potentially make $200+ = 8:1
-
-This justifies holding Grade A positions through volatility that would trigger exits on lower-grade positions.

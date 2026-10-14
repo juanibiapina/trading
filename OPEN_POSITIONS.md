@@ -19,38 +19,19 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 - Record catalyst grade at entry (A/B/C/D/None)
 - **Execute via Alpaca:** `node scripts/broker.js buy SYM QTY --limit P --ext` (extended-hours limit). Record the real fill price returned by the order, not the quoted/assumed price.
 
-### Holding Rules (based on catalyst grade)
-| Grade | Description | Hold Strategy |
-|-------|-------------|---------------|
-| **A** | Major operational catalyst (breakthrough deal, major partnership, transformative contract). **Excludes definitive fixed-price cash buyouts / merger agreements** — a set deal price pins the stock and kills AH→PM momentum, so grade those **D** (DOMO: held 5 days, -9.4%). Rumored / competing-bid / unfixed-ratio M&A can still re-rate. | Hold up to 5 days, trail stop at -20% from peak |
-| **B** | Solid catalyst (earnings beat, FDA milestone) | Hold up to 2 days, stop at -15% from entry |
-| **C** | Weak catalyst (analyst upgrade, financing) | Exit in premarket, stop at -10% |
-| **D/None** | No catalyst or dilution | Exit at first premarket opportunity |
+### Exit Rule (all grades)
+**Sell every open position at the first premarket evaluation (10:30 CET / 04:30 ET).** The 14:30 CET pulse resells anything left unfilled. No position is held to a later premarket or a later day. Applied 2026-10-14 (retroactive veto): the 26 trades held under the old Grade A (5 days) / Grade B (2 days) rules returned -11.9% against -3.1% if sold at the 04:30 open (21 of 26 worse, p 0.038); see `docs/investigations/init3-exec-gap-2026-10-09.md`.
 
-### Exit Triggers
-1. **Stop loss hit** — Exit immediately
-2. **Target reached** — Trail stop, don't exit all at once
-3. **Time limit** — Grade A: 5 days, Grade B: 2 days, Others: premarket
-4. **Catalyst invalidated** — News changes thesis → exit
+Catalyst grade is still recorded at entry for pattern analysis:
+
+| Grade | Description |
+|-------|-------------|
+| **A** | Major operational catalyst (breakthrough deal, major partnership, transformative contract). **Excludes definitive fixed-price cash buyouts / merger agreements** — grade those **D** (DOMO: held 5 days, -9.4%). Rumored / competing-bid / unfixed-ratio M&A can still re-rate. |
+| **B** | Solid catalyst (earnings beat, FDA milestone) |
+| **C** | Weak catalyst (analyst upgrade, financing) |
+| **D/None** | No catalyst or dilution |
 
 Execute exits via Alpaca: `node scripts/broker.js sell SYM QTY --limit P --ext`. Record the real fill price.
-
-## Risk Calculation
-
-Based on historical data (17 winners tracked):
-- Multi-day runners (held = big win): 2/17 = 12%
-- Same-day peaks (held = loss): 15/17 = 88%
-
-**Expected value per €100 position if held:**
-- 12% chance of +200% avg = +€24
-- 88% chance of -50% avg = -€44
-- **EV if holding blindly: -€20 per trade**
-
-**But with catalyst filtering:**
-- Grade A catalyst runners: 2/2 = 100% (AIIO, UGRO both had real catalysts)
-- No-catalyst crashes: 2/2 = 100% (EZGO, WOK)
-
-**Conclusion:** Hold Grade A, exit others quickly.
 
 ## Closed Positions
 

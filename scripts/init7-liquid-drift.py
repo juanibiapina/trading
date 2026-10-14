@@ -23,7 +23,7 @@ spec.loader.exec_module(census)
 
 COST, STRESS = 10 / 1e4, 20 / 1e4
 HOLDS, ENTRIES, SIDES = (5, 20), ('open', 'close'), ('long', 'short')
-TAIL = 0.05 / 8 / 2
+TAIL = 0.05 / 8 / 2                 # Bonferroni over 8 cells; --tail overrides (fade OOS freeze: 0.025)
 
 
 def month_interval(values, draws=4000, seed=13):
@@ -59,10 +59,16 @@ def summary(rows, key, shift=0.0):
 
 
 def main():
+    global TAIL
     parser = argparse.ArgumentParser()
     parser.add_argument('--census', type=Path, default=ROOT / 'log/2026-10-13/init7-liquid-ah-census')
     parser.add_argument('--out', type=Path, default=ROOT / 'log/2026-10-13/init7-liquid-drift')
+    parser.add_argument('--first', default=census.FIRST)
+    parser.add_argument('--last', default=census.LAST)
+    parser.add_argument('--tail', type=float, default=0.05 / 8 / 2, help='one-sided bootstrap tail per interval end')
     args = parser.parse_args()
+    TAIL = args.tail
+    census.configure(args.first, args.last)
     args.out.mkdir(parents=True, exist_ok=True)
 
     cal = json.loads((args.census / 'calendar.json').read_text())
@@ -123,7 +129,7 @@ def main():
                                  'net': sign * (r - b) - COST})
 
     result = {'freeze': str(FREEZE.relative_to(ROOT)), 'census': str(args.census.relative_to(ROOT)),
-              'last_bar': dates[-1], 'counts': counts, 'truncated': trunc, 'missing_bars': missing,
+              'last_bar': dates[-1], 'window': [census.FIRST, census.LAST], 'tail': TAIL, 'counts': counts, 'truncated': trunc, 'missing_bars': missing,
               'cells': {}, 'by_move_open_20': {}, 'events_by_month': {}}
     for k, rows in cells.items():
         result['cells'][k] = {'base': summary(rows, 'net'), 'stress': summary(rows, 'net', STRESS),

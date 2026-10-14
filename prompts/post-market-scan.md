@@ -157,14 +157,14 @@ node scripts/broker.js orders all        # confirm fill, read filled_avg_price
 - Catalyst Grade = A/B/C/D/None (see below)
 - Reason = brief justification
 
-**Catalyst Grading (determines hold strategy):**
-| Grade | Type | Examples | Hold Strategy |
-|-------|------|----------|---------------|
-| **A** | Major operational | Acquisition, major partnership, breakthrough deal | Hold up to 5 days |
-| **B** | Solid news | Earnings beat, FDA approval, contract win | Hold up to 2 days |
-| **C** | Weak news | Financing, analyst upgrade, minor PR | Exit in premarket |
-| **D** | Dilution | Stock offering, warrant exercise | Exit immediately |
-| **None** | No catalyst found | Unknown driver | Exit at first opportunity |
+**Catalyst Grading (recorded for pattern analysis):** every position, whatever its grade, is sold at the first premarket evaluation (10:30 CET / 04:30 ET); the Grade A/B multi-day holds were retired 2026-10-14 (see `prompts/position-evaluation.md`).
+| Grade | Type | Examples |
+|-------|------|----------|
+| **A** | Major operational | Acquisition, major partnership, breakthrough deal |
+| **B** | Solid news | Earnings beat, FDA approval, contract win |
+| **C** | Weak news | Financing, analyst upgrade, minor PR |
+| **D** | Dilution | Stock offering, warrant exercise |
+| **None** | No catalyst found | Unknown driver |
 
 **Merger-arb exclusion from Grade A (2026-07-28).** A **definitive, fixed-price
 cash acquisition / asset-purchase / merger agreement** is **not** a Grade A
