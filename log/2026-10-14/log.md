@@ -287,7 +287,52 @@ The 22:35 and 22:40 pulses left no section in the log; this scan follows 22:30.
 - YYAI, SDEV, CDXS: AH below 10%. Not evaluated.
 - Observation window (before 23:00 CET); no entries.
 
+## Scan 23:00 CET (5:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.59 | +14.4% | +31.4% | $2.09 | +50.4% | 4.9M | 11.9M | 0.4x | 4.4M | Miscellaneous Commercial Services |
+| YYAI | [TV](https://www.tradingview.com/chart/?symbol=YYAI) | $0.69 | -2.6% | +6.4% | $0.74 | +3.6% | 634K | 281K | 2.3x | 4.6M | Containers/Packaging |
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $2.07 | -31.7% | +6.8% | $2.21 | -27.1% | 396K | 32.9M | 0.0x | 2.3M | Biotechnology |
+| SDEV | [TV](https://www.tradingview.com/chart/?symbol=SDEV) | $0.99 | -20.8% | +5.1% | $1.04 | -16.8% | 325K | 50.1M | 0.0x | 51.8M | Financial Conglomerates |
+| BENF | [TV](https://www.tradingview.com/chart/?symbol=BENF) | $0.87 | -0.3% | +5.1% | $0.92 | +4.8% | 307K | 964K | 0.3x | 2.6M | Investment Managers |
+| CISS | [TV](https://www.tradingview.com/chart/?symbol=CISS) | $0.53 | -15.5% | +6.1% | $0.56 | -10.4% | 97K | 1.0M | 0.1x | 1.5M | Marine Shipping |
+| CDXS | [TV](https://www.tradingview.com/chart/?symbol=CDXS) | $1.29 | -2.3% | +5.6% | $1.36 | +3.2% | 75K | 805K | 0.1x | 101.7M | Chemicals: Specialty |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): NCPL
+
+The scanner's +31.4% / $2.09 for NCPL matches the 22:45 snapshot, so TradingView's figure is lagging. SIP and the IEX quote put NCPL at $2.15–$2.20.
+
+**Evaluation notes:**
+- NCPL: **ENTERED**. Fifth AH scan above 10%. Float 4.4M, Day% +14.4%, Total% under the +150% ceiling. The stock is building: SIP made new AH highs of $2.15 in the 16:40 bar (516K sh / 2,966 trades) and the 16:45 bar (392K sh / 2,328 trades), and volume is still accumulating at 276K–517K sh per bar since 16:30. The fresh IEX quote at 16:59 ET is $2.16 / $2.20, at the AH high. The AH high falls after the first-bar window, so the first-bar-spike skip does not apply, although CONFIRM-3 still reads NO. Catalyst Grade C: Nasdaq bid-price compliance PR (GlobeNewswire 2026-10-14 ~16:00 ET). `tradable=true`. The 22:25 check found no MULTI-SESSION-RUNNER tag. Bought 45 sh with a $2.24 limit; filled at **$2.16** (order 529b8e3a). Entry Total% is +55.4% vs the $1.39 prior close. The fill came in below the ask, so no CHASE-CAP.
+  - Spike-bar: `NCPL 2026-10-14  SPIKE  16:19ET  +29%  $2.05  2021 trades / 400k sh  (first co-spike bar) (as-of 17:00ET)`
+  - Third-bar: `NCPL 2026-10-14  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 17:00ET`
+  - Volume context (`NCPL-1700-volume-metric.json`, source `NCPL-1700-volume-sip.json`):
+    - `# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-13 48+0zero/48 slots; floor 100; same-date regular peak 841121 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T21:00:07+00:00; source fetched 2026-10-14T21:00:22.088238+00:00`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:00ET start=2026-10-14T20:00:00+00:00 shares=730815 local=unknown prior-peak=2.4272x rth-peak=0.8689x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:05ET start=2026-10-14T20:05:00+00:00 shares=410260 local=unknown prior-peak=1.3626x rth-peak=0.4878x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:10ET start=2026-10-14T20:10:00+00:00 shares=102754 local=unknown prior-peak=0.3413x rth-peak=0.1222x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:15ET start=2026-10-14T20:15:00+00:00 shares=707616 local=1.7248x prior-peak=2.3502x rth-peak=0.8413x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:20ET start=2026-10-14T20:20:00+00:00 shares=1273437 local=3.1040x prior-peak=4.2294x rth-peak=1.5140x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:25ET start=2026-10-14T20:25:00+00:00 shares=910853 local=1.2872x prior-peak=3.0252x rth-peak=1.0829x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:30ET start=2026-10-14T20:30:00+00:00 shares=501736 local=0.5508x prior-peak=1.6664x rth-peak=0.5965x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:35ET start=2026-10-14T20:35:00+00:00 shares=276180 local=0.3032x prior-peak=0.9173x rth-peak=0.3283x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:40ET start=2026-10-14T20:40:00+00:00 shares=516498 local=1.0294x prior-peak=1.7154x rth-peak=0.6141x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:45ET start=2026-10-14T20:45:00+00:00 shares=391784 local=0.7809x prior-peak=1.3012x rth-peak=0.4658x status=ok`
+    - Consumer verdict with the metric: `NCPL 2026-10-14  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 17:00ET`
+  - Book:
+    - `NCPL BOOK iex bid $2.16 x100 / ask $2.20 x100 @ 2026-10-14 16:59:34 ET age 49s two-sided spread 1.82% of ask`
+    - `NCPL BOOK sip-15m bid $2.07 x2700 / ask $2.08 x500 @ 2026-10-14 16:45:21 ET age 15m02s two-sided spread 0.48% of ask`
+    - `NCPL BOOK refresh +15s iex unchanged @ 2026-10-14 16:59:34 ET`
+    - `NCPL BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-14 17:00:23 ET; log-only)`
+- TCRT: back below 10% AH (+6.8%), so it stays at 1 AH scan above 10%. Dead-cat (Day% −31.7%), thin SIP volume, Grade None. Not eligible.
+- YYAI, SDEV, BENF, CISS, CDXS: AH below 10%. Not evaluated.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+| NCPL | $2.16 | 23:00 CET (17:00 ET) | 45 | 529b8e3a-fefd-418e-a890-521863b1f423 | Grade C (Nasdaq compliance PR); AH BUILD with new highs on 276K–517K sh/bar; float 4.4M; Total +55.4% |
