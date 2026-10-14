@@ -182,10 +182,25 @@ def print_timeline(ticker):
     print(f"\nSession Timeline (last 24h):")
     print("-" * 60)
     
+    # Yahoo drops past sessions' AH bars and keeps only the 16:00 ET close
+    # print; label that bar CLOSE so it is not read as a flat AH session.
+    dates = sorted({p['dt'].date() for p in prices})
+    no_ah_dates = set()
+    for d in dates[:-1]:
+        late = [p['dt'].hour * 60 + p['dt'].minute for p in prices
+                if p['dt'].date() == d and p['dt'].hour >= 16]
+        if late and max(late) == 16 * 60:
+            no_ah_dates.add(d)
+            print(f"No AH bars after the 16:00 ET close print for {d} "
+                  f"(Yahoo drops past AH sessions). Use SIP: broker.js bars "
+                  f"{ticker} --tf 5Min --start <AH-start-UTC>")
+
     # Group by session
     for p in prices[-48:]:  # Last ~4 hours at 5-min intervals
         minute = p['dt'].hour * 60 + p['dt'].minute
-        if 16 * 60 <= minute < 20 * 60:
+        if minute == 16 * 60 and p['dt'].date() in no_ah_dates:
+            session = "CLOSE"
+        elif 16 * 60 <= minute < 20 * 60:
             session = "AH"
         elif 4 * 60 <= minute < 9 * 60 + 30:
             session = "PM"

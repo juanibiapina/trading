@@ -60,7 +60,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **Skip dead-cat bounces** — stocks with Day% below -15% are excluded even if AH bounce is strong. **Dead-cat-override watch:** a Day% ≤ -15% candidate that BUILDS in AH to reclaim *above its regular close* (AH% rising across ≥2 scans) is not a dead-cat bounce; still skipped from live entry but flagged DEAD-CAT-OVERRIDE WATCH with a hypothetical entry for data collection (basis: BYAH Jun 11, hypothetical +72%)
 - **Early-peak base-hold requires holding within ~20% of the AH high** (or making new highs); a deep collapse (>20% off the AH high) that stabilizes at a much lower base is a fade, not a hold, especially on Grade-None macro/sector-beta names (basis: SKYQ Jun 10 +129% peak → +46% rebuild → -27.6%)
 - **Entry extension ceiling: 150% Total%** — skip candidates extended >150% from previous close; if only 23:00 candidate exceeds 150%, wait for later scans (late-building candidates often have better entry points). **Ceiling-override watch:** candidates that exceed 150% but show BUILD-and-hold (AH high after 17:00 ET, holding within ~20% of high across ≥2 scans, VRatio >5x) are still skipped but flagged with a hypothetical entry for data collection.
-- Morning retrospective reconstructs the prior AH session from SIP 5-minute bars (`broker.js bars`); Yahoo drops past sessions' AH bars by 04:20 ET, and `check-prices.py --ah-history` now says so instead of printing the 16:00 close as the AH range (since 2026-10-13). Forced AH scans are secondary diagnostics only
+- Morning retrospective reconstructs the prior AH session from SIP 5-minute bars (`broker.js bars`); Yahoo drops past sessions' AH bars by 04:20 ET, and `check-prices.py --ah-history` now says so instead of printing the 16:00 close as the AH range (since 2026-10-13); `price-timeline.py` labels that bar `[CLOSE]` with the same note (since 2026-10-14). Forced AH scans are secondary diagnostics only
 - **PM-only gapper tracker:** each morning eval classifies the biggest raw PM mover as an AH→PM continuation (detectable) or a PM-only gapper (flat/down in AH, undetectable), with a running tally. **Each PM-only gapper is also labelled holdable vs uninvestable** (a sustained gain over ≥2 consecutive 5-min bars on real volume = holdable; an instant crash or single thin tick = uninvestable) — the blind spot only has real cost if the gappers are holdable. PM-only gappers are a structural blind spot of the AH→PM strategy, not a detection-baseline failure (data collection: CIIT Jun 10, GLXG Jun 11, TDIC Jun 16, MBRX Jun 23 uninvestable, CUPR Jun 24 thin print)
 - **Late-AH-tail surge tracker:** each morning eval checks whether the winner's defining AH surge fired *after* the last scheduled scan (after 18:30 ET / 00:30 CET, before 04:00 ET PM open) in the unscanned 18:30–20:00 ET after-hours tail, with a running tally. Distinct from a PM-only gapper (the stock has an AH footprint); not a detection-threshold miss, not counted against baseline. Dataset for deciding whether to add late scans (~01:00/01:30 CET) — a scheduling decision left to the user. **Each case is sub-classified feed-lag vs true-tail:** feed-lag = already over the 10% AH threshold at the 18:30 ET last-scan timestamp but the live feed missed it (fix is data-source verification, not a late scan); true-tail = genuinely under threshold at 18:30 ET and surged after (only these argue for an added late scan) (data collection: ORIS Jun 22 true-tail surge 19:25 ET +54% hypothetical; BTCT Jun 29→30 feed-lag, already +67.6% at 18:30 ET, +47% hypothetical)
 - **Fade-rule false-negative tracker:** each morning eval records any candidate skipped on the SPIKE→FADE / early-peak-fade rule that then re-exploded in premarket (PM peak above its AH peak and above a profitable entry), with a running tally (float + catalyst grade per case). The re-ramp is **float-conditional**: the trigger to propose the exception is **≥4/5 (≥80%) *sub-3M-float* AH-faders re-exploding** (higher-float faders — LIQT 24.2M, TGE 44.2M — keep fading and are the negative control, not counted toward the trigger). At the trigger, propose a sub-3M-float PM-open re-check exception to the fade skip. **Standing sub-3M count: 4 of 15** (LNKS/RPGL/ATPC/BJDX re-exploded; SIP-corrected CRE Jun cycle, IOTR, WLDS, CRE Jul 29→30 cycle, VSME, ABTS, IPW, LGCL, TGL, and NXTT fell short). The exception is not one case from promotion; the overall SIP-verified sample must reach ≥80% (data collection only).
@@ -80,6 +80,40 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-10-14 — Label the 16:00 Close Print in Price Timelines
+
+**Context:** Reviewed the October 13 morning evaluation (written October 14) and the Oct 7–12 logs. October 13 ran 7/7 scheduled scans plus six extra observations. AEHL, the winner (PM SIP high $24.79, +189.9%), was first seen at 22:45 CEST, cleared the gate at 23:00 and was entered at $15.40 (peak +61.0% on the fill). AGMH (+12.1% peak, now below fill) and BKYI (final-scan entry at $3.26, PM peak $2.95, −23.6%) are the other open fills. Detection 75/86 (87.2%), selection 39/82 (47.6%). The morning evaluation followed yesterday's change and took AH levels from SIP. Its `price-timeline.py` excerpt still printed TGL's October 13 16:00 ET close print as `[AH] 10-13 16:00 ET: $0.28 (+0.0%)`, and the writer had to add "Yahoo shows no AH bars after 16:00 ET" by hand. `price-timeline.py` has the same past-session gap that `check-prices.py --ah-history` had.
+
+**Evaluation of previous changes:**
+
+- 2026-10-13 `check-prices.py --ah-history` missing-session line and SIP AH reconstruction: **helped, 1/5 sessions.** The morning evaluation skipped the Yahoo AH call, took every AH level from SIP bars, and has zero "returned only the 16:00 row" notes. Evening Yahoo AH shape checks (TCRT, JBDI, JYD, IZM, FCHL at 22:05–22:20 CEST) still printed live AH bars, so the live path is intact.
+- 2026-10-09 same-date regular-session ratio: **helped, 2/5.** 183/183 October 13 `VOLUME-CONTEXT` rows carry a known `rth-peak` across 32 metric files. The winner check cited `rth_peak_shares` (12,883 sh) for AEHL with no hand count.
+- 2026-10-09 SIP daily multi-session tagging: **helped, 4/10 entries.** AEHL, AGMH and BKYI entry notes cited SIP daily closes; the morning evaluation confirmed all three as day 1 with zero reclassifications.
+- 2026-10-08 DST-aware AH tools: **insufficient data until November 2; summer output held, 3/5 sessions.** All labels fall between 16:00 and 18:35 ET.
+- 2026-10-08 `broker.js bars --end`: **helped, 3/5.** Zero "`--end` ignored" notes.
+- 2026-10-07 stale delayed SIP snapshot replacement: **insufficient data, 4/5 sessions.** All 29 `BOOK` verdicts had delayed SIP ages of 15m00s–15m27s, so no `sip-hist` line was due; 26/29 read `IEX STALE`. All three fills used limits set from the SIP-15m book while IEX was frozen.
+- 2026-10-07 timeline close basis: **helped, 4/5.** `price-timeline.py` printed `regular close 2026-10-13` for AEHL ($8.55), TGL, AGMH and BKYI, matching SIP.
+- 2026-10-01 unrounded AH evidence: **helped, 6/6.** Present in all 13 AH scans.
+- 2026-09-22 to 09-25 supplementary-pass changes: **still insufficient for a cutoff decision.** October 13 added MWG (unassessed: no PM trades through 04:08 ET, 4,692 AH shares in total). Running: 15 unique names, 12 assessed, 1 sustained continuation (IPW), 3 unassessed.
+
+**Changes:**
+
+1. **scripts/price-timeline.py** — For any earlier date in the window whose only bar at or after 16:00 ET is the 16:00 print, the timeline prints `No AH bars after the 16:00 ET close print for DATE (Yahoo drops past AH sessions). Use SIP: broker.js bars SYM --tf 5Min --start <AH-start-UTC>` and labels that bar `[CLOSE]` instead of `[AH]`. The latest date in the window is never relabelled, so live evening output is unchanged.
+   - Why: the 04:20 ET morning run and the 10:30 position evaluation read this script. A flat `[AH]` row at the close price reads as "no AH move" on nights like AEHL's +166% AH build.
+   - Hypothesis: I expect zero `[AH] ... 16:00 ET` rows for a past session in morning-evaluation and position-evaluation excerpts over the next five covered sessions, and no hand-written "Yahoo shows no AH bars" caveats next to the excerpts. If Yahoo restores past AH bars, the note stops printing on its own.
+
+**Verification:** `price-timeline.py TGL` at 08:20 ET prints the note for 2026-10-13. A synthetic replay labels a past-date 16:00 bar `[CLOSE]` and leaves a same-day 16:00 bar followed by 16:05 as `[AH]`. `scan.py --help` and `git diff --check` passed.
+
+**Ready work skipped / next owners:**
+
+- **BKYI final-scan entry (−23.6%, `rth-peak` 0.02x on every post-18:00 bar):** one case. The ratio stays log-only per the October 9 archive test (no separation on 89 entries); entry rules belong to Juan.
+- **In-window feed lag (8), coverage failures (3 in 10 sessions), extreme-runner tally (83.3%):** routed to the daily email by the morning evaluation.
+- **Initiative 7 fade test:** owned by today's `strategy-advance` runs.
+- **Research replay scripts with fixed EDT offsets:** still pending before any winter replay.
+- No new `FEEDBACK_LOG.md` entries since October 9.
+
+**Updated process:** Price timelines mark a past session's 16:00 bar as the close print. Scanner thresholds, entry gates, sizing and learning rules are unchanged.
 
 ### 2026-10-13 — Stop Reporting the 16:00 Close as a Past Session's AH Range
 
