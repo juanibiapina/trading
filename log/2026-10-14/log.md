@@ -406,8 +406,77 @@ The 23:05–23:25 pulses left no section in the log; this scan follows 23:00.
 - TCRT, SDEV, CISS, AGMH, CDXS, FBGL: AH below 10%. Not evaluated (TCRT stays dead-cat, Day% −31.7%).
 - No new entries.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.59 | +14.4% | +35.9% | $2.16 | +55.4% | 7.7M | 12.2M | 0.6x | 4.4M | Miscellaneous Commercial Services |
+| YYAI | [TV](https://www.tradingview.com/chart/?symbol=YYAI) | $0.69 | -2.6% | +21.4% | $0.84 | +18.2% | 1.1M | 336K | 3.4x | 4.6M | Containers/Packaging |
+| GMEX | [TV](https://www.tradingview.com/chart/?symbol=GMEX) | $1.71 | -18.2% | +5.3% | $1.80 | -13.9% | 812K | 563K | 1.4x | n/a | Specialty Stores |
+| GENK | [TV](https://www.tradingview.com/chart/?symbol=GENK) | $1.69 | +16.6% | +5.2% | $1.78 | +22.7% | 308K | 5.7M | 0.1x | 6.6M | Restaurants |
+| CLNE | [TV](https://www.tradingview.com/chart/?symbol=CLNE) | $1.35 | -5.6% | +7.4% | $1.45 | +1.4% | 307K | 949K | 0.3x | 161.1M | Gas Distributors |
+| CISS | [TV](https://www.tradingview.com/chart/?symbol=CISS) | $0.53 | -15.5% | +7.7% | $0.57 | -9.0% | 245K | 1.1M | 0.2x | 1.5M | Marine Shipping |
+| AGMH | [TV](https://www.tradingview.com/chart/?symbol=AGMH) | $0.50 | -5.4% | +7.2% | $0.54 | +1.4% | 202K | 10.2M | 0.0x | 735K | Packaged Software |
+| SBNYL | [TV](https://www.tradingview.com/chart/?symbol=SBNYL) | $1.25 | -0.8% | +10.4% | $1.38 | +9.5% | 180K | 40K | 4.5x | 59.6M | Regional Banks |
+| JBDI | [TV](https://www.tradingview.com/chart/?symbol=JBDI) | $2.51 | -26.8% | +10.0% | $2.76 | -19.5% | 86K | 9.6M | 0.0x | n/a | Wholesale Distributors |
+| LUCD | [TV](https://www.tradingview.com/chart/?symbol=LUCD) | $0.54 | -10.4% | +6.8% | $0.58 | -4.3% | 69K | 2.3M | 0.0x | 160.1M | Medical Specialties |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): NCPL, SBNYL, YYAI
+
+**Evaluation notes:**
+- YYAI: **ENTERED**. Second AH scan above 10% (23:30 +11.5%, 00:00 +21.4%). Float 4.6M, Day% −2.6%, Total% under the +150% ceiling. SIP shows a second ignition after the faded 16:15–16:25 pop: the 17:30 bar ran to $0.90 (48K sh / 344 trades), the 17:35 bar printed 126K sh / 746 trades, and the 17:40 bar made the AH high of **$0.95** on 234K sh / 996 trades (VWAP $0.86). The 17:45 bar pulled back to a $0.79 close on 113K sh / 466 trades. The delayed SIP book at 17:45:40 ET was $0.850 / $0.853, and the scanner's $0.84 sits ~12% under the high, so the stock is holding. The AH high came at 17:40 ET, after the first-bar window, and CONFIRM-3 reads YES, so the first-bar-spike skip does not apply. `tradable=true`. Freshness guard: `broker.js quote` returned a frozen 16:00 ET IEX quote (`bid $0.59 x100 ask $0.00 x0`, 2 h old). Real SIP trades contradict it, so the zero ask is a stale artifact and does not trigger the illiquid skip (OLB Oct 8 precedent). The fill confirms a live book. Multi-session check: SIP daily closes were flat to down at $0.79 → $0.71 over Oct 6–13, with no session ≥+50%, and YYAI does not appear in `WINNERS_TRACKING.md`. That makes it a fresh day-1 igniter, so no MULTI-SESSION-RUNNER tag. Catalyst re-searched (2 searches this scan, 4 total): Benzinga's 17:06 ET AH movers list carries only the price move. Background items only: a 1-for-40 reverse split (May 14), a 1-for-20 reverse split (Aug 13), and a Nasdaq 10-K deficiency notice (Aug 28; plan due Oct 23). **Grade None**, entered with concern noted: no catalyst, serial reverse splits, and a pending compliance deadline. Bought 116 sh with a $0.88 limit; filled at **$0.82** (order eaba150d). Entry Total% is +15.8% vs the $0.708 prior close. The qualifying scan showed $0.84 / +18.2%, and the fill came in below it, so no CHASE-CAP.
+  - Spike-bar: `YYAI 2026-10-14  SPIKE  16:19ET  +22%  $0.84  121 trades / 23k sh  (first co-spike bar) (as-of 18:00ET)`
+  - Third-bar: `YYAI 2026-10-14  CONFIRM-3  YES ignition 17:30ET 3.5x; confirmed 17:40ET $0.84 as-of 18:00ET`
+  - Volume context (`YYAI-1800-volume-metric.json`, source `YYAI-1800-volume-sip.json`):
+    - `# YYAI shared SIP volume sip-ah-volume-v2; prior 2026-10-13 4+44zero/48 slots; floor 100; same-date regular peak 11250 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T22:00:55+00:00; source fetched 2026-10-14T22:00:56.219946+00:00`
+    - Rows 16:15–16:45 ET match the 23:30 section.
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 16:50ET start=2026-10-14T20:50:00+00:00 shares=23423 local=0.4427x prior-peak=46.8460x rth-peak=2.0820x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 16:55ET start=2026-10-14T20:55:00+00:00 shares=8250 local=0.3522x prior-peak=16.5000x rth-peak=0.7333x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:00ET start=2026-10-14T21:00:00+00:00 shares=32629 local=1.5480x prior-peak=65.2580x rth-peak=2.9004x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:05ET start=2026-10-14T21:05:00+00:00 shares=8826 local=0.3768x prior-peak=17.6520x rth-peak=0.7845x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:10ET start=2026-10-14T21:10:00+00:00 shares=8632 local=0.9780x prior-peak=17.2640x rth-peak=0.7673x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:15ET start=2026-10-14T21:15:00+00:00 shares=10380 local=1.1761x prior-peak=20.7600x rth-peak=0.9227x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:20ET start=2026-10-14T21:20:00+00:00 shares=14970 local=1.6961x prior-peak=29.9400x rth-peak=1.3307x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:25ET start=2026-10-14T21:25:00+00:00 shares=13917 local=1.3408x prior-peak=27.8340x rth-peak=1.2371x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:30ET start=2026-10-14T21:30:00+00:00 shares=48293 local=3.4701x prior-peak=96.5860x rth-peak=4.2927x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:35ET start=2026-10-14T21:35:00+00:00 shares=126182 local=8.4290x prior-peak=252.3640x rth-peak=11.2162x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:40ET start=2026-10-14T21:40:00+00:00 shares=234086 local=4.8472x prior-peak=468.1720x rth-peak=20.8076x status=ok`
+    - `YYAI 2026-10-14  VOLUME-CONTEXT 17:45ET start=2026-10-14T21:45:00+00:00 shares=113113 local=0.8964x prior-peak=226.2260x rth-peak=10.0545x status=ok`
+    - Consumer verdict with the metric: `YYAI 2026-10-14  CONFIRM-3  YES ignition 17:30ET 3.5x; confirmed 17:40ET $0.84 as-of 18:00ET`
+  - Book:
+    - `YYAI BOOK iex bid $0.5942 x100 / ask $0.0000 x0 @ 2026-10-14 16:00:04 ET age 2h00m one-sided/empty`
+    - `YYAI BOOK sip-15m bid $0.8502 x100 / ask $0.8530 x1000 @ 2026-10-14 17:45:40 ET age 15m00s two-sided spread 0.33% of ask`
+    - `YYAI BOOK refresh +15s iex unchanged @ 2026-10-14 16:00:04 ET`
+    - `YYAI BOOK verdict: IEX STALE 2h00m; SIP-15m TWO-SIDED (observed 2026-10-14 18:00:39 ET; log-only)`
+- NCPL: **already entered** (45 sh @ $2.16, 23:00 CET); the broker shows the position and the filled buy, so no new order. Holding: the scanner shows $2.16 (+55.4% Total), and the delayed SIP book at 17:45 ET was $2.17 / $2.18, within ~4% of the $2.25 AH high. Volume is cooling to 76K–185K sh per bar since 17:20 ET, down from 295K–413K. The broker marks the position at $2.09 (−3.2%).
+  - Spike-bar: `NCPL 2026-10-14  SPIKE  16:19ET  +29%  $2.05  2021 trades / 400k sh  (first co-spike bar) (as-of 18:00ET)`
+  - Third-bar: `NCPL 2026-10-14  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 18:00ET`
+  - Volume context (`NCPL-1800-volume-metric.json`, source `NCPL-1800-volume-sip.json`):
+    - `# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-13 48+0zero/48 slots; floor 100; same-date regular peak 841121 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T22:00:57+00:00; source fetched 2026-10-14T22:00:58.248493+00:00`
+    - Rows 16:00–17:15 ET match the 23:30 section.
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:20ET start=2026-10-14T21:20:00+00:00 shares=185277 local=0.6269x prior-peak=0.6154x rth-peak=0.2203x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:25ET start=2026-10-14T21:25:00+00:00 shares=138638 local=0.4691x prior-peak=0.4605x rth-peak=0.1648x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:30ET start=2026-10-14T21:30:00+00:00 shares=155156 local=0.8374x prior-peak=0.5153x rth-peak=0.1845x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:35ET start=2026-10-14T21:35:00+00:00 shares=76125 local=0.4906x prior-peak=0.2528x rth-peak=0.0905x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:40ET start=2026-10-14T21:40:00+00:00 shares=81651 local=0.5890x prior-peak=0.2712x rth-peak=0.0971x status=ok`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 17:45ET start=2026-10-14T21:45:00+00:00 shares=90896 local=1.1132x prior-peak=0.3019x rth-peak=0.1081x status=ok`
+    - Consumer verdict with the metric: `NCPL 2026-10-14  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 18:00ET`
+  - Book:
+    - `NCPL BOOK iex bid $2.16 x100 / ask $2.20 x100 @ 2026-10-14 16:59:34 ET age 1h01m two-sided spread 1.82% of ask`
+    - `NCPL BOOK sip-15m bid $2.17 x1300 / ask $2.18 x2200 @ 2026-10-14 17:45:39 ET age 15m01s two-sided spread 0.46% of ask`
+    - `NCPL BOOK refresh +15s iex unchanged @ 2026-10-14 16:59:34 ET`
+    - `NCPL BOOK verdict: IEX STALE 1h01m; SIP-15m TWO-SIDED (observed 2026-10-14 18:00:39 ET; log-only)`
+- SBNYL: untradable (carried). Second AH scan above 10% (+10.4%, an unchanged snapshot), so this is a qualified-but-untradable broker-block for the morning tally. No SIP or catalyst workup.
+- JBDI: AH +10.0% displayed, but it is absent from the unrounded >10% list, so it is below 10%. Dead-cat in any case (Day% −26.8%). Not evaluated.
+- GMEX, GENK, CLNE, CISS, AGMH, LUCD: AH below 10%. Not evaluated.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | NCPL | $2.16 | 23:00 CET (17:00 ET) | 45 | 529b8e3a-fefd-418e-a890-521863b1f423 | Grade C (Nasdaq compliance PR); AH BUILD with new highs on 276K–517K sh/bar; float 4.4M; Total +55.4% |
+| YYAI | $0.82 | 00:00 CET (18:00 ET) | 116 | eaba150d-b33d-4dd6-9bd7-e8cfe6435c39 | Grade None (no fresh catalyst); second AH ignition 17:30 ET to $0.95 on 126K–234K sh/bar, CONFIRM-3 YES; float 4.6M; Total +15.8% |

@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
 | NCPL | $2.16 | $2.16 | $2.16 | 0.0% | 0.0% | 45 | $97.20 | C | 2026-10-14 | AH BUILD, new highs $2.15 at 16:40–16:45 ET; Nasdaq bid-price compliance PR; float 4.4M; order 529b8e3a; sell at 10:30 CET premarket eval |
+| YYAI | $0.82 | $0.81 | $0.82 | -1.0% | 0.0% | 116 | $95.12 | None | 2026-10-14 | Second AH ignition 17:30 ET to SIP high $0.95 at 17:40 on 126K–234K sh/bar, CONFIRM-3 YES; no fresh catalyst; float 4.6M; Total +15.8%; order eaba150d; sell at 10:30 CET premarket eval |
 
 ## Position Rules
 
