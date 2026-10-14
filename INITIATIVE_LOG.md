@@ -1,5 +1,34 @@
 # Initiative Log
 
+### 2026-10-14 18:00 — Initiative 7 out-of-sample fade fails; no liquid candidate left. Initiative 3 hold retirement applied at 15:00
+
+**Evaluated:** The October 13 18:00 hypothesis **failed**: the frozen fade (short liquid AH up movers at the next open, cover at the D+20 close) nets -0.56% per trade on the prior year, lower bound -3.30, second half negative. No pilot is active.
+
+**Step taken:**
+
+- **15:00 run (committed as 77991ce, no log entry written; recorded here):**
+  - **Initiative 3:** applied the hold retirement under the updated prompt and the process-review handoff. Every position is sold at the first premarket evaluation (10:30 CEST / 04:30 ET); the 14:30 pulse resells anything unfilled. Edited `prompts/position-evaluation.md`, `prompts/post-market-scan.md` and `OPEN_POSITIONS.md`. Basis: 26 held trades returned -11.9% against -3.1% at the 04:30 open (21 of 26 worse, p 0.038).
+  - **Initiative 7:** froze `docs/investigations/init7-liquid-fade-oos-freeze.json` at 13:15 UTC before any fetch, added window flags to the census and drift scripts, and started the October 2024 – September 2025 fetch (gob `XCM`).
+- **18:00 run, Initiative 7 (dated; closes the liquid lane):** `XCM` had finished (exit 0, 1,222 symbols). Ran `scripts/init7-liquid-drift.py` on the window with the frozen 2.5% tail, then scored the single frozen cell with the new `scripts/init7-liquid-fade-oos.py`.
+- No other initiative had a ready item: 1 and 5 have no dated work, 2 is deferred, 6 is closed, and 3's first live check is tomorrow's 10:30 evaluation.
+
+**Result:**
+
+- **Frozen cell:** -0.555% net per trade [-3.296, +2.646], stress -0.755%, halves +1.521 / -2.616, n=578 (579 up movers, 1 missing bars, 0 splits, none truncated). **Fails.**
+- Up movers beat the equal-weight top 1,000 by +0.46 points over 20 sessions this year (+1.42% vs +0.97%), the opposite sign from the in-sample year.
+- **Descriptive:** fade by move size: 3-6% -2.64%, 6-10% +0.05%, >10% +3.34% [-3.01, +9.19]. The in-sample 6-10% signal is flat; the bucket pattern flips between years. Long up movers net +0.26% to +0.70% in all four cells, with no lower bound above zero.
+- **Decision:** Initiative 7 has no candidate left on liquid names (five frozen tests failed). No order, live rule, size or pulse timing changed in this run. Equity $99,728.46 (-$271.54), no open positions.
+- **Verification:** `scripts/init7-liquid-fade-oos.py` reproduces `fade-result.json`; ZETA 2024-10-08 checked by hand ($32.72 open 10-09 to $29.02 close 11-05, -11.31%).
+- **Evidence:** `docs/investigations/init7-liquid-fade-oos-2026-10-14.md`, `log/2026-10-14/init7-liquid-fade-oos/`.
+
+**Hypothesis / next step:**
+
+- **North Star pick, next run (Initiative 7, core universe):** the core micro-cap universe is where the large gross moves are and has never had a frozen historical census with quoted fills. Freeze it first: names outside the point-in-time top 1,000, price $0.50–$10, AH ignitions over the past year, entry at the NBBO ask at fixed AH times, exits at the 04:30 ET bid and at the open, net per trade with a date-clustered interval. Then start the fetch as a gob job and evaluate on the following run. Hypothesis: the full set is negative net, matching the 89 real entries; a pass needs a frozen subset with a positive lower bound and both halves positive. If nothing passes, propose to Juan that the AH→PM strategy be stopped or replaced.
+- **Initiative 3:** the next process review confirms that positions entered tonight are sold at the October 15 10:30 evaluation.
+- **Next daily email:** fade result (no liquid candidate), the applied hold retirement with its veto option, and the micro-cap census plan; Jev not run.
+
+**Needs from Juan:** nothing new. The hold retirement is applied; reply to veto it. Initiative 2 stays deferred.
+
 ### 2026-10-13 18:00 — Initiative 7 liquid drift test fails in all eight cells; liquid-event lane closed
 
 **Evaluated:** The October 13 15:00 hypothesis **failed**: up movers bought at the next open or close trail the equal-weight top 1,000 in every cell (-0.53% to -1.76% net), so no lower bound is above zero. No pilot is active.

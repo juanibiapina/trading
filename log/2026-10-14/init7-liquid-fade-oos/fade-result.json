@@ -1,0 +1,93 @@
+{
+ "freeze": "docs/investigations/init7-liquid-fade-oos-freeze.json",
+ "cell": "short up movers, open D+1 to close D+20",
+ "window": [
+  "2024-10-01",
+  "2025-09-30"
+ ],
+ "base": {
+  "n": 578,
+  "mean_pct": -0.555,
+  "median_pct": 0.367,
+  "interval_pct": [
+   -3.296,
+   2.646
+  ],
+  "win_rate": 0.517,
+  "halves_pct": [
+   1.521,
+   -2.616
+  ],
+  "passed": false
+ },
+ "stress": {
+  "n": 578,
+  "mean_pct": -0.755,
+  "median_pct": 0.167,
+  "interval_pct": [
+   -3.496,
+   2.446
+  ],
+  "win_rate": 0.509,
+  "halves_pct": [
+   1.321,
+   -2.816
+  ],
+  "passed": false
+ },
+ "raw_event_mean_pct": 1.421,
+ "bench_mean_pct": 0.966,
+ "dropped": {
+  "split": 0,
+  "missing_bars": 1,
+  "truncated": 0
+ },
+ "by_move": {
+  "3-6%": {
+   "n": 294,
+   "mean_pct": -2.639,
+   "median_pct": -1.168,
+   "interval_pct": [
+    -5.807,
+    0.481
+   ],
+   "win_rate": 0.459,
+   "halves_pct": [
+    -0.17,
+    -5.108
+   ],
+   "passed": false
+  },
+  "6-10%": {
+   "n": 150,
+   "mean_pct": 0.05,
+   "median_pct": 0.534,
+   "interval_pct": [
+    -2.009,
+    2.382
+   ],
+   "win_rate": 0.54,
+   "halves_pct": [
+    0.473,
+    -0.374
+   ],
+   "passed": false
+  },
+  ">10%": {
+   "n": 134,
+   "mean_pct": 3.341,
+   "median_pct": 3.164,
+   "interval_pct": [
+    -3.01,
+    9.189
+   ],
+   "win_rate": 0.619,
+   "halves_pct": [
+    1.977,
+    4.589
+   ],
+   "passed": false
+  }
+ },
+ "passed": false
+}
