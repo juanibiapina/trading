@@ -80,6 +80,18 @@ AH >10% at this snapshot (unrounded): none
 - No >10% AH candidates, so no spike-bar, CONFIRM-3, SIP volume or book checks to run. The 21:30 watch names (GLND, NXGL, TDIC, NCPL, etc.) carry to the next pulse.
 - Observation window (before 23:00 CET); no entries.
 
+## Scan 22:10 CET (4:10 PM ET)
+
+No candidates found. The 16:10:11 ET snapshot shows 0 hits, the third empty AH-open pulse in a row.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- No >10% AH candidates, so no spike-bar, CONFIRM-3, SIP volume or book checks to run. Free-tier SIP still blocks the 16:00–16:10 ET bars, so a cross-check of the 21:30 watch names (GLND, NXGL, TDIC, NCPL, etc.) waits for a later pulse.
+- Observation window (before 23:00 CET); no entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
