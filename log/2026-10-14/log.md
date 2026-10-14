@@ -184,6 +184,54 @@ AH >10% at this snapshot (unrounded): NCPL, TRUG
   - TRUG was the Aug 25 FINAL-SCAN-GATE-BLOCK name.
 - Observation window (before 23:00 CET); no entries.
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.59 | +14.4% | +11.9% | $1.78 | +28.1% | 1.1M | 11.5M | 0.1x | 4.4M | Miscellaneous Commercial Services |
+| TRUG | [TV](https://www.tradingview.com/chart/?symbol=TRUG) | $1.38 | -20.7% | +10.1% | $1.52 | -12.6% | 767K | 388K | 2.0x | 1.2M | Packaged Software |
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $2.07 | -31.7% | +7.7% | $2.23 | -26.4% | 130K | 32.9M | 0.0x | 2.3M | Biotechnology |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): NCPL, TRUG
+
+**Evaluation notes:**
+- NCPL: third AH scan above 10% (scan-count gate already met). The scanner's $1.78 lags the tape: the SIP 16:15 bar made a new AH high (O $1.78 H $2.05 C $2.02, vwap $1.94, 708K sh / 3,541 trades) after the 16:10 lull, and the fresh IEX quote is $2.06 / $2.08 (~+31% AH, ~+50% Total vs the $1.39 prior close). That is a rebuild on real volume, above the 16:05 high of $1.90. CONFIRM-3 still reads NO. The new high sits in the 16:15 bar, on the edge of the first-bar window; whether the first-bar-spike skip applies depends on whether it keeps making highs after 16:15 at the 23:00 check. Catalyst unchanged: Grade C (Nasdaq bid-price compliance PR, GlobeNewswire 2026-10-14 ~16:00 ET). `tradable=true`.
+  - Spike-bar: `NCPL 2026-10-14  NO-SPIKE  peak +19% @16:05ET  (no bar cleared +15% on a volume co-spike) (as-of 16:30ET)`
+  - Third-bar: `NCPL 2026-10-14  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET`
+  - Volume context (`NCPL-1630-volume-metric.json`, source `NCPL-1630-volume-sip.json`):
+    - `# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-13 48+0zero/48 slots; floor 100; same-date regular peak 841121 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T20:30:08+00:00; source fetched 2026-10-14T20:30:20.921266+00:00`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:00ET start=2026-10-14T20:00:00+00:00 shares=730815 local=unknown prior-peak=2.4272x rth-peak=0.8689x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:05ET start=2026-10-14T20:05:00+00:00 shares=410260 local=unknown prior-peak=1.3626x rth-peak=0.4878x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:10ET start=2026-10-14T20:10:00+00:00 shares=102754 local=unknown prior-peak=0.3413x rth-peak=0.1222x status=warmup`
+    - `NCPL 2026-10-14  VOLUME-CONTEXT 16:15ET start=2026-10-14T20:15:00+00:00 shares=707616 local=1.7248x prior-peak=2.3502x rth-peak=0.8413x status=ok`
+    - Consumer verdict with the metric: `NCPL 2026-10-14  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET`
+  - Book:
+    - `NCPL BOOK iex bid $2.06 x100 / ask $2.08 x100 @ 2026-10-14 16:30:28 ET age 0s two-sided spread 0.96% of ask`
+    - `NCPL BOOK sip-15m bid $1.77 x700 / ask $1.78 x2300 @ 2026-10-14 16:15:29 ET age 15m00s two-sided spread 0.56% of ask`
+    - `NCPL BOOK refresh +15s iex advanced @ 2026-10-14 16:30:32 ET`
+    - `NCPL BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-14 16:30:29 ET; log-only)`
+- TRUG: second AH scan above 10% (2 of 2), but Day% −20.7% puts it under the dead-cat filter, and it is still below the Oct 13 close ($1.74), so no DEAD-CAT-OVERRIDE. The 16:10 spike (H $1.74) is fading: 16:15 bar H $1.63 C $1.46, vwap $1.53, 378K sh / 2,766 trades, and the fresh IEX quote is $1.39 / $1.42, back at the $1.38 close. CONFIRM-3 turned NO. Catalyst unchanged: Grade None. `tradable=true`.
+  - Spike-bar: `TRUG 2026-10-14  SPIKE  16:10ET  +22%  $1.68  1089 trades / 168k sh  (first co-spike bar) (as-of 16:30ET)`
+  - Third-bar: `TRUG 2026-10-14  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET`
+  - Volume context (`TRUG-1630-volume-metric.json`, source `TRUG-1630-volume-sip.json`):
+    - `# TRUG shared SIP volume sip-ah-volume-v2; prior 2026-10-13 21+27zero/48 slots; floor 100; same-date regular peak 32960 sh; log-only`
+    - `# reconstructed as-of 2026-10-14T20:30:08+00:00; source fetched 2026-10-14T20:30:26.653463+00:00`
+    - `TRUG 2026-10-14  VOLUME-CONTEXT 16:00ET start=2026-10-14T20:00:00+00:00 shares=1891 local=unknown prior-peak=0.5529x rth-peak=0.0574x status=warmup`
+    - `TRUG 2026-10-14  VOLUME-CONTEXT 16:05ET start=2026-10-14T20:05:00+00:00 shares=71586 local=unknown prior-peak=20.9316x rth-peak=2.1719x status=warmup`
+    - `TRUG 2026-10-14  VOLUME-CONTEXT 16:10ET start=2026-10-14T20:10:00+00:00 shares=813779 local=unknown prior-peak=237.9471x rth-peak=24.6899x status=warmup`
+    - `TRUG 2026-10-14  VOLUME-CONTEXT 16:15ET start=2026-10-14T20:15:00+00:00 shares=377922 local=5.2793x prior-peak=110.5035x rth-peak=11.4661x status=ok`
+    - Consumer verdict with the metric: `TRUG 2026-10-14  CONFIRM-3  NO ignition 16:05ET failed third-bar hold/volume as-of 16:30ET`
+  - Book:
+    - `TRUG BOOK iex bid $1.39 x100 / ask $1.42 x100 @ 2026-10-14 16:30:10 ET age 19s two-sided spread 2.11% of ask`
+    - `TRUG BOOK sip-15m bid $1.53 x800 / ask $1.55 x300 @ 2026-10-14 16:15:28 ET age 15m00s two-sided spread 1.29% of ask`
+    - `TRUG BOOK refresh +15s iex unchanged @ 2026-10-14 16:30:10 ET`
+    - `TRUG BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-14 16:30:29 ET; log-only)`
+- TCRT: AH +7.7%, below the 10% threshold; Day% −31.7%. Not evaluated.
+- Observation window (before 23:00 CET); no entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
