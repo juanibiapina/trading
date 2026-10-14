@@ -18,6 +18,7 @@ Apply this data hierarchy from the start of the pulse:
 
 - Run `date` and `TZ=America/New_York date` to get the current time
 - **Late-start guard:** these pulses are scheduled 15:30–18:30 ET, and the bridge retries provider errors until they clear, so a pulse caught in an outage can resume hours later. If the current ET time is outside 15:25–20:00 ET on a weekday, do not scan or submit orders. Append `Late-start skip: post-market pulse began at HH:MM ET, outside the AH session; no scan or order.` to the log of the most recent weekday whose 16:00 ET close has passed, commit, push, and stop.
+- **AH-open pulse:** a scan run in the first minutes after 16:00 ET often returns 0 AH hits because the snapshot has no AH prints yet. Log the result and finish; do not sleep and rescan, since the next pulse runs five minutes later.
 - Determine the US trading date: if current CET time is before 06:00, the trading date is yesterday (CET). Otherwise it's today.
 - Set `LOG_DIR=log/YYYY-MM-DD` and `LOG_FILE=log/YYYY-MM-DD/log.md` using the trading date
 - Pull latest changes with the lock-aware sync helper: `bash scripts/sync-repo.sh`

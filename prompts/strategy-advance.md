@@ -18,9 +18,13 @@ baseline, and clean process are proxies, not the goal. The core AH->PM strategy
 is a hypothesis that can be replaced if another approach compounds faster. Every
 run, sanity-check that the active initiative is still the highest expected
 dollars-per-unit-time lever; if a bigger lever has appeared (including changing
-the core strategy or universe), surface it. Strategy pivots that touch
-`Day Trading.md` or live trading are *proposed to Juan*, not applied alone, but
-they are always in scope to raise.
+the core strategy or universe), surface it. Replacing the core strategy or
+universe is *proposed to Juan*, not applied alone, but it is always in scope to
+raise. Evidence-backed rule changes within the current strategy, including live
+entry, exit and holding rules in `Day Trading.md` or the trading prompts, are
+applied by this pulse and reported for Juan's retroactive veto (standing
+directive 2026-07-16/17 in `STRATEGY_ROADMAP.md`); do not leave them waiting on
+his approval. Trading-pulse timing changes follow the veto rule below.
 
 ## Rules
 
