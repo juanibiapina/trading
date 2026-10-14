@@ -6,7 +6,10 @@ This file tracks all daily winners for multi-day follow-up analysis.
 
 | Date Added | Ticker | Catalyst | Day 1 Peak | Day 1 Close | Current | Status |
 |------------|--------|----------|------------|-------------|---------|--------|
-| 2026-10-12 | FCHL | None (class action background; March 15-for-1 reverse split; history of AH pumps) | $2.26 PM SIP (+126.0% from $1.00) at 04:00 ET Oct 13, 2.11M sh / 19,103 tr; AH SIP high $1.99 (+99%) at 19:35 ET | — (Oct 13 close pending) | $2.04 (Oct 13 PM 04:22 ET, +104%) | Day 1. **Winner, DETECTED (7 AH scans from 22:25 CEST) + ENTERED @ $1.73** (23:00 CEST); peak +30.6% on the fill. Regular-session 5m peak 31K vs AH/PM peak bars 2.1–2.6M. Same night: DCX (+87.7% PM) was an in-window feed-lag miss. Float 1.3M |
+| 2026-10-13 | AEHL | None (dilution background: $100M ATM ~Oct 1, $6M converts Sep 16) | $24.79 PM SIP (+189.9% from $8.55) at 04:05 ET Oct 14, 232K sh / 8,804 tr; AH SIP high $22.72 (+165.7%) at 19:00 ET; Yahoo $29.76 at 04:10 ET unverified | — (Oct 14 close pending) | ~$23.69 (Oct 14 PM 04:23 ET, +177%) | Day 1. **Winner, DETECTED (5 AH scans from 22:45 CEST) + ENTERED @ $15.40** (23:00 CEST); SIP peak +61.0% on the fill. Regular-session 5m peak 12.9K vs AH/PM peak bars 232–393K. Extreme AH runner that continued into PM. Float 16.4M |
+| 2026-10-12 | FCHL | None (class action background; March 15-for-1 reverse split; history of AH pumps) | $2.26 PM SIP (+126.0% from $1.00) at 04:00 ET Oct 13, 2.11M sh / 19,103 tr; AH SIP high $1.99 (+99%) at 19:35 ET | $1.07 Oct 13 SIP close (regular high $1.69) | $0.97 (Oct 14 PM 04:10 ET SIP) | Day 1. **Winner, DETECTED (7 AH scans from 22:25 CEST) + ENTERED @ $1.73** (23:00 CEST); peak +30.6% on the fill. Regular-session 5m peak 31K vs AH/PM peak bars 2.1–2.6M. Same night: DCX (+87.7% PM) was an in-window feed-lag miss. Float 1.3M |
+
+October 14 note: AEHL added (October 13 session). FCHL day 2: dumped from the $2.26 PM peak to a $1.07 close and $0.97 PM Oct 14; no renewed run.
 
 October 13 note: FCHL added (October 12 session). BIYA and OLOX moved to Historical after 6–7 sessions with no renewed run. The October 9 session has no retrospective (baseline gap).
 

@@ -924,3 +924,150 @@ AH >10% at this snapshot (unrounded): AEHL, AGMH, BKYI, NCPL, TCRT, ZTG
 | AEHL | $15.40 | 23:01 CET (17:01 ET) | 6 | 7d3cf9e8 | Grade None; AH BUILD on SIP volume, CONFIRM-3 YES, holding ~18% off $18.40 high, +66% vs close |
 | AGMH | $0.66 | 23:01 CET (17:01 ET) | 144 | e0af8ded | Grade C Nasdaq compliance PR; float 735K, rebuilding near $0.74 high, +22% vs close |
 | BKYI | $3.26 | 00:32 CET (18:32 ET) | 30 | 5ac60d64 | Grade B contract win PR; float 1.3M, late AH ignition 17:30 ET on SIP volume, holding ~13% off $3.72 high, +98% vs close |
+
+## Morning Evaluation — 10:20 CEST (04:20 ET, October 14)
+
+**Pulse 1: AEHL is today's winner, and we detected and entered it.** AEHL closed October 13 at $8.55, ignited at 16:15 ET, built to an AH SIP high of $22.72 (+165.7%) at 19:00 ET and printed a **PM SIP high of $24.79 (+189.9%)** in the 04:05 ET bar on 231,639 shares / 8,804 trades. Our fill was $15.40 at 23:00 CEST; the SIP-verified peak is **+61.0% on the fill**. Exits belong to the 10:30 position pulse.
+
+Discovery ran before reading this log: `scan.py --all --session premarket` at 04:20 ET (GLND, AGMH, WFF, TCRT, GRML, AEHL) and `pm-sweep.py` (19 listed names above +10%). Levels are Alpaca SIP daily closes and 5-minute bars. SIP PM bars end at the 04:05 ET bar (1-minute bars to 04:08 ET); later PM is unassessed here. `check-prices.py --ah-history` was skipped: Yahoo drops the prior AH session by this run.
+
+### Today's Winner
+
+**AEHL — Antelope Enterprise Holdings (China livestream e-commerce and IT consulting; scanner industry Building Products), Nasdaq**
+
+- Catalyst: **None.** Two searches found only a Benzinga "surges 150% after hours" item with no cause. Background is dilution: $100M ATM (~Sep 29/Oct 1), $6M converts (Sep 16), an incentive-plan share registration. AEHL ran +75% AH on Jul 22 and +38% on Jul 23 on filings.
+- Previous close: **$8.55** (SIP, October 13; Day −7.8% from the $9.27 October 12 close). `price-timeline.py` uses the same basis.
+- AH last night: flat until 16:15 ET (H $12.00, 122,061 sh / 2,226 trades), then $15.73 at 16:25 ET (392,816 sh / 12,249 trades), $18.40 at 16:35 ET, a $20.76 wick at 17:20 ET, a base near $16, a second leg to $19.20 at 18:10 ET, and the **AH SIP high $22.72 (+165.7%) at 19:00 ET** (86,266 sh / 3,764 trades). Last AH bar 19:55 ET closed $21.45 (+150.9%).
+- Premarket now: 04:00 bar O $18.80 H $20.46 C $19.91 (254,768 sh / 13,193 trades); 04:05 bar H **$24.79** C $20.64 (231,639 sh / 8,804 trades). Yahoo prints $23.69–25.09 at 04:20–04:23 ET. Yahoo also shows a **$29.76 high at 04:10 ET (+248%)** that SIP cannot confirm yet (blocked window); the daily email should re-fetch it.
+- Hypothetical P&L: first sighting 22:45 CEST $15.05 → $24.79 = **+64.7%**; actual fill $15.40 → $24.79 = **+61.0%** (+93.2% if the Yahoo $29.76 holds up in SIP).
+- Float **16.4M** | Market cap **~$163M** (scanner field).
+- Volume vs previous day: the October 13 regular session's largest 5-minute bar was **12,883 sh** (`rth_peak_shares`), and October 12 traded 23K shares all day. AH peak bars (393K, 351K) are 27–30x that bar; PM peak bars (255K, 232K) are 18–20x. Clear spike.
+- Capturable: yes. Two-sided SIP book all evening ($16.21/$16.55 at 16:46 ET, $16.85/$16.94 at 17:15 ET) and a real fill at $15.40. The IEX quote was frozen at 16:00 ET ($6.88/$9.81), so the limit was set off the SIP book.
+
+**Scanner Diagnostic:**
+
+- Detectable at screening time (~22:15 CEST)? **YES** from 22:45 CEST. At 22:15 it had not ignited (flat $8.55 until 16:15 ET = 22:15 CEST). First AH appearance 22:45 CEST (+76.0%, $15.05, CONFIRM-3 YES 73.0x); gate met 23:00 (+100%); in all five AH scans from 22:45.
+- Acted on: entered 6 sh @ $15.40 at 23:00 CEST, the first entry scan. Grade None, BUILD, Entry Total% +66.1% vs the October 12 close.
+- Scanner gap: **none.** Detection and selection both worked.
+
+### Baseline Tracking
+
+Source: the October 12 log (Days tracked 98, detected 74/85, selected 38/81). The October 12 log is the immediately preceding trading day, so no new baseline gap. Existing gaps stay **Sep 11, Sep 18, Sep 25, Oct 2, Oct 9**.
+
+- Days tracked: **99** (98 + October 13 only).
+- Winners detected by scanner: **75/86 (87.2%)**, +AEHL.
+- Winner selected for paper trade: **39/82 (47.6%)**, +AEHL.
+- Target: >80% detection. Status: **BASELINE MET.** Coverage failures, five skipped retrospectives and the price-floor exclusions limit what the rate means.
+
+### Retrospective Scan Results
+
+`scan.py --all --session premarket` (04:20 ET): GLND +26.9%, AGMH +21.7%, WFF +6.1%, TCRT +20.8%, GRML +19.2%, AEHL +135.9%. `pm-sweep.py` added TGL +493.6%, LQDA +43.6%, RKDA +30.9% and thin prints (FGL 672 sh, MBIO 508, NIVF, GBR 1,396, AIMD 1,043, FLWS 2,508, TDTH 1,301, HOST 355, STEX 500, NCPL, IMCC 1,068). No forced AH scan was run.
+
+| Ticker | Oct 13 SIP close | AH SIP high / ET | PM SIP high / ET | PM high vs close | Peak-bar shares / trades | Latest | Classification |
+|--------|-----------------|------------------|------------------|------------------|--------------------------|--------|----------------|
+| AEHL | $8.55 | $22.72 / 19:00 | $24.79 / 04:05 | **+189.9%** | 231,639 / 8,804 | ~$23.69 (Yahoo 04:23) | Winner; detected, entered |
+| TGL | $0.278 | $0.31 / 16:00 (flat $0.25–0.28 all AH) | $2.13 / 04:00 | +666% | 6,936,450 / 27,395 | ~$1.17 (Yahoo 04:23) | PM-only gapper; sub-$0.50 close; Day −66.9% crash |
+| LQDA | $26.81 | $42.04 / by 18:30 | $40.00 (sweep) | +49% | — | $38.49 | Out of universe ($2.4B cap, $27); below the bar |
+| RKDA | $0.2075 | $0.37 / 19:10 | $0.34 / 04:00 | +64% | 4,227,568 / 19,510 | $0.24 (04:05 C) | Sub-$0.50, ignited 18:40 ET after the final scan; AH better |
+| TCRT | $3.03 | $3.97 / 19:35 | $3.98 / 04:00 | +31.4% | 637,315 / 9,410 | $3.34 (04:05 C) | Detected; ceiling skip; multi-session runner |
+| GLND | $2.21 | $2.23 (flat, <40K sh/bar) | $3.13 / 04:05 | +41.6% | 1,190,728 / 8,789 | $2.93 | PM-only mover |
+| AGMH | $0.5326 | $0.81 / 17:45 | $0.74 / 04:00 | +38.9% | 2,450,079 / 14,450 | $0.64 | Detected, entered; AH better |
+
+### Open Position P&L (Alpaca)
+
+`broker.js positions`: AEHL 6 @ $15.40 now $24.67, AGMH 144 @ $0.66 now $0.62, BKYI 30 @ $3.26 now $2.49. The `quote` endpoint is stamped 20:00 ET for AEHL, but the positions prices sit inside the live 04:20 ET prints (Yahoo AEHL $23.69–25.09, AGMH $0.62–0.63, BKYI $2.49–2.52), so they are not the stale prior close. P&L below uses the Alpaca positions prices.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| AEHL | $15.40 | +66.1% (vs $9.27 Oct 12) | None — no catalyst found | 23:00 CEST (17:00 ET) | $24.79 (SIP; Yahoo $29.76 unverified) | 04:05 ET | open | +$55.64 | +60.2% | ✅ Open, far above fill |
+| AGMH | $0.66 | +22.2% (vs $0.54 Oct 12) | C — Nasdaq compliance confirmation | 23:00 CEST (17:00 ET) | $0.74 (SIP) | 04:00 ET | open | −$5.51 | −5.8% | ⚠️ Open, below fill after +12.1% peak |
+| BKYI | $3.26 | +97.6% (vs $1.65 Oct 12) | B — government security agency customer | 00:30 CEST (18:32 ET) | $2.95 (SIP) | 04:00 ET | open | −$23.10 | −23.6% | ❌ Open, PM never reclaimed fill |
+
+**Total Realized P&L (Alpaca fills only, this session): $0.00** (unrealized +$27.03).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled checkpoints (21:30, 22:02, 22:30, 23:00, 23:30, 00:00, 00:30 CEST), plus extra observations at 22:05–22:25 and 22:45. The entry window was fully covered.
+- Candidates found: **10 unique tickers** with a >10% AH appearance (YFOR, NCPL, TCRT, MWG, AEHL, AGMH, FBGL, BKYI, DCX, ZTG).
+- Retrospective matches: 1/1 in-universe AH→PM movers of size. AEHL caught and entered.
+- Supplementary AH-change-only pass: the line is present in all 12 AH scans. **1 unique ticker: 0 continuation / 0 faded / 1 unassessed.**
+  - **MWG: unassessed.** Logged at $1.76 (22:25). SIP shows no PM trades through 04:08 ET; the last AH bar (19:55 ET) closed $1.79 on 4,692 AH shares in total. Persistence unknown.
+
+### Missed Opportunities
+
+No significant missed opportunities. TGL was a PM-only gapper (flat AH), RKDA ignited at 18:40 ET below the $0.50 floor and faded below its AH peak, and LQDA sits outside the universe below the winner bar.
+
+### AH Mover Follow-Through
+
+Every name with two or more >10% AH scans. Current = SIP 04:05 ET close.
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| AEHL | $22.72 | 19:00 | **Build** (+76 → 100 → 100 → 85 → 109%) | $20.64 | −9.2% | +141% | PM peak $24.79 **exceeded AH (+9.1%)**; PM better |
+| AGMH | $0.81 | 17:45 | **Build→hold** (+29 → 12 → 33 → 45 → 31%) | $0.64 | −21.0% | +20.2% | PM peak $0.74 **fell short (−8.6%)**; AH better |
+| TCRT | $3.97 | 19:35 | **Spike→hold, late rebuild** (+18.6 → 16.5 → 22.1 → 16.2 → 19.5%) | $3.34 | −15.9% | +10.2% | PM peak $3.98 ≈ AH peak; then fell to $3.21 |
+| NCPL | $1.86 | 18:35 | **Thin drift** (+13.3 → 13.7 → 12.9 → 11.6 → 20.5 → 18.3 → 19.4%) | $1.55 | −16.7% | +11.5% | PM peak $1.56 **fell short (−16.1%)**; AH better |
+| YFOR | $1.48 | 16:20 | **Spike→fade** (+12 → 32 → 40 → 28%, then below close) | $0.59 | −60.1% | −41.0% | PM peak $0.65 **fell short (−56%)**; collapsed through the close in AH ($0.64 at 19:55 ET) |
+| BKYI | $3.72 | 17:35 | **Late surge→fade** (+16.6 → 10.2%) | $2.70 | −27.4% | −4.6% | PM peak $2.95 **fell short (−20.7%)**; AH better |
+
+**AH-peak-vs-PM-peak, extreme zone:** AEHL topped at +165.7% AH and continued to +189.9% PM (SIP). It is a **continue** case. Tally **15 fades / 2 continues → 15 fades / 3 continues (83.3% fade)**, now below the 85% routing threshold. TCRT is excluded: its AH move was +31% from the October 13 close; the extension came in the regular session.
+
+**Chase-cap check:** AEHL filled at $15.40 below its qualifying scanner level ($17.10); BKYI qualified at +89.1% and filled at +97.6% (+8.5 pts, outside the >+120% zone). Standing **1 (XOS), never reclaimed**, unchanged.
+
+### Notes
+
+- **Coverage, last 10 completed sessions (Sep 30–Oct 13):** **Oct 2 0/7, Oct 5 0/7, Oct 9 0/7.** Sep 30, Oct 1, 6, 7, 8, 12 and **Oct 13 ran 7/7.** Sep 29 dropped out of the window: **3 failures in 10 sessions**, above the ≥2 trigger. The scheduler/bridge investigation stays routed to the email.
+- **Raw PM leader / PM-only tracking:** the biggest raw PM mover is **TGL (+666% SIP high)**, a **PM-only gapper**: AH flat at $0.25–0.28 on ≤244K sh/bar, then the 04:00 ET bar ran $0.33 → $2.13 on 6.94M sh / 27,395 trades. Catalyst None found (1 search; October 1 revenue guidance and a September 28 acquisition MOU are background). It crashed −66.9% in the October 13 regular session, so this is a dead-cat rebound off a crash. Investability: **holdable in character** (04:00–04:20 ET bars all above +300% on 3.3–6.9M sh/bar), spread unknown (IEX quote stale `ask $0.00 x0`). Not a scanner failure. `log/pm-open-scan.csv` has **no October 14 rows yet** at 04:20 ET; confirm the pm-open pulse captures TGL. Holdable PM-only count **69** (was 68). Carry the Initiative-6 cluster to the email.
+- **Price-floor exclusions: 12 observations across 9 nights, unchanged; >100%-and-holdable stays 1 (TOPP).** RKDA (close $0.2075) does not qualify: it sat near $0.22 (+6%) at the 18:30 ET final scan and ignited at 18:40 ET (325K–2.72M sh/bar, high $0.37 at 19:10 ET); PM SIP high $0.34 fell short of the AH peak. TGL's move was PM-only.
+- **In-window feed-lag: 8, unchanged.** Every in-universe name with a volume-backed in-window AH move appeared in the scans. The ≥3 trigger stays reached; carry the whole-universe AH verification to the email.
+- **Late-AH-tail tracking: 2 true-tail (ORIS, GNS) / 1 feed-lag (BTCT), unchanged.** AEHL's $22.72 high at 19:00 ET extended a detected build. RKDA's 18:40 ET ignition is a tail move below the price floor and below the winner bar; not counted.
+- **Fade-rule tally: sub-3M 4/25 (16.0%), unchanged; trigger not met.** No sub-3M fader was skipped on the fade rule. Higher-float controls: YFOR (3.9M, Grade C) AH $1.48 → PM $0.65, collapsed below its close; NCPL (4.4M) AH $1.86 → PM $1.56. FBGL (float n/a, Grade C Nasdaq bid-price compliance) was blocked by the 2-scan gate and faded: AH $5.00 → PM $2.86, below its $3.51 close. No strong-catalyst (A/B) faders.
+- **FIRST-BAR-SPIKE WATCH:** none flagged (NCPL was skipped as thin drift; its later highs came at 16:15, 17:40 and 18:35 ET). Standing **12 valid (3 ran / 9 faded-flat), 1 pending (ICMB)**, unchanged.
+- **Final-scan gate-block: 2 (TRUG, UPC; DKI excluded), unchanged.** ZTG first appeared at the final scan but failed CONFIRM-3, so it does not qualify; it would have lost money anyway: $0.66 → PM SIP peak $0.64 (−3.0%).
+- **CEILING-OVERRIDE WATCH / DEAD-CAT-OVERRIDE WATCH:** none flagged. For reference, TCRT's ceiling skip near $3.70 (23:30) → PM SIP $3.98 = +7.6%, then $3.21.
+- **Execution trackers:** broker-block **2**, stale-book-only **6**, no-fillable-book **4**, float-only **1**, all unchanged. All three qualifiers filled within seconds on limits set from the SIP-15m book while the IEX quote was frozen (AEHL/AGMH at 16:00 ET, BKYI at 16:53 ET).
+- **Actual-entry trackers:**
+  - **AEHL: day-1 fresh igniter** (Day −7.8%, falling base $11.76 → $8.55 over Oct 6–13). Grade None. $15.40 → PM SIP peak $24.79 = **+61.0%, ran.**
+  - **AGMH: day-1 fresh igniter** (Day −2.0%). Grade C. $0.66 → PM SIP peak $0.74 = **+12.1%, ran**, then back below the fill ($0.64). The Oct 5 placement at $0.6305 sits under the fill.
+  - **BKYI: day-1 fresh igniter** (Day +71.5% regular session, no prior ≥+50% session). Grade B. $3.26 → PM SIP peak $2.95 = **−9.5%, faded**; AH high $3.72 was the exit.
+  - First-day igniters **33 → 36 entries (15 ran / 8 flat / 13 faded) = 41.7% ran**. Multi-session runners **2, both faded** (DAIC, OLB), unchanged.
+  - Reverse-split tally unchanged (**4/5 this-week faded / 4/6 older continued**); none of the three entries had a split catalyst.
+- **Extreme-runner tally: 15 fades / 3 continues (83.3%)**, AEHL added as a continue. The ratio is now below the ≥85% routing threshold; the partial-profit recommendation in the email should carry the updated count.
+- **SIP basis checks:** October 13 closes AEHL $8.55, TGL $0.28, TCRT $3.03, AGMH $0.53, GLND $2.21, GRML $5.54, RKDA $0.21, LQDA $26.81. October 12 closes for Entry Total%: AEHL $9.27, AGMH $0.54, BKYI $1.65.
+- **WINNERS_TRACKING.md:** AEHL added to Active Watch. FCHL stays (day 2).
+
+### Daily Email Routing
+
+- Headline: **AEHL is the October 13→14 winner: detected and entered.** Close $8.55 → AH $22.72 (19:00 ET) → PM SIP high $24.79 (+190%) on 232K shares in the 04:05 ET bar, 18–30x the largest October 13 regular-session bar. Fill $15.40 at 23:00 CEST, peak +61.0% on the fill. Yahoo shows $29.76 at 04:10 ET; re-fetch SIP to confirm. Detection **75/86 (87.2%)**, selection **39/82 (47.6%)**, 99 days tracked.
+- **Open book:** AEHL +60.2%, AGMH −5.8% (peaked +12.1%), BKYI −23.6% (never reclaimed the fill).
+- **Scheduler/bridge reliability (decision for Juan):** 3 coverage failures in the last 10 sessions (Oct 2, Oct 5, Oct 9).
+- **Extreme-runner partial-profit (update):** AEHL continued past its +166% AH peak into PM, moving the tally to 15 fades / 3 continues (83.3%), below the 85% threshold.
+- Carry forward: 69-row holdable PM-only cluster → Initiative 6 (TGL +666% today, PM-only, dead-cat rebound); 8 in-window feed-lag misses → whole-universe AH verification; reverse-split recency recommendation; sub-$0.50 floor question (TOPP 1 of 3); stale IEX quote feed. The sub-3M fade (4/25), price-floor, first-bar and final-scan triggers are not met.
+
+### Price Charts
+
+Excerpts from `python3 scripts/price-timeline.py AEHL TGL AGMH BKYI` at ~04:23 ET. Yahoo 5-minute closes; Yahoo shows no AH bars after 16:00 ET, so the SIP tables above set the AH levels. Block charts omitted.
+
+```
+AEHL  Previous Close $8.55 (regular close 2026-10-13) | Peak $29.76 (+248.1%) at 10-14 04:10 ET (Yahoo; SIP-verified high $24.79 at 04:05)
+  [PM]  10-14 04:00 ET: $19.91 (+132.9%)
+  [PM]  10-14 04:05 ET: $20.64 (+141.4%)
+  [PM]  10-14 04:10 ET: $24.24 (+183.5%)
+  [PM]  10-14 04:15 ET: $23.66 (+176.7%)
+  [PM]  10-14 04:20 ET: $24.15 (+182.5%)
+  [PM]  10-14 04:23 ET: $23.69 (+177.0%)
+TGL   Previous Close $0.2780 (regular close 2026-10-13) | Peak $2.13 (+666.2%) at 10-14 04:00 ET
+  [AH]  10-13 16:00 ET: $0.28 (+0.0%)  Vol 509,580
+  [PM]  10-14 04:00 ET: $1.65 (+493.8%)
+  [PM]  10-14 04:05 ET: $1.38 (+396.4%)
+  [PM]  10-14 04:10 ET: $1.33 (+378.4%)
+  [PM]  10-14 04:15 ET: $1.18 (+324.5%)
+  [PM]  10-14 04:23 ET: $1.17 (+320.9%)
+AGMH  Previous Close $0.5326 (regular close 2026-10-13) | Peak $0.74 (+38.7%) at 10-14 04:00 ET
+  [PM]  10-14 04:00 ET: $0.65 (+21.7%)
+  [PM]  10-14 04:23 ET: $0.63 (+17.5%)
+BKYI  Previous Close $2.83 (regular close 2026-10-13)
+  [PM]  10-14 04:00 ET: $2.75 (−2.8%)
+  [PM]  10-14 04:10 ET: $2.44 (−13.8%)
+  [PM]  10-14 04:22 ET: $2.52 (−11.1%)
+```
