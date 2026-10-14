@@ -92,6 +92,19 @@ AH >10% at this snapshot (unrounded): none
 - No >10% AH candidates, so no spike-bar, CONFIRM-3, SIP volume or book checks to run. Free-tier SIP still blocks the 16:00–16:10 ET bars, so a cross-check of the 21:30 watch names (GLND, NXGL, TDIC, NCPL, etc.) waits for a later pulse.
 - Observation window (before 23:00 CET); no entries.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+No candidates found. The 16:15:09 ET snapshot shows 0 hits, the fourth empty AH pulse in a row.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- No >10% AH candidates, so no spike-bar, CONFIRM-3, SIP volume or book checks to run.
+- SIP cross-check of the 21:30 watch names (16:00 ET bar now served): the empty scan agrees with SIP. GLND 16:00 bar C $3.77 (vwap $3.85, 326K sh / 1,435 trades) is below its 15:55 close of $3.90. TDIC C $2.19 is below its $2.27 close. GENK C $1.63 is below its $1.68 close. NXGL 16:00 bar H $6.34 / C $5.76 (vwap $5.79, 237K sh / 3,234 trades), with C below its $5.83 price at 15:30 ET; the high was a brief wick. No watch name holds >10% AH.
+- Observation window (before 23:00 CET); no entries.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
