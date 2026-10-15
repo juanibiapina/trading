@@ -180,6 +180,55 @@ No candidates found.
 - **ZBAO** dropped out of the scan. SIP 16:10 bar C $0.95 (back at its $0.95 close, 124K sh / 548 trades): the first-bar spike to $1.50 fully round-tripped.
 - Others below 10% AH: ESLA +6.1% (sub-$1), NCPL +9.1% (day 3+ runner), DGXX +5.9% and ADCT +5.4% (floats >90M).
 
+## Scan 22:30 CET (4:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $2.18 | +5.3% | +22.5% | $2.67 | +29.0% | 1.4M | 33.5M | 0.0x | 2.3M | Biotechnology |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.98 | +24.5% | +8.6% | $2.15 | +35.2% | 519K | 16.3M | 0.0x | 2.1M | Miscellaneous Commercial Services |
+| DGXX | [TV](https://www.tradingview.com/chart/?symbol=DGXX) | $2.79 | +3.0% | +5.7% | $2.95 | +8.9% | 135K | 2.8M | 0.0x | 90.9M | Data Processing Services |
+| ADCT | [TV](https://www.tradingview.com/chart/?symbol=ADCT) | $1.49 | +2.8% | +5.4% | $1.57 | +8.3% | 72K | 2.3M | 0.0x | 99.0M | Pharmaceuticals: Major |
+| PMI | [TV](https://www.tradingview.com/chart/?symbol=PMI) | $10.00 | -21.1% | +19.0% | $11.90 | -6.2% | 17K | 755K | 0.0x | 1.4M | Medical Specialties |
+
+- Supplementary AH-change-only (>15%, not in volume pass): PMI
+- AH >10% at this snapshot (unrounded): PMI, TCRT
+
+**Evaluation notes:**
+- Observation only: entries open at 23:00 CET. AH >10% appearances so far: PMI 3 (22:20, 22:25, 22:30), TCRT 2 (22:25, 22:30), ZBAO 1 (22:20). TCRT now meets the 2-AH-scan count.
+- **TCRT** (`tradable=true`, carried; Alaunos Therapeutics, 2.3M float, biotech). Still building on rising volume:
+  - `TCRT 2026-10-15  SPIKE  16:07ET  +18%  $2.58  1341 trades / 185k sh  (first co-spike bar) (as-of 16:30ET)`
+  - `TCRT 2026-10-15  CONFIRM-3  YES ignition 16:05ET 3.0x; confirmed 16:15ET $2.83 as-of 16:30ET`
+  - `# TCRT shared SIP volume sip-ah-volume-v2; prior 2026-10-14 48+0zero/48 slots; floor 100; same-date regular peak 357922 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T20:30:25+00:00; source fetched 2026-10-15T20:30:28.954679+00:00`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 16:00ET start=2026-10-15T20:00:00+00:00 shares=195073 local=unknown prior-peak=2.4696x rth-peak=0.5450x status=warmup`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 16:05ET start=2026-10-15T20:05:00+00:00 shares=593356 local=unknown prior-peak=7.5118x rth-peak=1.6578x status=warmup`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 16:10ET start=2026-10-15T20:10:00+00:00 shares=772073 local=unknown prior-peak=9.7743x rth-peak=2.1571x status=warmup`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 16:15ET start=2026-10-15T20:15:00+00:00 shares=1309705 local=2.2073x prior-peak=16.5806x rth-peak=3.6592x status=ok`
+  - SIP 5m: 16:15 bar H $2.89, C $2.83, vwap $2.77, 1.31M sh / 9,141 trades. Four bars of rising volume (195K → 593K → 772K → 1.31M sh), each making a new high: BUILD. The 16:15 close $2.83 is +29.8% Total, matching the scanner's +29.0%.
+  - `TCRT BOOK iex bid $1.81 x100 / ask $2.49 x100 @ 2026-10-15 16:00:00 ET age 30m35s two-sided spread 27.31% of ask`
+  - `TCRT BOOK sip-15m bid $2.69 x2000 / ask $2.70 x3600 @ 2026-10-15 16:15:35 ET age 15m00s two-sided spread 0.37% of ask`
+  - `TCRT BOOK refresh +15s iex unchanged @ 2026-10-15 16:00:00 ET`
+  - `TCRT BOOK verdict: IEX STALE 30m35s; SIP-15m TWO-SIDED (observed 2026-10-15 16:30:35 ET; log-only)`
+  - MULTI-SESSION-RUNNER: day 4 of the move per SIP daily bars. Oct 9 $0.79 → Oct 12 $1.05 (+33%) → Oct 13 $3.03 (+189% on 256.9M sh) → Oct 14 $2.07 (−32%) → Oct 15 $2.18. Today's close is 2.08x the Oct 12 close. Not in `WINNERS_TRACKING.md`.
+  - Catalyst: re-searched (1 more search, 4 total today, budget spent): no release dated Oct 15. Background only: Velaris acquisition and funding (Oct 13, InvestorIdeas "triple digit gains on acquisition and funding"). Grade None.
+  - Entry status for 23:00 CET: passes float, Day%, 2-AH-scan count and ceiling (+29%); the high is not a first-bar pop (CONFIRM-3 YES). Re-check trajectory, SIP and book at 23:00.
+- **PMI** (`tradable=true`, carried; Picard Medical, 1.4M float). Third >10% appearance, still a thin dead-cat bounce:
+  - `PMI 2026-10-15  SPIKE  16:00ET  +27%  $12.70  71 trades / 33k sh  (first co-spike bar) (as-of 16:30ET)`
+  - `PMI 2026-10-15  CONFIRM-3  NO no local-volume new-high ignition as-of 16:30ET`
+  - `# PMI shared SIP volume sip-ah-volume-v2; prior 2026-10-14 5+43zero/48 slots; floor 100; same-date regular peak 125501 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T20:30:25+00:00; source fetched 2026-10-15T20:30:33.787966+00:00`
+  - `PMI 2026-10-15  VOLUME-CONTEXT 16:00ET start=2026-10-15T20:00:00+00:00 shares=39473 local=unknown prior-peak=32.8942x rth-peak=0.3145x status=warmup`
+  - `PMI 2026-10-15  VOLUME-CONTEXT 16:05ET start=2026-10-15T20:05:00+00:00 shares=6909 local=unknown prior-peak=5.7575x rth-peak=0.0551x status=warmup`
+  - `PMI 2026-10-15  VOLUME-CONTEXT 16:10ET start=2026-10-15T20:10:00+00:00 shares=806 local=unknown prior-peak=0.6717x rth-peak=0.0064x status=warmup`
+  - `PMI 2026-10-15  VOLUME-CONTEXT 16:15ET start=2026-10-15T20:15:00+00:00 shares=568 local=0.0822x prior-peak=0.4733x rth-peak=0.0045x status=ok`
+  - SIP 5m: 16:15 bar a single price $12.38, 568 sh / 13 trades. Still below the prior close (Total −6.2% on the scanner), volume collapsed, high from the first bar, CONFIRM-3 NO: dead-cat bounce plus FIRST-BAR-SPIKE pattern. No DEAD-CAT-OVERRIDE because it has not reclaimed the prior close.
+  - `PMI BOOK iex bid $10.32 x100 / ask $14.25 x100 @ 2026-10-15 16:00:01 ET age 30m33s two-sided spread 27.58% of ask`
+  - `PMI BOOK sip-15m bid $11.90 x100 / ask $12.38 x100 @ 2026-10-15 16:14:00 ET age 16m35s two-sided spread 3.88% of ask`
+  - `PMI BOOK refresh +15s iex unchanged @ 2026-10-15 16:00:01 ET`
+  - `PMI BOOK verdict: IEX STALE 30m33s; SIP-15m TWO-SIDED (observed 2026-10-15 16:30:35 ET; log-only)`
+  - Catalyst: search budget spent at 22:25; Grade None.
+- ZBAO and ESLA dropped out of the scan. Others below 10% AH: NCPL +8.6% (day 3+ runner), DGXX +5.7% and ADCT +5.4% (floats >90M).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
