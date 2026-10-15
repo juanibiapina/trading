@@ -229,6 +229,78 @@ No candidates found.
   - Catalyst: search budget spent at 22:25; Grade None.
 - ZBAO and ESLA dropped out of the scan. Others below 10% AH: NCPL +8.6% (day 3+ runner), DGXX +5.7% and ADCT +5.4% (floats >90M).
 
+## Scan 22:45 CET (4:45 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $2.18 | +5.3% | +41.4% | $3.08 | +48.9% | 4.6M | 33.9M | 0.1x | 2.3M | Biotechnology |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.98 | +24.5% | +13.1% | $2.24 | +40.9% | 888K | 16.4M | 0.1x | 2.1M | Miscellaneous Commercial Services |
+| VYGR | [TV](https://www.tradingview.com/chart/?symbol=VYGR) | $2.06 | +2.5% | +8.5% | $2.23 | +11.2% | 115K | 951K | 0.1x | 51.6M | Biotechnology |
+| JBDI | [TV](https://www.tradingview.com/chart/?symbol=JBDI) | $2.34 | -6.8% | +6.0% | $2.48 | -1.2% | 52K | 10.8M | 0.0x | n/a | Wholesale Distributors |
+| PMI | [TV](https://www.tradingview.com/chart/?symbol=PMI) | $10.00 | -21.1% | +28.3% | $12.83 | +1.2% | 21K | 755K | 0.0x | 1.4M | Medical Specialties |
+
+- Supplementary AH-change-only (>15%, not in volume pass): PMI
+- AH >10% at this snapshot (unrounded): NCPL, PMI, TCRT
+
+**Evaluation notes:**
+- Observation only: entries open at 23:00 CET. AH >10% appearances so far: PMI 4 (22:20, 22:25, 22:30, 22:45), TCRT 3 (22:25, 22:30, 22:45), NCPL 1 (22:45), ZBAO 1 (22:20).
+- `ah-crosscheck.js` returned `403: subscription does not permit querying recent SIP data` for all three names at 20:45Z; `broker.js bars` and the volume metric returned SIP bars through 16:30 ET.
+- **TCRT** (`tradable=true`, carried; 2.3M float, MULTI-SESSION-RUNNER day 4, catalyst Grade None). Still building: AH% +22.5% → +41.4%, scanner $3.08 at the AH high.
+  - `TCRT 2026-10-15  SPIKE  16:07ET  +18%  $2.58  1341 trades / 185k sh  (first co-spike bar) (as-of 16:45ET)`
+  - `TCRT 2026-10-15  CONFIRM-3  YES ignition 16:05ET 3.0x; confirmed 16:15ET $2.83 as-of 16:45ET`
+  - `# TCRT shared SIP volume sip-ah-volume-v2; prior 2026-10-14 48+0zero/48 slots; floor 100; same-date regular peak 357922 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T20:45:30+00:00; source fetched 2026-10-15T20:45:40.265149+00:00`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 16:00ET start=2026-10-15T20:00:00+00:00 shares=195073 local=unknown prior-peak=2.4696x rth-peak=0.5450x status=warmup`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 16:05ET start=2026-10-15T20:05:00+00:00 shares=593356 local=unknown prior-peak=7.5118x rth-peak=1.6578x status=warmup`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 16:10ET start=2026-10-15T20:10:00+00:00 shares=772073 local=unknown prior-peak=9.7743x rth-peak=2.1571x status=warmup`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 16:15ET start=2026-10-15T20:15:00+00:00 shares=1309705 local=2.2073x prior-peak=16.5806x rth-peak=3.6592x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 16:20ET start=2026-10-15T20:20:00+00:00 shares=1010965 local=1.3094x prior-peak=12.7986x rth-peak=2.8245x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 16:25ET start=2026-10-15T20:25:00+00:00 shares=1415852 local=1.4005x prior-peak=17.9244x rth-peak=3.9558x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 16:30ET start=2026-10-15T20:30:00+00:00 shares=986873 local=0.7535x prior-peak=12.4936x rth-peak=2.7572x status=ok`
+  - SIP 5m: 16:25 bar H $3.09 / C $3.09, 1.42M sh / 9,692 trades; 16:30 bar H $3.09, C $2.90, vwap $2.95, 987K sh / 6,521 trades. Seven bars of 0.6–1.4M sh each. SIP high $3.09 corroborates the scanner's $3.08. BUILD on accumulating volume.
+  - `TCRT BOOK iex bid $1.81 x100 / ask $2.49 x100 @ 2026-10-15 16:00:00 ET age 45m49s two-sided spread 27.31% of ask`
+  - `TCRT BOOK sip-15m bid $2.97 x600 / ask $2.98 x500 @ 2026-10-15 16:30:49 ET age 15m00s two-sided spread 0.34% of ask`
+  - `TCRT BOOK refresh +15s iex unchanged @ 2026-10-15 16:00:00 ET`
+  - `TCRT BOOK verdict: IEX STALE 45m49s; SIP-15m TWO-SIDED (observed 2026-10-15 16:45:49 ET; log-only)`
+  - Entry status for 23:00 CET: passes float, Day% (+5.3%), 2-AH-scan count and ceiling (+48.9%). Leading candidate if the build holds at 23:00.
+- **NCPL** (`tradable=true`; Netcapital, 2.1M float). First >10% AH appearance; drifted +7.1% → +13.1% across scans.
+  - `NCPL 2026-10-15  NO-SPIKE  peak +15% @16:29ET  (no bar cleared +15% on a volume co-spike) (as-of 16:45ET)`
+  - `NCPL 2026-10-15  CONFIRM-3  PENDING ignition 16:25ET; waiting for third bar as-of 16:45ET`
+  - `# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-14 48+0zero/48 slots; floor 100; same-date regular peak 2919414 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T20:45:30+00:00; source fetched 2026-10-15T20:45:42.425860+00:00`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 16:00ET start=2026-10-15T20:00:00+00:00 shares=309135 local=unknown prior-peak=0.2428x rth-peak=0.1059x status=warmup`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 16:05ET start=2026-10-15T20:05:00+00:00 shares=166599 local=unknown prior-peak=0.1308x rth-peak=0.0571x status=warmup`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 16:10ET start=2026-10-15T20:10:00+00:00 shares=78283 local=unknown prior-peak=0.0615x rth-peak=0.0268x status=warmup`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 16:15ET start=2026-10-15T20:15:00+00:00 shares=162117 local=0.9731x prior-peak=0.1273x rth-peak=0.0555x status=ok`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 16:20ET start=2026-10-15T20:20:00+00:00 shares=62630 local=0.3863x prior-peak=0.0492x rth-peak=0.0215x status=ok`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 16:25ET start=2026-10-15T20:25:00+00:00 shares=190723 local=2.4363x prior-peak=0.1498x rth-peak=0.0653x status=ok`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 16:30ET start=2026-10-15T20:30:00+00:00 shares=107607 local=0.6638x prior-peak=0.0845x rth-peak=0.0369x status=ok`
+  - SIP 5m: 62–191K sh / 262–673 trades per bar, high $2.27 (16:25), vwap $2.23 at 16:30. Volume is hundreds of trades and tens-to-low-hundreds of K shares per bar, below its own regular-session pace: thin drift so far, not a build.
+  - `NCPL BOOK iex bid $2.29 x100 / ask $2.31 x100 @ 2026-10-15 16:45:29 ET age 20s two-sided spread 0.87% of ask`
+  - `NCPL BOOK sip-15m bid $2.21 x6700 / ask $2.22 x2700 @ 2026-10-15 16:30:49 ET age 15m00s two-sided spread 0.45% of ask`
+  - `NCPL BOOK refresh +15s iex advanced @ 2026-10-15 16:46:00 ET`
+  - `NCPL BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-15 16:45:49 ET; log-only)`
+  - Catalyst (1 search): Oct 15 items are shareholder law firm investigation releases (Glancy Prongay, Howard G. Smith, Bronstein Gewirtz; stockhouse, 4–8 h before the close), a negative item. Background: Oct 14 8-K regained Nasdaq bid-price compliance but said prior financial statements should no longer be relied upon. Grade None. Day 3+ runner (21:30 notes); NCPL was also held overnight Oct 14→15 and sold at 10:30 CET for −13.0%.
+  - Needs a second >10% AH scan at 23:00 and per-bar volume rising into hundreds of K / thousands of trades; otherwise skip as thin drift.
+- **PMI** (`tradable=true`, carried; 1.4M float). Dead-cat bounce plus FIRST-BAR-SPIKE pattern, unchanged.
+  - `PMI 2026-10-15  SPIKE  16:00ET  +27%  $12.70  71 trades / 33k sh  (first co-spike bar) (as-of 16:45ET)`
+  - `PMI 2026-10-15  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET`
+  - `# PMI shared SIP volume sip-ah-volume-v2; prior 2026-10-14 5+43zero/48 slots; floor 100; same-date regular peak 125501 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T20:45:30+00:00; source fetched 2026-10-15T20:45:44.482300+00:00`
+  - `PMI 2026-10-15  VOLUME-CONTEXT 16:00ET start=2026-10-15T20:00:00+00:00 shares=39473 local=unknown prior-peak=32.8942x rth-peak=0.3145x status=warmup`
+  - `PMI 2026-10-15  VOLUME-CONTEXT 16:05ET start=2026-10-15T20:05:00+00:00 shares=6909 local=unknown prior-peak=5.7575x rth-peak=0.0551x status=warmup`
+  - `PMI 2026-10-15  VOLUME-CONTEXT 16:10ET start=2026-10-15T20:10:00+00:00 shares=806 local=unknown prior-peak=0.6717x rth-peak=0.0064x status=warmup`
+  - `PMI 2026-10-15  VOLUME-CONTEXT 16:15ET start=2026-10-15T20:15:00+00:00 shares=568 local=0.0822x prior-peak=0.4733x rth-peak=0.0045x status=ok`
+  - `PMI 2026-10-15  VOLUME-CONTEXT 16:20ET start=2026-10-15T20:20:00+00:00 shares=2772 local=3.4392x prior-peak=2.3100x rth-peak=0.0221x status=ok`
+  - `PMI 2026-10-15  VOLUME-CONTEXT 16:25ET start=2026-10-15T20:25:00+00:00 shares=2951 local=3.6613x prior-peak=2.4592x rth-peak=0.0235x status=ok`
+  - `PMI 2026-10-15  VOLUME-CONTEXT 16:30ET start=2026-10-15T20:30:00+00:00 shares=3097 local=1.1172x prior-peak=2.5808x rth-peak=0.0247x status=ok`
+  - `PMI BOOK iex bid $10.32 x100 / ask $14.25 x100 @ 2026-10-15 16:00:01 ET age 45m47s two-sided spread 27.58% of ask`
+  - `PMI BOOK sip-15m bid $12.60 x900 / ask $12.80 x100 @ 2026-10-15 16:30:43 ET age 15m05s two-sided spread 1.56% of ask`
+  - `PMI BOOK refresh +15s iex unchanged @ 2026-10-15 16:00:01 ET`
+  - `PMI BOOK verdict: IEX STALE 45m47s; SIP-15m TWO-SIDED (observed 2026-10-15 16:45:49 ET; log-only)`
+  - Scanner now shows Total +1.2% ($12.83 vs the $12.67 prior-day close implied by Day% −21.1%), a marginal reclaim above the prior close on 2.8–3.1K sh per bar. Day% −21.1% keeps it under the dead-cat skip; if it holds above the prior close at 23:00 with AH% rising, flag DEAD-CAT-OVERRIDE WATCH. Thin volume (hundreds to low thousands of shares per bar) would also fail the SIP accumulation check.
+- Others below 10% AH: VYGR +8.5% (51.6M float), JBDI +6.0% (Total −1.2%).
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
