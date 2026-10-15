@@ -9,6 +9,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
 | TCRT | $2.95 | $2.95 | $2.95 | 0.0% | 0.0% | 34 | $100.30 | None | 2026-10-15 | Alpaca order e5d5f4d2, 23:00 CET AH entry. Alaunos, 2.3M float, BUILD to $3.09 AH high (16:25 ET) holding within ~7% on 0.3–1.4M sh/bar SIP. MULTI-SESSION-RUNNER day 4. No fresh catalyst. Sell at 10:30 CET. |
+| XXII | $1.18 | $1.18 | $1.18 | 0.0% | 0.0% | 84 | $99.12 | C | 2026-10-15 | Alpaca order 58854c1d, 00:07 CET AH entry. 22nd Century, 599K float, Oct 15 Pinnacle VLN sales PR. Fresh day-1 BUILD to $1.08 AH high (17:45 ET) on 0.5–0.9M sh/bar SIP. Fill Total +80.6%. Sell at 10:30 CET. |
 
 ## Position Rules
 

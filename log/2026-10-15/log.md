@@ -497,8 +497,97 @@ No candidates found.
   - SIP 5m: pinned $2.24–2.30 on 27–66K sh / 142–264 trades per bar, lower than at 23:00. Thin drift, not a build. Not book-checked: SIP volume is not accumulating. Catalyst Grade None (searched at 22:45 and 23:00).
 - PMI dropped below the scanner list (last seen 23:00 at +17.5% AH, Total −7.3%). Others below 10% AH: DGXX +6.0% (90.9M float), BEEM +5.6%.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $2.18 | +5.3% | +31.2% | $2.86 | +38.2% | 9.1M | 34.4M | 0.3x | 2.3M | Biotechnology |
+| XXII | [TV](https://www.tradingview.com/chart/?symbol=XXII) | $0.63 | -3.6% | +58.1% | $0.99 | +52.4% | 3.5M | 439K | 8.1x | 599K | Biotechnology |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.98 | +24.5% | +11.6% | $2.21 | +39.0% | 2.2M | 16.5M | 0.1x | 2.1M | Miscellaneous Commercial Services |
+| XLAB | [TV](https://www.tradingview.com/chart/?symbol=XLAB) | $1.36 | +49.7% | +8.1% | $1.47 | +61.8% | 2.1M | 1.7M | 1.3x | 16.8M | Financial Conglomerates |
+| SITC | [TV](https://www.tradingview.com/chart/?symbol=SITC) | $3.01 | -0.3% | +19.6% | $3.60 | +19.2% | 1.3M | 1.5M | 0.9x | 52.3M | Real Estate Investment Trusts |
+| JBDI | [TV](https://www.tradingview.com/chart/?symbol=JBDI) | $2.34 | -6.8% | +20.5% | $2.82 | +12.4% | 265K | 10.9M | 0.0x | n/a | Wholesale Distributors |
+| BBCI | [TV](https://www.tradingview.com/chart/?symbol=BBCI) | $3.16 | +19.7% | +5.7% | $3.34 | +26.5% | 118K | 2.0M | 0.1x | 3.0M | Regional Banks |
+
+- Supplementary AH-change-only (>15%, not in volume pass): none
+- AH >10% at this snapshot (unrounded): JBDI, NCPL, SITC, TCRT, XXII
+
+**Evaluation notes:**
+- **New entry: XXII** (84 sh @ $1.18, 00:07 CET / 18:07 ET). AH >10% appearances so far: TCRT 6, NCPL 4, XXII 2 (23:30, 00:00), SITC 2 (23:30, 00:00), JBDI 2 (untradable), PMI 5 (gone since 23:00), XLAB 1 (now +8.1% AH, below threshold), ZBAO 1.
+- **XXII: ENTERED.** `tradable=true`; 22nd Century Group, 599K float, Grade C (GlobeNewswire Oct 15 ~16:30 ET Pinnacle VLN sales PR, verified at 23:30). Second >10% AH scan, Day% −3.6%, Total +52.4% at the qualifying scan.
+  - `XXII 2026-10-15  SPIKE  16:30ET  +29%  $0.81  199 trades / 45k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `XXII 2026-10-15  CONFIRM-3  NO ignition 16:30ET failed third-bar hold/volume as-of 18:00ET`
+  - `# XXII shared SIP volume sip-ah-volume-v2; prior 2026-10-14 2+46zero/48 slots; floor 100; same-date regular peak 11982 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T22:00:25+00:00; source fetched 2026-10-15T22:00:46.142971+00:00`
+  - VOLUME-CONTEXT 16:00–17:15ET rows are unchanged from the 23:30 scan; new completed bars:
+  - `XXII 2026-10-15  VOLUME-CONTEXT 17:20ET start=2026-10-15T21:20:00+00:00 shares=55402 local=0.2960x prior-peak=50.1830x rth-peak=4.6238x status=ok`
+  - `XXII 2026-10-15  VOLUME-CONTEXT 17:25ET start=2026-10-15T21:25:00+00:00 shares=75643 local=0.6892x prior-peak=68.5172x rth-peak=6.3131x status=ok`
+  - `XXII 2026-10-15  VOLUME-CONTEXT 17:30ET start=2026-10-15T21:30:00+00:00 shares=336779 local=4.4522x prior-peak=305.0534x rth-peak=28.1071x status=ok`
+  - `XXII 2026-10-15  VOLUME-CONTEXT 17:35ET start=2026-10-15T21:35:00+00:00 shares=886553 local=11.7202x prior-peak=803.0371x rth-peak=73.9904x status=ok`
+  - `XXII 2026-10-15  VOLUME-CONTEXT 17:40ET start=2026-10-15T21:40:00+00:00 shares=488562 local=1.4507x prior-peak=442.5380x rth-peak=40.7747x status=ok`
+  - `XXII 2026-10-15  VOLUME-CONTEXT 17:45ET start=2026-10-15T21:45:00+00:00 shares=829415 local=1.6977x prior-peak=751.2817x rth-peak=69.2217x status=ok`
+  - SIP 5m: BUILD. 17:30 $0.79→$0.88 (337K sh / 1,136 trades), 17:35 high $1.00 (887K sh / 3,335 trades), 17:40 C $0.98 (489K / 1,966), 17:45 new AH high $1.08, C $1.03, vwap $1.01 (829K / 3,193). Each push made a new high on hundreds-of-K shares and thousands of trades. SIP corroborates the scanner $0.99. The AH high came at 17:45, well after the first bar, so the first-bar-spike skip does not apply.
+  - `XXII BOOK iex bid $0.5203 x100 / ask $0.7296 x100 @ 2026-10-15 16:00:00 ET age 2h00m two-sided spread 28.69% of ask`
+  - `XXII BOOK sip-15m bid $0.9845 x700 / ask $0.9875 x1000 @ 2026-10-15 17:45:57 ET age 15m02s two-sided spread 0.30% of ask`
+  - `XXII BOOK refresh +15s iex unchanged @ 2026-10-15 16:00:00 ET`
+  - `XXII BOOK verdict: IEX STALE 2h00m; SIP-15m TWO-SIDED (observed 2026-10-15 18:00:59 ET; log-only)`
+  - Multi-session check: fresh day-1 igniter. Not in `WINNERS_TRACKING.md`. SIP daily closes Oct 7–14 drifted down $0.89 → $0.65 on 17–105K sh/day; today's regular session traded 6.5M sh but closed −3.6%. No prior session ran ≥+50%.
+  - Execution: the 18:04 rescan showed $1.02 (+56.8% Total). Limit $1.04 (96 sh) and $1.10 (90 sh) rested unfilled for ~1.5 and ~3.5 min and were canceled with 0 filled; limit $1.18 (84 sh) filled at $1.18 at 18:07 ET. Fill Total +80.6% against the $0.6535 prior close.
+  - Chase gap (log-only): qualifying $0.99 / +52.4%, fill $1.18 / +80.6%, gap +28 pts. Below the ~+120% fade zone, so no CHASE-CAP flag.
+- **TCRT: held (entered 23:00 @ $2.95).** No second entry.
+  - `TCRT 2026-10-15  SPIKE  16:07ET  +18%  $2.58  1341 trades / 185k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `TCRT 2026-10-15  CONFIRM-3  YES ignition 16:05ET 3.0x; confirmed 16:15ET $2.83 as-of 18:00ET`
+  - `# TCRT shared SIP volume sip-ah-volume-v2; prior 2026-10-14 48+0zero/48 slots; floor 100; same-date regular peak 357922 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T22:00:25+00:00; source fetched 2026-10-15T22:00:44.016306+00:00`
+  - VOLUME-CONTEXT 16:00–17:15ET rows are unchanged from the 23:30 scan; new completed bars:
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 17:20ET start=2026-10-15T21:20:00+00:00 shares=131972 local=0.6287x prior-peak=1.6707x rth-peak=0.3687x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 17:25ET start=2026-10-15T21:25:00+00:00 shares=309940 local=2.0231x prior-peak=3.9238x rth-peak=0.8659x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 17:30ET start=2026-10-15T21:30:00+00:00 shares=280219 local=1.8291x prior-peak=3.5475x rth-peak=0.7829x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 17:35ET start=2026-10-15T21:35:00+00:00 shares=157934 local=0.5636x prior-peak=1.9994x rth-peak=0.4413x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 17:40ET start=2026-10-15T21:40:00+00:00 shares=68274 local=0.2436x prior-peak=0.8643x rth-peak=0.1908x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 17:45ET start=2026-10-15T21:45:00+00:00 shares=110132 local=0.6973x prior-peak=1.3943x rth-peak=0.3077x status=ok`
+  - `TCRT BOOK iex bid $1.81 x100 / ask $2.49 x100 @ 2026-10-15 16:00:00 ET age 2h00m two-sided spread 27.31% of ask`
+  - `TCRT BOOK sip-15m bid $2.84 x6500 / ask $2.85 x1000 @ 2026-10-15 17:45:59 ET age 15m00s two-sided spread 0.35% of ask`
+  - `TCRT BOOK refresh +15s iex unchanged @ 2026-10-15 16:00:00 ET`
+  - `TCRT BOOK verdict: IEX STALE 2h00m; SIP-15m TWO-SIDED (observed 2026-10-15 18:00:59 ET; log-only)`
+  - Holding $2.84–2.86, ~8% under the $3.09 AH high; volume tapered to 68–310K sh per bar. Position −2.0% at the 18:05 positions check.
+- **SITC: Skip, Grade D liquidation pin (second >10% AH scan).** `tradable=true`, 52.3M float. AH $3.60 (+19.6%), above the $3.37 of the 23:30 scan, but the move reprices a fixed $3 special distribution and planned NYSE de-listing (BusinessWire Oct 15 ~17:00 ET). The merger-arb exclusion applies: value is pinned to the liquidation payout, so the overnight momentum the strategy needs is unlikely. Volume moderate at 67–164K sh per bar since 17:20.
+  - `SITC 2026-10-15  SPIKE  16:58ET  +17%  $3.52  103 trades / 21k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `SITC 2026-10-15  CONFIRM-3  NO no local-volume new-high ignition as-of 18:00ET`
+  - `# SITC shared SIP volume sip-ah-volume-v2; prior 2026-10-14 1+47zero/48 slots; floor 100; same-date regular peak 328377 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T22:00:25+00:00; source fetched 2026-10-15T22:00:50.484948+00:00`
+  - VOLUME-CONTEXT 16:00–17:15ET rows are unchanged from the 23:30 scan; new completed bars:
+  - `SITC 2026-10-15  VOLUME-CONTEXT 17:20ET start=2026-10-15T21:20:00+00:00 shares=96074 local=0.7064x prior-peak=0.8230x rth-peak=0.2926x status=ok`
+  - `SITC 2026-10-15  VOLUME-CONTEXT 17:25ET start=2026-10-15T21:25:00+00:00 shares=142750 local=1.2302x prior-peak=1.2228x rth-peak=0.4347x status=ok`
+  - `SITC 2026-10-15  VOLUME-CONTEXT 17:30ET start=2026-10-15T21:30:00+00:00 shares=164169 local=1.4147x prior-peak=1.4063x rth-peak=0.4999x status=ok`
+  - `SITC 2026-10-15  VOLUME-CONTEXT 17:35ET start=2026-10-15T21:35:00+00:00 shares=70730 local=0.4955x prior-peak=0.6059x rth-peak=0.2154x status=ok`
+  - `SITC 2026-10-15  VOLUME-CONTEXT 17:40ET start=2026-10-15T21:40:00+00:00 shares=67102 local=0.4701x prior-peak=0.5748x rth-peak=0.2043x status=ok`
+  - `SITC 2026-10-15  VOLUME-CONTEXT 17:45ET start=2026-10-15T21:45:00+00:00 shares=68015 local=0.9616x prior-peak=0.5826x rth-peak=0.2071x status=ok`
+  - `SITC BOOK iex bid $2.60 x100 / ask $0.0000 x0 @ 2026-10-15 16:00:01 ET age 2h00m one-sided/empty`
+  - `SITC BOOK sip-15m bid $3.59 x7900 / ask $3.60 x11400 @ 2026-10-15 17:45:49 ET age 15m10s two-sided spread 0.28% of ask`
+  - `SITC BOOK refresh +15s iex unchanged @ 2026-10-15 16:00:01 ET`
+  - `SITC BOOK verdict: IEX STALE 2h00m; SIP-15m TWO-SIDED (observed 2026-10-15 18:00:59 ET; log-only)`
+- **NCPL: Skip, thin drift (fourth >10% AH scan).** A 17:20 bar spiked to $2.36 on 277K sh, then volume fell back to 24–129K sh per bar and AH% eased to +11.6%. Catalyst Grade None.
+  - `NCPL 2026-10-15  SPIKE  17:22ET  +19%  $2.36  322 trades / 51k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `NCPL 2026-10-15  CONFIRM-3  NO ignition 16:25ET failed third-bar hold/volume as-of 18:00ET`
+  - `# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-14 48+0zero/48 slots; floor 100; same-date regular peak 2919414 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T22:00:25+00:00; source fetched 2026-10-15T22:00:48.292601+00:00`
+  - VOLUME-CONTEXT 16:00–17:15ET rows are unchanged from the 23:30 scan; new completed bars:
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 17:20ET start=2026-10-15T21:20:00+00:00 shares=277371 local=7.2477x prior-peak=0.2178x rth-peak=0.0950x status=ok`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 17:25ET start=2026-10-15T21:25:00+00:00 shares=129081 local=2.5771x prior-peak=0.1014x rth-peak=0.0442x status=ok`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 17:30ET start=2026-10-15T21:30:00+00:00 shares=52096 local=0.4036x prior-peak=0.0409x rth-peak=0.0178x status=ok`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 17:35ET start=2026-10-15T21:35:00+00:00 shares=124449 local=0.9641x prior-peak=0.0977x rth-peak=0.0426x status=ok`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 17:40ET start=2026-10-15T21:40:00+00:00 shares=84568 local=0.6795x prior-peak=0.0664x rth-peak=0.0290x status=ok`
+  - `NCPL 2026-10-15  VOLUME-CONTEXT 17:45ET start=2026-10-15T21:45:00+00:00 shares=24228 local=0.2865x prior-peak=0.0190x rth-peak=0.0083x status=ok`
+- **JBDI: untradable (carried).** Instrumentation only:
+  - `JBDI 2026-10-15  SPIKE  17:13ET  +16%  $2.72  104 trades / 14k sh  (first co-spike bar) (as-of 18:00ET)`
+  - `JBDI 2026-10-15  CONFIRM-3  PENDING ignition 17:40ET; waiting for third bar as-of 18:00ET`
+- XLAB dropped below 10% AH (+8.1%, $1.47); it never reached a second >10% AH scan. BBCI +5.7% AH.
+- `scripts/ah-crosscheck.js` returned `403: subscription does not permit querying recent SIP data` for all five names at 18:00 ET. Direct `broker.js bars` with an explicit start worked.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
 | TCRT | $2.95 | 23:00 CET (17:01 ET) | 34 | e5d5f4d2-2024-4d1d-97b3-2e246fcfd8f8 | Grade None. 2.3M float biotech, BUILD to $3.09 AH high on 1M+ sh/bar SIP, holding within ~7%; 4 AH scans >10%; day-4 multi-session runner, Total +42.5% at fill |
+| XXII | $1.18 | 00:07 CET (18:07 ET) | 84 | 58854c1d-453f-4c43-9ef2-6b99890eedf2 | Grade C (Oct 15 ~16:30 ET Pinnacle VLN sales PR). 599K float biotech, fresh day-1 BUILD: new AH highs $1.00 → $1.08 at 17:35–17:45 ET on 0.5–0.9M sh / 2–3.3K trades per SIP bar; 2 AH scans >10%; Total +80.6% at fill (qualified +52.4%) |
