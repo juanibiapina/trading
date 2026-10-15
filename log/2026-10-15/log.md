@@ -12,3 +12,7 @@ Quotes were stale (timestamps from 2026-10-14), so limits were priced off the la
 - SELL 45 NCPL limit $1.87 ext → filled $1.88 (order ff6523b9). P&L -$12.60 (-13.0%).
 - SELL 116 YYAI limit $0.65 ext → filled $0.67 (order 44de789a). P&L -$17.40 (-18.3%).
 - No open positions remain; the 14:30 CET pulse has nothing to resell.
+
+## Position Evaluation — 14:30 CET
+
+No open positions on Alpaca (equity $99,698.80, all cash). The 10:30 sells of NCPL and YYAI filled, so there is nothing to resell. OPEN_POSITIONS.md matches Alpaca.
