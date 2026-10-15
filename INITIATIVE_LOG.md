@@ -1,5 +1,42 @@
 # Initiative Log
 
+### 2026-10-15 15:00 — Initiative 7 micro-cap census fails in all eight cells; stop-or-replace proposal raised
+
+**Evaluated:**
+
+- The October 14 18:00 Initiative 7 hypothesis **held**: the full micro-cap set is negative net at both exits, and no frozen subset passes.
+- Initiative 3's first live sell-all exit **worked as specified**: NCPL and YYAI, entered October 14 evening, were sold at the October 15 10:30 CEST evaluation (orders `ff6523b9`, `44de789a`; `log/2026-10-15/process-review.md`). Juan's October 15 reply praises the AEHL and FCHL 04:30 exits and raises no veto.
+
+**Step taken:**
+
+- **Initiative 7 (dated, North Star pick):** froze `docs/investigations/init7-microcap-census-freeze.json` at 13:05 UTC before any micro-cap fetch.
+  - Universe: names outside the point-in-time top 1,000 with a regular close of $0.50–$10.
+  - Event: +10% to +150% above the close at both 16:30 and 17:00 ET, day change above -15%, at least 100k shares and $100k traded 16:00–16:55 ET, at least 3x the 20-session median.
+  - Fills: entry at the SIP ask at 17:00 ET; exits at the 04:30 ET bid and at the open less 50 bps.
+  - Statistics: eight cells (all, build, fresh, build∩fresh × two exits), a date-clustered bootstrap with Bonferroni.
+- Built `scripts/init7-microcap-census.py` and verified it on October 1–3, 2025. Ran the full year as gob `JoG`, which finished with exit 0 at 16:28 CEST.
+- The interim entry was committed as 10e73e8 before the wait.
+
+**Result:**
+
+- **All 499 scored events:**
+  - **04:30 bid:** **-3.16%** per trade [-6.13, +0.05], halves -3.63 / -2.69.
+  - **Open:** **-4.00%** per trade [-7.29, -0.62].
+  - **Shape:** win rate 28%; the median trade loses 6.2%.
+- **Subsets:** build -2.31%, fresh -3.64%, build∩fresh -2.69% at 04:30. **No cell passes, and every half is negative.**
+- **Before costs:** mid to mid still loses -1.79% at 04:30 and -3.06% at the open. The median entry spread is 72 bps.
+- **Descriptive:** no bucket of move size, price or AH dollar volume is positive. Thin names are worst: under $1M of AH dollars loses 8–11%. The census caught 45 of the 89 real entries; it scores them at -3.45%, against -2.49% for the real entries modeled at the 04:30 open. The 44 real entries it misses, mostly later entries, model at +1.02% (descriptive only).
+- **Verification:** STKH and CCM were checked by hand (CCM: ask $6.77, 04:30 bid $4.01, -40.8%).
+- **Evidence:** `docs/investigations/init7-microcap-census-2026-10-15.md`, `log/2026-10-15/init7-microcap-census/`.
+- **No change:** no order, live rule, size or pulse timing changed. Equity is $99,698.80 (-$301.20), with no open positions.
+
+**Hypothesis / next step:**
+
+- **18:00 run, Initiative 7:** freeze and test the late-entry variant on the cached universe. Fetch 17:00–18:30 ET bars and quotes for names that first cross +10% after 16:30, enter at the 18:30 ET ask (and the 17:30 ask), and keep the same exits, cells and pass rule. Hypothesis: it also fails. If so, the stop-or-replace proposal becomes unconditional, and the next lever is chosen by the North Star.
+- **Next daily email:** census result; the stop-or-replace proposal, pending the late-entry test, with the choice to pause paper entries or keep them as data collection; Jev not run.
+
+**Needs from Juan:** decide whether to stop or replace AH→PM (daily email). Initiative 2 stays deferred.
+
 ### 2026-10-14 18:00 — Initiative 7 out-of-sample fade fails; no liquid candidate left. Initiative 3 hold retirement applied at 15:00
 
 **Evaluated:** The October 13 18:00 hypothesis **failed**: the frozen fade (short liquid AH up movers at the next open, cover at the D+20 close) nets -0.56% per trade on the prior year, lower bound -3.30, second half negative. No pilot is active.
