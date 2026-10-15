@@ -1,5 +1,34 @@
 # Initiative Log
 
+### 2026-10-15 18:00 — Initiative 7 late-entry micro-cap census fails in all eight cells; stop-or-replace proposal now unconditional
+
+**Evaluated:** the October 15 15:00 hypothesis (the late-entry variant also fails) **held**. No cell passes, and every interval lies below zero.
+
+**Step taken:**
+
+- **Initiative 7 (dated, North Star pick):** froze `docs/investigations/init7-microcap-late-census-freeze.json` at 16:05 UTC, before any 17:00–18:30 ET bar or quote was fetched.
+  - Events: names in the same micro-cap universe that were not 17:00 census events and pass the same gate at the first of the 17:30, 18:00 or 18:30 ET scans (that scan and the one 30 minutes earlier both at +10% or more, at most +150%, day change above -15%, at least 100k shares and $100k since 16:00, at least 3x the 20-session median of the same window).
+  - Fills: entry at the SIP ask at that scan; exits at the 04:30 ET bid and the open less 50 bps. Same eight cells, Bonferroni interval and pass rule as the 17:00 census.
+- Built `scripts/init7-microcap-late-census.py`, which reuses the 17:00 cache. Verified it on October 1–3, 2025 and checked CIGL 2025-10-01 by hand (ask $4.93 at 17:29:59 ET, 04:30 bid $4.39, -10.95%). Ran the full year as gob `4GH` (exit 0). The interim entry was committed as 11dc4f2 before the wait.
+- Checked current Alpaca borrow flags for every name in both censuses (descriptive groundwork for the next candidate).
+- No other initiative had a ready item: 1 and 5 have no dated work, 2 is deferred, 3's next check is the process review, 6 is closed.
+
+**Result:**
+
+- **All 604 scored events:** **-3.91%** at the 04:30 bid [-5.99, -1.44], halves -5.99 / -1.86; **-5.61%** at the open [-8.12, -2.95]. Win rate 27%, median -6.4%. Build -5.28%, fresh -3.52%, build∩fresh -4.44% at 04:30.
+- **Before costs:** -2.24% mid to mid at 04:30 [-4.33, +0.25]; -4.60% at the open [-7.12, -1.92]. Median entry spread 74 bps. Bigger moves fade harder (50–150%: -8.43%).
+- **Descriptive:** the 32 real late entries the census catches return +3.80% [-3.72, +12.46], or +1.18% without BAOS; unselected late events on the same dates lose -8.08%. This rests on one trade and cannot rescue the failed pass.
+- **Short-side groundwork:** 161 of 671 census names (201 of 1,103 events) are easy to borrow on Alpaca today. The 100 late events among them fall -4.01% mid to mid by 04:30 (in-sample; today's flags are a look-ahead).
+- **Decision:** the long micro-cap AH lane is closed; the stop-or-replace proposal is unconditional. No order, live rule, size or pulse timing changed. Equity $99,698.80 (-$301.20), no open positions.
+- **Evidence:** `docs/investigations/init7-microcap-late-census-2026-10-15.md`, `log/2026-10-15/init7-microcap-late/`.
+
+**Hypothesis / next step:**
+
+- **Next run, Initiative 7:** freeze a short-fade test before fetching. Use the union of both census event definitions on 2024-10-01 to 2025-09-30: short at the event-scan bid, cover at the 04:30 ET ask and at the open plus 50 bps, and charge a borrow fee per night. Cells: all events and names easy to borrow today. Then start the prior-year fetch as a gob job. Hypothesis: the fade nets above zero with a positive lower bound and both halves positive on all events; the easy-to-borrow cell is smaller and may not pass. A short strategy replaces the core strategy, so any pass is proposed to Juan.
+- **Next daily email:** both census results, the unconditional stop-or-replace proposal (pause paper entries or keep them as data collection), and the short-fade plan; Jev not run.
+
+**Needs from Juan:** decide whether to stop or replace AH→PM (daily email). Initiative 2 stays deferred.
+
 ### 2026-10-15 15:00 — Initiative 7 micro-cap census fails in all eight cells; stop-or-replace proposal raised
 
 **Evaluated:**
