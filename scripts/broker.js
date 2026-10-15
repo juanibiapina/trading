@@ -186,6 +186,7 @@ async function cmdBars(flags, positional) {
     const n = b.n !== undefined && b.n !== null ? `  trades ${b.n}` : "";
     console.log(`${b.t}  O ${fmtUsd(b.o)} H ${fmtUsd(b.h)} L ${fmtUsd(b.l)} C ${fmtUsd(b.c)}  vol ${b.v}${vw}${n}`);
   }
+  if (q.next_page_token) console.log(`# truncated at --limit ${limit}; more bars exist after ${bars[bars.length - 1].t}`);
 }
 
 async function cmdClock(flags) {
