@@ -6,6 +6,14 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-10-15 — re: Trading Scanner Report - 2026-10-13
+
+**Juan said:** “Absolutely amazing entry and exit! that's what we want! Two days in a row!” (Gmail message 1a139d3b5fb7c46b, received 2026-10-14 09:52 UTC.)
+
+**Interpretation:** Juan endorses the AEHL trade as the target outcome: entered at $15.40 at the 23:00 CEST scan after CONFIRM-3 and the gate passed, with AH volume bars 27–30x the largest regular-session bar (the previous-day volume check from his DKI feedback), and sold at $23.78 at the 04:30 ET evaluation (+54.4%). “Two days in a row” includes FCHL on the Oct 12 cycle (entry $1.73, exit $1.97, +13.9%), also caught, entered and sold at 04:30 ET. Both trades sold at the first premarket evaluation, which matches the hold retirement applied Oct 14 15:00 CEST; his praise raises no veto of that change. Praise is not evidence of edge: the same cycle's BKYI lost 23.9%, and cumulative paper P&L is still −$271.54.
+
+**Action:** Logged; no rule change. Routed to Initiative 4 as the first clean Gmail reply cycle, and to Initiative 3 as a no-veto signal for the 04:30 ET sell-all exit. For the next scanner-improvement run: keep AEHL and FCHL as positive reference cases for the volume-spike entry profile, and look at what separated them from BKYI (bought at +98% on the day, gapped below the stop).
+
 ### 2026-10-09 — re: Trading Scanner Report - 2026-10-07
 
 **Juan said:** “DKI is NOT a winner. There is no volume spike compared to the previous day.” (InboxKit message 182, received 2026-10-08 09:41 UTC.)
