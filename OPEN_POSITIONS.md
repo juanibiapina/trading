@@ -8,8 +8,6 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
-| NCPL | $2.16 | $2.16 | $2.16 | 0.0% | 0.0% | 45 | $97.20 | C | 2026-10-14 | AH BUILD, new highs $2.15 at 16:40–16:45 ET; Nasdaq bid-price compliance PR; float 4.4M; order 529b8e3a; sell at 10:30 CET premarket eval |
-| YYAI | $0.82 | $0.81 | $0.82 | -1.0% | 0.0% | 116 | $95.12 | None | 2026-10-14 | Second AH ignition 17:30 ET to SIP high $0.95 at 17:40 on 126K–234K sh/bar, CONFIRM-3 YES; no fresh catalyst; float 4.6M; Total +15.8%; order eaba150d; sell at 10:30 CET premarket eval |
 
 ## Position Rules
 
@@ -42,6 +40,8 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| NCPL | $2.16 | $1.88 | -$12.60 | -13.0% | 1 | C | Sold 2026-10-15 PM 04:30 ET (order ff6523b9) at first premarket pulse. Gapped down: SIP PM 04:00 open $1.74, high $2.14 (04:10 bar, VWAP $2.03), never reached entry; last $1.92 on 255K sh/bar. Quote stale; limit $1.87 filled $1.88. |
+| YYAI | $0.82 | $0.67 | -$17.40 | -18.3% | 1 | None | Sold 2026-10-15 PM 04:30 ET (order 44de789a) at first premarket pulse. AH spike to $0.95 fully reversed: SIP PM high $0.87 (04:00 bar, VWAP $0.77, 421K sh) then faded to $0.68 on thinning volume. Quote stale (no ask); limit $0.65 filled $0.67. |
 | AEHL | $15.40 | $23.78 | +$50.28 | +54.4% | 1 | None | Sold 2026-10-14 PM 04:30 ET (order 3ecd0f1b) at first premarket pulse. SIP PM run: 04:10 bar H $29.76 (single spike, bar VWAP $23.62); sustained high $25.25 (04:15 bar, VWAP $24.22); 806K sh in first 20 min. Quote stale; limit $22.90 filled $23.78. |
 | AGMH | $0.66 | $0.64 | -$2.88 | -3.0% | 1 | C | Sold 2026-10-14 PM 04:30 ET (order 4c1c748e), Grade C premarket exit. SIP PM high $0.74 at 04:00 then faded to $0.63 (VWAP $0.63-0.64), 3.2M sh. Limit $0.61 filled $0.64. |
 | BKYI | $3.26 | $2.48 | -$23.40 | -23.9% | 1 | B | Sold 2026-10-14 PM 04:30 ET (order a25240dc); -15% hard stop breached. Gapped to $2.83 at PM open, broke to $2.43 by 04:10 ET (SIP). Never traded above entry after fill. Limit $2.40 filled $2.48. |
