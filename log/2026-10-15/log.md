@@ -48,6 +48,16 @@ Scanner returned 32 hits; the table keeps the 16 with Day% >+10%. Omitted: ~$10 
 - Prior footprint: NCPL repeats again (+32% yesterday, >10% AH names on Oct 6/7/12/13 with first-bar highs and CONFIRM-3 NO), so it is day 3+ of a move; check SIP daily bars for MULTI-SESSION-RUNNER if it qualifies in AH. BBCI appeared in yesterday's log. DRMA, CTNT and ONFO appeared on Oct 6–9.
 - Float above the 50M entry condition: LDI (107.4M). ESLA at $0.65 is a sub-$1 name with 17.2M float, up +105% on heavy volume.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found.
+
+- Supplementary AH-change-only (>15%, not in volume pass): none
+- AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- AH-open pulse (scanner snapshot 16:00:12 ET): the snapshot has no AH prints yet, so 0 hits is expected. Observation only; the entry window opens at 23:00 CET. The 21:30 watch names are carried to the next pulse.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
