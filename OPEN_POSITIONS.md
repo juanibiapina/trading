@@ -8,6 +8,7 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
+| TCRT | $2.95 | $2.95 | $2.95 | 0.0% | 0.0% | 34 | $100.30 | None | 2026-10-15 | Alpaca order e5d5f4d2, 23:00 CET AH entry. Alaunos, 2.3M float, BUILD to $3.09 AH high (16:25 ET) holding within ~7% on 0.3–1.4M sh/bar SIP. MULTI-SESSION-RUNNER day 4. No fresh catalyst. Sell at 10:30 CET. |
 
 ## Position Rules
 
