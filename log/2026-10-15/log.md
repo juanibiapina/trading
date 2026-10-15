@@ -58,6 +58,16 @@ No candidates found.
 **Evaluation notes:**
 - AH-open pulse (scanner snapshot 16:00:12 ET): the snapshot has no AH prints yet, so 0 hits is expected. Observation only; the entry window opens at 23:00 CET. The 21:30 watch names are carried to the next pulse.
 
+## Scan 22:05 CET (4:05 PM ET)
+
+No candidates found.
+
+- Supplementary AH-change-only (>15%, not in volume pass): none
+- AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- AH-open pulse (scanner snapshot 16:05:11 ET): still 0 AH hits, so there are no >10% candidates for spike-bar, CONFIRM-3 or SIP checks. Observation only; entries open at 23:00 CET. The 21:30 watch names carry to the next pulse.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
