@@ -1,0 +1,43 @@
+{
+  "frozen_utc": "2026-10-15T16:05:00Z",
+  "frozen_before": "any micro-cap 5-minute bar after 16:59 ET or any quote at 17:30, 18:00 or 18:30 ET was fetched; no late event list or return exists",
+  "purpose": "Test the only untested part of the live AH->PM entry: entries at the 17:30, 18:00 and 18:30 ET scans. The 17:00 ET census (docs/investigations/init7-microcap-census-freeze.json) failed in all eight cells. If this also fails, the proposal to stop or replace AH->PM becomes unconditional.",
+  "origin": "October 15 15:00 run: 499 events entered at the 17:00 ET ask lose -3.16% at the 04:30 bid; the 44 real entries the census misses (mostly later entries) model at +1.02%, descriptive only.",
+  "window": "events dated 2025-10-01 to 2026-09-30 (full 16:00 closes only); volume history from 2025-08-25",
+  "universe": "identical to the 17:00 census: the per-day fetched set cached in log/2026-10-15/init7-microcap-census/ah/ (raw close $0.50-$10.00), minus the point-in-time top 1000 by trailing three-month SIP dollar volume",
+  "data": "cached 16:00-16:59 ET 5-minute raw bars from the 17:00 census, plus new 17:00-18:29 ET 5-minute raw SIP bars for the same per-day symbol set; latest SIP quote in a window per event",
+  "checkpoints": "price at time T is the close of the last 5-minute bar starting at or before T-5 minutes. Entry scans T are 17:30, 18:00 and 18:30 ET (23:30, 00:00, 00:30 CEST live scans).",
+  "event": {
+    "exclusion": "symbol-dates that are events in the 17:00 census (its candidates() list) are excluded; they were already scored",
+    "gate": "price at T and price at T-30 minutes are both >= +10% above D's regular close (the two-AH-scan gate on the half-hour live scans)",
+    "total_ceiling": "price at T <= +150% above D's regular close",
+    "day_change": "D's regular close > -15% versus D-1's close",
+    "volume": "shares in bars starting 16:00 through T-5 minutes >= 100,000 AND dollars >= $100,000 AND shares >= 3x the median of the same window over the symbol's prior 20 fetched sessions (sessions without bars count as zero); at least 20 prior fetched sessions required",
+    "first_scan": "each symbol-date is an event at most once, at the earliest T in (17:30, 18:00, 18:30) where every condition holds",
+    "split": "drop events whose raw/split-adjusted close ratio changes by >1% from D to D+1; count drops"
+  },
+  "entry": "ask of the latest SIP quote at or before T with timestamp >= T-15 minutes; requires bid > 0 and ask > bid. Events without such a quote are excluded as unexecutable and counted.",
+  "exits": {
+    "exit_0430": "bid of the latest SIP quote in 04:00-04:30 ET on D+1; if none is valid, D+1 official open x (1 - 50 bps), counted as fallback",
+    "exit_open": "D+1 official raw open x (1 - 50 bps)"
+  },
+  "unit": "net return per trade = exit / entry - 1; equal weight per event",
+  "cells": {
+    "subsets": {
+      "all": "every event",
+      "build": "price at T >= price at T-30 minutes",
+      "fresh": "not a multi-session runner: none of D-2, D-1, D closed >= +50% above its own prior close AND D's close < 2x the close of D-3",
+      "build_fresh": "build AND fresh"
+    },
+    "exits": ["exit_0430", "exit_open"],
+    "count": 8
+  },
+  "statistics": {
+    "interval": "bootstrap resampling event dates (D) with replacement, 4000 draws, seed 13; two-sided interval with tail 0.025/8 (Bonferroni over 8 cells)",
+    "pass": "a cell passes if mean > 0 AND interval lower bound > 0 AND both chronological halves (split by D at the median event date) have mean > 0, at base cost; also report +100 bps round-trip stress, gross mid-to-mid returns, median and win rate"
+  },
+  "descriptive_only": "results by entry scan T, move buckets, close price buckets, AH dollar-volume buckets, entry spread quartiles, and recall of the 89 real entries (log/2026-10-09/init3-exec-gap/result.json) as late events, including the 44 the 17:00 census missed. None can rescue a failed pass.",
+  "decision_if_pass": "do not promote: retest the passing cell unchanged on 2024-10-01 to 2025-09-30. Only a pass there too leads to a narrowed live entry rule (later entry scans only), applied under the standing directive and reported for Juan's veto.",
+  "decision_if_fail": "the stop-or-replace proposal to Juan becomes unconditional (daily email); no live rule changes from this census alone.",
+  "limits": "consecutive half-hour checkpoints approximate the live 'two AH scans' gate, which can also count the 16:00-16:45 five-minute scans; no catalyst grading, no first-bar-spike or spike-fade skip; survivorship limited to assets Alpaca still lists; no borrow, fee or partial-fill model; quoted size ignored."
+}
