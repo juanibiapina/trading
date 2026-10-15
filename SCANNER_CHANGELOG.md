@@ -37,6 +37,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **AH percentage evidence:** `scan.py` prints `AH >10% at this snapshot (unrounded)` from the original unrounded result values, including `none`; evening logs preserve it for the existing AH appearance count. A rounded +10.0% in an older log is unresolved without original evidence. The list reports the percentage condition only; SIP, trajectory, extension, and book checks still determine entry.
 - **Dated Yahoo timelines:** evening and morning history checks pass `check-prices.py --date YYYY-MM-DD` with the intended ET session date. A missing session is unavailable; dated output leaves close bases and percentages unverified for SIP verification. Yahoo remains timeline-shape evidence within its five-day history window.
 - **Shared SIP volume context:** evening notes for tradable >10% AH candidates consume archived `sip-ah-volume-v1` rows through `ah-5m-confirmation.js --volume-metric PATH`. The same computed artifact supplies the daily HTML table. Archive actual fetch time, completed-bar cutoff and previous trading date; preserve unknown ratios and specific unavailable-data reasons. Since 2026-10-09 each row also carries `rth-peak`, the ratio to the largest bar of the same date's regular session (Juan's "previous day"). This is observation only. The calculation is defined in [the shared metric specification](docs/investigations/shared-sip-volume-metric.md).
+- **Volume-spike entry tracker (since 2026-10-15):** morning evaluations run `scripts/entry-volume-ratio.py` for each fill and tally realized 04:30 ET P&L by at-entry `rth-peak` bucket (`<2x`, `2-10x`, `>=10x`). Log-only; routes an entry-rule question to the email when the <2x bucket has ≥5 fills trailing the >=2x bucket by ≥10 points.
 - Regular session scans (21:30 CET) flag candidates as "Watch" — paper trades only entered during AH scans (22:00+ CET)
 - Entry rules: float <50M, first day of unusual volume (sector and price thresholds are observations under review, not hard rules)
 - **No-catalyst handling:** enter with concern noted (any float). "No catalyst" is a concern to document, not a skip reason. Float tracked for pattern analysis, not as filter.
@@ -74,12 +75,46 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - `scripts/check-prices.py` — Price checking utility
 - `scripts/book-check.js` — Read-only IEX versus consolidated SIP book diagnostic
 - `scripts/price-timeline.py` — Yahoo price timelines used by morning and position evaluations
+- `scripts/entry-volume-ratio.py` — At-entry same-date regular-session volume ratio from archived metric files
 - `prompts/post-market-scan.md` — Evening scan prompt (evaluation criteria, log format)
 - `prompts/morning-evaluation.md` — Morning evaluation prompt
 
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-10-15 — Track Fills by Their At-Entry Regular-Session Volume Ratio
+
+**Context:** Reviewed the October 14 morning evaluation (written October 15) and the Oct 9–13 logs. October 14 ran 7/7 scheduled scans plus six extra observations and had no winner. JBDI, the biggest genuine mover (+51.4% AH, +42.6% PM), was detected at the final scan and skipped as a dead-cat (hypothetical +6.2%). Both fills lost: NCPL sold at −13.0% and YYAI at −18.3% in the 04:30 ET pulse. Juan's October 15 feedback praised AEHL and FCHL and queued a task for this run: find what separated them from BKYI. The archived metric files answer it at entry time. FCHL's largest AH bar was 84.5x the same day's largest regular-session bar, AEHL's 30.5x. BKYI's was 0.24x: it had run +72.7% in the regular session on 2.65M-share bars, so its AH volume was no spike against the day. NCPL (1.51x) matches BKYI. AGMH (19.9x, −3.0%) and YYAI (20.8x, −18.3%) cut against the pattern. The 89-entry archive from the October 9 test shows no split at 2x either: 18 entries under 2x averaged −3.4%, and 71 at 2x or above averaged −3.2%. Those archive returns mix several exit policies, so the 04:30 ET exit adopted October 14 needs its own sample.
+
+**Evaluation of previous changes:**
+
+- 2026-10-14 `price-timeline.py` `[CLOSE]` label: **no trigger, 1/5 sessions.** Yahoo served the October 14 AH bars on the morning of October 15, so the note had nothing to label. The evaluation's excerpts show real AH rows (JBDI 17:40–19:55 ET) and zero `[AH] ... 16:00 ET` close rows for a past session. The 10:30 position evaluation printed no timeline excerpt.
+- 2026-10-13 `check-prices.py --ah-history` missing-session line and SIP AH reconstruction: **helped, 2/5.** All AH levels in the morning evaluation come from SIP bars, with zero "returned only the 16:00 row" notes.
+- 2026-10-09 same-date regular-session ratio: **helped, 3/5.** 176/176 October 14 `VOLUME-CONTEXT` rows across 18 metric files carry a known `rth-peak`. The JBDI winner check cited `rth_peak_shares` (248K) with no hand count.
+- 2026-10-09 SIP daily multi-session tagging: **helped, 6/10 entries.** NCPL and YYAI entry notes cited SIP daily closes; the morning evaluation reclassified neither.
+- 2026-10-08 DST-aware AH tools: **insufficient data until November 2; summer output held, 4/5 sessions.**
+- 2026-10-07 stale delayed SIP snapshot replacement: **insufficient data, 5/5 sessions.** Zero `sip-hist` lines were due. Both fills used limits from the SIP-15m book while IEX was frozen. Five sessions have now passed without the old-snapshot case arising; keep the code and review it again only when a delayed snapshot older than 45 minutes appears.
+- 2026-10-01 unrounded AH evidence: **helped, 7/7.** Present in all 12 AH scans.
+- 2026-09-22 to 09-25 supplementary-pass changes: **still insufficient for a cutoff decision.** October 14 added IBG (unassessed: no PM trades through 04:05 ET, 610 AH shares). Running: 16 unique names, 12 assessed, 1 sustained continuation (IPW), 4 unassessed.
+
+**Changes:**
+
+1. **scripts/entry-volume-ratio.py (new)** — `entry-volume-ratio.py SYM AH-DATE FILL-HHMM-ET` reads the latest archived `-volume-metric.json` written at or before the fill and prints the largest AH bar's `rth_peak_ratio`, its bucket (`<2x`, `2-10x`, `>=10x`), the bar time and both share counts. It reads local files only and prints `unknown` when no metric file exists.
+   - Why: the at-entry ratio needs the right metric file for the fill time; picking it by hand mixes in bars the scan could not yet see.
+2. **prompts/morning-evaluation.md** — New log-only tracker: for each fill, record the script's ratio and bucket beside the realized 04:30 ET P&L and the PM-peak return. Seeded with the six fills since October 12 (>=10x: 4 fills, 2 wins, mean +11.8%; <2x: 2 fills, 0 wins, mean −18.5%), with the archive null result as the control. When the <2x bucket reaches 5 fills and trails the >=2x bucket by at least 10 points of mean realized return, the morning evaluation routes an entry-rule question to the daily email.
+   - Why: Juan's feedback asked what separated AEHL and FCHL from BKYI, and the six new fills disagree with the archive. A prospective count under the current exit settles which one holds without changing any gate.
+   - Hypothesis: I expect every fill over the next 10 entries to carry a script-printed ratio (target ≥90% known), with zero hand-computed ratios. Separately, if the six-fill split is real, the <2x bucket's mean realized return will stay at least 10 points below the >=2x bucket once it reaches 5 fills; if it converges toward the archive (gap under 5 points), the ratio stays observation only.
+
+**Verification:** The script reproduces the six seed ratios from the archived files (FCHL 84.53x, AEHL 30.49x, AGMH 19.89x, BKYI 0.24x from the 18:30 file for an 18:32 fill, NCPL 1.51x, YYAI 20.81x) and prints `unknown` for a ticker with no file. `--help` prints usage; `scan.py --help` and `git diff --check` passed.
+
+**Ready work skipped / next owners:**
+
+- **Entry rule on the ratio:** Juan's decision; the tracker routes it to the email only at its trigger.
+- **In-window feed lag (8), coverage failures (3 in 10 sessions), holdable PM-only cluster (71 rows), sub-$0.50 floor question:** routed to the daily email by the morning evaluation; Initiative 6 owns the PM-only work.
+- **Research replay scripts with fixed EDT offsets:** still pending before any winter replay.
+
+**Updated process:** Morning evaluations record each fill's at-entry regular-session volume ratio. Scanner thresholds, entry gates, sizing and learning rules are unchanged.
 
 ### 2026-10-14 — Label the 16:00 Close Print in Price Timelines
 
