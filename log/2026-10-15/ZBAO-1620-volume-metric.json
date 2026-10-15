@@ -1,0 +1,49 @@
+{
+  "metric_version": "sip-ah-volume-v2",
+  "symbol": "ZBAO",
+  "date": "2026-10-15",
+  "prior_date": "2026-10-14",
+  "as_of_utc": "2026-10-15T20:20:27+00:00",
+  "source_observed_utc": "2026-10-15T20:20:29.897375+00:00",
+  "floor_shares": 100,
+  "prior_observed_slots": 38,
+  "prior_inferred_zero_slots": 10,
+  "prior_expected_slots": 48,
+  "prior_complete": true,
+  "prior_peak_shares": 36271,
+  "rth_observed_slots": 56,
+  "rth_inferred_zero_slots": 22,
+  "rth_expected_slots": 78,
+  "rth_complete": true,
+  "rth_peak_shares": 962982,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-15T20:00:00+00:00",
+      "bar_end_utc": "2026-10-15T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 319356,
+      "trades": 1957,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 8.804720024261806,
+      "rth_peak_ratio": 0.3316323669601301
+    },
+    {
+      "bar_start_utc": "2026-10-15T20:05:00+00:00",
+      "bar_end_utc": "2026-10-15T20:10:00+00:00",
+      "bar_et": "16:05",
+      "shares": 602604,
+      "trades": 3650,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 16.613933996856993,
+      "rth_peak_ratio": 0.6257687059571206
+    }
+  ]
+}
