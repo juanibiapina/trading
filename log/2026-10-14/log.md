@@ -650,3 +650,148 @@ Final scheduled scan. No new entries: every new >10% name fails a gate (three de
 |--------|------------|------------|-----------------|----------|--------|
 | NCPL | $2.16 | 23:00 CET (17:00 ET) | 45 | 529b8e3a-fefd-418e-a890-521863b1f423 | Grade C (Nasdaq compliance PR); AH BUILD with new highs on 276K–517K sh/bar; float 4.4M; Total +55.4% |
 | YYAI | $0.82 | 00:00 CET (18:00 ET) | 116 | eaba150d-b33d-4dd6-9bd7-e8cfe6435c39 | Grade None (no fresh catalyst); second AH ignition 17:30 ET to $0.95 on 126K–234K sh/bar, CONFIRM-3 YES; float 4.6M; Total +15.8% |
+
+## Morning Evaluation — 10:20 CEST (04:20 ET, October 15)
+
+**Pulse 1: no real winner today.** Nothing in the scan universe cleared +100%. The biggest genuine AH→PM mover is **JBDI** at +51.4% AH / +42.6% PM. The only >100% name is **GP** (+394% SIP high), a sub-$0.50 PM-only gapper with no AH footprint. Both overnight entries are under water: NCPL −10.1% and YYAI −17.6%. Exits belong to the 10:30 position pulse.
+
+Discovery ran before reading this log: `scan.py --all --session premarket` at 04:20 ET found only JBDI +23.5% and NCPL +20.1%. `pm-sweep.py` returned 14 listed names above +10%: GP, SDST, HCAI, SHFS and PPCB are below $0.50, JBDI and NCPL are in-universe, and the rest are thin prints (BIVI 383 sh, RDI 614, BBCI 100, VTIX 150, YCBD 100, CLRB 100) plus WFF (−91.7% crash day). Levels are Alpaca SIP daily closes and 5-minute bars. SIP PM bars end at the 04:05 ET bar, so later PM is unassessed here. Yahoo did serve last night's AH bars this morning, and they match the SIP shape.
+
+### Today's Winner
+
+**No real winner today.** The largest moves are below +100%, below the $0.50 floor, or PM-only:
+
+- **JBDI** (scanner industry Wholesale Distributors), the biggest genuine in-universe mover. Previous close **$2.51** (SIP, Oct 14; Day −26.8% after Oct 13's $1.00 → $3.43 run on 92.6M sh). AH ignition at 17:45 ET, **AH SIP high $3.80 (+51.4%) at 18:00 ET** on 295K sh / 3,118 trades. **PM SIP high $3.58 (+42.6%) at 04:00 ET** on 366K sh / 5,823 trades; 04:05 close $3.24, Yahoo $2.99 at 04:23. That is below the bar on %, and against the previous day it is no spike: Oct 14's largest regular-session 5m bar was 248K (`rth_peak_shares`), the AH peak bars ran 1.1–1.2x that, and Oct 13 traded 92.6M sh. Catalyst **None** (scan searches: only breakout/"regulatory probe" commentary). Float n/a, market cap ~$24M.
+- **GP** (GreenPower Motor, electric buses). Close **$0.273**. AH: 4 trades, 1,046 shares total. The 04:00 ET bar ran to **$1.35 (+394%)** on 4.91M sh / 16,327 trades but closed $0.55 (VWAP $0.68); 04:05 H $0.63 C $0.63 on 3.05M sh. PM-only gapper below the price floor. Catalyst **None** found (1 search; Oct 5 Newsfile release is background).
+- **HCAI** (Huachen AI, industrial machinery). Close **$0.2792**. Ignited 17:40 ET to **$0.53 (+89.8%) at 17:45 ET** on 2.08M sh / 4,432 trades and sat near $0.46 at the 18:30 ET final scan. PM SIP high $0.44 (+57.6%) at 04:00 on 4.13M sh, then Yahoo $0.25 (−11.7%) by 04:23. Below the bar and below the $0.50 floor.
+
+**Scanner Diagnostic (biggest genuine mover, JBDI):**
+
+- Detectable at screening time (~22:15 CEST)? **NO** at 22:15: JBDI sat at $2.26–2.40 (−4% to −10% AH) until 17:40 ET. **YES** from the 00:30 CEST final scan ($3.37, +34.3% AH); the 00:00 scan showed +10.0% rounded, below the unrounded 10% line.
+- Acted on: skipped as a dead-cat (Day −26.8%) and logged as a borderline DEAD-CAT-OVERRIDE WATCH at $3.37. Hypothetical $3.37 → PM SIP $3.58 = **+6.2%**, next bar close $3.24 below the entry.
+- Scanner gap: **none.** JBDI was detected in the only window where it moved, and the skip cost little.
+
+### Baseline Tracking
+
+Source: the October 13 log (Days tracked 99, detected 75/86, selected 39/82). The October 13 log is the immediately preceding trading day, so no new baseline gap. Existing gaps stay **Sep 11, Sep 18, Sep 25, Oct 2, Oct 9**.
+
+- Days tracked: **100** (99 + October 14 only).
+- Winners detected by scanner: **75/86 (87.2%)**, unchanged. No winner today, so nothing enters the denominator.
+- Winner selected for paper trade: **39/82 (47.6%)**, unchanged.
+- Target: >80% detection. Status: **BASELINE MET.** Coverage failures, five skipped retrospectives and the price-floor exclusions limit what the rate means.
+
+### Retrospective Scan Results
+
+`scan.py --all --session premarket` (04:20 ET): JBDI +23.5%, NCPL +20.1%. `pm-sweep.py` (04:20 ET): GP +101.5%, SDST +71.5%, HCAI +29.9%, SHFS +24.0%, JBDI, NCPL, PPCB +14.3% (2,652 sh), WFF +10.1%, and thin prints. No forced AH scan was run.
+
+| Ticker | Oct 14 SIP close | AH SIP high / ET | PM SIP high / ET | PM high vs close | Peak-bar shares / trades | Latest | Classification |
+|--------|-----------------|------------------|------------------|------------------|--------------------------|--------|----------------|
+| GP | $0.273 | $0.28 / 16:05 (1,046 AH sh) | $1.35 / 04:00 | +394% | 4,909,458 / 16,327 | $0.55 (Yahoo 04:23) | PM-only gapper; sub-$0.50; single-wick peak |
+| JBDI | $2.51 | $3.80 / 18:00 | $3.58 / 04:00 | +42.6% | 366,076 / 5,823 | $2.99 (Yahoo 04:23) | Biggest genuine mover; detected at final scan; dead-cat skip |
+| HCAI | $0.2792 | $0.53 / 17:45 | $0.44 / 04:00 | +57.6% | 4,133,611 / 15,927 | $0.25 (Yahoo 04:23) | Price-floor exclusion (in-window AH); AH better |
+| SHFS | $0.23 | $0.33 / 19:10 | $0.34 / 04:00 | +47.8% | 4,326,965 / 20,168 | $0.27 (04:05 C) | Sub-$0.50; ignited 18:50 ET, after the final scan |
+| NCPL | $1.59 | $2.25 / 17:10 | $1.97 / 04:00 | +23.9% | 165,354 / 1,606 | $1.94 (Yahoo 04:23) | Detected, entered; AH better |
+| YYAI | $0.69 | $1.01 / 19:35 | $0.87 / 04:00 | +25.9% | 420,875 / 3,550 | $0.69 (Yahoo 04:22) | Detected, entered; late-tail AH high, PM gap-down |
+| SDST | $0.03 | $0.05 / 19:00 | $0.06 / 04:00 | ~+70% | 95,143,254 / 50,085 | $0.04 | Sub-$0.05 penny; ignored |
+
+### Open Position P&L (Alpaca)
+
+`broker.js positions`: NCPL 45 @ $2.16 now $1.94, YYAI 116 @ $0.82 now $0.68. The `quote` endpoint is stale (NCPL 16:59 ET, YYAI 16:00 ET with `ask $0.00 x0`), but the positions prices match the SIP 04:05 ET closes ($1.92, $0.68) and Yahoo 04:22–04:23 prints ($1.94, $0.69), so they are live, not the prior close.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| NCPL | $2.16 | +55.4% (vs $1.39 Oct 13) | C — Nasdaq bid-price compliance | 23:00 CEST (17:00 ET) | $1.97 (SIP; Yahoo 04:10 close $2.02) | 04:00 ET | open | −$9.85 | −10.1% | ❌ Open, PM never reclaimed fill |
+| YYAI | $0.82 | +15.8% (vs $0.708 Oct 13) | None — no catalyst found | 00:00 CEST (18:00 ET) | $0.87 (SIP) | 04:00 ET | open | −$16.76 | −17.6% | ❌ Open, below fill after +6.1% open pop |
+
+**Total Realized P&L (Alpaca fills only, this session): $0.00** (unrealized −$26.61).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled checkpoints (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST), plus extra observations at 22:05–22:25 and 22:45. The entry window was fully covered.
+- Candidates found: **9 unique tickers** with a >10% AH appearance (NCPL, TRUG, TCRT, YYAI, SBNYL, JBDI, CISS, FBGL, IBG).
+- Retrospective matches: **3/3** in-universe AH→PM movers of size (JBDI, NCPL, YYAI), all detected.
+- Supplementary AH-change-only pass: the line is present in all AH scans. **1 unique ticker: 0 continuation / 0 faded / 1 unassessed.**
+  - **IBG: unassessed.** Logged at $0.98 (00:30). SIP shows no PM trades through 04:05 ET; AH carried 610 shares in total (last bar 19:45 ET C $0.85). Persistence unknown.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| HCAI | +89.8% at 17:45 ET (2.08M sh / 4,432 tr) | Below the $0.50 `MIN_PRICE` floor | No: 18:30 ET ~$0.46 → PM peak $0.44 = −4.3%; fell through the close by 04:15 |
+| GP | flat (1,046 AH sh) | PM-only gapper, below $0.50 | Not AH-actionable |
+
+### AH Mover Follow-Through
+
+Every name with two or more >10% AH scans. Current = SIP 04:05 ET close.
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| NCPL | $2.25 | 17:10 | **Build→fade** (+17.1 → 13.9 → 11.9 → 31.4 → 31.4 → 39.6 → 35.9 → 30.2%) | $1.92 | −14.7% | +20.8% | PM peak $1.97 **fell short (−12.4%)**; AH better |
+| YYAI | $1.01 | 19:35 | **Late surge** (+11.5 → 21.4 → 23.0%, tail high after the final scan) | $0.68 | −32.7% | −1.4% | PM peak $0.87 **fell short (−13.9%)**; gapped down from the $0.96 AH close |
+| TRUG | $1.74 | 16:10 | **Spike→fade** (+14.4 → 10.1%) | $1.27 | −27.0% | −8.0% | PM peak $1.38 **fell short (−20.7%)** |
+| SBNYL | n/a | — | Unchanged snapshot (+10.4% ×3) | n/a | — | — | No SIP bars (OTC preferred, untradable) |
+
+**AH-peak-vs-PM-peak, extreme zone:** no name reached +130% AH. Tally stays **15 fades / 3 continues (83.3%)**.
+
+**Chase-cap check:** NCPL filled $2.16 below its $2.20 ask and YYAI $0.82 below the $0.84 qualifying price. Standing **1 (XOS), never reclaimed**, unchanged.
+
+### Notes
+
+- **Coverage, last 10 completed sessions (Oct 1–Oct 14):** **Oct 2 0/7, Oct 5 0/7, Oct 9 0/7** (logs exist with no `## Scan` sections). Oct 1, 6, 7, 8, 12, 13 and **Oct 14 ran 7/7.** Sep 30 dropped out of the window: still **3 failures in 10 sessions**, above the ≥2 trigger. The scheduler/bridge investigation stays routed to the email.
+- **Raw PM leader / PM-only tracking:** the biggest raw PM mover is **GP (+394% SIP high)**, a **PM-only gapper** below the $0.50 floor. Investability: the $1.35 peak is a single wick (bar closed $0.55, VWAP $0.68), but the 04:00–04:15 ET Yahoo closes stayed above +100% on 3–5M sh/bar. That is holdable at the +100% level and uninvestable at the headline peak. Not a scanner failure. `log/pm-open-scan.csv` has **no October 15 rows yet** at 04:20 ET; confirm the pm-open pulse captures GP. Holdable PM-only count read from the file: **71**. Carry the Initiative-6 cluster to the email.
+- **Price-floor exclusions: 12 observations across 9 nights → 13 across 10 nights; >100%-and-holdable stays 1 (TOPP).** HCAI (Oct 14, close $0.2792): +89.8% AH at 17:45 ET on 2.08M sh / 4,432 trades, ~+65% at the 18:30 ET scan; PM peak $0.44 (+57.6%); hypothetical 18:30 entry ~$0.46 → −4.3%; **uninvestable** (PM below the AH peak, unwound below the close by 04:15 ET). Alpaca `tradable` not checked. SHFS ignited at 18:50 ET (after the window, $0.24 at 18:30 ET) and is not counted. GP was PM-only.
+- **In-window feed-lag: 8, unchanged.** Every in-universe name with an in-window AH move appeared in the scans. The ≥3 trigger stays reached; carry the whole-universe AH verification to the email.
+- **Late-AH-tail tracking: 2 true-tail (ORIS, GNS) / 1 feed-lag (BTCT), unchanged.** YYAI's $1.01 high at 19:35 ET came after the final scan but extended a detected entry and then gapped down; not a winner and not counted.
+- **Fade-rule tally: sub-3M 4/25 (16.0%), unchanged; trigger not met.** No candidate was skipped on the fade rule. TRUG (float 1.2M, Grade None) spiked at 16:10 ET and faded (PM $1.38 < AH $1.74), but its skip reason was dead-cat, so it is not counted.
+- **DEAD-CAT-OVERRIDE WATCH: JBDI provisional, not counted.** Only one unrounded >10% scan (00:30), so the two-rising-scan condition was not met (MSGY precedent). Raw: $3.37 → PM SIP $3.58 = **+6.2%** on 366K sh / 5,823 trades; next bar closed $3.24, below entry, so **transient**. Day-2 multi-session runner, Grade None. Standing **5 positive / 6 negative**, unchanged.
+- **CEILING-OVERRIDE / FIRST-BAR-SPIKE WATCH:** none flagged. NCPL's early 16:05 high was superseded by later highs at 16:25, 16:40 and 17:10 ET. First-bar standing **12 valid (3 ran / 9 faded-flat), 1 pending (ICMB)**, unchanged.
+- **Final-scan gate-block: 2 (TRUG, UPC; DKI excluded), unchanged.** JBDI first qualified at the final scan but failed the Day% gate (−26.8%); IBG was thin (510 sh).
+- **Execution trackers:** broker-block **2**, stale-book-only **6**, no-fillable-book **4**, float-only **1**, all unchanged. SBNYL (`tradable=false`) is not a broker-block case: float 59.6M exceeds the 50M gate and SIP has no bars. Both qualifiers filled within seconds on limits set from the SIP-15m book while the IEX quote was frozen (NCPL at 16:59 ET, YYAI at 16:00 ET with `ask $0.00 x0`).
+- **Actual-entry trackers:**
+  - **NCPL: day-1 igniter by the tag rule** (Day +14.4%; no prior ≥+50% session), but a repeat mover with AH footprints on Oct 6/7/12/13. Grade C. $2.16 → PM SIP peak $1.97 = **−8.8%, faded**; AH high $2.25 was the exit.
+  - **YYAI: day-1 fresh igniter** (Day −2.6%, flat $0.79 → $0.71 over Oct 6–13). Grade None. $0.82 → PM SIP peak $0.87 = **+6.1%, marginal ran then faded** (SSM precedent), now −17%. AH tail high $1.01 was the exit.
+  - First-day igniters **36 → 38 entries (16 ran / 8 flat / 14 faded) = 42.1% ran**. Multi-session runners **2, both faded** (DAIC, OLB), unchanged.
+  - Reverse-split tally unchanged (**4/5 this-week faded / 4/6 older continued**). YYAI carries 1-for-40 (May) and 1-for-20 (Aug 13) splits as background only; the catalyst note is not a split.
+- **SIP basis checks:** October 14 closes GP $0.27, JBDI $2.51, NCPL $1.59, YYAI $0.69, HCAI $0.28, SHFS $0.23, TRUG $1.38, TCRT $2.07, CISS $0.53, FBGL $2.40, IBG $0.82. October 13 closes for Entry Total%: NCPL $1.39, YYAI $0.708.
+- **AEHL day 2 (SIP):** Oct 14 session high **$30.60** (daily bar, includes PM) confirms Yahoo's $29.76 print was real. AEHL closed Oct 14 at $11.49 and trades $10.14 PM (04:05 ET). Our exit at $23.78 caught the PM run before the dump.
+- **WINNERS_TRACKING.md:** nothing added. AEHL (day 2) and FCHL (day 3) refreshed.
+
+### Daily Email Routing
+
+- Headline: **No real winner for October 14→15.** Biggest genuine mover JBDI: AH +51.4%, PM +42.6%, detected at the final scan and skipped as a dead-cat (hypothetical +6.2%). GP's +394% was a sub-$0.50 PM-only wick. Detection **75/86 (87.2%)**, selection **39/82 (47.6%)**, 100 days tracked.
+- **Open book:** NCPL −10.1% and YYAI −17.6%; neither reclaimed its fill in PM. Both AH peaks ($2.25, $1.01) were the better exits.
+- **Scheduler/bridge reliability (decision for Juan):** 3 coverage failures in the last 10 sessions (Oct 2, Oct 5, Oct 9).
+- Carry forward: 71-row holdable PM-only cluster → Initiative 6; 8 in-window feed-lag misses → whole-universe AH verification; extreme-runner partial profit (15/3, 83.3%, below threshold); reverse-split recency recommendation; sub-$0.50 floor question (TOPP 1 of 3; HCAI added as uninvestable); stale IEX quote feed. The sub-3M fade (4/25), price-floor, first-bar and final-scan triggers are not met.
+
+### Price Charts
+
+Excerpts from `python3 scripts/price-timeline.py JBDI NCPL YYAI HCAI GP` at ~04:23 ET (Yahoo 5-minute closes; SIP tables above set the peaks). Block charts omitted.
+
+```
+JBDI  Previous Close $2.51 (regular close 2026-10-14) | Peak $3.80 (+51.4%) at 10-14 18:00 ET
+  [AH]  10-14 17:40 ET: $2.77 (+10.4%)
+  [AH]  10-14 17:55 ET: $3.75 (+49.4%)
+  [AH]  10-14 18:30 ET: $3.24 (+29.1%)
+  [AH]  10-14 19:55 ET: $3.03 (+20.7%)
+  [PM]  10-15 04:05 ET: $3.24 (+28.9%)
+  [PM]  10-15 04:23 ET: $2.99 (+19.1%)
+NCPL  Previous Close $1.59 (regular close 2026-10-14) | AH high $2.25 SIP at 17:10 ET
+  [AH]  10-14 17:10 ET: $2.22 (+39.6%)
+  [AH]  10-14 19:55 ET: $1.89 (+18.8%)
+  [PM]  10-15 04:00 ET: $1.89 (+19.1%)
+  [PM]  10-15 04:10 ET: $2.02 (+27.0%)
+  [PM]  10-15 04:23 ET: $1.94 (+22.0%)
+YYAI  Previous Close $0.6911 (regular close 2026-10-14) | Peak $1.01 (+46.1%) at 10-14 19:35 ET
+  [AH]  10-14 19:55 ET: $0.96 (+38.9%)
+  [PM]  10-15 04:00 ET: $0.71 (+2.7%)
+  [PM]  10-15 04:22 ET: $0.69 (−0.3%)
+HCAI  Previous Close $0.2792 (regular close 2026-10-14) | Peak $0.53 (+89.4%) at 10-14 17:45 ET
+  [AH]  10-14 19:55 ET: $0.40 (+42.6%)
+  [PM]  10-15 04:00 ET: $0.36 (+29.9%)
+  [PM]  10-15 04:23 ET: $0.25 (−11.7%)
+GP    Previous Close $0.2730 (regular close 2026-10-14) | Peak $1.28 (+368.9%) at 10-15 04:00 ET (Yahoo; SIP $1.35)
+  [PM]  10-15 04:00 ET: $0.55 (+101.9%)
+  [PM]  10-15 04:10 ET: $0.63 (+132.2%)
+  [PM]  10-15 04:20 ET: $0.53 (+93.4%)
+  [PM]  10-15 04:23 ET: $0.55 (+101.2%)
+```
