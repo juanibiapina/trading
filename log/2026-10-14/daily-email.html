@@ -1,0 +1,63 @@
+<div style="font-family: -apple-system, Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+<h2 style="color: #1a1a1a; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">Overnight Cycle: Oct 14 AH &rarr; Oct 15 PM</h2>
+
+<h3 style="color: #555; margin-top: 20px;">Post-Market Scans</h3>
+<p>All 7 scheduled scans ran (21:30&ndash;00:30 CEST), plus 6 extra opening observations. 9 unique tickers crossed +10% AH. Two entries: <strong>NCPL</strong> at 23:00 (Grade C, Nasdaq compliance PR, AH build on 276K&ndash;517K sh/bar) and <strong>YYAI</strong> at 00:00 (no catalyst, second ignition, CONFIRM-3 YES). JBDI ignited late and was skipped as a dead-cat.</p>
+
+<h3 style="color: #555;">Today&rsquo;s Winner</h3>
+<p><strong>No real winner today</strong> (nothing in the universe cleared +100%).</p>
+<p>Biggest genuine mover: <strong>JBDI</strong> (wholesale distribution, day 2 after Oct 13&rsquo;s +243%) &mdash; no catalyst. AH high $3.80 (+51.4%) at 18:00 ET; PM SIP high $3.58 (+42.6%) at 04:00 ET, re-checked through 05:15 ET with no higher print. Hypothetical final-scan entry $3.37 &rarr; $3.58 (<span style="color: #2e7d32; font-weight: bold;">+6.2%</span>), and the next bar closed below entry.</p>
+<p>Scanner caught it? <strong style="color: #2e7d32;">YES</strong> &mdash; at the 00:30 final scan, its only window; skipped as a dead-cat (Day &minus;26.8%). GP&rsquo;s +394% was a sub-$0.50 PM-only wick, not actionable.</p>
+
+<h3 style="color: #555;">Baseline Status</h3>
+<p style="font-size: 18px; background: #f5f5f5; padding: 10px; border-radius: 4px;">Detection rate: <strong>75/86 (87.2%)</strong> &mdash; Target: &gt;80%<br/>
+<span style="color: #1976d2;">BASELINE MET</span> &middot; selection 39/82 (47.6%) &middot; 100 days tracked</p>
+
+<h3 style="color: #555;">Paper Trades</h3>
+<p style="font-size: 18px;">Paper P&amp;L: <span style="color: #c62828; font-weight: bold;">&minus;$29.64 (&minus;15.4%)</span></p>
+<ul>
+<li>NCPL 45 @ $2.16 &rarr; $1.88: <span style="color: #c62828;">&minus;$12.60 (&minus;13.0%)</span>. AH high was $2.25; PM peaked at $1.97.</li>
+<li>YYAI 116 @ $0.82 &rarr; $0.673: <span style="color: #c62828;">&minus;$17.04 (&minus;17.9%)</span>. AH tail high $1.01 at 19:35 ET; gapped down in PM.</li>
+</ul>
+<p>Both sold at the 10:30 CEST evaluation under the new sell-all rule; the AH highs were the better exits for both.</p>
+<p style="background: #f5f5f5; padding: 10px; border-radius: 4px;">Cumulative Paper P&amp;L: <span style="color: #c62828; font-weight: bold;">&minus;$301.20</span> (equity $99,698.80, all cash)</p>
+
+<h3 style="color: #555;">Scanner Improvement</h3>
+<p><strong>Oct 14</strong> (latest completed): <code>price-timeline.py</code> now labels a past session&rsquo;s 16:00 print as <code>[CLOSE]</code> and points to SIP, so a flat row no longer reads as &ldquo;no AH move&rdquo;. Hypothesis: zero past-session <code>[AH] 16:00</code> rows in the next five morning reviews. No change is recorded yet for this cycle; today&rsquo;s run comes after this email.</p>
+
+<h3 style="color: #555;">Process Review</h3>
+<p><strong>Oct 14</strong> (latest completed; covers sessions through Oct 14 14:30 CEST): all 24 sessions finished with no errors. Two fixes: strategy-advance now applies evidence-backed rule changes itself (this unstuck the hold retirement below), and the empty AH-open scan no longer sleeps and rescans. Last night&rsquo;s scans and this morning&rsquo;s sessions are not reviewed yet.</p>
+<p style="background: #fff3e0; padding: 10px; border-radius: 4px; border-left: 4px solid #ef6c00;"><strong>Open for you (infra):</strong> scheduler reliability &mdash; 3 of the last 10 evenings lost all scans (Oct 2, 5, 9; Oct 14 ran 7/7); and the provider login-error alert/fallback, open since Oct 6.</p>
+
+<h3 style="color: #555;">Initiative Progress</h3>
+<p>Window: Oct 14 11:32 CEST (last send) to this send.</p>
+<ul>
+<li><strong>Initiative 3 &mdash; exits, Oct 14 15:00 CEST</strong>: applied the hold retirement: every position is sold at the first premarket evaluation (10:30 CEST / 04:30 ET). Basis: 26 held trades returned &minus;11.9% vs &minus;3.1% at 04:30 (p 0.038). First live use today sold NCPL and YYAI; nothing is left for 14:30. Say the word to revert. Next: process review confirms the exit ran as written.</li>
+<li><strong>Initiative 7 &mdash; alternative strategies, Oct 14 15:00 and 18:00 CEST</strong>: froze and ran the out-of-sample fade (short liquid AH up movers at the next open, hold 20 sessions) on Oct 2024&ndash;Sep 2025. It fails: &minus;0.56% per trade [&minus;3.30, +2.65], halves +1.52 / &minus;2.62, n=578. Five frozen tests have failed, so no liquid candidate is left. Next: a frozen one-year census of the core micro-cap universe with quoted fills (ask entry, 04:30 bid and open exits). If no subset is positive, the proposal to you will be to stop or replace the AH&rarr;PM strategy.</li>
+<li><strong>Initiative 4 &mdash; reply loop, Oct 15 09:00 CEST</strong>: your AEHL reply was captured and logged; this is the first clean Gmail reply cycle. Next: keep reporting.</li>
+<li><strong>Initiative 6 &mdash; PM-only gappers (monitoring)</strong>: log-only cohort snapshot and PM-open scan ran this morning. GP ran +394% PM from $0.27 (single wick); holdable PM-only count is now 71. Pilot stays closed until real-time data exists.</li>
+</ul>
+<p>Blocked/deferred: Initiative 2 broker test deferred per your Sep 22 instruction. Initiatives 1 and 5 have no dated work.</p>
+
+<h3 style="color: #555;">Jev Results and Costs</h3>
+<p><strong>Not run in this window.</strong> No Jev calls appear in any repo artifact since the last email; both Initiative 7 runs were price-data tests. Window: 0 recorded calls, $0.00 USD in repo records; the billed charge is unverified (TypeSafe billing not queried). Cumulative recorded: 7 calls, 11,385 input / 1,088 output tokens, ~$0.00048 USD (estimate from the Oct 2 and Oct 7 manifests). Next: no Jev step is scheduled; Initiative 7&rsquo;s next deliverable is the micro-cap census.</p>
+
+<h3 style="color: #555;">Feedback Acknowledged</h3>
+<ul>
+<li><strong>Oct 14 &mdash; &ldquo;Absolutely amazing entry and exit! that&rsquo;s what we want! Two days in a row!&rdquo;</strong>: logged. AEHL (+54.4%) and FCHL (+13.9%) are kept as reference cases for the volume-spike entry profile; scanner improvement will compare them with BKYI (&minus;23.9%). Read as no veto of the 04:30 sell-all exit.</li>
+</ul>
+
+<h3 style="color: #555;">Charts (5m + volume)</h3>
+<p style="margin: 0 0 4px;"><strong>NCPL (traded: entry $2.16, exit $1.88)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-14/NCPL-1131.png" alt="NCPL 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+<p style="margin: 0 0 4px;"><strong>YYAI (traded: entry $0.82, exit $0.673)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-14/YYAI-1131.png" alt="YYAI 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+<p style="margin: 0 0 4px;"><strong>JBDI (biggest mover, not traded)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-14/JBDI-1131.png" alt="JBDI 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+
+<h3 style="color: #555;">Key Takeaway</h3>
+<p style="background: #e3f2fd; padding: 10px; border-radius: 4px; border-left: 4px solid #1976d2;">Both entries faded overnight (&minus;$29.64), and with every liquid alternative now failed, the micro-cap census decides whether the AH&rarr;PM strategy has any profitable subset.</p>
+
+<p>Reply to this email with feedback or a veto.</p>
+<p style="font-size: 12px; color: #666; margin-top: 20px;">Email session: anthropic/claude-opus-5-5 &middot; reasoning: medium</p>
+</div>
