@@ -585,6 +585,81 @@ No candidates found.
 - XLAB dropped below 10% AH (+8.1%, $1.47); it never reached a second >10% AH scan. BBCI +5.7% AH.
 - `scripts/ah-crosscheck.js` returned `403: subscription does not permit querying recent SIP data` for all five names at 18:00 ET. Direct `broker.js bars` with an explicit start worked.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| TCRT | [TV](https://www.tradingview.com/chart/?symbol=TCRT) | $2.18 | +5.3% | +31.7% | $2.87 | +38.6% | 9.8M | 34.5M | 0.3x | 2.3M | Biotechnology |
+| XXII | [TV](https://www.tradingview.com/chart/?symbol=XXII) | $0.63 | -3.6% | +78.6% | $1.12 | +72.1% | 7.4M | 864K | 8.6x | 599K | Biotechnology |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.98 | +24.5% | +9.6% | $2.17 | +36.5% | 2.3M | 16.5M | 0.1x | 2.1M | Miscellaneous Commercial Services |
+| SITC | [TV](https://www.tradingview.com/chart/?symbol=SITC) | $3.01 | -0.3% | +19.3% | $3.59 | +18.9% | 1.6M | 1.5M | 1.1x | 52.3M | Real Estate Investment Trusts |
+| ZBAO | [TV](https://www.tradingview.com/chart/?symbol=ZBAO) | $0.95 | -6.6% | +6.1% | $1.01 | -1.0% | 1.1M | 1.3M | 0.9x | n/a | Insurance Brokers/Services |
+| JBDI | [TV](https://www.tradingview.com/chart/?symbol=JBDI) | $2.34 | -6.8% | +17.5% | $2.75 | +9.6% | 321K | 10.9M | 0.0x | n/a | Wholesale Distributors |
+
+- Supplementary AH-change-only (>15%, not in volume pass): none
+- AH >10% at this snapshot (unrounded): JBDI, SITC, TCRT, XXII
+
+**Evaluation notes:**
+- **No new entries at the final scan.** No new >10% AH name appeared, so no FINAL-SCAN-GATE-BLOCK. AH >10% appearance counts: TCRT 7, XXII 3, SITC 3, JBDI 3 (untradable), NCPL 4 (now +9.6%, below threshold). Positions at 18:30 ET: TCRT 34 @ $2.95 → $2.88 (−2.4%), XXII 84 @ $1.18 → $1.09 (−7.6%).
+- **XXII: held (entered 00:07 @ $1.18).** After the entry it pushed to a new AH high of $1.30 in the 17:55 ET bar on 1.21M sh / 5,680 trades, then eased to $1.08 by 18:15 on 0.44–0.58M sh / 2.3–3.3K trades per bar. It is still within ~17% of the high, so this counts as a hold, with heavy volume still trading.
+  - `XXII 2026-10-15  SPIKE  16:30ET  +29%  $0.81  199 trades / 45k sh  (first co-spike bar) (as-of 18:30ET)`
+  - `XXII 2026-10-15  CONFIRM-3  NO ignition 16:30ET failed third-bar hold/volume as-of 18:30ET`
+  - `# XXII shared SIP volume sip-ah-volume-v2; prior 2026-10-14 2+46zero/48 slots; floor 100; same-date regular peak 11982 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T22:30:22+00:00; source fetched 2026-10-15T22:30:37.406457+00:00`
+  - VOLUME-CONTEXT rows through 17:45 ET are unchanged from the 00:00 scan. New completed bars:
+  - `XXII 2026-10-15  VOLUME-CONTEXT 17:50ET start=2026-10-15T21:50:00+00:00 shares=620876 local=0.7486x prior-peak=562.3877x rth-peak=51.8174x status=ok`
+  - `XXII 2026-10-15  VOLUME-CONTEXT 17:55ET start=2026-10-15T21:55:00+00:00 shares=1207362 local=1.9446x prior-peak=1093.6250x rth-peak=100.7646x status=ok`
+  - `XXII 2026-10-15  VOLUME-CONTEXT 18:00ET start=2026-10-15T22:00:00+00:00 shares=579529 local=0.6987x prior-peak=524.9357x rth-peak=48.3666x status=ok`
+  - `XXII 2026-10-15  VOLUME-CONTEXT 18:05ET start=2026-10-15T22:05:00+00:00 shares=435998 local=0.7022x prior-peak=394.9257x rth-peak=36.3877x status=ok`
+  - `XXII 2026-10-15  VOLUME-CONTEXT 18:10ET start=2026-10-15T22:10:00+00:00 shares=560128 local=0.9665x prior-peak=507.3623x rth-peak=46.7475x status=ok`
+  - `XXII 2026-10-15  VOLUME-CONTEXT 18:15ET start=2026-10-15T22:15:00+00:00 shares=559263 local=0.9985x prior-peak=506.5788x rth-peak=46.6753x status=ok`
+  - `XXII BOOK iex bid $0.5203 x100 / ask $0.7296 x100 @ 2026-10-15 16:00:00 ET age 2h30m two-sided spread 28.69% of ask`
+  - `XXII BOOK sip-15m bid $1.12 x1300 / ask $1.13 x500 @ 2026-10-15 18:15:22 ET age 15m00s two-sided spread 0.88% of ask`
+  - `XXII BOOK refresh +15s iex unchanged @ 2026-10-15 16:00:00 ET`
+  - `XXII BOOK verdict: IEX STALE 2h30m; SIP-15m TWO-SIDED (observed 2026-10-15 18:30:22 ET; log-only)`
+- **TCRT: held (entered 23:00 @ $2.95).** Steady $2.83–2.97 base with 68–211K sh per bar; the 18:15 bar closed at $2.97 on 1,044 trades, ~4% under the $3.09 AH high.
+  - `TCRT 2026-10-15  SPIKE  16:07ET  +18%  $2.58  1341 trades / 185k sh  (first co-spike bar) (as-of 18:30ET)`
+  - `TCRT 2026-10-15  CONFIRM-3  YES ignition 16:05ET 3.0x; confirmed 16:15ET $2.83 as-of 18:30ET`
+  - `# TCRT shared SIP volume sip-ah-volume-v2; prior 2026-10-14 48+0zero/48 slots; floor 100; same-date regular peak 357922 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T22:30:22+00:00; source fetched 2026-10-15T22:30:35.267132+00:00`
+  - VOLUME-CONTEXT rows through 17:45 ET are unchanged from the 00:00 scan. New completed bars:
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 17:50ET start=2026-10-15T21:50:00+00:00 shares=97831 local=0.8883x prior-peak=1.2385x rth-peak=0.2733x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 17:55ET start=2026-10-15T21:55:00+00:00 shares=109018 local=1.1144x prior-peak=1.3801x rth-peak=0.3046x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 18:00ET start=2026-10-15T22:00:00+00:00 shares=89426 local=0.8203x prior-peak=1.1321x rth-peak=0.2498x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 18:05ET start=2026-10-15T22:05:00+00:00 shares=210901 local=2.1558x prior-peak=2.6700x rth-peak=0.5892x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 18:10ET start=2026-10-15T22:10:00+00:00 shares=109781 local=1.0070x prior-peak=1.3898x rth-peak=0.3067x status=ok`
+  - `TCRT 2026-10-15  VOLUME-CONTEXT 18:15ET start=2026-10-15T22:15:00+00:00 shares=138845 local=1.2647x prior-peak=1.7578x rth-peak=0.3879x status=ok`
+  - `TCRT BOOK iex bid $1.81 x100 / ask $2.49 x100 @ 2026-10-15 16:00:00 ET age 2h30m two-sided spread 27.31% of ask`
+  - `TCRT BOOK sip-15m bid $2.89 x200 / ask $2.90 x5100 @ 2026-10-15 18:15:21 ET age 15m01s two-sided spread 0.34% of ask`
+  - `TCRT BOOK refresh +15s iex unchanged @ 2026-10-15 16:00:00 ET`
+  - `TCRT BOOK verdict: IEX STALE 2h30m; SIP-15m TWO-SIDED (observed 2026-10-15 18:30:22 ET; log-only)`
+- **SITC: Skip, Grade D liquidation pin (third >10% AH scan).** Pinned at $3.59–3.60 on falling volume (12–75K sh per bar since 17:50 ET), consistent with the fixed $3 special distribution and de-listing (BusinessWire Oct 15 ~17:00 ET).
+  - `SITC 2026-10-15  SPIKE  16:58ET  +17%  $3.52  103 trades / 21k sh  (first co-spike bar) (as-of 18:30ET)`
+  - `SITC 2026-10-15  CONFIRM-3  NO no local-volume new-high ignition as-of 18:30ET`
+  - `# SITC shared SIP volume sip-ah-volume-v2; prior 2026-10-14 1+47zero/48 slots; floor 100; same-date regular peak 328377 sh; log-only`
+  - `# reconstructed as-of 2026-10-15T22:30:22+00:00; source fetched 2026-10-15T22:30:39.889670+00:00`
+  - VOLUME-CONTEXT rows through 17:45 ET are unchanged from the 00:00 scan. New completed bars:
+  - `SITC 2026-10-15  VOLUME-CONTEXT 17:50ET start=2026-10-15T21:50:00+00:00 shares=52666 local=0.7743x prior-peak=0.4511x rth-peak=0.1604x status=ok`
+  - `SITC 2026-10-15  VOLUME-CONTEXT 17:55ET start=2026-10-15T21:55:00+00:00 shares=20437 local=0.3046x prior-peak=0.1751x rth-peak=0.0622x status=ok`
+  - `SITC 2026-10-15  VOLUME-CONTEXT 18:00ET start=2026-10-15T22:00:00+00:00 shares=75466 local=1.4329x prior-peak=0.6465x rth-peak=0.2298x status=ok`
+  - `SITC 2026-10-15  VOLUME-CONTEXT 18:05ET start=2026-10-15T22:05:00+00:00 shares=42887 local=0.8143x prior-peak=0.3674x rth-peak=0.1306x status=ok`
+  - `SITC 2026-10-15  VOLUME-CONTEXT 18:10ET start=2026-10-15T22:10:00+00:00 shares=12497 local=0.2914x prior-peak=0.1071x rth-peak=0.0381x status=ok`
+  - `SITC 2026-10-15  VOLUME-CONTEXT 18:15ET start=2026-10-15T22:15:00+00:00 shares=19867 local=0.4632x prior-peak=0.1702x rth-peak=0.0605x status=ok`
+  - `SITC BOOK iex bid $2.60 x100 / ask $0.0000 x0 @ 2026-10-15 16:00:01 ET age 2h30m one-sided/empty`
+  - `SITC BOOK sip-15m bid $3.59 x900 / ask $3.60 x200 @ 2026-10-15 18:15:10 ET age 15m13s two-sided spread 0.28% of ask`
+  - `SITC BOOK refresh +15s iex unchanged @ 2026-10-15 16:00:01 ET`
+  - `SITC BOOK verdict: IEX STALE 2h30m; SIP-15m TWO-SIDED (observed 2026-10-15 18:30:22 ET; log-only)`
+- **JBDI: untradable (carried).** Instrumentation only:
+  - `JBDI 2026-10-15  SPIKE  17:13ET  +16%  $2.72  104 trades / 14k sh  (first co-spike bar) (as-of 18:30ET)`
+  - `JBDI 2026-10-15  CONFIRM-3  NO ignition 17:40ET failed third-bar hold/volume as-of 18:30ET`
+- **Final-scan feed-lag cross-check:** `scripts/ah-crosscheck.js` again returned `403: subscription does not permit querying recent SIP data` for all 8 names, so direct `broker.js bars --start 2026-10-15T21:40:00Z` was used (latest bar 18:15 ET). The SIP data confirms the TradingView feed; no name was under-reported:
+  - NCPL $2.13 at 18:15 ET (~+7.6% AH) on 15–35K sh per bar, fading below threshold.
+  - XLAB $1.34, below its $1.36 close.
+  - BBCI $3.26 (+3% AH) on <2K sh per bar.
+  - ZBAO ~$1.01 on <7K sh per bar.
+  - PMI $11.49 on a few hundred shares.
+  - No rescue.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
