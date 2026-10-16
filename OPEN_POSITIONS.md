@@ -8,8 +8,6 @@ Every entry/exit must be a real Alpaca order; do not record trades that were not
 
 | Ticker | Entry | Current | Peak | P&L | Peak P&L | Shares | Cost | Grade | Entry Date | Notes |
 |--------|-------|---------|------|-----|----------|--------|------|-------|------------|-------|
-| TCRT | $2.95 | $2.95 | $2.95 | 0.0% | 0.0% | 34 | $100.30 | None | 2026-10-15 | Alpaca order e5d5f4d2, 23:00 CET AH entry. Alaunos, 2.3M float, BUILD to $3.09 AH high (16:25 ET) holding within ~7% on 0.3–1.4M sh/bar SIP. MULTI-SESSION-RUNNER day 4. No fresh catalyst. Sell at 10:30 CET. |
-| XXII | $1.18 | $1.18 | $1.18 | 0.0% | 0.0% | 84 | $99.12 | C | 2026-10-15 | Alpaca order 58854c1d, 00:07 CET AH entry. 22nd Century, 599K float, Oct 15 Pinnacle VLN sales PR. Fresh day-1 BUILD to $1.08 AH high (17:45 ET) on 0.5–0.9M sh/bar SIP. Fill Total +80.6%. Sell at 10:30 CET. |
 
 ## Position Rules
 
@@ -42,6 +40,8 @@ The pre-Alpaca markdown ledger used assumed prices that were never executed and 
 
 | Ticker | Entry | Exit | P&L | P&L % | Hold Days | Catalyst | Notes |
 |--------|-------|------|-----|-------|-----------|----------|-------|
+| TCRT | $2.95 | $2.99 | +$1.36 | +1.4% | 1 | None | Sold 2026-10-16 PM 04:30 ET (order 7c649bb3) at first premarket pulse. SIP peak since entry $3.03 (AH 18:20 ET); PM 04:00 open $2.85, low $2.64, last $2.87 on 114–291K sh/bar. Quote stale; limit $2.82 filled $2.99. |
+| XXII | $1.18 | $0.88 | -$25.20 | -25.4% | 1 | C | Sold 2026-10-16 PM 04:31 ET (order 23eda25b) at first premarket pulse. Never traded above entry after fill (SIP AH high $1.18 at 18:10 ET bar). PM 04:00 open $1.03 (1.5M sh), held ~$1.00 to 04:15 then dropped to $0.87–0.88 by 04:30. First limit $0.97 (509835ec) missed the drop; canceled and repriced $0.85, filled $0.88. |
 | NCPL | $2.16 | $1.88 | -$12.60 | -13.0% | 1 | C | Sold 2026-10-15 PM 04:30 ET (order ff6523b9) at first premarket pulse. Gapped down: SIP PM 04:00 open $1.74, high $2.14 (04:10 bar, VWAP $2.03), never reached entry; last $1.92 on 255K sh/bar. Quote stale; limit $1.87 filled $1.88. |
 | YYAI | $0.82 | $0.67 | -$17.40 | -18.3% | 1 | None | Sold 2026-10-15 PM 04:30 ET (order 44de789a) at first premarket pulse. AH spike to $0.95 fully reversed: SIP PM high $0.87 (04:00 bar, VWAP $0.77, 421K sh) then faded to $0.68 on thinning volume. Quote stale (no ask); limit $0.65 filled $0.67. |
 | AEHL | $15.40 | $23.78 | +$50.28 | +54.4% | 1 | None | Sold 2026-10-14 PM 04:30 ET (order 3ecd0f1b) at first premarket pulse. SIP PM run: 04:10 bar H $29.76 (single spike, bar VWAP $23.62); sustained high $25.25 (04:15 bar, VWAP $24.22); 806K sh in first 20 min. Quote stale; limit $22.90 filled $23.78. |
