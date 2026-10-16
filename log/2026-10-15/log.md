@@ -666,3 +666,156 @@ No candidates found.
 |--------|------------|------------|-----------------|----------|--------|
 | TCRT | $2.95 | 23:00 CET (17:01 ET) | 34 | e5d5f4d2-2024-4d1d-97b3-2e246fcfd8f8 | Grade None. 2.3M float biotech, BUILD to $3.09 AH high on 1M+ sh/bar SIP, holding within ~7%; 4 AH scans >10%; day-4 multi-session runner, Total +42.5% at fill |
 | XXII | $1.18 | 00:07 CET (18:07 ET) | 84 | 58854c1d-453f-4c43-9ef2-6b99890eedf2 | Grade C (Oct 15 ~16:30 ET Pinnacle VLN sales PR). 599K float biotech, fresh day-1 BUILD: new AH highs $1.00 → $1.08 at 17:35–17:45 ET on 0.5–0.9M sh / 2–3.3K trades per SIP bar; 2 AH scans >10%; Total +80.6% at fill (qualified +52.4%) |
+
+## Morning Evaluation — 10:20 CEST (04:20 ET, October 16)
+
+**Pulse 1: no real winner today.** The biggest genuine AH→PM mover is **XXII**, which we entered. It hit **$1.30 (+107.3%) in AH** at 17:55 ET on 1.21M shares, but its **PM SIP high is $1.13 (+80.2%)**, and it trades $1.00 (+59%) at 04:23 ET. The +100% was a single AH bar that did not carry into PM (INLF Sep 25 precedent). The only >100% PM print is **RUBI** (+127% wick), a sub-$0.50 PM-only gapper with 1,800 AH shares. Both overnight entries are under water: TCRT −4.1%, XXII −15.3%. Exits belong to the 10:30 position pulse.
+
+Discovery ran before reading this log: `scan.py --all --session premarket` at 04:20 ET found XXII +62.6%, TCRT +25.7%, BNAI +15.3%, XLAB +9.6%. `pm-sweep.py` returned 19 listed names above +10%: RUBI and HODO lead; PMI, SITC, BNAI, NCPL, JBDI are in-universe; the rest are 100–1,600-share prints (LNAI, DLHC, AEHL, LRHC, SDA, VTIX, NXXT, RVSN, SAGT) or sub-$0.50 (NIVF). Levels are Alpaca SIP daily closes and 5-minute bars. SIP PM bars end at the 04:05 ET bar, so later PM is unassessed here. Yahoo served last night's AH bars; they match the SIP shape.
+
+### Today's Winner
+
+**No real winner today.** The largest moves fail the +100% PM bar, the $0.50 floor, or have no AH footprint:
+
+- **XXII** (22nd Century Group, biotech / reduced-nicotine tobacco), the biggest genuine mover and the diagnostic benchmark.
+  - Catalyst: **C**, GlobeNewswire Oct 15 ~16:30 ET, Pinnacle VLN same-store unit sales +161%.
+  - Previous close **$0.6272** (SIP daily $0.63; Oct 14 close $0.6535 is the Entry Total% basis).
+  - AH: first move 16:30 ET ($0.81), BUILD 17:30–17:55 ET, **SIP high $1.2999 (+107.3%) at 17:55 ET** on 1,207,362 sh / 5,680 trades. 18:30 ET ~$1.12.
+  - PM: **SIP high $1.13 (+80.2%) at 04:00 ET** on 1,500,992 sh / 8,098 trades; 04:05 bar H $1.11, C $1.00 on 999,707 sh / 4,553 trades. Yahoo $1.00 (+59.4%) at 04:23 ET.
+  - Volume spike vs the previous day: **clear.** Oct 15 regular-session 5m peak was 11,982 sh (whole Oct 14 session 16.7K sh). AH peak bar 1.21M = 101x, PM peak bar 1.50M = 125x.
+  - Hypothetical: first sighting 23:30 CEST $0.75 → PM peak $1.13 = **+50.7%**. Our fill $1.18 → $1.13 = **−4.2%**.
+  - Float 599K | Market cap ~$0.45M (scanner).
+  - If a later PM pulse prints ≥$1.26 on real volume, XXII clears the bar and becomes a detected + selected winner; the daily email re-fetch should check.
+- **RUBI** (Rubico, marine shipping / tankers). Close **$0.321** (SIP). AH: 1,800 shares total. 04:00 ET bar ran to **$0.73 (+127.4%)** on 6.30M sh / 22,287 trades, closed $0.58 (VWAP $0.60); 04:05 bar H $0.622, C $0.60 on 3.69M sh / 11,337 trades; Yahoo $0.57–0.61 through 04:22. Catalyst **None** (1 search; Oct 5 stock-dividend distribution is background). `tradable=true`. PM-only gapper below the price floor.
+- **HODO** (House of Doge, packaged software). Close **$0.0675**. AH surge at **18:35 ET**, after the final scan (18:30 ET ~$0.074, +9%), to $0.088 on 0.6–1.0M sh bars. PM 04:00 bar **$0.1353 (+100.4%)** wick on 13.8M sh, closed $0.093. Sub-$0.10 penny; AH bars did not exceed its 1.18M regular-session peak bar. Ignored (SDST precedent).
+
+**Scanner Diagnostic (biggest genuine mover, XXII):**
+
+- Detectable at screening time (~22:15 CEST)? **NO** at 22:15: XXII was flat at its close until 16:30 ET (22:30 CEST). **YES** from 23:30 CEST ($0.75, +19.8% AH), then 00:00 ($0.99, +58.1%) and 00:30 ($1.12, +78.6%).
+- Acted on: **entered 84 @ $1.18 at 00:07 CEST** after the second >10% AH scan. The fill chased the 18:04 ET book from $0.99 to $1.18 (+28 pts), 10% under the $1.30 AH high.
+- Scanner gap: **none.** Detected in the first scan after ignition and selected. The loss is an exit-timing issue: the AH high was the better exit.
+
+### Baseline Tracking
+
+Source: the October 14 log (Days tracked 100, detected 75/86, selected 39/82). The October 14 log is the immediately preceding trading day, so no new baseline gap. Existing gaps stay **Sep 11, Sep 18, Sep 25, Oct 2, Oct 9**.
+
+- Days tracked: **101** (100 + October 15 only).
+- Winners detected by scanner: **75/86 (87.2%)**, unchanged. No winner today, so nothing enters the denominator.
+- Winner selected for paper trade: **39/82 (47.6%)**, unchanged.
+- Target: >80% detection. Status: **BASELINE MET.** Coverage failures, five skipped retrospectives and price-floor exclusions limit what the rate means.
+
+### Retrospective Scan Results
+
+`scan.py --all --session premarket` (04:20 ET): XXII +62.6%, TCRT +25.7%, BNAI +15.3%, XLAB +9.6%. `pm-sweep.py` (04:20 ET): RUBI +79.5%, XXII +62.6%, HODO +37.5%, TCRT +25.7%, PMI +20.4% (2,029 sh), SITC +17.3%, BNAI +15.3%, JBDI +13.2%, NCPL +12.6%, and thin prints. No forced AH scan was run.
+
+| Ticker | Oct 15 SIP close | AH SIP high / ET | PM SIP high / ET | PM high vs close | Peak-bar shares / trades | Latest | Classification |
+|--------|-----------------|------------------|------------------|------------------|--------------------------|--------|----------------|
+| RUBI | $0.321 | $0.33 / 16:35 (1,800 AH sh) | $0.73 / 04:00 | +127.4% | 6,303,055 / 22,287 | $0.60 (Yahoo 04:22) | PM-only gapper; sub-$0.50; wick peak, ~+80% held |
+| XXII | $0.6272 | $1.30 / 17:55 | $1.13 / 04:00 | +80.2% | 1,500,992 / 8,098 | $1.00 (Yahoo 04:23) | Biggest genuine mover; detected, entered; AH better |
+| HODO | $0.0675 | $0.088 / 18:45 | $0.1353 / 04:00 | +100.4% | 13,825,118 / 10,179 | $0.10 (Yahoo 04:22) | Sub-$0.10; AH surge after final scan |
+| TCRT | $2.18 | $3.09 / 16:25 | $2.86 (Yahoo 04:15; SIP $2.85) / 04:00 | +31.2% | 290,895 / 4,269 | $2.85 (Yahoo 04:22) | Detected, entered; day-4 runner; AH better |
+| BNAI | $5.86 (scanner) | $5.95 / 16:15 (235 AH sh) | $7.02 / 04:05 | +19.8% | 145,210 / 3,985 (04:00) | $6.67 | PM-only gapper, below +100% |
+| XLAB | $1.36 | $1.63 / 17:10 | $1.60 / 04:00 | +17.6% | 429,542 / 3,079 | $1.49 | Detected (1 scan >10%); below +100% |
+| NCPL | $1.98 | $2.42 / 17:20 | $2.40 / 04:00 | +21.2% | 112,727 / 2,152 | $2.23 (04:00 C) | Detected, thin-drift skip; AH better |
+| SITC | $3.01 | $3.75 / 16:55 (wick) | $3.57 / 04:00 | +18.6% | 28,218 / 241 | $3.53 | Detected, Grade D liquidation pin; skip |
+| PMI | $10.00 (closing print; Oct 14 $12.68) | $13.27 / 16:00 | $12.71 / 04:00 | +27.1% | 6,049 / 314 | $12.04 (04:00 C) | Detected, dead-cat + first-bar skip; thin |
+| JBDI | $2.34 | $2.82 / 17:40 | $2.71 / 04:00 | +15.8% | 28,012 / 381 | $2.64 | Detected, `tradable=false` |
+
+### Open Position P&L (Alpaca)
+
+`broker.js positions`: TCRT 34 @ $2.95 now $2.83, XXII 84 @ $1.18 now $1.00. The `quote` endpoint is stale for both (16:00 ET Oct 15: TCRT $1.81/$2.49, XXII $0.52/$0.73), but the positions prices match the SIP 04:05 ET closes ($2.76, $1.00) and Yahoo 04:22–04:23 prints ($2.85, $1.00), so they are live.
+
+| Ticker | Entry | Entry Total% | Catalyst | Entry Time | PM Peak | Peak Time | Exit | P&L | P&L % | Status |
+|--------|-------|--------------|----------|------------|---------|-----------|------|-----|-------|--------|
+| TCRT | $2.95 | +42.5% (vs $2.07 Oct 14) | None — Velaris acquisition (Oct 13) background | 23:00 CEST (17:01 ET) | $2.86 (Yahoo; SIP $2.85) | 04:15 ET | open | −$4.08 | −4.1% | ❌ Open, PM never reclaimed fill |
+| XXII | $1.18 | +80.6% (vs $0.6535 Oct 14) | C — Pinnacle VLN sales PR | 00:07 CEST (18:07 ET) | $1.13 (SIP) | 04:00 ET | open | −$15.12 | −15.3% | ❌ Open, PM never reclaimed fill |
+
+**Total Realized P&L (Alpaca fills only, this session): $0.00** (unrealized −$19.20).
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled checkpoints (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST), plus extra observations at 22:05–22:25 and 22:45. The entry window was fully covered.
+- Candidates found: **8 unique tickers** with a >10% AH appearance (PMI, ZBAO, TCRT, NCPL, XXII, XLAB, SITC, JBDI).
+- Retrospective matches: **8/8** in-universe AH movers of size, all detected. Misses are sub-$0.50 (HODO) or PM-only (RUBI, BNAI).
+- Supplementary AH-change-only pass: the line is present in all AH scans. **1 unique ticker: 1 continuation / 0 faded / 0 unassessed.**
+  - **PMI: raw continuation, persistence unknown.** Latest logged AH scan price $11.75 (23:00 CEST). SIP PM high $12.71 at 04:00 ET (+8.2% over $11.75) on 6,049 sh / 314 trades; no later PM bar yet. Still below its $13.27 first-bar AH high, and thin.
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| HODO | +30% at 18:35–18:45 ET (0.6–1.0M sh) | Below $0.50 floor; surge after the final scan | Not actionable: sub-$0.10, $0.135 wick closed $0.093 |
+| RUBI | flat (1,800 AH sh) | PM-only gapper, below $0.50 | Not AH-actionable |
+| BNAI | flat (235 AH sh) | PM-only gapper, +19.8% | No |
+
+### AH Mover Follow-Through
+
+Every name with two or more >10% AH scans. Current = Yahoo 04:22 ET or SIP 04:05 ET close.
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| TCRT | $3.09 | 16:25 | **Build→hold** (+13.4 → 22.5 → 41.4 → 31.2 → 33.0 → 31.2 → 31.7%) | $2.85 | −7.8% | +30.7% | PM peak $2.86 **fell short (−7.4%)**; AH better |
+| XXII | $1.30 | 17:55 | **Build / late surge** (+19.8 → 58.1 → 78.6%) | $1.00 | −23.1% | +59.4% | PM peak $1.13 **fell short (−13.1%)**; AH better |
+| NCPL | $2.42 | 17:20 | **Build→fade** (+13.1 → 14.6 → 15.2 → 11.6 → 9.6%) | $2.23 | −7.9% | +12.6% | PM peak $2.40 **fell short (−0.8%)** |
+| SITC | $3.75 (wick) | 16:55 | **Spike→hold** (+12.0 → 19.6 → 19.3%) | $3.53 | −5.9% | +17.3% | PM peak $3.57 fell short; liquidation pin as expected |
+| PMI | $13.27 | 16:00 | **Spike→fade** (+32.7 → 18.0 → 19.0 → 28.3 → 17.5%) | $12.04 | −9.3% | +20.4% | PM peak $12.71 fell short; thin |
+| JBDI | $2.82 | 17:40 | **Build→hold** (+13.7 → 20.5 → 17.5%) | $2.64 | −6.4% | +12.8% | PM peak $2.71 fell short; untradable |
+
+**AH-peak-vs-PM-peak, extreme zone:** no name reached +130% AH (XXII topped at +107%). Tally stays **15 fades / 3 continues (83.3%)**. XXII adds a sub-zone data point: a +107% AH top that faded into PM.
+
+**Chase-cap check:** XXII filled at +80.6% Total after qualifying at +52.4% (+28-pt chase), below the ~+120% fade zone, so no CHASE-CAP flag; PM did not reclaim the fill. TCRT filled at +42.5%, under its +48.9% qualifying scan. Standing **1 (XOS), never reclaimed**, unchanged.
+
+### Notes
+
+- **Coverage, last 10 completed sessions (Oct 2–Oct 15):** **Oct 2 0/7, Oct 5 0/7, Oct 9 0/7** (logs exist with no `## Scan` sections). Oct 6, 7, 8, 12, 13, 14 and **Oct 15 ran 7/7.** Still **3 failures in 10 sessions**, above the ≥2 trigger. The scheduler/bridge investigation stays routed to the email.
+- **Raw PM leader / PM-only tracking:** the biggest raw PM mover is **RUBI (+127.4% SIP high)**, a **PM-only gapper** below the $0.50 floor. Investability: the $0.73 peak is a single wick (bar closed $0.58), but 04:00–04:22 ET held +78–90% on 3.7–6.3M sh/bar, so holdable at the ~+80% level and uninvestable at the headline peak. Not a scanner failure. `log/pm-open-scan.csv` has **no October 16 rows yet** at 04:20 ET; confirm the pm-open pulse captures RUBI. Holdable PM-only count read from the file: **72**. Carry the Initiative-6 cluster to the email.
+- **Price-floor exclusions: 13 across 10 nights, unchanged; >100%-and-holdable stays 1 (TOPP).** HODO surged at 18:35 ET, after the window (~+9% at 18:30 ET), and is a sub-$0.10 penny, so it is not counted (SHFS precedent). RUBI was PM-only.
+- **In-window feed-lag: 8, unchanged.** Every in-universe name with an in-window AH move appeared in the scans. The ≥3 trigger stays reached; carry the whole-universe AH verification to the email.
+- **Late-AH-tail tracking: 2 true-tail (ORIS, GNS) / 1 feed-lag (BTCT), unchanged.** XXII's defining surge (17:30–17:55 ET) was inside the window.
+- **Fade-rule tally: sub-3M 4/25 (16.0%), unchanged; trigger not met.** No candidate was skipped on the fade rule. ZBAO (first-bar $1.50 at 16:00 ET, back to $0.95 by 16:10, PM high $0.98) faded but appeared in only one >10% scan, so it is not counted.
+- **DEAD-CAT-OVERRIDE / CEILING-OVERRIDE / FIRST-BAR-SPIKE WATCH:** none flagged. PMI's 22:45 reclaim (+1.2% Total) did not hold at 23:00, so no override watch; its dead-cat skip stands (PM $12.71 below the $13.27 AH high on 6K shares). First-bar standing **12 valid (3 ran / 9 faded-flat), 1 pending (ICMB)**, unchanged. Dead-cat override **5 positive / 6 negative**, unchanged.
+- **Final-scan gate-block: 2 (TRUG, UPC; DKI excluded), unchanged.** No new >10% name first appeared at 00:30.
+- **Execution trackers:** broker-block **2**, stale-book-only **6**, no-fillable-book **4**, float-only **1**, all unchanged. JBDI (`tradable=false`) is not a broker-block case: its spike bar was 14K sh / 104 trades and CONFIRM-3 stayed NO, so it never cleared the volume gates. SITC (52.3M float) was also a Grade D liquidation pin, so it is not a float-only skip. Both fills used the SIP-15m book while IEX sat frozen at 16:00 ET.
+- **Actual-entry trackers:**
+  - **TCRT: multi-session runner, day 4** (Oct 12 $1.05 → Oct 13 $3.03, +189% → Oct 14 $2.07 → Oct 15 $2.18). Grade None. $2.95 → PM peak $2.86 = **−3.1%, faded**; AH high $3.09 was the exit.
+  - **XXII: day-1 fresh igniter** (Day −3.6%; Oct 7–14 drifted $0.89 → $0.65 on 17–105K sh/day). Grade C. $1.18 → PM SIP peak $1.13 = **−4.2%, faded**; AH high $1.30 was the exit.
+  - First-day igniters **38 → 39 entries (16 ran / 8 flat / 15 faded) = 41.0% ran**. Multi-session runners **2 → 3, all faded** (DAIC, OLB, TCRT). Three of three multi-session entries faded; a "restrict entries to first-day igniters" proposal needs more cases, since first-day igniters run only 41% of the time.
+  - Reverse-split tally unchanged (**4/5 this-week faded / 4/6 older continued**); neither entry carried a split catalyst. Skipped-candidate note: ZBAO (1-for-50 split effective Oct 12, this-week, Grade None) faded from its $1.50 first-bar high to a $0.98 PM high, consistent with the this-week fade pattern.
+- **Regular-session volume-spike entry tracking:** `entry-volume-ratio.py` gives **TCRT 3.96x [2-10x]** (16:25 ET, 1.42M vs 358K sh) and **XXII 73.99x [>=10x]** (17:35 ET, 887K vs 12K sh). PM-peak returns: TCRT −3.1%, XXII −4.2%. Realized returns come from the 04:30 ET (10:30 CEST) sell and are pending; at 04:22 ET TCRT is −3.4% and XXII −15.3%. Standing before these outcomes: **>=10x 4 (2 wins, mean +11.8%) / 2-10x 0 / <2x 2 (0 wins, mean −18.5%)**; append both once the 10:30 pulse fills. These are the last fills before the ≥10x gate; no `VOLUME-GATE-SKIP` entries yet (the gate starts with the Oct 16 AH session).
+- **SIP basis checks:** October 15 closes XXII $0.63 ($0.6272), TCRT $2.18, RUBI $0.32, NCPL $1.98, JBDI $2.34, PMI $10.00 (closing print; last 5m regular bar traded $12.44, so PMI's PM% overstates the move against where it actually traded). October 14 closes for Entry Total%: TCRT $2.07, XXII $0.6535.
+- **WINNERS_TRACKING.md:** nothing added. AEHL (day 3) and FCHL (day 4) refreshed.
+
+### Daily Email Routing
+
+- Headline: **No real winner for October 15→16.** Biggest genuine mover XXII: AH +107% (one bar), PM +80%, detected at 23:30 CEST and entered at $1.18; PM never reclaimed the fill. RUBI's +127% was a sub-$0.50 PM-only wick. Detection **75/86 (87.2%)**, selection **39/82 (47.6%)**, 101 days tracked.
+- **Open book:** TCRT −4.1% and XXII −15.3% at 04:22 ET; both AH highs ($3.09, $1.30) were the better exits. Re-check XXII's later PM high: ≥$1.26 on real volume would make it a detected + selected winner.
+- **Scheduler/bridge reliability (decision for Juan):** 3 coverage failures in the last 10 sessions (Oct 2, Oct 5, Oct 9).
+- Carry forward: 72-row holdable PM-only cluster → Initiative 6; 8 in-window feed-lag misses → whole-universe AH verification; extreme-runner partial profit (15/3, 83.3%, below threshold); reverse-split recency recommendation; sub-$0.50 floor question (TOPP 1 of 3); stale IEX quote feed; multi-session runners now 0/3 ran. The sub-3M fade (4/25), price-floor, first-bar and final-scan triggers are not met.
+
+### Price Charts
+
+Excerpts from `python3 scripts/price-timeline.py XXII TCRT RUBI` at ~04:23 ET (Yahoo 5-minute closes; SIP tables above set the peaks). Block charts omitted.
+
+```
+XXII  Previous Close $0.6272 (regular close 2026-10-15) | Peak $1.30 (+107.3%) at 10-15 17:55 ET
+  [AH]  10-15 16:30 ET: $0.77 (+22.8%)
+  [AH]  10-15 17:30 ET: $0.88 (+40.8%)
+  [AH]  10-15 17:45 ET: $1.03 (+63.9%)
+  [AH]  10-15 17:55 ET: $1.18 (+88.1%)
+  [AH]  10-15 18:30 ET: $1.12 (+78.6%)
+  [AH]  10-15 19:55 ET: $1.04 (+65.6%)
+  [PM]  10-16 04:00 ET: $1.01 (+61.0%)
+  [PM]  10-16 04:23 ET: $1.00 (+59.4%)
+TCRT  Previous Close $2.18 (regular close 2026-10-15) | Peak $3.09 (+41.7%) at 10-15 16:25 ET
+  [AH]  10-15 16:30 ET: $2.91 (+33.5%)
+  [AH]  10-15 17:00 ET: $2.93 (+34.4%)
+  [AH]  10-15 18:30 ET: $2.88 (+32.1%)
+  [PM]  10-16 04:00 ET: $2.74 (+25.7%)
+  [PM]  10-16 04:15 ET: $2.86 (+31.2%)
+  [PM]  10-16 04:22 ET: $2.85 (+30.7%)
+RUBI  Previous Close $0.321 (SIP) | SIP peak $0.73 (+127.4%) at 10-16 04:00 ET
+  [PM]  10-16 04:00 ET: $0.58 (+80.7%)
+  [PM]  10-16 04:05 ET: $0.60 (+86.9%)
+  [PM]  10-16 04:15 ET: $0.57 (+77.6%)
+  [PM]  10-16 04:22 ET: $0.60 (+86.9%)
+```
