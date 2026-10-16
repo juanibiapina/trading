@@ -1,5 +1,34 @@
 # Initiative Log
 
+### 2026-10-16 18:00 — Initiative 7 fetch still running; short fade is executable on Alpaca only in the ETB cells
+
+**Evaluated:** the 15:00 hypothesis (the open-cover cell on all events passes, the 04:30 cell does not, the easy-to-borrow cell is too small) is **insufficient data**. gob `KaJ` is still running: daily and AH bars are done (272 days), the 16:00–18:29 ET bars were at 52 of 272 days at 16:00 UTC, at about 40 seconds a day, and about 2,200 quotes follow. It will outlast this run.
+
+**Step taken:**
+
+- **Initiative 7 (North Star pick, while its data loads):** checked whether the short fade can be traded on this account, and fixed the reading rule before any prior-year result exists.
+  - Alpaca docs: extended-hours short sales are allowed (limit orders, `day`/`gtc`); ETB locate and borrow cost $0; HTB shorts need a paid locate (round lots of 100, single use) plus a daily borrow fee.
+  - Paper account: `shorting_enabled: true`, multiplier 4; `GET /v1/locates/quotes` and `GET /v1/locates` return 404, so HTB names cannot be shorted or priced on paper.
+  - Asset flags today: YYAI, AGMH, AEHL, NCPL, TCRT, XXII, FCHL, BKYI, CIGL and DKI are all not shortable (TSLA control: shortable and ETB).
+  - Split the in-sample events (October 15 caches, not evidence) by move size and ETB status.
+- No second item: Initiative 1's gate first runs tonight; Initiative 3's census power check needs another large Alpaca fetch and waits for `KaJ` to finish; 2 is deferred; 5 and 6 have no dated work.
+
+**Result:**
+
+- **Rule fixed before the result:** only the `etb` cells count as executable on Alpaca paper. A pass in `all/exit_open` alone shows the fade exists but needs HTB access through a live account or another broker (Initiative 2, deferred).
+- **In-sample shape (descriptive):** moves of 10–25% do not fade (ETB -0.68%, non-ETB -0.01% at the open). Moves of 25–50% fade +4.7% / +5.0% and moves of 50–150% fade +5.9% / +9.8% at the open, but only 14% and 6% of those are ETB: about 53 ETB events a year out of 459.
+- **Money-fast reading:** if the prior year matches, the Alpaca-executable flow is about one short a week. The large flow needs HTB locates, whose fee on sub-$5 names (a $0.05 locate on a $2 stock is 2.5%) can match the edge.
+- No order, live rule, size or pulse timing changed. Equity $99,675.03, no positions open.
+- **Evidence:** `docs/investigations/init7-short-executability-2026-10-16.md`.
+
+**Hypothesis / next step:**
+
+- **Next run, Initiative 7:** `timeout 290 gob await KaJ`, one call per turn. On exit 0, record the four frozen cells from `log/2026-10-16/init7-short-fade/result.json`; judge tradability on the `etb` cells only. Hypothesis unchanged: `all/exit_open` passes, `all/exit_0430` does not, and the `etb` cells do not pass. If still running, record progress without restarting.
+- **After `KaJ`:** Initiative 3 take-profit power check on the census events (18:30–20:00 ET and 04:00–04:30 ET bars).
+- **Next daily email:** fetch progress, the ETB-only executability rule and the one-short-a-week size, the take-profit result, the open stop-or-replace ask.
+
+**Needs from Juan:** decide whether to stop or replace AH→PM (daily email). Initiative 2 stays deferred.
+
 ### 2026-10-16 15:00 — Initiative 7 short-fade test frozen, prior-year fetch running; Initiative 3 take-profit replay fails
 
 **Evaluated:** the October 15 18:00 next step (freeze a short-fade test before fetching, then start the prior-year fetch) is done this run. Its hypothesis (the fade nets above zero with a positive lower bound and both halves positive) waits on the fetch: insufficient data. The Initiative 3 sell-all exit ran again as specified (TCRT, XXII sold at the Oct 16 10:30 evaluation; `log/2026-10-16/process-review.md`).

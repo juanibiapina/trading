@@ -1728,7 +1728,29 @@ tracker).
 
 ---
 
-## Current priorities and initiative status — 2026-10-16 15:00 CEST
+## Current priorities and initiative status — 2026-10-16 18:00 CEST
+
+This checkpoint supersedes the October 16 15:00 checkpoint. **The prior-year fetch for the frozen short-fade test (gob `KaJ`) is still running** and will outlast this run: daily and AH bars are done (272 days), the 16:00–18:29 ET bars were at 52 of 272 days at 16:00 UTC (about 40 seconds a day, so about 2.5 hours left), and about 2,200 quotes follow. **Executability check, fixed before the result:** Alpaca allows opening shorts in extended hours, and ETB borrow is free, but hard-to-borrow shorts need paid locates and the locate API returns 404 on paper. All ten recent live entries (YYAI, AGMH, AEHL, NCPL, TCRT, XXII, FCHL, BKYI, CIGL, DKI) are not shortable today. **So only the `etb` cells count as executable on this account;** a pass in `all/exit_open` alone shows the fade exists but needs HTB access (Initiative 2, deferred). In-sample (not evidence), the fade sits in moves of 25% or more, and only about 53 of those 459 events a year are ETB. Paper equity $99,675.03, no positions open. The pilot slot stays free.
+
+**Money-fast selection:** the short fade remains the largest lever; with its data still loading, the run spent its budget on the question that decides whether a pass is tradable. **North Star check:** if the prior year matches in-sample, the Alpaca-executable flow is about one short a week, which is small; the large flow needs live HTB locates whose fee on sub-$5 names (e.g. $0.05 on a $2 stock = 2.5%) can match the edge.
+
+| Initiative | Latest concrete progress | Current status / dependency | Next deliverable and check |
+|---|---|---|---|
+| 1 — shared volume measurement | October 16 ≥10x `rth-peak` entry gate applied | **Gate live from the Oct 16 AH session (tonight).** | Morning evaluation Oct 17: count `VOLUME-GATE-SKIP` names and their 04:30 returns. |
+| 2 — broker execution | October 16: locate API absent on paper; HTB shorting needs a live account | **Deferred per Juan's September 22 instruction.** | Resume only when access arrives; a short-fade pass in the non-ETB cells would add HTB locates to the ask. |
+| 3 — scheduling and exits | October 16: take-profit replay fails | **Sell-all exit applied; take-profit: no change.** | Next process review: confirm 10:30/14:30 sells. Power check on the 1,103 census events waits until `KaJ` finishes (avoid two concurrent Alpaca fetches). |
+| 4 — initiative reporting | First Gmail reply cycle October 15 | **Delivered and verified.** | Next daily email: short-fade freeze, fetch progress, the ETB-only executability rule, take-profit result, the open stop-or-replace ask. |
+| 5 — review surface | October 8 v2 page | **Build delivered.** | No dated item. |
+| 6 — PM-only gappers | October 6 latency study | **Pilot ENDED; log-only research.** | Reopen only with real-time consolidated data. |
+| 7 — alternative strategies / core universe | October 16 18:00: executability rule fixed (`docs/investigations/init7-short-executability-2026-10-16.md`) | **Research; `KaJ` running.** | **Next run:** `timeout 290 gob await KaJ`, one call per turn; on exit 0 record the four frozen cells from `log/2026-10-16/init7-short-fade/result.json` and judge executability on the `etb` cells. If still running, record progress; do not restart (the fetch resumes from cache). |
+
+**Evidence, October 16 18:00:** `docs/investigations/init7-short-executability-2026-10-16.md`.
+
+**Previous-step evaluation:** the 15:00 hypothesis (open-cover all-events cell passes, 04:30 does not, ETB too small) is insufficient data: `KaJ` has not finished.
+
+**Needs from Juan / consolidated asks:** the stop-or-replace ask stays open. No trading-pulse timing change is proposed.
+
+## Prior checkpoint — 2026-10-16 15:00 CEST
 
 This checkpoint supersedes the October 15 18:00 checkpoint. **The short-fade test is frozen and its prior-year fetch is running (gob `KaJ`).** It shorts the union of both census event definitions (17:00 and 17:30–18:30 ET) on 2024-10-01 to 2025-09-30 at the scan bid, covers at the 04:30 ET ask or the open plus 50 bps, and charges 25 bps borrow per calendar night; cells all / easy to borrow today × two exits, Bonferroni over 4. The code check on the October 15 caches (in-sample, the year that chose the test, so not evidence) gives +0.14% at 04:30 [-1.54, +1.74] and **+2.58% at the open [+0.62, +4.43]** on 1,103 events; the easy-to-borrow cell (201) gives +1.04% / +0.77% with intervals spanning zero. **Initiative 3's resting take-profit replay fails its frozen rule:** on 103 real paper fills, +10/15/20% limits beat the 04:30 exit by +1.2 / +2.2 / +2.0 points with both halves positive, but every interval spans zero. Paper equity $99,698.80 (-$301.20), no positions open. The pilot slot stays free.
 
@@ -2236,6 +2258,8 @@ The next research priority is **Initiative 7's liquid regular-session feasibilit
 **Update 2026-10-14 18:00:** the out-of-sample fade fails. Shorting liquid AH up movers at the next open for 20 sessions loses -0.56% per trade on October 2024 – September 2025 [-3.30, +2.65], halves +1.52 / -2.62 (n=578). Initiative 7 has no candidate left on liquid names after five failed frozen tests. Next: a frozen census of the core micro-cap universe with quoted fills, to find out whether the current strategy has any positive subset. See `docs/investigations/init7-liquid-fade-oos-2026-10-14.md`.
 
 **Update 2026-10-15 15:00:** the core micro-cap strategy fails its frozen census. 499 AH ignitions over the past year (outside the top 1,000, $0.50–$10, +10–150% at 16:30 and 17:00 ET with a volume spike) bought at the 17:00 ET SIP ask lose -3.16% per trade at the 04:30 bid [-6.13, +0.05] and -4.00% at the open; no frozen subset passes and every half is negative. The 45 real entries it catches score -3.45%, matching live results. Next: the late-entry variant (17:30–18:30 ET), the last untested piece of the live strategy. See `docs/investigations/init7-microcap-census-2026-10-15.md`.
+
+**Update 2026-10-16 18:00:** fixed the executability rule before the prior-year result: on Alpaca paper only the `etb` cells are tradable (extended-hours shorts allowed, ETB borrow free, locate API 404 on paper, all ten recent live entries not shortable). In-sample, only about 53 of 459 events a year with moves of 25% or more are ETB. See `docs/investigations/init7-short-executability-2026-10-16.md`.
 
 **Update 2026-10-16 15:00:** froze the short-fade test (`docs/investigations/init7-microcap-short-fade-freeze.json`, 13:15 UTC) and started the prior-year fetch as gob `KaJ`. Code check on the in-sample caches (not evidence): all events +0.14% at the 04:30 ask, +2.58% [+0.62, +4.43] at the open plus 50 bps, after 25 bps per night borrow; the easy-to-borrow cell spans zero at both exits.
 
