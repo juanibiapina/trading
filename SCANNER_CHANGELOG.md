@@ -76,12 +76,47 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - `scripts/book-check.js` — Read-only IEX versus consolidated SIP book diagnostic
 - `scripts/price-timeline.py` — Yahoo price timelines used by morning and position evaluations
 - `scripts/entry-volume-ratio.py` — At-entry same-date regular-session volume ratio from archived metric files
+- `scripts/ah-crosscheck.js` — SIP AH snapshot for the final-scan feed-lag cross-check
 - `prompts/post-market-scan.md` — Evening scan prompt (evaluation criteria, log format)
 - `prompts/morning-evaluation.md` — Morning evaluation prompt
 
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-10-16 — Fix the 403 in the Final-Scan SIP Cross-Check
+
+**Context:** Reviewed the October 15 log (morning evaluation written October 16) and the Oct 12–14 logs. October 15 ran 7/7 scheduled scans plus six extra observations and had no winner. XXII, the biggest genuine mover (SIP AH high $1.30, +107.3% at 17:55 ET; PM SIP high $1.13, +80.2%), was detected at 23:30 CEST and entered at $1.18 at 00:07. Both fills were sold at 04:30 ET: TCRT $2.99 (+1.4%), XXII $0.88 (−25.4%). The night's tooling failure: `scripts/ah-crosscheck.js`, added October 15 by the process review for the final-scan feed-lag cross-check, returned `403: subscription does not permit querying recent SIP data` at all three calls (22:45, 00:00 and 00:30 CEST; 8 names at the final scan). The scans fell back to hand-built `broker.js bars` calls. Cause: the script always sent `end` = 20:00 ET (and 23:59Z for the daily bar), which lies inside the free tier's blocked last 15 minutes during a live session. A probe at 08:20 ET reproduced it: the same request returns 403 with a future end and 200 with an end 16 minutes back.
+
+**Evaluation of previous changes:**
+
+- 2026-10-16 ≥10x `rth-peak` entry gate: **insufficient data.** It goes live with the October 16 AH session. Applied to the October 15 fills after the fact, it would have skipped TCRT (3.96x, realized +1.4%) and kept XXII (73.99x, realized −25.4%), one night against the gate.
+- 2026-10-15 at-entry volume-ratio tracker: **helped, 2/2 fills.** The morning evaluation took TCRT 3.96x and XXII 73.99x from the script, with no hand count. Realized 04:30 ET results: `>=10x` 5 fills, 2 wins, mean +4.3% (XXII −25.4% pulled it from +11.8%); `2-10x` 1 fill, +1.4%; `<2x` 2 fills, mean −18.5%. The `<2x` bucket needs 5 fills before its trigger; the gate now stops new `<2x` fills, so the `VOLUME-GATE-SKIP` tally is the remaining test.
+- 2026-10-14 `price-timeline.py` `[CLOSE]` label: **no trigger, 2/5 sessions.** Yahoo again served the prior AH bars on the October 16 morning; excerpts show real AH rows and zero past-session `[AH] ... 16:00 ET` close rows.
+- 2026-10-13 SIP AH reconstruction: **helped, 3/5.** Every AH level in the morning evaluation comes from SIP bars.
+- 2026-10-09 same-date regular-session ratio: **helped, 4/5.** 156/156 October 15 `VOLUME-CONTEXT` rows across 24 metric files carry a known `rth-peak`; the XXII winner check cited the 11,982-share regular-session peak.
+- 2026-10-09 SIP daily multi-session tagging: **helped, 8/10 entries.** TCRT (day 4) and XXII (day 1) entry notes cited SIP daily closes; zero reclassifications.
+- 2026-10-08 DST-aware AH tools: **insufficient data until November 2; summer output held, 5/5 sessions.**
+- 2026-10-07 stale delayed SIP snapshot replacement: **insufficient data, 6 sessions.** The oldest delayed SIP book on October 15 was 16m35s (PMI, 22:30), so no `sip-hist` line was due.
+- 2026-10-01 unrounded AH evidence: **helped, 8/8.** Present in all 12 AH scans.
+- 2026-09-22 to 09-25 supplementary-pass changes: **still insufficient for a cutoff decision.** October 15 added PMI (raw continuation $11.75 → PM SIP high $12.71 on 6,049 sh, persistence unknown). Running: 17 unique names, 13 with a raw outcome, 1 sustained continuation (IPW), 4 unassessed.
+
+**Changes:**
+
+1. **scripts/ah-crosscheck.js** — When the request end would fall within 16 minutes of now, the script omits `end`, and Alpaca returns every bar it can serve (the behavior of `broker.js bars`). Past dates keep the explicit end. Before 16:16 ET it prints `no completed SIP AH bars yet` instead of calling. If no SIP daily bar is served for the date, the close falls back to the last regular-session 5-minute close, marked `*` with a footnote to check the scanner close.
+   - Why: the final-scan feed-lag cross-check recovers pipeline names that TradingView under-reports (GCTK, KUST, BTCT). On October 15 its tool failed at every call, and the prompt tells scans not to hand-build the check because `broker.js bars` defaults to 20 bars.
+   - Hypothesis: I expect zero `403` lines from `ah-crosscheck.js` over the next five covered sessions, every final scan to cite its table, and the fallback `*` close to appear on fewer than 1 in 10 rows. A `*` row on most names would mean the open-ended daily request returns nothing during AH and needs a different close source.
+
+**Verification:** `ah-crosscheck.js PMI XXII TCRT NCPL --date 2026-10-15` matches the morning evaluation's SIP closes and AH highs (XXII $0.6272 / $1.2999, TCRT $2.18 / $3.09). A run with the daily response stubbed empty prints the `*` fallback (TCRT $2.15, the last regular bar) and the footnote. Today's date at 08:22 ET prints the no-bars line. An unbounded live 5-minute request for XXII returned 200 with bars through 12:05Z. The live AH path itself is first exercised tonight. `node --check` and `git diff --check` passed.
+
+**Ready work skipped / next owners:**
+
+- **Exits (XXII and TCRT AH highs $1.30 and $3.09 beat the 04:30 sells; YYAI late exit):** Initiative 3 owns the resting take-profit replay; exits change live trading, so the result goes to Juan first.
+- **Multi-session runners 0/3 ran (DAIC, OLB, TCRT):** below the sample needed for the restrict-to-day-1 proposal; the morning evaluation carries it.
+- **Initiative 7 short-fade test, coverage failures (3 in 10 sessions), in-window feed lag (8), holdable PM-only cluster (72), sub-$0.50 floor question:** routed by the roadmap checkpoint and the morning evaluation to `strategy-advance` and the daily email.
+- **Research replay scripts with fixed EDT offsets:** still pending before any winter replay.
+
+**Updated process:** the final-scan cross-check tool works during a live session. Scanner thresholds, entry gates, sizing and learning rules are unchanged.
 
 ### 2026-10-16 — Hard Entry Gate: AH Volume ≥10x the Same Day's Regular-Session Peak (feedback capture)
 
