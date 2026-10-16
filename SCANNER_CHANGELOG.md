@@ -83,6 +83,20 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 
 _(entries are prepended — newest first)_
 
+### 2026-10-16 — Hard Entry Gate: AH Volume ≥10x the Same Day's Regular-Session Peak (feedback capture)
+
+**Context:** Juan replied to the October 14 report: "two bad entries. volume did not spike. FIX THIS." and "YYAI good entry, late exit." This is his fourth request for a volume-spike entry rule (Sep 3 "10 to 20 times", Oct 8 DKI, Oct 15). At entry, NCPL's largest AH bar was 1.51x the same day's largest regular-session bar and YYAI's was 20.8x.
+
+**Changes:**
+
+1. **prompts/post-market-scan.md** — Before any buy, run `entry-volume-ratio.py` at the scan minute and enter only at a max `rth-peak` ratio ≥10x. Below 10x or `unknown` is logged as `VOLUME-GATE-SKIP` with the hypothetical entry price. Other volume ratios stay observational.
+2. **prompts/morning-evaluation.md** — The fill tracker notes the gate and adds a `VOLUME-GATE-SKIP` tally with hypothetical 04:30 ET outcomes, so the gate's cost is measured.
+3. **scripts/entry-volume-ratio.py** — Docstring updated; behavior unchanged.
+
+**Hypothesis:** over the next 10 entries, every fill carries a ratio ≥10x, and the skipped names' mean hypothetical 04:30 return stays below the fills' mean realized return. Fills since Oct 12 under 10x: BKYI −23.9%, NCPL −13.0%, TCRT (Oct 15, 3.96x) pending. The 89-entry archive showed no split at 2x, so the skip tally is the check on whether the gate costs winners.
+
+**Verification:** the script prints NCPL 1.51x and YYAI 20.81x for the Oct 14 fills, and TCRT 3.96x and XXII 73.99x for the Oct 15 fills.
+
 ### 2026-10-15 — Track Fills by Their At-Entry Regular-Session Volume Ratio
 
 **Context:** Reviewed the October 14 morning evaluation (written October 15) and the Oct 9–13 logs. October 14 ran 7/7 scheduled scans plus six extra observations and had no winner. JBDI, the biggest genuine mover (+51.4% AH, +42.6% PM), was detected at the final scan and skipped as a dead-cat (hypothetical +6.2%). Both fills lost: NCPL sold at −13.0% and YYAI at −18.3% in the 04:30 ET pulse. Juan's October 15 feedback praised AEHL and FCHL and queued a task for this run: find what separated them from BKYI. The archived metric files answer it at entry time. FCHL's largest AH bar was 84.5x the same day's largest regular-session bar, AEHL's 30.5x. BKYI's was 0.24x: it had run +72.7% in the regular session on 2.65M-share bars, so its AH volume was no spike against the day. NCPL (1.51x) matches BKYI. AGMH (19.9x, −3.0%) and YYAI (20.8x, −18.3%) cut against the pattern. The 89-entry archive from the October 9 test shows no split at 2x either: 18 entries under 2x averaged −3.4%, and 71 at 2x or above averaged −3.2%. Those archive returns mix several exit policies, so the 04:30 ET exit adopted October 14 needs its own sample.

@@ -6,6 +6,14 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-10-16 — re: Trading Scanner Report - 2026-10-14
+
+**Juan said:** “two bad entries. volume did not spike. FIX THIS.” and, below it, “YYAI good entry, late exit.” (Gmail message 1a13f0b41fe27a3f, received 2026-10-15 10:11 UTC.)
+
+**Interpretation:** The second line narrows the first. NCPL was the bad entry: its largest AH bar at the fill was 1.51x the same day's largest regular-session bar. YYAI's was 20.8x, a real spike, and Juan calls it a good entry with a late exit. YYAI ran from $0.82 to an AH tail high of $1.01 (+23%) at 19:35 ET, after the last scan, then gapped down and sold at $0.673 (−17.9%) at 04:30 ET. This is Juan's fourth request for a volume-spike entry rule (Sep 3 “10 to 20 times”, Oct 8 DKI). The Oct 15 scanner-improvement run had kept the ratio log-only pending five <2x fills; “FIX THIS” overrides that wait.
+
+**Action:** Applied a hard entry gate in `prompts/post-market-scan.md`: enter only when `scripts/entry-volume-ratio.py` prints a max `rth-peak` ratio ≥10x at the scan minute; below 10x or unknown is a logged `VOLUME-GATE-SKIP`. 10x is Juan's own threshold and passes YYAI (20.8x), AEHL (30.5x), FCHL (84.5x) and XXII (74.0x, Oct 15); it blocks BKYI (0.24x), NCPL (1.51x) and TCRT (3.96x, Oct 15). Added a skip tally to `prompts/morning-evaluation.md` to measure the gate's cost, and logged the change in `SCANNER_CHANGELOG.md` and Initiative 1. Live from the Oct 16 AH session. For the late exit, routed a replay of a resting take-profit limit placed at fill (+10/15/20%, active through AH and PM) to Initiative 3; it changes live exits, so the result goes to Juan before it is wired.
+
 ### 2026-10-15 — re: Trading Scanner Report - 2026-10-13
 
 **Juan said:** “Absolutely amazing entry and exit! that's what we want! Two days in a row!” (Gmail message 1a139d3b5fb7c46b, received 2026-10-14 09:52 UTC.)

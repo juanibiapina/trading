@@ -797,6 +797,18 @@ it on the 89-entry archive and the gate-block cases. The morning-evaluation
 winner bar already applies this check by hand; the final-scan-ignition
 exception proposal is withdrawn (tally back to TRUG, UPC).
 
+**Juan feedback 2026-10-15 (NCPL/YYAI) "two bad entries. volume did not
+spike. FIX THIS." + "YYAI good entry, late exit" — GATE APPLIED.** At entry
+NCPL's largest AH bar was 1.51x the same day's largest regular-session bar;
+YYAI's was 20.8x. Applied a hard entry gate in `prompts/post-market-scan.md`:
+enter only when `scripts/entry-volume-ratio.py` prints a max `rth-peak` ratio
+≥10x at the scan minute; below 10x or unknown is a `VOLUME-GATE-SKIP`.
+10x is Juan's own threshold (Sep 3) and keeps YYAI. Fills since Oct 12: <10x
+BKYI 0.24x −23.9%, NCPL 1.51x −13.0%, TCRT (Oct 15) 3.96x; ≥10x FCHL,
+AEHL, AGMH, YYAI, XXII (Oct 15). The morning evaluation now tracks skipped
+names' hypothetical 04:30 outcomes to measure the gate's cost. Takes effect
+with the Oct 16 AH session. See FEEDBACK_LOG 2026-10-16.
+
 **Reopened angle (Juan, 2026-07-16 email feedback):** the volume *lead* is dead,
 but Juan proposes the *first volume spike bar* as the entry trigger ("that would
 be a great entry point") and no-spike as a negative filter ("LVLU is clearly
@@ -1183,6 +1195,8 @@ the daily-email pulse.
 ---
 
 ## Initiative 3 — Adaptive scheduling of pulses
+
+**Juan feedback 2026-10-15 (routed 2026-10-16): "YYAI good entry, late exit."** YYAI filled at $0.82 (18:00 ET), ran to an AH tail high of $1.01 (+23%) at 19:35 ET, after the last scan, then gapped down and sold at $0.673 (−17.9%) at 04:30 ET. NCPL also traded above entry in AH ($2.25 vs $2.16) and sold at −13.0%. The 04:30 sell-all rule has no way to sell AH strength. Next Initiative 3 run: replay a resting take-profit limit placed right after each fill (+10%, +15%, +20%, active through AH and PM until the 04:30 sell) on SIP bars for the fills since Oct 12, against the realized 04:30 exits. Proposed only; it changes live exits, so the result goes to Juan before it is wired.
 
 **Latest status (2026-10-14): hold retirement APPLIED** (retroactive veto). Every position is sold at the first premarket evaluation (10:30 CEST / 04:30 ET); the 14:30 pulse resells anything unfilled. Edited `prompts/position-evaluation.md`, `prompts/post-market-scan.md` and `OPEN_POSITIONS.md` (commit 77991ce). Catalyst grade is still recorded for analysis. The October 15 10:30 evaluation is the first live check.
 
@@ -1720,9 +1734,9 @@ This checkpoint supersedes the October 15 15:00 checkpoint. **The late-entry cen
 
 | Initiative | Latest concrete progress | Current status / dependency | Next deliverable and check |
 |---|---|---|---|
-| 1 — shared volume measurement | October 9 scanner-improvement | **Instrument, log-only.** | No dated item. |
+| 1 — shared volume measurement | October 16 feedback capture: ≥10x `rth-peak` entry gate applied (Juan, Oct 15 "FIX THIS") | **Gate live from the Oct 16 AH session.** | Morning evaluation: count `VOLUME-GATE-SKIP` names and their hypothetical 04:30 returns. |
 | 2 — broker execution | September 7 alternatives research | **Deferred per Juan's September 22 instruction.** | Resume only when access arrives. |
-| 3 — scheduling and exits | October 15: first live sell-all exits ran | **Applied, retroactive veto; no veto.** | Next process review: confirm each new entry is sold at 10:30 or 14:30. |
+| 3 — scheduling and exits | October 15: first live sell-all exits ran; Juan Oct 15: "YYAI good entry, late exit" | **Applied, retroactive veto; no veto.** | Next process review: confirm each new entry is sold at 10:30 or 14:30. Next Initiative 3 run: replay a resting take-profit limit placed at fill (+10/15/20%) against the 04:30 exits. |
 | 4 — initiative reporting | First Gmail reply cycle October 15 | **Delivered and verified.** | Next daily email: both census results, the unconditional stop-or-replace proposal (pause paper entries or keep them as data collection), and the short-fade test plan; Jev not run. |
 | 5 — review surface | October 8 v2 page | **Build delivered.** | No dated item. |
 | 6 — PM-only gappers | October 6 latency study | **Pilot ENDED; log-only research.** | Reopen only with real-time consolidated data. |

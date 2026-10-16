@@ -6,8 +6,9 @@ in log/DATE/ and picks the latest one written at or before the fill's ET time.
 Prints the largest completed AH bar's `rth_peak_ratio` (AH bar shares over the
 largest 5-minute bar of the same date's 09:30-16:00 ET regular session).
 
-Log-only evidence for the morning evaluation's volume-spike entry tracker; it
-does not fetch data and does not gate entries.
+The post-market scan uses it as the volume-spike entry gate (enter only at
+>=10x; Juan 2026-10-15), and the morning evaluation uses it for the fill
+tracker. It reads local files only and does not fetch data.
 
 Usage: entry-volume-ratio.py SYM DATE FILL_HHMM_ET [SYM DATE FILL_HHMM_ET ...]
 Example: entry-volume-ratio.py BKYI 2026-10-13 1832
