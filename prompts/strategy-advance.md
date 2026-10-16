@@ -132,7 +132,9 @@ Verify anything you build actually runs before logging it.
 **Long jobs (fetches or runs over ~5 minutes):** start them with `gob add`. Before
 waiting on one, prepend the `INITIATIVE_LOG.md` entry for the steps already
 done (marking the job as running), then commit and push. Poll with calls of 5
-minutes or less. (Basis: Oct 14 15:00 CEST — the run committed its changes,
+minutes or less, one wait call per turn: wait calls sent in the same turn run
+at the same time and do not lengthen the wait. `timeout 290 gob await <id>`
+returns as soon as the job ends. (Basis: Oct 14 15:00 CEST — the run committed its changes,
 then died inside one 28-minute wait loop on gob `XCM`; its log entry was never
 written, and the 18:00 run had to reconstruct it.) If the job will outlast the
 run, leave it running and let the next run evaluate it.
