@@ -1,0 +1,138 @@
+{
+ "freeze": "docs/investigations/init3-take-profit-freeze.json",
+ "fills": 103,
+ "scored": 103,
+ "baseline_fallback": 2,
+ "skipped_no_exit": 0,
+ "baseline_mean_pct": -1.053,
+ "variants": {
+  "tp10": {
+   "fill_rate": 0.573,
+   "mean_pct": 0.175,
+   "n": 103,
+   "mean_diff_pct": 1.228,
+   "interval_pct": [
+    -3.897,
+    5.057
+   ],
+   "halves_pct": [
+    1.034,
+    1.419
+   ],
+   "passed": false
+  },
+  "tp15": {
+   "fill_rate": 0.485,
+   "mean_pct": 1.107,
+   "n": 103,
+   "mean_diff_pct": 2.16,
+   "interval_pct": [
+    -2.678,
+    5.803
+   ],
+   "halves_pct": [
+    2.481,
+    1.845
+   ],
+   "passed": false
+  },
+  "tp20": {
+   "fill_rate": 0.388,
+   "mean_pct": 0.949,
+   "n": 103,
+   "mean_diff_pct": 2.002,
+   "interval_pct": [
+    -3.204,
+    5.877
+   ],
+   "halves_pct": [
+    1.492,
+    2.502
+   ],
+   "passed": false
+  }
+ },
+ "passed": [],
+ "since_oct12": [
+  {
+   "symbol": "FCHL",
+   "date": "2026-10-12",
+   "fill": 1.73,
+   "base": 0.1445,
+   "tp10": 0.1,
+   "tp15": 0.15,
+   "tp20": 0.2,
+   "max_up": 0.3064
+  },
+  {
+   "symbol": "AEHL",
+   "date": "2026-10-13",
+   "fill": 15.4,
+   "base": 0.5584,
+   "tp10": 0.1,
+   "tp15": 0.15,
+   "tp20": 0.2,
+   "max_up": 0.9325
+  },
+  {
+   "symbol": "AGMH",
+   "date": "2026-10-13",
+   "fill": 0.6586,
+   "base": -0.0357,
+   "tp10": 0.1,
+   "tp15": 0.15,
+   "tp20": 0.2,
+   "max_up": 0.2299
+  },
+  {
+   "symbol": "BKYI",
+   "date": "2026-10-13",
+   "fill": 3.26,
+   "base": -0.2393,
+   "tp10": -0.2393,
+   "tp15": -0.2393,
+   "tp20": -0.2393,
+   "max_up": -0.0061
+  },
+  {
+   "symbol": "NCPL",
+   "date": "2026-10-14",
+   "fill": 2.16,
+   "base": -0.1296,
+   "tp10": -0.1296,
+   "tp15": -0.1296,
+   "tp20": -0.1296,
+   "max_up": 0.0417
+  },
+  {
+   "symbol": "YYAI",
+   "date": "2026-10-14",
+   "fill": 0.8199,
+   "base": -0.1853,
+   "tp10": 0.1,
+   "tp15": 0.15,
+   "tp20": 0.2,
+   "max_up": 0.2319
+  },
+  {
+   "symbol": "TCRT",
+   "date": "2026-10-15",
+   "fill": 2.95,
+   "base": 0.0271,
+   "tp10": 0.0271,
+   "tp15": 0.0271,
+   "tp20": 0.0271,
+   "max_up": 0.0508
+  },
+  {
+   "symbol": "XXII",
+   "date": "2026-10-15",
+   "fill": 1.18,
+   "base": -0.2527,
+   "tp10": -0.2527,
+   "tp15": -0.2527,
+   "tp20": -0.2527,
+   "max_up": 0.0169
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+  "frozen_utc": "2026-10-16T13:35:00Z",
+  "frozen_before": "any post-fill bar or 04:30 quote was fetched for this replay; YYAI and NCPL (Oct 14) are the only fills examined so far, and they motivated the test",
+  "purpose": "Juan, Oct 15: 'YYAI good entry, late exit.' Does a resting sell limit placed right after each AH buy fill beat the live 04:30 ET sell-all exit?",
+  "fills": "every filled after-hours buy order on the Alpaca paper account PA37U2Y192A7 from 2026-06-25 to 2026-10-15 (buy filled_at between 16:00 and 20:00 ET), one row per order, at its filled_avg_price",
+  "baseline": "sell at the bid of the latest SIP quote in 04:00-04:30 ET on the next trading day (the live rule since Oct 14); rows without a valid quote use the first 1-minute SIP bar open at or after 04:00 ET and are counted",
+  "variants": {
+    "tp10": "limit at fill x 1.10",
+    "tp15": "limit at fill x 1.15",
+    "tp20": "limit at fill x 1.20"
+  },
+  "fill_rule": "the limit fills at the limit price if any 1-minute SIP bar starting after the fill minute and before 20:00 ET on D, or from 04:00 to 04:29 ET on D+1, has a high strictly above the limit; otherwise the row takes the baseline exit",
+  "unit": "return per trade = exit / fill - 1; equal weight; the comparison is the paired difference variant minus baseline",
+  "statistics": "mean paired difference with a bootstrap over fill dates (4000 draws, seed 13), two-sided interval with tail 0.025/3 (Bonferroni over 3 variants); also report fill rate, mean return per variant, and the fills since Oct 12 listed individually",
+  "pass": "a variant passes if the mean paired difference > 0 AND its interval lower bound > 0 AND both chronological halves have a positive mean difference",
+  "decision_if_pass": "report the passing variant to Juan in the daily email with the evidence; it changes live exits, so it is wired only if he does not object (Juan's routing of this item, FEEDBACK_LOG 2026-10-16)",
+  "decision_if_fail": "report that a resting take-profit does not beat the 04:30 exit on paper fills; no change",
+  "limits": "bar highs are trade prints, so a fill strictly above the limit is assumed to have filled the resting order; quoted size and queue position are ignored; the 20:00-04:00 overnight session is excluded; fills are real paper fills from strategies that changed over time; n is about 100."
+}

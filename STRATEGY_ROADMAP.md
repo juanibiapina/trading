@@ -1198,6 +1198,8 @@ the daily-email pulse.
 
 **Juan feedback 2026-10-15 (routed 2026-10-16): "YYAI good entry, late exit."** YYAI filled at $0.82 (18:00 ET), ran to an AH tail high of $1.01 (+23%) at 19:35 ET, after the last scan, then gapped down and sold at $0.673 (−17.9%) at 04:30 ET. NCPL also traded above entry in AH ($2.25 vs $2.16) and sold at −13.0%. The 04:30 sell-all rule has no way to sell AH strength. Next Initiative 3 run: replay a resting take-profit limit placed right after each fill (+10%, +15%, +20%, active through AH and PM until the 04:30 sell) on SIP bars for the fills since Oct 12, against the realized 04:30 exits. Proposed only; it changes live exits, so the result goes to Juan before it is wired.
 
+**Update 2026-10-16 15:00 — take-profit replay fails its frozen rule; no change.** Frozen in `docs/investigations/init3-take-profit-freeze.json` before any bar was fetched. On all 103 filled AH buys since June 25, a resting sell limit at +10% / +15% / +20% (filled when a 1-minute SIP bar after the fill minute, through 20:00 ET or 04:00–04:29 ET, trades above it) beats the 04:30 bid exit (-1.05% mean) by +1.23 [-3.90, +5.06] / +2.16 [-2.68, +5.80] / +2.00 [-3.20, +5.88] points. Both halves are positive for every variant, but no lower bound clears zero. Fill rates are 57% / 49% / 39%. Since Oct 12, the limit rescues YYAI (-18.5% → +10–20%) and AGMH (-3.6%) and caps AEHL (+55.8% → +10–20%). Details: `docs/investigations/init3-take-profit-2026-10-16.md`.
+
 **Latest status (2026-10-14): hold retirement APPLIED** (retroactive veto). Every position is sold at the first premarket evaluation (10:30 CEST / 04:30 ET); the 14:30 pulse resells anything unfilled. Edited `prompts/position-evaluation.md`, `prompts/post-market-scan.md` and `OPEN_POSITIONS.md` (commit 77991ce). Catalyst grade is still recorded for analysis. The October 15 10:30 evaluation is the first live check.
 
 **Prior status (2026-10-09): execution gap split.** Realized exits trail a modeled 04:30 ET open by 2.45 points per trade: -0.64 execution (exit spread, median 0.71%) and -1.81 timing. The timing loss is the Grade A/B hold decision: 26 held trades lost 8.77 points each against selling at 04:30 (p 0.038). Hold retirement proposed to Juan. See `docs/investigations/init3-exec-gap-2026-10-09.md`.
@@ -1726,7 +1728,29 @@ tracker).
 
 ---
 
-## Current priorities and initiative status — 2026-10-15 18:00 CEST
+## Current priorities and initiative status — 2026-10-16 15:00 CEST
+
+This checkpoint supersedes the October 15 18:00 checkpoint. **The short-fade test is frozen and its prior-year fetch is running (gob `KaJ`).** It shorts the union of both census event definitions (17:00 and 17:30–18:30 ET) on 2024-10-01 to 2025-09-30 at the scan bid, covers at the 04:30 ET ask or the open plus 50 bps, and charges 25 bps borrow per calendar night; cells all / easy to borrow today × two exits, Bonferroni over 4. The code check on the October 15 caches (in-sample, the year that chose the test, so not evidence) gives +0.14% at 04:30 [-1.54, +1.74] and **+2.58% at the open [+0.62, +4.43]** on 1,103 events; the easy-to-borrow cell (201) gives +1.04% / +0.77% with intervals spanning zero. **Initiative 3's resting take-profit replay fails its frozen rule:** on 103 real paper fills, +10/15/20% limits beat the 04:30 exit by +1.2 / +2.2 / +2.0 points with both halves positive, but every interval spans zero. Paper equity $99,698.80 (-$301.20), no positions open. The pilot slot stays free.
+
+**Money-fast selection:** the short fade is the largest lever left and the handoff's dated item. The take-profit replay was the only other ready item (Juan's "late exit" feedback). **North Star check:** in-sample, the edge sits in the open cover; the 04:30 cover loses most of it to the ask. If the prior year confirms that, the candidate becomes a short held into the open, which needs regular-hours shorting and borrow on hard-to-borrow names. That is harder to execute than the 04:30 cover.
+
+| Initiative | Latest concrete progress | Current status / dependency | Next deliverable and check |
+|---|---|---|---|
+| 1 — shared volume measurement | October 16 ≥10x `rth-peak` entry gate applied | **Gate live from the Oct 16 AH session.** | Morning evaluation: count `VOLUME-GATE-SKIP` names and their 04:30 returns. |
+| 2 — broker execution | September 7 alternatives research | **Deferred per Juan's September 22 instruction.** | Resume only when access arrives. |
+| 3 — scheduling and exits | October 16: take-profit replay fails (`docs/investigations/init3-take-profit-2026-10-16.md`) | **Sell-all exit applied; no veto. Take-profit: no change.** | Next process review: confirm each entry is sold at 10:30 or 14:30. Optional power check: replay the same limits on the 1,103 census events (needs 18:30–20:00 ET and 04:00–04:30 ET 1-minute bars). |
+| 4 — initiative reporting | First Gmail reply cycle October 15 | **Delivered and verified.** | Next daily email: short-fade freeze and running fetch, take-profit result for Juan's "late exit", the open stop-or-replace ask. |
+| 5 — review surface | October 8 v2 page | **Build delivered.** | No dated item. |
+| 6 — PM-only gappers | October 6 latency study | **Pilot ENDED; log-only research.** | Reopen only with real-time consolidated data. |
+| 7 — alternative strategies / core universe | October 16 15:00: short-fade test frozen, fetch running | **Research.** | **Next run (18:00):** `timeout 290 gob await KaJ`; if done, score the four frozen cells (the job evaluates on exit; `--replay` rescoring is possible). If still running, record progress and poll next run. |
+
+**Evidence, October 16:** `docs/investigations/init7-microcap-short-fade-freeze.json` (frozen 13:15 UTC), `scripts/init7-microcap-short-fade.py`, `log/2026-10-16/init7-short-fade-is/result.json` (code check), `docs/investigations/init3-take-profit-freeze.json` (frozen 13:35 UTC), `scripts/init3-take-profit-replay.py`, `log/2026-10-16/init3-take-profit/result.json`.
+
+**Previous-step evaluation:** the October 15 18:00 step (freeze the short fade, start the fetch) is done; the outcome waits on `KaJ`.
+
+**Needs from Juan / consolidated asks:** the stop-or-replace ask stays open. No trading-pulse timing change is proposed.
+
+## Prior checkpoint — 2026-10-15 18:00 CEST
 
 This checkpoint supersedes the October 15 15:00 checkpoint. **The late-entry census fails in all eight cells, so the stop-or-replace proposal is now unconditional.** Micro-cap AH ignitions that were not 17:00 events, bought at the SIP ask at the first of the 17:30, 18:00 or 18:30 ET scans where they pass the live gate, lose **-3.91%** per trade at the 04:30 bid [-5.99, -1.44] and **-5.61%** at the open [-8.12, -2.95] (n=604). Every interval and every half is negative. With the 17:00 census, the whole live entry window has failed a frozen test; seven frozen tests have failed in total. Paper equity **$99,698.80 (-$301.20)**, no open positions. The pilot slot stays free.
 
@@ -2213,7 +2237,9 @@ The next research priority is **Initiative 7's liquid regular-session feasibilit
 
 **Update 2026-10-15 15:00:** the core micro-cap strategy fails its frozen census. 499 AH ignitions over the past year (outside the top 1,000, $0.50–$10, +10–150% at 16:30 and 17:00 ET with a volume spike) bought at the 17:00 ET SIP ask lose -3.16% per trade at the 04:30 bid [-6.13, +0.05] and -4.00% at the open; no frozen subset passes and every half is negative. The 45 real entries it catches score -3.45%, matching live results. Next: the late-entry variant (17:30–18:30 ET), the last untested piece of the live strategy. See `docs/investigations/init7-microcap-census-2026-10-15.md`.
 
-**Needs from Juan:** decide on stopping or replacing AH→PM (daily email; conditional on the late-entry test); nothing blocks research. Preserve the deferred broker test.
+**Update 2026-10-16 15:00:** froze the short-fade test (`docs/investigations/init7-microcap-short-fade-freeze.json`, 13:15 UTC) and started the prior-year fetch as gob `KaJ`. Code check on the in-sample caches (not evidence): all events +0.14% at the 04:30 ask, +2.58% [+0.62, +4.43] at the open plus 50 bps, after 25 bps per night borrow; the easy-to-borrow cell spans zero at both exits.
+
+**Needs from Juan:** decide on stopping or replacing AH→PM (daily email; now unconditional); nothing blocks research. Preserve the deferred broker test.
 
 ## Open asks for Juan (consolidated)
 

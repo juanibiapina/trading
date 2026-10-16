@@ -1,0 +1,32 @@
+{
+  "frozen_utc": "2026-10-16T13:15:00Z",
+  "frozen_before": "any micro-cap daily bar, after-hours bar or quote dated 2024-08-26 to 2025-11-14 was fetched; no prior-year micro-cap event list or return exists",
+  "purpose": "Test the mirror of the failed core strategy: short micro-cap AH ignitions at the scan bid and cover at the 04:30 ET ask or the open. A pass is proposed to Juan as a core-strategy replacement; it is never applied alone.",
+  "origin": "October 15: the 17:00 ET census (-3.16% long at 04:30, n=499) and the late-entry census (-3.91%, n=604) failed on 2025-10-01 to 2026-09-30. Before costs the long side lost -1.79% / -2.24% mid to mid at 04:30 and -3.06% / -4.60% at the open, more than the spread. 201 of 1,103 in-sample events are easy to borrow on Alpaca today; the 100 late ones fall -4.01% mid to mid by 04:30 (in-sample, look-ahead flags). Those in-sample numbers chose this test and cannot count toward it.",
+  "window": "events dated 2024-10-01 to 2025-09-30 (full 16:00 closes only); volume history from 2024-08-26; daily bars to 2025-11-14",
+  "universe": "same construction as the October 15 censuses: symbols in log/2026-10-12/init7-reversal20-pit/universe.json.gz, excluding the point-in-time top 1000 by trailing three-month SIP dollar volume (rankings() of scripts/init7-liquid-ah-census.py on log/2026-10-14/init7-liquid-fade-oos/census/monthly.json.gz, which covers 2024-07 to 2025-08), with a raw regular close on D between $0.50 and $10.00",
+  "events": "the union of both frozen event definitions, unchanged: (a) docs/investigations/init7-microcap-census-freeze.json events (scan 17:00 ET), and (b) docs/investigations/init7-microcap-late-census-freeze.json events (first of the 17:30, 18:00, 18:30 ET scans, excluding (a) events). Each symbol-date is scored once, at its event scan T. Split events are dropped and counted.",
+  "entry": "short at the bid of the latest SIP quote at or before T with timestamp >= T-15 minutes (the same quote windows as the long censuses); requires bid > 0 and ask > bid; events without such a quote are excluded and counted",
+  "exits": {
+    "exit_0430": "cover at the ask of the latest SIP quote in 04:00-04:30 ET on D+1; if none is valid, D+1 official raw open x (1 + 50 bps), counted as fallback",
+    "exit_open": "cover at D+1 official raw open x (1 + 50 bps)"
+  },
+  "borrow_fee": "25 bps per calendar night from D to D+1 (1 night on weekdays, 3 over a weekend; about 91% annualized), charged on every event in every cell",
+  "unit": "net return per trade = 1 - cover / entry - borrow_fee; equal weight per event; losses are not capped",
+  "cells": {
+    "subsets": {
+      "all": "every scored event",
+      "etb": "symbol is easy_to_borrow and shortable in Alpaca's /v2/assets at fetch time (2026-10-16; a look-ahead flag, and delisted names count as not easy to borrow)"
+    },
+    "exits": ["exit_0430", "exit_open"],
+    "count": 4
+  },
+  "statistics": {
+    "interval": "bootstrap resampling event dates (D) with replacement, 4000 draws, seed 13; two-sided interval with tail 0.025/4 (Bonferroni over 4 cells)",
+    "pass": "a cell passes if mean > 0 AND interval lower bound > 0 AND both chronological halves (split by D at the median event date) have mean > 0, at base cost; also report a stress case (+100 bps round trip and 100 bps per night borrow), gross mid-to-mid returns, median, win rate and the worst 1% of trades"
+  },
+  "descriptive_only": "results by event origin (17:00 vs late) and scan, move buckets (10-25%, 25-50%, 50-150%), close price buckets, AH dollar-volume buckets, entry spread quartiles, events per month, exit_0430 fallback count. None can rescue a failed pass.",
+  "decision_if_pass": "propose to Juan (daily email) a paper short-fade pilot on the passing cell, sized like the learning phase, after a paper check that Alpaca accepts an extended-hours short on an easy-to-borrow name. No live rule, pulse or order changes from this census alone.",
+  "decision_if_fail": "the short mirror of the core strategy is closed; the stop-or-replace proposal stands without a short candidate, and the next lever is chosen by the North Star.",
+  "limits": "today's borrow flags stand in for point-in-time availability (look-ahead; hard-to-borrow names may have had no locate); a flat borrow fee; no short-sale restriction (Rule 201) model, though entries follow up moves; whether Alpaca accepts extended-hours short sales is not checked here; survivorship limited to assets Alpaca still lists; quoted size ignored; no catalyst grading."
+}

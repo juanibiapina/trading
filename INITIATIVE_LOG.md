@@ -1,5 +1,34 @@
 # Initiative Log
 
+### 2026-10-16 15:00 — Initiative 7 short-fade test frozen, prior-year fetch running; Initiative 3 take-profit replay fails
+
+**Evaluated:** the October 15 18:00 next step (freeze a short-fade test before fetching, then start the prior-year fetch) is done this run. Its hypothesis (the fade nets above zero with a positive lower bound and both halves positive) waits on the fetch: insufficient data. The Initiative 3 sell-all exit ran again as specified (TCRT, XXII sold at the Oct 16 10:30 evaluation; `log/2026-10-16/process-review.md`).
+
+**Step taken:**
+
+- **Initiative 7 (dated, North Star pick):** froze `docs/investigations/init7-microcap-short-fade-freeze.json` at 13:15 UTC, before any prior-year micro-cap data was fetched.
+  - Events: the union of the 17:00 and late-entry census definitions, unchanged, on 2024-10-01 to 2025-09-30.
+  - Fills: short at the scan bid; cover at the 04:30 ET ask (fallback open plus 50 bps) and at the open plus 50 bps; 25 bps borrow per calendar night on every event.
+  - Cells: all / easy to borrow on Alpaca today × two exits, Bonferroni over 4, same pass rule as the censuses.
+- Built `scripts/init7-microcap-short-fade.py`, which reuses both census modules unchanged for event selection. Code check on the October 15 caches (`--in-sample`) reproduces the counts (1,103 scored, 201 easy to borrow). CIGL 2025-10-01 checked by hand: bid $4.92, 04:30 ask $4.40, less 25 bps, +10.32%.
+- Started the prior-year fetch as gob `KaJ` at about 13:25 UTC. Daily raw bars for 8,092 symbols took 12 minutes; split bars, about 290 AH days of 16:00–18:29 ET bars and about 2,200 quotes remain. It will outlast this run.
+- **Initiative 3 (ready item, Juan's Oct 15 "late exit"):** froze `docs/investigations/init3-take-profit-freeze.json` at 13:35 UTC, built `scripts/init3-take-profit-replay.py`, and replayed +10/15/20% resting sell limits on all 103 AH buy fills since June 25.
+- No other ready item: 1 is waiting on morning-evaluation tallies, 2 is deferred, 5 has no dated work, 6 is closed.
+
+**Result:**
+
+- **Initiative 7 code check (in-sample year, not evidence):** all events +0.14% at the 04:30 ask [-1.54, +1.74], **+2.58% at the open [+0.62, +4.43]**, halves +4.51 / +0.66; stress -1.85% / +0.59%. Easy to borrow (201): +1.04% / +0.77%, intervals span zero, second half negative. Most of the 04:30 edge goes to the ask (mid to mid +2.04%).
+- **Initiative 3:** the 04:30 baseline averages -1.05%. Limits at +10/15/20% fill 57/49/39% of the time and gain +1.23 / +2.16 / +2.00 points, with both halves positive, but the intervals are [-3.90, +5.06], [-2.68, +5.80] and [-3.20, +5.88]. **No variant passes; no exit change.** Since Oct 12 the limit would have rescued YYAI and AGMH and capped AEHL's +55.8%.
+- No order, live rule, size or pulse timing changed. Equity $99,698.80 (-$301.20), no positions open.
+- **Evidence:** `log/2026-10-16/init7-short-fade-is/result.json`, `docs/investigations/init3-take-profit-2026-10-16.md`, `log/2026-10-16/init3-take-profit/result.json`.
+
+**Hypothesis / next step:**
+
+- **18:00 run, Initiative 7:** `timeout 290 gob await KaJ`, one call per turn. When it exits 0 the job has written `log/2026-10-16/init7-short-fade/result.json`; record the four frozen cells. Hypothesis: the open-cover cell on all events passes and the 04:30 cell does not; the easy-to-borrow cell is too small to pass. If the job is still running, record its progress and poll next run without restarting it (the fetch resumes from its cache).
+- **Next daily email:** the short-fade freeze and its in-sample code check (labelled as not evidence), the take-profit result answering "late exit", and the open stop-or-replace ask.
+
+**Needs from Juan:** decide whether to stop or replace AH→PM (daily email). Initiative 2 stays deferred.
+
 ### 2026-10-15 18:00 — Initiative 7 late-entry micro-cap census fails in all eight cells; stop-or-replace proposal now unconditional
 
 **Evaluated:** the October 15 15:00 hypothesis (the late-entry variant also fails) **held**. No cell passes, and every interval lies below zero.
