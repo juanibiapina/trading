@@ -1,0 +1,77 @@
+{
+  "cycle_date": "2026-10-15",
+  "status": "sent",
+  "provider": "Gmail (scripts/send-email.js)",
+  "message_id": "1a1440e32f992395",
+  "from": "juanibiapina@gmail.com",
+  "to": "juanibiapina@gmail.com",
+  "subject": "Trading Scanner Report - 2026-10-15",
+  "send_started_at": "2026-10-16T09:32:22.692450Z",
+  "sent_at": "2026-10-16T09:32:23.918983Z",
+  "sent_at_source": "Local UTC clock when the 'Sent: <Gmail message ID>' output arrived (Gmail response has no timestamp)",
+  "previous_successful_send_at": "2026-10-15T09:32:28.551546Z",
+  "previous_message_id": "1a13ee7e9a66b9f8",
+  "previous_receipt": "log/2026-10-14/daily-email.json",
+  "reporting_cutoff_at": "2026-10-16T09:32:22.692450Z",
+  "body_file": "daily-email.html",
+  "body_sha256": "f4350cd56dad0730a6bc43b1f787c368d0cbb9f7b1a7f4811b4db60e84131669",
+  "chart_urls": [
+    "https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-15/XXII-1131.png",
+    "https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-15/TCRT-1131.png"
+  ],
+  "chart_markers": "XXII entry 1.18@2026-10-15 18:05 ET, exit 0.8811@2026-10-16 04:30 ET (58854c1d, 23eda25b); TCRT entry 2.95@2026-10-15 17:00 ET, exit 2.99@2026-10-16 04:30 ET (e5d5f4d2, 7c649bb3)",
+  "winner": null,
+  "winner_note": "No real winner; biggest genuine mover XXII detected 23:30 CEST and entered; hypothetical first sighting +50.7%",
+  "winner_scanner_caught": true,
+  "biggest_mover_pm_sip_high": {
+    "ticker": "XXII",
+    "price": 1.13,
+    "time_et": "2026-10-16 04:00",
+    "checked_through_et": "05:15",
+    "vs_close_pct": 80.2
+  },
+  "realized_cycle_pnl_usd": -23.77,
+  "equity_usd": 99675.03,
+  "cumulative_pnl_usd": -324.97,
+  "open_positions": [],
+  "detection": "75/86 (87.2%)",
+  "selection": "39/82 (47.6%)",
+  "latest_scanner_improvement_date": "2026-10-15",
+  "feedback_capture_change_date": "2026-10-16",
+  "latest_completed_process_review_date": "2026-10-15",
+  "process_review_needs_user_action": "greprip attached numeric flags (low); carried: scheduler reliability (Oct 2, 5, 9); provider login-error alert/fallback (open since Oct 6)",
+  "initiative_updates": [
+    7,
+    1,
+    3,
+    4
+  ],
+  "initiative_monitoring": [
+    6
+  ],
+  "initiative_blocked_or_deferred": {
+    "2": "Deferred per Juan's Sep 22 instruction"
+  },
+  "open_asks_surfaced": [
+    "Initiative 7 stop-or-replace: pause paper entries or keep as data collection"
+  ],
+  "jev_status": "not run in window; no Jev calls in repo artifacts since previous send",
+  "jev_window_calls": 0,
+  "jev_window_cost_usd": 0.0,
+  "jev_window_cost_kind": "repo records only; TypeSafe billing not queried",
+  "jev_cumulative_recorded": {
+    "calls": 7,
+    "input_tokens": 11385,
+    "output_tokens": 1088,
+    "cost_usd_estimate": 0.00047817
+  },
+  "new_feedback": true,
+  "feedback_acknowledged": [
+    "2026-10-16 entry: Juan 'two bad entries. volume did not spike. FIX THIS.' / 'YYAI good entry, late exit.' (Gmail 1a13f0b41fe27a3f)"
+  ],
+  "email_session": {
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "reasoning": "medium"
+  }
+}

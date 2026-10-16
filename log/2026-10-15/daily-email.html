@@ -1,0 +1,64 @@
+<div style="font-family: -apple-system, Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+<h2 style="color: #1a1a1a; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">Overnight Cycle: Oct 15 AH &rarr; Oct 16 PM</h2>
+
+<h3 style="color: #555; margin-top: 20px;">Post-Market Scans</h3>
+<p>All 7 scheduled scans ran (21:30&ndash;00:30 CEST), plus 6 extra opening observations. 8 unique tickers crossed +10% AH. Two entries: <strong>TCRT</strong> at 23:00 (no catalyst, day 4 of a multi-session run, AH build to $3.09) and <strong>XXII</strong> at 00:07 (Grade C sales PR, fresh day-1 build on 0.5&ndash;0.9M sh/bar). Skipped: NCPL (thin drift), PMI (dead-cat), SITC (liquidation pin), JBDI (untradable).</p>
+
+<h3 style="color: #555;">Today&rsquo;s Winner</h3>
+<p><strong>No real winner today</strong> (nothing in the universe cleared +100% in PM).</p>
+<p>Biggest genuine mover: <strong>XXII</strong> (22nd Century, reduced-nicotine tobacco) &mdash; Pinnacle VLN same-store sales +161% PR at ~16:30 ET. AH high $1.30 (+107%) at 17:55 ET; PM SIP high $1.13 (+80.2%) at 04:00 ET, re-checked through 05:15 ET with no higher print. Hypothetical first sighting $0.75 &rarr; $1.13 (<span style="color: #2e7d32; font-weight: bold;">+50.7%</span>). RUBI&rsquo;s +127% was a sub-$0.50 PM-only wick.</p>
+<p>Scanner caught it? <strong style="color: #2e7d32;">YES</strong> &mdash; first scan after ignition (23:30 CEST), entered at the next scan. The fill chased to $1.18; the AH high was the better exit.</p>
+
+<h3 style="color: #555;">Baseline Status</h3>
+<p style="font-size: 18px; background: #f5f5f5; padding: 10px; border-radius: 4px;">Detection rate: <strong>75/86 (87.2%)</strong> &mdash; Target: &gt;80%<br/>
+<span style="color: #1976d2;">BASELINE MET</span> &middot; selection 39/82 (47.6%) &middot; 101 days tracked</p>
+
+<h3 style="color: #555;">Paper Trades</h3>
+<p style="font-size: 18px;">Paper P&amp;L: <span style="color: #c62828; font-weight: bold;">&minus;$23.77 (&minus;11.9%)</span></p>
+<ul>
+<li>TCRT 34 @ $2.95 &rarr; $2.99: <span style="color: #2e7d32;">+$1.36 (+1.4%)</span>. AH high $3.09; PM peaked near $2.97 into the 04:30 sell.</li>
+<li>XXII 84 @ $1.18 &rarr; $0.881: <span style="color: #c62828;">&minus;$25.11 (&minus;25.3%)</span>. The first $0.97 limit missed as price fell from $1.00 to $0.88 at 04:20&ndash;04:30 ET.</li>
+</ul>
+<p>Both sold at the 10:30 CEST evaluation. Under the new &ge;10x volume gate (below), TCRT (3.96x) would have been skipped and XXII (74x) would still have been entered.</p>
+<p style="background: #f5f5f5; padding: 10px; border-radius: 4px;">Cumulative Paper P&amp;L: <span style="color: #c62828; font-weight: bold;">&minus;$324.97</span> (equity $99,675.03, all cash)</p>
+
+<h3 style="color: #555;">Scanner Improvement</h3>
+<p><strong>Oct 16 09:00 CEST</strong> (from your reply): hard entry gate &mdash; enter only when the largest AH 5m bar is &ge;10x the same day&rsquo;s largest regular-session bar; anything below is logged as <code>VOLUME-GATE-SKIP</code> with its hypothetical outcome. Live from tonight&rsquo;s session. Hypothesis: skipped names&rsquo; mean 04:30 return stays below the fills&rsquo;.</p>
+<p><strong>Oct 15</strong> (latest scanner-improvement run): new <code>entry-volume-ratio.py</code> records each fill&rsquo;s at-entry ratio beside its 04:30 P&amp;L. Seed: &ge;10x fills averaged +11.8%, &lt;2x fills &minus;18.5%. Today&rsquo;s run comes after this email.</p>
+
+<h3 style="color: #555;">Process Review</h3>
+<p><strong>Oct 15</strong> (latest completed; covers sessions through Oct 15 14:30 CEST): two fixes. Strategy runs now log and commit before long waits (an Oct 14 run died mid-wait and lost its log entry), and a new <code>ah-crosscheck.js</code> replaces the hand-built final-scan check that the 20-bar limit cut off at 17:35 ET. Last night&rsquo;s scans are not reviewed yet; they show <code>ah-crosscheck.js</code> returning a 403 (recent SIP not permitted), with direct bars used as fallback.</p>
+<p style="background: #fff3e0; padding: 10px; border-radius: 4px; border-left: 4px solid #ef6c00;"><strong>Open for you (infra):</strong> scheduler reliability &mdash; 3 of the last 10 evenings lost all scans (Oct 2, 5, 9; Oct 15 ran 7/7); provider login-error alert/fallback, open since Oct 6; low priority: <code>grg</code> (greprip) rejects attached flags like <code>-A7</code>.</p>
+
+<h3 style="color: #555;">Initiative Progress</h3>
+<p>Window: Oct 15 11:32 CEST (last send) to this send.</p>
+<ul>
+<li><strong>Initiative 7 &mdash; alternative strategies, Oct 15 15:00 and 18:00 CEST</strong>: froze and ran two one-year censuses of the core micro-cap strategy with quoted fills. 17:00 ET entries: &minus;3.16% per trade at the 04:30 bid (n=499, 28% winners). Later 17:30&ndash;18:30 ET entries: &minus;3.91% [&minus;5.99, &minus;1.44] (n=604). Every subset and half is negative, also before costs. The long micro-cap AH lane is closed. Next: freeze a prior-year short-fade test (short at the event bid, cover at 04:30 or the open, borrow fee charged).</li>
+<li><strong>Initiative 1 &mdash; volume measurement, Oct 15 14:20 and Oct 16 09:00 CEST</strong>: added the at-entry volume-ratio tracker, then turned it into the &ge;10x hard entry gate after your reply. Next: morning evaluation counts <code>VOLUME-GATE-SKIP</code> names and their 04:30 outcomes.</li>
+<li><strong>Initiative 3 &mdash; exits, Oct 15&ndash;16</strong>: process review confirmed the sell-all exit ran as written; it ran again today (TCRT, XXII at 04:30 ET). Next: replay a resting take-profit limit placed at fill (+10/15/20%) against the 04:30 exits; it changes live exits, so the result comes to you before wiring.</li>
+<li><strong>Initiative 4 &mdash; reply loop, Oct 16 09:00 CEST</strong>: your Oct 14 reply was captured and acted on within the same morning. Next: keep reporting.</li>
+<li><strong>Initiative 6 &mdash; PM-only gappers (monitoring)</strong>: log-only cohort snapshot and PM-open scan ran (4 gappers). Holdable PM-only count is now 72. Pilot stays closed until real-time data exists.</li>
+</ul>
+<p>Blocked/deferred: Initiative 2 broker test deferred per your Sep 22 instruction. Initiative 5 has no dated work.</p>
+<p style="background: #fff3e0; padding: 10px; border-radius: 4px; border-left: 4px solid #ef6c00;"><strong>Open ask (roadmap):</strong> with both censuses failed, the choice is to pause paper entries or keep them running as data collection while the short-fade test runs. A short strategy would replace the core strategy, so any pass comes to you before live use.</p>
+
+<h3 style="color: #555;">Jev Results and Costs</h3>
+<p><strong>Not run in this window.</strong> No Jev calls appear in any repo artifact since the last email; both Initiative 7 runs were price-data censuses. Window: 0 recorded calls, $0.00 USD in repo records; the billed charge is unverified (TypeSafe billing not queried). Cumulative recorded: 7 calls, 11,385 input / 1,088 output tokens, ~$0.00048 USD (estimate from the Oct 2 and Oct 7 manifests). Next: no Jev step is scheduled; Initiative 7&rsquo;s next deliverable is the short-fade test.</p>
+
+<h3 style="color: #555;">Feedback Acknowledged</h3>
+<ul>
+<li><strong>Oct 15 &mdash; &ldquo;two bad entries. volume did not spike. FIX THIS.&rdquo; / &ldquo;YYAI good entry, late exit.&rdquo;</strong>: applied the &ge;10x AH-vs-regular-session volume gate (NCPL was 1.51x, YYAI 20.8x), live tonight. The late exit routed to Initiative 3 as a take-profit-limit replay.</li>
+</ul>
+
+<h3 style="color: #555;">Charts (5m + volume)</h3>
+<p style="margin: 0 0 4px;"><strong>XXII (biggest mover, traded: entry $1.18, exit $0.881)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-15/XXII-1131.png" alt="XXII 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+<p style="margin: 0 0 4px;"><strong>TCRT (traded: entry $2.95, exit $2.99)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-15/TCRT-1131.png" alt="TCRT 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+
+<h3 style="color: #555;">Key Takeaway</h3>
+<p style="background: #e3f2fd; padding: 10px; border-radius: 4px; border-left: 4px solid #1976d2;">A full year of quoted fills says buying micro-cap AH movers loses 3&ndash;4% per trade at every entry time, and last night&rsquo;s two trades (&minus;$23.77) fit that pattern.</p>
+
+<p>Reply to this email with feedback or a veto.</p>
+<p style="font-size: 12px; color: #666; margin-top: 20px;">Email session: anthropic/claude-opus-5-5 &middot; reasoning: medium</p>
+</div>
