@@ -1,0 +1,35 @@
+{
+  "metric_version": "sip-ah-volume-v2",
+  "symbol": "AURE",
+  "date": "2026-10-19",
+  "prior_date": "2026-10-16",
+  "as_of_utc": "2026-10-19T20:20:10+00:00",
+  "source_observed_utc": "2026-10-19T20:21:09.151605+00:00",
+  "floor_shares": 100,
+  "prior_observed_slots": 1,
+  "prior_inferred_zero_slots": 47,
+  "prior_expected_slots": 48,
+  "prior_complete": true,
+  "prior_peak_shares": 100,
+  "rth_observed_slots": 32,
+  "rth_inferred_zero_slots": 46,
+  "rth_expected_slots": 78,
+  "rth_complete": true,
+  "rth_peak_shares": 4157,
+  "rows": [
+    {
+      "bar_start_utc": "2026-10-19T20:00:00+00:00",
+      "bar_end_utc": "2026-10-19T20:05:00+00:00",
+      "bar_et": "16:00",
+      "shares": 1344,
+      "trades": 5,
+      "baseline_median_shares": null,
+      "baseline_shares": null,
+      "local_ratio": null,
+      "local_status": "warmup",
+      "local_ge_10": null,
+      "prior_peak_ratio": 13.44,
+      "rth_peak_ratio": 0.3233100793841713
+    }
+  ]
+}

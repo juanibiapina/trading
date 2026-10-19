@@ -76,6 +76,78 @@ AH >10% at this snapshot (unrounded): none
 **Evaluation notes:**
 - Observation only (entry window opens 23:00 CET). No AH candidates, so no spike-bar, CONFIRM-3, volume metric or catalyst checks ran. The 21:30 watch list carries to the next scan.
 
+## Scan 22:20 CET (4:20 PM ET)
+
+Scanner snapshot at 16:20:10 ET, 5 hits (first AH hits of the night).
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| POLA | [TV](https://www.tradingview.com/chart/?symbol=POLA) | $0.89 | +6.4% | +15.3% | $1.02 | +22.6% | 1.3M | 248K | 5.3x | 3.0M | Electronic Equipment/Instruments |
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $0.91 | -0.8% | +16.4% | $1.06 | +15.5% | 182K | 82K | 2.2x | 2.5M | Miscellaneous Commercial Services |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.63 | -24.9% | +12.4% | $1.83 | -15.6% | 168K | 19.0M | 0.0x | 2.1M | Miscellaneous Commercial Services |
+| CCHH | [TV](https://www.tradingview.com/chart/?symbol=CCHH) | $0.83 | -16.6% | +23.5% | $1.03 | +3.0% | 27K | 37K | 0.7x | 17.8M | Restaurants |
+| AURE | [TV](https://www.tradingview.com/chart/?symbol=AURE) | $0.85 | -12.8% | +15.8% | $0.99 | +0.9% | 1K | 35K | 0.0x | 10.9M | Information Technology Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): AURE, CCHH
+
+AH >10% at this snapshot (unrounded): AURE, CCHH, ISPC, NCPL, POLA
+
+**Instrumentation (log-only):**
+
+```
+POLA 2026-10-19  SPIKE  16:01ET  +21%  $1.08  1321 trades / 280k sh  (first co-spike bar) (as-of 16:20ET)
+POLA 2026-10-19  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+# POLA shared SIP volume sip-ah-volume-v2; prior 2026-10-16 0+48zero/48 slots; floor 100; same-date regular peak 26228 sh; log-only
+# reconstructed as-of 2026-10-19T20:20:10+00:00; source fetched 2026-10-19T20:20:50.693461+00:00
+POLA 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=1550740 local=unknown prior-peak=15507.4000x rth-peak=59.1254x status=warmup
+POLA 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=2833272 local=unknown prior-peak=28332.7200x rth-peak=108.0247x status=warmup
+POLA BOOK iex bid $1.11 x400 / ask $1.14 x400 @ 2026-10-19 16:21:34 ET age 7s two-sided spread 2.63% of ask
+POLA BOOK sip-15m bid $1.10 x800 / ask $1.11 x7700 @ 2026-10-19 16:06:41 ET age 15m00s two-sided spread 0.90% of ask
+POLA BOOK refresh +15s iex advanced @ 2026-10-19 16:21:51 ET
+POLA BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-19 16:21:41 ET; log-only)
+
+ISPC 2026-10-19  SPIKE  16:01ET  +21%  $1.10  73 trades / 52k sh  (first co-spike bar) (as-of 16:20ET)
+ISPC 2026-10-19  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+# ISPC shared SIP volume sip-ah-volume-v2; prior 2026-10-16 5+43zero/48 slots; floor 100; same-date regular peak 10300 sh; log-only
+# reconstructed as-of 2026-10-19T20:20:10+00:00; source fetched 2026-10-19T20:20:55.387928+00:00
+ISPC 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=193159 local=unknown prior-peak=167.5273x rth-peak=18.7533x status=warmup
+ISPC 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=93735 local=unknown prior-peak=81.2966x rth-peak=9.1005x status=warmup
+ISPC BOOK iex bid $1.00 x100 / ask $1.02 x100 @ 2026-10-19 16:17:19 ET age 4m22s two-sided spread 1.96% of ask
+ISPC BOOK sip-15m bid $1.00 x2500 / ask $1.01 x200 @ 2026-10-19 16:06:38 ET age 15m03s two-sided spread 0.99% of ask
+ISPC BOOK refresh +15s iex unchanged @ 2026-10-19 16:17:19 ET
+ISPC BOOK verdict: IEX STALE 4m22s; SIP-15m TWO-SIDED (observed 2026-10-19 16:21:41 ET; log-only)
+
+NCPL 2026-10-19  NO-SPIKE  peak +16% @16:02ET  (no bar cleared +15% on a volume co-spike) (as-of 16:20ET)
+NCPL 2026-10-19  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-16 48+0zero/48 slots; floor 100; same-date regular peak 280740 sh; log-only
+# reconstructed as-of 2026-10-19T20:20:10+00:00; source fetched 2026-10-19T20:20:59.232764+00:00
+NCPL 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=179387 local=unknown prior-peak=0.8873x rth-peak=0.6390x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=28256 local=unknown prior-peak=0.1398x rth-peak=0.1006x status=warmup
+
+CCHH 2026-10-19  SPIKE  16:03ET  +20%  $1.00  52 trades / 22k sh  (first co-spike bar) (as-of 16:20ET)
+CCHH 2026-10-19  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+# CCHH shared SIP volume sip-ah-volume-v2; prior 2026-10-16 4+44zero/48 slots; floor 100; same-date regular peak 3000 sh; log-only
+# reconstructed as-of 2026-10-19T20:20:10+00:00; source fetched 2026-10-19T20:21:03.528590+00:00
+CCHH 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=28190 local=unknown prior-peak=93.9667x rth-peak=9.3967x status=warmup
+CCHH 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=4253 local=unknown prior-peak=14.1767x rth-peak=1.4177x status=warmup
+
+AURE 2026-10-19  NO-SPIKE  peak +18% @16:00ET  (no bar cleared +15% on a volume co-spike) (as-of 16:20ET)
+AURE 2026-10-19  CONFIRM-3  NO no local-volume new-high ignition as-of 16:20ET
+# AURE shared SIP volume sip-ah-volume-v2; prior 2026-10-16 1+47zero/48 slots; floor 100; same-date regular peak 4157 sh; log-only
+# reconstructed as-of 2026-10-19T20:20:10+00:00; source fetched 2026-10-19T20:21:09.151605+00:00
+AURE 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=1344 local=unknown prior-peak=13.4400x rth-peak=0.3233x status=warmup
+```
+
+Volume artifacts: `POLA-1620`, `ISPC-1620`, `NCPL-1620`, `CCHH-1620`, `AURE-1620` (`-volume-sip.json` and `-volume-metric.json`) in this directory. Book check ran for POLA and ISPC only; the other three show thin or fading SIP volume.
+
+**Evaluation notes:**
+- Observation only (entry window opens 23:00 CET). This is AH appearance #1 for all five names. All five are `tradable=true`.
+- **POLA** (float 3.0M, Electronic Equipment): the only name with real AH volume. SIP 16:00 bar 1.55M sh, 16:05 bar 2.83M sh (108x `rth-peak`), against 26K sh in the largest regular session bar. Catalyst: GlobeNewswire 2026-10-19, ~16:00 ET, "Polar Power Completes Phase 1 of Strategic Restructuring, Reducing Annualized Costs by More Than $1 Million" → **Grade C** (minor PR). Live IEX book $1.11 / $1.14, above the $1.02 scanner price. AH high so far $1.08 at 16:01 ET in the open bar, and CONFIRM-3 NO: if the high stays in the first bar with no volume-backed new high, this is a FIRST-BAR-SPIKE skip.
+- **ISPC** (float 2.5M): 193K sh then 94K sh (18.8x → 9.1x `rth-peak`), declining. Open-bar spike at 16:01 ET ($1.10), now $1.06 with IEX book $1.00 / $1.02. Same first-bar pattern risk. Catalyst search (1 query): no same-day release found; latest items are the Oct 9 shareholder vote on financing and acquisition (background, not fresh). Re-search next scan.
+- **NCPL** (float 2.1M, Day −24.9%): dead-cat bounce; Total% −15.6% stays below its regular close. Volume fading (0.64x → 0.10x `rth-peak`). Same-day news is class-action lawsuit notices (GlobeNewswire/BusinessWire, Oct 19), which is negative. NCPL was the Oct 15 fill that lost −13.0% at 1.51x. Skip pending: dead-cat.
+- **CCHH** (float 17.8M, Day −16.6%): dead-cat bounce; Total% +3.0% is barely above close on 28K → 4K sh. No catalyst found (1 query). Skip pending: dead-cat and thin volume.
+- **AURE** (float 10.9M, Day −12.8%): 1,344 sh total in AH, NO-SPIKE. Thin print, no catalyst found (1 query). Skip pending: thin.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
