@@ -576,6 +576,101 @@ Volume artifacts: `WORX-1730`, `NCPL-1730`, `FUFU-1730` (`-volume-sip.json` and 
 - **FUFU** (float 16.9M, bitcoin miner, Day +32.2%, `tradable=true`): first >10% AH appearance (scanner +10.1%; SIP $1.30 = +9.3%, high $1.33). Thin SIP volume (10–70K sh, ~100 trades per bar), NO-SPIKE, CONFIRM-3 NO, max `rth-peak` 0.0075x. Catalyst: none found for today (2 searches; latest PRs are the Oct 15 HASH token launch and the September production update, both background). Not eligible: needs a second AH scan, and it would fail the volume gate.
 - SBNYL (+9.5%, float 59.6M), ISPC, AAME, SRTM, ATOM are under the 10% AH threshold.
 
+## Scan 00:00 CET (6:00 PM ET)
+
+Scanner snapshot at 18:00:10 ET, 13 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WORX | [TV](https://www.tradingview.com/chart/?symbol=WORX) | $2.68 | +94.2% | +8.6% | $2.91 | +110.9% | 6.6M | 13.7M | 0.5x | 545K | Packaged Software |
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.52 | -20.7% | +17.3% | $0.61 | -7.0% | 4.3M | 5.4M | 0.8x | 11.6M | Food: Specialty/Candy |
+| SBNYL | [TV](https://www.tradingview.com/chart/?symbol=SBNYL) | $1.05 | -1.9% | +9.5% | $1.15 | +7.5% | 1.3M | 170K | 7.7x | 59.6M | Regional Banks |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.63 | -24.9% | +20.3% | $1.96 | -9.7% | 1.2M | 19.1M | 0.1x | 2.1M | Miscellaneous Commercial Services |
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $0.91 | -0.8% | +8.1% | $0.98 | +7.3% | 648K | 137K | 4.7x | 2.5M | Miscellaneous Commercial Services |
+| MASK | [TV](https://www.tradingview.com/chart/?symbol=MASK) | $0.93 | +15.8% | +5.8% | $0.98 | +22.5% | 610K | 7.8M | 0.1x | 3.0M | Information Technology Services |
+| FUFU | [TV](https://www.tradingview.com/chart/?symbol=FUFU) | $1.19 | +32.2% | +9.2% | $1.30 | +44.4% | 467K | 5.3M | 0.1x | 16.9M | Data Processing Services |
+| ZTG | [TV](https://www.tradingview.com/chart/?symbol=ZTG) | $0.78 | +10.5% | +6.9% | $0.83 | +18.1% | 136K | 18.9M | 0.0x | n/a | Data Processing Services |
+| SRTM | [TV](https://www.tradingview.com/chart/?symbol=SRTM) | $0.64 | +0.0% | +7.0% | $0.68 | +7.0% | 135K | 0 | 0.0x | 491K | Real Estate Development |
+| SNES | [TV](https://www.tradingview.com/chart/?symbol=SNES) | $0.70 | +8.2% | +5.4% | $0.74 | +14.1% | 126K | 6.2M | 0.0x | 5.2M | Chemicals: Agricultural |
+| SRFM | [TV](https://www.tradingview.com/chart/?symbol=SRFM) | $0.85 | -3.9% | +6.4% | $0.90 | +2.2% | 102K | 3.9M | 0.0x | 106.5M | Airlines |
+| ATOM | [TV](https://www.tradingview.com/chart/?symbol=ATOM) | $3.06 | -0.6% | +7.2% | $3.28 | +6.5% | 72K | 514K | 0.1x | 36.9M | Miscellaneous Commercial Services |
+| REFR | [TV](https://www.tradingview.com/chart/?symbol=REFR) | $0.52 | -7.1% | +17.2% | $0.61 | +8.9% | 2K | 156K | 0.0x | 27.2M | Home Furnishings |
+
+Supplementary AH-change-only (>15%, not in volume pass): REFR
+
+AH >10% at this snapshot (unrounded): NCPL, PLAG, REFR
+
+**Instrumentation (log-only):**
+
+```
+NCPL 2026-10-19  SPIKE  16:27ET  +15%  $1.88  100 trades / 19k sh  (first co-spike bar) (as-of 18:00ET)
+NCPL 2026-10-19  CONFIRM-3  NO ignition 16:25ET failed third-bar hold/volume as-of 18:00ET
+# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-16 48+0zero/48 slots; floor 100; same-date regular peak 280740 sh; log-only
+# reconstructed as-of 2026-10-19T22:00:10+00:00; source fetched 2026-10-19T22:00:41.979491+00:00
+NCPL 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=179387 local=unknown prior-peak=0.8873x rth-peak=0.6390x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=28256 local=unknown prior-peak=0.1398x rth-peak=0.1006x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:10ET start=2026-10-19T20:10:00+00:00 shares=9625 local=unknown prior-peak=0.0476x rth-peak=0.0343x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:15ET start=2026-10-19T20:15:00+00:00 shares=16295 local=0.5767x prior-peak=0.0806x rth-peak=0.0580x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:20ET start=2026-10-19T20:20:00+00:00 shares=10262 local=0.6298x prior-peak=0.0508x rth-peak=0.0366x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:25ET start=2026-10-19T20:25:00+00:00 shares=130531 local=12.7198x prior-peak=0.6456x rth-peak=0.4650x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=62181 local=3.8160x prior-peak=0.3076x rth-peak=0.2215x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:35ET start=2026-10-19T20:35:00+00:00 shares=55012 local=0.8847x prior-peak=0.2721x rth-peak=0.1960x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:40ET start=2026-10-19T20:40:00+00:00 shares=79193 local=1.2736x prior-peak=0.3917x rth-peak=0.2821x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:45ET start=2026-10-19T20:45:00+00:00 shares=200529 local=3.2249x prior-peak=0.9919x rth-peak=0.7143x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:50ET start=2026-10-19T20:50:00+00:00 shares=58541 local=0.7392x prior-peak=0.2896x rth-peak=0.2085x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:55ET start=2026-10-19T20:55:00+00:00 shares=47330 local=0.5977x prior-peak=0.2341x rth-peak=0.1686x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:00ET start=2026-10-19T21:00:00+00:00 shares=24825 local=0.4241x prior-peak=0.1228x rth-peak=0.0884x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:05ET start=2026-10-19T21:05:00+00:00 shares=46164 local=0.9754x prior-peak=0.2283x rth-peak=0.1644x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:10ET start=2026-10-19T21:10:00+00:00 shares=33575 local=0.7273x prior-peak=0.1661x rth-peak=0.1196x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:15ET start=2026-10-19T21:15:00+00:00 shares=53776 local=1.6017x prior-peak=0.2660x rth-peak=0.1916x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:20ET start=2026-10-19T21:20:00+00:00 shares=70476 local=1.5266x prior-peak=0.3486x rth-peak=0.2510x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:25ET start=2026-10-19T21:25:00+00:00 shares=124481 local=2.3148x prior-peak=0.6157x rth-peak=0.4434x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:30ET start=2026-10-19T21:30:00+00:00 shares=55709 local=0.7905x prior-peak=0.2755x rth-peak=0.1984x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:35ET start=2026-10-19T21:35:00+00:00 shares=19447 local=0.2759x prior-peak=0.0962x rth-peak=0.0693x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:40ET start=2026-10-19T21:40:00+00:00 shares=13081 local=0.2348x prior-peak=0.0647x rth-peak=0.0466x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:45ET start=2026-10-19T21:45:00+00:00 shares=7487 local=0.3850x prior-peak=0.0370x rth-peak=0.0267x status=ok
+NCPL 2026-10-19 fill 1800 ET: max rth-peak 0.71x [<2x] at 16:45 ET (200,529 sh vs regular-session peak 280,740 sh), last bar 17:45 ET; source log/2026-10-19/NCPL-1800-volume-metric.json
+
+REFR 2026-10-19  NO-SPIKE  peak +17% @17:39ET  (no bar cleared +15% on a volume co-spike) (as-of 18:00ET)
+REFR 2026-10-19  CONFIRM-3  NO no local-volume new-high ignition as-of 18:00ET
+# REFR shared SIP volume sip-ah-volume-v2; prior 2026-10-16 4+44zero/48 slots; floor 100; same-date regular peak 30946 sh; log-only
+# reconstructed as-of 2026-10-19T22:00:10+00:00; source fetched 2026-10-19T22:00:44.312530+00:00
+REFR 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=1217 local=unknown prior-peak=2.1055x rth-peak=0.0393x status=warmup
+REFR 2026-10-19  VOLUME-CONTEXT 17:35ET start=2026-10-19T21:35:00+00:00 shares=890 local=8.9000x prior-peak=1.5398x rth-peak=0.0288x status=floored
+REFR 2026-10-19  VOLUME-CONTEXT 17:45ET start=2026-10-19T21:45:00+00:00 shares=769 local=7.6900x prior-peak=1.3304x rth-peak=0.0248x status=floored
+REFR 2026-10-19 fill 1800 ET: max rth-peak 0.04x [<2x] at 16:00 ET (1,217 sh vs regular-session peak 30,946 sh), last bar 17:45 ET; source log/2026-10-19/REFR-1800-volume-metric.json
+
+NCPL BOOK iex bid $1.96 x100 / ask $1.98 x100 @ 2026-10-19 16:59:56 ET age 1h00m two-sided spread 1.01% of ask
+NCPL BOOK sip-15m bid $1.96 x1200 / ask $1.97 x200 @ 2026-10-19 17:45:43 ET age 15m03s two-sided spread 0.51% of ask
+NCPL BOOK refresh +15s iex unchanged @ 2026-10-19 16:59:56 ET
+NCPL BOOK verdict: IEX STALE 1h00m; SIP-15m TWO-SIDED (observed 2026-10-19 18:00:46 ET; log-only)
+
+PLAG 2026-10-19  SPIKE  16:38ET  +19%  $0.62  407 trades / 142k sh  (first co-spike bar) (as-of 18:00ET)
+PLAG 2026-10-19  CONFIRM-3  NO ignition 16:35ET failed third-bar hold/volume as-of 18:00ET
+PLAG untradable (carried): no shared SIP volume metric
+```
+
+SIP cross-check (`ah-crosscheck.js`, latest completed bar 17:45 ET):
+
+```
+SYM     close    lastAH  at      AHhigh   AH%    hi%    AHvol      last4vol   trades4
+NCPL    1.63     1.9699    21:45Z  2.085      20.9   27.9    1326163      95724       605
+PLAG    0.52     0.591     21:45Z  0.6697     13.7   28.8    4614909     504483      1616
+REFR    0.5205   0.4887    21:45Z  0.61       -6.1   17.2       2876       2876         5
+WORX    2.68     2.9109    21:45Z  3.26        8.6   21.6    7871797     432809      3737
+FUFU    1.19     1.27      21:45Z  1.33        6.7   11.8     513922      45807       296
+```
+
+Volume artifacts: `NCPL-1800`, `REFR-1800` (`-volume-sip.json` and `-volume-metric.json`) in this directory.
+
+**Evaluation notes:**
+- Appearance count (>10% AH): NCPL #6, WORX #3 (now +8.6%), PLAG #2 (untradable, carried), REFR #1, FUFU #1 (now +9.2%). No fills this scan.
+- **NCPL** (float 2.1M, Day −24.9%): SIP $1.97 at 17:45 ET, 5% under the $2.085 high, Total% −9.7% still below the prior close. Skip: dead-cat (no reclaim of the regular close, so no DEAD-CAT-OVERRIDE WATCH). Volume fading to 7–20K sh per bar since 17:35 ET. **VOLUME-GATE-SKIP NCPL ratio 0.71x** — would have paid ~$1.97 (SIP-15m ask).
+- **REFR** (Research Frontiers, float 27.2M, Home Furnishings, Day −7.1%, `tradable=true`): first >10% AH appearance, from the change-only pass. SIP shows 2,876 AH shares on 5 trades and a last AH print $0.49 (−6.1% vs close); the scanner's $0.61 matches a single 17:35–17:40 ET print. Skip: thin / bad print (no accumulating volume). Live IEX quote is one-sided wide ($0.43 / $0.70, 16:00 ET). Catalyst: Grade C — Oct 19 GlobeNewswire PR outlining licensee Gauzy's $7M equity financing (released during the regular session, ~10:00 ET; 2 searches). Max `rth-peak` 0.04x, would also fail the volume gate.
+- **PLAG**: SIP $0.59 (+13.7%) at 17:45 ET, high $0.67 at 16:35 ET; untradable (carried), dead-cat (Day −20.7%).
+- **WORX** (+8.6%, SIP $2.91) and **FUFU** (+9.2%, SIP $1.27) slipped under 10% AH; both fading from their 16:25 and 16:53 ET highs.
+- SBNYL, ISPC, MASK, ZTG, SRTM, SNES, SRFM, ATOM are under the 10% AH threshold.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
