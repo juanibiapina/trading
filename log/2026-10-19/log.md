@@ -274,6 +274,115 @@ Volume artifacts: `POLA-1630`, `ISPC-1630`, `AURE-1630` (`-volume-sip.json` and 
 - **ISPC** (float 2.5M, Grade None after 2 searches): 16:15 bar 95K sh, back to $0.99 close, below the $1.10 open high (open high retested at 16:10, not exceeded). CONFIRM-3 NO. `rth-peak` now 9.2x on the latest bar; max 18.8x is from the open bar. Same FIRST-BAR-SPIKE pattern; fading toward $1.00.
 - **AURE**: no AH trades since the 16:00 bar (1,344 sh total). Skip: thin print.
 
+## Scan 22:45 CET (4:45 PM ET)
+
+Scanner snapshot at 16:45:15 ET, 6 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| POLA | [TV](https://www.tradingview.com/chart/?symbol=POLA) | $0.89 | +6.4% | +12.4% | $1.00 | +19.6% | 9.3M | 1.1M | 8.4x | 3.0M | Electronic Equipment/Instruments |
+| WORX | [TV](https://www.tradingview.com/chart/?symbol=WORX) | $2.68 | +94.2% | +16.4% | $3.12 | +126.1% | 3.0M | 13.3M | 0.2x | 545K | Packaged Software |
+| BURU | [TV](https://www.tradingview.com/chart/?symbol=BURU) | $0.55 | -6.1% | +23.2% | $0.68 | +15.7% | 624K | 5.0M | 0.1x | 8.4M | Electronic Components |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.63 | -24.9% | +11.7% | $1.82 | -16.1% | 353K | 19.0M | 0.0x | 2.1M | Miscellaneous Commercial Services |
+| ENGN | [TV](https://www.tradingview.com/chart/?symbol=ENGN) | $1.58 | -5.4% | +6.3% | $1.68 | +0.6% | 128K | 833K | 0.2x | 28.4M | Miscellaneous Commercial Services |
+| AURE | [TV](https://www.tradingview.com/chart/?symbol=AURE) | $0.85 | -12.8% | +15.8% | $0.99 | +0.9% | 1K | 35K | 0.0x | 10.9M | Information Technology Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): AURE
+
+AH >10% at this snapshot (unrounded): AURE, BURU, NCPL, POLA, WORX
+
+**Instrumentation (log-only):**
+
+```
+POLA 2026-10-19  SPIKE  16:01ET  +21%  $1.08  1321 trades / 280k sh  (first co-spike bar) (as-of 16:45ET)
+POLA 2026-10-19  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET
+# POLA shared SIP volume sip-ah-volume-v2; prior 2026-10-16 0+48zero/48 slots; floor 100; same-date regular peak 26228 sh; log-only
+# reconstructed as-of 2026-10-19T20:45:15+00:00; source fetched 2026-10-19T20:45:44.383538+00:00
+POLA 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=1550740 local=unknown prior-peak=15507.4000x rth-peak=59.1254x status=warmup
+POLA 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=2833272 local=unknown prior-peak=28332.7200x rth-peak=108.0247x status=warmup
+POLA 2026-10-19  VOLUME-CONTEXT 16:10ET start=2026-10-19T20:10:00+00:00 shares=1789150 local=unknown prior-peak=17891.5000x rth-peak=68.2153x status=warmup
+POLA 2026-10-19  VOLUME-CONTEXT 16:15ET start=2026-10-19T20:15:00+00:00 shares=1377890 local=0.7701x prior-peak=13778.9000x rth-peak=52.5351x status=ok
+POLA 2026-10-19  VOLUME-CONTEXT 16:20ET start=2026-10-19T20:20:00+00:00 shares=1545332 local=0.8637x prior-peak=15453.3200x rth-peak=58.9192x status=ok
+POLA 2026-10-19  VOLUME-CONTEXT 16:25ET start=2026-10-19T20:25:00+00:00 shares=1024270 local=0.6628x prior-peak=10242.7000x rth-peak=39.0525x status=ok
+POLA 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=1081641 local=0.7850x prior-peak=10816.4100x rth-peak=41.2399x status=ok
+POLA BOOK iex bid $1.00 x100 / ask $1.02 x100 @ 2026-10-19 16:29:43 ET age 16m19s two-sided spread 1.96% of ask
+POLA BOOK sip-15m bid $0.9801 x100 / ask $0.9848 x100 @ 2026-10-19 16:31:02 ET age 15m00s two-sided spread 0.48% of ask
+POLA BOOK refresh +15s iex unchanged @ 2026-10-19 16:29:43 ET
+POLA BOOK verdict: IEX STALE 16m19s; SIP-15m TWO-SIDED (observed 2026-10-19 16:46:02 ET; log-only)
+
+WORX 2026-10-19  SPIKE  16:23ET  +19%  $3.18  3514 trades / 522k sh  (first co-spike bar) (as-of 16:45ET)
+WORX 2026-10-19  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 16:45ET
+# WORX shared SIP volume sip-ah-volume-v2; prior 2026-10-16 42+6zero/48 slots; floor 100; same-date regular peak 5949201 sh; log-only
+# reconstructed as-of 2026-10-19T20:45:15+00:00; source fetched 2026-10-19T20:45:46.745679+00:00
+WORX 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=397057 local=unknown prior-peak=19.7678x rth-peak=0.0667x status=warmup
+WORX 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=188980 local=unknown prior-peak=9.4085x rth-peak=0.0318x status=warmup
+WORX 2026-10-19  VOLUME-CONTEXT 16:10ET start=2026-10-19T20:10:00+00:00 shares=193862 local=unknown prior-peak=9.6516x rth-peak=0.0326x status=warmup
+WORX 2026-10-19  VOLUME-CONTEXT 16:15ET start=2026-10-19T20:15:00+00:00 shares=308191 local=1.5897x prior-peak=15.3436x rth-peak=0.0518x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:20ET start=2026-10-19T20:20:00+00:00 shares=1320445 local=6.8113x prior-peak=65.7396x rth-peak=0.2220x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:25ET start=2026-10-19T20:25:00+00:00 shares=1057797 local=3.4323x prior-peak=52.6634x rth-peak=0.1778x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=717674 local=0.6785x prior-peak=35.7301x rth-peak=0.1206x status=ok
+WORX BOOK iex bid $3.00 x100 / ask $3.03 x100 @ 2026-10-19 16:46:02 ET age 0s two-sided spread 0.99% of ask
+WORX BOOK sip-15m bid $3.03 x3500 / ask $3.04 x3700 @ 2026-10-19 16:31:02 ET age 15m00s two-sided spread 0.33% of ask
+WORX BOOK refresh +15s iex advanced @ 2026-10-19 16:46:17 ET
+WORX BOOK verdict: IEX FRESH; SIP-15m TWO-SIDED (observed 2026-10-19 16:46:02 ET; log-only)
+
+BURU 2026-10-19  SPIKE  16:28ET  +24%  $0.68  222 trades / 97k sh  (first co-spike bar) (as-of 16:45ET)
+BURU 2026-10-19  CONFIRM-3  PENDING ignition 16:25ET; waiting for third bar as-of 16:45ET
+# BURU shared SIP volume sip-ah-volume-v2; prior 2026-10-16 40+8zero/48 slots; floor 100; same-date regular peak 149722 sh; log-only
+# reconstructed as-of 2026-10-19T20:45:15+00:00; source fetched 2026-10-19T20:45:49.241722+00:00
+BURU 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=20811 local=unknown prior-peak=0.7419x rth-peak=0.1390x status=warmup
+BURU 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=14134 local=unknown prior-peak=0.5039x rth-peak=0.0944x status=warmup
+BURU 2026-10-19  VOLUME-CONTEXT 16:10ET start=2026-10-19T20:10:00+00:00 shares=4017 local=unknown prior-peak=0.1432x rth-peak=0.0268x status=warmup
+BURU 2026-10-19  VOLUME-CONTEXT 16:15ET start=2026-10-19T20:15:00+00:00 shares=4444 local=0.3144x prior-peak=0.1584x rth-peak=0.0297x status=ok
+BURU 2026-10-19  VOLUME-CONTEXT 16:20ET start=2026-10-19T20:20:00+00:00 shares=3558 local=0.8006x prior-peak=0.1268x rth-peak=0.0238x status=ok
+BURU 2026-10-19  VOLUME-CONTEXT 16:25ET start=2026-10-19T20:25:00+00:00 shares=592997 local=147.6219x prior-peak=21.1407x rth-peak=3.9607x status=ok
+BURU 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=845345 local=190.2216x prior-peak=30.1371x rth-peak=5.6461x status=ok
+BURU BOOK iex bid $0.4781 x100 / ask $0.6384 x100 @ 2026-10-19 16:00:00 ET age 46m02s two-sided spread 25.11% of ask
+BURU BOOK sip-15m stale snapshot @ 2026-07-17 11:28:27 ET age 2261h17m (older than 45m00s; replaced by sip-hist)
+BURU BOOK sip-hist bid $0.6657 x800 / ask $0.6840 x800 @ 2026-10-19 16:30:02 ET age 16m00s two-sided spread 2.68% of ask
+BURU BOOK refresh +15s iex unchanged @ 2026-10-19 16:00:00 ET
+BURU BOOK verdict: IEX STALE 46m02s; SIP-15m STALE 2261h17m -> SIP-hist TWO-SIDED (observed 2026-10-19 16:46:02 ET; log-only)
+
+NCPL 2026-10-19  SPIKE  16:27ET  +15%  $1.88  100 trades / 19k sh  (first co-spike bar) (as-of 16:45ET)
+NCPL 2026-10-19  CONFIRM-3  PENDING ignition 16:25ET; waiting for third bar as-of 16:45ET
+# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-16 48+0zero/48 slots; floor 100; same-date regular peak 280740 sh; log-only
+# reconstructed as-of 2026-10-19T20:45:15+00:00; source fetched 2026-10-19T20:45:51.561508+00:00
+NCPL 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=179387 local=unknown prior-peak=0.8873x rth-peak=0.6390x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=28256 local=unknown prior-peak=0.1398x rth-peak=0.1006x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:10ET start=2026-10-19T20:10:00+00:00 shares=9625 local=unknown prior-peak=0.0476x rth-peak=0.0343x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:15ET start=2026-10-19T20:15:00+00:00 shares=16295 local=0.5767x prior-peak=0.0806x rth-peak=0.0580x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:20ET start=2026-10-19T20:20:00+00:00 shares=10262 local=0.6298x prior-peak=0.0508x rth-peak=0.0366x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:25ET start=2026-10-19T20:25:00+00:00 shares=130531 local=12.7198x prior-peak=0.6456x rth-peak=0.4650x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=62181 local=3.8160x prior-peak=0.3076x rth-peak=0.2215x status=ok
+
+AURE 2026-10-19  NO-SPIKE  peak +18% @16:00ET  (no bar cleared +15% on a volume co-spike) (as-of 16:45ET)
+AURE 2026-10-19  CONFIRM-3  NO no local-volume new-high ignition as-of 16:45ET
+# AURE shared SIP volume sip-ah-volume-v2; prior 2026-10-16 1+47zero/48 slots; floor 100; same-date regular peak 4157 sh; log-only
+# reconstructed as-of 2026-10-19T20:45:15+00:00; source fetched 2026-10-19T20:45:54.084587+00:00
+AURE 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=1344 local=unknown prior-peak=13.4400x rth-peak=0.3233x status=warmup
+AURE 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=480 local=4.8000x prior-peak=4.8000x rth-peak=0.1155x status=floored
+```
+
+SIP cross-check (`ah-crosscheck.js`, latest completed bar 16:30 ET):
+
+```
+SYM     close    lastAH  at      AHhigh   AH%    hi%    AHvol      last4vol   trades4
+POLA    0.889    0.9269    20:30Z  1.19        4.3   33.9   11202295    5029133     21245
+WORX    2.68     2.91      20:30Z  3.26        8.6   21.6    4184006    3404107     26128
+BURU    0.5541   0.5539    20:30Z  0.6942     -0.0   25.3    1485306    1446344      3367
+ISPC    0.9101   0.9312    20:30Z  1.1         2.3   20.9     627786     156474       705
+```
+
+Volume artifacts: `POLA-1645`, `WORX-1645`, `BURU-1645`, `NCPL-1645`, `AURE-1645` (`-volume-sip.json` and `-volume-metric.json`) in this directory. WORX and BURU checked `tradable=true` this scan; the others carry `tradable=true` from 22:20. No 22:35 or 22:40 sections exist in this log.
+
+**Evaluation notes:**
+- Observation only (entry window opens 23:00 CET). Appearance count: POLA #4, AURE #4, NCPL #3 (back above 10% after dropping out at 22:30), WORX #1, BURU #1. ISPC fell out of the scan (SIP +2.3% at 16:30 ET) and ENGN is +6.3%, below threshold.
+- **POLA** (float 3.0M, Grade C restructuring PR, GlobeNewswire 2026-10-19 ~16:00 ET): fading. SIP last $0.93 at 16:30 ET (+4.3%), 22% below the $1.19 high from the 16:05 open-window bar; the scanner's $1.00 lags SIP. Volume still large (1.08M sh, 41x `rth-peak`) but CONFIRM-3 NO across five scans. FIRST-BAR-SPIKE pattern plus a >20% drop from the high: skip at 23:00 unless SIP shows a volume-backed new high after 16:15 ET.
+- **WORX** (float 545K, Packaged Software, Day +94.2%): second leg of a big regular-session move. AH ignition 16:20 ET to a $3.26 high at 16:25 ET (1.32M and 1.06M sh, ~9K trades per bar), then 16:30 bar faded to $2.91 on 718K sh; CONFIRM-3 NO (failed third-bar hold). Live IEX book $3.00 / $3.03, back near the scanner price. Catalyst: GlobeNewswire 2026-10-19 10:10 AM ET, "SCWorx Announces New Agreement with Healthcare System" (new customer) → **Grade B** (contract win; drove the regular session, AH is continuation). Total% +126% is under the +150% ceiling. `rth-peak` max 0.22x (regular-session peak bar was 5.95M sh), so it fails the 10x volume gate as of now. SIP daily bars: Oct 14 $2.14, Oct 15 $2.01, Oct 16 $1.38 (range $1.07–$3.77 on 8.7M sh), today $2.68 on 115M sh. No prior session closed ≥+50% and today's close is 1.25x the close 3 sessions back, so it is not tagged MULTI-SESSION-RUNNER, though Oct 16 had an intraday spike to $3.77. Not in `WINNERS_TRACKING.md`.
+- **BURU** (float 8.4M, Electronic Components, Day −6.1%): spike and immediate fade. SIP 16:25 bar ran $0.57 → $0.69 on 593K sh / 1,249 trades, then 16:30 bar fell back to $0.55 (845K sh, vwap $0.59), flat to the close; the scanner's $0.68 lags. `rth-peak` max 5.6x, under the 10x gate. Catalyst: 2026-10-19 morning chairman letter on the completed Tekne acquisition and the Oct 15 S-3 (Grade C, minor PR); a NYSE American disclosure warning letter was announced ~16:30 ET (negative). Skip pending: SPIKE→FADE back to the close.
+- **NCPL** (Day −24.9%): dead-cat bounce, Total% −16.1% below its regular close; small 16:25 bounce on 131K sh (0.47x `rth-peak`). Skip: dead-cat.
+- **AURE**: 1,824 sh total in AH. Skip: thin print.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
