@@ -32,6 +32,17 @@ Scanner returned 25 hits; the table keeps the 17 with Day% >+10%. Omitted: ~$10 
 - Prior footprint: WORX and VAI appeared Oct 8; YMAT Oct 12; XLAB Oct 15 (+30.9% that day, so a repeat runner); TCRT appeared Oct 13–16 and was a past fill (TCRT 3.96x `rth-peak` at entry). Check SIP daily bars for MULTI-SESSION-RUNNER on any of these that qualifies in AH.
 - Float above the 50M entry condition: AIBZ (55.6M). WORX has a 545K float and $759K market cap, up +105% on the day.
 
+## Scan 22:00 CET (4:00 PM ET)
+
+No candidates found. Scanner snapshot at 16:00:10 ET returned 0 hits; at AH open the snapshot has no AH prints yet.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- Observation only (entry window opens 23:00 CET). No AH candidates, so no spike-bar, CONFIRM-3, volume metric or catalyst checks ran. The 21:30 watch list carries to the next scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
