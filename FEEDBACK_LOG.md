@@ -6,6 +6,14 @@ scanner/process tweak, or is logged for review.
 
 ---
 
+### 2026-10-19 — re: Trading Scanner Report - 2026-10-15
+
+**Juan said:** “XXII entry way too late” and “TCRT again not enough volume spike.” (Gmail message 1a1442478f25215e, received 2026-10-16 09:56 UTC.)
+
+**Interpretation:** TCRT was entered at 23:00 CEST with a 3.96x `rth-peak` ratio. The ≥10x gate applied from his Oct 15 reply went live with the Oct 16 AH session and would have skipped it, so that point is already handled. XXII had a real spike: the Pinnacle VLN PR printed at 16:30 ET, and SIP bars show $0.81 (+29%) on 297K and 444K shares at 16:30 and 16:35 ET (24.8x and 37.0x the same day's regular-session peak). Two separate delays followed. First, the TradingView scanner left XXII out of the 22:30, 22:45 and 23:00 CEST tables and first listed it at 23:30 CEST (17:30 ET, $0.75), about an hour after the spike. Second, the rule that requires >10% AH in two scans pushed the fill to 00:07 CEST (18:07 ET) at $1.18, when XXII was already +80.6% on the day and 12 minutes before its $1.30 AH high. The position sold at $0.881 (−25.3%). A 16:35 ET entry near $0.81 with a 04:30 ET exit near $0.88–1.00 would have been positive. Juan's complaint matches Initiative 1's July 16 co-spike idea: enter on the ignition bar.
+
+**Action:** No rule change in this pulse. Routed to Initiative 1 in `STRATEGY_ROADMAP.md` and to the next scanner-improvement run with two items. (1) Detection lag: find out why the TradingView screen omitted XXII from 16:30 to 17:30 ET while SIP showed the spike, and consider a SIP-based ignition sweep between scans. (2) Confirmation delay: test whether a ≥10x `rth-peak` spike bar can replace the second >10% AH scan as entry confirmation, and whether the pre-23:00 CET no-entry window can be lifted when that spike is present. Replay both on the archive and the Oct 12+ fills before going live, because this changes live entries. TCRT: no action; the gate covers it.
+
 ### 2026-10-16 — re: Trading Scanner Report - 2026-10-14
 
 **Juan said:** “two bad entries. volume did not spike. FIX THIS.” and, below it, “YYAI good entry, late exit.” (Gmail message 1a13f0b41fe27a3f, received 2026-10-15 10:11 UTC.)

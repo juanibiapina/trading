@@ -809,6 +809,18 @@ AEHL, AGMH, YYAI, XXII (Oct 15). The morning evaluation now tracks skipped
 names' hypothetical 04:30 outcomes to measure the gate's cost. Takes effect
 with the Oct 16 AH session. See FEEDBACK_LOG 2026-10-16.
 
+**Juan feedback 2026-10-16 (XXII/TCRT, routed 2026-10-19): "XXII entry way
+too late" + "TCRT again not enough volume spike."** TCRT (3.96x) is already
+covered by the ≥10x gate. XXII spiked at 16:30–16:35 ET ($0.81, 444K sh,
+37x `rth-peak`), but the TradingView screen first listed it at 17:30 ET
+($0.75), and the two-AH-scan rule delayed the fill to 18:07 ET at $1.18
+(+80.6% on the day; sold $0.881, −25.3%). Next scanner-improvement run:
+(1) diagnose the one-hour TradingView omission and consider a SIP ignition
+sweep between scans; (2) replay a rule where a ≥10x spike bar replaces the
+second-scan confirmation (and the pre-23:00 CET no-entry window) on the
+archive and the Oct 12+ fills. This is the July 16 co-spike entry; a live
+change goes to Juan first. See FEEDBACK_LOG 2026-10-19.
+
 **Reopened angle (Juan, 2026-07-16 email feedback):** the volume *lead* is dead,
 but Juan proposes the *first volume spike bar* as the entry trigger ("that would
 be a great entry point") and no-spike as a negative filter ("LVLU is clearly
