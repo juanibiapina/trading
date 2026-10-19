@@ -1,0 +1,33 @@
+{
+  "frozen_utc": "2026-10-19T16:10:00Z",
+  "frozen_before": "any regular-session (09:30-16:00 ET) bar or any quote at an ignition-bar time was fetched for 2024-10-01 to 2025-09-30. Already cached and seen: the 16:00-18:29 ET 5-minute AH bars, daily bars, and the 17:00+ scan-time and 04:30 quotes of the 872 short-fade events (log/2026-10-16/init7-short-fade). The only pre-freeze look at the AH cache was a count: 4,309 symbol-days print an AH bar above +10%.",
+  "purpose": "Test Juan's October 19 XXII request: enter on the volume ignition bar (about 16:30-16:45 ET) instead of at the 17:00+ scans after a second >10% scan. This is the last untested part of the live long entry.",
+  "origin": "On the same prior year, buying the 872 scan-time events at the ask lost -3.47% [-5.58, -0.95] at the 04:30 bid (Initiative 3 take-profit census). XXII Oct 15: SIP spike at 16:30-16:35 ET ($0.81, 24.8x/37.0x rth-peak), live fill 18:07 ET at $1.18, sold -25.3%.",
+  "window": "D from 2024-10-01 to 2025-09-30, full 16:00 closes only",
+  "universe": "per D: the symbols in log/2026-10-16/init7-short-fade/ah/D.json.gz 'fetched' (raw regular close $0.50-$10), excluding the point-in-time top 1000 by trailing three-month SIP dollar volume (lc.rankings on log/2026-10-14/init7-liquid-fade-oos/census/monthly.json.gz, as in the October 15 censuses), and requiring the D close / D-1 close - 1 > -15%",
+  "rth_peak": "largest 'v' among raw SIP 5-minute bars starting 09:30-15:55 ET on D; a symbol-day with no such bar is excluded and counted",
+  "ignition_bar": "the first raw SIP 5-minute bar starting 16:00-18:25 ET on D with v >= 10 x rth_peak AND close / D close - 1 > 10% AND <= 150%, AND cumulative AH shares from 16:00 through that bar >= 100,000 AND cumulative AH dollars (v x vw) >= $100,000. One event per symbol-day.",
+  "entry": "buy at the ask of the latest SIP quote at or before bar start + 6 minutes (bar end + 1 minute of detection latency) with timestamp >= bar start; requires bid > 0 and ask > bid, else excluded and counted",
+  "exits": {
+    "exit_0430": "sell at the bid of the latest SIP quote in 04:00-04:30 ET on D+1; if none is valid, D+1 official raw open x (1 - 50 bps), counted as fallback",
+    "exit_open": "sell at D+1 official raw open x (1 - 50 bps)"
+  },
+  "unit": "net return per trade = exit / entry - 1; equal weight; splits between D and D+1 (raw/split close ratio change > 1%) dropped and counted",
+  "cells": {
+    "subsets": {
+      "all": "every scored event",
+      "early": "ignition bar starts 16:00-16:40 ET (Juan's 16:30-16:45 ET entry window and earlier)"
+    },
+    "exits": ["exit_0430", "exit_open"],
+    "count": 4
+  },
+  "statistics": {
+    "interval": "lc.summary: bootstrap over event dates, 4000 draws, seed 13, two-sided tail 0.025/4 (Bonferroni over 4 cells)",
+    "pass": "mean > 0 AND interval lower bound > 0 AND both chronological halves (split at the median event date) > 0, at base cost; also report a stress case (-100 bps per trade) and gross mid-to-mid returns"
+  },
+  "descriptive_only": "paired comparison on symbol-days that are also in the 872 short-fade events (ignition entry vs scan-time ask entry, both to the 04:30 bid); results by ignition time bucket (16:00-16:25, 16:30-16:40, 16:45-17:25, 17:30-18:25), by ignition-bar ratio (10-30x, 30-100x, >100x), by move at the ignition bar (10-25%, 25-50%, 50-150%), by ETB flag; entry spread quartiles; events per month. None can rescue a failed pass.",
+  "hypothesis": "fails in all four cells: the ignition entry loses less than the scan entry on paired events but stays negative, because the overnight fade (+4.7% mid to mid by the open on the scan events) is larger than the extra move caught.",
+  "decision_if_pass": "the passing cell becomes the live entry-timing candidate: build a log-only SIP ignition sweep between scans first, then switch the live entry from the second >10% scan to the ignition bar under the standing rule-change directive (reported for Juan's veto); no pulse timing change without Juan's veto window.",
+  "decision_if_fail": "no tested entry timing gives the long AH->PM micro-cap trade an edge; the stop-or-replace ask to Juan stands with that added, and scanner-improvement's ignition-confirmation item is closed as unsupported.",
+  "limits": "Alpaca SIP 5-minute bars stand in for the live TradingView screen; the live detection lag (XXII listed an hour late) is not modelled beyond 1 minute; quoted size ignored; ETB is today's flag; survivorship limited to assets Alpaca still lists; no catalyst grading."
+}
