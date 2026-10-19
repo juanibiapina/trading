@@ -65,6 +65,17 @@ AH >10% at this snapshot (unrounded): none
 **Evaluation notes:**
 - Observation only (entry window opens 23:00 CET). No AH candidates, so no spike-bar, CONFIRM-3, volume metric or catalyst checks ran. The 21:30 watch list carries to the next scan.
 
+## Scan 22:15 CET (4:15 PM ET)
+
+No candidates found. Scanner snapshot at 16:15:16 ET returned 0 hits.
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): none
+
+**Evaluation notes:**
+- Observation only (entry window opens 23:00 CET). No AH candidates, so no spike-bar, CONFIRM-3, volume metric or catalyst checks ran. The 21:30 watch list carries to the next scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
