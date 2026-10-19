@@ -671,6 +671,166 @@ Volume artifacts: `NCPL-1800`, `REFR-1800` (`-volume-sip.json` and `-volume-metr
 - **WORX** (+8.6%, SIP $2.91) and **FUFU** (+9.2%, SIP $1.27) slipped under 10% AH; both fading from their 16:25 and 16:53 ET highs.
 - SBNYL, ISPC, MASK, ZTG, SRTM, SNES, SRFM, ATOM are under the 10% AH threshold.
 
+## Scan 00:30 CET (6:30 PM ET)
+
+Scanner snapshot at 18:30:11 ET, 7 hits. Final scheduled scan.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WORX | [TV](https://www.tradingview.com/chart/?symbol=WORX) | $2.68 | +94.2% | +14.6% | $3.07 | +122.5% | 7.1M | 13.8M | 0.5x | 545K | Packaged Software |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.63 | -24.9% | +20.9% | $1.97 | -9.2% | 1.3M | 19.1M | 0.1x | 2.1M | Miscellaneous Commercial Services |
+| SBNYL | [TV](https://www.tradingview.com/chart/?symbol=SBNYL) | $1.05 | -1.9% | +9.5% | $1.15 | +7.5% | 1.3M | 170K | 7.7x | 59.6M | Regional Banks |
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $0.91 | -0.8% | +6.9% | $0.97 | +6.1% | 695K | 142K | 4.9x | 2.5M | Miscellaneous Commercial Services |
+| SAIQ | [TV](https://www.tradingview.com/chart/?symbol=SAIQ) | $3.41 | +7.9% | +34.6% | $4.59 | +45.3% | 611K | 3.1M | 0.2x | 4.5M | Financial Conglomerates |
+| FUFU | [TV](https://www.tradingview.com/chart/?symbol=FUFU) | $1.19 | +32.2% | +7.6% | $1.28 | +42.2% | 509K | 5.3M | 0.1x | 16.9M | Data Processing Services |
+| ENGN | [TV](https://www.tradingview.com/chart/?symbol=ENGN) | $1.58 | -5.4% | +6.3% | $1.68 | +0.6% | 128K | 833K | 0.2x | 28.4M | Miscellaneous Commercial Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): NCPL, SAIQ, WORX
+
+**Instrumentation (log-only):**
+
+```
+SAIQ 2026-10-19  SPIKE  17:48ET  +16%  $3.94  112 trades / 14k sh  (first co-spike bar) (as-of 18:30ET)
+SAIQ 2026-10-19  CONFIRM-3  YES ignition 17:45ET 7.3x; confirmed 17:55ET $4.16 as-of 18:30ET
+# SAIQ shared SIP volume sip-ah-volume-v2; prior 2026-10-16 27+21zero/48 slots; floor 100; same-date regular peak 14661 sh; log-only
+# reconstructed as-of 2026-10-19T22:30:11+00:00; source fetched 2026-10-19T22:30:43.835584+00:00
+SAIQ 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=4068 local=unknown prior-peak=0.4464x rth-peak=0.2775x status=warmup
+SAIQ 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=207 local=unknown prior-peak=0.0227x rth-peak=0.0141x status=warmup
+SAIQ 2026-10-19  VOLUME-CONTEXT 16:15ET start=2026-10-19T20:15:00+00:00 shares=267 local=1.2899x prior-peak=0.0293x rth-peak=0.0182x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 16:20ET start=2026-10-19T20:20:00+00:00 shares=542 local=2.6184x prior-peak=0.0595x rth-peak=0.0370x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 16:25ET start=2026-10-19T20:25:00+00:00 shares=148 local=0.5543x prior-peak=0.0162x rth-peak=0.0101x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=446 local=1.6704x prior-peak=0.0489x rth-peak=0.0304x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 16:35ET start=2026-10-19T20:35:00+00:00 shares=839 local=1.8812x prior-peak=0.0921x rth-peak=0.0572x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 16:40ET start=2026-10-19T20:40:00+00:00 shares=590 local=1.3229x prior-peak=0.0647x rth-peak=0.0402x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 16:45ET start=2026-10-19T20:45:00+00:00 shares=292 local=0.4949x prior-peak=0.0320x rth-peak=0.0199x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 16:50ET start=2026-10-19T20:50:00+00:00 shares=1113 local=1.8864x prior-peak=0.1221x rth-peak=0.0759x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 16:55ET start=2026-10-19T20:55:00+00:00 shares=452 local=0.7661x prior-peak=0.0496x rth-peak=0.0308x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:00ET start=2026-10-19T21:00:00+00:00 shares=858 local=1.8982x prior-peak=0.0942x rth-peak=0.0585x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:05ET start=2026-10-19T21:05:00+00:00 shares=290 local=0.3380x prior-peak=0.0318x rth-peak=0.0198x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:10ET start=2026-10-19T21:10:00+00:00 shares=880 local=1.9469x prior-peak=0.0966x rth-peak=0.0600x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:15ET start=2026-10-19T21:15:00+00:00 shares=671 local=0.7821x prior-peak=0.0736x rth-peak=0.0458x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:20ET start=2026-10-19T21:20:00+00:00 shares=1409 local=2.0999x prior-peak=0.1546x rth-peak=0.0961x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:25ET start=2026-10-19T21:25:00+00:00 shares=1687 local=1.9170x prior-peak=0.1851x rth-peak=0.1151x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:30ET start=2026-10-19T21:30:00+00:00 shares=391 local=0.2775x prior-peak=0.0429x rth-peak=0.0267x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:35ET start=2026-10-19T21:35:00+00:00 shares=6981 local=4.9546x prior-peak=0.7661x rth-peak=0.4762x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:40ET start=2026-10-19T21:40:00+00:00 shares=2918 local=1.7297x prior-peak=0.3202x rth-peak=0.1990x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:45ET start=2026-10-19T21:45:00+00:00 shares=21300 local=7.2995x prior-peak=2.3376x rth-peak=1.4528x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:50ET start=2026-10-19T21:50:00+00:00 shares=19960 local=2.8592x prior-peak=2.1905x rth-peak=1.3614x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 17:55ET start=2026-10-19T21:55:00+00:00 shares=159890 local=8.0105x prior-peak=17.5472x rth-peak=10.9058x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 18:00ET start=2026-10-19T22:00:00+00:00 shares=228043 local=10.7062x prior-peak=25.0267x rth-peak=15.5544x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 18:05ET start=2026-10-19T22:05:00+00:00 shares=138307 local=0.8650x prior-peak=15.1786x rth-peak=9.4337x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 18:10ET start=2026-10-19T22:10:00+00:00 shares=284799 local=1.7812x prior-peak=31.2554x rth-peak=19.4256x status=ok
+SAIQ 2026-10-19  VOLUME-CONTEXT 18:15ET start=2026-10-19T22:15:00+00:00 shares=97571 local=0.4279x prior-peak=10.7080x rth-peak=6.6551x status=ok
+SAIQ 2026-10-19 fill 1830 ET: max rth-peak 19.43x [>=10x] at 18:10 ET (284,799 sh vs regular-session peak 14,661 sh), last bar 18:15 ET; source log/2026-10-19/SAIQ-1830-volume-metric.json
+
+WORX 2026-10-19  SPIKE  16:23ET  +19%  $3.18  3514 trades / 522k sh  (first co-spike bar) (as-of 18:30ET)
+WORX 2026-10-19  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 18:30ET
+# WORX shared SIP volume sip-ah-volume-v2; prior 2026-10-16 42+6zero/48 slots; floor 100; same-date regular peak 5949201 sh; log-only
+# reconstructed as-of 2026-10-19T22:30:11+00:00; source fetched 2026-10-19T22:30:46.192930+00:00
+WORX 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=397057 local=unknown prior-peak=19.7678x rth-peak=0.0667x status=warmup
+WORX 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=188980 local=unknown prior-peak=9.4085x rth-peak=0.0318x status=warmup
+WORX 2026-10-19  VOLUME-CONTEXT 16:10ET start=2026-10-19T20:10:00+00:00 shares=193862 local=unknown prior-peak=9.6516x rth-peak=0.0326x status=warmup
+WORX 2026-10-19  VOLUME-CONTEXT 16:15ET start=2026-10-19T20:15:00+00:00 shares=308191 local=1.5897x prior-peak=15.3436x rth-peak=0.0518x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:20ET start=2026-10-19T20:20:00+00:00 shares=1320445 local=6.8113x prior-peak=65.7396x rth-peak=0.2220x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:25ET start=2026-10-19T20:25:00+00:00 shares=1057797 local=3.4323x prior-peak=52.6634x rth-peak=0.1778x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=717674 local=0.6785x prior-peak=35.7301x rth-peak=0.1206x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:35ET start=2026-10-19T20:35:00+00:00 shares=834528 local=0.7889x prior-peak=41.5477x rth-peak=0.1403x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:40ET start=2026-10-19T20:40:00+00:00 shares=308042 local=0.3691x prior-peak=15.3362x rth-peak=0.0518x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:45ET start=2026-10-19T20:45:00+00:00 shares=551677 local=0.7687x prior-peak=27.4657x rth-peak=0.0927x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:50ET start=2026-10-19T20:50:00+00:00 shares=415231 local=0.7527x prior-peak=20.6727x rth-peak=0.0698x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:55ET start=2026-10-19T20:55:00+00:00 shares=221344 local=0.5331x prior-peak=11.0198x rth-peak=0.0372x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:00ET start=2026-10-19T21:00:00+00:00 shares=150117 local=0.3615x prior-peak=7.4737x rth-peak=0.0252x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:05ET start=2026-10-19T21:05:00+00:00 shares=257995 local=1.1656x prior-peak=12.8445x rth-peak=0.0434x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:10ET start=2026-10-19T21:10:00+00:00 shares=100532 local=0.4542x prior-peak=5.0051x rth-peak=0.0169x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:15ET start=2026-10-19T21:15:00+00:00 shares=114093 local=0.7600x prior-peak=5.6802x rth-peak=0.0192x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:20ET start=2026-10-19T21:20:00+00:00 shares=163299 local=1.4313x prior-peak=8.1300x rth-peak=0.0274x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:25ET start=2026-10-19T21:25:00+00:00 shares=138124 local=1.2106x prior-peak=6.8766x rth-peak=0.0232x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:30ET start=2026-10-19T21:30:00+00:00 shares=86836 local=0.6287x prior-peak=4.3232x rth-peak=0.0146x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:35ET start=2026-10-19T21:35:00+00:00 shares=75641 local=0.5476x prior-peak=3.7659x rth-peak=0.0127x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:40ET start=2026-10-19T21:40:00+00:00 shares=172356 local=1.9848x prior-peak=8.5809x rth-peak=0.0290x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:45ET start=2026-10-19T21:45:00+00:00 shares=97976 local=1.1283x prior-peak=4.8778x rth-peak=0.0165x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:50ET start=2026-10-19T21:50:00+00:00 shares=96661 local=0.9866x prior-peak=4.8124x rth-peak=0.0162x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:55ET start=2026-10-19T21:55:00+00:00 shares=71580 local=0.7306x prior-peak=3.5637x rth-peak=0.0120x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 18:00ET start=2026-10-19T22:00:00+00:00 shares=193899 local=2.0060x prior-peak=9.6534x rth-peak=0.0326x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 18:05ET start=2026-10-19T22:05:00+00:00 shares=83752 local=0.8665x prior-peak=4.1697x rth-peak=0.0141x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 18:10ET start=2026-10-19T22:10:00+00:00 shares=72376 local=0.8642x prior-peak=3.6033x rth-peak=0.0122x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 18:15ET start=2026-10-19T22:15:00+00:00 shares=205148 local=2.4495x prior-peak=10.2135x rth-peak=0.0345x status=ok
+WORX 2026-10-19 fill 1830 ET: max rth-peak 0.22x [<2x] at 16:20 ET (1,320,445 sh vs regular-session peak 5,949,201 sh), last bar 18:15 ET; source log/2026-10-19/WORX-1830-volume-metric.json
+
+NCPL 2026-10-19  SPIKE  16:27ET  +15%  $1.88  100 trades / 19k sh  (first co-spike bar) (as-of 18:30ET)
+NCPL 2026-10-19  CONFIRM-3  NO ignition 16:25ET failed third-bar hold/volume as-of 18:30ET
+# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-16 48+0zero/48 slots; floor 100; same-date regular peak 280740 sh; log-only
+# reconstructed as-of 2026-10-19T22:30:11+00:00; source fetched 2026-10-19T22:30:48.494879+00:00
+NCPL 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=179387 local=unknown prior-peak=0.8873x rth-peak=0.6390x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=28256 local=unknown prior-peak=0.1398x rth-peak=0.1006x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:10ET start=2026-10-19T20:10:00+00:00 shares=9625 local=unknown prior-peak=0.0476x rth-peak=0.0343x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:15ET start=2026-10-19T20:15:00+00:00 shares=16295 local=0.5767x prior-peak=0.0806x rth-peak=0.0580x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:20ET start=2026-10-19T20:20:00+00:00 shares=10262 local=0.6298x prior-peak=0.0508x rth-peak=0.0366x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:25ET start=2026-10-19T20:25:00+00:00 shares=130531 local=12.7198x prior-peak=0.6456x rth-peak=0.4650x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=62181 local=3.8160x prior-peak=0.3076x rth-peak=0.2215x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:35ET start=2026-10-19T20:35:00+00:00 shares=55012 local=0.8847x prior-peak=0.2721x rth-peak=0.1960x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:40ET start=2026-10-19T20:40:00+00:00 shares=79193 local=1.2736x prior-peak=0.3917x rth-peak=0.2821x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:45ET start=2026-10-19T20:45:00+00:00 shares=200529 local=3.2249x prior-peak=0.9919x rth-peak=0.7143x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:50ET start=2026-10-19T20:50:00+00:00 shares=58541 local=0.7392x prior-peak=0.2896x rth-peak=0.2085x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:55ET start=2026-10-19T20:55:00+00:00 shares=47330 local=0.5977x prior-peak=0.2341x rth-peak=0.1686x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:00ET start=2026-10-19T21:00:00+00:00 shares=24825 local=0.4241x prior-peak=0.1228x rth-peak=0.0884x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:05ET start=2026-10-19T21:05:00+00:00 shares=46164 local=0.9754x prior-peak=0.2283x rth-peak=0.1644x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:10ET start=2026-10-19T21:10:00+00:00 shares=33575 local=0.7273x prior-peak=0.1661x rth-peak=0.1196x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:15ET start=2026-10-19T21:15:00+00:00 shares=53776 local=1.6017x prior-peak=0.2660x rth-peak=0.1916x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:20ET start=2026-10-19T21:20:00+00:00 shares=70476 local=1.5266x prior-peak=0.3486x rth-peak=0.2510x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:25ET start=2026-10-19T21:25:00+00:00 shares=124481 local=2.3148x prior-peak=0.6157x rth-peak=0.4434x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:30ET start=2026-10-19T21:30:00+00:00 shares=55709 local=0.7905x prior-peak=0.2755x rth-peak=0.1984x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:35ET start=2026-10-19T21:35:00+00:00 shares=19447 local=0.2759x prior-peak=0.0962x rth-peak=0.0693x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:40ET start=2026-10-19T21:40:00+00:00 shares=13081 local=0.2348x prior-peak=0.0647x rth-peak=0.0466x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:45ET start=2026-10-19T21:45:00+00:00 shares=7487 local=0.3850x prior-peak=0.0370x rth-peak=0.0267x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:50ET start=2026-10-19T21:50:00+00:00 shares=9817 local=0.7505x prior-peak=0.0486x rth-peak=0.0350x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:55ET start=2026-10-19T21:55:00+00:00 shares=8727 local=0.8890x prior-peak=0.0432x rth-peak=0.0311x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 18:00ET start=2026-10-19T22:00:00+00:00 shares=18320 local=2.0992x prior-peak=0.0906x rth-peak=0.0653x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 18:05ET start=2026-10-19T22:05:00+00:00 shares=19857 local=2.0227x prior-peak=0.0982x rth-peak=0.0707x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 18:10ET start=2026-10-19T22:10:00+00:00 shares=14626 local=0.7984x prior-peak=0.0723x rth-peak=0.0521x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 18:15ET start=2026-10-19T22:15:00+00:00 shares=23859 local=1.3023x prior-peak=0.1180x rth-peak=0.0850x status=ok
+NCPL 2026-10-19 fill 1830 ET: max rth-peak 0.71x [<2x] at 16:45 ET (200,529 sh vs regular-session peak 280,740 sh), last bar 18:15 ET; source log/2026-10-19/NCPL-1830-volume-metric.json
+
+SAIQ BOOK iex bid $2.90 x100 / ask $3.89 x100 @ 2026-10-19 16:00:00 ET age 2h30m two-sided spread 25.45% of ask
+SAIQ BOOK sip-15m bid $4.50 x300 / ask $4.53 x100 @ 2026-10-19 18:15:50 ET age 15m00s two-sided spread 0.66% of ask
+SAIQ BOOK refresh +15s iex unchanged @ 2026-10-19 16:00:00 ET
+SAIQ BOOK verdict: IEX STALE 2h30m; SIP-15m TWO-SIDED (observed 2026-10-19 18:30:50 ET; log-only)
+WORX BOOK iex bid $2.94 x100 / ask $2.97 x100 @ 2026-10-19 16:59:32 ET age 1h31m two-sided spread 1.01% of ask
+WORX BOOK sip-15m bid $3.06 x400 / ask $3.07 x800 @ 2026-10-19 18:15:48 ET age 15m02s two-sided spread 0.33% of ask
+WORX BOOK refresh +15s iex unchanged @ 2026-10-19 16:59:32 ET
+WORX BOOK verdict: IEX STALE 1h31m; SIP-15m TWO-SIDED (observed 2026-10-19 18:30:50 ET; log-only)
+NCPL BOOK iex bid $1.96 x100 / ask $1.98 x100 @ 2026-10-19 16:59:56 ET age 1h30m two-sided spread 1.01% of ask
+NCPL BOOK sip-15m bid $1.96 x2300 / ask $1.97 x300 @ 2026-10-19 18:15:38 ET age 15m12s two-sided spread 0.51% of ask
+NCPL BOOK refresh +15s iex unchanged @ 2026-10-19 16:59:56 ET
+NCPL BOOK verdict: IEX STALE 1h30m; SIP-15m TWO-SIDED (observed 2026-10-19 18:30:50 ET; log-only)
+```
+
+SIP cross-check (`ah-crosscheck.js`, latest completed bar 18:15 ET):
+
+```
+SYM     close    lastAH  at      AHhigh   AH%    hi%    AHvol      last4vol   trades4
+SAIQ    3.41     4.52      22:15Z  4.7268     32.6   38.6     974919     748720     10383
+WORX    2.68     3.1805    22:15Z  3.26       18.7   21.6    8595213     555175      3891
+NCPL    1.63     1.91      22:15Z  2.085      17.2   27.9    1421369      76662       326
+FUFU    1.19     1.2897    22:15Z  1.33        8.4   11.8     570049      42677       197
+PLAG    0.52     0.5337    22:15Z  0.6697      2.6   28.8    5146687     405007       899
+REFR    0.5205   0.4887    21:45Z  0.61       -6.1   17.2       2876       2876         5
+```
+
+Volume artifacts: `SAIQ-1830`, `WORX-1830`, `NCPL-1830` (`-volume-sip.json` and `-volume-metric.json`) in this directory. All three checked `tradable=true` this scan.
+
+**Evaluation notes:**
+- Appearance count (>10% AH): NCPL #7, WORX #4 (back above 10%), SAIQ #1. No fills this scan or tonight.
+- **SAIQ** (WISeSat.Space Holdings, float 4.5M, Financial Conglomerates / satellite communications, Day +7.9%, `tradable=true`): late ignition from 17:45 ET. SIP 5-minute bars went 21K sh at 17:45 ET to 160K, 228K, 138K, 285K and 98K sh (18:15 ET), 10,383 trades over the last 4 bars; SIP high $4.73, last $4.52 at 18:15 ET, matching the scanner's $4.59. CONFIRM-3 YES (7.3x, confirmed 17:55 ET $4.16). Max `rth-peak` 19.43x at 18:10 ET, so it **passes** the 10x volume gate. Catalyst: **Grade None**. 4 searches found no Oct 19 release; latest items are the Oct 12 GlobeNewswire post-quantum strategy PR and the Oct 8 FOSSA "October 2026 satellite launch" PR (background, both older than today). It de-SPACed on Oct 2 (Columbus Acquisition). SIP daily bars: Oct 14 $3.88, Oct 15 $3.21, Oct 16 $3.16, Oct 19 $3.41; no session closed ≥+50% and today's close is 0.88x the close 3 sessions back, so not MULTI-SESSION-RUNNER. Skip: first AH appearance at the final scan (2-AH-scan gate).
+- **FINAL-SCAN-GATE-BLOCK SAIQ**: float 4.5M, Grade None, ignition 17:45 ET, qualified at $4.59 / +45.3% Total% (scanner, 18:30 ET), SIP 18:15 ET last $4.52 on 975K AH sh / 10,383 trades in the last 4 bars, CONFIRM-3 YES, `rth-peak` 19.43x, SIP-15m book $4.50 / $4.53. Blocked only by the 2-AH-scan gate.
+- **WORX** (float 545K, Grade B, Day +94.2%): SIP $3.18 at 18:15 ET (+18.7%), 2.5% under the $3.26 high from 16:25 ET; 205K sh on the 18:15 ET bar. CONFIRM-3 NO. Total% +122.5%, under the ceiling. **VOLUME-GATE-SKIP WORX ratio 0.22x**: AH volume never approached the 5.95M sh regular-session peak bar; would have paid ~$3.07 (SIP-15m ask).
+- **NCPL**: SIP $1.91 at 18:15 ET, Total% −9.2%, still below the prior close. Skip: dead-cat (no reclaim, no DEAD-CAT-OVERRIDE WATCH). **VOLUME-GATE-SKIP NCPL ratio 0.71x**; would have paid ~$1.97 (SIP-15m ask).
+- Final-scan feed-lag cross-check: FUFU (+8.4%), PLAG (+2.6%, untradable), REFR (−6.1%, no AH prints since 17:45 ET) are all below 10% on SIP, so TradingView did not drop a live mover.
+- SBNYL, ISPC, FUFU, ENGN are under the 10% AH threshold.
+- Night summary: no paper trades. Every repeat qualifier failed the volume gate or the dead-cat filter; the only name to pass the volume gate (SAIQ) ignited too late for a second AH scan.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
