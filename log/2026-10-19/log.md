@@ -464,6 +464,118 @@ Volume artifacts: `WORX-1700`, `NCPL-1700` (`-volume-sip.json` and `-volume-metr
 - **PLAG** (float 11.6M, Food: Specialty/Candy, Day −20.7%): first >10% AH appearance; SIP $0.58 at 16:45 ET, high $0.67 at the 16:35 spike; CONFIRM-3 NO. `tradable=false` — qualified-but-untradable broker-block, carry as untradable on later scans. Would also skip as dead-cat.
 - SBNYL (+9.5%, float 59.6M), FUFU (+8.4%), ENGN, SRTM, LRMR are under the 10% AH threshold.
 
+## Scan 23:30 CET (5:30 PM ET)
+
+Scanner snapshot at 17:30:10 ET, 9 hits.
+
+| Ticker | Chart | Close | Day% | AH Chg | AH Price | Total% | AH Vol | AvgVol | VRatio | Float | Industry |
+|--------|-------|-------|------|--------|----------|--------|--------|--------|--------|-------|----------|
+| WORX | [TV](https://www.tradingview.com/chart/?symbol=WORX) | $2.68 | +94.2% | +10.0% | $2.95 | +113.7% | 6.0M | 13.7M | 0.4x | 545K | Packaged Software |
+| PLAG | [TV](https://www.tradingview.com/chart/?symbol=PLAG) | $0.52 | -20.7% | +9.9% | $0.57 | -12.9% | 3.4M | 5.3M | 0.6x | 11.6M | Food: Specialty/Candy |
+| SBNYL | [TV](https://www.tradingview.com/chart/?symbol=SBNYL) | $1.05 | -1.9% | +9.5% | $1.15 | +7.5% | 1.3M | 170K | 7.7x | 59.6M | Regional Banks |
+| NCPL | [TV](https://www.tradingview.com/chart/?symbol=NCPL) | $1.63 | -24.9% | +23.9% | $2.02 | -6.9% | 909K | 19.1M | 0.0x | 2.1M | Miscellaneous Commercial Services |
+| ISPC | [TV](https://www.tradingview.com/chart/?symbol=ISPC) | $0.91 | -0.8% | +7.0% | $0.97 | +6.2% | 628K | 135K | 4.7x | 2.5M | Miscellaneous Commercial Services |
+| AAME | [TV](https://www.tradingview.com/chart/?symbol=AAME) | $1.45 | +38.1% | +5.5% | $1.53 | +45.7% | 433K | 4.9M | 0.1x | 20.3M | Multi-Line Insurance |
+| FUFU | [TV](https://www.tradingview.com/chart/?symbol=FUFU) | $1.19 | +32.2% | +10.1% | $1.31 | +45.6% | 393K | 5.3M | 0.1x | 16.9M | Data Processing Services |
+| SRTM | [TV](https://www.tradingview.com/chart/?symbol=SRTM) | $0.64 | +0.0% | +5.9% | $0.67 | +5.9% | 130K | 0 | 0.0x | 491K | Real Estate Development |
+| ATOM | [TV](https://www.tradingview.com/chart/?symbol=ATOM) | $3.06 | -0.6% | +7.2% | $3.28 | +6.5% | 72K | 514K | 0.1x | 36.9M | Miscellaneous Commercial Services |
+
+Supplementary AH-change-only (>15%, not in volume pass): none
+
+AH >10% at this snapshot (unrounded): FUFU, NCPL, WORX
+
+**Instrumentation (log-only):**
+
+```
+WORX 2026-10-19  SPIKE  16:23ET  +19%  $3.18  3514 trades / 522k sh  (first co-spike bar) (as-of 17:30ET)
+WORX 2026-10-19  CONFIRM-3  NO ignition 16:20ET failed third-bar hold/volume as-of 17:30ET
+# WORX shared SIP volume sip-ah-volume-v2; prior 2026-10-16 42+6zero/48 slots; floor 100; same-date regular peak 5949201 sh; log-only
+# reconstructed as-of 2026-10-19T21:30:10+00:00; source fetched 2026-10-19T21:30:35.504287+00:00
+WORX 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=397057 local=unknown prior-peak=19.7678x rth-peak=0.0667x status=warmup
+WORX 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=188980 local=unknown prior-peak=9.4085x rth-peak=0.0318x status=warmup
+WORX 2026-10-19  VOLUME-CONTEXT 16:10ET start=2026-10-19T20:10:00+00:00 shares=193862 local=unknown prior-peak=9.6516x rth-peak=0.0326x status=warmup
+WORX 2026-10-19  VOLUME-CONTEXT 16:15ET start=2026-10-19T20:15:00+00:00 shares=308191 local=1.5897x prior-peak=15.3436x rth-peak=0.0518x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:20ET start=2026-10-19T20:20:00+00:00 shares=1320445 local=6.8113x prior-peak=65.7396x rth-peak=0.2220x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:25ET start=2026-10-19T20:25:00+00:00 shares=1057797 local=3.4323x prior-peak=52.6634x rth-peak=0.1778x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=717674 local=0.6785x prior-peak=35.7301x rth-peak=0.1206x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:35ET start=2026-10-19T20:35:00+00:00 shares=834528 local=0.7889x prior-peak=41.5477x rth-peak=0.1403x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:40ET start=2026-10-19T20:40:00+00:00 shares=308042 local=0.3691x prior-peak=15.3362x rth-peak=0.0518x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:45ET start=2026-10-19T20:45:00+00:00 shares=551677 local=0.7687x prior-peak=27.4657x rth-peak=0.0927x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:50ET start=2026-10-19T20:50:00+00:00 shares=415231 local=0.7527x prior-peak=20.6727x rth-peak=0.0698x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 16:55ET start=2026-10-19T20:55:00+00:00 shares=221344 local=0.5331x prior-peak=11.0198x rth-peak=0.0372x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:00ET start=2026-10-19T21:00:00+00:00 shares=150117 local=0.3615x prior-peak=7.4737x rth-peak=0.0252x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:05ET start=2026-10-19T21:05:00+00:00 shares=257995 local=1.1656x prior-peak=12.8445x rth-peak=0.0434x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:10ET start=2026-10-19T21:10:00+00:00 shares=100532 local=0.4542x prior-peak=5.0051x rth-peak=0.0169x status=ok
+WORX 2026-10-19  VOLUME-CONTEXT 17:15ET start=2026-10-19T21:15:00+00:00 shares=114093 local=0.7600x prior-peak=5.6802x rth-peak=0.0192x status=ok
+WORX 2026-10-19 fill 1730 ET: max rth-peak 0.22x [<2x] at 16:20 ET (1,320,445 sh vs regular-session peak 5,949,201 sh), last bar 17:15 ET; source log/2026-10-19/WORX-1730-volume-metric.json
+WORX BOOK iex bid $2.94 x100 / ask $2.97 x100 @ 2026-10-19 16:59:32 ET age 31m17s two-sided spread 1.01% of ask
+WORX BOOK sip-15m bid $2.97 x1600 / ask $2.98 x300 @ 2026-10-19 17:15:41 ET age 15m08s two-sided spread 0.34% of ask
+WORX BOOK refresh +15s iex unchanged @ 2026-10-19 16:59:32 ET
+WORX BOOK verdict: IEX STALE 31m17s; SIP-15m TWO-SIDED (observed 2026-10-19 17:30:49 ET; log-only)
+
+NCPL 2026-10-19  SPIKE  16:27ET  +15%  $1.88  100 trades / 19k sh  (first co-spike bar) (as-of 17:30ET)
+NCPL 2026-10-19  CONFIRM-3  NO ignition 16:25ET failed third-bar hold/volume as-of 17:30ET
+# NCPL shared SIP volume sip-ah-volume-v2; prior 2026-10-16 48+0zero/48 slots; floor 100; same-date regular peak 280740 sh; log-only
+# reconstructed as-of 2026-10-19T21:30:10+00:00; source fetched 2026-10-19T21:30:37.758034+00:00
+NCPL 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=179387 local=unknown prior-peak=0.8873x rth-peak=0.6390x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=28256 local=unknown prior-peak=0.1398x rth-peak=0.1006x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:10ET start=2026-10-19T20:10:00+00:00 shares=9625 local=unknown prior-peak=0.0476x rth-peak=0.0343x status=warmup
+NCPL 2026-10-19  VOLUME-CONTEXT 16:15ET start=2026-10-19T20:15:00+00:00 shares=16295 local=0.5767x prior-peak=0.0806x rth-peak=0.0580x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:20ET start=2026-10-19T20:20:00+00:00 shares=10262 local=0.6298x prior-peak=0.0508x rth-peak=0.0366x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:25ET start=2026-10-19T20:25:00+00:00 shares=130531 local=12.7198x prior-peak=0.6456x rth-peak=0.4650x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=62181 local=3.8160x prior-peak=0.3076x rth-peak=0.2215x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:35ET start=2026-10-19T20:35:00+00:00 shares=55012 local=0.8847x prior-peak=0.2721x rth-peak=0.1960x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:40ET start=2026-10-19T20:40:00+00:00 shares=79193 local=1.2736x prior-peak=0.3917x rth-peak=0.2821x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:45ET start=2026-10-19T20:45:00+00:00 shares=200529 local=3.2249x prior-peak=0.9919x rth-peak=0.7143x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:50ET start=2026-10-19T20:50:00+00:00 shares=58541 local=0.7392x prior-peak=0.2896x rth-peak=0.2085x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 16:55ET start=2026-10-19T20:55:00+00:00 shares=47330 local=0.5977x prior-peak=0.2341x rth-peak=0.1686x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:00ET start=2026-10-19T21:00:00+00:00 shares=24825 local=0.4241x prior-peak=0.1228x rth-peak=0.0884x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:05ET start=2026-10-19T21:05:00+00:00 shares=46164 local=0.9754x prior-peak=0.2283x rth-peak=0.1644x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:10ET start=2026-10-19T21:10:00+00:00 shares=33575 local=0.7273x prior-peak=0.1661x rth-peak=0.1196x status=ok
+NCPL 2026-10-19  VOLUME-CONTEXT 17:15ET start=2026-10-19T21:15:00+00:00 shares=53776 local=1.6017x prior-peak=0.2660x rth-peak=0.1916x status=ok
+
+FUFU 2026-10-19  NO-SPIKE  peak +12% @16:53ET  (no bar cleared +15% on a volume co-spike) (as-of 17:30ET)
+FUFU 2026-10-19  CONFIRM-3  NO no local-volume new-high ignition as-of 17:30ET
+# FUFU shared SIP volume sip-ah-volume-v2; prior 2026-10-16 43+5zero/48 slots; floor 100; same-date regular peak 9279771 sh; log-only
+# reconstructed as-of 2026-10-19T21:30:10+00:00; source fetched 2026-10-19T21:30:40.354540+00:00
+FUFU 2026-10-19  VOLUME-CONTEXT 16:00ET start=2026-10-19T20:00:00+00:00 shares=37347 local=unknown prior-peak=0.7068x rth-peak=0.0040x status=warmup
+FUFU 2026-10-19  VOLUME-CONTEXT 16:05ET start=2026-10-19T20:05:00+00:00 shares=9141 local=unknown prior-peak=0.1730x rth-peak=0.0010x status=warmup
+FUFU 2026-10-19  VOLUME-CONTEXT 16:10ET start=2026-10-19T20:10:00+00:00 shares=9886 local=unknown prior-peak=0.1871x rth-peak=0.0011x status=warmup
+FUFU 2026-10-19  VOLUME-CONTEXT 16:15ET start=2026-10-19T20:15:00+00:00 shares=14697 local=1.4866x prior-peak=0.2781x rth-peak=0.0016x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 16:20ET start=2026-10-19T20:20:00+00:00 shares=69500 local=7.0301x prior-peak=1.3153x rth-peak=0.0075x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 16:25ET start=2026-10-19T20:25:00+00:00 shares=9320 local=0.6341x prior-peak=0.1764x rth-peak=0.0010x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 16:30ET start=2026-10-19T20:30:00+00:00 shares=27545 local=1.8742x prior-peak=0.5213x rth-peak=0.0030x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 16:35ET start=2026-10-19T20:35:00+00:00 shares=25347 local=0.9202x prior-peak=0.4797x rth-peak=0.0027x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 16:40ET start=2026-10-19T20:40:00+00:00 shares=16223 local=0.6400x prior-peak=0.3070x rth-peak=0.0017x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 16:45ET start=2026-10-19T20:45:00+00:00 shares=46268 local=1.8254x prior-peak=0.8756x rth-peak=0.0050x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 16:50ET start=2026-10-19T20:50:00+00:00 shares=64258 local=2.5351x prior-peak=1.2161x rth-peak=0.0069x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 16:55ET start=2026-10-19T20:55:00+00:00 shares=19158 local=0.4141x prior-peak=0.3626x rth-peak=0.0021x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 17:00ET start=2026-10-19T21:00:00+00:00 shares=16387 local=0.3542x prior-peak=0.3101x rth-peak=0.0018x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 17:05ET start=2026-10-19T21:05:00+00:00 shares=31133 local=1.6251x prior-peak=0.5892x rth-peak=0.0034x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 17:10ET start=2026-10-19T21:10:00+00:00 shares=24825 local=1.2958x prior-peak=0.4698x rth-peak=0.0027x status=ok
+FUFU 2026-10-19  VOLUME-CONTEXT 17:15ET start=2026-10-19T21:15:00+00:00 shares=21748 local=0.8761x prior-peak=0.4116x rth-peak=0.0023x status=ok
+
+```
+
+SIP cross-check (`ah-crosscheck.js`, latest completed bar 17:15 ET):
+
+```
+SYM     close    lastAH  at      AHhigh   AH%    hi%    AHvol      last4vol   trades4
+WORX    2.68     2.97      21:15Z  3.26       10.8   21.6    7137565     622737      5655
+NCPL    1.63     2.0687    21:15Z  2.07       26.9   27.0    1035482     158340       846
+FUFU    1.19     1.3001    21:15Z  1.33        9.3   11.8     442783      94093       382
+PLAG    0.52     0.5751    21:15Z  0.6697     10.6   28.8    3846346     789689      2343
+```
+
+Volume artifacts: `WORX-1730`, `NCPL-1730`, `FUFU-1730` (`-volume-sip.json` and `-volume-metric.json`) in this directory.
+
+**Evaluation notes:**
+- Appearance count (>10% AH): NCPL #5, WORX #3, FUFU #1, PLAG #1 (scanner +9.9% now; untradable, carried). No fills this scan.
+- **WORX** (float 545K, Grade B contract win, Day +94.2%, Total% +113.7%): still holding, SIP $2.97 at 17:15 ET, 9% under the $3.26 high (16:25 ET), but per-bar volume has cooled to 100–260K sh since 16:50 ET. CONFIRM-3 NO. Max `rth-peak` still 0.22x. **VOLUME-GATE-SKIP WORX ratio 0.22x** — would have paid ~$2.98 (SIP-15m ask, 33 sh).
+- **NCPL** (float 2.1M, Day −24.9%): SIP $2.07 at 17:15 ET, new AH high $2.07, AH +26.9%, Total% still −6.9% below the prior close. Skip: dead-cat (has not reclaimed the regular close, so no DEAD-CAT-OVERRIDE WATCH). Volume gate would also fail (max `rth-peak` 0.71x); SIP volume is thin (25–60K sh per bar).
+- **FUFU** (float 16.9M, bitcoin miner, Day +32.2%, `tradable=true`): first >10% AH appearance (scanner +10.1%; SIP $1.30 = +9.3%, high $1.33). Thin SIP volume (10–70K sh, ~100 trades per bar), NO-SPIKE, CONFIRM-3 NO, max `rth-peak` 0.0075x. Catalyst: none found for today (2 searches; latest PRs are the Oct 15 HASH token launch and the September production update, both background). Not eligible: needs a second AH scan, and it would fail the volume gate.
+- SBNYL (+9.5%, float 59.6M), ISPC, AAME, SRTM, ATOM are under the 10% AH threshold.
+
 ## Paper Trades (Alpaca fills)
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
