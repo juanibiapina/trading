@@ -1,5 +1,31 @@
 # Initiative Log
 
+### 2026-10-19 18:00 — Initiative 7 ignition-bar entry fails; every live-entry variant has now failed
+
+**Evaluated:** the 15:00 run left no hypothesis to judge. Its dated item was to freeze and run the ignition-entry census (Juan, Oct 19, XXII), and this run did that.
+
+**Step taken:**
+
+- **Initiative 7 (last untested part of the live entry; Juan's request):** froze `docs/investigations/init7-ignition-entry-freeze.json` at 16:10 UTC, before any regular-session bar or ignition-time quote was fetched. Built `scripts/init7-ignition-entry.py` on the short-fade caches and ran it as gob `U8t` (10 minutes): 3,862 candidate symbol-days, regular-session peaks, and 547 entry quotes.
+- No second item. Initiative 1's gate first runs tonight; Initiative 3 waits on the next process review; 2 is deferred; 5 and 6 have no dated work. The Oct 16 process-review handoff (freeze, gob, push before waiting) was already done and was followed again here.
+
+**Result:**
+
+- **Fails in all four cells.** The trade buys at the ask 1 minute after the first 16:00–18:25 ET bar with ≥10x `rth-peak` volume and a +10–150% move. all/04:30 **-8.01% [-12.08, -2.61]**; all/open -11.82%; early (≤16:40)/04:30 **-10.25% [-13.66, -6.76]**; early/open -12.32%. All halves are negative (n=544 and 400).
+- **Paired with the scan entry (364 events):** ignition -5.12% against scan -3.31%; the difference is -1.82 points [-4.05, +0.30]. The 180 ignitions that never reach a scan lose about -13.8%. The second-scan confirmation is a useful filter, so the scanner-improvement item that would replace it with ignition confirmation is closed as unsupported.
+- Spot check ESYN 2024-10-01 matches by hand (ask $1.36 at 16:40:59 ET, 04:30 bid $1.22, -10.3%). The one large outlier, DSY 2025-09-08 at +937%, favours the strategy, and the result still fails.
+- No order, live rule, size or pulse timing changed. Equity $99,675.03, no positions open.
+- **Evidence:** `log/2026-10-19/init7-ignition-entry/result.json`, `docs/investigations/init7-ignition-entry-2026-10-19.md`.
+
+**Hypothesis / next step:**
+
+- The hypothesis held in part: every cell fails, but the ignition entry loses more than the scan entry, while the hypothesis predicted less.
+- **Next run, Initiative 7:** the live long trade has no surviving variant. Choose the next candidate by the North Star from the cached data, then freeze its hypothesis and pass rule before any fetch. Options include D+1 regular-session continuation and a premarket-gap fade.
+- **Morning evaluation Oct 20 (Initiative 1):** first `VOLUME-GATE-SKIP` tally.
+- **Next daily email:** the ignition result as the answer to Juan's XXII point, and the stop-or-replace ask.
+
+**Needs from Juan:** decide whether to stop or replace AH→PM (daily email). Initiative 2 stays deferred.
+
 ### 2026-10-19 15:00 — Initiative 7 short fade passes only in names Alpaca cannot borrow; Initiative 3 take-profit census fails
 
 **Evaluated:** the October 16 hypothesis (the all-events open-cover cell passes, the 04:30 cell does not, the ETB cells do not) **worked exactly**. gob `KaJ` finished October 16 20:50 CEST: 872 of 889 events scored.
