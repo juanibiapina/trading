@@ -1,0 +1,136 @@
+{
+ "freeze": "docs/investigations/init3-take-profit-census-freeze.json",
+ "events": 872,
+ "scored": 872,
+ "baseline_fallback": 19,
+ "no_bars_after_entry": 9,
+ "baseline": {
+  "n": 872,
+  "mean_pct": -3.474,
+  "median_pct": -6.049,
+  "interval_pct": [
+   -5.58,
+   -0.953
+  ],
+  "win_rate": 0.278,
+  "halves_pct": [
+   -4.054,
+   -2.893
+  ],
+  "passed": false
+ },
+ "variants": {
+  "tp10": {
+   "fill_rate": 0.442,
+   "return": {
+    "n": 872,
+    "mean_pct": -2.5,
+    "median_pct": -1.252,
+    "interval_pct": [
+     -3.778,
+     -1.351
+    ],
+    "win_rate": 0.476,
+    "halves_pct": [
+     -2.54,
+     -2.46
+    ],
+    "passed": false
+   },
+   "paired_diff": {
+    "n": 872,
+    "mean_pct": 0.974,
+    "median_pct": 0.0,
+    "interval_pct": [
+     -1.134,
+     2.582
+    ],
+    "win_rate": 0.311,
+    "halves_pct": [
+     1.514,
+     0.433
+    ],
+    "passed": false
+   }
+  },
+  "tp15": {
+   "fill_rate": 0.333,
+   "return": {
+    "n": 872,
+    "mean_pct": -2.526,
+    "median_pct": -3.777,
+    "interval_pct": [
+     -3.951,
+     -1.29
+    ],
+    "win_rate": 0.396,
+    "halves_pct": [
+     -2.996,
+     -2.056
+    ],
+    "passed": false
+   },
+   "paired_diff": {
+    "n": 872,
+    "mean_pct": 0.948,
+    "median_pct": 0.0,
+    "interval_pct": [
+     -1.113,
+     2.481
+    ],
+    "win_rate": 0.233,
+    "halves_pct": [
+     1.058,
+     0.837
+    ],
+    "passed": false
+   }
+  },
+  "tp20": {
+   "fill_rate": 0.247,
+   "return": {
+    "n": 872,
+    "mean_pct": -2.528,
+    "median_pct": -4.839,
+    "interval_pct": [
+     -4.132,
+     -0.95
+    ],
+    "win_rate": 0.344,
+    "halves_pct": [
+     -3.095,
+     -1.96
+    ],
+    "passed": false
+   },
+   "paired_diff": {
+    "n": 872,
+    "mean_pct": 0.946,
+    "median_pct": 0.0,
+    "interval_pct": [
+     -0.622,
+     2.224
+    ],
+    "win_rate": 0.17,
+    "halves_pct": [
+     0.959,
+     0.933
+    ],
+    "passed": false
+   }
+  }
+ },
+ "beats_exit": [],
+ "rescues": [],
+ "max_up_quantiles_pct": [
+  0.3,
+  1.4,
+  3.2,
+  5.1,
+  8.0,
+  11.9,
+  17.4,
+  24.1,
+  39.0
+ ]
+}

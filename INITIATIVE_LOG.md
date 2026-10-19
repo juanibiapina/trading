@@ -1,5 +1,34 @@
 # Initiative Log
 
+### 2026-10-19 15:00 — Initiative 7 short fade passes only in names Alpaca cannot borrow; Initiative 3 take-profit census fails
+
+**Evaluated:** the October 16 hypothesis (the all-events open-cover cell passes, the 04:30 cell does not, the ETB cells do not) **worked exactly**. gob `KaJ` finished October 16 20:50 CEST: 872 of 889 events scored.
+
+- all / open: **+3.24% [+1.09, +5.54]**, halves +4.00 / +2.49, pass; stress +1.25% [-0.93, +3.57].
+- all / 04:30: -0.72% [-3.46, +1.51], fail.
+- etb / 04:30: -2.84% [-5.27, -0.68]; etb / open: -1.19% [-4.27, +1.62]; both fail.
+
+**Step taken:**
+
+- **Initiative 7 (largest open lever, data landed):** recorded the frozen cells and applied the executability rule fixed before the result. Write-up: `docs/investigations/init7-microcap-short-fade-2026-10-19.md`.
+- **Initiative 3 (dated item waiting on `KaJ`, Juan's "late exit"):** froze `docs/investigations/init3-take-profit-census-freeze.json` at 13:20 UTC, built `scripts/init3-take-profit-census.py`, fetched 1-minute highs for the 872 events (gob `XwA`, 4.5 minutes) and replayed +10/15/20% resting limits against the 04:30 bid exit.
+- Checked the weekend: no AH scans Friday by schedule (Mon–Thu), so the ≥10x volume gate's first live session is tonight.
+
+**Result:**
+
+- **Short fade:** real but not tradable here. The fade lives in names Alpaca cannot short; ETB names do not fade. No pilot. The short lane is closed on this account; it reopens only with HTB access (Initiative 2, deferred), and real HTB fees likely eat the +3% edge.
+- **Take-profit:** the long side bought at the scan ask loses -3.47% [-5.58, -0.95] at the 04:30 bid. Limits at +10/15/20% fill 44/33/25% and add about +0.95 points each (intervals span zero), leaving every variant at about -2.5% with its interval below zero. No exit change; take-profit line closed. Spot check HKD 2024-10-02 matches by hand.
+- No order, live rule, size or pulse timing changed. Equity $99,675.03, no positions open.
+- **Evidence:** `log/2026-10-16/init7-short-fade/result.json`, `log/2026-10-19/init3-take-profit-census/result.json`, `docs/investigations/init3-take-profit-census-2026-10-19.md`.
+
+**Hypothesis / next step:**
+
+- **Next run, Initiative 7:** Juan's Oct 19 XXII point is the last untested piece of the live entry. Freeze, before fetching any 16:30–16:45 ET quote, an ignition-entry census on the same 872 prior-year events: buy at the ask at the first 5-minute bar with ≥10x `rth-peak` volume and >10% AH, sell at the 04:30 bid. Hypothesis: it loses less than the 17:00 entry but still loses, because the overnight fade (+4.7% mid to mid to the open) is larger than the extra move caught.
+- **Morning evaluation Oct 20 (Initiative 1):** first `VOLUME-GATE-SKIP` tally.
+- **Next daily email:** short-fade result, take-profit census, the ignition-entry plan, the open stop-or-replace ask.
+
+**Needs from Juan:** decide whether to stop or replace AH→PM (daily email). Initiative 2 stays deferred.
+
 ### 2026-10-16 18:00 — Initiative 7 fetch still running; short fade is executable on Alpaca only in the ETB cells
 
 **Evaluated:** the 15:00 hypothesis (the open-cover cell on all events passes, the 04:30 cell does not, the easy-to-borrow cell is too small) is **insufficient data**. gob `KaJ` is still running: daily and AH bars are done (272 days), the 16:00–18:29 ET bars were at 52 of 272 days at 16:00 UTC, at about 40 seconds a day, and about 2,200 quotes follow. It will outlast this run.

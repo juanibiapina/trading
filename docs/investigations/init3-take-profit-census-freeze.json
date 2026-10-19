@@ -1,0 +1,21 @@
+{
+  "frozen_utc": "2026-10-19T13:20:00Z",
+  "frozen_before": "any bar high after the scan minute was fetched for the prior-year census events; only their scan quotes, 5-minute open/close bars to 18:29 ET, 04:30 quotes and next opens have been read (October 16 short-fade test)",
+  "purpose": "Power check for the October 16 take-profit replay (n about 100 live fills, no variant passed; Juan, Oct 15: 'late exit'). Does a resting sell limit placed at entry beat the live 04:30 ET exit on a year of the strategy's own events, and does it make the long side profitable?",
+  "events": "the 872 scored prior-year events in log/2026-10-16/init7-short-fade/events.json.gz (union of the 17:00 and late-entry micro-cap census definitions, 2024-10-01 to 2025-09-30), unchanged",
+  "entry": "buy at the ask of the cached scan quote (log/2026-10-16/init7-short-fade/quotes.json.gz, key 'entry') at scan time T",
+  "baseline": "sell at the bid of the cached 04:00-04:30 ET quote on D+1 (the live rule since Oct 14); if invalid, D+1 open x (1 - 50 bps), as in the October 15 long censuses",
+  "variants": {
+    "tp10": "limit at entry x 1.10",
+    "tp15": "limit at entry x 1.15",
+    "tp20": "limit at entry x 1.20"
+  },
+  "fill_rule": "the limit fills at the limit price if any 1-minute SIP bar (raw) starting at or after T and before 20:00 ET on D, or from 04:00 to 04:29 ET on D+1, has a high strictly above the limit; otherwise the row takes the baseline exit",
+  "unit": "return per trade = exit / entry - 1; equal weight",
+  "statistics": "bootstrap over event dates (4000 draws, seed 13), two-sided interval with tail 0.025/3 (Bonferroni over 3 variants), for the paired difference variant minus baseline and for the variant's own return",
+  "pass": "a variant beats the exit if its mean paired difference > 0 AND interval lower bound > 0 AND both chronological halves have a positive mean difference. It rescues the strategy only if its own mean return also passes the same rule (mean > 0, lower bound > 0, both halves > 0)",
+  "decision_if_rescue": "propose the variant to Juan as a live exit change in the daily email, with a prospective check on the next 20 live fills; it changes live exits",
+  "decision_if_beats_only": "report that the limit cuts losses but leaves the long side negative; the stop-or-replace proposal stands and the limit is offered as damage control while paper entries continue",
+  "decision_if_fail": "no exit change; the take-profit line of Initiative 3 is closed",
+  "limits": "bar highs are trade prints, so a print strictly above the limit is assumed to fill the order; quoted size and queue position are ignored; the 20:00-04:00 overnight session is excluded; same survivorship and look-ahead limits as the census"
+}
