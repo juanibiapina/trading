@@ -1,0 +1,39 @@
+{
+  "frozen_utc": "2026-10-20T16:15:00Z",
+  "frozen_before": "any monthly return of ranks 1001-3000 is computed; only file shapes and date ranges of the cached monthly bars were inspected",
+  "ranking_doc": "docs/investigations/init7-candidate-ranking-2026-10-20.md",
+  "hypothesis": "Among liquid small caps (point-in-time dollar-volume ranks 1001-3000), last month's biggest losers beat the equal-weight small-cap basket the next month by more than a 50 bps round trip. Long-only, so it is executable on Alpaca with market-on-close orders and no borrow.",
+  "inputs": {
+    "monthly_bars": "log/2026-10-12/init7-reversal20-pit/monthly.json.gz (Alpaca SIP 1Month bars, adjustment=all, 2016-01 to 2025-09, 7,262 symbols including inactive)",
+    "universe_list": "log/2026-10-12/init7-reversal20-pit/universe.json.gz key alpaca (funds already removed by name)",
+    "no_fetch": true
+  },
+  "universe": {
+    "symbols": "universe.alpaca, minus 5-letter symbols ending in U, W or R (units, warrants, rights), minus symbols containing '.'",
+    "duplicates": "same rule as init7-reversal20-pit: a monthly bar with the same (month, volume) as a longer-history symbol is dropped",
+    "ranking": "sum of monthly vwap x volume over months m-3, m-2, m-1 for decision month m; names need bars in all three months",
+    "band": "ranks 1001 to 3000 inclusive",
+    "price_floor": "close of month m-1 >= $5.00"
+  },
+  "signal": "r_prev = close(m-1) / close(m-2) - 1",
+  "portfolio": "long the 10% of eligible names with the lowest r_prev (ties by symbol), equal weight, entered at the close of month m-1, exited at the close of month m",
+  "benchmark": "equal-weight return of all eligible names over the same month",
+  "missing_exit": "a name with no bar in month m (delisted or halted) gets -30% (Shumway's performance-delisting proxy); applied to portfolio and benchmark alike",
+  "cost": {"base_bps_round_trip": 50, "stress_bps_round_trip": 100, "applied_to": "portfolio only, full turnover assumed every month"},
+  "window": "decision months 2016-04 to 2025-09",
+  "unit": "monthly excess = portfolio return - benchmark return - cost",
+  "pass": {
+    "mean_excess_base_gt_0": true,
+    "bootstrap_95_lower_gt_0": "iid resampling of months, 4000 draws, seed 13, 2.5% bound of the mean excess",
+    "both_chronological_halves_gt_0": true,
+    "stress_mean_gt_0": true,
+    "passed": "all four checks"
+  },
+  "descriptive_only": [
+    "raw long return and QQQ-free cash comparison (absolute dollars per month per $100k)",
+    "long-short spread (bottom minus top decile), not executable for HTB names",
+    "missing-exit count and sensitivity with missing exits dropped"
+  ],
+  "decision_if_pass": "fetch adjusted monthly bars for 2025-07 to 2026-09 and repeat on 2025-10 to 2026-09 as a holdout before any shadow pilot; any live use goes to Juan",
+  "decision_if_fail": "drop small-cap monthly reversal; next candidate is post-earnings drift in ranks 1001-3000 with SEC 8-K item 2.02 dates"
+}
