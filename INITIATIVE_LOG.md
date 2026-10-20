@@ -1,5 +1,31 @@
 # Initiative Log
 
+### 2026-10-20 18:00 — Initiative 7 candidate ranking; small-cap monthly reversal fails
+
+**Evaluated:** the 15:00 run's next step (rank three families outside the micro-cap events, freeze the top one) is done by this run. Initiative 1: no AH session since the morning tally, so **insufficient data** (still 2 of 5 skips).
+
+**Step taken:**
+
+- **Initiative 7:** ranked small-cap monthly reversal, post-earnings drift in ranks 1001–3000, and the HTB short fade by expected net dollars a day on $100k (`docs/investigations/init7-candidate-ranking-2026-10-20.md`). Reversal ranked first: it is the only family that runs on Alpaca without borrow, and its data was cached. Froze it in `docs/investigations/init7-smallcap-reversal-freeze.json` (16:15 UTC, pushed in 2e3825e before any return was computed), then built and ran `scripts/init7-smallcap-reversal.py` offline (7 s).
+- Initiatives 2 (deferred), 3 (no fills), 5 and 6 had no dated work.
+
+**Result:**
+
+- **Fails on all four checks.** Over 2016-04 to 2025-09 (114 months, about 1,778 names a month), the bottom decile trails the band by **-1.27% a month** after 50 bps [-2.08, -0.43]. Halves are -0.04 and -2.49, stress is -1.77, and 38 of 114 months are positive. Losers keep losing; the yearly drag was -2.5, -2.7, -3.1 and -4.6 from 2022 to 2025.
+- Robustness: dropping delisted exits gives -1.25%. Removing the $5 floor (biased by reverse-split adjustment) gives -0.59% [-1.56, +0.44], halves +0.59 / -1.78, still a fail. The June 2023 TOP and BANL rows match a hand computation.
+- **North Star:** QQQ earned about 18% a year over the same span, about $70 a trading day on $100k, and nothing tested beats cash. Added to the stop-or-replace ask as a comparator, with index exposure as an option for Juan to weigh.
+- No order, live rule, size or pulse timing changed. Equity $99,675.03, no positions open.
+- **Evidence:** `log/2026-10-20/init7-smallcap-reversal/result.json`, `docs/investigations/init7-smallcap-reversal-2026-10-20.md`.
+
+**Hypothesis / next step:**
+
+- The hypothesis (losers beat the band by more than 50 bps) was wrong in sign.
+- **Next run, Initiative 7:** freeze post-earnings drift in ranks 1001–3000. Entry at the D+1 close after an SEC 8-K item 2.02 filing, hold 20 and 60 sessions, measured against the band, with the Oct 13 negative drift result as the prior to beat. Then start the 8-K date and daily-bar fetch with `gob add`, log and push, and wait one call per turn.
+- **Morning evaluation Oct 21 (Initiative 1):** add the Oct 20 AH skips to the tally.
+- **Next daily email:** reversal result plus the QQQ comparator in the stop-or-replace ask.
+
+**Needs from Juan:** decide whether to stop or replace AH→PM, now with the QQQ comparator (daily email). Initiative 2 stays deferred.
+
 ### 2026-10-20 15:00 — Initiative 7 D+1 regular-session long fails; micro-cap event lane closed at every horizon
 
 **Evaluated:** the October 19 18:00 step (pick and freeze the next candidate from cached data) is done by this run. Its Initiative 1 check, the first `VOLUME-GATE-SKIP` tally, is **insufficient data**: the Oct 19 AH session made no entries and 2 skips (WORX 0.22x, NCPL 0.71x), with a provisional 04:23 ET skip mean of +14.9% against 5 skips needed.

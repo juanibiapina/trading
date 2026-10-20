@@ -1,0 +1,46 @@
+{
+  "freeze": "docs/investigations/init7-smallcap-reversal-freeze.json",
+  "months": 114,
+  "first": "2016-04",
+  "last": "2025-09",
+  "mean_eligible": 1778.0,
+  "mean_excess_base_pct": -1.265,
+  "interval_95_pct": [
+    -2.083,
+    -0.425
+  ],
+  "halves_pct": [
+    -0.038,
+    -2.491
+  ],
+  "mean_excess_stress_pct": -1.765,
+  "positive_months": 38,
+  "checks": {
+    "mean_excess_base_gt_0": false,
+    "bootstrap_95_lower_gt_0": false,
+    "both_halves_gt_0": false,
+    "stress_mean_gt_0": false
+  },
+  "passed": false,
+  "descriptive": {
+    "long_raw_mean_pct": -0.253,
+    "bench_mean_pct": 0.511,
+    "long_raw_net_base_mean_pct": -0.753,
+    "excess_base_missing_dropped_pct": -1.253,
+    "long_short_gross_pct": -0.07,
+    "missing_long_total": 60,
+    "missing_all_total": 539,
+    "excess_base_by_year_pct": {
+      "2016": -0.426,
+      "2017": -0.422,
+      "2018": -1.424,
+      "2019": 0.142,
+      "2020": 1.844,
+      "2021": -0.034,
+      "2022": -2.532,
+      "2023": -2.698,
+      "2024": -3.128,
+      "2025": -4.589
+    }
+  }
+}
