@@ -1,0 +1,369 @@
+{
+  "freeze": "docs/investigations/init7-d1-session-long-freeze.json",
+  "events": 872,
+  "scored": 861,
+  "dropped": {
+    "missing_bar": 10,
+    "split": 1
+  },
+  "cells": {
+    "all/close1": {
+      "base": {
+        "n": 861,
+        "mean_pct": -0.739,
+        "median_pct": -3.616,
+        "interval_pct": [
+          -3.528,
+          4.493
+        ],
+        "win_rate": 0.386,
+        "halves_pct": [
+          -0.106,
+          -1.37
+        ],
+        "passed": false
+      },
+      "stress": {
+        "n": 861,
+        "mean_pct": -1.739,
+        "median_pct": -4.616,
+        "interval_pct": [
+          -4.528,
+          3.493
+        ],
+        "win_rate": 0.359,
+        "halves_pct": [
+          -1.106,
+          -2.37
+        ],
+        "passed": false
+      }
+    },
+    "all/close2": {
+      "base": {
+        "n": 861,
+        "mean_pct": -5.131,
+        "median_pct": -7.745,
+        "interval_pct": [
+          -7.893,
+          -0.786
+        ],
+        "win_rate": 0.305,
+        "halves_pct": [
+          -5.254,
+          -5.007
+        ],
+        "passed": false
+      },
+      "stress": {
+        "n": 861,
+        "mean_pct": -6.131,
+        "median_pct": -8.745,
+        "interval_pct": [
+          -8.893,
+          -1.786
+        ],
+        "win_rate": 0.282,
+        "halves_pct": [
+          -6.254,
+          -6.007
+        ],
+        "passed": false
+      }
+    },
+    "gap_up/close1": {
+      "base": {
+        "n": 732,
+        "mean_pct": -0.202,
+        "median_pct": -3.931,
+        "interval_pct": [
+          -3.35,
+          6.267
+        ],
+        "win_rate": 0.392,
+        "halves_pct": [
+          1.078,
+          -1.483
+        ],
+        "passed": false
+      },
+      "stress": {
+        "n": 732,
+        "mean_pct": -1.202,
+        "median_pct": -4.931,
+        "interval_pct": [
+          -4.35,
+          5.267
+        ],
+        "win_rate": 0.366,
+        "halves_pct": [
+          0.078,
+          -2.483
+        ],
+        "passed": false
+      }
+    },
+    "gap_up/close2": {
+      "base": {
+        "n": 732,
+        "mean_pct": -4.711,
+        "median_pct": -7.85,
+        "interval_pct": [
+          -7.819,
+          0.399
+        ],
+        "win_rate": 0.302,
+        "halves_pct": [
+          -3.884,
+          -5.538
+        ],
+        "passed": false
+      },
+      "stress": {
+        "n": 732,
+        "mean_pct": -5.711,
+        "median_pct": -8.85,
+        "interval_pct": [
+          -8.819,
+          -0.601
+        ],
+        "win_rate": 0.279,
+        "halves_pct": [
+          -4.884,
+          -6.538
+        ],
+        "passed": false
+      }
+    }
+  },
+  "gross": {
+    "all/close1": {
+      "n": 861,
+      "mean_pct": 0.259,
+      "median_pct": -2.648,
+      "interval_pct": [
+        -2.558,
+        5.543
+      ],
+      "win_rate": 0.415,
+      "halves_pct": [
+        0.898,
+        -0.379
+      ],
+      "passed": false
+    },
+    "all/close2": {
+      "n": 861,
+      "mean_pct": -4.177,
+      "median_pct": -6.818,
+      "interval_pct": [
+        -6.968,
+        0.211
+      ],
+      "win_rate": 0.326,
+      "halves_pct": [
+        -4.302,
+        -4.053
+      ],
+      "passed": false
+    },
+    "gap_up/close1": {
+      "n": 732,
+      "mean_pct": 0.801,
+      "median_pct": -2.966,
+      "interval_pct": [
+        -2.378,
+        7.335
+      ],
+      "win_rate": 0.415,
+      "halves_pct": [
+        2.094,
+        -0.493
+      ],
+      "passed": false
+    },
+    "gap_up/close2": {
+      "n": 732,
+      "mean_pct": -3.754,
+      "median_pct": -6.923,
+      "interval_pct": [
+        -6.892,
+        1.408
+      ],
+      "win_rate": 0.322,
+      "halves_pct": [
+        -2.918,
+        -4.589
+      ],
+      "passed": false
+    }
+  },
+  "descriptive": {
+    "etb/close1": {
+      "n": 194,
+      "mean_pct": 7.404,
+      "median_pct": -1.539,
+      "interval_pct": [
+        -2.276,
+        31.036
+      ],
+      "win_rate": 0.433,
+      "halves_pct": [
+        15.833,
+        -0.852
+      ],
+      "passed": false
+    },
+    "etb/close2": {
+      "n": 194,
+      "mean_pct": 4.576,
+      "median_pct": -1.933,
+      "interval_pct": [
+        -3.598,
+        22.413
+      ],
+      "win_rate": 0.438,
+      "halves_pct": [
+        11.137,
+        -1.851
+      ],
+      "passed": false
+    },
+    "gap<0/close1": {
+      "n": 117,
+      "mean_pct": -2.997,
+      "median_pct": -2.127,
+      "interval_pct": [
+        -6.66,
+        1.342
+      ],
+      "win_rate": 0.359,
+      "halves_pct": [
+        -6.328,
+        0.279
+      ],
+      "passed": false
+    },
+    "gap0-20/close1": {
+      "n": 425,
+      "mean_pct": 1.391,
+      "median_pct": -2.795,
+      "interval_pct": [
+        -3.46,
+        11.816
+      ],
+      "win_rate": 0.395,
+      "halves_pct": [
+        3.149,
+        -0.293
+      ],
+      "passed": false
+    },
+    "gap20-50/close1": {
+      "n": 211,
+      "mean_pct": 0.426,
+      "median_pct": -1.357,
+      "interval_pct": [
+        -2.699,
+        3.792
+      ],
+      "win_rate": 0.469,
+      "halves_pct": [
+        -0.241,
+        1.075
+      ],
+      "passed": false
+    },
+    "gap>50/close1": {
+      "n": 108,
+      "mean_pct": -8.952,
+      "median_pct": -11.321,
+      "interval_pct": [
+        -13.595,
+        -3.517
+      ],
+      "win_rate": 0.213,
+      "halves_pct": [
+        -8.508,
+        -9.396
+      ],
+      "passed": false
+    },
+    "short_mirror/close1": {
+      "n": 861,
+      "mean_pct": -1.266,
+      "median_pct": 1.669,
+      "interval_pct": [
+        -6.604,
+        1.579
+      ],
+      "win_rate": 0.549,
+      "halves_pct": [
+        -1.912,
+        -0.622
+      ],
+      "passed": false
+    },
+    "short_mirror_etb/close1": {
+      "n": 194,
+      "mean_pct": -9.574,
+      "median_pct": -0.45,
+      "interval_pct": [
+        -33.683,
+        0.302
+      ],
+      "win_rate": 0.479,
+      "halves_pct": [
+        -18.173,
+        -1.151
+      ],
+      "passed": false
+    }
+  },
+  "passed_cells": [],
+  "passed": false,
+  "bottom5_close1": [
+    [
+      "CUPR|2025-08-14",
+      -87.5
+    ],
+    [
+      "IXHL|2025-05-14",
+      -64.3
+    ],
+    [
+      "LGCL|2025-09-09",
+      -64.0
+    ],
+    [
+      "IMCC|2025-05-30",
+      -50.8
+    ],
+    [
+      "TURB|2024-10-10",
+      -46.9
+    ]
+  ],
+  "top5_close1": [
+    [
+      "SMX|2025-07-24",
+      79.4
+    ],
+    [
+      "RCT|2025-06-26",
+      99.2
+    ],
+    [
+      "MLGO|2025-02-20",
+      101.2
+    ],
+    [
+      "ENTA|2025-09-26",
+      109.9
+    ],
+    [
+      "DRUG|2024-10-14",
+      1354.5
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "frozen_utc": "2026-10-20T13:01:50Z",
+  "frozen_before": "any D+1 or D+2 regular-session return (open to close, or open to next close) was computed for the 872 events in log/2026-10-16/init7-short-fade/events.json.gz. The daily bars holding those prices are already cached (daily-raw.json.gz); prior tests used only the D+1 official open (exit_open) and the 04:30 quote. No new fetch.",
+  "purpose": "Initiative 7, first candidate after every live AH->PM long variant failed (Oct 15-19). The overnight fade is already priced into the D+1 open; test whether a long bought at that open, in the liquid regular session where Alpaca fills are realistic, makes money on the same event set.",
+  "origin": "Scan-time events fade about 4.7% mid to mid by the D+1 open (short-fade census). Open question: do the names keep fading through D+1 or rebound after the open dump.",
+  "window": "events D from 2024-10-01 to 2025-09-30 (the 872 scored short-fade events; D+1 = 'next')",
+  "universe": "the 872 events as stored; D+2 = next calendar session after D+1 with a 16:00 close",
+  "entry": "buy at D+1 official raw open x (1 + 50 bps)",
+  "exits": {
+    "close1": "sell at D+1 official raw close x (1 - 50 bps)",
+    "close2": "sell at D+2 official raw close x (1 - 50 bps)"
+  },
+  "unit": "net return per trade = exit / entry - 1; equal weight; events with a missing D+1 or D+2 daily bar, or a split between D and the exit day (raw/split close ratio change > 1%), dropped and counted",
+  "cells": {
+    "subsets": {
+      "all": "every scored event",
+      "gap_up": "D+1 open > D close (still gapped up at the open)"
+    },
+    "exits": [
+      "close1",
+      "close2"
+    ],
+    "count": 4
+  },
+  "statistics": {
+    "interval": "lc.summary: bootstrap over event dates, 4000 draws, seed 13, two-sided tail 0.025/4 (Bonferroni over 4 cells)",
+    "pass": "mean > 0 AND interval lower bound > 0 AND both chronological halves > 0, at base cost; also report stress (-100 bps per trade) and gross open-to-close"
+  },
+  "descriptive_only": "ETB subset; by D+1 gap (open/D close: <0, 0-20%, 20-50%, >50%); by AH move at scan; short mirror (not executable on Alpaca for non-ETB names). None can rescue a failed pass.",
+  "hypothesis": "fails in all four cells: day-after micro-cap runners keep fading through the regular session, so the long side loses again; gap_up loses more than all.",
+  "decision_if_pass": "the passing cell becomes a log-only shadow pulse (record the D+1 open buy and close sell for each scan event) for 15 sessions before any pilot; no live rule change.",
+  "decision_if_fail": "the D+1 regular-session long lane is closed for these events; the micro-cap long side has then failed at every horizon from the scan to D+2; add that to the stop-or-replace ask.",
+  "limits": "official open/close prints stand in for fills; 50 bps covers spread plus slippage at the open auction for typical names but understates it for the widest books; ETB is today's flag; no intraday stop or target; survivorship limited to assets Alpaca still lists."
+}

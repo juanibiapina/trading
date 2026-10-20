@@ -1,5 +1,30 @@
 # Initiative Log
 
+### 2026-10-20 15:00 — Initiative 7 D+1 regular-session long fails; micro-cap event lane closed at every horizon
+
+**Evaluated:** the October 19 18:00 step (pick and freeze the next candidate from cached data) is done by this run. Its Initiative 1 check, the first `VOLUME-GATE-SKIP` tally, is **insufficient data**: the Oct 19 AH session made no entries and 2 skips (WORX 0.22x, NCPL 0.71x), with a provisional 04:23 ET skip mean of +14.9% against 5 skips needed.
+
+**Step taken:**
+
+- **Initiative 7 (dated item; one run, no fetch):** froze `docs/investigations/init7-d1-session-long-freeze.json` at 13:01:50 UTC, before any D+1/D+2 session return was computed. Built `scripts/init7-d1-session-long.py` on the cached short-fade daily bars: buy at the D+1 official open +50 bps, sell at the D+1 or D+2 close -50 bps; subsets all and gap_up.
+- **Initiative 1:** recorded the first gate tally above. Initiative 3 had nothing to check (no Oct 19 fills); 2 is deferred; 5 and 6 have no dated work.
+
+**Result:**
+
+- **Fails in all four cells** (861 scored, 10 missing bars, 1 split). all/D+1 close -0.74% [-3.53, +4.49]; all/D+2 close **-5.13% [-7.89, -0.79]**; gap_up/D+1 close -0.20% [-3.35, +6.27]; gap_up/D+2 close -4.71% [-7.82, +0.40].
+- DRUG 2024-10-14 (+1,354% on D+1, real Bright Minds data day) carries the D+1 mean; without it all/D+1 close is -2.31%, median about -4%. D+1 gaps above +50% lose -8.95% [-13.6, -3.5] (n=108). The short mirror at the D+1 close also loses (-1.27%).
+- No order, live rule, size or pulse timing changed. Equity $99,675.03, no positions open.
+- **Evidence:** `log/2026-10-20/init7-d1-session-long/result.json`, `docs/investigations/init7-d1-session-long-2026-10-20.md`.
+
+**Hypothesis / next step:**
+
+- The hypothesis held on the pass rule (all four cells fail) and was wrong on direction for gap_up, which lost less than all because names opening below the D close lose -3.0%.
+- **Next run, Initiative 7:** rank three candidate families outside these events by expected net dollars a day on Alpaca (post-earnings drift in small and mid caps with point-in-time data; short-term reversal in ETB Russell 2000 names; the HTB short fade as a broker-dependent lever), then freeze the top one before any fetch.
+- **Morning evaluations (Initiative 1):** keep the skip tally; judge the gate's cost at 5 skips.
+- **Next daily email:** the D+1 result added to the stop-or-replace ask.
+
+**Needs from Juan:** decide whether to stop or replace AH→PM (daily email). Initiative 2 stays deferred.
+
 ### 2026-10-19 18:00 — Initiative 7 ignition-bar entry fails; every live-entry variant has now failed
 
 **Evaluated:** the 15:00 run left no hypothesis to judge. Its dated item was to freeze and run the ignition-entry census (Juan, Oct 19, XXII), and this run did that.
