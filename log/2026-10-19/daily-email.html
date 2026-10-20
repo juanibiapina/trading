@@ -1,0 +1,64 @@
+<div style="font-family: -apple-system, Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+<h2 style="color: #1a1a1a; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">Overnight Cycle: Oct 19 AH &rarr; Oct 20 PM</h2>
+<p style="font-size: 13px; color: #666;">First report since Oct 16. Friday Oct 16 had no AH scans (scans run Mon&ndash;Thu), so there was no cycle to email on Oct 19.</p>
+
+<h3 style="color: #555; margin-top: 20px;">Post-Market Scans</h3>
+<p>13 scans ran (7/7 core checkpoints 21:30&ndash;00:30 CEST plus 6 observation scans). 11 unique tickers crossed +10% AH. Notable: SAIQ, WORX, NCPL. <strong>No paper trades</strong>: every repeat qualifier failed the new &ge;10x volume gate or the dead-cat filter, and the only name that passed the volume gate (SAIQ) first appeared at the final scan.</p>
+
+<h3 style="color: #555;">Today&rsquo;s Winner</h3>
+<p><strong>No real winner.</strong> Nothing cleared +100% on a capturable, volume-backed move.</p>
+<p><strong>SAIQ</strong> (WISeSat.Space, satellite comms; de-SPAC Oct 2) &mdash; no catalyst found. Biggest genuine mover.<br/>
+Close $3.41 &rarr; AH high $5.10 (+49.6%) &rarr; PM SIP high <strong>$6.72 (+97.1%) at 04:00 ET</strong> on 1.22M sh / 22,244 trades. Re-fetched through the 05:15 ET bar: no higher print; last $4.93.<br/>
+Final-scan sighting $4.59 &rarr; PM peak: <span style="color: #2e7d32; font-weight: bold;">+46.4%</span> hypothetical. Volume spike was real: AH peak bar 19.4x the day&rsquo;s regular-session peak.</p>
+<p>Scanner caught it? <strong style="color: #2e7d32;">YES</strong>, one scan late &mdash; SAIQ was +22% on SIP at 18:00 ET but missing from the TradingView snapshot (feed lag). It surfaced at the 00:30 final scan and the 2-AH-scan gate blocked entry.</p>
+<p style="font-size: 13px; color: #666;">Skipped: GCDT +121% PM wick, sub-$0.50 and PM-only. WORX +59.7% AH tail after the final scan, but 0.22x volume against a 126M-share day.</p>
+
+<h3 style="color: #555;">Baseline Status</h3>
+<p style="font-size: 18px; background: #f5f5f5; padding: 10px; border-radius: 4px;">Detection rate: <strong>75/86 (87.2%)</strong> &mdash; Target: &gt;80%<br/>
+<span style="color: #1976d2;">BASELINE MET</span> &middot; Selection 39/82 (47.6%) &middot; 102 days tracked</p>
+
+<h3 style="color: #555;">Paper Trades</h3>
+<p style="font-size: 18px;">Paper P&amp;L this cycle: <strong>$0.00</strong> (no fills, no open positions)</p>
+<p style="background: #f5f5f5; padding: 10px; border-radius: 4px;">Cumulative Paper P&amp;L: <span style="color: #c62828; font-weight: bold;">-$324.99</span> (equity $99,675.01)</p>
+<p>First night under the &ge;10x volume gate: 2 skips. WORX 0.22x would have made +31% to the PM peak; NCPL 0.71x &minus;3%. The gate needs 5 skips before its cost can be judged.</p>
+
+<h3 style="color: #555;">Scanner Improvement</h3>
+<p><strong>Oct 16 (latest completed):</strong> fixed the 403 in <code>ah-crosscheck.js</code>, the final-scan SIP check for names TradingView under-reports. It worked live at the Oct 19 final scan. Also Oct 16: the hard &ge;10x volume entry gate from your &ldquo;FIX THIS&rdquo; reply. No change recorded for this cycle yet; today&rsquo;s run comes after this email.</p>
+<p><strong>Ready to apply:</strong> the final-scan ignition exception (enter at the final scan when CONFIRM-3, &ge;10x volume, fillable book and under the ceiling all pass). All 3 valid blocked cases ran: TRUG +47%, UPC +11.9%, SAIQ +46.4%. Strategy-advance owns applying it; reply to veto.</p>
+
+<h3 style="color: #555;">Process Review</h3>
+<p><strong>Oct 16 (latest completed):</strong> covered 23 sessions through Oct 16 12:40 UTC. Two issues, both fixed: the crosscheck 403 (fixed by the scanner improvement), and strategy runs sending up to 10 parallel wait calls per turn (prompt now requires one). Sessions after Oct 16 12:40 UTC are not reviewed yet.</p>
+<p style="background: #fff3e0; padding: 10px; border-radius: 4px;"><strong>Still open for you:</strong> provider login-error alert/fallback (open since Oct 6); greprip numeric flags (low). Scheduler: the Friday gaps (Oct 2, 9, 16) come from a Mon&ndash;Thu AH schedule, so they are not failures. Say if you want Friday AH scans added.</p>
+
+<h3 style="color: #555;">Initiative Progress</h3>
+<p style="font-size: 13px; color: #666;">Window: Oct 16 09:32 UTC (last email) through this send.</p>
+<ul>
+<li><strong>Initiative 7 &mdash; alternative strategies, Oct 16 15:00 &rarr; Oct 19 18:00</strong>: ran two frozen prior-year tests. <em>Short fade</em>: shorting these names to the open makes +3.24% per trade, but only in names Alpaca cannot borrow; borrowable names do not fade, so the short lane is closed. <em>Ignition-bar entry</em> (your XXII point): buying the first &ge;10x volume bar loses &minus;8.0% at 04:30 and &minus;10.3% for bars by 16:40 ET, 1.8 points worse than the scan entry. Every live-entry variant has now failed. Next: freeze the next candidate (e.g. D+1 regular-session continuation or a PM-gap fade) before fetching data.</li>
+<li><strong>Initiative 3 &mdash; exits, Oct 16 15:00 + Oct 19 15:00</strong>: tested +10/15/20% take-profit limits on 103 real fills and 872 prior-year events. They add about +1 point but every variant still loses ~2.5% per trade. Take-profit line closed; sell-all at 04:30 stays. Next: process review confirms sells on the next entries.</li>
+<li><strong>Initiative 1 &mdash; volume measurement, Oct 19 AH</strong>: the &ge;10x gate ran its first live session (2 skips, 0 fills). The ignition-as-confirmation idea is closed by the Initiative 7 census. Next: skip tally in each morning evaluation.</li>
+<li><strong>Initiative 4 &mdash; reporting, Oct 16 + Oct 19</strong>: Oct 16 review confirmed the last email covered every moved initiative; your Oct 16 reply was captured Oct 19 (below).</li>
+<li><strong>Initiative 6 &mdash; PM-only gappers</strong>: monitoring only. Daily cohort snapshots continue; holdable PM-only count 78.</li>
+</ul>
+<p>Blocked/deferred: Initiative 2 (broker test) deferred per your Sep 22 instruction. Initiative 5: no dated item.</p>
+
+<h3 style="color: #555;">Jev Results and Costs</h3>
+<p><strong>Not run</strong> in this window. No Jev calls or Jev artifacts in the repo since Oct 16 09:32 UTC, so window usage is 0 calls / $0.00 from repo records; TypeSafe billing was not queried, so no measured charge is available. Recorded cumulative (Oct 2 classification, <code>docs/investigations/init7-jev-classification-2026-10-02.md</code>): 7 calls, 11,385 input / 1,088 output tokens, ~$0.00048 USD estimated. Next: no Jev work scheduled; Initiative 7 picks its next candidate first.</p>
+
+<h3 style="color: #555;">Feedback Acknowledged</h3>
+<ul>
+<li><strong>Oct 16 &mdash; &ldquo;XXII entry way too late&rdquo; / &ldquo;TCRT again not enough volume spike&rdquo;</strong>: TCRT (3.96x) is now blocked by the &ge;10x gate. XXII: tested buying at the ignition bar on a full prior year; it loses more than the current entry (above), so no rule change. The TradingView feed lag that delayed XXII (and SAIQ last night) is routed to scanner improvement as a SIP cross-check.</li>
+</ul>
+
+<h3 style="color: #555;">Open Ask</h3>
+<p><strong>Stop or replace AH&rarr;PM:</strong> five frozen tests (17:00 entry, late entry, ignition entry, take-profit, shorting) all lose. Pause live paper entries, or keep them as data collection while research looks for a new strategy?</p>
+
+<h3 style="color: #555;">Charts (5m + volume)</h3>
+<p style="margin: 0 0 4px;"><strong>SAIQ (biggest mover, not traded)</strong></p>
+<img src="https://raw.githubusercontent.com/juanibiapina/trading/main/log/2026-10-19/SAIQ-1131.png" alt="SAIQ 5m chart" style="width: 100%; max-width: 560px; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 12px;"/>
+
+<h3 style="color: #555;">Key Takeaway</h3>
+<p style="background: #e3f2fd; padding: 10px; border-radius: 4px; border-left: 4px solid #1976d2;">Buying earlier does not rescue the strategy: every tested version of the live AH&rarr;PM entry loses, so the stop-or-replace decision is the main open lever.</p>
+
+<p>Reply with feedback; replies feed the next cycle.</p>
+<p style="font-size: 12px; color: #666; margin-top: 20px;">Email session: anthropic/claude-opus-5-5 &middot; reasoning: medium</p>
+</div>
