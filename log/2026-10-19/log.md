@@ -835,3 +835,156 @@ Volume artifacts: `SAIQ-1830`, `WORX-1830`, `NCPL-1830` (`-volume-sip.json` and 
 
 | Ticker | Fill Price | Entry Time | Shares (~$100) | Order ID | Reason |
 |--------|------------|------------|-----------------|----------|--------|
+
+## Morning Evaluation — 10:20 CEST (04:20 ET, October 20)
+
+**Pulse 1: no real winner today (provisional).** The biggest genuine AH→PM mover is **SAIQ** at a **SIP PM high of $6.72 (+97.1%)** on 1.22M shares / 22,244 trades in the 04:00 ET bar, 3 points under the +100% bar. It was **detected at the 00:30 CEST final scan** ($4.59) and skipped only by the 2-AH-scan gate (FINAL-SCAN-GATE-BLOCK). SAIQ was already +22% on SIP when the 00:00 CEST scan ran, and TradingView omitted it; one scan earlier would have given it the second AH scan it needed. No fills last night and no open positions.
+
+Discovery ran before reading this log: `scan.py --all --session premarket` at 04:20 ET returned SAIQ +84.4% and WORX +34.3%. `pm-sweep.py` returned 14 listed names above +10%: SAIQ, GCDT (sub-$0.50), WORX, NCPL, then thin prints or sub-$0.50 names (TPST 103 sh, VVOS, BAOS, CLNN 307 sh, IQST, INVZ, FRTT, ACH, LHAI, ACXP). Levels are Alpaca SIP daily closes and 5-minute bars; SIP PM bars end at the 04:05 ET bar, so later PM is unassessed here. Yahoo served last night's AH bars this morning and they match the SIP shape.
+
+### Today's Winner
+
+**No real winner today (provisional).** No name clears +100% on a capturable, volume-backed move:
+
+- **SAIQ** (WISeSat.Space Holdings, satellite communications / post-quantum security; de-SPAC Oct 2), the biggest genuine mover and the diagnostic benchmark.
+  - Catalyst: **None** (2 searches). Latest PRs are Oct 8 (FOSSA "October 2026 satellite launch") and Oct 12 (post-quantum strategy), both background. The scan log's 4 searches agree.
+  - Previous close **$3.41** (SIP daily Oct 19; Oct 16 $3.16, Day +7.9%).
+  - AH: flat to 17:30 ET; ignition 17:35–17:55 ET; BUILD to $4.73 at 18:10 ET (284,799 sh / 3,636 trades); held $4.2–4.6; second leg 19:45–19:55 ET to the **SIP AH high $5.10 (+49.6%)** on 101K sh / 965 trades.
+  - PM: **SIP high $6.72 (+97.1%) at 04:00 ET** on 1,215,183 sh / 22,244 trades (bar closed $6.29); 04:05 bar H $6.29, C $5.96 on 546,252 sh / 9,982 trades. Yahoo $5.53 (+62.2%) at 04:23 ET, fading.
+  - Volume spike vs the previous day: **clear.** Oct 19 regular-session 5m peak 14,661 sh (09:45 ET). AH peak bar 284,799 = 19.4x; PM peak bar 1,215,183 = 82.9x.
+  - Hypothetical: final-scan sighting 00:30 CEST $4.59 → PM peak $6.72 = **+46.4%**; at the 04:23 ET price $5.53 = +20.5%.
+  - Float 4.5M | Market cap ~$101.7M.
+  - If a later PM bar prints **≥$6.82** on real volume, SAIQ clears the bar and becomes a **detected, not selected** winner (76/87 detected, 39/83 selected). The daily email re-fetch should check.
+- **WORX** (SCWorx, packaged software). Close $2.68 (Oct 16 $1.38, Day +94.2% on a Grade B contract win, 126M shares). AH in-window high $3.26 at 16:25 ET, then a tail surge **after the final scan** to the SIP AH high **$4.28 (+59.7%) at 18:40 ET** on 1.05M sh / 9,022 trades. PM SIP high $3.89 at 04:00 ET (880K / 12,792); Yahoo $3.94 (+46.9%) at 04:23 ET, rising. **Not a winner**: below +100%, and the largest AH bar (1.32M) is 0.22x the 5.95M regular-session peak bar, so there is no volume spike.
+- **GCDT** (Green Circle Decarbonize, engineering). Close $0.279 (SIP). AH flat at $0.26–$0.28 on ≤6K-share bars. 04:00 ET bar ran to **$0.6167 (+121%)** on 4.62M sh / 10,744 trades and closed $0.40; 04:05 bar H $0.49, C $0.46 on 4.56M / 11,786; Yahoo $0.46 (+64%) at 04:23. Sub-$0.50 PM-only gapper with no AH footprint. Live book is stale (16:00 ET $0.23 / $0.31). Not AH-actionable.
+
+**Scanner Diagnostic (biggest genuine mover, SAIQ):**
+
+- Detectable at screening time (~22:15 CEST)? **NO** at 22:15: SAIQ traded flat at $3.34–$3.45 until 17:30 ET (23:30 CEST). **YES from the 00:00 CEST scan on SIP**: the 17:55 ET bar closed $4.16 (+22.0%) on 159,890 sh / 2,084 trades, but the 18:00:10 ET TradingView snapshot did not list SAIQ, even in the change-only pass. It first appeared at **00:30 CEST** ($4.59, +34.6% AH).
+- Why not acted on: one >10% AH scan only, so the 2-AH-scan gate blocked it. It passed every other gate: CONFIRM-3 YES, `rth-peak` 19.43x (≥10x), Total% +45.3%, Day% +7.9%, `tradable=true`, SIP-15m book $4.50 / $4.53. The IEX quote was 2h30m stale.
+- Scanner gap: **feed lag at 00:00 CEST plus the 2-AH-scan gate.** If TradingView had shown SAIQ at 18:00 ET, the 00:30 scan would have been its second AH scan and it would have qualified for entry. Neither a threshold nor a schedule change is needed. The fix options are (a) a whole-universe SIP gainers cross-check at each scan (already routed as the feed-lag recommendation) and (b) the final-scan-ignition exception (now 3/3 ran, below).
+
+### Baseline Tracking
+
+Source: the October 15 log (Days tracked 101, detected 75/86, selected 39/82). **New baseline gap: October 16** (log exists with only position evaluations; no scans and no retrospective). Gaps now **Sep 11, Sep 18, Sep 25, Oct 2, Oct 9, Oct 16**, all Fridays.
+
+- Days tracked: **102** (101 + October 19 only; October 16 not back-filled).
+- Winners detected by scanner: **75/86 (87.2%)**, unchanged. No winner today, so nothing enters the denominator.
+- Winner selected for paper trade: **39/82 (47.6%)**, unchanged.
+- Target: >80% detection. Status: **BASELINE MET.** Six skipped Friday retrospectives, coverage failures and price-floor exclusions limit what the rate means.
+
+### Retrospective Scan Results
+
+`scan.py --all --session premarket` (04:20 ET): SAIQ +84.4%, WORX +34.3%. `pm-sweep.py` (04:20 ET): SAIQ +84.4%, GCDT +44.8% (PM high +121%), WORX +34.3%, NCPL +16.9%, then thin or sub-$0.50 prints. No forced AH scan was run. AH reconstruction from SIP 5-minute bars (20:00–24:00Z):
+
+| Ticker | Oct 19 SIP close | AH SIP high / ET | PM SIP high / ET | PM high vs close | PM peak-bar shares / trades | Latest | Classification |
+|--------|-----------------|------------------|------------------|------------------|-----------------------------|--------|----------------|
+| SAIQ | $3.41 | $5.10 / 19:55 | $6.72 / 04:00 | +97.1% | 1,215,183 / 22,244 | $5.53 (Yahoo 04:23) | Biggest genuine mover; detected 00:30, final-scan gate-block |
+| GCDT | $0.279 | $0.28 / 16:00 (flat) | $0.6167 / 04:00 | +121.0% | 4,621,301 / 10,744 | $0.46 | PM-only gapper; sub-$0.50; wick peak |
+| WORX | $2.68 | $4.28 / 18:40 | $3.89 / 04:00 | +45.1% | 879,993 / 12,792 | $3.94 (Yahoo 04:23) | Detected, volume-gate skip (0.22x); tail surge after final scan |
+| NCPL | $1.63 | $2.08 / 17:20 | $2.06 / 04:00 | +26.4% | 44,376 / 575 | $1.91 | Detected, dead-cat + volume-gate skip |
+| FUFU | $1.19 | $1.33 / 16:50 | $1.19 / 04:00 | 0.0% | 101,088 / 576 | $1.12 | Detected (1 scan), faded |
+| POLA | $0.889 | $1.19 / 16:05 | $0.81 / 04:00 | −8.9% | 87,312 / 367 | $0.72 | Detected, first-bar spike, faded below close |
+| ISPC | $0.91 | $1.10 / 16:00 | $0.94 / 04:00 | +3.3% | 496 / 11 | $0.94 | Detected, first-bar spike, faded |
+| PLAG | $0.52 | $0.67 / 16:40 | $0.54 / 04:00 | +3.8% | 85,209 / 494 | $0.49 | Detected, `tradable=false`, dead-cat |
+| BURU | $0.554 | $0.69 / 16:25 | $0.55 / 04:00 | −0.7% | 34,451 / 89 | $0.54 | Detected (1 scan), spike→fade |
+
+### Open Position P&L (Alpaca)
+
+No executed positions. `broker.js positions` is empty; last night produced no fills. The October 15 fills closed at the October 16 10:30 pulse: TCRT sold $2.99 (+1.4%), XXII sold $0.88 (−25.4%).
+
+**Total Realized P&L (Alpaca fills only, this session): $0.00**
+
+### Scanner Effectiveness
+
+- Evening scans ran: **7 of 7** scheduled checkpoints (21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30 CEST), plus extra observations at 22:05–22:25 and 22:45. The entry window was fully covered.
+- Candidates found: **11 unique tickers** with a >10% AH appearance (POLA, ISPC, NCPL, CCHH, AURE, WORX, BURU, PLAG, FUFU, REFR, SAIQ).
+- Retrospective matches: **all in-universe AH movers of size were detected** (SAIQ, WORX, NCPL). SAIQ was detected one scan late because of feed lag. GCDT is PM-only and below the floor.
+- Supplementary AH-change-only pass: the line is present in all AH scans. **3 unique tickers: 0 continuation / 3 faded / 0 unassessed.**
+  - **AURE: faded.** Latest logged AH scan price $0.99 (22:45 CEST) → SIP PM high $0.74 (234 sh / 1 trade).
+  - **CCHH: faded.** $1.03 (22:20 CEST) → SIP PM high $0.85 (300 sh / 1 trade).
+  - **REFR: faded.** $0.61 (00:00 CEST, a single thin print) → SIP PM high $0.48 (121 sh / 1 trade).
+
+### Missed Opportunities
+
+| Ticker | AH Change | Why Missed | Would Be Profitable? |
+|--------|-----------|------------|---------------------|
+| SAIQ | +22% at 18:00 ET (160K sh / 2,084 trades), +34.6% at 18:30 ET | Omitted by the 00:00 CEST TradingView snapshot (feed lag); at 00:30 it had only one AH scan, so the 2-AH-scan gate blocked it | Yes: $4.59 → PM peak $6.72 = +46.4%; +20.5% at 04:23 ET |
+| WORX | +16% to +19% in-window; tail surge to +59.7% at 18:40 ET | Volume-gate skip (0.22x); tail surge after the final scan | Yes on price: $2.97 → PM peak $3.89 = +31.0% (Yahoo $3.94 at 04:23), but there was no volume spike against the 126M-share regular session |
+| GCDT | flat | PM-only gapper, below $0.50 | Not AH-actionable |
+
+### AH Mover Follow-Through
+
+Every name with two or more >10% AH scans. Current = Yahoo 04:23 ET or SIP 04:05 ET close.
+
+| Ticker | AH Peak | Peak Time | AH Trajectory | Current PM | From Peak | From Close | Verdict |
+|--------|---------|-----------|---------------|------------|-----------|------------|---------|
+| WORX | $4.28 | 18:40 | **Spike→hold, late surge after final scan** (+16.4 → 11.9 → 10.0 → 8.6 → 14.6%; SIP +59.7% at 18:40) | $3.94 | −7.9% | +47.0% | PM peak $3.89 SIP **fell short (−9.1%)**; AH tail better |
+| NCPL | $2.08 | 17:20 | **Build** (+12.4 → 10.4 → 7.0 → 11.7 → 18.4 → 23.9 → 20.3 → 20.9%) | $1.91 | −8.2% | +17.2% | PM peak $2.06 **fell short (−1.0%)**; dead-cat, never reclaimed the $2.17 Oct 16 close |
+| POLA | $1.19 | 16:05 | **Spike→fade** (+15.3 → 29.4 → 30.5 → 12.4%) | $0.72 | −39.5% | −19.0% | PM peak $0.81 **fell short**, below the close |
+| ISPC | $1.10 | 16:00 | **Spike→fade** (+16.4 → 11.0 → 13.2%) | $0.94 | −14.5% | +3.3% | PM peak $0.94 **fell short** |
+| AURE | $1.00 | 16:00 | **Thin flat print** (+15.8% ×4 on 1,344 sh) | $0.74 | −26.0% | −12.9% | Faded; thin |
+| PLAG | $0.67 | 16:40 | **Spike→hold** (+13.5 → 17.3%) | $0.49 | −26.9% | −5.8% | PM peak $0.54 fell short; untradable, dead-cat |
+
+**AH-peak-vs-PM-peak, extreme zone:** no name reached +130% AH (WORX topped at +59.7%, SAIQ +49.6%). Tally stays **15 fades / 3 continues (83.3%)**. SAIQ is a sub-zone continuation: PM $6.72 exceeded its $5.10 AH high, so PM was the better exit.
+
+**Chase-cap check:** no fills. Standing **1 (XOS), never reclaimed**, unchanged.
+
+### Notes
+
+- **Coverage, last 10 completed sessions (Oct 6–Oct 19):** **Oct 9 0/7 and Oct 16 0/7** (logs exist with no `## Scan` sections). Oct 6, 7, 8, 12, 13, 14, 15 and **Oct 19 ran 7/7.** **2 failures in 10 sessions**, still at the ≥2 trigger. Every recent failure is a Friday (Oct 2, Oct 9, Oct 16; Oct 5 was a Monday), and every baseline gap is a Friday (Sep 11, 18, 25, Oct 2, 9, 16). Friday evening scans and the Monday-morning retrospective of Friday appear not to be scheduled. This goes to the email as a scheduler decision for Juan.
+- **Raw PM leader / PM-only tracking:** the biggest raw PM mover is **GCDT (+121.0% SIP high)**, a **PM-only gapper** below the $0.50 floor (AH flat on ≤6K-share bars). Investability: the $0.6167 peak is a single wick (bar closed $0.40), but 04:05–04:23 ET held +58–65% on ~4.6M sh/bar, so holdable at ~+60% and uninvestable at the headline. Not a scanner failure. `log/pm-open-scan.csv` has **no October 20 rows yet** at 04:20 ET; the pm-open pulse should capture GCDT. Holdable PM-only count read from the file: **78**. Carry the Initiative-6 cluster to the email.
+- **Final-scan gate-block: 2 → 3 (TRUG, UPC, SAIQ), all ran, all pass the prior-day volume check.** SAIQ: float 4.5M, Grade None, ignition 17:45 ET, qualified $4.59 at 00:30 CEST → PM SIP peak $6.72 = **+46.4%, ran** (+20.5% at 04:23 ET). Prior-day check (Juan's DKI rule), recomputed from SIP 5m bars this morning: **SAIQ** AH peak bar 284,799 vs 14,661 regular-session peak (19.4x); **TRUG** (Aug 25) AH peak bar 2,641,703 vs 143,874 (18.4x); **UPC** (Sep 1) AH ignition bars ~206–223K vs 2,174 (~100x). DKI stays excluded. The re-proposal condition ("only with cases that pass that check") is now met: **route the final-scan-ignition exception** (CONFIRM-3 YES + ≥10x `rth-peak` + fillable book + under the ceiling, entered at the final scan) to the daily email as a decision. Not applied here.
+- **In-window feed lag (SAIQ, delay rather than a miss):** SAIQ was +22.0% on SIP at the 18:00 ET snapshot (17:55 bar, 159,890 sh / 2,084 trades) and absent from that scan, including the >15% change-only pass. It was surfaced at 00:30 CEST, so it is **not** added to the never-surfaced tally (**stays 8**). The lag cost the second AH scan and the entry. This strengthens the whole-universe SIP AH cross-check recommendation already in the email.
+- **Late-AH-tail tracking: 2 true-tail (ORIS, GNS) / 1 feed-lag (BTCT), unchanged.** SAIQ's defining surge (17:35–18:10 ET) was in-window; its 19:45–19:55 second leg added to it. WORX surged 18:35–18:45 ET ($3.28 → $4.28 on 1.05M sh) after the final scan, but it was already +22% and surfaced at 18:30 ET and is not the benchmark mover, so it is not counted.
+- **Price-floor exclusions: 13 across 10 nights, unchanged; >100%-and-holdable stays 1 (TOPP).** GCDT is PM-only (no in-window AH signal), so it is not a price-floor exclusion.
+- **Fade-rule tally: sub-3M 4/25 (16.0%), unchanged; trigger not met.** No candidate was formally skipped on the fade rule in the entry window. Contrast: ISPC (2.5M, Grade None) and POLA (3.0M, Grade C) first-bar faders dropped below 10% before 23:00 and kept fading (PM $0.94 vs AH $1.10; PM $0.81 vs AH $1.19).
+- **FIRST-BAR-SPIKE WATCH / DEAD-CAT-OVERRIDE / CEILING-OVERRIDE:** none flagged. POLA and ISPC showed the first-bar pattern but fell out before the entry window, so no WATCH; both faded, consistent with the gate. NCPL never reclaimed its regular close. First-bar standing **12 valid (3 ran / 9 faded-flat), 1 pending (ICMB)**; dead-cat override **5 positive / 6 negative**; both unchanged.
+- **Execution trackers:** broker-block **2**, stale-book-only **6**, no-fillable-book **4**, float-only **1**, all unchanged. PLAG (`tradable=false`) also failed CONFIRM-3 and the dead-cat filter, so it is not a broker-block case. SAIQ's IEX quote was 2h30m stale, but the 2-AH-scan gate blocked it, so it is not a stale-book case.
+- **Actual-entry trackers (multi-session, reverse split, chase-cap):** no entries last night; all unchanged (first-day igniters 39 entries, 16 ran / 8 flat / 15 faded; multi-session 3, all faded; reverse-split 4/5 this-week faded / 4/6 older continued).
+- **Regular-session volume-spike entry tracking (Oct 15 fills, realized at the Oct 16 10:30 CEST sells):** **TCRT 3.96x [2-10x]**: sold $2.99, **+1.4%** realized; PM peak $3.03 = +2.7%. **XXII 73.99x [>=10x]**: sold $0.88, **−25.4%** realized; PM peak $1.13 = −4.2%. Standing: **>=10x 5 (2 wins, mean +4.3%) / 2-10x 1 (1 win, +1.4%) / <2x 2 (0 wins, mean −18.5%).**
+- **VOLUME-GATE-SKIP (first night under the ≥10x gate; Oct 16 had no scans):**
+  - **WORX 0.22x** (Grade B, Day +94.2%): would have paid ~$2.97 (23:00 CEST IEX ask) → PM SIP peak $3.89 = **+31.0%**; 04:23 ET Yahoo $3.94 = +32.7%. The 04:30 price is pending.
+  - **NCPL 0.71x** (also dead-cat): ~$1.97 → PM peak $2.06 = +4.6%; 04:05 ET close $1.91 = −3.0%.
+  - Standing **2 skips**, provisional mean 04:23 return **+14.9%** vs the >=10x fills' realized mean +4.3%. The gap is 10.6 points, but on 2 skips (the threshold is ≥5), so it is not reportable as a gate cost yet. WORX's run came with no volume spike against a 126M-share regular session, which is the profile Juan rejected.
+- **SIP basis checks:** October 19 closes SAIQ $3.41, WORX $2.68, GCDT $0.279, NCPL $1.63, POLA $0.889, ISPC $0.91, PLAG $0.52, FUFU $1.19, BURU $0.554. October 16 closes: SAIQ $3.16, WORX $1.38.
+- **WINNERS_TRACKING.md:** nothing added. AEHL ($10.01 Oct 19 close) and FCHL ($0.86) moved to Historical after 5+ sessions with no renewed run.
+
+### Daily Email Routing
+
+- Headline: **No real winner for October 19→20 (provisional).** Biggest genuine mover SAIQ: AH +49.6%, PM SIP +97.1% on 1.2M shares, 3 points short of the bar. Detected at the 00:30 CEST final scan ($4.59) and blocked only by the 2-AH-scan gate; hypothetical +46.4% to the PM peak. GCDT's +121% was a sub-$0.50 PM-only wick. Detection **75/86 (87.2%)**, selection **39/82 (47.6%)**, 102 days tracked.
+- **Re-check SAIQ's later PM high:** ≥$6.82 on real volume would make it a detected, not selected winner (76/87, 39/83).
+- **Final-scan-ignition exception (decision for Juan):** 3 of 3 valid final-scan gate-blocks ran (TRUG +47%, UPC +11.9%, SAIQ +46.4% to PM peak). All three spiked against the prior day's regular-session 5m bars (18.4x, ~100x, 19.4x). Proposal: allow an entry at the final scan when CONFIRM-3 YES, `rth-peak` ≥10x, the book is fillable and Total% is under the ceiling.
+- **TradingView feed lag cost SAIQ its second scan:** +22% on SIP at 18:00 ET (160K sh / 2,084 trades) and absent from the 00:00 CEST snapshot. Supports the whole-universe SIP AH cross-check (8 never-surfaced misses plus this delay).
+- **Scheduler/bridge reliability (decision for Juan):** Friday Oct 16 had 0/7 scans and no retrospective; Oct 9 also 0/7. Every coverage failure since Oct 2 and every baseline gap since Sep 11 falls on a Friday, which points to a Friday-evening schedule gap.
+- Volume-gate skips start: WORX 0.22x would have made +31% to the PM peak, NCPL −3% at 04:05. 2 of the 5 skips needed before judging the gate.
+- Carry forward: 78-row holdable PM-only cluster → Initiative 6; extreme-runner partial profit (15/3, 83.3%); reverse-split recency recommendation; sub-$0.50 floor question (TOPP 1 of 3); stale IEX quote feed; multi-session runners 0/3 ran. The sub-3M fade (4/25), price-floor and first-bar triggers are not met.
+
+### Price Charts
+
+Excerpts from `python3 scripts/price-timeline.py SAIQ WORX GCDT` at ~04:23 ET (Yahoo 5-minute closes; the SIP tables above set the peaks). Block charts omitted.
+
+```
+SAIQ  Previous Close $3.41 (regular close 2026-10-19) | Peak $6.72 (+97.0%) at 10-20 04:00 ET
+  [AH]  10-19 17:30 ET: $3.49 (+2.3%)
+  [AH]  10-19 17:45 ET: $3.83 (+12.3%)
+  [AH]  10-19 17:55 ET: $4.16 (+22.0%)   <- 00:00 CEST scan at 18:00 ET omitted SAIQ
+  [AH]  10-19 18:10 ET: $4.59 (+34.6%)
+  [AH]  10-19 18:30 ET: $4.38 (+28.5%)   <- 00:30 CEST final scan, first appearance
+  [AH]  10-19 19:30 ET: $4.48 (+31.4%)
+  [AH]  10-19 19:55 ET: $5.04 (+47.8%)
+  [PM]  10-20 04:00 ET: $6.29 (+84.5%)
+  [PM]  10-20 04:10 ET: $5.81 (+70.4%)
+  [PM]  10-20 04:23 ET: $5.53 (+62.2%)
+WORX  Previous Close $2.68 (regular close 2026-10-19) | Peak $4.28 (+59.7%) at 10-19 18:40 ET
+  [AH]  10-19 18:30 ET: $3.28 (+22.4%)
+  [AH]  10-19 18:40 ET: $4.03 (+50.4%)
+  [AH]  10-19 19:55 ET: $3.32 (+23.9%)
+  [PM]  10-20 04:00 ET: $3.57 (+33.2%)
+  [PM]  10-20 04:23 ET: $3.94 (+46.9%)
+GCDT  Previous Close $0.2790 (regular close 2026-10-19) | Peak $0.62 (+121.0%) at 10-20 04:00 ET
+  [AH]  10-19 18:30 ET: $0.27 (-2.3%)
+  [PM]  10-20 04:00 ET: $0.40 (+43.8%)
+  [PM]  10-20 04:05 ET: $0.46 (+64.8%)
+  [PM]  10-20 04:23 ET: $0.46 (+64.2%)
+```
