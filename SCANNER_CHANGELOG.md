@@ -67,7 +67,7 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 - **Fade-rule false-negative tracker:** each morning eval records any candidate skipped on the SPIKE→FADE / early-peak-fade rule that then re-exploded in premarket (PM peak above its AH peak and above a profitable entry), with a running tally (float + catalyst grade per case). The re-ramp is **float-conditional**: the trigger to propose the exception is **≥4/5 (≥80%) *sub-3M-float* AH-faders re-exploding** (higher-float faders — LIQT 24.2M, TGE 44.2M — keep fading and are the negative control, not counted toward the trigger). At the trigger, propose a sub-3M-float PM-open re-check exception to the fade skip. **Standing sub-3M count: 4 of 15** (LNKS/RPGL/ATPC/BJDX re-exploded; SIP-corrected CRE Jun cycle, IOTR, WLDS, CRE Jul 29→30 cycle, VSME, ABTS, IPW, LGCL, TGL, and NXTT fell short). The exception is not one case from promotion; the overall SIP-verified sample must reach ≥80% (data collection only).
 - **Reverse-split-squeeze fade tracker:** each morning eval records, for every entered/notable name whose catalyst is a reverse stock split (not a fresh operational catalyst), whether it faded overnight or continued, plus split ratio, split recency (this-week vs months-old), float, and entry→PM-peak P&L, in a running tally. A reverse split is a listing-compliance/distress signal (manufactured low float), not isolated by the catalyst-grade or float trackers. Data collection, no gate change — dataset for deciding whether reverse-split recency should downgrade entry conviction (data collection: ELPW Jul 10 1:80 faded −17.8%, YYGH Jul 10 30:1 faded −17.5%, EDHL Jul 6 1:16 months-old +6% mild, DCX Jul 8 flat). **This-week bucket now 4/4 faded (ELPW, YYGH, BIYA, BTOG) — recency signal RESOLVED; conviction-downgrade recommendation for this-week reverse splits with no fresh operational catalyst routed to Juan's daily email.**
 - **Price-floor exclusion tracker:** each morning eval uses the independent whole-market PM sweep (no price/mcap cap) to find real, in-window, volume-backed AH movers that no scan surfaced solely because they sit below `MIN_PRICE = $0.50`, and logs each with its AH signal, PM peak, hypo AH→PM P&L, Alpaca `tradable`, and a **holdable vs uninvestable** verdict (book spread relative to price; gain sustained ≥2 consecutive 5-min bars). Counted as a detection miss (the signal was real and in-window; our universe filter chose not to query it), but `MIN_PRICE` is **not** changed on this evidence — threshold to propose a floor change or a log-only sub-$0.50 pass is ≥3 sub-$0.50 names on ≥3 separate nights that are both >100% and holdable on tight spreads; until then it is a question for the daily email. Standing count 5 across 2 nights, **0 holdable** (CISS +164% ~40% spread and unwound in 25 min, OMH `tradable=false`, GOSS flat AH→PM — latest authoritative tally in morning evaluations)
-- **Scan-coverage check:** each morning eval verifies how many of the 7 scheduled evening scans actually ran (match `## Scan` headings / git commits to scheduled checkpoints, counting each once), records `Evening scans ran: X of 7`, and keeps a coverage-failure tally in Notes. It checks the last ~10 completed US trading sessions, carries forward dated shortfalls (an existing log without scans is 0/7; a missing log is unknown), and routes ≥2 failures to the daily email for scheduler/bridge investigation. Missing morning retrospectives are baseline gaps tracked separately. On a night the scanner did not cover the entry window, the night's winner is **not** counted as a detection miss and selection is not penalized — it is logged as a coverage failure, not a threshold gap (founding case: Jun 18–19, only 2 of 7 scans ran)
+- **Scan-coverage check:** each morning eval verifies how many of the 7 scheduled evening scans actually ran (match `## Scan` headings / git commits to scheduled checkpoints, counting each once), records `Evening scans ran: X of 7`, and keeps a coverage-failure tally in Notes. It checks the last ~10 scheduled (Monday–Thursday) US trading sessions, treats Friday sessions as unscheduled (since 2026-10-20), carries forward dated shortfalls (an existing log without scans is 0/7; a missing log is unknown), and routes ≥2 failures to the daily email for scheduler/bridge investigation. Missing morning retrospectives are baseline gaps tracked separately. On a night the scanner did not cover the entry window, the night's winner is **not** counted as a detection miss and selection is not penalized — it is logged as a coverage failure, not a threshold gap (founding case: Jun 18–19, only 2 of 7 scans ran)
 
 ## Modifiable Files
 
@@ -83,6 +83,40 @@ MIN_DAY_CHANGE_REGULAR = 15%  (supplementary regular session scan)
 ## Change Log
 
 _(entries are prepended — newest first)_
+
+### 2026-10-20 — Stop Counting Unscheduled Friday Sessions as Coverage Failures
+
+**Context:** Reviewed the October 19 log (morning evaluation written October 20) and the Oct 13–16 logs. October 19 ran 7/7 scheduled scans plus six extra observations, made no fills, and had no winner (provisional). SAIQ, the biggest genuine mover (SIP AH high $5.10, PM SIP high $6.72, +97.1%), first appeared at the 00:30 CEST final scan and was blocked only by the 2-AH-scan gate. The morning evaluation counted October 16 (Friday) as a `0/7` coverage failure and a baseline gap, wrote "Friday-evening scans ... appear not to be scheduled", and routed a scheduler/bridge decision to the daily email. The scheduler confirms it: every evening scan cron is `* * 1-4` (00:00/00:30 `2-5`), and the morning evaluation runs `2-5`. Friday sessions are unscheduled by design. The Sep 11 – Oct 16 "baseline gaps" are all Fridays, and the only real failure in the last 10 scheduled sessions (Oct 1 – Oct 19, Mon–Thu) is October 5 (0/7, outage), below the ≥2 trigger.
+
+**Evaluation of previous changes:**
+
+- 2026-10-16 `ah-crosscheck.js` 403 fix: **helped, 1/5 sessions.** Five calls on October 19 (22:45, 23:00, 23:30, 00:00, 00:30 CEST), zero `403` lines, zero `*` fallback closes; the final scan cited its table for 6 names.
+- 2026-10-16 ≥10x `rth-peak` entry gate: **insufficient data, 2/5 skips.** First live session: zero fills. `VOLUME-GATE-SKIP` WORX 0.22x (+31.0% to the PM peak) and NCPL 0.71x (−3.0% at 04:05 ET). SAIQ passed the gate (19.43x) and was blocked by the 2-AH-scan gate.
+- 2026-10-15 at-entry volume-ratio tracker: **no new fills.** Standing `>=10x` 5 / `2-10x` 1 / `<2x` 2.
+- 2026-10-14 `price-timeline.py` `[CLOSE]` label: **no trigger, 3/5 sessions.** Yahoo served the October 19 AH bars on the morning.
+- 2026-10-13 SIP AH reconstruction: **helped, 4/5.** Every AH level in the retrospective table comes from SIP bars.
+- 2026-10-09 same-date regular-session ratio: **helped, 5/5.** 234/234 `VOLUME-CONTEXT` rows carry a known `rth-peak`.
+- 2026-10-09 SIP daily multi-session tagging: **no entries;** the SAIQ gate-block note cited SIP daily closes.
+- 2026-10-08 DST-aware AH tools: **insufficient data until November 2.**
+- 2026-10-07 stale delayed SIP snapshot replacement: **helped, first case.** BURU's delayed SIP snapshot was dated 2026-07-17 (2261h old); `book-check.js` replaced it with `sip-hist` and printed a two-sided verdict.
+- 2026-10-01 unrounded AH evidence: **helped, 9/9.** Present in all 12 AH scans.
+- 2026-09-22 to 09-25 supplementary-pass changes: **still insufficient for a cutoff decision.** October 19 added AURE, CCHH and REFR, all faded on single-trade PM prints. Running: 20 unique names, 16 with a raw outcome, 1 sustained continuation (IPW).
+
+**Changes:**
+
+1. **prompts/morning-evaluation.md** — The baseline-gap check and the coverage carry-forward count Monday–Thursday sessions only. A Friday session is unscheduled: it is neither a baseline gap nor a coverage failure, and it stays out of the tally and the email routing.
+   - Why: the prompt said "last ~10 completed US trading sessions", so every Friday became a `0/7` failure. Two Fridays in any 10-session window hit the ≥2 trigger alone, and the email carried a scheduler decision that Juan already made.
+   - Hypothesis: I expect the next 5 morning evaluations to list zero Friday dates as coverage failures or baseline gaps, and the coverage tally to read 1 failure (Oct 5) in the last 10 scheduled sessions until Oct 5 ages out, with no scheduler/bridge item in the daily email unless a Mon–Thu session misses scans.
+
+**Verification:** read back both edited passages; the scheduler crons were read from `scheduler.json` (read-only). `scan.py --help` passes.
+
+**Ready work skipped / next owners:**
+
+- **SAIQ "feed lag" at 00:00 CEST:** SIP bars show SAIQ at $3.69–$3.82 (+8–12%) on ~21K-share bars at 17:40–17:45 ET, the minute TradingView's ~15-minute-lagged 18:00 snapshot reflects; its 160K-share bar started 17:55 ET. Lowering the 15% supplementary pass would have needed both the right lag and the volume to cross 50K, so one case does not justify a threshold change. Alpaca's `/v1beta1/screener/stocks/movers` was probed as a whole-universe SIP source: it ranks regular-session change only (WORX +94.2%, `last_updated` 23:59Z), so it cannot replace the cross-check. No free real-time whole-universe AH source exists yet.
+- **Final-scan-ignition exception (3/3 ran: TRUG, UPC, SAIQ):** changes live entries; the morning evaluation routed it to Juan. The Initiative 7 ignition census (Oct 19) is the counter-evidence for ignitions that never reach a scan.
+- **Research replay scripts with fixed EDT offsets:** still pending before any winter replay.
+
+**Updated process:** coverage and baseline checks follow the Mon–Thu schedule. Scanner thresholds, entry gates, sizing and learning rules are unchanged.
 
 ### 2026-10-16 — Fix the 403 in the Final-Scan SIP Cross-Check
 
