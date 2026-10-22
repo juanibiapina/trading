@@ -5,7 +5,7 @@ The daily trading summary is sent from Juan's Gmail account
 Gmail thread with feedback. This pulse finds new replies, records the feedback,
 and acts on anything quick. It runs once a day.
 
-Load the `gmcli` skill. The gmcli account is always `juanibiapina@gmail.com`.
+Load the `gog-gmail` skill. gog's default account is `juanibiapina@gmail.com`.
 
 ## Steps
 
@@ -14,13 +14,13 @@ Load the `gmcli` skill. The gmcli account is always `juanibiapina@gmail.com`.
 List recent report threads:
 
 ```bash
-gmcli juanibiapina@gmail.com search 'subject:"Trading Scanner Report" newer_than:14d'
+gog --readonly gmail search 'subject:"Trading Scanner Report" newer_than:14d' --json --results-only
 ```
 
 Read each thread:
 
 ```bash
-gmcli juanibiapina@gmail.com thread THREAD_ID
+gog --readonly gmail thread get THREAD_ID --json
 ```
 
 The first message in a thread is the report itself. Every later message is a
